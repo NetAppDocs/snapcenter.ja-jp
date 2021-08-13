@@ -1,0 +1,41 @@
+---
+permalink: install/task_add_a_snapcenter_controller_based_license.html 
+sidebar: sidebar 
+keywords: add, controller-based license 
+summary: FAS または AFF システムを使用していて、 SnapCenter 標準ライセンスまたは SnapManagerSuite ライセンスがある場合は、 ONTAP コマンドラインを使用して SnapCenter コントローラベースライセンスを追加できます。 
+---
+= SnapCenter の標準コントローラベースライセンスを追加します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+FAS または AFF システムを使用していて、 SnapCenter 標準ライセンスまたは SnapManagerSuite ライセンスがある場合は、 ONTAP コマンドラインを使用して SnapCenter コントローラベースライセンスを追加できます。
+
+* 必要なもの *
+
+* FAS または AFF システムのクラスタ管理者である必要があります。
+* SnapCenter Standard または SnapManagerSuite のライセンスが必要です。
+
+
+* このタスクについて *
+
+FAS または AFF ストレージを使用した SnapCenter の試用版をインストールする場合は、 Premium Bundle 評価ライセンスを取得してコントローラにインストールできます。
+
+SnapCenter を試用版としてインストールする場合は、営業担当者にお問い合わせいただき、 Premium Bundle 評価ライセンスを取得してコントローラにインストールしてください。
+
+* 手順 *
+
+. ONTAP コマンドラインを使用してネットアップクラスタにログインします。
+. SnapManagerSuite ライセンスキーを追加します。
++
+'system license add - license-code license_key'
+
++
+このコマンドは、 admin 権限レベルで使用できます。
+
+. SnapManagerSuite ライセンスがインストールされていることを確認します。
++
+「 license show 」を参照してください
+
+

@@ -1,0 +1,41 @@
+---
+permalink: protect-hana/task_install_the_snapcenter_plug_in_for_sap_hana_database_on_linux_hosts_using_the_command_line_interface.html 
+sidebar: sidebar 
+keywords:  
+summary: SnapCenter ユーザインターフェイス（ UI ）を使用して、 SnapCenter Plug-in for SAP HANA Database をインストールする必要があります。環境で SnapCenter UI からプラグインのリモートインストールが許可されていない場合は、コマンドラインインターフェイス \ （ CLI\ ）を使用して、コンソールモードまたはサイレントモードで Plug-in for SAP HANA Database をインストールできます。 
+---
+= コマンドラインインターフェイスを使用して、 Linux ホストに SnapCenter Plug-in for SAP HANA Database をインストールします
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter ユーザインターフェイス（ UI ）を使用して、 SnapCenter Plug-in for SAP HANA Database をインストールする必要があります。環境で SnapCenter UI からプラグインのリモートインストールが許可されていない場合は、コマンドラインインターフェイス（ CLI ）を使用して、 Plug-in for SAP HANA Database をコンソールモードまたはサイレントモードでインストールできます。
+
+* 手順 *
+
+. Linux インストールファイル（ snapcenter _ linux_host_plugin.bin ）の SnapCenter Plug-ins パッケージを C ： \ProgramData\NetApp\SnapCenter \Package リポジトリから、 Plug-in for SAP HANA Database をインストールするホストにコピーします。
++
+このパスには、 SnapCenter サーバがインストールされているホストからアクセスできます。
+
+. コマンドプロンプトで、インストールファイルをコピーしたディレクトリに移動します。
+. プラグインをインストールします。 'path-to_installation_bin_file/ snapcenter_linux_host_plugin.bin -i silent -dport=port_number_for _host-DSERVER_IP=server_name_or_IP_address -DSERVER_HTTPS_port=port_number_for _server
++
+** -dport には、 SMCore HTTPS 通信ポートを指定します。
+** - DSERVER_IP は、 SnapCenter サーバの IP アドレスを指定します。
+** - DSERVER_HTTPS_PORT には、 SnapCenter サーバの HTTPS ポートを指定します。
+** -duser_install_DIR - SnapCenter Plug-ins Package for Linux をインストールするディレクトリを指定します
+** DINSTALL_LOG_name は、ログファイルの名前を指定します。
+
+
++
+[listing]
+----
+/tmp/sc-plugin-installer/snapcenter_linux_host_plugin.bin -i silent  -DPORT=8145 -DSERVER_IP=scserver.domain.com -DSERVER_HTTPS_PORT=8146 -DUSER_INSTALL_DIR=/opt -DINSTALL_LOG_NAME=SnapCenter_Linux_Host_Plugin_Install_2.log -DCHOSEN_FEATURE_LIST=CUSTOM
+----
+. 次のコマンドを入力して、 =<installation directory>/NetApp/snapcenter /cscc /etc/SC_SMS_Services.properties ファイルを編集し、 plugins/enabled=hana ： 3.0 パラメータを追加します。
+. Add-Smhost コマンドレットと必要なパラメータを使用して、ホストを SnapCenter サーバに追加します。
++
+コマンドで使用できるパラメータとその説明については、 RUNNING Get Help command_name _ を使用して参照できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+
+

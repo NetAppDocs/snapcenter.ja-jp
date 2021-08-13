@@ -1,0 +1,53 @@
+---
+permalink: uninstall/task_uninstall_plug_ins_from_a_host_using_the_snapcenter_gui.html 
+sidebar: sidebar 
+keywords: uninstall, gui 
+summary: 個々のプラグインまたはプラグインパッケージが不要になった場合は、 SnapCenter インターフェイスを使用してアンインストールできます。 
+---
+= SnapCenter GUI を使用してプラグインをアンインストールします
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+個々のプラグインまたはプラグインパッケージが不要になった場合は、 SnapCenter インターフェイスを使用してアンインストールできます。
+
+* 必要なもの *
+
+* アンインストールするプラグインパッケージのリソースグループを削除しておく必要があります。
+* アンインストールするプラグインパッケージのリソースグループに関連付けられているポリシーを解除しておく必要があります。
+
+
+* このタスクについて *
+
+個々のプラグインをアンインストールできます。たとえば、あるホストのリソースが不足している場合に、そのプラグインをより強力なホストに移動するために、 SnapCenter Plug-in for Microsoft SQL Server のアンインストールが必要になることがあります。プラグインパッケージ全体をアンインストールすることもできます。たとえば、 SnapCenter Plug-in for Oracle Database と SnapCenter Plug-in for UNIX が含まれている Linux 用 SnapCenter Plug-ins Package のアンインストールが必要になることがあります。
+
+* ホストの削除には、すべてのプラグインのアンインストールが含まれます。
++
+SnapCenter からホストを削除する場合、 SnapCenter はホストを削除する前にホスト上のすべてのプラグインパッケージをアンインストールします。
+
+* SnapCenter GUI は、一度に 1 つのホストからプラグインを削除します。
++
+SnapCenter GUI を使用する場合、プラグインをアンインストールできるホストは一度に 1 つです。ただし、複数のアンインストール処理を同時に実行できます。
+
++
+また、 _Uninstall-sSmHostPackage_ コマンドレットと必要なパラメータを使用して、複数のホストからプラグインをアンインストールすることもできます。コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+
+
+
+
+IMPORTANT: SnapCenter Server がインストールされているホストから SnapCenter Plug-ins Package for Windows をアンインストールすると、 SnapCenter Server のインストールが破損します。SnapCenter Server が不要になったことが確実である場合を除き、 SnapCenter Plug-ins Package for Windows をアンインストールしないでください。
+
+* 手順 *
+
+. 左側のナビゲーションペインで、 * Hosts * （ホスト）をクリックします。
+. [Hosts] ページで、 [*Managed Hosts] をクリックします。
+. Managed Hosts ページで、プラグインまたはプラグインパッケージをアンインストールするホストを選択します。
+. 削除するプラグインの横にある * 削除 * > * 送信 * をクリックします。
+
+
+* 終了後 *
+
+5 分待ってから、そのホストにプラグインを再インストールします。この時間は、 SnapCenter GUI が管理対象ホストのステータスを更新するのに十分です。プラグインをすぐに再インストールすると、のインストールが失敗します。
+
+Linux 用の SnapCenter Plug-ins パッケージをアンインストールしている場合は、アンインストール固有のログファイルが _ / custom_location / snapcenter / log_ にあります。

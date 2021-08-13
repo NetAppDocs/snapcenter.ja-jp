@@ -1,0 +1,31 @@
+---
+permalink: protect-sce/reference_prerequisites_to_add_hosts_and_install_snapcenter_plug_in_for_microsoft_exchange_server.html 
+sidebar: sidebar 
+keywords:  
+summary: ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。 
+---
+= ホストを追加して SnapCenter Plug-in for Microsoft Exchange Server をインストールするための前提条件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。
+
+* iSCSI を使用している場合は、 iSCSI サービスが実行されている必要があります。
+* ローカル管理者権限を持つドメインユーザがあり、リモートホストに対してローカルログイン権限が付与されている必要があります。
+* スタンドアロン構成およびデータベース可用性グループ構成で Microsoft Exchange Server 2013 、 2016 、または 2019 を使用している必要があります。
+* Windows ホストにプラグインをインストールする場合、ビルトインでないクレデンシャルを指定する場合、またはユーザがローカルワークグループユーザに属している場合は、ホストで UAC を無効にする必要があります。
+* SnapCenter でクラスタノードを管理する場合は、クラスタ内のすべてのノードに対する管理者権限を持つユーザが必要です。
+* Exchange Server に対する管理者権限を持つユーザが必要です。
+* SnapManager for Microsoft Exchange Server および SnapDrive for Windows がすでにインストールされている場合は、 SnapDrive を使用してデータを確実に保護するために、同じ Exchange サーバに Plug-in for Exchange をインストールする前に、 SnapCenter for Windows で使用する VSS ハードウェアプロバイダの登録を解除する必要があります。
+* SnapManager for Microsoft Exchange Server と Plug-in for Exchange が同じサーバにインストールされている場合は、 SnapManager for Microsoft Exchange Server で作成されたすべてのスケジュールを Windows スケジューラから一時停止または削除する必要があります。
+* ホストがサーバから完全修飾ドメイン名（ FQDN ）に解決できる必要があります。hosts ファイルが解決可能になるように変更され、短縮名と FQDN の両方が hosts ファイルに指定されている場合は、 SnapCenter hosts ファイルに次の形式でエントリを作成します： _<IP_address> <host_fqdn><host_name> _ 。
+* 次のポートがファイアウォールでブロックされていないことを確認してください。ブロックされていないとホストの追加操作が失敗します。この問題を解決するには、ダイナミックポート範囲を設定します。詳細については、を参照してください https://docs.microsoft.com/en-us/troubleshoot/windows-server/networking/configure-rpc-dynamic-port-allocation-with-firewalls["Microsoft のドキュメント"^]。
++
+** Windows 2016 および Exchange 2016 のポート範囲 50000 ~ 51000
+** Windows Server 2012 R2 および Exchange 2013 用のポート範囲 6000-6500
+** Windows 2019 のポート範囲は 49152~65536 です
+
+
+

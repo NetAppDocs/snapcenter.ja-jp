@@ -1,0 +1,31 @@
+---
+permalink: protect-scc/reference_prerequisites_for_using_snapcenter_custom_plug_ins.html 
+sidebar: sidebar 
+keywords: Credentials 
+summary: SnapCenter Custom Plug-ins を使用するには、 SnapCenter 管理者が SnapCenter サーバをインストールして設定し、前提条件となるタスクを実行する必要があります。 
+---
+= SnapCenter Custom Plug-ins を使用するための前提条件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter Custom Plug-ins を使用するには、 SnapCenter 管理者が SnapCenter サーバをインストールして設定し、前提条件となるタスクを実行する必要があります。
+
+* SnapCenter サーバをインストールして設定します。
+* SnapCenter サーバにログインします。
+* 必要に応じて、ストレージシステム接続を追加し、クレデンシャルを作成して、 SnapCenter 環境を設定します。
+* ホストを追加し、プラグインをインストールしてアップロードします。
+* 必要に応じて、 Java 1.7 または Java 1.8 をプラグインホストにインストールします。
+* データパス（ LIF ）が複数ある場合、または dNFS 構成を使用している場合は、データベースホストで SnapCenter CLI を使用して次の作業を実行できます。
++
+** デフォルトでは、データベースホストのすべての IP アドレスが、クローンボリュームの Storage Virtual Machine （ SVM ）の NFS ストレージエクスポートポリシーに追加されます。特定の IP アドレスを使用する場合、または IP アドレスのサブセットに制限する場合は、 Set-PreferredHostIPsInStorageExportPolicy CLI を実行します。
+** SVM に複数のデータパス（ LIF ）がある場合は、 NFS クローンボリュームをマウントするための適切なデータパス（ LIF ）が SnapCenter によって選択されます。ただし、特定のデータパス（ LIF ）を指定する場合は、 Set-SvmPreferredDataPath CLI を実行する必要があります。コマンドで使用できるパラメータとその説明については、 RUNNING Get Help command_name _ を使用して参照できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2877144["SnapCenter ソフトウェアコマンドリファレンスガイド"^]。
+
+
+* バックアップレプリケーションが必要である場合は、 SnapMirror と SnapVault をセットアップします。
+* ポート 9090 がホストの他のアプリケーションで使用されていないことを確認します。
++
+SnapCenter で必要な他のポートに加え、ポート 9090 を SnapCenter カスタムプラグイン用に確保しておく必要があります。
+
+

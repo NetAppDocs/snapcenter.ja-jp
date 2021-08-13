@@ -1,0 +1,28 @@
+---
+permalink: install/concept_snapcenter_standard_controller_based_licenses.html 
+sidebar: sidebar 
+keywords: controller-based licenses, standard license 
+summary: FAS または AFF ストレージコントローラを使用する場合は、 SnapCenter の標準コントローラベースのライセンスが必要です。 
+---
+= SnapCenter の標準的なコントローラベースのライセンス
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+FAS または AFF ストレージコントローラを使用する場合は、 SnapCenter の標準コントローラベースのライセンスが必要です。
+
+コントローラベースのライセンスには次のような特徴があります。
+
+* Premium Bundle または Flash Bundle （ベースパックには含まれません）の購入に SnapCenter Standard のライセンスが含まれます。
+* 無制限のストレージ使用
+* ONTAP System Manager またはストレージクラスタのコマンドラインを使用して、 FAS または AFF のストレージコントローラに直接追加して有効にします
++
+
+NOTE: SnapCenter コントローラベースのライセンスについては、 SnapCenter GUI にライセンス情報を入力しません。
+
+* コントローラのシリアル番号にロックされています
+
+
+
+NOTE: お使いのコントローラにすでに SnapManagerSuite ライセンスがある場合は、 SnapCenter の標準コントローラベースのライセンス使用権が自動的に提供されます。SnapManagerSuite ライセンスと SnapCenter 標準のコントローラベースのライセンスは同じ意味で使用されますが、同じライセンスを指します。

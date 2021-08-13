@@ -1,0 +1,147 @@
+---
+permalink: install/reference_connection_and_port_requirements.html 
+sidebar: sidebar 
+keywords: ports, port requirements 
+summary: SnapCenter サーバとアプリケーションまたはデータベースのプラグインをインストールする前に、接続とポートの要件が満たされていることを確認する必要があります。 
+---
+= 接続とポートの要件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter サーバとアプリケーションまたはデータベースのプラグインをインストールする前に、接続とポートの要件が満たされていることを確認する必要があります。
+
+* アプリケーションはポートを共有できません。
++
+各ポートは、適切なアプリケーション専用にする必要があります。
+
+* デフォルトのポートを使用しない場合は、インストール時にカスタムポートを選択できます。
++
+プラグインポートは、インストール後にホストの変更ウィザードを使用して変更できます。
+
+* 固定ポートの場合は、デフォルトのポート番号を受け入れる必要があります。
+* ファイアウォール
++
+** ファイアウォール、プロキシ、またはその他のネットワークデバイスが接続を妨げないようにしてください。
+** SnapCenter のインストール時にカスタムポートを指定した場合は、プラグインホストに、 SnapCenter Plug-in Loader のそのポート用のファイアウォールルールを追加する必要があります。
+
+
+
+
+次の表に、各ポートとそのデフォルト値を示します。
+
+|===
+| ポートのタイプ | デフォルトのポート 
+
+
+ a| 
+SnapCenter ポート
+ a| 
+8146 （ HTTPS ）、双方向、カスタマイズ可能。 URL は、 https://server:8146_ を参照してください
+
+SnapCenter クライアント（ SnapCenter ユーザ）と SnapCenter サーバ間の通信に使用されます。プラグインホストから SnapCenter サーバへの通信にも使用されます。
+
+
+
+ a| 
+SnapCenter SMCore の通信ポート
+ a| 
+8145 （ HTTPS ）、双方向、カスタマイズ可能
+
+このポートは、 SnapCenter サーバと SnapCenter プラグインがインストールされているホストの間の通信に使用されます。
+
+
+
+ a| 
+MySQL ポート
+ a| 
+3306 （ HTTPS ）、双方向
+
+このポートは、 SnapCenter と MySQL リポジトリデータベースの間の通信に使用されます。
+
+SnapCenter サーバから MySQL サーバへのセキュアな接続を作成できます。 link:../install/concept_configure_secured_mysql_connections_with_snapcenter_server.html["詳細はこちら。"^]
+
+
+
+ a| 
+Windows プラグインホスト
+ a| 
+135 、 445 （ TCP ）
+
+ポート 135 および 445 に加え、 Microsoft が指定したダイナミックポート範囲も開いている必要があります。リモートインストール操作では、このポート範囲を動的に検索する Windows Management Instrumentation （ WMI ）サービスを使用します。
+
+サポートされているダイナミックポート範囲については、を参照してください https://support.microsoft.com/kb/832017["Windows のサービス概要とネットワークポート要件"^]
+
+ポートは、 SnapCenter サーバとプラグインをインストールするホストとの間の通信に使用されます。プラグインパッケージのバイナリを Windows プラグインホストにプッシュするには、プラグインホストでのみポートを開く必要があります。このポートはインストール後に閉じることができます。
+
+
+
+ a| 
+Linux または AIX プラグインホスト
+ a| 
+22 （ SSH ）
+
+ポートは、 SnapCenter サーバとプラグインをインストールするホストとの間の通信に使用されます。プラグインパッケージのバイナリを Linux または AIX プラグインのホストにコピーするために SnapCenter で使用されます。これらのポートを開いておくか、ファイアウォールまたは iptables から除外しておく必要があります。
+
+
+
+ a| 
+SnapCenter Plug-ins Package for Windows 、 SnapCenter Plug-ins Package for Linux または SnapCenter Plug-ins Package for AIX のいずれかです
+ a| 
+8145 （ HTTPS ）、双方向、カスタマイズ可能
+
+ポートは、 SMCore とプラグインパッケージがインストールされているホストの間の通信に使用されます。
+
+通信パスも、 SVM 管理 LIF と SnapCenter サーバの間で開いている必要があります。
+
+
+
+ a| 
+SnapCenter Plug-in for Oracle Database
+ a| 
+27216 、カスタマイズ可能
+
+デフォルトの JDBC ポートは、 Oracle データベースに接続するためにプラグイン for Oracle で使用されます。
+
+
+
+ a| 
+SnapCenter 用のカスタムプラグイン
+ a| 
+9090 （ HTTPS ）、固定
+
+これはカスタムプラグインホストでのみ使用される内部ポートで、ファイアウォールの例外は不要です。
+
+SnapCenter サーバとカスタムプラグイン間の通信はポート 8145 を介してルーティングされます。
+
+
+
+ a| 
+ONTAP クラスタまたは SVM の通信ポート
+ a| 
+443 （ HTTPS ）、双方向 80 （ HTTP ）、双方向
+
+このポートは、 SnapCenter サーバを実行するホストと SVM の間の通信に SAL （ストレージ抽象化レイヤ）で使用されます。現時点では、 SnapCenter プラグインホストと SVM の間の通信に、 SnapCenter for Windows プラグインホストの SAL でもポートが使用されています。
+
+
+
+ a| 
+SnapCenter Plug-in for SAP HANA Database のポート
+ a| 
+3instance_number13 または 3instance_number15 、 HTTP または HTTPS 、双方向、カスタマイズ可能です
+
+マルチテナントデータベースコンテナ（ MDC ）のシングルテナントの場合は、ポート番号は 13 で終わり、 MDC 以外の場合はポート番号は 15 で終わります。
+
+たとえば、 32013 はインスタンス 20 のポート番号で、 31015 はインスタンス 10 のポート番号です。
+
+
+
+ a| 
+ドメインコントローラの通信ポート
+ a| 
+認証が適切に機能するために、 Microsoft のマニュアルを参照して、ドメインコントローラのファイアウォールで開く必要があるポートを確認してください。
+
+SnapCenter サーバ、プラグインホスト、またはその他の Windows クライアントがユーザを認証できるように、ドメインコントローラで Microsoft の必要なポートを開く必要があります。
+
+|===

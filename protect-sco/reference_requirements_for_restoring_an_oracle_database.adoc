@@ -1,0 +1,33 @@
+---
+permalink: protect-sco/reference_requirements_for_restoring_an_oracle_database.html 
+sidebar: sidebar 
+keywords:  
+summary: Oracle データベースをリストアする前に、前提条件を満たしていることを確認する必要があります。 
+---
+= Oracle データベースをリストアするための要件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Oracle データベースをリストアする前に、前提条件を満たしていることを確認する必要があります。
+
+* リストアとリカバリの戦略を定義しておく必要があります。
+* ユーザが Snapshot コピーをミラーまたはバックアップにレプリケートする場合は、ソースボリュームとデスティネーションボリューム両方の Storage Virtual Machine （ SVM ）を SnapCenter 管理者がユーザに割り当てておく必要があります。
+* バックアップの一環としてアーカイブログが削除される場合は、必要なアーカイブログのバックアップを手動でマウントしておく必要があります。
+* 仮想マシンディスク（ VMDK ）上にある Oracle データベースをリストアする場合は、クローン VMDK を割り当てるための必要な数の空きスロットがゲストマシンにあることを確認してください。
+* データベースでセカンダリ保護が有効になっている場合は、そのデータベースに属するすべてのデータボリュームとアーカイブログボリュームが保護されていることを確認する必要があります。
+* 制御ファイルまたはフルデータベースのリストアを実行するには、 RAC One Node データベースが「 nomount 」状態であることを確認する必要があります。
+* NFS 環境に ASM データベースインスタンスがある場合は、 ASM ディスクパス /var/opt/snapcenter /cu/clones/*/*_ を asm_diskstring パラメータで定義された既存のパスに追加して、リカバリ操作の一環として ASM ログバックアップを正常にマウントする必要があります。
+* ASM_diskstring パラメータで、 ASMFD または configure _ORCL ： * _ を使用する場合は、 _ AFD ： * _ を設定します。
++
+
+NOTE: asm_diskstring パラメータの編集方法については、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Disk_paths_are_not_added_to_the_asm_diskstring_database_parameter["asm_diskstring にディスクパスを追加する方法"^]
+
+* OS 認証を無効にし、 Oracle データベースの Oracle データベース認証を有効にしている場合は、 _$ORACLE_HOME/network/admin_for ASM データベースで使用可能な * listener.ora * ファイルに静的リスナーを設定し、そのデータベースのデータファイルと制御ファイルをリストアする必要があります。
+* データベースサイズがテラバイト（ TB ）単位の場合は、 Set-SmConfigSettings コマンドを実行して、 SCORestoreTimeout パラメータの値を増やす必要があります。
+* vCenter に必要なすべてのライセンスがインストールされ、最新の状態であることを確認する必要があります。
++
+ライセンスがインストールされていない場合、または最新の状態でない場合は、警告メッセージが表示されます。警告を無視して続行すると、 RDM からのリストアが失敗します。
+
+

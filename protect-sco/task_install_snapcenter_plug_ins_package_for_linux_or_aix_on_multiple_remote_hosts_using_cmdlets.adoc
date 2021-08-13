@@ -1,0 +1,34 @@
+---
+permalink: protect-sco/task_install_snapcenter_plug_ins_package_for_linux_or_aix_on_multiple_remote_hosts_using_cmdlets.html 
+sidebar: sidebar 
+keywords: credentials, install, multiple hosts 
+summary: SmHostPackage PowerShell コマンドレットを使用して、複数のホストに SnapCenter Plug-ins Package for Linux または SnapCenter Plug-ins Package for AIX をインストールする必要があります。 
+---
+= コマンドレットを使用して、複数のリモートホストに Plug-in Package for Linux または AIX をインストールします
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Linux 用 SnapCenter Plug-ins Package または SnapCenter Plug-ins Package for AIX を複数のホストにインストールするには、 _ Install -SmHostPackage_PowerShell コマンドレットを使用する必要があります。
+
+* 必要なもの *
+
+プラグインパッケージをインストールする各ホストで、ローカル管理者の権限を持つドメインユーザとして SnapCenter にログインする必要があります。
+
+* 手順 *
+
+. PowerShell を起動します。
+. SnapCenter サーバホストで、 _Open-SmConnection_cmdlet を使用してセッションを確立し、クレデンシャルを入力します。
+. _ Install -SmHostPackage_cmdlet と、必要なパラメータを使用して、 Linux または SnapCenter Plug-in Package for AIX をインストール SnapCenter します。
++
+プラグインを手動でインストール済みで、プラグインをインストールするための要件をホストが満たしているかどうかを検証しない場合は、 -skipprecheck _ オプションを使用できます。
+
++
+
+NOTE: ファイアウォールの拒否ルールで指定されているプラグインポートのファイアウォールステータスは、事前確認スクリプトで検証されません。
+
+. リモートインストールのクレデンシャルを入力します。
+
+
+コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。

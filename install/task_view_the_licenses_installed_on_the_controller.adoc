@@ -1,0 +1,56 @@
+---
+permalink: install/task_view_the_licenses_installed_on_the_controller.html 
+sidebar: sidebar 
+keywords: view licenses, controller 
+summary: ONTAP コマンドラインを使用してコントローラにインストールされているすべてのライセンスを表示し、 SnapManagerSuite ライセンスがすでにインストールされているかどうかを確認できます。 
+---
+= コントローラにインストールされているライセンスを表示します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP コマンドラインを使用してコントローラにインストールされているすべてのライセンスを表示し、 SnapManagerSuite ライセンスがすでにインストールされているかどうかを確認できます。
+
+FAS または AFF システムのクラスタ管理者である必要があります。
+
+
+NOTE: SnapCenter の標準コントローラベースのライセンスが、コントローラに SnapManagerSuite ライセンスとして表示されます。
+
+* 手順 *
+
+. ONTAP コマンドラインを使用してネットアップコントローラにログインします。
+. license show コマンドを入力し、出力を表示して SnapManagerSuite ライセンスがインストールされているかどうかを確認します。
++
+[listing]
+----
+cluster1::> license show
+(system license show)
+
+Serial Number: 1-80-0000xx
+Owner: cluster1
+Package           Type     Description              Expiration
+----------------- -------- ---------------------    ---------------
+Base              site     Cluster Base License     -
+
+Serial Number: 1-81-000000000000000000000000xx
+Owner: cluster1-01
+Package           Type     Description              Expiration
+----------------- -------- ---------------------    ---------------
+NFS               license  NFS License              -
+CIFS              license  CIFS License             -
+iSCSI             license  iSCSI License            -
+FCP               license  FCP License              -
+SnapRestore       license  SnapRestore License      -
+SnapMirror        license  SnapMirror License       -
+FlexClone         license  FlexClone License        -
+SnapVault         license  SnapVault License        -
+SnapManagerSuite  license  SnapManagerSuite License -
+----
++
+この例では、 SnapManagerSuite ライセンスをインストールするため、 SnapCenter の追加ライセンスは必要ありません。
+
++
+SnapManagerSuite ライセンスが表示されない場合は、コントローラのシリアル番号を取得し、からライセンスを取得する必要があります https://mysupport.netapp.com/site/["ネットアップサポートサイト"^]。
+
+

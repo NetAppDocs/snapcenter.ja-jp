@@ -1,0 +1,18 @@
+---
+permalink: install/concept_network_load_balanacing_and_application_request_routing_requirements.html 
+sidebar: sidebar 
+keywords: NLB, configure 
+summary: SnapCenter ハイアベイラビリティを設定するには、 Microsoft Network Load Balancing （ NLB ）を設定します。 
+---
+= Microsoft Network Load Balancer を手動で設定します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter ハイアベイラビリティを設定するには、 Microsoft Network Load Balancing （ NLB ）を設定します。SnapCenter 4.2 以降では、高可用性を実現するために、 SnapCenter 以外のインストール環境で NLB を手動で設定する必要があります。
+
+SnapCenter でネットワーク負荷分散 (NLB) を構成する方法の詳細については、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_NLB_and_ARR_with_SnapCenter["NLB に SnapCenter を設定する方法"^]。
+
+
+NOTE: SnapCenter 4.1.1 以前では、 SnapCenter のインストール時にネットワーク負荷分散 (NLB) の構成がサポートされていました。

@@ -1,0 +1,15 @@
+---
+permalink: reference_release_notes.html 
+sidebar: sidebar 
+keywords: release notes, snapcenter 
+summary: このリリースの SnapCenter サーバおよび SnapCenter プラグインパッケージに関する重要な情報を提供します。これには、解決済みの問題、既知の問題、注意事項、および制限事項が含まれます。 
+---
+= リリースノート
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+このリリースの SnapCenter サーバおよび SnapCenter プラグインパッケージに関する重要な情報を提供します。これには、解決済みの問題、既知の問題、注意事項、および制限事項が含まれます。
+
+詳細については、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2877281["SnapCenter ソフトウェア 4.5 リリースノート"^]。

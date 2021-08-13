@@ -1,0 +1,22 @@
+---
+permalink: protect-scc/concept_what_you_can_do_with_the_snapcenter_custom_plug_ins.html 
+sidebar: sidebar 
+keywords:  
+summary: SnapCenter Custom Plug-ins を使用してデータ保護処理を実行できます。 
+---
+= SnapCenter Custom Plug-ins の機能
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter Custom Plug-ins を使用してデータ保護処理を実行できます。
+
+* データベース、インスタンス、ドキュメント、表領域などのリソースを追加します。
+* バックアップを作成します
+* バックアップからリストアします
+* バックアップをクローニングする。
+* バックアップ処理のスケジュールを設定します。
+* バックアップ、リストア、クローニングの各処理を監視する。
+* バックアップ、リストア、クローニングの各処理のレポートを表示します。
+

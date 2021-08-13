@@ -1,0 +1,59 @@
+---
+permalink: protect-sco/concept_prepare_for_protecting_oracle_databases.html 
+sidebar: sidebar 
+keywords: oracle, preparation for protection, prerequisites 
+summary: バックアップ、クローニング、リストアなどのデータ保護処理を実行する場合は、事前に戦略を定義し、環境をセットアップする必要があります。また、 SnapVault サーバで SnapMirror テクノロジと SnapCenter テクノロジを使用するように設定することもできます。 
+---
+= Oracle データベースの保護を準備する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+バックアップ、クローニング、リストアなどのデータ保護処理を実行する場合は、事前に戦略を定義し、環境をセットアップする必要があります。また、 SnapVault サーバで SnapMirror テクノロジと SnapCenter テクノロジを使用するように設定することもできます。
+
+SnapVault テクノロジと SnapMirror テクノロジを活用するには、ストレージデバイス上のソースボリュームとデスティネーションボリューム間のデータ保護関係を設定して初期化する必要があります。これらのタスクを実行するには、 NetAppSystem Manager を使用するか、ストレージコンソールのコマンドラインを使用します。
+
+Plug-in for Oracle Database を使用する前に、 SnapCenter 管理者が SnapCenter Server のインストールと設定を行い、前提条件となるタスクを実行する必要があります。
+
+* SnapCenter サーバをインストールして設定します。 link:../install/task_install_the_snapcenter_server_using_the_install_wizard.html["詳細はこちら。"^]
+* ストレージシステム接続を追加して SnapCenter 環境を設定します。 link:../install/task_add_storage_systems.html["詳細はこちら。"^]
++
+
+NOTE: SnapCenter では、異なるクラスタにある同じ名前の SVM は複数サポートされません。SVM 登録またはクラスタ登録を使用して SnapCenter に登録する SVM は、それぞれ一意である必要があります。
+
+* インストールユーザ用に、認証モードを Linux または AIX に設定してクレデンシャルを作成します。 link:../protect-sco/task_set_up_credentials_for_installing_the_plug_in_package_for_linux_or_aix.html["詳細はこちら。"^]
+* ホストを追加し、プラグインをインストールし、リソースを検出します。
+* VMware RDM LUN または VMDK に存在する Oracle データベースを SnapCenter Server で保護する場合は、 SnapCenter Plug-in for VMware vSphere を導入して、 SnapCenter にプラグインを登録する必要があります。
+* Linux または AIX ホストに Java をインストールします。
++
+を参照してください link:../protect-sco/reference_host_requirements_for_installing_the_snapcenter_plug_in_package_for_linux.html["Linux ホストの要件"^] または  を参照してください。
+
+* アプリケーションファイアウォールのタイムアウト値は 3 時間以上に設定する必要があります。
+* NFS 環境で Oracle データベースを使用している場合は、マウント、クローニング、検証、リストアの各処理を実行できるように、プライマリストレージまたはセカンダリストレージ用に少なくとも 1 つの NFS データ LIF を設定しておく必要があります。
+* データパス（ LIF ）が複数ある場合、または dNFS 構成を使用している場合は、データベースホストで SnapCenter CLI を使用して次の作業を実行できます。
++
+** デフォルトでは、データベースホストのすべての IP アドレスが、クローンボリュームの Storage Virtual Machine （ SVM ）の NFS ストレージエクスポートポリシーに追加されます。特定の IP アドレスを使用する場合、または IP アドレスのサブセットに制限する場合は、 Set-PreferredHostIPsInStorageExportPolicy CLI を実行します。
+** SVM に複数のデータパス（ LIF ）がある場合は、 NFS クローンボリュームをマウントするための適切なデータパス（ LIF ）が SnapCenter によって選択されます。ただし、特定のデータパス（ LIF ）を指定する場合は、 Set-SvmPreferredDataPath CLI を実行する必要があります。詳細については、コマンドリファレンスガイドを参照してください。
+
+
+* SAN 環境で Oracle データベースを使用している場合は、次のガイドに記載された推奨事項に従って SAN 環境が設定されていることを確認してください。
++
+** https://library.netapp.com/ecm/ecm_download_file/ECMLP2547957["Linux Unified Host Utilities の推奨されるホスト設定"^]
+** https://library.netapp.com/ecm/ecm_download_file/ECMLP2547958["『 Using Linux Hosts with ONTAP storage 』を参照してください"^]
+** https://library.netapp.com/ecm/ecm_download_file/ECMP1119218["AIX Host Utilities の影響を受けるホスト設定"^]
+
+
+* Oracle Linux または RHEL オペレーティングシステムの LVM で Oracle データベースを使用している場合は、最新バージョンの論理ボリューム管理（ LVM ）をインストールします。
+* SnapManager for Oracle を使用していて、 SnapCenter Plug-in for Oracle Database に移行する場合は、 sccli コマンド sc-migrate を使用して、プロファイルを SnapCenter のポリシーおよびリソースグループに移行できます。
+* バックアップレプリケーションが必要である場合は、 ONTAP で SnapMirror と SnapVault を設定します
+
+
+SnapCenter 4.1.1 ユーザの場合、 SnapCenter Plug-in for VMware vSphere 4.1.1 のドキュメントには、仮想化されたデータベースとファイルシステムの保護に関する情報が記載されています。SnapCenter 4.2.x ユーザの場合、 NetApp Data Broker 1.0 および 1.0.1 のドキュメントでは、 Linux ベースの NetApp Data Broker 仮想アプライアンス（オープン仮想アプライアンス形式）が提供する SnapCenter Plug-in for VMware vSphere を使用して、仮想化されたデータベースとファイルシステムを保護する方法について説明しています。SnapCenter 4.3.x を使用する場合は、 Linux ベースの SnapCenter Plug-in for VMware vSphere 仮想アプライアンス（オープン仮想アプライアンス形式）を使用して仮想化されたデータベースとファイルシステムを保護する方法について、 SnapCenter Plug-in for VMware vSphere 4.3 のドキュメントを参照してください。
+
+* 詳細はこちら *
+
+* http://mysupport.netapp.com/matrix["Interoperability Matrix Tool で確認してください"^]
+* https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/index.html["SnapCenter Plug-in for VMware vSphere のドキュメント"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Data_protection_operation_fails_in_a_non-multipath_environment_in_RHEL_7_and_later["RHEL 7 以降の非マルチパス環境でデータ保護処理が失敗する"^]
+

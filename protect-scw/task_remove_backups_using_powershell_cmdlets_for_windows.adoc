@@ -1,0 +1,38 @@
+---
+permalink: protect-scw/task_remove_backups_using_powershell_cmdlets_for_windows.html 
+sidebar: sidebar 
+keywords: backups 
+summary: Remove-SmBackup コマンドレットを使用すると、他のデータ保護処理に不要になったバックアップを削除できます。 
+---
+= PowerShell コマンドレットを使用してバックアップを削除します
+:icons: font
+:imagesdir: ../media/
+
+
+Remove-SmBackup コマンドレットを使用すると、他のデータ保護処理に不要になったバックアップを削除できます。
+
+PowerShell コマンドレットを実行できるように PowerShell 環境を準備しておく必要があります。
+
+コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+
+* 手順 *
+
+. Open-SmConnection コマンドレットを使用して、指定したユーザの SnapCenter サーバとの接続セッションを開始します。
++
+[listing]
+----
+Open-SmConnection  -SMSbaseurl  https:\\snapctr.demo.netapp.com:8146/
+----
+. Remove-SmBackup コマンドレットを使用して 1 つ以上のバックアップを削除します。
++
+この例では、バックアップ ID を指定してバックアップを 2 つ削除しています。
+
++
+[listing]
+----
+Remove-SmBackup -BackupIds 3,4
+Remove-SmBackup
+Are you sure want to remove the backup(s).
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
+----
+

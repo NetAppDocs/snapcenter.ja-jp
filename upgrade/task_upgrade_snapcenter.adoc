@@ -1,0 +1,131 @@
+---
+permalink: upgrade/task_upgrade_snapcenter.html 
+sidebar: sidebar 
+keywords: upgrade, upgrade snapcenter server 
+summary: SnapCenter サーバインストーラの実行ファイルを使用して、 SnapCenter サーバをアップグレードできます。 
+---
+= SnapCenter サーバをアップグレードします
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter サーバインストーラの実行ファイルを使用して、 SnapCenter サーバをアップグレードできます。
+
+* 必要なもの *
+
+* SnapCenter サーバホストは、 Windows アップデートが適用された最新の状態である必要があります。システムの再起動が保留されることはありません。
+* アップグレード処理を開始する前に、他の処理が実行されていないことを確認する必要があります。
+* ジョブが実行されていないことを確認したら、 SnapCenter リポジトリ（ MySQL ）データベースをバックアップする必要があります。
++
+詳細については、を参照してください link:../admin/concept_manage_the_snapcenter_server_repository.html#back-up-the-snapcenter-repository["SnapCenter リポジトリをバックアップします"^]。
+
+* SnapCenter サーバホストまたはプラグインホストで変更した SnapCenter 構成ファイルをすべてバックアップしておく必要があります。
++
+SnapCenter 構成ファイルの例： SnapDrive Service.exe.config 、 SMCoreServiceHost.exe.config など。
+
+
+
+* このタスクについて *
+
+* アップグレード中、ホストは自動的にメンテナンスモードになり、スケジュールされたジョブをホストが実行できなくなります。アップグレード後、ホストは自動的にメンテナンスモードから解除されます。
+* アップグレード操作を開始する前に、ホストを手動でメンテナンスモードにした場合は、アップグレード後に、 [*Hosts*>*Activate Schedule] をクリックして、ホストを手動でメンテナンスモードから解除する必要があります。
+* サポートされているアップグレードパス
++
+|===
+| 使用するポート | 可能です 
+
+
+ a| 
+4.0.x
+ a| 
+** 4.1.x または 4.2.x に直接アップグレードしてください
+** 4.3.x にアップグレードするには、まず 4.1.x または 4.2.x にアップグレードしてから、 4.3.x にアップグレードします
+** 4.4.x にアップグレードするには、まず 4.2.x にアップグレードしてから、 4.4.x にアップグレードします
+** 4.2.x にアップグレードしてから 4.4.x にアップグレードし、その後 4.5 にアップグレードします
+
+
+
+
+ a| 
+4.1.x
+ a| 
+** 4.2.x または 4.3.x に直接アップグレードします
+** 4.2.x または 4.3.x にアップグレードしてから、 4.4.x にアップグレードしてください
+** 4.3.x にアップグレードしてから 4.5 にアップグレードします
+
+
+
+
+ a| 
+4.2.x
+ a| 
+** 4.3.x または 4.4.x に直接アップグレードします
+** 4.3.x または 4.4.x にアップグレードしてから 4.5 にアップグレードします
+
+
+
+
+ a| 
+4.3.x
+ a| 
+4.4.x または 4.5 に直接アップグレードします
+
+
+
+ a| 
+4.4.x
+ a| 
+4.5 に直接アップグレードします
+
+|===
+
+
+* 手順 *
+
+. ネットアップサポートサイトから SnapCenter サーバインストールパッケージをダウンロードします。
++
+https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab[]
+
+. C ： \Program Files\NetApp\Virtual \SnapCenter WebApp にある Web.config のコピーを作成します。
+. Windows タスクスケジュールからプラグインホストに関連する SnapCenter スケジュールをエクスポートして、アップグレードが失敗した場合にプラグインホストを使用してスケジュールをリストアできるようにします。
++
+「 cd d:\\SCBackup `'chtasks /quere/XML/TN TASKNAME>"D:\SCBackup\TASKNAME.xml" 」
+
+. リポジトリのバックアップが設定されていない場合は、 SnapCenter MySQL データベースダンプを作成します。
++
+「 d:\\SCBackup````m ysqldump--all-dtransaction--add-drop-database --triggers--events--u root-p>D:\SCBackup\SCRepoBackup.dmp 」を参照してください
+
++
+プロンプトが表示されたら、パスワードを入力します。
+
+. ダウンロードした .exe ファイルをダブルクリックして、 SnapCenter Server のアップグレードを開始します。
++
+アップグレードを開始すると、すべての事前確認が実行され、最小要件が満たされていない場合には、対応するエラーまたは警告メッセージが表示されます。警告メッセージは無視してインストールを続行できます。ただし、エラーは修正する必要があります。
+
++
+
+NOTE: SnapCenter では、以前のバージョンの SnapCenter Server のインストール時に提供された既存の MySQL Server リポジトリデータベースのパスワードが引き続き使用されます。
+
+. [* アップグレード ] をクリックします。
++
+どの段階でも、 *Cancel* ボタンをクリックすると、アップグレードワークフローがキャンセルされます。SnapCenter サーバを以前の状態にロールバックしません。
+
++
+|===
+
+
+| * ベストプラクティス： * SnapCenter からログアウトしてログインするか、新しいブラウザを開いて SnapCenter GUI にアクセスしてください。 
+|===
+
+
+* 終了後 *
+
+* sudo ユーザを使用してプラグインをインストールした場合は、 _C ： \ProgramData\NetApp\SnapCenter \Package Repository\ORACLE_checksum.txt_ にある sha224 キーをコピーして、 /etc/sudoers_file を更新します。
+* ホスト上のリソースの新規検出を実行する必要があります。
++
+ホストのステータスが stopped と表示される場合は、しばらく待ってから新しい検出を実行できます。また、 *HostRefreshInterval* パラメータの値（デフォルト値は 3600 秒）を 10 分を超える任意の値に変更することもできます。
+
+* アップグレードに失敗した場合は、失敗したインストールをクリーンアップし、以前のバージョンの SnapCenter を再インストールして、 NSM データベースを以前の状態にリストアする必要があります。
+* SnapCenter サーバホストをアップグレードしたあと、ストレージシステムを追加する前にプラグインもアップグレードする必要があります。
+

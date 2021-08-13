@@ -1,0 +1,40 @@
+---
+section: admin
+title: SnapCenter サーバとプラグインを管理します
+entries:
+- title: ダッシュボードを表示します
+  entries:
+  - title: ダッシュボードの概要
+    url: "/admin/concept_overview_of_dashboard.html"
+  - title: ダッシュボードに情報を表示する方法
+    url: "/admin/task_how_to_view_information_on_the_dashboard.html"
+  - title: ダッシュボードからジョブのステータスレポートを要求します
+    url: "/admin/task_request_status_reports_of_the_jobs_from_the_dashboard.html"
+  - title: ダッシュボードから保護ステータスのレポートを要求します
+    url: "/admin/task_request_reports_of_the_protection_status_from_the_dashboard.html"
+- title: RBAC を管理します
+  url: "/admin/task_manage_rbac.html"
+- title: ホストを管理します
+  url: "/admin/concept_manage_hosts.html"
+- title: Resources ページでサポートされている操作
+  url: "/admin/concept_what_operations_can_be_performed_from_the_resource_page.html"
+- title: ポリシーを管理する
+  url: "/admin/concept_manage_policies.html"
+- title: リソースグループの管理
+  url: "/admin/task_manage_resource_groups.html"
+- title: バックアップを管理します
+  url: "/admin/concept_manage_backups.html"
+- title: クローンを削除します。
+  url: "/admin/task_delete_clones.html"
+- title: ジョブ、スケジュール、イベント、およびログを監視する
+  url: "/admin/concept_monitor_jobs_schedules_events_and_logs.html"
+- title: SnapCenter のレポート機能の概要
+  url: "/admin/concept_overview_of_snapcenter_reports.html"
+- title: SnapCenter サーバリポジトリを管理します
+  url: "/admin/concept_manage_the_snapcenter_server_repository.html"
+- title: 信頼できないドメインのリソースを管理します
+  url: "/admin/concept_manage_resources_of_untrusted_domains.html"
+- title: ストレージシステムを管理
+  url: "/admin/concept_manage_the_storage_system.html"
+- title: EMS データ収集を管理します
+  url: "/admin/concept_manage_ems_data_collection.html"

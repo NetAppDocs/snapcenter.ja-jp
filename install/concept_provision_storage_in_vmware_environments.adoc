@@ -1,0 +1,13 @@
+---
+permalink: install/concept_provision_storage_in_vmware_environments.html 
+sidebar: sidebar 
+keywords:  
+summary: VMware 環境での SnapCenter Plug-in for Microsoft Windows を使用して、 LUN の作成と管理、および Snapshot バックアップコピーの管理を行うことができます。 
+---
+= VMware 環境でストレージをプロビジョニング
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VMware 環境での SnapCenter Plug-in for Microsoft Windows を使用して、 LUN の作成と管理、および Snapshot バックアップコピーの管理を行うことができます。

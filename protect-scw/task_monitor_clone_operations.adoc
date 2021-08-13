@@ -1,0 +1,41 @@
+---
+permalink: protect-scw/task_monitor_clone_operations.html 
+sidebar: sidebar 
+keywords:  
+summary: Jobs ページを使用して、 SnapCenter のクローニング処理の進捗状況を監視できます。処理の進捗状況をチェックして、処理が完了するタイミングや問題があるかどうかを確認できます。 
+---
+= クローニング処理を監視する
+:icons: font
+:imagesdir: ../media/
+
+
+Jobs ページを使用して、 SnapCenter のクローニング処理の進捗状況を監視できます。処理の進捗状況をチェックして、処理が完了するタイミングや問題があるかどうかを確認できます。
+
+* このタスクについて *
+
+以下のアイコンがジョブページに表示され、操作の状態を示します。
+
+* image:../media/progress_icon.gif["実行中のアイコン"] 実行中です
+* image:../media/success_icon.gif["完了アイコン"] 正常に完了しました
+* image:../media/failed_icon.gif["失敗したアイコン"] 失敗しました
+* image:../media/warning_icon.gif["警告アイコンが表示されています"] 警告で終了したか、警告が原因で起動できませんでした
+* image:../media/verification_job_in_queue.gif["検証ジョブをキューに格納します"] キューに登録され
+* image:../media/cancel_icon.gif[""] キャンセルされました
+
+
+* 手順 *
+
+. 左側のナビゲーションペインで、 *Monitor* をクリックします。
+. [* Monitor*] ページで、 [* Jobs] をクリックします。
+. [* ジョブ * ] ページで、次の手順を実行します。
++
+.. をクリックします image:../media/filter_icon.gif[""] をクリックして、クローニング処理のみが表示されるようにリストをフィルタリングします。
+.. 開始日と終了日を指定します。
+.. [*Type*]( タイプ *) ドロップダウンリストから '[*Clone*]( クローン *) を選択します
+.. [ * Status * ] ドロップダウン・リストから、クローンのステータスを選択します。
+.. [ 適用（ Apply ） ] をクリックして、正常に完了した操作を表示する。
+
+
+. クローンジョブを選択し、 * Details * をクリックして、ジョブの詳細を表示します。
+. ［ * ジョブの詳細 * ］ ページで、 ［ * ログの表示 * ］ をクリックします。
+

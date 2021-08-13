@@ -1,0 +1,15 @@
+---
+permalink: install/install_workflow.html 
+sidebar: sidebar 
+keywords: install, snapcenter server, license, storage system, RBAC, provision storage, workflow 
+summary: ワークフロー図は、 SnapCenter サーバのインストールと設定の手順を示しています。 
+---
+= インストールワークフロー
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+このワークフローでは、 SnapCenter サーバのインストールと設定に必要なさまざまなタスクについて説明します。
+
+image::../media/install_snapcenter_server.png[SnapCenter サーバをインストールします]

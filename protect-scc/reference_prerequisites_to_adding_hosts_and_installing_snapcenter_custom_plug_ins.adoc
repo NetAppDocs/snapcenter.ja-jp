@@ -1,0 +1,63 @@
+---
+permalink: protect-scc/reference_prerequisites_to_adding_hosts_and_installing_snapcenter_custom_plug_ins.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。Custom Plug-ins は、 Windows と Linux のどちらの環境でも使用できます。 
+---
+= ホストを追加して SnapCenter Custom Plug-ins をインストールするための前提条件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。Custom Plug-ins は、 Windows と Linux のどちらの環境でも使用できます。
+
+* カスタムプラグインを作成しておく必要があります。詳細については、開発者情報を参照してください。
++
+link:concept_develop_a_plug_in_for_your_application.html["アプリケーション用のプラグインを開発します"]
+
+* MySQL または DB2 アプリケーションを管理する場合は、ネットアップが提供している MySQL および DB2 のカスタムプラグインをダウンロードしておく必要があります。
+* Linux ホストまたは Windows ホストに Java 1.8 / 64 ビットをインストールしておく必要があります。
+* Windows ホストにプラグインをインストールする場合、ビルトインでないクレデンシャルを指定する場合、またはユーザがローカルワークグループユーザに属している場合は、ホストで UAC を無効にする必要があります。
+* カスタムプラグインが、ホストの追加処理を実行するクライアントホストにインストールされている必要があります。
+
+
+
+
+== 全般
+
+iSCSI を使用している場合は、 iSCSI サービスが実行されている必要があります。
+
+
+
+== Windows ホスト
+
+* ローカル管理者権限を持つドメインユーザがあり、リモートホストに対してローカルログイン権限が付与されている必要があります。
+* SnapCenter でクラスタノードを管理する場合は、クラスタ内のすべてのノードに対する管理者権限を持つユーザが必要です。
+
+
+
+
+== Linux ホスト
+
+* root ユーザまたは root 以外のユーザ用にパスワードベースの SSH 接続を有効にしておく必要があります。
+* Linux ホストに Java 1.8 64 ビットがインストールされている必要があります。
++
+SnapCenter Server ホストに Windows 2019 または Windows 2016 を使用している場合は、 Java 1.8 、 64 ビットをインストールする必要があります。要件の最新情報については、 Interoperability Matrix Tool （ IMT ）を参照してください。
+
++
+http://www.java.com/en/download/manual.jsp["すべてのオペレーティングシステム用の Java のダウンロード"]
+
++
+http://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool で確認できます"]
+
+* いくつかのパスにアクセスできるように root 以外のユーザに sudo 権限を設定する必要があります。visudo Linux ユーティリティを使用して、 /etc/sudoers ファイルに次の行を追加します。例：
++
+[listing]
+----
+Cmnd_Alias SCCMD = /opt/NetApp/snapcenter/scc/bin/scc <non_root_user> ALL=(ALL) NOPASSWD:SETENV: SCCMD
+----
++
+non_root_user は、作成した root 以外のユーザの名前です。
+
+

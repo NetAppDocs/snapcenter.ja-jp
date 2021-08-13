@@ -1,0 +1,41 @@
+---
+permalink: protect-scsql/concept_what_you_can_do_with_the_snapcenter_plug_in_for_microsoft_sql_server.html 
+sidebar: sidebar 
+keywords:  
+summary: SnapCenter Plug-in for Microsoft SQL Server をインストールした環境では、 SnapCenter を使用して SQL Server データベースをバックアップ、リストア、およびクローニングすることができます。 
+---
+= SnapCenter Plug-in for Microsoft SQL Server の機能
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter Plug-in for Microsoft SQL Server をインストールした環境では、 SnapCenter を使用して SQL Server データベースをバックアップ、リストア、およびクローニングすることができます。
+
+SQL Server データベースおよびデータベースリソースのバックアップ処理、リストア処理、およびクローニング処理で実行できるタスクを次に示します。
+
+* SQL Server データベースおよび関連するトランザクションログをバックアップする
++
+master システムデータベースと msdb システムデータベースについては、ログバックアップを作成できません。model システムデータベースのログバックアップは作成できます。
+
+* データベースリソースをリストアする
++
+** master システムデータベース、 msdb システムデータベース、および model システムデータベースをリストアできます。
+** 複数のデータベース、インスタンス、および可用性グループをリストアすることはできません。
+** システムデータベースを別のパスにリストアすることはできません。
+
+
+* 本番環境のデータベースのポイントインタイムクローンを作成します
++
+tempdb システムデータベースでは、バックアップ、リストア、クローニング、クローニングのライフサイクル処理を実行できません。
+
+* バックアップ処理をただちに検証するか、あとで検証する
++
+SQL Server システムデータベースの検証はサポートされていません。SnapCenter がデータベースのクローンを作成し、検証処理を実行します。SnapCenter では SQL Server システムデータベースをクローニングできないため、これらのデータベースの検証はサポートされていません。
+
+* バックアップ処理とクローニング処理のスケジュールを設定する
+* バックアップ処理、リストア処理、クローニング処理を監視する
+
+
+
+NOTE: Plug-in for SQL Server では、 SMB 共有の SQL Server データベースのバックアップとリカバリはサポートされません。

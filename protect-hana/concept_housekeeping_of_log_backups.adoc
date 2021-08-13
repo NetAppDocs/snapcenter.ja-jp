@@ -1,0 +1,15 @@
+---
+permalink: protect-hana/concept_housekeeping_of_log_backups.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: SnapCenter は、ストレージシステムレベルおよびファイルシステムレベルでの不要なログおよびデータバックアップの削除を、 SAP HANA のバックアップカタログ内で管理します。 
+---
+= SnapCenter による不要なログおよびデータバックアップの削除の管理
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter は、ストレージシステムレベルおよびファイルシステムレベルでの不要なログおよびデータバックアップの削除を、 SAP HANA のバックアップカタログ内で管理します。
+
+保持設定に基づいて、プライマリストレージまたはセカンダリストレージの Snapshot コピーと SAP HANA のカタログ内の対応するエントリが削除されます。SAP HANA のカタログのエントリは、バックアップやリソースグループを削除したときにも削除されます。

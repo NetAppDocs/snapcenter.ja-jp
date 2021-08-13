@@ -1,0 +1,23 @@
+---
+permalink: protect-scsql/task_monitor_dataprotection_operations_on_sql_resources_in_the_activity_pane.html 
+sidebar: sidebar 
+keywords: SnapCenter Server 
+summary: '[ アクティビティ（ Activity ） ] パネルには、最近実行された 5 つの操作が表示されまた、操作が開始された日時と操作のステータスも表示されます。' 
+---
+= ［ アクティビティ ］ ペインで、 SQL リソースのデータ保護操作を監視します
+:icons: font
+:imagesdir: ../media/
+
+
+[ アクティビティ（ Activity ） ] パネルには、最近実行された 5 つの操作が表示されまた、操作が開始された日時と操作のステータスも表示されます。
+
+[Activity （アクティビティ） ] ペインには、バックアップ、リストア、クローン、およびスケジュールされたバックアップ処理に関する情報が表示されます。Plug-in for SQL Server または Plug-in for Exchange Server を使用している場合は、再シード処理に関する情報もアクティビティペインに表示されます。
+
+* 手順 *
+
+. 左側のナビゲーションペインで、 * リソース * をクリックし、リストから適切なプラグインを選択します。
+. をクリックします image:../media/activity_pane_icon.gif[""] をクリックして、最近の 5 つの操作を表示します。
++
+いずれかの処理をクリックすると、その処理の詳細がジョブの詳細ページに表示されます。
+
+

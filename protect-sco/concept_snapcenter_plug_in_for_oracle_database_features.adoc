@@ -1,0 +1,59 @@
+---
+permalink: protect-sco/concept_snapcenter_plug_in_for_oracle_database_features.html 
+sidebar: sidebar 
+keywords: plug-in for Oracle features 
+summary: Plug-in for Oracle Database は、 Linux または AIX ホスト上で Oracle データベースと統合されるほか、ストレージシステム上でネットアップのテクノロジと統合されます。 
+---
+= Plug-in for Oracle Database の特長
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Plug-in for Oracle Database は、 Linux または AIX ホスト上で Oracle データベースと統合されるほか、ストレージシステム上でネットアップのテクノロジと統合されます。
+
+* 統一されたグラフィカルユーザインターフェイス
++
+SnapCenter のインターフェイスは、すべてのプラグインと環境で標準化され、一貫しています。SnapCenter のインターフェイスから、すべてのプラグインで、バックアップ、リストア、リカバリ、クローニングの各処理を一貫した方法で実行できるほか、ダッシュボードビューで概要を把握したり、ロールベースアクセス制御（ RBAC ）を設定したり、ジョブを監視したりすることができます。
+
+* 中央管理の自動化
++
+バックアップ処理とクローニング処理のスケジュールを設定したり、ポリシーベースのバックアップ保持を設定したり、リストア処理を実行したりできます。SnapCenter から E メールアラートを送信するように設定して、環境をプロアクティブに監視することもできます。
+
+* 無停止の NetApp Snapshot コピーテクノロジ
++
+SnapCenter では、 Plug-in for Oracle Database および Plug-in for UNIX でネットアップの Snapshot コピーテクノロジを使用してデータベースがバックアップされます。Snapshot コピーはストレージスペースを最小限しか消費しません。
+
+
+
+Plug-in for Oracle Database には、次のようなメリットもあります。
+
+* バックアップ、リストア、クローニング、マウント、アンマウント、 検証ワークフローなどがあります
+* ホストで設定されている Oracle データベースの自動検出
+* Oracle Recovery Manager （ RMAN ）を使用したカタログ化とカタログ化解除がサポートされます。
+* セキュリティが RBAC でサポートされ、ロール委譲が一元化されます
++
+また、許可された SnapCenter ユーザにアプリケーションレベルの権限を付与するようにクレデンシャルを設定することもできます。
+
+* NetApp FlexClone テクノロジを使用して、本番環境のデータベースのスペース効率に優れたポイントインタイムコピーを作成し、テストまたはデータの抽出を行います
++
+クローンを作成するストレージシステムに FlexClone ライセンスが必要です。
+
+* SAN 環境および ASM 環境でバックアップを作成する際に、 ONTAP の整合グループ（ CG ）機能がサポートされます
+* 自動化された無停止のバックアップ検証
+* 複数のデータベースホストで同時に複数のバックアップを実行できます
++
+1 回の処理で、 1 つのホストのデータベースが同じボリュームを共有する場合に複数の Snapshot コピーが統合されます。
+
+* 物理インフラと仮想インフラがサポートされます
+* NFS 、 iSCSI 、ファイバチャネル（ FC ）、 RDM 、 NFS および VMFS 経由の VMDK 、 NFS 、 SAN 、 RDM 、および VMDK 経由の ASM がサポートされます
+* ONTAP の選択的 LUN マップ（ SLM ）機能がサポートされます
++
+デフォルトで有効になる SLM 機能は、最適パスを持たない LUN を定期的に検出して修正します。SLM を設定するには、 /var/opt/snapcenter /scu/etc. にある scu.properties ファイル内のパラメータを変更します
+
++
+** この機能を無効にするには、 ENABLE_LUNPATH_MONITORING の値を false に設定します。
+** LUN パスが自動的に修正される頻度を指定するには、 LUNPATH_MONITORING_INTERVAL に値（時間単位）を割り当てます。SLM の詳細については、を参照してください http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanag/home.html["『 ONTAP 9 SAN アドミニストレーションガイド』"^]。
+
+
+

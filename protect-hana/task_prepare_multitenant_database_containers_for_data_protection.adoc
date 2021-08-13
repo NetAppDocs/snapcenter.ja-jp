@@ -1,0 +1,49 @@
+---
+permalink: protect-hana/task_prepare_multitenant_database_containers_for_data_protection.html 
+sidebar: sidebar 
+keywords: multitenant database containers 
+summary: SnapCenter に直接登録された SAP HANA ホストの場合、 SnapCenter Plug-in for SAP HANA Database をインストールまたはアップグレードすると、ホスト上のリソースが自動的に検出されます。プラグインをインストールまたはアップグレードした後、プラグインホスト上にあるすべてのマルチテナントデータベースコンテナ \(MDC\) リソースに対して、別の MDC リソースが自動的に別の GUID 形式で検出され、 SnapCenter に登録されます。新しいリソースは「ロック」状態になります。 
+---
+= マルチテナントデータベースコンテナでデータ保護を準備
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter に直接登録された SAP HANA ホストの場合、 SnapCenter Plug-in for SAP HANA Database をインストールまたはアップグレードすると、ホスト上のリソースが自動的に検出されます。プラグインをインストールまたはアップグレードした後、プラグインホスト上にあるすべてのマルチテナントデータベースコンテナ（ MDC ）リソースに対して、別の MDC リソースが自動的に検出されて SnapCenter に登録されます。新しいリソースは「ロック」状態になります。
+
+* このタスクについて *
+
+たとえば、 SnapCenter 4.2 では、 E90 MDC リソースがプラグインホスト上にあり、手動で登録されている場合、 SnapCenter 4.3 にアップグレードした後に、別の GUID を持つ別の E90 MDC リソースが検出されて SnapCenter に登録されます。
+
+
+NOTE: SnapCenter 4.2 以前のバージョンのリソースに関連付けられたバックアップは、保持期間が満了するまで保持される必要があります。保存期間が終了したら、古い MDC リソースを削除して、新しい自動検出された MDC リソースを引き続き管理できます。
+
+「古い MDC リソース」は、 SnapCenter 4.2 以前のリリースで手動で追加されたプラグインホストの MDC リソースです。
+
+SnapCenter 4.3 で検出された新しいリソースを使用してデータ保護処理を開始するには、次の手順を実行します。
+
+* 手順 *
+
+. [* リソース *] ページで、以前の SnapCenter リリースにバックアップが追加されている古い MDC リソースを選択し、 [ トポロジ ] ページから「メンテナンスモード」にします。
++
+リソースがリソースグループの一部である場合は、リソースグループを「メンテナンスモード」にします。
+
+. リソースページから新しいリソースを選択して、 SnapCenter 4.3 にアップグレードした後に検出された新しい MDC リソースを構成します。
++
+「新しい MDC リソース」は、 SnapCenter サーバとプラグインホストが 4.3 にアップグレードされたときに検出された、新しく検出された MDC リソースです。新しい MDC リソースは、古い MDC リソースと同じ SID を持つリソース、特定のホスト、およびリソースページのその横に赤い南京錠のアイコンで識別できます。
+
+. SnapCenter 4.3 へのアップグレード後に検出された新しい MDC リソースを保護するには ' 保護ポリシー ' スケジュール ' 通知設定を選択します
+. 保持設定に基づいて、 SnapCenter 4.2 以前のリリースで作成されたバックアップを削除します。
+. Topology ページからリソースグループを削除します。
+. [ リソース ] ページから古い MDC リソースを削除します。
++
+たとえば、プライマリ Snapshot コピーの保持期間が 7 日で、セカンダリ Snapshot コピーの保持期間が 45 日の場合、 45 日が完了してすべてのバックアップが削除されたあとに、リソースグループと古い MDC リソースを削除する必要があります。
+
+
+
+* 詳細はこちら *
+
+link:task_configure_hdb_user_store_key_and_hdbsql_os_user_for_the_sap_hana_database.html["SAP HANA データベース用に HDB User Store Key および HDBSQL OS ユーザを設定します"]
+
+link:task_view_sap_hana_database_backups_and_clones_in_the_topology_page_sap_hana.html["Topology ページで、 SAP HANA データベースのバックアップとクローンを表示します"]

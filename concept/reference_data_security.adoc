@@ -1,0 +1,38 @@
+---
+permalink: concept/reference_data_security.html 
+sidebar: sidebar 
+keywords: security,authentication, CA certificates 
+summary: SnapCenter では、データのセキュリティを確保するために厳格なセキュリティおよび認証機能を採用しています。 
+---
+= セキュリティ機能
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter では、データのセキュリティを確保するために厳格なセキュリティおよび認証機能を採用しています。
+
+SnapCenter には、次のセキュリティ機能が含まれています。
+
+* SnapCenter へのすべての通信には、 HTTP over SSL （ HTTPS ）が使用されます。
+* SnapCenter のすべてのクレデンシャルは、 Advanced Encryption Standard （ AES ）暗号化を使用して保護されます。
+* SnapCenter で使用しているセキュリティアルゴリズムは、 Federal Information Processing Standard （ FIPS ；連邦情報処理標準）に準拠しています。
+* SnapCenter では、お客様から提供された承認済みの CA 証明書の使用がサポートされます。
+* SnapCenter 4.1.1 以降では、 ONTAP との Transport Layer Security （ TLS ） 1.2 通信がサポートされています。クライアントとサーバの間の通信にも TLS 1.2 を使用できます。
+* SnapCenter は、会社のファイアウォールの内側にインストールされ、 SnapCenter サーバへのアクセス、および SnapCenter サーバとプラグイン間の通信を可能にします。
+* SnapCenter API および操作アクセスでは、 AES 暗号化で暗号化されたトークンが使用されます。このトークンの有効期限は 24 時間です。
+* SnapCenter は、ログイン用に Windows Active Directory と統合されているほか、アクセス権限を制御するロールベースアクセス制御（ RBAC ）も統合されています。
+* SnapCenter PowerShell コマンドレットセッションはセキュリティで保護されます。
+* デフォルトでは、操作を行わないまま 15 分が経過すると、 5 分後に SnapCenter からログアウトすることを示す警告が表示されます。操作を行わないまま 20 分が経過すると、 SnapCenter からログアウトされ、再度ログインする必要があります。ログアウト期間を変更できます。
+* ログインに 5 回以上失敗すると、一時的にログインが無効になります。
+
+
+
+
+== CA 証明書の概要
+
+SnapCenter サーバーインストーラを使用すると、インストール中に集中型 SSL 証明書サポートを有効にできます。サーバとプラグイン間のセキュアな通信を強化するために、 SnapCenter では、お客様から提供された許可済み CA 証明書の使用をサポートしています。
+
+SnapCenter サーバとそれぞれのプラグインをインストールしたあとに、 CA 証明書を導入する必要があります。詳細については、を参照してください link:../install/reference_generate_CA_certificate_CSR_file.html["CA 証明書 CSR ファイルを生成します"^]。
+
+また、 SnapCenter Plug-in for VMware vSphere の CA 証明書を導入することもできます。詳細については、を参照してください https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_manage_snapcenter_plug-in_for_vmware_vsphere.html#create-and-import-certificates["証明書を作成してインポートします"^]。

@@ -1,0 +1,18 @@
+---
+permalink: protect-scsql/concept_limitations_related_to_the_import_feature.html 
+sidebar: sidebar 
+keywords:  
+summary: SnapManager for Microsoft SQL Server から SnapCenter にアーカイブバックアップをインポートする前に制限事項について確認しておくと、インポートを正常に完了するのに役立ちます。対象のバックアップは、 SnapVault テクノロジでアーカイブされている必要があります。 
+---
+= インポート機能に関連する制限事項
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager for Microsoft SQL Server から SnapCenter にアーカイブバックアップをインポートする前に制限事項について確認しておくと、インポートを正常に完了するのに役立ちます。対象のバックアップは、 SnapVault テクノロジでアーカイブされている必要があります。
+
+* SnapCenter で SnapManager for Microsoft SQL Server を使用して作成されたクローンは管理できません。これらのクローンは、 SnapManager for Microsoft SQL Server で管理する必要があります。
+* バックアップのインポートは、 SnapCenter のグラフィカルユーザインターフェイス（ GUI ）からは実行できません。
+* VMDK ディスクを使用した仮想マシンからデータベースをインポートすることはできません。
+

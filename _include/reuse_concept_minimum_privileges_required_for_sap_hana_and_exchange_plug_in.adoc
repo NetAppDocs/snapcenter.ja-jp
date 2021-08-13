@@ -1,0 +1,191 @@
+= 
+
+
+必要な最小 ONTAP 権限は、データ保護に使用する SnapCenter プラグインによって異なります。
+
+|===
+| フルアクセスコマンド： ONTAP 8.2_x_and later に必要な最小権限 
+
+
+ a| 
+event generate-autosupport-log を指定します
+
+
+
+ a| 
+ジョブ履歴の表示
+
+ジョブが停止しました
+
+
+
+ a| 
+LUN
+
+lun create をクリックします
+
+lun delete
+
+LUN igroup add
+
+lun igroup create を追加します
+
+lun igroup delete
+
+LUN igroup の名前を変更します
+
+lun igroup show を参照してください
+
+LUN マッピングの追加 - レポートノード
+
+LUN マッピングが作成されます
+
+LUN マッピングが削除されます
+
+LUN マッピングの削除 - レポートノード
+
+lun mapping show
+
+lun modify を追加します
+
+LUN のボリューム内移動
+
+LUN はオフラインです
+
+LUN はオンラインです
+
+LUN の永続的予約はクリアします
+
+LUN のサイズ変更
+
+LUN シリアル
+
+lun show をクリックします
+
+
+
+ a| 
+SnapMirror ポリシー追加ルール
+
+snapmirror policy modify-rule
+
+snapmirror policy remove-rule 」を実行します
+
+snapmirror policy show の略
+
+SnapMirror リストア
+
+snapmirror show の略
+
+snapmirror show -history の略
+
+SnapMirror の更新
+
+SnapMirror の update-ls-set
+
+snapmirror list-destinations
+
+
+
+ a| 
+バージョン
+
+
+
+ a| 
+volume clone create を実行します
+
+volume clone show を実行します
+
+ボリュームクローンスプリット開始
+
+ボリュームクローンスプリットは停止します
+
+volume create を実行します
+
+ボリュームを削除します
+
+volume file clone create を実行します
+
+volume file show-disk-usage
+
+ボリュームはオフラインです
+
+ボリュームはオンラインです
+
+volume modify を使用します
+
+volume qtree create を実行します
+
+volume qtree delete
+
+volume qtree modify の略
+
+volume qtree show の略
+
+ボリュームの制限
+
+volume show のコマンドです
+
+volume snapshot create を実行します
+
+ボリューム Snapshot の削除
+
+volume snapshot modify の実行
+
+ボリューム Snapshot の名前が変更されます
+
+ボリューム Snapshot リストア
+
+ボリューム Snapshot の restore-file
+
+volume snapshot show の実行
+
+ボリュームのアンマウント
+
+
+
+ a| 
+SVM CIFS です
+
+vserver cifs share create の場合
+
+SVM CIFS 共有が削除されます
+
+vserver cifs shadowcopy show
+
+vserver cifs share show のコマンドです
+
+vserver cifs show のコマンドです
+
+SVM エクスポートポリシー
+
+vserver export-policy create を参照してください
+
+vserver export-policy delete
+
+vserver export-policy rule create
+
+vserver export-policy rule show
+
+vserver export-policy show のコマンドを入力します
+
+Vserver iSCSI
+
+vserver iscsi connection show
+
+vserver show のコマンドです
+
+|===
+|===
+| 読み取り専用コマンド： ONTAP 8.2_x_and later に必要な最小権限 
+
+
+ a| 
+Network Interface の略
+
+network interface show の略
+
+Vserver
+
+|===

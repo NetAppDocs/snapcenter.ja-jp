@@ -1,0 +1,17 @@
+---
+permalink: protect-scc/task_install_snapcenter_custom_plug_in.html 
+sidebar: sidebar 
+keywords: installing 
+summary: カスタムプラグインリソースを保護する場合は、 SnapCenter Custom Plug-ins をインストールしてセットアップする必要があります。 
+---
+= SnapCenter Custom Plug-ins をインストールします
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+カスタムプラグインリソースを保護する場合は、 SnapCenter Custom Plug-ins をインストールしてセットアップする必要があります。
+
+image::../media/scc_install_configure_workflow.png[SCC インストール設定ワークフロー]
+
+link:concept_develop_a_plug_in_for_your_application.html["アプリケーション用のプラグインを開発します"]

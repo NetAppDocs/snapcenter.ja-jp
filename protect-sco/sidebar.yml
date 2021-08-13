@@ -1,0 +1,124 @@
+---
+section: protect-sco
+title: Oracle データベースを保護します
+entries:
+- title: SnapCenter Plug-in for Oracle Database の概要を参照してください
+  url: "/protect-sco/concept_snapcenter_plug_in_for_oracle_database_overview.html"
+  entries:
+  - title: Plug-in for Oracle Database の機能
+    url: "/protect-sco/concept_what_you_can_do_with_the_snapcenter_plug_in_for_oracle_database.html"
+  - title: Plug-in for Oracle の機能
+    url: "/protect-sco/concept_snapcenter_plug_in_for_oracle_database_features.html"
+  - title: Plug-in for Oracle Database でサポートされるストレージタイプ
+    url: "/protect-sco/reference_storage_types_supported_by_snapcenter_plug_in_for_oracle_database.html"
+  - title: Plug-in for Oracle の SnapMirror と SnapVault のレプリケーションに使用するストレージシステムを準備
+    url: "/protect-sco/reference_prepare_storage_systems_for_snapmirror_and_snapvault_replication_for_plugin_for_oracle.html"
+  - title: Plug-in for Oracle に必要な最小 ONTAP 権限
+    url: "/protect-sco/reference_minimum_ontap_privileges_required_for_oracle_plug_in.html"
+- title: SnapCenter Plug-in for Oracle Database をインストールします
+  url: "/protect-sco/task_install_snapcenter_plug_in_for_oracle_databases.html"
+  entries:
+  - title: ホストを追加して Plug-in Package for Linux または AIX をインストールするための前提条件
+    url: "/protect-sco/reference_prerequisites_for_adding_hosts_and_installing_snapcenter_plug_ins_package_for_linux_or_aix.html"
+    entries:
+    - title: Plug-in Package for Linux をインストールするためのホストの要件
+      url: "/protect-sco/reference_host_requirements_for_installing_the_snapcenter_plug_in_package_for_linux.html"
+    - title: Plug-in Package for AIX をインストールするためのホストの要件
+      url: "/protect-sco/reference_host_requirements_for_installing_the_snapcenter_plug_ins_package_for_aix.html"
+    - title: Plug-in Package for Linux または AIX をインストールするためのクレデンシャルを設定します
+      url: "/protect-sco/task_set_up_credentials_for_installing_the_plug_in_package_for_linux_or_aix.html"
+    - title: Oracle データベースのクレデンシャルを設定します
+      url: "/protect-sco/task_configure_credentials_for_oracle_database.html"
+  - title: Linux または AIX 用のホストを追加して Plug-ins Package をインストールします
+    url: "/protect-sco/task_add_hosts_and_installing_the_snapcenter_plug_ins_package_for_linux_or_aix.html"
+    entries:
+    - title: コマンドレットを使用して、複数のリモートホストに Plug-in Package for Linux または AIX をインストールします
+      url: "/protect-sco/task_install_snapcenter_plug_ins_package_for_linux_or_aix_on_multiple_remote_hosts_using_cmdlets.html"
+    - title: コマンドラインインターフェイスを使用して、 Linux または AIX 用の Plug-ins Package をインストールします
+      url: "/protect-sco/concept_install_snapcenter_plug_ins_package_for_linux_or_aix_using_command_line_interface.html"
+    - title: Plug-in Package for Linux または AIX のインストールのステータスを監視します
+      url: "/protect-sco/task_monitor_the_status_of_installing_plugin_for_Oracle.html"
+  - title: SnapCenter Plug-in Loader サービスを設定します
+    url: "/protect-sco/task_configure_snapcenter_plug_in_loader_service.html"
+  - title: Linux ホストで SnapCenter Plug-in Loader サービスを使用して CA 証明書を設定します
+    url: "/protect-sco/task_configure_CA_certificate_with_SPL_on_Linux_host.html"
+  - title: プラグインの CA 証明書を有効にします
+    url: "/protect-sco/task_enable_ca_certificates_for_plug-ins.html"
+  - title: SnapManager for Oracle および SnapManager for SAP から SnapCenter にデータをインポートします
+    url: "/protect-sco/concept_import_data_from_snapmanager_for_oracle_and_snapmanager_for_sap_to_snapcenter.html"
+- title: SnapCenter Plug-in for VMware vSphere をインストール
+  url: "/protect-sco/concept_install_snapcenter_plug_in_for_vmware_vsphere.html"
+- title: Oracle データベースの保護を準備する
+  url: "/protect-sco/concept_prepare_for_protecting_oracle_databases.html"
+- title: Oracle データベースをバックアップする
+  url: "/protect-sco/task_back_up_oracle_databases.html"
+  entries:
+  - title: Oracle データベースのバックアップ戦略を定義する
+    url: "/protect-sco/task_define_a_backup_strategy_for_oracle_databases.html"
+  - title: Oracle データベースをバックアップに使用できるかどうかを確認します
+    url: "/protect-sco/task_determine_whether_oracle_databases_are_available_for_backup.html"
+  - title: Oracle データベースのバックアップポリシーの作成
+    url: "/protect-sco/task_create_backup_policies_for_oracle_database.html"
+  - title: Oracle データベースのリソースグループを作成してポリシーを適用します
+    url: "/protect-sco/task_create_resource_groups_and_attaching_policies_for_oracle_databases.html"
+  - title: Oracle データベースをバックアップするための要件
+    url: "/protect-sco/reference_requirements_for_backing_up_an_oracle_database.html"
+  - title: Oracle リソースのバックアップ
+    url: "/protect-sco/task_back_up_oracle_resources.html"
+  - title: Oracle データベースのリソースグループをバックアップする
+    url: "/protect-sco/task_back_up_oracle_database_resource_groups.html"
+  - title: UNIX コマンドを使用して Oracle データベースをバックアップします
+    url: "/protect-sco/task_back_up_oracle_databases_using_unix_commands.html"
+  - title: Oracle データベースのバックアップ処理を監視する
+    url: "/protect-sco/task_monitor_oracle_database_backup_operations.html"
+    entries:
+    - title: "[Activity] ペインで、 Oracle データベースのデータ保護操作を監視します"
+      url: "/protect-sco/task_monitor_dataprotection_operations_on_oracle_database_in_the_activity_pane.html"
+  - title: Oracle データベースのバックアップ処理をキャンセルします
+    url: "/protect-sco/task_cancel_the_snapcenter_plug_in_for_oracle_database_backup_operations.html"
+  - title: Topology ページで、 Oracle データベースのバックアップとクローンを表示します
+    url: "/protect-sco/task_view_oracle_databse_backups_and_clones_in_the_topology_page.html"
+- title: データベースバックアップのマウントとアンマウント
+  url: "/protect-sco/task_mount_and_unmount_databases_backups.html"
+- title: Oracle データベースのリストアとリカバリを行う
+  url: "/protect-sco/task_restore_oracle_databases.html"
+  entries:
+  - title: Oracle データベースのリストアとリカバリの戦略を定義する
+    url: "/protect-sco/task_define_a_restore_and_recovery_strategy_for_oracle_databases.html"
+  - title: Oracle データベースをリストアするための要件
+    url: "/protect-sco/reference_requirements_for_restoring_an_oracle_database.html"
+  - title: Oracle データベースをリストアします
+    url: "/protect-sco/task_restore_an_oracle_database.html"
+  - title: ポイントインタイムリカバリを使用した表領域のリストアとリカバリ
+    url: "/protect-sco/task_restore_and_recovere_tablespaces_using_point_in_time_recovery.html"
+  - title: ポイントインタイムリカバリを使用して、プラグイン可能なデータベースをリストアおよびリカバリします
+    url: "/protect-sco/task_restore_and_recover_pluggable_database_using_point_in_time_recovery.html"
+  - title: UNIX コマンドを使用して Oracle データベースをリストアおよびリカバリする
+    url: "/protect-sco/task_restore_and_recover_oracle_databases_using_unix_commands.html"
+  - title: Oracle データベースのリストア処理を監視する
+    url: "/protect-sco/task_monitor_oracle_database_restore_operations.html"
+  - title: Oracle データベースのリストア処理をキャンセルします
+    url: "/protect-sco/task_cancel_oracle_database_restore_operations.html"
+- title: Oracle データベースのクローニング
+  url: "/protect-sco/task_clone_oracle_database_backups.html"
+  entries:
+  - title: Oracle データベースのクローニング戦略を定義する
+    url: "/protect-sco/task_define_a_clone_strategy_for_oracle_databases.html"
+  - title: Oracle データベースをクローニングするための要件
+    url: "/protect-sco/reference_requirements_for_cloning_an_oracle_database.html"
+  - title: Oracle データベースのクローニング
+    url: "/protect-sco/task_clone_an_oracle_database_backup.html"
+  - title: プラグイン可能なデータベースをクローニングします
+    url: "/protect-sco/task_clone_a_pluggable_database.html"
+  - title: UNIX コマンドを使用して Oracle データベースバックアップをクローニングする
+    url: "/protect-sco/task_clone_oracle_database_backups_using_unix_commands.html"
+  - title: Oracle データベースクローンをスプリットします
+    url: "/protect-sco/task_split_an_oracle_database_clone.html"
+  - title: プラグイン可能なデータベースのスプリットクローン
+    url: "/protect-sco/task_split_clone_of_a_pluggable_database.html"
+  - title: Oracle データベースのクローニング処理を監視する
+    url: "/protect-sco/task_monitor_oracle_database_clone_operations.html"
+  - title: クローンをリフレッシュします
+    url: "/protect-sco/task_refresh_a_clone.html"
+  - title: プラグイン可能なデータベースのクローンを削除します
+    url: "/protect-sco/task_delete_clone_of_a_pluggable_database.html"

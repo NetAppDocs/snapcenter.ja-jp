@@ -1,0 +1,19 @@
+---
+permalink: protect-sce/reference_restore_exchange_resources.html 
+sidebar: sidebar 
+keywords:  
+summary: SnapCenter を使用して、 1 つ以上のバックアップをアクティブファイルシステムにリストアすることにより、 Exchange データベースをリストアできます。 
+---
+= Exchange リソースをリストアします
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter を使用して、 1 つ以上のバックアップをアクティブファイルシステムにリストアすることにより、 Exchange データベースをリストアできます。
+
+次のワークフローは、 Exchange データベースのリストア処理の実行順序を示しています。
+
+image:../media/all_plug_ins_restore_workflow.png[""]
+
+PowerShell コマンドレットを手動またはスクリプトで使用して、バックアップとリストアの処理を実行することもできます。PowerShell コマンドレットの詳細については、 SnapCenter コマンドレットのヘルプを使用するか、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。

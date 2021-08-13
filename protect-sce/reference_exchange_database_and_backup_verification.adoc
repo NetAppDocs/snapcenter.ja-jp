@@ -1,0 +1,22 @@
+---
+permalink: protect-sce/reference_exchange_database_and_backup_verification.html 
+sidebar: sidebar 
+keywords:  
+summary: SnapCenter Plug-in for Microsoft Exchange Server ではバックアップの検証は実行されませんが、 Exchange の Eseutil ツールを使用して Exchange データベースとバックアップを検証することができます。 
+---
+= Exchange データベースおよびバックアップの検証
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter Plug-in for Microsoft Exchange Server ではバックアップの検証は実行されませんが、 Exchange の Eseutil ツールを使用して Exchange データベースとバックアップを検証することができます。
+
+Microsoft Exchange Eseutil ツールは、 Exchange サーバに組み込まれているコマンド・ライン・ユーティリティです。このユーティリティを使用すると、 Exchange データベースおよびバックアップの整合性チェックを実行して整合性を検証できます。
+
+|===
+
+
+| * ベストプラクティス： * 最低 2 つのレプリカを含む DAG 構成の一部であるデータベースに対して、整合性チェックを実行する必要はありません。 
+|===
+追加情報の場合は、を参照してください https://docs.microsoft.com/en-us/exchange/exchange-server?view=exchserver-2019["Microsoft Exchange Server のマニュアル"^]。

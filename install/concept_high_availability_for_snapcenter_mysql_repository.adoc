@@ -1,0 +1,37 @@
+---
+permalink: install/concept_high_availability_for_snapcenter_mysql_repository.html 
+sidebar: sidebar 
+keywords: SnapCenter, MySQL high availability 
+summary: MySQL Server の機能である MySQL レプリケーションを使用すると、 MySQL データベースサーバ（マスター）から別の MySQL データベースサーバ（スレーブ）にデータをレプリケートできます。SnapCenter では、 Network Load Balancing （ NLB ）が有効な 2 つのノード間でのみ、高可用性実現のために MySQL レプリケーションをサポートしています。 
+---
+= SnapCenter MySQL リポジトリの高可用性
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+MySQL Server の機能である MySQL レプリケーションを使用すると、 MySQL データベースサーバ（マスター）から別の MySQL データベースサーバ（スレーブ）にデータをレプリケートできます。SnapCenter では、 Network Load Balancing （ NLB ）が有効な 2 つのノード間でのみ、高可用性実現のために MySQL レプリケーションをサポートしています。
+
+SnapCenter は、マスターリポジトリに対して読み取りまたは書き込み操作を実行し、マスターリポジトリに障害が発生した場合はスレーブリポジトリに接続をルーティングします。スレーブリポジトリがマスターリポジトリになります。SnapCenter は逆方向のレプリケーションもサポートしており、これはフェイルオーバー時にのみ有効になります。
+
+MySQL の高可用性（ HA ）機能を使用する場合は、 1 つ目のノードに Network Load Balancer （ NLB ）を設定する必要があります。MySQL リポジトリは、インストール中にこのノードにインストールされます。2 つ目のノードに SnapCenter をインストールするときは、 1 つ目のノードの F5 に参加して、 2 つ目のノードに MySQL リポジトリのコピーを作成する必要があります。
+
+SnapCenter には、 MySQL レプリケーションを管理するための _Get-SmRepositoryConfig_and _Set -SmRepositoryConfig_PowerShell コマンドレットが用意されています。
+
+コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+
+MySQL HA 機能に関連する次の制限事項を確認しておく必要があります。
+
+* NLB と MySQL HA がサポートされるのは、 2 つのノードまでです。
+* SnapCenter スタンドアロンインストールから NLB インストールまたはその逆の切り替えや、 MySQL スタンドアロンセットアップから MySQL HA への切り替えはサポートされていません。
+* スレーブリポジトリのデータがマスターリポジトリのデータと同期されていない場合、自動フェイルオーバーはサポートされません。
++
+強制フェイルオーバーを開始するには、 _Set-SmRepositoryConfig_cmdlet を使用します。
+
+* フェイルオーバーが開始されると、実行中のジョブが失敗する可能性があります。
++
+MySQL Server または SnapCenter Server がダウンしたためにフェイルオーバーが発生した場合、実行中のすべてのジョブが失敗する可能性があります。2 つ目のノードへのフェイルオーバー後、後続のすべてのジョブは正常に実行されます。
+
+
+
+ハイアベイラビリティの設定については、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_NLB_and_ARR_with_SnapCenter["SnapCenter で NLB と ARR を設定する方法"^]。

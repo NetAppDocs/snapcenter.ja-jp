@@ -1,0 +1,20 @@
+---
+permalink: protect-hana/task_define_a_restore_and_recovery_strategy_for_sap_hana_resources.html 
+sidebar: sidebar 
+keywords:  
+summary: データベースのリストアとリカバリを行う前に戦略を定義しておくと、リストア処理とリカバリ処理を正常に実行できるようになります。 
+---
+= SAP HANA リソースのリストアとリカバリの戦略を定義する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+データベースのリストアとリカバリを行う前に戦略を定義しておくと、リストア処理とリカバリ処理を正常に実行できるようになります。
+
+* 手順 *
+
+. 手動で追加した SAP HANA リソースでサポートされるリストア戦略を決定します
+. 自動検出された SAP HANA データベースに対するリストア戦略を決定します
+. 実行するリカバリ処理のタイプを決定します。
+

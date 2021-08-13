@@ -1,0 +1,24 @@
+---
+permalink: protect-scw/reference_installation_requirements_for_snapcenter_plug_in_for_microsoft_windows.html 
+sidebar: sidebar 
+keywords: requirements 
+summary: Plug-in for Windows をインストールする前に、一定のインストール要件について理解しておく必要があります。 
+---
+= SnapCenter Plug-in for Microsoft Windows のインストール要件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Plug-in for Windows をインストールする前に、一定のインストール要件について理解しておく必要があります。
+
+ユーザが Plug-in for Windows の使用を開始するためには、 SnapCenter 管理者が事前に SnapCenter サーバをインストールして設定し、前提条件となるタスクを実行する必要があります。
+
+* Plug-in for Windows をインストールするには、 SnapCenter 管理者権限が必要です。
++
+SnapCenter 管理者ロールには管理者権限が必要です。
+
+* SnapCenter サーバをインストールして設定しておく必要があります。
+* Windows ホストにプラグインをインストールする場合、ビルトインでないクレデンシャルを指定する場合、またはユーザがローカルワークグループユーザに属している場合は、ホストで UAC を無効にする必要があります。
+* バックアップレプリケーションが必要な場合は、 SnapMirror と SnapVault をセットアップする必要があります。
+

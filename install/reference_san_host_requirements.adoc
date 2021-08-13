@@ -1,0 +1,32 @@
+---
+permalink: install/reference_san_host_requirements.html 
+sidebar: sidebar 
+keywords: host utilities, Microsoft DSM, Windows MPIO 
+summary: SnapCenter ホストが FC / iSCSI 環境に配置されている場合、 ONTAP ストレージへのアクセスを有効にするために、システムに追加のソフトウェアのインストールが必要になることがあります。 
+---
+= SAN ホストの要件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter ホストが FC / iSCSI 環境に配置されている場合、 ONTAP ストレージへのアクセスを有効にするために、システムに追加のソフトウェアのインストールが必要になることがあります。
+
+SnapCenter には、 Host Utilities と DSM は含まれていません。SnapCenter ホストが SAN 環境に配置されている場合は、次のソフトウェアのインストールと設定が必要になることがあります。
+
+* Host Utilities のことです
++
+Host Utilities は FC および iSCSI をサポートしており、 Windows サーバ上で MPIO を使用することができます。詳細については、を参照してください https://docs.netapp.com/us-en/ontap-sanhost/["Host Utilities のマニュアル"^]。
+
+* Microsoft DSM for Windows MPIO
++
+このソフトウェアは Windows MPIO ドライバと連携して、ネットアップと Windows のホストコンピュータ間の複数のパスを管理します。
+
++
+ハイアベイラビリティ構成には DSM が必要です。
+
++
+
+NOTE: ONTAP DSM を使用していた場合は、 Microsoft DSM に移行する必要があります。詳細については、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Data_ONTAP_DSM_for_Windows_MPIO/How_to_migrate_from_Data_ONTAP_DSM_4.1p1_to_Microsoft_native_DSM["ONTAP DSM から Microsoft DSM への移行方法"^]。
+
+

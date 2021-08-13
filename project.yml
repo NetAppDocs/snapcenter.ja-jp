@@ -1,0 +1,89 @@
+---
+sidebar:
+  entries:
+  - title: SnapCenter ソフトウェアのドキュメント
+    url: "/index.html"
+  - title: リリースノート
+    url: "/reference_release_notes.html"
+  - section: concept
+  - section: install
+  - section: protect-scsql
+  - section: protect-hana
+  - section: protect-sco
+  - section: protect-scw
+  - section: protect-sce
+  - section: protect-scc
+  - section: admin
+  - section: upgrade
+  - section: uninstall
+  - section: sc-automation
+  - title: 法的通知
+    url: "/reference_legal_notices.html"
+homepage:
+  tiles:
+  - title: はじめに
+    links:
+    - title: リリースノート
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2877281
+    - title: SnapCenter の詳細をご確認ください
+      url: "/concept/concept_snapcenter_overview.html"
+    - title: SQL Server データベースの保護に関するクイックリファレンスです
+      url: "/protect-scsql/quick_start_to_install_snapcenter_plug-in_for_sql_server.html"
+    - title: SnapCenter サーバと SnapCenter プラグインをアップグレードします
+      url: "/upgrade/upgrade_workflow.html"
+  - title: SnapCenter サーバをインストールします
+    links:
+    - title: 必要なライセンス
+      url: "/install/concept_snapcenter_licenses.html"
+    - title: ポートを設定します
+      url: "/install/reference_connection_and_port_requirements.html"
+    - title: SnapCenter サーバをインストールします
+      url: "/install/task_install_the_snapcenter_server_using_the_install_wizard.html"
+    - title: F5 を使用してハイアベイラビリティを設定します
+      url: "/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html"
+  - title: Microsoft SQL Server データベースを保護する
+    links:
+    - title: SnapCenter Plug-in for Microsoft SQL Server データベースをインストールします
+      url: "/protect-scsql/task_add_hosts_and_install_snapcenter_plug_ins_package_for_windows.html"
+    - title: SQL Server データベースをバックアップするポリシーを作成します
+      url: "/protect-scsql/task_create_backup_policies_for_sql_server_databases.html"
+    - title: SQL Server データベースをバックアップする
+      url: "/protect-scsql/task_back_up_sql_resources.html"
+  - title: SAP HANA データベースを保護します
+    links:
+    - title: SnapCenter Plug-in for SAP HANA Database をインストール
+      url: "/protect-hana/task_add_hosts_and_install_plug_in_packages_on_remote_hosts_sap_hana.html"
+    - title: SAP HANA データベースをバックアップするポリシーを作成する
+      url: "/protect-hana/task_create_backup_policies_for_sap_hana_databases.html"
+    - title: SAP HANA データベースをバックアップする
+      url: "/protect-hana/task_back_up_sap_hana_databases.html"
+  - title: Oracle データベースを保護します
+    links:
+    - title: SnapCenter Plug-in for Oracle Database をインストールします
+      url: "/protect-sco/task_add_hosts_and_installing_the_snapcenter_plug_ins_package_for_linux_or_aix.html"
+    - title: Oracle データベースをバックアップするポリシーを作成します
+      url: "/protect-sco/task_create_backup_policies_for_oracle_database.html"
+    - title: Oracle データベースをバックアップする
+      url: "/protect-sco/task_back_up_oracle_resources.html"
+  - title: VMware 上でデータベースを保護します
+    links:
+    - title: SnapCenter Plug-in for VMware vSphere について説明します
+      url: https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/index.html
+    - title: SnapCenter Plug-in for VMware vSphere を導入
+      url: https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere.html
+  - title: ブログコミュニティ
+    links:
+    - title: ネットアップのブログ - SnapCenter
+      url: https://blog.netapp.com/tag/snapcenter/
+    - title: ネットアップコミュニティ - SnapCenter
+      url: https://community.netapp.com/t5/forums/filteredbylabelpage/board-id/backup-and-restore-discussions/label-name/snapcenter
+  - title: リソースの追加
+    links:
+    - title: コマンドレットリファレンスガイド
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143
+    - title: コマンドリファレンスガイド
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2877144
+    - title: 以前のバージョンの SnapCenter のドキュメント
+      url: https://docs.netapp.com/ocsc-44/topic/com.netapp.ndc.ocsc-vers/GUID-C35C3D6E-1833-4F73-AE09-38137FC69F8C.html
+    - title: ネットアップのナレッジベース - SnapCenter
+      url: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter

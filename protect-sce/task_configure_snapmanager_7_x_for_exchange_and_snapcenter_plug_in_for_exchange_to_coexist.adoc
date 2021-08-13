@@ -1,0 +1,77 @@
+---
+permalink: protect-sce/task_configure_snapmanager_7_x_for_exchange_and_snapcenter_plug_in_for_exchange_to_coexist.html 
+sidebar: sidebar 
+keywords:  
+summary: SnapCenter Plug-in for Microsoft Exchange Server を SnapManager for Microsoft Exchange Server と共存できるようにするには、 SnapManager for Microsoft Exchange Server がインストールされている Exchange Server と同じ Exchange Server に SnapCenter Plug-in for Microsoft Exchange Server をインストールし、 SnapManager for Exchange のスケジュールを無効にする必要があります。 および SnapCenter Plug-in for Microsoft Exchange Server を使用して新しいスケジュールとバックアップを設定します。 
+---
+= Exchange と SnapCenter が共存するように SnapManager 7.x を設定します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter Plug-in for Microsoft Exchange Server を SnapManager for Microsoft Exchange Server と共存できるようにするには、 SnapManager for Microsoft Exchange Server がインストールされている Exchange Server と同じ Exchange Server に SnapCenter Plug-in for Microsoft Exchange Server をインストールし、 SnapManager for Exchange のスケジュールを無効にする必要があります。 および SnapCenter Plug-in for Microsoft Exchange Server を使用して新しいスケジュールとバックアップを設定します。
+
+* 必要なもの *
+
+* SnapManager for Microsoft Exchange Server と SnapDrive for Windows がすでにインストールされており、システムおよび SnapInfo ディレクトリに SnapManager for Microsoft Exchange Server のバックアップが存在します。
+* SnapManager for Microsoft Exchange Server で作成された不要なバックアップを削除または再利用しておく必要があります。
+* SnapManager for Microsoft Exchange Server で作成されたすべてのスケジュールを、 Windows スケジューラから一時停止または削除しておく必要があります。
+* SnapManager Plug-in for Microsoft Exchange Server と SnapCenter for Microsoft Exchange Server は同じ Exchange サーバ上に共存できますが、既存の SnapManager for Microsoft Exchange Server を SnapCenter にアップグレードすることはできません。
++
+SnapCenter には、アップグレードのオプションはありません。
+
+* SnapCenter では、 SnapManager for Microsoft Exchange Server バックアップからの Exchange データベースのリストアはサポートされていません。
++
+SnapCenter Plug-in for Microsoft Exchange Server のインストール後に SnapManager for Microsoft Exchange Server をアンインストールしないで、 SnapManager for Microsoft Exchange Server のバックアップをリストアする場合は、追加の手順を実行する必要があります。
+
+
+
+* 手順 *
+
+. すべての DAG ノードで PowerShell を使用して、 SnapDrive for Windows VSS ハードウェアプロバイダが登録されているかどうかを確認します。 _vssadmin list provider_
++
+[listing]
+----
+C:\Program Files\NetApp\SnapDrive>vssadmin list providers
+vssadmin 1.1 - Volume Shadow Copy Service administrative command-line tool
+(C) Copyright 2001-2013 Microsoft Corp.
+
+Provider name: 'Data ONTAP VSS Hardware Provider'
+   Provider type: Hardware
+   Provider Id: {ddd3d232-a96f-4ac5-8f7b-250fd91fd102}
+   Version: 7. 1. 4. 6845
+----
+. SnapDrive ディレクトリから、 SnapDrive for Windows から VSS ハードウェアプロバイダの登録を解除します。 _navssprv.exe -r service – u_
+. VSS ハードウェアプロバイダが削除されたことを確認します。 _vssadmin list providers_
+. SnapCenter に Exchange ホストを追加し、 SnapCenter Plug-in for Microsoft Windows および SnapCenter Plug-in for Microsoft Exchange Server をインストールします。
+. すべての DAG ノードの SnapCenter Plug-in for Microsoft Windows ディレクトリで、 VSS ハードウェアプロバイダが登録されていることを確認します： _vssadmin list providers_
++
+[listing]
+----
+[PS] C:\Windows\system32>vssadmin list providers
+vssadmin 1.1 - Volume Shadow Copy Service administrative command-line tool
+(C) Copyright 2001-2013 Microsoft Corp.
+
+Provider name: 'Data ONTAP VSS Hardware Provider'
+   Provider type: Hardware
+   Provider Id: {31fca584-72be-45b6-9419-53a3277301d1}
+   Version: 7. 0. 0. 5561
+----
+. SnapManager for Microsoft Exchange Server のバックアップスケジュールを停止します。
+. SnapCenter GUI を使用して、オンデマンドバックアップの作成、スケジュールされたバックアップの設定、保持の設定を行います。
+. SnapManager for Microsoft Exchange Server をアンインストールします。
++
+SnapManager for Microsoft Exchange Server を今すぐアンインストールしないで、 SnapManager for Microsoft Exchange Server のバックアップをリストアする場合は、次の手順を実行します。
+
++
+.. すべての DAG ノードから SnapCenter Plug-in for Microsoft Exchange Server の登録を解除します。 _navssprv.exe -r service -u _
++
+[listing]
+----
+C:\Program Files\NetApp\SnapCenter\SnapCenter Plug-in for Microsoft Windows>navssprv.exe -r service -u
+----
+.. C ： \Program Files\NetApp\SnapManager \SnapDrive\_directory から、すべての DAG ノードに SnapDrive for Windows を登録します。 _navssprv.exe -r service -c hostname \\username -p password_
+
+
+

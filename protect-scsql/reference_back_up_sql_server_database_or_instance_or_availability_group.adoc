@@ -1,0 +1,49 @@
+---
+permalink: protect-scsql/reference_back_up_sql_server_database_or_instance_or_availability_group.html 
+sidebar: sidebar 
+keywords:  
+summary: SnapCenter Plug-in for Microsoft SQL Server をインストールした環境では、 SnapCenter を使用して SQL Server リソースをバックアップすることができます。 
+---
+= SQL Server データベース、インスタンス、または可用性グループをバックアップする
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter Plug-in for Microsoft SQL Server をインストールした環境では、 SnapCenter を使用して SQL Server リソースをバックアップすることができます。
+
+スケジュールを設定して、複数のサーバで同時に複数のバックアップを実行することができます。
+
+バックアップ処理とリストア処理を同じリソースで同時に実行することはできません。
+
+次のワークフローは、バックアップ処理の実行順序を示しています。
+
+image::../media/scsql_backup_workflow.png[SCSQL バックアップワークフロー]
+
+
+NOTE: NetApp 以外の LUN 、破損したデータベース、またはリストア中のデータベースを選択すると、 Resources ページの Backup Now 、 Restore 、 Manage Backups 、および Clone の各オプションが無効になります。
+
+PowerShell コマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、リカバリ、検証、クローニングの処理を実行することもできます。PowerShell コマンドレットの詳細については、 SnapCenter コマンドレットのヘルプを使用するか、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["SnapCenter ソフトウェアコマンドレットリファレンスガイド"]
+
+
+
+== SnapCenter でのデータベースのバックアップ方法
+
+SnapCenter は、 Snapshot コピーテクノロジを使用して、 LUN または VMDK に格納されている SQL Server データベースをバックアップします。SnapCenter は、データベースの Snapshot コピーを作成することによってバックアップを作成します。
+
+リソースページでフルデータベースバックアップの対象としてデータベースを選択すると、同じストレージボリューム上の他のすべてのデータベースが SnapCenter によって自動的に選択されます。LUN または VMDK にデータベースが 1 つだけ格納されている場合は、そのデータベースを個別に選択解除したり、再度選択したりできます。LUN または VMDK に複数のデータベースが格納されている場合は、それらのデータベースをグループとして選択解除したり、再度選択したりする必要があります。
+
+1 つのボリューム上のすべてのデータベースが、 Snapshot コピーを使用して同時にバックアップされます。同時にバックアップ可能なデータベースの最大数が 35 で、ストレージボリュームに格納されているデータベースが 35 個よりも多い場合、データベース数を 35 で割った数の Snapshot コピーが作成されます。
+
+
+NOTE: Snapshot コピーごとのデータベースの最大数は、バックアップポリシーで設定できます。
+
+SnapCenter で作成される Snapshot コピーには、ストレージシステムボリューム全体がキャプチャされます。ただし、バックアップは、バックアップが作成された SQL ホストサーバに対してのみ有効になります。
+
+他の SQL ホストサーバのデータが同じボリュームに含まれている場合、それらのデータを Snapshot コピーからリストアすることはできません。
+
+* 詳細はこちら *
+
+link:task_back_up_resources_using_powershell_cmdlets.html["PowerShell コマンドレットを使用してリソースをバックアップします"]
+
+link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Quiesce_or_grouping_resources_operations_fail["リソースの休止処理またはグループ化処理が失敗します"]

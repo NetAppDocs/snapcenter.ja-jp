@@ -1,0 +1,27 @@
+---
+permalink: install/concept_snapcenter_standard_capacity_based_licenses.html 
+sidebar: sidebar 
+keywords: capacity-based licenses 
+summary: ONTAP Select 標準容量ライセンスは、 Cloud Volumes ONTAP プラットフォームと SnapCenter プラットフォームのデータを保護するために使用します。 
+---
+= SnapCenter の容量単位の標準ライセンスです
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP Select 標準容量ライセンスは、 Cloud Volumes ONTAP プラットフォームと SnapCenter プラットフォームのデータを保護するために使用します。
+
+ライセンスには次のような特徴があります。
+
+* 51xxxxxxx の形式の 9 桁のシリアル番号で構成されます
++
+SnapCenter GUI を使用してライセンスを有効にするには、ライセンスのシリアル番号と有効なネットアップサポートサイトのログインクレデンシャルを使用します。
+
+* 個別の永続ライセンスとして提供され、使用済みストレージ容量または保護するデータのサイズのいずれか小さい方に基づくコストと、データは SnapCenter によって管理されます
+* テラバイトあたりの利用可能容量
++
+たとえば、 1TB 、 2TB 、 4TB などの容量ベースのライセンスを取得できます。
+
+* 100TB の容量が使用可能な 90 日間の試用版ライセンスです
+

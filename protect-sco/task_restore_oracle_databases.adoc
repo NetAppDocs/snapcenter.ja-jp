@@ -1,0 +1,17 @@
+---
+permalink: protect-sco/task_restore_oracle_databases.html 
+sidebar: sidebar 
+keywords:  
+summary: リストアワークフローには、計画、リストア処理の実行、および処理の監視が含まれます。 
+---
+= Oracle データベースのリストアとリカバリを行う
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+リストアワークフローには、計画、リストア処理の実行、および処理の監視が含まれます。
+
+次のワークフローは、リストア処理の実行順序を示しています。
+
+image::../media/all_plug_ins_restore_workflow.png[all_plug-ins_restore_workflow を実行します]

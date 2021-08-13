@@ -1,0 +1,15 @@
+---
+permalink: protect-sco/task_install_snapcenter_plug_in_for_oracle_databases.html 
+sidebar: sidebar 
+keywords: installing 
+summary: Oracle データベースを保護する場合は、 SnapCenter Plug-in for Oracle Database をインストールしてセットアップする必要があります。 
+---
+= SnapCenter Plug-in for Oracle Database をインストールします
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Oracle データベースを保護する場合は、 SnapCenter Plug-in for Oracle Database をインストールしてセットアップする必要があります。
+
+image::../media/sco_install_configure_workflow.png[SCO インストール設定ワークフロー]

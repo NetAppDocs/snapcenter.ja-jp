@@ -1,0 +1,148 @@
+---
+permalink: protect-hana/task_back_up_sap_hana_databases.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: どのリソースグループにも含まれていないリソースは、のページからバックアップすることができます。 
+---
+= SAP HANA データベースをバックアップする
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+どのリソースグループにも含まれていないリソースは、のページからバックアップすることができます。
+
+* 必要なもの *
+
+* バックアップポリシーを作成しておく必要があります。
+* セカンダリストレージとの SnapMirror 関係があるリソースをバックアップする場合、ストレージユーザに割り当てられた ONTAP ロールには「「 'SnapMirro all' 」権限を含める必要があります。ただし、「 vsadmin 」ロールを使用している場合、「 'SnapMirro all 」権限は必要ありません。
+* Snapshot コピーベースのバックアップ処理の場合は、すべてのテナントデータベースが有効でアクティブになっていることを確認してください。
+* 1 つ以上のテナントデータベースが停止しているときにファイルベースのバックアップを作成する場合は、 Set-SmConfigSettings コマンドレットを使用して、 HANA プロパティファイルの allow_file_by_backup_IFINACTIVE_tenants_present パラメータを * YES * に設定します。
++
+コマンドレットで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["SnapCenter ソフトウェアコマンドレットリファレンスガイド"]
+
+
+
+* 手順 *
+
+. 左側のナビゲーションペインで、 * リソース * をクリックし、リストから適切なプラグインを選択します。
+. [* リソース *] ページで、リソースタイプに基づいて [* 表示 *] ドロップダウンリストからリソースをフィルタリングします。
++
+* をクリックしますimage:../media/filter_icon.gif[""]* をクリックし、ホスト名とリソースタイプを選択してリソースをフィルタリングします。をクリックします image:../media/filter_icon.gif[""] をクリックしてフィルタペインを閉じます。
+
+. バックアップするリソースをクリックします。
+. リソース * ページで、 Snapshot コピーにカスタム名形式を使用する * を選択し、 Snapshot コピー名に使用するカスタム名形式を入力します。
++
+たとえば、 _customText_policy_hostname_or_resource_hostname_hostname_1 です。デフォルトでは、 Snapshot コピー名の後ろにタイムスタンプが追加されます。
+
+. [ アプリケーションの設定 *] ページで、次の操作を行います。
++
+** [*Backups] の矢印をクリックして、追加のバックアップ・オプションを設定します。
++
+必要に応じて、整合グループのバックアップを有効にし、次の作業を実行します。
+
++
+|===
+| フィールド | 手順 
+
+
+ a| 
+整合グループ Snapshot 処理が完了するまで待機する時間を設定してください
+ a| 
+Snapshot コピー処理が完了するまでの待機時間を指定するには、「至急」、「 * 中」、または「 * relaxed 」を選択します。Urgent = 5 秒、 Medium = 7 秒、 Relaxed = 20 秒。
+
+
+
+ a| 
+WAFL 同期を無効にします
+ a| 
+WAFL 整合ポイントを強制しない場合は、これを選択します。
+
+|===
+** [* Scripts] の矢印をクリックすると、休止、 Snapshot コピー、および休止解除の各処理に対して PRE および POST のコマンドが実行されます。
++
+バックアップ処理を終了する前にプリコマンドを実行することもできます。プリスクリプトとポストスクリプトは SnapCenter サーバで実行されます。
+
+** [** カスタム構成 ** ] 矢印をクリックし、このリソースを使用するすべてのジョブに必要なカスタム値のペアを入力します。
+** Snapshot コピーツールの * 矢印をクリックして、 Snapshot コピーを作成するツールを選択します。
++
+|===
+| 状況 | 作業 
+
+
+ a| 
+SnapCenter を使用してストレージレベルの Snapshot コピーを作成する
+ a| 
+ファイルシステムの整合性なしで SnapCenter * を選択します。
+
+
+
+ a| 
+SnapCenter ： Plug-in for Windows を使用してファイルシステムを整合性のある状態にしてから Snapshot コピーを作成する
+ a| 
+ファイルシステムの整合性を維持した状態で SnapCenter を選択します。
+
+
+
+ a| 
+Snapshot コピーを作成するコマンドを入力するには、次のコマンドを入力します
+ a| 
+「 * other * 」を選択し、コマンドを入力して Snapshot コピーを作成します。
+
+|===
++
+image:../media/application_settings.gif[""]
+
+
+
+. [*Policies*] ページで、次の手順を実行します。
++
+.. ドロップダウンリストから 1 つ以上のポリシーを選択します。
++
+
+NOTE: また、 * をクリックしてポリシーを作成することもできますimage:../media/add_policy_from_resourcegroup.gif[""]*
+
++
+[ 選択したポリシーのスケジュールを設定 ] セクションに、選択したポリシーが一覧表示されます。
+
+.. * をクリックしますimage:../media/add_policy_from_resourcegroup.gif[""]* スケジュールを設定するポリシーの [ スケジュールの設定 ] 列。
+.. [Add schedules for policy_name_] ダイアログボックスで、スケジュールを設定し、 [OK] をクリックします。
++
+_policy_name_は 、選択したポリシーの名前です。
+
++
+設定されたスケジュールは、 [ 適用されたスケジュール ] 列に一覧表示されます。
+
+
+
+. [*Notification] ページの [*Email preference*] ドロップダウンリストから、電子メールを送信するシナリオを選択します。
++
+また、送信者と受信者の E メールアドレス、および E メールの件名を指定する必要があります。SMTP は、 * Settings * > * Global Settings * でも設定する必要があります。
+
+. 概要を確認し、 [ 完了 ] をクリックします。
++
+リソースのトポロジページが表示されます。
+
+. [ 今すぐバックアップ ] をクリックします。
+. [* バックアップ * ] ページで、次の手順を実行します。
++
+.. リソースに複数のポリシーを適用した場合は、 [* Policy] ドロップダウン・リストから、バックアップに使用するポリシーを選択します。
++
+オンデマンドバックアップ用に選択したポリシーがバックアップスケジュールに関連付けられている場合は、スケジュールタイプに指定した保持設定に基づいてオンデマンドバックアップが保持されます。
+
+.. [ バックアップ ] をクリックします。
+
+
+. 操作の進行状況を監視するには、 * Monitor * > * Jobs * をクリックします。
++
+** MetroCluster 構成では、フェイルオーバー後に SnapCenter が保護関係を検出できない場合があります。
++
+詳細については、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["MetroCluster のフェイルオーバー後に SnapMirror 関係または SnapVault 関係を検出できません"^]
+
+** VMDK 上のアプリケーションデータおよび SnapCenter Plug-in for VMware vSphere の Java ヒープサイズが不足している場合、バックアップが失敗することがあります。
++
+Java のヒープサイズを増やすには、スクリプトファイル /opt/NetApp/init_scripts/scvservice_. を探します。このスクリプトでは、 _DO_START METHOD_Command によって、 SnapCenter VMware プラグインサービスが開始されます。このコマンドを次のように更新します。 _java -jar -Xmx8192M -Xms4096M_
+
+
+
+

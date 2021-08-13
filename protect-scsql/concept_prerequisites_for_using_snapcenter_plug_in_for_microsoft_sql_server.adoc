@@ -1,0 +1,46 @@
+---
+permalink: protect-scsql/concept_prerequisites_for_using_snapcenter_plug_in_for_microsoft_sql_server.html 
+sidebar: sidebar 
+keywords: credential 
+summary: ユーザが Plug-in for SQL Server の使用を開始するためには、 SnapCenter 管理者が事前に SnapCenter サーバをインストールして設定し、前提条件となるタスクを実行する必要があります。 
+---
+= SnapCenter Plug-in for Microsoft SQL Server を使用するための前提条件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ユーザが Plug-in for SQL Server の使用を開始するためには、 SnapCenter 管理者が事前に SnapCenter サーバをインストールして設定し、前提条件となるタスクを実行する必要があります。
+
+* SnapCenter サーバをインストールして設定します。
+* SnapCenter にログインします。
+* ストレージシステム接続を追加または割り当て、クレデンシャルを作成して、 SnapCenter 環境を設定します。
++
+
+NOTE: SnapCenter では、異なるクラスタにある同じ名前の SVM は複数サポートされません。SnapCenter でサポートする SVM には、それぞれ一意の名前を付ける必要があります。
+
+* ホストを追加し、プラグインをインストールし、リソースを検出（更新）し、プラグインを設定します。
+* Invoke-NaSmConfigureResources を実行して既存の Microsoft SQL Server データベースをローカルディスクからネットアップ LUN に移動したり、その逆を実行したりします。
++
+コマンドレットの実行方法については、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["SnapCenter ソフトウェアコマンドレットリファレンスガイド"]
+
+* VMware RDM LUN または VMDK に存在する SQL データベースを SnapCenter Server で保護する場合は、 SnapCenter Plug-in for VMware vSphere を導入して、 SnapCenter にプラグインを登録する必要があります。詳細については、 SnapCenter Plug-in for VMware vSphere のドキュメントを参照してください。
++
+https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/["SnapCenter Plug-in for VMware vSphere のドキュメント"]
+
+* SnapCenter Plug-in for Microsoft Windows を使用して、ホスト側のストレージをプロビジョニングします。
+* 既存のデータベースをネットアップストレージに移動します。
++
+詳細については、「 SnapCenter によるインポート情報」を参照してください。
+
++
+link:concept_import_archived_backups_from_snapmanager_for_sql_to_snapcenter.html["SnapManager for Microsoft SQL Server から SnapCenter にアーカイブバックアップをインポートします"]
+
+* バックアップレプリケーションが必要である場合は、 SnapMirror 関係と SnapVault 関係をセットアップします。
+
+
+詳細については、 SnapCenter のインストールに関する説明を参照してください。
+
+SnapCenter 4.1.1 ユーザの場合、 SnapCenter Plug-in for VMware vSphere 4.1.1 のドキュメントには、仮想化されたデータベースとファイルシステムの保護に関する情報が記載されています。SnapCenter 4.2.x ユーザの場合、 NetApp Data Broker 1.0 および 1.0.1 のドキュメントでは、 Linux ベースの NetApp Data Broker 仮想アプライアンス（オープン仮想アプライアンス形式）が提供する SnapCenter Plug-in for VMware vSphere を使用して、仮想化されたデータベースとファイルシステムを保護する方法について説明しています。SnapCenter 4.3.x を使用する場合は、 Linux ベースの SnapCenter Plug-in for VMware vSphere 仮想アプライアンス（オープン仮想アプライアンス形式）を使用して仮想化されたデータベースとファイルシステムを保護する方法について、 SnapCenter Plug-in for VMware vSphere 4.3 のドキュメントを参照してください。
+
+https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/["SnapCenter Plug-in for VMware vSphere のドキュメント"]

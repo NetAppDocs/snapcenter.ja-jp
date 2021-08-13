@@ -1,0 +1,119 @@
+---
+permalink: install/concept_create_and_manage_igroups.html 
+sidebar: sidebar 
+keywords: igroup 
+summary: イニシエータグループ（ igroup ）を作成して、ストレージシステム上の特定の LUN にアクセスできるホストを指定します。SnapCenter を使用して、 Windows ホストの igroup の作成、名前変更、変更、削除を行うことができます。 
+---
+= igroup を作成して管理します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+イニシエータグループ（ igroup ）を作成して、ストレージシステム上の特定の LUN にアクセスできるホストを指定します。SnapCenter を使用して、 Windows ホストの igroup の作成、名前変更、変更、削除を行うことができます。
+
+
+
+== igroup を作成
+
+SnapCenter を使用して、 Windows ホスト上に igroup を作成できます。igroup を LUN にマッピングすると、ディスクの作成ウィザードまたはディスク接続ウィザードでこの igroup を使用できるようになります。
+
+* 手順 *
+
+. 左側のナビゲーションペインで、 * Hosts * （ホスト）をクリックします。
+. Hosts ページで、 * igroup * をクリックします。
+. [ イニシエータグループ ] ページで、 [* 新規作成 ] をクリックします。
+. igroup の作成ダイアログボックスで、 igroup を定義します。
++
+|===
+| フィールド | 手順 
+
+
+ a| 
+ストレージシステム
+ a| 
+igroup にマッピングする LUN の SVM を選択します。
+
+
+
+ a| 
+ホスト
+ a| 
+igroup を作成するホストを選択します。
+
+
+
+ a| 
+igroup 名
+ a| 
+igroup の名前を入力します。
+
+
+
+ a| 
+イニシエータ
+ a| 
+イニシエータを選択します。
+
+
+
+ a| 
+を入力します
+ a| 
+イニシエータタイプとして、 iSCSI 、 FCP 、または混在（ FCP と iSCSI ）のいずれかを選択します。
+
+|===
+. 入力に問題がなければ、「 * OK * 」をクリックします。
++
+SnapCenter により、ストレージシステムに igroup が作成されます。
+
+
+
+
+
+== igroup の名前を変更する
+
+SnapCenter を使用して、既存の igroup の名前を変更できます。
+
+* 手順 *
+
+. 左側のナビゲーションペインで、 * Hosts * （ホスト）をクリックします。
+. Hosts ページで、 * igroup * をクリックします。
+. イニシエータグループページで、 * Storage Virtual Machine * フィールドをクリックして使用可能な SVM のリストを表示し、名前を変更する igroup の SVM を選択します。
+. SVM の igroup のリストで、名前を変更する igroup を選択し、 * Rename * をクリックします。
+. igroup の名前変更ダイアログボックスで、 igroup の新しい名前を入力し、 * 名前の変更 * をクリックします。
+
+
+
+
+== igroup を変更する
+
+SnapCenter を使用すると、既存の igroup にイニシエータを追加できます。igroup の作成時に追加できるホストは 1 つだけです。クラスタに対して igroup を作成するには、 igroup を変更して他のノードをその igroup に追加します。
+
+* 手順 *
+
+. 左側のナビゲーションペインで、 * Hosts * （ホスト）をクリックします。
+. Hosts ページで、 * igroup * をクリックします。
+. イニシエータグループページで、 * Storage Virtual Machine * フィールドをクリックして使用可能な SVM のドロップダウンリストを表示し、変更する igroup の SVM を選択します。
+. igroup のリストで igroup を選択し、 * イニシエータを igroup に追加 * をクリックします。
+. ホストを選択します。
+. イニシエータを選択し、 * OK * をクリックします。
+
+
+
+
+== igroup を削除する
+
+SnapCenter を使用して、不要になった igroup を削除できます。
+
+* 手順 *
+
+. 左側のナビゲーションペインで、 * Hosts * （ホスト）をクリックします。
+. Hosts ページで、 * igroup * をクリックします。
+. イニシエータグループページで、 * Storage Virtual Machine * フィールドをクリックして使用可能な SVM のドロップダウンリストを表示し、削除する igroup の SVM を選択します。
+. SVM の igroup のリストで、削除する igroup を選択し、 * Delete * をクリックします。
+. igroup の削除ダイアログボックスで、 * OK * をクリックします。
++
+SnapCenter によって igroup が削除されます。
+
+

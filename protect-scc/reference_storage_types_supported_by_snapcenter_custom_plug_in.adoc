@@ -1,0 +1,38 @@
+---
+permalink: protect-scc/reference_storage_types_supported_by_snapcenter_custom_plug_in.html 
+sidebar: sidebar 
+keywords:  
+summary: SnapCenter は、物理マシンと仮想マシンの両方でさまざまなストレージタイプをサポートしています。SnapCenter カスタムプラグインをインストールする前に、ストレージタイプがサポートされているかどうかを確認する必要があります。 
+---
+= SnapCenter Custom Plug-ins でサポートされるストレージタイプ
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter は、物理マシンと仮想マシンの両方でさまざまなストレージタイプをサポートしています。SnapCenter カスタムプラグインをインストールする前に、ストレージタイプがサポートされているかどうかを確認する必要があります。
+
+|===
+| マシン | ストレージタイプ 
+
+
+ a| 
+物理サーバと仮想サーバ（ VMDK と RDM LUN はサポートされません）
+ a| 
+FC 接続 LUN
+
+
+
+ a| 
+物理サーバと仮想サーバ（ VMDK と RDM LUN はサポートされません）
+ a| 
+iSCSI で接続された LUN
+
+
+
+ a| 
+物理サーバと仮想サーバ（ VMDK と RDM LUN はサポートされません）
+ a| 
+NFS-connected ボリューム
+
+|===

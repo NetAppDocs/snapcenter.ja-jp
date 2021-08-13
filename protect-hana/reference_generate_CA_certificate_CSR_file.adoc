@@ -1,0 +1,21 @@
+---
+permalink: protect-hana/reference_generate_CA_certificate_CSR_file.html 
+sidebar: sidebar 
+keywords: SnapCenter 
+summary: 証明書署名要求（ CSR ）を生成し、証明書をインポートできます。 
+---
+= CA 証明書 CSR ファイルを生成します
+:icons: font
+:imagesdir: ../media/
+
+
+証明書署名要求（ CSR ）を生成し、生成された CSR を使用して認証局（ CA ）から取得できる証明書をインポートできます。証明書には秘密鍵が関連付けられます。
+
+CSR はエンコードされたテキストブロックであり、認証された証明書ベンダーに提供されて署名済み CA 証明書を取得します。
+
+CSR の生成方法については、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_generate_CA_Certificate_CSR_file["CA 証明書 CSR ファイルの生成方法"^]。
+
+
+NOTE: ドメイン（ * .domain.company.com ）またはシステム（ machine1.domain.company.com ）の CA 証明書を所有している場合、 CA 証明書 CSR ファイルの生成を省略できます。SnapCenter を使用して既存の CA 証明書を導入できます。
+
+クラスタ構成の場合は、クラスタ名（仮想クラスタ FQDN ）とそれぞれのホスト名を CA 証明書に記載する必要があります。証明書を更新するには、証明書を取得する前に Subject Alternative Name （ SAN ）フィールドに値を入力します。ワイルドカード証明書（ * .domain.company.com ）の場合、証明書にはドメインのすべてのホスト名が暗黙的に含まれます。

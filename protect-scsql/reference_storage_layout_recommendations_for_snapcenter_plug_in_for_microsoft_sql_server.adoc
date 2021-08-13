@@ -1,0 +1,54 @@
+---
+permalink: protect-scsql/reference_storage_layout_recommendations_for_snapcenter_plug_in_for_microsoft_sql_server.html 
+sidebar: sidebar 
+keywords:  
+summary: ストレージレイアウトが適切に設計されているため、 SnapCenter サーバでデータベースをバックアップして、リカバリの目標を達成できます。ストレージレイアウトを定義する際には、データベースのサイズ、データベースの変更率、バックアップの実行頻度など、いくつかの要素を考慮する必要があります。 
+---
+= SnapCenter Plug-in for Microsoft SQL Server のストレージレイアウトに関する推奨事項
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ストレージレイアウトが適切に設計されているため、 SnapCenter サーバでデータベースをバックアップして、リカバリの目標を達成できます。ストレージレイアウトを定義する際には、データベースのサイズ、データベースの変更率、バックアップの実行頻度など、いくつかの要素を考慮する必要があります。
+
+以降のセクションでは、 SnapCenter Plug-in for Microsoft SQL Server がインストールされている環境での、 LUN と仮想マシンディスク（ VMDK ）のストレージレイアウトに関する推奨事項と制限について説明します。
+
+この場合、 LUN には、 VMware RDM ディスクと、ゲストにマッピングされた iSCSI 直接接続 LUN を含めることができます。
+
+
+
+== LUN と VMDK の要件
+
+必要に応じて、次のデータベースのパフォーマンスと管理を最適化するために、専用の LUN または VMDK を使用できます。
+
+* マスターデータベースとモデルシステムデータベース
+* tempdb
+* ユーザデータベースファイル（ .mdf および .ndf ）
+* ユーザデータベーストランザクションログファイル（ .ldf ）
+* ログディレクトリ
+
+
+大規模なデータベースをリストアする場合は、専用の LUN または VMDK を使用することを推奨します。LUN または VMDK 全体のリストアにかかる時間は、 LUN または VMDK に格納されている個々のファイルのリストアにかかる時間よりも短くなります。
+
+ログディレクトリについては、データファイルディスクまたはログファイルディスクに十分な空きスペースを確保できるように、別個の LUN または VMDK を作成する必要があります。
+
+
+
+== LUN および VMDK のサンプルレイアウト
+
+次の図は、 LUN 上の大規模データベース用のストレージレイアウトを設定する方法を示しています。
+
+image::../media/smsql_storage_layout_mult_vols_snapcenter.gif[複数の LUN]
+
+次の図は、 LUN 上の中規模または小規模のデータベースのストレージレイアウトを構成する方法を示しています。
+
+image::../media/smsql_storage_layout_mult_dbs_luns_snapcenter.gif[各 LUN に複数のデータベースがある場合]
+
+次の図は、 VMDK 上の大規模データベース用のストレージレイアウトを設定する方法を示しています。
+
+image::../media/smsql_storage_layout_large_dbs_vmdk.gif[VMDK 上の大規模データベースのストレージレイアウト]
+
+次の図は、 VMDK 上の中規模または小規模のデータベースのストレージレイアウトを設定する方法を示しています。
+
+image::../media/smsql_storage_layout_med_small_dbs_vmdk.gif[VMDK 上の中規模または小規模のデータベースのストレージレイアウト]

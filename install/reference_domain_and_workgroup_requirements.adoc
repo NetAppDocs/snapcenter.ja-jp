@@ -1,0 +1,30 @@
+---
+permalink: install/reference_domain_and_workgroup_requirements.html 
+sidebar: sidebar 
+keywords: active directory domain, workgroups, multi-domain forests, cross-domain, cross-forest domains 
+summary: SnapCenter サーバは、ドメインまたはワークグループ内のシステムにインストールできます。インストールに使用するユーザには、ワークグループとドメインの両方の場合に、マシンに対する管理者権限が必要です。 
+---
+= ドメインとワークグループの要件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter サーバは、ドメインまたはワークグループ内のシステムにインストールできます。インストールに使用するユーザには、ワークグループとドメインの両方の場合に、マシンに対する管理者権限が必要です。
+
+Windows ホストに SnapCenter Server プラグインと SnapCenter プラグインをインストールするには、次のいずれかを使用する必要があります。
+
+* * Active Directory ドメイン *
++
+ローカル管理者の権限を持つドメインユーザを使用する必要があります。ドメインユーザは、 Windows ホストのローカル管理者グループのメンバーである必要があります。
+
+* * ワークグループ *
++
+ローカル管理者の権限があるローカルアカウントを使用する必要があります。
+
+
+
+ドメイントラスト、マルチドメインフォレスト、およびクロスドメイントラストはサポートされていますが、クロスフォレストドメインはサポートされません。詳細については、 Microsoft の Active Directory ドメインと信頼関係に関するドキュメントを参照してください。
+
+
+NOTE: SnapCenter サーバをインストールしたあとに、 SnapCenter ホストが配置されているドメインを変更しないでください。SnapCenter サーバをインストールした時点のドメインから SnapCenter サーバホストを削除して、 SnapCenter サーバをアンインストールしようとすると、アンインストール処理は失敗します。

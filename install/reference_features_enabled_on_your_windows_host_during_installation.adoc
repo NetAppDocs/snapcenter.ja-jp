@@ -1,0 +1,130 @@
+---
+permalink: install/reference_features_enabled_on_your_windows_host_during_installation.html 
+sidebar: sidebar 
+keywords:  
+summary: SnapCenter Server インストーラを使用すると、インストール中に Windows ホストで Windows の機能とロールが有効になります。これらの情報は、トラブルシューティングやホストシステムのメンテナンスに役立つ場合があります。 
+---
+= インストール中に Windows ホストで有効になる機能
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter Server インストーラを使用すると、インストール中に Windows ホストで Windows の機能とロールが有効になります。これらの情報は、トラブルシューティングやホストシステムのメンテナンスに役立つ場合があります。
+
+|===
+| カテゴリ | フィーチャー（ Feature ） 
+
+
+ a| 
+Web サーバ
+ a| 
+* インターネットインフォメーションサービス
+* World Wide Web Services の略
+* Common HTTP Features （共通 HTTP 機能）
++
+** 既定のドキュメント
+** ディレクトリの参照
+** HTTP エラー
+** HTTP リダイレクション
+** 静的なコンテンツ
+** WebDAV 発行
+
+
+* 正常性と診断
++
+** カスタムログ
+** HTTP ログ
+** ログツール
+** Request Monitor サービスの略
+** トレース
+
+
+* パフォーマンス機能
++
+** 静的なコンテンツの圧縮
+
+
+* セキュリティ
++
+** IP セキュリティ
+** Basic Authentication の略
+** 一元的な SSL 証明書のサポート
+** クライアント証明書マッピング認証
+** IIS クライアント証明書マッピング認証
+** IP およびドメインの制限
+** 要求フィルタリング
+** URL 承認
+** Windows 認証
+
+
+* アプリケーション開発機能
++
+** .NET 拡張機能 4.5
+** アプリケーションの初期化
+** ASP.NET 4.5.
+** サーバー側インクルード
+** WebSocket プロトコル
+
+
+* 管理ツール
++
+** IIS Management Console の略
+
+
+
+
+
+
+ a| 
+IIS 管理スクリプトおよびツール
+ a| 
+* IIS 管理サービス
+* Web 管理ツール
+
+
+
+
+ a| 
++.NET Framework 4.5.2 機能 +
+ a| 
+* .NET Framework 4.5.2
+* ASP.NET 4.5.2
+* Windows Communication Foundation (WCF) HTTP Activation 45
++
+** TCP のアクティブ化
+** HTTP アクティブ化
+** メッセージキュー（ MSMQ ）のアクティブ化
+
+
+
+
+
+
+ a| 
+メッセージキュー
+ a| 
+* メッセージキューサービス
++
+
+NOTE: SnapCenter が作成および管理する MSMQ サービスを他のアプリケーションが使用していないことを確認します。
+
+* MSMQ サーバ
+
+
+
+
+ a| 
+Windows プロセスアクティブ化サービス
+ a| 
+* プロセスモデル
+
+
+
+
+ a| 
+設定 API
+ a| 
+すべて
+
+|===

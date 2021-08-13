@@ -1,0 +1,128 @@
+= 
+
+
+SnapCenter は、物理マシンと仮想マシンの両方でさまざまなストレージタイプをサポートしています。ホストに対応したパッケージをインストールする前に、ストレージタイプがサポートされているかどうかを確認する必要があります。
+
+Windows Server では、 SnapCenter プロビジョニングとデータ保護がサポートされます。サポートされているバージョンの最新情報については、を参照してください http://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool で確認できます"^]。
+
+|===
+| マシン | ストレージタイプ | を使用してプロビジョニング | サポートのメモ 
+
+
+ a| 
+物理サーバ
+ a| 
+FC 接続 LUN
+ a| 
+SnapCenter のグラフィカルユーザインターフェイス（ GUI ）または PowerShell コマンドレット
+ a| 
+
+
+
+ a| 
+物理サーバ
+ a| 
+iSCSI で接続された LUN
+ a| 
+SnapCenter GUI または PowerShell コマンドレット
+ a| 
+
+
+
+ a| 
+物理サーバ
+ a| 
+Storage Virtual Machine （ SVM ）上の SMB3 （ CIFS ）共有
+ a| 
+SnapCenter GUI または PowerShell コマンドレット
+ a| 
+プロビジョニングのみがサポートされます。
+
+SnapCenter プロトコルを使用してデータや共有をバックアップすることはできません。
+
+
+
+ a| 
+VMware VM
+ a| 
+FC または iSCSI HBA で接続された RDM LUN
+ a| 
+PowerShell コマンドレット
+ a| 
+
+
+
+ a| 
+VMware VM
+ a| 
+iSCSI イニシエータによってゲストシステムに直接接続された iSCSI LUN
+ a| 
+SnapCenter GUI または PowerShell コマンドレット
+ a| 
+
+
+
+ a| 
+VMware VM
+ a| 
+VMFS または NFS データストア上の Virtual Machine File Systems （ VMFS ）
+ a| 
+VMware vSphere または VSC のクローニングユーティリティ
+ a| 
+
+
+
+ a| 
+VMware VM
+ a| 
+SVM 上の SMB3 共有に接続されたゲストシステム
+ a| 
+SnapCenter GUI または PowerShell コマンドレット
+ a| 
+プロビジョニングのみがサポートされます。
+
+SnapCenter プロトコルを使用してデータや共有をバックアップすることはできません。
+
+
+
+ a| 
+Hyper-V VM
+ a| 
+仮想ファイバチャネルスイッチで接続された仮想 FC （ vFC ） LUN
+ a| 
+SnapCenter GUI または PowerShell コマンドレット
+ a| 
+仮想ファイバチャネルスイッチで接続された仮想 FC （ vFC ） LUN のプロビジョニングには、 Hyper-V Manager を使用する必要があります。
+
+
+NOTE: Hyper-V のパススルーディスク、およびネットアップストレージでプロビジョニングされた VHD （ x ）でのデータベースのバックアップはサポートされていません。
+
+
+
+ a| 
+Hyper-V VM
+ a| 
+iSCSI イニシエータによってゲストシステムに直接接続された iSCSI LUN
+ a| 
+SnapCenter GUI または PowerShell コマンドレット
+ a| 
+
+NOTE: Hyper-V のパススルーディスク、およびネットアップストレージでプロビジョニングされた VHD （ x ）でのデータベースのバックアップはサポートされていません。
+
+
+
+ a| 
+Hyper-V VM
+ a| 
+SVM 上の SMB3 共有に接続されたゲストシステム
+ a| 
+SnapCenter GUI または PowerShell コマンドレット
+ a| 
+プロビジョニングのみがサポートされます。
+
+SnapCenter プロトコルを使用してデータや共有をバックアップすることはできません。
+
+
+NOTE: Hyper-V のパススルーディスク、およびネットアップストレージでプロビジョニングされた VHD （ x ）でのデータベースのバックアップはサポートされていません。
+
+|===

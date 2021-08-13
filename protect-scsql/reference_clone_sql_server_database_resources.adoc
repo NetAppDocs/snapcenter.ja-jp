@@ -1,0 +1,29 @@
+---
+permalink: protect-scsql/reference_clone_sql_server_database_resources.html 
+sidebar: sidebar 
+keywords:  
+summary: バックアップからデータベースリソースをクローニングする前に、 SnapCenter Server でいくつかのタスクを実行する必要があります。データベースのクローニングは、本番環境のデータベースまたはそのバックアップセットのポイントインタイムコピーを作成するプロセスです。アプリケーション開発サイクル中に実装が必要な機能を現在のデータベースの構造およびコンテンツを使用してテストする場合、データの抽出と操作を行うツールを使用してデータウェアハウスにデータを取り込む場合、誤って削除または変更されたデータをリカバリする場合などに実行します。 
+---
+= SQL Server データベースリソースのクローニング
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+バックアップからデータベースリソースをクローニングする前に、 SnapCenter Server でいくつかのタスクを実行する必要があります。データベースのクローニングは、本番環境のデータベースまたはそのバックアップセットのポイントインタイムコピーを作成するプロセスです。アプリケーション開発サイクル中に実装が必要な機能を現在のデータベースの構造およびコンテンツを使用してテストする場合、データの抽出と操作を行うツールを使用してデータウェアハウスにデータを取り込む場合、誤って削除または変更されたデータをリカバリする場合などに実行します。
+
+データベースのクローニング処理では、ジョブ ID に基づいてレポートが生成されます。
+
+次のワークフローは、クローニング処理の実行順序を示しています。
+
+image::../media/scsql_clone_workflow.png[クローニングのワークフロー図]
+
+PowerShell コマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、リカバリ、検証、クローニングの処理を実行することもできます。PowerShell コマンドレットの詳細については、 SnapCenter コマンドレットのヘルプを使用するか、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["SnapCenter ソフトウェアコマンドレットリファレンスガイド"]
+
+* 詳細はこちら *
+
+link:task_clone_from_a_sql_server_database_backup.html["SQL Server データベースバックアップからのクローニング"]
+
+link:task_perform_clone_lifecycle_management.html["クローンライフサイクルの実行"]
+
+link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Clone_operation_might_fail_or_take_longer_time_to_complete_with_default_TCP_TIMEOUT_value["デフォルトの TCP_TIMEOUT 値を使用すると、クローニング処理が失敗するか所要時間が長くなる可能性があります"]

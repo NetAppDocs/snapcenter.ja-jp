@@ -1,0 +1,20 @@
+---
+permalink: install/reference_supported_storage_systems_and_applications.html 
+sidebar: sidebar 
+keywords: storage system, ONTAP version 
+summary: サポートされるストレージシステム、アプリケーション、およびデータベースを確認しておく必要があります。 
+---
+= サポートされるストレージシステムおよびアプリケーション
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+サポートされるストレージシステム、アプリケーション、およびデータベースを確認しておく必要があります。
+
+* SnapCenter では、データを保護するために ONTAP 8.3.0 以降がサポートされています。
+* SnapCenter では、さまざまなアプリケーションやデータベースの保護がサポートされます。
++
+サポートされているアプリケーションおよびデータベースの詳細については、を参照してください http://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool で確認できます"^]。
+
+

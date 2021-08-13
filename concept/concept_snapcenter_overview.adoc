@@ -1,0 +1,357 @@
+---
+permalink: concept/concept_snapcenter_overview.html 
+sidebar: sidebar 
+keywords:  
+summary: SnapCenter ソフトウェアは、シンプルで拡張性に優れた一元的なプラットフォームです。ハイブリッドクラウド内の任意の場所にある ONTAP システムで実行されているアプリケーション、データベース、ホストファイルシステム、 VM に対して、アプリケーションと整合性のあるデータ保護を提供します。 
+---
+= SnapCenter の概要
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter ソフトウェアは、シンプルで拡張性に優れた一元的なプラットフォームです。ハイブリッドクラウド内の任意の場所にある ONTAP システムで実行されているアプリケーション、データベース、ホストファイルシステム、 VM に対して、アプリケーションと整合性のあるデータ保護を提供します。
+
+SnapCenter では、ネットアップの Snapshot 、 SnapRestore 、 FlexClone 、 SnapMirror 、および SnapVault テクノロジを活用して、次の機能を提供します。
+
+* アプリケーションと整合性のある、高速でスペース効率に優れたディスクベースのバックアップ
+* 迅速できめ細かなリストアと、アプリケーションと整合性のあるリカバリを実現
+* スペース効率に優れた高速クローニング
+
+
+SnapCenter には、 SnapCenter サーバと個々の軽量プラグインの両方が含まれています。リモートアプリケーションホストへのプラグインの導入を自動化したり、バックアップ、検証、クローニングの処理をスケジュールしたり、すべてのデータ保護処理を監視したりできます。
+
+SnapCenter は、次の方法で導入できます。
+
+* オンプレミスで保護：
++
+** ONTAP FAS または AFF のプライマリシステム上にあり、 ONTAP FAS または AFF のセカンダリシステムにレプリケートされるデータ
+** ONTAP Select プライマリシステム上のデータ
+
+
+* ハイブリッドクラウドのオンプレミスで以下を保護：
++
+** ONTAP FAS または AFF プライマリシステム上にあり、 Cloud Volumes ONTAP または NetApp Private Storage セカンダリシステムにレプリケートされるデータ
+
+
+* パブリッククラウドで次のデータを保護：
++
+** Cloud Volumes ONTAP （旧 ONTAP Cloud ）プライマリシステム上のデータ
+
+
+
+
+SnapCenter の主な機能は次のとおりです。
+
+* アプリケーションと整合性のある一元的なデータ保護
++
+データ保護は、 ONTAP システムで実行されている Microsoft Exchange Server 、 Microsoft SQL Server 、 Linux または AIX 上の Oracle データベース、 SAP HANA データベース、および Windows ホストファイルシステムでサポートされます。
+
++
+ユーザ定義の SnapCenter プラグインを作成するためのフレームワークを提供することで、他の標準またはカスタムのアプリケーションやデータベースでもデータ保護がサポートされます。これにより、 1 つの画面で他のアプリケーションやデータベースのデータを保護することができます。このフレームワークを活用して、ネットアップは IBM DB2 、 MongoDB 、 MySQL など用の SnapCenter カスタムプラグインを NetApp Automation Store でリリースしました。
+
+* ポリシーベースのバックアップ
++
+ポリシーベースのバックアップでは、 NetApp Snapshot コピーテクノロジを利用して、アプリケーションと整合性のある高速なディスクベースのバックアップを、スペース効率に優れた方法で作成します。必要に応じて、既存の保護関係を更新することで、セカンダリストレージに対するこれらのバックアップの保護を自動化することができます。
+
+* 複数のリソースのバックアップ
++
+SnapCenter リソースグループを使用して、同じタイプの複数のリソース（アプリケーション、データベース、またはホストファイルシステム）を同時にバックアップできます。
+
+* リストアとリカバリ
++
+SnapCenter を使用すると、バックアップとアプリケーションと整合性のある、時間ベースのリカバリを迅速かつきめ細かくリストアできます。ハイブリッドクラウドの任意のデスティネーションからリストアできます。
+
+* クローニング
++
+SnapCenter は、スペース効率に優れた、アプリケーションと整合性のある高速クローニングを実現し、ソフトウェア開発期間を短縮します。ハイブリッドクラウドの任意のデスティネーションにクローニングできます。
+
+* 単一のユーザ管理グラフィカルユーザインターフェイス（ GUI ）
++
+SnapCenter GUI では、ハイブリッドクラウドの任意のデスティネーションにあるリソースのバックアップとクローンを管理するための単一の停止インターフェイスが提供されます。
+
+* REST API 、 Windows コマンドレット、 UNIX コマンド
++
+SnapCenter には、ほとんどの機能をオーケストレーションソフトウェアと統合するための REST API 、および Windows PowerShell コマンドレットとコマンドラインインターフェイスが含まれています。
+
+* 一元化されたデータ保護ダッシュボードとレポート作成
+* セキュリティと委譲のためのロールベースアクセス制御（ RBAC ）。
+* 高可用性を備えたリポジトリデータベース
++
+SnapCenter には、すべてのバックアップメタデータを格納するための高可用性機能を備えたリポジトリデータベースが組み込まれています。
+
+* プラグインの自動プッシュインストール
++
+SnapCenter サーバホストからアプリケーションホストへの SnapCenter プラグインのリモートプッシュを自動化できます。
+
+* 高可用性
++
+SnapCenter のハイアベイラビリティは、外部ロードバランサ（ F5 ）を使用して設定されています。同じデータセンター内で最大 2 つのノードがサポートされます。
+
+
+
+
+
+== SnapCenter アーキテクチャ
+
+SnapCenter プラットフォームは、集中管理サーバー（ SnapCenter サーバー）と SnapCenter プラグインホストを含む多層アーキテクチャに基づいています。
+
+SnapCenter はマルチサイトデータセンターをサポートしている。SnapCenter サーバとプラグインホストは、地理的に離れた場所に配置することもできます。
+
+image::../media/snapcenter_architecture.gif[SnapCenter アーキテクチャ]
+
+
+
+== SnapCenter コンポーネント
+
+SnapCenter は、 SnapCenter Server と SnapCenter プラグインで構成されています。インストールするプラグインは、保護するデータに適したプラグインだけにしてください。
+
+* SnapCenter サーバ
+* SnapCenter Plug-ins Package for Windows には次のプラグインが含まれています。
++
+** SnapCenter Plug-in for Microsoft SQL Server
+** SnapCenter Plug-in for Microsoft Windows の略
+** SnapCenter Plug-in for Microsoft Exchange Server の略
+** SAP HANA データベース向け SnapCenter プラグイン
+
+
+* SnapCenter Plug-ins Package for Linux 。 Linux には次のプラグインが含まれています。
++
+** SnapCenter Plug-in for Oracle Database
+** SAP HANA データベース向け SnapCenter プラグイン
+** SnapCenter Plug-in for UNIX の略
++
+
+NOTE: SnapCenter Plug-in for UNIX はスタンドアロンのプラグインではなく、個別にインストールすることはできません。このプラグインは、 SnapCenter Plug-in for Oracle Database または SnapCenter Plug-in for SAP HANA Database のインストール時に自動的にインストールされます。
+
+
+
+* SnapCenter Plug-ins Package for AIX ：以下のプラグインが含まれています。
++
+** SnapCenter Plug-in for Oracle Database
+** SnapCenter Plug-in for UNIX の略
++
+
+NOTE: SnapCenter Plug-in for UNIX はスタンドアロンのプラグインではなく、個別にインストールすることはできません。このプラグインは、 SnapCenter Plug-in for Oracle Database のインストール時に自動的にインストールされます。
+
+
+
+* SnapCenter カスタムプラグイン
++
+カスタムプラグインはコミュニティでサポートされており、からダウンロードできます https://automationstore.netapp.com/home.shtml["NetApp Storage Automation Store の略"]。
+
+
+
+SnapCenter Plug-in for VMware vSphere は、ネットアップのデータブローカーです。仮想化されたデータベースやファイルシステムに対する SnapCenter のデータ保護処理をサポートする、スタンドアロンの仮想アプライアンスです。
+
+
+
+== SnapCenter サーバ
+
+SnapCenter サーバには、 Web サーバ、一元化された HTML5 ベースのユーザインターフェイス、 PowerShell コマンドレット、 REST API 、および SnapCenter リポジトリが含まれています。
+
+SnapCenter を使用すると、単一のユーザインターフェイスで複数の SnapCenter サーバ間の高可用性とスケールアウトを実現できます。外部ロードバランサ（ F5 ）を使用して高可用性を実現できます。数千台ものホストで構成される大規模な環境では、複数の SnapCenter Server を追加して負荷を分散すると便利です。
+
+* SnapCenter Plug-ins Package for Windows を使用している場合、ホストエージェントは SnapCenter サーバおよび Windows プラグインホストで実行されます。ホストエージェントは、リモート Windows ホストまたは Microsoft SQL Server でスケジュールをネイティブに実行します。スケジュールはローカル SQL インスタンスで実行されます。
++
+SnapCenter サーバは、ホストエージェントを介して Windows プラグインと通信します。
+
+* SnapCenter Plug-ins Package for Linux または SnapCenter Plug-ins Package for AIX を使用している場合、 SnapCenter サーバでスケジュールが Windows タスクスケジュールとして実行されます。
++
+** SnapCenter Plug-in for Oracle Database の場合、 SnapCenter サーバホストで実行されるホストエージェントは、 Linux ホストまたは AIX ホストで実行される SnapCenter Plug-in Loader （ SPL ）と通信して、異なるデータ保護処理を実行します。
+** SnapCenter Plug-in for SAP HANA Database および SnapCenter Custom Plug-ins の場合、 SnapCenter サーバはホストで実行されている SCCore エージェントを通じてこれらのプラグインと通信します。
+
+
+
+
+SnapCenter サーバとプラグインは、 HTTPS を使用してホストエージェントと通信します。
+
+SnapCenter 処理に関する情報は、 SnapCenter リポジトリに保存されます。
+
+
+
+== SnapCenter プラグイン
+
+各 SnapCenter プラグインは、特定の環境、データベース、およびアプリケーションをサポートしています。
+
+|===
+| プラグイン名 | インストールパッケージに含まれています | 他のプラグインが必要です | ホストにインストール済みである | サポートされているプラットフォーム 
+
+
+ a| 
+Plug-in for SQL Server のこと
+ a| 
+Windows 用プラグインパッケージ
+ a| 
+Plug-in for Windows のこと
+ a| 
+SQL Server ホスト
+ a| 
+Windows の場合
+
+
+
+ a| 
+Plug-in for Windows のこと
+ a| 
+Windows 用プラグインパッケージ
+ a| 
+ a| 
+Windows ホスト
+ a| 
+Windows の場合
+
+
+
+ a| 
+Plug-in for Exchange の略
+ a| 
+Windows 用プラグインパッケージ
+ a| 
+Plug-in for Windows のこと
+ a| 
+Exchange Server ホスト
+ a| 
+Windows の場合
+
+
+
+ a| 
+Plug-in for Oracle Database の略
+ a| 
+Linux 用プラグインパッケージおよび AIX 用プラグインパッケージ
+ a| 
+Plug-in for UNIX のこと
+ a| 
+Oracle ホスト
+ a| 
+Linux または AIX
+
+
+
+ a| 
+Plug-in for SAP HANA Database の略
+ a| 
+Plug-in Package for Linux and Plug-ins Package for Windows 』を参照してください
+ a| 
+Plug-in for UNIX or Plug-in for Windows のいずれかです
+ a| 
+HDBSQL クライアントホスト
+ a| 
+Linux または Windows
+
+
+
+ a| 
+カスタムプラグイン
+ a| 
+https://automationstore.netapp.com/home.shtml["NetApp Storage Automation Store の略"^]
+ a| 
+ファイルシステムのバックアップについては、 Plug-in for Windows を参照してください
+ a| 
+カスタムアプリケーションホスト
+ a| 
+Linux または Windows
+
+|===
+
+NOTE: SnapCenter Plug-in for VMware vSphere は、仮想マシン（ VM ）、データストア、および仮想マシンディスク（ VMDK ）に対して crash-consistent で VM と整合性のあるバックアップおよびリストア処理をサポートし、 SnapCenter アプリケーション固有のプラグインをサポートして、仮想化されたデータベースおよびファイルシステムに対してアプリケーションと整合性のあるバックアップおよびリストア処理を保護します。
+
+SnapCenter 4.1.1 ユーザの場合、 SnapCenter Plug-in for VMware vSphere 4.1.1 のドキュメントには、仮想化されたデータベースとファイルシステムの保護に関する情報が記載されています。SnapCenter 4.2.x ユーザの場合、 NetApp Data Broker 1.0 および 1.0.1 のドキュメントでは、 Linux ベースの NetApp Data Broker 仮想アプライアンス（オープン仮想アプライアンス形式）が提供する SnapCenter Plug-in for VMware vSphere を使用して、仮想化されたデータベースとファイルシステムを保護する方法について説明しています。SnapCenter 4.3 以降を使用しているユーザの場合は、を参照してください https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/index.html["SnapCenter Plug-in for VMware vSphere のドキュメント"^] Linux ベースの SnapCenter Plug-in for VMware vSphere 仮想アプライアンス（ Open Virtual Appliance 形式）を使用した、仮想化されたデータベースとファイルシステムの保護に関する情報を提供します。
+
+
+
+=== SnapCenter Plug-in for Microsoft SQL Server の特長
+
+* SnapCenter 環境で、アプリケーションに対応したバックアップ、リストア、およびクローニングの処理を自動化します。
+* SnapCenter Plug-in for VMware vSphere を導入して SnapCenter に登録すると、 VMDK および raw デバイスマッピング（ RDM ） LUN 上の Microsoft SQL Server データベースがサポートされます
+* SMB 共有のプロビジョニングのみをサポートします。SMB 共有での SQL Server データベースのバックアップはサポートされていません。
+* SnapManager for Microsoft SQL Server から SnapCenter へのバックアップのインポートをサポートします。
+
+
+
+
+=== SnapCenter Plug-in for Microsoft Windows の特長
+
+* SnapCenter 環境の Windows ホストで実行されている他のプラグインに対して、アプリケーション対応のデータ保護を有効にします
+* SnapCenter 環境で、アプリケーションに対応したバックアップ、リストア、およびクローニングの処理を自動化します
+* Windows ホストのストレージのプロビジョニング、整合性のある Snapshot コピーの作成、およびスペースの再生をサポートします
++
+
+NOTE: Plug-in for Windows では、 SMB 共有および Windows ファイルシステムを物理 RDM LUN 上にプロビジョニングしますが、 SMB 共有上での Windows ファイルシステムのバックアップ処理はサポートされません。
+
+
+
+
+
+=== SnapCenter Plug-in for Microsoft Exchange Server の特長
+
+* SnapCenter 環境での Microsoft Exchange Server データベースおよび Database Availability Group （ DAG ；データベース可用性グループ）で、アプリケーションに対応したバックアップおよびリストア処理を自動化します
+* は、 SnapCenter Plug-in for VMware vSphere を導入して SnapCenter に登録する際に、 RDM LUN 上の仮想 Exchange Server をサポートします
+
+
+
+
+=== SnapCenter Plug-in for Oracle Database の特長
+
+* アプリケーションに対応したバックアップ、リストア、リカバリ、検証、マウント、 SnapCenter 環境での Oracle データベースのアンマウントおよびクローニング処理
+* SAP 対応の Oracle データベースをサポートしますが、 SAP BR * Tools との統合は提供されません
+
+
+
+
+=== SnapCenter Plug-in for UNIX の特長
+
+* Plug-in for Oracle Database で、 Linux または AIX システム上の基盤となるホストストレージスタックを処理することで、 Oracle データベースに対するデータ保護処理を実行できます
+* ONTAP を実行するストレージシステムで、 Network File System （ NFS ；ネットワークファイルシステム）プロトコルおよび Storage Area Network （ SAN ；ストレージエリアネットワーク）プロトコルをサポートします。
+* Linux システムの場合、 VMDK および RDM LUN 上の Oracle データベースは、 SnapCenter Plug-in for VMware vSphere を導入して SnapCenter に登録するとサポートされます。
+* SAN ファイルシステムおよび LVM レイアウトで AIX 用のマウントガードをサポートします。
+* SAN ファイルシステムのインラインロギングと AIX システムの LVM レイアウトでのみ、 Enhanced Journaled File System （ JFS2 ）をサポートします。
++
+SAN デバイス上に構築された SAN ネイティブデバイス、ファイルシステム、 LVM のレイアウトがサポートされます。
+
+
+
+
+
+=== SnapCenter Plug-in for SAP HANA Database の特長
+
+* SnapCenter 環境で、アプリケーションに対応した SAP HANA データベースのバックアップ、リストア、クローニングを自動化します
+
+
+
+
+=== SnapCenter Custom Plug-ins の特長
+
+* は、他の SnapCenter プラグインでサポートされていないアプリケーションやデータベースを管理するためのカスタムプラグインをサポートしています。カスタムプラグインは、 SnapCenter のインストールには含まれていません。
+* では、別のボリュームにバックアップセットのミラーコピーを作成し、ディスクツーディスクのバックアップレプリケーションを実行できます。
+* Windows 環境と Linux 環境の両方をサポートします。Windows 環境では、カスタムプラグインに SnapCenter Plug-in for Microsoft Windows を組み合わせて使用することで、ファイルシステムの整合性のあるバックアップを作成することができます。
+
+
+SnapCenter ソフトウェア用の MySQL 、 DB2 、 MongoDB カスタムプラグインのサンプルは、からダウンロードできます https://automationstore.netapp.com/home.shtml["NetApp Storage Automation Store の略"^]。
+
+
+NOTE: MySQL 、 DB2 、 MongoDB のカスタムプラグインは、ネットアップのコミュニティでのみサポートされます。
+
+ネットアップでは、カスタムプラグインの作成と使用をサポートしていますが、作成したカスタムプラグインはネットアップではサポートしていません。
+
+詳細については、を参照してください link:../protect-scc/concept_develop_a_plug_in_for_your_application.html["アプリケーション用のプラグインを開発します"^]
+
+
+
+== SnapCenter リポジトリ
+
+SnapCenter リポジトリは NSM データベースとも呼ばれ、 SnapCenter のすべての処理の情報とメタデータを格納します。
+
+MySQL Server リポジトリデータベースは、 SnapCenter Server のインストール時にデフォルトでインストールされます。MySQL Server がすでにインストールされていて、 SnapCenter Server を新規にインストールする場合は、 MySQL Server をアンインストールする必要があります。
+
+SnapCenter では、 SnapCenter リポジトリデータベースとして MySQL Server 5.7.25 以降をサポートしています。以前のリリースの SnapCenter を搭載した以前のバージョンの MySQL Server を使用していた場合、 SnapCenter のアップグレード中に MySQL Server が 5.7.25 以降にアップグレードされます。
+
+SnapCenter リポジトリには、次の情報とメタデータが格納されます。
+
+* バックアップ、クローニング、リストア、検証の各メタデータ
+* レポート作成、ジョブ、イベントの情報
+* ホストおよびプラグインの情報
+* ロール、ユーザ、および権限の詳細
+* ストレージシステムの接続情報
+

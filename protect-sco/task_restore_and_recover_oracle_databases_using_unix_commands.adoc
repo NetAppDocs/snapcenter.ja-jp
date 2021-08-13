@@ -1,0 +1,30 @@
+---
+permalink: protect-sco/task_restore_and_recover_oracle_databases_using_unix_commands.html 
+sidebar: sidebar 
+keywords: restore, recover, CLI 
+summary: リストアとリカバリのワークフローには、計画、リストア処理とリカバリ処理の実行、および処理の監視が含まれます。 
+---
+= UNIX コマンドを使用して Oracle データベースをリストアおよびリカバリする
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+リストアとリカバリのワークフローには、計画、リストア処理とリカバリ処理の実行、および処理の監視が含まれます。
+
+* このタスクについて *
+
+次のコマンドを実行して、 SnapCenter サーバとの接続を確立し、バックアップをリストしてその情報を取得し、バックアップをリストアする必要があります。
+
+コマンドで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2877144["SnapCenter ソフトウェアコマンドリファレンスガイド"^]。
+
+* 手順 *
+
+. 指定されたユーザ用に SnapCenter サーバとの接続セッションを開始します： _Open-SmConnection_
+. リストアするバックアップに関する情報を取得します： _Get-SmBackup_
+. 指定したバックアップに関する詳細情報を取得します： _Get-SmBackupDetails_
++
+このコマンドは、指定されたバックアップ ID に一致する指定されたリソースのバックアップに関する詳細情報を取得します。情報には、データベース名、バージョン、ホーム、開始 SCN と終了 SCN 、表領域、 Pluggable Database とその表領域などがあります。
+
+. バックアップからデータをリストアする： _Restore-SmBackup_
+

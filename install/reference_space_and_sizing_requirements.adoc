@@ -1,0 +1,77 @@
+---
+permalink: install/reference_space_and_sizing_requirements.html 
+sidebar: sidebar 
+keywords: SnapCenter 
+summary: SnapCenter サーバをインストールする前に、スペースとサイジングの要件を十分に理解しておく必要があります。また、利用可能なシステムおよびセキュリティの更新も適用する必要があります。 
+---
+= スペースとサイジングの要件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter サーバをインストールする前に、スペースとサイジングの要件を十分に理解しておく必要があります。また、利用可能なシステムおよびセキュリティの更新も適用する必要があります。
+
+|===
+| 項目 | 要件 
+
+
+ a| 
+オペレーティングシステム
+ a| 
+Microsoft Windows の場合
+
+サポートされているのは、英語版、ドイツ語版、日本語版、簡体字中国語版のオペレーティングシステムのみです。
+
+サポートされているバージョンの最新情報については、を参照してください http://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool で確認できます"^]。
+
+
+
+ a| 
+最小 CPU 数
+ a| 
+4 コア
+
+
+
+ a| 
+最小 RAM
+ a| 
+8 GB
+
+
+NOTE: MySQL Server のバッファプールでは、 RAM の合計の 20% が使用されます。
+
+
+
+ a| 
+SnapCenter サーバソフトウェアおよびログ用のハードドライブの最小容量
+ a| 
+4 GB
+
+
+NOTE: SnapCenter サーバがインストールされているドライブに SnapCenter リポジトリがある場合は、 10GB にすることを推奨します。
+
+
+
+ a| 
+SnapCenter リポジトリ用のハードドライブの最小容量
+ a| 
+6 GB
+
+
+NOTE: メモ： SnapCenter リポジトリがインストールされているドライブに SnapCenter サーバがある場合は、 10GB にすることを推奨します。
+
+
+
+ a| 
+必要なソフトウェアパッケージ
+ a| 
+* Microsoft .NET Framework 4.5.2 以降
+* Windows Management Framework （ WMF ） 4.0 以降
+* PowerShell 4.0 以降
+
+
+サポートされているバージョンの最新情報については、を参照してください http://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool で確認できます"^]。
+
+|===

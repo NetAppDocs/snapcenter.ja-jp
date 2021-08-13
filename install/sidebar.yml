@@ -1,0 +1,146 @@
+---
+section: install
+title: SnapCenter サーバのインストール
+entries:
+- title: ワークフローをインストールします
+  url: "/install/install_workflow.html"
+- title: SnapCenter サーバをインストールする準備をします
+  entries:
+  - title: ドメインとワークグループの要件
+    url: "/install/reference_domain_and_workgroup_requirements.html"
+  - title: スペースとサイジングの要件
+    url: "/install/reference_space_and_sizing_requirements.html"
+  - title: SAN ホストの要件
+    url: "/install/reference_san_host_requirements.html"
+  - title: サポートされるストレージシステムおよびアプリケーション
+    url: "/install/reference_supported_storage_systems_and_applications.html"
+  - title: サポートされているブラウザ
+    url: "/install/reference_supported_browsers.html"
+  - title: 接続とポートの要件
+    url: "/install/reference_connection_and_port_requirements.html"
+  - title: SnapCenter ライセンス
+    url: "/install/concept_snapcenter_licenses.html"
+  - title: クレデンシャルの認証方式を指定します
+    url: "/install/concept_authentication_methods_for_your_credentials.html"
+  - title: Storage Virtual Machine の接続とクレデンシャル
+    url: "/install/concept_svm_connections_and_credentials.html"
+- title: SnapCenter サーバをインストールします
+  url: "/install/task_install_the_snapcenter_server_using_the_install_wizard.html"
+- title: SnapCenter にログインします
+  url: "/install/task_log_in_to_snapcenter.html"
+- title: CA 証明書を設定します
+  entries:
+  - title: CA 証明書 CSR ファイルを生成します
+    url: "/install/reference_generate_CA_certificate_CSR_file.html"
+  - title: CA 証明書をインポートします
+    url: "/install/task_import_CA_certificates.html"
+  - title: CA 証明書のサムプリントを取得します
+    url: "/install/task_get_the_CA_certificate_thumbprint.html"
+  - title: Windows ホストプラグインサービスを使用して CA 証明書を設定する
+    url: "/install/task_configure_CA_certificate_with_Windows_host_plug-in_services.html"
+  - title: SnapCenter サイトで CA 証明書を設定します
+    url: "/install/task_configure_CA_certificate_with_snapcenter_site.html"
+  - title: SnapCenter サーバの CA 証明書を有効にします
+    url: "/install/task_enable_ca_certificates_for_snapcenter.html"
+- title: 信頼できない Active Directory ドメインを登録します
+  url: "/install/task_register_untrusted_active_directory_domains.html"
+- title: ハイアベイラビリティを設定する
+  entries:
+  - title: F5 を使用して SnapCenter サーバのハイアベイラビリティを構成します
+    url: "/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html"
+  - title: Microsoft Network Load Balancer を手動で設定します
+    url: "/install/concept_network_load_balanacing_and_application_request_routing_requirements.html"
+  - title: NLB から F5 に切り替えて高可用性を実現します
+    url: "/install/task_switch_from_nlb_to_f5_for_high_availability.html"
+  - title: SnapCenter MySQL リポジトリの高可用性
+    url: "/install/concept_high_availability_for_snapcenter_mysql_repository.html"
+  - title: SnapCenter 証明書をエクスポートする
+    url: "/install/task_export_snapcenter_certificates.html"
+- title: ロールベースアクセス制御（ RBAC ）の設定
+  entries:
+  - title: ユーザまたはグループを追加し、ロールとアセットを割り当てます
+    url: "/install/task_add_a_user_or_group_and_assign_role_and_assets.html"
+  - title: ロールを作成します
+    url: "/install/task_create_a_role.html"
+  - title: security login コマンドを使用して、 ONTAP RBAC ロールを追加します
+    url: "/install/task_add_an_rbac_role_using_security_login_commands.html"
+  - title: 最小限の権限で ONTAP クラスタロールを作成します
+    url: "/install/task_create_an_ontap_cluster_role_with_minimum_privileges.html"
+  - title: Active Directory の読み取り権限を有効にするように IIS アプリケーションプールを設定します
+    url: "/install/task_configure_iis_application_pools_to_enable_active_directory_read_permissions.html"
+- title: ストレージシステムを追加
+  url: "/install/task_add_storage_systems.html"
+- title: SnapCenter ライセンスを追加します
+  url: "/install/task_add_snapcenter_licenses.html"
+  entries:
+  - title: SnapCenter の標準的なコントローラベースのライセンス
+    url: "/install/concept_snapcenter_standard_controller_based_licenses.html"
+    entries:
+    - title: SnapManager スイートのストレージコントローラライセンスがインストールされているかどうかを確認します
+      url: "/install/task_verify_if_the_snapmanager_suite_storage_controller_license_is_installed.html"
+    - title: コントローラにインストールされているライセンスを表示します
+      url: "/install/task_view_the_licenses_installed_on_the_controller.html"
+    - title: コントローラのシリアル番号を取得します
+      url: "/install/task_retrieve_the_controller_serial_number.html"
+    - title: SnapCenter コントローラベースのライセンスのシリアル番号を取得します
+      url: "/install/task_retrieve_the_snapcenter_controller_based_license_serial_number.html"
+    - title: SnapCenter の標準コントローラベースライセンスを追加します
+      url: "/install/task_add_a_snapcenter_controller_based_license.html"
+    - title: 試用版ライセンスを削除します
+      url: "/install/task_remove_the_trial_license.html"
+  - title: SnapCenter の容量単位の標準ライセンスです
+    url: "/install/concept_snapcenter_standard_capacity_based_licenses.html"
+    entries:
+    - title: SnapCenter での使用容量の計算方法
+      url: "/install/concept_how_snapcenter_calculates_capacity_usage.html"
+    - title: SnapCenter の容量ベースのライセンスの容量要件を計算します
+      url: "/install/task_calculate_capacity_requirements_for_a_snapcenter_capacity_based_license.html"
+    - title: SnapCenter の容量ベースのライセンスのシリアル番号を取得します
+      url: "/install/task_retrieve_snapcenter_capacity_based_license_serial_number.html"
+    - title: ネットアップライセンスファイルを生成
+      url: "/install/task_generate_a_netapp_license_file.html"
+    - title: SnapCenter の容量ベースのライセンスを追加
+      url: "/install/task_add_snapcenter_capacity_based_licenses.html"
+- title: Windows ホストでストレージをプロビジョニングする
+  url: "/install/concept_provision_storage_on_windows_hosts.html"
+  entries:
+  - title: LUN ストレージを設定します
+    url: "/install/concept_configure_lun_storage.html"
+    entries:
+    - title: iSCSI セッションを確立します
+      url: "/install/task_establish_an_iscsi_session.html"
+    - title: iSCSI セッションを切断します
+      url: "/install/task_disconnect_an_iscsi_session.html"
+    - title: igroup を作成して管理します
+      url: "/install/concept_create_and_manage_igroups.html"
+    - title: ディスクを作成および管理する
+      url: "/install/task_create_and_manage_disks.html"
+  - title: SMB 共有を作成および管理する
+    url: "/install/concept_create_and_manage_smb_shares.html"
+  - title: ストレージシステム上のスペースを再生する
+    url: "/install/task_reclaim_space_on_the_storage_system.html"
+  - title: PowerShell コマンドレットを使用してストレージをプロビジョニング
+    url: "/install/reference_provision_storage_using_powershell_cmdlets.html"
+- title: VMware 環境でストレージをプロビジョニング
+  url: "/install/concept_provision_storage_in_vmware_environments.html"
+  entries:
+  - title: サポートされている VMware ゲスト OS プラットフォーム
+    url: "/install/concept_supported_vmware_guest_os_platforms.html"
+    entries:
+    - title: VMware ESXi サーバ関連の制限事項
+      url: "/install/concept_vmware_esxi_server_related_limitations.html"
+    - title: SnapCenter RDM の処理に必要な最小限の vCenter 権限
+      url: "/install/concept_minimum_vcenter_privileges_required_for_snapcenter_rdm_operations.html"
+  - title: Microsoft クラスタで FC RDM LUN を管理します
+    url: "/install/concept_manage_fc_rdm_luns_in_a_microsoft_cluster.html"
+    entries:
+    - title: Microsoft クラスタで FC RDM LUN を使用するための要件
+      url: "/install/concept_requirements_for_using_fc_rdm_luns_in_a_microsoft_cluster.html"
+    - title: Microsoft クラスタでは、 FC / iSCSI RDM LUN の使用に関する制限事項がサポートされています
+      url: "/install/concept_microsoft_cluster_support_limitations_using_fc_rdm_luns.html"
+    - title: 共有 FC RDM LUN を作成
+      url: "/install/task_create_a_shared_fc_rdm_lun.html"
+- title: SnapCenter サーバとの安全な MySQL 接続を設定します
+  url: "/install/concept_configure_secured_mysql_connections_with_snapcenter_server.html"
+- title: インストール中に Windows ホストで有効になる機能
+  url: "/install/reference_features_enabled_on_your_windows_host_during_installation.html"

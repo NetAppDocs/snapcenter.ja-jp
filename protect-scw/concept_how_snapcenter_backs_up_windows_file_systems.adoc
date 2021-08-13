@@ -1,0 +1,22 @@
+---
+permalink: protect-scw/concept_how_snapcenter_backs_up_windows_file_systems.html 
+sidebar: sidebar 
+keywords:  
+summary: SnapCenter では、 Snapshot コピーテクノロジを使用して Windows ファイルシステムのリソースがバックアップされます。これには、 Windows クラスタの LUN 、 CSV （クラスタ共有ボリューム）、 RDM （ raw デバイスマッピング）ボリューム、 ALM （非対称 LUN マッピング）、および VMFS / NFS （ NFS を使用する VMware Virtual Machine File System ）に基づく VMDK にあるリソースが含まれます。 
+---
+= SnapCenter での Windows ファイルシステムのバックアップ方法
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter では、 Snapshot コピーテクノロジを使用して Windows ファイルシステムのリソースがバックアップされます。これには、 Windows クラスタの LUN 、 CSV （クラスタ共有ボリューム）、 RDM （ raw デバイスマッピング）ボリューム、 ALM （非対称 LUN マッピング）、および VMFS / NFS （ NFS を使用する VMware Virtual Machine File System ）に基づく VMDK にあるリソースが含まれます。
+
+SnapCenter は、ファイルシステムの Snapshot コピーを作成することによってバックアップを作成します。ボリュームに複数のホストの LUN が含まれている場合は、フェデレーテッドバックアップを使用すると、各 LUN を個別にバックアップするよりも迅速かつ効率的に処理できます。ボリュームの Snapshot コピーを 1 つだけ作成すれば、各ファイルシステムの Snapshot を個別に作成しなくても済むからです。
+
+SnapCenter で作成される Snapshot コピーには、ストレージシステムボリューム全体がキャプチャされます。ただし、バックアップは、バックアップが作成されたホストサーバに対してのみ有効になります。
+
+他のホストサーバのデータが同じボリュームに含まれている場合、それらのデータを Snapshot コピーからリストアすることはできません。
+
+
+NOTE: Windows ファイルシステムにデータベースが含まれている場合、ファイルシステムをバックアップしてもデータベースがバックアップされるわけではありません。データベースをバックアップするには、いずれかのデータベースプラグインを使用する必要があります。

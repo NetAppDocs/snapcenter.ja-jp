@@ -1,0 +1,25 @@
+---
+permalink: protect-scc/concept_snapcenter_custom_plug_ins_overview.html 
+sidebar: sidebar 
+keywords: SnapCenter Custom Plug-ins 
+summary: 使用するアプリケーション用のカスタムプラグインを開発し、 SnapCenter を使用してそれらのアプリケーションのバックアップ、リストア、クローニングを行うことができます。カスタムプラグインは、他の SnapCenter プラグインと同様に NetAppSnap Center ソフトウェアのホスト側コンポーネントとして機能し、アプリケーションに対応したリソースのデータ保護と管理を実現します。 
+---
+= SnapCenter Custom Plug-ins の概要
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用するアプリケーション用のカスタムプラグインを開発し、 SnapCenter を使用してそれらのアプリケーションのバックアップ、リストア、クローニングを行うことができます。カスタムプラグインは、他の SnapCenter プラグインと同様に NetApp SnapCenter ソフトウェアのホスト側コンポーネントとして機能し、アプリケーションに対応したリソースのデータ保護と管理を実現します。
+
+Custom Plug-ins をインストールすると、 SnapCenter と NetApp SnapMirror テクノロジを使用して別のボリュームのバックアップセットのミラーコピーを作成し、 NetApp SnapVault テクノロジを使用してディスクツーディスクのバックアップレプリケーションを実行できます。Custom Plug-ins は、 Windows と Linux のどちらの環境でも使用できます。
+
+
+NOTE: SnapCenter CLI では、 SnapCenter Custom Plug-ins コマンドはサポートされていません。
+
+ネットアップでは、 MySQL と DB2 のカスタムプラグインとして、 SnapCenter ソフトウェア 2.0 以降および MongoDB のカスタムプラグインを 3.0 以降から提供しています。これらのプラグインは、からダウンロードできます https://automationstore.netapp.com/home.shtml["NetApp Storage Automation Store の略"^]。
+
+
+NOTE: MySQL 、 DB2 、 MongoDB のカスタムプラグインは、ネットアップのコミュニティでのみサポートされます。
+
+独自のカスタムプラグインは、を参照して作成できます link:concept_develop_a_plug_in_for_your_application.html["アプリケーション用のプラグインを開発します"^]。

@@ -1,0 +1,26 @@
+---
+permalink: install/task_disconnect_an_iscsi_session.html 
+sidebar: sidebar 
+keywords: iSCSI session 
+summary: 複数のセッションを実行しているターゲットから iSCSI セッションを切断しなければならない場合があります。 
+---
+= iSCSI セッションを切断します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+複数のセッションを実行しているターゲットから iSCSI セッションを切断しなければならない場合があります。
+
+* 手順 *
+
+. 左側のナビゲーションペインで、 * Hosts * （ホスト）をクリックします。
+. Hosts （ホスト）ページで、 * iSCSI Session （ iSCSI セッション） * をクリックします。
+. Storage Virtual Machine * ドロップダウンリストから、 iSCSI ターゲットの Storage Virtual Machine （ SVM ）を選択します。
+. [*Host*] ドロップダウン・リストから ' セッションのホストを選択します
+. iSCSI セッションのリストから、切断するセッションを選択し、 * セッションの切断 * をクリックします。
+. [ セッションの切断 ] ダイアログボックスで、 [OK] をクリックします。
++
+SnapCenter によって iSCSI セッションが切断されます。
+
+

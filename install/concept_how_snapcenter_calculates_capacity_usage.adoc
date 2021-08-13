@@ -1,0 +1,17 @@
+---
+permalink: install/concept_how_snapcenter_calculates_capacity_usage.html 
+sidebar: sidebar 
+keywords: SnapCenter, capacity usage 
+summary: SnapCenter の容量ベースのライセンスをインストールしている場合、 SnapCenter は、管理対象の ONTAP Select および Cloud Volumes ONTAP ストレージ上で、 1 日に 1 回、午前 0 時に使用容量を自動的に計算します。SnapCenter を正しく設定するには、 SnapCenter での容量の計算方法を確認しておく必要があります。 
+---
+= SnapCenter での使用容量の計算方法
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter の容量ベースのライセンスをインストールしている場合、 SnapCenter は、管理対象の ONTAP Select および Cloud Volumes ONTAP ストレージ上で、 1 日に 1 回、午前 0 時に使用容量を自動的に計算します。SnapCenter を正しく設定するには、 SnapCenter での容量の計算方法を確認しておく必要があります。
+
+ONTAP Select または Cloud Volumes ONTAP をストレージプラットフォームとして使用している場合は、バックアップやリストアなどの SnapCenter 機能を有効にするために、 SnapCenter Standard 容量ベースのライセンスがインストールされている必要があります。Standard 容量ライセンスを使用している場合、 SnapCenter は、ライセンスで許可された合計容量から、すべてのボリュームの使用済み容量を差し引くことによって、未使用の容量を計算します。
+
+使用容量がライセンスで許可された容量を超えた場合、 SnapCenter ダッシュボードに警告が表示されます。SnapCenter で容量のしきい値と通知を設定している場合は、使用容量が指定したしきい値に達すると E メールが送信されます。

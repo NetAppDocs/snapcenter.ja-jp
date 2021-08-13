@@ -1,0 +1,51 @@
+---
+permalink: protect-hana/concept_auto_discovery_of_resources_on_linux_host.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: リソースとは、 SnapCenter で管理されている Linux ホスト上の SAP HANA データベースと非データボリュームです。SnapCenter Plug-in for SAP HANA Database プラグインをインストールすると、その Linux ホスト上の SAP HANA データベースが自動的に検出されてリソースページに表示されます。 
+---
+= Linux ホスト上のリソースの自動検出
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+リソースとは、 SnapCenter で管理されている Linux ホスト上の SAP HANA データベースと非データボリュームです。SnapCenter Plug-in for SAP HANA Database プラグインをインストールすると、その Linux ホスト上の SAP HANA データベースが自動的に検出されてリソースページに表示されます。
+
+自動検出は、次の SAP HANA リソースでサポートされています。
+
+* 単一のコンテナ
++
+プラグインをインストールまたはアップグレードしたあと、中央ホストプラグインにある単一コンテナリソースは、手動で追加したリソースとして引き続き使用されます。
+
++
+プラグインをインストールまたはアップグレードすると、 SnapCenter に直接登録されている SAP HANA Linux ホストでのみ、 SAP HANA データベースが自動的に検出されます。
+
+* マルチテナントデータベースコンテナ（ MDC ）
++
+プラグインをインストールまたはアップグレードした後、中央ホストプラグインにある MDC リソースは、手動で追加したリソースとして続行されます。
+
++
+SnapCenter 4.3 へのアップグレード後も、中央ホストプラグインに MDC リソースを手動で追加する必要があります。
+
++
+SnapCenter に直接登録された SAP HANA Linux ホストの場合、プラグインをインストールまたはアップグレードすると、ホスト上のリソースが自動で検出されます。プラグインをアップグレードした後、プラグインホスト上にあるすべての MDC リソースに対して、別の MDC リソースが自動的に別の GUID 形式で検出され、 SnapCenter に登録されます。新しいリソースはロック状態になります。
+
++
+たとえば、 SnapCenter 4.2 では、 E90 MDC リソースがプラグインホスト上にあり、手動で登録されている場合、 SnapCenter 4.3 にアップグレードした後に、別の GUID を持つ別の E90 MDC リソースが検出されて SnapCenter に登録されます。
+
+
+
+データ保護処理用の SnapCenter プラグインホスト上の新しい MDC リソースを使用する方法の詳細については、『 SAP HANA データベースデータ保護ガイド』を参照してください
+
+自動検出は、次の構成ではサポートされません。
+
+* RDM と VMDK のレイアウト
++
+
+NOTE: 上記のリソースが検出された場合、これらのリソースではデータ保護処理はサポートされていません。
+
+* HANA マルチホスト構成
+* HANA システムレプリケーション
+* 同じホスト上の複数のインスタンス
+

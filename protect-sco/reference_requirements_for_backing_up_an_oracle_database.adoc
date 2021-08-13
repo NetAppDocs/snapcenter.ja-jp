@@ -1,0 +1,25 @@
+---
+permalink: protect-sco/reference_requirements_for_backing_up_an_oracle_database.html 
+sidebar: sidebar 
+keywords: requirements, prerequisites 
+summary: Oracle データベースをバックアップする前に、前提条件を満たしていることを確認する必要があります。 
+---
+= Oracle データベースをバックアップするための要件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Oracle データベースをバックアップする前に、前提条件を満たしていることを確認する必要があります。
+
+* ポリシーを適用したリソースグループを作成しておく必要があります。
+* セカンダリストレージとの SnapMirror 関係があるリソースをバックアップする場合、ストレージユーザに割り当てられた ONTAP ロールには「「 'SnapMirro all' 」権限を含める必要があります。ただし、「 vsadmin 」ロールを使用している場合、「 'SnapMirro all 」権限は必要ありません。
+* バックアップ処理で使用されるアグリゲートを、データベースが使用する Storage Virtual Machine （ SVM ）に割り当てておく必要があります。
+* データベースでセカンダリ保護が有効になっている場合は、そのデータベースに属するすべてのデータボリュームとアーカイブログボリュームが保護されていることを確認しておく必要があります。
+* ASM ディスク・グループ上にファイルがあるデータベースが 'Oracle DBVERIFY ユーティリティを使用してバックアップを検証するには ' マウント状態またはオープン状態であることを確認しておく必要があります
+* ボリュームマウントポイントの長さが 240 文字を超えないことを確認しておく必要があります。
+* バックアップするデータベースが大容量（ TB 単位）の場合は、 SnapCenter サーバホストで RESTTimeout の値を 86400000~in_C ： \Program Files\NetApp\SMCore \SMCoreServiceHost.exe.config_file に増やしてください。
++
+値を変更するときに実行中のジョブがないことを確認し、値を増やしたあとに SnapCenter SMCore サービスを再起動します。
+
+

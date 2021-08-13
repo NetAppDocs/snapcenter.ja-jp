@@ -1,0 +1,17 @@
+---
+permalink: protect-hana/concept_snapcenter_plug_in_for_sap_hana_database_overview.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: SnapCenter Plug-in for SAP HANA Database は、 SAP HANA データベースに対応したデータ保護管理を提供する、 NetApp SnapCenter ソフトウェアのホスト側コンポーネントです。Plug-in for SAP HANA Database は、 SnapCenter 環境での SAP HANA データベースのバックアップ、リストア、およびクローニングを自動化します。 
+---
+= SnapCenter Plug-in for SAP HANA Database の概要
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter Plug-in for SAP HANA Database は、 SAP HANA データベースに対応したデータ保護管理を提供する、 NetApp SnapCenter ソフトウェアのホスト側コンポーネントです。Plug-in for SAP HANA Database は、 SnapCenter 環境での SAP HANA データベースのバックアップ、リストア、およびクローニングを自動化します。
+
+SnapCenter は、単一コンテナおよびマルチテナントデータベースコンテナ（ MDC ）をサポートしています。Plug-in for SAP HANA Database は、 Windows と Linux のどちらの環境でも使用できます。HANA データベースホストにインストールされていないプラグインは、一元化されたホストプラグインと呼ばれます。一元化されたホストプラグインで、複数のホストにまたがる複数の HANA データベースを管理できます。
+
+Plug-in for SAP HANA Database がインストールされている場合は、 SnapCenter で NetApp SnapMirror テクノロジを使用して、別のボリュームにバックアップセットのミラーコピーを作成できます。また、このプラグインと NetApp SnapVault テクノロジを併用して、標準への準拠を目的としたディスクツーディスクのバックアップレプリケーションを実行することもできます。

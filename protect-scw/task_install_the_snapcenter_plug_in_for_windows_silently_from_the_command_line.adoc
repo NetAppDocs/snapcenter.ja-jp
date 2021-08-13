@@ -1,0 +1,108 @@
+---
+permalink: protect-scw/task_install_the_snapcenter_plug_in_for_windows_silently_from_the_command_line.html 
+sidebar: sidebar 
+keywords:  
+summary: SnapCenter Plug-in for Microsoft Windows を SnapCenter の GUI からリモートでインストールできない場合は、 Windows ホスト上にローカルにインストールできます。SnapCenter Plug-in for Microsoft Windows のインストールプログラムを、 Windows のコマンドラインからサイレントモードで自動的に実行できます。 
+---
+= コマンドラインから SnapCenter Plug-in for Microsoft Windows をサイレントにインストールします
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter Plug-in for Microsoft Windows を SnapCenter の GUI からリモートでインストールできない場合は、 Windows ホスト上にローカルにインストールできます。SnapCenter Plug-in for Microsoft Windows のインストールプログラムを、 Windows のコマンドラインからサイレントモードで自動的に実行できます。
+
+* 必要なもの *
+
+* Microsoft .NET Framework 4.5.2 以降がインストールされている必要があります。
+* PowerShell 4.0 以降がインストールされている必要があります。
+* Windows メッセージキューをオンにしておく必要があります。
+* ホストのローカル管理者である必要があります。
+
+
+* 手順 *
+
+. インストールの場所から、 SnapCenter Plug-in for Microsoft Windows をダウンロードします。
++
+たとえば、デフォルトのインストールパスは C ： \ProgramData\NetApp\SnapCenter \Package Repository です。
+
++
+このパスには、 SnapCenter サーバがインストールされているホストからアクセスできます。
+
+. プラグインをインストールするホストにインストールファイルをコピーします。
+. コマンドプロンプトで、インストールファイルをダウンロードしたディレクトリに移動します。
+. 変数を実際のデータに置き換えて、次のコマンドを入力します。
++
+「 snapcenter _windows_host_plugin.exe 」 /silent/debuglog 「 /log 」 by_SNAPCENTER_port=SUIT_INSTALLDIR="by_ServiceAccount=BI_SERVICEPWD=ISFeatureInstall=SCW`
+
++
+例：
+
++
+....
+`"C:\ProgramData\NetApp\SnapCenter\Package Repository \snapcenter_windows_host_plugin.exe"/silent /debuglog"C: \HPPW_SCW_Install.log" /log"C:\" BI_SNAPCENTER_PORT=8145 SUITE_INSTALLDIR="C: \Program Files\NetApp\SnapCenter" BI_SERVICEACCOUNT=domain\administrator BI_SERVICEPWD=password ISFeatureInstall=SCW`
+....
++
+
+NOTE: Plug-in for Windows のインストール中に渡されるすべてのパラメータでは、大文字と小文字が区別されます。
+
++
+次の変数の値を入力します。
+
++
+|===
+| 変数（ Variable ） | 価値 
+
+
+ a| 
+// debuglog "<Debug_Log_Path>_
+ a| 
+インストーラのログファイルの名前と場所を次のように指定します。 Setup.exe /debuglog "C:\PathToLog\setupexe.log"
+
+
+
+ a| 
+BI _ SNAPCENTER_PORT
+ a| 
+SnapCenter が SMCore と通信するポートを指定します。
+
+
+
+ a| 
+SUITE_INSTALLDIR
+ a| 
+ホストのプラグインパッケージのインストールディレクトリを指定します。
+
+
+
+ a| 
+BY_ServiceAccount の場合
+ a| 
+SnapCenter Plug-in for Microsoft Windows の Web サービスアカウントを指定します。
+
+
+
+ a| 
+BI_SERVVICEPWD
+ a| 
+SnapCenter Plug-in for Microsoft Windows の Web サービスアカウントのパスワードを指定します。
+
+
+
+ a| 
+ISFeatureInstall
+ a| 
+SnapCenter によってリモートホストに導入される解決策を指定します。
+
+|===
++
+_debuglog_parameter には、 SnapCenter のログファイルのパスが含まれます。このログファイルにはインストールで実行されるプラグインの前提条件に関するチェック結果が記録されるため、トラブルシューティング情報を入手する方法としてこのログファイルに書き込むことを推奨します。
+
++
+必要に応じて、 SnapCenter for Windows パッケージのログファイルでその他のトラブルシューティング情報を確認できます。パッケージのログファイルは、 _%Temp_folder に（最も古いものから）一覧表示されます（例： _C ： \temp\_ ）。
+
++
+
+NOTE: Plug-in for Windows をインストールすると、 SnapCenter サーバではなくホストにプラグインが登録されます。SnapCenter サーバにプラグインを登録するには、 SnapCenter GUI または PowerShell コマンドレットを使用してホストを追加します。ホストを追加すると、プラグインが自動的に検出されます。
+
+

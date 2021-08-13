@@ -1,0 +1,19 @@
+---
+permalink: protect-hana/concept_prepare_to_install_the_snapcenter_plug_in_for_sap_hana_database_on_the_linux_host.html 
+sidebar: sidebar 
+keywords:  
+summary: SnapCenter Plug-in for SAP HANA Database をインストールする Linux ホストは、依存するソフトウェア、データベース、オペレーティングシステムの要件を満たしている必要があります。 
+---
+= Linux ホストに SnapCenter Plug-in for SAP HANA Database をインストールする準備をします
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter Plug-in for SAP HANA Database をインストールする Linux ホストは、依存するソフトウェア、データベース、オペレーティングシステムの要件を満たしている必要があります。
+
+サポートされる構成の最新情報については、 Interoperability Matrix Tool （ IMT ）を参照してください。
+
+http://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool で確認できます"]
+
+SnapCenter Plug-in for SAP HANA Database は、 SnapCenter Plug-ins Package for Linux の一部です。SnapCenter Plug-ins Package for Linux をインストールする前に、 Windows ホストに SnapCenter がインストールされている必要があります。

@@ -1,0 +1,44 @@
+---
+permalink: protect-scw/concept_snapcenter_plug_in_for_windows_features.html 
+sidebar: sidebar 
+keywords:  
+summary: Plug-in for Windows は、ストレージシステム上でネットアップの Snapshot コピーテクノロジと統合されます。Plug-in for Windows の操作には、 SnapCenter インターフェイスを使用します。 
+---
+= SnapCenter Plug-in for Windows の特長
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Plug-in for Windows は、ストレージシステム上でネットアップの Snapshot コピーテクノロジと統合されます。Plug-in for Windows の操作には、 SnapCenter インターフェイスを使用します。
+
+Plug-in for Windows の主な機能は次のとおりです。
+
+* * SnapCenter * による統一されたグラフィカル・ユーザー・インターフェイス
++
+SnapCenter のインターフェイスは、すべてのプラグインと環境で標準化され、一貫しています。SnapCenter インターフェイスを使用すると、すべてのプラグインでバックアッププロセスとリストアプロセスを一貫した方法で実行できるほか、ダッシュボードビューで概要を把握したり、ロールベースアクセス制御（ RBAC ）を設定したり、ジョブを監視したりすることができます。SnapCenter では、バックアップ処理とクローニング処理に対応したスケジュールとポリシーの一元管理も可能です。
+
+* * 中央管理の自動化 *
++
+日常的なファイルシステムのバックアップのスケジュールを設定したり、ポリシーベースのバックアップ保持を設定したり、リストア処理をセットアップしたりできます。SnapCenter から E メールアラートを送信するように設定して、ファイルシステム環境をプロアクティブに監視することもできます。
+
+* * 無停止の NetApp Snapshot コピー・テクノロジー *
++
+Plug-in for Windows では、ネットアップの Snapshot コピーテクノロジを使用しています。これにより、ファイルシステムを数秒でバックアップし、ホストをオフラインにすることなく迅速にリストアすることが可能です。Snapshot コピーはストレージスペースを最小限しか消費しません。
+
+
+
+Plug-in for Windows には、上記の主要な機能以外にも次のようなメリットがあります。
+
+* バックアップ、リストア、およびクローニングのワークフローがサポートされます
+* セキュリティが RBAC でサポートされ、ロール委譲が一元化されます
+* NetApp FlexClone テクノロジを使用して、本番用ファイルシステムのスペース効率に優れたコピーを作成し、テストまたはデータの抽出を行います
++
+FlexClone のライセンス情報については、を参照してください link:../install/concept_snapcenter_licenses.html["SnapCenter ライセンス"^]。
+
+* 複数のサーバで同時に複数のバックアップを実行できます
+* PowerShell コマンドレットを使用して、バックアップ、リストア、クローニングの各処理のスクリプトを作成できます
+* ファイルシステムと仮想マシンディスク（ VMDK ）のバックアップがサポートされます。
+* 物理インフラと仮想インフラがサポートされます
+* iSCSI 、ファイバチャネル、 FCoE 、 raw デバイスマッピング（ RDM ）、非対称 LUN マッピング（ ALM ）、 NFS および VMFS 経由の VMDK 、および仮想 FC がサポートされます
+

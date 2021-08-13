@@ -1,0 +1,38 @@
+---
+permalink: protect-sce/task_install_plug_in_for_exchange_from_the_snapcenter_server_host_using_powershell_cmdlets.html 
+sidebar: sidebar 
+keywords:  
+summary: Plug-in for Exchange は SnapCenter の GUI からインストールする必要があります。GUI を使用しない場合は、 SnapCenter サーバホストまたはリモートホストで PowerShell コマンドレットを使用できます。 
+---
+= PowerShell コマンドレットを使用して、 SnapCenter サーバホストから Plug-in for Exchange をインストールします
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Plug-in for Exchange は SnapCenter の GUI からインストールする必要があります。GUI を使用しない場合は、 SnapCenter サーバホストまたはリモートホストで PowerShell コマンドレットを使用できます。
+
+* 必要なもの *
+
+* SnapCenter サーバがインストールおよび設定されている必要があります。
+* ホストのローカル管理者または管理者権限を持つユーザである必要があります。
+* SnapCenter Admin など、プラグイン、インストール、およびアンインストールの権限のあるロールが割り当てられているユーザが必要です
+* Plug-in for Exchange をインストールする前に、サポートされている構成のインストール要件と種類を確認しておく必要があります。
+* Plug-in for Exchange をインストールするホストには Windows ホストを使用する必要があります。
+
+
+* 手順 *
+
+. SnapCenter サーバホストで、 _Open-SmConnection_cmdlet を使用してセッションを確立し、クレデンシャルを入力します。
+. Plug-in for Exchange をインストールするホストを追加するには、 _Add-SmHost_cmdlet と必要なパラメータを使用します。
++
+コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+
++
+ホストは、スタンドアロンホストでも DAG ホストでもかまいません。DAG を指定する場合は、 -IsDAG_parameter が必要です。
+
+. 必要なパラメータを指定して、 _Install-SmHostPackage_cmdlet を使用し、 Plug-in for Exchange をインストールします。
++
+このコマンドは、指定したホストに Plug-in for Exchange をインストールし、 SnapCenter にプラグインを登録します。
+
+

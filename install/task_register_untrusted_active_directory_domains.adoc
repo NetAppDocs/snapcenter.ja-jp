@@ -1,0 +1,64 @@
+---
+permalink: install/task_register_untrusted_active_directory_domains.html 
+sidebar: sidebar 
+keywords:  
+summary: 信頼されていない複数の Active Directory ドメインのホスト、ユーザ、およびグループを管理するには、 Active Directory を SnapCenter サーバに登録する必要があります。 
+---
+= 信頼できない Active Directory ドメインを登録します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+信頼されていない複数の Active Directory ドメインのホスト、ユーザ、およびグループを管理するには、 Active Directory を SnapCenter サーバに登録する必要があります。
+
+* 必要なもの *
+
+* Fully Qualified Domain Name （ FQDN ；完全修飾ドメイン名）に SnapCenter サーバから到達できます。
+* FQDN を解決できない場合は、指定したドメインコントローラの IP アドレスを SnapCenter サーバから解決できる必要があります。
+* プラグインホストと SnapCenter サーバ間の双方向通信を有効にしておく必要があります。
+* DNS 解決は、 SnapCenter サーバからプラグインホスト、およびその逆にセットアップする必要があります。
+
+
+* このタスクについて *
+
+信頼されていないドメインは FQDN に登録できます。FQDN を SnapCenter サーバから解決できない場合は、 IP アドレスを使用して登録できます。
+
+信頼されていないドメインの登録には、 SnapCenter ユーザインターフェイスまたは PowerShell コマンドレットを使用します。
+
+* 手順 *
+
+. 左側のナビゲーションペインで、 * 設定 * をクリックします。
+. 設定ページで、 * グローバル設定 * をクリックします。
+. [ グローバル設定 ] ページで、 [* ドメイン設定 * ] をクリックします。
+. をクリックします image:../media/add_policy_from_resourcegroup.gif[""] 新しいドメインを登録します。
+. [ 新しいドメインの登録 ] ページで、信頼できないドメインの登録に必要な情報を指定します。
++
+|===
+| フィールド | 手順 
+
+
+ a| 
+ドメイン名（ Domain Name ）
+ a| 
+ドメインの NetBIOS 名を指定します。
+
+
+
+ a| 
+ドメイン FQDN
+ a| 
+FQDN を指定し、 * resolve * をクリックします。
+
+
+
+ a| 
+ドメインコントローラの IP アドレス
+ a| 
+ドメイン FQDN を SnapCenter サーバから解決できない場合は、ドメインコントローラの IP アドレスを 1 つ以上指定します。
+
+詳細については、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_does_not_allow_to_add_Domain_Controller_IP_for_untrusted_domain_from_GUI["GUI から信頼できないドメインのドメインコントローラ IP を追加します"^]。
+
+|===
+. [OK] をクリックします。
+

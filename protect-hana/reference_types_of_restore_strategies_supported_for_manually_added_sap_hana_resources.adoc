@@ -1,0 +1,34 @@
+---
+permalink: protect-hana/reference_types_of_restore_strategies_supported_for_manually_added_sap_hana_resources.html 
+sidebar: sidebar 
+keywords: SnapCenter 
+summary: SnapCenter を使用してリストア処理を正常に実行するには、事前に戦略を定義しておく必要があります。SAP HANA リソースを手動で追加する場合のリストア戦略には、 2 つのタイプがあります。手動で追加した SAP HANA リソースはリカバリできません。 
+---
+= 手動で追加した SAP HANA リソースでサポートされるリストア戦略のタイプ
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter を使用してリストア処理を正常に実行するには、事前に戦略を定義しておく必要があります。SAP HANA リソースを手動で追加する場合のリストア戦略には、 2 つのタイプがあります。手動で追加した SAP HANA リソースはリカバリできません。
+
+
+NOTE: 手動で追加した SAP HANA リソースはリカバリできません。
+
+
+
+== リソース全体のリストア
+
+* リソースのすべてのボリューム、 qtree 、および LUN をリストアします
+
+
+
+NOTE: リソースにボリュームまたは qtree が含まれている場合、そのボリュームまたは qtree でリストア対象として選択された Snapshot コピーのあとに作成された Snapshot コピーは削除され、リカバリすることはできません。また、同じボリュームまたは qtree で他のリソースがホストされている場合、そのリソースも削除されます。
+
+
+
+== ファイルレベルのリストア
+
+* ボリューム、 qtree 、またはディレクトリからファイルをリストアします
+* 選択した LUN のみをリストアします
+

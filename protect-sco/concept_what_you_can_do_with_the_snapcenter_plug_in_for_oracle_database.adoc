@@ -1,0 +1,32 @@
+---
+permalink: protect-sco/concept_what_you_can_do_with_the_snapcenter_plug_in_for_oracle_database.html 
+sidebar: sidebar 
+keywords: backup, restore, clone, oracle database 
+summary: Plug-in for Oracle Database では、次のバックアップ、検証、リストア、リカバリ、マウントを実行できます。 Oracle データベースとそのリソースをアンマウントおよびクローニングする。また、 Oracle Recovery Manager （ RMAN ）でデータベースバックアップのカタログ化またはカタログ化解除を行うこともできます。 
+---
+= Plug-in for Oracle Database の機能
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Plug-in for Oracle Database では、次のバックアップ、検証、リストア、リカバリ、マウントを実行できます。 Oracle データベースとそのリソースをアンマウントおよびクローニングする。また、 Oracle Recovery Manager （ RMAN ）でデータベースバックアップのカタログ化またはカタログ化解除を行うこともできます。
+
+* データファイル、制御ファイル、およびアーカイブログファイルをバックアップします。
++
+バックアップはコンテナデータベース（ CDB ）レベルでのみサポートされます。
+
+* データベース、 CDB 、および Pluggable Database （ PDB ）のリストアとリカバリを行います。
++
+PDB の不完全リカバリはサポートされていません。
+
+* ある時点までの本番環境データベースのクローンを作成します。
++
+クローニングは CDB レベルでのみサポートされます。
+
+* バックアップをただちに検証します。
+* リカバリ処理のためにデータバックアップとログバックアップのマウントとアンマウントを行います。
+* バックアップ処理と検証処理をスケジュールします。
+* すべての処理を監視します。
+* バックアップ、リストア、クローニングの各処理のレポートを表示します。
+

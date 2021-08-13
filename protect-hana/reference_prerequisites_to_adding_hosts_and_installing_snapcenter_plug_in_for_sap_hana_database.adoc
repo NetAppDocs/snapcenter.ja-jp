@@ -1,0 +1,59 @@
+---
+permalink: protect-hana/reference_prerequisites_to_adding_hosts_and_installing_snapcenter_plug_in_for_sap_hana_database.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。SnapCenter Plug-in for SAP HANA Database は、 Windows と Linux のどちらの環境でも使用できます。 
+---
+= ホストを追加して SnapCenter Plug-in for SAP HANA Database をインストールするための前提条件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。SnapCenter Plug-in for SAP HANA Database は、 Windows と Linux のどちらの環境でも使用できます。
+
+* ホストに Java 1.8 64 ビットがインストールされている必要があります。
+* SAP HANA データベースの対話型端末（ HDBSQL クライアント）をホストにインストールしておく必要があります。
+* Windows の場合は、「 LocalSystem 」 Windows ユーザを使用してプラグインの Creator Service が実行されている必要があります。これは、 Plug-in for SAP HANA Database がドメイン管理者としてインストールされている場合のデフォルトの動作です。
+* Windows の場合は、ユーザストアキーを SYSTEM ユーザとして作成する必要があります。
+* Windows ホストにプラグインをインストールする場合、ビルトインでないクレデンシャルを指定する場合、またはユーザがローカルワークグループユーザに属している場合は、ホストで UAC を無効にする必要があります。SnapCenter Plug-in for Microsoft Windows は、 Windows ホストに SAP HANA プラグインを使用してデフォルトで導入されます。
+* Linux ホストの場合は、 HDB Secure User Store キーに HDBSQL OS ユーザとしてアクセスします。
+* SnapCenter サーバが、 Plug-in for SAP HANA Database ホストの 8145 ポートまたはカスタムポートにアクセスできる必要があります。
+
+
+
+
+== Windows ホスト
+
+* ローカル管理者権限を持つドメインユーザがあり、リモートホストに対してローカルログイン権限が付与されている必要があります。
+* Plug-in for SAP HANA Database を Windows ホストにインストールする際に、 SnapCenter Plug-in for Microsoft Windows が自動的にインストールされます。
+* root ユーザまたは root 以外のユーザ用にパスワードベースの SSH 接続を有効にしておく必要があります。
+* Windows ホストに Java 1.8 64 ビットがインストールされている必要があります。
++
+要件の最新情報については、 Interoperability Matrix Tool （ IMT ）を参照してください。
+
++
+http://www.java.com/en/download/manual.jsp["すべてのオペレーティングシステム用の Java のダウンロード"]
+
++
+http://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool で確認できます"]
+
+
+
+
+
+== Linux ホスト
+
+* root ユーザまたは root 以外のユーザ用にパスワードベースの SSH 接続を有効にしておく必要があります。
+* Linux ホストに Java 1.8 64 ビットがインストールされている必要があります。
++
+要件の最新情報については、 Interoperability Matrix Tool （ IMT ）を参照してください。
+
++
+http://www.java.com/en/download/manual.jsp["すべてのオペレーティングシステム用の Java のダウンロード"]
+
++
+http://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool で確認できます"]
+
+* Linux ホストで実行されている SAP HANA データベースを Plug-in for SAP HANA Database のインストール時にインストールすると、 SnapCenter Plug-in for UNIX が自動的にインストールされます。
+

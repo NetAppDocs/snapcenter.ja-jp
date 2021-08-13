@@ -1,0 +1,17 @@
+---
+permalink: protect-sco/concept_snapcenter_plug_in_for_oracle_database_overview.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for Oracle Databases, overview, Oracle, Oracle database 
+summary: SnapCenter Plug-in for Oracle Database は、 Oracle データベースに対応したデータ保護管理を提供する、 NetApp SnapCenter ソフトウェアのホスト側コンポーネントです。 
+---
+= SnapCenter Plug-in for Oracle Database の概要を参照してください
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter Plug-in for Oracle Database は、 Oracle データベースに対応したデータ保護管理を提供する、 NetApp SnapCenter ソフトウェアのホスト側コンポーネントです。
+
+Plug-in for Oracle Database によって、 Oracle RMAN を使用したバックアップ、カタログ化とカタログ化解除、検証、マウント、アンマウント、リストア、 SnapCenter 環境での Oracle データベースのリカバリとクローニングPlug-in for Oracle Database は、すべてのデータ保護処理を実行するために SnapCenter Plug-in for UNIX をインストールします。
+
+Plug-in for Oracle Database では、 SAP アプリケーションを実行している Oracle データベースのバックアップを管理することができます。ただし、 SAP BR * Tools との統合はサポートされません。

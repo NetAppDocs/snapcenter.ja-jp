@@ -1,0 +1,34 @@
+---
+permalink: sc-automation/task_how to_access_rest_apis_using_the_swagger_api_web_page.html 
+sidebar: sidebar 
+keywords: REST API, Swagger 
+summary: REST API は Swagger Web ページから利用できます。Swagger Web ページにアクセスして SnapCenter サーバ REST API を表示したり、 API を手動で問題呼び出したりできます。REST API を使用して、 SnapCenter サーバの管理やデータ保護処理を行うことができます。 
+---
+= Swagger API Web ページから REST API にアクセスする方法
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+REST API は Swagger Web ページから利用できます。Swagger Web ページにアクセスして SnapCenter サーバ REST API を表示したり、 API を手動で問題呼び出したりできます。REST API を使用して、 SnapCenter サーバの管理やデータ保護処理を行うことができます。
+
+REST API を実行する SnapCenter サーバの管理 IP アドレスまたはドメイン名を確認しておく必要があります。
+
+REST API クライアントを実行するための特別な権限は必要ありません。すべてのユーザが Swagger Web ページにアクセスできます。REST API を使用してアクセスするオブジェクトに対する各権限は、 REST API へのログイン時にトークンを生成するユーザに基づいています。
+
+* 手順 *
+
+. ブラウザから、 URL を入力して Swagger Web ページにアクセスします。形式は \\ https://<SnapCenter_IP_address_or_name>:<SnapCenter_port>/swagger/_ です。
++
+
+NOTE: REST API URL に、 + 、 . 、 % 、 & の文字が含まれていないことを確認してください。
+
+. Swagger Explore * フィールドで、 Swagger API のドキュメントが自動的に表示されない場合は、「 \\ https://<SnapCenter_IP_address_or_name>:<SnapCenter_port>/Content/swagger/SnapCenter.yaml_ 」と入力します
+. [* Explore] をクリックします。
++
+API のリソースタイプまたはカテゴリのリストが表示されます。
+
+. API リソースタイプをクリックすると、そのリソースタイプの API が表示されます。
+
+
+SnapCenter REST API の実行時に予期しない動作が発生した場合は、ログファイルを使用して原因を特定し、問題を解決することができます。SnapCenter ユーザー・インターフェイスからログ・ファイルをダウンロードするには、 * Monitor * > * Logs * > * Download * をクリックします。

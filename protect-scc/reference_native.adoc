@@ -1,0 +1,147 @@
+---
+permalink: protect-scc/reference_native.html 
+sidebar: sidebar 
+keywords:  
+summary: ネイティブ形式を使用してプラグインを開発します。 
+---
+= ネイティブ形式
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter では、 Perl 以外のプログラミング言語やスクリプト言語を使用してプラグインを作成できます。これは、スクリプトまたはバッチファイルとして使用できるネイティブスタイルプログラミングと呼ばれます。
+
+ネイティブ形式のプラグインは、次に示す特定の表記規則に従う必要があります。
+
+プラグインが実行可能である必要があります
+
+* UNIX システムの場合、エージェントを実行するユーザにはプラグインに対する実行権限が必要です
+* Windows システムの場合、 PowerShell プラグインのサフィックスは .ps1 に、その他の Windows スクリプトのサフィックスは .cmd または .bat にする必要があり、ユーザによって実行可能である必要があります
+* プラグインは、「 -quiesce 」、「 -unquiesce 」などのコマンドライン引数に対応する必要があります。
+* 操作または関数が実装されていない場合、プラグインは終了コード 99 を返す必要があります
+* プラグインは、特定の構文を使用して結果をサーバに渡す必要があります
+
+
+
+
+== 一般的なプラグイン処理
+
+
+
+=== エラーメッセージのロギング
+
+各オペレーションは ' サーバにメッセージを送信することができますサーバは ' コンテンツを表示して保存しますメッセージには、メッセージレベル、タイムスタンプ、およびメッセージテキストが含まれます。複数行のメッセージがサポートされます。
+
+の形式で入力し
+
+....
+SC_MSG#<level>#<timestamp>#<message>
+SC_MESSAGE#<level>#<timestamp>#<message>
+....
+
+
+=== プラグインスタブを使用する
+
+SnapCenter プラグインはプラグインスタブを実装する必要があります。SnapCenter サーバが呼び出すメソッドは、特定のワークフローに基づいています。
+
+|===
+| プラグインスタブ | オプション / 必須 | 目的 
+
+
+ a| 
+休止
+ a| 
+必須
+ a| 
+このスタブは休止を実行します。Snapshot コピーを作成できる状態にアプリケーションを配置します。これは、ストレージ Snapshot コピー処理の前に呼び出されます。
+
+
+
+ a| 
+休止解除
+ a| 
+必須
+ a| 
+休止解除を実行する場合は、このスタブを指定します。アプリケーションは通常の状態になります。ストレージ Snapshot コピー処理のあとに呼び出されます。
+
+
+
+ a| 
+clone_pre
+ a| 
+任意。
+ a| 
+このスタブは、クローニング前のタスクを実行する役割を果たします。この場合、組み込みの SnapCenter クローニングインターフェイスを使用しており、「 clone_vol または clone_lun 」操作の実行時にのみトリガーされることを前提としています。
+
+
+
+ a| 
+clone_post をクリックしてください
+ a| 
+任意。
+ a| 
+この STUB は、クローニング後のタスクの実行を担当します。このパラメータは、組み込みの SnapCenter クローニングインターフェイスを使用していること、および「 clone_vol 」または「 clone_lun 」処理を実行するときにのみトリガーされることを前提としています。
+
+
+
+ a| 
+restore_pre
+ a| 
+任意。
+ a| 
+このスタブはリストア前のタスクを実行するためのものです。この処理は、組み込みの SnapCenter リストアインターフェイスを使用していることを前提としており、リストア処理の実行中にのみ実行されます。
+
+
+
+ a| 
+リストア
+ a| 
+任意。
+ a| 
+このスタブは、すべてのリストアアクションを実行するためのものです。この要件は、組み込みのリストアインターフェイスを使用していないことを前提としています。このコマンドはリストア処理の実行中にトリガーされます。
+
+|===
+
+
+=== 例
+
+
+
+==== Windows PowerShell の場合
+
+スクリプトをシステムで実行できるかどうかを確認します。スクリプトを実行できない場合は、スクリプトに対して Set-ExecutionPolicy bypass を設定して、操作を再試行します。
+
+....
+if ($args.length -ne 1) {
+  write-warning "You must specify a method";
+  break;
+}
+function log ($level, $message) {
+  $d = get-date
+  echo "SC_MSG#$level#$d#$message"
+}
+function quiesce {
+  $app_name = (get-item env:APP_NAME).value
+  log "INFO" "Quiescing application using script $app_name";
+  log "INFO" "Quiescing application finished successfully"
+}
+function unquiesce {
+  $app_name = (get-item env:APP_NAME).value
+  log "INFO" "Unquiescing application using script $app_name";
+  log "INFO" "Unquiescing application finished successfully"
+}
+  switch ($args[0]) {
+    "-quiesce" {
+    quiesce;
+}
+"-unquiesce" {
+    unquiesce;
+}
+default {
+    write-error "Function $args[0] is not implemented";
+    exit 99;
+  }
+}
+exit 0;
+....

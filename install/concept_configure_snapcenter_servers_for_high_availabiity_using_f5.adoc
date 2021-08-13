@@ -1,0 +1,39 @@
+---
+permalink: install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html 
+sidebar: sidebar 
+keywords: F5,load balancer 
+summary: SnapCenter でハイアベイラビリティ（ HA\ ）をサポートするには、 F5 ロードバランサをインストールします。F5 によって、 SnapCenter サーバは、同じ場所にある最大 2 台のホストでアクティブ / パッシブ構成をサポートできます。SnapCenter で F5 ロードバランサを使用するには、 SnapCenter サーバを設定し、 F5 ロードバランサを設定する必要があります。 
+---
+= F5 を使用して SnapCenter サーバのハイアベイラビリティを構成します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter でハイアベイラビリティ（ HA ）をサポートするには、 F5 ロードバランサをインストールします。F5 によって、 SnapCenter サーバは、同じ場所にある最大 2 台のホストでアクティブ / パッシブ構成をサポートできます。SnapCenter で F5 ロードバランサを使用するには、 SnapCenter サーバを設定し、 F5 ロードバランサを設定する必要があります。
+
+
+IMPORTANT: SnapCenter 4.2.x からアップグレードし、以前に Network Load Balancing （ NLB ）を使用していた場合は、引き続きその構成を使用するか、 F5 に切り替えることができます。
+
+ワークフローイメージには、 F5 ロードバランサを使用して SnapCenter サーバのハイアベイラビリティを設定する手順が記載されています。詳細な手順については、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_SnapCenter_Servers_for_high_availability_using_F5_Load_Balancer["F5 ロードバランサを使用して SnapCenter サーバのハイアベイラビリティを設定する方法"^]。
+
+image::../media/sc-F5-configure-workflow.png[SC F5 設定ワークフロー]
+
+次のコマンドレットを使用して F5 クラスタを追加および削除するには、 SnapCenter サーバのローカル管理者グループのメンバーである必要があります（ SnapCenterAdmin ロールに割り当てられることに加えて）。
+
+* Add - SmServerCluster をクリックします
+* add-SmServer
+* remove-SmServerCluster を実行しました
++
+詳細については、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+
+
+
+
+
+=== F5 のその他の設定情報
+
+* SnapCenter をインストールしてハイアベイラビリティ用に設定したら、 F5 クラスタ IP を指すように SnapCenter デスクトップのショートカットを編集します。
+* SnapCenter サーバ間でフェイルオーバーが発生し、既存の SnapCenter セッションも存在する場合は、ブラウザを閉じてから再度 SnapCenter にログオンする必要があります。
+* ロードバランサのセットアップ（ NLB または F5 ）で、 NLB ノードまたは F5 ノードによって一部解決されているノードを追加し、 SnapCenter ノードがこのノードに到達できない場合、 SnapCenter ホストページでホストが停止して実行中の状態になる頻度が高くなります。この問題を解決するには、両方の SnapCenter ノードが NLB ノードまたは F5 ノードでホストを解決できることを確認する必要があります。
+

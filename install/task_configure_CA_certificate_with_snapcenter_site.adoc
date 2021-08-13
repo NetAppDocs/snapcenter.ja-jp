@@ -1,0 +1,32 @@
+---
+permalink: install/task_configure_CA_certificate_with_snapcenter_site.html 
+sidebar: sidebar 
+keywords: SnapCenter, configure, CA certificate 
+summary: CA 証明書は、 Windows ホスト上で SnapCenter サイトを使用して設定する必要があります。 
+---
+= SnapCenter サイトで CA 証明書を設定します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+CA 証明書は、 Windows ホスト上で SnapCenter サイトを使用して設定する必要があります。
+
+* 手順 *
+
+. SnapCenter がインストールされている Windows サーバーで IIS マネージャーを開きます。
+. 左側のナビゲーションペインで、 * 接続 * をクリックします。
+. サーバー名と * Sites * を展開します。
+. SSL 証明書をインストールする SnapCenter Web サイトを選択します。
+. [* アクション * （ Actions * ） ] > [* サイトの編集 * （ * Edit Site * ） ] に移動し、 [ * バインド * （ Bind
+. バインディングページで、「 https * のバインディング」を選択します。
+. [ 編集（ Edit ） ] をクリックします。
+. [SSL certificate] ドロップダウンリストから、最近インポートした SSL 証明書を選択します。
+. [OK] をクリックします。
+
+
+
+NOTE: 最近導入した CA 証明書がドロップダウンメニューに表示されない場合は、 CA 証明書が秘密鍵に関連付けられているかどうかを確認します。
+
+
+IMPORTANT: 証明書が次のパスを使用して追加されていることを確認します。 * コンソールルート > 証明書–ローカルコンピュータ > 信頼されたルート証明機関 > 証明書 * 。

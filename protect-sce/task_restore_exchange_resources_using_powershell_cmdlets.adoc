@@ -1,0 +1,75 @@
+---
+permalink: protect-sce/task_restore_exchange_resources_using_powershell_cmdlets.html 
+sidebar: sidebar 
+keywords: restore 
+summary: Exchange データベースをリストアするときは、 SnapCenter サーバとの接続セッションを開始し、バックアップをリストしてバックアップ情報を取得し、バックアップをリストアします。 
+---
+= PowerShell コマンドレットを使用して Exchange リソースをリストアします
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Exchange データベースをリストアするときは、 SnapCenter サーバとの接続セッションを開始し、バックアップをリストしてバックアップ情報を取得し、バックアップをリストアします。
+
+PowerShell コマンドレットを実行できるように PowerShell 環境を準備しておく必要があります。
+
+* 手順 *
+
+. 「 Open-SmConnection 」コマンドレットを使用して、指定されたユーザの SnapCenter サーバとの接続セッションを開始します。
++
+[listing]
+----
+Open-smconnection  -SMSbaseurl  https://snapctr.demo.netapp.com:8146/
+----
+. 「 Get-SmBackup 」コマンドレットを使用して、リストアする 1 つ以上のバックアップに関する情報を取得します。
++
+この例は、使用可能なすべてのバックアップに関する情報を表示します。
+
++
+[listing]
+----
+PS C:\> Get-SmBackup
+
+BackupId                      BackupName                    BackupTime                    BackupType
+--------                      ----------                    ----------                    ----------
+341                           ResourceGroup_36304978_UTM... 12/8/2017 4:13:24 PM          Full Backup
+342                           ResourceGroup_36304978_UTM... 12/8/2017 4:16:23 PM          Full Backup
+355                           ResourceGroup_06140588_UTM... 12/8/2017 6:32:36 PM          Log Backup
+356                           ResourceGroup_06140588_UTM... 12/8/2017 6:36:20 PM          Full Backup
+----
+. 「 Restore-SmBackup 」コマンドレットを使用して、バックアップからデータをリストアします。
++
+この例では、最新の状態へのバックアップをリストアしています。
+
++
+[listing]
+----
+C:\PS> Restore-SmBackup -PluginCode SCE -AppObjectId 'sce-w2k12-exch.sceqa.com\sce-w2k12-exch_DB_2' -BackupId 341 -IsRecoverMount:$true
+----
++
+この例では、ポイントインタイムバックアップをリストアします。
+
++
+[listing]
+----
+C:\ PS> Restore-SmBackup -PluginCode SCE -AppObjectId 'sce-w2k12-exch.sceqa.com\sce-w2k12-exch_DB_2' -BackupId 341 -IsRecoverMount:$true -LogRestoreType ByTransactionLogs -LogCount 2
+----
++
+この例では、セカンダリストレージのバックアップをプライマリストレージにリストアします。
+
++
+[listing]
+----
+C:\ PS> Restore-SmBackup -PluginCode 'SCE' -AppObjectId 'DB2' -BackupId 81 -IsRecoverMount:$true -Confirm:$false
+-archive @{Primary="paw_vs:vol1";Secondary="paw_vs:vol1_mirror"} -logrestoretype All
+----
++
+-archive パラメータを使用すると ' リストアに使用するプライマリ・ボリュームとセカンダリ・ボリュームを指定できます
+
++
+-IsRecoverMount:$true' パラメータを使用すると ' リストア後にデータベースをマウントできます
+
+
+
+コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。

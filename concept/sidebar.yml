@@ -1,0 +1,22 @@
+---
+section: concept
+title: 概念
+entries:
+- title: SnapCenter の概要
+  url: "/concept/concept_snapcenter_overview.html"
+- title: セキュリティ機能
+  url: "/concept/reference_data_security.html"
+- title: SnapCenter の RBAC
+  entries:
+  - title: RBAC のタイプ
+    url: "/concept/concept_types_of_role_based_access_control_in_snapcenter.html"
+  - title: RBAC の権限とロール
+    url: "/concept/reference_role_based_access_control_permissions_and_roles.html"
+  - title: 事前定義された SnapCenter ロールと権限
+    url: "/concept/reference_pre_defined_snapcenter_roles_and_permissions.html"
+- title: リソース、リソースグループ、ポリシー
+  url: "/concept/concept_resources_resource_groups_and_policies.html"
+- title: プリスクリプトとポストスクリプト
+  url: "/concept/concept_prescripts_and_postscripts.html"
+- title: REST API を使用した SnapCenter の自動化
+  url: "/concept/concept_snapcenter_rest_apis.html"

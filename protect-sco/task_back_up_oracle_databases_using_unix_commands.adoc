@@ -1,0 +1,50 @@
+---
+permalink: protect-sco/task_back_up_oracle_databases_using_unix_commands.html 
+sidebar: sidebar 
+keywords: backup, cli, commands 
+summary: バックアップのワークフローには、計画、バックアップするリソースの特定、バックアップポリシーの作成、リソースグループの作成とポリシーの適用、バックアップの作成、処理の監視が含まれます。 
+---
+= UNIX コマンドを使用して Oracle データベースをバックアップします
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+バックアップのワークフローには、計画、バックアップするリソースの特定、バックアップポリシーの作成、リソースグループの作成とポリシーの適用、バックアップの作成、処理の監視が含まれます。
+
+* 必要なもの *
+
+* ストレージシステム接続を追加し、 SmStorageConnection_or_Add-SmCredential_ のコマンドを使用してクレデンシャルを作成しておく必要があります。
+* Command_Open-SmConnection_ を使用して SnapCenter サーバとの接続セッションを確立しておく必要があります。
++
+SnapCenter アカウントでのログインセッションは 1 つしか確立できず、トークンはユーザのホームディレクトリに保存されます。
+
++
+
+NOTE: 接続セッションは 24 時間のみ有効です。ただし、 TokenNeverExpires オプションを使用して期限切れにならないトークンを作成し、セッションを常に有効にすることができます。
+
+
+
+* このタスクについて *
+
+次のコマンドを実行して、 SnapCenter サーバとの接続の確立、 Oracle データベースインスタンスの検出、ポリシーとリソースグループの追加、バックアップの作成と検証を行います。
+
+コマンドで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2877144["SnapCenter ソフトウェアコマンドリファレンスガイド"^]。
+
+* 手順 *
+
+. 指定されたユーザ用に SnapCenter サーバとの接続セッションを開始します： _Open-SmConnection_
+. ホストリソースの検出処理を実行します： _Get-SmResources_
+. Real Application Cluster （ RAC ）データベースのバックアップ処理に使用する Oracle データベースのクレデンシャルと優先ノードを設定します： _Configure - SmOracleDatabase_
+. バックアップポリシーを作成します。 _Add-SmPolicy_
+. セカンダリ（ SnapVault または SnapMirror ）ストレージの場所に関する情報を取得します： _get -SmSecondaryDetails_
++
+このコマンドは、指定したリソースのプライマリストレージからセカンダリストレージへのマッピングの詳細を取得します。バックアップリソースグループを作成する際に、このマッピングの詳細を使用してセカンダリの検証を設定できます。
+
+. リソースグループを SnapCenter に追加します： _Add-SmResourceGroup_
+. バックアップを作成する： _New-SmBackup_
++
+WaitForCompletion オプションを使用してジョブをポーリングすることができます。このオプションを指定した場合は、バックアップジョブが完了するまでコマンドが引き続きサーバをポーリングします。
+
+. SnapCenter からログを取得します： _Get-SmLogs_
+

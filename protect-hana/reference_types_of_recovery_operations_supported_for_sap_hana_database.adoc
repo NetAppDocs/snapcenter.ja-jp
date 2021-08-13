@@ -1,0 +1,23 @@
+---
+permalink: protect-hana/reference_types_of_recovery_operations_supported_for_sap_hana_database.html 
+sidebar: sidebar 
+keywords:  
+summary: SnapCenter を使用すると、 SAP HANA データベースに対してさまざまなタイプのリカバリ処理を実行できます。 
+---
+= SAP HANA データベースでサポートされるリカバリ処理のタイプ
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter を使用すると、 SAP HANA データベースに対してさまざまなタイプのリカバリ処理を実行できます。
+
+* データベースを最新の状態にリカバリします
+* 特定の時点までデータベースをリカバリします
++
+リカバリの日時を指定する必要があります。
+
+* 特定のデータバックアップまでデータベースをリカバリします
+
+
+SnapCenter には、 SAP HANA データベースをリカバリするオプションもありません。

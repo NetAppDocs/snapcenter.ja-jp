@@ -1,0 +1,19 @@
+---
+permalink: protect-scc/task_back_up_custom_plug_in_resources.html 
+sidebar: sidebar 
+keywords:  
+summary: バックアップのワークフローには、計画、バックアップするリソースの特定、バックアップポリシーの管理、リソースグループの作成とポリシーの適用、バックアップの作成、処理の監視が含まれます。 
+---
+= カスタムプラグインリソースをバックアップする
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+バックアップのワークフローには、計画、バックアップするリソースの特定、バックアップポリシーの管理、リソースグループの作成とポリシーの適用、バックアップの作成、処理の監視が含まれます。
+
+次のワークフローは、バックアップ処理の実行順序を示しています。
+
+image::../media/scc_backup_workflow.png[バックアップのワークフロー]
+
+PowerShell コマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、クローニングの処理を実行することもできます。PowerShell コマンドレットの詳細については、 SnapCenter コマンドレットのヘルプを使用するか、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["SnapCenter ソフトウェアコマンドレットリファレンスガイド"]

@@ -1,0 +1,77 @@
+---
+permalink: protect-sco/reference_storage_types_supported_by_snapcenter_plug_in_for_oracle_database.html 
+sidebar: sidebar 
+keywords: storage types, iSCSI, NFS, RDM, VMDK, NFS, LVM, ASM, SAN filesystem 
+summary: SnapCenter は、物理マシンと仮想マシンの両方でさまざまなストレージタイプをサポートしています。SnapCenter Plug-ins Package for Linux または SnapCenter Plug-ins Package for AIX をインストールする前に、ストレージタイプがサポートされているかどうかを確認する必要があります。 
+---
+= Plug-in for Oracle Database でサポートされるストレージタイプ
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter は、物理マシンと仮想マシンの両方でさまざまなストレージタイプをサポートしています。SnapCenter Plug-ins Package for Linux または SnapCenter Plug-ins Package for AIX をインストールする前に、ストレージタイプがサポートされているかどうかを確認する必要があります。
+
+SnapCenter では、 Linux および AIX のストレージプロビジョニングはサポートされていません。
+
+
+
+== Linux でサポートされているストレージタイプ
+
+次の表に、 Linux でサポートされるストレージタイプを示します。
+
+|===
+| マシン | ストレージタイプ 
+
+
+ a| 
+物理サーバ
+ a| 
+* FC 接続 LUN
+* iSCSI で接続された LUN
+* NFS-connected ボリューム
+
+
+
+
+ a| 
+VMware ESXi
+ a| 
+* FC または iSCSI ESXi HBA によって接続された RDM LUN は、ホストに存在するすべてのホストバスアダプタを SnapCenter がスキャンするため、完了までに時間がかかることがあります。
++
+/opt/NetApp/SnapCenter /spl/plugins/SCU/scucore /modules/SCU/ConfigU/Config_に ある * LinuxConfig.pm * ファイルを編集して、 * scsi_hosts _optimized_rescan * パラメーターの値を 1 に設定し、 ha_driver_names にリストされている HBA のみを再スキャンすることができます。
+
+* iSCSI イニシエータによってゲストシステムに直接接続された iSCSI LUN
+* VMFS データストアまたは NFS データストア上の VMDK
+* ゲストシステムに直接接続された NFS ボリューム
+
+
+|===
+
+
+== AIX でサポートされているストレージタイプ
+
+次の表に、 AIX でサポートされるストレージタイプを示します。
+
+|===
+| マシン | ストレージタイプ 
+
+
+ a| 
+物理サーバ
+ a| 
+* FC 接続 LUN と iSCSI 接続 LUN ：
++
+SAN 環境では、 ASM 、 LVM 、および SAN のファイルシステムがサポートされます。
+
++
+
+NOTE: AIX およびファイルシステムでの NFS はサポートされていません。
+
+* 拡張ジャーナルファイルシステム（ JFS2 ）
++
+SAN ファイルシステムおよび LVM レイアウトでのインラインロギングをサポートします。
+
+
+
+|===

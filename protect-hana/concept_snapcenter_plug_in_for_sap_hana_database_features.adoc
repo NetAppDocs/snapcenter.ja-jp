@@ -1,0 +1,48 @@
+---
+permalink: protect-hana/concept_snapcenter_plug_in_for_sap_hana_database_features.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: SnapCenter は、プラグインアプリケーションと統合されるほか、ストレージシステム上でネットアップのテクノロジと統合されます。Plug-in for SAP HANA Database の操作には、 SnapCenter のグラフィカルユーザインターフェイスを使用します。 
+---
+= SnapCenter Plug-in for SAP HANA Database の特長
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter は、プラグインアプリケーションと統合されるほか、ストレージシステム上でネットアップのテクノロジと統合されます。Plug-in for SAP HANA Database の操作には、 SnapCenter のグラフィカルユーザインターフェイスを使用します。
+
+* * 統一されたグラフィカル・ユーザー・インターフェイス *
++
+SnapCenter のインターフェイスは、すべてのプラグインと環境で標準化され、一貫しています。SnapCenter インターフェイスを使用すると、すべてのプラグインでバックアップ、リストア、クローニングの各処理を一貫した方法で実行できるほか、ダッシュボードビューで概要を把握したり、ロールベースアクセス制御（ RBAC ）を設定したり、ジョブを監視したりすることができます。
+
+* * 中央管理の自動化 *
++
+バックアップ処理のスケジュールを設定したり、ポリシーベースのバックアップ保持を設定したり、リストア処理を実行したりできます。SnapCenter から E メールアラートを送信するように設定して、環境をプロアクティブに監視することもできます。
+
+* * 無停止の NetApp Snapshot コピー・テクノロジー *
++
+SnapCenter では、 Plug-in for SAP HANA Database でネットアップの Snapshot コピーテクノロジを使用してリソースがバックアップされます。
+
+
+
+Plug-in for SAP HANA Database を使用すると、次のメリットもあります。
+
+* バックアップ、リストア、クローニングのワークフローがサポートされます
+* セキュリティが RBAC でサポートされ、ロール委譲が一元化されます
++
+また、許可された SnapCenter ユーザにアプリケーションレベルの権限を付与するようにクレデンシャルを設定することもできます。
+
+* NetApp FlexClone テクノロジを使用して、スペース効率に優れたポイントインタイムコピーを作成し、テストまたはデータの抽出を行います
++
+クローンを作成するストレージシステムに FlexClone ライセンスが必要です。
+
+* バックアップの作成で ONTAP の整合グループ（ CG ）の Snapshot コピー機能がサポートされます。
+* 複数のリソースホストで同時に複数のバックアップを実行できます
++
+1 回の処理で、 1 つのホストの複数のリソースが同じボリュームを共有する場合に複数の Snapshot コピーが統合されます。
+
+* 外部コマンドを使用して Snapshot コピーを作成できます。
+* ファイルベースのバックアップがサポートされます。
+* XFS ファイルシステムで Linux LVM がサポートされています。
+

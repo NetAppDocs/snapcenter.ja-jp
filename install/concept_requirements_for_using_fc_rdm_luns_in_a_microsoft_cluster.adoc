@@ -1,0 +1,49 @@
+---
+permalink: install/concept_requirements_for_using_fc_rdm_luns_in_a_microsoft_cluster.html 
+sidebar: sidebar 
+keywords:  
+summary: Plug-in for Windows では、特定の構成要件を満たしていれば、 2 つの異なる ESX サーバまたは ESXi サーバに属する 2 台の仮想マシンで構成された Microsoft クラスタで FC RDM LUN の使用がサポートされます。この構成は、クラスタ全体のボックスとも呼ばれます。 
+---
+= Microsoft クラスタで FC RDM LUN を使用するための要件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Plug-in for Windows では、特定の構成要件を満たしていれば、 2 つの異なる ESX サーバまたは ESXi サーバに属する 2 台の仮想マシンで構成された Microsoft クラスタで FC RDM LUN の使用がサポートされます。この構成は、クラスタ全体のボックスとも呼ばれます。
+
+* 仮想マシン（ VM ）で同じバージョンの Windows Server を実行している必要があります。
+* ESX サーバまたは ESXi サーバのバージョンが VMware の各親ホストで同じである必要があります。
+* 各親ホストに少なくとも 2 つのネットワークアダプタが必要です。
+* 2 台の ESX サーバまたは ESXi サーバ間で VMFS （ VMware Virtual Machine File System ）データストアを少なくとも 1 つ共有している必要があります。
+* VMware では、共有データストアを FC SAN 上に作成することを推奨しています。
++
+共有データストアは、必要に応じて iSCSI で作成することもできます。
+
+* 共有 RDM LUN が物理互換モードである必要があります。
+* 共有 RDM LUN は、 Plug-in for Windows の外部で手動で作成する必要があります。
++
+共有ストレージに仮想ディスクを使用することはできません。
+
+* クラスタ内の各仮想マシンに、 SCSI コントローラが物理互換モードで設定されている必要があります。
++
+Windows Server 2008 R2 では、各仮想マシンに LSI Logic SAS SCSI コントローラを構成する必要があります。LSI Logic SAS タイプのコントローラが 1 台しかなく、すでに C ：ドライブに接続されている場合、そのコントローラを共有 LUN で使用することはできません。
+
++
+準仮想化タイプの SCSI コントローラは VMware Microsoft クラスタではサポートされていません。
+
++
+
+NOTE: 物理互換モードで仮想マシン上の共有 LUN に SCSI コントローラを追加する場合は、 VMware Infrastructure Client の * Create a new disk* オプションではなく、 * Raw Device Mappings * （ RDM ）オプションを選択する必要があります。
+
+* Microsoft 仮想マシンクラスタを VMware クラスタに含めることはできません。
+* Microsoft クラスタに属する仮想マシンに Plug-in for Windows をインストールする場合は、 ESX または ESXi のクレデンシャルではなく vCenter のクレデンシャルを使用する必要があります。
+* Plug-in for Windows では、複数のホストのイニシエータを含む igroup を作成することはできません。
++
+共有クラスタディスクとして使用する RDM LUN を作成する前に、すべての ESXi ホストのイニシエータを含む igroup をストレージコントローラ上に作成しておく必要があります。
+
+* ESXi 5.0 で FC イニシエータを使用して RDM LUN を作成します。
++
+RDM LUN を作成すると、 ALUA でイニシエータグループが作成されます。
+
+

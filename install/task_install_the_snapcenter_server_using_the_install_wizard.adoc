@@ -1,0 +1,66 @@
+---
+permalink: install/task_install_the_snapcenter_server_using_the_install_wizard.html 
+sidebar: sidebar 
+keywords: install, snapcenter software, install wizard 
+summary: SnapCenter サーバインストーラの実行ファイルを実行して、 SnapCenter サーバをインストールできます。 
+---
+= SnapCenter サーバをインストールします
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter サーバインストーラの実行ファイルを実行して、 SnapCenter サーバをインストールできます。
+
+必要に応じて、 PowerShell コマンドレットを使用して複数のインストール手順や設定手順を実行することができます。
+
+
+NOTE: コマンドラインからの SnapCenter サーバのサイレントインストールはサポートされていません。
+
+* 必要なもの *
+
+* SnapCenter サーバホストは、保留中のシステムの再起動がない Windows アップデートで最新の状態になっている必要があります。
+* SnapCenter サーバをインストールするホストに MySQL サーバがインストールされていないことを確認しておく必要があります。
+* Windows インストーラのデバッグを有効にしておく必要があります。
++
+有効にする方法については、 Microsoft の Web サイトを参照してください https://support.microsoft.com/kb/223300["Windows インストーラのログ"^]。
+
++
+
+NOTE: SnapCenter サーバは、 Microsoft Exchange サーバ、 Active Directory サーバ、またはドメインネームサーバが配置されたホストにはインストールしないでください。
+
+
+
+* 手順 *
+
+. から SnapCenter Server インストールパッケージをダウンロードします https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["ネットアップサポートサイト"^]。
+. ダウンロードした .exe ファイルをダブルクリックして、 SnapCenter Server のインストールを開始します。
++
+インストールの開始後、すべての事前確認が実行され、最小要件を満たしていない場合には、対応するエラーまたは警告メッセージが表示されます。
+
++
+警告メッセージは無視してインストールを続行できますが、エラーは修正しておく必要があります。
+
+. SnapCenter サーバのインストールに必要な設定済みの値を確認し、必要に応じて変更します。
++
+MySQL Server リポジトリデータベースのパスワードを指定する必要はありません。SnapCenter サーバのインストール時に、パスワードは自動生成されます。
+
++
+
+NOTE: リポジトリ・データベースのカスタム・パスでは ' 特殊文字 "`%`" はサポートされていませんパスに "%" を含めると ' インストールは失敗します
+
+. [ 今すぐインストール ] をクリックします。
++
+無効な値を指定すると、該当するエラーメッセージが表示されます。値を再入力してからインストールを開始してください。
+
++
+
+NOTE: [Cancel] * ボタンをクリックすると、実行中のステップが完了し、ロールバック操作が開始されます。SnapCenter サーバがホストから完全に削除されます。
+
++
+ただし、「 SnapCenter サーバサイトの再起動」または「 SnapCenter サーバの起動を待機中」の処理が実行されているときに「 * キャンセル」をクリックすると、処理はキャンセルされずにインストールが続行されます。
+
++
+ログファイルは常に、 admin ユーザの %temp% フォルダに古いものから順番に表示されます。ログの場所をリダイレクトする場合は 'C:\installer_location\installer_name.exe /log"C:\"`` を実行して ' コマンドプロンプトから SnapCenter Server のインストールを開始します
+
+

@@ -1,0 +1,50 @@
+---
+permalink: protect-scsql/task_import_archived_backups.html 
+sidebar: sidebar 
+keywords: SnapVault 
+summary: コマンドラインインターフェイスからインポート SnapManager できるの SnapCenter は、 SnapVault テクノロジを使用してアーカイブされたバックアップだけです。 
+---
+= アーカイブバックアップをインポートする
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+コマンドラインインターフェイスからインポート SnapManager できるの SnapCenter は、 SnapVault テクノロジを使用してアーカイブされたバックアップだけです。
+
+* 必要なもの *
+
+* SnapCenter Plug-in for Microsoft SQL Server と SnapManager for Microsoft SQL Server 7.x の両方が同じホストにインストールされている必要があります。
+* クラスタをサポートするには、プラグインと 7.x 製品の両方がクラスタの各ノードにインストールされている必要があります。
+* ホストまたはクラスタを SnapCenter に追加し、ホストまたはクラスタにあるバックアップに使用できるリソースを検出しておく必要があります。
+* SnapManager for Microsoft SQL Server の SnapInfo フォルダをバックアップしておく必要があります。
++
+インポート処理に失敗した場合、 SnapInfo ディレクトリのバックアップメタデータを取得できます。
+
+
+
+|===
+
+
+ a| 
+* ベストプラクティス： * SnapCenter Plug-in for Microsoft SQL Server のログバックアップフォルダを設定することを推奨します。
+
+|===
+SnapCenter のインストールと設定のタスクについては、 SnapCenter のインストールに関する情報を参照してください。SnapManager for Microsoft SQL Server のインストールと設定のタスクについては、 SnapManager のインストールに関する情報を参照してください。
+
+アーカイブバックアップを SnapManager for Microsoft SQL Server から SnapCenter にインポートすると、それらのバックアップのリストア処理やクローニング処理を SnapCenter から実行できるようになります。同時に、 SnapManager for Microsoft SQL Server を使用して、バックアップ、リストア、およびクローニングの処理を引き続き実行することもできます。
+
+* 手順 *
+
+. SnapCenter で SnapManager for Microsoft SQL Server のスケジュールと同様のスケジュールを手動で作成するには、次の手順を実行します。
++
+.. 「 Get-SmSchedule 」コマンドレットを使用して、 SnapManager for Microsoft SQL Server からスケジュール情報を取得します。
+.. スケジュール情報を保存します。
++
+SnapCenter でポリシーを作成するときに、このスケジュールの情報を使用できます。
+
+.. 「 Get-SmSchedule-Hostname 」 <hostname> -PluginCode SMSQL-DisableCurrentGenSchedule 」コマンドレットを使用して、 SnapManager for Microsoft SQL Server のスケジュールを無効にします。
+
+
+. 「 Invoke-NaSmBackupMigration 」コマンドレットを使用して、アーカイブ済みのバックアップをインポートします。
+

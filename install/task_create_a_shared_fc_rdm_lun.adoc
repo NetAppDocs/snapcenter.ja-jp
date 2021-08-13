@@ -1,0 +1,15 @@
+---
+permalink: install/task_create_a_shared_fc_rdm_lun.html 
+sidebar: sidebar 
+keywords:  
+summary: FC RDM LUN を使用して Microsoft クラスタ内のノード間でストレージを共有する前に、共有クォーラムディスクと共有ストレージディスクを作成し、それらをクラスタ内の両方の仮想マシンに追加しておく必要があります。 
+---
+= 共有 FC RDM LUN を作成
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+FC RDM LUN を使用して Microsoft クラスタ内のノード間でストレージを共有する前に、共有クォーラムディスクと共有ストレージディスクを作成し、それらをクラスタ内の両方の仮想マシンに追加しておく必要があります。
+
+共有ディスクの作成に Plug-in for Windows は使用しません。共有 LUN を作成し、クラスタ内の各仮想マシンに追加する必要があります。詳細については、を参照してください https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.mscs.doc/GUID-1A2476C0-CA66-4B80-B6F9-8421B6983808.html["物理ホスト間で仮想マシンをクラスタ化します"^]。

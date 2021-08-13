@@ -1,0 +1,26 @@
+---
+permalink: install/concept_microsoft_cluster_support_limitations_using_fc_rdm_luns.html 
+sidebar: sidebar 
+keywords:  
+summary: Plug-in for Windows では、異なる ESX サーバまたは ESXi サーバに属する異なる仮想マシン上の FC / iSCSI RDM LUN を使用する Microsoft クラスタがサポートされます。 
+---
+= Microsoft クラスタでは、 FC / iSCSI RDM LUN の使用に関する制限事項がサポートされています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Plug-in for Windows では、異なる ESX サーバまたは ESXi サーバに属する異なる仮想マシン上の FC / iSCSI RDM LUN を使用する Microsoft クラスタがサポートされます。
+
+
+NOTE: この機能は、 ESX 5.5i よりも前のリリースではサポートされていません。
+
+* Plug-in for Windows では、 ESX iSCSI および NFS データストア上のクラスタはサポートされません。
+* Plug-in for Windows では、クラスタ環境でのイニシエータの混在はサポートされません。
++
+イニシエータは FC と Microsoft iSCSI のどちらか一方にする必要があります。
+
+* ESX iSCSI イニシエータと HBA は、 Microsoft クラスタ内の共有ディスクではサポートされません。
+* Plug-in for Windows では、 Microsoft クラスタに属する仮想マシンの vMotion による移行はサポートされません。
+* Plug-in for Windows では、 Microsoft クラスタ内の仮想マシンでの MPIO はサポートされません。
+

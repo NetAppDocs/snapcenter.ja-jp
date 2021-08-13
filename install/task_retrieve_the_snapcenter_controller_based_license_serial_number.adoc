@@ -1,0 +1,36 @@
+---
+permalink: install/task_retrieve_the_snapcenter_controller_based_license_serial_number.html 
+sidebar: sidebar 
+keywords: retrieve license serial number, controller-based license serial number, serial number 
+summary: FAS または AFF ストレージを使用している場合、ネットアップサポートサイトから SnapCenter コントローラベースのライセンスを取得してから、 ONTAP コマンドラインを使用してインストールできます。 
+---
+= SnapCenter コントローラベースのライセンスのシリアル番号を取得します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+FAS または AFF ストレージを使用している場合、ネットアップサポートサイトから SnapCenter コントローラベースのライセンスを取得してから、 ONTAP コマンドラインを使用してインストールできます。
+
+* 必要なもの *
+
+* 有効なネットアップサポートサイトのログインクレデンシャルが必要です。
++
+有効なクレデンシャルを入力しないと、検索結果は返されません。
+
+* コントローラのシリアル番号が必要です。
+
+
+* 手順 *
+
+. ネットアップサポートサイトにログインします http://mysupport.netapp.com/["mysupport.netapp.com"^]。
+. [ システム ] 、 [ * ソフトウェアライセンス ] の順に移動します。
+. 選択基準領域で、シリアル番号（ユニットの背面にある番号）が選択されていることを確認し、コントローラのシリアル番号を入力して、 * Go!* をクリックします。
++
+image::../media/nss_controller_license_select.gif[NSS コントローラのライセンス選択]
+
++
+指定したコントローラのライセンスのリストが表示されます。
+
+. SnapCenter Standard または SnapManagerSuite ライセンスを探して記録します。
+

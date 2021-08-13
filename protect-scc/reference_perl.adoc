@@ -1,0 +1,356 @@
+---
+permalink: protect-scc/reference_perl.html 
+sidebar: sidebar 
+keywords:  
+summary: Perl を使用してプラグインを開発します。 
+---
+= Perl ベースの開発
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Perl を使用してプラグインを開発するには、特定の規則に従う必要があります。
+
+* 内容は読み取り可能である必要があります
+* setenv 、 quiesce 、および unquiesce の必須処理を実装する必要があります
+* 結果をエージェントに戻すには、特定の構文を使用する必要があります
+* 内容は <plugin_name>.pm ファイルとして保存してください
+
+
+使用可能な処理はです
+
+* setenv
+* バージョン
+* 休止
+* 休止解除
+* clone_pre 、 clone_post
+* restore_pre 、 restore を実行します
+* クリーンアップ
+
+
+
+
+== 一般的なプラグイン処理
+
+
+
+=== 結果オブジェクトを使用する
+
+カスタムプラグイン処理では、必ず結果オブジェクトを定義する必要があります。このオブジェクトは、メッセージ、終了コード、 stdout 、 stderr をホストエージェントに送信します。
+
+結果オブジェクト：
+
+....
+my $result = {
+....
+....
+      exit_code => 0,
+      stdout => "",
+      stderr => "",
+};
+....
+結果オブジェクトを返します。
+
+....
+return $result;
+....
+
+
+=== データの整合性を維持します
+
+同じワークフローの実行の一部として、処理間でデータを保持（クリーンアップを除く）できます。この設定には、キーと値のペアを使用します。キーと値のデータペアは結果オブジェクトの一部として設定され、保持され、同じワークフローの後続の操作で使用できます。
+
+次のコードサンプルは、保持するデータを設定します。
+
+....
+my $result = {
+  exit_code => 0,
+  stdout => "",
+  stderr => "",
+};
+  $result->{env}->{‘key1’} = ‘value1’;
+  $result->{env}->{‘key2’} = ‘value2’;
+  ….
+  return $result
+....
+上記のコードでは、 2 つのキーと値のペアを設定します。これらのペアは、後続の操作で入力として使用できます。2 つのキーと値のペアには、次のコードを使用してアクセスできます。
+
+....
+sub setENV {
+    my ($self, $config) = @_;
+    my $first_value = $config->{‘key1’};
+    my $second_value = $config->{‘key2’};
+    …
+}
+....
+....
+=== Logging error messages
+....
+各処理では、メッセージをホストエージェントに送信して戻すことができます。エージェントは、コンテンツを表示して保存します。メッセージには、メッセージレベル、タイムスタンプ、およびメッセージテキストが含まれます。複数行のメッセージがサポートされます。
+
+....
+Load the SnapCreator::Event Class:
+my $msgObj = new SnapCreator::Event();
+my @message_a = ();
+....
+msgObj を使用して、 Collect メソッドを使用してメッセージをキャプチャします。
+
+....
+$msgObj->collect(\@message_a, INFO, "My INFO Message");
+$msgObj->collect(\@message_a, WARN, "My WARN Message");
+$msgObj->collect(\@message_a, ERROR, "My ERROR Message");
+$msgObj->collect(\@message_a, DEBUG, "My DEBUG Message");
+$msgObj->collect(\@message_a, TRACE, "My TRACE Message");
+....
+結果オブジェクトにメッセージを適用します。
+
+....
+$result->{message} = \@message_a;
+....
+
+
+=== プラグインスタブを使用する
+
+カスタムプラグインでは、プラグインのスタブを公開する必要があります。これらは、 SnapCenter サーバがワークフローに基づいて呼び出すメソッドです。
+
+|===
+| プラグインスタブ | オプション / 必須 | 目的 
+
+
+ a| 
+setenv
+ a| 
+必須
+ a| 
+このスタブは、環境と構成オブジェクトを設定します。
+
+ここでは、環境の解析または処理を行う必要があります。スタブが呼び出されるたびに、 setenv スタブが直前に呼び出されます。これは Perl 形式のプラグインの場合にのみ必要です。
+
+
+
+ a| 
+バージョン
+ a| 
+任意。
+ a| 
+このスタブは、アプリケーションのバージョンを取得するために使用されます。
+
+
+
+ a| 
+調査
+ a| 
+任意。
+ a| 
+このスタブは、エージェントまたはホストでホストされているインスタンスまたはデータベースなどのアプリケーションオブジェクトを検出するために使用されます。
+
+このプラグインは、検出されたアプリケーションオブジェクトを応答の一部として特定の形式で返す必要があります。このスタブは、アプリケーションが SnapDrive for Unix に統合されている場合にのみ使用されます。
+
+
+NOTE: Linux ファイルシステム（ Linux フレーバ）がサポートされています。AIX/Solaris （ UNIX 版）はサポートされていません。
+
+
+
+ a| 
+Discovery_complete の手順を実行します
+ a| 
+任意。
+ a| 
+このスタブは、エージェントまたはホストでホストされているインスタンスまたはデータベースなどのアプリケーションオブジェクトを検出するために使用されます。
+
+このプラグインは、検出されたアプリケーションオブジェクトを応答の一部として特定の形式で返す必要があります。このスタブは、アプリケーションが SnapDrive for Unix に統合されている場合にのみ使用されます。
+
+
+NOTE: Linux ファイルシステム（ Linux フレーバ）がサポートされています。AIX および Solaris （ UNIX 版）はサポートされていません。
+
+
+
+ a| 
+休止
+ a| 
+必須
+ a| 
+このスタブは、アプリケーションを Snapshot コピーの作成が可能な状態にする休止を実行します。これは、 Snapshot コピー処理の前に呼び出されます。保持するアプリケーションのメタデータは応答の一部として設定する必要があります。これは、対応するストレージ Snapshot コピーの以降のクローニング処理またはリストア処理中に、構成パラメータの形式で返されます。
+
+
+
+ a| 
+休止解除
+ a| 
+必須
+ a| 
+このスタブは、アプリケーションを通常の状態に戻すことを意味し、休止解除を実行します。この呼び出しは、 Snapshot コピーの作成後に行われます。
+
+
+
+ a| 
+clone_pre
+ a| 
+任意。
+ a| 
+このスタブは、クローニング前タスクを実行する役割を果たします。このパラメータは、組み込みの SnapCenter サーバクローニングインターフェイスを使用していることを前提としており、クローニング処理の実行時にトリガーされます。
+
+
+
+ a| 
+clone_post をクリックしてください
+ a| 
+任意。
+ a| 
+この STUB は、クローニング後のタスクの実行を担当します。このパラメータは、組み込みの SnapCenter サーバクローニングインターフェイスを使用していることを前提としており、クローニング処理の実行時にのみトリガーされます。
+
+
+
+ a| 
+restore_pre
+ a| 
+任意。
+ a| 
+このスタブは、リストア前のタスクの実行を担当します。これは、組み込みの SnapCenter Server リストアインターフェイスを使用しており、リストア処理中にトリガされることを前提としています。
+
+
+
+ a| 
+リストア
+ a| 
+任意。
+ a| 
+このスタブは、アプリケーションのリストアタスクを実行する役割を果たします。この要件は、組み込みの SnapCenter Server リストアインターフェイスを使用していることを前提としており、リストア処理の実行時にのみトリガーされます。
+
+
+
+ a| 
+クリーンアップ
+ a| 
+任意。
+ a| 
+この STUB は、バックアップ、リストア、またはクローン処理後にクリーンアップを実行する場合の説明です。クリーンアップは、通常のワークフローの実行中またはワークフローの失敗時に実行できます。このワークフロー名では、バックアップ、 cloneVolAndLun 、または fileOrVolRestore などの設定パラメータアクションを参照して、クリーンアップを呼び出すことができます。設定パラメータ ERROR_MESSAGE は ' ワークフローの実行中にエラーが発生したかどうかを示しますERROR_MESSAGE が定義されていて NULL ではない場合 ' ワークフロー失敗の実行中にクリーンアップが呼び出されます
+
+
+
+ a| 
+APP_VERSION
+ a| 
+任意。
+ a| 
+このスタブは、 SnapCenter がプラグインによって管理されるアプリケーションバージョンの詳細を取得するために使用されます。
+
+|===
+
+
+=== プラグインパッケージの情報
+
+すべてのプラグインについて、次の情報が必要です。
+
+....
+package MOCK;
+our @ISA = qw(SnapCreator::Mod);
+=head1 NAME
+MOCK - class which represents a MOCK module.
+=cut
+=head1 DESCRIPTION
+MOCK implements methods which only log requests.
+=cut
+use strict;
+use warnings;
+use diagnostics;
+use SnapCreator::Util::Generic qw ( trim isEmpty );
+use SnapCreator::Util::OS qw ( isWindows isUnix getUid
+createTmpFile );
+use SnapCreator::Event qw ( INFO ERROR WARN DEBUG COMMENT ASUP
+CMD DUMP );
+my $msgObj = new SnapCreator::Event();
+my %config_h = ();
+....
+
+
+=== 処理
+
+ブート時、バージョン、休止、休止解除など、カスタムプラグインでサポートされるさまざまな処理をコード化できます。
+
+
+
+==== setENV 動作
+
+Perl を使用して作成されたプラグインに対して、 setENV 操作が必要です。ENV を設定すると、プラグインパラメータに簡単にアクセスできます。
+
+....
+sub setENV {
+    my ($self, $obj) = @_;
+    %config_h = %{$obj};
+    my $result = {
+      exit_code => 0,
+      stdout => "",
+      stderr => "",
+    };
+    return $result;
+}
+....
+
+
+==== バージョン処理
+
+バージョン処理は、アプリケーションのバージョン情報を返します。
+
+....
+sub version {
+  my $version_result = {
+    major => 1,
+    minor => 2,
+    patch => 1,
+    build => 0
+  };
+  my @message_a = ();
+  $msgObj->collect(\@message_a, INFO, "VOLUMES
+$config_h{'VOLUMES'}");
+  $msgObj->collect(\@message_a, INFO,
+"$config_h{'APP_NAME'}::quiesce");
+  $version_result->{message} = \@message_a;
+  return $version_result;
+}
+....
+
+
+==== 休止処理
+
+休止処理を実行すると、 resources パラメータにリストされているリソースに対してアプリケーション休止処理が実行されます。
+
+....
+sub quiesce {
+  my $result = {
+      exit_code => 0,
+      stdout => "",
+      stderr => "",
+  };
+  my @message_a = ();
+  $msgObj->collect(\@message_a, INFO, "VOLUMES
+$config_h{'VOLUMES'}");
+  $msgObj->collect(\@message_a, INFO,
+"$config_h{'APP_NAME'}::quiesce");
+  $result->{message} = \@message_a;
+  return $result;
+}
+....
+
+
+==== 休止解除処理
+
+アプリケーションの休止解除には休止解除処理が必要です。リソースのリストは、 resources パラメータで指定できます。
+
+....
+sub unquiesce {
+  my $result = {
+      exit_code => 0,
+      stdout => "",
+      stderr => "",
+  };
+  my @message_a = ();
+  $msgObj->collect(\@message_a, INFO, "VOLUMES
+$config_h{'VOLUMES'}");
+  $msgObj->collect(\@message_a, INFO,
+"$config_h{'APP_NAME'}::unquiesce");
+  $result->{message} = \@message_a;
+  return $result;
+}
+....

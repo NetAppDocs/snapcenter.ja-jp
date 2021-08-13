@@ -1,0 +1,29 @@
+---
+permalink: protect-sce/task_restore_an_exchange_server_database_from_secondary_storage.html 
+sidebar: sidebar 
+keywords:  
+summary: セカンダリストレージ（ミラーまたはバックアップ）から、バックアップされた Exchange Server データベースをリストアすることができます。 
+---
+= セカンダリストレージから Exchange Server データベースをリストアする
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+セカンダリストレージ（ミラーまたはバックアップ）から、バックアップされた Exchange Server データベースをリストアすることができます。
+
+プライマリストレージからセカンダリストレージに Snapshot コピーをレプリケートしておく必要があります。
+
+* 手順 *
+
+. 左側のナビゲーションペインで、 [* リソース ] をクリックし、リストから [Microsoft Exchange Server プラグイン *] を選択します。
+. [ リソース ] ページで、 [*View] ドロップダウン・リストから [*Database] または [*Resource Group] を選択します。
+. データベースまたはリソースグループを選択します。
++
+データベースまたはリソースグループのトポロジページが表示されます。
+
+. [ コピーの管理 ] セクションで、セカンダリ・ストレージ・システム（ミラーまたはバックアップ）から * バックアップ * を選択します。
+. リストからバックアップを選択し、をクリックします image:../media/restore_icon.gif["リストアアイコン"]。
+. [Location] ページで、選択したリソースを復元する宛先ボリュームを選択します。
+. リストア・ウィザードを完了し ' 概要を確認してから '[* 終了 *] をクリックします
+

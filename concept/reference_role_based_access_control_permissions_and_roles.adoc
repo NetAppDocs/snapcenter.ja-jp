@@ -1,0 +1,85 @@
+---
+permalink: concept/reference_role_based_access_control_permissions_and_roles.html 
+sidebar: sidebar 
+keywords: RBAC, roles, permissions 
+summary: SnapCenter のロールベースアクセス制御（ RBAC ）では、ロールを作成して権限を追加し、そのロールにユーザやそのグループを割り当てることができます。これにより、 SnapCenter 管理者は環境を一元的に管理しながら、アプリケーション管理者はデータ保護ジョブを管理できます。SnapCenter には、事前定義されたロールと権限がいくつか付属してい 
+---
+= RBAC の権限とロール
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter のロールベースアクセス制御（ RBAC ）では、ロールを作成して権限を割り当てることができ、そのロールにユーザやそのグループを割り当てることができます。これにより、 SnapCenter 管理者は環境を一元的に管理しながら、アプリケーション管理者はデータ保護ジョブを管理できます。SnapCenter には、事前定義されたロールと権限がいくつか付属してい
+
+
+
+== SnapCenter ロール
+
+SnapCenter には、次のロールがあらかじめ定義されています。これらのロールにユーザやグループを割り当てて使用できるほか、新しいロールを作成することもできます。
+
+ロールをユーザに割り当てると、 SnapCenter Admin ロールを割り当てていない限り、そのユーザに関連するジョブだけが Jobs ページに表示されます。
+
+* App Backup and Clone Admin の登録を確認します
+* Backup and Clone Viewer に表示されます
+* インフラ管理者
+* SnapCenter Admin
+
+
+
+
+== SnapCenter Plug-in for VMware vSphere のロール
+
+VM 、 VMDK 、およびデータストアの VM 整合性のあるデータ保護を管理するために、 SnapCenter Plug-in for VMware vSphere によって vCenter で次のロールが作成されます。
+
+* SCV 管理者
+* SCV ビュー
+* SCV バックアップ
+* SCV Restore （ SCV リストア）
+* SCV ゲストファイルのリストア
+
+
+詳細については、を参照してください https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_types_of_rbac_for_snapcenter_users.html["SnapCenter Plug-in for VMware vSphere ユーザ用の RBAC のタイプ"^]
+
+|===
+
+
+| * ベストプラクティス： * SnapCenter Plug-in for VMware vSphere の処理用に ONTAP ロールを 1 つ作成し、必要な権限をすべて割り当てることを推奨します。 
+|===
+
+
+== SnapCenter 権限
+
+SnapCenter から提供される権限は次のとおりです。
+
+* リソースグループ
+* ポリシー
+* バックアップ
+* ホスト
+* ストレージ接続
+* クローン
+* Provision （ Microsoft SQL データベースのみ）
+* ダッシュボード
+* レポート
+* リストア
++
+** Full Volume Restore （ Custom Plug-ins のみ）
+
+
+* リソース
++
+管理者以外のユーザがリソース検出処理を実行する場合、管理者からプラグインの権限が求められます。
+
+* プラグインのインストールまたはアンインストール
++
+
+NOTE: Plug-in Installation 権限を有効にする場合は、 Host 権限も変更して読み取りと更新を有効にする必要があります。
+
+* データ移行
+* mount （ Oracle データベースのみ）
+* Unmount （ Oracle データベースのみ）
+* Job Monitor サービスの略
++
+ジョブ監視権限を使用すると、さまざまなロールのメンバーが、割り当てられているすべてのオブジェクトの処理を確認できます。
+
+

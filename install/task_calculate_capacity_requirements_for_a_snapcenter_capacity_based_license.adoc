@@ -1,0 +1,44 @@
+---
+permalink: install/task_calculate_capacity_requirements_for_a_snapcenter_capacity_based_license.html 
+sidebar: sidebar 
+keywords: capacity requirements, capacity-based license 
+summary: SnapCenter の容量ベースのライセンスを取得する前に、 SnapCenter で管理するホストの容量を計算する必要があります。 
+---
+= SnapCenter の容量ベースのライセンスの容量要件を計算します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter の容量ベースのライセンスを取得する前に、 SnapCenter で管理するホストの容量を計算する必要があります。
+
+* 必要なもの *
+
+Cloud Volumes ONTAP または ONTAP Select システムのクラスタ管理者である必要があります。
+
+* このタスクについて *
+
+SnapCenter は、使用済み容量を計算します。ファイルシステムまたはデータベースのサイズが 1TB で、使用スペースが 500GB の場合、 SnapCenter は 500GB の使用容量を計算します。重複排除と圧縮のあとにボリューム容量が計算され、ボリューム全体の使用容量に基づいて算出されます。
+
+* 手順 *
+
+. ONTAP コマンドラインを使用してネットアップコントローラにログインします。
+. 使用済みボリューム容量を表示するには、コマンドを入力します。
++
+[listing]
+----
+select::> vol show -fields used -volume Engineering,Marketing
+vserver volume       used
+------- ------       ------
+VS1     Engineering  2.13TB
+VS1     Marketing    2.62TB
+
+2	entries were displayed.
+----
++
+2 つのボリュームの使用済み容量の合計が 5TB 未満であるため、 5TB のデータをすべて保護する場合は、 SnapCenter の容量ベースの最小ライセンス要件は 5TB です。
+
++
+ただし、合計で 5TB の使用容量のうち 2TB しか保護しない場合は、 2TB の容量ベースライセンスを取得できます。
+
+

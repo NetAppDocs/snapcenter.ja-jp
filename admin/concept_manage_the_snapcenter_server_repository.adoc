@@ -1,0 +1,164 @@
+---
+permalink: admin/concept_manage_the_snapcenter_server_repository.html 
+sidebar: sidebar 
+keywords:  
+summary: SnapCenter から実行される各種の処理に関する情報は、 SnapCenter サーバのデータベースリポジトリに格納されます。SnapCenter サーバをデータ損失から保護するには、リポジトリのバックアップを作成する必要があります。 
+---
+= SnapCenter サーバリポジトリを管理します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter から実行される各種の処理に関する情報は、 SnapCenter サーバのデータベースリポジトリに格納されます。SnapCenter サーバをデータ損失から保護するには、リポジトリのバックアップを作成する必要があります。
+
+SnapCenter サーバリポジトリは、 NSM データベースと呼ばれることもあります。
+
+
+
+== SnapCenter リポジトリを保護するための前提条件
+
+SnapCenter リポジトリを保護するには、一定の前提条件を満たしている必要があります。
+
+* Storage Virtual Machine （ SVM ）接続の管理
++
+ストレージクレデンシャルを設定する必要があります。
+
+* ホストのプロビジョニング
++
+SnapCenter リポジトリのホストに、ネットアップストレージディスクが少なくとも 1 つ必要です。SnapCenter リポジトリのホストにネットアップディスクがない場合は作成する必要があります。
+
++
+ホストの追加、 SVM 接続のセットアップ、およびホストのプロビジョニングの詳細については、インストール手順を参照してください。
+
+* iSCSI LUN または VMDK のプロビジョニング
++
+ハイアベイラビリティ（ HA ）構成の場合は、いずれかの SnapCenter Server で iSCSI LUN または VMDK のいずれかをプロビジョニングできます。
+
+
+
+
+
+== SnapCenter リポジトリをバックアップします
+
+SnapCenter サーバリポジトリをバックアップしておくと、データ損失からの保護に役立ちます。リポジトリは、 _Protect -SmRepository_cmdlet を実行してバックアップできます。
+
+* このタスクについて *
+
+_Protect -SmRepository_cmdlet では、次のタスクを実行します。
+
+* リソースグループとポリシーを作成します
+* SnapCenter リポジトリのバックアップスケジュールを作成します
+
+
+* 手順 *
+
+. PowerShell を起動します。
+. SnapCenter サーバホストで、 _Open-SmConnection_cmdlet を使用してセッションを確立し、クレデンシャルを入力します。
+. _Protect -SmRepository_cmdlet と必要なパラメータを使用して、リポジトリをバックアップします。
+
+
+
+
+== SnapCenter リポジトリのバックアップを表示する
+
+SnapCenter サーバデータベースリポジトリのバックアップのリストを表示するには、 _Get-SmRepositoryBackups_cmdlet を実行します。
+
+リポジトリのバックアップは、 _Protect -SmRepository_cmdlet で指定されたスケジュールに従って作成されます。
+
+* 手順 *
+
+. PowerShell を起動します。
+. コマンドプロンプトで、次のコマンドレットを入力し、 SnapCenter サーバに接続するためのクレデンシャルを指定します。 _Open-SMConnection_
+. Get-SmRepositoryBackups_cmdlet を使用して、使用可能な SnapCenter データベースのバックアップの一覧を表示します。
+
+
+
+
+== SnapCenter データベースリポジトリをリストアします
+
+SnapCenter リポジトリをリストアするには、 _Restore-SmRepositoryBackup_cmdlet を実行します。
+
+SnapCenter リポジトリをリストアする場合は、リストア処理中にリポジトリデータベースにアクセスできないため、実行中の他の SnapCenter 処理に影響します。
+
+* 手順 *
+
+. PowerShell を起動します。
+. コマンドプロンプトで、次のコマンドレットを入力し、 SnapCenter サーバに接続するためのクレデンシャルを指定します。 _Open-SMConnection_
+. _Restore-SmRepositoryBackup_cmdlet を使用して、リポジトリのバックアップをリストアします。
++
+次のコマンドレットでは、 iSCSI LUN または VMDK にあるバックアップから SnapCenter MySQL データベースリポジトリをリストアします。
+
++
+[listing]
+----
+C:\PS>Restore-SmRepositoryBackup -BackupName MYSQL_DS_SC_Repository_mva-x3550-s09_09-15-2016_10.32.00.4445
+----
++
+次のコマンドレットは、バックアップファイルが iSCSI LUN 内で誤って削除された場合に、 SnapCenter MySQL データベースをリストアします。VMDK の場合、 ONTAP Snapshot コピーからバックアップを手動でリストアします。
+
++
+[listing]
+----
+C:\PS>Restore-SmRepositoryBackup -BackupName MYSQL_DS_SC_Repository_mva-x3550-s09_09-15-2016_10.32.00.4445 -RestoreFileSystem
+----
+
+
+
+
+== SnapCenter リポジトリを移行する
+
+SnapCenter サーバのデータベースリポジトリをデフォルトの場所から別のディスクに移行することができます。リポジトリの移行は、より多くのスペースを持つディスクに再配置する場合などに行います。
+
+* 手順 *
+
+. Windows で MYSQL57 サービスを停止します。
+. MySQL のデータディレクトリを探します。
++
+通常、このデータディレクトリは C ： \ProgramData\MySQL\MySQL Server 5.7.\Data にあります。
+
+. MySQL のデータディレクトリを新しい場所（例： E ： \Data\nsm ）にコピーします。
+. 新しいディレクトリを右クリックし、 * プロパティ * > * セキュリティ * を選択して、ネットワークサービスローカルサーバーアカウントを新しいディレクトリに追加し、アカウントにフルコントロールを割り当てます。
+. 元のデータベースディレクトリの名前を変更します（例： NSM_COPY ）。
+. Windows のコマンドプロンプトで、 _mklink_command を使用してディレクトリのシンボリックリンクを作成します。
++
+「 mklink/d 」 C ： \ProgramData\MySQL\MySQL Server 5.7\Data\NSm 」 E ： \Data\NSm
+
+. Windows で MYSQL57 サービスを開始します。
+. SnapCenter にログインしてリポジトリのエントリを確認するか、 MySQL ユーティリティにログインして新しいリポジトリに接続して、データベースの場所が正しく変更されたことを確認します。
+. 名前を変更した元のデータベースリポジトリディレクトリ（ NSM_COPY ）を削除します。
+
+
+
+
+== SnapCenter リポジトリのパスワードをリセットします
+
+MySQL Server リポジトリデータベースのパスワードは、 SnapCenter 4.2 以降の SnapCenter Server のインストール時に自動的に生成されます。この自動生成されたパスワードは、 SnapCenter ユーザにはいかなる時点でも知られていません。リポジトリデータベースにアクセスする場合は、パスワードをリセットする必要があります。
+
+* 必要なもの *
+
+パスワードをリセットするには、 SnapCenter 管理者の権限が必要です。
+
+* 手順 *
+
+. PowerShell を起動します。
+. コマンドプロンプトで、次のコマンドを入力し、 SnapCenter サーバに接続するためのクレデンシャルを指定します。 _Open-SMConnection_
+. リポジトリのパスワードをリセットします。 _Set-SmRepositoryPassword_
++
+次に、リポジトリのパスワードをリセットするコマンドを示します。
+
++
+[listing]
+----
+
+Set-SmRepositoryPassword at command pipeline position 1
+Supply values for the following parameters:
+NewPassword: ********
+ConfirmPassword: ********
+Successfully updated the MySQL server password.
+----
+
+
+* 詳細はこちら *
+
+コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。

@@ -1,0 +1,138 @@
+---
+permalink: protect-sco/reference_host_requirements_for_installing_the_snapcenter_plug_in_package_for_linux.html 
+sidebar: sidebar 
+keywords: SnapCenter, host requirement for Linux, sudo privileges, non-root user 
+summary: SnapCenter Plug-ins Package for Linux をインストールする前に、ホストが要件を満たしていることを確認する必要があります。 
+---
+= Plug-in Package for Linux をインストールするためのホストの要件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter Plug-ins Package for Linux をインストールする前に、ホストが要件を満たしていることを確認する必要があります。
+
+|===
+| 項目 | 要件 
+
+
+ a| 
+オペレーティングシステム
+ a| 
+* Red Hat Enterprise Linux の場合
+* Oracle Linux の場合
++
+
+NOTE: Oracle Linux または Red Hat Enterprise Linux 6.6 または 7.0 オペレーティングシステムの LVM で Oracle データベースを使用している場合は、最新バージョンの論理ボリュームマネージャ（ LVM ）をインストールする必要があります。
+
+* SUSE Linux Enterprise Server （ SLES ）
+
+
+
+
+ a| 
+ホスト上の SnapCenter プラグインの最小 RAM
+ a| 
+1 GB
+
+
+
+ a| 
+ホスト上の SnapCenter プラグインのインストールおよびログの最小スペース
+ a| 
+2 GB
+
+
+NOTE: 十分なディスクスペースを割り当て、 logs フォルダによるストレージ消費を監視する必要があります。必要なログスペースは、保護するエンティティの数とデータ保護処理の頻度によって異なります。十分なディスクスペースがない場合、最近実行した処理に対してログは作成されません。
+
+
+
+ a| 
+必要なソフトウェアパッケージ
+ a| 
+Java 1.8.x （ 64 ビット）の Oracle Java と OpenJDK のバージョン
+
+Java を最新バージョンにアップグレードした場合は、 /var/opt/snapcenter /etc/sp/etc/spl.properties にある JAVA_HOME オプションが正しい Java バージョンに設定されていること、および正しいパスが指定されていることを確認する必要があります。
+
+|===
+サポートされているバージョンの最新情報については、を参照してください http://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool で確認できます"^]。
+
+
+
+== Linux プラグインホストの root 以外のユーザに対する sudo 権限を設定する
+
+SnapCenter 2.0 以降のリリースでは、 root 以外のユーザが SnapCenter Plug-ins Package for Linux をインストールしてプラグインプロセスを開始できます。いくつかのパスにアクセスできるように root 以外のユーザに sudo 権限を設定する必要があります。
+
+* 必要なもの *
+
+* sudo 1.8.7 以降。
+* root 以外のユーザが Oracle インストールグループに含まれていることを確認します。
+* /etc/ssh/sshd_config_file を編集して、メッセージ認証コードアルゴリズム MACs HMAC-sha2-256 および MACs HMAC-sha2-512 を設定します。
++
+構成ファイルを更新したら、 sshd サービスを再起動します。
+
++
+例
+
++
+[listing]
+----
+#Port 22
+#AddressFamily any
+#ListenAddress 0.0.0.0
+#ListenAddress ::
+#Legacy changes
+#KexAlgorithms diffie-hellman-group1-sha1
+#Ciphers aes128-cbc
+#The default requires explicit activation of protocol
+Protocol 2
+HostKey/etc/ssh/ssh_host_rsa_key
+MACs hmac-sha2-256
+----
+
+
+* このタスクについて *
+
+次のパスにアクセスできるように root 以外のユーザに sudo 権限を設定する必要があります。
+
+* /home / sudo _user_/ .sc_netapp / snapcenter_linux_host_plugin.bin
+* /custom_location/NetApp/snapcenter /spl/installing/plugins/uninstall
+* /custom_location/NetApp/snapcenter /spl/bin/spl になります
+
+
+* 手順 *
+
+. SnapCenter Plug-ins Package for Linux をインストールする Linux ホストにログインします。
+. visudo Linux ユーティリティを使用して、 /etc/sudoers ファイルに次の行を追加します。
++
+[listing, subs="+quotes"]
+----
+Cmnd_Alias SCCMD = sha224:checksum_value== /home/_SUDO_USER_/.sc_netapp/snapcenter_linux_host_plugin.bin,
+/opt/NetApp/snapcenter/spl/installation/plugins/uninstall,
+/opt/NetApp/snapcenter/spl/bin/spl
+Cmnd_Alias PRECHECKCMD = sha224:checksum_value== /home/_SUDO_USER_/.sc_netapp/Linux_Prechecks.sh
+_SUDO_USER_ ALL=(ALL) NOPASSWD:SETENV: SCCMD, PRECHECKCMD
+Defaults: _SUDO_USER_ env_keep=JAVA_HOME
+Defaults: _SUDO_USER_ !visiblepw
+Defaults: _SUDO_USER_ !requiretty
+----
++
+_sudo _user_は 、作成した root 以外のユーザの名前です。
+
++
+チェックサム値は、 _ C ： \ProgramData\NetApp\SnapCenter \Package Repository_に ある * ORACLE_checksum.txt * ファイルから取得できます。
+
++
+カスタムの場所を指定した場合、場所は _custom_path \NetApp\SnapCenter \Package Repository_に なります。
+
++
+
+IMPORTANT: この例は、独自のデータを作成するための参照としてのみ使用してください。
+
+
+
+|===
+
+
+| * ベストプラクティス：セキュリティ上の理由から、インストールまたはアップグレードのたびに sudo エントリを削除することを推奨します。 
+|===

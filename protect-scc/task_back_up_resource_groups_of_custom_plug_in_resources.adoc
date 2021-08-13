@@ -1,0 +1,47 @@
+---
+permalink: protect-scc/task_back_up_resource_groups_of_custom_plug_in_resources.html 
+sidebar: sidebar 
+keywords:  
+summary: リソースグループは、リソースページからオンデマンドでバックアップできます。リソースグループにポリシーが適用され、かつスケジュールが設定されている場合は、スケジュールに従って自動的にバックアップが実行されます。 
+---
+= カスタムプラグインリソースのリソースグループをバックアップする
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+リソースグループは、リソースページからオンデマンドでバックアップできます。リソースグループにポリシーが適用され、かつスケジュールが設定されている場合は、スケジュールに従って自動的にバックアップが実行されます。
+
+* 必要なもの *
+
+* ポリシーを適用したリソースグループを作成しておく必要があります。
+* セカンダリストレージとの SnapMirror 関係があるリソースをバックアップする場合、ストレージユーザに割り当てられた ONTAP ロールには「「 'napmirror all' 」権限を含める必要があります。ただし、「 vsadmin 」ロールを使用している場合、「 'SnapMirro all 」権限は必要ありません。
+
+
+* 手順 *
+
+. 左側のナビゲーションペインで、 * リソース * をクリックし、リストから適切なプラグインを選択します。
+. [* リソース ] ページで、 [ * 表示 ] リストから [ * リソースグループ * ] を選択します。
++
+リソースグループを検索するには、検索ボックスにリソースグループ名を入力するか、をクリックします image:../media/filter_icon.gif[""] タグを選択します。をクリックします image:../media/filter_icon.gif[""] をクリックしてフィルタペインを閉じます。
+
+. [ * リソースグループ * ] ページで、バックアップするリソースグループを選択し、 [ * 今すぐバックアップ * ] をクリックします。
+. [* バックアップ * ] ページで、次の手順を実行します。
++
+.. 複数のポリシーをリソースグループに関連付けている場合は、「 * Policy * 」ドロップダウンリストから、バックアップに使用するポリシーを選択します。
++
+オンデマンドバックアップ用に選択したポリシーがバックアップスケジュールに関連付けられている場合は、スケジュールタイプに指定した保持設定に基づいてオンデマンドバックアップが保持されます。
+
+.. [ バックアップ ] をクリックします。
+
+
+. 操作の進行状況を監視するには、 * Monitor * > * Jobs * をクリックします。
++
+** MetroCluster 構成では、フェイルオーバー後に SnapCenter が保護関係を検出できない場合があります。
++
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["MetroCluster のフェイルオーバー後に SnapMirror 関係または SnapVault 関係を検出できません"]
+
+** VMDK 上のアプリケーションデータおよび SnapCenter Plug-in for VMware vSphere の Java ヒープサイズが不足している場合、バックアップが失敗することがあります。Java のヒープサイズを増やすには、スクリプトファイル /opt/NetApp/init_scripts/scvservice を探します。このスクリプトでは、「 do_start method 」コマンドは SnapCenter VMware プラグインサービスを起動します。このコマンドを次のように更新します：「 java -jar -Xmx8192M-Xms4096M 」
+
+
+

@@ -1,0 +1,109 @@
+---
+permalink: protect-scw/task_back_up_a_single_resource_on_demand_for_windows_file_systems.html 
+sidebar: sidebar 
+keywords: backing up 
+summary: リソースグループに含まれていないリソースは、のリソースページからオンデマンドでバックアップすることができます。 
+---
+= Windows ファイルシステムの単一のリソースをオンデマンドでバックアップする
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+リソースグループに含まれていないリソースは、のリソースページからオンデマンドでバックアップすることができます。
+
+* このタスクについて *
+
+セカンダリストレージとの SnapMirror 関係があるリソースをバックアップする場合、ストレージユーザに割り当てられたロールには「 "'napmirror all" 」権限を含める必要があります。ただし、「 vsadmin 」ロールを使用している場合、「 'SnapMirro all 」権限は必要ありません。
+
+
+NOTE: ファイルシステムをバックアップする場合、 SnapCenter は、バックアップするファイルシステムのボリュームマウントポイント（ VMP ）にマウントされている LUN をバックアップしません。
+
+
+IMPORTANT: Windows ファイルシステムのコンテキストで作業している場合は、データベースファイルをバックアップしないでください。バックアップを作成しても整合性に欠け、リストア時にデータが失われる可能性があります。データベースファイルを保護するには、データベースに適した SnapCenter プラグイン（ SnapCenter Plug-in for Microsoft SQL Server 、 SnapCenter Plug-in for Microsoft Exchange Server 、データベースファイル用のカスタムプラグインなど）を使用する必要があります。
+
+* 手順 *
+
+. 左側のナビゲーションペインで、 * リソース * をクリックし、リストから適切なプラグインを選択します。
+. [ リソース ] ページで、 [ ファイルシステム ] リソースタイプを選択し、バックアップするリソースを選択します。
+. File System-Protect ウィザードが自動的に起動しない場合は、 [*Protect] をクリックしてウィザードを開始します。
++
+「リソースグループの作成」のタスクの説明に従って、保護設定を指定します。
+
+. オプション：ウィザードのリソースページで、 Snapshot コピーのカスタム名形式を入力します。
++
+たとえば、 customtext_resourcegroup_policy_hostname や resourcegroup_hostname などの形式です。デフォルトでは、 Snapshot コピー名の後ろにタイムスタンプが追加されます。
+
+. [Policies] ページで、次のタスクを実行します。
++
+.. ドロップダウンリストから 1 つ以上のポリシーを選択します。
++
+既存のポリシーを選択し、 [*Details*] をクリックすると、そのポリシーを使用できるかどうかを確認できます。
+
++
+既存のポリシーがいずれも要件を満たさない場合は、既存のポリシーをコピーして変更するか、をクリックして新しいポリシーを作成できます image:../media/add_policy_from_resourcegroup.gif[""] ポリシーウィザードを起動します。
+
++
+選択したポリシーは、 [Configure schedules for selected policies] セクションの [Policy （ポリシー） ] カラムに表示されます。
+
+.. Configure schedules for selected policies セクションで、をクリックします image:../media/add_policy_from_resourcegroup.gif[""] スケジュールを設定するポリシーの Configure Schedules （スケジュールの設定）列。
+.. [Add schedules for policy_name_] ダイアログボックスで、開始日、有効期限、頻度を指定してスケジュールを設定し、 [*Finish] をクリックします。
++
+設定されたスケジュールは、 [Configure schedules for selected policies] セクションの [Applied Schedules] カラムに表示されます。
+
++
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Scheduled_data_protection_operations_fail_if_the_number_of_operations_running_reaches_maximum_limit["スケジュールされた処理が失敗する可能性が"]
+
+
+
+. [ 通知 ] ページで、次のタスクを実行します。
++
+|===
+| フィールド | 手順 
+
+
+ a| 
+E メール設定
+ a| 
+バックアップリソースグループの作成後、ポリシーの適用後、スケジュールの設定後に受信者に E メールを送信するには、「 Always * 」、「 On Failure * 」、または「 On Failure * 」または「 On Failure / Warning * 」を選択します。
+
+SMTP サーバの情報 ' デフォルトの電子メールの件名 ' およびからの電子メールアドレスを入力します
+
+
+
+ a| 
+移動元
+ a| 
+E メールアドレス
+
+
+
+ a| 
+終了：
+ a| 
+E メールの送信先アドレス
+
+
+
+ a| 
+件名
+ a| 
+E メールのデフォルトの件名
+
+|===
+. 概要を確認し、 [ 完了 ] をクリックします。
++
+データベーストポロジのページが表示されます。
+
+. [ 今すぐバックアップ ] をクリックします。
+. [ バックアップ ] ページで、次の手順を実行します。
++
+.. リソースに複数のポリシーを適用している場合は、ポリシーのドロップダウンリストから、バックアップに使用するポリシーを選択します。
++
+オンデマンドバックアップ用に選択したポリシーがバックアップスケジュールに関連付けられている場合は、スケジュールタイプに指定した保持設定に基づいてオンデマンドバックアップが保持されます。
+
+.. [ バックアップ ] をクリックします。
+
+
+. 操作の進行状況を監視するには、 * Monitor * > * Jobs * をクリックします。
+

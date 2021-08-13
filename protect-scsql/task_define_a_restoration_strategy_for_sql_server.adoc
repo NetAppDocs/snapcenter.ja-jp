@@ -1,0 +1,13 @@
+---
+permalink: protect-scsql/task_define_a_restoration_strategy_for_sql_server.html 
+sidebar: sidebar 
+keywords:  
+summary: SQL Server のリストア戦略を定義しておくと、それに従ってデータベースをリストアすることができます。 
+---
+= SQL Server のリストア戦略を定義する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SQL Server のリストア戦略を定義しておくと、それに従ってデータベースをリストアすることができます。

@@ -1,0 +1,71 @@
+---
+permalink: protect-sce/concept_prepare_for_data_protection.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for Exchange Server 
+summary: バックアップ、クローニング、リストアなどのデータ保護処理を実行する場合は、事前に戦略を定義し、環境をセットアップする必要があります。また、 SnapVault サーバで SnapMirror テクノロジと SnapCenter テクノロジを使用するように設定することもできます。 
+---
+= データ保護を準備
+:icons: font
+:imagesdir: ../media/
+
+
+バックアップ、クローニング、リストアなどのデータ保護処理を実行する場合は、事前に戦略を定義し、環境をセットアップする必要があります。また、 SnapVault サーバで SnapMirror テクノロジと SnapCenter テクノロジを使用するように設定することもできます。
+
+SnapVault テクノロジと SnapMirror テクノロジを活用するには、ストレージデバイス上のソースボリュームとデスティネーションボリューム間のデータ保護関係を設定して初期化する必要があります。これらのタスクを実行するには、 NetAppSystem Manager を使用するか、ストレージコンソールのコマンドラインを使用します。
+
+* 詳細はこちら *link:https://docs.netapp.com/us-en/ontap-automation/getting_started_with_the_rest_api.html["REST API の使用を開始する"]
+
+
+
+== SnapCenter Plug-in for Microsoft Exchange Server を使用するための前提条件
+
+Plug-in for Exchange を使用するには、 SnapCenter 管理者が事前に SnapCenter サーバをインストールして設定し、前提条件となるタスクを実行する必要があります。
+
+* SnapCenter サーバをインストールして設定します。
+* SnapCenter にログインします。
+* ストレージシステム接続を追加または割り当て、クレデンシャルを作成して、 SnapCenter 環境を設定します。
++
+
+NOTE: SnapCenter では、異なるクラスタにある同じ名前の SVM は複数サポートされません。SnapCenter でサポートする SVM には、それぞれ一意の名前を付ける必要があります。
+
+* ホストを追加し、 SnapCenter Plug-in for Microsoft Windows と SnapCenter Plug-in for Microsoft Exchange Server をインストールし、それらのリソースを検出（更新）します。
+* SnapCenter Plug-in for Microsoft Windows を使用して、ホスト側のストレージをプロビジョニングします。
+* VMware RDM LUN に存在する Exchange データベースを SnapCenter Server で保護する場合は、 SnapCenter Plug-in for VMware vSphere を導入し、 SnapCenter に登録する必要があります。詳細については、 SnapCenter Plug-in for VMware vSphere のドキュメントを参照してください。
++
+
+NOTE: VMDK はサポートされません。
+
+* Microsoft Exchange ツールを使用して、既存の Microsoft Exchange Server データベースをローカルディスクからサポートされているストレージに移動します。
+* バックアップレプリケーションが必要である場合は、 SnapMirror 関係と SnapVault 関係をセットアップします。
+
+
+SnapCenter 4.1.1 ユーザの場合、 SnapCenter Plug-in for VMware vSphere 4.1.1 のドキュメントには、仮想化されたデータベースとファイルシステムの保護に関する情報が記載されています。SnapCenter 4.2.x ユーザの場合、 NetApp Data Broker 1.0 および 1.0.1 のドキュメントでは、 Linux ベースの NetApp Data Broker 仮想アプライアンス（オープン仮想アプライアンス形式）が提供する SnapCenter Plug-in for VMware vSphere を使用して、仮想化されたデータベースとファイルシステムを保護する方法について説明しています。SnapCenter 4.3.x を使用する場合は、 Linux ベースの SnapCenter Plug-in for VMware vSphere 仮想アプライアンス（オープン仮想アプライアンス形式）を使用して仮想化されたデータベースとファイルシステムを保護する方法について、 SnapCenter Plug-in for VMware vSphere 4.3 のドキュメントを参照してください。
+
+https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/["SnapCenter Plug-in for VMware vSphere のドキュメント"^]
+
+
+
+== Exchange Server の保護におけるリソース、リソースグループ、ポリシーの使用方法
+
+SnapCenter を使用する前に、実行するバックアップ、リストア、および再シードの処理に関する基本的な概念を理解しておくと役立ちます。ここでは、さまざまな処理で扱うリソース、リソースグループ、およびポリシーについて説明します。
+
+* リソースとは、通常は SnapCenter でバックアップするメールボックスデータベースまたは Microsoft Exchange データベース可用性グループ（ DAG ）のことです。
+* SnapCenter リソースグループは、ホストまたは Exchange DAG のリソースの集まりで、リソースグループには DAG 全体または個別データベースのいずれかを含めることができます。
++
+リソースグループに対して処理を実行すると、リソースグループに対して指定したスケジュールに従って、リソースグループに定義されているリソースに対して処理が実行されます。
+
++
+単一のリソースまたはリソースグループをオンデマンドでバックアップすることができます。スケジュールされたバックアップを単一のリソースおよびリソースグループに対して実行することもできます。
+
++
+リソースグループは、以前はデータセットと呼ばれていました。
+
+* ポリシーは、バックアップ頻度、コピーの保持、スクリプト、およびデータ保護処理のその他の特性を指定するものです。
++
+リソースグループを作成するときに、そのグループに対して 1 つ以上のポリシーを選択します。単一のリソースに対してオンデマンドでバックアップを実行する場合は、ポリシーを 1 つ以上選択することもできます。
+
+
+
+リソースグループは、保護対象となるものと、曜日と時間の観点から保護する場合を定義するものと考えてください。ポリシーは、保護する方法を定義するポリシーと考えてください。たとえば、ホストのすべてのデータベースをバックアップする場合は、ホストのすべてのデータベースを含むリソースグループを作成します。リソースグループに、日次ポリシーと毎時ポリシーの 2 つのポリシーを適用します。リソースグループを作成してポリシーを適用する際に、フルバックアップを 1 日 1 回実行するようにリソースグループを設定し、別のスケジュールでログバックアップを 1 時間おきに実行するように設定します。次の図は、データベースのリソース、リソースグループ、およびポリシーの関係を示しています。
+
+image::../media/sce_resourcegroup_policy.gif[SCE リソースグループポリシー]

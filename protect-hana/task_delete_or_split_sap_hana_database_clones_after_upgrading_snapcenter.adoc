@@ -1,0 +1,31 @@
+---
+permalink: protect-hana/task_delete_or_split_sap_hana_database_clones_after_upgrading_snapcenter.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: SnapCenter 4.3 にアップグレードすると、クローンは表示されなくなります。クローンを削除するか、クローンが作成されたリソースのトポロジページからクローンをスプリットします。 
+---
+= SnapCenter のアップグレード後に、 SAP HANA データベースのクローンを削除またはスプリットします
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter 4.3 にアップグレードすると、クローンは表示されなくなります。クローンを削除するか、クローンが作成されたリソースのトポロジページからクローンをスプリットします。
+
+* このタスクについて *
+
+非表示クローンのストレージフットプリントを確認するには、「 Get-SmClone-ListStorageFootprint 」コマンドを実行します
+
+* 手順 *
+
+. remove-smbackup コマンドレットを使用して、クローニングしたリソースのバックアップを削除します。
+. remove-smresourcegroup コマンドレットを使用して、クローニングされたリソースのリソースグループを削除します。
+. remove-smprotectresource コマンドレットを使用して、クローニングされたリソースの保護を解除します。
+. [* リソース ] ページから親リソースを選択します。
++
+リソースのトポロジページが表示されます。
+
+. [ コピーの管理 ] ビューで ' プライマリ・ストレージ・システムまたはセカンダリ（ミラーまたはレプリケートされた）ストレージ・システムからクローンを選択します
+. クローンを選択し、をクリックします image:../media/delete_icon.gif[""] クローンを削除するには、をクリックします image:../media/split_cone.gif[""] をクリックしてクローンをスプリットします。
+. [OK] をクリックします。
+

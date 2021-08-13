@@ -1,0 +1,138 @@
+---
+permalink: protect-sco/task_configure_CA_certificate_with_SPL_on_Linux_host.html 
+sidebar: sidebar 
+keywords: SnapCenter, SPL, Plug-in loader service, CA certificate, certificate 
+summary: Linux ホストで SnapCenter Plug-in Loader サービスを使用して CA 証明書を設定します 
+---
+= Linux ホストに SnapCenter Plug-in Loader （ SPL ）サービスを使用して CA 証明書を設定します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SPL キーストアとその証明書のパスワードを管理し、 CA 証明書を設定し、ルート証明書または中間証明書を SPL の信頼ストアに設定し、 CA 署名キーペアを SPL の信頼ストアと SnapCenter Plug-in Loader サービスを使用して設定して、インストールされたデジタル証明書をアクティブ化する必要があります。
+
+
+IMPORTANT: SPL は、ファイル 'keystore.jkS' を使用します。このファイルは、 '/var/opt/snapcenter /spl/etc にあり、どちらもトラストストアおよびキーストアとして使用されます。
+
+
+
+== SPL キーストアのパスワードと使用中の CA 署名済みキーペアのエイリアスを管理します
+
+* 手順 *
+
+. SPL プロパティファイルから SPL キーストアのデフォルトパスワードを取得できます。
++
+これはキー 'PL_keystore.pass' に対応する値です。
+
+. キーストアのパスワードを変更します。
++
+....
+keytool -storepasswd -keystore keystore.jks
+....
+. キーストア内の秘密鍵エントリのすべてのエイリアスのパスワードを、キーストアに使用されているパスワードと同じパスワードに変更します。
++
+....
+keytool -keypasswd -alias "<alias_name>" -keystore keystore.jks
+....
++
+spl.properties ファイル内のキー SPL の _keystore.pass に対しても同じ内容を更新します。
+
+. パスワードを変更したら、サービスを再起動してください。
+
+
+
+NOTE: SPL キーストアのパスワードと秘密鍵に関連付けられているすべてのエイリアスパスワードが同じである必要があります。
+
+
+
+== ルート証明書または中間証明書を SPL の信頼ストアに設定します
+
+SPL の信頼ストアへの秘密鍵を使用せずにルート証明書または中間証明書を設定する必要があります。
+
+* 手順 *
+
+. SPL キーストアが格納されているフォルダ（ /var/opt/snapcenter /spl/etc_ ）に移動します。
+. ファイル 'keystore.jkS' を探します。
+. キーストアに追加された証明書を表示します。
++
+....
+keytool -list -v -keystore keystore.jks
+....
+. ルート証明書または中間証明書を追加します。
++
+....
+keytool -import -trustcacerts -alias <AliasNameForCerticateToBeImported> -file /<CertificatePath> -keystore keystore.jks
+....
+. SPL の信頼ストアにルート証明書または中間証明書を設定したら、サービスを再起動します。
+
+
+
+NOTE: ルート CA 証明書、中間 CA 証明書の順に追加する必要があります。
+
+
+
+== CA 署名キーペアを SPL の信頼ストアに設定します
+
+CA 署名鍵ペアを SPL 信頼ストアに設定する必要があります。
+
+* 手順 *
+
+. SPL のキーストア /var/opt/snapcenter /spl/ などを含むフォルダに移動します
+. ファイル 'keystore.jkS' を探します。
+. キーストアに追加された証明書を表示します。
++
+....
+keytool -list -v -keystore keystore.jks
+....
+. 秘密鍵と公開鍵の両方を含む CA 証明書を追加します。
++
+....
+keytool -importkeystore -srckeystore <CertificatePathToImport> -srcstoretype pkcs12 -destkeystore keystore.jks -deststoretype JKS
+....
+. キーストアに追加された証明書を表示します。
++
+....
+keytool -list -v -keystore keystore.jks
+....
+. キーストアに、キーストアに追加された新しい CA 証明書に対応するエイリアスが含まれていることを確認します。
+. CA 証明書用に追加された秘密鍵のパスワードをキーストアのパスワードに変更します。
++
+デフォルトの SPL キーストアパスワードは、 spl.properties ファイル内のキー SPL の keystore.pass の値です。
+
++
+....
+keytool -keypasswd -alias "<aliasNameOfAddedCertInKeystore>" -keystore keystore.jks
+....
+. CA 証明書のエイリアス名が長く、スペースまたは特殊文字（「 * 」、「」）が含まれている場合は、エイリアス名を単純な名前に変更します。
++
+....
+keytool -changealias -alias "<OrignalAliasName>" -destalias "<NewAliasName>" -keystore keystore.jks
+....
+. spl.properties ファイルにあるキーストアからエイリアス名を設定します。
++
+この値をキー SPL の certificate_alias に更新します。
+
+. CA 署名済みキーペアを SPL 信頼ストアに設定したら、サービスを再起動します。
+
+
+
+
+== SPL の証明書失効リスト（ CRL ）を設定します
+
+SPL 用に CRL を設定する必要があります
+
+* このタスクについて *
+
+* SPL は、事前に設定されたディレクトリ内の CRL ファイルを検索します。
+* SPL の CRL ファイルのデフォルトディレクトリは、 _var/opt/snapcenter /spl/etc/crl_です 。
+
+
+* 手順 *
+
+. spl.properties ファイル内のデフォルトディレクトリを、キー SPL_CRL_PATH に対して変更および更新できます。
+. このディレクトリに複数の CRL ファイルを配置できます。
++
+着信証明書は各 CRL に対して検証されます。
+
+

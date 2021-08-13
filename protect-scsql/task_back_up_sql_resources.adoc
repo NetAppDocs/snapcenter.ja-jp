@@ -1,0 +1,153 @@
+---
+permalink: protect-scsql/task_back_up_sql_resources.html 
+sidebar: sidebar 
+keywords:  
+summary: どのリソースグループにも含まれていないリソースは、のページからバックアップすることができます。 
+---
+= SQL リソースをバックアップする
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+どのリソースグループにも含まれていないリソースは、のページからバックアップすることができます。
+
+* このタスクについて *
+
+* Windows クレデンシャル認証の場合は、プラグインをインストールする前にクレデンシャルを設定する必要があります。
+* SQL Server インスタンス認証の場合、プラグインのインストール後にクレデンシャルを追加する必要があります。
+* gMSA 認証の場合 'gMSA を有効にして使用するには '*Add Host* ページまたは *Modify Host* ページで SnapCenter にホストを登録するときに gMSA を設定する必要があります
+* ホストを gMSA とともに追加し 'gMSA にログイン権限とシステム管理権限がある場合 'gMSA を使用して SQL インスタンスに接続します
+
+
+* 手順 *
+
+. 左側のナビゲーションペインで、 * リソース * をクリックし、リストから適切なプラグインを選択します。
+. リソースページで、 * View * ドロップダウン・リストから * Database * 、 * Instance * 、または * Availability Group * を選択します。
++
+.. バックアップするデータベース、インスタンス、または可用性グループを選択します。
++
+インスタンスをバックアップする場合、そのインスタンスの前回のバックアップステータスやタイムスタンプに関する情報はリソースページに表示されません。
+
++
+トポロジビューでは、バックアップステータス、タイムスタンプ、またはバックアップがインスタンスのものかデータベースのものかを区別できません。
+
+
+
+. リソース * ページで、 Snapshot コピー * のカスタム名形式チェックボックスを選択し、 Snapshot コピー名に使用するカスタムの名前形式を入力します。
++
+たとえば 'customText_policy_hostname や resource_hostname などですデフォルトでは、 Snapshot コピー名の後ろにタイムスタンプが追加されます。
+
+. [*Policies*] ページで、次のタスクを実行します。
++
+.. [* Policies （ポリシー） ] セクションで、ドロップダウン・リストから 1 つ以上のポリシーを選択します。
++
+ポリシーを作成するには、 * をクリックしますimage:../media/add_policy_from_resourcegroup.gif[""]* をクリックして、ポリシーウィザードを起動します。
+
++
+[ 選択したポリシーのスケジュールを設定する *] セクションに、選択したポリシーが一覧表示されます。
+
+.. * をクリックしますimage:../media/add_policy_from_resourcegroup.gif[""]* スケジュールを設定するポリシーの [ スケジュールの設定 ] 列。
+.. [ ポリシー *'policy_name' のスケジュールを追加 ] ダイアログボックスでスケジュールを設定し、 [OK] をクリックします。
++
+ここで 'policy_name' は ' 選択したポリシーの名前です
+
++
+設定されたスケジュールは、 [* Applied Schedules] 列に表示されます。
+
+.. Microsoft SQL Server スケジューラを使用する * を選択し、スケジューリング・ポリシーに関連付けられているスケジューラ・インスタンス * ドロップダウンリストからスケジューラ・インスタンスを選択します。
+
+
+. [* Verification] ページで、次の手順を実行します。
++
+.. [* Verification server*] ドロップダウン・リストから検証サーバを選択します。
++
+検証サーバ（ローカルホストまたはリモートホスト）は複数選択できます。
+
++
+
+NOTE: 検証サーバのバージョンは、プライマリデータベースをホストしている SQL Server のエディションと同じかそれ以上である必要があります。
+
+.. セカンダリ・ストレージ・システム上のバックアップを検証するには ' セカンダリ・ロケータをロードを選択します
+.. 検証スケジュールを設定するポリシーを選択し、 * をクリックしますimage:../media/add_policy_from_resourcegroup.gif[""]*
+.. [ 検証スケジュールの追加 *'policy_name' ] ダイアログボックスで ' 次のアクションを実行します
++
+|===
+| 状況 | 手順 
+
+
+ a| 
+バックアップ後に検証を実行します
+ a| 
+[ バックアップ後に検証を実行 ] を選択します。
+
+
+
+ a| 
+検証をスケジュールします
+ a| 
+[ スケジュールされた検証を実行する ] を選択します。
+
+|===
++
+
+NOTE: 検証サーバでストレージ接続が確立されていないと、検証処理は失敗して「 Failed to mount disk 」というエラーメッセージが表示されます。
+
+.. [OK] をクリックします。
++
+設定されたスケジュールは、 [ 適用されたスケジュール ] 列に一覧表示されます。
+
+
+
+. [*Notification] ページの [*Email preference*] ドロップダウンリストから、電子メールを送信するシナリオを選択します。
++
+また、送信者と受信者の E メールアドレス、および E メールの件名を指定する必要があります。リソースグループで実行された操作のレポートを添付する場合は、 [ ジョブレポートの添付（ Attach Job Report ） ] を選択します。
+
++
+
+NOTE: E メール通知を利用する場合は、 GUI または PowerShell コマンド Set-SmtpServer を使用して SMTP サーバの詳細を指定しておく必要があります。
+
+. 概要を確認し、 [ 完了 ] をクリックします。
++
+データベーストポロジのページが表示されます。
+
+. [ 今すぐバックアップ ] をクリックします。
+. [* バックアップ * ] ページで、次の手順を実行します。
++
+.. リソースに複数のポリシーを適用している場合は、「 * Policy * 」ドロップダウン・リストから、バックアップに使用するポリシーを選択します。
++
+オンデマンドバックアップ用に選択したポリシーがバックアップスケジュールに関連付けられている場合は、スケジュールタイプに指定した保持設定に基づいてオンデマンドバックアップが保持されます。
+
+.. 「 * Verify after backup * 」を選択して、バックアップを検証します。
+.. [ バックアップ ] をクリックします。
++
+オンデマンドバックアップ用に選択したポリシーがバックアップスケジュールに関連付けられている場合は、スケジュールタイプに指定した保持設定に基づいてオンデマンドバックアップが保持されます。
+
++
+暗黙的なリソースグループが作成されます。これを表示するには、 * User Access * ページから該当するユーザーまたはグループを選択します。暗黙的なリソースグループタイプは「リソース」です。
+
+
+
+. 操作の進行状況を監視するには、 * Monitor * > * Jobs * をクリックします。
+
+
+* 終了後 *
+
+* MetroCluster 構成では、フェイルオーバー後に SnapCenter が保護関係を検出できない場合があります。
++
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["MetroCluster のフェイルオーバー後に SnapMirror 関係または SnapVault 関係を検出できません"]
+
+* VMDK 上のアプリケーションデータおよび SnapCenter Plug-in for VMware vSphere の Java ヒープサイズが不足している場合、バックアップが失敗することがあります。Java のヒープサイズを増やすには、スクリプトファイル /opt/NetApp/init_scripts/scvservice を探します。このスクリプトでは、「 do_start method 」コマンドは SnapCenter VMware プラグインサービスを起動します。このコマンドを次のように更新します：「 java -jar -Xmx8192M-Xms4096M 」
+
+
+* 詳細はこちら *
+
+link:task_create_backup_policies_for_sql_server_databases.html["SQL Server データベースのバックアップポリシーを作成する"]
+
+link:task_back_up_resources_using_powershell_cmdlets.html["PowerShell コマンドレットを使用してリソースをバックアップします"]
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Clone_operation_might_fail_or_take_longer_time_to_complete_with_default_TCP_TIMEOUT_value["TCP_TIMEOUT での遅延のために MySQL 接続エラーが発生して、バックアップ処理が失敗します"]
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Backup_fails_with_Windows_scheduler_error["Windows スケジューラのエラーでバックアップが失敗します"]
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Quiesce_or_grouping_resources_operations_fail["リソースの休止処理またはグループ化処理が失敗します"]

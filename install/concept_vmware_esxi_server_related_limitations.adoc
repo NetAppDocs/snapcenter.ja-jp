@@ -1,0 +1,22 @@
+---
+permalink: install/concept_vmware_esxi_server_related_limitations.html 
+sidebar: sidebar 
+keywords:  
+summary: SnapCenter Plug-in for Microsoft Windows は、 VMware Windows ゲストでサポートされます。Plug-in for Windows を使用してプロビジョニングや Snapshot コピーの管理操作を実行する前に、いくつかの制限事項について確認しておく必要があります。 
+---
+= VMware ESXi サーバ関連の制限事項
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter Plug-in for Microsoft Windows は、 VMware Windows ゲストでサポートされます。Plug-in for Windows を使用してプロビジョニングや Snapshot コピーの管理操作を実行する前に、いくつかの制限事項について確認しておく必要があります。
+
+* ESXi クレデンシャルを使用して仮想マシン上の Microsoft クラスタに Plug-in for Windows をインストールすることはできません。
++
+クラスタ化された仮想マシンに Plug-in for Windows をインストールする場合、 vCenter のクレデンシャルを使用する必要があります。
+
+* クラスタ化されたすべてのノードで、同じクラスタディスクに同じ（仮想 SCSI アダプタ上の）ターゲット ID を使用する必要があります。
+* Plug-in for Windows を使用せずに RDM LUN を作成した場合、プラグインサービスを再起動して、新しく作成したディスクを認識させる必要があります。
+* VMware ゲスト OS で iSCSI イニシエータと FC イニシエータを同時に使用することはできません。
+

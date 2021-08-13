@@ -1,0 +1,24 @@
+---
+permalink: install/concept_minimum_vcenter_privileges_required_for_snapcenter_rdm_operations.html 
+sidebar: sidebar 
+keywords: minimum privileges, RDM 
+summary: ゲスト OS で RDM の処理を実行するには、最小限の vCenter 権限が必要です。 
+---
+= SnapCenter RDM の処理に必要な最小限の vCenter 権限
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ゲスト OS で RDM の処理を実行するには、最小限の vCenter 権限が必要です。
+
+ホストで次の最小権限が設定されている必要があります。
+
+* データストア：ファイルを削除します
+* ホスト： [Configuration] > [Storage Partition] の順に選択します
+* 仮想マシン：構成
+
+
+これらの権限は、 Virtual Center Server レベルのロールに割り当てる必要があります。これらの権限を割り当てるロールは、 root 権限を持たないユーザには割り当てることができません。
+
+これらの権限を割り当てたら、ゲスト OS に Plug-in for Windows をインストールできます。

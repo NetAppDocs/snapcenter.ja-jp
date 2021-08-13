@@ -1,0 +1,52 @@
+---
+permalink: protect-scsql/concept_snapcenter_plug_in_for_microsoft_sql_server_features.html 
+sidebar: sidebar 
+keywords:  
+summary: Plug-in for SQL Server は、 Windows ホスト上で Microsoft SQL Server と統合されるほか、ストレージシステム上でネットアップの Snapshot コピーテクノロジと統合されます。Plug-in for SQL Server を操作するには、 SnapCenter インターフェイスを使用します。 
+---
+= SnapCenter Plug-in for Microsoft SQL Server の特長
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Plug-in for SQL Server は、 Windows ホスト上で Microsoft SQL Server と統合されるほか、ストレージシステム上でネットアップの Snapshot コピーテクノロジと統合されます。Plug-in for SQL Server を操作するには、 SnapCenter インターフェイスを使用します。
+
+Plug-in for SQL Server の主な機能は次のとおりです。
+
+* * SnapCenter * による統一されたグラフィカル・ユーザー・インターフェイス
++
+SnapCenter のインターフェイスは、すべてのプラグインと環境で標準化され、一貫しています。SnapCenter インターフェイスを使用すると、すべてのプラグインでバックアッププロセスとリストアプロセスを一貫した方法で実行できるほか、ダッシュボードビューで概要を把握したり、ロールベースアクセス制御（ RBAC ）を設定したり、ジョブを監視したりすることができます。SnapCenter では、バックアップ処理とクローニング処理に対応したスケジュールとポリシーの一元管理も可能です。
+
+* * 中央管理の自動化 *
++
+日常的な SQL Server バックアップのスケジュールを設定したり、ポリシーベースのバックアップ保持、ポイントインタイムのリストア処理、および最新の状態へのリストア処理を設定することができます。SnapCenter から E メールアラートを送信するように設定して、 SQL Server 環境をプロアクティブに監視することもできます。
+
+* * 無停止の NetApp Snapshot コピー・テクノロジー *
++
+Plug-in for SQL Server では、 NetApp SnapCenter Plug-in for Microsoft Windows でネットアップの Snapshot コピーテクノロジを使用します。これにより、データベースを数秒でバックアップし、 SQL Server をオフラインにすることなく迅速にリストアすることが可能です。Snapshot コピーはストレージスペースを最小限しか消費しません。
+
+
+
+Plug-in for SQL Server には、上記の主要な機能以外にも次のようなメリットがあります。
+
+* バックアップ、リストア、クローニング、および検証のワークフローがサポートされます
+* セキュリティが RBAC でサポートされ、ロール委譲が一元化されます
+* NetApp FlexClone テクノロジを使用して、本番環境のデータベースのスペース効率に優れたポイントインタイムコピーを作成し、テストまたはデータの抽出を行います
++
+クローンを保持するストレージシステムに FlexClone ライセンスが必要です。
+
+* 自動化された無停止のバックアップ検証
+* 複数のサーバで同時に複数のバックアップを実行できます
+* PowerShell コマンドレットを使用して、バックアップ、検証、リストア、クローニングの各処理のスクリプトを作成できます
+* SQL Server の AlwaysOn 可用性グループ（ AG ）をサポートしているため、 AG のセットアップ、バックアップ、リストアの各処理を迅速に実行できます
+* SQL Server 2014 の機能であるインメモリデータベースとバッファプール拡張（ BPE ）がサポートされます
+* LUN と仮想マシンディスク（ VMDK ）のバックアップがサポートされます。
+* 物理インフラと仮想インフラがサポートされます
+* iSCSI 、ファイバチャネル、 FCoE 、 raw デバイスマッピング（ RDM ）、および NFS / VMFS 経由の VMDK がサポートされます
++
+
+NOTE: NAS ボリュームには、 Storage Virtual Machine （ SVM ）内にデフォルトのエクスポートポリシーが必要です。
+
+* SQL Server スタンドアロンデータベースでの FileStream とファイルグループのサポート。
+

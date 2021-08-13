@@ -1,0 +1,24 @@
+---
+permalink: protect-sco/task_clone_oracle_database_backups.html 
+sidebar: sidebar 
+keywords: clone operation 
+summary: クローニングワークフローには、計画、クローニング処理の実行、および処理の監視が含まれます。 
+---
+= Oracle データベースのクローニング
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+クローニングワークフローには、計画、クローニング処理の実行、および処理の監視が含まれます。
+
+データベースをクローニングする理由には次のものがあります。
+
+* アプリケーション開発のライフサイクルで、実装が必要な機能を、現在のデータベースの構造およびコンテンツを使用してテストするため。
+* データの抽出と操作を行うツールを使用してデータウェアハウスにデータを取り込むため。
+* 誤って削除または変更されたデータをリカバリするため。
+
+
+次のワークフローは、クローニング処理の実行順序を示しています。
+
+image::../media/sco_scc_wfs_clone_workflow.png[クローニングワークフロー]

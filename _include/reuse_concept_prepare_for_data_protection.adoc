@@ -1,0 +1,8 @@
+= 
+
+
+バックアップ、クローニング、リストアなどのデータ保護処理を実行する場合は、事前に戦略を定義し、環境をセットアップする必要があります。また、 SnapVault サーバで SnapMirror テクノロジと SnapCenter テクノロジを使用するように設定することもできます。
+
+SnapVault テクノロジと SnapMirror テクノロジを活用するには、ストレージデバイス上のソースボリュームとデスティネーションボリューム間のデータ保護関係を設定して初期化する必要があります。これらのタスクを実行するには、 NetAppSystem Manager を使用するか、ストレージコンソールのコマンドラインを使用します。
+
+* 詳細はこちら *link:https://docs.netapp.com/us-en/ontap-automation/getting_started_with_the_rest_api.html["REST API の使用を開始する"]
