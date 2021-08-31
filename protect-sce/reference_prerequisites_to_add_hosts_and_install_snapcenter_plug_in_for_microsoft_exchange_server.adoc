@@ -29,3 +29,133 @@ summary: ホストを追加してプラグインパッケージをインスト�
 
 
 
+
+
+
+== SnapCenter Plug-ins Package for Windows をインストールするホストの要件
+
+SnapCenter Plug-ins Package for Windows をインストールする前に、ホストシステムのいくつかの基本的なスペース要件とサイジング要件を確認しておく必要があります。
+
+|===
+| 項目 | 要件 
+
+
+ a| 
+オペレーティングシステム
+ a| 
+Microsoft Windows の場合
+
+サポートされているバージョンの最新情報については、を参照してください http://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool で確認できます"^]。
+
+
+
+ a| 
+ホスト上の SnapCenter プラグインの最小 RAM
+ a| 
+1 GB
+
+
+
+ a| 
+ホスト上の SnapCenter プラグインのインストールおよびログの最小スペース
+ a| 
+5 GB
+
+
+NOTE: 十分なディスクスペースを割り当て、 logs フォルダによるストレージ消費を監視する必要があります。必要なログスペースは、保護するエンティティの数とデータ保護処理の頻度によって異なります。十分なディスクスペースがない場合、最近実行した処理に対してログは作成されません。
+
+
+
+ a| 
+必要なソフトウェアパッケージ
+ a| 
+* Microsoft .NET Framework 4.5.2 以降
+* Windows Management Framework （ WMF ） 4.0 以降
+* PowerShell 4.0 以降
+
+
+サポートされているバージョンの最新情報については、を参照してください http://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool で確認できます"^]。
+
+|===
+
+
+== Exchange Server の権限が必要です
+
+SnapCenter で Exchange サーバまたは DAG を追加し、ホストまたは DAG に SnapCenter Plug-in for Microsoft Exchange Server をインストールできるようにするには、最小限の権限と権限を持つユーザのクレデンシャルを SnapCenter に設定する必要があります。
+
+ローカル管理者の権限を持つドメインユーザと、リモート Exchange ホストに対するローカルログイン権限、および DAG 内のすべてのノードに対する管理権限を持つドメインユーザが必要です。ドメインユーザには、次の最小権限が必要です。
+
+* Add-MailboxDatabaseCopy を追加します
+* dismount - データベース
+* Get-AdServerSettings
+* Get-DatabaseAvailabilityGroup 」を参照してください
+* Get-ExchangeServer
+* MailboxDatabase を取得します
+* Get-MailboxDatabaseCopyStatus
+* Get-MailboxServer
+* Get-MailboxStatistics を実行します
+* Get-PublicFolderDatabase を参照してください
+* MOVE - ActiveMailboxDatabase
+* move-DatabasePath-ConfigurationOnly:$true
+* mount - データベース
+* New-MailboxDatabase
+* 新規 - PublicFolderDatabase
+* MailboxDatabase を削除します
+* MailboxDatabaseCopy を削除します
+* -PublicFolderDatabase を削除します
+* 履歴書 -MailboxDatabaseCopy
+* 「設定」 - 「サーバ設定
+* MailboxDatabase-allowfilerestore を $true に設定します
+* MailboxDatabaseCopy を設定します
+* 「 - PublicFolderDatabase 」を設定します
+* Suspend-MailboxDatabaseCopy を実行します
+* Update-MailboxDatabaseCopy
+
+
+
+
+== Windows Server 2012 以降で gMSA を構成します
+
+SnapCenter Plug-ins Package for Windows をインストールする前に、ホストシステムのいくつかの基本的なスペース要件とサイジング要件を確認しておく必要があります。
+
+|===
+| 項目 | 要件 
+
+
+ a| 
+オペレーティングシステム
+ a| 
+Microsoft Windows の場合
+
+サポートされているバージョンの最新情報については、を参照してください http://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool で確認できます"^]。
+
+
+
+ a| 
+ホスト上の SnapCenter プラグインの最小 RAM
+ a| 
+1 GB
+
+
+
+ a| 
+ホスト上の SnapCenter プラグインのインストールおよびログの最小スペース
+ a| 
+5 GB
+
+
+NOTE: 十分なディスクスペースを割り当て、 logs フォルダによるストレージ消費を監視する必要があります。必要なログスペースは、保護するエンティティの数とデータ保護処理の頻度によって異なります。十分なディスクスペースがない場合、最近実行した処理に対してログは作成されません。
+
+
+
+ a| 
+必要なソフトウェアパッケージ
+ a| 
+* Microsoft .NET Framework 4.5.2 以降
+* Windows Management Framework （ WMF ） 4.0 以降
+* PowerShell 4.0 以降
+
+
+サポートされているバージョンの最新情報については、を参照してください http://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool で確認できます"^]。
+
+|===

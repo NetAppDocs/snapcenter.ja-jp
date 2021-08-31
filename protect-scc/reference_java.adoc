@@ -188,9 +188,7 @@ AppVersion （アプリバージョン）
 .. TutorialPlugin という名前を入力してください。
 .. スーパークラスの参照ボタンをクリックし、「 * AbstractPlugin 」を検索します。表示される結果は 1 つだけです。
 +
-....
-"AbstractPlugin - com.netapp.snapcreator.agent.nextgen.plugin".
-....
+ "AbstractPlugin - com.netapp.snapcreator.agent.nextgen.plugin".
 .. [ 完了 ] をクリックします。
 .. Java クラス :
 +

@@ -10,7 +10,7 @@ summary: SnapCenter でデータ保護処理を有効にするには、複数の
 
 
 [role="lead"]
-SnapCenter でデータ保護処理を有効にするには、複数のライセンスが必要です。インストールする SnapCenter ライセンスのタイプは、ストレージ環境および使用する機能によって異なります。
+SnapCenter では、アプリケーション、データベース、ファイルシステム、および仮想マシンのデータを保護するために、複数のライセンスが必要になります。インストールする SnapCenter ライセンスのタイプは、ストレージ環境および使用する機能によって異なります。
 
 |===
 | 使用許諾 | 必要に応じて 
@@ -97,7 +97,7 @@ NOTE: セカンダリデスティネーションに SnapCenter Standard ライ�
 
 NOTE: SnapCenter Advanced および SnapCenter NAS ファイルサービスのライセンスは廃止され、現在は提供されていません。
 
-ライセンスの追加方法については、を参照してください link:..//install/task_add_snapcenter_licenses.html["SnapCenter ライセンスを追加します"^]。
+1 つ以上の SnapCenter ライセンスをインストールする必要があります。ライセンスの追加方法については、を参照してください link:..//install/concept_snapcenter_standard_controller_based_licenses.html["SnapCenter の標準コントローラベースのライセンスを追加します"] または 。
 
 
 

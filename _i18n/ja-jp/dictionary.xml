@@ -36,10 +36,8 @@
   <block id="456dce50d13fcf7c2c4881e39c114254" category="paragraph">SnapCenter Plug-in for VMware vSphere は、事前に設定されたディレクトリ内の CRL ファイルを検索します。VMware vSphere 用 SnapCenter プラグインの CRL ファイルのデフォルトディレクトリは、 _/opt/NetApp/config/crl_です 。</block>
   <block id="1b782c06b199c89589ed8bcf1a6ca9ab" category="paragraph">このディレクトリに複数の CRL ファイルを配置できます。着信証明書は各 CRL に対して検証されます。</block>
   <block id="e53689fd856f2378aafc71172bca9677" category="summary">バックアップ、クローニング、リストアなどのデータ保護処理を実行する場合は、事前に戦略を定義し、環境をセットアップする必要があります。また、 SnapVault サーバで SnapMirror テクノロジと SnapCenter テクノロジを使用するように設定することもできます。</block>
-  <block id="fd1cb6f6c8f0813f0c0f54443f130176" category="doc">SQL データベースの保護を準備する</block>
   <block id="712a25807ffdbe76d2f9cea167d6577a" category="paragraph">SnapVault テクノロジと SnapMirror テクノロジを活用するには、ストレージデバイス上のソースボリュームとデスティネーションボリューム間のデータ保護関係を設定して初期化する必要があります。これらのタスクを実行するには、 NetAppSystem Manager を使用するか、ストレージコンソールのコマンドラインを使用します。</block>
   <block id="17332aa1fd5861b55b1cfe91240e73d1" category="inline-link-macro">REST API の使用を開始する</block>
-  <block id="b1e5f0d44dfc3c3a01d835b966c42e16" category="paragraph">* 詳細はこちら *<block ref="6ba7cd9b650690bef3ee79ccfd130b0a" category="inline-link-macro-rx"></block></block>
   <block id="45d66806e5bd1bbdee583fa4e0d0ef79" category="summary">ユーザが Plug-in for SQL Server の使用を開始するためには、 SnapCenter 管理者が事前に SnapCenter サーバをインストールして設定し、前提条件となるタスクを実行する必要があります。</block>
   <block id="50a33a56dee8ec0266f9fbc0fc243da2" category="doc">SnapCenter Plug-in for Microsoft SQL Server を使用するための前提条件</block>
   <block id="d3bd1679f97e986f5eabfb3cb076e96b" category="list-text">SnapCenter サーバをインストールして設定します。</block>
@@ -654,8 +652,6 @@
   <block id="a200c15748125d289ffe86820ffcd19f" category="paragraph">FC または iSCSI HBA で接続された RDM LUN</block>
   <block id="a5e23c97dd15d671c82b090f4480878c" category="paragraph">PowerShell コマンドレット</block>
   <block id="681eb44a9cbd6da8f7c3f918a64f2c6c" category="paragraph">iSCSI イニシエータによってゲストシステムに直接接続された iSCSI LUN</block>
-  <block id="5b779593a671f00d327b360a1ce0c2cf" category="paragraph">VMFS または NFS データストア上の Virtual Machine File Systems （ VMFS ）</block>
-  <block id="8217dddf43b8945631b5b1350f670c15" category="paragraph">VMware vSphere または VSC のクローニングユーティリティ</block>
   <block id="414ff662e83e18f999457703c274be4b" category="paragraph">SVM 上の SMB3 共有に接続されたゲストシステム</block>
   <block id="8389b191652a37792de566d96af881d9" category="paragraph">Hyper-V VM</block>
   <block id="bface44d9eafe9939661dba269100705" category="paragraph">仮想ファイバチャネルスイッチで接続された仮想 FC （ vFC ） LUN</block>
@@ -1232,7 +1228,6 @@
   <block id="9c124c0fc8c6cc2725dad57b45c85eb0" category="paragraph">次の図は、データベースのリソース、リソースグループ、およびポリシーの関係を示しています。</block>
   <block id="98a31c63f0ad69ee2075cb6cc6584bd3" category="image-alt">scsql リソースグループポリシー</block>
   <block id="4b0b8f3dcc1d02bb62d5a7533b295209" category="summary">SnapCenter Jobs ページを使用して、各バックアップ処理の進捗状況を監視できます。進捗状況をチェックして、処理が完了するタイミングや問題があるかどうかを確認できます。</block>
-  <block id="d674bb23dbac2b123a4fb57240a09020" category="doc">SQL リソースのバックアップ処理を監視する</block>
   <block id="2794927004b00b8d766ca3deca4c7096" category="paragraph">SnapCenterJobs ページを使用して、各種バックアップ処理の進捗状況を監視できます。進捗状況をチェックして、処理が完了するタイミングや問題があるかどうかを確認できます。</block>
   <block id="7944a2318d6a58176074a0d99b34c73d" category="paragraph">以下のアイコンがジョブページに表示され、操作の対応する状態を示します。</block>
   <block id="c0a63413cafa6a465f587d5835701c87" category="list-text">[ モニター ] ページで、 [ * ジョブ * ] をクリックします。</block>
@@ -1244,7 +1239,6 @@
   <block id="5f31a909a716e6e46492a1095c0444d8" category="list-text">バックアップジョブを選択し、 ［ * 詳細 * ］ をクリックしてジョブの詳細を表示します。</block>
   <block id="f4d8f263741562ac4c8e18153f44e752" category="admonition">バックアップジョブのステータスがと表示されます<block ref="718fe53e11bbf4bb30ca7e885db5e6f5" category="inline-image-macro-rx" type="image"></block>で、ジョブの詳細をクリックすると、バックアップ処理の子タスクの一部がまだ実行中であるか、警告の兆候がマークされていることがわかります。</block>
   <block id="2e014a97aaa75a1779bc262286731365" category="summary">ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。</block>
-  <block id="a2ccf2e0f9a76f19aa262b12964773cf" category="doc">ホストを追加して SnapCenter Plug-in for Microsoft SQL Server をインストールするための前提条件</block>
   <block id="8dd7d2aae8c4a449ae4eb17577d64964" category="list-text">iSCSI を使用している場合は、 iSCSI サービスが実行されている必要があります。</block>
   <block id="061b9167e88f686d39fa02000809052c" category="list-text">リモートホストに対するローカルログイン権限を持つローカル管理者の権限を持つユーザが必要です。</block>
   <block id="dbef26874057ae0be535fee20766f8cb" category="list-text">SnapCenter でクラスタノードを管理する場合は、クラスタ内のすべてのノードに対する管理者権限を持つユーザが必要です。</block>
@@ -1867,7 +1861,6 @@
   <block id="6c39fd8b168969057db8809308f6fa7d" category="section-title">リストア処理のデスティネーション</block>
   <block id="3ac862c89220de1caebfe67568f499cb" category="paragraph">データベースは、同じデータベースインスタンスの同じ場所にのみリストアできます。</block>
   <block id="0008fa503e4f0b20c7c5998325b66ab6" category="paragraph">RAC セットアップでは、クラスタ内の任意のノードから RAC データベースをリストアできます。</block>
-  <block id="46eb8a99554a54a5562c703f9a25a778" category="doc">[Activity] ペインで、 Oracle データベースのデータ保護操作を監視します</block>
   <block id="241427aa082547643032d9ac47ab0dda" category="summary">Oracle データベースをリストアする前に、前提条件を満たしていることを確認する必要があります。</block>
   <block id="e4efd46999918866976643fdf1c3041d" category="doc">Oracle データベースをリストアするための要件</block>
   <block id="58f28c7080a3b5a4d907dfdece1ece75" category="list-text">リストアとリカバリの戦略を定義しておく必要があります。</block>
@@ -2175,7 +2168,6 @@
   <block id="168ab792c2cf9b011ce6299d37acc0db" category="list-text">マウントされているバックアップを選択し、をクリックします <block ref="95ba06560c8632912f250655b94bc667" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="369c1744e4451be5d347dcbf66ae16b9" category="summary">SnapCenter Plug-in for Oracle Database は、 Oracle データベースに対応したデータ保護管理を提供する、 NetApp SnapCenter ソフトウェアのホスト側コンポーネントです。</block>
   <block id="50dd81eadc28deda5586552678161af6" category="doc">SnapCenter Plug-in for Oracle Database の概要を参照してください</block>
-  <block id="94d576fc5e81bb9610497ddae44570aa" category="paragraph">Plug-in for Oracle Database によって、 Oracle RMAN を使用したバックアップ、カタログ化とカタログ化解除、検証、マウント、アンマウント、リストア、 SnapCenter 環境での Oracle データベースのリカバリとクローニングPlug-in for Oracle Database は、すべてのデータ保護処理を実行するために SnapCenter Plug-in for UNIX をインストールします。</block>
   <block id="005a9d9d8d3ea04fe576ea51dbb37182" category="paragraph">Plug-in for Oracle Database では、 SAP アプリケーションを実行している Oracle データベースのバックアップを管理することができます。ただし、 SAP BR * Tools との統合はサポートされません。</block>
   <block id="381bb74dcb857609537acee4a3539bed" category="summary">どのリソースグループにも含まれていないリソースは、のリソースページからバックアップすることができます。</block>
   <block id="bb3bb922fc2fe1b5851c8c139e13f07b" category="doc">Oracle リソースのバックアップ</block>
@@ -2416,7 +2408,6 @@
   <block id="a909d5db254f7262bb93275a07812330" category="inline-link">RHEL 7 以降の非マルチパス環境でデータ保護処理が失敗する</block>
   <block id="637e979b90ef1f6ab2dd922a7436fbec" category="list-text"><block ref="637e979b90ef1f6ab2dd922a7436fbec" category="inline-link-rx"></block></block>
   <block id="6c83b31ae4346bfe10e9606266a64704" category="summary">Plug-in for Oracle Database では、次のバックアップ、検証、リストア、リカバリ、マウントを実行できます。 Oracle データベースとそのリソースをアンマウントおよびクローニングする。また、 Oracle Recovery Manager （ RMAN ）でデータベースバックアップのカタログ化またはカタログ化解除を行うこともできます。</block>
-  <block id="4d4592941c9cbfb21757f7993031ebcf" category="doc">Plug-in for Oracle Database の機能</block>
   <block id="a1f1d91bdd3fc54ff761f7ae76729ac2" category="list-text">データファイル、制御ファイル、およびアーカイブログファイルをバックアップします。</block>
   <block id="d99e420ec7c9773c04ecf30dec335450" category="paragraph">バックアップはコンテナデータベース（ CDB ）レベルでのみサポートされます。</block>
   <block id="8f68439f9ce2283fcb38d3159bb04e5b" category="list-text">データベース、 CDB 、および Pluggable Database （ PDB ）のリストアとリカバリを行います。</block>
@@ -2695,7 +2686,6 @@
   <block id="eebf4dbc30cb79473f44b0746798f0d8" category="list-text">Run_Refresh - SmClone_ 。</block>
   <block id="2dca23ddca1615e63d449ef4dd543431" category="paragraph">"PL-SCO-20032: CanExecute 操作がエラーで失敗した場合 : PL-SCO-300331: Redo ログファイル +SC_2959770772_clmdb/clredolog/redo01_01.log Exist" エラーメッセージが表示されたときに、操作が失敗した場合は、 -WaitToTriggerClone_" に高い値を指定してください。</block>
   <block id="f8c1a6ff268bea2d03c02074752387b4" category="paragraph">UNIX コマンドの詳細については、を参照してください<block ref="4959699b8c93f922209ddc8c83c796c6" category="inline-link-rx"></block>。</block>
-  <block id="8d003c327dd3bde25151b3faf6346b8e" category="summary">リソース（データベース）またはリソースグループのバックアップを作成することができます。バックアップのワークフローには、計画、バックアップするリソースの特定、バックアップポリシーの作成、リソースグループの作成とポリシーの適用、バックアップの作成、処理の監視が含まれます。</block>
   <block id="1aac38ab9167eb6ae3a199d0a8bc7915" category="doc">Oracle データベースをバックアップする</block>
   <block id="cb21f64b7aa1d58307ba1cfcc254fb77" category="paragraph">リソース（データベース）またはリソースグループのバックアップを作成することができます。バックアップのワークフローには、計画、バックアップするリソースの特定、バックアップポリシーの作成、リソースグループの作成とポリシーの適用、バックアップの作成、処理の監視が含まれます。</block>
   <block id="b9721a35a6c374ded595576ccbd2f789" category="paragraph">次のワークフローは、バックアップ処理の実行順序を示しています。</block>
@@ -2845,9 +2835,6 @@
   <block id="298ee0d54bd96050fb56f416e8665199" category="list-text">igroup の削除ダイアログボックスで、 * OK * をクリックします。</block>
   <block id="b6014af484171e08fae6e547c92aac45" category="paragraph">SnapCenter によって igroup が削除されます。</block>
   <block id="9c53e7ba342b700373ad570a7701ac93" category="summary">FAS または AFF システムを使用していて、 SnapCenter 標準ライセンスまたは SnapManagerSuite ライセンスがある場合は、 ONTAP コマンドラインを使用して SnapCenter コントローラベースライセンスを追加できます。</block>
-  <block id="9575d89eee3d9cea045cdf8003c58424" category="doc">SnapCenter の標準コントローラベースライセンスを追加します</block>
-  <block id="bb86646c3744ac012d0b1bac2cce39e8" category="list-text">FAS または AFF システムのクラスタ管理者である必要があります。</block>
-  <block id="e8533f31693f0664194046af3657868a" category="list-text">SnapCenter Standard または SnapManagerSuite のライセンスが必要です。</block>
   <block id="f749923aaf47a5a4e633b49ccf2873c5" category="paragraph">FAS または AFF ストレージを使用した SnapCenter の試用版をインストールする場合は、 Premium Bundle 評価ライセンスを取得してコントローラにインストールできます。</block>
   <block id="77284acb8b512806e32e2236346e084c" category="paragraph">SnapCenter を試用版としてインストールする場合は、営業担当者にお問い合わせいただき、 Premium Bundle 評価ライセンスを取得してコントローラにインストールしてください。</block>
   <block id="62749f76fbc0b3c54c0e9340e012798d" category="list-text">ONTAP コマンドラインを使用してネットアップクラスタにログインします。</block>
@@ -2855,9 +2842,7 @@
   <block id="a9109f87be4f882e4af7256b03cf8603" category="paragraph">'system license add - license-code license_key'</block>
   <block id="f19a479c9a38f158a358148b2b6e17cc" category="paragraph">このコマンドは、 admin 権限レベルで使用できます。</block>
   <block id="a138b0f06f247274d2e4ba8de6e7bf8d" category="list-text">SnapManagerSuite ライセンスがインストールされていることを確認します。</block>
-  <block id="07cb61bb6a886191f8b7b03683a90980" category="summary">Plug-in for Windows は、サポート対象バージョンの VMware ESXi で実行されている x64 ゲストオペレーティングシステムで LUN のプロビジョニングや Snapshot コピーの管理に使用できます。</block>
   <block id="68e27484ae284c9fc298973714df92ff" category="doc">サポートされている VMware ゲスト OS プラットフォーム</block>
-  <block id="f7d241b4c585c9c7c6a35fbb8147ea7a" category="paragraph">Plug-in for Windows では、次の構成の VMware ゲスト OS をサポートしています。</block>
   <block id="b9db741c7a680c86374c4d2efbfaa506" category="list-text">サポートされている Windows Server のバージョン</block>
   <block id="edc5a5eb2987305ddb5091070ee9fc21" category="list-text">Microsoft クラスタ構成</block>
   <block id="820975a681d6bd98ccc34b3e0595d110" category="paragraph">VMware 上でサポートされるノードは、 Microsoft iSCSI Software Initiator を使用する場合は最大 16 、 FC を使用する場合は最大 2 つです</block>
@@ -2919,7 +2904,6 @@
   <block id="8103ea1f974b6fe78b3263b7a1107692" category="paragraph">SnapCenter が iSCSI セッションを確立します。</block>
   <block id="d92abf366bd9060c59bb86c051a977d0" category="list-text">この手順を繰り返して、各ターゲットのセッションを確立します。</block>
   <block id="f8a549c5d60e74034419845623f5c51a" category="summary">ONTAP Select 標準容量ライセンスは、 Cloud Volumes ONTAP プラットフォームと SnapCenter プラットフォームのデータを保護するために使用します。</block>
-  <block id="b9625e188b9a141b5a2c32f0f98b9587" category="doc">SnapCenter の容量単位の標準ライセンスです</block>
   <block id="a6f6b8e1900f201c352d37d7ad4eee46" category="paragraph">ライセンスには次のような特徴があります。</block>
   <block id="1e1ad6d102344db746935e8ae7b4053a" category="list-text">51xxxxxxx の形式の 9 桁のシリアル番号で構成されます</block>
   <block id="8df6c319bc0dd3bc17034d6f7b0b0d01" category="paragraph">SnapCenter GUI を使用してライセンスを有効にするには、ライセンスのシリアル番号と有効なネットアップサポートサイトのログインクレデンシャルを使用します。</block>
@@ -2928,8 +2912,6 @@
   <block id="3ad8f1015a5748dc3e790e64bb9a4e26" category="paragraph">たとえば、 1TB 、 2TB 、 4TB などの容量ベースのライセンスを取得できます。</block>
   <block id="ec72ca404ef39d44f067aaaae39cf0e4" category="list-text">100TB の容量が使用可能な 90 日間の試用版ライセンスです</block>
   <block id="2743dc2e5d64cfecd6d65ef69f417e95" category="summary">SnapCenter の容量ベースのライセンスのシリアル番号は、注文の確認やドキュメントパッケージに記載されています。このシリアル番号がない場合は、ネットアップサポートサイトから取得できます。</block>
-  <block id="85f9b7d5b53caffdb60aea59164b1f58" category="doc">SnapCenter の容量ベースのライセンスのシリアル番号を取得します</block>
-  <block id="c954918517ba3ff2b9f19210937d9448" category="paragraph">有効なネットアップサポートサイトのログインクレデンシャルが必要です。有効なクレデンシャルを入力しないと、検索結果は返されません。</block>
   <block id="0373910e51252c7b97dcbea9f4942604" category="inline-link">mysupport.netapp.com</block>
   <block id="260c486181bff01291b08f4368caf4e0" category="list-text">ネットアップサポートサイトにログインします<block ref="28649c93049a329043d206ec7fa0c6f8" category="inline-link-rx"></block>。</block>
   <block id="55b506dcddf68638833e19d289e73897" category="list-text">[ システム ] 、 [ * ソフトウェアライセンス ] の順に移動します。</block>
@@ -2937,7 +2919,6 @@
   <block id="afdb1414f39146e968c3e38bd864c000" category="image-alt">NSS ライセンス選択</block>
   <block id="969166d70500094403472cee53c7eb80" category="list-text">会社名を入力して、「 * Go!* 」をクリックします。</block>
   <block id="072c7ce9ef654fbadd39bfb8d07dd1f6" category="paragraph">SnapCenter ライセンスの 9 桁のシリアル番号が 51xxxxxxx の形式で表示されます。</block>
-  <block id="e9f575c81244daed2d0f2a5e982caa00" category="list-text">SnapCenter ライセンスのシリアル番号を記録します。</block>
   <block id="4f208af6a990c3a6dbb3b1a7f78ab5d4" category="summary">Storage Virtual Machine （ SVM ）上に SMB3 共有を設定するには、 SnapCenter ユーザインターフェイスまたは PowerShell コマンドレットを使用できます。</block>
   <block id="61e81eb53b72fd5418e7a2bd125c8686" category="doc">SMB 共有を作成および管理する</block>
   <block id="e716be3faae541eba0074c1e65cdb45f" category="cell">* ベストプラクティス： * SnapCenter に付属のテンプレートを利用して共有の設定を自動化できるため、コマンドレットの使用を推奨します。</block>
@@ -2968,7 +2949,6 @@
   <block id="0e2512a370e5e94220f1e12e7b6323ec" category="list-text">共有の削除ダイアログボックスで、 * OK * をクリックします。</block>
   <block id="90151f3434b36edf515d9e6630d279d9" category="paragraph">SnapCenter によって SVM から SMB 共有が削除されます。</block>
   <block id="b7bbc11caf1a65c77460de0469d40f7d" category="summary">SnapCenter の GUI を使用して、 SnapManager スイートライセンスが FAS または AFF のプライマリストレージシステムにインストールされているかどうかを表示したり、 SnapManager スイートライセンスが必要なストレージシステムを特定したりできます。SnapManager スイートのライセンスは、プライマリストレージシステム上の FAS および AFF SVM またはクラスタにのみ適用されます。</block>
-  <block id="d6a6fe5d47e4d0fc43ce2aa059799fbe" category="doc">SnapManager スイートのストレージコントローラライセンスがインストールされているかどうかを確認します</block>
   <block id="febaac7ceadda0aca80556bfc7f22a33" category="list-text">左側のナビゲーションペインで、 * ストレージシステム * をクリックします。</block>
   <block id="d4f4bf7c0fccc84de2f6f808b0187018" category="list-text">Storage Systems ページの * Type * ドロップダウンから、追加したすべての SVM またはクラスタを表示するかどうかを選択します。</block>
   <block id="9ba45610f0250c3f3d93d968194d341c" category="list-text">追加されたすべての SVM を表示するには、 * ONTAP SVM * を選択します。</block>
@@ -2978,16 +2958,7 @@
   <block id="56ea331cb0dea9dc3bddc3e0e2f3ef88" category="paragraph">Controller License 列には、次のステータスが表示されます。</block>
   <block id="2522d4d4da08f9de2686d2c18e41a94b" category="list-text"><block ref="da9849daa2aa04218f87948a7256713b" category="inline-image-macro-rx" type="image"></block> FAS スイートライセンスが AFF または SnapManager プライマリストレージシステムにインストールされていることを示します。</block>
   <block id="3064686d0324adfa86cb183026ea8a66" category="list-text"><block ref="355b5886443669e7ad5ff1741a77218f" category="inline-image-macro-rx" type="image"></block> FAS スイートライセンスが AFF または SnapManager プライマリストレージシステムにインストールされていないことを示します。</block>
-  <block id="1aaff1fdcc72cd16496dd991ca0f6792" category="list-text">Not Applicable - このコントローラには SnapManager スイートライセンスが適用されないことを示します。</block>
-  <block id="7388ebf7c22fabfa3abdbc72a0f28103" category="paragraph">このメッセージは、次のプラットフォームについて表示されます。</block>
-  <block id="117bdbda976fe8b3212bc3b6327a0a1b" category="list-text">Cloud Volumes ONTAP</block>
-  <block id="3a3a5cd068731551120f43f37950768b" category="list-text">ONTAP Select の場合</block>
   <block id="e095aee1efd740c71961a13e76576da6" category="list-text">セカンダリストレージ</block>
-  <block id="a162a2588b0d4a82897843c0e0bee937" category="summary">ONTAP Select を SnapCenter プラットフォームまたは Cloud Volumes ONTAP プラットフォームで使用している場合は、 SnapCenter 容量ベースのライセンスを 1 つ以上インストールする必要があります。</block>
-  <block id="1b6a7e374e2fbc1c27c121ab0651fb26" category="doc">SnapCenter の容量ベースのライセンスを追加</block>
-  <block id="f8391a568c0f1fe6887a8c766c14f96b" category="list-text">SnapCenter 管理者ユーザとしてログインする必要があります。</block>
-  <block id="f1aa2a5ef79b24786eca8f5e0ea08996" category="list-text">SnapCenter を使用してネットアップサポートサイトにログインしてライセンスを取得する場合は、ライセンスのシリアル番号と有効なネットアップサポートサイトのクレデンシャルが必要です。</block>
-  <block id="7fdefd115bb82b89d089899a3dab4a58" category="list-text">ネットアップライセンスファイル（ NLF ）を使用してライセンスを追加する場合は、ライセンスファイルの場所を確認しておく必要があります。</block>
   <block id="3e95c3ade0efd0b3c285dd4e09c3339d" category="paragraph">[ 設定 ] ページでは、次のタスクを実行できます。</block>
   <block id="f13e95a655fb97423bd52082209d8781" category="list-text">ライセンスを追加します</block>
   <block id="c2267a540cdece9a806b765d927ba8ef" category="list-text">ライセンスの詳細を表示して、各ライセンスに関する情報を簡単に確認できます。</block>
@@ -3000,8 +2971,6 @@
   <block id="a1d8662559bac2669232432df90e6db3" category="paragraph">ライセンスをインポートするには、ネットアップサポートサイト（ NSS ）のログインクレデンシャルを入力します</block>
   <block id="a426e2b1ae7b2ed68b622079636cb9f8" category="list-text">NSS のユーザ名を入力します。</block>
   <block id="21b830aba4d35dd682d3fb99b5c39c58" category="list-text">NSS パスワードを入力します。</block>
-  <block id="82995a40bedfafc8f5ebf94ce2347743" category="list-text">SnapCenter ライセンスのシリアル番号を入力します。</block>
-  <block id="742d7678f89e399603e9cdfbedd0be24" category="admonition">ストレージコントローラのシリアル番号ではありません。ストレージコントローラベースの容量ライセンスを使用している場合は、ストレージコントローラでそのライセンスを入力する必要があります。コントローラベースのライセンスの入力には、 SnapCenter GUI は使用しません。</block>
   <block id="07cb62e97402d6f5f7ae164e960f673c" category="paragraph">ネットアップライセンスファイル</block>
   <block id="358adfd23e97ae6d9631faacdf38349f" category="list-text">ライセンスファイルの場所を参照し、選択します。</block>
   <block id="31d9f23fbb53d2787e021e33f512537e" category="list-text">* 開く * をクリックします。</block>
@@ -3283,16 +3252,12 @@
   <block id="6f550466a69bad21f11ab99fc12db497" category="doc">インストールワークフロー</block>
   <block id="1b6e4426f8c688c2d09195bf31d0242c" category="paragraph">このワークフローでは、 SnapCenter サーバのインストールと設定に必要なさまざまなタスクについて説明します。</block>
   <block id="91f32543aa28b785a5495845a7fb8cec" category="summary">FAS または AFF ストレージコントローラを使用する場合は、 SnapCenter の標準コントローラベースのライセンスが必要です。</block>
-  <block id="3d9797bbdd3123049895bfe6683c933c" category="doc">SnapCenter の標準的なコントローラベースのライセンス</block>
   <block id="b1c23ca4e9e67a158bfb24299743d88f" category="paragraph">コントローラベースのライセンスには次のような特徴があります。</block>
   <block id="5300768d44eab29e62cfac966d22baea" category="list-text">Premium Bundle または Flash Bundle （ベースパックには含まれません）の購入に SnapCenter Standard のライセンスが含まれます。</block>
   <block id="c55c867b9e6458f61ad9c49c7535bfab" category="list-text">無制限のストレージ使用</block>
   <block id="b867b5a0cc0e8c022da3fb526dbf2e0d" category="list-text">ONTAP System Manager またはストレージクラスタのコマンドラインを使用して、 FAS または AFF のストレージコントローラに直接追加して有効にします</block>
   <block id="c0919ecf5802c65bf773794b7af70540" category="admonition">SnapCenter コントローラベースのライセンスについては、 SnapCenter GUI にライセンス情報を入力しません。</block>
   <block id="17449a90a0d7161db56cba83fa4f2728" category="list-text">コントローラのシリアル番号にロックされています</block>
-  <block id="2c0dfc3db3d94e00645c45c2b4e11d36" category="admonition">お使いのコントローラにすでに SnapManagerSuite ライセンスがある場合は、 SnapCenter の標準コントローラベースのライセンス使用権が自動的に提供されます。SnapManagerSuite ライセンスと SnapCenter 標準のコントローラベースのライセンスは同じ意味で使用されますが、同じライセンスを指します。</block>
-  <block id="94eeb18657408467d66acc1da414cb30" category="summary">SnapCenter Standard ライセンスは、アプリケーション、データベース、ファイルシステム、および仮想マシンを保護します。SnapCenter にストレージシステムを追加する前に、 1 つ以上の SnapCenter ライセンスをインストールする必要があります。</block>
-  <block id="4a7251511db83089e697e43a9f18d352" category="doc">SnapCenter ライセンスを追加します</block>
   <block id="eb55a5732c8239cbf4f476df49cc20a3" category="paragraph">必要なライセンスの詳細については、を参照してください <block ref="6de8516502145d64739d69762f4898a1" category="inline-link-macro-rx"></block>。</block>
   <block id="cb71fa17674dc4797c071cbc95e38b23" category="summary">SnapCenter を使用して、サポートされる Windows Server ホストにネットアップストレージを割り当てることができます。SnapCenter を使用して Windows ホストをプロビジョニングすると、作成するバックアップでアプリケーションとの整合性が確保されます。SnapCenter Plug-ins Package for Windows をインストールして設定しておく必要があります。</block>
   <block id="0daccd45abdac281e7508c5de0fa492c" category="doc">Windows ホストでストレージをプロビジョニングする</block>
@@ -3303,16 +3268,10 @@
   <block id="0bb1ca17dcceed1d4fabc183c544ff8f" category="list-text">igroup を作成して、ストレージシステム上の特定の LUN にアクセスできるホストを指定します</block>
   <block id="f32fe896744fc700791c1d2f3793f7a5" category="list-text">ディスクの作成、サイズ変更、および接続</block>
   <block id="c6074d3b5ef6196f31a5ab6de252833f" category="list-text">Storage Virtual Machine （ SVM ）に SMB 共有を作成する</block>
-  <block id="9a1798d533c4efc2abb3f344d19b655d" category="summary">ONTAP コマンドラインを使用してコントローラにインストールされているすべてのライセンスを表示し、 SnapManagerSuite ライセンスがすでにインストールされているかどうかを確認できます。</block>
-  <block id="073a4aa0f24b9a43b8650fab8f2cebb7" category="doc">コントローラにインストールされているライセンスを表示します</block>
-  <block id="c3c48593f22fc1b8babf5d9894e2de87" category="admonition">SnapCenter の標準コントローラベースのライセンスが、コントローラに SnapManagerSuite ライセンスとして表示されます。</block>
   <block id="062174c6682cfbf4f3b6b5c1d6707824" category="list-text">ONTAP コマンドラインを使用してネットアップコントローラにログインします。</block>
   <block id="9865599458fea2a88fc4f94d29ab5c4e" category="list-text">license show コマンドを入力し、出力を表示して SnapManagerSuite ライセンスがインストールされているかどうかを確認します。</block>
   <block id="5b12cbd18ef5bbd432e4411b45e422ad" category="paragraph">この例では、 SnapManagerSuite ライセンスをインストールするため、 SnapCenter の追加ライセンスは必要ありません。</block>
-  <block id="5a1c4d4d6b6e3ceedbc55bc73fb798e7" category="paragraph">SnapManagerSuite ライセンスが表示されない場合は、コントローラのシリアル番号を取得し、からライセンスを取得する必要があります<block ref="3725c06f412bedb14ffd610de312875d" category="inline-link-rx"></block>。</block>
-  <block id="ad36e28dd0a1f8565c9586ea8ff70d33" category="summary">ゲスト OS で RDM の処理を実行するには、最小限の vCenter 権限が必要です。</block>
   <block id="509675a9a6ae231c84937ede65cbf4a7" category="doc">SnapCenter RDM の処理に必要な最小限の vCenter 権限</block>
-  <block id="5a52cf7cb72a8c82f99e25d838ee7028" category="paragraph">ホストで次の最小権限が設定されている必要があります。</block>
   <block id="ef02a3bf909198f5789f51eb7f4ff85b" category="list-text">データストア：ファイルを削除します</block>
   <block id="4ed4338029add2e5cbf170e93c00cd59" category="list-text">ホスト： [Configuration] &gt; [Storage Partition] の順に選択します</block>
   <block id="602bc3d39a3a66d26965862c4576443f" category="list-text">仮想マシン：構成</block>
@@ -3371,9 +3330,7 @@
   <block id="16e7597f6d1a1595520060010a775409" category="paragraph">ドメインコントローラの通信ポート</block>
   <block id="fa51be75ce838b88fdd3475b507591a3" category="paragraph">認証が適切に機能するために、 Microsoft のマニュアルを参照して、ドメインコントローラのファイアウォールで開く必要があるポートを確認してください。</block>
   <block id="c659718bc9e53e4da63cb36d6025798c" category="paragraph">SnapCenter サーバ、プラグインホスト、またはその他の Windows クライアントがユーザを認証できるように、ドメインコントローラで Microsoft の必要なポートを開く必要があります。</block>
-  <block id="79bab43feae7562a6626a7a697e2976c" category="summary">トライアルライセンス（「 50 」で終わるシリアル番号）は、 SnapCenter GUI では削除できません。コントローラベースの SnapCenter 標準ライセンスを使用していて、 SnapCenter GUI から容量ベースの試用版ライセンスを削除する必要がある場合は、 mysql コマンドを使用して試用版ライセンスを手動で削除する必要があります。</block>
   <block id="a2e769316816cc255f9f37fbed415c69" category="doc">試用版ライセンスを削除します</block>
-  <block id="829f53acdba72e2434f7f8b0c4252e4e" category="paragraph">SnapCenter GUI を使用して、試用版ライセンス（「 50 」で終わるシリアル番号）を削除することはできません。コントローラベースの SnapCenter 標準ライセンスを使用していて、 SnapCenter GUI から容量ベースの試用版ライセンスを削除する必要がある場合は、 mysql コマンドを使用して試用版ライセンスを手動で削除する必要があります。</block>
   <block id="87d0fa08c99bcc9a194b85ddcbe3da26" category="paragraph">トライアルライセンスを手動で削除する必要があるのは、 SnapCenter の標準コントローラベースのライセンスを使用している場合のみです。SnapCenter の Standard 容量ベースのライセンスを調達し、 SnapCenter の GUI に追加すると、試用版ライセンスが自動的に上書きされます。</block>
   <block id="68dae2573ac7874d6dd234af4fa4c752" category="list-text">SnapCenter サーバで、 PowerShell ウィンドウを開き、 MySQL パスワードをリセットします。</block>
   <block id="aa5c2438bb48bc6f9fc91294d9f5f2c1" category="list-text">Open-SmConnection コマンドレットを実行して、 SnapCenterAdmin アカウントの SnapCenter サーバとの接続セッションを開始します。</block>
@@ -3469,7 +3426,6 @@
   <block id="02f25ba36a2907c8f8d0598b962b14ed" category="list-text">レジストリエディタを閉じます。</block>
   <block id="21b55e1babd986a5f3ed39019361ea07" category="summary">VMware 環境での SnapCenter Plug-in for Microsoft Windows を使用して、 LUN の作成と管理、および Snapshot バックアップコピーの管理を行うことができます。</block>
   <block id="e2d0fdb0252253026c4030313d523287" category="doc">VMware 環境でストレージをプロビジョニング</block>
-  <block id="f8233fd53ae3e5952555d6c98a306e4e" category="summary">SnapCenter コントローラベースのライセンスを取得するには、コントローラのシリアル番号が必要です。ONTAP コマンドラインを使用すると、コントローラのシリアル番号を取得できます。</block>
   <block id="9c665690c697cc93e5a897a8a63d25c2" category="doc">コントローラのシリアル番号を取得します</block>
   <block id="ed996e97427b9382e039c0a5dde5d493" category="list-text">ONTAP コマンドラインを使用してコントローラにログインします。</block>
   <block id="1220394f5402b4332338e11150062d91" category="list-text">system show -instance コマンドを入力し、出力を確認してコントローラのシリアル番号を確認します。</block>
@@ -3595,16 +3551,12 @@
   <block id="541eb9f7e4046db89bc6e649fea3e51d" category="admonition">[Cancel] * ボタンをクリックすると、実行中のステップが完了し、ロールバック操作が開始されます。SnapCenter サーバがホストから完全に削除されます。</block>
   <block id="0a72b5ed9e647b1bccffb29f78092df4" category="paragraph">ただし、「 SnapCenter サーバサイトの再起動」または「 SnapCenter サーバの起動を待機中」の処理が実行されているときに「 * キャンセル」をクリックすると、処理はキャンセルされずにインストールが続行されます。</block>
   <block id="bf81ea5010d5d85942a2a57301afd2ac" category="paragraph">ログファイルは常に、 admin ユーザの %temp% フォルダに古いものから順番に表示されます。ログの場所をリダイレクトする場合は 'C:\installer_location\installer_name.exe /log"C:\"`` を実行して ' コマンドプロンプトから SnapCenter Server のインストールを開始します</block>
-  <block id="c3194c6567995eb9ff81a788011b0e1f" category="summary">SnapCenter の容量ベースのライセンスをインストールしている場合、 SnapCenter は、管理対象の ONTAP Select および Cloud Volumes ONTAP ストレージ上で、 1 日に 1 回、午前 0 時に使用容量を自動的に計算します。SnapCenter を正しく設定するには、 SnapCenter での容量の計算方法を確認しておく必要があります。</block>
   <block id="b15a52a99ef14861ba148ae197add182" category="doc">SnapCenter での使用容量の計算方法</block>
-  <block id="2c9cd5ff7db22fc6859c1c0cab760700" category="paragraph">ONTAP Select または Cloud Volumes ONTAP をストレージプラットフォームとして使用している場合は、バックアップやリストアなどの SnapCenter 機能を有効にするために、 SnapCenter Standard 容量ベースのライセンスがインストールされている必要があります。Standard 容量ライセンスを使用している場合、 SnapCenter は、ライセンスで許可された合計容量から、すべてのボリュームの使用済み容量を差し引くことによって、未使用の容量を計算します。</block>
-  <block id="88a62c6ada117394d3edd7eb8064cc91" category="paragraph">使用容量がライセンスで許可された容量を超えた場合、 SnapCenter ダッシュボードに警告が表示されます。SnapCenter で容量のしきい値と通知を設定している場合は、使用容量が指定したしきい値に達すると E メールが送信されます。</block>
   <block id="10680a7aa79949d8b454b29a782cc64a" category="summary">FC RDM LUN を使用して Microsoft クラスタ内のノード間でストレージを共有する前に、共有クォーラムディスクと共有ストレージディスクを作成し、それらをクラスタ内の両方の仮想マシンに追加しておく必要があります。</block>
   <block id="5010ac065b072d3a5a66d4913af22358" category="doc">共有 FC RDM LUN を作成</block>
   <block id="cbdb6828febec04786f22df9a1ccc748" category="inline-link">物理ホスト間で仮想マシンをクラスタ化します</block>
   <block id="343e62dffb88999e9c503088341e1fc0" category="paragraph">共有ディスクの作成に Plug-in for Windows は使用しません。共有 LUN を作成し、クラスタ内の各仮想マシンに追加する必要があります。詳細については、を参照してください<block ref="4339506e2feb8115940eea5a6e9ba248" category="inline-link-rx"></block>。</block>
   <block id="474c0722911434e135bf42df035f7de6" category="summary">Plug-in for Windows では、特定の構成要件を満たしていれば、 2 つの異なる ESX サーバまたは ESXi サーバに属する 2 台の仮想マシンで構成された Microsoft クラスタで FC RDM LUN の使用がサポートされます。この構成は、クラスタ全体のボックスとも呼ばれます。</block>
-  <block id="60569e1833a174775bf309b72c88ef3a" category="doc">Microsoft クラスタで FC RDM LUN を使用するための要件</block>
   <block id="70a4074331de52ecee06dc3b774cd173" category="list-text">仮想マシン（ VM ）で同じバージョンの Windows Server を実行している必要があります。</block>
   <block id="c2b3831649c02f541b854d02dd08fd7e" category="list-text">ESX サーバまたは ESXi サーバのバージョンが VMware の各親ホストで同じである必要があります。</block>
   <block id="c68adab60c44fd33d9d80852de42847b" category="list-text">各親ホストに少なくとも 2 つのネットワークアダプタが必要です。</block>
@@ -3733,25 +3685,18 @@
   <block id="a27c3070ff7f863792f528487e11b681" category="list-text">VMFS タイプの VMDK 用の iSCSI または FC ライセンス</block>
   <block id="37258956f8a9c89da0109335d18aa405" category="paragraph">ソースボリュームを利用できない場合に SnapMirror デスティネーションシステムからデータを提供するには、 SnapMirror デスティネーションシステムに必要です。</block>
   <block id="cdc31d96c535e9b4d0a4c97b0340372f" category="admonition">SnapCenter Advanced および SnapCenter NAS ファイルサービスのライセンスは廃止され、現在は提供されていません。</block>
-  <block id="9c0006f487048cc1a24e86e30f777444" category="paragraph">ライセンスの追加方法については、を参照してください <block ref="22bdd0b3662d6f36268fd8a41878f574" category="inline-link-macro-rx"></block>。</block>
   <block id="59746a4c33021bdc9cb716ea91eadbb0" category="section-title">Single Mailbox Recovery （ SMBR ）ライセンス</block>
   <block id="8119a3fca1d141f0d7a8e7156604c296" category="paragraph">SnapCenter Plug-in for Exchange を使用して Microsoft Exchange Server データベースと Single Mailbox Recovery （ SMBR ）を管理している場合は、 SMBR のライセンスが追加で必要です。 SMBR の場合は、ユーザのメールボックスに基づいて別途購入する必要があります。</block>
   <block id="0d5e6d352f8f3217e51e0df5fe981349" category="inline-link">SMBR リリースノート</block>
   <block id="3305eb9373205972a06c6092007cad70" category="paragraph">メールボックスが 1 、 000 、 5000 、 15000 、 25000 個という単位で提供されている SMBR ライセンスを購入する場合は、ネットアップの営業担当者にお問い合わせください。SKU の購入後、の手順に従ってライセンスを取得できます<block ref="26f9ebf6b2beedaef61522277c7c5b3d" category="inline-link-rx"></block>。</block>
   <block id="e641334b8b39e850790bd4b25b2e3cec" category="paragraph">ライセンスキーのリクエストを送信すると、 Kroll Ontrack は問題 50 メールボックスライセンスキーを送信します。資格に基づいて、 Kroll Ontrack は検証後にメールボックスのライセンスをアップグレードします。</block>
   <block id="da68fe81ae35bfda8d512b213d4ea64f" category="summary">FAS または AFF ストレージを使用している場合、ネットアップサポートサイトから SnapCenter コントローラベースのライセンスを取得してから、 ONTAP コマンドラインを使用してインストールできます。</block>
-  <block id="ec4f3c62045df4a9c335dd0444cdbc54" category="doc">SnapCenter コントローラベースのライセンスのシリアル番号を取得します</block>
-  <block id="3e3276b96057e7701aaae67c45a157bd" category="list-text">有効なネットアップサポートサイトのログインクレデンシャルが必要です。</block>
   <block id="315713e21026e04eaaa2b9a3821e4c3d" category="paragraph">有効なクレデンシャルを入力しないと、検索結果は返されません。</block>
-  <block id="241c95681ccf8bd671dbd4fa578a9e9b" category="list-text">コントローラのシリアル番号が必要です。</block>
   <block id="371319a0c9817abb98eea29d4567a795" category="list-text">選択基準領域で、シリアル番号（ユニットの背面にある番号）が選択されていることを確認し、コントローラのシリアル番号を入力して、 * Go!* をクリックします。</block>
   <block id="d9996bb23744ed1a95dc297c99d45d4d" category="image-alt">NSS コントローラのライセンス選択</block>
   <block id="b5ddaee766816307a016e7736f50313d" category="paragraph">指定したコントローラのライセンスのリストが表示されます。</block>
   <block id="5da6f07d19afc1937b1b5b064152d98e" category="list-text">SnapCenter Standard または SnapManagerSuite ライセンスを探して記録します。</block>
-  <block id="b54f18176bb25d3763a7ce7a1cec9bae" category="summary">ネットアップサポートサイトのクレデンシャルと SnapCenter ライセンスのシリアル番号を SnapCenter GUI に入力しない場合や、ネットアップサポートサイトへの SnapCenter からのインターネットアクセスがない場合は、ネットアップライセンスファイルを生成できます。 次に、 SnapCenter ホストからアクセス可能な場所にファイルをダウンロードして保存します。</block>
   <block id="aec2fa195585d5a55c735b267231ecf8" category="doc">ネットアップライセンスファイルを生成</block>
-  <block id="fb9c073654a7ab22b4f90b620eae0115" category="list-text">SnapCenter を ONTAP Select または Cloud Volumes ONTAP で使用している必要があります。</block>
-  <block id="d967c99771a719e267b244cdac6d6ce5" category="list-text">9 桁の SnapCenter ライセンスシリアル番号が 51xxxxxxx の形式で入力されている必要があります。</block>
   <block id="eeb818d6636d7675fb1108e834a0fed1" category="inline-link">ネットアップライセンスファイルジェネレータ</block>
   <block id="5064ce102d4c25981e21e76e6aa515d3" category="list-text">に移動します<block ref="52825a9f9c75513bbd1f360c2df7f081" category="inline-link-rx"></block>。</block>
   <block id="cc5aaa62ea65ba445a0ca28e684ec137" category="list-text">必要な情報を入力します。</block>
@@ -3796,7 +3741,6 @@
   <block id="50c8eedc062cfc2a0cdca0c70661c9ab" category="inline-link">SnapCenter で NLB と ARR を設定する方法</block>
   <block id="ff8ebcd3db2a0433d94d5787e5eb9e10" category="paragraph">ハイアベイラビリティの設定については、を参照してください<block ref="e6066454f6b1da30f834e99c8ec9e27b" category="inline-link-rx"></block>。</block>
   <block id="e60af40b9e81b3b1218616f1ecc5432c" category="summary">Plug-in for Windows では、異なる ESX サーバまたは ESXi サーバに属する異なる仮想マシン上の FC / iSCSI RDM LUN を使用する Microsoft クラスタがサポートされます。</block>
-  <block id="2fe83c1996d8fc35689e686536c30f6d" category="doc">Microsoft クラスタでは、 FC / iSCSI RDM LUN の使用に関する制限事項がサポートされています</block>
   <block id="2ec8d8c0e413c64941b3392c86f96c04" category="admonition">この機能は、 ESX 5.5i よりも前のリリースではサポートされていません。</block>
   <block id="b0a21bcb000eca6a17eee34293d84825" category="list-text">Plug-in for Windows では、 ESX iSCSI および NFS データストア上のクラスタはサポートされません。</block>
   <block id="151812d83295b85f574a9bbb0d67244a" category="list-text">Plug-in for Windows では、クラスタ環境でのイニシエータの混在はサポートされません。</block>
@@ -3804,7 +3748,6 @@
   <block id="ab54609ee5d6e15ea370231c6a597ae9" category="list-text">ESX iSCSI イニシエータと HBA は、 Microsoft クラスタ内の共有ディスクではサポートされません。</block>
   <block id="f034f0fa36c8b39add8d246d76d047cc" category="list-text">Plug-in for Windows では、 Microsoft クラスタに属する仮想マシンの vMotion による移行はサポートされません。</block>
   <block id="b88dbedd8fcea13adf629d85780a25e4" category="list-text">Plug-in for Windows では、 Microsoft クラスタ内の仮想マシンでの MPIO はサポートされません。</block>
-  <block id="67b8e8a8f3d1fcb54fd6147ea80f3a62" category="summary">SnapCenter Plug-in for Microsoft Windows は、 VMware Windows ゲストでサポートされます。Plug-in for Windows を使用してプロビジョニングや Snapshot コピーの管理操作を実行する前に、いくつかの制限事項について確認しておく必要があります。</block>
   <block id="899fb38056bfa55fefa31d639ef3150e" category="doc">VMware ESXi サーバ関連の制限事項</block>
   <block id="58e3ee800c9ab06146240fd2ed8a77e4" category="list-text">ESXi クレデンシャルを使用して仮想マシン上の Microsoft クラスタに Plug-in for Windows をインストールすることはできません。</block>
   <block id="c48b48a89f105c0bc451692ba3bc8f90" category="paragraph">クラスタ化された仮想マシンに Plug-in for Windows をインストールする場合、 vCenter のクレデンシャルを使用する必要があります。</block>
@@ -3845,8 +3788,6 @@
   <block id="1240073aadeb78a3e72b1cedfb5cec2f" category="list-text">設定ページで、 * 設定 * &gt; * グローバル設定 * &gt; * CA 証明書設定 * と進みます。</block>
   <block id="a6e94fec2cfcadd0e75ac025786feb7f" category="list-text">*<block ref="ce7f8fe6cf825357e942960470acb5bc" category="inline-image-macro-rx" type="image"></block>* ：有効な CA 証明書がないか、プラグインホストに割り当てられていないことを示します。</block>
   <block id="b253c383592a32db835b060dd347fb51" category="summary">SnapCenter の容量ベースのライセンスを取得する前に、 SnapCenter で管理するホストの容量を計算する必要があります。</block>
-  <block id="dd66b8946449c985d7a78beedb4c6cf8" category="doc">SnapCenter の容量ベースのライセンスの容量要件を計算します</block>
-  <block id="60e54fb059fb6aa5bf21623d410358dd" category="paragraph">Cloud Volumes ONTAP または ONTAP Select システムのクラスタ管理者である必要があります。</block>
   <block id="b3ce93a0fdb481ef23214dbe76f20fbd" category="paragraph">SnapCenter は、使用済み容量を計算します。ファイルシステムまたはデータベースのサイズが 1TB で、使用スペースが 500GB の場合、 SnapCenter は 500GB の使用容量を計算します。重複排除と圧縮のあとにボリューム容量が計算され、ボリューム全体の使用容量に基づいて算出されます。</block>
   <block id="7a8bc63ce0be9d70f65ff4bebb9b433c" category="list-text">使用済みボリューム容量を表示するには、コマンドを入力します。</block>
   <block id="c52aa08e4b032ad1666772ea0c44119c" category="paragraph">2 つのボリュームの使用済み容量の合計が 5TB 未満であるため、 5TB のデータをすべて保護する場合は、 SnapCenter の容量ベースの最小ライセンス要件は 5TB です。</block>
@@ -4305,10 +4246,6 @@
   <block id="dc647eb65e6711e155375218212b3964" category="paragraph">パスワード</block>
   <block id="63fbbc1b83be3eb89f9b77d408d2ac48" category="admonition">Linux ユーザのみに該当します。</block>
   <block id="fa82b0b99da0e46e629baf5081d8fee2" category="doc">必要な最小 ONTAP 権限</block>
-  <block id="71f96d6798aa01ccfac53afc2456a9cd" category="doc">SAP HANA データベースのリストア処理をキャンセルします</block>
-  <block id="09b4581c12077337b31653050f9e5350" category="summary">SnapCenter Plug-in for SAP HANA Database を SnapCenter Server からリモートでインストールできない環境では、 Linux ホストに直接インストールできます。対話型のウィザードまたはコマンドラインインターフェイスを使用してプラグインをインストールできます。</block>
-  <block id="c2eec74e49afff811e5a6da3148c2660" category="doc">SnapCenter Plug-in for SAP HANA Database を Linux ホストに個別にインストールします</block>
-  <block id="5b88229e87fbf1795f383c0bd5b1a45c" category="paragraph">Plug-in for SAP HANA Database は、 HDBSQL クライアントが配置された各 Linux ホストにインストールする必要があります。</block>
   <block id="3edd74de1f47818f3f21d91ae6232de2" category="summary">SnapCenter を使用してリストア処理を正常に実行するには、事前に戦略を定義しておく必要があります。自動検出された SAP HANA データベースには、 2 種類のリストア戦略があります。</block>
   <block id="9f03145f1db5d9c1114fdd6e88c92bd6" category="doc">自動検出された SAP HANA データベースでサポートされるリストア戦略のタイプ</block>
   <block id="d26e732ff4468b921ec70bf797290866" category="section-title">リソース全体のリストア</block>
@@ -4459,7 +4396,6 @@
   <block id="ef6b493c36772b4cff5ddca5d370121f" category="list-text">ボリューム、 qtree 、またはディレクトリからファイルをリストアします</block>
   <block id="504e78ba630989f50409682ae7d17167" category="list-text">選択した LUN のみをリストアします</block>
   <block id="dd5f630f41cdfc02249f05e881feeef5" category="summary">リストアとリカバリのワークフローには、計画、リストア処理の実行、および処理の監視が含まれます。</block>
-  <block id="292b479bdc8ac6d3b1a668d0bf42ca50" category="doc">SAP HANA データベースをリストア</block>
   <block id="e30c3d908a4ed515e16791b672cc0709" category="image-alt">リストアワークフロー</block>
   <block id="515099a9db2d69620b1bbc080fe5200a" category="paragraph">PowerShell コマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、クローニングの処理を実行することもできます。PowerShell コマンドレットの詳細については、 SnapCenter のコマンドレットのヘルプを使用するか、コマンドレットのリファレンス情報を参照してください。</block>
   <block id="1f48dbbea01c56f6a2e52360679bf5c1" category="paragraph"><block ref="daae4ae3ea6b2cf5910972d7c966e3bc" category="inline-link-rx"></block>。</block>
@@ -4549,10 +4485,8 @@
   <block id="c72e421659f98c50e18a18d8f905b1d6" category="list-text">ホストタイプが Linux の場合は、フィンガープリントを確認し、 * Confirm and Submit * をクリックします。</block>
   <block id="278698b1ed9c8da1a5834234f787974a" category="paragraph">インストール固有のログファイルは、 /custom_location/snapcenter /logs にあります。</block>
   <block id="9638dcdc640dbf6662834e293cbc12b3" category="summary">SnapCenter Plug-in for SAP HANA Database をインストールする Linux ホストは、依存するソフトウェア、データベース、オペレーティングシステムの要件を満たしている必要があります。</block>
-  <block id="a47c023c2085f21d4e618cba9ef75dfd" category="doc">Linux ホストに SnapCenter Plug-in for SAP HANA Database をインストールする準備をします</block>
   <block id="9e8c841a17bd4c0ec7d85ab94b954bca" category="paragraph">サポートされる構成の最新情報については、 Interoperability Matrix Tool （ IMT ）を参照してください。</block>
   <block id="d38df2295bfe768071dcfe28649a9438" category="paragraph"><block ref="d38df2295bfe768071dcfe28649a9438" category="inline-link-rx"></block></block>
-  <block id="ede04cadc09e08f3213975dc6bb9f0f8" category="paragraph">SnapCenter Plug-in for SAP HANA Database は、 SnapCenter Plug-ins Package for Linux の一部です。SnapCenter Plug-ins Package for Linux をインストールする前に、 Windows ホストに SnapCenter がインストールされている必要があります。</block>
   <block id="e53ba889508b719f73b0223755d7a145" category="summary">SnapCenter を使用してバックアップをクローニングすることができます。クローニングはプライマリとセカンダリのどちらのバックアップからも実行できます。</block>
   <block id="cc9ec1117ac60bf06e35d58497993679" category="doc">SAP HANA データベースのバックアップをクローニングします</block>
   <block id="ff9ea1d5d9e34a2e53ae21ce93b5318b" category="list-text">リソースまたはリソースグループをバックアップしておく必要があります。</block>
@@ -4604,7 +4538,6 @@
   <block id="7f6ba439286f41d27f288dd7335169c5" category="paragraph">「 * サマリカード * 」セクションには、ファイルベースのバックアップ、 Snapshot コピーバックアップ、およびクローンの合計数が表示されます。</block>
   <block id="8decbf1aae0caf98d11e0d7812d18fa5" category="list-text">表でバックアップを選択し、データ保護アイコンをクリックして、リストア、クローニング、削除の各処理を実行します。</block>
   <block id="f5236905507f722bdfe8fab4cdd4de2b" category="list-text">クローンをスプリットする場合は、表でクローンを選択し、をクリックします <block ref="4e76ccc6d666f337d0615fe61d91903b" category="inline-image-macro-rx" type="image"></block>。</block>
-  <block id="fdaca78ada7742b0ce602dbee1e74d98" category="doc">SAP HANA データベースを保護するための準備</block>
   <block id="f70451089f1e1bfca806390a988a70f9" category="summary">自動検出は、特定の HANA インスタンスではサポートされていません。これらのリソースは手動で追加する必要があります。</block>
   <block id="b39d1e4f73b157bb2f5b3a972e89eeb6" category="doc">プラグインホストにリソースを手動で追加します</block>
   <block id="529693f008bf73338af648fe1d20d733" category="paragraph">SnapCenter サーバのインストール、ホストの追加、ストレージシステム接続のセットアップ、 HDB ユーザストアキーの追加などのタスクを完了しておく必要があります。</block>
@@ -4619,29 +4552,19 @@
   <block id="70c6e16d5846190bb939d8bf7dd65498" category="list-text">[*Provide Resource Details*] ページで、次の操作を実行します。</block>
   <block id="0ae55e3aeda2ed34504cdb299750c35e" category="paragraph">リソースタイプ（ Resource Type ）</block>
   <block id="f87b54c1e1b36fd8fdf7fe10d53c8f8c" category="paragraph">リソースタイプを入力します。リソースタイプは、単一コンテナ、マルチテナントデータベースコンテナ（ MDC ）、非データボリュームです。</block>
-  <block id="324755708fc80fe062ea1ec2f32f4987" category="paragraph">SAP HANA System Name の略</block>
   <block id="38e82d8074a21d4e6cc51e67e58c9cc2" category="paragraph">SAP HANA システムのわかりやすい名前を入力します。このオプションは、単一コンテナまたは MDC リソースタイプを選択した場合にのみ使用できます。</block>
   <block id="1c2684566717c78cd97248bd9b26c55b" category="paragraph">SID</block>
   <block id="1db1efa9a360be7c9183d433804fee89" category="paragraph">システム ID （ SID ）を入力します。インストールされた SAP HANA システムは単一の SID で識別されます。</block>
-  <block id="553d1b79af266758a3f926b5523b2597" category="paragraph">HDBSQL クライアントホスト</block>
-  <block id="02c91b8ee8a60999ab4437da284092fc" category="paragraph">通信ホストを選択します。</block>
   <block id="b5a921b4f977e783bd167dd44c02d491" category="paragraph">hdb セキュアユーザストアキー</block>
   <block id="95b10e00e5ef4b628986a60112f87aaa" category="paragraph">SAP HANA システムに接続するためのキーを入力します。このキーには、データベースに接続するためのログイン情報が含まれています。</block>
   <block id="cee248575d109b963f54afafda4720a1" category="paragraph">HDBSQL OS ユーザ</block>
   <block id="596bf9414108fb79d00ec3039e739625" category="paragraph">HDB Secure User Store Key が設定されているユーザー名を入力します。Windows の場合は、 HDBSQL OS ユーザがシステムユーザであることが必須です。そのため、システムユーザーに対して HDB Secure User Store Key を設定する必要があります。</block>
-  <block id="cfad9f5ea3aed693642b36f141e70160" category="paragraph">リソース名</block>
-  <block id="c9c6619dba55acd9fec061cb0c3a1033" category="paragraph">リソース名を入力します。このオプションは、リソースタイプとして非データボリュームを選択した場合にのみ使用できます。</block>
   <block id="0fbb10965129ebd05e8097124e3c74fe" category="list-text">[ ストレージ容量の確保 * ] ページで、ストレージ・システムを選択し、 1 つ以上のボリューム、 LUN 、および qtree を選択して、 [ * 保存 * ] をクリックします。</block>
   <block id="266587454e01a92f0bfd85f3e920b6e9" category="paragraph">オプション：「 * 」をクリックします<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>* アイコンをクリックして、他のストレージ・システムからボリューム、 LUN 、および qtree を追加します。</block>
-  <block id="32a2a47492a506956a8a265559c11f21" category="paragraph">データベースは、 SID 、通信ホスト、関連するリソースグループとポリシー、全体的なステータスなどの情報とともに表示されます。</block>
   <block id="3f1fe53287c04e073da002e39b799896" category="paragraph">リソースへのアクセスをユーザに許可する場合は、ユーザにリソースを割り当てる必要があります。これにより、ユーザは、自身に割り当てられたアセットに対して権限のある処理を実行できます。</block>
-  <block id="bcfa31a0eb6a456e14ca52b0aa5c67d1" category="paragraph">リンク : https://docs.netapp.com/us-en/snapcenter/install/task_add_a_user_or_group_and_assign_role_and_assets.html[Add ユーザーまたはグループとロールおよびアセットの割り当て ]</block>
   <block id="c10e25f3cfc1a1e38bbbb9bacf35aa2d" category="paragraph">データベースの追加が完了したら、 SAP HANA データベースの詳細を変更できます。</block>
   <block id="643909b41c03d17d8e2e4389a2654076" category="paragraph">SAP HANA リソースにバックアップが関連付けられている場合、次の項目は変更できません。</block>
-  <block id="86b4cf179ea0d860ef25b086bfd74dfd" category="list-text">マルチテナントデータベースコンテナ（ MDC ）： SID または HDBSQL クライアントホスト</block>
-  <block id="23cc17a678c9621a227585d11212472d" category="list-text">Single Container ： SID または HDBSQL クライアントホスト</block>
   <block id="d6db5f12a9d3e76b6481e5a2ecd860ad" category="list-text">データボリューム以外：リソース名、関連付けられた SID 、またはプラグインホスト</block>
-  <block id="207c3c9206ef226d399fbf493181ad2d" category="doc">SAP HANA データベースのクローニング処理をキャンセルします</block>
   <block id="f278e708e20d1033739d8d371741422d" category="summary">SnapCenter ユーザインターフェイス（ UI ）を使用して、 SnapCenter Plug-in for SAP HANA Database をインストールする必要があります。環境で SnapCenter UI からプラグインのリモートインストールが許可されていない場合は、コマンドラインインターフェイス \ （ CLI\ ）を使用して、コンソールモードまたはサイレントモードで Plug-in for SAP HANA Database をインストールできます。</block>
   <block id="2577ba74b42ec952e03432cac7d57a04" category="doc">コマンドラインインターフェイスを使用して、 Linux ホストに SnapCenter Plug-in for SAP HANA Database をインストールします</block>
   <block id="d444fb67779b9c8a26850d1ce6c0e031" category="paragraph">SnapCenter ユーザインターフェイス（ UI ）を使用して、 SnapCenter Plug-in for SAP HANA Database をインストールする必要があります。環境で SnapCenter UI からプラグインのリモートインストールが許可されていない場合は、コマンドラインインターフェイス（ CLI ）を使用して、 Plug-in for SAP HANA Database をコンソールモードまたはサイレントモードでインストールできます。</block>
@@ -4756,7 +4679,6 @@
   <block id="fc757224d0f11cae40cba577a1aa87f2" category="paragraph">プラグインに渡すキーと値の組み合わせを複数指定することができます。</block>
   <block id="c22ec2402b480dc8cb9b512d970791f3" category="list-text">[* Retention *] ページで ' バックアップ・タイプの保持設定と [ バックアップ・タイプ ] ページで選択したスケジュール・タイプを指定します</block>
   <block id="7c180945c3efa4def592180bfeae77c5" category="admonition">Snapshot コピーベースのバックアップで SnapVault レプリケーションを有効にする場合は、保持数を 2 以上に設定する必要があります。保持数を 1 に設定すると、新しい Snapshot コピーがターゲットにレプリケートされるまで最初の Snapshot コピーが SnapVault 関係の参照 Snapshot コピーになるため、保持処理が失敗することがあります。</block>
-  <block id="faabd3fd7cf7d50182ba17a4450ce0de" category="admonition">ファイルベースのバックアップを使用して整合性チェックを実行する場合は、保持数を 1 に設定する必要があります。これにより、ブロック整合性チェックの実行時に前に作成されたバックアップが毎回上書きされ、ファイルベースのバックアップが 1 つだけ保持されるようになります。</block>
   <block id="0ed8618baf349f1ed78f131760d15112" category="list-text">Snapshot コピーベースのバックアップの場合は、 * Replication * ページでレプリケーション設定を指定します。</block>
   <block id="53ef3d7584a54991b60fba81e93d201f" category="paragraph">* ローカル Snapshot コピー作成後に SnapMirror を更新 *</block>
   <block id="b1b35a317e8c296440243c1d7986c039" category="paragraph">ONTAP の保護関係のタイプがミラーとバックアップの場合、このオプションのみを選択すると、プライマリで作成された Snapshot コピーがデスティネーションに転送されませんが、デスティネーションのリストに表示されます。この Snapshot コピーがリストア処理の対象としてデスティネーションで選択されると、「 Secondary Location is not available for the selected vaulted/mirrored backup 」というエラーメッセージが表示されます。</block>
@@ -4811,7 +4733,6 @@
   <block id="93f2d6a1a85e6dc485df261b08b8eabb" category="list-text">SnapCenter Plug-in for SAP HANA Database では、 RDM / VMDK 仮想環境にあるリソースの自動検出はサポートされません。データベースを手動で追加する場合は、仮想環境のストレージ情報を指定する必要があります。</block>
   <block id="69b78244df6d0e155ae65ee682dd4e8d" category="paragraph">プラグインをインストールすると、その Linux ホスト上のすべてのリソースが自動的に検出され、リソースページに表示されます。</block>
   <block id="a9d0e12f10920c999cb78960286bd82a" category="paragraph">自動で検出されたリソースは変更または削除できません。</block>
-  <block id="c3fab54a032d5987aa76c215fbeeec1b" category="paragraph">自動検出でサポートされているリソースとサポートされていないリソースについては、を参照してください <block ref="20a53071d4c72b3186db85a8f0e92f72" category="inline-link-macro-rx"></block>。</block>
   <block id="ea6799b398e3200b6531e1aa5a544d0c" category="list-text">左側のナビゲーションペインで、 * Resources * をクリックし、リストから Plug-in for SAP HANA Database を選択します。</block>
   <block id="e8bf60be8e57f50d1f47ed903a286151" category="list-text">[* リソース *] ページで、 [ 表示 ] リストからリソースタイプを選択します。</block>
   <block id="275739dcbd0826cc4a0ad3c63d35359a" category="list-text">（オプション） * をクリックします<block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block>* をクリックし、ホスト名を選択します。</block>
@@ -4865,9 +4786,7 @@
   <block id="81d542f25e96a46a7bd9990a1921dd0b" category="summary">SnapCenter Plug-in for SAP HANA Database を使用するには、 SnapCenter 管理者が事前に SnapCenter サーバをインストールして設定し、前提条件となるタスクを実行する必要があります。</block>
   <block id="789f8038d433cb036f0619af86008034" category="doc">SnapCenter Plug-in for SAP HANA Database を使用するための前提条件</block>
   <block id="a5d8946536d3ffa699ada66ee92654d6" category="list-text">SnapCenter サーバにログインします。</block>
-  <block id="cb106905263500454336a747423d2b8c" category="list-text">VMware RDM LUN または VMDK に存在する SAP HANA データベースを SnapCenter Server で保護する場合は、 SnapCenter Plug-in for VMware vSphere を導入して、プラグインを SnapCenter に登録する必要があります。詳細については、 SnapCenter Plug-in for VMware vSphere のドキュメントを参照してください。</block>
   <block id="521e4c748d90979b116ba375769e0ef9" category="list-text">必要に応じて、ストレージシステム接続を追加し、クレデンシャルを作成して、 SnapCenter 環境を設定します。</block>
-  <block id="37d011e88b95f75ae690ca9bfd115e57" category="list-text">ホストを追加し、プラグインをインストールしてアップロードします。</block>
   <block id="016b0b0d0f71620129d33cb2bb631fd9" category="list-text">Java 1.7 または Java 1.8 を Linux ホストまたは Windows ホストにインストールします。</block>
   <block id="c783d48d811b4aab13eb61840dc3ee7c" category="paragraph">ホストマシンの環境パス変数に Java パスを設定する必要があります。</block>
   <block id="94a5e03dcafcb993f53258c83811415f" category="list-text">バックアップレプリケーションが必要である場合は、 SnapMirror と SnapVault をセットアップします。</block>
@@ -6244,7 +6163,6 @@
   <block id="4cf477198b533ad0884bbb1836790433" category="paragraph">保持するデータはプラグインによって Result オブジェクトの一部として設定されます。具体的な形式で記述され、プラグイン開発の各形式で詳しく説明されています。</block>
   <block id="6ad653f84eed0c76647686ab11205da7" category="doc">カスタムプラグインリソースの保護におけるリソース、リソースグループ、ポリシーの使用方法</block>
   <block id="fa195f3aeab33bc32aac81731432394a" category="list-text">リソースとは、 SnapCenter でバックアップやクローンを作成するデータベース、 Windows ファイルシステム、 VM などです。</block>
-  <block id="360db383ed7932e22254377d0d1b26af" category="list-text">SnapCenterresource グループは、ホストまたはクラスタ上のリソースの集まりです。</block>
   <block id="82975dfa27b0a20ad62378df0b7a4c08" category="paragraph">リソースグループは、保護対象となるものと、曜日と時間の観点から保護する場合を定義するものと考えてください。ポリシーは、保護する方法を定義するポリシーと考えてください。たとえば、すべてのデータベースをバックアップする場合や、ホストのすべてのファイルシステムをバックアップする場合は、すべてのデータベースまたはホストのすべてのファイルシステムを含むリソースグループを作成します。リソースグループに、日次ポリシーと毎時ポリシーの 2 つのポリシーを適用します。リソースグループを作成してポリシーを適用する際に、ファイルベースのバックアップを 1 日 1 回実行するようにリソースグループを設定し、別のスケジュールで Snapshot ベースのバックアップを 1 時間おきに実行するように設定します。</block>
   <block id="f756f2ea5c5f2dba717e2d3dfdc37719" category="summary">SnapCenter Custom Plug-ins を使用してデータ保護処理を実行できます。</block>
   <block id="27a900f1a63545d14b71e4b2d44fc8a9" category="doc">SnapCenter Custom Plug-ins の機能</block>
@@ -6254,11 +6172,9 @@
   <block id="b92d70c39b6e5b77f828b04b1f8cf2e7" category="paragraph">この例では、指定したリソースグループに関する情報を表示しています。</block>
   <block id="490bfe5ade57157a35bf58b686acb1cf" category="list-text">New-SmClone コマンドレットを使用して、クローンリソースグループまたは既存のバックアップからクローニング処理を開始する。</block>
   <block id="315a460f7f81dcfd725404e026e0565e" category="doc">カスタムプラグインリソースを保護する準備をします</block>
-  <block id="65db78ba4bb7ec58ca8079414b8b335b" category="doc">カスタムプラグインリソースのリストア処理をキャンセルする</block>
   <block id="517a125fd46ee1a60309a280447487c0" category="summary">リソースをバックアップするときは、 SnapCenter サーバとの接続を確立してから、リソースの追加、ポリシーの追加、バックアップリソースグループの作成を行って、バックアップを実行します。</block>
   <block id="d278818a36e5f43a96b7082ec24a25e0" category="paragraph">リソースを追加する例を次に示します。</block>
   <block id="d51b1b50a87024de88cbdf1b6d828c21" category="paragraph">この例では、新しいバックアップポリシーを作成しています。</block>
-  <block id="8a637ed63ae6bc5903a74c5a5504e1bf" category="list-text">New-SmBackup コマンドレットを使用して、新しい Snapshot コピージョブを開始する。</block>
   <block id="6aba9ab9639862100a3f951f105883b5" category="summary">バックアップジョブを作成する前にバックアップ戦略を定義しておくと、リソースの正常なリストアやクローニングに必要なバックアップを確実に作成できます。バックアップ戦略の大部分は、サービスレベルアグリーメント（ SLA\ ）、目標復旧時間（ RTO\ ）、および目標復旧時点（ RPO\ ）によって決まります。</block>
   <block id="24940fc9df90a646aba3659646256b87" category="doc">バックアップ戦略を定義する</block>
   <block id="aec3dc1357d1c4a5e8173a948d80fd3c" category="paragraph">バックアップジョブを作成する前にバックアップ戦略を定義しておくと、リソースの正常なリストアやクローニングに必要なバックアップを確実に作成できます。バックアップ戦略の大部分は、サービスレベルアグリーメント（ SLA ）、目標復旧時間（ RTO ）、および目標復旧時点（ RPO ）によって決まります。</block>
@@ -6292,9 +6208,7 @@
   <block id="c1d36bef52fc074303f12c52de7b144f" category="list-text">[ アップロード ] をクリックします。</block>
   <block id="14c63a85dc0d2eb17d6a4de481e630f9" category="paragraph">パッケージをアップロードする前に zip 形式のカスタムプラグインフォルダ内の記述子 .xml ファイルが検証されます。</block>
   <block id="22b9c22ece0544103d4ef5fde3f3591c" category="paragraph">SnapCenter サーバにアップロードされたカスタムプラグインが表示されます。</block>
-  <block id="e648b7e89b8f24f919ab78fa5b6cd354" category="paragraph">MySQL または DB2 アプリケーションを管理する場合は、ネットアップが提供している MySQL および DB2 のカスタムプラグインを使用できます。MySQL と DB2 のカスタムプラグインは、ネットアップの Tool チェストで入手できます。</block>
   <block id="00ebf5cec061915cd0462d73602dcad8" category="inline-link">NetApp Automation Store の略</block>
-  <block id="d3ea61d82a4ec47b836f9470e82a3de1" category="paragraph"><block ref="d3ea61d82a4ec47b836f9470e82a3de1" category="inline-link-rx"></block></block>
   <block id="ab443ca6692007d7b4d66d4e3044cbd8" category="paragraph">「 * 事前確認をスキップ」チェックボックスを選択していない場合、ホストがプラグインのインストール要件を満たしているかどうかが検証されます。ディスクスペース、 RAM 、 PowerShell のバージョン、 .NET のバージョン、場所（ Windows プラグインの場合）、および Java のバージョン（ Linux プラグインの場合）が、最小要件に照らして検証されます。最小要件を満たしていない場合は、対応するエラーまたは警告メッセージが表示されます。</block>
   <block id="2ed40d52224af2dfedf93c8eb0550f77" category="summary">SnapCenter サーバを使用して作成したカスタムプラグインをホストにインストールすると、アプリケーションのデータ保護を有効にすることができます。</block>
   <block id="3a08617a6dcc882e91018fc505870b76" category="doc">SnapCenter のカスタムプラグイン</block>
@@ -6576,7 +6490,6 @@
   <block id="83aeb7b594481ad598eb0b519836777b" category="summary">SnapCenter は、物理マシンと仮想マシンの両方でさまざまなストレージタイプをサポートしています。SnapCenter カスタムプラグインをインストールする前に、ストレージタイプがサポートされているかどうかを確認する必要があります。</block>
   <block id="c48a2f5430d3aff55420b834363bcc46" category="doc">SnapCenter Custom Plug-ins でサポートされるストレージタイプ</block>
   <block id="6da41a50505a00272cd3a44cfd33c736" category="paragraph">物理サーバと仮想サーバ（ VMDK と RDM LUN はサポートされません）</block>
-  <block id="4eec415fb3b1bcad2efa13c342f6239d" category="doc">カスタムプラグインリソースのクローニング処理をキャンセルする</block>
   <block id="caef6d3f9e7cdd9ed1d3eaabe29db549" category="summary">カスタムプラグインリソースを保護する場合は、 SnapCenter Custom Plug-ins をインストールしてセットアップする必要があります。</block>
   <block id="299b0e289b8c6b18ae4948ce9c8d828b" category="doc">SnapCenter Custom Plug-ins をインストールします</block>
   <block id="86f7f637d3819a7b4814644b7f8d8972" category="image-alt">SCC インストール設定ワークフロー</block>
@@ -7239,7 +7152,6 @@
   <block id="66bdd10c104f52b4f8519b652bc8e084" category="sidebar">ネットアップのナレッジベース - SnapCenter</block>
   <block id="8e321b2da713147d628c56fbb4185404" category="sidebar">プライマリストレージボリュームまたはセカンダリストレージボリュームを使用したバックアップコピーの検証</block>
   <block id="2dbf352013e90b28f510baa76c1423f6" category="sidebar">SnapCenter Plug-in for Microsoft SQL Server のインストールのクイックスタート</block>
-  <block id="d1ee216324621460ae7a110ab1d57872" category="sidebar">コマンドレットを使用して、複数のリモートホストに SnapCenter Plug-in for Microsoft Windows をインストールします</block>
   <block id="32011135d9979489b3395d0006de49b3" category="sidebar">CA 証明書をインポートする</block>
   <block id="5cb6a75832518fd27c8d399ca2772808" category="sidebar">SnapCenter でクローニング処理を監視する</block>
   <block id="463da88e9b9043684d0979147f719cf3" category="sidebar">Plug-in for Oracle の機能</block>
@@ -7266,4 +7178,97 @@
   <block id="eada736bfcfe3be151f853e6f08f6d26" category="sidebar">ネイティブ形式</block>
   <block id="b3121ceac9c3b1c097a1f53db3eff2a7" category="sidebar">SnapCenter サーバとプラグインを管理します</block>
   <block id="fea84990764109b117844dae6e7232a7" category="sidebar">ダッシュボードを表示します</block>
+  <block id="bc52382a2b038e05ecba07a8b5754946" category="paragraph">Virtual Machine File Systems （ VMFS ）または NFS データストア</block>
+  <block id="8887a9a417a1629326acdb917d224337" category="paragraph">VMware vSphere の場合</block>
+  <block id="f2307f08324f486f71f2209e1d4e0d5f" category="doc">SnapCenter Plug-in for Microsoft SQL Server のインストールワークフロー</block>
+  <block id="dad5746df11efbf1248f8053bbe1226d" category="doc">SnapCenter Jobs ページで、 SQL リソースのバックアップ処理を監視します</block>
+  <block id="f9ba38b961aca7823da15b938828b64f" category="doc">ホストを追加して SnapCenter Plug-in for Microsoft SQL Server をインストールするための前提条件</block>
+  <block id="1775c206d933e72952320bc9c39e56a4" category="doc">アーカイブバックアップのインポートの概要</block>
+  <block id="160c0afc78008acd5e27a47466223006" category="summary">リソース（データベース）またはリソースグループのバックアップを作成することができます。</block>
+  <block id="43b9d4da02f11505dff89d05efea04c6" category="doc">Plug-in for Oracle Database の機能</block>
+  <block id="6d60bb075e677f1c265ebdaa41edebc7" category="paragraph">Plug-in for Oracle Database によって、 Oracle Recovery Manager （ RMAN ）、検証、マウント、アンマウント、リストア、 SnapCenter 環境での Oracle データベースのリカバリとクローニングPlug-in for Oracle Database は、すべてのデータ保護処理を実行するために SnapCenter Plug-in for UNIX をインストールします。</block>
+  <block id="de1dc9ecd8b785149fcee2f9c27647bd" category="section-title">[Activity] ペインでデータ保護操作を監視します</block>
+  <block id="247c902b5f932e2e47b98b966ab41a08" category="doc">SnapCenter の Standard 容量ベースのライセンスを追加</block>
+  <block id="b7045e270f9ec5cdf3d4a2f1516dd0fd" category="section-title">容量ベースのライセンスを追加するための前提条件</block>
+  <block id="fc839d90b395c50c0f0c94028073c2fc" category="paragraph">容量ベースのライセンスを追加する前に、容量要件を計算し、容量ベースのライセンスのシリアル番号を取得し、必要に応じてライセンスファイルを生成する必要があります。</block>
+  <block id="b0c7f3b2e1c49f12743f8681bad9f4d9" category="section-title">必要な容量を計算</block>
+  <block id="fff248d88b8e6fe585098d0e2e47af26" category="paragraph">Cloud Volumes ONTAP または ONTAP Select システムのクラスタ管理者である必要があります。</block>
+  <block id="8653cfd71a4452fb9ae4b9ab1e4f43c5" category="section-title">容量ベースのライセンスのシリアル番号を取得します</block>
+  <block id="8e4be97b92b5d685df7ecc1adcda7baf" category="paragraph">有効なネットアップサポートサイトのログインクレデンシャルが必要です。</block>
+  <block id="2be4e86fec9db8038212e41252f1f190" category="list-text">シリアル番号を記録します。</block>
+  <block id="7ab335ae0eb6b3dd5aa9c839cf5ead00" category="paragraph">ネットアップサポートサイトのクレデンシャルと SnapCenter ライセンスのシリアル番号を SnapCenter の GUI に入力しない場合や、 SnapCenter からネットアップサポートサイトにインターネットにアクセスできない場合は、ネットアップライセンスファイル（ NLF ）を生成できます。 次に、 SnapCenter ホストからアクセス可能な場所にファイルをダウンロードして保存します。</block>
+  <block id="b38bcb46a26616707e57598919123e4f" category="list-text">SnapCenter を ONTAP Select または Cloud Volumes ONTAP で使用する必要があります。</block>
+  <block id="26e6565b87611c0e2e61e424bbf253a8" category="list-text">有効なネットアップサポートサイトのログインクレデンシャルが必要です。</block>
+  <block id="ef37f690ac766ca61a4b063851b90274" category="list-text">ライセンスの 9 桁のシリアル番号を 51xxxxxxx の形式で用意しておく必要があります。</block>
+  <block id="2fab191a54d328d06a3a746dee5bbad2" category="section-title">容量ベースのライセンスを追加</block>
+  <block id="8c1f23f212262c3300e93f874826f6e5" category="paragraph">SnapCenter を ONTAP Select プラットフォームまたは Cloud Volumes ONTAP プラットフォームで使用している場合は、 1 つ以上の SnapCenter 容量ベースのライセンスをインストールする必要があります。</block>
+  <block id="7497c6eb5b40c317a0e3ac59d973ce6b" category="list-text">SnapCenter 管理者ユーザとしてログインする必要があります。</block>
+  <block id="55f664ebb6051a6a8020142e125c7571" category="paragraph">ネットアップライセンスファイル（ NLF ）を使用してライセンスを追加する場合は、ライセンスファイルの場所を確認しておく必要があります。</block>
+  <block id="d6cd0a28d068c868d81bfecd02276ee3" category="list-text">コントローラベースのライセンスのシリアル番号を入力します。</block>
+  <block id="33e4a71d44495d6f1fd89da8547d2ff8" category="paragraph">SnapCenter は、管理対象の ONTAP Select および Cloud Volumes ONTAP ストレージ上で、 1 日に 1 回、午前 0 時に使用容量を自動的に計算します。SnapCenter を正しく設定するには、 SnapCenter での容量の計算方法を確認しておく必要があります。</block>
+  <block id="b49e5091a9fa2af83579f7097033c636" category="paragraph">Standard 容量ライセンスを使用している場合、 SnapCenter は、ライセンスで許可された合計容量から、すべてのボリュームの使用済み容量を差し引くことによって、未使用の容量を計算します。使用容量がライセンスで許可された容量を超えた場合、 SnapCenter ダッシュボードに警告が表示されます。SnapCenter で容量のしきい値と通知を設定している場合は、使用容量が指定したしきい値に達すると E メールが送信されます。</block>
+  <block id="f011a01ebc3350e546311efaf71140bc" category="doc">SnapCenter の標準コントローラベースのライセンスを追加します</block>
+  <block id="20284ac6e2b70536e661c28917c1f549" category="section-title">コントローラベースのライセンスを追加するための前提条件</block>
+  <block id="caaa0ad9310c0a99138c911b96b968e3" category="paragraph">コントローラベースのライセンスを追加する前に、 SnapManager スイートライセンスがインストールされているかどうかを確認し、コントローラにインストールされているライセンスを特定し、コントローラのシリアル番号を取得して、コントローラベースのライセンスのシリアル番号を取得する必要があります。</block>
+  <block id="3a6c1a3709f142da8374f25ad7aabeda" category="section-title">SnapManager スイートライセンスがインストールされているかどうかを確認します</block>
+  <block id="6aa5717c99b34de9980debfbe3c6fa76" category="admonition">お使いのコントローラにすでに SnapManagerSuite ライセンスがある場合は、 SnapCenter の標準コントローラベースのライセンス使用権が自動的に提供されます。SnapManagerSuite ライセンスと SnapCenter 標準のコントローラベースのライセンスは同じ意味で使用されますが、同じライセンスを指します。</block>
+  <block id="a909f2df296012a51dc7da77f9e20dc6" category="list-text">該当しない場合は、ストレージコントローラが Cloud Volumes ONTAP 、 ONTAP Select 、またはセカンダリストレージプラットフォーム上にあるため、 SnapManager スイートのライセンスは適用されません。</block>
+  <block id="3991b99f14bb81b2f89217b235be9e25" category="section-title">コントローラにインストールされているライセンスを特定します</block>
+  <block id="6709a231567d24784eb3e160f2720365" category="paragraph">ONTAP コマンドラインを使用すると、コントローラにインストールされているすべてのライセンスを表示できます。FAS または AFF システムのクラスタ管理者である必要があります。</block>
+  <block id="e7590fb47d0f1f083a0a8a323aa643a0" category="admonition">SnapCenter の標準コントローラベースのライセンスが、 SnapManagerSuite ライセンスとしてコントローラに表示されます。</block>
+  <block id="aa9f3e3dd8188fb5cf1d9979b4a7a787" category="paragraph">コントローラベースのライセンスのシリアル番号を取得するには、コントローラのシリアル番号が必要です。ONTAP コマンドラインを使用すると、コントローラのシリアル番号を取得できます。FAS または AFF システムのクラスタ管理者である必要があります。</block>
+  <block id="8903a54a74657bc9f41f9375ea9d6adc" category="section-title">コントローラベースのライセンスのシリアル番号を取得します</block>
+  <block id="253fa4a7008b4934e4b20001065ef254" category="list-text">コントローラのシリアル番号を確認しておく必要があります。</block>
+  <block id="f11c7003376367fce75352e6129d04ca" category="section-title">コントローラベースのライセンスを追加</block>
+  <block id="8109f2b1a2b4fcb7f972be2b07c29c46" category="list-text">FAS または AFF システムのクラスタ管理者である必要があります。</block>
+  <block id="9a935baf19dae6c50cae12b831745abd" category="list-text">SnapCenter Standard または SnapManagerSuite のライセンスが必要です。</block>
+  <block id="f01f22cfc141e64ad20b64a9b3f2ac85" category="paragraph">コントローラベースの SnapCenter 標準ライセンスを使用していて、容量ベースの試用版ライセンス ( シリアル番号は「 50 」で終わる ) を削除する必要がある場合は、 MySQL コマンドを使用して、試用版ライセンスを手動で削除する必要があります。SnapCenter GUI でトライアルライセンスを削除することはできません。</block>
+  <block id="ca92f38ec64bb5da713b4badc8620434" category="paragraph">ゲスト OS で RDM の処理を実行するには、ホストに対する次の vCenter 権限が必要です。</block>
+  <block id="03d6fc6f0007d8c1e15a56f0a4522686" category="paragraph">SnapCenter では、アプリケーション、データベース、ファイルシステム、および仮想マシンのデータを保護するために、複数のライセンスが必要になります。インストールする SnapCenter ライセンスのタイプは、ストレージ環境および使用する機能によって異なります。</block>
+  <block id="d0487d3c65933c7dda38325ae975026b" category="paragraph">1 つ以上の SnapCenter ライセンスをインストールする必要があります。ライセンスの追加方法については、を参照してください <block ref="0ca3149bbd09cc6482f3e5921aad891d" category="inline-link-macro-rx"></block> または <block ref="daae28e1483ad0a51ebe8ba1b52cdeb5" category="inline-link-macro-rx"></block>。</block>
+  <block id="e3c97b7280ee6648e1258a38646e21fe" category="paragraph">* このタスクについて * クローン・スプリット処理の制限事項については、を参照してください<block ref="3ae98799f9586e965a749204c2b3e8f9" category="inline-link-rx"></block>。</block>
+  <block id="b3b5361b491a028013fc3043e9bbf7a7" category="doc">SAP HANA データベースの保護におけるリソース、リソースグループ、ポリシーの使用方法</block>
+  <block id="6bbc1cc2d778155e34c6c797ed0dee3f" category="list-text">リソースとは、通常は SnapCenter でバックアップまたはクローニングする SAP HANA データベースのことです。</block>
+  <block id="0d9c8d9fe540eebdc0f8c24187ca777d" category="list-text">SnapCenter リソースグループは、ホスト上のリソースの集まりです。</block>
+  <block id="81ed8941a42b91dfddb35c2b838e3a27" category="list-text">ポリシーは、バックアップ頻度、レプリケーション、スクリプト、およびデータ保護処理のその他の特性を指定するものです。</block>
+  <block id="66f7a0f8b4cefaf4a1ca75e479e31fb0" category="paragraph">リソースグループは、保護対象となるものを定義するものであり、日と時間の観点から保護する必要がある場合に考えてみてください。ポリシーは、保護方法を定義するものと考えてください。たとえば、すべてのデータベースをバックアップする場合は、ホストのすべてのデータベースを含むリソースグループを作成します。リソースグループに、日次ポリシーと毎時ポリシーの 2 つのポリシーを適用します。リソースグループを作成してポリシーを適用する際に、フルバックアップを毎日実行するようにリソースグループを設定できます。</block>
+  <block id="be5ab51d888f9dacb41587c99306d7cc" category="paragraph">HANA システム名</block>
+  <block id="e979ea7eef0ef246823a9861bce1500a" category="paragraph">プラグインホスト</block>
+  <block id="989131e62bf8a317c4f8cef573379336" category="paragraph">プラグインホストを選択します。</block>
+  <block id="f0ea8f94935b4f03b3f98486d410b6c4" category="paragraph">データベースは、 SID 、プラグインホスト、関連するリソースグループとポリシー、全体的なステータスなどの情報とともに表示されます</block>
+  <block id="65029b82973fe89d2af9288d26c3e30b" category="paragraph"><block ref="65029b82973fe89d2af9288d26c3e30b" category="inline-link-macro-rx"></block></block>
+  <block id="14ded6d8dedd87e6fc2549e97428ffd6" category="list-text">マルチテナントデータベースコンテナ（ MDC ）： SID または HDBSQL Client （プラグイン）ホスト</block>
+  <block id="5462999c0f2d8eed2a8ceb2a740a8b10" category="list-text">Single Container ： SID または HDBSQL Client （プラグイン）ホスト</block>
+  <block id="c20d8d729a2cb1909e6c92aa4b0635a1" category="list-text">HDBSQL クライアントが配置された各 Linux ホストに Plug-in for SAP HANA Database をインストールする必要があります。</block>
+  <block id="33a8f9c4fe2c0cd8ae505b8d4831fe28" category="list-text">SnapCenter Plug-in for SAP HANA Database は、 SnapCenter Plug-ins Package for Linux の一部です。SnapCenter Plug-ins Package for Linux をインストールする前に、 Windows ホストに SnapCenter がインストールされている必要があります。</block>
+  <block id="6ba7cd9b650690bef3ee79ccfd130b0a" category="paragraph"><block ref="6ba7cd9b650690bef3ee79ccfd130b0a" category="inline-link-macro-rx"></block></block>
+  <block id="fa5ad2e8d730251bd90eea875f95091c" category="paragraph">MySQL または DB2 アプリケーションを管理する場合は、ネットアップが提供している MySQL および DB2 のカスタムプラグインを使用できます。MySQL と DB2 のカスタムプラグインについては、を参照してください<block ref="480a3096e7d732b8f84f20e353e713fd" category="inline-link-rx"></block></block>
+  <block id="c1771eca1b0509d4428cca5735b54165" category="summary">SnapCenter Custom Plug-ins をインストールする Linux ホストが、依存するソフトウェア、データベース、オペレーティングシステムの要件を満たしている必要があります。</block>
+  <block id="c63099b1ea6cc0822c3d3ea8084372c6" category="doc">Linux ホストに SnapCenter Custom Plug-ins をインストールする準備をします</block>
+  <block id="96617efb98ff2c341a6af4791e056cc2" category="paragraph">SnapCenter Custom Plug-ins は、 SnapCenter Plug-ins Package for Linux の一部です。SnapCenter Plug-ins Package for Linux をインストールする前に、 Windows ホストに SnapCenter がインストールされている必要があります。</block>
+  <block id="15ebf2f3be5051263a1f17cb1c2a135c" category="summary">環境によっては、 SnapCenter サーバから SnapCenter Custom Plug-ins をリモートでインストールできない場合は、 Linux ホストに直接インストールできます。対話型のウィザードまたはコマンドラインインターフェイスを使用してプラグインをインストールできます。</block>
+  <block id="38e65e06e8687378a088624bcffb0435" category="doc">SnapCenter Custom Plug-ins を Linux ホストに個別にインストールします</block>
+  <block id="0f86a1aee795e1b2600e86eb6b2722ec" category="summary">SnapCenter カスタムプラグインは、 SnapCenter ユーザインターフェイス（ UI ）を使用してインストールする必要があります。お使いの環境で SnapCenter UI からプラグインをリモートでインストールできない場合は、コマンドラインインターフェイス \ （ CLI\ ）を使用して、コンソールモードまたはサイレントモードでカスタムプラグインをインストールできます。</block>
+  <block id="b5c24629ead5c583e2208216205af10a" category="doc">コマンドラインインターフェイスを使用して、 Linux ホストに SnapCenter カスタムプラグインをインストールします</block>
+  <block id="0f18e8aaa7478aae88b697e6b89d15f0" category="paragraph">SnapCenter カスタムプラグインは、 SnapCenter ユーザインターフェイス（ UI ）を使用してインストールする必要があります。環境内で SnapCenter UI からプラグインのリモートインストールが許可されていない場合は、カスタムプラグインをコンソールモードまたはサイレントモードでインストールできます。そのためには、コマンドラインインターフェイス（ CLI ）を使用します。</block>
+  <block id="ef5b54514d2bc2cec099dbe31b43d400" category="list-text">SnapCenter Plug-ins Package for Linux のインストールファイル（ snapcenter linux_host_plugin.bin ）を C ： \ProgramData\NetApp\SnapCenter \Package Repository から、カスタムプラグインをインストールするホストにコピーします。</block>
+  <block id="f96e2a1e803fa28017557015321ddb3a" category="list-text">SnapCenter にログインし、 UI または PowerShell コマンドレットを使用してカスタムプラグインをアップロードします。</block>
+  <block id="0810f7315ee6a01129962550a5432379" category="paragraph">カスタムプラグインを UI からアップロードする方法については、を参照してください <block ref="160cc1b049fe5d10ecf41332794586e5" category="inline-link-macro-rx"></block> セクション。</block>
+  <block id="6d61da8537780fd23a681da23103b991" category="paragraph">PowerShell コマンドレットの詳細については、 SnapCenter のコマンドレットのヘルプを使用するか、コマンドレットのリファレンス情報を参照してください。</block>
+  <block id="4cbefe74fbcdea5cde822de543a2b616" category="sidebar">SQL Server リソースのバックアップ戦略</block>
+  <block id="c839588253fb91ab7c3ffd7dbc89ef20" category="sidebar">SQL Server のリストア戦略</block>
+  <block id="25bf2c62056fbb603e50ca9faa296f05" category="sidebar">SnapCenter Plug-in for Microsoft SQL Server をインストールする準備をします</block>
+  <block id="3e3c892945f01849a83a9ba45b50046a" category="sidebar">ホストを追加して SnapCenter Plug-in for Microsoft SQL Server をインストールするための前提条件</block>
+  <block id="6119871227cfd0ac53fa00369e5ea153" category="sidebar">SnapCenter Jobs ページでバックアップ処理を監視します</block>
+  <block id="e62a99d48b4d9b1ce6eb1be8cdf44cca" category="sidebar">SnapCenter Plug-in for SAP HANA Databases の略</block>
+  <block id="883135fe64e6d1e34b5f9e436f840927" category="sidebar">SAP HANA データベースのバックアップ戦略</block>
+  <block id="01feedeb5589791154fb6933172b117e" category="sidebar">SAP HANA データベースのリストアとリカバリの戦略</block>
+  <block id="b121f809528d9b2de8b169c1a245c274" category="sidebar">SnapCenter Plug-in for SAP HANA Database をインストールする準備をします</block>
+  <block id="8df068e4b07db24cbb362d904ec51ab4" category="sidebar">SnapCenter Plug-in for SAP HANA Database のインストールワークフロー</block>
+  <block id="abad280cf46d16a0bab0a51ae1663cf8" category="sidebar">SnapCenter Plug-in for SAP HANA Databases をインストールします</block>
+  <block id="0e1b3005c7d7fef8012117ae579df248" category="sidebar">バックアップのワークフロー</block>
+  <block id="d03427303a92403b89bef9b602954bc0" category="sidebar">リソースを検出し、マルチテナントデータベースコンテナでデータ保護を準備</block>
+  <block id="d6dd28fb84b3a677cdf709e3bd31e79d" category="sidebar">SAP HANA データベースをリストア</block>
+  <block id="409bf5fec45b4fdc568b8daf282ddbde" category="sidebar">SnapCenter Plug-in for Microsoft Exchange Server の概念</block>
+  <block id="3b878279a04dc47d60932cb294d96259" category="sidebar">概要</block>
 </blocks>

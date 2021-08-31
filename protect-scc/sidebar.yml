@@ -54,6 +54,13 @@ entries:
     entries:
     - title: コマンドレットを使用して、複数のリモートホストに Linux または Windows 用の SnapCenter プラグインパッケージをインストールします
       url: "/protect-scc/task_install_snapcenter_plug_in_packages_for_linux_or_windows_on_multiple_remote_hosts_using_cmdlets_scc.html"
+    - title: SnapCenter Custom Plug-ins を Linux ホストに個別にインストールします
+      url: "/protect-scc/concept_install_snapcenter_custom_plug_ins_independently_on_the_linux_host.html"
+      entries:
+      - title: SnapCenter Custom Plug-ins を Linux ホストに個別にインストールします
+        url: "/protect-scc/concept_prepare_to_install_the_snapcenter_custom_plug_ins_on_the_linux_host.html"
+      - title: コマンドラインインターフェイスを使用して、 Linux ホストに SnapCenter カスタムプラグインをインストールします
+        url: "/protect-scc/task_install_the_snapcenter_custom_plug_ins_on_linux_hosts_using_the_command_line_interface.html"
     - title: SnapCenter プラグインパッケージのインストールステータスを監視する
       url: "/protect-scc/task_monitor_the_status_of_installing_plugin_for_scc.html"
   - title: CA 証明書 CSR ファイルを生成します
@@ -110,8 +117,6 @@ entries:
     url: "/protect-scc/task_restore_and_recover_resources_using_powershell_cmdlets_scc.html"
   - title: リストア処理を監視する
     url: "/protect-scc/task_monitor_scc_resources_restore_operations.html"
-  - title: リストア処理をキャンセルします
-    url: "/protect-scc/task_cancel_scc_resources_restore_operations.html"
 - title: カスタムプラグインリソースのバックアップをクローニングする
   url: "/protect-scc/task_clone_custom_plug_in_resource_backups.html"
   entries:
@@ -121,5 +126,3 @@ entries:
     url: "/protect-scc/task_clone_backups_using_powershell_cmdlets.html"
   - title: SnapCenter でクローニング処理を監視する
     url: "/protect-scc/task_monitor_scc_resource_clone_operations.html"
-  - title: クローニング処理をキャンセルします
-    url: "/protect-scc/task_cancel_scc_resource_clone_operations.html"

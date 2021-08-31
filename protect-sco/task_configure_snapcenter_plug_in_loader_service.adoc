@@ -132,33 +132,23 @@ SPL サービスの開始に使用される JAVA_HOME の絶対ディレクト�
 +
 ** root ユーザとして SnapCenter Plug-in Loader サービスを開始します。
 +
-....
-`/custom_location/NetApp/snapcenter/spl/bin/spl start`
-....
+ `/custom_location/NetApp/snapcenter/spl/bin/spl start`
 ** SnapCenter Plug-in Loader サービスを停止します。
 +
-....
-`/custom_location/NetApp/snapcenter/spl/bin/spl stop`
-....
+ `/custom_location/NetApp/snapcenter/spl/bin/spl stop`
 +
 
 NOTE: stop コマンドに -force オプションを指定すると、 SnapCenter Plug-in Loader サービスを強制的に停止できます。ただし、既存の処理が終了するため、実行する前に十分に注意する必要があります。
 
 ** SnapCenter Plug-in Loader サービスを再起動します。
 +
-....
-`/custom_location/NetApp/snapcenter/spl/bin/spl restart`
-....
+ `/custom_location/NetApp/snapcenter/spl/bin/spl restart`
 ** SnapCenter Plug-in Loader サービスのステータスを確認します。
 +
-....
-`/custom_location/NetApp/snapcenter/spl/bin/spl status`
-....
+ `/custom_location/NetApp/snapcenter/spl/bin/spl status`
 ** SnapCenter Plug-in Loader サービスで変更を探します。
 +
-....
-`/custom_location/NetApp/snapcenter/spl/bin/spl change`
-....
+ `/custom_location/NetApp/snapcenter/spl/bin/spl change`
 
 
 

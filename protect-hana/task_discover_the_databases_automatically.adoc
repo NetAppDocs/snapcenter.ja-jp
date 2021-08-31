@@ -29,8 +29,6 @@ summary: リソースとは、 SnapCenter で管理されている Linux ホス�
 
 自動で検出されたリソースは変更または削除できません。
 
-自動検出でサポートされているリソースとサポートされていないリソースについては、を参照してください link:task_discover_the_databases_automatically.html["Linux ホスト上のリソースの自動検出"]。
-
 * 手順 *
 
 . 左側のナビゲーションペインで、 * Resources * をクリックし、リストから Plug-in for SAP HANA Database を選択します。

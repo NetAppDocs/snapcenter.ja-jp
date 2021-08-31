@@ -62,7 +62,7 @@ Add-SMPolicy -PolicyName 'db2VolumePolicy' -PolicyType 'Backup' -PluginPolicyTyp
 Add-SmResourceGroup -ResourceGroupName 'Verify_ManualBackup_DatabaseLevel_MultipleVolume_unix' -Resources @(@
 {"Host"="10.232.206.248";"Uid"="db2inst2\NONREC"},@{"Host"="10.232.206.248";"Uid"="db2inst1\NONREC"}) -Policies db2ManualPolicy
 ----
-. New-SmBackup コマンドレットを使用して、新しい Snapshot コピージョブを開始する。
+. New-SmBackup コマンドレットを使用して、新しいバックアップジョブを開始する。
 +
 [listing]
 ----

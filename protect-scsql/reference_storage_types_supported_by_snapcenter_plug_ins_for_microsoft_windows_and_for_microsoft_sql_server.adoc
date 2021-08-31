@@ -73,9 +73,9 @@ SnapCenter GUI または PowerShell コマンドレット
  a| 
 VMware VM
  a| 
-VMFS または NFS データストア上の Virtual Machine File Systems （ VMFS ）
+Virtual Machine File Systems （ VMFS ）または NFS データストア
  a| 
-VMware vSphere または VSC のクローニングユーティリティ
+VMware vSphere の場合
  a| 
 
 

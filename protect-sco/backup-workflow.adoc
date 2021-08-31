@@ -1,10 +1,10 @@
 ---
-permalink: protect-sco/task_back_up_oracle_databases.html 
+permalink: protect-sco/backup-workflow.html 
 sidebar: sidebar 
-keywords: backup, oracle database 
-summary: リソース（データベース）またはリソースグループのバックアップを作成することができます。バックアップのワークフローには、計画、バックアップするリソースの特定、バックアップポリシーの作成、リソースグループの作成とポリシーの適用、バックアップの作成、処理の監視が含まれます。 
+keywords: backup, workflow 
+summary: リソース（データベース）またはリソースグループのバックアップを作成することができます。 
 ---
-= Oracle データベースをバックアップする
+= バックアップのワークフロー
 :icons: font
 :imagesdir: ../media/
 

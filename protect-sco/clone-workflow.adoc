@@ -1,10 +1,10 @@
 ---
-permalink: protect-sco/task_clone_oracle_database_backups.html 
+permalink: protect-sco/clone-workflow.html 
 sidebar: sidebar 
-keywords: clone operation 
+keywords: clone operation, clone, workflow 
 summary: クローニングワークフローには、計画、クローニング処理の実行、および処理の監視が含まれます。 
 ---
-= Oracle データベースのクローニング
+= クローニングワークフロー
 :icons: font
 :imagesdir: ../media/
 

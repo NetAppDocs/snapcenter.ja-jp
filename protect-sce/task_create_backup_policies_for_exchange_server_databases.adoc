@@ -212,9 +212,7 @@ NOTE: DAG 構成のホストにはログバックアップのみを使用し、�
 *** デフォルトでは、 SnapCenter は DAG 内の他のすべてのホストでこのデータベースの最も古いフルバックアップを検出し、フルバックアップの前に作成されたこのホスト上のすべてのログバックアップを削除します。
 *** ログバックアップのみを使用する DAG 内のホストのデフォルトの保持設定を上書きするには、 _C ： \Program Files\NetApp\SnapManager WebApp\web.config_file にキー * MaxLogBackupOnlyCountWithoutFullBackup * を追加します。
 +
-....
-<add key="MaxLogBackupOnlyCountWithoutFullBackup" value="10">
-....
+ <add key="MaxLogBackupOnlyCountWithoutFullBackup" value="10">
 +
 この例では、 10 という値は、ホストに最大 10 個のログバックアップを保持することを意味します。
 

@@ -1,0 +1,19 @@
+---
+permalink: protect-scc/concept_prepare_to_install_the_snapcenter_custom_plug_ins_on_the_linux_host.html 
+sidebar: sidebar 
+keywords:  
+summary: SnapCenter Custom Plug-ins をインストールする Linux ホストが、依存するソフトウェア、データベース、オペレーティングシステムの要件を満たしている必要があります。 
+---
+= Linux ホストに SnapCenter Custom Plug-ins をインストールする準備をします
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter Custom Plug-ins をインストールする Linux ホストが、依存するソフトウェア、データベース、オペレーティングシステムの要件を満たしている必要があります。
+
+サポートされる構成の最新情報については、 Interoperability Matrix Tool （ IMT ）を参照してください。
+
+http://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool で確認できます"]
+
+SnapCenter Custom Plug-ins は、 SnapCenter Plug-ins Package for Linux の一部です。SnapCenter Plug-ins Package for Linux をインストールする前に、 Windows ホストに SnapCenter がインストールされている必要があります。

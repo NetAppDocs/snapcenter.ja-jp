@@ -24,6 +24,13 @@ FC 接続 LUN
 
 
  a| 
+物理サーバ
+ a| 
+iSCSI で接続された LUN
+
+
+
+ a| 
 物理サーバと仮想サーバ
  a| 
 NFS-connected ボリューム

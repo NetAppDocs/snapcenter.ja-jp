@@ -22,9 +22,7 @@ Windows Server 2012 以降では、管理ドメインアカウントからサー
 例：
 
 +
-....
-New-ADServiceAccount -name <ServiceAccountName> -DNSHostName <fqdn> -PrincipalsAllowedToRetrieveManagedPassword <group> -ServicePrincipalNames <SPN1,SPN2,…>
-....
+ New-ADServiceAccount -name <ServiceAccountName> -DNSHostName <fqdn> -PrincipalsAllowedToRetrieveManagedPassword <group> -ServicePrincipalNames <SPN1,SPN2,…>
 .. 「 Get-ADServiceAccount 」コマンドを実行して、サービスアカウントを確認します。
 
 

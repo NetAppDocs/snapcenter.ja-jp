@@ -27,14 +27,10 @@ IMPORTANT: SPL は、ファイル 'keystore.jkS' を使用します。このフ�
 
 . キーストアのパスワードを変更します。
 +
-....
-keytool -storepasswd -keystore keystore.jks
-....
+ keytool -storepasswd -keystore keystore.jks
 . キーストア内の秘密鍵エントリのすべてのエイリアスのパスワードを、キーストアに使用されているパスワードと同じパスワードに変更します。
 +
-....
-keytool -keypasswd -alias "<alias_name>" -keystore keystore.jks
-....
+ keytool -keypasswd -alias "<alias_name>" -keystore keystore.jks
 +
 spl.properties ファイル内のキー SPL の _keystore.pass に対しても同じ内容を更新します。
 
@@ -56,14 +52,10 @@ SPL の信頼ストアへの秘密鍵を使用せずにルート証明書また�
 . ファイル 'keystore.jkS' を探します。
 . キーストアに追加された証明書を表示します。
 +
-....
-keytool -list -v -keystore keystore.jks
-....
+ keytool -list -v -keystore keystore.jks
 . ルート証明書または中間証明書を追加します。
 +
-....
-keytool -import -trustcacerts -alias <AliasNameForCerticateToBeImported> -file /<CertificatePath> -keystore keystore.jks
-....
+ keytool -import -trustcacerts -alias <AliasNameForCerticateToBeImported> -file /<CertificatePath> -keystore keystore.jks
 . SPL の信頼ストアにルート証明書または中間証明書を設定したら、サービスを再起動します。
 
 
@@ -82,33 +74,23 @@ CA 署名鍵ペアを SPL 信頼ストアに設定する必要があります。
 . ファイル 'keystore.jkS' を探します。
 . キーストアに追加された証明書を表示します。
 +
-....
-keytool -list -v -keystore keystore.jks
-....
+ keytool -list -v -keystore keystore.jks
 . 秘密鍵と公開鍵の両方を含む CA 証明書を追加します。
 +
-....
-keytool -importkeystore -srckeystore <CertificatePathToImport> -srcstoretype pkcs12 -destkeystore keystore.jks -deststoretype JKS
-....
+ keytool -importkeystore -srckeystore <CertificatePathToImport> -srcstoretype pkcs12 -destkeystore keystore.jks -deststoretype JKS
 . キーストアに追加された証明書を表示します。
 +
-....
-keytool -list -v -keystore keystore.jks
-....
+ keytool -list -v -keystore keystore.jks
 . キーストアに、キーストアに追加された新しい CA 証明書に対応するエイリアスが含まれていることを確認します。
 . CA 証明書用に追加された秘密鍵のパスワードをキーストアのパスワードに変更します。
 +
 デフォルトの SPL キーストアパスワードは、 spl.properties ファイル内のキー SPL の keystore.pass の値です。
 
 +
-....
-keytool -keypasswd -alias "<aliasNameOfAddedCertInKeystore>" -keystore keystore.jks
-....
+ keytool -keypasswd -alias "<aliasNameOfAddedCertInKeystore>" -keystore keystore.jks
 . CA 証明書のエイリアス名が長く、スペースまたは特殊文字（「 * 」、「」）が含まれている場合は、エイリアス名を単純な名前に変更します。
 +
-....
-keytool -changealias -alias "<OrignalAliasName>" -destalias "<NewAliasName>" -keystore keystore.jks
-....
+ keytool -changealias -alias "<OrignalAliasName>" -destalias "<NewAliasName>" -keystore keystore.jks
 . spl.properties ファイルにあるキーストアからエイリアス名を設定します。
 +
 この値をキー SPL の certificate_alias に更新します。

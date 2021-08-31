@@ -3,7 +3,6 @@ section: protect-sco
 title: Oracle データベースを保護します
 entries:
 - title: SnapCenter Plug-in for Oracle Database の概要を参照してください
-  url: "/protect-sco/concept_snapcenter_plug_in_for_oracle_database_overview.html"
   entries:
   - title: Plug-in for Oracle Database の機能
     url: "/protect-sco/concept_what_you_can_do_with_the_snapcenter_plug_in_for_oracle_database.html"
@@ -51,8 +50,9 @@ entries:
 - title: Oracle データベースの保護を準備する
   url: "/protect-sco/concept_prepare_for_protecting_oracle_databases.html"
 - title: Oracle データベースをバックアップする
-  url: "/protect-sco/task_back_up_oracle_databases.html"
   entries:
+  - title: バックアップのワークフロー
+    url: "/protect-sco/backup-workflow.html"
   - title: Oracle データベースのバックアップ戦略を定義する
     url: "/protect-sco/task_define_a_backup_strategy_for_oracle_databases.html"
   - title: Oracle データベースをバックアップに使用できるかどうかを確認します
@@ -71,9 +71,6 @@ entries:
     url: "/protect-sco/task_back_up_oracle_databases_using_unix_commands.html"
   - title: Oracle データベースのバックアップ処理を監視する
     url: "/protect-sco/task_monitor_oracle_database_backup_operations.html"
-    entries:
-    - title: "[Activity] ペインで、 Oracle データベースのデータ保護操作を監視します"
-      url: "/protect-sco/task_monitor_dataprotection_operations_on_oracle_database_in_the_activity_pane.html"
   - title: Oracle データベースのバックアップ処理をキャンセルします
     url: "/protect-sco/task_cancel_the_snapcenter_plug_in_for_oracle_database_backup_operations.html"
   - title: Topology ページで、 Oracle データベースのバックアップとクローンを表示します
@@ -81,8 +78,9 @@ entries:
 - title: データベースバックアップのマウントとアンマウント
   url: "/protect-sco/task_mount_and_unmount_databases_backups.html"
 - title: Oracle データベースのリストアとリカバリを行う
-  url: "/protect-sco/task_restore_oracle_databases.html"
   entries:
+  - title: リストアワークフロー
+    url: "/protect-sco/restore-workflow.html"
   - title: Oracle データベースのリストアとリカバリの戦略を定義する
     url: "/protect-sco/task_define_a_restore_and_recovery_strategy_for_oracle_databases.html"
   - title: Oracle データベースをリストアするための要件
@@ -100,8 +98,9 @@ entries:
   - title: Oracle データベースのリストア処理をキャンセルします
     url: "/protect-sco/task_cancel_oracle_database_restore_operations.html"
 - title: Oracle データベースのクローニング
-  url: "/protect-sco/task_clone_oracle_database_backups.html"
   entries:
+  - title: クローニングワークフロー
+    url: "/protect-sco/clone-workflow.html"
   - title: Oracle データベースのクローニング戦略を定義する
     url: "/protect-sco/task_define_a_clone_strategy_for_oracle_databases.html"
   - title: Oracle データベースをクローニングするための要件

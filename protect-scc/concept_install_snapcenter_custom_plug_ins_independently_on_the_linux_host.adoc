@@ -1,0 +1,13 @@
+---
+permalink: protect-scc/concept_install_snapcenter_custom_plug_ins_independently_on_the_linux_host.html 
+sidebar: sidebar 
+keywords:  
+summary: 環境によっては、 SnapCenter サーバから SnapCenter Custom Plug-ins をリモートでインストールできない場合は、 Linux ホストに直接インストールできます。対話型のウィザードまたはコマンドラインインターフェイスを使用してプラグインをインストールできます。 
+---
+= SnapCenter Custom Plug-ins を Linux ホストに個別にインストールします
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+環境によっては、 SnapCenter サーバから SnapCenter Custom Plug-ins をリモートでインストールできない場合は、 Linux ホストに直接インストールできます。対話型のウィザードまたはコマンドラインインターフェイスを使用してプラグインをインストールできます。

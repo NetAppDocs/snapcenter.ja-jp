@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: SnapCenter Plug-in for Microsoft SQL Server をインストールした環境では、 SnapCenter を使用して SQL Server リソースをバックアップすることができます。 
 ---
-= SQL Server データベース、インスタンス、または可用性グループをバックアップする
+= バックアップのワークフロー
 :icons: font
 :imagesdir: ../media/
 

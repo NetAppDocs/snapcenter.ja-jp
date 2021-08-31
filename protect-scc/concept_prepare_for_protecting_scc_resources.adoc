@@ -13,4 +13,6 @@ summary: バックアップ、クローニング、リストアなどのデー�
 
 SnapVault テクノロジと SnapMirror テクノロジを活用するには、ストレージデバイス上のソースボリュームとデスティネーションボリューム間のデータ保護関係を設定して初期化する必要があります。これらのタスクを実行するには、 NetAppSystem Manager を使用するか、ストレージコンソールのコマンドラインを使用します。
 
-* 詳細はこちら *link:https://docs.netapp.com/us-en/ontap-automation/getting_started_with_the_rest_api.html["REST API の使用を開始する"]
+* 詳細はこちら *
+
+link:https://docs.netapp.com/us-en/ontap-automation/getting_started_with_the_rest_api.html["REST API の使用を開始する"]

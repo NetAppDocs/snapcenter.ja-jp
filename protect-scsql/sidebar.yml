@@ -2,9 +2,10 @@
 section: protect-scsql
 title: Microsoft SQL Server データベースを保護する
 entries:
-- title: SnapCenter Plug-in for Microsoft SQL Server の概要
-  url: "/protect-scsql/concept_snapcenter_plug_in_for_microsoft_sql_server_overview.html"
+- title: SnapCenter Plug-in for Microsoft SQL Server
   entries:
+  - title: SnapCenter Plug-in for Microsoft SQL Server の概要
+    url: "/protect-scsql/concept_snapcenter_plug_in_for_microsoft_sql_server_overview.html"
   - title: SnapCenter Plug-in for Microsoft SQL Server の機能
     url: "/protect-scsql/concept_what_you_can_do_with_the_snapcenter_plug_in_for_microsoft_sql_server.html"
   - title: SnapCenter Plug-in for Microsoft SQL Server の特長
@@ -19,9 +20,10 @@ entries:
     url: "/protect-scsql/reference_minimum_ontap_privileges_required_for_sql_plug_in.html"
   - title: SnapMirror レプリケーションと SnapVault レプリケーションのためのストレージシステムを準備
     url: "/protect-scsql/reference_prepare_storage_systems_for_snapmirror_and_snapvault_replication_for_plugin_for_sql.html"
-  - title: SQL Server リソースのバックアップ戦略を定義する
-    url: "/protect-scsql/task_define_a_backup_strategy_for_sql_server_resources.html"
+  - title: SQL Server リソースのバックアップ戦略
     entries:
+    - title: SQL Server リソースのバックアップ戦略を定義する
+      url: "/protect-scsql/task_define_a_backup_strategy_for_sql_server_resources.html"
     - title: サポートされるバックアップのタイプ
       url: "/protect-scsql/concept_type_of_backups_supported.html"
     - title: データベースプラグインのバックアップスケジュール
@@ -40,9 +42,10 @@ entries:
       url: "/protect-scsql/concept_backup_copy_verification_using_the_primary_or_secondary_storage_volume_for_plugin_for_sql.html"
     - title: 検証ジョブをスケジュールするタイミング
       url: "/protect-scsql/concept_when_to_schedule_verification_jobs.html"
-  - title: SQL Server のリストア戦略を定義する
-    url: "/protect-scsql/task_define_a_restoration_strategy_for_sql_server.html"
+  - title: SQL Server のリストア戦略
     entries:
+    - title: SQL Server のリストア戦略を定義する
+      url: "/protect-scsql/task_define_a_restoration_strategy_for_sql_server.html"
     - title: リストア処理のソースとデスティネーション
       url: "/protect-scsql/reference_sources_and_destinations_for_a_restore_operation.html"
     - title: SnapCenter でサポートされている SQL Server 復旧モデル
@@ -53,32 +56,35 @@ entries:
     url: "/protect-scsql/task_define_a_clone_strategy_for_sql_server.html"
 - title: SnapCenter Plug-in for Microsoft SQL Server のインストールのクイックスタート
   url: "/protect-scsql/quick_start_to_install_snapcenter_plug-in_for_sql_server.html"
-- title: SnapCenter Plug-in for Microsoft SQL Server をインストールします
-  url: "/protect-scsql/task_install_snapcenter_plug_in_for_microsoft_sql_server_database.html"
+- title: SnapCenter Plug-in for Microsoft SQL Server をインストールする準備をします
   entries:
+  - title: SnapCenter Plug-in for Microsoft SQL Server のインストールワークフロー
+    url: "/protect-scsql/task_install_snapcenter_plug_in_for_microsoft_sql_server_database.html"
   - title: ホストを追加して SnapCenter Plug-in for Microsoft SQL Server をインストールするための前提条件
     url: "/protect-scsql/reference_prerequisites_to_adding_hosts_and_installing_snapcenter_plug_in_for_microsoft_sql_server.html"
+  - title: SnapCenter Plug-ins Package for Windows をインストールするホストの要件
+    url: "/protect-scsql/reference_host_requirements_to_install_snapcenter_plug_in_package_for_windows_sql.html"
+  - title: SnapCenter Plug-ins Package for Windows のクレデンシャルを設定します
+    url: "/protect-scsql/task_set_up_credentials_for_snapcenter_plug_ins_package_for_windows.html"
+  - title: 個々の SQL Server リソースのクレデンシャルを設定する
+    url: "/protect-scsql/task_configure_credentials_for_an_individual_sql_server_resource.html"
+  - title: Windows Server 2012 以降で gMSA を構成します
+    url: "/protect-scsql/task_configure_gMSA_on_windows_server_2012_or_later.html"
+  - title: SnapCenter Plug-in for Microsoft SQL Server をインストールします
     entries:
-    - title: SnapCenter Plug-ins Package for Windows をインストールするホストの要件
-      url: "/protect-scsql/reference_host_requirements_to_install_snapcenter_plug_in_package_for_windows_sql.html"
-    - title: SnapCenter Plug-ins Package for Windows のクレデンシャルを設定します
-      url: "/protect-scsql/task_set_up_credentials_for_snapcenter_plug_ins_package_for_windows.html"
-    - title: 個々の SQL Server リソースのクレデンシャルを設定する
-      url: "/protect-scsql/task_configure_credentials_for_an_individual_sql_server_resource.html"
-    - title: Windows Server 2012 以降で gMSA を構成します
-      url: "/protect-scsql/task_configure_gMSA_on_windows_server_2012_or_later.html"
-  - title: ホストを追加し、 SnapCenter Plug-ins Package for Windows をインストールします
-    url: "/protect-scsql/task_add_hosts_and_install_snapcenter_plug_ins_package_for_windows.html"
-    entries:
-    - title: コマンドレットを使用して、複数のリモートホストに SnapCenter Plug-in for Microsoft Windows をインストールします
-      url: "/protect-scsql/task_install_snapcenter_plug_in_package_for_windows_on_multiple_remote_hosts_using_cmdlets_scsql.html"
+    - title: ホストを追加し、 SnapCenter Plug-ins Package for Windows をインストールします
+      url: "/protect-scsql/task_add_hosts_and_install_snapcenter_plug_ins_package_for_windows.html"
+    - title: コマンドレットを使用して、複数のリモートホストに SnapCenter Plug-in for Microsoft SQL Server
+        をインストールします
+      url: "/protect-scsql/task_install_snapcenter_plug_in_package_for_windows_server_on_multiple_remote_hosts_using_cmdlets_scsql.html"
     - title: コマンドラインから SnapCenter Plug-in for Microsoft SQL Server をサイレントインストールします
       url: "/protect-scsql/task_install_the_snapcenter_plug_in_for_sql_server_silently.html"
     - title: Plug-in for SQL Server のインストールのステータスを監視します
       url: "/protect-scsql/task_monitor_the_status_of_installing_plugin_for_sql.html"
-  - title: CA 証明書 CSR ファイルを生成します
-    url: "/protect-scsql/reference_generate_CA_certificate_CSR_file.html"
+  - title: CA 証明書を設定します
     entries:
+    - title: CA 証明書 CSR ファイルを生成します
+      url: "/protect-scsql/reference_generate_CA_certificate_CSR_file.html"
     - title: CA 証明書をインポートする
       url: "/protect-scsql/task_import_CA_certificates.html"
     - title: CA 証明書のサムプリントを取得します
@@ -88,8 +94,9 @@ entries:
     - title: プラグインの CA 証明書を有効にします
       url: "/protect-scsql/task_enable_ca_certificates_for_plug-ins.html"
   - title: SnapManager for Microsoft SQL Server から SnapCenter にアーカイブバックアップをインポートします
-    url: "/protect-scsql/concept_import_archived_backups_from_snapmanager_for_sql_to_snapcenter.html"
     entries:
+    - title: アーカイブバックアップのインポートの概要
+      url: "/protect-scsql/concept_import_archived_backups_from_snapmanager_for_sql_to_snapcenter.html"
     - title: インポート機能に関連する制限事項
       url: "/protect-scsql/concept_limitations_related_to_the_import_feature.html"
     - title: アーカイブバックアップをインポートする
@@ -99,15 +106,15 @@ entries:
 - title: SnapCenter Plug-in for VMware vSphere をインストール
   url: "/protect-scsql/task_install_snapcenter_plug_in_for_vmware_vsphere.html"
 - title: データ保護を準備
-  url: "/protect-scsql/concept_prepare_for_protecting_sql_databases.html"
   entries:
   - title: SnapCenter Plug-in for Microsoft SQL Server を使用するための前提条件
     url: "/protect-scsql/concept_prerequisites_for_using_snapcenter_plug_in_for_microsoft_sql_server.html"
   - title: SQL Server の保護におけるリソース、リソースグループ、ポリシーの使用方法
     url: "/protect-scsql/concept_how_resources_resource_groups_and_policies_are_used_for_protecting_sql_server.html"
 - title: SQL Server データベース、インスタンス、または可用性グループをバックアップする
-  url: "/protect-scsql/reference_back_up_sql_server_database_or_instance_or_availability_group.html"
   entries:
+  - title: バックアップのワークフロー
+    url: "/protect-scsql/reference_back_up_sql_server_database_or_instance_or_availability_group.html"
   - title: バックアップに使用できるリソースがあるかどうかを確認する
     url: "/protect-scsql/task_determine_whether_resources_are_available_for_backup.html"
   - title: ネットアップストレージシステムにリソースを移行
@@ -123,8 +130,9 @@ entries:
   - title: SQL Server リソースグループをバックアップする
     url: "/protect-scsql/task_back_up_sql_server_resource_groups.html"
   - title: バックアップ処理を監視する
-    url: "/protect-scsql/task_monitor_sql_resources_backup_operations.html"
     entries:
+    - title: SnapCenter Jobs ページでバックアップ処理を監視します
+      url: "/protect-scsql/task_monitor_sql_resources_backup_operations.html"
     - title: アクティビティペインで操作を監視します
       url: "/protect-scsql/task_monitor_dataprotection_operations_on_sql_resources_in_the_activity_pane.html"
   - title: PowerShell コマンドレットを使用してストレージシステム接続とクレデンシャルを作成します
@@ -140,8 +148,9 @@ entries:
   - title: PowerShell コマンドレットを使用してセカンダリバックアップ数をクリーンアップします
     url: "/protect-scsql/task_clean_up_the_secondary_backup_count_using_powershell_cmdlets_for_sql.html"
 - title: SQL Server リソースをリストアする
-  url: "/protect-scsql/reference_restore_sql_server_resources.html"
   entries:
+  - title: リストアワークフロー
+    url: "/protect-scsql/reference_restore_sql_server_resources.html"
   - title: データベースをリストアするための要件
     url: "/protect-scsql/concept_requirements_for_restoring_a_database.html"
   - title: SQL Server データベースのバックアップをリストアする
@@ -157,8 +166,9 @@ entries:
   - title: リストア処理をキャンセルします
     url: "/protect-scsql/task_cancel_sql_resources_restore_operations.html"
 - title: SQL Server データベースリソースのクローニング
-  url: "/protect-scsql/reference_clone_sql_server_database_resources.html"
   entries:
+  - title: クローニングワークフロー
+    url: "/protect-scsql/reference_clone_sql_server_database_resources.html"
   - title: SQL Server データベースバックアップからのクローニング
     url: "/protect-scsql/task_clone_from_a_sql_server_database_backup.html"
   - title: PowerShell コマンドレットを使用してバックアップをクローニングする

@@ -127,10 +127,7 @@ zip 形式のフォルダには、カスタムプラグインコードと DESCRI
 SnapCenter サーバにアップロードされたカスタムプラグインが表示されます。
 
 +
-MySQL または DB2 アプリケーションを管理する場合は、ネットアップが提供している MySQL および DB2 のカスタムプラグインを使用できます。MySQL と DB2 のカスタムプラグインは、ネットアップの Tool チェストで入手できます。
-
-+
-https://automationstore.netapp.com/home.shtml["NetApp Automation Store の略"]
+MySQL または DB2 アプリケーションを管理する場合は、ネットアップが提供している MySQL および DB2 のカスタムプラグインを使用できます。MySQL と DB2 のカスタムプラグインについては、を参照してください https://automationstore.netapp.com/home.shtml["NetApp Automation Store の略"]
 
 
 

@@ -10,7 +10,11 @@ summary: Plug-in for Oracle Database では、次のバックアップ、検証�
 
 
 [role="lead"]
-Plug-in for Oracle Database では、次のバックアップ、検証、リストア、リカバリ、マウントを実行できます。 Oracle データベースとそのリソースをアンマウントおよびクローニングする。また、 Oracle Recovery Manager （ RMAN ）でデータベースバックアップのカタログ化またはカタログ化解除を行うこともできます。
+SnapCenter Plug-in for Oracle Database は、 Oracle データベースに対応したデータ保護管理を提供する、 NetApp SnapCenter ソフトウェアのホスト側コンポーネントです。
+
+Plug-in for Oracle Database によって、 Oracle Recovery Manager （ RMAN ）、検証、マウント、アンマウント、リストア、 SnapCenter 環境での Oracle データベースのリカバリとクローニングPlug-in for Oracle Database は、すべてのデータ保護処理を実行するために SnapCenter Plug-in for UNIX をインストールします。
+
+Plug-in for Oracle Database では、 SAP アプリケーションを実行している Oracle データベースのバックアップを管理することができます。ただし、 SAP BR * Tools との統合はサポートされません。
 
 * データファイル、制御ファイル、およびアーカイブログファイルをバックアップします。
 +
