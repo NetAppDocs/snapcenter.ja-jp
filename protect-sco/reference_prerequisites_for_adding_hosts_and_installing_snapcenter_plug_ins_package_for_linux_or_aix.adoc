@@ -1,7 +1,7 @@
 ---
 permalink: protect-sco/reference_prerequisites_for_adding_hosts_and_installing_snapcenter_plug_ins_package_for_linux_or_aix.html 
 sidebar: sidebar 
-keywords: prerequisites, iSCSI, Oracle path 
+keywords: prerequisites, iSCSI, Oracle path, host requirement for Linux, sudo privileges, non-root user, host requirements for AIX, credentials, authenticate, domain administrator, local administrator, workgroup, sudo, root user 
 summary: ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。 
 ---
 = ホストを追加して Plug-in Package for Linux または AIX をインストールするための前提条件
@@ -37,4 +37,398 @@ Java のダウンロード方法については、次を参照してください
 NOTE: Plug-in for Oracle Database では、 SAP を対象とした Oracle データベースの管理も可能です。ただし、 SAP BR * Tools との統合はサポートされません。
 
 * Oracle データベース 11.2.0.3 以降を使用している場合は、 13366202 Oracle パッチをインストールする必要があります。
+
+
+
+
+== Linux ホストの要件
+
+SnapCenter Plug-ins Package for Linux をインストールする前に、ホストが要件を満たしていることを確認する必要があります。
+
+|===
+| 項目 | 要件 
+
+
+ a| 
+オペレーティングシステム
+ a| 
+* Red Hat Enterprise Linux の場合
+* Oracle Linux の場合
++
+
+NOTE: Oracle Linux または Red Hat Enterprise Linux 6.6 または 7.0 オペレーティングシステムの LVM で Oracle データベースを使用している場合は、最新バージョンの論理ボリュームマネージャ（ LVM ）をインストールする必要があります。
+
+* SUSE Linux Enterprise Server （ SLES ）
+
+
+
+
+ a| 
+ホスト上の SnapCenter プラグインの最小 RAM
+ a| 
+1 GB
+
+
+
+ a| 
+ホスト上の SnapCenter プラグインのインストールおよびログの最小スペース
+ a| 
+2 GB
+
+
+NOTE: 十分なディスクスペースを割り当て、 logs フォルダによるストレージ消費を監視する必要があります。必要なログスペースは、保護するエンティティの数とデータ保護処理の頻度によって異なります。十分なディスクスペースがない場合、最近実行した処理に対してログは作成されません。
+
+
+
+ a| 
+必要なソフトウェアパッケージ
+ a| 
+Java 1.8.x （ 64 ビット）の Oracle Java と OpenJDK のバージョン
+
+Java を最新バージョンにアップグレードした場合は、 /var/opt/snapcenter /etc/sp/etc/spl.properties にある JAVA_HOME オプションが正しい Java バージョンに設定されていること、および正しいパスが指定されていることを確認する必要があります。
+
+|===
+サポートされているバージョンの最新情報については、を参照してください http://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool で確認できます"^]。
+
+
+
+=== Linux ホストの root 以外のユーザに sudo 権限を設定する
+
+SnapCenter 2.0 以降のリリースでは、 root 以外のユーザが SnapCenter Plug-ins Package for Linux をインストールしてプラグインプロセスを開始できます。いくつかのパスにアクセスできるように root 以外のユーザに sudo 権限を設定する必要があります。
+
+* 必要なもの *
+
+* sudo 1.8.7 以降。
+* root 以外のユーザが Oracle インストールグループに含まれていることを確認します。
+* /etc/ssh/sshd_config_file を編集して、メッセージ認証コードアルゴリズム MACs HMAC-sha2-256 および MACs HMAC-sha2-512 を設定します。
++
+構成ファイルを更新したら、 sshd サービスを再起動します。
+
++
+例
+
++
+[listing]
+----
+#Port 22
+#AddressFamily any
+#ListenAddress 0.0.0.0
+#ListenAddress ::
+#Legacy changes
+#KexAlgorithms diffie-hellman-group1-sha1
+#Ciphers aes128-cbc
+#The default requires explicit activation of protocol
+Protocol 2
+HostKey/etc/ssh/ssh_host_rsa_key
+MACs hmac-sha2-256
+----
+
+
+* このタスクについて *
+
+次のパスにアクセスできるように root 以外のユーザに sudo 権限を設定する必要があります。
+
+* /home / sudo _user_/ .sc_netapp / snapcenter_linux_host_plugin.bin
+* /custom_location/NetApp/snapcenter /spl/installing/plugins/uninstall
+* /custom_location/NetApp/snapcenter /spl/bin/spl になります
+
+
+* 手順 *
+
+. SnapCenter Plug-ins Package for Linux をインストールする Linux ホストにログインします。
+. visudo Linux ユーティリティを使用して、 /etc/sudoers ファイルに次の行を追加します。
++
+[listing, subs="+quotes"]
+----
+Cmnd_Alias SCCMD = sha224:checksum_value== /home/_SUDO_USER_/.sc_netapp/snapcenter_linux_host_plugin.bin,
+/opt/NetApp/snapcenter/spl/installation/plugins/uninstall,
+/opt/NetApp/snapcenter/spl/bin/spl
+Cmnd_Alias PRECHECKCMD = sha224:checksum_value== /home/_SUDO_USER_/.sc_netapp/Linux_Prechecks.sh
+_SUDO_USER_ ALL=(ALL) NOPASSWD:SETENV: SCCMD, PRECHECKCMD
+Defaults: _SUDO_USER_ env_keep=JAVA_HOME
+Defaults: _SUDO_USER_ !visiblepw
+Defaults: _SUDO_USER_ !requiretty
+----
++
+_sudo _user_は 、作成した root 以外のユーザの名前です。
+
++
+チェックサム値は、 _ C ： \ProgramData\NetApp\SnapCenter \Package Repository_に ある * ORACLE_checksum.txt * ファイルから取得できます。
+
++
+カスタムの場所を指定した場合、場所は _custom_path \NetApp\SnapCenter \Package Repository_に なります。
+
++
+
+IMPORTANT: この例は、独自のデータを作成するための参照としてのみ使用してください。
+
+
+
+|===
+
+
+| * ベストプラクティス：セキュリティ上の理由から、インストールまたはアップグレードのたびに sudo エントリを削除することを推奨します。 
+|===
+
+
+== AIX ホストの要件
+
+SnapCenter Plug-ins Package for AIX をインストールする前に、ホストが要件を満たしていることを確認する必要があります。
+
+|===
+| 項目 | 要件 
+
+
+ a| 
+オペレーティングシステム
+ a| 
+AIX 4.3 以降
+
+
+
+ a| 
+ホスト上の SnapCenter プラグインの最小 RAM
+ a| 
+4 GB
+
+
+
+ a| 
+ホスト上の SnapCenter プラグインのインストールおよびログの最小スペース
+ a| 
+1 GB
+
+
+NOTE: 十分なディスクスペースを割り当て、 logs フォルダによるストレージ消費を監視する必要があります。必要なログスペースは、保護するエンティティの数とデータ保護処理の頻度によって異なります。十分なディスクスペースがない場合、最近実行した処理に対してログは作成されません。
+
+
+
+ a| 
+必要なソフトウェアパッケージ
+ a| 
+Java 1.8.x （ 64 ビット） IBM Java
+
+Java を最新バージョンにアップグレードした場合は、 /var/opt/snapcenter /etc/sp/etc/spl.properties にある JAVA_HOME オプションが正しい Java バージョンに設定されていること、および正しいパスが指定されていることを確認する必要があります。
+
+|===
+サポートされているバージョンの最新情報については、を参照してください http://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool で確認できます"^]。
+
+
+
+=== AIX ホストの root 以外のユーザに sudo 権限を設定します
+
+SnapCenter 4.4 以降では、 root 以外のユーザが SnapCenter Plug-ins Package for AIX をインストールしてプラグインプロセスを開始できます。いくつかのパスにアクセスできるように root 以外のユーザに sudo 権限を設定する必要があります。
+
+* 必要なもの *
+
+* sudo 1.8.7 以降。
+* root 以外のユーザが Oracle インストールグループに含まれていることを確認します。
+* /etc/ssh/sshd_config_file を編集して、メッセージ認証コードアルゴリズム MACs HMAC-sha2-256 および MACs HMAC-sha2-512 を設定します。
++
+構成ファイルを更新したら、 sshd サービスを再起動します。
+
++
+例
+
++
+[listing]
+----
+#Port 22
+#AddressFamily any
+#ListenAddress 0.0.0.0
+#ListenAddress ::
+#Legacy changes
+#KexAlgorithms diffie-hellman-group1-sha1
+#Ciphers aes128-cbc
+#The default requires explicit activation of protocol
+Protocol 2
+HostKey/etc/ssh/ssh_host_rsa_key
+MACs hmac-sha2-256
+----
+
+
+* このタスクについて *
+
+次のパスにアクセスできるように root 以外のユーザに sudo 権限を設定する必要があります。
+
+* /home/_aix_user_//.sc_netapp /snapcenter aix_host_plugin.bsx
+* /custom_location/NetApp/snapcenter /spl/installing/plugins/uninstall
+* /custom_location/NetApp/snapcenter /spl/bin/spl になります
+
+
+* 手順 *
+
+. SnapCenter Plug-ins Package for AIX をインストールする AIX ホストにログインします。
+. visudo Linux ユーティリティを使用して、 /etc/sudoers ファイルに次の行を追加します。
++
+[listing, subs="+quotes"]
+----
+Cmnd_Alias SCCMD = sha224:checksum_value== /home/_AIX_USER_/.sc_netapp/snapcenter_aix_host_plugin.bsx,
+/opt/NetApp/snapcenter/spl/installation/plugins/uninstall,
+/opt/NetApp/snapcenter/spl/bin/spl
+Cmnd_Alias PRECHECKCMD = sha224:checksum_value== /home/_AIX_USER_/.sc_netapp/AIX_Prechecks.sh
+_AIX_USER_ ALL=(ALL) NOPASSWD:SETENV: SCCMD, PRECHECKCMD
+Defaults: _AIX_USER_ !visiblepw
+Defaults: _AIX_USER_ !requiretty
+----
++
+_aix_user_は 、作成した root 以外のユーザの名前です。
+
++
+チェックサム値は、 _ C ： \ProgramData\NetApp\SnapCenter \Package Repository_に ある * ORACLE_checksum.txt * ファイルから取得できます。
+
++
+カスタムの場所を指定した場合、場所は _custom_path \NetApp\SnapCenter \Package Repository_に なります。
+
++
+
+IMPORTANT: この例は、独自のデータを作成するための参照としてのみ使用してください。
+
+
+
+|===
+
+
+| * ベストプラクティス：セキュリティ上の理由から、インストールまたはアップグレードのたびに sudo エントリを削除することを推奨します。 
+|===
+
+
+== クレデンシャルを設定する
+
+SnapCenter は、クレデンシャルを使用して SnapCenter 処理を実行するユーザを認証しますLinux または AIX ホストにプラグインパッケージをインストールするためのクレデンシャルを作成する必要があります。
+
+* このタスクについて *
+
+このクレデンシャルは、 root ユーザに対して作成されるほか、プラグインプロセスをインストールして開始する sudo 権限がある root 以外のユーザに対しても作成されます。
+
+詳細については、を参照してください <<Configure sudo privileges for non-root users for Linux host>> または <<Configure sudo privileges for non-root users for AIX host>>
+
+|===
+
+
+| * ベストプラクティス： * ホストを導入してプラグインをインストールしたあとでクレデンシャルを作成することは可能ですが、 SVM を追加したあとで、ホストを導入してプラグインをインストールする前にクレデンシャルを作成することを推奨します。 
+|===
+* 手順 *
+
+. 左側のナビゲーションペインで、 * 設定 * をクリックします。
+. [ 設定 ] ページで、 [* 資格情報 ] をクリックします。
+. [ 新規作成（ New ） ] をクリックする。
+. [Credential] ページで、クレデンシャル情報を入力します。
++
+|===
+| フィールド | 手順 
+
+
+ a| 
+クレデンシャル名
+ a| 
+クレデンシャルの名前を入力します。
+
+
+
+ a| 
+ユーザ名 / パスワード
+ a| 
+認証に使用するユーザ名とパスワードを入力します。
+
+** ドメイン管理者
++
+SnapCenter プラグインをインストールするシステムのドメイン管理者を指定します。Username フィールドの有効な形式は次のとおりです。
+
++
+*** NETBIOS_USERNAME_
+*** _ ドメイン FQDN\ ユーザ名 _
+
+
+** ローカル管理者（ワークグループのみ）
++
+ワークグループに属するシステムの場合は、 SnapCenter プラグインをインストールするシステムに組み込みのローカル管理者を指定します。ユーザアカウントに昇格された権限がある場合、またはホストシステムでユーザアクセス制御機能が無効になっている場合は、ローカル管理者グループに属するローカルユーザアカウントを指定できます。Username フィールドの有効な形式は、 _username_ です
+
+
+
+
+
+ a| 
+認証モード
+ a| 
+使用する認証モードを選択します。
+
+プラグインホストのオペレーティングシステムに応じて、 Linux または AIX のいずれかを選択します。
+
+
+
+ a| 
+sudo 権限を使用する
+ a| 
+root 以外のユーザのクレデンシャルを作成する場合は、「 * sudo 権限を使用する * 」チェックボックスをオンにします。
+
+|===
+. [OK] をクリックします。
+
+
+クレデンシャルの設定が完了したら、「 * User and Access * 」ページで、ユーザまたはユーザグループにクレデンシャルのメンテナンスを割り当てることができます。
+
+
+
+== Oracle データベースのクレデンシャルを設定します
+
+Oracle データベースに対してデータ保護処理を実行するために使用するクレデンシャルを設定する必要があります。
+
+* このタスクについて *
+
+Oracle データベースでサポートされているさまざまな認証方式を確認しておく必要があります。詳細については、を参照してくださいlink:../install/concept_authentication_methods_for_your_credentials.html["クレデンシャルの認証方式を指定します"^]。
+
+個々のリソースグループのクレデンシャルを設定していて、ユーザ名にフル管理者権限がない場合は、ユーザ名に少なくともリソースグループとバックアップ権限が必要です。
+
+Oracle データベース認証を有効にしている場合、リソースビューに赤い鍵のアイコンが表示されます。データベースを保護できるようにデータベースのクレデンシャルを設定するか、データベースをリソースグループに追加してデータ保護処理を実行する必要があります。
+
+
+NOTE: クレデンシャルの作成時に誤った詳細を指定すると、エラーメッセージが表示されます。[ キャンセル ] をクリックしてから、もう一度実行してください。
+
+* 手順 *
+
+. 左側のナビゲーションペインで、 * リソース * をクリックし、リストから適切なプラグインを選択します。
+. [ リソース ] ページで、 [ * 表示 ] リストから [ * データベース * ] を選択します。
+. をクリックします image:../media/filter_icon.gif[""]をクリックし、ホスト名とデータベースタイプを選択してリソースをフィルタリングします。
++
+をクリックします image:../media/filter_icon.gif[""] をクリックしてフィルタペインを閉じます。
+
+. データベースを選択し、 * データベース設定 * > * データベースの設定 * をクリックします。
+. [ データベース設定の設定 ] セクションの [ 既存の資格情報を使用する *] ドロップダウンリストから、 Oracle データベースでデータ保護ジョブを実行するために使用する資格情報を選択します。
++
+
+NOTE: Oracle ユーザには sysdba 権限が必要です。
+
++
+をクリックしてクレデンシャルを作成することもできます image:../media/add_icon_configure_database.gif["データベース設定画面の追加アイコン"]。
+
+. ASM 設定の設定セクションの既存の認証情報を使用ドロップダウンリストから、 ASM インスタンスでデータ保護ジョブを実行するために使用する認証情報を選択します。
++
+
+NOTE: ASM ユーザには SYSASM 権限が必要です。
+
++
+をクリックしてクレデンシャルを作成することもできます image:../media/add_icon_configure_database.gif["データベース設定画面の追加アイコン"]。
+
+. [RMAN カタログ設定の構成 ] セクションの [ 既存のクレデンシャルを使用する *] ドロップダウンリストから、 Oracle Recovery Manager （ RMAN ）カタログデータベースでデータ保護ジョブを実行するために使用するクレデンシャルを選択します。
++
+をクリックしてクレデンシャルを作成することもできます image:../media/add_icon_configure_database.gif["データベース設定画面の追加アイコン"]。
+
++
+*TNSNAME* フィールドに、 SnapCenter サーバーがデータベースとの通信に使用する透過ネットワーク印刷材 (TNS) ファイル名を入力します。
+
+. [* Preferred RAC Nodes] フィールドで、バックアップに優先する Real Application Cluster （ RAC ）ノードを指定します。
++
+優先ノードには、 RAC データベースインスタンスが存在するクラスタノードを 1 つまたはすべて指定できます。バックアップ処理は、指定したノードでのみ、指定した順序で実行されます。
+
++
+RAC One Node では、優先ノードにリストされるノードは 1 つだけで、この優先ノードはデータベースが現在ホストされているノードです。
+
++
+RAC One Node データベースのフェイルオーバーまたは再配置後に、 SnapCenter リソースページでリソースを更新すると、データベースが以前にホストされていた優先 RAC ノード * リストからホストが削除されます。データベースを再配置する RAC ノードは *RAC ノード * に表示され、手動で優先 RAC ノードとして設定する必要があります。
+
++
+詳細については、を参照してください link:../protect-sco/task_define_a_backup_strategy_for_oracle_databases.html#preferred-nodes-in-rac-setup["RAC セットアップで優先ノードを指定します"^]。
+
+. [OK] をクリックします。
 

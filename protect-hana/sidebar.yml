@@ -3,10 +3,9 @@ section: protect-hana
 title: SAP HANA データベースを保護します
 entries:
 - title: SnapCenter Plug-in for SAP HANA Databases の略
-  entries: 
-- title: SnapCenter Plug-in for SAP HANA Database の概要
-  url: "/protect-hana/concept_snapcenter_plug_in_for_sap_hana_database_overview.html"
   entries:
+  - title: SnapCenter Plug-in for SAP HANA Database の概要
+    url: "/protect-hana/concept_snapcenter_plug_in_for_sap_hana_database_overview.html"
   - title: SnapCenter Plug-in for SAP HANA Database の機能
     url: "/protect-hana/concept_what_you_can_do_using_the_snapcenter_plug_in_for_sap_hana_database.html"
   - title: SnapCenter Plug-in for SAP HANA Database の特長
@@ -47,31 +46,31 @@ entries:
       url: "/protect-hana/reference_types_of_restore_performed_for_auto_discovered_sap_hana_databases.html"
     - title: SAP HANA データベースでサポートされるリカバリ処理のタイプ
       url: "/protect-hana/reference_types_of_recovery_operations_supported_for_sap_hana_database.html"
-  - title: SnapCenter Plug-in for SAP HANA Database をインストールする準備をします
+- title: SnapCenter Plug-in for SAP HANA Database をインストールする準備をします
+  entries:
+  - title: SnapCenter Plug-in for SAP HANA Database のインストールワークフロー
+    url: "/protect-hana/task_install_snapcenter_plug_in_for_sap_hana_database.html"
+  - title: ホストを追加して SnapCenter Plug-in for SAP HANA Database をインストールするための前提条件
+    url: "/protect-hana/reference_prerequisites_to_adding_hosts_and_installing_snapcenter_plug_in_for_sap_hana_database.html"
+  - title: SnapCenter Plug-ins Package for Windows をインストールするホストの要件
+    url: "/protect-hana/reference_host_requirements_to_install_snapcenter_plug_in_package_for_windows_hana.html"
+  - title: SnapCenter Plug-ins Package for Linux をインストールするためのホストの要件
+    url: "/protect-hana/reference_host_requirements_to_install_snapcenter_plug_in_package_for_linux.html"
+  - title: SnapCenter Plug-in for SAP HANA Database のクレデンシャルを設定します
+    url: "/protect-hana/task_set_up_credentials_for_snapcenter_plug_in_for_sap_hana_database.html"
+  - title: Windows Server 2012 以降で gMSA を構成します
+    url: "/protect-hana/task_configure_gMSA_on_windows_server_2012_or_later.html"
+  - title: SnapCenter Plug-in for SAP HANA Databases をインストールします
     entries:
-    - title: SnapCenter Plug-in for SAP HANA Database のインストールワークフロー
-      url: "/protect-hana/task_install_snapcenter_plug_in_for_sap_hana_database.html"
-    - title: ホストを追加して SnapCenter Plug-in for SAP HANA Database をインストールするための前提条件
-      url: "/protect-hana/reference_prerequisites_to_adding_hosts_and_installing_snapcenter_plug_in_for_sap_hana_database.html"
-    - title: SnapCenter Plug-ins Package for Windows をインストールするホストの要件
-      url: "/protect-hana/reference_host_requirements_to_install_snapcenter_plug_in_package_for_windows_hana.html"
-    - title: SnapCenter Plug-ins Package for Linux をインストールするためのホストの要件
-      url: "/protect-hana/reference_host_requirements_to_install_snapcenter_plug_in_package_for_linux.html"
-    - title: SnapCenter Plug-in for SAP HANA Database のクレデンシャルを設定します
-      url: "/protect-hana/task_set_up_credentials_for_snapcenter_plug_in_for_sap_hana_database.html"
-    - title: Windows Server 2012 以降で gMSA を構成します
-      url: "/protect-hana/task_configure_gMSA_on_windows_server_2012_or_later.html"
-    - title: SnapCenter Plug-in for SAP HANA Databases をインストールします
-      entries:
-      - title: ホストを追加し、プラグインパッケージをリモートホストにインストールする
-        url: "/protect-hana/task_add_hosts_and_install_plug_in_packages_on_remote_hosts_sap_hana.html"
-      - title: コマンドレットを使用して、複数のリモートホストに Linux または Windows 用の SnapCenter プラグインパッケージをインストールします
-        url: "/protect-hana/task_install_snapcenter_plug_in_packages_for_linux_or_windows_on_multiple_remote_hosts_using_cmdlets_sap_hana.html"
-      - title: コマンドラインインターフェイスを使用して、 Linux ホストに SnapCenter Plug-in for SAP HANA Database
-          をインストールします
-        url: "/protect-hana/task_install_the_snapcenter_plug_in_for_sap_hana_database_on_linux_hosts_using_the_command_line_interface.html"
-      - title: SnapCenter プラグインパッケージのインストールステータスを監視する
-        url: "/protect-hana/task_monitor_the_status_of_installing_plugin_for_sap_hana.html"
+    - title: ホストを追加し、プラグインパッケージをリモートホストにインストールする
+      url: "/protect-hana/task_add_hosts_and_install_plug_in_packages_on_remote_hosts_sap_hana.html"
+    - title: コマンドレットを使用して、複数のリモートホストに Linux または Windows 用の SnapCenter プラグインパッケージをインストールします
+      url: "/protect-hana/task_install_snapcenter_plug_in_packages_for_linux_or_windows_on_multiple_remote_hosts_using_cmdlets_sap_hana.html"
+    - title: コマンドラインインターフェイスを使用して、 Linux ホストに SnapCenter Plug-in for SAP HANA Database
+        をインストールします
+      url: "/protect-hana/task_install_the_snapcenter_plug_in_for_sap_hana_database_on_linux_hosts_using_the_command_line_interface.html"
+    - title: SnapCenter プラグインパッケージのインストールステータスを監視する
+      url: "/protect-hana/task_monitor_the_status_of_installing_plugin_for_sap_hana.html"
   - title: CA 証明書を設定します
     entries:
     - title: CA 証明書 CSR ファイルを生成します

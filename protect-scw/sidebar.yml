@@ -2,9 +2,10 @@
 section: protect-scw
 title: Windows ファイルシステムを保護
 entries:
-- title: SnapCenter Plug-in for Microsoft Windows の概要を参照してください
-  url: "/protect-scw/concept_snapcenter_plug_in_for_microsoft_windows_overview.html"
+- title: SnapCenter Plug-in for Microsoft Windows の概念
   entries:
+  - title: SnapCenter Plug-in for Microsoft Windows の概要を参照してください
+    url: "/protect-scw/concept_snapcenter_plug_in_for_microsoft_windows_overview.html"
   - title: SnapCenter Plug-in for Microsoft Windows の機能
     url: "/protect-scw/reference_what_you_can_do_with_the_snapcenter_plug_in_for_microsoft_windows.html"
   - title: SnapCenter Plug-in for Windows の特長
@@ -22,30 +23,24 @@ entries:
   - title: Windows ファイルシステムのクローンのソースとデスティネーション
     url: "/protect-scw/reference_sources_and_destinations_of_clones_for_windows_file_systems.html"
 - title: SnapCenter Plug-in for Microsoft Windows をインストールします
-  url: "/protect-scw/concept_install_snapcenter_plug_in_for_microsoft_windows.html"
   entries:
+  - title: インストールワークフロー
+    url: "/protect-scw/concept_install_snapcenter_plug_in_for_microsoft_windows.html"
   - title: SnapCenter Plug-in for Microsoft Windows のインストール要件
     url: "/protect-scw/reference_installation_requirements_for_snapcenter_plug_in_for_microsoft_windows.html"
-    entries:
-    - title: SnapCenter Plug-ins Package for Windows をインストールするホストの要件
-      url: "/protect-scw/reference_host_requirements_to_install_snapcenter_plug_in_package_for_windows.html"
-    - title: Plug-in for Windows のクレデンシャルを設定します
-      url: "/protect-scw/task_set_up_your_credentials_for_the_plug_in_for_windows.html"
-    - title: Windows Server 2012 以降で gMSA を構成します
-      url: "/protect-scw/task_configure_gMSA_on_windows_server_2012_or_later.html"
   - title: ホストを追加し、 SnapCenter Plug-in for Microsoft Windows をインストールします
     url: "/protect-scw/task_add_hosts_and_install_snapcenter_plug_in_for_microsoft_windows.html"
+  - title: PowerShell コマンドレットを使用して、複数のリモートホストに SnapCenter Plug-in for Microsoft Windows
+      をインストールします
+    url: "/protect-scw/task_install_on_multiple_remote_hosts_using_powershell_cmdlets.html"
+  - title: コマンドラインから SnapCenter Plug-in for Microsoft Windows をサイレントにインストールします
+    url: "/protect-scw/task_install_the_snapcenter_plug_in_for_windows_silently_from_the_command_line.html"
+  - title: SnapCenter プラグインパッケージのインストールステータスを監視する
+    url: "/protect-scw/task_monitor_snapcenter_plug_in_package_installation_status.html"
+  - title: CA 証明書を設定します
     entries:
-    - title: PowerShell コマンドレットを使用して、複数のリモートホストに SnapCenter Plug-in for Microsoft
-        Windows をインストールします
-      url: "/protect-scw/task_install_on_multiple_remote_hosts_using_powershell_cmdlets.html"
-    - title: コマンドラインから SnapCenter Plug-in for Microsoft Windows をサイレントにインストールします
-      url: "/protect-scw/task_install_the_snapcenter_plug_in_for_windows_silently_from_the_command_line.html"
-    - title: SnapCenter プラグインパッケージのインストールステータスを監視する
-      url: "/protect-scw/task_monitor_snapcenter_plug_in_package_installation_status.html"
-  - title: CA 証明書 CSR ファイルを生成します
-    url: "/protect-scw/reference_generate_CA_certificate_CSR_file.html"
-    entries:
+    - title: CA 証明書 CSR ファイルを生成します
+      url: "/protect-scw/reference_generate_CA_certificate_CSR_file.html"
     - title: CA 証明書をインポートする
       url: "/protect-scw/task_import_CA_certificates.html"
     - title: CA 証明書のサムプリントを取得します
@@ -57,8 +52,9 @@ entries:
 - title: SnapCenter Plug-in for VMware vSphere をインストール
   url: "/protect-scw/task_install_snapcenter_plug_in_for_vmware_vsphere.html"
 - title: Windows ファイルシステムのバックアップ
-  url: "/protect-scw/reference_back_up_windows_file_systems.html"
   entries:
+  - title: バックアップのワークフロー
+    url: "/protect-scw/reference_back_up_windows_file_systems.html"
   - title: Windows ファイルシステムで使用可能なリソースを確認します
     url: "/protect-scw/task_determine_resource_availability_for_windows_file_systems.html"
   - title: Windows ファイルシステムのバックアップポリシーの作成
@@ -83,18 +79,20 @@ entries:
     url: "/protect-scw/task_remove_backups_using_powershell_cmdlets_for_windows.html"
   - title: PowerShell コマンドレットを使用してセカンダリバックアップ数をクリーンアップします
     url: "/protect-scw/task_clean_up_the_secondary_backup_count_using_powershell_cmdlets_for_windows.html"
-- title: Windows ファイルシステムのバックアップをリストアする
-  url: "/protect-scw/task_restore_windows_file_system_backups.html"
+- title: Windows ファイルシステムをリストア
   entries:
+  - title: Windows ファイルシステムのバックアップをリストアする
+    url: "/protect-scw/task_restore_windows_file_system_backups.html"
   - title: PowerShell コマンドレットを使用してリソースをリストアおよびリカバリする
     url: "/protect-scw/task_restore_and_recover_resources_using_powershell_cmdlets_for_windows.html"
   - title: リストア処理を監視する
     url: "/protect-scw/task_monitor_restore_operations.html"
   - title: リストア処理をキャンセルします
     url: "/protect-scw/task_cancel_restore_operations.html"
-- title: Windows ファイルシステムのバックアップからのクローニング
-  url: "/protect-scw/task_clone_from_a_windows_file_system_backup.html"
+- title: Windows ファイルシステムのクローニング
   entries:
+  - title: Windows ファイルシステムのバックアップからのクローニング
+    url: "/protect-scw/task_clone_from_a_windows_file_system_backup.html"
   - title: PowerShell コマンドレットを使用してバックアップをクローニングする
     url: "/protect-scw/task_clone_backups_using_powershell_cmdlets_for_windows.html"
   - title: クローニング処理を監視する

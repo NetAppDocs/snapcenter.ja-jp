@@ -74,28 +74,29 @@ entries:
   url: "/install/concept_snapcenter_standard_controller_based_licenses.html"
 - title: SnapCenter の Standard 容量ベースのライセンスを追加
   url: "/install/concept_snapcenter_standard_capacity_based_licenses.html"
-- title: Windows ホストでストレージをプロビジョニングする
-  url: "/install/concept_provision_storage_on_windows_hosts.html"
+- title: ストレージシステムをプロビジョニング
   entries:
-  - title: LUN ストレージを設定します
-    url: "/install/concept_configure_lun_storage.html"
+  - title: Windows ホストでストレージをプロビジョニングする
     entries:
-    - title: iSCSI セッションを確立します
-      url: "/install/task_establish_an_iscsi_session.html"
-    - title: iSCSI セッションを切断します
-      url: "/install/task_disconnect_an_iscsi_session.html"
-    - title: igroup を作成して管理します
-      url: "/install/concept_create_and_manage_igroups.html"
-    - title: ディスクを作成および管理する
-      url: "/install/task_create_and_manage_disks.html"
-  - title: SMB 共有を作成および管理する
-    url: "/install/concept_create_and_manage_smb_shares.html"
-  - title: ストレージシステム上のスペースを再生する
-    url: "/install/task_reclaim_space_on_the_storage_system.html"
-  - title: PowerShell コマンドレットを使用してストレージをプロビジョニング
-    url: "/install/reference_provision_storage_using_powershell_cmdlets.html"
-- title: VMware 環境でストレージをプロビジョニング
-  url: "/install/concept_provision_storage_in_vmware_environments.html"
+    - title: LUN ストレージを設定します
+      url: "/install/concept_configure_lun_storage.html"
+      entries:
+      - title: iSCSI セッションを確立します
+        url: "/install/task_establish_an_iscsi_session.html"
+      - title: iSCSI セッションを切断します
+        url: "/install/task_disconnect_an_iscsi_session.html"
+      - title: igroup を作成して管理します
+        url: "/install/concept_create_and_manage_igroups.html"
+      - title: ディスクを作成および管理する
+        url: "/install/task_create_and_manage_disks.html"
+    - title: SMB 共有を作成および管理する
+      url: "/install/concept_create_and_manage_smb_shares.html"
+    - title: ストレージシステム上のスペースを再生する
+      url: "/install/task_reclaim_space_on_the_storage_system.html"
+    - title: PowerShell コマンドレットを使用してストレージをプロビジョニング
+      url: "/install/reference_provision_storage_using_powershell_cmdlets.html"
+  - title: VMware 環境でストレージをプロビジョニング
+    url: "/install/concept_provision_storage_in_vmware_environments.html"
 - title: SnapCenter サーバとの安全な MySQL 接続を設定します
   url: "/install/concept_configure_secured_mysql_connections_with_snapcenter_server.html"
 - title: インストール中に Windows ホストで有効になる機能

@@ -22,12 +22,12 @@ Plug-in for Oracle Database を使用する前に、 SnapCenter 管理者が Sna
 
 NOTE: SnapCenter では、異なるクラスタにある同じ名前の SVM は複数サポートされません。SVM 登録またはクラスタ登録を使用して SnapCenter に登録する SVM は、それぞれ一意である必要があります。
 
-* インストールユーザ用に、認証モードを Linux または AIX に設定してクレデンシャルを作成します。 link:../protect-sco/task_set_up_credentials_for_installing_the_plug_in_package_for_linux_or_aix.html["詳細はこちら。"^]
+* インストールユーザ用に、認証モードを Linux または AIX に設定してクレデンシャルを作成します。 link:../protect-sco/reference_prerequisites_for_adding_hosts_and_installing_snapcenter_plug_ins_package_for_linux_or_aix.html#set-up-credentials["詳細はこちら。"^]
 * ホストを追加し、プラグインをインストールし、リソースを検出します。
 * VMware RDM LUN または VMDK に存在する Oracle データベースを SnapCenter Server で保護する場合は、 SnapCenter Plug-in for VMware vSphere を導入して、 SnapCenter にプラグインを登録する必要があります。
 * Linux または AIX ホストに Java をインストールします。
 +
-を参照してください link:../protect-sco/reference_host_requirements_for_installing_the_snapcenter_plug_in_package_for_linux.html["Linux ホストの要件"^] または  を参照してください。
+を参照してください link:../protect-sco/reference_prerequisites_for_adding_hosts_and_installing_snapcenter_plug_ins_package_for_linux_or_aix.html#linux-host-requirements["Linux ホストの要件"^] または  を参照してください。
 
 * アプリケーションファイアウォールのタイムアウト値は 3 時間以上に設定する必要があります。
 * NFS 環境で Oracle データベースを使用している場合は、マウント、クローニング、検証、リストアの各処理を実行できるように、プライマリストレージまたはセカンダリストレージ用に少なくとも 1 つの NFS データ LIF を設定しておく必要があります。

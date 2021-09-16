@@ -21,7 +21,7 @@ summary: ホストを追加してプラグインパッケージをインスト�
 * SnapManager for Microsoft Exchange Server および SnapDrive for Windows がすでにインストールされている場合は、 SnapDrive を使用してデータを確実に保護するために、同じ Exchange サーバに Plug-in for Exchange をインストールする前に、 SnapCenter for Windows で使用する VSS ハードウェアプロバイダの登録を解除する必要があります。
 * SnapManager for Microsoft Exchange Server と Plug-in for Exchange が同じサーバにインストールされている場合は、 SnapManager for Microsoft Exchange Server で作成されたすべてのスケジュールを Windows スケジューラから一時停止または削除する必要があります。
 * ホストがサーバから完全修飾ドメイン名（ FQDN ）に解決できる必要があります。hosts ファイルが解決可能になるように変更され、短縮名と FQDN の両方が hosts ファイルに指定されている場合は、 SnapCenter hosts ファイルに次の形式でエントリを作成します： _<IP_address> <host_fqdn><host_name> _ 。
-* 次のポートがファイアウォールでブロックされていないことを確認してください。ブロックされていないとホストの追加操作が失敗します。この問題を解決するには、ダイナミックポート範囲を設定します。詳細については、を参照してください https://docs.microsoft.com/en-us/troubleshoot/windows-server/networking/configure-rpc-dynamic-port-allocation-with-firewalls["Microsoft のドキュメント"^]。
+* 次のポートがファイアウォールでブロックされていないことを確認してください。ブロックされていないとホストの追加操作が失敗します。この問題を解決するには、ダイナミックポート範囲を設定する必要があります。詳細については、を参照してください https://docs.microsoft.com/en-us/troubleshoot/windows-server/networking/configure-rpc-dynamic-port-allocation-with-firewalls["Microsoft のドキュメント"^]。
 +
 ** Windows 2016 および Exchange 2016 のポート範囲 50000 ~ 51000
 ** Windows Server 2012 R2 および Exchange 2013 用のポート範囲 6000-6500
@@ -30,6 +30,17 @@ summary: ホストを追加してプラグインパッケージをインスト�
 
 
 
+[NOTE]
+====
+ポート範囲を特定するには、次のコマンドを実行します。
+
+* netsh int ipv4 show dynamicport tcp
+* netsh int ipv4 show dynamicport udp
+* netsh int ipv6 show dynamicport tcp を実行します
+* netsh int ipv6 show dynamicport udp
+
+
+====
 
 
 == SnapCenter Plug-ins Package for Windows をインストールするホストの要件

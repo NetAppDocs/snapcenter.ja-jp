@@ -3,7 +3,6 @@ section: uninstall
 title: SnapCenter Server とプラグインをアンインストールします
 entries:
 - title: SnapCenter プラグインパッケージをアンインストールします
-  url: "/uninstall/concept_uninstall_snapcenter_plug_ins_and_plug_in_packages.html"
   entries:
   - title: ホストを削除するための前提条件
     url: "/uninstall/reference_prerequisites_for_removing_a_host.html"

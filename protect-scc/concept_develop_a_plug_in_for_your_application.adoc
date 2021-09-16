@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: SnapCenter サーバを使用すると、 SnapCenter へのプラグインとしてアプリケーションを導入および管理できます。 
 ---
-= アプリケーション用のプラグインを開発します
+= 概要
 :icons: font
 :imagesdir: ../media/
 

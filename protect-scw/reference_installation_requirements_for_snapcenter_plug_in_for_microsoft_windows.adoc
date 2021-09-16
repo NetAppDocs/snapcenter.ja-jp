@@ -22,3 +22,184 @@ SnapCenter 管理者ロールには管理者権限が必要です。
 * Windows ホストにプラグインをインストールする場合、ビルトインでないクレデンシャルを指定する場合、またはユーザがローカルワークグループユーザに属している場合は、ホストで UAC を無効にする必要があります。
 * バックアップレプリケーションが必要な場合は、 SnapMirror と SnapVault をセットアップする必要があります。
 
+
+
+
+== SnapCenter Plug-ins Package for Windows をインストールするホストの要件
+
+SnapCenter Plug-ins Package for Windows をインストールする前に、ホストシステムのいくつかの基本的なスペース要件とサイジング要件を確認しておく必要があります。
+
+|===
+| 項目 | 要件 
+
+
+ a| 
+オペレーティングシステム
+ a| 
+Microsoft Windows の場合
+
+サポートされているバージョンの最新情報については、を参照してください http://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool で確認できます"^]。
+
+
+
+ a| 
+ホスト上の SnapCenter プラグインの最小 RAM
+ a| 
+1 GB
+
+
+
+ a| 
+ホスト上の SnapCenter プラグインのインストールおよびログの最小スペース
+ a| 
+5 GB
+
+
+NOTE: 十分なディスクスペースを割り当て、 logs フォルダによるストレージ消費を監視する必要があります。必要なログスペースは、保護するエンティティの数とデータ保護処理の頻度によって異なります。十分なディスクスペースがない場合、最近実行した処理に対してログは作成されません。
+
+
+
+ a| 
+必要なソフトウェアパッケージ
+ a| 
+* Microsoft .NET Framework 4.5.2 以降
+* Windows Management Framework （ WMF ） 4.0 以降
+* PowerShell 4.0 以降
+
+
+サポートされているバージョンの最新情報については、を参照してください http://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool で確認できます"^]。
+
+|===
+
+
+== Plug-in for Windows のクレデンシャルを設定します
+
+SnapCenter は、クレデンシャルを使用して SnapCenter 処理を実行するユーザを認証しますSnapCenter プラグインのインストールに必要なクレデンシャル、および Windows ファイルシステムでデータ保護処理を実行するための追加のクレデンシャルを作成する必要があります。
+
+* 必要なもの *
+
+* プラグインのインストール前に Windows クレデンシャルをセットアップする必要があります。
+* リモートホストで、管理者権限を含む管理者権限でクレデンシャルを設定する必要があります。
+* 個々のリソースグループのクレデンシャルを設定していて、そのユーザにフル管理者権限がない場合は、少なくともリソースグループとバックアップ権限をユーザに割り当てる必要があります。
+
+
+* 手順 *
+
+. 左側のナビゲーションペインで、 * 設定 * をクリックします。
+. [ 設定 ] ページで、 [* 資格情報 ] をクリックします。
+. [ 新規作成（ New ） ] をクリックする。
+. [ クレデンシャル ] ページで、次の操作を実行します。
++
+|===
+| フィールド | 手順 
+
+
+ a| 
+クレデンシャル名
+ a| 
+クレデンシャルの名前を入力します。
+
+
+
+ a| 
+ユーザ名 / パスワード
+ a| 
+認証に使用するユーザ名とパスワードを入力します。
+
+** ドメイン管理者または管理者グループの任意のメンバー
++
+ドメイン管理者、または SnapCenter プラグインをインストールするシステムの管理者グループの任意のメンバーを指定します。Username フィールドの有効な形式は次のとおりです。
+
++
+*** NETBIOS/USERNAME
+*** 「ドメイン FQDN\ ユーザ名」
+*** 「 username@UPN 」のようになります
+
+
+** ローカル管理者（ワークグループのみ）
++
+ワークグループに属するシステムの場合は、 SnapCenter プラグインをインストールするシステムに組み込みのローカル管理者を指定します。ユーザアカウントに昇格された権限がある場合、またはホストシステムでユーザアクセス制御機能が無効になっている場合は、ローカル管理者グループに属するローカルユーザアカウントを指定できます。Username フィールドの有効な形式は、「 username 」です
+
++
+パスワードには二重引用符（ " ）を使用しないでください。
+
+
+
+
+
+ a| 
+パスワード
+ a| 
+認証に使用するパスワードを入力します。
+
+|===
+. [OK] をクリックします。
++
+クレデンシャルの設定が完了したら、 * User and Access * ページで、ユーザまたはユーザグループにクレデンシャルメンテナンスを割り当てることができます。
+
+
+
+
+
+== Windows Server 2012 以降で gMSA を構成します
+
+Windows Server 2012 以降では、管理ドメインアカウントからサービスアカウントパスワードの自動管理を提供するグループマネージドサービスアカウント（ gMSA ）を作成できます。
+
+* 必要なもの *
+
+* Windows Server 2012 以降のドメインコントローラが必要です。
+* ドメインのメンバーである Windows Server 2012 以降のホストが必要です。
+
+
+* 手順 *
+
+. GMSA のオブジェクトごとに固有のパスワードを生成するには、 KDS ルートキーを作成します。
+. ドメインごとに、 Windows ドメインコントローラから次のコマンドを実行します。 Add-KDSRootKey -EffectiveImmedient
+. GMSA を作成して構成します。
++
+.. ユーザグループアカウントを作成します。
+.. グループにコンピュータオブジェクトを追加します。
+.. 作成したユーザグループを使用して gMSA を作成します。
++
+例：
+
++
+ New-ADServiceAccount -name <ServiceAccountName> -DNSHostName <fqdn> -PrincipalsAllowedToRetrieveManagedPassword <group> -ServicePrincipalNames <SPN1,SPN2,…>
+.. 「 Get-ADServiceAccount 」コマンドを実行して、サービスアカウントを確認します。
+
+
+. ホストで gMSA を設定します。
++
+.. gMSA アカウントを使用するホストで、 Windows PowerShell 用の Active Directory モジュールを有効にします。
++
+そのためには、 PowerShell から次のコマンドを実行します。
+
++
+[listing]
+----
+PS C:\> Get-WindowsFeature AD-Domain-Services
+
+Display Name                           Name                Install State
+------------                           ----                -------------
+[ ] Active Directory Domain Services   AD-Domain-Services  Available
+
+
+PS C:\> Install-WindowsFeature AD-DOMAIN-SERVICES
+
+Success Restart Needed Exit Code      Feature Result
+------- -------------- ---------      --------------
+True    No             Success        {Active Directory Domain Services, Active ...
+WARNING: Windows automatic updating is not enabled. To ensure that your newly-installed role or feature is
+automatically updated, turn on Windows Update.
+----
+.. ホストを再起動します。
+.. PowerShell コマンド・プロンプトの「 Install-AdServiceAccount <gMSA > 」から次のコマンドを実行して ' ホストに gMSA をインストールします
+.. 次のコマンドを実行して 'gMSA アカウントを確認します 'Test-AdServiceAccount <gMSA >
+
+
+. ホスト上で設定されている gMSA に管理者権限を割り当てます。
+. SnapCenter サーバで設定済みの gMSA アカウントを指定して、 Windows ホストを追加します。
++
+SnapCenter サーバーは選択されたプラグインをホストにインストールし、指定された gMSA はプラグインのインストール時にサービスログオンアカウントとして使用されます。
+
+
