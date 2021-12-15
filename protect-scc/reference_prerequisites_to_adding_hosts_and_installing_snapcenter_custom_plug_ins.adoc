@@ -49,7 +49,7 @@ SnapCenter Server ホストに Windows 2019 または Windows 2016 を使用し�
 http://www.java.com/en/download/manual.jsp["すべてのオペレーティングシステム用の Java のダウンロード"]
 
 +
-http://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool で確認できます"]
+https://mysupport.netapp.com/matrix/imt.jsp?components=100747;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"]
 
 * いくつかのパスにアクセスできるように root 以外のユーザに sudo 権限を設定する必要があります。visudo Linux ユーティリティを使用して、 /etc/sudoers ファイルに次の行を追加します。例：
 +

@@ -70,7 +70,7 @@ NOTE: 検証サーバのバージョンは、プライマリデータベース�
 
 .. セカンダリ・ストレージ・システム上のバックアップを検証するには ' セカンダリ・ロケータをロードを選択します
 .. 検証スケジュールを設定するポリシーを選択し、 * をクリックしますimage:../media/add_policy_from_resourcegroup.gif[""]*
-.. [ 検証スケジュールの追加 *'policy_name' ] ダイアログボックスで ' 次のアクションを実行します
+.. Add Verification Schedules_policy_name_dialog box で、次の処理を実行します。
 +
 |===
 | 状況 | 手順 

@@ -77,7 +77,7 @@ NOTE: セカンダリデスティネーションに SnapCenter Standard ライ�
 |===
 * その他の要件 *
 
-ONTAP およびアプリケーションプラグインの最小要件については、を参照してください http://mysupport.netapp.com/matrix["Interoperability Matrix Tool で確認してください"^]
+ONTAP およびアプリケーションプラグインの最小要件については、を参照してください https://mysupport.netapp.com/matrix/imt.jsp?components=100747;&solution=1257&isHWU&src=IMT["Interoperability Matrix Tool で確認してください"^]
 
 |===
 | ホスト | 最小要件 
@@ -86,7 +86,7 @@ ONTAP およびアプリケーションプラグインの最小要件につい�
  a| 
 オペレーティングシステム（ 64 ビット）
  a| 
-を参照してください http://mysupport.netapp.com/matrix["Interoperability Matrix Tool で確認してください"^]
+を参照してください https://mysupport.netapp.com/matrix/imt.jsp?components=100747;&solution=1257&isHWU&src=IMT["Interoperability Matrix Tool で確認してください"^]
 
 
 

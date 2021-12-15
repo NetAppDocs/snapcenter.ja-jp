@@ -18,6 +18,9 @@ v66 を使用している場合、 SnapCenter GUI の起動に失敗すること
 
 * Internet Explorer の略
 +
+IE 10 以前のバージョンを使用している場合、 SnapCenter UI が正しくロードされません。IE 11 にアップグレードする必要があります。
+
++
 ** デフォルトレベルのセキュリティのみがサポートされています。
 +
 Internet Explorer のセキュリティ設定を変更すると、ブラウザの表示に重大な問題が発生します。
@@ -28,4 +31,4 @@ Internet Explorer のセキュリティ設定を変更すると、ブラウザ�
 * Microsoft Edge の場合
 
 
-サポートされているバージョンの最新情報については、を参照してください http://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool で確認できます"^]。
+サポートされているバージョンの最新情報については、を参照してください https://mysupport.netapp.com/matrix/imt.jsp?components=100747;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。

@@ -56,7 +56,7 @@ SnapCenter Plug-ins Package for Windows をインストールする前に、ホ�
  a| 
 Microsoft Windows の場合
 
-サポートされているバージョンの最新情報については、を参照してください http://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool で確認できます"^]。
+サポートされているバージョンの最新情報については、を参照してください https://mysupport.netapp.com/matrix/imt.jsp?components=100747;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。
 
 
 
@@ -85,7 +85,7 @@ NOTE: 十分なディスクスペースを割り当て、 logs フォルダに�
 * PowerShell 4.0 以降
 
 
-サポートされているバージョンの最新情報については、を参照してください http://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool で確認できます"^]。
+サポートされているバージョンの最新情報については、を参照してください https://mysupport.netapp.com/matrix/imt.jsp?components=100747;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。
 
 |===
 
@@ -138,7 +138,7 @@ SnapCenter Plug-ins Package for Windows をインストールする前に、ホ�
  a| 
 Microsoft Windows の場合
 
-サポートされているバージョンの最新情報については、を参照してください http://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool で確認できます"^]。
+サポートされているバージョンの最新情報については、を参照してください https://mysupport.netapp.com/matrix/imt.jsp?components=100747;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。
 
 
 
@@ -167,6 +167,6 @@ NOTE: 十分なディスクスペースを割り当て、 logs フォルダに�
 * PowerShell 4.0 以降
 
 
-サポートされているバージョンの最新情報については、を参照してください http://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool で確認できます"^]。
+サポートされているバージョンの最新情報については、を参照してください https://mysupport.netapp.com/matrix/imt.jsp?components=100747;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。
 
 |===

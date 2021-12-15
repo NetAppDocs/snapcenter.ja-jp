@@ -67,7 +67,6 @@
   <block id="aab338915e32b60e92c8de3a23aa5c5d" category="paragraph">オペレーティングシステム</block>
   <block id="bb79f96acbff544ded541446c9c7c894" category="paragraph">Microsoft Windows の場合</block>
   <block id="9ed4a475dd3705157a9fed8811f63ce2" category="inline-link">NetApp Interoperability Matrix Tool で確認できます</block>
-  <block id="264b50a0f975dfeaf3e648ba9a40b2ed" category="paragraph">サポートされているバージョンの最新情報については、を参照してください<block ref="49d81d143d5c8b402603532056154481" category="inline-link-rx"></block>。</block>
   <block id="97d747ad5d4878c60364b9ba961fd5a4" category="paragraph">ホスト上の SnapCenter プラグインの最小 RAM</block>
   <block id="0d642755e7f12f7563e3db33bd0c39cb" category="paragraph">1 GB</block>
   <block id="94ca5bd1fc6971f402b85442105f093f" category="paragraph">ホスト上の SnapCenter プラグインのインストールおよびログの最小スペース</block>
@@ -180,8 +179,6 @@
   <block id="afac60f293b05dc186f67c671aabe6bc" category="paragraph">レポートされたエラーをオブジェクトごとにすべて表示する場合は、このオプションを選択します。</block>
   <block id="62acb38bef8d64c5f91175e7ae80611b" category="paragraph">非クラスタ化インデックス（ noindex ）をチェックしない</block>
   <block id="7872e7b32ee763197ad7b5b084205b8c" category="paragraph">非クラスタ化インデックスをチェックしない場合は、「 * 非クラスタ化インデックスをチェックしない」を選択します。SQL Server データベースは、 Microsoft SQL Server の Database Consistency Checker （ DBCC ）を使用して、データベース内のオブジェクトの論理的な整合性と物理的な整合性をチェックします。</block>
-  <block id="90b0c0b2319c30979a22d4851cc38490" category="paragraph">内部データベースの Snapshot コピー（ TABLOCK ）を使用する代わりに、チェックを制限してルックを取得します。</block>
-  <block id="181277c8095d0b12679b8ba39e339423" category="paragraph">内部データベースの Snapshot コピーを使用する代わりに、チェックを制限してロックを取得する場合は、「 * 」を選択します。</block>
   <block id="d2f34567100e19ae71be551d2bab96bf" category="list-text">[ ログ・バックアップ * ] セクションで、 [ 完了時にログ・バックアップを検証する * ] を選択し、完了時にログ・バックアップを検証します。</block>
   <block id="a7abc11ba08de5d8165c85606e400ec8" category="list-text">検証スクリプトの設定 * セクションで、検証処理の前後に実行するプリスクリプトまたはポストスクリプトのパスと引数を入力します。</block>
   <block id="fed1c121dc4f5a5484e5623e297385fb" category="list-text">概要を確認し、 [ 完了 ] をクリックします。</block>
@@ -449,7 +446,6 @@
   <block id="714c955a93d0173dfa1f64ba57283a64" category="admonition">検証サーバのバージョンは、プライマリデータベースをホストしている SQL Server のエディションと同じかそれ以上である必要があります。</block>
   <block id="165a706b2aac1c99b9bead7d6d155859" category="list-text">セカンダリ・ストレージ・システム上のバックアップを検証するには ' セカンダリ・ロケータをロードを選択します</block>
   <block id="a69de308424c0233fb5435c6ed27ec7d" category="list-text">検証スケジュールを設定するポリシーを選択し、 * をクリックします<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>*</block>
-  <block id="c23d1904661e64e07243711f061aa70d" category="list-text">[ 検証スケジュールの追加 *'policy_name' ] ダイアログボックスで ' 次のアクションを実行します</block>
   <block id="5ddfe5d3f436393022d0a111c1f2b429" category="paragraph">バックアップ後に検証を実行します</block>
   <block id="770dea1a7ffca4cdfedbdad1adb3687d" category="paragraph">[ バックアップ後に検証を実行 ] を選択します。</block>
   <block id="6da3a2d5b37f6128e6fcbc17b5e45ac3" category="paragraph">検証をスケジュールします</block>
@@ -635,7 +631,6 @@
   <block id="fd64ae65e36415bcb508e23c2f81edee" category="paragraph">バックアップの詳細が表示されます。</block>
   <block id="a418089089559a000c49aa3b9a686667" category="summary">SnapCenter は、物理マシンと仮想マシンの両方でさまざまなストレージタイプをサポートしています。ホストに対応したパッケージをインストールする前に、ストレージタイプがサポートされているかどうかを確認する必要があります。</block>
   <block id="dae1725dc2e5765223411b1d431ef15d" category="doc">SnapCenter Plug-in for Microsoft Windows および Microsoft SQL Server でサポートされるストレージタイプ</block>
-  <block id="f18c71406bdb3e27ae28a0570acfb57b" category="paragraph">Windows Server では、 SnapCenter プロビジョニングとデータ保護がサポートされます。サポートされているバージョンの最新情報については、を参照してください<block ref="49d81d143d5c8b402603532056154481" category="inline-link-rx"></block>。</block>
   <block id="47c954121886a5e5aaca7eece461b56f" category="cell">マシン</block>
   <block id="f0cb6783b152b19ceab16227ca3976a2" category="cell">ストレージタイプ</block>
   <block id="2bfe08a4f62392e52d13ca1c380c81d4" category="cell">を使用してプロビジョニング</block>
@@ -1032,7 +1027,6 @@
   <block id="c77d16e2631c1e539982c0bc793f22b0" category="paragraph">このリストには、 SnapCenter で追加されたすべての SQL Server が含まれます。検証サーバ（ローカルホストまたはリモートホスト）は複数選択できます。</block>
   <block id="35a91e9ad1ffed78f81a00fbc833fa69" category="admonition">検証サーバのバージョンが、プライマリデータベースをホストしている SQL Server のバージョンとエディションと一致している必要があります。</block>
   <block id="34098500b6237d2918a60eeb7bc52132" category="list-text">Load locators * （ロケータのロード）をクリックして、 SnapMirror ボリュームと SnapVault ボリュームをロードし、セカンダリ・ストレージ上で検証を実行します。</block>
-  <block id="462ec78afe1c834797787c53a7eb07d8" category="list-text">Add Verification Scheduledespolicy_name ダイアログボックスで、次の操作を実行します。</block>
   <block id="5fc49d26bbb3bab9fc2e2c6fc0490216" category="paragraph">[Run verification after backup] を選択します。</block>
   <block id="b39614f1e3ff23cc5b5cd5fd6bf27259" category="inline-image-macro">アイコンをクリックして、設定済みスケジュールを編集します</block>
   <block id="5f11c7889df3330ff1f653f5e5702931" category="inline-image-macro">削除アイコン</block>
@@ -1125,11 +1119,9 @@
   <block id="7dbd4083dc9a93160940c1e53d03999f" category="admonition">セカンダリデスティネーションに SnapCenter Standard ライセンスを追加することを推奨しますが、必須ではありません。セカンダリデスティネーションで SnapCenter 標準ライセンスが有効になっていない場合、フェイルオーバー処理の実行後に、 SnapCenter を使用してセカンダリデスティネーションのリソースをバックアップすることはできません。ただし、クローニング処理と検証処理を実行するには、セカンダリデスティネーションに FlexClone ライセンスが必要です。</block>
   <block id="89a71adc7ceff2f08a2162d1abfd9de6" category="paragraph">* その他の要件 *</block>
   <block id="918d32b75f0ab883abba3a8dc0c3ae8d" category="inline-link">Interoperability Matrix Tool で確認してください</block>
-  <block id="1b5939a958029d9af1feaf20b0b87dab" category="paragraph">ONTAP およびアプリケーションプラグインの最小要件については、を参照してください<block ref="8202e2d9ff186d084c29140284f981f1" category="inline-link-rx"></block></block>
   <block id="8124579383e90243e4b06323d2b37f8d" category="cell">ホスト</block>
   <block id="a55b17d8324fe50e023be8010d4b5474" category="cell">最小要件</block>
   <block id="a0315547f70da02dc3ae867b333d7a34" category="paragraph">オペレーティングシステム（ 64 ビット）</block>
-  <block id="c30835f2a8a6fdaae956ec3646e908d4" category="paragraph">を参照してください<block ref="8202e2d9ff186d084c29140284f981f1" category="inline-link-rx"></block></block>
   <block id="2b55387dd066c5bac646ac61543d152d" category="paragraph">CPU</block>
   <block id="0e6a971ec5306b612f39cb5f57db7161" category="list-text">サーバホスト： 4 コア</block>
   <block id="30a4532a5bee2de6dedd7d0dd519c56c" category="list-text">プラグインホスト： 1 コア</block>
@@ -1891,7 +1883,6 @@
   <block id="28ada90c589b6b80a72ff33d9870e73f" category="admonition">データのインポートは、 SnapCenter のグラフィカルユーザインターフェイス（ GUI ）ではサポートされていません。</block>
   <block id="91048ee9b28431a0b8417fc6aca22a53" category="section-title">データのインポートがサポートされる構成</block>
   <block id="b136948fc75470b29a82776a9d289413" category="paragraph">SnapManager 3.4.x for Oracle および SnapManager 3.4.x for SAP から SnapCenter にデータをインポートする前に、 SnapCenter Plug-in for Oracle Database でサポートされる構成を確認しておく必要があります。</block>
-  <block id="8090d2dc097ae73b699cc20525f91e9e" category="paragraph">SnapCenter Plug-in for Oracle Database でサポートされる構成をに示します<block ref="49d81d143d5c8b402603532056154481" category="inline-link-rx"></block>。</block>
   <block id="c11806b444e73d136144652a83923eba" category="section-title">データが SnapCenter にインポートされます</block>
   <block id="d80d91babef4edbe3aa5ac78f57b8cbc" category="paragraph">プロファイル、スケジュール、およびプロファイルを使用して実行される処理をインポートできます。</block>
   <block id="e3fde9f3aff3294492c93c044790a79f" category="cell">SnapManager for Oracle および SnapManager for SAP から入手できます</block>
@@ -2231,7 +2222,6 @@
   <block id="750b10574c7c5ac05afa7817be89a63e" category="list-text">Oracle ASM フィルタドライバ (ASMFD)</block>
   <block id="da02aa1448f6bd34e97b4d20a7b5bdcf" category="admonition">PDB 移行処理と PDB クローニング処理はサポートされていません。</block>
   <block id="0483f292b9712b967df26187e876eb45" category="list-text">Oracle Flex ASM</block>
-  <block id="c918cbe5c790e683fb3a523dc9a82600" category="paragraph">サポートされている Oracle のバージョンの最新情報については、を参照してください<block ref="49d81d143d5c8b402603532056154481" category="inline-link-rx"></block>。</block>
   <block id="2e00e783f5f2412a8f09c782c23524f4" category="section-title">Oracle データベースでサポートされるバックアップのタイプ</block>
   <block id="63a9fc894d971ef7a1fef2e8bafbd8d4" category="paragraph">バックアップタイプでは、作成するバックアップのタイプを指定します。SnapCenter では、 Oracle データベースに対してオンラインバックアップタイプとオフラインバックアップタイプがサポートされます。</block>
   <block id="cd9177f3a112508cd1d4ef7ec5499433" category="section-title">オンラインバックアップ</block>
@@ -2398,7 +2388,6 @@
   <block id="ba09c94fed381b580a726fc94531b160" category="list-text">Oracle Linux または RHEL オペレーティングシステムの LVM で Oracle データベースを使用している場合は、最新バージョンの論理ボリューム管理（ LVM ）をインストールします。</block>
   <block id="8770246977269a639c8c2818412dc3ac" category="list-text">SnapManager for Oracle を使用していて、 SnapCenter Plug-in for Oracle Database に移行する場合は、 sccli コマンド sc-migrate を使用して、プロファイルを SnapCenter のポリシーおよびリソースグループに移行できます。</block>
   <block id="4c893189fecc8b6e5c41ae931ffd7f89" category="list-text">バックアップレプリケーションが必要である場合は、 ONTAP で SnapMirror と SnapVault を設定します</block>
-  <block id="419877ea43e5d2306a2d543c27f2f0ef" category="list-text"><block ref="419877ea43e5d2306a2d543c27f2f0ef" category="inline-link-rx"></block></block>
   <block id="50295902d444d01e41805e9bc1b0598e" category="list-text"><block ref="50295902d444d01e41805e9bc1b0598e" category="inline-link-rx"></block></block>
   <block id="a909d5db254f7262bb93275a07812330" category="inline-link">RHEL 7 以降の非マルチパス環境でデータ保護処理が失敗する</block>
   <block id="637e979b90ef1f6ab2dd922a7436fbec" category="list-text"><block ref="637e979b90ef1f6ab2dd922a7436fbec" category="inline-link-rx"></block></block>
@@ -2831,7 +2820,6 @@
   <block id="820975a681d6bd98ccc34b3e0595d110" category="paragraph">VMware 上でサポートされるノードは、 Microsoft iSCSI Software Initiator を使用する場合は最大 16 、 FC を使用する場合は最大 2 つです</block>
   <block id="f1a7b77dc434e17fd514506c2a6cd80c" category="list-text">RDM LUN</block>
   <block id="daa9730f0908f333879829d0ff58fd7a" category="paragraph">通常の RDMS では、最大 56 の RDM LUN と 4 つの LSI Logic SCSI コントローラがサポートされます。 VMware VM MSCS のボックスツーボックスの Plug-in for Windows 構成では、最大 42 の RDM LUN と 3 つの LSI Logic SCSI コントローラがサポートされます</block>
-  <block id="5b9868b5ee12077d5c933341f663f4ab" category="paragraph">サポートされているバージョンの最新情報については、を参照してください<block ref="49d81d143d5c8b402603532056154481" category="inline-link-rx"></block>。</block>
   <block id="554b18f954019b477e2e91a5765d0334" category="summary">既存の SnapCenter ロールに加えて、独自のロールを作成して権限をカスタマイズできます。</block>
   <block id="57cf47fd5cdb4fa24f625917dbf7b4cb" category="doc">ロールを作成します</block>
   <block id="736f3871653c42d5fc23c7b63472291d" category="paragraph">「 SnapCenterAdmin 」ロールでログインする必要があります。</block>
@@ -2995,106 +2983,6 @@
   <block id="50dd0a56e2faa99d354fb627dcb6e89a" category="list-text">ユーザのロックを解除します。</block>
   <block id="e36c8512e3778b0a83d27f616b9ba1ff" category="paragraph">「 securitylogin unlock -user &lt;user_name\\&gt; -vserver &lt;cluster_name\\&gt; 」のようになります</block>
   <block id="81fb23c0c8e735fb97f9f661b58902b8" category="section-title">ロールの作成および権限の割り当てに使用する ONTAP CLI コマンド</block>
-  <block id="bd2a3614bc4d41081c720a9fdf9ef8f7" category="paragraph">ロールを作成して権限を割り当てるには、いくつかの ONTAP CLI コマンドを実行する必要があります。</block>
-  <block id="74f3b19ba9c351092444a4e2af884b53" category="list-text">「 securitylogin role create -role Role_Name -cmddirname 」 cluster identity modify -vserver SVM_name or cluster_name -access all ’</block>
-  <block id="f00bd7ed18d9c5986f8e5ce1c07e6a43" category="list-text">「 securitylogin role create -role Role_Name -cmddirname 」 cluster identity show -vserver SVM_name or Cluster_name -access all</block>
-  <block id="a7d6709069978ea36eb435ae4dfc7612" category="list-text">「 securitylogin role create -role Role_Name -cmddirname 」 cluster modify -vserver SVM_name or Cluster_name -access all</block>
-  <block id="1966dd12e6a5b0d5512e766ce74fb761" category="list-text">「 securitylogin role create -role Role_Name -cmddirname 」 cluster peer show -vserver SVM_name or Cluster_name -access all</block>
-  <block id="68bc90df50d61809462b54dd711cbf17" category="list-text">「 securitylogin role create -role Role_Name -cmddirname 」 cluster show -vserver SVM_name or Cluster_name -access all</block>
-  <block id="d7bad26b30ec7aa08af2c7cd050f6fab" category="list-text">「 securitylogin role create -role Role_Name -cmddirname 」 event generate-autosupport-log 「 -vserver SVM_name or cluster_name -access all</block>
-  <block id="ba3301272f4ffb4565254865af6febb8" category="list-text">「 security login role create -vserver SVM_name or Cluster_name -role Role_Name -cmddirname 」 job history show 「 -access all</block>
-  <block id="c2dde51f1e503294e4ff05e8b3df77ba" category="list-text">「 security login role create -vserver SVM_name or Cluster_name -role Role_Name -cmddirname 」 job stop 「 -access all</block>
-  <block id="db057c526db9d4d87ca4144bdf29de0a" category="list-text">「 security login role create -vserver SVM_name or Cluster_name -role Role_Name -cmddirname "LUN" -access all</block>
-  <block id="59e2a28205bb797f60aa683176dafdad" category="list-text">「 security login role create -vserver SVM_name or cluster_name -role Role_Name -cmddirname "LUN create " -access all</block>
-  <block id="eeff5b86c1aabc870fa237fd08d76ab1" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname "lun delete " -access all 」を実行します</block>
-  <block id="9ea6c0e4ea5c0e03432ebab66c79754c" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 lun igroup add 「 -access all</block>
-  <block id="6b032d632640d92fa66667c032acd96a" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 lun igroup create 「 -access all</block>
-  <block id="8ad8db40f7f8eb889bcfdba0e44812a5" category="list-text">「 security login role create -vserver SVM_name or cluster_name -role Role_Name -cmddirname "lun igroup delete " -access all</block>
-  <block id="28b0343629c6ca691556167d91eea212" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 lun igroup modify 「 -access all</block>
-  <block id="483cbe4960f184d0bbf9547c11d3e46c" category="list-text">「 security login role create -vserver SVM_name or cluster_name -role Role_Name -cmddirname "LUN igroup rename " -access all</block>
-  <block id="53db71781de2969645e4e7a27a778012" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 lun igroup show 「 -access all</block>
-  <block id="367ec01e2bb891850afc97f5e44106bc" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 lun mapping add-reporting-nodes 「 -access all</block>
-  <block id="2fb32824d55aaf728b047f48352e2343" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 lun mapping create 「 -access all</block>
-  <block id="77e212b94d84703b13eaee167fa8c5e0" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 lun mapping delete 「 -access all</block>
-  <block id="8183a22f44b37c67c6c1eb678ac818a2" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 lun mapping remove-reporting-nodes 「 -access all</block>
-  <block id="c27306e8d652ef380e8a4fd6b6b3047f" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 lun mapping show 「 -access all</block>
-  <block id="de468806cc6096c9201ec3da38aee586" category="list-text">「 security login role create -vserver SVM_name or Cluster_name -role Role_Name -cmddirname 」 lun modify 「 -access all</block>
-  <block id="052b437c30de253f1135217bbdc8549f" category="list-text">「 security login role create -vserver SVM_name or Cluster_name -role Role_Name -cmddirname 」 lun move-in -volume 」 -access all</block>
-  <block id="f19662157ee70509d79b07b1c43a4eec" category="list-text">「 security login role create -vserver SVM_name or Cluster_name -role Role_Name -cmddirname "LUN offline" -access all</block>
-  <block id="0d5a6c9f6ea7f59ee3216cbbe718dc92" category="list-text">「 security login role create -vserver SVM_name or Cluster_name -role Role_Name -cmddirname "LUN online " -access all</block>
-  <block id="51b674ea3221909122eb860a062d0997" category="list-text">「 security login role create -vserver SVM_name or Cluster_name -role Role_Name -cmddirname 」 lun persistent-reservation clear コマンド -access all</block>
-  <block id="3ccf980f8be0bca1d2f71b0e743a672d" category="list-text">「 security login role create -vserver SVM_name or Cluster_name -role Role_Name -cmddirname "LUN resize " -access all</block>
-  <block id="40e98f652181f2847bd44cddd33e0062" category="list-text">「 security login role create -vserver SVM_name or Cluster_name -role Role_Name -cmddirname "LUN serial" -access all</block>
-  <block id="16c818fcdeddb989c570371c5350cd5e" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname "lun show " -access all 」を実行します</block>
-  <block id="64cc27baa88836c83613bc5306824b21" category="list-text">「 security login role create -vserver SVM_name or Cluster_name -role Role_Name -cmddirname 」 network interface create 「 -access readonly</block>
-  <block id="629369cf2f67d082699d4f036800643f" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 network interface delete 「 -access readonly 」を指定します</block>
-  <block id="0b64238a4d4320b082abe88598fca756" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 network interface modify 「 -access readonly 」を指定します</block>
-  <block id="6e98de181b66b3f9b61d888005021b92" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 network interface show 「 -access readonly 」を指定します</block>
-  <block id="6eeba8c67c97ff0b5bd0eaba7e7427cb" category="list-text">「 security login role create -vserver SVM_name or Cluster_name -role Role_Name -cmddirname 」 security login 「 -access readonly</block>
-  <block id="76e09e443441572c656a7e9cac05a5a2" category="list-text">「 securitylogin role create -role Role_Name -cmddirname 」 -vserver SVM_name or Cluster_name -access all</block>
-  <block id="5f2d42c1ebfef86b7c051857e8477ae4" category="list-text">「 securitylogin role create -role Role_Name -cmddirname 」「 snapmirror list -destinations 」 -vserver SVM_name または cluster_name -access all 」を指定します</block>
-  <block id="08c19983c3fbf4c7ebf05b7c5489c676" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 snapmirror policy add -rule 「 -access all 」に設定されています</block>
-  <block id="c85b7396dfc1d2366ad4764e6bdc3d1b" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname "snapmirror policy create " -access all 」を実行します</block>
-  <block id="56a9e572875c13d4187e7f69ac48f294" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname "snapmirror policy delete " -access all 」を実行します</block>
-  <block id="762b1fabd18355d78fe5d8d33e48746b" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 snapmirror policy modify 「 -access all 」を指定します</block>
-  <block id="95b923460995311a815735be01a5df41" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 snapmirror policy modify -rule 「 -access all 」を指定します</block>
-  <block id="d5f9eeb48d5488591b85eb025b75e90d" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 snapmirror policy remove-rule 「 -access all 」を実行します</block>
-  <block id="52eabe08b9ece65f62d48b3a55a5b2a2" category="list-text">「 security login role create -vserver SVM_name or cluster_name -role Role_Name -cmddirname "snapmirror policy show " -access all 」を実行します</block>
-  <block id="a124a07bed7ad0d2597b1dcd1c0f81fa" category="list-text">「 security login role create -vserver SVM_name or cluster_name -role Role_Name -cmddirname "snapmirror restore" -access all</block>
-  <block id="3d745a8cbe283ecc388f07ec61270daa" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname "snapmirror show " -access all 」を実行します</block>
-  <block id="84b6fe668e96106685842efcb014c6f4" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname "snapmirror show -history" -access all 」を指定します</block>
-  <block id="78e8a5898362214ad94d764ac5ed2e56" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname "snapmirror update" -access all 」を実行します</block>
-  <block id="601b5bc813d6d16d2967697926d21469" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 snapmirror update-ls-set 「 -access all</block>
-  <block id="fea7da1c91ddd372544ac0be3a4d4e80" category="list-text">「 security login role create -vserver SVM_name or Cluster_name -role Role_Name -cmddirname 」「 version 」 -access all</block>
-  <block id="5e4287ac2440cd293fb330253ddd460b" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 volume clone create 「 -access all 」を実行します</block>
-  <block id="3be97ed9d929b68b527a35a4c7194e75" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 volume clone show 「 -access all 」を実行します</block>
-  <block id="23ac697780b177f35e933674f3f40bf9" category="list-text">「 security login role create -vserver SVM_name or Cluster_name -role Role_Name -cmddirname 」 volume clone split start 「 -access all 」に設定されています</block>
-  <block id="0d7fb189638f248383c7785cd9c324c4" category="list-text">「 security login role create -vserver SVM_name or Cluster_name -role Role_Name -cmddirname 」「 volume clone split stop 」 -access all 」に相当します</block>
-  <block id="0188ef3402a8e6c744ebbb3c9323db1e" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 volume clone split status 「 -access all 」を指定します</block>
-  <block id="e29107bc9819b050646222ab1e60c0d6" category="list-text">「 security login role create -vserver SVM_name or cluster_name -role Role_Name -cmddirname "volume create " -access all 」を実行します</block>
-  <block id="8e99e9712877d48cd92b537bdc5d0b3e" category="list-text">「 security login role create -vserver SVM_name or Cluster_name -role Role_Name -cmddirname "volume destroy " -access all</block>
-  <block id="f3741531666e72885b09210612e2271d" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 volume file clone create 「 -access all</block>
-  <block id="64a6a36df2206b3f3f9ff0f72696ccc3" category="list-text">「 security login role create -vserver SVM_name or cluster_name -role Role_Name -cmddirname 」 volume file show -disk usage 「 -access all 」に指定します</block>
-  <block id="2e2f8335c8f28d54d6aaaaa2cdf6b5e2" category="list-text">「 security login role create -vserver SVM_name or Cluster_name -role Role_Name -cmddirname 」 volume modify 「 -access all</block>
-  <block id="de8dec0c6dc63eb3f741fe7af7ec3886" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname "volume offline " -access all 」を実行します</block>
-  <block id="e49cab20b1a8c3f5672b723d1547b933" category="list-text">「 security login role create -vserver SVM_name or cluster_name -role Role_Name -cmddirname "volume online " -access all 」を実行します</block>
-  <block id="911975554f8c962f616adbf3387e39f0" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 volume qtree create 「 -access all</block>
-  <block id="f924fdd08ddba090694fee52a977918f" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 volume qtree delete -access all を実行します</block>
-  <block id="9107b678a4f83f1e0ab96bee26d1b195" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 volume qtree modify 「 -access all</block>
-  <block id="7ecc8bf8132f465b8a6f3da594fc26db" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 volume qtree show 「 -access all 」を実行します</block>
-  <block id="48e95ff337f6a2bb4e7883b50d1d3575" category="list-text">「 security login role create -vserver SVM_name or Cluster_name -role Role_Name -cmddirname 」 volume restrict 「 -access all</block>
-  <block id="2ae549f29e42005c469c51ad5632e6c4" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 volume show 「 -access all 」を実行します</block>
-  <block id="32e977385793b6b14e8dd356a17bb232" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 volume snapshot create 「 -access all 」を実行します</block>
-  <block id="547ceb8a19c64179dccd1482c883220b" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 volume snapshot delete 「 -access all 」を指定します</block>
-  <block id="129fb40b23846d1901ada05028590084" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 volume snapshot modify 「 -access all 」を指定します</block>
-  <block id="5418670a47b390a94ee6eb7cb2bfc1f5" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 volume snapshot promote 「 -access all 」に設定されています</block>
-  <block id="5c5886ce74020cacffa29e8c877a9dcd" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 volume snapshot rename 「 -access all 」を指定します</block>
-  <block id="630ea525603533d67966eff178934e8b" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 volume snapshot restore コマンド -access all 」を実行します</block>
-  <block id="a465239d3fcdcd095161fc47a01b365d" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 volume snapshot restore -file 「 -access all 」を指定します</block>
-  <block id="50280f649a46a745be11521468e01a19" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 volume snapshot show 「 -access all 」を実行します</block>
-  <block id="d641b0360ed4d087a0c826e7c25c35bd" category="list-text">「 security login role create -vserver SVM_name or Cluster_name -role Role_Name -cmddirname 」 volume unmount 「 -access all</block>
-  <block id="4f3cd2a90bfbbdb2be83e61aa0c3ad36" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 vserver 「 -access all</block>
-  <block id="4e49c5ad47b5998dfd02b7a28ac19a69" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 vserver cifs create 「 -access all</block>
-  <block id="39bea7893a702559be548f4963a4e555" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 vserver cifs delete -access all</block>
-  <block id="75bffcebc6d50bb264fd73977bf3d55d" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 vserver cifs share modify 「 -access all 」を指定します</block>
-  <block id="479e8f996f2286de22bc4d0541ab7e31" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 vserver cifs share create 「 -access all</block>
-  <block id="f1d3d4a0f4808a6b6b3cd08f5bf1a7f1" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 vserver cifs share delete 「 -access all 」を指定します</block>
-  <block id="02efed3a1aad7b8466e51f3fb93b2ae8" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 vserver cifs share show 「 -access all 」を指定します</block>
-  <block id="07deed8ae05aa38e02ea7cf6d1f1223d" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 vserver cifs show 「 -access all</block>
-  <block id="22e01b867f45091803ec6c640cc7d394" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 vserver create 「 -access all</block>
-  <block id="9d7125e7b71105c501bb51ec65c59d2c" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 vserver export-policy create 「 -access all</block>
-  <block id="bb5cfdda0d34411ca517cbde4c6bd8cb" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 vserver export-policy delete 「 -access all 」を実行します</block>
-  <block id="c4f56eaa7f3b76abc7b34f32777c940b" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 vserver export-policy rule create 「 -access all</block>
-  <block id="91ef550ac8b695e98c9f563cf2f6ce0d" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 vserver export-policy rule delete 「 -access all 」を指定します</block>
-  <block id="ea90fe66b3bccbeba167955bc873bb71" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 vserver export-policy rule modify 「 -access all 」を指定します</block>
-  <block id="903101e64347ea401471decb0bce1ff8" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 vserver export-policy rule show 「 -access all 」を実行します</block>
-  <block id="a980088d001a13fdd22f3f097a682303" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 vserver export-policy show 「 -access all 」を実行します</block>
-  <block id="5f1c7ca1ff814a35159403d49457708d" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 vserver iscsi connection show 「 -access all 」を実行します</block>
-  <block id="e56dc9e1abba5cf9ebaf56fe68a3e452" category="list-text">「 security login role create -vserver SVM_name or Cluster_name -role Role_Name -cmddirname 」 vserver 「 -access readonly</block>
-  <block id="2432e0559115429e9cf69bf3a4b8d687" category="list-text">「 security login role create -vserver SVM_name or Cluster_name -role Role_Name -cmddirname 」 vserver modify 「 -access readonly</block>
-  <block id="321a6e0b31277b1e79ae2d53f51a9a5f" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 vserver show 「 -access readonly</block>
-  <block id="4f6f220874c8f13557f2d2f4621258a7" category="list-text">「 security login role create -vserver svm_name or cluster_name -role Role_Name -cmddirname 」 vserver export-policy 「 -access all 」を実行します</block>
-  <block id="a7adf0c6a40a1c8ebe9cc197ff3a1381" category="list-text">「 security login role create -vserver SVM_name or cluster_name -role Role_Name -cmddirname "vserver iscsi " -access all</block>
   <block id="866c5fb3e37cc4dc71c69fec8582a96d" category="summary">Windows ホストは、ストレージシステム上の LUN を仮想ディスクとして認識します。SnapCenter を使用して、 FC 接続 LUN または iSCSI 接続 LUN を作成および設定できます。</block>
   <block id="1b7557792c66607ae44880c91345062e" category="doc">ディスクを作成および管理する</block>
   <block id="002a0034a22b875f64790639c12dc553" category="admonition">SnapCenter では、ディスク名の変更はサポートされていません。SnapCenter で管理しているディスクの名前を変更すると、 SnapCenter 処理は正常に終了しません。</block>
@@ -3317,12 +3205,10 @@
   <block id="11ed0a0d13245c242749913d8aee1584" category="paragraph">「 nsm を使用」「 nsm ライセンスから削除」。ここで、 NSM_License_Serial_number='510000050';'</block>
   <block id="e4dbf1e5d099c4253a603227e4b3bc08" category="summary">データ保護処理とプロビジョニング処理を実行するには、 ONTAP ストレージへの SnapCenter アクセスを付与するストレージシステムをセットアップする必要があります。スタンドアロンの SVM を追加するか、複数の SVM で構成されるクラスタを追加することができます。</block>
   <block id="787d250b4622b9b1f34f52b01f5768aa" category="doc">ストレージシステムを追加</block>
-  <block id="bb6515f023bab02fba33c79988c80c1c" category="paragraph">データ保護処理とプロビジョニング処理を実行するには、 ONTAP ストレージへの SnapCenter アクセスを付与するストレージシステムをセットアップする必要があります。スタンドアロンの SVM を追加したり、複数の SVM で構成されるクラスタを追加したりできます。</block>
   <block id="70991649072f70fdb060c64c2144c8c8" category="paragraph">SnapCenter では、異なるクラスタに同じ名前のストレージシステムを複数配置することはサポートされていません。SnapCenter でサポートされるストレージシステムには、それぞれ一意の名前およびデータ LIF の IP アドレスを割り当てる必要があります。</block>
   <block id="d8c79769d1510f53b50beb7c46e3e14f" category="list-text">ストレージシステムを設定する際に、 Event Management System （ EMS ；イベント管理システム）と AutoSupport の機能を有効にすることもできます。AutoSupport ツールは、システムの健常性に関するデータを収集し、そのデータをシステムのトラブルシューティング用にネットアップテクニカルサポートに自動的に送信します。</block>
   <block id="8066687b2002e6c5af9c9a8c64166d49" category="paragraph">これらの機能を有効にすると、リソースが保護されたとき、リストアまたはクローニング処理が正常に完了したとき、または処理が失敗したときに、 SnapCenter からストレージシステムに AutoSupport 情報が、ストレージシステムの syslog に EMS メッセージが送信されます。</block>
   <block id="90e51e88af6422ac879c0c7acebf28ca" category="list-text">SnapMirror デスティネーションまたは SnapVault デスティネーションに Snapshot コピーをレプリケートする場合は、デスティネーション SVM またはクラスタとソース SVM またはクラスタへのストレージシステム接続をセットアップする必要があります。</block>
-  <block id="5cecacd0046bcdea358b6cf08ae78310" category="list-text">SnapCenter 4.5 以降では、 ASA アグリゲートで最大 128TB のサイズの ONTAP のアプリケーションデータベースがサポートされます。大規模な LUN の場合、レイテンシを回避するために SnapCenter ではシックプロビジョニング LUN のみを推奨しています。</block>
   <block id="af0393ab7c1c21394683b80f2704864d" category="admonition">ストレージシステムのパスワードを変更すると、スケジュールされたジョブ、オンデマンドバックアップ、およびリストア処理が失敗する場合があります。ストレージ・システムのパスワードを変更した後、 Storage （ストレージ）タブで * Modify （変更） * をクリックしてパスワードを更新できます。</block>
   <block id="d907195077a50076f92791c10bb76a87" category="list-text">[ ストレージシステム ] ページで、 [ 新規作成 ] をクリックします。</block>
   <block id="7e3e16c1661e45c7df525db25b2af547" category="list-text">Add Storage System （ストレージシステムの追加）ページで、次の情報を入力します。</block>
@@ -3609,7 +3495,6 @@
   <block id="ed3518bf4a914f119b6bdecebdd5768f" category="paragraph">サポートされるストレージシステム、アプリケーション、およびデータベースを確認しておく必要があります。</block>
   <block id="c8f093093364799903de04dd2e4130fd" category="list-text">SnapCenter では、データを保護するために ONTAP 8.3.0 以降がサポートされています。</block>
   <block id="cf12f1baaed2b3c195374322d8d857bc" category="list-text">SnapCenter では、さまざまなアプリケーションやデータベースの保護がサポートされます。</block>
-  <block id="e7479e5e57745f65727551483f060a94" category="paragraph">サポートされているアプリケーションおよびデータベースの詳細については、を参照してください<block ref="49d81d143d5c8b402603532056154481" category="inline-link-rx"></block>。</block>
   <block id="4c7a5eef4043ff1b8837e34761c5a044" category="summary">信頼されていない複数の Active Directory ドメインのホスト、ユーザ、およびグループを管理するには、 Active Directory を SnapCenter サーバに登録する必要があります。</block>
   <block id="378f0ed69bcfd27611f3fb3d8d53ebde" category="doc">信頼できない Active Directory ドメインを登録します</block>
   <block id="f33e6bee45fbbfa3b85931361c63b13e" category="list-text">Fully Qualified Domain Name （ FQDN ；完全修飾ドメイン名）に SnapCenter サーバから到達できます。</block>
@@ -4461,7 +4346,6 @@
   <block id="278698b1ed9c8da1a5834234f787974a" category="paragraph">インストール固有のログファイルは、 /custom_location/snapcenter /logs にあります。</block>
   <block id="9638dcdc640dbf6662834e293cbc12b3" category="summary">SnapCenter Plug-in for SAP HANA Database をインストールする Linux ホストは、依存するソフトウェア、データベース、オペレーティングシステムの要件を満たしている必要があります。</block>
   <block id="9e8c841a17bd4c0ec7d85ab94b954bca" category="paragraph">サポートされる構成の最新情報については、 Interoperability Matrix Tool （ IMT ）を参照してください。</block>
-  <block id="d38df2295bfe768071dcfe28649a9438" category="paragraph"><block ref="d38df2295bfe768071dcfe28649a9438" category="inline-link-rx"></block></block>
   <block id="e53ba889508b719f73b0223755d7a145" category="summary">SnapCenter を使用してバックアップをクローニングすることができます。クローニングはプライマリとセカンダリのどちらのバックアップからも実行できます。</block>
   <block id="cc9ec1117ac60bf06e35d58497993679" category="doc">SAP HANA データベースのバックアップをクローニングします</block>
   <block id="ff9ea1d5d9e34a2e53ae21ce93b5318b" category="list-text">リソースまたはリソースグループをバックアップしておく必要があります。</block>
@@ -4620,9 +4504,7 @@
   <block id="407b04b96597bfd636217f14c76066d2" category="list-text">HDBSQL クライアントのパスを設定します。</block>
   <block id="47d403518b5a7a92c3f199666b9bade9" category="summary">SnapCenter Plug-ins Package for Linux をインストールする前に、ホストシステムの基本的なスペースとサイジング要件を理解しておく必要があります。</block>
   <block id="ac33edef4526164e3c7c9a4df9986310" category="doc">SnapCenter Plug-ins Package for Linux をインストールするためのホストの要件</block>
-  <block id="6b1bc00b11a4fd100a577bb7767ec4d9" category="paragraph">サポートされているバージョンの最新情報については、を参照してください<block ref="c061f1a820e4b2619638734a53cd68bf" category="inline-link-rx"></block>。</block>
   <block id="1ec72ff98c807b748e55dd0ff1dbf757" category="admonition">十分なディスクスペースを割り当て、 logs フォルダによるストレージ消費を監視する必要があります。必要なログスペースは、保護するエンティティの数とデータ保護処理の頻度によって異なります。十分なディスクスペースがない場合、最近実行した処理に対してログは作成されません。</block>
-  <block id="f16754a0ee7b9726e25b423ea15a0ec5" category="paragraph">サポートされているバージョンの最新情報については、を参照してください<block ref="c061f1a820e4b2619638734a53cd68bf" category="inline-link-rx"></block>。。</block>
   <block id="3ae095e6e07d17e8918b6a67b8c784c9" category="summary">バックアップジョブを作成する前にバックアップ戦略を定義しておくと、リソースの正常なリストアやクローニングに必要なバックアップを作成するのに役立ちます。バックアップ戦略の大部分は、サービスレベルアグリーメント（ SLA\ ）、目標復旧時間（ RTO\ ）、および目標復旧時点（ RPO\ ）によって決まります。</block>
   <block id="e905ed4042dd0ec46ff540a7c45c6f31" category="doc">SAP HANA データベースのバックアップ戦略を定義する</block>
   <block id="dae0c1941584d66ccde8deef4940141d" category="paragraph">バックアップジョブを作成する前にバックアップ戦略を定義しておくと、リソースの正常なリストアやクローニングに必要なバックアップを作成するのに役立ちます。バックアップ戦略の大部分は、サービスレベルアグリーメント（ SLA ）、目標復旧時間（ RTO ）、および目標復旧時点（ RPO ）によって決まります。</block>
@@ -4673,7 +4555,6 @@
   <block id="361ef555cc4b1de8cd252d68a14901af" category="list-text">ローカル管理者権限を持つドメインユーザがあり、リモートホストに対してローカルログイン権限が付与されている必要があります。</block>
   <block id="19651d78354411794cd21f4636d9840b" category="list-text">Plug-in for SAP HANA Database を Windows ホストにインストールする際に、 SnapCenter Plug-in for Microsoft Windows が自動的にインストールされます。</block>
   <block id="bcb0136ee3c09e3ce7ec64c7148608dd" category="list-text">Windows ホストに Java 1.8 64 ビットがインストールされている必要があります。</block>
-  <block id="455c4cccc6e93cd44f6da472ea4b4644" category="paragraph">要件の最新情報については、 Interoperability Matrix Tool （ IMT ）を参照してください。</block>
   <block id="9226092112d9484949841b47e3b0500e" category="paragraph"><block ref="9226092112d9484949841b47e3b0500e" category="inline-link-rx"></block></block>
   <block id="b838812df6d8e06f0e9a3796d4a00149" category="list-text">Linux ホストに Java 1.8 64 ビットがインストールされている必要があります。</block>
   <block id="f551df54591f7eef7409f694b7b0cc08" category="list-text">Linux ホストで実行されている SAP HANA データベースを Plug-in for SAP HANA Database のインストール時にインストールすると、 SnapCenter Plug-in for UNIX が自動的にインストールされます。</block>
@@ -6257,7 +6138,6 @@
   <block id="e734e6e2e702d38ebab6ed3c050a5e72" category="doc">カスタムプラグインリソースのバックアップをクローニングする</block>
   <block id="a0eb96c1037b9c3af4529b269d3b3516" category="paragraph">PowerShell コマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、クローニングの処理を実行することもできます。PowerShell コマンドレットの詳細については、 SnapCenter コマンドレットのヘルプを使用するか、を参照してください<block ref="aabd79bbab071761889403beced1e0e9" category="inline-link-rx"></block>。</block>
   <block id="e1c05a94a3712659051eb07eafa04bd4" category="paragraph">Java 1.8 （ 64 ビット） Oracle Java または OpenJDK</block>
-  <block id="55aeb811019968d3392cc387d99864aa" category="paragraph">サポートされているバージョンの最新情報については、を参照してください<block ref="c061f1a820e4b2619638734a53cd68bf" category="inline-link-rx"></block></block>
   <block id="edc25de414c7fe73d241458dab7bca2b" category="summary">個々のカスタムプラグインリソースがどのリソースグループにも含まれていない場合は、のリソースページからリソースをバックアップできます。リソースはオンデマンドでバックアップすることも、リソースにポリシーが適用されてスケジュールが設定されている場合は、スケジュールに従って自動的にバックアップが行われるようにすることもできます。</block>
   <block id="8ffa4ba0dd2df5995fd397c72a149679" category="doc">個々のカスタムプラグインリソースをバックアップする</block>
   <block id="ff48fff5b9628fa0fba10705ef9f5e19" category="list-text">[* リソース ] ページで、リソースタイプに基づいて [* 表示 *] ドロップダウンリストからリソースをフィルタリングします。</block>
@@ -7266,4 +7146,222 @@
   <block id="08759ac851b4d644eddfd819f2b366e9" category="sidebar">SnapCenter カスタムプラグインをインストールする準備をします</block>
   <block id="16a0da04ed4ea27dbbb965b612c6b369" category="sidebar">SnapCenter Custom Plug-ins のインストールワークフロー</block>
   <block id="834849dd07442651b1ce8092c92186f0" category="sidebar">SnapCenter Custom Plug-ins をインストールします</block>
+  <block id="f65f3e3be818e9835c8edb554d894c5b" category="paragraph">サポートされているバージョンの最新情報については、を参照してください<block ref="929c20ad32b736c5348d65c31e756cb4" category="inline-link-rx"></block>。</block>
+  <block id="f1c737192a177e293b485053b8acc0b6" category="paragraph"><block ref="35d67ca5fb8eee1c87b329d07f732dac" category="inline-link-rx"></block></block>
+  <block id="41c30ac1e9aa232930e7f9b6b0ce8106" category="paragraph">サポートされているバージョンの最新情報については、を参照してください<block ref="d452377272bd1fa2c1fe23511e2af897" category="inline-link-rx"></block></block>
+  <block id="785cc627c8f85c5259515d6de81c908d" category="paragraph">Windows Server では、 SnapCenter プロビジョニングとデータ保護がサポートされます。サポートされているバージョンの最新情報については、を参照してください<block ref="929c20ad32b736c5348d65c31e756cb4" category="inline-link-rx"></block>。</block>
+  <block id="3e320ac7627c625a9d388ed6223ee9cd" category="list-text">SnapCenter は、 SnapCenter ソフトウェア 4.5 P1 パッチリリースで、ネットアップ ONTAP の Amazon FSX をサポートしています。</block>
+  <block id="45f17314977d7d13b625668a331e0de9" category="paragraph">NetApp ONTAP に Amazon FSX を使用している場合、データ保護処理を実行するには、 SnapCenter サーバホストプラグインを 4.5 P1 パッチリリースにアップグレードする必要があります。</block>
+  <block id="cc788b7e72b2a734dd0985bd1e0e9fe3" category="inline-link">Amazon FSX for NetApp ONTAP のドキュメント</block>
+  <block id="6ae4072dd3f83211384c8e5499a7935c" category="paragraph">NetApp ONTAP の Amazon FSX の詳細については、を参照してください<block ref="6acd76e3ffef3be13d939109e0593e26" category="inline-link-rx"></block>。</block>
+  <block id="770293317b6abf940c328f3b52d4ea4f" category="paragraph">サポートされているアプリケーションおよびデータベースの詳細については、を参照してください<block ref="929c20ad32b736c5348d65c31e756cb4" category="inline-link-rx"></block>。</block>
+  <block id="fe18ba96a84933f468432bb88ec36838" category="paragraph">サポートされているバージョンの最新情報については、を参照してください<block ref="929c20ad32b736c5348d65c31e756cb4" category="inline-link-rx"></block>。</block>
+  <block id="b822295e51d5429c426ab9c2787523da" category="summary">ONTAP の SVM を SnapCenter で使用するように設定し、 vsadmin ロールを使用したくない場合、 SVM ロールを作成する必要があります。</block>
+  <block id="56e14ee5960cfe37cfc3964b6597babb" category="doc">最小権限を持つ SVM ロールを作成します</block>
+  <block id="5394acdbb7aa09ee20a7bb0640ea03bf" category="paragraph">ONTAP で新しい SVM ユーザのロールを作成する場合、実行する必要がある ONTAP CLI コマンドがいくつかあります。ONTAP 内の SVM を SnapCenter で使用するように設定し、 vsadmin ロールを使用したくない場合、このロールが必要です。</block>
+  <block id="607d52fb81ce0d68187ad68e278b2038" category="paragraph">「 security login role create – vserver &lt;svm_name&gt; -role &lt;svm_role_Name\&gt; -cmddirname &lt;permission\&gt;`</block>
+  <block id="e14e1b926c9b2eaf942d0bc044d407f4" category="paragraph">「 security login create -user &lt;user_name\&gt; -vserver &lt;svm_name&gt; -application ontapi -authmethod password -role &lt;svm_Role_Name\&gt;` 」のように設定します</block>
+  <block id="87438cb05e7f3a99d7cb0f708d03820f" category="paragraph">'security login unlock -user &lt;user_name\&gt; -vserver &lt;svm_name\&gt;`</block>
+  <block id="5828bd4572658b3ec60c10c123756d37" category="section-title">SVM ロールの作成および権限の割り当てに使用する ONTAP CLI コマンド</block>
+  <block id="926b7acb0dd0dddac1e9ab03e87150b7" category="paragraph">SVM ロールを作成して権限を割り当てるには、いくつかの ONTAP CLI コマンドを実行する必要があります。</block>
+  <block id="3fd8ba893562f342d865571b0059781e" category="list-text">「 security login role create -role SVM_SVM_SVM_Role_Name -cmddirname 」「 snapmirror list -destinations 」 -vserver SVM_name -access all 」</block>
+  <block id="038be67ee8a52d8b3eab699d5f7c43d3" category="list-text">「 security login role create -role SVM_SVM_SVM_Role_Name -cmddirname 」 event generate-autosupport-log 「 -vserver svm_name -access all 」</block>
+  <block id="16b2bf2485b29324d1d9c52df65291c4" category="list-text">「 security login role create -vserver SVM_name -role SVM_SVM_SVM_Role_Name -cmddirname 」 job history show 「 -access all 」</block>
+  <block id="a0df08dd4d49098e386a72bc7f795b26" category="list-text">「 security login role create -vserver SVM_name -role SVM_SVM_SVM_Role_Name -cmddirname "job stop " -access all"</block>
+  <block id="8205a16103582031e200a6f0062cb43d" category="list-text">「 security login role create -vserver SVM_name -role SVM_SVM_SVM_SVM_SVM_Role_name -cmddirname "LUN" -access all" 」</block>
+  <block id="77d14dd229f22e75b140b12306c243d3" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 lun create 「 -access all</block>
+  <block id="e1591576a5800f25342f1c086407ae01" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 lun delete -access all を指定します</block>
+  <block id="fb12f3dd2e8853d45d6a0ea4b329075d" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 lun igroup add 「 -access all</block>
+  <block id="e53caa86cc62fc0262780e6a3a91891f" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 lun igroup create 「 -access all</block>
+  <block id="c722177ec75912e93d2f92a373f8cbee" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 lun igroup delete 「 -access all</block>
+  <block id="d86a9f51c3fc7522bd8adde0ec1c5197" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」「 lun igroup rename 」 -access all</block>
+  <block id="9b164f1f7736600715be680a2838a2a8" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 lun igroup show 「 -access all</block>
+  <block id="72d871fffa8a9997809196f91f71162a" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 lun mapping add-reporting-nodes 「 -access all 」</block>
+  <block id="daf7b5d2005961b7fd1da6d40f58ecb5" category="list-text">「 security login role create -vserver SVM_name -role SVM_SVM_SVM_Role_Name -cmddirname "LUN mapping create " -access all"</block>
+  <block id="55ee80641b5e4a7129b766c5f1947cb9" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 lun mapping delete 「 -access all</block>
+  <block id="0452c90c862e8bea83d415d798fe7a17" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 lun mapping remove-reporting-nodes 「 -access all</block>
+  <block id="e236a547a0832ed88896e7bd4979e95d" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 lun mapping show 「 -access all</block>
+  <block id="edcd0c1d3a6c50e57c4c4ce6b575a1b2" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 lun modify 「 -access all</block>
+  <block id="ab817b58789bc8d8a949e564646b573e" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 lun move-in -volume 」 -access all</block>
+  <block id="d0624a76d29ac8c4c004528a4f1adb07" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname "LUN offline" -access all</block>
+  <block id="580f5a9628d3dadc6f33a9cc329e7c30" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname "LUN online " -access all</block>
+  <block id="cc726ab19c5f6ebad14747bfb9ca2b1d" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname "LUN resize " -access all</block>
+  <block id="a358cbd4a618edf90cae23f19bebb285" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname "LUN serial" -access all</block>
+  <block id="ffd0adba3d8a766871862b8166efb08a" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 lun show 「 -access all</block>
+  <block id="0f0a2ef01be3fa45bc7144749af7247b" category="list-text">「 security login role create -vserver SVM_name -role SVM_SVM_SVM_Role_Name -cmddirname " network interface " -access readonly 」</block>
+  <block id="c7a78c9e0680e33782bcb69c308c2726" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 snapmirror policy add-rule -access all</block>
+  <block id="581ff44a24f5961a469602e478f31324" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 snapmirror policy modify -rule 「 -access all</block>
+  <block id="6252c3ab8ec38aa610d862bd24476214" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 snapmirror policy remove-rule 「 -access all</block>
+  <block id="aa8a48dbc61b0a5d577ab8dedad6021c" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 snapmirror policy show 「 -access all</block>
+  <block id="a9b4caf91cde1275944a164442502065" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname "snapmirror restore" -access all</block>
+  <block id="af00217dfbaf0ac00b8acacea1925b32" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname "snapmirror show " -access all</block>
+  <block id="88c3c4a361a77d5fcb60740ebbbf5cb6" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname "snapmirror update" -access all</block>
+  <block id="19953e83739ad51ca7dac1f823c087f6" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 snapmirror update ls -set 「 -access all</block>
+  <block id="fbbad2769d29974d8fcb049adbc53deb" category="list-text">「 security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname 」「 version 」 -access all</block>
+  <block id="17dcc82039b4a77cd7c23ba801207bd1" category="list-text">「 security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname 」 volume clone create 「 -access all</block>
+  <block id="837d2dba4c195ceca824ce45a0acfe07" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 volume clone show 「 -access all</block>
+  <block id="2080dab3c671ab071b904311683d6cb4" category="list-text">「 security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname 」 volume clone split start 「 -access all 」に設定されています</block>
+  <block id="e9648215a3769feee22a41bf65b91ee7" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 volume clone split stop 「 -access all 」に設定されています</block>
+  <block id="04d7eef0434438f6c00a815fd04572ab" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 volume create コマンド -access all</block>
+  <block id="e963f7a86dc582d8d9d5943cef628524" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 volume destroy -access all</block>
+  <block id="bcb36311cdabf5e104c29a2455a2b2fb" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 volume file clone create 「 -access all</block>
+  <block id="3e7ef57b8ab69baf16a18ea93b3676d5" category="list-text">「 security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname 」 volume file show -disk -usage 「 -access all 」に設定されています</block>
+  <block id="2fb39c82698a785daa43f03a404c2de4" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 volume modify コマンド -access all `</block>
+  <block id="cb5100c9a1972089037a2b839829a571" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 volume offline 「 -access all</block>
+  <block id="9ae5a705149eb6309787392299485b28" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 volume online 「 -access all</block>
+  <block id="7046b9b0ca926400aabde41868be9e91" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 volume qtree create 「 -access all</block>
+  <block id="8514d8de13a32128695aa1c7aaefd6c4" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 volume qtree delete 「 -access all</block>
+  <block id="d1cb0d4730d56bd837f23d77effbf4ea" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 volume qtree modify 「 -access all</block>
+  <block id="fca38464c2fe372be5ed94f32c3df28e" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 volume qtree show 「 -access all</block>
+  <block id="ee086838f193bf88a02c37c67208165a" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 volume restrict 「 -access all</block>
+  <block id="4ba9f91cc6a8d2e5264c01d345c95146" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 volume show コマンド「 -access all 」</block>
+  <block id="d0357222ef21ed740c39a504d7e72eee" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 volume snapshot create 「 -access all</block>
+  <block id="b85c77d1aef3e63c9fa15283feccd652" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 volume snapshot delete 「 -access all</block>
+  <block id="a4bedde203588ee63f49aff6e5e585f0" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 volume snapshot modify 「 -access all</block>
+  <block id="0c75d81528f220c17258d11ae716c094" category="list-text">「 security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname 」 volume snapshot rename 「 -access all</block>
+  <block id="bfd0636af10180d6df3fc34f36931fbc" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 volume snapshot restore コマンド -access all</block>
+  <block id="17cba5e46a625f105f6d847a1307be4e" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 volume snapshot restore -file 「 -access all</block>
+  <block id="4cd7158fe45c638e224f969fcec016d5" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 volume snapshot show 「 -access all</block>
+  <block id="e51eb8aad82ff131453a8fa1b1165400" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 volume unmount 「 -access all</block>
+  <block id="4a669edbfaf6ae7eedbb967c276d36ad" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 vserver cifs share create 「 -access all</block>
+  <block id="47b7078633ea8280dad3f20d7a492e9a" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 vserver cifs share delete 「 -access all</block>
+  <block id="158c9a291de59c8bfc45a17a6f097560" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 vserver cifs share show 「 -access all</block>
+  <block id="139070ad937f056a58254f79edf225a9" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 vserver cifs show 「 -access all</block>
+  <block id="b3180e322deb797aeb7ca696e1bf4114" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 vserver export-policy create 「 -access all</block>
+  <block id="c2c2354ac74c20c7387d70aa883c0529" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 vserver export-policy delete 「 -access all</block>
+  <block id="3cdfaff1528e474040e3b89b41b06add" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 vserver export-policy rule create 「 -access all</block>
+  <block id="b05817f4014440d7bfff2409db27e664" category="list-text">「 security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname 」 vserver export-policy rule show 「 -access all 」</block>
+  <block id="ed851dfd4557d096974fc08b45d7fe9a" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 vserver export-policy show 「 -access all 」 * の securitylogin role create -vserver SVM_name -role SVM_SVM_Role_Name -cmddirname 「 vserver iscsi connection show 」 -access all 」</block>
+  <block id="f8ab61d03ef9c157f83d8967c5325f72" category="list-text">「 security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname 」 vserver 「 -access readonly</block>
+  <block id="32b2dd2ad5bcd04617f8049be39f3a4e" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 vserver export-policy 「 -access all</block>
+  <block id="070716b587ce6b006f4906a8222fc505" category="list-text">「 security login role create -vserver svm_name -role SVM_Role_Name -cmddirname 」 vserver iscsi 「 -access all</block>
+  <block id="9c4ec47b74ac2ceb05d2eec75e743a66" category="list-text">「 security login role create -vserver SVM_name -role SVM_SVM_SVM_Role_name -cmddirname 」「 volume clone split status 」 -access all 」</block>
+  <block id="8aff8257a02ab428a1f9e5ee25f8d7d7" category="section-title">クラスタディスクを表示します</block>
+  <block id="aa9d9dce3778c7f67373fe9167a9b6b6" category="paragraph">SnapCenter で管理しているクラスタ上のクラスタディスクを表示できます。クラスタ化されたディスクは、 Hosts （ホスト）ドロップダウンからクラスタを選択した場合にのみ表示されます。</block>
+  <block id="84534e956a948c4ab03e578557b1f0b1" category="list-text">[*Host*] ドロップダウン・リストからクラスタを選択します</block>
+  <block id="3375e2b7dd26ec739f41b8bcc986e140" category="summary">最小限の権限で ONTAP クラスタロールを作成して、 SnapCenter の admin ロールを使用して ONTAP で処理を実行する必要がないようにする必要があります。</block>
+  <block id="822239f41b07c86cff067dac38fab7f4" category="doc">最小限の権限で ONTAP クラスタロールを作成します</block>
+  <block id="d96a08e21a2a6f654ce7bfb34d9c3bf4" category="section-title">クラスタロールの作成および権限の割り当てに使用する ONTAP CLI コマンド</block>
+  <block id="166504d6fb19fa3fcbbf622275eef589" category="paragraph">クラスタロールを作成して権限を割り当てるには、いくつかの ONTAP CLI コマンドを実行する必要があります。</block>
+  <block id="41d7ade3381c454a1329620f9f658b8b" category="list-text">「 security login role create -role Role_Name -cmddirname 」 cluster identity modify -vserver cluster_name または cluster_name -access all 」を指定します</block>
+  <block id="6fb89d73c4a5ac47fffbb74dfa2e83f1" category="list-text">「 security login role create -role role_Name -cmddirname 」 cluster identity show -vserver cluster_name -access all 」を参照してください</block>
+  <block id="065992cd0013f37f03b4e13303b9ba92" category="list-text">「 security login role create -role Role_Name -cmddirname 」 cluster modify -vserver cluster_name -access all `</block>
+  <block id="6cf57dddc7246be83fead826cd2d488b" category="list-text">「 security login role create -role Role_Name -cmddirname 」 cluster peer show -vserver cluster_name -access all `</block>
+  <block id="09835700a8ab8639649722dc18579f0c" category="list-text">「 security login role create -role Role_Name -cmddirname 」 cluster show -vserver Cluster_name -access all `</block>
+  <block id="9d566854ec7ef14de553dc0b2222fae0" category="list-text">「 security login role create -role Role_Name -cmddirname 」 event generate-autosupport-log 」 -vserver cluster_name -access all `</block>
+  <block id="cd2a321672946fd6e39976559e1e72a9" category="list-text">security login role create -vserver cluster_name -role Role_Name -cmddirname " job history show " -access all `</block>
+  <block id="bb513c5a705eb742be0e75eb7c864f5b" category="list-text">security login role create -vserver cluster_name -role Role_Name -cmddirname "job stop " -access all `</block>
+  <block id="6435842f20dddcddfd00a9e7ec2f3111" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname "lun" -access all</block>
+  <block id="3c9458c1094a42df94f932d5e25512d1" category="list-text">security login role create -vserver cluster_name -role Role_Name -cmddirname "lun create " -access all `</block>
+  <block id="8200118795b8d66f1f807eec71028cb4" category="list-text">security login role create -vserver cluster_name -role Role_Name -cmddirname "lun delete " -access all `</block>
+  <block id="42ce9cd18976f6863ec783251f2d8521" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」「 lun igroup add 」 -access all</block>
+  <block id="f140ea9c1f309982226639467233b9c0" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」「 lun igroup create 」 -access all</block>
+  <block id="4b7454eac1957610e053adc631da384d" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」「 lun igroup delete 」 -access all</block>
+  <block id="6e80afbe9243a229326544a6df0c8dce" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」「 lun igroup modify 」 -access all 」を参照してください</block>
+  <block id="1f70e4acb59ba954f59173d3bef7133b" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」「 lun igroup rename 」 -access all</block>
+  <block id="4df94b70c4d7aef0ecd152f81ca9a540" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 lun igroup show コマンド -access all 」を参照してください</block>
+  <block id="e0b9daf69f5446b1bb3ebb53253427b3" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」「 lun mapping add-reporting-nodes 」 -access all</block>
+  <block id="1e4485deae6a6fe2d519a4fbe53c48ac" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」「 lun mapping create 」 -access all</block>
+  <block id="44d778fa0d6d34a95d063030ccae1afb" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」「 lun mapping delete 」 -access all</block>
+  <block id="11bc2ead1a61545816e624344f23f139" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」「 lun mapping remove-reporting-nodes 」 -access all</block>
+  <block id="55041f58aa0c95da91a67c2c2b8828a3" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 lun mapping show 「 -access all</block>
+  <block id="b976ebba1da3c0ddbe10f1eb83150d94" category="list-text">security login role create -vserver cluster_name -role Role_Name -cmddirname "lun modify " -access all `</block>
+  <block id="fbb5b9fce29fac9599ff22c8ad1618bd" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 lun move-in -volume "-access all 」を参照してください</block>
+  <block id="dda93f2e0ae7e37e9a96826890d44ce0" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname "LUN offline" -access all</block>
+  <block id="cc9810663f08defa2fc3fb4db0b81b5b" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」「 lun online 」 -access all</block>
+  <block id="04d4686bd9595dcf8e7dbcb486a35ec2" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」「 lun persistent-reservation clear 」 -access all</block>
+  <block id="0e1c73715519d97ce6887df359f9b078" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 lun resize 「 -access all</block>
+  <block id="bda55a4db3da7ceecc0da18674adcb61" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」「 lun serial 」 -access all</block>
+  <block id="4fa9cd5875ab3ba77be7acffa681c32e" category="list-text">security login role create -vserver cluster_name -role Role_Name -cmddirname "lun show " -access all `</block>
+  <block id="8600122b6dc46489d22a82a44798648c" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 network interface create コマンド -access readonly 」を参照してください</block>
+  <block id="765a8e041e5317b44f9611533b80e9f5" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 network interface delete 「 -access readonly 」</block>
+  <block id="c1da9af46934efe191b635569c8a647d" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 network interface modify 「 -access readonly</block>
+  <block id="9a51991e1f433b4cc9830e2c68aaf8b2" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 network interface show 「 -access readonly 」</block>
+  <block id="7f8e9cf7769696e6f10a6ce7e8cdd581" category="list-text">security login role create -vserver cluster_name -role Role_Name -cmddirname "security login" -access readonly `</block>
+  <block id="2ac25784ce91a23d15f2c0dd086e195b" category="list-text">「 security login role create -role Role_Name -cmddirname 」「 snapmirror create 」 -vserver cluster_name -access all 」を参照してください</block>
+  <block id="c83fbd1412fe34809d8ea25a89cfdc00" category="list-text">「 security login role create -role Role_Name -cmddirname 」 snapmirror list -destinations 「 -vserver cluster_name -access all 」を指定します</block>
+  <block id="141edf7eae1b698eb667cdadbc54120d" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 snapmirror policy add -rule 「 -access all</block>
+  <block id="2b0f27523f648e21356ed5347cc543e1" category="list-text">security login role create -vserver cluster_name -role Role_Name -cmddirname "snapmirror policy create " -access all `</block>
+  <block id="f8e0b6d327989ea6c240e28d2e57664c" category="list-text">security login role create -vserver cluster_name -role Role_Name -cmddirname "snapmirror policy delete " -access all `</block>
+  <block id="11e637966fe648c56962f5ca2a03873d" category="list-text">security login role create -vserver cluster_name -role Role_Name -cmddirname "snapmirror policy modify " -access all `</block>
+  <block id="eb365078d1f7f32487c00233a9d8ae06" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 snapmirror policy modify -rule 「 -access all 」を参照してください</block>
+  <block id="b255ccd61bcc850770cb349084ceb4d5" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 snapmirror policy remove-rule 「 -access all</block>
+  <block id="fa3aa40455dea8ed8cfe131dd485280a" category="list-text">security login role create -vserver cluster_name -role Role_Name -cmddirname "snapmirror policy show " -access all `</block>
+  <block id="6e48ea27976d6131772400c341a9deb6" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname "snapmirror restore" -access all</block>
+  <block id="457c22757ec75c7e19faf55dddfb85f0" category="list-text">security login role create -vserver cluster_name -role Role_Name -cmddirname "snapmirror show " -access all `</block>
+  <block id="f6a0b425dd1a436357db0db7df5a9986" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 snapmirror show -history 「 -access all</block>
+  <block id="76c317432817bd95b625fd259088c202" category="list-text">security login role create -vserver cluster_name -role Role_Name -cmddirname "snapmirror update" -access all `</block>
+  <block id="b5381819130c65198a003be9b2e91318" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 snapmirror update ls -set 「 -access all</block>
+  <block id="7d1cc5c179bdb35a18f65b23ed628ab3" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 system license add 「 -access all</block>
+  <block id="8125d610c88faa37aadfe1ed2f3ad56a" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 system license clean-up 「 -access all</block>
+  <block id="6f2b6612ab7bf1fcb9b74ca870f8c6f8" category="list-text">security login role create -vserver cluster_name -role Role_Name -cmddirname "system license delete " -access all `</block>
+  <block id="7fe31fc1cbc99839e1b3fa44bec88b27" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 system license show 「 -access all</block>
+  <block id="1b16b25a24aa4b14b9ec16904b762004" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 system license status show 「 -access all 」を参照してください</block>
+  <block id="01d5fb22cc1b4d098b8fd01cf24ce309" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 system node modify コマンド -access all `</block>
+  <block id="f27ebd256ee27078062cfb222948679b" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 system node show 「 -access all 」を参照してください</block>
+  <block id="1e6eabcba8d45fc013eb34cb8ca09177" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 system status show 「 -access all 」を参照してください</block>
+  <block id="1707991108a48830f373249b8ca8f2f3" category="list-text">security login role create -vserver cluster_name -role Role_Name -cmddirname " version " -access all `</block>
+  <block id="42c85301ed42fd405276f656f13da6f9" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 volume clone create コマンド -access all `</block>
+  <block id="f4366a8c8fe655583176fe88836d8741" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 volume clone show 「 -access all 」を参照してください</block>
+  <block id="47916ecea131de052569cceebeb87b1e" category="list-text">security login role create -vserver cluster_name -role Role_Name -cmddirname " volume clone split start " -access all `</block>
+  <block id="f9b6c9608976bafc56db4cd921ae3260" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 volume clone split stop 「 -access all</block>
+  <block id="dfed61eb5e95a8e322a3080839b7663a" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 volume create コマンド -access all `</block>
+  <block id="1a4cd26b7cdf375544e5a3f915526eaa" category="list-text">security login role create -vserver cluster_name -role Role_Name -cmddirname " volume destroy " -access all `</block>
+  <block id="a4cd6fd05f369229f5ff3517716e11c0" category="list-text">security login role create -vserver cluster_name -role Role_Name -cmddirname " volume file clone create " -access all `</block>
+  <block id="7baaee5b29e9f98e2de503b20ad69821" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 volume file show -disk -usage 「 -access all 」を参照してください</block>
+  <block id="ab3ef7be09ebb30a12041ede069dcc02" category="list-text">security login role create -vserver cluster_name -role Role_Name -cmddirname " volume modify " -access all `</block>
+  <block id="17cc98d3d84572f338beca75b0c6887a" category="list-text">security login role create -vserver cluster_name -role Role_Name -cmddirname " volume offline " -access all `</block>
+  <block id="3bbadaaac59ac2a2fb0f95b8b73fdf8c" category="list-text">security login role create -vserver cluster_name -role Role_Name -cmddirname " volume online " -access all `</block>
+  <block id="a680d86da52d7bbb45604e60c4afd634" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 volume qtree create コマンド -access all `</block>
+  <block id="de6eaafb05dbbde5f12fb2a21e99a326" category="list-text">security login role create -vserver cluster_name -role Role_Name -cmddirname " volume qtree delete " -access all `</block>
+  <block id="8445317c33072728f166c18ff2f84baf" category="list-text">security login role create -vserver cluster_name -role Role_Name -cmddirname " volume qtree modify " -access all `</block>
+  <block id="df14d96c6a7bd7f0f6631751931d5746" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 volume qtree show 「 -access all</block>
+  <block id="7ac86c11eccb6340aa050a3e555d8db0" category="list-text">security login role create -vserver cluster_name -role Role_Name -cmddirname " volume restrict " -access all `</block>
+  <block id="9df5f588230d161b52b8c20cd47eea83" category="list-text">security login role create -vserver cluster_name -role Role_Name -cmddirname " volume show " -access all `</block>
+  <block id="cd508097ec400feea377c6655cc4819e" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 volume snapshot create コマンド -access all `</block>
+  <block id="36e91b7d4fcc65841760ef016f9c8ffb" category="list-text">security login role create -vserver cluster_name -role Role_Name -cmddirname " volume snapshot delete " -access all `</block>
+  <block id="5315c14c33a0386fce80f563f10d78e0" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 volume snapshot modify コマンド -access all `</block>
+  <block id="03aeefb809109e8ecd3a38cfd5b46a0a" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 volume snapshot promote 「 -access all 」を参照してください</block>
+  <block id="e9a713b199ef8540aa6a81c5d786afa8" category="list-text">security login role create -vserver cluster_name -role Role_Name -cmddirname " volume snapshot rename " -access all `</block>
+  <block id="d5c0067182f0fbf9742d150f66c08285" category="list-text">security login role create -vserver cluster_name -role Role_Name -cmddirname " volume snapshot restore " -access all `</block>
+  <block id="71d4fa6008943dc1e940b561a28ec5d0" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 volume snapshot restore -file 「 -access all</block>
+  <block id="712257cb8c43c470d5578f86d7ded391" category="list-text">security login role create -vserver cluster_name -role Role_Name -cmddirname " volume snapshot show " -access all `</block>
+  <block id="afd3eed3edbaad972ba62d67f18f3ac7" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 volume unmount 「 -access all</block>
+  <block id="3f5bfa3b7ef349005342ec7aadf47404" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」「 vserver 」 -access all</block>
+  <block id="06cb86f468fd9d1c1a1a18c2c732fd3d" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 vserver cifs create 「 -access all</block>
+  <block id="248f790c6cb7bb67421f8d0a60a20271" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 vserver cifs delete 「 -access all</block>
+  <block id="71fc96d862f587d46eb1fecd916c69e3" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 vserver cifs modify 「 -access all</block>
+  <block id="89d5eb414e4f702cab9e4463bf265917" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 vserver cifs share modify 「 -access all</block>
+  <block id="451120e092f0bbdab236ac5ccdd3bcd9" category="list-text">「 security login role create -vserver Cluster_name -role Role_Name -cmddirname 」 vserver cifs share create 「 -access all</block>
+  <block id="308d9fe0fc4c4aec91c1b8e3abd331d7" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 vserver cifs share delete 「 -access all</block>
+  <block id="09bede4a4490d781c84587833cad2661" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 vserver cifs share show 「 -access all</block>
+  <block id="4acc0874e4ada0508e93e166ea464e7e" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 vserver cifs show 「 -access all</block>
+  <block id="5c26d9a447e90a1129959ac809047173" category="list-text">「 security login role create -vserver Cluster_name -role Role_Name -cmddirname 」 vserver create 「 -access all</block>
+  <block id="d5448cebecb0bff66f17ac1f3ae84d4a" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 vserver export-policy create 「 -access all</block>
+  <block id="1b614a5b1de43cb19d5f24d9189833ab" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 vserver export-policy delete 「 -access all</block>
+  <block id="49a893e4b823e7a150c88820d384be71" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 vserver export-policy rule create 「 -access all</block>
+  <block id="43a2f919116eb07e7a18dd66c41ceef1" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 vserver export-policy rule delete 「 -access all</block>
+  <block id="9e29d26a51271782767627a4909c1f4d" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 vserver export-policy rule modify 「 -access all</block>
+  <block id="67fed3defef9db7a9446080c3349284b" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 vserver export-policy rule show 「 -access all</block>
+  <block id="a229876514e113542518cd6020f30e68" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 vserver export-policy show 「 -access all</block>
+  <block id="6b556c778a011334a41ad4c746997184" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 vserver iscsi connection show 「 -access all</block>
+  <block id="59897f08e771d646ccdbe064b379e1f3" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 vserver modify 「 -access all</block>
+  <block id="a4ed44c4f710ccc95d64b935f9ea9d03" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname 」 vserver show 「 -access all</block>
+  <block id="032615c5bcc68f759618748b90e724e4" category="paragraph">データ保護処理とプロビジョニング処理を実行するためには、 ONTAP ストレージまたは NetApp ONTAP 用の Amazon FSX に SnapCenter アクセスを付与するストレージシステムをセットアップする必要があります。</block>
+  <block id="077adf941b6f42926593e8ffdeb998bc" category="paragraph">スタンドアロンの SVM を追加したり、複数の SVM で構成されるクラスタを追加したりできます。NetApp ONTAP に Amazon FSX を使用している場合は、 SnapCenter 4.5 P1 の fsxadmin アカウントを使用して複数の SVM で構成される FSX 管理 LIF を追加するか、 SnapCenter に FSX SVM を追加できます。</block>
+  <block id="74ae0888147d892b12bb807a0b81b3af" category="paragraph">FSX SVM を追加した場合は、ここに FSX SVM が表示されます。</block>
+  <block id="6f9f8c6ff90de911912e63ac72e07121" category="paragraph">fsxadmin を使用して FSX クラスタを追加した場合、 FSX クラスタがここに表示されます。</block>
+  <block id="74e84f9442fdb7717385ee092400869a" category="paragraph">IE 10 以前のバージョンを使用している場合、 SnapCenter UI が正しくロードされません。IE 11 にアップグレードする必要があります。</block>
+  <block id="0fdef8ecc33033bd2416bb77fbe197ca" category="paragraph">サポートされているバージョンの最新情報については、を参照してください<block ref="d452377272bd1fa2c1fe23511e2af897" category="inline-link-rx"></block>。</block>
+  <block id="a8ad5b50c16f63c3b827493e08f9005e" category="paragraph">サポートされているバージョンの最新情報については、を参照してください<block ref="d452377272bd1fa2c1fe23511e2af897" category="inline-link-rx"></block>。。</block>
+  <block id="ba239d3d0591ceb6004d736c087f5101" category="paragraph">。<block ref="809efd359aada3bab1427bd054c95ead" category="inline-link-rx"></block> 要件に関する最新情報が含まれています。</block>
+  <block id="3b9b501ce9ff4819d459190476007edc" category="paragraph">たとえば 'customText_policy_hostname や resource_hostname などですデフォルトでは、 Snapshot コピー名の後ろにタイムスタンプが追加されます。</block>
+  <block id="88d8212b57ef4a806bbe46dc391aebdf" category="paragraph">内部データベースの Snapshot コピー（ TABLOCK ）を使用せずに、チェックを制限してロックを取得します。</block>
+  <block id="bed7a5b2a53899a17a7ddb2e244ad497" category="paragraph">内部データベースの Snapshot コピーを使用する代わりに、チェックを制限してロックを取得する場合は、「 * 」を選択します。このオプションを選択すると、チェックが制限され、内部データベースの Snapshot コピーを使用する代わりにロックが取得されます。</block>
+  <block id="256c5d04c9cf631cb051364b250a65db" category="paragraph">ONTAP およびアプリケーションプラグインの最小要件については、を参照してください<block ref="4df7f43eee7332634b184fc0bf6af5a5" category="inline-link-rx"></block></block>
+  <block id="9486c31166cc0784ddae85134aa115cf" category="paragraph">を参照してください<block ref="4df7f43eee7332634b184fc0bf6af5a5" category="inline-link-rx"></block></block>
+  <block id="170f8235332a3dc7aef513f9e7f38495" category="list-text"><block ref="c14397e351cc69582a4d957b8ce42013" category="inline-link-rx"></block></block>
+  <block id="736b6babd1e0dcc9352ee5be0cba8093" category="paragraph">サポートされている Oracle のバージョンの最新情報については、を参照してください<block ref="929c20ad32b736c5348d65c31e756cb4" category="inline-link-rx"></block>。</block>
+  <block id="4fce23fd62d0444906188b4379914b4a" category="paragraph">SnapCenter Plug-in for Oracle Database でサポートされる構成をに示します<block ref="929c20ad32b736c5348d65c31e756cb4" category="inline-link-rx"></block>。</block>
+  <block id="cddfaa01c32e2362546c78364751248b" category="admonition">SnapCenter Plug-ins Package for AIX に含まれている SnapCenter Plug-in for UNIX では、同時ボリュームグループはサポートされていません。</block>
 </blocks>

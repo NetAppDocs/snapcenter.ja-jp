@@ -30,13 +30,10 @@ summary: ホストを追加してプラグインパッケージをインスト�
 * root ユーザまたは root 以外のユーザ用にパスワードベースの SSH 接続を有効にしておく必要があります。
 * Windows ホストに Java 1.8 64 ビットがインストールされている必要があります。
 +
-要件の最新情報については、 Interoperability Matrix Tool （ IMT ）を参照してください。
-
-+
 http://www.java.com/en/download/manual.jsp["すべてのオペレーティングシステム用の Java のダウンロード"]
 
 +
-http://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool で確認できます"]
+。 https://mysupport.netapp.com/matrix/imt.jsp?components=100747;&solution=1257&isHWU&src=IMT["Interoperability Matrix Tool で確認してください"] 要件に関する最新情報が含まれています。
 
 
 
@@ -47,13 +44,10 @@ http://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool で確�
 * root ユーザまたは root 以外のユーザ用にパスワードベースの SSH 接続を有効にしておく必要があります。
 * Linux ホストに Java 1.8 64 ビットがインストールされている必要があります。
 +
-要件の最新情報については、 Interoperability Matrix Tool （ IMT ）を参照してください。
-
-+
 http://www.java.com/en/download/manual.jsp["すべてのオペレーティングシステム用の Java のダウンロード"]
 
 +
-http://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool で確認できます"]
+。 https://mysupport.netapp.com/matrix/imt.jsp?components=100747;&solution=1257&isHWU&src=IMT["Interoperability Matrix Tool で確認してください"] 要件に関する最新情報が含まれています。
 
 * Linux ホストで実行されている SAP HANA データベースを Plug-in for SAP HANA Database のインストール時にインストールすると、 SnapCenter Plug-in for UNIX が自動的にインストールされます。
 
