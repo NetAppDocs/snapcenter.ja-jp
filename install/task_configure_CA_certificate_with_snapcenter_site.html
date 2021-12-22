@@ -1,0 +1,4175 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head class="at-element-marker">
+  <title>SnapCenter サイトで CA 証明書を設定します</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="SnapCenter サイトで CA 証明書を設定します" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/ja-jp/snapcenter/install/task_configure_CA_certificate_with_snapcenter_site.html" />
+	<meta property="og:description" content="CA 証明書は、 Windows ホスト上で SnapCenter サイトを使用して設定する必要があります。" />
+  <meta property="og:image" content="https://docs.netapp.com/ja-jp/snapcenter/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/>
+  
+  <meta name="description" content="CA 証明書は、 Windows ホスト上で SnapCenter サイトを使用して設定する必要があります。">
+  <meta name="keywords" content=" SnapCenter, configure, CA certificate">
+  
+  
+
+  <!-- Icons -->
+  <link rel="icon" href="/ja-jp/snapcenter/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed -->
+  
+
+  <!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+  <!-- Elastic Search -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
+
+  <!-- Controls AsciiDoctor Admonition Blocks -->
+  <link rel="stylesheet" type="text/css" href="/ja-jp/snapcenter/css/font-awesome.min.css">
+
+  <!-- Controls the shadow effect for search dropdown menu -->
+  <link rel="stylesheet" href="/ja-jp/snapcenter/css/boxshadowproperties.css">
+
+  <!-- NetApp CSS controls the technical content -->
+  <link rel="stylesheet" type="text/css" href="/ja-jp/snapcenter/css/netapp.css">
+
+  <!-- WWW CSS Content -->
+  <link rel="stylesheet" type="text/css" href="/ja-jp/snapcenter/css/www-luci-dotcom.min.css">
+  <link rel="stylesheet" type="text/css" href="/ja-jp/snapcenter/css/www-netapp-dotcom.css">
+  <link rel="stylesheet" href="/ja-jp/snapcenter/css/www-netapp-library-critical.min.css" media="all" >
+  <link rel="stylesheet" href="/ja-jp/snapcenter/css/www-netapp-library-non-critical.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="/ja-jp/snapcenter/css/www-netapp-library-global-header-footer.min.css">
+
+  <!-- NetApp IE Customizations -->
+  <link rel="stylesheet" href='/ja-jp/snapcenter/css/na-utility.css' type='text/css'>
+  <link rel="stylesheet" href='/ja-jp/snapcenter/css/na-sidebar.css' type='text/css'>
+  <link rel='stylesheet' href='/ja-jp/snapcenter/css/clouddocs.css' type='text/css'>
+  <link rel='stylesheet' href='/ja-jp/snapcenter/css/na-pagenav.css' type='text/css'>
+
+  
+  <link rel="stylesheet" href="/ja-jp/snapcenter/css/landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/ja-jp/snapcenter/css/tabbed-blocks.css" type="text/css">
+  <link rel="stylesheet" href='/ja-jp/snapcenter/css/product-family.css' type="text/css">
+  
+
+  
+  <link rel='stylesheet' href='/ja-jp/snapcenter/css/na-feature.css' type='text/css'>
+  
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  <!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
+  
+    <script src='/ja-jp/snapcenter/js/na-search.js'></script>
+  
+
+  
+  <script src='/ja-jp/snapcenter/js/na-pagenav.js'></script>
+  
+
+  <link rel='stylesheet' href='/ja-jp/snapcenter/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/ja-jp/snapcenter/css/prism-netapp.css' type='text/css'>
+
+
+  <script src='/ja-jp/snapcenter/js/na-utility.js'></script>
+  <script src='/ja-jp/snapcenter/js/clouddocs.js'></script>
+  <script>
+  if (document.location.hostname === "docs.netapp.com") {
+    var head = document.getElementsByTagName('head')[0];
+    var adobe = document.createElement("script");
+    adobe.type = "text/javascript";
+    adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js";
+    head.appendChild(adobe);
+  }
+  </script>
+  <script src='/ja-jp/snapcenter/js/jquery.navgoco.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src='/ja-jp/snapcenter/js/toc.js'></script>
+  <script src='/ja-jp/snapcenter/js/customscripts.js'></script>
+
+  <script>
+      $(document).ready(function() {
+          
+          var collapseOnInit = true;
+          
+
+          var navSettings = {
+              "caretHtml": '',
+              "accordion": collapseOnInit,
+              "openClass": 'active', // open
+              "save": false, // leave false or nav highlighting doesn't work right
+              "cookie": {
+                  "name": 'navgoco',
+                  "expires": false,
+                  "path": '/'
+              },
+              "slide": {
+                  "duration": 400,
+                  "easing": 'swing'
+              }
+          };
+
+          // Initialize navgoco with default options
+          $("#mysidebar").navgoco(navSettings);
+          
+
+          $("#collapseAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', false);
+          });
+
+          $("#expandAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', true);
+          });
+
+      });
+
+  </script>
+  <script>
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+  </script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-81697994-3"></script>
+  <script>
+  if (document.location.hostname === "docs.netapp.com") {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-81697994-3');
+  }
+  </script>
+  <script src='/ja-jp/snapcenter/js/version-dropdown.js'></script>
+  <script src='/ja-jp/snapcenter/js/product-family.js'></script>
+  <script src='/ja-jp/snapcenter/js/FileSaver.min.js'></script>
+  <script src='/ja-jp/snapcenter/js/jszip-utils.min.js'></script>
+  <script src='/ja-jp/snapcenter/js/jszip.min.js'></script>
+  <script src='/ja-jp/snapcenter/js/pdf-ux.js'></script>
+</head>
+
+
+  <body class role="document">
+    <div id="page" class="n-off-canvas-menu">
+      <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
+      <div class="n-off-canvas-menu__content-wrap">
+        <header class="site-header" id="banner">
+  <!-- Start top_hat -->
+  <div class="n-top-hat">
+    <div class="n-container">
+      <div class="n-top-hat__cross-property-nav">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/products-a-z/" class="n-top-hat__link">製品とソリューション</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/support-and-training/netapp-university/" class="n-top-hat__link">サポートとトレーニング</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://cloud.netapp.com" class="n-top-hat__link">Cloud Central</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://community.netapp.com/" class="n-top-hat__link">コミュニティ</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://blog.netapp.com/" class="n-top-hat__link">ブログ</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://customers.netapp.com/en/" class="n-top-hat__link">ユーザ事例</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">お問い合わせ</a>
+          </li>
+        </ul>
+      </div>
+      <div class="n-top-hat__utils">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">お問い合わせ</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End top_hat -->
+
+  <!-- Start property bar -->
+  <style>
+    .n-property-navigation-bar__menus--desktop-experience .n-menu--mega__default-content__heading span {
+    color: #34B0FF;
+    }
+  </style>
+  <div class="n-property-bar " data-ntap-ui="sticky-nav">
+    <div class="n-property-bar__inner-wrap">
+      <div class="n-property-bar__menu-toggle">
+        <a href="#" class="n-property-bar__menu-toggle-link">
+          <span class="n-property-bar__menu-toggle-text">Menu</span>
+          <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
+            <title>bars</title>
+            <use xlink:href="/ja-jp/snapcenter/common/svg/sprite.svg#bars"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="n-property-bar__property-mark ">
+        <a href="https://www.netapp.com" class="n-property-bar__property-link">
+          <div class="n-property-bar__logo">
+            <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
+              <title>netapp-mark</title>
+              <use xlink:href="/ja-jp/snapcenter/common/svg/sprite.svg#netapp-mark"></use>
+            </svg>
+            <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
+              <title>netapp-logo</title>
+              <use xlink:href="/ja-jp/snapcenter/common/svg/sprite.svg#netapp-logo"></use>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      
+      <div class="search-property-bar">
+        <div id="search-demo-container" class="searchbox n-property-bar__search">
+          <div id="react-search" 
+          data-search-html="/ja-jp/snapcenter/search.html"
+          data-type="widget" 
+          data-placeholder="ドキュメントを検索" 
+          data-no-results-found="{query}に該当する結果はありません" 
+          data-did-you-mean="{suggestion} を検索" 
+          data-no-results-found-did-you-mean="{query} に該当する結果はありません。{suggestion} の間違いではありませんか?" 
+          data-results-found="{hitCount} 件見つかりました"  
+          data-sk-es-pf-indexes=""></div>
+          <button class="n-property-bar__search-toggle-button" type="button">
+            <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/snapcenter/common/svg/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="n-property-bar__toolbar">
+    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
+      <div id="ie-i18n-menu">
+      <span class="ie-i18n-lang">日本語</span>
+        <button class="ie-i18n-icon-container" type="button">
+          <svg class="n-globe__icon" aria-labelledby="title">
+            <title>globe</title>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/snapcenter/common/svg/sprite.svg#globe"></use>
+          </svg>
+        </button>
+      </div>
+      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
+        <div class="n-language-selector-menu">
+          <ul class="n-menu__list">
+            <li class="n-menu__list-column">
+              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/ja-jp/snapcenter/install/task_configure_CA_certificate_with_snapcenter_site.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/us-en/snapcenter/install/task_configure_CA_certificate_with_snapcenter_site.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/zh-cn/snapcenter/install/task_configure_CA_certificate_with_snapcenter_site.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
+                </li></ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- End Language Selector -->
+
+    <div class="n-property-bar__cta"></div>
+  </div>
+  <script>
+    $(function(){
+        var currentLocalization = $('html').attr('lang');
+
+        var localizationsDictionary = {
+            "en-CA" : "https://www.netapp.com/search/index.aspx?for_cr=canada&",
+            "en-IN" : "https://www.netapp.com/search/index.aspx?for_cr=india&",
+            "nl-NL" : "https://www.netapp.com/search/index.aspx?for_cr=netherlands&",
+            "ru-RU" : "https://www.netapp.com/search/index.aspx?for_cr=russia&",
+            "sv-SE" : "https://www.netapp.com/search/index.aspx?for_cr=sweden&",
+            "it-IT" : "https://www.netapp.com/search/index.aspx?for_cr=italy&",
+            "he-IL" : "https://www.netapp.com/search/index.aspx?for_cr=israel&",
+            "ko-KR" : "https://www.netapp.com/search/index.aspx?for_cr=korea&",
+            "zh-TW" : "https://www.netapp.com/search/index.aspx?for_cr=taiwan&",
+            "en-GB" : "https://www.netapp.com/search/index.aspx?for_cr=unitedkingdom&",
+            "en-SG" : "https://www.netapp.com/search/index.aspx?for_cr=asean&",
+            "en-AU" : "https://www.netapp.com/search/index.aspx?for_cr=australia&",
+            "pt-BR" : "https://www.netapp.com/search/index.aspx?for_cr=brasil&",
+            "de-CH" : "https://www.netapp.com/search/index.aspx?for_cr=switzerland&",
+            "es-MX" : "https://www.netapp.com/search/index.aspx?for_cr=mexico&"
+        };
+
+        if($('html').hasClass('ntap-whitelisted') && localizationsDictionary.hasOwnProperty(currentLocalization)) {
+            $('.n-property-bar__property-link').attr('href', '/');
+        }
+    });
+  </script>
+  <!-- End property bar -->
+</header>
+
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+  <!-- Sidebar Column -->
+  
+  <div class="col-md-3" >
+      <div class="n-pdf-header">
+  <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+    <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>利用可能なPDF<span>
+    </span>
+  </a>
+</div>
+<div class="n-pdf-body-container">
+  <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+        <a target="_blank" href="/ja-jp/snapcenter/pdfs/fullsite-sidebar/SnapCenter_ソフトウェアのドキュメント.pdf" >
+          <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>このドキュメントサイトのPDF</a>
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/概念.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            概念
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/SnapCenter_の_RBAC.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            SnapCenter の RBAC
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/SnapCenter_サーバのインストール.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            SnapCenter サーバのインストール
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/SnapCenter_サーバをインストールする準備をします.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            SnapCenter サーバをインストールする準備をします
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/CA_証明書を設定します.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            CA 証明書を設定します
+          </a>
+          
+
+
+
+
+
+
+
+
+    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
+  <a target="_blank" href="/ja-jp/snapcenter/pdfs/pages/install/task_configure_CA_certificate_with_snapcenter_site.pdf" >
+    <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+    PDF of this page
+  </a>
+</li>
+
+</ul>
+  
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/ハイアベイラビリティを設定する.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            ハイアベイラビリティを設定する
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/ロールベースアクセス制御__RBAC__の設定.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            ロールベースアクセス制御（ RBAC ）の設定
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/ストレージシステムをプロビジョニング.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            ストレージシステムをプロビジョニング
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/Windows_ホストでストレージをプロビジョニングする.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            Windows ホストでストレージをプロビジョニングする
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/LUN_ストレージを設定します.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            LUN ストレージを設定します
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/Microsoft_SQL_Server_データベースを保護する.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            Microsoft SQL Server データベースを保護する
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/SnapCenter_Plug_in_for_Microsoft_SQL_Server.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            SnapCenter Plug-in for Microsoft SQL Server
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/SQL_Server_リソースのバックアップ戦略.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            SQL Server リソースのバックアップ戦略
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/SQL_Server_のリストア戦略.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            SQL Server のリストア戦略
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/SnapCenter_Plug_in_for_Microsoft_SQL_Server_をインストールする準備をします.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            SnapCenter Plug-in for Microsoft SQL Server をインストールする準備をします
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/SnapCenter_Plug_in_for_Microsoft_SQL_Server_をインストールします.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            SnapCenter Plug-in for Microsoft SQL Server をインストールします
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/CA_証明書を設定します.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            CA 証明書を設定します
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/SnapManager_for_Microsoft_SQL_Server_から_SnapCenter_にアーカイブバックアップをインポートします.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            SnapManager for Microsoft SQL Server から SnapCenter にアーカイブバックアップをインポートします
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/データ保護を準備.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            データ保護を準備
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/SQL_Server_データベース_インスタンス_または可用性グループをバックアップする.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            SQL Server データベース、インスタンス、または可用性グループをバックアップする
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/バックアップ処理を監視する.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            バックアップ処理を監視する
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/SQL_Server_リソースをリストアする.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            SQL Server リソースをリストアする
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/SQL_Server_データベースリソースのクローニング.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            SQL Server データベースリソースのクローニング
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/SAP_HANA_データベースを保護します.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            SAP HANA データベースを保護します
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/SnapCenter_Plug_in_for_SAP_HANA_Databases_の略.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            SnapCenter Plug-in for SAP HANA Databases の略
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/SAP_HANA_データベースのバックアップ戦略.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            SAP HANA データベースのバックアップ戦略
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/SAP_HANA_データベースのリストアとリカバリの戦略.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            SAP HANA データベースのリストアとリカバリの戦略
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/SnapCenter_Plug_in_for_SAP_HANA_Database_をインストールする準備をします.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            SnapCenter Plug-in for SAP HANA Database をインストールする準備をします
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/SnapCenter_Plug_in_for_SAP_HANA_Databases_をインストールします.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            SnapCenter Plug-in for SAP HANA Databases をインストールします
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/CA_証明書を設定します.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            CA 証明書を設定します
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/データ保護を準備.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            データ保護を準備
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/SAP_HANA_のリソースをバックアップ.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            SAP HANA のリソースをバックアップ
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/リソースを検出し_マルチテナントデータベースコンテナでデータ保護を準備.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            リソースを検出し、マルチテナントデータベースコンテナでデータ保護を準備
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/バックアップ処理を監視する.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            バックアップ処理を監視する
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/SAP_HANA_データベースをリストア.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            SAP HANA データベースをリストア
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/SAP_HANA_リソースのバックアップをクローニングする.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            SAP HANA リソースのバックアップをクローニングする
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/Oracle_データベースを保護します.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            Oracle データベースを保護します
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/SnapCenter_Plug_in_for_Oracle_Database_の概要を参照してください.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            SnapCenter Plug-in for Oracle Database の概要を参照してください
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/SnapCenter_Plug_in_for_Oracle_Database_をインストールします.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            SnapCenter Plug-in for Oracle Database をインストールします
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/Oracle_データベースをバックアップする.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            Oracle データベースをバックアップする
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/Oracle_データベースのリストアとリカバリを行う.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            Oracle データベースのリストアとリカバリを行う
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/Oracle_データベースのクローニング.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            Oracle データベースのクローニング
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/Windows_ファイルシステムを保護.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            Windows ファイルシステムを保護
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/SnapCenter_Plug_in_for_Microsoft_Windows_の概念.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            SnapCenter Plug-in for Microsoft Windows の概念
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/SnapCenter_Plug_in_for_Microsoft_Windows_をインストールします.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            SnapCenter Plug-in for Microsoft Windows をインストールします
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/CA_証明書を設定します.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            CA 証明書を設定します
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/Windows_ファイルシステムのバックアップ.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            Windows ファイルシステムのバックアップ
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/Windows_ファイルシステムをリストア.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            Windows ファイルシステムをリストア
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/Windows_ファイルシステムのクローニング.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            Windows ファイルシステムのクローニング
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/Microsoft_Exchange_Server_データベースを保護する.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            Microsoft Exchange Server データベースを保護する
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/SnapCenter_Plug_in_for_Microsoft_Exchange_Server_の概念.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            SnapCenter Plug-in for Microsoft Exchange Server の概念
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/SnapCenter_Plug_in_for_Microsoft_Exchange_Server_をインストールします.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            SnapCenter Plug-in for Microsoft Exchange Server をインストールします
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/CA_証明書を設定します.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            CA 証明書を設定します
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/Exchange_リソースをバックアップする.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            Exchange リソースをバックアップする
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/Exchange_リソースをリストアします.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            Exchange リソースをリストアします
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/カスタムアプリケーションを保護.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            カスタムアプリケーションを保護
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/SnapCenter_カスタムプラグイン.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            SnapCenter カスタムプラグイン
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/カスタムプラグインのバックアップ戦略.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            カスタムプラグインのバックアップ戦略
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/アプリケーション用のプラグインを開発します.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            アプリケーション用のプラグインを開発します
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/SnapCenter_カスタムプラグインをインストールする準備をします.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            SnapCenter カスタムプラグインをインストールする準備をします
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/SnapCenter_Custom_Plug_ins_をインストールします.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            SnapCenter Custom Plug-ins をインストールします
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/CA_証明書を設定します.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            CA 証明書を設定します
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/データ保護を準備.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            データ保護を準備
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/カスタムプラグインリソースをバックアップする.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            カスタムプラグインリソースをバックアップする
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/カスタムプラグインリソースをリストアする.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            カスタムプラグインリソースをリストアする
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/カスタムプラグインリソースのバックアップをクローニングする.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            カスタムプラグインリソースのバックアップをクローニングする
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/SnapCenter_サーバとプラグインを管理します.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            SnapCenter サーバとプラグインを管理します
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/ダッシュボードを表示します.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            ダッシュボードを表示します
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/SnapCenter_サーバとプラグインをアップグレードします.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            SnapCenter サーバとプラグインをアップグレードします
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/SnapCenter_Server_とプラグインをアンインストールします.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            SnapCenter Server とプラグインをアンインストールします
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/SnapCenter_プラグインパッケージをアンインストールします.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            SnapCenter プラグインパッケージをアンインストールします
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/snapcenter/pdfs/sidebar/REST_API_による自動化.pdf" 
+            
+          >
+            <img src="/ja-jp/snapcenter/images/pdf.png" width="16" height="16"/>
+            REST API による自動化
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+</li></ul>
+  <div class="zip-pdf-link-container" style="display: none;">   
+    <a href="#" id="zipPdf">
+      <img src="/ja-jp/snapcenter/images/pdf-zip.png" width="16" height="16"/>
+      <pre>個別のPDFドキュメントのコレクション<span class="zip-size"></span></pre>
+    </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+</div>
+<script>
+  $("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+  $("#toggleButtonPdf").click(function () {
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+  });
+</script><div class="sidebar-nav-container">
+  <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/index.html">
+        SnapCenter ソフトウェアのドキュメント
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/reference_release_notes.html">
+        リリースノート
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 概念</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/concept/concept_snapcenter_overview.html">
+        SnapCenter の概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/concept/reference_data_security.html">
+        セキュリティ機能
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SnapCenter の RBAC</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/concept/concept_types_of_role_based_access_control_in_snapcenter.html">
+        RBAC のタイプ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/concept/reference_role_based_access_control_permissions_and_roles.html">
+        RBAC の権限とロール
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/concept/reference_pre_defined_snapcenter_roles_and_permissions.html">
+        事前定義された SnapCenter ロールと権限
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/concept/concept_resources_resource_groups_and_policies.html">
+        リソース、リソースグループ、ポリシー
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/concept/concept_prescripts_and_postscripts.html">
+        プリスクリプトとポストスクリプト
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/concept/concept_snapcenter_rest_apis.html">
+        REST API を使用した SnapCenter の自動化
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SnapCenter サーバのインストール</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/install_workflow.html">
+        ワークフローをインストールします
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SnapCenter サーバをインストールする準備をします</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/reference_domain_and_workgroup_requirements.html">
+        ドメインとワークグループの要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/reference_space_and_sizing_requirements.html">
+        スペースとサイジングの要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/reference_san_host_requirements.html">
+        SAN ホストの要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/reference_supported_storage_systems_and_applications.html">
+        サポートされるストレージシステムおよびアプリケーション
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/reference_supported_browsers.html">
+        サポートされているブラウザ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/reference_connection_and_port_requirements.html">
+        接続とポートの要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/concept_snapcenter_licenses.html">
+        SnapCenter ライセンス
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/concept_authentication_methods_for_your_credentials.html">
+        クレデンシャルの認証方式を指定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/concept_svm_connections_and_credentials.html">
+        Storage Virtual Machine の接続とクレデンシャル
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html">
+        SnapCenter サーバをインストールします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/task_log_in_to_snapcenter.html">
+        SnapCenter にログインします
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> CA 証明書を設定します</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/reference_generate_CA_certificate_CSR_file.html">
+        CA 証明書 CSR ファイルを生成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/task_import_CA_certificates.html">
+        CA 証明書をインポートします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/task_get_the_CA_certificate_thumbprint.html">
+        CA 証明書のサムプリントを取得します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/task_configure_CA_certificate_with_Windows_host_plug-in_services.html">
+        Windows ホストプラグインサービスを使用して CA 証明書を設定する
+      </a></li><li class="  active "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/task_configure_CA_certificate_with_snapcenter_site.html">
+        SnapCenter サイトで CA 証明書を設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/task_enable_ca_certificates_for_snapcenter.html">
+        SnapCenter サーバの CA 証明書を有効にします
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/task_register_untrusted_active_directory_domains.html">
+        信頼できない Active Directory ドメインを登録します
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> ハイアベイラビリティを設定する</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html">
+        F5 を使用して SnapCenter サーバのハイアベイラビリティを構成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/concept_network_load_balanacing_and_application_request_routing_requirements.html">
+        Microsoft Network Load Balancer を手動で設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/task_switch_from_nlb_to_f5_for_high_availability.html">
+        NLB から F5 に切り替えて高可用性を実現します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/concept_high_availability_for_snapcenter_mysql_repository.html">
+        SnapCenter MySQL リポジトリの高可用性
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/task_export_snapcenter_certificates.html">
+        SnapCenter 証明書をエクスポートする
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> ロールベースアクセス制御（ RBAC ）の設定</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/task_add_a_user_or_group_and_assign_role_and_assets.html">
+        ユーザまたはグループを追加し、ロールとアセットを割り当てます
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/task_create_a_role.html">
+        ロールを作成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/task_add_an_rbac_role_using_security_login_commands.html">
+        security login コマンドを使用して、 ONTAP RBAC ロールを追加します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/create-svm-roles-minimum-privileges.html">
+        最小権限を持つ SVM ロールを作成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/task_create_an_ontap_cluster_role_with_minimum_privileges.html">
+        最小限の権限で ONTAP クラスタロールを作成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/task_configure_iis_application_pools_to_enable_active_directory_read_permissions.html">
+        Active Directory の読み取り権限を有効にするように IIS アプリケーションプールを設定します
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/task_add_storage_systems.html">
+        ストレージシステムを追加
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/concept_snapcenter_standard_controller_based_licenses.html">
+        SnapCenter の標準コントローラベースのライセンスを追加します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/concept_snapcenter_standard_capacity_based_licenses.html">
+        SnapCenter の Standard 容量ベースのライセンスを追加
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> ストレージシステムをプロビジョニング</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Windows ホストでストレージをプロビジョニングする</div>
+      </a>
+      <ul><li class="subfolders "><a href="/ja-jp/snapcenter/install/concept_configure_lun_storage.html">
+        <div class="na-navbar-padding"> LUN ストレージを設定します</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/task_establish_an_iscsi_session.html">
+        iSCSI セッションを確立します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/task_disconnect_an_iscsi_session.html">
+        iSCSI セッションを切断します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/concept_create_and_manage_igroups.html">
+        igroup を作成して管理します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/task_create_and_manage_disks.html">
+        ディスクを作成および管理する
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/concept_create_and_manage_smb_shares.html">
+        SMB 共有を作成および管理する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/task_reclaim_space_on_the_storage_system.html">
+        ストレージシステム上のスペースを再生する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/reference_provision_storage_using_powershell_cmdlets.html">
+        PowerShell コマンドレットを使用してストレージをプロビジョニング
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/concept_provision_storage_in_vmware_environments.html">
+        VMware 環境でストレージをプロビジョニング
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/concept_configure_secured_mysql_connections_with_snapcenter_server.html">
+        SnapCenter サーバとの安全な MySQL 接続を設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/reference_features_enabled_on_your_windows_host_during_installation.html">
+        インストール中に Windows ホストで有効になる機能
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Microsoft SQL Server データベースを保護する</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SnapCenter Plug-in for Microsoft SQL Server</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/concept_snapcenter_plug_in_for_microsoft_sql_server_overview.html">
+        SnapCenter Plug-in for Microsoft SQL Server の概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/concept_what_you_can_do_with_the_snapcenter_plug_in_for_microsoft_sql_server.html">
+        SnapCenter Plug-in for Microsoft SQL Server の機能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/concept_snapcenter_plug_in_for_microsoft_sql_server_features.html">
+        SnapCenter Plug-in for Microsoft SQL Server の特長
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/concept_support_for_asymmetric_lun_mapping_alm_in_windows_clusters.html">
+        Windows クラスタでの非対称 LUN マッピングのサポート
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/reference_storage_types_supported_by_snapcenter_plug_ins_for_microsoft_windows_and_for_microsoft_sql_server.html">
+        SnapCenter Plug-in for Microsoft Windows および Microsoft SQL Server でサポートされるストレージタイプ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/reference_storage_layout_recommendations_for_snapcenter_plug_in_for_microsoft_sql_server.html">
+        SnapCenter Plug-in for Microsoft SQL Server のストレージレイアウトに関する推奨事項
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/reference_minimum_ontap_privileges_required_for_sql_plug_in.html">
+        SQL プラグインに必要な最小限の ONTAP 権限
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/reference_prepare_storage_systems_for_snapmirror_and_snapvault_replication_for_plugin_for_sql.html">
+        SnapMirror レプリケーションと SnapVault レプリケーションのためのストレージシステムを準備
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SQL Server リソースのバックアップ戦略</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_define_a_backup_strategy_for_sql_server_resources.html">
+        SQL Server リソースのバックアップ戦略を定義する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/concept_type_of_backups_supported.html">
+        サポートされるバックアップのタイプ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/concept_backup_schedules_for_plugin_for_sql.html">
+        データベースプラグインのバックアップスケジュール
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/concept_number_of_backup_jobs_needed_for_databases.html">
+        データベースに必要なバックアップジョブの数
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/concept_backup_naming_conventions_for_plugin_for_sql.html">
+        バックアップの命名規則
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/concept_backup_retention_options_for_plugin_for_sql.html">
+        バックアップ保持オプション
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/concept_how_long_to_retain_transaction_log_backups_on_the_source_storage_system.html">
+        ソースストレージシステムにトランザクションログバックアップを保持する期間
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/concept_multiple_databases_on_the_same_volume.html">
+        同じボリューム上の複数のデータベース
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/concept_backup_copy_verification_using_the_primary_or_secondary_storage_volume_for_plugin_for_sql.html">
+        プライマリストレージボリュームまたはセカンダリストレージボリュームを使用したバックアップコピーの検証
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/concept_when_to_schedule_verification_jobs.html">
+        検証ジョブをスケジュールするタイミング
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SQL Server のリストア戦略</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_define_a_restoration_strategy_for_sql_server.html">
+        SQL Server のリストア戦略を定義する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/reference_sources_and_destinations_for_a_restore_operation.html">
+        リストア処理のソースとデスティネーション
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/concept_sql_server_recovery_models_snapcenter_plug_in_for_microsoft_sql_server.html">
+        SnapCenter でサポートされている SQL Server 復旧モデル
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/reference_types_of_restore_operations.html">
+        リストア処理のタイプ
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_define_a_clone_strategy_for_sql_server.html">
+        SQL Server のクローニング戦略を定義する
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/quick_start_to_install_snapcenter_plug-in_for_sql_server.html">
+        SnapCenter Plug-in for Microsoft SQL Server のインストールのクイックスタート
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SnapCenter Plug-in for Microsoft SQL Server をインストールする準備をします</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_install_snapcenter_plug_in_for_microsoft_sql_server_database.html">
+        SnapCenter Plug-in for Microsoft SQL Server のインストールワークフロー
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/reference_prerequisites_to_adding_hosts_and_installing_snapcenter_plug_in_for_microsoft_sql_server.html">
+        ホストを追加して SnapCenter Plug-in for Microsoft SQL Server をインストールするための前提条件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/reference_host_requirements_to_install_snapcenter_plug_in_package_for_windows_sql.html">
+        SnapCenter Plug-ins Package for Windows をインストールするホストの要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_set_up_credentials_for_snapcenter_plug_ins_package_for_windows.html">
+        SnapCenter Plug-ins Package for Windows のクレデンシャルを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_configure_credentials_for_an_individual_sql_server_resource.html">
+        個々の SQL Server リソースのクレデンシャルを設定する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_configure_gMSA_on_windows_server_2012_or_later.html">
+        Windows Server 2012 以降で gMSA を構成します
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SnapCenter Plug-in for Microsoft SQL Server をインストールします</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_add_hosts_and_install_snapcenter_plug_ins_package_for_windows.html">
+        ホストを追加し、 SnapCenter Plug-ins Package for Windows をインストールします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_install_snapcenter_plug_in_package_for_windows_server_on_multiple_remote_hosts_using_cmdlets_scsql.html">
+        コマンドレットを使用して、複数のリモートホストに SnapCenter Plug-in for Microsoft SQL Server をインストールします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_install_the_snapcenter_plug_in_for_sql_server_silently.html">
+        コマンドラインから SnapCenter Plug-in for Microsoft SQL Server をサイレントインストールします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_monitor_the_status_of_installing_plugin_for_sql.html">
+        Plug-in for SQL Server のインストールのステータスを監視します
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> CA 証明書を設定します</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/reference_generate_CA_certificate_CSR_file.html">
+        CA 証明書 CSR ファイルを生成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_import_CA_certificates.html">
+        CA 証明書をインポートする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_get_the_CA_certificate_thumbprint.html">
+        CA 証明書のサムプリントを取得します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_configure_CA_certificate_with_Windows_host_plug-in_services.html">
+        Windows ホストプラグインサービスを使用して CA 証明書を設定する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_enable_ca_certificates_for_plug-ins.html">
+        プラグインの CA 証明書を有効にします
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SnapManager for Microsoft SQL Server から SnapCenter にアーカイブバックアップをインポートします</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/concept_import_archived_backups_from_snapmanager_for_sql_to_snapcenter.html">
+        アーカイブバックアップのインポートの概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/concept_limitations_related_to_the_import_feature.html">
+        インポート機能に関連する制限事項
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_import_archived_backups.html">
+        アーカイブバックアップをインポートする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_view_the_imported_backups_in_snapcenter_server.html">
+        SnapCenter サーバで、インポートされたバックアップを表示します
+      </a></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_install_snapcenter_plug_in_for_vmware_vsphere.html">
+        SnapCenter Plug-in for VMware vSphere をインストール
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> データ保護を準備</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/concept_prerequisites_for_using_snapcenter_plug_in_for_microsoft_sql_server.html">
+        SnapCenter Plug-in for Microsoft SQL Server を使用するための前提条件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/concept_how_resources_resource_groups_and_policies_are_used_for_protecting_sql_server.html">
+        SQL Server の保護におけるリソース、リソースグループ、ポリシーの使用方法
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SQL Server データベース、インスタンス、または可用性グループをバックアップする</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/reference_back_up_sql_server_database_or_instance_or_availability_group.html">
+        バックアップのワークフロー
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_determine_whether_resources_are_available_for_backup.html">
+        バックアップに使用できるリソースがあるかどうかを確認する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_migrate_resources_to_netapp_storage.html">
+        ネットアップストレージシステムにリソースを移行
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_create_backup_policies_for_sql_server_databases.html">
+        SQL Server データベースのバックアップポリシーを作成する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_create_resource_groups_and_attach_policies_for_sql_server.html">
+        SQL Server のリソースグループを作成してポリシーを適用します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/concept_requirements_for_backing_up_sql_resources.html">
+        SQL リソースのバックアップに関する要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_back_up_sql_resources.html">
+        SQL リソースをバックアップする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_back_up_sql_server_resource_groups.html">
+        SQL Server リソースグループをバックアップする
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> バックアップ処理を監視する</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_monitor_sql_resources_backup_operations.html">
+        SnapCenter Jobs ページでバックアップ処理を監視します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_monitor_dataprotection_operations_on_sql_resources_in_the_activity_pane.html">
+        アクティビティペインで操作を監視します
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_sql.html">
+        PowerShell コマンドレットを使用してストレージシステム接続とクレデンシャルを作成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_back_up_resources_using_powershell_cmdlets_for_sql.html">
+        PowerShell コマンドレットを使用してリソースをバックアップします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_cancel_the_snapcenter_plug_in_for_sql_server_operations.html">
+        SnapCenter Plug-in for Microsoft SQL Server のバックアップ処理をキャンセルします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_view_sql_server_backups_and_clones_in_the_topology_page.html">
+        トポロジページで SQL Server のバックアップとクローンを表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_remove_backups_using_powershell_cmdlets_for_sql.html">
+        PowerShell コマンドレットを使用してバックアップを削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_clean_up_the_secondary_backup_count_using_powershell_cmdlets_for_sql.html">
+        PowerShell コマンドレットを使用してセカンダリバックアップ数をクリーンアップします
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SQL Server リソースをリストアする</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/reference_restore_sql_server_resources.html">
+        リストアワークフロー
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/concept_requirements_for_restoring_a_database.html">
+        データベースをリストアするための要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_restore_sql_server_database_backups.html">
+        SQL Server データベースのバックアップをリストアする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_restore_a_sql_server_database_from_secondary_storage.html">
+        セカンダリストレージから SQL Server データベースをリストアする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_reseed_availability_group_databases.html">
+        可用性グループデータベースを再シードしています
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_restore_and_recover_resources_using_powershell_cmdlets_for_sql.html">
+        PowerShell コマンドレットを使用してリソースをリストアおよびリカバリする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_monitor_sql_resources_restore_operations.html">
+        リストア処理を監視する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_cancel_sql_resources_restore_operations.html">
+        リストア処理をキャンセルします
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SQL Server データベースリソースのクローニング</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/reference_clone_sql_server_database_resources.html">
+        クローニングワークフロー
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_clone_from_a_sql_server_database_backup.html">
+        SQL Server データベースバックアップからのクローニング
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_clone_backups_using_powershell_cmdlets_for_sql.html">
+        PowerShell コマンドレットを使用してバックアップをクローニングする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_perform_clone_lifecycle_management.html">
+        クローンライフサイクルの実行
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_monitor_sql_database_clone_operations.html">
+        SnapCenter でクローニング処理を監視する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_cancel_sql_resource_clone_operations.html">
+        クローニング処理をキャンセルします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scsql/task_split_a_clone_for_sql.html">
+        クローンをスプリットします。
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SAP HANA データベースを保護します</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SnapCenter Plug-in for SAP HANA Databases の略</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/concept_snapcenter_plug_in_for_sap_hana_database_overview.html">
+        SnapCenter Plug-in for SAP HANA Database の概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/concept_what_you_can_do_using_the_snapcenter_plug_in_for_sap_hana_database.html">
+        SnapCenter Plug-in for SAP HANA Database の機能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/concept_snapcenter_plug_in_for_sap_hana_database_features.html">
+        SnapCenter Plug-in for SAP HANA Database の特長
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/reference_storage_types_supported_by_snapcenter_plug_in_for_sap_hana_database.html">
+        SnapCenter Plug-in for SAP HANA Database でサポートされるストレージタイプ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/concept_minimum_privileges_required_for_sap_hana_and_exchange_plug_in.html">
+        必要な最小 ONTAP 権限
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/reference_prepare_storage_systems_for_snapmirror_and_snapvault_replication_for_plugin_for_hana.html">
+        SnapMirror レプリケーションと SnapVault レプリケーションのためのストレージシステムを準備
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SAP HANA データベースのバックアップ戦略</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_define_a_backup_strategy_for_sap_hana_databases.html">
+        SAP HANA データベースのバックアップ戦略を定義する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/concept_auto_discovery_of_resources_on_linux_host.html">
+        Linux ホスト上のリソースの自動検出
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/concept_type_of_backups_supported.html">
+        サポートされるバックアップのタイプ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/concept_how_snapcenter_plug_in_for_sap_hana_database_uses_consistency_group_snapshot_copies.html">
+        SnapCenter Plug-in for SAP HANA Database での整合グループ Snapshot コピーの使用方法
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/concept_housekeeping_of_log_backups.html">
+        SnapCenter による不要なログおよびデータバックアップの削除の管理
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/reference_considerations_for_determining_backup_schedules_for_sap_hana_database.html">
+        SAP HANA データベースのバックアップスケジュールを決定する際の考慮事項
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/concept_number_of_backup_jobs_needed_for_sap_hana_databases.html">
+        SAP HANA データベースに必要なバックアップジョブの数
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/concept_backup_naming_conventions_for_plugin_for_hana.html">
+        バックアップの命名規則
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SAP HANA データベースのリストアとリカバリの戦略</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_define_a_restore_and_recovery_strategy_for_sap_hana_resources.html">
+        SAP HANA リソースのリストアとリカバリの戦略を定義する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/reference_types_of_restore_strategies_supported_for_manually_added_sap_hana_resources.html">
+        手動で追加した SAP HANA リソースでサポートされるリストア戦略のタイプ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/reference_types_of_restore_strategies_supported_for_auto_discovered_sap_hana_databases.html">
+        自動検出された SAP HANA データベースでサポートされるリストア戦略のタイプ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/reference_types_of_restore_performed_for_auto_discovered_sap_hana_databases.html">
+        自動検出された SAP HANA データベースのリストア処理のタイプ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/reference_types_of_recovery_operations_supported_for_sap_hana_database.html">
+        SAP HANA データベースでサポートされるリカバリ処理のタイプ
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SnapCenter Plug-in for SAP HANA Database をインストールする準備をします</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_install_snapcenter_plug_in_for_sap_hana_database.html">
+        SnapCenter Plug-in for SAP HANA Database のインストールワークフロー
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/reference_prerequisites_to_adding_hosts_and_installing_snapcenter_plug_in_for_sap_hana_database.html">
+        ホストを追加して SnapCenter Plug-in for SAP HANA Database をインストールするための前提条件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/reference_host_requirements_to_install_snapcenter_plug_in_package_for_windows_hana.html">
+        SnapCenter Plug-ins Package for Windows をインストールするホストの要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/reference_host_requirements_to_install_snapcenter_plug_in_package_for_linux.html">
+        SnapCenter Plug-ins Package for Linux をインストールするためのホストの要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_set_up_credentials_for_snapcenter_plug_in_for_sap_hana_database.html">
+        SnapCenter Plug-in for SAP HANA Database のクレデンシャルを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_configure_gMSA_on_windows_server_2012_or_later.html">
+        Windows Server 2012 以降で gMSA を構成します
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SnapCenter Plug-in for SAP HANA Databases をインストールします</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_add_hosts_and_install_plug_in_packages_on_remote_hosts_sap_hana.html">
+        ホストを追加し、プラグインパッケージをリモートホストにインストールする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_install_snapcenter_plug_in_packages_for_linux_or_windows_on_multiple_remote_hosts_using_cmdlets_sap_hana.html">
+        コマンドレットを使用して、複数のリモートホストに Linux または Windows 用の SnapCenter プラグインパッケージをインストールします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_install_the_snapcenter_plug_in_for_sap_hana_database_on_linux_hosts_using_the_command_line_interface.html">
+        コマンドラインインターフェイスを使用して、 Linux ホストに SnapCenter Plug-in for SAP HANA Database をインストールします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_monitor_the_status_of_installing_plugin_for_sap_hana.html">
+        SnapCenter プラグインパッケージのインストールステータスを監視する
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> CA 証明書を設定します</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/reference_generate_CA_certificate_CSR_file.html">
+        CA 証明書 CSR ファイルを生成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_import_CA_certificates.html">
+        CA 証明書をインポートする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_get_the_CA_certificate_thumbprint.html">
+        CA 証明書のサムプリントを取得します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_configure_CA_certificate_with_Windows_host_plug-in_services.html">
+        Windows ホストプラグインサービスを使用して CA 証明書を設定する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_configure_CA_certificate_for_saphana_on_Linux_host.html">
+        Linux ホストで SnapCenter SAP HANA Plug-ins サービスの CA 証明書を設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_configure_CA_certificate_for_saphana_on_windows_host.html">
+        Windows ホストで SnapCenter SAP HANA Plug-ins サービスの CA 証明書を設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_enable_ca_certificates_for_plug-ins.html">
+        プラグインの CA 証明書を有効にします
+      </a></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_install_snapcenter_plug_in_for_vmware_vsphere.html">
+        SnapCenter Plug-in for VMware vSphere をインストール
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> データ保護を準備</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/reference_prerequisites_for_using_snapcenter_plug_in_for_sap_hana_database.html">
+        SnapCenter Plug-in for SAP HANA Database を使用するための前提条件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/concept_how_resources_resource_groups_and_policies_are_used_for_protecting_sap_hana_databases.html">
+        SAP HANA データベースの保護におけるリソース、リソースグループ、ポリシーの使用方法
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SAP HANA のリソースをバックアップ</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_back_up_sap_hana_resources.html">
+        バックアップのワークフロー
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_configure_hdb_user_store_key_and_hdbsql_os_user_for_the_sap_hana_database.html">
+        SAP HANA データベース用に HDB User Store Key および HDBSQL OS ユーザを設定します
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> リソースを検出し、マルチテナントデータベースコンテナでデータ保護を準備</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_discover_the_databases_automatically.html">
+        データベースを自動的に検出します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_prepare_multitenant_database_containers_for_data_protection.html">
+        マルチテナントデータベースコンテナでデータ保護を準備
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_add_resources_manually_to_the_plug_in_host.html">
+        プラグインホストにリソースを手動で追加します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_create_backup_policies_for_sap_hana_databases.html">
+        SAP HANA データベースのバックアップポリシーを作成する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_create_resource_groups_and_attach_policies.html">
+        リソースグループを作成してポリシーを適用
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_back_up_sap_hana_databases.html">
+        SAP HANA データベースをバックアップする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_back_up_resource_groups_sap_hana.html">
+        リソースグループをバックアップする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_create_a_storage_system_connection_and_a_run_as_account_using_powershell_cmdlets_for_sap_hana_database.html">
+        PowerShell コマンドレットを使用して SAP HANA データベース用のストレージシステム接続とクレデンシャルを作成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_back_up_databases_using_powershell_cmdlets_sap_hana.html">
+        PowerShell コマンドレットを使用してデータベースをバックアップします
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> バックアップ処理を監視する</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_monitor_hana_databases_backup_operations.html">
+        SnapCenter Jobs ページでバックアップ処理を監視します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_monitor_dataprotection_operations_on_hana_databases_in_the_activity_pane.html">
+        アクティビティペインで操作を監視します
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_cancel_backup_operations_for_sap_hana.html">
+        バックアップ処理をキャンセルします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_view_sap_hana_database_backups_and_clones_in_the_topology_page_sap_hana.html">
+        Topology ページで、 SAP HANA データベースのバックアップとクローンを表示します
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SAP HANA データベースをリストア</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_restore_sap_hana_databases.html">
+        リストアワークフロー
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_restore_and_recover_a_manually_added_resource_backup.html">
+        手動で追加したリソースバックアップをリストアおよびリカバリする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_restore_and_recover_an_auto_discovered_database_backup.html">
+        自動検出されたデータベースバックアップをリストアおよびリカバリする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_restore_sap_hana_database_using_powershell_cmdlets.html">
+        PowerShell コマンドレットを使用して SAP HANA データベースをリストアする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_restore_and_recover_resources_using_powershell_cmdlets_hana.html">
+        PowerShell コマンドレットを使用してリソースをリストアする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_monitor_hana_databases_restore_operations.html">
+        リストア処理を監視する
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SAP HANA リソースのバックアップをクローニングする</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_clone_sap_hana_resource_backups.html">
+        クローニングワークフロー
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_clone_a_sap_hana_database_backup.html">
+        SAP HANA データベースのバックアップをクローニングします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_clone_sap_hana_database_backups_using_powershell_cmdlets.html">
+        PowerShell コマンドレットを使用して SAP HANA データベースのバックアップをクローニングする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_monitor_hana_database_clone_operations.html">
+        SnapCenter でクローニング処理を監視する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_split_a_clone_for_hana.html">
+        クローンをスプリットします。
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-hana/task_delete_or_split_sap_hana_database_clones_after_upgrading_snapcenter.html">
+        SnapCenter のアップグレード後に、 SAP HANA データベースのクローンを削除またはスプリットします
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Oracle データベースを保護します</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SnapCenter Plug-in for Oracle Database の概要を参照してください</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/concept_what_you_can_do_with_the_snapcenter_plug_in_for_oracle_database.html">
+        Plug-in for Oracle Database の機能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/concept_snapcenter_plug_in_for_oracle_database_features.html">
+        Plug-in for Oracle の機能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/reference_storage_types_supported_by_snapcenter_plug_in_for_oracle_database.html">
+        Plug-in for Oracle Database でサポートされるストレージタイプ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/reference_prepare_storage_systems_for_snapmirror_and_snapvault_replication_for_plugin_for_oracle.html">
+        Plug-in for Oracle の SnapMirror と SnapVault のレプリケーションに使用するストレージシステムを準備
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/reference_minimum_ontap_privileges_required_for_oracle_plug_in.html">
+        Plug-in for Oracle に必要な最小 ONTAP 権限
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SnapCenter Plug-in for Oracle Database をインストールします</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/install-snapcenter-plug-in-for-oracle-workflow.html">
+        Plug-in for Oracle Database のインストールワークフロー
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/reference_prerequisites_for_adding_hosts_and_installing_snapcenter_plug_ins_package_for_linux_or_aix.html">
+        ホストを追加して Plug-in Package for Linux または AIX をインストールするための前提条件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/task_add_hosts_and_installing_the_snapcenter_plug_ins_package_for_linux_or_aix.html">
+        Linux または AIX 用のホストを追加して Plug-ins Package をインストールします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/task_configure_snapcenter_plug_in_loader_service.html">
+        SnapCenter Plug-in Loader サービスを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/task_configure_CA_certificate_with_SPL_on_Linux_host.html">
+        Linux ホストで SnapCenter Plug-in Loader サービスを使用して CA 証明書を設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/task_enable_ca_certificates_for_plug-ins.html">
+        プラグインの CA 証明書を有効にします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/concept_import_data_from_snapmanager_for_oracle_and_snapmanager_for_sap_to_snapcenter.html">
+        SnapManager for Oracle および SnapManager for SAP から SnapCenter にデータをインポートします
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/concept_install_snapcenter_plug_in_for_vmware_vsphere.html">
+        SnapCenter Plug-in for VMware vSphere をインストール
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/concept_prepare_for_protecting_oracle_databases.html">
+        Oracle データベースの保護を準備する
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Oracle データベースをバックアップする</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/backup-workflow.html">
+        バックアップのワークフロー
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/task_define_a_backup_strategy_for_oracle_databases.html">
+        Oracle データベースのバックアップ戦略を定義する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/task_determine_whether_oracle_databases_are_available_for_backup.html">
+        Oracle データベースをバックアップに使用できるかどうかを確認します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/task_create_backup_policies_for_oracle_database.html">
+        Oracle データベースのバックアップポリシーの作成
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/task_create_resource_groups_and_attaching_policies_for_oracle_databases.html">
+        Oracle データベースのリソースグループを作成してポリシーを適用します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/reference_requirements_for_backing_up_an_oracle_database.html">
+        Oracle データベースをバックアップするための要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/task_back_up_oracle_resources.html">
+        Oracle リソースのバックアップ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/task_back_up_oracle_database_resource_groups.html">
+        Oracle データベースのリソースグループをバックアップする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/task_back_up_oracle_databases_using_unix_commands.html">
+        UNIX コマンドを使用して Oracle データベースをバックアップします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/task_monitor_oracle_database_backup_operations.html">
+        Oracle データベースのバックアップ処理を監視する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/task_cancel_the_snapcenter_plug_in_for_oracle_database_backup_operations.html">
+        Oracle データベースのバックアップ処理をキャンセルします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/task_view_oracle_databse_backups_and_clones_in_the_topology_page.html">
+        Topology ページで、 Oracle データベースのバックアップとクローンを表示します
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/task_mount_and_unmount_databases_backups.html">
+        データベースバックアップのマウントとアンマウント
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Oracle データベースのリストアとリカバリを行う</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/restore-workflow.html">
+        リストアワークフロー
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/task_define_a_restore_and_recovery_strategy_for_oracle_databases.html">
+        Oracle データベースのリストアとリカバリの戦略を定義する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/reference_requirements_for_restoring_an_oracle_database.html">
+        Oracle データベースをリストアするための要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/task_restore_an_oracle_database.html">
+        Oracle データベースをリストアします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/task_restore_and_recovere_tablespaces_using_point_in_time_recovery.html">
+        ポイントインタイムリカバリを使用した表領域のリストアとリカバリ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/task_restore_and_recover_pluggable_database_using_point_in_time_recovery.html">
+        ポイントインタイムリカバリを使用して、プラグイン可能なデータベースをリストアおよびリカバリします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/task_restore_and_recover_oracle_databases_using_unix_commands.html">
+        UNIX コマンドを使用して Oracle データベースをリストアおよびリカバリする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/task_monitor_oracle_database_restore_operations.html">
+        Oracle データベースのリストア処理を監視する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/task_cancel_oracle_database_restore_operations.html">
+        Oracle データベースのリストア処理をキャンセルします
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Oracle データベースのクローニング</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/clone-workflow.html">
+        クローニングワークフロー
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/task_define_a_clone_strategy_for_oracle_databases.html">
+        Oracle データベースのクローニング戦略を定義する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/reference_requirements_for_cloning_an_oracle_database.html">
+        Oracle データベースをクローニングするための要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/task_clone_an_oracle_database_backup.html">
+        Oracle データベースのクローニング
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/task_clone_a_pluggable_database.html">
+        プラグイン可能なデータベースをクローニングします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/task_clone_oracle_database_backups_using_unix_commands.html">
+        UNIX コマンドを使用して Oracle データベースバックアップをクローニングする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/task_split_an_oracle_database_clone.html">
+        Oracle データベースクローンをスプリットします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/task_split_clone_of_a_pluggable_database.html">
+        プラグイン可能なデータベースのスプリットクローン
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/task_monitor_oracle_database_clone_operations.html">
+        Oracle データベースのクローニング処理を監視する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/task_refresh_a_clone.html">
+        クローンをリフレッシュします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/task_delete_clone_of_a_pluggable_database.html">
+        プラグイン可能なデータベースのクローンを削除します
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Windows ファイルシステムを保護</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SnapCenter Plug-in for Microsoft Windows の概念</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/concept_snapcenter_plug_in_for_microsoft_windows_overview.html">
+        SnapCenter Plug-in for Microsoft Windows の概要を参照してください
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/reference_what_you_can_do_with_the_snapcenter_plug_in_for_microsoft_windows.html">
+        SnapCenter Plug-in for Microsoft Windows の機能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/concept_snapcenter_plug_in_for_windows_features.html">
+        SnapCenter Plug-in for Windows の特長
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/concept_how_snapcenter_backs_up_windows_file_systems.html">
+        SnapCenter での Windows ファイルシステムのバックアップ方法
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/reference_storage_types_supported_by_snapcenter_plug_ins_for_microsoft_windows.html">
+        SnapCenter Plug-in for Microsoft Windows でサポートされるストレージタイプ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/reference_minimum_ontap_privileges_required_for_windows_plug_in.html">
+        Windows プラグインに必要な最小限の ONTAP 権限
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/reference_prepare_storage_system_for_snapmirror_and_snapvault.html">
+        SnapMirror レプリケーションと SnapVault レプリケーションのためのストレージシステムを準備
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/task_define_a_backup_strategy_for_windows_file_systems.html">
+        Windows ファイルシステムのバックアップ戦略を定義する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/reference_sources_and_destinations_of_clones_for_windows_file_systems.html">
+        Windows ファイルシステムのクローンのソースとデスティネーション
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SnapCenter Plug-in for Microsoft Windows をインストールします</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/concept_install_snapcenter_plug_in_for_microsoft_windows.html">
+        インストールワークフロー
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/reference_installation_requirements_for_snapcenter_plug_in_for_microsoft_windows.html">
+        SnapCenter Plug-in for Microsoft Windows のインストール要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/task_add_hosts_and_install_snapcenter_plug_in_for_microsoft_windows.html">
+        ホストを追加し、 SnapCenter Plug-in for Microsoft Windows をインストールします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/task_install_on_multiple_remote_hosts_using_powershell_cmdlets.html">
+        PowerShell コマンドレットを使用して、複数のリモートホストに SnapCenter Plug-in for Microsoft Windows をインストールします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/task_install_the_snapcenter_plug_in_for_windows_silently_from_the_command_line.html">
+        コマンドラインから SnapCenter Plug-in for Microsoft Windows をサイレントにインストールします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/task_monitor_snapcenter_plug_in_package_installation_status.html">
+        SnapCenter プラグインパッケージのインストールステータスを監視する
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> CA 証明書を設定します</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/reference_generate_CA_certificate_CSR_file.html">
+        CA 証明書 CSR ファイルを生成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/task_import_CA_certificates.html">
+        CA 証明書をインポートする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/task_get_the_CA_certificate_thumbprint.html">
+        CA 証明書のサムプリントを取得します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/task_configure_CA_certificate_with_Windows_host_plug-in_services.html">
+        Windows ホストプラグインサービスを使用して CA 証明書を設定する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/task_enable_ca_certificates_for_plug-ins.html">
+        プラグインの CA 証明書を有効にします
+      </a></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/task_install_snapcenter_plug_in_for_vmware_vsphere.html">
+        SnapCenter Plug-in for VMware vSphere をインストール
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Windows ファイルシステムのバックアップ</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/reference_back_up_windows_file_systems.html">
+        バックアップのワークフロー
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/task_determine_resource_availability_for_windows_file_systems.html">
+        Windows ファイルシステムで使用可能なリソースを確認します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/task_create_backup_policies_for_windows_file_systems.html">
+        Windows ファイルシステムのバックアップポリシーの作成
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/task_create_resource_groups_for_windows_file_systems.html">
+        Windows ファイルシステムのリソースグループを作成する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/task_back_up_a_single_resource_on_demand_for_windows_file_systems.html">
+        Windows ファイルシステムの単一のリソースをオンデマンドでバックアップする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/task_back_up_resource_groups_for_windows_file_systems.html">
+        Windows ファイルシステムのリソースグループをバックアップする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_windows.html">
+        PowerShell コマンドレットを使用してストレージシステム接続とクレデンシャルを作成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/task_back_up_resources_using_powershell_cmdlets_for_windows.html">
+        PowerShell コマンドレットを使用してリソースをバックアップします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/task_monitor_backup_operations.html">
+        バックアップ処理を監視する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/task_cancel_backup_operations_for_windows_file_system.html">
+        バックアップ処理をキャンセルします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/task_view_related_backups_and_clones_in_the_topology_page.html">
+        トポロジページで関連するバックアップとクローンを表示します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/task_remove_backups_using_powershell_cmdlets_for_windows.html">
+        PowerShell コマンドレットを使用してバックアップを削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/task_clean_up_the_secondary_backup_count_using_powershell_cmdlets_for_windows.html">
+        PowerShell コマンドレットを使用してセカンダリバックアップ数をクリーンアップします
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Windows ファイルシステムをリストア</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/task_restore_windows_file_system_backups.html">
+        Windows ファイルシステムのバックアップをリストアする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/task_restore_and_recover_resources_using_powershell_cmdlets_for_windows.html">
+        PowerShell コマンドレットを使用してリソースをリストアおよびリカバリする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/task_monitor_restore_operations.html">
+        リストア処理を監視する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/task_cancel_restore_operations.html">
+        リストア処理をキャンセルします
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Windows ファイルシステムのクローニング</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/task_clone_from_a_windows_file_system_backup.html">
+        Windows ファイルシステムのバックアップからのクローニング
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/task_clone_backups_using_powershell_cmdlets_for_windows.html">
+        PowerShell コマンドレットを使用してバックアップをクローニングする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/task_monitor_clone_operations.html">
+        クローニング処理を監視する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/task_cancel_clone_operations.html">
+        クローニング処理をキャンセルします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/task_split_a_clone_for_windows.html">
+        クローンをスプリットします。
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Microsoft Exchange Server データベースを保護する</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SnapCenter Plug-in for Microsoft Exchange Server の概念</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/concept_snapcenter_plug_in_for_exchange_server_overview.html">
+        概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/concept_what_you_can_do_with_snapcenter_plug_in_for_microsoft_exchange_server.html">
+        SnapCenter Plug-in for Microsoft Exchange Server の機能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/reference_storage_types_supported_by_snapcenter_plug_in_for_microsoft_windows_and_for_microsoft_exchange_server.html">
+        SnapCenter Plug-in for Microsoft Windows および Microsoft Exchange Server でサポートされるストレージタイプ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/concept_minimum_privileges_required_exchange_plug_in.html">
+        必要な最小 ONTAP 権限
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/reference_prepare_storage_system_for_snapmirror_and_snapvault.html">
+        SnapMirror レプリケーションと SnapVault レプリケーションのためのストレージシステムを準備
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/task_define_a_backup_strategy_for_exchange_server_resources.html">
+        Exchange Server リソースのバックアップ戦略を定義する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/task_define_a_restore_strategy_for_exchange_databases.html">
+        Exchange データベースのリストア戦略を定義する
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SnapCenter Plug-in for Microsoft Exchange Server をインストールします</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/concept_install_snapcenter_plug_in_for_microsoft_exchange_server.html">
+        インストールワークフロー
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/reference_prerequisites_to_add_hosts_and_install_snapcenter_plug_in_for_microsoft_exchange_server.html">
+        ホストを追加して SnapCenter Plug-in for Microsoft Exchange Server をインストールするための前提条件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/task_set_up_credentials_for_the_snapcenter_plug_in_for_windows_sce.html">
+        SnapCenter Plug-in for Windows のクレデンシャルを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/task_add_hosts_and_install_plug_in_for_exchange.html">
+        ホストを追加し、 Plug-in for Exchange をインストールします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/task_install_plug_in_for_exchange_from_the_snapcenter_server_host_using_powershell_cmdlets.html">
+        PowerShell コマンドレットを使用して、 SnapCenter サーバホストから Plug-in for Exchange をインストールします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/task_install_the_snapcenter_plug_in_for_exchange_silently_from_the_command_line.html">
+        コマンドラインから SnapCenter Plug-in for Exchange をサイレントにインストールします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/task_monitor_snapcenter_plug_in_package_installation_status.html">
+        SnapCenter プラグインパッケージのインストールステータスを監視する
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> CA 証明書を設定します</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/reference_generate_CA_certificate_CSR_file.html">
+        CA 証明書 CSR ファイルを生成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/task_import_CA_certificates.html">
+        CA 証明書をインポートする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/task_get_the_CA_certificate_thumbprint.html">
+        CA 証明書のサムプリントを取得します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/task_configure_CA_certificate_with_Windows_host_plug-in_services.html">
+        Windows ホストプラグインサービスを使用して CA 証明書を設定する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/task_enable_ca_certificates_for_plug-ins.html">
+        プラグインの CA 証明書を有効にします
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/task_configure_snapmanager_7_x_for_exchange_and_snapcenter_plug_in_for_exchange_to_coexist.html">
+        Exchange と SnapCenter が共存するように SnapManager 7.x を設定します
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/task_install_snapcenter_plug_in_for_vmware_vsphere.html">
+        SnapCenter Plug-in for VMware vSphere をインストール
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/concept_prepare_for_data_protection.html">
+        データ保護を準備
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Exchange リソースをバックアップする</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/concept_back_up_exchange_resources.html">
+        バックアップのワークフロー
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/reference_exchange_database_and_backup_verification.html">
+        Exchange データベースおよびバックアップの検証
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/task_determine_whether_exchange_resources_are_available_for_backup_sce.html">
+        Exchange リソースをバックアップに使用できるかどうかを確認します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/task_create_backup_policies_for_exchange_server_databases.html">
+        Exchange Server データベースのバックアップポリシーを作成する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/task_create_resource_groups_and_attach_policies_for_exchange_servers.html">
+        Exchange Server のリソースグループを作成してポリシーを適用します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/task_back_up_exchange_databases.html">
+        Exchange データベースをバックアップします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/task_back_up_exchange_resources_groups.html">
+        Exchange リソースグループをバックアップする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_exchange_database.html">
+        Exchange Server 用の PowerShell コマンドレットを使用して、ストレージシステム接続とクレデンシャルを作成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/task_back_up_exchange_resources_using_powershell_cmdlets.html">
+        PowerShell コマンドレットを使用して Exchange リソースをバックアップします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/task_monitor_backup_operations.html">
+        バックアップ処理を監視する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/task_cancel_backup_operations_for_exchange_database.html">
+        Exchange データベースのバックアップ処理をキャンセルします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/task_remove_exchange_backups_using_powershell_cmdlets.html">
+        PowerShell コマンドレットを使用して Exchange バックアップを削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/task_view_exchange_backups_in_the_topology_page.html">
+        Topology ページで Exchange バックアップを表示します
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Exchange リソースをリストアします</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/reference_restore_exchange_resources.html">
+        リストアワークフロー
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/concept_requirements_for_restoring_an_exchange_database.html">
+        Exchange データベースをリストアするための要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/task_restore_exchange_databases.html">
+        Exchange データベースをリストアします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/reference_granular_recovery_of_mails_and_mailbox.html">
+        メールとメールボックスのきめ細かいリカバリ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/task_restore_an_exchange_server_database_from_secondary_storage.html">
+        セカンダリストレージから Exchange Server データベースをリストアする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/task_restore_exchange_resources_using_powershell_cmdlets.html">
+        PowerShell コマンドレットを使用して Exchange リソースをリストアします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/task_reseed_a_passive_exchange_node_replica.html">
+        Exchange のパッシブノードレプリカを再シードします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/task_reseed_a_replica_using_powershell_cmdlets_for_exchange_database.html">
+        PowerShell コマンドレットを使用した Exchange データベースの再シード
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/task_monitor_restore_operations.html">
+        リストア処理を監視する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/task_cancel_restore_operations.html">
+        リストア処理をキャンセルします
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> カスタムアプリケーションを保護</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SnapCenter カスタムプラグイン</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/concept_snapcenter_custom_plug_ins_overview.html">
+        SnapCenter Custom Plug-ins の概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/concept_what_you_can_do_with_the_snapcenter_custom_plug_ins.html">
+        SnapCenter Custom Plug-ins の機能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/concept_snapcenter_custom_plug_ins_features.html">
+        SnapCenter Custom Plug-ins の特長
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/reference_storage_types_supported_by_snapcenter_custom_plug_in.html">
+        SnapCenter Custom Plug-ins でサポートされるストレージタイプ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/reference_minimum_ontap_privileges_required_for_custom_plug_in.html">
+        カスタムプラグインに必要な最小 ONTAP 権限
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/reference_prepare_storage_systems_for_snapmirror_and_snapvault_replication_for_plugin_for_scc.html">
+        SnapMirror レプリケーションと SnapVault レプリケーションのためのストレージシステムを準備
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/task_define_a_backup_strategy.html">
+        バックアップ戦略を定義する
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> カスタムプラグインのバックアップ戦略</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/reference_backup_schedules_of_custom_plug_in_resources.html">
+        カスタムプラグインリソースのバックアップスケジュール
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/concept_number_of_backup_jobs_needed.html">
+        必要なバックアップジョブの数
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/reference_types_of_restore_strategies_supported_for_manually_added_sap_hana_resources.html">
+        手動で追加した SAP HANA リソースでサポートされるリストア戦略のタイプ
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> アプリケーション用のプラグインを開発します</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/concept_develop_a_plug_in_for_your_application.html">
+        概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/reference_perl.html">
+        Perl ベースの開発
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/reference_native.html">
+        ネイティブ形式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/reference_java.html">
+        Java スタイル
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/reference_custom_plugin_in_snapcenter.html">
+        SnapCenter のカスタムプラグイン
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SnapCenter カスタムプラグインをインストールする準備をします</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/task_install_snapcenter_custom_plug_in.html">
+        SnapCenter Custom Plug-ins のインストールワークフロー
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/reference_prerequisites_to_adding_hosts_and_installing_snapcenter_custom_plug_ins.html">
+        ホストを追加して SnapCenter Custom Plug-ins をインストールするための前提条件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/reference_host_requirements_to_install_snapcenter_plug_in_package_for_windows_scc.html">
+        SnapCenter Plug-ins Package for Windows をインストールするホストの要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/reference_host_requirements_for_installing_the_snapcenter_plug_in_package_for_linux_scc.html">
+        SnapCenter Plug-ins Package for Linux をインストールするためのホストの要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/task_set_up_credentials_for_snapcenter_custom_plug_in.html">
+        SnapCenter Custom Plug-ins のクレデンシャルを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/task_configure_gMSA_on_windows_server_2012_or_later.html">
+        Windows Server 2012 以降で gMSA を構成します
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SnapCenter Custom Plug-ins をインストールします</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/task_add_hosts_and_install_plug_in_packages_on_remote_hosts_scc.html">
+        ホストを追加し、プラグインパッケージをリモートホストにインストールする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/task_install_snapcenter_plug_in_packages_for_linux_or_windows_on_multiple_remote_hosts_using_cmdlets_scc.html">
+        コマンドレットを使用して、複数のリモートホストに Linux または Windows 用の SnapCenter プラグインパッケージをインストールします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/task_install_the_snapcenter_custom_plug_ins_on_linux_hosts_using_the_command_line_interface.html">
+        コマンドラインインターフェイスを使用して、 Linux ホストに SnapCenter カスタムプラグインをインストールします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/task_monitor_the_status_of_installing_plugin_for_scc.html">
+        SnapCenter プラグインパッケージのインストールステータスを監視する
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> CA 証明書を設定します</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/reference_generate_CA_certificate_CSR_file.html">
+        CA 証明書 CSR ファイルを生成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/task_import_CA_certificates.html">
+        CA 証明書をインポートする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/task_get_the_CA_certificate_thumbprint.html">
+        CA 証明書のサムプリントを取得します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/task_configure_CA_certificate_with_Windows_host_plug-in_services.html">
+        Windows ホストプラグインサービスを使用して CA 証明書を設定する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/task_configure_CA_certificate_for_SCC_on_Linux_host.html">
+        Linux ホストで SnapCenter Custom Plug-ins サービスの CA 証明書を設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/task_configure_CA_certificate_for_SCC_on_windows_host.html">
+        Windows ホストで SnapCenter Custom Plug-ins サービスの CA 証明書を設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/task_enable_ca_certificates_for_plug-ins.html">
+        プラグインの CA 証明書を有効にします
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> データ保護を準備</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/reference_prerequisites_for_using_snapcenter_custom_plug_ins.html">
+        SnapCenter Custom Plug-ins を使用するための前提条件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/concept_how_resources_resource_groups_and_policies_are_used_for_protecting_custom_plug_in_resources.html">
+        カスタムプラグインリソースの保護におけるリソース、リソースグループ、ポリシーの使用方法
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> カスタムプラグインリソースをバックアップする</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/task_back_up_custom_plug_in_resources.html">
+        バックアップのワークフロー
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/task_add_resources_to_snapcenter_custom_plug_ins.html">
+        SnapCenter Custom Plug-ins にリソースを追加します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/task_create_policies_for_custom_plug_in_resources.html">
+        カスタムプラグインリソースのポリシーを作成する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/task_create_resource_groups_and_attach_policies.html">
+        リソースグループを作成してポリシーを適用
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/task_back_up_individual_custom_plug_in_resources.html">
+        個々のカスタムプラグインリソースをバックアップする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/task_back_up_resource_groups_of_custom_plug_in_resources.html">
+        カスタムプラグインリソースのリソースグループをバックアップする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_scc.html">
+        PowerShell コマンドレットを使用してストレージシステム接続とクレデンシャルを作成します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/task_back_up_resources_using_powershell_cmdlets.html">
+        PowerShell コマンドレットを使用してリソースをバックアップします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/task_monitor_scc_resources_backup_operations.html">
+        バックアップ処理を監視する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/task_cancel_backup_operations_for_scc.html">
+        バックアップ処理をキャンセルします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/task_view_custom_plug_in_resource_backups_and_clones_in_the_topology_page.html">
+        Topology ページで、カスタムプラグインリソースに関連するバックアップとクローンを表示します
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> カスタムプラグインリソースをリストアする</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/task_restore_custom_plug_in_resources.html">
+        リストアワークフロー
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/task_restore_a_resource_backup.html">
+        リソースのバックアップをリストアする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/task_restore_and_recover_resources_using_powershell_cmdlets_scc.html">
+        PowerShell コマンドレットを使用してリソースをリストアする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/task_monitor_scc_resources_restore_operations.html">
+        リストア処理を監視する
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> カスタムプラグインリソースのバックアップをクローニングする</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/task_clone_custom_plug_in_resource_backups.html">
+        クローニングワークフロー
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/task_clone_from_a_backup.html">
+        バックアップからのクローニング
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/task_clone_backups_using_powershell_cmdlets.html">
+        PowerShell コマンドレットを使用してバックアップをクローニングする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scc/task_monitor_scc_resource_clone_operations.html">
+        SnapCenter でクローニング処理を監視する
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SnapCenter サーバとプラグインを管理します</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> ダッシュボードを表示します</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/admin/concept_overview_of_dashboard.html">
+        ダッシュボードの概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/admin/task_how_to_view_information_on_the_dashboard.html">
+        ダッシュボードに情報を表示する方法
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/admin/task_request_status_reports_of_the_jobs_from_the_dashboard.html">
+        ダッシュボードからジョブのステータスレポートを要求します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/admin/task_request_reports_of_the_protection_status_from_the_dashboard.html">
+        ダッシュボードから保護ステータスのレポートを要求します
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/admin/task_manage_rbac.html">
+        RBAC を管理します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/admin/concept_manage_hosts.html">
+        ホストを管理します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/admin/concept_what_operations_can_be_performed_from_the_resource_page.html">
+        Resources ページでサポートされている操作
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/admin/concept_manage_policies.html">
+        ポリシーを管理する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/admin/task_manage_resource_groups.html">
+        リソースグループの管理
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/admin/concept_manage_backups.html">
+        バックアップを管理します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/admin/task_delete_clones.html">
+        クローンを削除します。
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/admin/concept_monitor_jobs_schedules_events_and_logs.html">
+        ジョブ、スケジュール、イベント、およびログを監視する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/admin/concept_overview_of_snapcenter_reports.html">
+        SnapCenter のレポート機能の概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/admin/concept_manage_the_snapcenter_server_repository.html">
+        SnapCenter サーバリポジトリを管理します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/admin/concept_manage_resources_of_untrusted_domains.html">
+        信頼できないドメインのリソースを管理します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/admin/concept_manage_the_storage_system.html">
+        ストレージシステムを管理
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/admin/concept_manage_ems_data_collection.html">
+        EMS データ収集を管理します
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SnapCenter サーバとプラグインをアップグレードします</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/upgrade/task_configure_snapcenter_to_check_for_available_updates.html">
+        利用可能なアップデートを確認するように SnapCenter を設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/upgrade/upgrade_workflow.html">
+        アップグレードワークフロー
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/upgrade/task_upgrade_snapcenter.html">
+        SnapCenter サーバをアップグレードします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/upgrade/task_upgrade_your_plug_in_packages.html">
+        プラグインパッケージをアップグレードします
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SnapCenter Server とプラグインをアンインストールします</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SnapCenter プラグインパッケージをアンインストールします</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/uninstall/reference_prerequisites_for_removing_a_host.html">
+        ホストを削除するための前提条件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/uninstall/task_remove_a_host.html">
+        ホストを削除します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/uninstall/task_uninstall_plug_ins_from_a_host_using_the_snapcenter_gui.html">
+        SnapCenter GUI を使用してプラグインをアンインストールします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/uninstall/task_uninstalling_windows_plug_ins_using_the_command_line_interface_on_the_snapcenter_server_host.html">
+        PowerShell コマンドレットを使用して Windows プラグインをアンインストールします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/uninstall/task_uninstall_plug_ins_locally_on_a_host.html">
+        プラグインをホスト上でローカルにアンインストールします
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/uninstall/task_uninstall_snapcenter_plug_ins_package_for_linux_or_aix_using_command_line_interface.html">
+        CLI を使用して、 Linux または AIX 用のプラグインパッケージをアンインストールします
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/uninstall/task_uninstalling_the_snapcenter_server.html">
+        SnapCenter サーバをアンインストールします
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> REST API による自動化</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/sc-automation/overview_rest_apis.html">
+        REST API の概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/sc-automation/concept_how_to_access_snapcenter_rest_api_natively.html">
+        SnapCenter REST API にネイティブでアクセスする方法
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/sc-automation/concept_rest_web_services_foundation.html">
+        基盤としての REST Web サービス
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/sc-automation/concept_basic_operational_characterstics.html">
+        基本的な動作特性
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/sc-automation/concept_input_variables_controlling_an_api_request.html">
+        API 要求を制御する入力変数
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/sc-automation/concept_interpreting_an_api_response.html">
+        API 応答の解釈
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/sc-automation/reference_supported_rest_apis.html">
+        サポートされている REST API
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/sc-automation/task_how to_access_rest_apis_using_the_swagger_api_web_page.html">
+        Swagger API Web ページから REST API にアクセスする方法
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/sc-automation/task_get_started_with_the_rest_api.html">
+        REST API の使用を開始する
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/reference_legal_notices.html">
+        法的通知
+      </a></li></ul>
+</div>
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+  </div>
+  
+
+  <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
+    <!-- Begin of page container -->
+    <article class="page-content">
+      <div class="ie-utility">
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://www.netapp.com">ホーム</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">ドキュメント</a>
+        </li>
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/ja-jp/snapcenter/">SnapCenter&nbsp;Software</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          SnapCenter サイトで CA 証明書を設定します
+        </li>
+      </ul>
+    </div>
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
+      <div class="ie-nmt-disclaimer">
+  <span>
+    <div class="ie-nmt-disclaimer-container">
+      <div class="ie-nmt-disclaimer-icon">
+        <svg class="luci-icon" aria-hidden="true">
+          <use xlink:href="/ja-jp/snapcenter/common/svg/sprite.svg#circle-info">
+        </svg>
+      </div>
+      <div class="ie-nmt-disclaimer-content">
+        <span> 日本語は機械翻訳による参考訳です。内容に矛盾や不一致があった場合には、英語の内容が優先されます。 </span>
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+  </span>
+</div><div class="n-doc__component-detail-heading-wrap">
+  <h1 class="n-doc__component-detail-heading">SnapCenter サイトで CA 証明書を設定します</h1>
+</div>
+
+
+<p class="page-details">
+  
+    
+    <time datetime="2021-08-13 09:12:06 +0000">08/13/2021</time>
+    
+  
+
+<span>寄稿者
+  <a target="_blank" href="https://github.com/netapp-nsriram">
+    <img  class="avatar avatar-small"
+          alt="netapp-nsriram"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/64957347?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" href="https://github.com/netapp-soumikd">
+    <img  class="avatar avatar-small"
+          alt="netapp-soumikd"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/64966556?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+</span>
+
+
+</p>
+
+
+<div class="paragraph lead">
+<p>CA 証明書は、 Windows ホスト上で SnapCenter サイトを使用して設定する必要があります。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>手順 *</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>SnapCenter がインストールされている Windows サーバーで IIS マネージャーを開きます。</p>
+</li>
+<li>
+<p>左側のナビゲーションペインで、 * 接続 * をクリックします。</p>
+</li>
+<li>
+<p>サーバー名と * Sites * を展開します。</p>
+</li>
+<li>
+<p>SSL 証明書をインストールする SnapCenter Web サイトを選択します。</p>
+</li>
+<li>
+<p>[* アクション * （ Actions * ） ] &gt; [* サイトの編集 * （ * Edit Site * ） ] に移動し、 [ * バインド * （ Bind</p>
+</li>
+<li>
+<p>バインディングページで、「 https * のバインディング」を選択します。</p>
+</li>
+<li>
+<p>[ 編集（ Edit ） ] をクリックします。</p>
+</li>
+<li>
+<p>[SSL certificate] ドロップダウンリストから、最近インポートした SSL 証明書を選択します。</p>
+</li>
+<li>
+<p>[OK] をクリックします。</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/snapcenter/images/note.svg" alt="注記">
+</td>
+<td class="content">
+最近導入した CA 証明書がドロップダウンメニューに表示されない場合は、 CA 証明書が秘密鍵に関連付けられているかどうかを確認します。
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/snapcenter/images/important.svg" alt="重要">
+</td>
+<td class="content">
+証明書が次のパスを使用して追加されていることを確認します。 * コンソールルート &gt; 証明書–ローカルコンピュータ &gt; 信頼されたルート証明機関 &gt; 証明書 * 。
+</td>
+</tr>
+</table>
+</div>
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  
+  <!-- Start Page Toolbar -->
+  <div class="page-nav-toolbar">
+    <div id="version-dropdown"></div>
+    <div class="page-nav-contribute"  >
+      <a target="_blank" href="https://github.com/NetAppDocs/snapcenter/issues/new?body=Page%3A%20[SnapCenter サイトで CA 証明書を設定します](https://docs.netapp.com/ja-jp/snapcenter/install/task_configure_CA_certificate_with_snapcenter_site.html)" class="page-nav-contribute-link" role="button"><img src="/ja-jp/snapcenter/images/discuss-sm.svg" class="github-icon" />ドキュメントの変更をリクエスト</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/snapcenter/blob/main/install/task_configure_CA_certificate_with_snapcenter_site.adoc" class="page-nav-contribute-link" role="button"><img src="/ja-jp/snapcenter/images/edit-sm.svg" class="github-icon" />GitHub で編集</a>
+      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ja-jp/snapcenter/images/article-sm.svg" class="github-icon" />寄稿者向けガイド</a>
+    </div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">このページ</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+  <div style="clear: both"></div><!-- Main needs to have height -->
+</div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+      <div class="n-footer__bottom-left">
+
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+            <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2021 NetApp, Inc.</a>
+            </li>
+
+</ul>
+</div>
+<div class="n-footer__social-links">
+<ul class="n-footer__social-link-list">
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com" target="_blank" title="blog" alt="blog">
+<span class="n-footer__social-link-text">blog</span>
+<svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+  <title>blog@</title>
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/snapcenter/common/svg/sprite.svg#blog"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/" target="_blank" title="community" alt="community">
+<span class="n-footer__social-link-text">community</span>
+<svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
+<title>community@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/snapcenter/common/svg/sprite.svg#comments"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp" target="_blank" title="twitter" alt="twitter">
+<span class="n-footer__social-link-text">twitter</span>
+<svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+<title>twitter@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/snapcenter/common/svg/sprite.svg#twitter"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp" target="_blank" title="facebook" alt="facebook">
+<span class="n-footer__social-link-text">facebook</span>
+<svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+<title>facebook@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/snapcenter/common/svg/sprite.svg#facebook"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-linkedin" href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
+<span class="n-footer__social-link-text">linkedin</span>
+<svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+<title>linkedin@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/snapcenter/common/svg/sprite.svg#linkedin"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-youtube" href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
+<span class="n-footer__social-link-text">youtube</span>
+<svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+<title>youtube@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/snapcenter/common/svg/sprite.svg#youtube"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-slideshare" href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
+<span class="n-footer__social-link-text">slideshare</span>
+<svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+<title>slideshare@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/snapcenter/common/svg/sprite.svg#slideshare"></use>
+</svg>
+
+</a>
+</li>
+</ul>
+</div>
+
+</div>
+<div class="n-footer__bottom-right">
+  <p class="n-footer__fine-print">Web サイトについてのフィードバックを<a target="_self" href="javascript:netapp_mailto()" class="n-footer__copyright">お寄せください</a>
+  <a href="https://docs.netapp.com/ja-jp/announcements/" class="n-footer__copyright">お知らせ</a>
+  </p>
+</div>
+</div>
+</div>
+</footer>
+
+      </div>
+
+      <!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/ja-jp/snapcenter/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/ja-jp/snapcenter/js/prism.js'></script>
+      <script type="text/javascript" src='/ja-jp/snapcenter/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/ja-jp/snapcenter/js/www-ntap.js'></script>
+    <script src='/ja-jp/snapcenter/js/tabbed-blocks.js'></script>
+  </body>
+
+  
+</html>
