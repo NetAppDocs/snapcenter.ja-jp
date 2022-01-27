@@ -42,8 +42,12 @@ entries:
     url: "/install/task_configure_CA_certificate_with_snapcenter_site.html"
   - title: SnapCenter サーバの CA 証明書を有効にします
     url: "/install/task_enable_ca_certificates_for_snapcenter.html"
-- title: 信頼できない Active Directory ドメインを登録します
-  url: "/install/task_register_untrusted_active_directory_domains.html"
+- title: Active Directory 、 LDAP 、 LDAPS を設定します
+  entries:
+  - title: 信頼できない Active Directory ドメインを登録します
+    url: "/install/task_register_untrusted_active_directory_domains.html"
+  - title: LDAPS の CA クライアント証明書を設定します
+    url: "/install/task_configure_CA_client_certificate_for_LDAPS.html"
 - title: ハイアベイラビリティを設定する
   entries:
   - title: F5 を使用して SnapCenter サーバのハイアベイラビリティを構成します
@@ -82,15 +86,10 @@ entries:
     entries:
     - title: LUN ストレージを設定します
       url: "/install/concept_configure_lun_storage.html"
-      entries:
-      - title: iSCSI セッションを確立します
-        url: "/install/task_establish_an_iscsi_session.html"
-      - title: iSCSI セッションを切断します
-        url: "/install/task_disconnect_an_iscsi_session.html"
-      - title: igroup を作成して管理します
-        url: "/install/concept_create_and_manage_igroups.html"
-      - title: ディスクを作成および管理する
-        url: "/install/task_create_and_manage_disks.html"
+    - title: igroup を作成して管理します
+      url: "/install/concept_create_and_manage_igroups.html"
+    - title: ディスクを作成および管理する
+      url: "/install/task_create_and_manage_disks.html"
     - title: SMB 共有を作成および管理する
       url: "/install/concept_create_and_manage_smb_shares.html"
     - title: ストレージシステム上のスペースを再生する

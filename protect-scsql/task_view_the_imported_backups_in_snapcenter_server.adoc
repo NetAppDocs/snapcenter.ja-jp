@@ -22,4 +22,8 @@ SnapManager for Microsoft SQL Server のアーカイブ・バックアップを�
 +
 バックアップの詳細が表示されます。
 
++
+
+NOTE: アーカイブ Snapshot コピーが移行され、セカンダリ保持の一環としてストレージからクリーンアップされる場合は、 SnapManager で作成された対応するプライマリ Snapshot コピーを手動でクリーンアップする必要があります。
+
 

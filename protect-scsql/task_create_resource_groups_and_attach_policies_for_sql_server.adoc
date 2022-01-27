@@ -106,7 +106,7 @@ NOTE: 検証サーバのバージョンが、プライマリデータベース�
 
 .. Load locators * （ロケータのロード）をクリックして、 SnapMirror ボリュームと SnapVault ボリュームをロードし、セカンダリ・ストレージ上で検証を実行します。
 .. 検証スケジュールを設定するポリシーを選択し、 * をクリックしますimage:../media/add_policy_from_resourcegroup.gif[""]*
-.. Add Verification Schedules_policy_name_dialog box で、次の処理を実行します。
+.. Add Verification Schedules policy_name ダイアログボックスで、次の操作を実行します。
 +
 |===
 | 状況 | 手順 

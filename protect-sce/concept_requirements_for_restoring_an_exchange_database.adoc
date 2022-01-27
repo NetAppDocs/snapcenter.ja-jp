@@ -12,6 +12,9 @@ summary: SnapCenter Plug-in for Microsoft Exchange Server のバックアップ�
 [role="lead"]
 SnapCenter Plug-in for Microsoft Exchange Server のバックアップから Exchange Server データベースをリストアする前に、以下の要件を満たしていることを確認する必要があります。
 
+
+NOTE: 復元機能を完全に使用するには、 SnapCenter Server と SnapCenter Plug-in for Exchange データベースの両方を 4.6 にアップグレードする必要があります。
+
 * データベースをリストアするには、 Exchange Server がオンラインで稼働している必要があります。
 * データベースが Exchange Server 上に存在している必要があります。
 +

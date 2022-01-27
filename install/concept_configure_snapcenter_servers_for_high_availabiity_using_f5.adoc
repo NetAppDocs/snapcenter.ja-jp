@@ -25,7 +25,7 @@ image::../media/sc-F5-configure-workflow.png[SC F5 設定ワークフロー]
 * add-SmServer
 * remove-SmServerCluster を実行しました
 +
-詳細については、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+詳細については、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
 
 
 

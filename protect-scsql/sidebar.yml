@@ -93,6 +93,14 @@ entries:
       url: "/protect-scsql/task_configure_CA_certificate_with_Windows_host_plug-in_services.html"
     - title: プラグインの CA 証明書を有効にします
       url: "/protect-scsql/task_enable_ca_certificates_for_plug-ins.html"
+  - title: ディザスタリカバリを設定
+    entries:
+    - title: SnapCenter Plug-in for SQL Server のディザスタリカバリ
+      url: "/protect-scsql/task_disaster_recovery_scsql.html"
+    - title: SnapCenter Plug-in for SQL Server のストレージディザスタリカバリ
+      url: "/protect-scsql/task_storage_disaster_recovery_for_scsql.html"
+    - title: SnapCenter Plug-in for SQL Server のセカンダリストレージからプライマリストレージへのフェイルバック
+      url: "/protect-scsql/task_failback_from_scsql_secondary_storage_to_primary_storage.html"
   - title: SnapManager for Microsoft SQL Server から SnapCenter にアーカイブバックアップをインポートします
     entries:
     - title: アーカイブバックアップのインポートの概要

@@ -191,6 +191,9 @@ NOTE: セカンダリストレージでの Snapshot コピーの最大数に達�
 +
 スクリプトのタイムアウト値を指定することもできます。デフォルト値は 60 秒です。
 
++
+SnapCenter では、プリスクリプトとポストスクリプトを実行する際に、事前定義された環境変数を使用できます。 link:../protect-sco/predefined-environment-variables-prescript-postscript-backup.html["詳細はこちら。"^]
+
 . [Verification] ページで、次の手順を実行します。
 +
 .. 検証処理を実行するバックアップスケジュールを選択します。

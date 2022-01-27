@@ -47,4 +47,10 @@ SnapCenter でポリシーを作成するときに、このスケジュールの
 
 
 . 「 Invoke-NaSmBackupMigration 」コマンドレットを使用して、アーカイブ済みのバックアップをインポートします。
++
+たとえば、スタンドアロン SQL ホストを移行するには、「 Invoke-NaSmBackupMigration-Hostname 」 <hostname>`````-PluginCode SMSQL’ を実行します
+
++
+たとえば、クラスタホストを移行するには、「 Invoke-NaSmBackupMigration-Hostname <clustername> `-PluginCode SMSQL’ 」と入力します
+
 

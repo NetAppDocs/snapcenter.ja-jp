@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords:  
 summary: SnapCenter Custom Plug-ins を使用してデータ保護処理を実行できます。 
 ---
-= SnapCenter Custom Plug-ins の機能
+= SnapCenter Custom Plug-ins および Storage プラグインの機能
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
 SnapCenter Custom Plug-ins を使用してデータ保護処理を実行できます。
+
+* カスタムプラグイン *
 
 * データベース、インスタンス、ドキュメント、表領域などのリソースを追加します。
 * バックアップを作成します
@@ -19,4 +21,26 @@ SnapCenter Custom Plug-ins を使用してデータ保護処理を実行でき�
 * バックアップ処理のスケジュールを設定します。
 * バックアップ、リストア、クローニングの各処理を監視する。
 * バックアップ、リストア、クローニングの各処理のレポートを表示します。
+
+
+* ストレージプラグイン *
+
+このプラグインは、データ保護処理に使用できます。
+
+* 複数の ONTAP クラスタ間でストレージボリュームの整合グループ Snapshot コピーを作成する。
+* 組み込みのプレ / ポストスクリプトフレームワークを使用してカスタムアプリケーションをバックアップします
++
+ONTAP ボリューム、 LUN 、または qtree をバックアップできます。
+
+* SnapCenter ポリシーを使用して、プライマリで作成された Snapshot コピーを ONTAP セカンダリに対して更新し、既存のレプリケーション関係（ SnapVault/SnapMirror/ユニ ファイドレプリケーション）を利用します
++
+ONTAP のプライマリとセカンダリには、 ONTAP FAS 、 AFF 、 Select 、 Cloud ONTAP があります。
+
+* ONTAP ボリューム、 LUN 、またはファイルの完全なリカバリ
++
+参照機能またはインデックス付け機能が製品に組み込まれていないため、それぞれのファイルパスを手動で指定する必要があります。
+
++
+qtree またはディレクトリのリストアはサポートされませんが、バックアップの範囲が qtree レベルで定義されている場合にのみ、 qtree のクローニングとエクスポートを実行できます。
+
 

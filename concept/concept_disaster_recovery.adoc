@@ -1,0 +1,36 @@
+---
+permalink: protect-concept/concept_disaster_recovery.html 
+sidebar: sidebar 
+keywords:  
+summary: SnapCenter ディザスタリカバリ機能を使用すると、リソースの破損やサーバクラッシュなどの災害が発生した場合に SnapCenter サーバをリカバリできます。 
+---
+= ディザスタリカバリ
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter ディザスタリカバリ機能を使用すると、リソースの破損やサーバクラッシュなどの災害が発生した場合に SnapCenter サーバをリカバリできます。SnapCenter リポジトリ、サーバスケジュール、およびサーバ構成コンポーネントをリカバリできます。
+
+ディザスタリカバリ（ DR ）のタイプは次のとおりです。
+
+* * SnapCenter サーバ DR *
++
+SnapCenter サーバのデータは、プラグインが SnapCenter サーバで管理されているかどうかに関係なくバックアップおよびリカバリされます。
+
++
+SnapCenter のディザスタリカバリ機能では、 REST API を使用して SnapCenter サーバをバックアップします。
+
++
+link:../sc-automation/rest_api_workflows_disaster_recovery_of_snapcenter_server.html["SnapCenter サーバのディザスタリカバリ用の REST API のワークフロー"]
+
+* * SQL Server DR *
++
+DR は、 SnapCenter Plug-in for SQL Server でのみサポートされます。SnapCenter Plug-in for SQL Server がダウンしたときに、別の SQL ホストに切り替えてデータをリカバリする手順はいくつかあります。
+
++
+link:../protect-scsql/task_disaster_recovery_scsql.html["SnapCenter Plug-in for SQL Server のディザスタリカバリ"]
+
+
+
+SnapCenter は、 ONTAP の SnapMirror テクノロジを使用してデータをレプリケートします。DR 用にセカンダリサイトにデータをレプリケートして同期し続けることができます。フェイルオーバーは、 SnapMirror のレプリケーション関係を解除することによって開始できます。フェイルバック中に、同期を反転させて DR サイトのデータをプライマリサイトにレプリケートすることができます。

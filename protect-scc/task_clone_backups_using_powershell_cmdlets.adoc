@@ -16,7 +16,7 @@ summary: クローニングワークフローには、計画、クローニン�
 
 PowerShell コマンドレットを実行できるように PowerShell 環境を準備しておく必要があります。
 
-PowerShell コマンドレットについては、 SnapCenter コマンドレットのヘルプを使用するか、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+PowerShell コマンドレットについては、 SnapCenter コマンドレットのヘルプを使用するか、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
 
 * 手順 *
 

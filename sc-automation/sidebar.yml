@@ -1,6 +1,6 @@
 ---
 section: sc-automation
-title: REST API による自動化
+title: REST API を使用して自動化
 entries:
 - title: REST API の概要
   url: "/sc-automation/overview_rest_apis.html"
@@ -15,8 +15,16 @@ entries:
 - title: API 応答の解釈
   url: "/sc-automation/concept_interpreting_an_api_response.html"
 - title: サポートされている REST API
-  url: "/sc-automation/reference_supported_rest_apis.html"
+  entries:
+  - title: その他のプラグインでサポートされている REST API ワークフロー
+    url: "/sc-automation/reference_supported_rest_apis.html"
+  - title: Oracle データベースでサポートされる REST API
+    url: "/sc-automation/refrence_rest_apis_supported_for_oracle_database.html"
+  - title: SnapCenter サーバのディザスタリカバリでサポートされる REST API
+    url: "/sc-automation/rest_api_workflows_disaster_recovery_of_snapcenter_server.html"
 - title: Swagger API Web ページから REST API にアクセスする方法
   url: "/sc-automation/task_how to_access_rest_apis_using_the_swagger_api_web_page.html"
 - title: REST API の使用を開始する
   url: "/sc-automation/task_get_started_with_the_rest_api.html"
+- title: SnapCenter サーバのディザスタリカバリ用の REST API のワークフロー
+  url: "/sc-automation/rest_api_workflows_disaster_recovery_of_snapcenter_server.html"

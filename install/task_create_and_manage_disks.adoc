@@ -1,7 +1,7 @@
 ---
 permalink: install/task_create_and_manage_disks.html 
 sidebar: sidebar 
-keywords: disks 
+keywords: disks, create, manage, clustered disks, view 
 summary: Windows ホストは、ストレージシステム上の LUN を仮想ディスクとして認識します。SnapCenter を使用して、 FC 接続 LUN または iSCSI 接続 LUN を作成および設定できます。 
 ---
 = ディスクを作成および管理する
@@ -11,6 +11,11 @@ summary: Windows ホストは、ストレージシステム上の LUN を仮想�
 
 [role="lead"]
 Windows ホストは、ストレージシステム上の LUN を仮想ディスクとして認識します。SnapCenter を使用して、 FC 接続 LUN または iSCSI 接続 LUN を作成および設定できます。
+
+* SnapCenter では基本ディスクのみがサポートされます。ダイナミックディスクはサポートされていません。
+* GPT には、 NTFS または CSVFS でフォーマットされたボリュームとマウントパスが 1 つのボリュームを含むデータパーティションと MBR 1 つのプライマリパーティションのみが許可されます。
+* サポートされるパーティションスタイル： GPT 、 MBR 。 VMware UEFI VM では、 iSCSI ディスクのみがサポートされます
+
 
 
 NOTE: SnapCenter では、ディスク名の変更はサポートされていません。SnapCenter で管理しているディスクの名前を変更すると、 SnapCenter 処理は正常に終了しません。
@@ -52,6 +57,8 @@ SnapCenter で管理しているクラスタ上のクラスタディスクを表
 == FC 接続または iSCSI 接続の LUN またはディスクを作成します
 
 Windows ホストは、ストレージシステム上の LUN を仮想ディスクとして認識します。SnapCenter を使用して、 FC 接続 LUN または iSCSI 接続 LUN を作成および設定できます。
+
+SnapCenter の外部でディスクを作成してフォーマットする場合は、 NTFS と CSVFS ファイルシステムのみがサポートされます。
 
 * 必要なもの *
 

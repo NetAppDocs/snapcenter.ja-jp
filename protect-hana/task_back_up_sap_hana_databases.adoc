@@ -10,16 +10,23 @@ summary: どのリソースグループにも含まれていないリソース�
 
 
 [role="lead"]
-どのリソースグループにも含まれていないリソースは、のページからバックアップすることができます。
+どのリソースグループにも属していないリソースは、 * Resources * ページからバックアップできます。
 
 * 必要なもの *
 
 * バックアップポリシーを作成しておく必要があります。
 * セカンダリストレージとの SnapMirror 関係があるリソースをバックアップする場合、ストレージユーザに割り当てられた ONTAP ロールには「「 'SnapMirro all' 」権限を含める必要があります。ただし、「 vsadmin 」ロールを使用している場合、「 'SnapMirro all 」権限は必要ありません。
 * Snapshot コピーベースのバックアップ処理の場合は、すべてのテナントデータベースが有効でアクティブになっていることを確認してください。
-* 1 つ以上のテナントデータベースが停止しているときにファイルベースのバックアップを作成する場合は、 Set-SmConfigSettings コマンドレットを使用して、 HANA プロパティファイルの allow_file_by_backup_IFINACTIVE_tenants_present パラメータを * YES * に設定します。
+* SAP HANA システムのレプリケーションバックアップを作成するには、 SAP HANA システムのすべてのリソースを 1 つのリソースグループに追加することを推奨します。これにより、テイクオーバー / フェイルバックモードでのシームレスなバックアップが可能になります。
 +
-コマンドレットで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["SnapCenter ソフトウェアコマンドレットリファレンスガイド"]
+link:protect-hana/task_create_resource_groups_and_attach_policies.html["リソースグループを作成してポリシーを適用"]。
+
++
+link:protect-hana/task_back_up_resource_groups_sap_hana.html["リソースグループをバックアップする"]
+
+* 1 つ以上のテナントデータベースが停止しているときにファイルベースのバックアップを作成する場合は、 HANA のプロパティファイルで「 Set-SmConfigSettings 」コマンドレットを使用して allow_file_bbase_backup_IFINACTIVE_tenants_present パラメータを * YES * に設定します。
++
+コマンドレットで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["SnapCenter ソフトウェアコマンドレットリファレンスガイド"]
 
 
 

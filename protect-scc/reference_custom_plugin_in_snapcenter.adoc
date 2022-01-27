@@ -187,7 +187,7 @@ PowerShell コマンドレットの詳細については、 SnapCenter のコマ
 
 
 
-https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
 
 
 

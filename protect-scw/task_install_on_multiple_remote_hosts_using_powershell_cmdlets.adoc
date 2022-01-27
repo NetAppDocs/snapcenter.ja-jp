@@ -20,7 +20,7 @@ SnapCenter Plug-in for Microsoft Windows を複数のホストに一度にイン
 . SnapCenter サーバ・ホストで 'Open-SmConnection' コマンドレットを使用してセッションを確立し ' 認証情報を入力します
 . 「 Add-SmHost 」コマンドレットと必要なパラメータを使用して、スタンドアロン・ホストまたはクラスタを SnapCenter に追加します。
 +
-コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
 
 . Install-SmHostPackage コマンドレットと必要なパラメータを使用して、複数のホストにプラグインをインストールします。
 +

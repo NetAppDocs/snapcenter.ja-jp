@@ -1,0 +1,41 @@
+---
+permalink: protect-scsql/task_failback_from_scsql_secondary_storage_to_primary_storage.html 
+sidebar: sidebar 
+keywords:  
+summary: SnapCenter Plug-in for SQL Server のプライマリストレージがオンラインに戻ったら、プライマリストレージにフェイルバックする必要があります。 
+---
+= SnapCenter Plug-in for SQL Server のセカンダリストレージからプライマリストレージへのフェイルバック
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter Plug-in for SQL Server のプライマリストレージがオンラインに戻ったら、プライマリストレージにフェイルバックする必要があります。
+
+* 必要なもの *
+
+* SnapCenter Plug-in for SQL Server を * 管理ホスト * ページから * メンテナンス * モードに切り替えます。
+* セカンダリストレージをホストから切断して、プライマリストレージから接続します。
+* プライマリストレージにフェイルバックするには、逆再同期処理を実行して、フェイルオーバー前と同じ関係の方向が維持されることを確認します。
++
+逆再同期処理の実行後もプライマリストレージとセカンダリストレージのロールを保持するには、逆再同期処理をもう一度実行します。
+
++
+詳細については、を参照してください link:https://docs.netapp.com/us-en/ontap-sm-classic/online-help-96-97/task_reverse_resynchronizing_snapmirror_relationships.html["ミラー関係を逆再同期しています"]
+
+* MSSQL サーバサービスを再起動します。
+* SQL リソースがオンラインに戻っていることを確認します。
+
+
+* 手順 *
+
+. [ * 設定 * ] ページで、 [ * 設定 * ] > [ * グローバル設定 * ] > [ * 災害復旧 * ] の順に選択します。
+. [Enable Disaster Recovery] を選択解除します。
+. [ 適用（ Apply ） ] をクリックします。
+. DR ジョブが有効になっているかどうかを確認するには、 * Monitor * > * Jobs * をクリックします。
+
+
+* 終了後 *
+
+* フェイルオーバー時に作成された SnapCenter Plug-in for SQL Server バックアップは、 UI またはコマンドレット「 Remove-SmDRFailoverBackups 」を使用して削除できます
+

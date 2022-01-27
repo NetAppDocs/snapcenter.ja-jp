@@ -103,7 +103,7 @@ NOTE: をクリックしてポリシーを作成することもできます imag
 +
 .. Load locators * （ロケータのロード）をクリックして、 SnapMirror または SnapVault ボリュームをロードし、セカンダリ・ストレージ上で検証を実行します。
 .. * をクリックしますimage:../media/add_policy_from_resourcegroup.gif[""]* Configure Schedules （スケジュールの設定）列で、ポリシーのすべてのスケジュールタイプの検証スケジュールを設定します。
-.. Add Verification Schedules_policy_name_dialog box で、次の処理を実行します。
+.. Add Verification Schedules policy_name ダイアログボックスで、次の操作を実行します。
 +
 |===
 | 状況 | 手順 

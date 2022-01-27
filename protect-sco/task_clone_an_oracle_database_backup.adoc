@@ -21,7 +21,7 @@ NOTE: Linux ホストで作成されたバックアップを AIX ホストにク
 
 SnapCenter では、 Oracle RAC データベースのバックアップからクローニングした場合にスタンドアロンデータベースが作成されます。SnapCenter では、 Data Guard スタンバイデータベースおよび Active Data Guard スタンバイデータベースのバックアップからのクローニングをサポートしています。
 
-クローニング中に、 SnapCenter はリカバリ処理用にログバックアップをマウントします。リカバリ後、ログバックアップはアンマウントされます。これらのクローンはすべて、 /var/opt/snapcenter /scu/clones/_ の下にマウントされます。NFS 経由で ASM を使用している場合は、 ASM_diskstring パラメータで定義された既存のパスに /var/opt/snapcenter /scu/clones/*/*_ を追加する必要があります。
+クローニング中に、 SnapCenter は、 SCN または dat に基づいて、リカバリ処理のために最適な数のログバックアップをマウントします。リカバリ後、ログバックアップはアンマウントされます。これらのクローンはすべて、 /var/opt/snapcenter /scu/clones/_ の下にマウントされます。NFS 経由で ASM を使用している場合は、 ASM_diskstring パラメータで定義された既存のパスに /var/opt/snapcenter /scu/clones/*/*_ を追加する必要があります。
 
 SAN 環境で ASM データベースのバックアップをクローニングする際には、クローニングされるホストデバイスの udev ルールが /etc/udev/rules.d/ 999-scu-netapp.rules_ に作成されます。クローニングされるホストデバイスに関連付けられた udev ルールは、クローンを削除すると削除されます。
 
@@ -190,6 +190,9 @@ Oracle ホーム、ユーザ名、およびグループの詳細が、ソース�
 +
 プリスクリプトは、 _ /var/opt/snapcenter /spl/scripts_or 内のいずれかのフォルダに保存する必要があります。デフォルトでは、 /var/opt/snapcenter /spl/scripts_path が読み込まれます。このパス内の任意のフォルダにスクリプトを配置した場合は、スクリプトが配置されているフォルダまでの完全なパスを指定する必要があります。
 
++
+SnapCenter では、プリスクリプトとポストスクリプトを実行する際に、事前定義された環境変数を使用できます。 link:../protect-sco/predefined-environment-variables-prescript-postscript-clone.html["詳細はこちら。"^]
+
 .. Database Parameter settings セクションで、データベースの初期化に使用される、すでに入力されているデータベースパラメータの値を変更します。
 +
 * をクリックすると、パラメータを追加できますimage:../media/add_policy_from_resourcegroup.gif[""]*
@@ -259,7 +262,12 @@ SnapCenter は、指定された System Change Number （ SCN ）までデータ
  a| 
 外部アーカイブログの場所を指定します
  a| 
-外部アーカイブログの場所を指定します。
+データベースが ARCHIVELOG モードで実行されている場合、 SnapCenter は、指定した SCN または選択した日時に基づいて、最適な数のログバックアップを特定してマウントします。
+
+外部アーカイブログの場所を指定することもできます。
+
+
+NOTE: キャンセルするまでログバックアップを選択した場合、 SnapCenter は自動的にはログバックアップを識別してマウントしません。
 
 
 
@@ -296,6 +304,9 @@ SnapCenter は、指定された System Change Number （ SCN ）までデータ
 PostScript は /var/opt/snapcenter /spl/scripts_or に保存するか、このパス内の任意のフォルダに保存する必要があります。デフォルトでは、 /var/opt/snapcenter /spl/scripts_path が読み込まれます。
 
 このパス内の任意のフォルダにスクリプトを配置した場合は、スクリプトが配置されているフォルダまでの完全なパスを指定する必要があります。
+
+
+NOTE: クローニング処理が失敗した場合、ポストスクリプトは実行されず、クリーンアップアクティビティは直接トリガーされます。
 
 |===
 . [ 通知 ] ページの [ 電子メールの設定 *] ドロップダウンリストから、電子メールを送信するシナリオを選択します。

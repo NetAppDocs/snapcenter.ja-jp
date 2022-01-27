@@ -1,0 +1,29 @@
+---
+permalink: protect-scsql/task_disaster_recovery_scsql.html 
+sidebar: sidebar 
+keywords:  
+summary: SnapCenter Plug-in for SQL Server がダウンした場合は、いくつかの手順を手動で実行することでリカバリできます。 
+---
+= SnapCenter Plug-in for SQL Server のディザスタリカバリ
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter Plug-in for SQL Server がダウンしたときに、別の SQL ホストに切り替えてデータをリカバリする手順はいくつかあります。
+
+* 必要なもの *
+
+* セカンダリホストのオペレーティングシステム、アプリケーション、およびホスト名は、プライマリホストと同じにする必要があります。
+* [ ホストの追加 ] または [ ホストの変更 ] ページを使用して、 SnapCenter Plug-in for SQL Server を別のホストにプッシュします。
++
+link:https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_hosts.html["ホストを管理します"]
+
+
+
+* 手順 *
+
+. [*Hosts] ページからホストを選択して、 SnapCenter Plug-in for SQL Server を変更およびインストールします。
+. （オプション） SnapCenter Plug-in for SQL Server の構成ファイルをディザスタリカバリ（ DR ）バックアップから新しいマシンに置き換えます。
+. Windows スケジュールと SQL スケジュールを、 DR バックアップから SnapCenter Plug-in for SQL Server フォルダからインポートします。
+

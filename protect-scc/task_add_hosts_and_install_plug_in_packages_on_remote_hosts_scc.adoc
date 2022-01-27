@@ -119,6 +119,9 @@ NOTE: プラグインを手動でインストールし、カスタムポート�
 +
 zip 形式のフォルダには、カスタムプラグインコードと DESCRIPTOR .xml ファイルが含まれています。
 
++
+Storage Plug-In の場合は、 _C ： \ProgramData\NetApp\SnapCenter \Package Repository_に 移動し、「 Storage.zip 」フォルダを選択します。
+
 ... [ アップロード ] をクリックします。
 +
 パッケージをアップロードする前に zip 形式のカスタムプラグインフォルダ内の記述子 .xml ファイルが検証されます。

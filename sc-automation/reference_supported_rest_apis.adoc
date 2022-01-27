@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: REST API categories 
 summary: SnapCenter REST API で使用できるリソースは、 SnapCenter API ドキュメントページに表示されるカテゴリ別に分類されています。 
 ---
-= サポートされている REST API
+= 他のプラグインでサポートされている REST API
 :icons: font
 :imagesdir: ../media/
 

@@ -1,0 +1,267 @@
+---
+permalink: protect-sco/predefined-environment-variables-prescript-postscript-backup.html 
+sidebar: sidebar 
+keywords: environment variable, predefined, prescript, postscript, backup, policy 
+summary: SnapCenter では、バックアップポリシーの作成時にプリスクリプトおよびポストスクリプトを実行する際に、事前定義された環境変数を使用できます。 
+---
+= バックアップ固有のプリスクリプトおよびポストスクリプト用の事前定義された環境変数
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter では、バックアップポリシーの作成時にプリスクリプトおよびポストスクリプトを実行する際に、事前定義された環境変数を使用できます。この機能は、 VMDK を除くすべての Oracle 構成でサポートされます。
+
+SnapCenter は、シェルスクリプトが実行される環境で直接アクセス可能なパラメータの値を事前定義します。スクリプトの実行時にこれらのパラメータの値を手動で指定する必要はありません。
+
+
+
+== バックアップポリシーを作成するためにサポートされる事前定義された環境変数
+
+* * sc_job_ID * は、処理のジョブ ID を指定します。
++
+例： 256
+
+* *SC_ORACLE_SID * はデータベースのシステム識別子を指定します
++
+複数のデータベースを処理する場合は、パラメータにパイプで区切られたデータベース名が含まれます。
+
++
+このパラメータは、アプリケーションボリュームに対して入力されます。
+
++
+例： NFSB32 | NFSB31
+
+* *sc_host * は、データベースのホスト名を指定します。
++
+RAC の場合、ホスト名はバックアップが実行されるホストの名前になります。
+
++
+このパラメータは、アプリケーションボリュームに対して入力されます。
+
++
+例： scsmohost2.gdl.englabe.netapp.com
+
+* *SC_OS_USER* は、データベースのオペレーティング・システムの所有者を指定します。
++
+このデータは、 <db1><osuser1>|<db2><osuser2> の形式になります。
+
++
+例： NFSB31@Oracle|NFSB32@Oracle
+
+* * SC_OS_GROUP * はデータベースのオペレーティング・システム・グループを指定します
++
+データは <db1><osgroup1><osgroup>|<db2>@<osgroup2> の形式で表示されます。
+
++
+例： NFSB31@ INSTALL | NFSB32@oinstall
+
+* * SC_BACKUP _ TYPE * 」にはバックアップ・タイプ（オンライン・フル、オンライン・データ、オンライン・ログ、オフライン・シャットダウン、オフライン・マウント）を指定します。
++
+例
+
++
+** フルバックアップの場合： ONLINEFULL
+** データのみのバックアップ :ONLINEDATA
+** ログのみのバックアップ： ONLINELOG
+
+
+* * SC_backup_name * はバックアップ名です
++
+このパラメータは、アプリケーションボリュームに対して入力されます。
+
++
+例： DATA@RG2_scspr2417819002_07-20-2021_12.16.48.9267 _0 | LOG@RG2_scspr2417819002_07-20-2021_12.16.48.9267 _1 | AV@RG2_scspr2417819002_07-20-2021_12.16.48.9267
+
+* * SC_BACKUP ID * にはバックアップ ID を指定します
++
+このパラメータは、アプリケーションボリュームに対して入力されます。
+
++
+例： DATA @203 | LOG@205 | AV@207
+
+* *SC_ORACLE_HOME* は Oracle ホーム・ディレクトリのパスを指定します
++
+例： NFSB32@ /ora01/app/oracle/product/18.1.0/db_1 | NFSB31@ /ora01/app/oracle/product/18.1.0/db_1
+
+* * SC_BACKUP _retention-* はポリシーに定義されている保持期間です
++
+例
+
++
+** フルバックアップの場合：毎時 | データ @ 日数： 3 | log@ count ： 4
+** オンデマンドデータのみのバックアップの場合： OnDemand | data@ count ： 2
+** オンデマンドログのみのバックアップの場合： OnDemand | log@count ： 2
+
+
+* * sc_resource_group_name * で、リソースグループの名前を指定します。
++
+例： RG1
+
+* * SC_BACKUP _policy_name * はバックアップ・ポリシーの名前です
++
+例： backup_policy
+
+* * sc_av_name * は、アプリケーション・ボリュームの名前を指定します。
++
+例： AV1|AV2
+
+* * SC_primary_data_volume_full_path * は、データファイルディレクトリに対する SVM からボリュームへのストレージマッピングを指定します。LUN と qtree の親ボリュームの名前になります。
++
+データの形式は、 <db1 >@<SVM1 ： volume1 >|<db2 >@<SVM2 ： volume2> となります。
+
++
+例
+
++
+** 同じリソースグループ内の 2 つのデータベース： NFSB32@buck ： /vol/scspr2417819002_NFS_CDB_NFSB32_DATA | NFSB31@buck ： /vol/scspr2417819002_NFS_CDB_NFSB31_DATA
+** データファイルが複数のボリュームに分散されている単一のデータベースの場合： buck ： /vol/scspro2417819002_nfs_cdb31_data 、 herculus ： /vol/scspr2417819002_nfs
+
+
+* * SC_primary_archivelogs_volume_full_path * は、ログファイルディレクトリに対する SVM のボリュームへのストレージマッピングを指定します。LUN と qtree の親ボリュームの名前になります。
++
+例
+
++
+** 単一データベースインスタンスの場合： buck ： /vol/scspr2417819002_NFS_CDB_NFSB31_redo
+** 複数のデータベースインスタンスの場合： NFSB31@ バック： /vol/scspr2417819002_NFS_CDB_NFSB31_redo | NFSB32@ バック： /vol/scspr2417819002_NFS_CDB_NFSB32_redo
+
+
+* * SC_primary_full_snapshot_name_for_tag * は、ストレージ・システム名とボリューム名を含む Snapshot のリストを指定します。
++
+例
+
++
+** 単一データベースインスタンスの場合： buck ： /vol/scspr2417819002_nfs_cdb_NFSB32_data/Rg2_scspr2417819002_07-21-202_02.28.26.3973_0 、バック： /vol/scspr2417819002_nfs_cda_2.2B32_redo 01726.21_r19821_scspr1972_j21_j21_scspr2002_2002_17202_017202_019002_019002_019002_019002_019002_017
+** 複数のデータベースインスタンスの場合： NFSB32@buck ： /vol/scspr2417819002_NFS_CDB32_data/Rg2_scspr2417819002_07-021_2021_21_219002_0226.3973_0 、バック： /vol/scspr2417819002_NFS21_2.17002_NFS017002_NFS019002_002_NFS019002_42002_4_017202_NFS122_1821_CD21_2.17202_NFS017202_41_CD21_2.17202_17202_17202_17202_17202_17202_17202_17202_17202_122_17202_17202_0.2_ R17202_17202_17202_17202_17202_17202_0.2_ NFS 9_17202_17202_122_17202_122_DATA 、 NFS 017202_17202_17202_17202_17202_0.2_ NFS 9_R17202_122_17202_
+
+
+* * SC_primary_snapshot_names * には、バックアップ中に作成されたプライマリ Snapshot の名前を指定します。
++
+例
+
++
+** 単一データベースインスタンスの場合： RG2_scspr2417819002_07-021-021-02.28.26.3973_0 、 RG2_scspr2417819002_07-021-202_02.28.26.3973_1
+** 複数のデータベースインスタンスの場合： NFSB32@RG2_scspr2417819002_07-21-2021_02.28.26.3973 _0 、 Rg2_scspr2417819002_07-01-202_02.28.26.3973_1|NFSB31@RG2_scspr2417819002_07-21-2021_02.28.26.3973 _0 、 Rg2_scspr2417819002_07-021-02.28.26.3973_1
+** 整合グループの Snapshot に 2 つのボリュームが含まれる場合： CG3_R80404CBEF5V1_04-05-050202_003.4945_bfc279cc-28ad-465c-9d60-5487ac17b25d_202_4_3_8_58_350
+
+
+* * SC_primary_mount_points * は、バックアップに含まれるマウントポイントの詳細を指定します。
++
+詳細には、バックアップでファイルの直接の親ではなく、ボリュームがマウントされているディレクトリが含まれます。ASM 構成の場合は、ディスクグループの名前です。
+
++
+データの形式は、 <db1><mountpoint1, mountpoint2>|<DB2><mountpoint1, mountpoint2> のようになります。
+
++
+例
+
++
+** シングルデータベースインスタンスの場合： /mnt/nfsdb3_data 、 /mnt/nfsdb3_log 、 /mnt/nfsdb3_data1
+** 複数のデータベースインスタンスの場合： NFSB31@/mnt/nfsdb31_data 、 /mnt/nfsdb31_log 、 /mnt/nfsdb31_log 、 /mnt/nfsdb32_data, /mnt/nfsdb32_log 、 /mnt/nfsdb32_data1
+** ASM の場合： +DATA2DG 、 +LOG2DG
+
+
+* * SC_primary_snapshots および _mount_points * には、各マウントポイントのバックアップ中に作成された Snapshot の名前を指定します。
++
+例
+
++
+** シングルデータベースインスタンスの場合： Rg2_scspr2417819002_07-02-2202_02.28.26.3973_0 ： /mnt/nfsb32_data 、 Rg2_scspr2417819002_07-021 - 202_02.28.26.3973_1 ： /mnt/bnfs31_log
+** 複数のデータベースインスタンスの場合： NFSB32@RG2_scspr2417819002_07-21-2021_02.28.26.3973 _0 ： /mnt/nfsb32_data 、 Rg2_scspr2417819002_07-021 - 202_02.28.26.3973_1 ： /mnt/nfsb31_log | NFSB31@RG2_scspr2417819002_07-21-2021_02.28.26.3973 _0 ： /mnt/nfsb31_data 、 Rg2_scspr24178219002_07819002_302_log - nfs3/026.32_nfmnt_302_log
+
+
+* *SC_archivelogs_locations* はアーカイブ・ログ・ディレクトリの場所を指定します
++
+ディレクトリ名はアーカイブログファイルの直下の親になります。アーカイブログを複数の場所に配置すると、すべての場所がキャプチャされます。これには FRA シナリオも含まれます。ディレクトリにソフトリンクが使用されている場合は、同じ情報が入力されます。
+
++
+例
+
++
+** NFS 上の単一データベースの場合： /mnt/nfsdb2_log
+** NFS 上の複数のデータベースおよび NFSB31 データベースアーカイブログが 2 つの異なる場所に格納されている場合： NFSB31@/mnt/nfsdb31_log1 、 /mnt/nfsdb31_log2 | NFSB32@/mnt/nfsdb32_log
+** ASM の場合： +LOG2DG/ASMDB2/ARCHIVE/2021 _ 07_15
+
+
+* * SC_redo _logs_locations * は 'redo ログ・ディレクトリの場所を指定します
++
+ディレクトリ名は REDO ログファイルの直下の親になります。ディレクトリにソフトリンクが使用されている場合は、同じ情報が入力されます。
+
++
+例
+
++
+** NFS 上の単一データベースの場合： /mnt/nfsdb2_data/newdb1
+** NFS 上の複数のデータベース： NFSB31@/mnt/nfsdb31_data/newdb31|NFSB32@/mnt/nfsdb32_data/newdb32
+** ASM の場合： +LOG2DG/ASMDB2/ONLINELOG
+
+
+* * sc_control_files_location* には、制御ファイルディレクトリの場所を指定します。
++
+このディレクトリ名は制御ファイルの直下の親になります。ディレクトリにソフトリンクが使用されている場合は、同じ情報が入力されます。
+
++
+例
+
++
+** NFS 上の単一データベースの場合： /mnt/nfsdb2_data/FRA/newdb1 、 /mnt/nfsdb2_data/newdb1
+** NFS 上の複数のデータベース： NFSB3@/mnt/nfsdb31_data/FRA/newdb31 、 /mnt/nfsdb31_data/newdb31/NFSB32@/mnt/nfsdb32_data/FRA/newdb32 、 /mnt/nfsdb32_data/newdb32
+** ASM の場合： +LOG2DG/ASMDB2/CONTROLFILE
+
+
+* *SC_data_files_locations" にはデータ・ファイル・ディレクトリの場所を指定します
++
+ディレクトリ名はデータファイルの直下の親になります。ディレクトリにソフトリンクが使用されている場合は、同じ情報が入力されます。
+
++
+例
+
++
+** NFS 上の単一データベースの場合： /mnt/nfsdb3_data1 、 /mnt/nfsdb3_data/newDB3/datafile
+** NFS 上の複数のデータベース： NFSB31@/mnt/nfsdb31_data1 、 /mnt/nfsdb31_data/newDB31/datafile | NFSB32@/mnt/nfsdb32_data1 、 /mnt/nfsdb32_data/newDB32/data/newDB32/datafile
+** ASM の場合： +DATA2D2/ASMDB2/datafile 、 +DATA2D2/ASMDB2/tempfile
+
+
+* * SC_SNAPSHOT_LABEL * はセカンダリ・ラベルの名前を指定します
++
+例： Hourly 、 Daily 、 Weekly 、 Monthly 、 Custom Label
+
+
+
+
+
+== サポートされるデリミタ
+
+* * ： * は、 SVM 名とボリューム名を区切るために使用します
++
+例： buck ： /vol/scspr2417819002_nfs_cdb32_data/Rg2_scspr2417819002_07-021 - 202_02.28.26.3973_0 、バック： /vol/scspr2417819002_cda_2.2/Rg2_scr21_scspr2004_17821_scspr2002_240021_scspr2004_17202_j21_scspr2002_0.21_j21_j21_j21_scspr2002_0
+
+* *@* は、データベース名からデータを分離し、キーから値を分離するために使用されます。
++
+例
+
++
+** NFSB32@buck ： /vol/scspr2417819002_NFSB32_CDB_data/Rg2_scspr2417819002_019002_019002_019002_07-21-202_02.28.26.3973_0 、バック： /vol/scspr2417819002_CD21_NFS21_24002_NFS017002_002_002_NFS21_24002_NFS21_24002_17002_172021_2.17002_17002_17002_17002_17002_17002_17202_17202_17002_17002_17002_17202_17002_17002_17202_17202_17202_17202_17202_17202_17202_17202_17002_17002_17002_17002_17202_17202_17202_17202_17202_17202_17202_17202_17202_17202_17202_17202_17202_17202_17202_17
+** NFSB3@ Oracle | NFSB32@ Oracle
+
+
+* * | * は、 2 つの異なるデータベース間でデータを分離するため、および SC_BACKUP ID 、 SC_BACKUP _retention 、および SC_BACKUP _name の各パラメータの 2 つのエンティティ間でデータを分離するために使用されます。
++
+例
+
++
+** データ @203| ログ @205
+** 毎時 | データ @ 日数： 3 | ログ @ カウント： 4
+** DATA@RG2_scspr2417819002_07-20-2021_12.16.48.9267 _0 | LOG@RG2_scspr2417819002_07-20-2021_12.16.48.9267 _1
+
+
+* * / * を使用して、 SC_primary_snapshot_names パラメータと SC_primary_full_snapshot_name_for_tag パラメータのボリューム名を Snapshot と区切ります。
++
+例： NFSB32@buck ： /vol/scspr2417819002_NFS_CDB_NFSB32_data/Rg2_scspr2417819002_07-021 - 202_02.28.26.3973_0 、バック： /vol/scspr2417819002_NFS_CDB_2.2BNFS32_bNFS32_26.21_R1726.21_scspr702-1721_scspr1973.0021_r21_scspr21_scspr2002_1772.1773.190021_scspr21_sc2002_
+
+* * 、 * は、同じ DB の変数のセットを区切るために使用されます。
++
+例： NFSB32@buck ： /vol/scspr2417819002_NFS_CDB_NFSB32_data/Rg2_scspr2417819002_07-21-202_02.28.26.3973_0 、 NFS19002_017819002_nfs_sc019002_002_41_scspbucK_24002_24002_24002_cdr21_nfs21_sc1621_r17202_17202_17202_17202_17202_17202_17202_17202_122_122_17202_122_17202_17202_122_ NFS 9_17202_17202_17202_17202_17202_17202_017202_017202_122_ NFS 9_172_ NFS 9_R17202_017202_017202_017202_017202_017202_017202_017202_017202_017202_017202_017202_017202_017202_
+
+

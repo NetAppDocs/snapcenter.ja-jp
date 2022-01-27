@@ -25,9 +25,12 @@ VMware 上でサポートされるノードは、 Microsoft iSCSI Software Initi
 +
 通常の RDMS では、最大 56 の RDM LUN と 4 つの LSI Logic SCSI コントローラがサポートされます。 VMware VM MSCS のボックスツーボックスの Plug-in for Windows 構成では、最大 42 の RDM LUN と 3 つの LSI Logic SCSI コントローラがサポートされます
 
++
+VMware 準仮想 SCSI コントローラをサポートします。RDM ディスクでは 256 本のディスクをサポートできます。
 
 
-サポートされているバージョンの最新情報については、を参照してください https://mysupport.netapp.com/matrix/imt.jsp?components=100747;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。
+
+サポートされているバージョンの最新情報については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。
 
 
 

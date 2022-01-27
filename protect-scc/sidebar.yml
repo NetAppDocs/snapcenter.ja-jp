@@ -24,8 +24,8 @@ entries:
       url: "/protect-scc/reference_backup_schedules_of_custom_plug_in_resources.html"
     - title: 必要なバックアップジョブの数
       url: "/protect-scc/concept_number_of_backup_jobs_needed.html"
-  - title: 手動で追加した SAP HANA リソースでサポートされるリストア戦略のタイプ
-    url: "/protect-scc/reference_types_of_restore_strategies_supported_for_manually_added_sap_hana_resources.html"
+  - title: カスタムプラグインリソースを手動で追加する場合にサポートされるリストア戦略のタイプ
+    url: "/protect-scc/reference_types_of_restore_strategies_supported_for_manually_added_custom_plugin_resources.html"
 - title: アプリケーション用のプラグインを開発します
   entries:
   - title: 概要

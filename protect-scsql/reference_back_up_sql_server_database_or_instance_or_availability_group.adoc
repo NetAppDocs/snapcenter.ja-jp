@@ -23,7 +23,7 @@ image::../media/scsql_backup_workflow.png[SCSQL バックアップワークフ�
 
 NOTE: NetApp 以外の LUN 、破損したデータベース、またはリストア中のデータベースを選択すると、 Resources ページの Backup Now 、 Restore 、 Manage Backups 、および Clone の各オプションが無効になります。
 
-PowerShell コマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、リカバリ、検証、クローニングの処理を実行することもできます。PowerShell コマンドレットの詳細については、 SnapCenter コマンドレットのヘルプを使用するか、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2877143["SnapCenter ソフトウェアコマンドレットリファレンスガイド"]
+PowerShell コマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、リカバリ、検証、クローニングの処理を実行することもできます。PowerShell コマンドレットの詳細については、 SnapCenter コマンドレットのヘルプを使用するか、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["SnapCenter ソフトウェアコマンドレットリファレンスガイド"]
 
 
 

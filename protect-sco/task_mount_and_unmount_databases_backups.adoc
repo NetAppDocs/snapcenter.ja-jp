@@ -76,7 +76,7 @@ ASM データベースのバックアップをマウントする場合は、マ�
 `./sccli get-Smbackup - BackupNamebackup_name`
 
 +
-コマンドで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2877144["SnapCenter ソフトウェアコマンドリファレンスガイド"^]。
+コマンドで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2880725["SnapCenter ソフトウェアコマンドリファレンスガイド"^]。
 
 
 

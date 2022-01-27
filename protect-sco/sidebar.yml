@@ -22,6 +22,8 @@ entries:
     url: "/protect-sco/reference_prerequisites_for_adding_hosts_and_installing_snapcenter_plug_ins_package_for_linux_or_aix.html"
   - title: Linux または AIX 用のホストを追加して Plug-ins Package をインストールします
     url: "/protect-sco/task_add_hosts_and_installing_the_snapcenter_plug_ins_package_for_linux_or_aix.html"
+  - title: Linux または AIX 用のプラグインパッケージをインストールする別の方法
+    url: "/protect-sco/alternate-ways-install-plug-in-linux-aix.html"
   - title: SnapCenter Plug-in Loader サービスを設定します
     url: "/protect-sco/task_configure_snapcenter_plug_in_loader_service.html"
   - title: Linux ホストで SnapCenter Plug-in Loader サービスを使用して CA 証明書を設定します
@@ -40,6 +42,8 @@ entries:
     url: "/protect-sco/backup-workflow.html"
   - title: Oracle データベースのバックアップ戦略を定義する
     url: "/protect-sco/task_define_a_backup_strategy_for_oracle_databases.html"
+  - title: バックアップ固有のプリスクリプトおよびポストスクリプト用の事前定義された環境変数
+    url: "/protect-sco/predefined-environment-variables-prescript-postscript-backup.html"
   - title: Oracle データベースをバックアップに使用できるかどうかを確認します
     url: "/protect-sco/task_determine_whether_oracle_databases_are_available_for_backup.html"
   - title: Oracle データベースのバックアップポリシーの作成
@@ -68,9 +72,11 @@ entries:
     url: "/protect-sco/restore-workflow.html"
   - title: Oracle データベースのリストアとリカバリの戦略を定義する
     url: "/protect-sco/task_define_a_restore_and_recovery_strategy_for_oracle_databases.html"
+  - title: 特定のプリスクリプトとポストスクリプトをリストアするための事前定義された環境変数
+    url: "/protect-sco/predefined-environment-variables-prescript-postscript-restore.html"
   - title: Oracle データベースをリストアするための要件
     url: "/protect-sco/reference_requirements_for_restoring_an_oracle_database.html"
-  - title: Oracle データベースをリストアします
+  - title: Oracle データベースのリストアとリカバリを行う
     url: "/protect-sco/task_restore_an_oracle_database.html"
   - title: ポイントインタイムリカバリを使用した表領域のリストアとリカバリ
     url: "/protect-sco/task_restore_and_recovere_tablespaces_using_point_in_time_recovery.html"
@@ -88,6 +94,8 @@ entries:
     url: "/protect-sco/clone-workflow.html"
   - title: Oracle データベースのクローニング戦略を定義する
     url: "/protect-sco/task_define_a_clone_strategy_for_oracle_databases.html"
+  - title: 特定のプリスクリプトおよびポストスクリプトをクローニングするための事前定義された環境変数
+    url: "/protect-sco/predefined-environment-variables-prescript-postscript-clone.html"
   - title: Oracle データベースをクローニングするための要件
     url: "/protect-sco/reference_requirements_for_cloning_an_oracle_database.html"
   - title: Oracle データベースのクローニング
@@ -106,3 +114,15 @@ entries:
     url: "/protect-sco/task_refresh_a_clone.html"
   - title: プラグイン可能なデータベースのクローンを削除します
     url: "/protect-sco/task_delete_clone_of_a_pluggable_database.html"
+- title: アプリケーションボリュームを管理する
+  entries:
+  - title: アプリケーションボリュームを追加します
+    url: "/protect-sco/add-application-volume.html"
+  - title: アプリケーションボリュームのバックアップ
+    entries:
+    - title: アプリケーションボリュームをバックアップ
+      url: "/protect-sco/backup-application-volume.html"
+    - title: アプリケーションボリュームのリソースグループをバックアップします
+      url: "/protect-sco/backup-application-volume-resource-group.html"
+  - title: アプリケーションボリュームのバックアップをクローニングする
+    url: "/protect-sco/clone-application-volume.html"

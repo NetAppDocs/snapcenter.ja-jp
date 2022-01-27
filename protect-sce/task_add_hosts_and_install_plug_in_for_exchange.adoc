@@ -10,7 +10,7 @@ summary: SnapCenterAdd Host ページを使用して、 Windows ホストを追�
 
 
 [role="lead"]
-SnapCenterAdd Host ページを使用して、 Windows ホストを追加できます。指定したホストに Plug-in for Exchange が自動的にインストールされます。これはプラグインのインストールに推奨される方法です。ホストを追加してプラグインをインストールするには、個々のホストまたはクラスタを使用します。
+SnapCenter のホストの追加ページを使用して、 Windows ホストを追加できます。指定したホストに Plug-in for Exchange が自動的にインストールされます。これはプラグインのインストールに推奨される方法です。ホストを追加してプラグインをインストールするには、個々のホストまたはクラスタを使用します。
 
 * 必要なもの *
 
@@ -26,9 +26,29 @@ SnapCenter サーバをプラグインホストとして別の SnapCenter サー
 
 ホストの追加とプラグインパッケージのインストールは、個々のホストまたはクラスタに対して実行できます。クラスタ（ Exchange DAG ）にプラグインをインストールする場合は、ネットアップ LUN 上にデータベースがないノードがある場合でも、クラスタのすべてのノードにインストールされます。
 
+SnapCenter 4.6 以降では、 SCE はマルチテナンシーをサポートしており、次の方法を使用してホストを追加できます。
+
+|===
+| ホスト追加処理 | 4.5 以前 | 4.6 以降 
+
+
+| IP なしの DAG をクロスドメインまたは別のドメインに追加 | サポート対象外 | サポートされます 
+
+
+| 同じドメインまたはクロスドメインにそれぞれ固有の名前を持つ複数の IP DAG を追加します | サポートされます | サポートされます 
+
+
+| クロスドメインに、ホスト名と DB 名が同じ IP DAG または IP レス DAG を複数追加する | サポート対象外 | サポートされます 
+
+
+| 同じ名前でクロスドメインに属する IP/IP を行わない DAG を複数追加します | サポート対象外 | サポートされます 
+
+
+| 同じ名前とクロスドメインを持つ複数のスタンドアロンホストを追加します | サポート対象外 | サポートされます 
+|===
 Plug-in for Exchange は Windows 用 SnapCenter プラグインパッケージによって異なり、バージョンも同じである必要があります。Plug-in for Exchange のインストール時に、デフォルトで SnapCenter Plug-ins Package for Windows が選択され、 VSS Hardware Provider とともにインストールされます。
 
-SnapManager for Microsoft Exchange Server と SnapDrive for Windows がすでにインストールされている場合は、 同じ Exchange サーバに Plug-in for Exchange をインストールする場合は、 Plug-in for Exchange および SnapCenter Plug-ins Package for Windows と互換性がないため、 SnapDrive for Windows で使用する VSS ハードウェアプロバイダの登録を解除する必要があります。
+SnapManager for Microsoft Exchange Server と SnapDrive for Windows がすでにインストールされている場合は、 同じ Exchange サーバに Plug-in for Exchange をインストールする場合は、 Plug-in for Exchange および SnapCenter Plug-ins Package for Windows と互換性がないため、 SnapDrive for Windows で使用する VSS ハードウェアプロバイダの登録を解除する必要があります。詳細については、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_manually_register_the_Data_ONTAP_VSS_Hardware_Provider["Data ONTAP VSS ハードウェアプロバイダを手動で登録する方法"]。
 
 * 手順 *
 
@@ -61,15 +81,25 @@ SnapCenter は、 DNS の適切な設定によって異なります。そのた�
 
 信頼されていないドメインホストの IP アドレスは、 FQDN に解決される場合にのみサポートされます。
 
+SnapCenter を使用してホストを追加する際、ホストがサブドメインの一部である場合は、 FQDN を指定する必要があります。
+
 次のいずれかの IP アドレスまたは FQDN を入力できます。
 
 ** スタンドアロンホスト
 ** Exchange DAG
++
+Exchange DAG の場合、次の操作を実行できます。
+
++
+*** DAG 名、 DAG の IP アドレス、ノード名、またはノードの IP アドレスを指定して DAG を追加します。
+*** DAG クラスタのいずれかのノードの IP アドレスまたは FQDN を指定して、 IP なしの DAG クラスタを追加します。
+*** 同じドメインまたは別のドメインに属する IP なしの DAG を追加します。同じ名前でドメインが異なる複数の IP/IP が少ない DAG を追加することもできます。
 
 
-SnapCenter を使用してホストを追加する際、ホストがサブドメインの一部である場合は、 FQDN を指定する必要があります。
 
-DAG クラスタのいずれかのノードの IP アドレスまたは FQDN を指定して、 DAG のないクラスタを追加することもできます。
+
+
+NOTE: スタンドアロンホストまたは Exchange DAG （クロスドメインまたは同じドメイン）の場合は、ホストまたは DAG の FQDN または IP アドレスを指定することを推奨します。
 
 
 
