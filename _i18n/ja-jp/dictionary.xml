@@ -7786,4 +7786,7 @@
   <block id="d08bb023e713ac5ff94f7b3a84332b71" category="sidebar">その他のプラグインでサポートされている REST API ワークフロー</block>
   <block id="60fb82bb98786b71893de4332fbed808" category="sidebar">Oracle データベースでサポートされる REST API</block>
   <block id="bbbbcb8f41827abddd8ec6151fdf9e99" category="sidebar">SnapCenter ソフトウェア</block>
+  <block id="27e7993c4841ae5fd670cdd945ccb96d" category="inline-link">ディザスタリカバリ API</block>
+  <block id="90840bc3d6109c892e0f709274fdc6b6" category="paragraph">詳細については、を参照してください<block ref="af818973dd6acaf1e28a3bd4ca9bd4a5" category="inline-link-rx"></block> ビデオ：</block>
+  <block id="699f1c0496b9360a6686498114b0be37" category="paragraph">FAS 、 AFF 、および Amazon FSX に必要です</block>
 </blocks>

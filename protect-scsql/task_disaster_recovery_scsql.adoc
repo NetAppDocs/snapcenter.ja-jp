@@ -27,3 +27,5 @@ link:https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_hosts.html["�
 . （オプション） SnapCenter Plug-in for SQL Server の構成ファイルをディザスタリカバリ（ DR ）バックアップから新しいマシンに置き換えます。
 . Windows スケジュールと SQL スケジュールを、 DR バックアップから SnapCenter Plug-in for SQL Server フォルダからインポートします。
 
+
+詳細については、を参照してください https://www.youtube.com/watch?v=Nbr_wm9Cnd4&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg["ディザスタリカバリ API"^] ビデオ：
