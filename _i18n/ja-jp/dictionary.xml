@@ -4331,7 +4331,6 @@
   <block id="cca6a85f5065269f712b6122c56bcc23" category="paragraph">LUN のエクスポート先であるホストの iSCSI イニシエータ名を入力します。このオプションは、 LUN リソースタイプを選択した場合にのみ使用できます。</block>
   <block id="888a77f5ac0748b6c8001822417df8b6" category="paragraph">プロトコル</block>
   <block id="19ca9a39b837f0de2cd60194c3115a82" category="paragraph">LUN プロトコルを入力します。このオプションは、 LUN リソースタイプを選択した場合にのみ使用できます。</block>
-  <block id="26b17225b626fb9238849fd60eabdf60" category="paragraph">[+]</block>
   <block id="4e783e8dfeae9de37071ca1aacd853de" category="paragraph">リソースとして LUN を選択し、セカンダリバックアップからクローニングする場合、デスティネーションボリュームのリストが表示されます。1 つのソースについて複数のデスティネーションボリュームを選択することができます。</block>
   <block id="d21ab82b42875e082ef4574c36d6c5e4" category="admonition">クローニングを実行する前に、 iSCSI イニシエータまたは FCP が存在し、代替ホストに設定およびログインしていることを確認する必要があります。</block>
   <block id="2516fb414e835dfca0b69565d324572e" category="list-text">[* Scripts] ページで、次の手順を実行します。</block>
@@ -7037,7 +7036,6 @@
   <block id="4cbefe74fbcdea5cde822de543a2b616" category="sidebar">SQL Server リソースのバックアップ戦略</block>
   <block id="c839588253fb91ab7c3ffd7dbc89ef20" category="sidebar">SQL Server のリストア戦略</block>
   <block id="25bf2c62056fbb603e50ca9faa296f05" category="sidebar">SnapCenter Plug-in for Microsoft SQL Server をインストールする準備をします</block>
-  <block id="3e3c892945f01849a83a9ba45b50046a" category="sidebar">ホストを追加して SnapCenter Plug-in for Microsoft SQL Server をインストールするための前提条件</block>
   <block id="6119871227cfd0ac53fa00369e5ea153" category="sidebar">SnapCenter Jobs ページでバックアップ処理を監視します</block>
   <block id="e62a99d48b4d9b1ce6eb1be8cdf44cca" category="sidebar">SnapCenter Plug-in for SAP HANA Databases の略</block>
   <block id="883135fe64e6d1e34b5f9e436f840927" category="sidebar">SAP HANA データベースのバックアップ戦略</block>
@@ -7789,4 +7787,5 @@
   <block id="27e7993c4841ae5fd670cdd945ccb96d" category="inline-link">ディザスタリカバリ API</block>
   <block id="90840bc3d6109c892e0f709274fdc6b6" category="paragraph">詳細については、を参照してください<block ref="af818973dd6acaf1e28a3bd4ca9bd4a5" category="inline-link-rx"></block> ビデオ：</block>
   <block id="699f1c0496b9360a6686498114b0be37" category="paragraph">FAS 、 AFF 、および Amazon FSX に必要です</block>
+  <block id="c6a05503c268c70227420c852ced4926" category="admonition">/etc/fstab ファイル内の UUID マッピングは SnapCenter でサポートされません。</block>
 </blocks>

@@ -40,6 +40,9 @@ NOTE: Plug-in for Oracle Database では、 SAP を対象とした Oracle デー
 
 
 
+NOTE: /etc/fstab ファイル内の UUID マッピングは SnapCenter でサポートされません。
+
+
 
 == Linux ホストの要件
 
