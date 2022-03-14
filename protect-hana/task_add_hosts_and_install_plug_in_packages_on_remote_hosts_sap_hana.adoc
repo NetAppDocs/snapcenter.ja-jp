@@ -35,7 +35,7 @@ link:../protect-hana/task_configure_gMSA_on_windows_server_2012_or_later.html["W
 . 左側のナビゲーションペインで、 * Hosts * （ホスト）をクリックします。
 . 上部で [Managed Hosts] タブが選択されていることを確認します。
 . [ 追加（ Add ） ] をクリックします。
-. [*Hosts*] ページで、次の操作を実行します。
+. Hosts ページで、次の操作を実行します。
 +
 |===
 | フィールド | 手順 

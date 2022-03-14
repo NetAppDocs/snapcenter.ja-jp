@@ -24,7 +24,7 @@ entries:
     url: "/protect-scw/reference_sources_and_destinations_of_clones_for_windows_file_systems.html"
 - title: SnapCenter Plug-in for Microsoft Windows をインストールします
   entries:
-  - title: インストールワークフロー
+  - title: SnapCenter Plug-in for Microsoft Windows のインストールワークフロー
     url: "/protect-scw/concept_install_snapcenter_plug_in_for_microsoft_windows.html"
   - title: SnapCenter Plug-in for Microsoft Windows のインストール要件
     url: "/protect-scw/reference_installation_requirements_for_snapcenter_plug_in_for_microsoft_windows.html"

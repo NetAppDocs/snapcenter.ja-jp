@@ -75,7 +75,7 @@ NOTE: SnapCenter への初回ログイン時は、インストールプロセス
 
 * 結果 *
 
-[ * ダッシュボード * ] ページが表示されます。
+ダッシュボードページが表示されます。
 
 ログにサイトにアクセスできないというエラーが表示されて失敗した場合は、 SSL 証明書を SnapCenter にマッピングする必要があります。 https://kb.netapp.com/?title=Advice_and_Troubleshooting%2FData_Protection_and_Security%2FSnapCenter%2FSnapCenter_will_not_open_with_error_%2522This_site_can%2527t_be_reached%2522["詳細はこちら。"^]
 

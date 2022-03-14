@@ -19,7 +19,7 @@ NOTE: SnapCenter CLI では、 SnapCenter Custom Plug-ins コマンドはサポ�
 
 ネットアップは、 SnapCenter に組み込まれているカスタムプラグインフレームワークを使用して、 ONTAP ストレージ上でデータボリュームのデータ保護処理を実行するためのストレージプラグインを提供しています。
 
-カスタムプラグインとストレージプラグインは、 * ホストの追加 * ページからインストールできます。
+カスタムプラグインとストレージプラグインは、ホストの追加ページからインストールできます。
 
 link:task_add_hosts_and_install_plug_in_packages_on_remote_hosts_scc.html["ホストを追加し、プラグインパッケージをリモートホストにインストールする。"^]
 

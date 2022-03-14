@@ -55,7 +55,7 @@ SnapManager for Microsoft Exchange Server と SnapDrive for Windows がすでに
 . 左側のナビゲーションペインで、 * Hosts * （ホスト）をクリックします。
 . 上部で [Managed Hosts] が選択されていることを確認します。
 . [ 追加（ Add ） ] をクリックします。
-. [*Hosts*] ページで、次の手順を実行します。
+. Hosts ページで、次の手順を実行します。
 +
 |===
 | フィールド | 手順 

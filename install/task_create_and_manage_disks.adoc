@@ -478,7 +478,7 @@ Fibre Channel * または * iSCSI * を選択し、ホスト上のイニシエ�
 FC で MPIO を使用している場合は、 FC イニシエータを複数選択できます。
 
 |===
-. [Group Type] ページで、既存の igroup を LUN にマッピングするか、新しい igroup を作成するかを指定します。
+. Group Type ページで、既存の igroup を LUN にマッピングするか、新しい igroup を作成するかを指定します。
 +
 |===
 | 選択するオプション | 状況 

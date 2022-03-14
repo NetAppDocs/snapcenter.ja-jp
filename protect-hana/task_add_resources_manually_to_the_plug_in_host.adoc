@@ -38,8 +38,8 @@ NOTE: 上記のリソースが検出された場合、これらのリソース�
 * 手順 *
 
 . 左側のナビゲーションペインで、ドロップダウンリストから SnapCenter Plug-in for SAP HANA Database を選択し、 * Resources * をクリックします。
-. [* リソース ] ページで、 [* SAP HANA データベースの追加 ] をクリックします。
-. [*Provide Resource Details*] ページで、次の操作を実行します。
+. リソースページで、 * SAP HANA データベースの追加 * をクリックします。
+. [Provide Resource Details] ページで、次の操作を実行します。
 +
 |===
 | フィールド | 手順 
@@ -90,7 +90,7 @@ HDBSQL OS ユーザ
 HDB Secure User Store Key が設定されているユーザー名を入力します。Windows の場合は、 HDBSQL OS ユーザがシステムユーザであることが必須です。そのため、システムユーザーに対して HDB Secure User Store Key を設定する必要があります。
 
 |===
-. [ ストレージ容量の確保 * ] ページで、ストレージ・システムを選択し、 1 つ以上のボリューム、 LUN 、および qtree を選択して、 [ * 保存 * ] をクリックします。
+. ストレージ容量の提供ページで、ストレージシステムを選択し、ボリューム、 LUN 、および qtree を 1 つ以上選択して、 * 保存 * をクリックします。
 +
 オプション：「 * 」をクリックしますimage:../media/add_policy_from_resourcegroup.gif[""]* アイコンをクリックして、他のストレージ・システムからボリューム、 LUN 、および qtree を追加します。
 

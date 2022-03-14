@@ -10,7 +10,7 @@ summary: SnapManager for Microsoft SQL Server のアーカイブバックアッ�
 
 
 [role="lead"]
-SnapManager for Microsoft SQL Server のアーカイブ・バックアップをインポートすると、これらのバックアップを [* トポロジ * ] ページで SnapCenter で表示できます。
+SnapManager for Microsoft SQL Server のアーカイブバックアップ SnapCenter をインポートすると、トポロジページにこれらのバックアップが表示されます。
 
 * 手順 *
 
@@ -18,7 +18,7 @@ SnapManager for Microsoft SQL Server のアーカイブ・バックアップを�
 . すべてのデータベースを含むリソースグループを作成します。
 . リソースグループを選択します。
 . リソースグループを保護する。
-. [* トポロジ *] ページの [* コピーの管理 *] ビューで、 [ バックアップコピーからのバックアップ ] をクリックします。
+. [ トポロジ ] ページの [ コピーの管理 ] ビューで、 [ バックアップコピーからのバックアップ ] をクリックします。
 +
 バックアップの詳細が表示されます。
 

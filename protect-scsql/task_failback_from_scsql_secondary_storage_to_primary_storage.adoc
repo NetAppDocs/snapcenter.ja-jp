@@ -14,7 +14,7 @@ SnapCenter Plug-in for SQL Server のプライマリストレージがオンラ�
 
 * 必要なもの *
 
-* SnapCenter Plug-in for SQL Server を * 管理ホスト * ページから * メンテナンス * モードに切り替えます。
+* Managed Hosts ページから SnapCenter Plug-in for SQL Server を * Maintenance * モードにします。
 * セカンダリストレージをホストから切断して、プライマリストレージから接続します。
 * プライマリストレージにフェイルバックするには、逆再同期処理を実行して、フェイルオーバー前と同じ関係の方向が維持されることを確認します。
 +
@@ -29,7 +29,7 @@ SnapCenter Plug-in for SQL Server のプライマリストレージがオンラ�
 
 * 手順 *
 
-. [ * 設定 * ] ページで、 [ * 設定 * ] > [ * グローバル設定 * ] > [ * 災害復旧 * ] の順に選択します。
+. 設定ページで、 * 設定 * > * グローバル設定 * > * ディザスタ・リカバリ * と進みます。
 . [Enable Disaster Recovery] を選択解除します。
 . [ 適用（ Apply ） ] をクリックします。
 . DR ジョブが有効になっているかどうかを確認するには、 * Monitor * > * Jobs * をクリックします。
