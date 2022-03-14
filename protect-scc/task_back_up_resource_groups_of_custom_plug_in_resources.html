@@ -50,10 +50,10 @@
   
   <link rel="stylesheet" href="/ja-jp/snapcenter/css/landing-page.css" type="text/css">
   <link rel="stylesheet" href="/ja-jp/snapcenter/css/tabbed-blocks.css" type="text/css">
-  <link rel="stylesheet" href='/ja-jp/snapcenter/css/product-family.css' type="text/css">
   <link rel='stylesheet' href='/ja-jp/snapcenter/css/na-feature.css' type='text/css'><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-  <!-- Used to import Promise for IE. Required for SearchKit -->
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/ja-jp/snapcenter/js/na-search.js'></script><script src='/ja-jp/snapcenter/js/na-pagenav.js'></script><link rel='stylesheet' href='/ja-jp/snapcenter/css/prism.css' type='text/css'>
   <link rel='stylesheet' href='/ja-jp/snapcenter/css/prism-netapp.css' type='text/css'>
 
@@ -131,7 +131,6 @@
   }
   </script>
   <script src='/ja-jp/snapcenter/js/version-dropdown.js'></script>
-  <script src='/ja-jp/snapcenter/js/product-family.js'></script>
   <script src='/ja-jp/snapcenter/js/FileSaver.min.js'></script>
   <script src='/ja-jp/snapcenter/js/jszip-utils.min.js'></script>
   <script src='/ja-jp/snapcenter/js/jszip.min.js'></script>
@@ -144,6 +143,43 @@
       <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
       <div class="n-off-canvas-menu__content-wrap">
         <header class="site-header" id="banner">
+  
+  <!-- Start Page Toolbar -->
+  <div class="page-nav-toolbar">
+    <div id="version-dropdown"><div id="version-dropdown-ie-i18n">
+  <div id="version-dropdown-ie-i18n-menu">
+    <span class="ie-i18n-lang"><span class="version-title">SnapCenter ソフトウェア </span><span class="version">4.6</span></span>
+    <span class="version-dropdown-caret"></span>
+  </div>
+  <div id="version-dropdown-n-property-navigation-bar__menu--language-selector" class="n-menu n-menu--v3 n-menu--is-active" style="display: none;">
+    <div class="n-language-selector-menu">
+      <ul class="n-menu__list">
+        <li class="n-menu__list-column">
+          <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1"><a href="https://docs.netapp.com/ja-jp/snapcenter/protect-scc/task_back_up_resource_groups_of_custom_plug_in_resources.html" class="n-menu__header-text" target="_self">
+                <span translate="no" class="notranslate"><span>SnapCenter ソフトウェア</span><span class="version"> 4.6</span></span>
+              </a></li><li class="n-menu__list-item n-menu__list-item--level-1"><a href="https://docs.netapp.com/ja-jp/snapcenter-45/protect-scc/task_back_up_resource_groups_of_custom_plug_in_resources.html" class="n-menu__header-text" target="_self">
+                <span translate="no" class="notranslate"><span>SnapCenter ソフトウェア</span><span class="version"> 4.5</span></span>
+              </a></li></ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div></div>
+    <div class="page-nav-contribute"  >
+      <a target="_blank" href="https://github.com/NetAppDocs/snapcenter/issues/new?body=Page%3A%20[カスタムプラグインリソースのリソースグループをバックアップする](https://docs.netapp.com/ja-jp/snapcenter/protect-scc/task_back_up_resource_groups_of_custom_plug_in_resources.html)" class="page-nav-contribute-link" role="button"><img src="/ja-jp/snapcenter/images/discuss-sm.svg" class="github-icon" />ドキュメントの変更をリクエスト</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/snapcenter/blob/main/protect-scc/task_back_up_resource_groups_of_custom_plug_in_resources.adoc" class="page-nav-contribute-link" role="button"><img src="/ja-jp/snapcenter/images/edit-sm.svg" class="github-icon" />GitHub で編集</a>
+      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ja-jp/snapcenter/images/article-sm.svg" class="github-icon" />寄稿者向けガイド</a>
+    </div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">このページ</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
   <!-- Start top_hat -->
   <div class="n-top-hat">
     <div class="n-container">
@@ -2939,7 +2975,7 @@
         <div class="na-navbar-padding"> SnapCenter サーバのインストール</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/install/install_workflow.html">
-        ワークフローをインストールします
+        インストールワークフロー
       </a></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> SnapCenter サーバをインストールする準備をします</div>
       </a>
@@ -3438,7 +3474,7 @@
         <div class="na-navbar-padding"> SnapCenter Plug-in for Oracle Database をインストールします</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/install-snapcenter-plug-in-for-oracle-workflow.html">
-        Plug-in for Oracle Database のインストールワークフロー
+        SnapCenter Plug-in for Oracle Database のインストールワークフロー
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/reference_prerequisites_for_adding_hosts_and_installing_snapcenter_plug_ins_package_for_linux_or_aix.html">
         ホストを追加して Plug-in Package for Linux または AIX をインストールするための前提条件
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sco/task_add_hosts_and_installing_the_snapcenter_plug_ins_package_for_linux_or_aix.html">
@@ -3580,7 +3616,7 @@
         <div class="na-navbar-padding"> SnapCenter Plug-in for Microsoft Windows をインストールします</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/concept_install_snapcenter_plug_in_for_microsoft_windows.html">
-        インストールワークフロー
+        SnapCenter Plug-in for Microsoft Windows のインストールワークフロー
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/reference_installation_requirements_for_snapcenter_plug_in_for_microsoft_windows.html">
         SnapCenter Plug-in for Microsoft Windows のインストール要件
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-scw/task_add_hosts_and_install_snapcenter_plug_in_for_microsoft_windows.html">
@@ -3683,7 +3719,7 @@
         <div class="na-navbar-padding"> SnapCenter Plug-in for Microsoft Exchange Server をインストールします</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/concept_install_snapcenter_plug_in_for_microsoft_exchange_server.html">
-        インストールワークフロー
+        SnapCenter Plug-in for Microsoft Exchange Server のインストールワークフロー
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/reference_prerequisites_to_add_hosts_and_install_snapcenter_plug_in_for_microsoft_exchange_server.html">
         ホストを追加して SnapCenter Plug-in for Microsoft Exchange Server をインストールするための前提条件
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapcenter/protect-sce/task_set_up_credentials_for_the_snapcenter_plug_in_for_windows_sce.html">
@@ -4029,19 +4065,16 @@
     <div class="n-breadcrumb">
       <ul class="n-breadcrumb__list">
         <li class="n-breadcrumb__list-item">
-          <a href="https://www.netapp.com">ホーム</a>
+          <a href="https://docs.netapp.com">docs.netapp.com</a>
         </li>
-        <li class="n-breadcrumb__list-item">
-          <a href="https://docs.netapp.com">ドキュメント</a>
-        </li>
+        
+
         
 
         <li class="n-breadcrumb__list-item">
           <a href="/ja-jp/snapcenter/">SnapCenter&nbsp;Software&nbsp;4.6</a>
         </li>
-        <li class="n-breadcrumb__list-item">
-          カスタムプラグインリソースのリソースグループをバックアップする
-        </li>
+
       </ul>
     </div>
     <div style="clear: both"></div><!-- Main needs to have height -->
@@ -4070,7 +4103,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-03-09 09:39:41 +0000">03/09/2022</time>
+    <time datetime="2022-03-14 20:21:59 +0000">03/14/2022</time>
     
   
 
@@ -4080,6 +4113,14 @@
           alt="netapp-nsriram"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/64957347?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" href="https://github.com/netapp-soumikd">
+    <img  class="avatar avatar-small"
+          alt="netapp-soumikd"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/64966556?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -4095,7 +4136,6 @@
 
 
 </p>
-
 
 <div class="paragraph lead">
 <p>リソースグループは、リソースページからオンデマンドでバックアップできます。リソースグループにポリシーが適用され、かつスケジュールが設定されている場合は、スケジュールに従って自動的にバックアップが実行されます。</p>
@@ -4119,16 +4159,16 @@
 <p>左側のナビゲーションペインで、 * リソース * をクリックし、リストから適切なプラグインを選択します。</p>
 </li>
 <li>
-<p>[* リソース ] ページで、 [ * 表示 ] リストから [ * リソースグループ * ] を選択します。</p>
+<p>[ リソース ] ページで、 [ * 表示 ] リストから [ * リソースグループ * ] を選択します。</p>
 <div class="paragraph">
 <p>リソースグループを検索するには、検索ボックスにリソースグループ名を入力するか、をクリックします <span class="image"><img src="../media/filter_icon.gif" alt=""></span> タグを選択します。をクリックします <span class="image"><img src="../media/filter_icon.gif" alt=""></span> をクリックしてフィルタペインを閉じます。</p>
 </div>
 </li>
 <li>
-<p>[ * リソースグループ * ] ページで、バックアップするリソースグループを選択し、 [ * 今すぐバックアップ * ] をクリックします。</p>
+<p>[ リソースグループ ] ページで、バックアップするリソースグループを選択し、 [ 今すぐバックアップ * ] をクリックします。</p>
 </li>
 <li>
-<p>[* バックアップ * ] ページで、次の手順を実行します。</p>
+<p>Backup （バックアップ）ページで、次の手順を実行します。</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
@@ -4169,43 +4209,6 @@
     <!-- Page Container -->
   </div>
 
-  
-  <!-- Start Page Toolbar -->
-  <div class="page-nav-toolbar">
-    <div id="version-dropdown"><div id="version-dropdown-ie-i18n">
-  <div id="version-dropdown-ie-i18n-menu">
-    <span class="ie-i18n-lang"><span class="version-title">SnapCenter ソフトウェア </span><span class="version">4.6</span></span>
-    <span class="version-dropdown-caret"></span>
-  </div>
-  <div id="version-dropdown-n-property-navigation-bar__menu--language-selector" class="n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-    <div class="n-language-selector-menu">
-      <ul class="n-menu__list">
-        <li class="n-menu__list-column">
-          <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1"><a href="https://docs.netapp.com/ja-jp/snapcenter/protect-scc/task_back_up_resource_groups_of_custom_plug_in_resources.html" class="n-menu__header-text" target="_blank">
-                <span translate="no" class="notranslate"><span>SnapCenter ソフトウェア</span><span class="version"> 4.6</span></span>
-              </a></li><li class="n-menu__list-item n-menu__list-item--level-1"><a href="https://docs.netapp.com/ja-jp/snapcenter-45/protect-scc/task_back_up_resource_groups_of_custom_plug_in_resources.html" class="n-menu__header-text" target="_blank">
-                <span translate="no" class="notranslate"><span>SnapCenter ソフトウェア</span><span class="version"> 4.5</span></span>
-              </a></li></ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div></div>
-    <div class="page-nav-contribute"  >
-      <a target="_blank" href="https://github.com/NetAppDocs/snapcenter/issues/new?body=Page%3A%20[カスタムプラグインリソースのリソースグループをバックアップする](https://docs.netapp.com/ja-jp/snapcenter/protect-scc/task_back_up_resource_groups_of_custom_plug_in_resources.html)" class="page-nav-contribute-link" role="button"><img src="/ja-jp/snapcenter/images/discuss-sm.svg" class="github-icon" />ドキュメントの変更をリクエスト</a>
-      <a target="_blank" href="https://github.com/NetAppDocs/snapcenter/blob/main/protect-scc/task_back_up_resource_groups_of_custom_plug_in_resources.adoc" class="page-nav-contribute-link" role="button"><img src="/ja-jp/snapcenter/images/edit-sm.svg" class="github-icon" />GitHub で編集</a>
-      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ja-jp/snapcenter/images/article-sm.svg" class="github-icon" />寄稿者向けガイド</a>
-    </div>
-    <div class="page-nav-container">
-      <nav class="page-nav-fixed">
-        <div class="page-nav-title">このページ</div>
-        <div class="page-nav-links">
-          <ul class="page-nav-inner" id="page-menu"></ul>
-        </div>
-      </nav>
-    </div>
-  </div>
-  
   <div style="clear: both"></div><!-- Main needs to have height --></div>
 
         </main>
