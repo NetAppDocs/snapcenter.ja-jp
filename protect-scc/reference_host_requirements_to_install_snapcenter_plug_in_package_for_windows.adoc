@@ -5,6 +5,7 @@ keywords: SAP HANA,Custom plug-ins
 summary: SnapCenter Plug-ins Package for Windows をインストールする前に、ホストシステムのいくつかの基本的なスペース要件とサイジング要件を確認しておく必要があります。 
 ---
 = SnapCenter Plug-ins Package for Windows をインストールするホストの要件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

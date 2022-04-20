@@ -5,6 +5,7 @@ keywords: exporting certificates
 summary: SnapCenter 証明書をエクスポートする。 
 ---
 = SnapCenter 証明書をエクスポートする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

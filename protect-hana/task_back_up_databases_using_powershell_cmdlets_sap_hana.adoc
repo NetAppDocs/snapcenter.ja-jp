@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for SAP HANA Database
 summary: データベースをバックアップするときは、 SnapCenter サーバとの接続を確立してから、リソースの追加、ポリシーの追加、バックアップリソースグループの作成を行って、バックアップを実行します。 
 ---
 = PowerShell コマンドレットを使用してデータベースをバックアップします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

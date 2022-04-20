@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter GUI を使用してホストのプロビジョニングやスペース再生のジョブを実行しない場合は、 SnapCenter Plug-in for Microsoft Windows から提供される PowerShell コマンドレットを使用できます。コマンドレットは直接使用できるほか、スクリプトに追加することもできます。 
 ---
 = PowerShell コマンドレットを使用してストレージをプロビジョニング
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

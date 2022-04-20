@@ -5,6 +5,7 @@ keywords: ALM
 summary: SnapCenter Plug-in for Microsoft SQL Server は、 SQL Server 2012 以降、非対称 LUN マッピング（ ALM ）構成の高可用性、およびディザスタリカバリ用の可用性グループの検出をサポートしています。SnapCenter は、リソースを検出する際に、 ALM 構成のローカルホストとリモートホストにあるデータベースを検出します。 
 ---
 = Windows クラスタでの非対称 LUN マッピングのサポート
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

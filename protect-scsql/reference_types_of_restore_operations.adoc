@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for SQL Server
 summary: SnapCenter を使用すると、 SQL Server リソースに対してさまざまなタイプのリストア処理を実行できます。 
 ---
 = リストア処理のタイプ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

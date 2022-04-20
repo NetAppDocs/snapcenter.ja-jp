@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter Plug-in for Microsoft Windows を複数のホストに一度にインストールする場合は、 Install-SmHostPackage PowerShell コマンドレットを使用します。 
 ---
 = PowerShell コマンドレットを使用して、複数のリモートホストに SnapCenter Plug-in for Microsoft Windows をインストールします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords:
 summary: SnapManager for Microsoft SQL Server から SnapCenter にデータをインポートすると、以前のバージョンのデータを引き続き使用できるようになります。SnapManager for Microsoft SQL Server から SnapCenter にインポートできるのは、 SnapVault テクノロジを使用してアーカイブされたバックアップだけです。 
 ---
 = アーカイブバックアップのインポートの概要
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

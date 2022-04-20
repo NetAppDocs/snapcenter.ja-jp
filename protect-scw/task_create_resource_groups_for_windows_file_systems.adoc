@@ -5,6 +5,7 @@ keywords: resource groups
 summary: リソースグループとは、保護する複数のファイルシステムを追加できるコンテナです。リソースグループに 1 つ以上のポリシーを適用して実行するデータ保護ジョブのタイプを定義し、バックアップスケジュールを指定することも必要です。 
 ---
 = Windows ファイルシステムのリソースグループを作成する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

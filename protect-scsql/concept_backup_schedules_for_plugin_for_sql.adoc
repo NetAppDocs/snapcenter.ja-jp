@@ -5,6 +5,7 @@ keywords:
 summary: バックアップ頻度 \ （スケジュールタイプ \ ）はポリシーで指定され、バックアップスケジュールはリソースグループの設定で指定されます。 
 ---
 = Plug-in for SQL Server のバックアップスケジュール
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter サーバを使用すると、 SnapCenter へのプラグインとしてアプリケーションを導入および管理できます。 
 ---
 = 概要
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

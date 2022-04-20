@@ -5,6 +5,7 @@ keywords: uninstall, gui
 summary: 個々のプラグインまたはプラグインパッケージが不要になった場合は、 SnapCenter インターフェイスを使用してアンインストールできます。 
 ---
 = SnapCenter GUI を使用してプラグインをアンインストールします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

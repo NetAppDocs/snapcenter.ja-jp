@@ -5,6 +5,7 @@ keywords: clone
 summary: クローニングワークフローには、計画、クローニング処理の実行、および処理の監視が含まれます。 
 ---
 = PowerShell コマンドレットを使用してバックアップをクローニングする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter を使用して、クローニングされたリソースを親リソースからスプリットできます。スプリットされたクローンは、親リソースに依存しません。 
 ---
 = クローンをスプリットします。
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

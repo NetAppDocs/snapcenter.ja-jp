@@ -5,6 +5,7 @@ keywords: resource group
 summary: リソースグループはすべてのデータ保護ジョブに必要です。リソースグループに 1 つ以上のポリシーを適用して、実行するデータ保護ジョブのタイプと保護スケジュールを定義することも必要です。 
 ---
 = Exchange Server のリソースグループを作成してポリシーを適用します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

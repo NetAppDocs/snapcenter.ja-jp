@@ -5,6 +5,7 @@ keywords:
 summary: キューに登録されているバックアップ処理をキャンセルできます。 
 ---
 = カスタムプラグインのバックアップ処理をキャンセルする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: modify RBAC, role, users, groups
 summary: SnapCenter では、ロール、ユーザ、およびグループを変更できます。 
 ---
 = RBAC を管理します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

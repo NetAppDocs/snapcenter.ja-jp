@@ -5,6 +5,7 @@ keywords: credential
 summary: ユーザが Plug-in for SQL Server の使用を開始するためには、 SnapCenter 管理者が事前に SnapCenter サーバをインストールして設定し、前提条件となるタスクを実行する必要があります。 
 ---
 = SnapCenter Plug-in for Microsoft SQL Server を使用するための前提条件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

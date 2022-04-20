@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter Plug-in for Microsoft SQL Server のバックアップから SQL Server データベースをリストアする前に、以下の要件を満たしていることを確認する必要があります。 
 ---
 = データベースをリストアするための要件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

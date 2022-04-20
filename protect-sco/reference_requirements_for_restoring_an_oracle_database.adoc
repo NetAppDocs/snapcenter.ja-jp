@@ -5,6 +5,7 @@ keywords:
 summary: Oracle データベースをリストアする前に、前提条件を満たしていることを確認する必要があります。 
 ---
 = Oracle データベースをリストアするための要件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords:
 summary: リソースの検出とデータ保護処理の実行については、のリソースページを参照してください。実行できる処理は、リソースの管理に使用するプラグインによって異なります。 
 ---
 = Resources ページでサポートされている操作
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

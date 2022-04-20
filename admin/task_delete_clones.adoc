@@ -5,6 +5,7 @@ keywords:
 summary: 不要になったクローンは削除できます。 
 ---
 = クローンを削除します。
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

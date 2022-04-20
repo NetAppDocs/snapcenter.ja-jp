@@ -5,6 +5,7 @@ keywords:
 summary: リソースまたはリソースグループからポリシーの適用を解除したり、ポリシーの変更、削除、表示、コピーを行ったりすることができます。 
 ---
 = ポリシーを管理する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

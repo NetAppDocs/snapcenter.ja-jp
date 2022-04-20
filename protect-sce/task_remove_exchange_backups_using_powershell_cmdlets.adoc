@@ -5,6 +5,7 @@ keywords: backups
 summary: Remove-SmBackup コマンドレットを使用すると、他のデータ保護処理に Exchange バックアップが不要になった場合に Exchange バックアップを削除できます。 
 ---
 = PowerShell コマンドレットを使用して Exchange バックアップを削除します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

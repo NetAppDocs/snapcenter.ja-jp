@@ -5,6 +5,7 @@ keywords: svm role, privileges
 summary: ONTAP の SVM を SnapCenter で使用するように設定し、 vsadmin ロールを使用したくない場合、 SVM ロールを作成する必要があります。 
 ---
 = 最小権限を持つ SVM ロールを作成します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

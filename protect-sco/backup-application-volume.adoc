@@ -5,6 +5,7 @@ keywords: application volume, back up
 summary: アプリケーションボリュームがどのリソースグループにも属していない場合は、リソースページからアプリケーションボリュームをバックアップできます。 
 ---
 = アプリケーションボリュームをバックアップ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for SAP HANA Database
 summary: SnapCenter は、ストレージシステムレベルおよびファイルシステムレベルでの不要なログおよびデータバックアップの削除を、 SAP HANA のバックアップカタログ内で管理します。 
 ---
 = SnapCenter による不要なログおよびデータバックアップの削除の管理
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

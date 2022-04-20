@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for SAP HANA Database
 summary: SnapCenter 4.3 にアップグレードすると、クローンは表示されなくなります。クローンを削除するか、クローンが作成されたリソースのトポロジページからクローンをスプリットします。 
 ---
 = SnapCenter のアップグレード後に、 SAP HANA データベースのクローンを削除またはスプリットします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

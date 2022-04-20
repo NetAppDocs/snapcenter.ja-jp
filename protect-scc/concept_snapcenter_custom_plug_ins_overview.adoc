@@ -5,6 +5,7 @@ keywords: SnapCenter Custom Plug-ins
 summary: 使用するアプリケーション用のカスタムプラグインを開発し、 SnapCenter を使用してそれらのアプリケーションのバックアップ、リストア、クローニングを行うことができます。カスタムプラグインは、他の SnapCenter プラグインと同様に NetAppSnap Center ソフトウェアのホスト側コンポーネントとして機能し、アプリケーションに対応したリソースのデータ保護と管理を実現します。 
 ---
 = SnapCenter Custom Plug-ins の概要
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

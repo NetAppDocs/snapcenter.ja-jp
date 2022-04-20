@@ -5,6 +5,7 @@ keywords: http methods, request headers, request body, filtering objects, size, 
 summary: API 呼び出しの処理方法は、 HTTP 要求で設定されたパラメータと変数を使用して制御できます。 
 ---
 = API 要求を制御する入力変数
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

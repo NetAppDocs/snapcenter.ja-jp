@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for SAP HANA Databases
 summary: SnapCenter では、自動検出された SAP HANA データベースについて、ボリュームベースの SnapRestore （ VBSR ）、単一ファイル SnapRestore 、および接続とコピーのリストアタイプがサポートされます。 
 ---
 = 自動検出された SAP HANA データベースのリストア処理のタイプ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

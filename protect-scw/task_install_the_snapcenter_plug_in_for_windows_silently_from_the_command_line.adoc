@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter Plug-in for Microsoft Windows を SnapCenter の GUI からリモートでインストールできない場合は、 Windows ホスト上にローカルにインストールできます。SnapCenter Plug-in for Microsoft Windows のインストールプログラムを、 Windows のコマンドラインからサイレントモードで自動的に実行できます。 
 ---
 = コマンドラインから SnapCenter Plug-in for Microsoft Windows をサイレントにインストールします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

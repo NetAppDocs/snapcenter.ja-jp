@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter には、システムの健常性や処理の状況を監視および管理するためのさまざまなレポートオプションが用意されています。 
 ---
 = SnapCenter のレポート機能の概要
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

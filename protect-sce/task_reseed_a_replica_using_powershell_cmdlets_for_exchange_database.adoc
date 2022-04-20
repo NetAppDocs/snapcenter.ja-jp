@@ -5,6 +5,7 @@ keywords:
 summary: PowerShell コマンドレットを使用すると、問題のあるレプリカをリストアできます。そのためには、同じホストの最新のコピーを使用するか、代替ホストの最新のコピーを使用します。 
 ---
 = PowerShell コマンドレットを使用した Exchange データベースの再シード
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

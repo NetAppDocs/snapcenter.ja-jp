@@ -5,6 +5,7 @@ keywords: backup types, restore methods, connect-and-copy restore, full restore,
 summary: データベースのリストアとリカバリを行う前に戦略を定義しておくと、リストア処理とリカバリ処理を正常に実行できるようになります。 
 ---
 = Oracle データベースのリストアとリカバリの戦略を定義する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

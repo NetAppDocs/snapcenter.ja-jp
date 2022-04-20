@@ -5,6 +5,7 @@ keywords: uninstall, remove, remove host
 summary: SnapCenter サーバはホストを削除すると、最初にそのホストに対してリストされているバックアップ、クローン、ジョブ、リソースグループ、およびリソースを SnapCenter のリソースページから削除したあと、ホスト上のプラグインパッケージをアンインストールします。 
 ---
 = ホストを削除します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

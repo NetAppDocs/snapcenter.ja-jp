@@ -5,6 +5,7 @@ keywords: alternate methods, install, plug-ins package, linux, aix, remote hosts
 summary: SnapCenter Plug-ins Package for Linux または SnapCenter Plug-ins Package for AIX を別の方法でインストールすることもできます。 
 ---
 = Linux または AIX 用のプラグインパッケージをインストールする別の方法
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

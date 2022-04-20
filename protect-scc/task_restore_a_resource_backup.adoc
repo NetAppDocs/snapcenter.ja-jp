@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter を使用してリソースをリストアすることができます。リストア処理の機能は、使用するプラグインによって異なります。 
 ---
 = リソースのバックアップをリストアする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

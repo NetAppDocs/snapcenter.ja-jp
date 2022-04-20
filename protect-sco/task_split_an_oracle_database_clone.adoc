@@ -5,6 +5,7 @@ keywords: split a clone, split
 summary: SnapCenter を使用して、クローニングされたリソースを親リソースからスプリットできます。スプリットされたクローンは、親リソースに依存しません。 
 ---
 = Oracle データベースクローンをスプリットします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for SAP HANA Databases
 summary: SnapCenter を使用してリストア処理を正常に実行するには、事前に戦略を定義しておく必要があります。自動検出された SAP HANA データベースには、 2 種類のリストア戦略があります。 
 ---
 = 自動検出された SAP HANA データベースでサポートされるリストア戦略のタイプ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

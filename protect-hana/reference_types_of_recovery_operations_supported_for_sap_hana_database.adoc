@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter を使用すると、 SAP HANA データベースに対してさまざまなタイプのリカバリ処理を実行できます。 
 ---
 = SAP HANA データベースでサポートされるリカバリ処理のタイプ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

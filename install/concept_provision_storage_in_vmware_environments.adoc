@@ -5,6 +5,7 @@ keywords: guest OS, VMware ESXi server, limitations, RDM, Microsoft cluster
 summary: VMware 環境での SnapCenter Plug-in for Microsoft Windows を使用して、 LUN の作成と管理、および Snapshot バックアップコピーの管理を行うことができます。 
 ---
 = VMware 環境でストレージをプロビジョニング
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

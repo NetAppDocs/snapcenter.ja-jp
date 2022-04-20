@@ -5,6 +5,7 @@ keywords:
 summary: バックアップは、名前変更および削除することができます。複数のバックアップを同時に削除することもできます。 
 ---
 = バックアップを管理します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

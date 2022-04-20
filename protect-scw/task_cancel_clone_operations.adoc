@@ -5,6 +5,7 @@ keywords:
 summary: キューに格納されているクローニングジョブをキャンセルすることができます。 
 ---
 = クローニング処理をキャンセルします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

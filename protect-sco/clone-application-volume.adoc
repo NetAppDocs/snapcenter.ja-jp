@@ -5,6 +5,7 @@ keywords: application volume, clone, split a clone
 summary: SnapCenter を使用して、アプリケーションボリュームのバックアップのクローニング、クローンのスプリット、およびクローンの削除を行うことができます。 
 ---
 = アプリケーションボリュームのバックアップをクローニングする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

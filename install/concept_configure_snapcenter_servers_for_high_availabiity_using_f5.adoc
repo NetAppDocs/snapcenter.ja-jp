@@ -5,6 +5,7 @@ keywords: F5,load balancer
 summary: SnapCenter でハイアベイラビリティ（ HA\ ）をサポートするには、 F5 ロードバランサをインストールします。F5 によって、 SnapCenter サーバは、同じ場所にある最大 2 台のホストでアクティブ / パッシブ構成をサポートできます。SnapCenter で F5 ロードバランサを使用するには、 SnapCenter サーバを設定し、 F5 ロードバランサを設定する必要があります。 
 ---
 = F5 を使用して SnapCenter サーバのハイアベイラビリティを構成します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

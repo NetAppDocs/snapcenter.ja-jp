@@ -5,6 +5,7 @@ keywords: REST APIs, oracle database
 summary: Oracle データベースでサポートされる REST API のワークフローについて説明します 
 ---
 = Oracle データベースでサポートされる REST API
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

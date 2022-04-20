@@ -5,6 +5,7 @@ keywords: Credentials,SnapCenter Plug-in for SAP HANA Database
 summary: SnapCenter Plug-in for SAP HANA Database を使用するには、 SnapCenter 管理者が事前に SnapCenter サーバをインストールして設定し、前提条件となるタスクを実行する必要があります。 
 ---
 = SnapCenter Plug-in for SAP HANA Database を使用するための前提条件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

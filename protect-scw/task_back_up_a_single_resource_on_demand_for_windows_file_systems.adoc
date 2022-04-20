@@ -5,6 +5,7 @@ keywords: backing up
 summary: リソースグループに含まれていないリソースは、のリソースページからオンデマンドでバックアップすることができます。 
 ---
 = Windows ファイルシステムの単一のリソースをオンデマンドでバックアップする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

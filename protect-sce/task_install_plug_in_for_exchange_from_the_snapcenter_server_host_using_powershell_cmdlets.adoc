@@ -5,6 +5,7 @@ keywords:
 summary: Plug-in for Exchange は SnapCenter の GUI からインストールする必要があります。GUI を使用しない場合は、 SnapCenter サーバホストまたはリモートホストで PowerShell コマンドレットを使用できます。 
 ---
 = PowerShell コマンドレットを使用して、 SnapCenter サーバホストから Plug-in for Exchange をインストールします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

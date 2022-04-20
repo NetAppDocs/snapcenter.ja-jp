@@ -5,6 +5,7 @@ keywords:
 summary: プライマリストレージボリュームまたは SnapMirror または SnapVault セカンダリストレージボリュームでバックアップコピーを検証することができます。セカンダリストレージボリュームを使用して検証を実行すると、プライマリストレージボリュームの負荷が軽減されます。 
 ---
 = Plug-in for SQL Server でのプライマリストレージボリュームまたはセカンダリストレージボリュームを使用したバックアップコピーの検証
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

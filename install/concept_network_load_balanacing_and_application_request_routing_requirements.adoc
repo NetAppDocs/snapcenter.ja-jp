@@ -5,6 +5,7 @@ keywords: NLB, configure
 summary: SnapCenter ハイアベイラビリティを設定するには、 Microsoft Network Load Balancing （ NLB ）を設定します。 
 ---
 = Microsoft Network Load Balancer を手動で設定します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

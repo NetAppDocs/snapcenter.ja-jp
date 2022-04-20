@@ -5,6 +5,7 @@ keywords: upgrade, upgrade snapcenter server
 summary: SnapCenter サーバインストーラの実行ファイルを使用して、 SnapCenter サーバをアップグレードできます。 
 ---
 = SnapCenter サーバをアップグレードします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

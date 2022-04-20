@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for SAP HANA Database,run as
 summary: SnapCenter を使用してバックアップをクローニングすることができます。クローニングはプライマリとセカンダリのどちらのバックアップからも実行できます。 
 ---
 = SAP HANA データベースのバックアップをクローニングします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

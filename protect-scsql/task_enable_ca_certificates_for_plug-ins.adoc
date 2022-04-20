@@ -5,6 +5,7 @@ keywords: SnapCenter
 summary: CA 証明書を設定し、 SnapCenter サーバと対応するプラグインホストに CA 証明書を導入する必要があります。 
 ---
 = プラグインの CA 証明書を有効にします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

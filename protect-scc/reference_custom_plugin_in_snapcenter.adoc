@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter サーバを使用して作成したカスタムプラグインをホストにインストールすると、アプリケーションのデータ保護を有効にすることができます。 
 ---
 = SnapCenter のカスタムプラグイン
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

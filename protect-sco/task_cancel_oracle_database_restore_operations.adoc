@@ -5,6 +5,7 @@ keywords: cancel, restore
 summary: キューに格納されているリストアジョブをキャンセルできます。 
 ---
 = Oracle データベースのリストア処理をキャンセルします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

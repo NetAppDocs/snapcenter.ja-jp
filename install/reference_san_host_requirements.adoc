@@ -5,6 +5,7 @@ keywords: host utilities, Microsoft DSM, Windows MPIO
 summary: SnapCenter ホストが FC / iSCSI 環境に配置されている場合、 ONTAP ストレージへのアクセスを有効にするために、システムに追加のソフトウェアのインストールが必要になることがあります。 
 ---
 = SAN ホストの要件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

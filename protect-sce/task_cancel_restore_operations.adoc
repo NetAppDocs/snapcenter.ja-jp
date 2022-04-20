@@ -5,6 +5,7 @@ keywords:
 summary: キューに格納されているリストアジョブをキャンセルできます。 
 ---
 = Exchange データベースのリストア処理をキャンセルします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

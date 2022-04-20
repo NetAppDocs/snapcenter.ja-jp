@@ -5,6 +5,7 @@ keywords:
 summary: Plug-in for Exchange は、 SnapCenter ユーザインターフェイス内からインストールする必要があります。ただし、何らかの理由でインストールできない場合は、 Windows のコマンドラインから、 Plug-in for Exchange のインストールプログラムをサイレントモードで自動的に実行できます。 
 ---
 = コマンドラインから SnapCenter Plug-in for Exchange をサイレントにインストールします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

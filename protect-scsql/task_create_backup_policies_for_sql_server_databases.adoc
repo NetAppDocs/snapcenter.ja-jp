@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter を使用して SQL Server リソースをバックアップする前に、リソースまたはリソースグループのバックアップポリシーを作成することができます。また、リソースグループの作成時や単一のリソースのバックアップ時にバックアップポリシーを作成することもできます。 
 ---
 = SQL Server データベースのバックアップポリシーを作成する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

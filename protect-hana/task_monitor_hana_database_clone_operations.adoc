@@ -5,6 +5,7 @@ keywords: clone
 summary: Jobs ページを使用して、 SnapCenter のクローニング処理の進捗状況を監視できます。処理の進捗状況をチェックして、処理が完了するタイミングや問題があるかどうかを確認できます。 
 ---
 = SAP HANA データベースのクローニング処理を監視する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

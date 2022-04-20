@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter は、 Active Directory \ （ AD \ ）の信頼できるドメインのホストを管理するだけでなく、複数の AD 信頼されていないドメインのホストも管理します。信頼されていない AD ドメインを SnapCenter サーバに登録する必要があります。SnapCenter では、複数の信頼されていない AD ドメインのユーザとグループがサポートされます 
 ---
 = 信頼できないドメインのリソースを管理します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

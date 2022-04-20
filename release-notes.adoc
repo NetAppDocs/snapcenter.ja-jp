@@ -5,6 +5,7 @@ keywords: release notes, snapcenter
 summary: このリリースの SnapCenter サーバおよび SnapCenter プラグインパッケージに関する重要な情報を提供します。これには、解決済みの問題、既知の問題、注意事項、および制限事項が含まれます。 
 ---
 = リリースノート
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

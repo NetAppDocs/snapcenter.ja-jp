@@ -5,6 +5,7 @@ keywords: SnapVault
 summary: コマンドラインインターフェイスからインポート SnapManager できるの SnapCenter は、 SnapVault テクノロジを使用してアーカイブされたバックアップだけです。 
 ---
 = アーカイブバックアップをインポートする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: RBAC roles, add, ONTAP RBAC role
 summary: ストレージシステムで clustered ONTAP を実行している場合、 security login コマンドを使用して ONTAP RBAC ロールを追加できます。 
 ---
 = security login コマンドを使用して、 ONTAP RBAC ロールを追加します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

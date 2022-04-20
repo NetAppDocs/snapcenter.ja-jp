@@ -5,6 +5,7 @@ keywords: SnapCenter plug-in for Exchange Server
 summary: リソースグループはホストまたは Exchange DAG のリソースの集まりで、リソースグループには DAG 全体または個々のデータベースを含めることができます。リソースグループは、のリソースページからバックアップできます。 
 ---
 = Exchange リソースグループをバックアップする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

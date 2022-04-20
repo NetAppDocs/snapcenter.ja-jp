@@ -5,6 +5,7 @@ keywords: SnapCenter
 summary: SnapCenter サーバと Windows ホストプラグインの CA 証明書をインポートします 
 ---
 = CA 証明書をインポートする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

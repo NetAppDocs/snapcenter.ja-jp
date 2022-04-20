@@ -5,6 +5,7 @@ keywords: igroup
 summary: イニシエータグループ（ igroup ）を作成して、ストレージシステム上の特定の LUN にアクセスできるホストを指定します。SnapCenter を使用して、 Windows ホストの igroup の作成、名前変更、変更、削除を行うことができます。 
 ---
 = igroup を作成して管理します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

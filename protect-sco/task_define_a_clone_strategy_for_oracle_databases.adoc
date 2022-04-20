@@ -5,6 +5,7 @@ keywords: backup types, cloning type, clone name, limitations
 summary: データベースをクローニングする前に戦略を定義しておくと、クローニング処理を確実に成功させることができます。 
 ---
 = Oracle データベースのクローニング戦略を定義する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
@@ -27,7 +28,7 @@ SnapCenter では、 Oracle データベースの各種バックアップのク�
 * Automatic Storage Management （ ASM ）構成でのオンラインデータバックアップ、オンラインフルバックアップ、オフラインマウントバックアップ、オフラインシャットダウンバックアップ
 +
 
-IMPORTANT: マルチパス構成ファイルで user_friendly _name オプションが yes に設定されていて、 udev ルールファイルを使用して Oracle ASM ディスクに対してエイリアスまたはシンボリックリンクが定義されている場合、 Oracle ASM 設定はサポートされません。
+IMPORTANT: マルチパス構成ファイルの user_friendy_names オプションが yes に設定されている場合、 SAN 構成はサポートされません。
 
 
 

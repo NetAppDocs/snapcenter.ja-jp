@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter を使用して、 1 つ以上のバックアップをアクティブファイルシステムにリストアすることにより、 Exchange データベースをリストアできます。 
 ---
 = リストアワークフロー
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

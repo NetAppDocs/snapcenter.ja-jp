@@ -5,6 +5,7 @@ keywords: SnapCenter, configure, CA certificate
 summary: CA 証明書は、 Windows ホスト上で SnapCenter サイトを使用して設定する必要があります。 
 ---
 = SnapCenter サイトで CA 証明書を設定します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

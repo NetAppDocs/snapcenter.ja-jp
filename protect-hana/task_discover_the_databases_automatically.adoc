@@ -5,6 +5,7 @@ keywords: credentials
 summary: リソースとは、 SnapCenter で管理されている Linux ホスト上の SAP HANA データベースと非データボリュームです。使用可能な SAP HANA データベースを検出したあと、それらのリソースをリソースグループに追加してデータ保護処理を実行できます。 
 ---
 = データベースを自動的に検出します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

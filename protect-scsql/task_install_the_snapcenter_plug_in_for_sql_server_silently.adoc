@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter Plug-in for Microsoft SQL Server は、 SnapCenter ユーザインターフェイス内からインストールする必要があります。ただし、何らかの理由でインストールできない場合は、 Windows のコマンドラインから、 Plug-in for SQL Server のインストールプログラムをサイレントモードで自動的に実行できます。 
 ---
 = コマンドラインから SnapCenter Plug-in for Microsoft SQL Server をサイレントインストールします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: capacity-based licenses, add, capacity requirements, serial number of 
 summary: ONTAP Select 標準容量ライセンスは、 Cloud Volumes ONTAP プラットフォームと SnapCenter プラットフォームのデータを保護するために使用します。 
 ---
 = SnapCenter の Standard 容量ベースのライセンスを追加
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

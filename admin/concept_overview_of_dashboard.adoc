@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter の左側のナビゲーションペインで、ダッシュボードには、最近のジョブアクティビティ、アラート、保護の概要、ストレージの効率性と使用状況、 SnapCenter ジョブのステータス（バックアップ、クローン、リストア）、スタンドアロンおよび Windows クラスタホストの構成ステータスなど、システムの健全性が一目でわかります。 SnapCenter で管理されている Storage Virtual Machine （ SVM ）の数とライセンス容量。 
 ---
 = ダッシュボードの概要
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

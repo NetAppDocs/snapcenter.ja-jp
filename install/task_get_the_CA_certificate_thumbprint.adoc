@@ -5,6 +5,7 @@ keywords: SnapCenter, certificate thumbprint
 summary: 証明書のサムプリントは、証明書を識別する 16 進数の文字列です。サムプリントは、サムプリントアルゴリズムを使用して証明書の内容から計算されます。 
 ---
 = CA 証明書のサムプリントを取得します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

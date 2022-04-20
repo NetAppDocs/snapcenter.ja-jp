@@ -5,6 +5,7 @@ keywords:
 summary: 実行中、キューに登録済み、または応答しないバックアップ処理をキャンセルできます。 
 ---
 = Oracle データベースのバックアップ処理をキャンセルします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

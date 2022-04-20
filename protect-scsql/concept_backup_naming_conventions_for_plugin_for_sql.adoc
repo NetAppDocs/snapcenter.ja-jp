@@ -5,6 +5,7 @@ keywords:
 summary: Snapshot コピーのデフォルトの命名規則を使用するか、カスタマイズした命名規則を使用できます。デフォルトのバックアップ命名規則では Snapshot コピー名にタイムスタンプが追加されるため、コピーが作成されたタイミングを特定できます。 
 ---
 = Plug-in for SQL Server のバックアップ命名規則
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

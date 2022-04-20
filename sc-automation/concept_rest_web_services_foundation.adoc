@@ -5,6 +5,7 @@ keywords: uri endpoints, http messages, json format
 summary: REST は、分散 Web アプリケーションを作成するためのスタイルです。Web サービス API の設計においては、サーバベースのリソースを公開してその状態を管理するための一連のテクノロジとベストプラクティスが確立されます。主流のプロトコルと標準を使用して、 SnapCenter を管理するための柔軟な基盤を提供しています。 
 ---
 = 基盤としての REST Web サービス
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

@@ -5,6 +5,7 @@ keywords: Secure Sockets Layer, secure MYSQL connections, standalone configurati
 summary: SnapCenter サーバと MySQL サーバ間の通信をスタンドアロン構成または Network Load Balancing （ NLB ）構成で保護する場合は、 Secure Sockets Layer （ SSL ）証明書とキーファイルを生成できます。 
 ---
 = SnapCenter サーバとの安全な MySQL 接続を設定します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for SAP HANA Database
 summary: Plug-in for SAP HANA Database をインストールした環境では、 SnapCenter を使用して SAP HANA データベースとそのリソースをバックアップ、リストア、クローニングできます。これらの処理をサポートするタスクを実行することもできます。 
 ---
 = SnapCenter Plug-in for SAP HANA Database の機能
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

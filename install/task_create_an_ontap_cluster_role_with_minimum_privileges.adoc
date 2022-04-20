@@ -5,6 +5,7 @@ keywords: ONTAP cluster role, privileges
 summary: 最小限の権限で ONTAP クラスタロールを作成して、 SnapCenter の admin ロールを使用して ONTAP で処理を実行する必要がないようにする必要があります。 
 ---
 = 最小限の権限で ONTAP クラスタロールを作成します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

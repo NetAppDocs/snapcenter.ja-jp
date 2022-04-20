@@ -5,6 +5,7 @@ keywords: REST API categories
 summary: SnapCenter REST API で使用できるリソースは、 SnapCenter API ドキュメントページに表示されるカテゴリ別に分類されています。 
 ---
 = 他のプラグインでサポートされている REST API
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

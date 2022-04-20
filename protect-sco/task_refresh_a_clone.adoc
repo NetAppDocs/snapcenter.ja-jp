@@ -5,6 +5,7 @@ keywords: refresh clone, clone
 summary: 'クローンを更新するには、 [Refresh-SmClone] コマンドを実行します。このコマンドは、データベースのバックアップを作成し、既存のクローンを削除し、同じ名前でクローンを作成します。' 
 ---
 = クローンをリフレッシュします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

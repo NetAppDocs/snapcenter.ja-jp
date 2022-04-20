@@ -5,6 +5,7 @@ keywords: installing
 summary: カスタムプラグインリソースを保護する場合は、 SnapCenter Custom Plug-ins をインストールしてセットアップする必要があります。 
 ---
 = SnapCenter Custom Plug-ins のインストールワークフロー
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

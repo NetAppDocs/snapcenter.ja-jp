@@ -5,6 +5,7 @@ keywords: uninstall, uninstall plug-in locally, uninstall plug-in from a host
 summary: SnapCenter サーバからホストにアクセスできない場合は、ホスト上でローカルに SnapCenter プラグインをアンインストールできます。 
 ---
 = プラグインをホスト上でローカルにアンインストールします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

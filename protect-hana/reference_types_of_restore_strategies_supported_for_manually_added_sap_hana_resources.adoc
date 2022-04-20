@@ -5,6 +5,7 @@ keywords: SnapCenter
 summary: SnapCenter を使用してリストア処理を正常に実行するには、事前に戦略を定義しておく必要があります。SAP HANA リソースを手動で追加する場合のリストア戦略には、 2 つのタイプがあります。手動で追加した SAP HANA リソースはリカバリできません。 
 ---
 = 手動で追加した SAP HANA リソースでサポートされるリストア戦略のタイプ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

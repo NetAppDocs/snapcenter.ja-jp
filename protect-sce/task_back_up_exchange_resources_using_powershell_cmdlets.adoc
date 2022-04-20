@@ -5,6 +5,7 @@ keywords: backup
 summary: Exchange Server データベースをバックアップする場合は、 SnapCenter サーバとの接続を確立し、 Exchange サーバデータベースを検出し、ポリシーの追加、バックアップリソースグループの作成、バックアップ、およびバックアップステータスの表示を行います。 
 ---
 = PowerShell コマンドレットを使用して Exchange リソースをバックアップします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

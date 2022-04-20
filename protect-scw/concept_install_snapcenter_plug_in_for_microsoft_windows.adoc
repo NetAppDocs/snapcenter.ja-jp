@@ -5,6 +5,7 @@ keywords: installing
 summary: データベースファイル以外の Windows ファイルを保護する場合は、 SnapCenter Plug-in for Microsoft Windows をインストールしてセットアップする必要があります。 
 ---
 = SnapCenter Plug-in for Microsoft Windows のインストールワークフロー
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

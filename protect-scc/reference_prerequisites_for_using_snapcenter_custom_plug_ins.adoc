@@ -5,6 +5,7 @@ keywords: Credentials
 summary: SnapCenter Custom Plug-ins を使用するには、 SnapCenter 管理者が SnapCenter サーバをインストールして設定し、前提条件となるタスクを実行する必要があります。 
 ---
 = SnapCenter Custom Plug-ins を使用するための前提条件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

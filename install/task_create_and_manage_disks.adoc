@@ -5,6 +5,7 @@ keywords: disks, create, manage, clustered disks, view
 summary: Windows ホストは、ストレージシステム上の LUN を仮想ディスクとして認識します。SnapCenter を使用して、 FC 接続 LUN または iSCSI 接続 LUN を作成および設定できます。 
 ---
 = ディスクを作成および管理する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

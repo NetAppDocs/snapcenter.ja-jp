@@ -5,6 +5,7 @@ keywords: RBAC, role, permission, pre-defined role
 summary: SnapCenter には、事前定義されたロールが用意されており、それぞれ一連の権限がすでに有効になっています。ロールベースアクセス制御（ RBAC ）をセットアップして管理するときは、これらの事前定義されたロールを使用するか、新しいロールを作成できます。 
 ---
 = 事前定義された SnapCenter ロールと権限
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: SnapCenter
 summary: 証明書署名要求（ CSR ）を生成し、証明書をインポートできます。 
 ---
 = CA 証明書 CSR ファイルを生成します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

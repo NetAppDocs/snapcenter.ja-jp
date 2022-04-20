@@ -5,6 +5,7 @@ keywords: backup, restore, clone, oracle database
 summary: Plug-in for Oracle Database では、次のバックアップ、検証、リストア、リカバリ、マウントを実行できます。 Oracle データベースとそのリソースをアンマウントおよびクローニングする。また、 Oracle Recovery Manager （ RMAN ）でデータベースバックアップのカタログ化またはカタログ化解除を行うこともできます。 
 ---
 = Plug-in for Oracle Database の機能
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

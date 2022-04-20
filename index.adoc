@@ -8,6 +8,7 @@ summary: SnapCenter ソフトウェアは、シンプルで拡張性に優れた
 ---
 = SnapCenter ソフトウェアのドキュメント
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

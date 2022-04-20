@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter を使用してカスタムプラグイン固有のリソースをバックアップする前に、バックアップ対象のリソースまたはリソースグループのバックアップポリシーを作成する必要があります。 
 ---
 = カスタムプラグインリソースのポリシーを作成する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

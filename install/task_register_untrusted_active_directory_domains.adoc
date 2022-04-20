@@ -5,6 +5,7 @@ keywords:
 summary: 信頼されていない複数の Active Directory ドメインのホスト、ユーザ、およびグループを管理するには、 Active Directory を SnapCenter サーバに登録する必要があります。 
 ---
 = 信頼できない Active Directory ドメインを登録します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

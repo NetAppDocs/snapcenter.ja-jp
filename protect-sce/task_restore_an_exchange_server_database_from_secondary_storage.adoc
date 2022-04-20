@@ -5,6 +5,7 @@ keywords:
 summary: セカンダリストレージ（ミラーまたはバックアップ）から、バックアップされた Exchange Server データベースをリストアすることができます。 
 ---
 = セカンダリストレージから Exchange Server データベースをリストアする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

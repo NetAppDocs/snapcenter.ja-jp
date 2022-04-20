@@ -5,6 +5,7 @@ keywords: prescript, postscript, script path, script timeout, script types suppo
 summary: カスタムのプリスクリプトとポストスクリプトをデータ保護処理の一部として使用することができます。これらのスクリプトにより、データ保護ジョブの前後の処理を自動化できます。たとえば、データ保護ジョブのエラーや警告を自動的に通知するスクリプトを組み込むことができます。プリスクリプトとポストスクリプトを設定する前に、スクリプトを作成するための要件を理解しておく必要があります。 
 ---
 = プリスクリプトとポストスクリプト
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords:
 summary: リソースをバックアップするときは、 SnapCenter サーバとの接続を確立してから、リソースの追加、ポリシーの追加、バックアップリソースグループの作成を行って、バックアップを実行します。 
 ---
 = PowerShell コマンドレットを使用してリソースをバックアップします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: uninstall, snapcenter server
 summary: 'データ保護ジョブの管理に SnapCenter サーバを使用しない場合は、 SnapCenter サーバホストの [ プログラムと機能 ] コントロールパネルを使用して SnapCenter サーバをアンインストールできます。SnapCenter サーバをアンインストールすると、そのコンポーネントがすべて削除されます。' 
 ---
 = SnapCenter サーバをアンインストールします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

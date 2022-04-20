@@ -5,6 +5,7 @@ keywords:
 summary: Perl を使用してプラグインを開発します。 
 ---
 = Perl ベースの開発
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

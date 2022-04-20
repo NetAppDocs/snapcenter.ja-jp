@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter を使用して、バックアップされた SQL Server データベースをリストアできます。データベースのリストアは段階的に実施され、すべてのデータページとログページが指定した SQL Server バックアップから指定したデータベースにコピーされます。 
 ---
 = SQL Server データベースのバックアップをリストアする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords:
 summary: PowerShell コマンドレットを使用すると、 Event Management System （ EMS ；イベント管理システム）でのデータ収集をスケジュール設定および管理できます。EMS データ収集では、 SnapCenter サーバ、インストールされている SnapCenter プラグインパッケージ、ホストに関する情報などが収集され、指定した ONTAP Storage Virtual Machine （ SVM ）に送信されます。 
 ---
 = EMS データ収集を管理します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

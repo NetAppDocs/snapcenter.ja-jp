@@ -5,6 +5,7 @@ keywords: space
 summary: ファイルが削除または変更された場合、 NTFS は LUN 上の使用可能なスペースを追跡しますが、この情報はストレージシステムには報告されません。新たに解放されたブロックがストレージで空きスペースとしてマークされるようにするには、 Plug-in for Windows ホストでスペース再生用 PowerShell コマンドレットを実行します。 
 ---
 = ストレージシステム上のスペースを再生する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

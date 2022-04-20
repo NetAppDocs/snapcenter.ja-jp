@@ -5,6 +5,7 @@ keywords: SnapCenter
 summary: SnapCenter サーバをインストールする前に、スペースとサイジングの要件を十分に理解しておく必要があります。また、利用可能なシステムおよびセキュリティの更新も適用する必要があります。 
 ---
 = スペースとサイジングの要件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

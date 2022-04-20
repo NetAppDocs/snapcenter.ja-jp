@@ -5,6 +5,7 @@ keywords: SnapCenter, ca certificate, activate, digital certificate
 summary: CA 証明書に Windows ホストプラグインサービスを設定して、インストールされたデジタル証明書をアクティブ化する必要があります。 
 ---
 = Windows ホストプラグインサービスを使用して CA 証明書を設定する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

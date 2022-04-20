@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for SAP HANA Database
 summary: リソースグループは、ホスト上のリソースの集まりです。リソースグループのバックアップ処理は、リソースグループに定義されているすべてのリソースを対象に実行されます。 
 ---
 = リソースグループをバックアップする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter Plug-in for SQL Server ストレージをリカバリするには、グローバル設定ページでストレージの DR モードを有効にします。 
 ---
 = SnapCenter Plug-in for SQL Server の Storage Disaster Recovery （ DR ；ストレージディザスタリカバリ）
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

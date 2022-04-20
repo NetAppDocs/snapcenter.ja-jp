@@ -5,6 +5,7 @@ keywords: SnapCenter
 summary: Windows ホストで SnapCenter Custom Plug-ins サービスの CA 証明書を設定します 
 ---
 = Windows ホストで SnapCenter SAP HANA Plug-ins サービスの CA 証明書を設定します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

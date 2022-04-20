@@ -5,6 +5,7 @@ keywords: clone
 summary: SnapCenter を使用して、 Windows ファイルシステムのバックアップをクローニングすることができます。誤って削除または変更された単一のファイルのコピーが必要な場合は、バックアップをクローニングし、クローン内のファイルを使用できます。 
 ---
 = Windows ファイルシステムのバックアップからのクローニング
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

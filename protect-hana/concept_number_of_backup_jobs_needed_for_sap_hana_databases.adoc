@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for SAP HANA Database
 summary: 必要なバックアップジョブの数を左右する要因としては、リソースのサイズ、使用中のボリュームの数、リソースの変更率、サービスレベルアグリーメント（ SLA\ ）などがあります。 
 ---
 = SAP HANA データベースに必要なバックアップジョブの数
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

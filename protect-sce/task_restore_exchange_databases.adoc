@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter を使用して、バックアップされた Exchange データベースをリストアできます。 
 ---
 = Exchange データベースをリストアします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

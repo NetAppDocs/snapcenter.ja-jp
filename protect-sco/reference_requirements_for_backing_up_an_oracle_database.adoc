@@ -5,6 +5,7 @@ keywords: requirements, prerequisites
 summary: Oracle データベースをバックアップする前に、前提条件を満たしていることを確認する必要があります。 
 ---
 = Oracle データベースをバックアップするための要件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

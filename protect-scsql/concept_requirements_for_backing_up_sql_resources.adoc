@@ -5,6 +5,7 @@ keywords:
 summary: SQL リソースをバックアップする前に、いくつかの要件を満たしていることを確認する必要があります。 
 ---
 = SQL リソースのバックアップに関する要件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

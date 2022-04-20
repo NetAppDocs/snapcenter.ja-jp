@@ -1,4 +1,5 @@
 = 
+:allow-uri-read: 
 
 
 SnapCenter Plug-ins Package for Windows をインストールする前に、ホストシステムのいくつかの基本的なスペース要件とサイジング要件を確認しておく必要があります。

@@ -5,6 +5,7 @@ keywords: backup, Oracle database, policy, schedule, verification, resources
 summary: どのリソースグループにも含まれていないリソースは、のリソースページからバックアップすることができます。 
 ---
 = Oracle リソースのバックアップ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

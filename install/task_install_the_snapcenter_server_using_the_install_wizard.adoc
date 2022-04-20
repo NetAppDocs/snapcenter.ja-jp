@@ -5,6 +5,7 @@ keywords: install, snapcenter software, install wizard
 summary: SnapCenter サーバインストーラの実行ファイルを実行して、 SnapCenter サーバをインストールできます。 
 ---
 = SnapCenter サーバをインストールします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

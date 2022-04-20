@@ -5,6 +5,7 @@ keywords:
 summary: SnapManager for Microsoft SQL Server のアーカイブバックアップ SnapCenter をインポートすると、トポロジページにこれらのバックアップが表示されます。 
 ---
 = SnapCenter サーバで、インポートされたバックアップを表示します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

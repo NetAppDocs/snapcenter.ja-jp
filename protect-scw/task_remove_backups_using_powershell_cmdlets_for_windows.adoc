@@ -5,6 +5,7 @@ keywords: backups
 summary: Remove-SmBackup コマンドレットを使用すると、他のデータ保護処理に不要になったバックアップを削除できます。 
 ---
 = PowerShell コマンドレットを使用してバックアップを削除します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

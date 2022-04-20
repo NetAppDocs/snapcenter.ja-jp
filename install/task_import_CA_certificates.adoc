@@ -5,6 +5,7 @@ keywords: SnapCenter, import, import ca certificate, mmc, microsoft management c
 summary: Microsoft の管理コンソール（ MMC ）を使用して、 SnapCenter サーバと Windows ホストプラグインに CA 証明書をインポートする必要があります。 
 ---
 = CA 証明書をインポートする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

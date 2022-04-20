@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter Plug-in for Microsoft Exchange Server ではバックアップの検証は実行されませんが、 Exchange の Eseutil ツールを使用して Exchange データベースとバックアップを検証することができます。 
 ---
 = Exchange データベースおよびバックアップの検証
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

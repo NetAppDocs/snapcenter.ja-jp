@@ -5,6 +5,7 @@ keywords: RBAC, roles, permissions
 summary: SnapCenter のロールベースアクセス制御（ RBAC ）では、ロールを作成して権限を追加し、そのロールにユーザやそのグループを割り当てることができます。これにより、 SnapCenter 管理者は環境を一元的に管理しながら、アプリケーション管理者はデータ保護ジョブを管理できます。SnapCenter には、事前定義されたロールと権限がいくつか付属してい 
 ---
 = RBAC の権限とロール
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

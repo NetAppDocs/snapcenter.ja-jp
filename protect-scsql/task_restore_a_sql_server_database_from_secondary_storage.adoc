@@ -5,6 +5,7 @@ keywords:
 summary: セカンダリストレージシステム上の物理 LUN （ RDM 、 iSCSI 、または FCP ）から、バックアップされた SQL Server データベースをリストアできます。リストアは段階的に実施され、すべてのデータとログページがセカンダリストレージシステム上の指定した SQL Server バックアップから指定したデータベースにコピーされます。 
 ---
 = セカンダリストレージから SQL Server データベースをリストアする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords:
 summary: キューに登録されているバックアップ処理をキャンセルできます。 
 ---
 = SAP HANA のバックアップ処理をキャンセルします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

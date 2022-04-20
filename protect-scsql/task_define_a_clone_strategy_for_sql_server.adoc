@@ -5,6 +5,7 @@ keywords:
 summary: クローニング戦略を定義しておくと、それに従ってデータベースのクローニングを実行することができます。 
 ---
 = SQL Server のクローニング戦略を定義する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

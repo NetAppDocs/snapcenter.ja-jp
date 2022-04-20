@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter ディザスタリカバリ機能を使用すると、リソースの破損やサーバクラッシュなどの災害が発生した場合に SnapCenter サーバをリカバリできます。 
 ---
 = ディザスタリカバリ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
@@ -12,11 +13,13 @@ summary: SnapCenter ディザスタリカバリ機能を使用すると、リソ
 [role="lead"]
 SnapCenter ディザスタリカバリ機能を使用すると、リソースの破損やサーバクラッシュなどの災害が発生した場合に SnapCenter サーバをリカバリできます。SnapCenter リポジトリ、サーバスケジュール、およびサーバ構成コンポーネントをリカバリできます。
 
+また、 SnapCenter Plug-in for SQL Server および SnapCenter Plug-in for SQL Server ストレージをリカバリすることもできます。
+
 ディザスタリカバリ（ DR ）のタイプは次のとおりです。
 
 * * SnapCenter サーバ DR *
 +
-SnapCenter サーバのデータは、プラグインが SnapCenter サーバで管理されているかどうかに関係なくバックアップおよびリカバリされます。
+SnapCenter サーバのデータは、 SnapCenter サーバでプラグインが追加されているか管理されているかに関係なく、バックアップおよびリカバリされます。
 
 +
 SnapCenter のディザスタリカバリ機能では、 REST API を使用して SnapCenter サーバをバックアップします。
@@ -24,7 +27,7 @@ SnapCenter のディザスタリカバリ機能では、 REST API を使用し�
 +
 link:../sc-automation/rest_api_workflows_disaster_recovery_of_snapcenter_server.html["SnapCenter サーバのディザスタリカバリ用の REST API のワークフロー"]
 
-* * SQL Server DR *
+* * SnapCenter プラグインと Storage DR *
 +
 DR は、 SnapCenter Plug-in for SQL Server でのみサポートされます。SnapCenter Plug-in for SQL Server がダウンしたときに、別の SQL ホストに切り替えてデータをリカバリする手順はいくつかあります。
 

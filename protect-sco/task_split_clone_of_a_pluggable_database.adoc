@@ -5,6 +5,7 @@ keywords: split, PDB, cloned PDB
 summary: SnapCenter を使用して、クローニングされた Pluggable Database \ （ PDB\ ）をスプリットできます。 
 ---
 = プラグイン可能なデータベースのスプリットクローン
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

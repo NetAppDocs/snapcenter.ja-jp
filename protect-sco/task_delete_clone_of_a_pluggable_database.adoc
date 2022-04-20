@@ -5,6 +5,7 @@ keywords: delete, PDB, clone PDB
 summary: 不要になったプラグイン可能データベース \ （ PDB\ ）のクローンは削除できます。 
 ---
 = プラグイン可能なデータベースのクローンを削除します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

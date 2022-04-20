@@ -5,6 +5,7 @@ keywords: credentials, install plug-in, Linux, AIX, GUI, add host, monitor
 summary: ホストの追加ページを使用 SnapCenter してホストを追加し、 SnapCenter Plug-ins Package for Linux または SnapCenter Plug-ins Package for AIX をインストールできます。プラグインは、自動的にリモートホストにインストールされます。 
 ---
 = GUI を使用して、 Linux または AIX 用のホストを追加し、 Plug-ins Package をインストールします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -4,7 +4,8 @@ sidebar: sidebar
 keywords:  
 summary: 必要な最小 ONTAP 権限は、データ保護に使用する SnapCenter プラグインによって異なります。 
 ---
-= 必要な最小 ONTAP 権限
+= SAP HANA プラグインに必要な最小限の ONTAP 権限
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
@@ -12,7 +13,7 @@ summary: 必要な最小 ONTAP 権限は、データ保護に使用する SnapCe
 必要な最小 ONTAP 権限は、データ保護に使用する SnapCenter プラグインによって異なります。
 
 |===
-| フルアクセスコマンド： ONTAP 8.2_x_and later に必要な最小権限 
+| フルアクセスコマンド： ONTAP 8.3.0 以降で必要な最小権限 
 
 
  a| 
@@ -186,7 +187,7 @@ vserver show のコマンドです
 
 |===
 |===
-| 読み取り専用コマンド： ONTAP 8.2_x_and later に必要な最小権限 
+| 読み取り専用コマンド： ONTAP 8.3.0 以降で必要な最小権限 
 
 
  a| 

@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter Plug-in for Microsoft Windows を使用してネットアップストレージシステムをプロビジョニングしたら、 SnapCenter グラフィカルユーザインターフェイス \ （ GUI\ ）または PowerShell コマンドレットを使用して、リソースをネットアップストレージシステムに移行するか、またはあるネットアップ LUN から別のネットアップ LUN に移行できます。 
 ---
 = ネットアップストレージシステムにリソースを移行
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

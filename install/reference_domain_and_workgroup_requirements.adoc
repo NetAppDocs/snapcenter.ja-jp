@@ -5,6 +5,7 @@ keywords: active directory domain, workgroups, multi-domain forests, cross-domai
 summary: SnapCenter サーバは、ドメインまたはワークグループ内のシステムにインストールできます。インストールに使用するユーザには、ワークグループとドメインの両方の場合に、マシンに対する管理者権限が必要です。 
 ---
 = ドメインとワークグループの要件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: restore
 summary: Jobs ページを使用して、 SnapCenter の各リストア処理の進捗状況を監視できます。処理の進捗状況をチェックして、処理が完了するタイミングや問題があるかどうかを確認できます。 
 ---
 = SAP HANA データベースのリストア処理を監視する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

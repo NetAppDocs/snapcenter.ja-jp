@@ -5,6 +5,7 @@ keywords: application volume, resource group, back up, database
 summary: アプリケーションボリュームのみ、またはアプリケーションボリュームとデータベースが混在しているリソースグループをバックアップできます。 
 ---
 = アプリケーションボリュームのリソースグループをバックアップします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords:
 summary: SnapManager for Microsoft SQL Server から SnapCenter にアーカイブバックアップをインポートする前に制限事項について確認しておくと、インポートを正常に完了するのに役立ちます。対象のバックアップは、 SnapVault テクノロジでアーカイブされている必要があります。 
 ---
 = インポート機能に関連する制限事項
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

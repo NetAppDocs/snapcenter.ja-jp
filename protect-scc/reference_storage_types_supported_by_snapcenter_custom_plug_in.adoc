@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter は、物理マシンと仮想マシンの両方でさまざまなストレージタイプをサポートしています。SnapCenter カスタムプラグインをインストールする前に、ストレージタイプがサポートされているかどうかを確認する必要があります。 
 ---
 = SnapCenter Custom Plug-ins でサポートされるストレージタイプ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

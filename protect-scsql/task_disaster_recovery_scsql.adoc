@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter Plug-in for SQL Server がダウンした場合は、いくつかの手順を手動で実行することでリカバリできます。 
 ---
 = SnapCenter Plug-in for SQL Server のディザスタリカバリ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

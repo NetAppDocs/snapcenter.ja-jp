@@ -5,6 +5,7 @@ keywords:
 summary: ダッシュボードを使用して、特定のプラグインで管理されるリソースの保護の詳細を要求できます。 
 ---
 = ダッシュボードから保護ステータスのレポートを要求します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

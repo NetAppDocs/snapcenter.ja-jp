@@ -5,6 +5,7 @@ keywords: credentials
 summary: Install-SmHostPackage PowerShell コマンドレットを使用すると、複数のホストに Linux または Windows 向け SnapCenter プラグインパッケージを同時にインストールできます。 
 ---
 = コマンドレットを使用して、複数のリモートホストに Linux または Windows 用の SnapCenter プラグインパッケージをインストールします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

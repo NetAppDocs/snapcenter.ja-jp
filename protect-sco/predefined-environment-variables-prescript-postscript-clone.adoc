@@ -5,6 +5,7 @@ keywords: environment variable, predefined, prescript, postscript, clone
 summary: SnapCenter では、データベースのクローニング時にプリスクリプトとポストスクリプトを実行する際に、事前定義された環境変数を使用できます。 
 ---
 = 特定のプリスクリプトおよびポストスクリプトをクローニングするための事前定義された環境変数
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter Plug-in for Microsoft Windows をインストールした環境では、 SnapCenter を使用して Windows ファイルシステムをバックアップすることができます。単一のファイルシステム、または複数のファイルシステムを含むリソースグループをバックアップできます。バックアップは、オンデマンドで実行することも、定義した保護スケジュールに従って実行することもできます。 
 ---
 = Windows ファイルシステムのバックアップ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for SQL Server
 summary: リソースのバックアップまたはクローニングを準備する際に、プライマリストレージとセカンダリストレージ上のすべてのバックアップとクローンの図を表示すると役に立ちます。 
 ---
 = トポロジページで SQL Server のバックアップとクローンを表示します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

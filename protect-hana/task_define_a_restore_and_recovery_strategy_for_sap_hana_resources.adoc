@@ -5,6 +5,7 @@ keywords:
 summary: データベースのリストアとリカバリを行う前に戦略を定義しておくと、リストア処理とリカバリ処理を正常に実行できるようになります。 
 ---
 = SAP HANA リソースのリストアとリカバリの戦略を定義する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

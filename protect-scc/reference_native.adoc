@@ -5,6 +5,7 @@ keywords:
 summary: ネイティブ形式を使用してプラグインを開発します。 
 ---
 = ネイティブ形式
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

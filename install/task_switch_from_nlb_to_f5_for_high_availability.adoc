@@ -5,6 +5,7 @@ keywords: F5, NLB, high availability
 summary: SnapCenter HA 構成を Network Load Balancing （ NLB ）から変更して、 F5 ロードバランサを使用することができます。 
 ---
 = NLB から F5 に切り替えて高可用性を実現します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

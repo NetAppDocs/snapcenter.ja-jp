@@ -5,6 +5,7 @@ keywords: CA client certificate, LDAPS
 summary: Windows Active Directory LDAPS に CA 証明書が設定されている場合は、 SnapCenter サーバで LDAPS の CA クライアント証明書を設定する必要があります。 
 ---
 = LDAPS の CA クライアント証明書を設定します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

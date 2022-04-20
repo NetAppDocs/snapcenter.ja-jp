@@ -5,6 +5,7 @@ keywords: uninstall, prerequisites, plug-in, plug-in packages
 summary: データ保護ジョブの管理に SnapCenter を使用する必要がなくなった場合は、ホストを削除できます。たとえば、保護が必要なデータがなくなったホストを削除できます。SnapCenter サーバからホストを削除する前に、前提条件となるタスクを実行する必要があります。 
 ---
 = ホストを削除するための前提条件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

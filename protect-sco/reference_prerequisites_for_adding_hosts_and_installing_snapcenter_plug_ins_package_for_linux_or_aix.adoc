@@ -5,6 +5,7 @@ keywords: prerequisites, iSCSI, Oracle path, host requirement for Linux, sudo pr
 summary: ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。 
 ---
 = ホストを追加して Plug-in Package for Linux または AIX をインストールするための前提条件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
@@ -101,7 +102,7 @@ SnapCenter 2.0 以降のリリースでは、 root 以外のユーザが SnapCen
 
 * 必要なもの *
 
-* sudo 1.8.7 以降。
+* sudo バージョンは 1.8.7 ～ 1.8.19P2 です。
 * root 以外のユーザが Oracle インストールグループに含まれていることを確認します。
 * /etc/ssh/sshd_config_file を編集して、メッセージ認証コードアルゴリズム MACs HMAC-sha2-256 および MACs HMAC-sha2-512 を設定します。
 +
@@ -227,7 +228,7 @@ SnapCenter 4.4 以降では、 root 以外のユーザが SnapCenter Plug-ins Pa
 
 * 必要なもの *
 
-* sudo 1.8.7 以降。
+* sudo バージョンは 1.8.7 ～ 1.8.19P2 です。
 * root 以外のユーザが Oracle インストールグループに含まれていることを確認します。
 * /etc/ssh/sshd_config_file を編集して、メッセージ認証コードアルゴリズム MACs HMAC-sha2-256 および MACs HMAC-sha2-512 を設定します。
 +

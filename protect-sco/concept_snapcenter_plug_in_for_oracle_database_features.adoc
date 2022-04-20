@@ -5,6 +5,7 @@ keywords: plug-in for Oracle features
 summary: Plug-in for Oracle Database は、 Linux または AIX ホスト上で Oracle データベースと統合されるほか、ストレージシステム上でネットアップのテクノロジと統合されます。 
 ---
 = Plug-in for Oracle Database の特長
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: installing
 summary: Oracle データベースを保護する場合は、 SnapCenter Plug-in for Oracle Database をインストールしてセットアップする必要があります。 
 ---
 = SnapCenter Plug-in for Oracle Database のインストールワークフロー
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for Oracle Database
 summary: SnapCenter を使用する前に、実行するバックアップ、クローニング、およびリストアの処理に関連する基本的な概念を理解しておくと役立ちます。 
 ---
 = Oracle データベースの保護における、リソース、リソースグループ、およびポリシーの使用方法
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

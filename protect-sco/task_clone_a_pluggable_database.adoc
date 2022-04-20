@@ -5,6 +5,7 @@ keywords: clone, pluggable database, PDB
 summary: Pluggable Database \ （ PDB\ ）を、同じホストまたは代替ホスト上の異なるターゲット CDB または同じ CDB にクローニングできます。クローニングした PDB を目的の SCN または日時にリカバリすることもできます。 
 ---
 = プラグイン可能なデータベースをクローニングします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

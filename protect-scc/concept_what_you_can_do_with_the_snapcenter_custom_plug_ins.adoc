@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter Custom Plug-ins を使用してデータ保護処理を実行できます。 
 ---
 = SnapCenter Custom Plug-ins および Storage プラグインの機能
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

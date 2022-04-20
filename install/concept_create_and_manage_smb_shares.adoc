@@ -5,6 +5,7 @@ keywords: SMB shares
 summary: Storage Virtual Machine （ SVM ）上に SMB3 共有を設定するには、 SnapCenter ユーザインターフェイスまたは PowerShell コマンドレットを使用できます。 
 ---
 = SMB 共有を作成および管理する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

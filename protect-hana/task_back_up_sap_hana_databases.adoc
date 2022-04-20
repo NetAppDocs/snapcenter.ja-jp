@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for SAP HANA Database
 summary: どのリソースグループにも含まれていないリソースは、のページからバックアップすることができます。 
 ---
 = SAP HANA データベースをバックアップする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

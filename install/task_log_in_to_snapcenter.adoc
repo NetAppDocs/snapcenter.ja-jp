@@ -5,6 +5,7 @@ keywords: log in, logging, SnapCenter UI, modify timeout, GUI session timeout, d
 summary: SnapCenter では、 Role-Based Access Control （ RBAC ；ロールベースアクセス制御）がサポートされています。SnapCenter 管理者が、 SnapCenter RBAC を使用して、ロールとリソースをワークグループまたは Active Directory 内のユーザまたは Active Directory 内のグループに割り当てます。RBAC ユーザは、割り当てられたロールを使用して SnapCenter にログインできるようになりました。 
 ---
 = SnapCenter にログインします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

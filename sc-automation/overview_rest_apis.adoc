@@ -5,6 +5,7 @@ keywords: REST APIs, swagger
 summary: REST API を使用して SnapCenter のいくつかの管理操作を実行する方法について説明します。REST API は Swagger Web ページから利用できます。 
 ---
 = REST API の概要
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

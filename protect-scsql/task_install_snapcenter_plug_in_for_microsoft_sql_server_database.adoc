@@ -5,6 +5,7 @@ keywords: installing
 summary: SQL Server データベースを保護する場合は、 SnapCenter Plug-in for Microsoft SQL Server をインストールしてセットアップする必要があります。 
 ---
 = SnapCenter Plug-in for Microsoft SQL Server のインストールワークフロー
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

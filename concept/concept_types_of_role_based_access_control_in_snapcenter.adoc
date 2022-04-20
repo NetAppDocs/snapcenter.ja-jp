@@ -5,6 +5,7 @@ keywords: RBAC, roles, permissions, application-level RBAC, ONTAP permissions
 summary: SnapCenter のロールベースアクセス制御（ RBAC ）と ONTAP 権限を使用して、 SnapCenter 管理者はロールの作成とアクセス権限の設定を行うことができます。この方法でアクセスを一元管理することで、アプリケーション管理者は委譲された環境で安全に作業することができ 
 ---
 = RBAC のタイプ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

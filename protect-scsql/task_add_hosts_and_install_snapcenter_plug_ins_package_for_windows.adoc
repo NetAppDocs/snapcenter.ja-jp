@@ -5,6 +5,7 @@ keywords: credentials
 summary: ホストの追加とプラグインパッケージのインストールには、 SnapCenterAdd Host ページを使用する必要があります。プラグインは、自動的にリモートホストにインストールされます。 
 ---
 = ホストを追加し、 SnapCenter Plug-ins Package for Windows をインストールします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

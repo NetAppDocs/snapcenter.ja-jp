@@ -5,6 +5,7 @@ keywords: ports, port requirements
 summary: SnapCenter サーバとアプリケーションまたはデータベースのプラグインをインストールする前に、接続とポートの要件が満たされていることを確認する必要があります。 
 ---
 = 接続とポートの要件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
@@ -145,3 +146,4 @@ SnapCenter Plug-in for SAP HANA Database のポート
 SnapCenter サーバ、プラグインホスト、またはその他の Windows クライアントがユーザを認証できるように、ドメインコントローラで Microsoft の必要なポートを開く必要があります。
 
 |===
+ポートの詳細を変更する手順については、を参照してください https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_hosts.html#modify-plug-in-hosts[] [ プラグインホストを変更 ^] 。

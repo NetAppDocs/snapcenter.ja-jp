@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for SAP HANA Database
 summary: プラグインを使用して、リソースグループの整合グループ Snapshot コピーを作成することができます。整合グループとはボリュームのコンテナであり、複数のボリュームを格納して 1 つのエンティティとして管理できます。整合グループには複数のボリュームの Snapshot コピーが同時に格納されるため、一連のボリュームのコピーの整合性が確保されます。 
 ---
 = SnapCenter Plug-in for SAP HANA Database での整合グループ Snapshot コピーの使用方法
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

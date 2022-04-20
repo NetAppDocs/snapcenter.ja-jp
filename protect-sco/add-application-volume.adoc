@@ -5,6 +5,7 @@ keywords: application volume, overview, add, modify, delete
 summary: アプリケーションボリュームは手動で追加する必要があります。 
 ---
 = アプリケーションボリュームを追加します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

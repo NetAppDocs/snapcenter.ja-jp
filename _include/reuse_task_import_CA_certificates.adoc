@@ -1,4 +1,5 @@
 = 
+:allow-uri-read: 
 
 
 Microsoft の管理コンソール（ MMC ）を使用して、 SnapCenter サーバと Windows ホストプラグインに CA 証明書をインポートする必要があります。

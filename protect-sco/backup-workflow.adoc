@@ -5,6 +5,7 @@ keywords: backup, workflow
 summary: リソース（データベース）またはリソースグループのバックアップを作成することができます。 
 ---
 = バックアップのワークフロー
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

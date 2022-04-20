@@ -5,6 +5,7 @@ keywords: SnapCenter, enable CA, certificate
 summary: CA 証明書を設定し、 SnapCenter サーバの CA 証明書検証を有効にする必要があります。 
 ---
 = SnapCenter の CA 証明書を有効にします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

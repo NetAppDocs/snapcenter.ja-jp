@@ -5,6 +5,7 @@ keywords: SnapCenter
 summary: Windows ホストプラグインサービスで CA 証明書を設定します 
 ---
 = Windows ホストプラグインサービスを使用して CA 証明書を設定する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

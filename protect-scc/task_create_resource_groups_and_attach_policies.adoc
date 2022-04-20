@@ -5,6 +5,7 @@ keywords:
 summary: リソースグループはコンテナであり、バックアップして保護するリソースをここに追加する必要があります。 
 ---
 = リソースグループを作成してポリシーを適用
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

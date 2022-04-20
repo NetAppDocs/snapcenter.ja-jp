@@ -5,6 +5,7 @@ keywords: backup
 summary: PowerShell コマンドレットを使用して、 SQL Server データベースや Windows ファイルシステムをバックアップできます。たとえば、 SQL Server データベースまたは Windows ファイルシステムのバックアップでは、 SnapCenter サーバとの接続の確立、 SQL Server データベースインスタンスまたは Windows ファイルシステムの検出、ポリシーの追加、バックアップリソースグループの作成、バックアップ、およびバックアップの検証が行われます。 
 ---
 = PowerShell コマンドレットを使用してリソースをバックアップします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

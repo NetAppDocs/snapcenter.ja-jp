@@ -5,6 +5,7 @@ keywords: requirements
 summary: Plug-in for Windows をインストールする前に、一定のインストール要件について理解しておく必要があります。 
 ---
 = SnapCenter Plug-in for Microsoft Windows のインストール要件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

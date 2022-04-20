@@ -5,6 +5,7 @@ keywords: configure, snapcenter server, updates, software updates
 summary: SnapCenter は、ネットアップサポートサイトと定期的に通信し、利用可能なソフトウェアアップデートがあればユーザに通知します。スケジュールを作成して、利用可能な更新に関する情報の受信間隔を指定することもできます。 
 ---
 = 利用可能なアップデートを確認するように SnapCenter を設定します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

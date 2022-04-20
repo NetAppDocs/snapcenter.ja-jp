@@ -5,6 +5,7 @@ keywords: SnapCenter
 summary: CA 証明書のサムプリントを取得します。 
 ---
 = CA 証明書のサムプリントを取得します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

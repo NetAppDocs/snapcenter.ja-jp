@@ -5,6 +5,7 @@ keywords: IIS application pool, active directory, enable
 summary: SnapCenter の Active Directory 読み取り権限を有効にする必要がある場合は、 Windows Server でインターネットインフォメーションサービス（ IIS ）を設定してカスタムのアプリケーションプールアカウントを作成できます。 
 ---
 = Active Directory の読み取り権限を有効にするように IIS アプリケーションプールを設定します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

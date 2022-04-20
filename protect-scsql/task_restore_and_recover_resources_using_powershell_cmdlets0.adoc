@@ -5,6 +5,7 @@ keywords:
 summary: リソースのバックアップをリストアするときは、 SnapCenter サーバとの接続セッションを開始し、バックアップをリストしてバックアップ情報を取得し、バックアップをリストアします。 
 ---
 = PowerShell コマンドレットを使用してリソースをリストアする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

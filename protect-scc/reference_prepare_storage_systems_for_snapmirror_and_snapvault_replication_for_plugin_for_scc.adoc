@@ -5,6 +5,7 @@ keywords: snapmirror, snapvault, storage system, replication
 summary: SnapCenter プラグインは、 ONTAP の SnapMirror テクノロジおよび SnapVault テクノロジと組み合わせて使用できます 
 ---
 = カスタムプラグインの SnapMirror および SnapVault レプリケーション用のストレージシステムを準備する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

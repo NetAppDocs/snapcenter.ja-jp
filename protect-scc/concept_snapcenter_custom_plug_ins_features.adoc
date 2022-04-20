@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter は、プラグインアプリケーションと統合されるほか、ストレージシステム上でネットアップのテクノロジと統合されます。Custom Plug-ins の操作には、 SnapCenter のグラフィカルユーザインターフェイスを使用します。 
 ---
 = SnapCenter Custom Plug-ins の特長
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

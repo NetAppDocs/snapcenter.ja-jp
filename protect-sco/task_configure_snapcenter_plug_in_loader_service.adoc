@@ -5,6 +5,7 @@ keywords: SPL, plug-in loader service
 summary: SnapCenter Plug-in Loader サービスは、 Linux または AIX 用のプラグインパッケージをロードして、 SnapCenter サーバーと通信します。SnapCenter Plug-in Loader サービスは、 Linux 用の SnapCenter Plug-ins Package または AIX 用 SnapCenter Plug-ins Package をインストールするとインストールされます。 
 ---
 = SnapCenter Plug-in Loader サービスを設定します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

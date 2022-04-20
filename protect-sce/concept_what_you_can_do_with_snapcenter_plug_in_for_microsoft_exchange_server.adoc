@@ -5,6 +5,7 @@ keywords:
 summary: Plug-in for Exchange を使用して、 Exchange Server データベースのバックアップとリストアを行うことができます。 
 ---
 = SnapCenter Plug-in for Microsoft Exchange Server の機能
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

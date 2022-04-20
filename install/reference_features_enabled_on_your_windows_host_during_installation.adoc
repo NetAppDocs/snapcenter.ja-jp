@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter Server インストーラを使用すると、インストール中に Windows ホストで Windows の機能とロールが有効になります。これらの情報は、トラブルシューティングやホストシステムのメンテナンスに役立つ場合があります。 
 ---
 = インストール中に Windows ホストで有効になる機能
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

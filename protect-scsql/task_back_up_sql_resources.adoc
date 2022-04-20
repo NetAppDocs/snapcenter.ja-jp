@@ -5,6 +5,7 @@ keywords:
 summary: どのリソースグループにも含まれていないリソースは、のページからバックアップすることができます。 
 ---
 = SQL リソースをバックアップする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

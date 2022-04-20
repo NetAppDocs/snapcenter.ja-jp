@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter から実行される各種の処理に関する情報は、 SnapCenter サーバのデータベースリポジトリに格納されます。SnapCenter サーバをデータ損失から保護するには、リポジトリのバックアップを作成する必要があります。 
 ---
 = SnapCenter サーバリポジトリを管理します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

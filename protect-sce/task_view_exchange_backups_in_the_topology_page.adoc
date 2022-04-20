@@ -5,6 +5,7 @@ keywords:
 summary: リソースのバックアップを準備する際に、プライマリストレージとセカンダリストレージのすべてのバックアップの図を表示すると便利です。 
 ---
 = Topology ページで Exchange バックアップを表示します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

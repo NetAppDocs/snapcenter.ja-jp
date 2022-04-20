@@ -5,6 +5,7 @@ keywords: install, VMware vSphere
 summary: データベースが仮想マシン（ VM ）に格納されている場合や VM とデータストアを保護する場合は、 SnapCenter Plug-in for VMware vSphere 仮想アプライアンスを導入する必要があります。 
 ---
 = SnapCenter Plug-in for VMware vSphere をインストール
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

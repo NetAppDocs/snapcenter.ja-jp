@@ -5,6 +5,7 @@ keywords: environment variable, predefined, prescript, postscript, backup, polic
 summary: SnapCenter では、バックアップポリシーの作成時にプリスクリプトおよびポストスクリプトを実行する際に、事前定義された環境変数を使用できます。 
 ---
 = バックアップ固有のプリスクリプトおよびポストスクリプト用の事前定義された環境変数
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

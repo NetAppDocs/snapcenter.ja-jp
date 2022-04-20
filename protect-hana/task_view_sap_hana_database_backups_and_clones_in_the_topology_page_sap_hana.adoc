@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for SAP HANA Database
 summary: リソースのバックアップまたはクローニングを準備する際に、プライマリストレージとセカンダリストレージ上のすべてのバックアップとクローンの図を表示すると役に立ちます。 
 ---
 = Topology ページで、 SAP HANA データベースのバックアップとクローンを表示します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

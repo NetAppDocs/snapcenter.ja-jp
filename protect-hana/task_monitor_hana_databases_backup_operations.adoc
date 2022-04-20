@@ -5,6 +5,7 @@ keywords: SnapCenter Server
 summary: SnapCenter Jobs ページを使用して、各バックアップ処理の進捗状況を監視できます。進捗状況をチェックして、処理が完了するタイミングや問題があるかどうかを確認できます。 
 ---
 = SAP HANA データベースのバックアップ処理を監視する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

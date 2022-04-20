@@ -5,6 +5,7 @@ keywords: SnapCenter, browsers, chrome, IE, Edge
 summary: SnapCenter ソフトウェアは、複数のブラウザで使用できます。 
 ---
 = サポートされているブラウザ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

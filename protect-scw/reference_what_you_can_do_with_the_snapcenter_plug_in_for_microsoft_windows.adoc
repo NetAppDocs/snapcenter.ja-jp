@@ -5,6 +5,7 @@ keywords:
 summary: Plug-in for Windows をインストールした環境では、 SnapCenter を使用して Windows ファイルシステムのバックアップ、リストア、クローニングを実行することができます。これらの処理をサポートするタスクを実行することもできます。 
 ---
 = SnapCenter Plug-in for Microsoft Windows の機能
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

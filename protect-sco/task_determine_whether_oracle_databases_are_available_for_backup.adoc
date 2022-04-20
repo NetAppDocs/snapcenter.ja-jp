@@ -5,6 +5,7 @@ keywords: credentials,SnapCenter Plug-in for Oracle Databases
 summary: リソースとは、 SnapCenter で管理されているホスト上の Oracle データベースのことです。使用可能なデータベースを検出したあとに、それらのデータベースをリソースグループに追加してデータ保護処理を実行できます。 
 ---
 = Oracle データベースをバックアップに使用できるかどうかを確認します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

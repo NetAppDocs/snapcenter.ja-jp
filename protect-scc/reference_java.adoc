@@ -5,6 +5,7 @@ keywords:
 summary: Java スタイルを使用してプラグインを開発します。 
 ---
 = Java スタイル
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

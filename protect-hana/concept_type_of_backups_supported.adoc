@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for SAP HANA Database
 summary: バックアップタイプでは、作成するバックアップのタイプを指定します。SnapCenter では、 SAP HANA データベースについて、ファイルベースのバックアップと Snapshot コピーベースのバックアップをサポートしています。 
 ---
 = サポートされるバックアップのタイプ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

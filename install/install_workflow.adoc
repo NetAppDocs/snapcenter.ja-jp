@@ -5,6 +5,7 @@ keywords: install, snapcenter server, license, storage system, RBAC, provision s
 summary: ワークフロー図は、 SnapCenter サーバのインストールと設定の手順を示しています。 
 ---
 = インストールワークフロー
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

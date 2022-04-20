@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for SAP HANA Database
 summary: クローニングワークフローには、クローニング処理の実行と処理の監視が含まれます。 
 ---
 = クローニングワークフロー
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

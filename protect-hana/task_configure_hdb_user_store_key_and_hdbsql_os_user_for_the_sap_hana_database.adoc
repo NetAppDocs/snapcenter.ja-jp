@@ -5,6 +5,7 @@ keywords:
 summary: SAP HANA データベースでデータ保護処理を実行するには、 HDB User Store Key および HDBSQL OS ユーザを設定する必要があります。 
 ---
 = SAP HANA データベース用に HDB User Store Key および HDBSQL OS ユーザを設定します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

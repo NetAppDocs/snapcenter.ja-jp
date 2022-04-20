@@ -5,6 +5,7 @@ keywords: PDB, pluggable database, restore, CDB, PITR, point-in-time recovery, R
 summary: コンテナデータベース（ CDB ）内の他の PDB に影響を与えることなく、破損または破棄された Pluggable Database （ PDB ）をリストアおよびリカバリできます。SnapCenter は、 RMAN を使用して PDB のポイントインタイムリカバリ（ PITR ）を実行します。 
 ---
 = ポイントインタイムリカバリを使用して、プラグイン可能なデータベースをリストアおよびリカバリします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

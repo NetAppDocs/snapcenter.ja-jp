@@ -5,6 +5,7 @@ keywords: controller-based licenses, standard license, SnapManager Suite license
 summary: FAS または AFF ストレージコントローラを使用する場合は、 SnapCenter の標準コントローラベースのライセンスが必要です。 
 ---
 = SnapCenter の標準コントローラベースのライセンスを追加します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

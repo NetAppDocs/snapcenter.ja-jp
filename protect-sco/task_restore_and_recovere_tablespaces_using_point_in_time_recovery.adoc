@@ -5,6 +5,7 @@ keywords: restore, PITR, point-in-time recovery, RMAN, tablespaces
 summary: データベース内の他の表領域に影響を与えずに、破損または削除された表領域のサブセットをリストアできます。SnapCenter は、 RMAN を使用して表領域のポイントインタイムリカバリ（ PITR ）を実行します。 
 ---
 = ポイントインタイムリカバリを使用した表領域のリストアとリカバリ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

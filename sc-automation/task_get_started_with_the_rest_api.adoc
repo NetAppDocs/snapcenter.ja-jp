@@ -5,6 +5,7 @@ keywords:
 summary: API にアクセスすると、ライブセットアップでより複雑なワークフロープロセスを使用する前にいくつかの情報を確認できます。 
 ---
 = REST API の使用を開始する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

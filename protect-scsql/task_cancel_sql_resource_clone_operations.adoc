@@ -5,6 +5,7 @@ keywords:
 summary: キューに登録されているクローニング処理をキャンセルできます。 
 ---
 = SQL リソースのクローニング処理をキャンセルする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: REST APIs, swagger
 summary: REST API にネイティブにアクセスする。REST API は Swagger Web ページから利用できます。 
 ---
 = SnapCenter REST API にネイティブでアクセスする方法
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords:
 summary: Windows Server 2012 以降では、管理ドメインアカウントからサービスアカウントパスワードの自動管理を提供するグループ Managed Service Account \ （ gMSA \ ）を作成できます。 
 ---
 = Windows Server 2012 以降で gMSA を構成します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

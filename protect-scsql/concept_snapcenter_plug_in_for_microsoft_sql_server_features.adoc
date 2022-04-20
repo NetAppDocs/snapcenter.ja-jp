@@ -5,6 +5,7 @@ keywords:
 summary: Plug-in for SQL Server は、 Windows ホスト上で Microsoft SQL Server と統合されるほか、ストレージシステム上でネットアップの Snapshot コピーテクノロジと統合されます。Plug-in for SQL Server を操作するには、 SnapCenter インターフェイスを使用します。 
 ---
 = SnapCenter Plug-in for Microsoft SQL Server の特長
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

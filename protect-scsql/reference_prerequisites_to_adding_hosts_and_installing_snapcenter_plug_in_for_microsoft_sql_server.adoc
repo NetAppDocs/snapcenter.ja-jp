@@ -5,6 +5,7 @@ keywords: credentials
 summary: ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。 
 ---
 = ホストを追加して SnapCenter Plug-in for Microsoft SQL Server をインストールするための前提条件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

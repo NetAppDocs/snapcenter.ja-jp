@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter Plug-in for Microsoft Exchange Server をインストールした環境では、 SnapCenter を使用して Exchange リソースをバックアップすることができます。 
 ---
 = バックアップのワークフロー
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for SAP HANA Database
 summary: 自動検出は、特定の HANA インスタンスではサポートされていません。これらのリソースは手動で追加する必要があります。 
 ---
 = プラグインホストにリソースを手動で追加します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

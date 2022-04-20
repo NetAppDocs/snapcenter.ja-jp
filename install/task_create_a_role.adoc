@@ -5,6 +5,7 @@ keywords: role, create, permission
 summary: 既存の SnapCenter ロールに加えて、独自のロールを作成して権限をカスタマイズできます。 
 ---
 = ロールを作成します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

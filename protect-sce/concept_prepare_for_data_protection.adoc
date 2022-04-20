@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for Exchange Server
 summary: バックアップ、クローニング、リストアなどのデータ保護処理を実行する場合は、事前に戦略を定義し、環境をセットアップする必要があります。また、 SnapVault サーバで SnapMirror テクノロジと SnapCenter テクノロジを使用するように設定することもできます。 
 ---
 = データ保護を準備
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

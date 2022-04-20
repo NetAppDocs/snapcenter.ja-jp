@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter のディザスタリカバリ機能では、 REST API を使用して SnapCenter サーバをバックアップします。 
 ---
 = SnapCenter サーバのディザスタリカバリでサポートされる REST API
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: REST API, Swagger
 summary: REST API は Swagger Web ページから利用できます。Swagger Web ページにアクセスして SnapCenter サーバ REST API を表示したり、 API を手動で問題呼び出したりできます。REST API を使用して、 SnapCenter サーバの管理やデータ保護処理を行うことができます。 
 ---
 = Swagger API Web ページから REST API にアクセスする方法
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

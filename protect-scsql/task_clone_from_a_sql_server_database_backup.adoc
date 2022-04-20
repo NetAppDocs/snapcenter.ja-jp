@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter を使用して、 SQL Server データベースバックアップをクローニングすることができます。古いバージョンのデータにアクセスしたりリストアしたりする場合は、データベースバックアップをオンデマンドでクローニングできます。 
 ---
 = SQL Server データベースバックアップからのクローニング
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

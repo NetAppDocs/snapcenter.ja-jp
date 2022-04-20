@@ -5,6 +5,7 @@ keywords:
 summary: バックアップコピーを保持する日数を選択するか、保持するバックアップコピーの数を指定できます。指定できる最大数は ONTAP で 255 個です。たとえば、組織の必要に応じて、 10 日分のバックアップコピーや 130 個のバックアップコピーを保持できます。 
 ---
 = Plug-in for SQL Server のバックアップ保持オプション
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

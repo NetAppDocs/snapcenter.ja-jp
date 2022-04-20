@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for Exchange Server
 summary: SnapCenterJobs ページを使用して、各種バックアップ処理の進捗状況を監視できます。進捗状況をチェックして、処理が完了するタイミングや問題があるかどうかを確認できます。 
 ---
 = バックアップ処理を監視する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

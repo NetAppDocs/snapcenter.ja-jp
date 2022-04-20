@@ -5,6 +5,7 @@ keywords:
 summary: ストレージシステムを追加したあとで、ストレージシステムの設定や接続を変更したり、ストレージシステムを削除したりできます。 
 ---
 = ストレージシステムを管理
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: SnapCenter, MySQL high availability
 summary: MySQL Server の機能である MySQL レプリケーションを使用すると、 MySQL データベースサーバ（マスター）から別の MySQL データベースサーバ（スレーブ）にデータをレプリケートできます。SnapCenter では、 Network Load Balancing （ NLB ）が有効な 2 つのノード間でのみ、高可用性実現のために MySQL レプリケーションをサポートしています。 
 ---
 = SnapCenter MySQL リポジトリの高可用性
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

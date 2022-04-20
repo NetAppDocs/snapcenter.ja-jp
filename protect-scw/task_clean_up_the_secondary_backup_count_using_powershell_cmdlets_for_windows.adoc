@@ -5,6 +5,7 @@ keywords: backups
 summary: Remove-SmBackup コマンドレットを使用して、 Snapshot コピーがないセカンダリバックアップのバックアップ数をクリーンアップできます。このコマンドレットは、 Manage Copies トポロジに表示される Snapshot コピーの合計数がセカンダリストレージの Snapshot コピー保持設定と一致しない場合に使用できます。 
 ---
 = PowerShell コマンドレットを使用してセカンダリバックアップ数をクリーンアップします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

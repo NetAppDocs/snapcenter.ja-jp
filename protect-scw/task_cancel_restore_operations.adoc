@@ -5,6 +5,7 @@ keywords:
 summary: キューに格納されているリストアジョブをキャンセルできます。 
 ---
 = リストア処理をキャンセルします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

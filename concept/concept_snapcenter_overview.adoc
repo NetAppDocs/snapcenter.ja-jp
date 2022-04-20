@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter ソフトウェアは、シンプルで拡張性に優れた一元的なプラットフォームです。ハイブリッドクラウド内の任意の場所にある ONTAP システムで実行されているアプリケーション、データベース、ホストファイルシステム、 VM に対して、アプリケーションと整合性のあるデータ保護を提供します。 
 ---
 = SnapCenter の概要
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

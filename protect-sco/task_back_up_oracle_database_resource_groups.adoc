@@ -5,6 +5,7 @@ keywords: backup, resource group
 summary: リソースグループは、ホストまたはクラスタ上のリソースの集まりです。リソースグループのバックアップ処理は、リソースグループに定義されているすべてのリソースを対象に実行されます。 
 ---
 = Oracle データベースのリソースグループをバックアップする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

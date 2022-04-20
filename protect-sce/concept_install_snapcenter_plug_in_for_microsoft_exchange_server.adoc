@@ -5,6 +5,7 @@ keywords: installing
 summary: Exchange データベースを保護する場合は、 SnapCenter Plug-in for Microsoft Exchange Server をインストールしてセットアップする必要があります。 
 ---
 = SnapCenter Plug-in for Microsoft Exchange Server のインストールワークフロー
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

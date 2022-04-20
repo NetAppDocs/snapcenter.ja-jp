@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter カスタムプラグインは、 SnapCenter ユーザインターフェイス（ UI ）を使用してインストールする必要があります。お使いの環境で SnapCenter UI からプラグインをリモートでインストールできない場合は、コマンドラインインターフェイス \ （ CLI\ ）を使用して、コンソールモードまたはサイレントモードでカスタムプラグインをインストールできます。 
 ---
 = コマンドラインインターフェイスを使用して、 Linux ホストに SnapCenter カスタムプラグインをインストールします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

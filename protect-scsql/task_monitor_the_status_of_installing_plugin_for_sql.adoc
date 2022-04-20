@@ -5,6 +5,7 @@ keywords:
 summary: SnapCenter プラグインパッケージのインストールの進捗状況は、 Jobs ページで監視できます。インストールの進捗状況をチェックして、インストールが完了するタイミングや問題があるかどうかを確認できます。 
 ---
 = Plug-in for SQL Server のインストールのステータスを監視します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

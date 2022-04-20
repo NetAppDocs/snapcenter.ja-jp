@@ -5,6 +5,7 @@ keywords: SnapCenter Plug-in for SAP HANA Database
 summary: SnapCenter は、プラグインアプリケーションと統合されるほか、ストレージシステム上でネットアップのテクノロジと統合されます。Plug-in for SAP HANA Database の操作には、 SnapCenter のグラフィカルユーザインターフェイスを使用します。 
 ---
 = SnapCenter Plug-in for SAP HANA Database の特長
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

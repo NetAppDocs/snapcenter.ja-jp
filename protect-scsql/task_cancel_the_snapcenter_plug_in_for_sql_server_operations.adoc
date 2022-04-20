@@ -5,6 +5,7 @@ keywords:
 summary: 実行中、キューに登録済み、または応答しないバックアップ処理をキャンセルできます。バックアップ処理をキャンセルすると、 SnapCenter サーバは処理を停止し、作成されたバックアップが SnapCenter サーバに登録されていない場合は、ストレージからすべての Snapshot コピーを削除します。バックアップがすでに SnapCenter サーバに登録されている場合、キャンセル後も、作成済みの Snapshot コピーはロールバックされません。 
 ---
 = SnapCenter Plug-in for Microsoft SQL Server のバックアップ処理をキャンセルします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

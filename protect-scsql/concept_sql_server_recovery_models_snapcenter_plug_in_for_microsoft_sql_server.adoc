@@ -5,6 +5,7 @@ keywords:
 summary: デフォルトでは、各データベースタイプに特定の復旧モデルが割り当てられます。SQL Server データベース管理者は、各データベースを別の復旧モデルに再割り当てできます。 
 ---
 = SnapCenter でサポートされている SQL Server 復旧モデル
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

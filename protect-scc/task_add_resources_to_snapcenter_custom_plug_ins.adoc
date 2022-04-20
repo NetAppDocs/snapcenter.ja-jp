@@ -5,6 +5,7 @@ keywords:
 summary: バックアップまたはクローンを作成するリソースを追加する必要があります。環境によっては、バックアップまたはクローンを作成するデータベースインスタンスやそのコレクションもリソースに含まれます。 
 ---
 = SnapCenter Custom Plug-ins にリソースを追加します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

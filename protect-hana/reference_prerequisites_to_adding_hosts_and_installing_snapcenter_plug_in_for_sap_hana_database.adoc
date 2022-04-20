@@ -5,6 +5,7 @@ keywords: credentials
 summary: ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。SnapCenter Plug-in for SAP HANA Database は、 Windows と Linux のどちらの環境でも使用できます。 
 ---
 = ホストを追加して SnapCenter Plug-in for SAP HANA Database をインストールするための前提条件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

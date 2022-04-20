@@ -5,6 +5,7 @@ keywords: Credentials, alternate host, clone, FRA, OMF
 summary: SnapCenter を使用して、データベースのバックアップを使用して Oracle データベースをクローニングすることができます。 
 ---
 = Oracle データベースバックアップをクローニングする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
