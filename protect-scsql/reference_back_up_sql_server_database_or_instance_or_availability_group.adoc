@@ -45,6 +45,6 @@ SnapCenter で作成される Snapshot コピーには、ストレージシス�
 
 * 詳細はこちら *
 
-link:task_back_up_resources_using_powershell_cmdlets.html["PowerShell コマンドレットを使用してリソースをバックアップします"]
+link:task_back_up_resources_using_powershell_cmdlets_for_sql.html["PowerShell コマンドレットを使用してリソースをバックアップします"]
 
 link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Quiesce_or_grouping_resources_operations_fail["リソースの休止処理またはグループ化処理が失敗します"]
