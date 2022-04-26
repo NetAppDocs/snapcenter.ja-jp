@@ -23,6 +23,6 @@ PowerShell コマンドレットを手動またはスクリプトで使用して
 
 link:task_restore_a_sql_server_database_from_secondary_storage.html["セカンダリストレージから SQL Server データベースをリストアする"]
 
-link:task_restore_and_recover_resources_using_powershell_cmdlets.html["PowerShell コマンドレットを使用してリソースをリストアおよびリカバリする"]
+link:task_restore_and_recover_resources_using_powershell_cmdlets_for_sql.html["PowerShell コマンドレットを使用してリソースをリストアおよびリカバリする"]
 
 link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Restore_operation_might_fail_on_Windows_2008_R2["Windows 2008 R2 でリストア処理が失敗することがあります"]

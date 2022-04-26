@@ -18,7 +18,7 @@ SnapCenter のホストの追加ページを使用して、 Windows ホストを
 * SnapCenter Admin など、プラグインのインストールとアンインストールの権限のあるロールが割り当てられているユーザが必要です
 * Windows ホストにプラグインをインストールする場合、ビルトインでないクレデンシャルを指定する場合、またはユーザがローカルワークグループユーザに属している場合は、ホストで UAC を無効にする必要があります。
 * メッセージキューサービスが実行されている必要があります。
-* Group Managed Service Account （ gMSA ；グループ管理サービスアカウント）を使用している場合は、管理者権限を持つ gMSA を設定する必要があります。詳細については、を参照してくださいlink:task_configure_gMSA_on_windows_server_2012_or_later_for_exchange_server.html["Windows Server 2012 以降でグループマネージドサービスアカウントを設定します"^]。
+* Group Managed Service Account （ gMSA ；グループ管理サービスアカウント）を使用している場合は、管理者権限を持つ gMSA を設定する必要があります。詳細については、を参照してくださいlink:task_configure_gMSA_on_windows_server_2012_or_later.html["Microsoft Exchange Server 2012 以降でグループマネージドサービスアカウントを設定します"^]。
 
 
 * このタスクについて *

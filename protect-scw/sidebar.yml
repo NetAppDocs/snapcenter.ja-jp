@@ -28,6 +28,8 @@ entries:
     url: "/protect-scw/concept_install_snapcenter_plug_in_for_microsoft_windows.html"
   - title: SnapCenter Plug-in for Microsoft Windows のインストール要件
     url: "/protect-scw/reference_installation_requirements_for_snapcenter_plug_in_for_microsoft_windows.html"
+  - title: Windows Server 2012 以降で gMSA を構成します
+    url: "/protect-scw/task_configure_gMSA_on_windows_server_2012_or_later.html"
   - title: ホストを追加し、 SnapCenter Plug-in for Microsoft Windows をインストールします
     url: "/protect-scw/task_add_hosts_and_install_snapcenter_plug_in_for_microsoft_windows.html"
   - title: PowerShell コマンドレットを使用して、複数のリモートホストに SnapCenter Plug-in for Microsoft Windows

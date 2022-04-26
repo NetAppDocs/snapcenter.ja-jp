@@ -253,7 +253,6 @@
   <block id="8a2bd81e968aaadb6ec10a1b58f541cc" category="inline-link-macro">SQL Server データベース、インスタンス、または可用性グループをバックアップする</block>
   <block id="38c78702a48e457f5ef291281168432e" category="paragraph"><block ref="38c78702a48e457f5ef291281168432e" category="inline-link-macro-rx"></block></block>
   <block id="8c922e6a0134954b667b072d00b58ce3" category="inline-link-macro">PowerShell コマンドレットを使用してバックアップをクローニングする</block>
-  <block id="77a401672d28681f3a520de107c9ed51" category="paragraph"><block ref="77a401672d28681f3a520de107c9ed51" category="inline-link-macro-rx"></block></block>
   <block id="68f8e37f5b3d7c3c6c34a481b33a736f" category="inline-link">デフォルトの TCP_TIMEOUT 値を使用すると、クローニング処理が失敗するか所要時間が長くなる可能性があります</block>
   <block id="f7e7f0dd9d36aec3d609775de2dbbd0b" category="paragraph"><block ref="f7e7f0dd9d36aec3d609775de2dbbd0b" category="inline-link-rx"></block></block>
   <block id="1e9ab426973a56020f8d1db85cb07f06" category="inline-link">フェイルオーバークラスタインスタンスのデータベースクローンが失敗します</block>
@@ -561,7 +560,6 @@
   <block id="4a45b99dc57bfa145ace46e1fd9baa9d" category="paragraph">PowerShell コマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、リカバリ、検証、クローニングの処理を実行することもできます。PowerShell コマンドレットの詳細については、 SnapCenter コマンドレットのヘルプを使用するか、を参照してください<block ref="22d4c47c8368759c58ff9ac05ffd0e13" category="inline-link-rx"></block></block>
   <block id="69bb12bd720ba41593c0fadfa768b82e" category="paragraph"><block ref="69bb12bd720ba41593c0fadfa768b82e" category="inline-link-macro-rx"></block></block>
   <block id="6924edabeae66398839af50da876447a" category="inline-link-macro">PowerShell コマンドレットを使用してリソースをリストアおよびリカバリする</block>
-  <block id="455f3e406c536ec723cdf3bf3192c0e5" category="paragraph"><block ref="455f3e406c536ec723cdf3bf3192c0e5" category="inline-link-macro-rx"></block></block>
   <block id="f8acea491fd41bf474c92c44e455142e" category="inline-link-macro">Windows 2008 R2 でリストア処理が失敗することがあります</block>
   <block id="cf33f62e19ff3bb795452fe592555ee3" category="paragraph"><block ref="cf33f62e19ff3bb795452fe592555ee3" category="inline-link-macro-rx"></block></block>
   <block id="1f8ca173b65dfa4ec89689efd778bdb1" category="summary">Windows ホストプラグインサービスで CA 証明書を設定します</block>
@@ -750,7 +748,6 @@
   <block id="b5eb0b5304f9fc2eda1c4758804a309a" category="list-text">メッセージキューイングサービスが実行中状態であることを確認する必要があります。</block>
   <block id="495a029c5d7c250f801f4d0c65513c50" category="list-text">Group Managed Service Account （ gMSA ；グループ管理サービスアカウント）を使用している場合は、管理者権限を持つ gMSA を設定する必要があります。</block>
   <block id="005e0b40f0357593974211c0506e1021" category="inline-link-macro">Windows Server 2012 以降で SQL 用のグループマネージドサービスアカウントを設定します</block>
-  <block id="cbb9319067916a535f7b003c1a70b83f" category="paragraph"><block ref="cbb9319067916a535f7b003c1a70b83f" category="inline-link-macro-rx"></block></block>
   <block id="302ca62990c674aa6f608e6444c00482" category="paragraph">SnapCenter サーバをプラグインホストとして別の SnapCenter サーバに追加することはできません。</block>
   <block id="e0a6a8624a69b68bc0839f233664cd97" category="paragraph">ホストの追加とプラグインパッケージのインストールは、個々のホストまたはクラスタに対して実行できます。クラスタまたは Windows Server Failover Clustering （ WSFC ）にプラグインをインストールする場合、プラグインはクラスタのすべてのノードにインストールされます。</block>
   <block id="51929aa5ac08be2aca8dda46b9a095b1" category="inline-link-macro">ホストを管理します</block>
@@ -4520,8 +4517,6 @@
   <block id="43e4843cc378c4665771060dbab161eb" category="doc">ホストを追加し、 Plug-in for Exchange をインストールします</block>
   <block id="45e52ea61331adeddb8fcba96510d245" category="list-text">SnapCenter Admin など、プラグインのインストールとアンインストールの権限のあるロールが割り当てられているユーザが必要です</block>
   <block id="f43b8555947d4751531f2048f4ceb68f" category="list-text">メッセージキューサービスが実行されている必要があります。</block>
-  <block id="5da8a38d0d164ee119a4369bd402f7e7" category="inline-link-macro">Windows Server 2012 以降でグループマネージドサービスアカウントを設定します</block>
-  <block id="c3d3d7d361f2929e16e2c819af868aee" category="list-text">Group Managed Service Account （ gMSA ；グループ管理サービスアカウント）を使用している場合は、管理者権限を持つ gMSA を設定する必要があります。詳細については、を参照してください<block ref="de44f57898ffbf94587de066666e509e" category="inline-link-macro-rx"></block>。</block>
   <block id="c20a8a11a419d74017da773b8a54f9ff" category="paragraph">Plug-in for Exchange は Windows 用 SnapCenter プラグインパッケージによって異なり、バージョンも同じである必要があります。Plug-in for Exchange のインストール時に、デフォルトで SnapCenter Plug-ins Package for Windows が選択され、 VSS Hardware Provider とともにインストールされます。</block>
   <block id="262d319024a0918be769dfc76e9786c3" category="list-text">上部で [Managed Hosts] が選択されていることを確認します。</block>
   <block id="a2019a474e94462a57623d70d38bc98e" category="paragraph">ホストタイプとして * windows * を選択します。</block>
@@ -5119,7 +5114,6 @@
   <block id="6999d09aed9c7b160e001c5345554e29" category="doc">ホストを追加し、 SnapCenter Plug-in for Microsoft Windows をインストールします</block>
   <block id="7cfe72b14626cbdfa82c7d1d900586aa" category="list-text">SnapCenter ユーザーは 'Windows Server のサービスとしてログオンロールに追加する必要があります</block>
   <block id="634521473d8c5fdebcafa0c217efa6b5" category="inline-link-macro">Windows ファイルシステム用に、 Windows Server 2012 以降のグループマネージドサービスアカウントを設定します</block>
-  <block id="8d338c95545ac01f94f754b10be02dec" category="paragraph"><block ref="8d338c95545ac01f94f754b10be02dec" category="inline-link-macro-rx"></block></block>
   <block id="cce76c1c114e69fd9b5ed7b130742034" category="list-text">Windows プラグイン</block>
   <block id="a561a8020c6cf9c0bfcf2c0057ac1550" category="list-text">Microsoft Exchange Server の略</block>
   <block id="78898e52fcbdc5337204a384f2456d4f" category="list-text">Microsoft SQL Server の場合</block>
@@ -5808,7 +5802,6 @@
   <block id="b55afd5b52f01e281bc890c6adab0b29" category="paragraph">通常、選択するバックアップジョブの数は、リソースが配置されているボリュームの数によって異なります。たとえば、あるボリュームに小規模なリソースのグループを配置しており、別のボリュームに 1 つの大規模なリソースを配置している場合は、小規模なリソース用のバックアップジョブと大規模なリソース用のバックアップジョブを 1 つずつ作成できます。</block>
   <block id="b880dba5b80385d6a4d3f5ff54d8ef78" category="summary">ホストを追加するには、 SnapCenterAdd Host ページを使用して、プラグインパッケージをインストールする必要があります。プラグインは、自動的にリモートホストにインストールされます。ホストの追加とプラグインパッケージのインストールは、個々のホストまたはクラスタに対して実行できます。</block>
   <block id="d1556c9da336be030540adcf58889977" category="inline-link-macro">カスタムアプリケーション用に、 Windows Server 2012 以降のグループマネージドサービスアカウントを設定します</block>
-  <block id="7760830a49bc2ffc8c6db5a38cec828f" category="paragraph"><block ref="7760830a49bc2ffc8c6db5a38cec828f" category="inline-link-macro-rx"></block></block>
   <block id="bceac0a8fa4156f8efbbf85fb76e4953" category="paragraph">クラスタ（ WSFC ）にプラグインをインストールすると、クラスタのすべてのノードにプラグインがインストールされます。</block>
   <block id="56a139bed9c50b0c2ef905b84f371cf2" category="paragraph">ホストタイプを選択します。</block>
   <block id="14aee625cd152256e849c1aa7031d871" category="admonition">カスタムプラグインは、 Windows と Linux のどちらの環境でも使用できます。</block>
@@ -7195,14 +7188,12 @@
   <block id="56dd6d218b0a2db6d61393ca74894094" category="paragraph">サポートされているバージョンの最新情報については、を参照してください<block ref="1b419d76cc3163a36d36ff494ed65b44" category="inline-link-rx"></block>。</block>
   <block id="2cda512470ebd52d3c5ba685f87bb1fb" category="paragraph">SAP HANA システムのレプリケーションバックアップを作成するには、 SAP HANA システムのすべてのリソースを 1 つのリソースグループに追加することを推奨します。これにより、テイクオーバー / フェイルバックモードでのシームレスなバックアップが可能になります。</block>
   <block id="9cd58488a30b1e2a8252c0303b4a18d2" category="list-text">SAP HANA システムのレプリケーションでは、その HANA システムのすべてのリソースを 1 つのリソースグループに追加して、リソースグループのバックアップを作成することを推奨します。これにより、テイクオーバー / フェイルバックモードでのシームレスなバックアップが可能になります。</block>
-  <block id="c539927559212f942e79e0c2201b67a7" category="paragraph"><block ref="6b4a21b0947273e0629d5408bc6d8cf2" category="inline-link-macro-rx"></block>。</block>
   <block id="a81b91d7d1d982d9748f7c921ddef6f5" category="paragraph">SAP HANA システムに接続するためのキーを入力します。</block>
   <block id="416846cc2d6684fcda5ed01768c14980" category="paragraph">このキーには、データベースに接続するためのログイン情報が含まれています。</block>
   <block id="99e729822359383d3878548f668ad032" category="paragraph">SAP HANA システムレプリケーションでは、セカンダリユーザキーは検証されません。この値はテイクオーバー時に使用されます。</block>
   <block id="88b9a84562729de4f24eef1b144f1867" category="paragraph">データベースは、 SID 、プラグインホスト、関連するリソースグループとポリシー、全体的なステータスなどの情報とともに表示されます</block>
   <block id="abe175cac2897f907056ac4845d0fecd" category="paragraph">SAP HANA リソースにバックアップが関連付けられている場合、次の項目は変更できません。</block>
   <block id="5e12dbd5bf3c6917f4290e5b5a559e1d" category="list-text">SAP HANA システムレプリケーションでプライマリシステムとセカンダリシステムの両方のリソースを検出する場合は、 root ユーザまたは sudo ユーザを使用してプライマリシステムとセカンダリシステムの両方を追加することを推奨します。</block>
-  <block id="1f2a97d23c720f6f85620fac8ce92aaf" category="paragraph"><block ref="1f2a97d23c720f6f85620fac8ce92aaf" category="inline-link-macro-rx"></block></block>
   <block id="961e6abd0c7a72786d3641390a4dea5f" category="list-text">1 つ以上のテナントデータベースが停止しているときにファイルベースのバックアップを作成する場合は、 HANA のプロパティファイルで「 Set-SmConfigSettings 」コマンドレットを使用して allow_file_bbase_backup_IFINACTIVE_tenants_present パラメータを * YES * に設定します。</block>
   <block id="942d4608d2f485c3d83b2faf1e7746fc" category="paragraph">コマンドレットで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。または、を参照することもできます<block ref="30086a18cf21b3d909c213d70f40a693" category="inline-link-rx"></block></block>
   <block id="ba26ffcdcd99a1aea9b86f7be319ba8b" category="admonition">リポジトリのリストア処理の実行に使用されたバックアップは、リストア処理の実行後にリポジトリのバックアップを取得したときに表示されません。</block>
@@ -7738,4 +7729,13 @@
   <block id="f91d0c3af79b649ecca3ab95634c22c6" category="list-text">sudo バージョンは 1.8.7 ～ 1.8.19P2 です。</block>
   <block id="51fb25555c87830dd2151ad5f3b7a845" category="paragraph"><block ref="51fb25555c87830dd2151ad5f3b7a845" category="inline-link-macro-rx"></block></block>
   <block id="10e4911e9effb28d4e43d47f67fac6db" category="paragraph">Oracle データベースのバックアップを作成する際に、データベースで複数の処理が実行されないようにするために、 Oracle データベースホスト上に運用ロックファイル（ _.SM_lock_dbsid_ ）が _ $ORACLE_HOME/dbs_directory に作成されます。処理ロックファイルは、データベースのバックアップが完了すると自動的に削除されます。</block>
+  <block id="378c4677444d1c0a4a5f7af5b98179fa" category="paragraph"><block ref="18c30fe5285c9c31acdd1bd6d51af1bd" category="inline-link-macro-rx"></block>。</block>
+  <block id="ae75553103cbeaaaa3b0e4002805ae6f" category="paragraph"><block ref="ae75553103cbeaaaa3b0e4002805ae6f" category="inline-link-macro-rx"></block></block>
+  <block id="6ce007c78eb3953e5a2c4d5ee67f6f7e" category="inline-link-macro">Microsoft Exchange Server 2012 以降でグループマネージドサービスアカウントを設定します</block>
+  <block id="2c6de9d78cadc71ce1a601b2497fe7b5" category="list-text">Group Managed Service Account （ gMSA ；グループ管理サービスアカウント）を使用している場合は、管理者権限を持つ gMSA を設定する必要があります。詳細については、を参照してください<block ref="9362052d26222b41e4897c5b63b8ae64" category="inline-link-macro-rx"></block>。</block>
+  <block id="d2f75a69047fa1d93423f0ebca0e578e" category="paragraph"><block ref="d2f75a69047fa1d93423f0ebca0e578e" category="inline-link-macro-rx"></block></block>
+  <block id="b7ee450a891722e2248bf6edbef84f21" category="paragraph"><block ref="b7ee450a891722e2248bf6edbef84f21" category="inline-link-macro-rx"></block></block>
+  <block id="f9db2c2c51ac713541e90ff79219156d" category="paragraph"><block ref="f9db2c2c51ac713541e90ff79219156d" category="inline-link-macro-rx"></block></block>
+  <block id="7a679a1d48731136f64e6e6d38429002" category="paragraph"><block ref="7a679a1d48731136f64e6e6d38429002" category="inline-link-macro-rx"></block></block>
+  <block id="8eea6d6db8756ac6f485ef882956153e" category="paragraph"><block ref="8eea6d6db8756ac6f485ef882956153e" category="inline-link-macro-rx"></block></block>
 </blocks>

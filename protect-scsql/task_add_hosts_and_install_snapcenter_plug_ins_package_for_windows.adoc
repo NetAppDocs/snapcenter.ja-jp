@@ -20,7 +20,7 @@ summary: ホストの追加とプラグインパッケージのインストー�
 * メッセージキューイングサービスが実行中状態であることを確認する必要があります。
 * Group Managed Service Account （ gMSA ；グループ管理サービスアカウント）を使用している場合は、管理者権限を持つ gMSA を設定する必要があります。
 +
-link:task_configure_gMSA_on_windows_server_2012_or_later_for_sql.html["Windows Server 2012 以降で SQL 用のグループマネージドサービスアカウントを設定します"^]
+link:task_configure_gMSA_on_windows_server_2012_or_later.html["Windows Server 2012 以降で SQL 用のグループマネージドサービスアカウントを設定します"^]
 
 
 

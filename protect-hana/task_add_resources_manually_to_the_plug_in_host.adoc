@@ -19,7 +19,7 @@ summary: 自動検出は、特定の HANA インスタンスではサポート�
 * SAP HANA システムのレプリケーションでは、その HANA システムのすべてのリソースを 1 つのリソースグループに追加して、リソースグループのバックアップを作成することを推奨します。これにより、テイクオーバー / フェイルバックモードでのシームレスなバックアップが可能になります。
 
 
-link:protect-hana/task_create_resource_groups_and_attach_policies.html["リソースグループを作成してポリシーを適用"]。
+link:task_create_resource_groups_and_attach_policies.html["リソースグループを作成してポリシーを適用"]。
 
 * このタスクについて *
 

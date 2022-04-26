@@ -1,0 +1,72 @@
+---
+permalink: protect-sce/task_configure_gMSA_on_windows_server_2012_or_later.html 
+sidebar: sidebar 
+keywords:  
+summary: Windows Server 2012 以降では、管理ドメインアカウントからサービスアカウントパスワードの自動管理を提供するグループ Managed Service Account \ （ gMSA \ ）を作成できます。 
+---
+= Windows Server 2012 以降で gMSA を構成します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+Windows Server 2012 以降では、管理ドメインアカウントからサービスアカウントパスワードの自動管理を提供するグループマネージドサービスアカウント（ gMSA ）を作成できます。
+
+* 必要なもの *
+
+* Windows Server 2012 以降のドメインコントローラが必要です。
+* ドメインのメンバーである Windows Server 2012 以降のホストが必要です。
+
+
+* 手順 *
+
+. GMSA のオブジェクトごとに固有のパスワードを生成するには、 KDS ルートキーを作成します。
+. ドメインごとに、 Windows ドメインコントローラから次のコマンドを実行します。 Add-KDSRootKey -EffectiveImmedient
+. GMSA を作成して構成します。
++
+.. ユーザグループアカウントを作成します。
+.. グループにコンピュータオブジェクトを追加します。
+.. 作成したユーザグループを使用して gMSA を作成します。
++
+例：
+
++
+ New-ADServiceAccount -name <ServiceAccountName> -DNSHostName <fqdn> -PrincipalsAllowedToRetrieveManagedPassword <group> -ServicePrincipalNames <SPN1,SPN2,…>
+.. 「 Get-ADServiceAccount 」コマンドを実行して、サービスアカウントを確認します。
+
+
+. ホストで gMSA を設定します。
++
+.. gMSA アカウントを使用するホストで、 Windows PowerShell 用の Active Directory モジュールを有効にします。
++
+そのためには、 PowerShell から次のコマンドを実行します。
+
++
+[listing]
+----
+PS C:\> Get-WindowsFeature AD-Domain-Services
+
+Display Name                           Name                Install State
+------------                           ----                -------------
+[ ] Active Directory Domain Services   AD-Domain-Services  Available
+
+
+PS C:\> Install-WindowsFeature AD-DOMAIN-SERVICES
+
+Success Restart Needed Exit Code      Feature Result
+------- -------------- ---------      --------------
+True    No             Success        {Active Directory Domain Services, Active ...
+WARNING: Windows automatic updating is not enabled. To ensure that your newly-installed role or feature is
+automatically updated, turn on Windows Update.
+----
+.. ホストを再起動します。
+.. PowerShell コマンド・プロンプトの「 Install-AdServiceAccount <gMSA > 」から次のコマンドを実行して ' ホストに gMSA をインストールします
+.. 次のコマンドを実行して 'gMSA アカウントを確認します 'Test-AdServiceAccount <gMSA >
+
+
+. ホスト上で設定されている gMSA に管理者権限を割り当てます。
+. SnapCenter サーバで設定済みの gMSA アカウントを指定して、 Windows ホストを追加します。
++
+SnapCenter サーバーは選択されたプラグインをホストにインストールし、指定された gMSA はプラグインのインストール時にサービスログオンアカウントとして使用されます。
+
+

@@ -172,6 +172,6 @@ NOTE: 可用性グループデータベースではカスタムログディレ�
 
 * 詳細はこちら *
 
-link:task_restore_and_recover_resources_using_powershell_cmdlets.html["PowerShell コマンドレットを使用してリソースをリストアおよびリカバリする"]
+link:task_restore_and_recover_resources_using_powershell_cmdlets_for_sql.html["PowerShell コマンドレットを使用してリソースをリストアおよびリカバリする"]
 
 link:task_restore_a_sql_server_database_from_secondary_storage.html["セカンダリストレージから SQL Server データベースをリストアする"]

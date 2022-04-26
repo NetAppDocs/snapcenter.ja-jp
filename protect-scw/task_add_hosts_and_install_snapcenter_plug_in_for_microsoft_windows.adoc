@@ -21,7 +21,7 @@ SnapCenter のホストの追加ページを使用して、 Windows ホストを
 * メッセージキューイングサービスが実行中状態であることを確認する必要があります。
 * Group Managed Service Account （ gMSA ；グループ管理サービスアカウント）を使用している場合は、管理者権限を持つ gMSA を設定する必要があります。
 +
-link:task_configure_gMSA_on_windows_server_2012_or_later_for_windows_file_system.html["Windows ファイルシステム用に、 Windows Server 2012 以降のグループマネージドサービスアカウントを設定します"]
+link:task_configure_gMSA_on_windows_server_2012_or_later.html["Windows ファイルシステム用に、 Windows Server 2012 以降のグループマネージドサービスアカウントを設定します"]
 
 
 

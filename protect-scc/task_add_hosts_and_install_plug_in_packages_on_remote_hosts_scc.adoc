@@ -19,7 +19,7 @@ summary: ホストを追加するには、 SnapCenterAdd Host ページを使用
 * メッセージキューサービスが実行されていることを確認してください。
 * Group Managed Service Account （ gMSA ；グループ管理サービスアカウント）を使用している場合は、管理者権限を持つ gMSA を設定する必要があります。
 +
-link:task_configure_gMSA_on_windows_server_2012_or_later_for_custom_applications.html["カスタムアプリケーション用に、 Windows Server 2012 以降のグループマネージドサービスアカウントを設定します"]
+link:task_configure_gMSA_on_windows_server_2012_or_later.html["カスタムアプリケーション用に、 Windows Server 2012 以降のグループマネージドサービスアカウントを設定します"]
 
 
 
