@@ -4371,7 +4371,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-20 03:23:27 +0000">04/20/2022</time>
+    <time datetime="2022-05-31 19:36:36 +0000">05/31/2022</time>
     
   
 
@@ -4389,7 +4389,7 @@
 <h2 id="サポートされているスクリプトタイプ">サポートされているスクリプトタイプ</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>次のタイプのスクリプトがサポートされています。</p>
+<p>Windowsでは、次の種類のスクリプトがサポートされています。</p>
 </div>
 <div class="ulist">
 <ul>
@@ -4404,13 +4404,51 @@
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>UNIXでは、次のタイプのスクリプトがサポートされています。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Perl スクリプト</p>
+</li>
+<li>
+<p>Pythonスクリプト</p>
+</li>
+<li>
+<p>シェルスクリプト</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/snapcenter/images/note.svg" alt="注記">
+</td>
+<td class="content">
+デフォルトのbashシェルに加えて、sh-sshell、k-sshell、c-shellなどの他のシェルもサポートされています。
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="スクリプトパス">スクリプトパス</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>プラグインホストで、非仮想化ストレージシステムおよび仮想ストレージシステム上で SnapCenter 処理の一部として実行されるすべてのプリスクリプトとポストスクリプトが実行されます。そのため、スクリプトはプラグインホスト、またはプラグインホストからアクセス可能な SMB 共有に配置する必要があります。</p>
+<p>プラグインホストで、非仮想化ストレージシステムおよび仮想ストレージシステム上で SnapCenter 処理の一部として実行されるすべてのプリスクリプトとポストスクリプトが実行されます。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Windowsスクリプトは、プラグインホスト、またはプラグインホストからアクセス可能なSMB共有に配置する必要があります。</p>
+</li>
+<li>
+<p>UNIXスクリプトはプラグインホストに配置する必要があります。</p>
+</li>
+</ul>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -4419,7 +4457,7 @@
 <img src="/us-en/snapcenter/images/note.svg" alt="注記">
 </td>
 <td class="content">
-スクリプトパスは、スクリプト実行時に検証されます。
+スクリプトパスは実行時に検証されます。
 </td>
 </tr>
 </table>
@@ -4433,7 +4471,19 @@
 <p>スクリプトはバックアップポリシーに指定します。バックアップジョブが開始されると、ポリシーによってスクリプトがバックアップ対象のリソースに自動的に関連付けられます。バックアップポリシーを作成する際には、プリスクリプトとポストスクリプトの引数を指定できます。</p>
 </div>
 <div class="paragraph">
-<p>複数のスクリプトを指定するには、スクリプトパスの入力後に * Enter キーを押し、スクリプトごとに改行します。セミコロン（ ; ）は使用できません。プリスクリプトとポストスクリプトをそれぞれ複数指定できます。1 つのスクリプトをプリスクリプトとポストスクリプトの両方として作成し、そのスクリプトから他のスクリプトを呼び出すことができます。</p>
+<p>Windowsの場合のみ、複数のスクリプトを指定できます。各スクリプトパスのあとに「* Enter」キーを押すと、スクリプトが1行に表示されます。セミコロン（ ; ）は使用できません。プリスクリプトとポストスクリプトをそれぞれ複数指定できます。1 つのスクリプトをプリスクリプトとポストスクリプトの両方として作成し、そのスクリプトから他のスクリプトを呼び出すことができます。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/snapcenter/images/note.svg" alt="注記">
+</td>
+<td class="content">
+UNIXの場合は、複数のスクリプトを指定することはできません。
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -4441,7 +4491,10 @@
 <h2 id="スクリプトのタイムアウト">スクリプトのタイムアウト</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>バックアップスクリプトのタイムアウトは 15 分です。この値は変更できません。</p>
+<p>Windowsの場合、タイムアウトは15分に設定され、変更できません。</p>
+</div>
+<div class="paragraph">
+<p>UNIXの場合、タイムアウトはデフォルトで60秒に設定されます。タイムアウト値を変更できます。</p>
 </div>
 </div>
 </div>
@@ -4449,7 +4502,10 @@
 <h2 id="スクリプトの出力">スクリプトの出力</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>プリスクリプトとポストスクリプトの出力ファイルのデフォルトディレクトリは、 Windows\System32 です。</p>
+<p>Windowsのプリスクリプトとポストスクリプトの出力ファイルのデフォルトディレクトリは、Windows\System32です。</p>
+</div>
+<div class="paragraph">
+<p>UNIXのプリスクリプトとポストスクリプトには、デフォルトの場所はありません。出力ファイルは任意の場所にリダイレクトできます。</p>
 </div>
 </div>
 </div>
