@@ -106,7 +106,7 @@ SnapCenter サーバが稼働しているポート番号を表示します。
 
 
  a| 
-SPL の logs_MAX_COUNT
+logs_MAX_COUNT
  a| 
 SnapCenter Plug-in Loader ログファイルのうち、 _/custom_location/snapcenter /spl/logs_folder に保持されているファイルの数を表示します。
 
@@ -123,6 +123,31 @@ JAVA_HOME にアクセスします
 SPL サービスの開始に使用される JAVA_HOME の絶対ディレクトリパスを表示します。
 
 このパスは、インストール時および SPL の開始時に決定されます。
+
+
+
+ a| 
+LOG_MAX_SIZE
+ a| 
+ジョブログファイルの最大サイズを表示します。
+
+最大サイズに達すると、ログファイルが圧縮され、そのジョブの新しいファイルにログが書き込まれます。
+
+
+
+ a| 
+retain_logs_of _last_days
+ a| 
+ログを保持する日数が表示されます。
+
+
+
+ a| 
+enable_certificate_validationを実行します
+ a| 
+ホストでCA証明書の検証が有効になっている場合はtrueと表示されます。
+
+このパラメータを有効または無効にするには、*。spl.properties*ファイルを編集するか、SnapCenter GUIまたはコマンドレットを使用します。
 
 |===
 これらのパラメータのいずれかがデフォルト値に割り当てられていない場合、または値を割り当てたり変更したりする場合は、 spl.properties ファイルを変更します。また、 spl.properties ファイルを確認して編集し、パラメータに割り当てられている値に関連する問題のトラブルシューティングを行うこともできます。spl.properties ファイルを変更したら、 SnapCenter Plug-in Loader サービスを再起動する必要があります。
