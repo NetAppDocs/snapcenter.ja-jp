@@ -28,6 +28,18 @@ SnapCenter 構成ファイルの例： SnapDrive Service.exe.config 、 SMCoreSe
 
 
 
+* このタスクについて *
+
+* アップグレード手順は 'Windows'Linux'AIX ホストをメンテナンスモードにしますこれにより ' ホストはスケジュールされたジョブを実行できなくなります
+* SnapCenter Plug-in for Microsoft SQL Server、SnapCenter Plug-in for Microsoft Exchange Server、およびSnapCenter Plug-in for Microsoft Windowsの場合、サーバーとプラグインホストの両方を、scripts_pathを実行するために4.7バージョンにアップグレードすることをお勧めします。
++
+ポリシーでプリスクリプトとポストスクリプトが有効になっている既存のバックアップスケジュールと検証スケジュールについては、アップグレード後もバックアップ処理が続行されます。
+
++
+［*ジョブの詳細*］ページで、スクリプトをscripts_pathにコピーし、ポリシーを編集してscripts_pathに対するパスを指定するように警告メッセージが表示されます。クローンライフサイクルジョブの場合、サブジョブレベルで警告メッセージが表示されます。
+
+
+
 * 手順 *
 
 . 左側のナビゲーションペインで、 * Hosts * > * Managed Hosts * をクリックします。

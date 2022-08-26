@@ -24,6 +24,8 @@ entries:
     url: "/install/concept_authentication_methods_for_your_credentials.html"
   - title: Storage Virtual Machine の接続とクレデンシャル
     url: "/install/concept_svm_connections_and_credentials.html"
+  - title: 多要素認証（MFA）を有効にする
+    url: "/install/enable_multifactor_authentication.html"
 - title: SnapCenter サーバをインストールします
   url: "/install/task_install_the_snapcenter_server_using_the_install_wizard.html"
 - title: SnapCenter にログインします

@@ -19,4 +19,4 @@ SnapCenter Plug-in for Microsoft Windows をインストールした環境では
 
 image::../media/sce_backup_workflow.gif[SCE バックアップワークフロー]
 
-PowerShell コマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、クローニングの処理を実行することもできます。SnapCenter コマンドレットのヘルプまたはを使用します https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^] PowerShell コマンドレットの詳細については、を参照してください。
+PowerShell コマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、クローニングの処理を実行することもできます。SnapCenter コマンドレットのヘルプまたはを使用します https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^] PowerShell コマンドレットの詳細については、を参照してください。

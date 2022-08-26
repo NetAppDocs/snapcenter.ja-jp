@@ -1,7 +1,7 @@
 ---
 permalink: protect-sco/task_determine_whether_oracle_databases_are_available_for_backup.html 
 sidebar: sidebar 
-keywords: credentials,SnapCenter Plug-in for Oracle Databases 
+keywords: credentials,SnapCenter Plug-in for Oracle Databases, non-database entries, oratab 
 summary: リソースとは、 SnapCenter で管理されているホスト上の Oracle データベースのことです。使用可能なデータベースを検出したあとに、それらのデータベースをリソースグループに追加してデータ保護処理を実行できます。 
 ---
 = Oracle データベースをバックアップに使用できるかどうかを確認します
@@ -62,3 +62,45 @@ IMPORTANT: データベース名が SnapCenter 以外に変更された場合は
 
 
 NOTE: Oracle データベース認証を有効にしている場合、リソースビューに赤い鍵のアイコンが表示されます。データベースを保護できるようにデータベースのクレデンシャルを設定するか、データベースをリソースグループに追加してデータ保護処理を実行する必要があります。
+
+
+
+== SnapCenter で非データベースエントリが検出されないようにする方法
+
+oratabファイル内に追加された非データベースエントリをSnapCenter で検出できません。
+
+* 手順 *
+
+. Oracle用プラグインをインストールしたあと、rootユーザはディレクトリ_/var/opt/snapcenter/sco/etc/に*SC_oratab .config *ファイルを作成する必要があります。
++
+Oracleバイナリの所有者とグループに書き込み権限を付与して、ファイルを将来的に保持できるようにします。
+
+. データベース管理者は、* SC_oratab .config *ファイルに非データベース・エントリを追加する必要があります。
++
+/etc/oratabファイル内の非データベース・エントリに定義されている形式を同じにするか、またはユーザが非データベース・エンティティ・ストリングだけを追加できるようにすることを推奨します。
+
++
+
+NOTE: 文字列では大文字と小文字が区別されます。先頭に#が付いているテキストはコメントとして扱われます。データベース以外の名前の後ろにコメントを追加できます。
+
++
+....
+For example:
+--------------------------------------------
+# Sample entries
+# Each line can have only one non-database name
+# These are non-database name
+oratar  # Added by the admin group -1
+#Added by the script team
+NEWSPT
+DBAGNT:/ora01/app/oracle/product/agent:N
+-----------------------------------------------
+....
+. リソースを確認
++
+データベース以外のエントリがリソースページにリストされません。* SC_oratab .config *に追加されているエントリはありません。
+
+
+
+
+IMPORTANT: SnapCenter プラグインをアップグレードする前に、SC_AGENT構成ファイルのバックアップを作成することを常に推奨します。

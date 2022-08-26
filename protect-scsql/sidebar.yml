@@ -101,16 +101,6 @@ entries:
       url: "/protect-scsql/task_storage_disaster_recovery_for_scsql.html"
     - title: SnapCenter Plug-in for SQL Server のセカンダリストレージからプライマリストレージへのフェイルバック
       url: "/protect-scsql/task_failback_from_scsql_secondary_storage_to_primary_storage.html"
-  - title: SnapManager for Microsoft SQL Server から SnapCenter にアーカイブバックアップをインポートします
-    entries:
-    - title: アーカイブバックアップのインポートの概要
-      url: "/protect-scsql/concept_import_archived_backups_from_snapmanager_for_sql_to_snapcenter.html"
-    - title: インポート機能に関連する制限事項
-      url: "/protect-scsql/concept_limitations_related_to_the_import_feature.html"
-    - title: アーカイブバックアップをインポートする
-      url: "/protect-scsql/task_import_archived_backups.html"
-    - title: SnapCenter サーバで、インポートされたバックアップを表示します
-      url: "/protect-scsql/task_view_the_imported_backups_in_snapcenter_server.html"
 - title: SnapCenter Plug-in for VMware vSphere をインストール
   url: "/protect-scsql/task_install_snapcenter_plug_in_for_vmware_vsphere.html"
 - title: データ保護を準備

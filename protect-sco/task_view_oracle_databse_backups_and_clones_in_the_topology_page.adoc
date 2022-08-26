@@ -66,4 +66,4 @@ SnapmirrorStatusUpdateWaitTime に割り当てられた値がより小さい場�
 
 コマンドで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。
 
-または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2880725["SnapCenter ソフトウェアコマンドリファレンスガイド"^] または https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2883301["SnapCenter ソフトウェアコマンドリファレンスガイド"^] または https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。

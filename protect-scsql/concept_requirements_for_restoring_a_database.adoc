@@ -41,7 +41,7 @@ https://support.microsoft.com/kb/2887595["Microsoft のサポート記事 288759
 * データベースをリストアする前に、バックアップジョブとクローニングジョブをすべて停止する必要があります。
 * データベースサイズがテラバイト（ TB ）単位の場合、リストア処理がタイムアウトすることがあります。
 +
-次のコマンドを実行して、 SnapCenter サーバの RESTTimeout パラメータの値を 20000000ms に増やす必要があります。 Set-SmConfigSettings -Agent -configSettings @ ｛ "RESTTimeout" = "20000000" ｝ 。データベースのサイズに応じて、タイムアウト値を変更でき、設定可能な最大値は 214748648 です。
+次のコマンドを実行して、 SnapCenter サーバの RESTTimeout パラメータの値を 20000000ms に増やす必要があります。 Set-SmConfigSettings -Agent -configSettings @ ｛ "RESTTimeout" = "20000000" ｝ 。データベースのサイズによっては、タイムアウト値を変更できます。また、設定できる最大値は86400000msです。
 
 
 

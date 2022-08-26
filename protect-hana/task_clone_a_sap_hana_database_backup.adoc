@@ -19,9 +19,21 @@ SnapCenter を使用してバックアップをクローニングすることが
 * ボリュームをホストするアグリゲートが Storage Virtual Machine （ SVM ）に割り当てられたアグリゲートリストに含まれていることを確認する必要があります。
 * ファイルベースのバックアップはクローニングできません。
 * ターゲットクローンサーバの SAP HANA インスタンス SID が、 Target Clone SID フィールドに入力されたものと同じであることが必要です。
+* クローニング前またはクローニング後のPREコマンドについては、次のパスから、プラグインホストのコマンドリストにコマンドが含まれているかどうかを確認する必要があります。
++
+Windowsの場合：_ C：\Program Files\NetApp\SnapCenter \Snapcenter Plug-in Creator\etc\allowed_commands _list .txt_
+
++
+Linuxの場合：_/var/opt/snapcenter/scc/allowed _commands _list.txt_
 
 
-* このタスクについて * クローン・スプリット処理の制限事項については、を参照してください http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["ONTAP 9 論理ストレージ管理ガイド"^]。
+
+
+NOTE: コマンドリストにコマンドがない場合、処理は失敗します。
+
+* このタスクについて *
+
+クローンスプリット処理の制限事項については、を参照してください http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["ONTAP 9 論理ストレージ管理ガイド"^]。
 
 * 手順 *
 
@@ -106,7 +118,7 @@ Linux マシンのボリュームまたは qtree に対する mount コマンド
 NFS の例：
 
 +
- mount VSERVER_DATA_IP:%{VOLUME_NAME_Clone} /mnt
+ mount VSERVER_DATA_IP:%VOLUME_NAME_Clone /mnt
 
 
 . [ 通知 ] ページの [ 電子メールの設定 *] ドロップダウンリストから、電子メールを送信するシナリオを選択します。

@@ -15,7 +15,7 @@ SnapCenter Plug-in for Microsoft Windows を SnapCenter の GUI からリモー�
 
 * 必要なもの *
 
-* Microsoft .NET Framework 4.5.2 以降がインストールされている必要があります。
+* Microsoft .Net 4.7.2以降がインストールされている必要があります。
 * PowerShell 4.0 以降がインストールされている必要があります。
 * Windows メッセージキューをオンにしておく必要があります。
 * ホストのローカル管理者である必要があります。

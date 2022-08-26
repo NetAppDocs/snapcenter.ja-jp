@@ -36,6 +36,7 @@ Plug-in for Oracle Database には、次のようなメリットもあります�
 +
 また、許可された SnapCenter ユーザにアプリケーションレベルの権限を付与するようにクレデンシャルを設定することもできます。
 
+* アーカイブログ管理（ALM）でリストア処理とクローニング処理がサポートされます
 * NetApp FlexClone テクノロジを使用して、本番環境のデータベースのスペース効率に優れたポイントインタイムコピーを作成し、テストまたはデータの抽出を行います
 +
 クローンを作成するストレージシステムに FlexClone ライセンスが必要です。
@@ -53,8 +54,25 @@ Plug-in for Oracle Database には、次のようなメリットもあります�
 デフォルトで有効になる SLM 機能は、最適パスを持たない LUN を定期的に検出して修正します。SLM を設定するには、 /var/opt/snapcenter /scu/etc. にある scu.properties ファイル内のパラメータを変更します
 
 +
-** この機能を無効にするには、 ENABLE_LUNPATH_MONITORING の値を false に設定します。
-** LUN パスが自動的に修正される頻度を指定するには、 LUNPATH_MONITORING_INTERVAL に値（時間単位）を割り当てます。SLM の詳細については、を参照してください http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanag/home.html["『 ONTAP 9 SAN アドミニストレーションガイド』"^]。
+** この機能を無効にするには、ENABLE_LUNPATH_MONITORINGパラメータの値をfalseに設定します。
+** LUNパスが自動的に修正される頻度を指定するには、LUNPATH_MONITORING_INTERVALパラメータに値（時間単位）を割り当てます。SLM の詳細については、を参照してください http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanag/home.html["『 ONTAP 9 SAN アドミニストレーションガイド』"^]。
+
+
+* LinuxでのNon-Volatile Memory Express（NVMe）のサポート
++
+** NVMe utilをホストにインストールする必要があります。
++
+代替ホストにクローニングまたはマウントするには、NVMe utilをインストールする必要があります。
+
+** バックアップ、リストア、クローニング、マウント、アンマウント、 VMDKやRDMなどの仮想環境を除き、NVMeハードウェアでカタログ化、カタログ化解除、および検証の処理がサポートされます。
++
+上記の操作は、パーティションがないデバイスまたはシングルパーティションでサポートされています。
 
 
 
+
+
+
+NOTE: NVMeデバイス用のマルチパス解決策 は、カーネルで標準のマルチパスオプションを設定することで設定できます。Device Mapper（DM）マルチパスはサポートされていません。
+
++サポートされているバージョンの最新情報については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。

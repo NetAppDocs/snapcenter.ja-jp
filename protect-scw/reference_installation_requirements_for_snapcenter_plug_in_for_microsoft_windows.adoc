@@ -63,12 +63,14 @@ NOTE: 十分なディスクスペースを割り当て、 logs フォルダに�
  a| 
 必要なソフトウェアパッケージ
  a| 
-* Microsoft .NET Framework 4.5.2 以降
+* Microsoft .NET Framework 4.7.2以降
 * Windows Management Framework （ WMF ） 4.0 以降
 * PowerShell 4.0 以降
 
 
 サポートされているバージョンの最新情報については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。
+
+.NETのトラブルシューティングについては、を参照してください。 link:..https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_upgrade_or_install_fails_with_%22This_KB_is_not_related_to_the_OS%22["インターネットに接続されていない従来型システムでは、SnapCenter のアップグレードまたはインストールが失敗します。"]
 
 |===
 
@@ -122,7 +124,7 @@ SnapCenter は、クレデンシャルを使用して SnapCenter 処理を実行
 ワークグループに属するシステムの場合は、 SnapCenter プラグインをインストールするシステムに組み込みのローカル管理者を指定します。ユーザアカウントに昇格された権限がある場合、またはホストシステムでユーザアクセス制御機能が無効になっている場合は、ローカル管理者グループに属するローカルユーザアカウントを指定できます。Username フィールドの有効な形式は、「 username 」です
 
 +
-パスワードには二重引用符（ " ）を使用しないでください。
+パスワードに二重引用符（"）またはバックティック（`）を使用しないでください。小なり（<）と感嘆符（！）は使用しないでください。 パスワードに記号を追加します。たとえば、lessthan <！10、lessthan10 <！、backtick 12とします。
 
 
 
@@ -158,7 +160,9 @@ Windows Server 2012 以降では、管理ドメインアカウントからサー
 . ドメインごとに、 Windows ドメインコントローラから次のコマンドを実行します。 Add-KDSRootKey -EffectiveImmedient
 . GMSA を作成して構成します。
 +
-.. ユーザグループアカウントを作成します。
+.. 次の形式でユーザグループアカウントを作成します。
++
+ domainName\accountName$
 .. グループにコンピュータオブジェクトを追加します。
 .. 作成したユーザグループを使用して gMSA を作成します。
 +

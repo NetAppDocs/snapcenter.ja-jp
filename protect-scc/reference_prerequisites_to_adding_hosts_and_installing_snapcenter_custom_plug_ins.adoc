@@ -27,7 +27,45 @@ link:concept_develop_a_plug_in_for_your_application.html["アプリケーショ�
 
 == 全般
 
-iSCSI を使用している場合は、 iSCSI サービスが実行されている必要があります。
+iSCSIを使用している場合は、iSCSIサービスが実行されている必要があります。
+
+
+
+== SHA512ハッシュ
+
+* ネットアップが提供するカスタムプラグインでは、カスタムプラグインファイルのSHA512ハッシュを_custom_plugin_checksum_list _ fileに追加しておく必要があります。
++
+** Linuxホストでは、SHA512ハッシュは、_/var/opt/snapcenter/scc/custom plugin _checksum_list .txt_にあります
+** Windowsホストでは、SHA512ハッシュは_ C：\Program Files\NetApp\SnapManager Plug-in Creator\etc\custom_plugin_schecksum_list .txt_にあります
++
+カスタムのインストールパスでは、SHA512ハッシュは_<custom path>\NetApp\SnapCenter \Snapcenter Plug-in Creator\etc\custom_plugin_checksum_list .txt_にあります
+
+
+
++
+custom_plugin_schecksum_listは、SnapCenter によってホストにインストールされたカスタムプラグインの一部です。
+
+* アプリケーション用に作成したカスタムプラグインについては、次の手順を実行しておく必要があります。
++
+.. プラグインzipファイルのSHA512ハッシュを生成しました。
++
+などのオンラインツールを使用できます https://emn178.github.io/online-tools/sha512_file_hash.html["SHA512ハッシュ"^]。
+
+.. 生成されたSHA512ハッシュを新しい行のcustom_plugin_schecksum_listファイルに追加しました。
++
+コメントは、ハッシュが属するプラグインを識別するために#記号で始まります。
+
++
+次に、チェックサムファイルでSHAN512ハッシュを使用する例を示します。
+
++
+....
+#ORASCPM
+03721f567a1e4a1cb5569066b9a58af619ee12b1f8713108f81b696cfbdb81c25232fa63d6e6777a2b2a1ec068bb0a93a59a8ade71587182f8bccbe81f7e0ba6
+....
+
+
+
 
 
 

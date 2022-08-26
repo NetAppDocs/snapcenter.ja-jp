@@ -57,4 +57,4 @@ https://www.netapp.com/company/legal/machine-translation/["https://www.netapp.co
 
 本製品で使用されているサードパーティの著作権およびライセンスに関する情報を提供します。お使いの製品では、必ずしも以下に示すすべてのソフトウェアコンポーネントを使用しているわけではありません。
 
-https://library.netapp.com/ecm/ecm_download_file/ECMLP2880727["SnapCenter 4.6 に関する注意事項"^]
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2883298["SnapCenter 4.7の注意事項"^]

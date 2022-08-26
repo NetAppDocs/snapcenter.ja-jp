@@ -137,6 +137,9 @@ MACs hmac-sha2-256
 * /custom_location/NetApp/snapcenter /spl/bin/spl になります
 
 
+
+NOTE: RACセットアップを管理する場合は、root以外のユーザをOracleユーザにする必要があります。また、root以外のOSユーザにもこのユーザを使用することはできません。
+
 * 手順 *
 
 . SnapCenter Plug-ins Package for Linux をインストールする Linux ホストにログインします。
@@ -262,6 +265,9 @@ MACs hmac-sha2-256
 * /custom_location/NetApp/snapcenter /spl/installing/plugins/uninstall
 * /custom_location/NetApp/snapcenter /spl/bin/spl になります
 
+
+
+NOTE: RACセットアップを管理する場合は、root以外のユーザをOracleユーザにする必要があります。また、root以外のOSユーザにもこのユーザを使用することはできません。
 
 * 手順 *
 

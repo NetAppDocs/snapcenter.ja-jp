@@ -19,7 +19,7 @@ Oracle データベースをバックアップする前に、前提条件を満�
 * データベースでセカンダリ保護が有効になっている場合は、そのデータベースに属するすべてのデータボリュームとアーカイブログボリュームが保護されていることを確認しておく必要があります。
 * ASM ディスク・グループ上にファイルがあるデータベースが 'Oracle DBVERIFY ユーティリティを使用してバックアップを検証するには ' マウント状態またはオープン状態であることを確認しておく必要があります
 * ボリュームマウントポイントの長さが 240 文字を超えないことを確認しておく必要があります。
-* バックアップするデータベースが大容量（ TB 単位）の場合は、 SnapCenter サーバホストで RESTTimeout の値を 86400000~in_C ： \Program Files\NetApp\SMCore \SMCoreServiceHost.exe.config_file に増やしてください。
+* バックアップするデータベースが大容量（TB単位）の場合は、SnapCenter サーバホストでRESTTimeoutの値を86400000msに増やして、C：\Program Files\NetApp\SMCore \SMCoreServiceHost.exe.config_fileに設定してください。
 +
 値を変更するときに実行中のジョブがないことを確認し、値を増やしたあとに SnapCenter SMCore サービスを再起動します。
 

@@ -51,6 +51,7 @@ ASM ディスクグループにあるデータファイルは、 SnapCenter の�
 
 
 
+** NVMeの場合、NVMe utilをインストールする必要があります
 
 
 * データ LUN の保護タイプと、ミラー、バックアップ、ミラー - ヴォールトなどのログ LUN は、ログバックアップを使用して代替ホストへのクローニング中にセカンダリロケータを検出するために同じである必要があります。
@@ -74,4 +75,20 @@ NOTE: 新しいクローン・マウント・ポイントを 'autofs サブシ�
 * Oracle Linux 7 以降または Red Hat Enterprise Linux （ RHEL ） 7 以降の Storage Area Network （ SAN ；ストレージエリアネットワーク）環境でのクローニングを正常に実行するには、の値として、 /etc/lvm/lvmlvm/lvmmetad=0 を設定し、 lvm2-lvmetad サービスを停止する必要があります。
 * Oracle データベース 11.2.0.3 以降を使用していて、 NID スクリプトを使用して補助インスタンスのデータベース ID を変更している場合は、 13366202 Oracle パッチをインストールする必要があります。
 * ボリュームをホストするアグリゲートが Storage Virtual Machine （ SVM ）に割り当てられたアグリゲートリストに含まれていることを確認する必要があります。
+* NVMeの場合、接続から除外するターゲットポートがあるときは、/var/opt/snapcenter/scu/etc/nvme.confファイルにターゲットノード名とポート名を追加します。
++
+ファイルが存在しない場合は、次の例に示すようにファイルを作成する必要があります。
+
++
+ブラックリスト｛_
+
++
+....
+# You can add comments by using the ‘#’ at the beginning of the line
+nn-0x<target_node_name_1>:pn-0x<target_port_name_1>
+nn-0x<target_node_name_2>:pn-0x<target_port_name_2>
+....
++
+_｝_
+
 

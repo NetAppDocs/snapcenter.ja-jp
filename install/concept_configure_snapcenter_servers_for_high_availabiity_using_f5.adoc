@@ -26,7 +26,7 @@ image::../media/sc-F5-configure-workflow.png[SC F5 設定ワークフロー]
 * add-SmServer
 * remove-SmServerCluster を実行しました
 +
-詳細については、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+詳細については、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
 
 
 
@@ -37,4 +37,5 @@ image::../media/sc-F5-configure-workflow.png[SC F5 設定ワークフロー]
 * SnapCenter をインストールしてハイアベイラビリティ用に設定したら、 F5 クラスタ IP を指すように SnapCenter デスクトップのショートカットを編集します。
 * SnapCenter サーバ間でフェイルオーバーが発生し、既存の SnapCenter セッションも存在する場合は、ブラウザを閉じてから再度 SnapCenter にログオンする必要があります。
 * ロードバランサのセットアップ（ NLB または F5 ）で、 NLB ノードまたは F5 ノードによって一部解決されているノードを追加し、 SnapCenter ノードがこのノードに到達できない場合、 SnapCenter ホストページでホストが停止して実行中の状態になる頻度が高くなります。この問題を解決するには、両方の SnapCenter ノードが NLB ノードまたは F5 ノードでホストを解決できることを確認する必要があります。
+* MFA設定のSnapCenter コマンドは、すべてのノードで実行する必要があります。証明書利用者設定は、Active Directoryフェデレーションサービス（AD FS）サーバで、F5クラスタの詳細を使用して行う必要があります。ノードレベルのSnapCenter UIアクセスはMFAが有効になったあとはブロックされます。
 

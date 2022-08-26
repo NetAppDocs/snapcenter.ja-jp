@@ -38,6 +38,7 @@ NOTE: asm_diskstring パラメータの編集方法については、を参照�
 ** UID と GID が元のホストと同じである
 ** Oracle のバージョンが元のホストと同じである
 ** OS のディストリビューションとバージョンが元のホストと同じである
+** NVMeの場合、NVMe utilをインストールする必要があります
 
 
 
@@ -77,7 +78,7 @@ ASM データベースのバックアップをマウントする場合は、マ�
 `./sccli get-Smbackup - BackupNamebackup_name`
 
 +
-コマンドで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2880725["SnapCenter ソフトウェアコマンドリファレンスガイド"^]。
+コマンドで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2883301["SnapCenter ソフトウェアコマンドリファレンスガイド"^]。
 
 
 

@@ -17,6 +17,17 @@ SnapCenter を使用して、 1 つ以上のバックアップからデータを
 
 * リソースまたはリソースグループをバックアップしておく必要があります。
 * リストアするリソースまたはリソースグループに対して現在実行中のバックアップ処理がある場合は、すべてキャンセルしておく必要があります。
+* リストア前、リストア後、マウント、アンマウントの各コマンドについて、プラグインホストのコマンドリストに以下のパスからコマンドが含まれていないか確認してください。
++
+Windowsの場合：_ C：\Program Files\NetApp\SnapCenter \Snapcenter Plug-in Creator\etc\allowed_commands _list .txt_
+
++
+Linuxの場合：_/var/opt/snapcenter/scc/allowed _commands _list.txt_
+
++
+
+NOTE: コマンドリストにコマンドがない場合、処理は失敗します。
+
 
 
 * このタスクについて *

@@ -147,7 +147,7 @@ enable_certificate_validationを実行します
  a| 
 ホストでCA証明書の検証が有効になっている場合はtrueと表示されます。
 
-このパラメータを有効または無効にするには、*。spl.properties*ファイルを編集するか、SnapCenter GUIまたはコマンドレットを使用します。
+このパラメータを有効または無効にするには、spl.propertiesを編集するか、SnapCenter GUIまたはコマンドレットを使用します。
 
 |===
 これらのパラメータのいずれかがデフォルト値に割り当てられていない場合、または値を割り当てたり変更したりする場合は、 spl.properties ファイルを変更します。また、 spl.properties ファイルを確認して編集し、パラメータに割り当てられている値に関連する問題のトラブルシューティングを行うこともできます。spl.properties ファイルを変更したら、 SnapCenter Plug-in Loader サービスを再起動する必要があります。

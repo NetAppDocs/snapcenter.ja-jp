@@ -48,7 +48,7 @@ SnapCenter Plug-in for SQL Server ストレージをリカバリするには、�
 * フェイルオーバー時に作成された SnapCenter Plug-in for SQL Server のバックアップは、 UI またはコマンドレットの「 Remove-SmBackup 」を使用して削除できます
 * フェールオーバー後に、一部のリソースを非 DR モードにする場合は、「 Remove-SmResourceDRMode 」コマンドレットを使用します
 +
-詳細については、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+詳細については、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
 
 * SnapCenter サーバは、 DR モードまたは非 DR モードの個々のストレージリソース（ SQL データベース）を管理しますが、 DR モードまたは非 DR モードのストレージリソースを含むリソースグループは管理しません。
 
