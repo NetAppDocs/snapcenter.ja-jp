@@ -23,6 +23,6 @@ NetApp ONTAP の Amazon FSX の詳細については、を参照してくださ�
 
 * SnapCenter では、さまざまなアプリケーションやデータベースの保護がサポートされます。
 +
-サポートされているアプリケーションおよびデータベースの詳細については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。
+サポートされているアプリケーションおよびデータベースの詳細については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=105046;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。
 
 
