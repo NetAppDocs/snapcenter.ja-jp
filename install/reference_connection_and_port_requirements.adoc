@@ -61,7 +61,7 @@ MySQL ポート
 
 このポートは、 SnapCenter と MySQL リポジトリデータベースの間の通信に使用されます。
 
-SnapCenter サーバから MySQL サーバへのセキュアな接続を作成できます。 link:../install/concept_configure_secured_mysql_connections_with_snapcenter_server.html["詳細はこちら。"^]
+SnapCenter サーバから MySQL サーバへのセキュアな接続を作成できます。 link:../install/concept_configure_secured_mysql_connections_with_snapcenter_server.html["詳細はこちら。"]
 
 
 
@@ -128,7 +128,7 @@ ONTAP クラスタまたは SVM の通信ポート
 
 
  a| 
-SnapCenter Plug-in for SAP HANA Database のポート
+SnapCenter Plug-in for SAP HANA Database vCodeスペルチェッカーポート
  a| 
 3instance_number13 または 3instance_number15 、 HTTP または HTTPS 、双方向、カスタマイズ可能です
 
@@ -146,4 +146,4 @@ SnapCenter Plug-in for SAP HANA Database のポート
 SnapCenter サーバ、プラグインホスト、またはその他の Windows クライアントがユーザを認証できるように、ドメインコントローラで Microsoft の必要なポートを開く必要があります。
 
 |===
-ポートの詳細を変更する手順については、を参照してください https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_hosts.html#modify-plug-in-hosts[] [ プラグインホストを変更 ^] 。
+ポートの詳細を変更する手順については、を参照してください link:../admin/concept_manage_hosts.html#modify-plug-in-hosts["プラグインホストを変更します"]。

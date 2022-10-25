@@ -2996,7 +2996,6 @@
   <block id="4f5e4136027ec0a3e4043eb5412b3ba4" category="paragraph">このポートは、 SnapCenter サーバと SnapCenter プラグインがインストールされているホストの間の通信に使用されます。</block>
   <block id="91ca015b30de2a05aff2f16ec93231dd" category="paragraph">MySQL ポート</block>
   <block id="efe50212c612e0d762535b54fd67befd" category="paragraph">このポートは、 SnapCenter と MySQL リポジトリデータベースの間の通信に使用されます。</block>
-  <block id="2fd902191e98265318221699b71a7bbc" category="paragraph">SnapCenter サーバから MySQL サーバへのセキュアな接続を作成できます。 <block ref="98294cf010405bdb856636ffa91b07b6" category="inline-link-macro-rx"></block></block>
   <block id="bc40ff6b34d5fee4e2df3ad7383271dc" category="paragraph">サポートされているダイナミックポート範囲については、を参照してください<block ref="89dbd1724554234088076a511a419e1e" category="inline-link-rx"></block></block>
   <block id="32196bca89704936d522cb1276210a4d" category="paragraph">ポートは、 SnapCenter サーバとプラグインをインストールするホストとの間の通信に使用されます。プラグインパッケージのバイナリを Windows プラグインホストにプッシュするには、プラグインホストでのみポートを開く必要があります。このポートはインストール後に閉じることができます。</block>
   <block id="31287d49a8a96de2e8d195c76a865396" category="paragraph">Linux または AIX プラグインホスト</block>
@@ -3014,7 +3013,6 @@
   <block id="640e1e1057328dc7a71ff3efe908fb8c" category="paragraph">SnapCenter サーバとカスタムプラグイン間の通信はポート 8145 を介してルーティングされます。</block>
   <block id="0e2baf6e148be111338e84354edd4364" category="paragraph">443 （ HTTPS ）、双方向 80 （ HTTP ）、双方向</block>
   <block id="a26bff28c23606c7396b4619af8af1bd" category="paragraph">このポートは、 SnapCenter サーバを実行するホストと SVM の間の通信に SAL （ストレージ抽象化レイヤ）で使用されます。現時点では、 SnapCenter プラグインホストと SVM の間の通信に、 SnapCenter for Windows プラグインホストの SAL でもポートが使用されています。</block>
-  <block id="657328b06bb4725d5cf327593551d8d6" category="paragraph">SnapCenter Plug-in for SAP HANA Database のポート</block>
   <block id="a703a5f03b1b230925e5a7bef766ea84" category="paragraph">3instance_number13 または 3instance_number15 、 HTTP または HTTPS 、双方向、カスタマイズ可能です</block>
   <block id="5afe34fece774db451a111901841c2f9" category="paragraph">マルチテナントデータベースコンテナ（ MDC ）のシングルテナントの場合は、ポート番号は 13 で終わり、 MDC 以外の場合はポート番号は 15 で終わります。</block>
   <block id="f79f66ef0d80eeeac5a8a3b2f86e2d84" category="paragraph">たとえば、 32013 はインスタンス 20 のポート番号で、 31015 はインスタンス 10 のポート番号です。</block>
@@ -3761,7 +3759,6 @@
   <block id="f131ab7559cf49d32373fdff9b7cbaaa" category="admonition">SnapCenter Plug-in for UNIX はスタンドアロンのプラグインではなく、個別にインストールすることはできません。このプラグインは、 SnapCenter Plug-in for Oracle Database のインストール時に自動的にインストールされます。</block>
   <block id="ad41f7a9e85843a998743e132424a395" category="list-text">SnapCenter カスタムプラグイン</block>
   <block id="b6ddf325474f53377de3e17f65c983f3" category="inline-link">NetApp Storage Automation Store の略</block>
-  <block id="4d85577b7a29bc5d237d7c7beb5ebc7c" category="paragraph">カスタムプラグインはコミュニティでサポートされており、からダウンロードできます<block ref="14adb94a4faec9ea0e0992d90e98b640" category="inline-link-rx"></block>。</block>
   <block id="4bfa416280fc4f5037348c904859e18f" category="paragraph">SnapCenter Plug-in for VMware vSphere は、ネットアップのデータブローカーです。仮想化されたデータベースやファイルシステムに対する SnapCenter のデータ保護処理をサポートする、スタンドアロンの仮想アプライアンスです。</block>
   <block id="2aa0571a478e7d0fecaba7f94c88bf25" category="section-title">SnapCenter サーバ</block>
   <block id="e4b70dc0a2377b7bbef832a55b2d603c" category="paragraph">SnapCenter サーバには、 Web サーバ、一元化された HTML5 ベースのユーザインターフェイス、 PowerShell コマンドレット、 REST API 、および SnapCenter リポジトリが含まれています。</block>
@@ -3836,7 +3833,6 @@
   <block id="dbe26f725743679de01e440c2e7697ad" category="admonition">MySQL 、 DB2 、 MongoDB のカスタムプラグインは、ネットアップのコミュニティでのみサポートされます。</block>
   <block id="a84dab656bf020b14be7a5c3596b4288" category="paragraph">ネットアップでは、カスタムプラグインの作成と使用をサポートしていますが、作成したカスタムプラグインはネットアップではサポートしていません。</block>
   <block id="07af457ed5409f58b0d5ca2b41b5ec39" category="inline-link-macro">アプリケーション用のプラグインを開発します</block>
-  <block id="e0348137514c6fa588f7dc1c018f38d7" category="paragraph">詳細については、を参照してください <block ref="42bf949f5c33c0da2d19dcdbdfcd8185" category="inline-link-macro-rx"></block></block>
   <block id="3012455ba6e0ba02dfa333bdecc83c57" category="section-title">SnapCenter リポジトリ</block>
   <block id="cc1d85843af98a2ce08e58f1408e6364" category="paragraph">SnapCenter リポジトリは NSM データベースとも呼ばれ、 SnapCenter のすべての処理の情報とメタデータを格納します。</block>
   <block id="b795272c033653aa88e12f8f4fd442ca" category="paragraph">MySQL Server リポジトリデータベースは、 SnapCenter Server のインストール時にデフォルトでインストールされます。MySQL Server がすでにインストールされていて、 SnapCenter Server を新規にインストールする場合は、 MySQL Server をアンインストールする必要があります。</block>
@@ -6681,7 +6677,6 @@
   <block id="f01f22cfc141e64ad20b64a9b3f2ac85" category="paragraph">コントローラベースの SnapCenter 標準ライセンスを使用していて、容量ベースの試用版ライセンス ( シリアル番号は「 50 」で終わる ) を削除する必要がある場合は、 MySQL コマンドを使用して、試用版ライセンスを手動で削除する必要があります。SnapCenter GUI でトライアルライセンスを削除することはできません。</block>
   <block id="ca92f38ec64bb5da713b4badc8620434" category="paragraph">ゲスト OS で RDM の処理を実行するには、ホストに対する次の vCenter 権限が必要です。</block>
   <block id="03d6fc6f0007d8c1e15a56f0a4522686" category="paragraph">SnapCenter では、アプリケーション、データベース、ファイルシステム、および仮想マシンのデータを保護するために、複数のライセンスが必要になります。インストールする SnapCenter ライセンスのタイプは、ストレージ環境および使用する機能によって異なります。</block>
-  <block id="d0487d3c65933c7dda38325ae975026b" category="paragraph">1 つ以上の SnapCenter ライセンスをインストールする必要があります。ライセンスの追加方法については、を参照してください <block ref="0ca3149bbd09cc6482f3e5921aad891d" category="inline-link-macro-rx"></block> または <block ref="daae28e1483ad0a51ebe8ba1b52cdeb5" category="inline-link-macro-rx"></block>。</block>
   <block id="b3b5361b491a028013fc3043e9bbf7a7" category="doc">SAP HANA データベースの保護におけるリソース、リソースグループ、ポリシーの使用方法</block>
   <block id="6bbc1cc2d778155e34c6c797ed0dee3f" category="list-text">リソースとは、通常は SnapCenter でバックアップまたはクローニングする SAP HANA データベースのことです。</block>
   <block id="0d9c8d9fe540eebdc0f8c24187ca777d" category="list-text">SnapCenter リソースグループは、ホスト上のリソースの集まりです。</block>
@@ -7488,7 +7483,6 @@
   <block id="45cfde3246d77aae99351b410b97c7c0" category="doc">SAP HANA プラグインに必要な最小限の ONTAP 権限</block>
   <block id="f787fb91924061fe015dd390115ff7b0" category="cell">フルアクセスコマンド： ONTAP 8.3.0 以降で必要な最小権限</block>
   <block id="3c7a1d3e0ce94aeb0c7ab231e365f15e" category="cell">読み取り専用コマンド： ONTAP 8.3.0 以降で必要な最小権限</block>
-  <block id="8bd83f1f314ef9e02c70e66cc9fb845c" category="paragraph">ポートの詳細を変更する手順については、を参照してください<block ref="50723147440c13da7c31ceaceb52ba16" category="inline-link-rx"></block> [ プラグインホストを変更 ^] 。</block>
   <block id="5e312685e47c74b5ee2a4102a18ee03f" category="doc">Exchange プラグインに必要な最小 ONTAP 権限</block>
   <block id="f2e203e95de8a92902a61dcabea6f456" category="list-text">ホストの追加とプラグインパッケージのインストールは、個々のホストまたはクラスタに対して実行できます。</block>
   <block id="adc8d83761c6331a65ee343d3de2a603" category="list-text">Exchange ノードが DAG の一部である場合、 SnapCenter サーバに追加できるノードは 1 つだけです。</block>
@@ -7919,4 +7913,14 @@
   <block id="097869dcfdfea94a43eab778d57a4e83" category="paragraph">サポートされているバージョンの最新情報については、を参照してください<block ref="102c8b4f5323d57ed48904a1ba94c2de" category="inline-link-rx"></block>。</block>
   <block id="bf14f1703af6af8b51300dc61dc1594c" category="paragraph">サポートされているバージョンの最新情報については、を参照してください<block ref="4d75397e7ff03528228bfd2c042ee164" category="inline-link-rx"></block>。</block>
   <block id="02f8c9fac34de290666ccfe51e19b761" category="paragraph"><block ref="c86a29400a88b8541473f7e26922bd2f" category="inline-link-rx"></block></block>
+  <block id="b6b7e7973fe70256b1b775baf8ac7261" category="paragraph">1 つ以上の SnapCenter ライセンスをインストールする必要があります。ライセンスの追加方法については、を参照してください <block ref="978050eb868e07441781781da059ebc5" category="inline-link-macro-rx"></block> または <block ref="47cf8583fc17afccfc8268b2830ab680" category="inline-link-macro-rx"></block>。</block>
+  <block id="13aef2b62d8736d22562e85c99ca60eb" category="paragraph">SnapCenter サーバから MySQL サーバへのセキュアな接続を作成できます。 <block ref="cd7568118ad87382648cb2133a315ffd" category="inline-link-macro-rx"></block></block>
+  <block id="6529e3cc72b3980f54f2d2ad982c79c2" category="paragraph">SnapCenter Plug-in for SAP HANA Database vCodeスペルチェッカーポート</block>
+  <block id="0cfe29479bcdd52d04233cb07867b8dc" category="paragraph">ポートの詳細を変更する手順については、を参照してください <block ref="e76f469a4971f2c04dd83de4f8464750" category="inline-link-macro-rx"></block>。</block>
+  <block id="66ee30700091538587a27acf4ecad692" category="inline-link">REST APIの概要</block>
+  <block id="9a9a51f1993f5461829d8466a8fb013e" category="paragraph">REST APIの詳細については、を参照してください<block ref="ea5c19f623f4ce0e4a3a37a512890f94" category="inline-link-rx"></block>。</block>
+  <block id="ac82cdc7de65b45fb896f54ac6f878a6" category="paragraph">Windowsコマンドレットの詳細については、を参照してください<block ref="d4c5c0570d011aab6fdb5c260e0a26e0" category="inline-link-rx"></block>。</block>
+  <block id="9381fc6f6aaa8ab22b178a15c78fbc00" category="paragraph">UNIXコマンドの詳細については、を参照してください<block ref="f0a304dd5eda28bc5cad0e10ba143e0a" category="inline-link-rx"></block>。</block>
+  <block id="c41cef29e8776e4670cacce5775ec017" category="paragraph">カスタムプラグインはコミュニティでサポートされており、からダウンロードできます<block ref="554f546cf121f440c6cfd97d643765df" category="inline-link-rx"></block>。</block>
+  <block id="0403e11795fb79ba2a2b089e5837948f" category="paragraph">詳細については、を参照してください <block ref="5d3441c720944f2bfbf67dc2b7c68bf1" category="inline-link-macro-rx"></block></block>
 </blocks>

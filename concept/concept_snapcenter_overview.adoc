@@ -51,6 +51,9 @@ SnapCenter の主な機能は次のとおりです。
 +
 ユーザ定義の SnapCenter プラグインを作成するためのフレームワークを提供することで、他の標準またはカスタムのアプリケーションやデータベースでもデータ保護がサポートされます。これにより、 1 つの画面で他のアプリケーションやデータベースのデータを保護することができます。このフレームワークを活用して、ネットアップは IBM DB2 、 MongoDB 、 MySQL など用の SnapCenter カスタムプラグインを NetApp Automation Store でリリースしました。
 
++
+https://automationstore.netapp.com/home.shtml["NetApp Storage Automation Store の略"^]
+
 * ポリシーベースのバックアップ
 +
 ポリシーベースのバックアップでは、 NetApp Snapshot コピーテクノロジを利用して、アプリケーションと整合性のある高速なディスクベースのバックアップを、スペース効率に優れた方法で作成します。必要に応じて、既存の保護関係を更新することで、セカンダリストレージに対するこれらのバックアップの保護を自動化することができます。
@@ -74,6 +77,15 @@ SnapCenter GUI では、ハイブリッドクラウドの任意のデスティ�
 * REST API 、 Windows コマンドレット、 UNIX コマンド
 +
 SnapCenter には、ほとんどの機能をオーケストレーションソフトウェアと統合するための REST API 、および Windows PowerShell コマンドレットとコマンドラインインターフェイスが含まれています。
+
++
+REST APIの詳細については、を参照してください https://docs.netapp.com/us-en/snapcenter/sc-automation/overview_rest_apis.html["REST APIの概要"]。
+
++
+Windowsコマンドレットの詳細については、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+
++
+UNIXコマンドの詳細については、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2883301["SnapCenter ソフトウェアコマンドリファレンスガイド"^]。
 
 * 一元化されたデータ保護ダッシュボードとレポート作成
 * セキュリティと委譲のためのロールベースアクセス制御（ RBAC ）。
@@ -143,7 +155,7 @@ NOTE: SnapCenter Plug-in for UNIX はスタンドアロンのプラグインで�
 
 * SnapCenter カスタムプラグイン
 +
-カスタムプラグインはコミュニティでサポートされており、からダウンロードできます https://automationstore.netapp.com/home.shtml["NetApp Storage Automation Store の略"]。
+カスタムプラグインはコミュニティでサポートされており、からダウンロードできます https://automationstore.netapp.com/home.shtml["NetApp Storage Automation Store の略"^]。
 
 
 
@@ -340,7 +352,7 @@ NOTE: MySQL 、 DB2 、 MongoDB のカスタムプラグインは、ネットア
 
 ネットアップでは、カスタムプラグインの作成と使用をサポートしていますが、作成したカスタムプラグインはネットアップではサポートしていません。
 
-詳細については、を参照してください link:../protect-scc/concept_develop_a_plug_in_for_your_application.html["アプリケーション用のプラグインを開発します"^]
+詳細については、を参照してください link:../protect-scc/concept_develop_a_plug_in_for_your_application.html["アプリケーション用のプラグインを開発します"]
 
 
 
