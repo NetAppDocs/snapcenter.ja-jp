@@ -48,7 +48,7 @@ NOTE: SnapCenter または ONTAP をあとからアップグレードする場�
 ONTAP RBAC ロールの設定の詳細については、を参照してください http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-adm-auth-rbac/home.html["ONTAP 9 管理者認証と RBAC パワーガイド"^]。
 
 
-NOTE: SnapCenter のドキュメントではロールに割り当てる要素を「権限」と呼びますが、OnCommand System Manager GUI では ' 権限の代わりに属性が使用されます ONTAP RBAC ロールを設定する場合は、この 2 つの用語は同じ意味です。
+NOTE: SnapCenter のドキュメントではロールに割り当てる要素を「権限」と呼びますが、OnCommand システムマネージャGUIでは、_privilegeではなく、TERM_attribute__が使用されます。ONTAP RBACロールを設定する場合は、この2つの用語は同じ意味です。
 
 * 手順 *
 
