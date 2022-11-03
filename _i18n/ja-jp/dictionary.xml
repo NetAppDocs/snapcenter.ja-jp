@@ -7920,4 +7920,5 @@
   <block id="74fec6bb431ffa93b327d4933607ec3f" category="admonition">SnapCenter のドキュメントではロールに割り当てる要素を「権限」と呼びますが、OnCommand システムマネージャGUIでは、_privilegeではなく、TERM_attribute__が使用されます。ONTAP RBACロールを設定する場合は、この2つの用語は同じ意味です。</block>
   <block id="654c0ff0573689496c47502d09cfe7a8" category="list-text">12_c_databaseのバックアップをクローニングするためのシードPDB関連情報を取得するには、ソースデータベースのパラメータファイルでexclude_seed_cdb_viewの値をFALSEに設定する必要があります。</block>
   <block id="dfb3e8f24407538f95c7f42d27411d1b" category="admonition">この値は、12_c_databaseをバックアップする前に設定する必要があります。</block>
+  <block id="98084b9b354e4b46189c9b89dc98527a" category="list-text"><block ref="e083e217410d0cc67271c8e1828e715a" prefix="" category="inline-code"></block></block>
 </blocks>
