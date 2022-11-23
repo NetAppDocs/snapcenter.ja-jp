@@ -1,14 +1,9 @@
----
-permalink: protect-hana/task_cancel_backup_operations_for_sap_hana.html 
-sidebar: sidebar 
-keywords:  
-summary: キューに登録されているバックアップ処理をキャンセルできます。 
----
-= SAP HANA のバックアップ処理をキャンセルします
+= 
 :allow-uri-read: 
-:icons: font
-:imagesdir: ../media/
 
+
+'''
+permalink：protect-hana/task_cancel_backup_operations_for_sap_hana.htmlサイドバー：サイドバーキーワード：概要：「キューに格納されているバックアップ処理をキャンセルできます。」--- SAP HANAのバックアップ処理をキャンセルします。icons：imagesdir：../media/
 
 キューに登録されているバックアップ処理をキャンセルできます。
 

@@ -1,14 +1,9 @@
----
-permalink: protect-scsql/task_clone_backups_using_powershell_cmdlets_for_sql.html 
-sidebar: sidebar 
-keywords: clone 
-summary: クローニングワークフローには、計画、クローニング処理の実行、および処理の監視が含まれます。 
----
-= PowerShell コマンドレットを使用してバックアップをクローニングする
+= 
 :allow-uri-read: 
-:icons: font
-:imagesdir: ../media/
 
+
+'''
+permalink: protect-scsql/task_clone_backups_using_powershell_cmdlets_for_sql.htmlサイドバー:サイドバーキーワード: clone summary :'The clone workflow includes planning、performing the clone operation、and monitoring the operation.--- PowerShellコマンドレットを使用してバックアップをクローニングします。icons：imagesdir：../media/
 
 クローニングワークフローには、計画、クローニング処理の実行、および処理の監視が含まれます。
 

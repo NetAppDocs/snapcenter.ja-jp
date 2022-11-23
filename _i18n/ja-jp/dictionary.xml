@@ -352,7 +352,6 @@
   <block id="91817a3c4feab4788ad5f16317cd2b5e" category="paragraph">エクスポートされた証明書に使用する新しいパスワードを指定し、 * Next * をクリックします。</block>
   <block id="262ae19666f55b8c3fbe02b43c8f93b8" category="paragraph">証明書のインポートウィザードを完了しています</block>
   <block id="addd3f74b675e28bf71a9fb679c0fac1" category="paragraph">概要を確認し、 [ 完了 ] をクリックしてインポートを開始します。</block>
-  <block id="00f1ae92d58286283bc965b1952157af" category="admonition">証明書のインポートは、秘密鍵にバンドルされている必要があります（サポートされている形式は、 *.pfx 、 *p12 、 *.p7b ）。</block>
   <block id="104bdf61dc45d8330dd81b72891ea1ad" category="list-text">「 Personal 」フォルダについて、手順 5 を繰り返します。</block>
   <block id="d89db36e40cda4db9332408e3db1bcae" category="summary">SnapCenter Plug-in for Microsoft SQL Server は、 Microsoft SQL Server データベースに対応したデータ保護管理を提供する、 NetApp SnapCenter ソフトウェアのホスト側コンポーネントです。Plug-in for SQL Server を使用することで、 SnapCenter 環境での SQL Server データベースのバックアップ、検証、リストア、およびクローニングの処理を自動化できます。</block>
   <block id="684a61c61cc522de778dd73d69a56db5" category="doc">SnapCenter Plug-in for Microsoft SQL Server の概要</block>
@@ -3990,7 +3989,6 @@
   <block id="53d187685aedd87c48a1c968cc264e39" category="paragraph">また、送信者と受信者の E メールアドレスと E メールの件名を指定する必要があります。また、 [* 設定 * （ Settings * ） ] &gt; [* グローバル設定 * （ * Global Settings * ） ] ページでも SMTP を設定する必要があります。</block>
   <block id="2065a62a889c7d875ea69c2c53fffe7c" category="doc">SAP HANA データベースのリストア処理を監視する</block>
   <block id="4bffcb318383f66f33ce546ef1bd835d" category="summary">キューに登録されているバックアップ処理をキャンセルできます。</block>
-  <block id="ffaafcbad8fa7abfb6f9166b4bc76388" category="doc">SAP HANA のバックアップ処理をキャンセルします</block>
   <block id="00b6424c67cd63395d096351871da862" category="list-text">処理をキャンセルするには、 SnapCenter 管理者またはジョブ所有者としてログインする必要があります。</block>
   <block id="7579ef9f39e92f070b72b32eec4dc236" category="list-text">バックアップ操作は、 *Monitor* ページまたは *Activity* ペインからキャンセルできます。</block>
   <block id="7cce8bb6fff837804846be288a5a1314" category="list-text">実行中のバックアップ処理をキャンセルすることはできません。</block>
@@ -5479,25 +5477,12 @@
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="summary">著作権に関する声明、商標、特許などにアクセスできます。</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法的通知</block>
   <block id="6016a2b341113bf496b719905398ecd2" category="section-title">著作権</block>
-  <block id="de6edae22bc37b97b38a15c7f8af62e2" category="inline-link"><block ref="de6edae22bc37b97b38a15c7f8af62e2" category="inline-link-rx"></block></block>
-  <block id="bb66384fc72d3c628df8a5f0f82af691" category="paragraph"><block ref="bb66384fc72d3c628df8a5f0f82af691" category="inline-link-rx"></block></block>
   <block id="126a02652da6de02962cf1b654fd6376" category="section-title">商標</block>
   <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NetApp 、 NetApp のロゴ、および NetApp の商標ページに記載されているマークは、 NetApp, Inc. の商標です。その他の会社名および製品名は、それぞれの所有者の商標である場合があります。</block>
-  <block id="a93bc0a57623c2facaa010825c808507" category="inline-link"><block ref="a93bc0a57623c2facaa010825c808507" category="inline-link-rx"></block></block>
-  <block id="e895a12067be0bbd74a4e8b2b0aa1151" category="paragraph"><block ref="e895a12067be0bbd74a4e8b2b0aa1151" category="inline-link-rx"></block></block>
   <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">特許</block>
   <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">ネットアップが所有する特許の最新リストは、次のサイトで入手できます。</block>
-  <block id="547ea2e305891e64d8e744949b0aca2c" category="inline-link"><block ref="547ea2e305891e64d8e744949b0aca2c" category="inline-link-rx"></block></block>
-  <block id="f48d97bbf0d920d837c970ab54fcbf14" category="paragraph"><block ref="f48d97bbf0d920d837c970ab54fcbf14" category="inline-link-rx"></block></block>
   <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">プライバシーポリシー</block>
-  <block id="50921fca0d376fca62102a5e608994e2" category="inline-link"><block ref="50921fca0d376fca62102a5e608994e2" category="inline-link-rx"></block></block>
-  <block id="3440f69304b6f0194e5502be93aede3f" category="paragraph"><block ref="3440f69304b6f0194e5502be93aede3f" category="inline-link-rx"></block></block>
-  <block id="b4de17ead867a3cf0b9d11e57e562672" category="section-title">機械翻訳</block>
-  <block id="19d4bd8b5bc76a91b74c1aa69ecea894" category="paragraph">翻訳版のコンテンツに関する重要な情報。</block>
-  <block id="db9bfd81e26275c9db26e2db3ac172c3" category="inline-link"><block ref="db9bfd81e26275c9db26e2db3ac172c3" category="inline-link-rx"></block></block>
-  <block id="53028fa3036b4b4d8b4ba1c27bf5f0f8" category="paragraph"><block ref="53028fa3036b4b4d8b4ba1c27bf5f0f8" category="inline-link-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">オープンソース</block>
-  <block id="0d06100a9c9a8a7758a0d58988e99d2f" category="paragraph">本製品で使用されているサードパーティの著作権およびライセンスに関する情報を提供します。お使いの製品では、必ずしも以下に示すすべてのソフトウェアコンポーネントを使用しているわけではありません。</block>
   <block id="80e29bd8c63d2e1543e65e2db033a6a4" category="summary">SnapCenter ソフトウェアは、シンプルで拡張性に優れた一元的なプラットフォームです。ハイブリッドクラウドの任意の場所にある ONTAP システムで実行されているアプリケーション、データベース、ホストファイルシステム、 VM に対して、アプリケーションと整合性のあるデータ保護を提供します。</block>
   <block id="7608e75619cff3eeb4e8bce40481b456" category="doc">SnapCenter ソフトウェアのドキュメント</block>
   <block id="057a347dfa62d3d36d0bcd41b7f519e2" category="summary">SnapCenter サーバからホストにアクセスできない場合は、ホスト上でローカルに SnapCenter プラグインをアンインストールできます。</block>
@@ -6815,12 +6800,6 @@
   <block id="822239f41b07c86cff067dac38fab7f4" category="doc">最小限の権限で ONTAP クラスタロールを作成します</block>
   <block id="d96a08e21a2a6f654ce7bfb34d9c3bf4" category="section-title">クラスタロールの作成および権限の割り当てに使用する ONTAP CLI コマンド</block>
   <block id="166504d6fb19fa3fcbbf622275eef589" category="paragraph">クラスタロールを作成して権限を割り当てるには、いくつかの ONTAP CLI コマンドを実行する必要があります。</block>
-  <block id="41d7ade3381c454a1329620f9f658b8b" category="list-text">「 security login role create -role Role_Name -cmddirname 」 cluster identity modify -vserver cluster_name または cluster_name -access all 」を指定します</block>
-  <block id="6fb89d73c4a5ac47fffbb74dfa2e83f1" category="list-text">「 security login role create -role role_Name -cmddirname 」 cluster identity show -vserver cluster_name -access all 」を参照してください</block>
-  <block id="065992cd0013f37f03b4e13303b9ba92" category="list-text">「 security login role create -role Role_Name -cmddirname 」 cluster modify -vserver cluster_name -access all `</block>
-  <block id="6cf57dddc7246be83fead826cd2d488b" category="list-text">「 security login role create -role Role_Name -cmddirname 」 cluster peer show -vserver cluster_name -access all `</block>
-  <block id="09835700a8ab8639649722dc18579f0c" category="list-text">「 security login role create -role Role_Name -cmddirname 」 cluster show -vserver Cluster_name -access all `</block>
-  <block id="9d566854ec7ef14de553dc0b2222fae0" category="list-text">「 security login role create -role Role_Name -cmddirname 」 event generate-autosupport-log 」 -vserver cluster_name -access all `</block>
   <block id="cd2a321672946fd6e39976559e1e72a9" category="list-text">security login role create -vserver cluster_name -role Role_Name -cmddirname " job history show " -access all `</block>
   <block id="bb513c5a705eb742be0e75eb7c864f5b" category="list-text">security login role create -vserver cluster_name -role Role_Name -cmddirname "job stop " -access all `</block>
   <block id="6435842f20dddcddfd00a9e7ec2f3111" category="list-text">「 security login role create -vserver cluster_name -role Role_Name -cmddirname "lun" -access all</block>
@@ -7315,7 +7294,6 @@
   <block id="bbbbcb8f41827abddd8ec6151fdf9e99" category="sidebar">SnapCenter ソフトウェア</block>
   <block id="27e7993c4841ae5fd670cdd945ccb96d" category="inline-link">ディザスタリカバリ API</block>
   <block id="90840bc3d6109c892e0f709274fdc6b6" category="paragraph">詳細については、を参照してください<block ref="af818973dd6acaf1e28a3bd4ca9bd4a5" category="inline-link-rx"></block> ビデオ：</block>
-  <block id="699f1c0496b9360a6686498114b0be37" category="paragraph">FAS 、 AFF 、および Amazon FSX に必要です</block>
   <block id="c6a05503c268c70227420c852ced4926" category="admonition">/etc/fstab ファイル内の UUID マッピングは SnapCenter でサポートされません。</block>
   <block id="3160f4991d365988a865df5567f2147f" category="list-text">Jobs （ジョブ）ページで、次の手順を実行します。</block>
   <block id="1c41074e44dc2e55551dfb68d2bc354d" category="list-text">［ ジョブの詳細 ］ ページで、 ［ * ログの表示 * ］ をクリックします。</block>
@@ -7921,4 +7899,21 @@
   <block id="654c0ff0573689496c47502d09cfe7a8" category="list-text">12_c_databaseのバックアップをクローニングするためのシードPDB関連情報を取得するには、ソースデータベースのパラメータファイルでexclude_seed_cdb_viewの値をFALSEに設定する必要があります。</block>
   <block id="dfb3e8f24407538f95c7f42d27411d1b" category="admonition">この値は、12_c_databaseをバックアップする前に設定する必要があります。</block>
   <block id="98084b9b354e4b46189c9b89dc98527a" category="list-text"><block ref="e083e217410d0cc67271c8e1828e715a" prefix="" category="inline-code"></block></block>
+  <block id="0d51371cbb850772d2130a36f4368df4" category="list-text">MetroCluster のショーをご覧ください</block>
+  <block id="09e95b77ffe81fe465a83ba99efad5c8" category="paragraph"><block ref="09e95b77ffe81fe465a83ba99efad5c8" category="inline-link-rx"></block></block>
+  <block id="7aa531e9acfe2b98e34d2c92fe9846ff" category="paragraph"><block ref="7aa531e9acfe2b98e34d2c92fe9846ff" category="inline-link-rx"></block></block>
+  <block id="d7f1fbcf9ce4e42f705add574d262b2c" category="paragraph"><block ref="d7f1fbcf9ce4e42f705add574d262b2c" category="inline-link-rx"></block></block>
+  <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
+  <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知ファイルには、ネットアップソフトウェアで使用されるサードパーティの著作権およびライセンスに関する情報が記載されています。</block>
+  <block id="1dee04b6f048297be6da9f8740c99b6d" category="admonition">証明書のインポートは、秘密鍵にバンドルされている必要があります（サポートされている形式は、*.pfx、*.p12、および*.p7b）。</block>
+  <block id="ad6e610d08a861e343805ef4cb444552" category="paragraph">permalink: protect-scsql/task_clone_backups_using_powershell_cmdlets_for_sql.htmlサイドバー:サイドバーキーワード: clone summary :'The clone workflow includes planning、performing the clone operation、and monitoring the operation.--- PowerShellコマンドレットを使用してバックアップをクローニングします。icons：imagesdir：../media/</block>
+  <block id="bd259d74a88fa9ae4cdb9c027643d76a" category="paragraph">FAS およびAFF に必要です</block>
+  <block id="56b5155701c0c0dd57595a6dd3daf917" category="list-text"><block ref="336b55519098bef0384fc43c7f43f47b" prefix="" category="inline-code"></block></block>
+  <block id="eda6105c4f159883b951dcd044964c6f" category="list-text"><block ref="2c9674954a47108e373e077d3bcb8357" prefix="" category="inline-code"></block></block>
+  <block id="4cf7cdb80a69806b961d32bc57f3ac26" category="list-text"><block ref="ad3921143a52d77fc513fd3dae33e149" prefix="" category="inline-code"></block></block>
+  <block id="7b7a10c598084df58b9da02c47af7a60" category="list-text"><block ref="f6adba9e3b22137c40b1d75ee2b37e75" prefix="" category="inline-code"></block></block>
+  <block id="d8135ce9a2bd17b9c659e4605801a778" category="list-text"><block ref="f659aa294fff6eaecdf95876c173adf6" prefix="" category="inline-code"></block></block>
+  <block id="dde541c94f2b033571de6bfe76fcf3c3" category="list-text"><block ref="234efccf9d477e939eeae95c37c1803f" prefix="" category="inline-code"></block></block>
+  <block id="e2bb7a9783ce9c6c02e6001911562e16" category="list-text"><block ref="2e72f8b3689961923dec66f94cdf620f" prefix="" category="inline-code"></block></block>
+  <block id="91ae9720ac69723481c4de57234c575e" category="paragraph">permalink：protect-hana/task_cancel_backup_operations_for_sap_hana.htmlサイドバー：サイドバーキーワード：概要：「キューに格納されているバックアップ処理をキャンセルできます。」--- SAP HANAのバックアップ処理をキャンセルします。icons：imagesdir：../media/</block>
 </blocks>

@@ -123,4 +123,10 @@ summary: 必要な最小 ONTAP 権限は、データ保護に使用する SnapCe
 * network interface show の略
 
 
+
+
+ a| 
+* MetroCluster のショーをご覧ください
+
+
 |===

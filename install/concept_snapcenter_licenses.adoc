@@ -20,7 +20,7 @@ SnapCenter では、アプリケーション、データベース、ファイル
  a| 
 SnapCenter 標準のコントローラベース
  a| 
-FAS 、 AFF 、および Amazon FSX に必要です
+FAS およびAFF に必要です
 
 SnapCenter Standard ライセンスはコントローラベースのライセンスで、 Premium Bundle に含まれています。SnapManager スイートのライセンスをお持ちの場合は、 SnapCenter Standard のライセンスもご利用いただけます。FAS または AFF ストレージを使用した SnapCenter の試用版をインストールする場合は、営業担当者にお問い合わせください。
 

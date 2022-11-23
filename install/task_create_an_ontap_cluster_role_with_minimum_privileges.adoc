@@ -39,12 +39,13 @@ NOTE: このコマンドは権限ごとに実行する必要があります。
 
 クラスタロールを作成して権限を割り当てるには、いくつかの ONTAP CLI コマンドを実行する必要があります。
 
-* 「 security login role create -role Role_Name -cmddirname 」 cluster identity modify -vserver cluster_name または cluster_name -access all 」を指定します
-* 「 security login role create -role role_Name -cmddirname 」 cluster identity show -vserver cluster_name -access all 」を参照してください
-* 「 security login role create -role Role_Name -cmddirname 」 cluster modify -vserver cluster_name -access all `
-* 「 security login role create -role Role_Name -cmddirname 」 cluster peer show -vserver cluster_name -access all `
-* 「 security login role create -role Role_Name -cmddirname 」 cluster show -vserver Cluster_name -access all `
-* 「 security login role create -role Role_Name -cmddirname 」 event generate-autosupport-log 」 -vserver cluster_name -access all `
+* `security login role create -vserver Cluster_name or cluster_name -role Role_Name -cmddirname "metrocluster show" -access readonly`
+* `security login role create -vserver Cluster_name or cluster_name -role Role_Name -cmddirname "cluster identity modify" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "cluster identity show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "cluster modify" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "cluster peer show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "cluster show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "event generate-autosupport-log" -access all`
 * security login role create -vserver cluster_name -role Role_Name -cmddirname " job history show " -access all `
 * security login role create -vserver cluster_name -role Role_Name -cmddirname "job stop " -access all `
 * 「 security login role create -vserver cluster_name -role Role_Name -cmddirname "lun" -access all

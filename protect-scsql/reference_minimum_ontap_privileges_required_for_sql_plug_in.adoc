@@ -184,9 +184,6 @@ vserver iscsi connection show
 
 vserver show のコマンドです
 
-|===
-|===
-| 読み取り専用コマンド： ONTAP 8.3.0 以降で必要な最小権限 
 
 
  a| 
@@ -195,5 +192,7 @@ Network Interface の略
 network interface show の略
 
 Vserver
+
+MetroCluster のショーをご覧ください
 
 |===
