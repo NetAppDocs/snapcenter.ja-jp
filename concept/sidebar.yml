@@ -15,7 +15,7 @@ entries:
   - title: 事前定義された SnapCenter ロールと権限
     url: "/concept/reference_pre_defined_snapcenter_roles_and_permissions.html"
 - title: ディザスタリカバリ
-  url: "/protect-concept/concept_disaster_recovery.html"
+  url: "/concept/concept_disaster_recovery.html"
 - title: リソース、リソースグループ、ポリシー
   url: "/concept/concept_resources_resource_groups_and_policies.html"
 - title: プリスクリプトとポストスクリプト
