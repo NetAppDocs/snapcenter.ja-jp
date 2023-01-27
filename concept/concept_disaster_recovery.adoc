@@ -33,6 +33,9 @@ SnapCenter のディザスタリカバリ機能では、 REST API を使用し�
 +
 link:../sc-automation/rest_api_workflows_disaster_recovery_of_snapcenter_server.html["SnapCenter サーバのディザスタリカバリ用の REST API のワークフロー"]
 
++
+監査設定に関連する構成ファイルはDRバックアップにバックアップされず、リストア処理後にDRサーバにもバックアップされません。監査ログの設定を手動で繰り返す必要があります。
+
 * * SnapCenter プラグインと Storage DR *
 +
 DR は、 SnapCenter Plug-in for SQL Server でのみサポートされます。SnapCenter Plug-in for SQL Server がダウンしたときに、別の SQL ホストに切り替えてデータをリカバリする手順はいくつかあります。

@@ -126,7 +126,7 @@ NOTE: バックアップ・ジョブ作成時に選択するサーバ上の * �
 E メール通知を利用する場合は、 GUI または PowerShell コマンド「 S et-SmtpServer 」を使用して、 SMTP サーバの詳細を指定しておく必要があります。
 
 +
-コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
 
 . 概要を確認し、 [ 完了 ] をクリックします。
 

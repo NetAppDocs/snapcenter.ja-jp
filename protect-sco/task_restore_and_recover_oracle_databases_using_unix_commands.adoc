@@ -17,7 +17,7 @@ summary: リストアとリカバリのワークフローには、計画、リ�
 
 次のコマンドを実行して、 SnapCenter サーバとの接続を確立し、バックアップをリストしてその情報を取得し、バックアップをリストアする必要があります。
 
-コマンドで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2883301["SnapCenter ソフトウェアコマンドリファレンスガイド"^]。
+コマンドで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2885486["SnapCenter ソフトウェアコマンドリファレンスガイド"^]。
 
 * 手順 *
 

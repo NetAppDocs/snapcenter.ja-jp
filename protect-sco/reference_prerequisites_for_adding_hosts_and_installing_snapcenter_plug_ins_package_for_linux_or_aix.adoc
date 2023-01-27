@@ -16,14 +16,18 @@ summary: ホストを追加してプラグインパッケージをインスト�
 * iSCSI を使用している場合は、 iSCSI サービスが実行されている必要があります。
 * root ユーザまたは root 以外のユーザ用にパスワードベースの SSH 接続を有効にしておく必要があります。
 +
-SnapCenter Plug-in for Oracle Database は、 root 以外のユーザがインストールできます。ただし、プラグインプロセスをインストールして開始できるように root 以外のユーザに sudo 権限を設定する必要があります。プラグインをインストールすると、プロセスが有効な root ユーザとして実行されます。
+SnapCenter Plug-in for Oracle Database は、 root 以外のユーザがインストールできます。ただし、プラグインプロセスをインストールして開始できるように root 以外のユーザに sudo 権限を設定する必要があります。プラグインをインストールすると、有効なroot以外のユーザとしてプロセスが実行されるようになります。
 
 * AIX ホストに SnapCenter Plug-ins Package for AIX をインストールする場合は、ディレクトリレベルのシンボリックリンクを手動で解決しておく必要があります。
 +
 SnapCenter Plug-ins Package for AIX は、ファイルレベルのシンボリックリンクを自動的に解決しますが、 JAVA_HOME の絶対パスを取得するためのディレクトリレベルのシンボリックリンクは解決しません。
 
 * インストールユーザ用に、認証モードを Linux または AIX に設定してクレデンシャルを作成します。
-* Linux または AIX ホストに Java 1.8.x 、 64 ビットをインストールしておく必要があります。
+* LinuxまたはAIXホストにJava 1.8.xまたはJava 11（64ビット）をインストールしておく必要があります。
++
+
+NOTE: LinuxホストにJava 11の認定エディションのみがインストールされていることを確認します。
+
 +
 Java のダウンロード方法については、次を参照してください。
 
@@ -87,7 +91,12 @@ NOTE: 十分なディスクスペースを割り当て、 logs フォルダに�
  a| 
 必要なソフトウェアパッケージ
  a| 
-Java 1.8.x （ 64 ビット）の Oracle Java と OpenJDK のバージョン
+* Java 1.8.x（64ビット）のOracle JavaとOpenJDKのバージョン
+* Java 11（64ビット）のOracle JavaとOpenJDKのバージョン
+
+
+
+NOTE: LinuxホストにJava 11の認定エディションのみがインストールされていることを確認します。
 
 Java を最新バージョンにアップグレードした場合は、 /var/opt/snapcenter /etc/sp/etc/spl.properties にある JAVA_HOME オプションが正しい Java バージョンに設定されていること、および正しいパスが指定されていることを確認する必要があります。
 
@@ -98,12 +107,11 @@ Java を最新バージョンにアップグレードした場合は、 /var/opt
 
 === Linux ホストの root 以外のユーザに sudo 権限を設定する
 
-SnapCenter 2.0 以降のリリースでは、 root 以外のユーザが SnapCenter Plug-ins Package for Linux をインストールしてプラグインプロセスを開始できます。いくつかのパスにアクセスできるように root 以外のユーザに sudo 権限を設定する必要があります。
+SnapCenter 2.0 以降のリリースでは、 root 以外のユーザが SnapCenter Plug-ins Package for Linux をインストールしてプラグインプロセスを開始できます。プラグインプロセスは、有効なroot以外のユーザとして実行されます。いくつかのパスにアクセスできるように root 以外のユーザに sudo 権限を設定する必要があります。
 
 * 必要なもの *
 
-* sudo バージョンは 1.8.7 ～ 1.8.19P2 です。
-* root 以外のユーザが Oracle インストールグループに含まれていることを確認します。
+* sudoバージョン1.8.7以降。
 * /etc/ssh/sshd_config_file を編集して、メッセージ認証コードアルゴリズム MACs HMAC-sha2-256 および MACs HMAC-sha2-512 を設定します。
 +
 構成ファイルを更新したら、 sshd サービスを再起動します。
@@ -132,13 +140,10 @@ MACs hmac-sha2-256
 
 次のパスにアクセスできるように root 以外のユーザに sudo 権限を設定する必要があります。
 
-* /home / sudo _user_/ .sc_netapp / snapcenter_linux_host_plugin.bin
+* /home/_linux_user_//.sc_netapp / snapcenter_linux_host_plugin.bin
 * /custom_location/NetApp/snapcenter /spl/installing/plugins/uninstall
 * /custom_location/NetApp/snapcenter /spl/bin/spl になります
 
-
-
-NOTE: RACセットアップを管理する場合は、root以外のユーザをOracleユーザにする必要があります。また、root以外のOSユーザにもこのユーザを使用することはできません。
 
 * 手順 *
 
@@ -147,35 +152,32 @@ NOTE: RACセットアップを管理する場合は、root以外のユーザをO
 +
 [listing, subs="+quotes"]
 ----
-Cmnd_Alias SCCMD = sha224:checksum_value== /home/_SUDO_USER_/.sc_netapp/snapcenter_linux_host_plugin.bin,
-/opt/NetApp/snapcenter/spl/installation/plugins/uninstall,
-/opt/NetApp/snapcenter/spl/bin/spl
-Cmnd_Alias PRECHECKCMD = sha224:checksum_value== /home/_SUDO_USER_/.sc_netapp/Linux_Prechecks.sh
-_SUDO_USER_ ALL=(ALL) NOPASSWD:SETENV: SCCMD, PRECHECKCMD
-Defaults: _SUDO_USER_ env_keep=JAVA_HOME
-Defaults: _SUDO_USER_ !visiblepw
-Defaults: _SUDO_USER_ !requiretty
+Cmnd_Alias HPPLCMD = sha224:checksum_value== /home/_LINUX_USER_/.sc_netapp/snapcenter_linux_host_plugin.bin, /opt/NetApp/snapcenter/spl/installation/plugins/uninstall, /opt/NetApp/snapcenter/spl/bin/spl, /opt/NetApp/snapcenter/scc/bin/scc
+Cmnd_Alias PRECHECKCMD = sha224:checksum_value== /home/_LINUX_USER_/.sc_netapp/Linux_Prechecks.sh
+Cmnd_Alias CONFIGCHECKCMD = sha224:checksum_value== /opt/NetApp/snapcenter/spl/plugins/scu/scucore/configurationcheck/Config_Check.sh
+Cmnd_Alias SCCMD = sha224:checksum_value== /opt/NetApp/snapcenter/spl/bin/sc_command_executor
+Cmnd_Alias SCCCMDEXECUTOR =checksum_value== /opt/NetApp/snapcenter/scc/bin/sccCommandExecutor
+_LINUX_USER_ ALL=(ALL) NOPASSWD:SETENV: HPPLCMD, PRECHECKCMD, CONFIGCHECKCMD, SCCCMDEXECUTOR, SCCMD
+Defaults: _LINUX_USER_ !visiblepw
+Defaults: _LINUX_USER_ !requiretty
 ----
 +
-_sudo _user_は 、作成した root 以外のユーザの名前です。
 
-+
-チェックサム値は、 _ C ： \ProgramData\NetApp\SnapCenter \Package Repository_に ある * ORACLE_checksum.txt * ファイルから取得できます。
+NOTE: RACセットアップを実行している場合は、他の許可されているコマンドとともに、/etc/sudoersファイルに次のように追加します。'/RAC/bin/olsnodes'<crs_home>
 
-+
+
+
+_crs_home_fileの値は、/etc/oracle/olr.loc_fileから取得できます。
+
+_linux_user_は、作成したroot以外のユーザの名前です。
+
+checksum_value_xは、_ C：\ProgramData\NetApp\SnapCenter \Package Repository_に ある* ORACLE_checksum.txt *ファイルから取得できます。
+
 カスタムの場所を指定した場合、場所は _custom_path \NetApp\SnapCenter \Package Repository_に なります。
 
-+
 
 IMPORTANT: この例は、独自のデータを作成するための参照としてのみ使用してください。
 
-
-
-|===
-
-
-| * ベストプラクティス：セキュリティ上の理由から、インストールまたはアップグレードのたびに sudo エントリを削除することを推奨します。 
-|===
 
 
 == AIX ホストの要件
@@ -216,7 +218,9 @@ NOTE: 十分なディスクスペースを割り当て、 logs フォルダに�
  a| 
 必要なソフトウェアパッケージ
  a| 
-Java 1.8.x （ 64 ビット） IBM Java
+* Java 1.8.x（64ビット）IBM Java
+* Java 11（64ビット）IBM Java
+
 
 Java を最新バージョンにアップグレードした場合は、 /var/opt/snapcenter /etc/sp/etc/spl.properties にある JAVA_HOME オプションが正しい Java バージョンに設定されていること、および正しいパスが指定されていることを確認する必要があります。
 
@@ -227,12 +231,11 @@ Java を最新バージョンにアップグレードした場合は、 /var/opt
 
 === AIX ホストの root 以外のユーザに sudo 権限を設定します
 
-SnapCenter 4.4 以降では、 root 以外のユーザが SnapCenter Plug-ins Package for AIX をインストールしてプラグインプロセスを開始できます。いくつかのパスにアクセスできるように root 以外のユーザに sudo 権限を設定する必要があります。
+SnapCenter 4.4 以降では、 root 以外のユーザが SnapCenter Plug-ins Package for AIX をインストールしてプラグインプロセスを開始できます。プラグインプロセスは、有効なroot以外のユーザとして実行されます。いくつかのパスにアクセスできるように root 以外のユーザに sudo 権限を設定する必要があります。
 
 * 必要なもの *
 
-* sudo バージョンは 1.8.7 ～ 1.8.19P2 です。
-* root 以外のユーザが Oracle インストールグループに含まれていることを確認します。
+* sudoバージョン1.8.7以降。
 * /etc/ssh/sshd_config_file を編集して、メッセージ認証コードアルゴリズム MACs HMAC-sha2-256 および MACs HMAC-sha2-512 を設定します。
 +
 構成ファイルを更新したら、 sshd サービスを再起動します。
@@ -266,9 +269,6 @@ MACs hmac-sha2-256
 * /custom_location/NetApp/snapcenter /spl/bin/spl になります
 
 
-
-NOTE: RACセットアップを管理する場合は、root以外のユーザをOracleユーザにする必要があります。また、root以外のOSユーザにもこのユーザを使用することはできません。
-
 * 手順 *
 
 . SnapCenter Plug-ins Package for AIX をインストールする AIX ホストにログインします。
@@ -276,34 +276,32 @@ NOTE: RACセットアップを管理する場合は、root以外のユーザをO
 +
 [listing, subs="+quotes"]
 ----
-Cmnd_Alias SCCMD = sha224:checksum_value== /home/_AIX_USER_/.sc_netapp/snapcenter_aix_host_plugin.bsx,
-/opt/NetApp/snapcenter/spl/installation/plugins/uninstall,
-/opt/NetApp/snapcenter/spl/bin/spl
+Cmnd_Alias HPPACMD = sha224:checksum_value== /home/_AIX_USER_/.sc_netapp/snapcenter_aix_host_plugin.bsx,
+/opt/NetApp/snapcenter/spl/installation/plugins/uninstall, /opt/NetApp/snapcenter/spl/bin/spl
 Cmnd_Alias PRECHECKCMD = sha224:checksum_value== /home/_AIX_USER_/.sc_netapp/AIX_Prechecks.sh
-_AIX_USER_ ALL=(ALL) NOPASSWD:SETENV: SCCMD, PRECHECKCMD
+Cmnd_Alias CONFIGCHECKCMD = sha224:checksum_value== /opt/NetApp/snapcenter/spl/plugins/scu/scucore/configurationcheck/Config_Check.sh
+Cmnd_Alias SCCMD = sha224:checksum_value== /opt/NetApp/snapcenter/spl/bin/sc_command_executor
+_AIX_USER_ ALL=(ALL) NOPASSWD:SETENV: HPPACMD, PRECHECKCMD, CONFIGCHECKCMD, SCCMD
 Defaults: _AIX_USER_ !visiblepw
 Defaults: _AIX_USER_ !requiretty
 ----
 +
+
+NOTE: RACセットアップを実行している場合は、他の許可されているコマンドとともに、/etc/sudoersファイルに次のように追加します。'/RAC/bin/olsnodes'<crs_home>
+
+
+
+_crs_home_fileの値は、/etc/oracle/olr.loc_fileから取得できます。
+
 _aix_user_は 、作成した root 以外のユーザの名前です。
 
-+
-チェックサム値は、 _ C ： \ProgramData\NetApp\SnapCenter \Package Repository_に ある * ORACLE_checksum.txt * ファイルから取得できます。
+checksum_value_xは、_ C：\ProgramData\NetApp\SnapCenter \Package Repository_に ある* ORACLE_checksum.txt *ファイルから取得できます。
 
-+
 カスタムの場所を指定した場合、場所は _custom_path \NetApp\SnapCenter \Package Repository_に なります。
 
-+
 
 IMPORTANT: この例は、独自のデータを作成するための参照としてのみ使用してください。
 
-
-
-|===
-
-
-| * ベストプラクティス：セキュリティ上の理由から、インストールまたはアップグレードのたびに sudo エントリを削除することを推奨します。 
-|===
 
 
 == クレデンシャルを設定する

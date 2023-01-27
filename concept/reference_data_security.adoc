@@ -27,9 +27,12 @@ SnapCenter には、次のセキュリティ機能が含まれています。
 * SnapCenter は、会社のファイアウォールの内側にインストールされ、 SnapCenter サーバへのアクセス、および SnapCenter サーバとプラグイン間の通信を可能にします。
 * SnapCenter API および操作アクセスでは、 AES 暗号化で暗号化されたトークンが使用されます。このトークンの有効期限は 24 時間です。
 * SnapCenter は、ログイン用に Windows Active Directory と統合されているほか、アクセス権限を制御するロールベースアクセス制御（ RBAC ）も統合されています。
+* IPSecは、WindowsおよびLinuxホスト・マシン用のONTAP 上のSnapCenter でサポートされます。 https://docs.netapp.com/us-en/ontap/networking/configure_ip_security_@ipsec@_over_wire_encryption.html#use-ipsec-identities["詳細はこちら。"]。
 * SnapCenter PowerShell コマンドレットセッションはセキュリティで保護されます。
 * デフォルトでは、操作を行わないまま 15 分が経過すると、 5 分後に SnapCenter からログアウトすることを示す警告が表示されます。操作を行わないまま 20 分が経過すると、 SnapCenter からログアウトされ、再度ログインする必要があります。ログアウト期間を変更できます。
 * ログインに 5 回以上失敗すると、一時的にログインが無効になります。
+* SnapCenter サーバとONTAP 間のCA証明書認証をサポートします。 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_securely_connect_SnapCenter_with_ONTAP_using_CA_certificate["詳細はこちら。"]。
+* SnapCenter サーバとプラグインに整合性検証機能が追加され、新規インストールおよびアップグレード処理中に出荷されたすべてのバイナリが検証されます。
 
 
 

@@ -50,6 +50,6 @@ https://imt.netapp.com/matrix/imt.jsp?components=105284;&solution=1259&isHWU&src
 . 次のコマンドを入力して、 =<installation directory>/NetApp/snapcenter /cscc /etc/SC_SMS_Services.properties ファイルを編集し、 plugins/enabled=hana ： 3.0 パラメータを追加します。
 . Add-Smhost コマンドレットと必要なパラメータを使用して、ホストを SnapCenter サーバに追加します。
 +
-コマンドで使用できるパラメータとその説明については、 RUNNING Get Help command_name _ を使用して参照できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+コマンドで使用できるパラメータとその説明については、 RUNNING Get Help command_name _ を使用して参照できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
 
 

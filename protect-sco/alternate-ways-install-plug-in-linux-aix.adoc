@@ -10,6 +10,20 @@ summary: SnapCenter Plug-ins Package for Linux または SnapCenter Plug-ins Pac
 :imagesdir: ../media/
 
 
+[role="lead"]
+コマンドレットまたはCLIを使用して、LinuxまたはAIX用のPlug-ins Packageを手動でインストールすることもできます。
+
+プラグインを手動でインストールする前に、_ C：\ProgramData\NetApp\SnapCenter \Package Repository_に あるキー* snapcenter public_key.pub *と* snapcenter _ linux_host_plugin.bin .sig *を使用して、バイナリパッケージの署名を検証する必要があります。
+
+
+NOTE: プラグインをインストールするホストに* OpenSSL 1.0.2G*がインストールされていることを確認します。
+
+次のコマンドを実行して、バイナリパッケージの署名を検証します。
+
+* Linuxホストの場合： `openssl dgst -sha256 -verify snapcenter_public_key.pub -signature snapcenter_linux_host_plugin.bin.sig snapcenter_linux_host_plugin.bin`
+* AIXホストの場合： `openssl dgst -sha256 -verify snapcenter_public_key.pub -signature snapcenter_linux_host_plugin.bsx.sig snapcenter_linux_host_plugin.bsx`
+
+
 
 
 == コマンドレットを使用して複数のリモートホストにインストールします
@@ -35,7 +49,7 @@ NOTE: ファイアウォールの拒否ルールで指定されているプラ�
 . リモートインストールのクレデンシャルを入力します。
 
 
-コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
 
 
 
@@ -65,9 +79,9 @@ NOTE: 他の SnapCenter 処理の実行中にフェイルオーバーが発生�
 
 
 
-== Linux 用の Plug-ins Package をサイレントモードまたはコンソールモードでインストールします
+== Linux用のPlug-ins Packageをサイレントモードでインストールします
 
-SnapCenter Plug-ins Package for Linux は、コンソールモードまたはコマンドラインインターフェイス（ CLI ）を使用してサイレントモードでインストールできます。
+コマンドラインインターフェイス（CLI）を使用して、SnapCenter Plug-ins Package for Linuxをサイレントモードでインストールできます。
 
 * 必要なもの *
 
@@ -89,32 +103,10 @@ DISPLAY 環境変数が設定されている場合は、 UNSET DISPLAY を実行
 デフォルトのインストールパスは、 _C ： \ProgramData\NetApp\SnapCenter \PackageRepository_です 。このパスには、 SnapCenter サーバがインストールされているホストからアクセスできます。
 
 . コマンドプロンプトで、インストールファイルをダウンロードしたディレクトリに移動します。
-. 使用するインストールモードに応じて、次のいずれかの手順を実行します。
+. を実行します
 +
-|===
-| インストールモード | 手順 
-
-
- a| 
-コンソールモード
- a| 
-.. を実行します
-+
-SnapCenter_linux_host_plugin.bin – I console
-
-.. 画面の指示に従ってインストールを完了します。
-
-
-
-
- a| 
-サイレントモード
- a| 
-を実行します
-
 `../SnapCenter _Linux_host_plugin.bin -i サイレント -dport=8145 - DSERVER_IP=SnapCenter _Server_FQDN -DSERVER_HTTPS_PORT=SnapCenter _ Server_Port-DUSER_INSTALL_DIR=/opt/custom_path
 
-|===
 . /var/opt/snapcenter /spl/etc/__ にある spl.properties ファイルを編集して、 spl_enabled_plugins/SCO 、 SCU を追加し、 SnapCenter Plug-in Loader サービスを再起動します。
 
 

@@ -18,7 +18,7 @@ summary: ホストを追加してプラグインパッケージをインスト�
 link:concept_develop_a_plug_in_for_your_application.html["アプリケーション用のプラグインを開発します"]
 
 * MySQL または DB2 アプリケーションを管理する場合は、ネットアップが提供している MySQL および DB2 のカスタムプラグインをダウンロードしておく必要があります。
-* Linux ホストまたは Windows ホストに Java 1.8 / 64 ビットをインストールしておく必要があります。
+* Java 1.8またはJava 11（64ビット）がLinuxホストまたはWindowsホストにインストールされている必要があります。
 * Windows ホストにプラグインをインストールする場合、ビルトインでないクレデンシャルを指定する場合、またはユーザがローカルワークグループユーザに属している場合は、ホストで UAC を無効にする必要があります。
 * カスタムプラグインが、ホストの追加処理を実行するクライアントホストにインストールされている必要があります。
 
@@ -80,9 +80,9 @@ custom_plugin_schecksum_listは、SnapCenter によってホストにインス�
 == Linux ホスト
 
 * root ユーザまたは root 以外のユーザ用にパスワードベースの SSH 接続を有効にしておく必要があります。
-* Linux ホストに Java 1.8 64 ビットがインストールされている必要があります。
+* Java 1.8またはJava 11（64ビット）をLinuxホストにインストールしておく必要があります。
 +
-SnapCenter Server ホストに Windows 2019 または Windows 2016 を使用している場合は、 Java 1.8 、 64 ビットをインストールする必要があります。要件の最新情報については、 Interoperability Matrix Tool （ IMT ）を参照してください。
+SnapCenter ServerホストにWindows Server 2019またはWindows Server 2016を使用している場合は、Java 1.8またはJava 11（64ビット）をインストールする必要があります。要件の最新情報については、 Interoperability Matrix Tool （ IMT ）を参照してください。
 
 +
 http://www.java.com/en/download/manual.jsp["すべてのオペレーティングシステム用の Java のダウンロード"]
@@ -90,13 +90,31 @@ http://www.java.com/en/download/manual.jsp["すべてのオペレーティング
 +
 https://imt.netapp.com/matrix/imt.jsp?components=105308;&solution=1259&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"]
 
-* いくつかのパスにアクセスできるように root 以外のユーザに sudo 権限を設定する必要があります。visudo Linux ユーティリティを使用して、 /etc/sudoers ファイルに次の行を追加します。例：
+* いくつかのパスにアクセスできるように root 以外のユーザに sudo 権限を設定する必要があります。visudo Linux ユーティリティを使用して、 /etc/sudoers ファイルに次の行を追加します。
 +
-[listing]
+
+NOTE: Sudoバージョン1.8.7以降を使用していることを確認します。
+
++
+[listing, subs="+quotes"]
 ----
-Cmnd_Alias SCCMD = /opt/NetApp/snapcenter/scc/bin/scc <non_root_user> ALL=(ALL) NOPASSWD:SETENV: SCCMD
+Cmnd_Alias HPPLCMD = sha224:checksum_value== /home/_LINUX_USER_/.sc_netapp/snapcenter_linux_host_plugin.bin, /opt/NetApp/snapcenter/spl/installation/plugins/uninstall, /opt/NetApp/snapcenter/spl/bin/spl, /opt/NetApp/snapcenter/scc/bin/scc
+Cmnd_Alias PRECHECKCMD = sha224:checksum_value== /home/_LINUX_USER_/.sc_netapp/Linux_Prechecks.sh
+Cmnd_Alias CONFIGCHECKCMD = sha224:checksum_value== /opt/NetApp/snapcenter/spl/plugins/scu/scucore/configurationcheck/Config_Check.sh
+Cmnd_Alias SCCMD = sha224:checksum_value== /opt/NetApp/snapcenter/spl/bin/sc_command_executor
+Cmnd_Alias SCCCMDEXECUTOR =checksum_value== /opt/NetApp/snapcenter/scc/bin/sccCommandExecutor
+_LINUX_USER_ ALL=(ALL) NOPASSWD:SETENV: HPPLCMD, PRECHECKCMD, CONFIGCHECKCMD, SCCCMDEXECUTOR, SCCMD
+Defaults: _LINUX_USER_ !visiblepw
+Defaults: _LINUX_USER_ !requiretty
 ----
 +
-non_root_user は、作成した root 以外のユーザの名前です。
+_linux_user_は、作成したroot以外のユーザの名前です。
+
++
+checksum_value_xは、_ C：\ProgramData\NetApp\SnapCenter \Package Repository_に ある* ORACLE_checksum.txt *ファイルから取得できます。
+
++
+
+IMPORTANT: この例は、独自のデータを作成するための参照としてのみ使用してください。
 
 

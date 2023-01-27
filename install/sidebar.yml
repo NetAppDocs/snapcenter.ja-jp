@@ -76,6 +76,8 @@ entries:
     url: "/install/task_create_an_ontap_cluster_role_with_minimum_privileges.html"
   - title: Active Directory の読み取り権限を有効にするように IIS アプリケーションプールを設定します
     url: "/install/task_configure_iis_application_pools_to_enable_active_directory_read_permissions.html"
+- title: 監査ログを設定します
+  url: "/install/task_configure_audit_log_settings.html"
 - title: ストレージシステムを追加
   url: "/install/task_add_storage_systems.html"
 - title: SnapCenter の標準コントローラベースのライセンスを追加します

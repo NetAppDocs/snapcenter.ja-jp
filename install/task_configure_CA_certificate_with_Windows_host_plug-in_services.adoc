@@ -28,14 +28,11 @@ SnapCenter サーバおよび CA 証明書がすでに導入されているす�
  > netsh http delete sslcert ipport=0.0.0.0:8145
 . 次のコマンドを実行して、新しくインストールした証明書を Windows ホストプラグインサービスにバインドします。
 +
-[>$cert=_<certificate thumbprint>_]
-
-+
-$GUID=[GUID]: NewGuid().ToString("B")
-
-+
-`>netsh http add sslcertipport=0.0.0.0:_<SMCore Port>_certthash=$cert appid="$GUID"`
-
+....
+> $cert = “_<certificate thumbprint>_”
+> $guid = [guid]::NewGuid().ToString("B")
+> netsh http add sslcert ipport=0.0.0.0: _<SMCore Port>_ certhash=$cert appid="$guid"
+....
 +
 例：
 
@@ -43,6 +40,6 @@ $GUID=[GUID]: NewGuid().ToString("B")
 ....
 > $cert = “a909502dd82ae41433e6f83886b00d4277a32a7b”
 > $guid = [guid]::NewGuid().ToString("B")
-> netsh http add sslcert ipport=0.0.0.0:8145 certhash=$cert appid="$guid"
+> netsh http add sslcert ipport=0.0.0.0: _<SMCore Port>_ certhash=$cert appid="$guid"
 ....
 

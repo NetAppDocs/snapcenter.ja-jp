@@ -15,6 +15,6 @@ SnapCenter GUI を使用してホストのプロビジョニングやスペー�
 
 リモートのプラグインホストでコマンドレットを実行する場合は、 SnapCenter Open-SMConnection コマンドレットを実行して SnapCenter サーバへの接続を確立する必要があります。
 
-コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
 
 SnapDrive for Windows をサーバから削除したために SnapCenter PowerShell コマンドレットが破損した場合は、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_cmdlets_broken_when_SnapDrive_for_Windows_is_uninstalled["SnapDrive コマンドレットは、 SnapCenter for Windows をアンインストールすると解除されます"^]。

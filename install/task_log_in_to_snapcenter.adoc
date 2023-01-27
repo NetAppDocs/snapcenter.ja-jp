@@ -35,7 +35,7 @@ GUI のデフォルトの URL は、 SnapCenter サーバがインストール�
 
 ハイアベイラビリティ（ HA ）構成の場合は、仮想クラスタ IP_https://Virtual_Cluster_IP_or_FQDN:8146_ を使用して SnapCenter にアクセスする必要があります。Internet Explorer （ IE ）で \\ https://Virtual_Cluster_IP_or_FQDN:8146_ に移動しても SnapCenter UI が表示されない場合は、各プラグインホストで IE の信頼済みサイトに仮想クラスタの IP アドレスまたは FQDN を追加するか、あるいは各プラグインホストで IE のセキュリティ強化オプションを無効にする必要があります。詳細については、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_access_cluster_IP_address_from_outside_network["ネットワーク外からクラスタ IP アドレスにアクセスできません"^]。
 
-PowerShell コマンドレットを使用すると、 SnapCenter GUI に加え、設定、バックアップ、リストアの各処理を実行するスクリプトを作成できます。一部のコマンドレットは、各 SnapCenter リリースで変更された可能性があります。。 https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^] に詳細を示します。
+PowerShell コマンドレットを使用すると、 SnapCenter GUI に加え、設定、バックアップ、リストアの各処理を実行するスクリプトを作成できます。一部のコマンドレットは、各 SnapCenter リリースで変更された可能性があります。。 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^] に詳細を示します。
 
 
 NOTE: SnapCenter への初回ログイン時は、インストールプロセスで指定したクレデンシャルを使用してログインする必要があります。

@@ -75,4 +75,18 @@ Plug-in for Oracle Database には、次のようなメリットもあります�
 
 NOTE: NVMeデバイス用のマルチパス解決策 は、カーネルで標準のマルチパスオプションを設定することで設定できます。Device Mapper（DM）マルチパスはサポートされていません。
 
-+サポートされているバージョンの最新情報については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。
+* OracleおよびGRIDではなく、デフォルト以外のすべてのユーザをサポートします。
++
+デフォルト以外のユーザをサポートするには、_ file /var/opt/snapcenter/sco/etc/_にある* sco.properties*ファイル内のパラメータの値を変更して、デフォルト以外のユーザを設定する必要があります。
+
++
+パラメータのデフォルト値は、OracleとGridに設定されています。
+
++
+** db_user = Oracleの場合
+** db_group=oinstall
+** gi_user = grid
+** gi_group = oinstall
+
+
+

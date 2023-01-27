@@ -1,6 +1,6 @@
 ---
 settings:
-  name: SnapCenter Software 4.7
+  name: SnapCenter Software 4.8
   internal:
     pdf_enabled: true
   prod:
@@ -9,6 +9,9 @@ settings:
   versions:
   - name: SnapCenter ソフトウェア
     url: "/snapcenter"
+    version-number: '4.8'
+  - name: SnapCenter ソフトウェア
+    url: "/snapcenter-4.7"
     version-number: '4.7'
   - name: SnapCenter ソフトウェア
     url: "/snapcenter-46"
@@ -19,7 +22,7 @@ settings:
   langs: ja-jp,us-en,zh-cn,zh-tw,ko-kr,fr-fr,de-de
 sidebar:
   entries:
-  - title: SnapCenter ソフトウェア4.7のドキュメント
+  - title: SnapCenter ソフトウェア4.8のドキュメント
     url: "/index.html"
   - title: リリースノート
     url: "/release-notes.html"
@@ -42,7 +45,7 @@ homepage:
   - title: はじめに
     links:
     - title: リリースノート
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2883299
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2885481
     - title: SnapCenter の詳細をご確認ください
       url: "/concept/concept_snapcenter_overview.html"
     - title: SQL Server データベースの保護に関するクイックリファレンスです
@@ -102,9 +105,9 @@ homepage:
   - title: リソースの追加
     links:
     - title: コマンドレットリファレンスガイド
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482
     - title: コマンドリファレンスガイド
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2883301
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2885486
     - title: 以前のバージョンの SnapCenter のドキュメント
       url: https://www.netapp.com/data-protection/backup-recovery/snapcenter-backup-management/documentation/#ProseArticleLinkList13
     - title: ネットアップのナレッジベース - SnapCenter
