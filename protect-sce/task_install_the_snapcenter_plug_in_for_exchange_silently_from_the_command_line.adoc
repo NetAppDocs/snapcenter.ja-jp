@@ -32,7 +32,7 @@ Plug-in for Exchange は、 SnapCenter ユーザインターフェイス内か�
 
 . プラグインをインストールするホストにインストールファイルをコピーします。
 . ローカルホストの Windows コマンドプロンプトで、プラグインのインストールファイルを保存したディレクトリに移動します。
-. 変数を実際のデータに置き換えて、次のコマンドを入力してインストールします。
+. 次のコマンドを入力して、プラグインをインストールします。
 +
 _snapcenter _windows_host_plugin.exe "/silent/debuglog "<Debug_Log_Path>" /log" <Log_Path>" b_SNAPCENTER_port=<Num>Suite_INSTALLDIR="<Install_Directory_Path>" BV_ServiceAccount=<domain\administrator> BV_SERVICEPCPWD = <SCW> インストール、 ISW>
 
@@ -46,8 +46,6 @@ _C ： \ProgramData\NetApp\SnapCenter \Package Repository_snapcenter _windows_ho
 
 NOTE: Plug-in for Exchange のインストール時に渡されるすべてのパラメータでは、大文字と小文字が区別されます。
 
-+
-.. _ /silent / debuglog " C ： \Installdebug.log " / log " C ： \temp " BY_SNAPCENTER_PORT = 8145 Suite_INSTALLDIR=" C ： \Program Files "BY_ServiceAccount=demo\administrator BV_SERVVICPWD = Netapp1 ！ISFeatureInstall = HPPW 、 SCW_
 +
 変数には次の値を入力します。
 
@@ -99,8 +97,6 @@ ISFeatureInstall
 SnapCenter によってリモートホストに導入される解決策を指定します。
 
 |===
-
-
 . Windows タスクスケジューラ、メインインストールログファイル _C:\Installdebug.log_ 、およびその他のインストールファイルを _C:\Temp_. で監視します。
 . _%temp%_ ディレクトリを監視して、 _msiexe.exe_installers がエラーなしでソフトウェアをインストールしているかどうかを確認します。
 +

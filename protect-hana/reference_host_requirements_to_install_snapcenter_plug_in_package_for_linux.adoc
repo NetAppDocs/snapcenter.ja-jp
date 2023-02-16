@@ -24,7 +24,7 @@ SnapCenter Plug-ins Package for Linux をインストールする前に、ホス
 * SUSE Linux Enterprise Server （ SLES ）
 
 
-サポートされているバージョンの最新情報については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"]。
+サポートされているバージョンの最新情報については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=108380;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"]。
 
 
 
@@ -52,6 +52,6 @@ Java 1.8.x （ 64 ビット）の Oracle Java と OpenJDK のバージョン
 
 Java を最新バージョンにアップグレードした場合は、 /var/opt/snapcenter /etc/sp/etc/spl.properties にある JAVA_HOME オプションが正しい Java バージョンに設定されていること、および正しいパスが指定されていることを確認する必要があります。
 
-サポートされているバージョンの最新情報については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"]。
+サポートされているバージョンの最新情報については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=108380;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"]。
 
 |===

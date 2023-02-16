@@ -10,6 +10,7 @@ summary: Remove-SmBackup コマンドレットを使用すると、他のデー�
 :imagesdir: ../media/
 
 
+[role="lead"]
 Remove-SmBackup コマンドレットを使用すると、他のデータ保護処理に不要になったバックアップを削除できます。
 
 PowerShell コマンドレットを実行できるように PowerShell 環境を準備しておく必要があります。

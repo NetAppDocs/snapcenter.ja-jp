@@ -10,6 +10,7 @@ summary: Windows Server 2012 以降では、管理ドメインアカウントか
 :imagesdir: ../media/
 
 
+[role="lead"]
 Windows Server 2012 以降では、管理ドメインアカウントからサービスアカウントパスワードの自動管理を提供するグループマネージドサービスアカウント（ gMSA ）を作成できます。
 
 * 必要なもの *

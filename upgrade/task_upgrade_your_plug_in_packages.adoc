@@ -31,7 +31,7 @@ SnapCenter 構成ファイルの例： SnapDrive Service.exe.config 、 SMCoreSe
 * このタスクについて *
 
 * アップグレード手順は 'Windows'Linux'AIX ホストをメンテナンスモードにしますこれにより ' ホストはスケジュールされたジョブを実行できなくなります
-* SnapCenter Plug-in for Microsoft SQL Server、SnapCenter Plug-in for Microsoft Exchange Server、およびSnapCenter Plug-in for Microsoft Windowsの場合、サーバーとプラグインホストの両方を、scripts_pathを実行するために4.7バージョンにアップグレードすることをお勧めします。
+* SnapCenter Plug-in for Microsoft SQL Server、SnapCenter Plug-in for Microsoft Exchange Server、およびSnapCenter Plug-in for Microsoft Windowsの場合、サーバとプラグインホストの両方を、scripts_pathを実行する最新バージョンにアップグレードすることを推奨します。
 +
 ポリシーでプリスクリプトとポストスクリプトが有効になっている既存のバックアップスケジュールと検証スケジュールについては、アップグレード後もバックアップ処理が続行されます。
 
@@ -54,14 +54,19 @@ SnapCenter 構成ファイルの例： SnapDrive Service.exe.config 、 SMCoreSe
 
 ** 複数のホストをアップグレードする場合は、すべてのホストを選択し、をクリックします image:../media/more_icon.gif[""]をクリックし、 * アップグレード * > * OK * をクリックします。
 +
+関連するすべてのサービスは、プラグインのアップグレード中に再開されます。
+
++
 
 NOTE: パッケージ内のすべてのプラグインが選択されますが、以前のバージョンの SnapCenter でインストールされていたプラグインのみがアップグレードされ、残りのプラグインはインストールされません。新しいプラグインをインストールするには、 * Add plug-ins * オプションを使用する必要があります。
 
-
-
-
-
++
 [ 事前確認をスキップ ] チェックボックスをオンにしていない場合、プラグインをインストールするための要件をホストが満たしているかどうかが検証されます。最小要件を満たしていない場合は、対応するエラーまたは警告メッセージが表示されます。問題を修正したら、 [* アップグレード ] をクリックします。
 
++
 
 NOTE: エラーがディスクスペースまたは RAM に関連している場合は、 C ： \Program Files\NetApp\SnapManager WebApp にある Web.config ファイルまたは C ： \Windows\System32\WindowsPowerShell\v1.0\Modules\SnapCenter にある PowerShell 構成ファイルを更新して、デフォルト値を変更できます。エラーがそれ以外のパラメータに関連している場合は、問題を修正してから要件を再度検証する必要があります。
+
+
+
+

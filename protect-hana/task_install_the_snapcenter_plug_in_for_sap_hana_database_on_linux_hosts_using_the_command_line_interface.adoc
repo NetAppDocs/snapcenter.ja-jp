@@ -2,7 +2,7 @@
 permalink: protect-hana/task_install_the_snapcenter_plug_in_for_sap_hana_database_on_linux_hosts_using_the_command_line_interface.html 
 sidebar: sidebar 
 keywords:  
-summary: SnapCenter ユーザインターフェイス（ UI ）を使用して、 SnapCenter Plug-in for SAP HANA Database をインストールする必要があります。環境で SnapCenter UI からプラグインのリモートインストールが許可されていない場合は、コマンドラインインターフェイス \ （ CLI\ ）を使用して、コンソールモードまたはサイレントモードで Plug-in for SAP HANA Database をインストールできます。 
+summary: SnapCenter ユーザインターフェイス（ UI ）を使用して、 SnapCenter Plug-in for SAP HANA Database をインストールする必要があります。環境でSnapCenter UIからプラグインのリモートインストールが許可されていない場合は、コマンドラインインターフェイス（CLI 1）を使用して、コンソールモードまたはサイレントモードでPlug-in for SAP HANA Databaseをインストールできます。 
 ---
 = コマンドラインインターフェイスを使用して、 Linux ホストに SnapCenter Plug-in for SAP HANA Database をインストールします
 :allow-uri-read: 
@@ -21,7 +21,7 @@ SnapCenter ユーザインターフェイス（ UI ）を使用して、 SnapCen
 サポートされる構成の最新情報については、 Interoperability Matrix Tool （ IMT ）を参照してください。
 
 +
-https://imt.netapp.com/matrix/imt.jsp?components=105284;&solution=1259&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"]
+https://imt.netapp.com/matrix/imt.jsp?components=108391;&solution=1259&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"]
 
 * SnapCenter Plug-in for SAP HANA Database は、 SnapCenter Plug-ins Package for Linux の一部です。SnapCenter Plug-ins Package for Linux をインストールする前に、 Windows ホストに SnapCenter がインストールされている必要があります。
 
