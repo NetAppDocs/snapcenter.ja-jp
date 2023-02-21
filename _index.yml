@@ -6,7 +6,7 @@ indexpage:
   - title: はじめに
     links:
     - title: リリースノート
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2883299
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2885481
     - title: SnapCenter の詳細をご確認ください
       url: "/concept/concept_snapcenter_overview.html"
     - title: SQL Server データベースの保護に関するクイックリファレンスです
