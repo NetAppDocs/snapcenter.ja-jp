@@ -9,7 +9,7 @@ entries:
 - title: 基盤としての REST Web サービス
   url: "/sc-automation/concept_rest_web_services_foundation.html"
 - title: 基本的な動作特性
-  url: "/sc-automation/concept_basic_operational_characterstics.html"
+  url: "/sc-automation/concept_basic_operational_characteristics.html"
 - title: API 要求を制御する入力変数
   url: "/sc-automation/concept_input_variables_controlling_an_api_request.html"
 - title: API 応答の解釈
