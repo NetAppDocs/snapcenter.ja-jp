@@ -14,6 +14,10 @@ summary: ホストを追加してプラグインパッケージをインスト�
 ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。SnapCenter Plug-in for SAP HANA Database は、 Windows と Linux のどちらの環境でも使用できます。
 
 * ホストに Java 1.8 64 ビットがインストールされている必要があります。
++
+
+NOTE: IBM Javaはサポートされていません。
+
 * SAP HANA データベースの対話型端末（ HDBSQL クライアント）をホストにインストールしておく必要があります。
 * Windows の場合は、「 LocalSystem 」 Windows ユーザを使用してプラグインの Creator Service が実行されている必要があります。これは、 Plug-in for SAP HANA Database がドメイン管理者としてインストールされている場合のデフォルトの動作です。
 * Windows の場合は、ユーザストアキーを SYSTEM ユーザとして作成する必要があります。
