@@ -196,13 +196,13 @@ ONTAP クラスタまたは SVM の通信ポート
 
 SQL Server に対して sysadmin 権限を持つユーザが必要です。このプラグインは Microsoft VDI Framework を使用しますが、これには sysadmin アクセスが必要です。
 
-SnapManager for Microsoft SQL Server を使用していて、 SnapManager for Microsoft SQL Server から SnapCenter にデータをインポートする場合は、を参照してください link:../protect-scsql/concept_import_archived_backups_from_snapmanager_for_sql_to_snapcenter.html["アーカイブバックアップをインポートする"^]
-
 
 
 == SnapCenter サーバをインストールします
 
-* SnapCenter Server* をダウンロードしてインストールします
+
+
+=== SnapCenter サーバをダウンロードしてインストールします
 
 * 手順 *
 
@@ -221,7 +221,9 @@ NOTE: インストール用のカスタムパスでは、特殊文字“ % ”�
 . [ 今すぐインストール ] をクリックします。
 
 
-* SnapCenter * にログインします
+
+
+=== SnapCenter にログインします
 
 * 手順 *
 
@@ -236,7 +238,9 @@ NOTE: インストール用のカスタムパスでは、特殊文字“ % ”�
 . [ * サインイン * ] をクリックします。
 
 
-* SnapCenter 標準コントローラベースライセンス * を追加します
+
+
+=== SnapCenter の標準コントローラベースライセンスを追加します
 
 * 手順 *
 
@@ -250,7 +254,9 @@ NOTE: インストール用のカスタムパスでは、特殊文字“ % ”�
 
 
 
-* SnapCenter の容量ベースのライセンスを追加 *
+
+
+=== SnapCenter 容量ベースライセンスを追加
 
 * 手順 *
 
@@ -265,7 +271,9 @@ NOTE: インストール用のカスタムパスでは、特殊文字“ % ”�
 . [ 完了 ] をクリックします。
 
 
-* ストレージ・システム接続のセットアップ *
+
+
+=== ストレージシステム接続をセットアップする
 
 * 手順 *
 
@@ -285,7 +293,9 @@ NOTE: インストール用のカスタムパスでは、特殊文字“ % ”�
 
 == Plug-in for Microsoft SQL Server をインストールします
 
-* Run As クレデンシャルを設定して、 Plug-in for Microsoft SQL Server * をインストールします
+
+
+=== Plug-in for Microsoft SQL Serverをインストールするには、Run Asクレデンシャルをセットアップします
 
 * 手順 *
 
@@ -299,7 +309,9 @@ NOTE: インストール用のカスタムパスでは、特殊文字“ % ”�
 
 
 
-* ホストを追加し、 Plug-in for Microsoft SQL Server* をインストールします
+
+
+=== ホストを追加してPlug-in for Microsoft SQL Serverをインストールします
 
 * 手順 *
 

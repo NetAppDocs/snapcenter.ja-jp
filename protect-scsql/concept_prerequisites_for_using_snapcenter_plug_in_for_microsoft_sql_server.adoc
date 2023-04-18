@@ -30,13 +30,6 @@ NOTE: SnapCenter では、異なるクラスタにある同じ名前の SVM は�
 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/["SnapCenter Plug-in for VMware vSphere のドキュメント"]
 
 * SnapCenter Plug-in for Microsoft Windows を使用して、ホスト側のストレージをプロビジョニングします。
-* 既存のデータベースをネットアップストレージに移動します。
-+
-詳細については、「 SnapCenter によるインポート情報」を参照してください。
-
-+
-link:concept_import_archived_backups_from_snapmanager_for_sql_to_snapcenter.html["SnapManager for Microsoft SQL Server から SnapCenter にアーカイブバックアップをインポートします"]
-
 * バックアップレプリケーションが必要である場合は、 SnapMirror 関係と SnapVault 関係をセットアップします。
 
 
