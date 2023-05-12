@@ -24,7 +24,7 @@ Oracle データベースをクローニングする前に、前提条件を満�
 * NFS 経由で ASM を使用している場合は、 ASM_diskstring パラメータで定義された既存のパスに /var/opt/snapcenter /scu/clones/*/*_ を追加する必要があります。
 * ASM_diskstring パラメータで、 ASMFD または configure _ORCL ： * _ を使用する場合は、 _ AFD ： * _ を設定します。
 +
-asm_diskstring パラメータの編集方法については、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Disk_paths_are_not_added_to_the_asm_diskstring_database_parameter["asm_diskstring にディスクパスを追加する方法"^]。
+asm_diskstring パラメータの編集方法については、を参照してください https://["asm_diskstring にディスクパスを追加する方法"^]。
 
 * 代替ホストでクローンを作成する場合、代替ホストは次の要件を満たす必要があります。
 +
@@ -33,8 +33,8 @@ asm_diskstring パラメータの編集方法については、を参照して�
 +
 *** プライマリストレージまたはセカンダリ（バックアップまたはミラー）ストレージから代替ホストにクローニングする場合は、セカンダリストレージと代替ホストの間に iSCSI セッションが確立されているか、 FC 用に適切にゾーニングされていることを確認してください。
 +
-**** https://library.netapp.com/ecm/ecm_download_file/ECMLP2547936["『 Linux Host Utilities Installation and Setup Guide 』"^]
-**** https://library.netapp.com/ecm/ecm_download_file/ECMP1119223["『 AIX Host Utilities Installation and Setup Guide 』"^]
+**** https://["『 Linux Host Utilities Installation and Setup Guide 』"^]
+**** https://["『 AIX Host Utilities Installation and Setup Guide 』"^]
 
 
 *** バックアップ・ストレージまたはミラー・ストレージから同じホストにクローニングする場合は、バックアップまたはミラー・ストレージとホストの間に iSCSI セッションが確立されているか、 FC 用に適切にゾーニングされているかを確認してください。

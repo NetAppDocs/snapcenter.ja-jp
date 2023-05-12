@@ -18,7 +18,7 @@ summary: リソースとは、 SnapCenter で管理されているホスト上�
 * SnapCenter サーバのインストール、ホストの追加、ストレージシステム接続の作成、クレデンシャルの追加などのタスクを完了しておく必要があります。
 * データベースが仮想マシンディスク（ VMDK ）または raw デバイスマッピング（ RDM ）上にある場合は、 SnapCenter Plug-in for VMware vSphere を導入し、 SnapCenter にプラグインを登録する必要があります。
 +
-詳細については、を参照してください https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere.html["SnapCenter Plug-in for VMware vSphere を導入"^]。
+詳細については、を参照してください https://["SnapCenter Plug-in for VMware vSphere を導入"^]。
 
 * データベースが VMDK ファイルシステムにある場合は、 vCenter にログインして * VM オプション * > * Advanced * > * Edit configuration * に移動し、 VM の DISK.enableUUID_true の値を設定しておく必要があります。
 * SnapCenter データベースのさまざまなタイプやバージョンを検出するための、 Oracle のプロセスを確認しておく必要があります。

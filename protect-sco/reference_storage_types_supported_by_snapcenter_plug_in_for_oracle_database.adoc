@@ -76,4 +76,4 @@ SAN ファイルシステムおよび LVM レイアウトでのインライン�
 
 
 |===
-。 https://imt.netapp.com/matrix/imt.jsp?components=108392;&solution=1259&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"] サポートされているバージョンに関する最新情報が含まれています。
+。 https://["NetApp Interoperability Matrix Tool で確認できます"] サポートされているバージョンに関する最新情報が含まれています。

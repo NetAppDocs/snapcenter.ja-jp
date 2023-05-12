@@ -110,7 +110,7 @@ NOTE: ログバックアップに必要なスペースは、最新の状態へ�
 
 +
 
-NOTE: Exchangeボリューム（LUN）を扱う場合は、ログとデータベースに対して個別のバックアップポリシーを作成し、同じラベルを使用して、ログポリシーのkeep（retention）をデータベースポリシーの2倍の数に設定します。詳細については、を参照してください。 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_for_Exchange_Backups_only_keep_half_the_Snapshots_on_the_Vault_destination_log_volume["SnapCenter for Exchangeバックアップでは、バックアップデスティネーションログボリュームに保持されるSnapshotの半分だけが保持されます"^]
+NOTE: Exchangeボリューム（LUN）を扱う場合は、ログとデータベースに対して個別のバックアップポリシーを作成し、同じラベルを使用して、ログポリシーのkeep（retention）をデータベースポリシーの2倍の数に設定します。詳細については、を参照してください。 https://["SnapCenter for Exchangeバックアップでは、バックアップデスティネーションログボリュームに保持されるSnapshotの半分だけが保持されます"^]
 
 .. Database Availability Group Settings セクションで、次の操作を選択します。
 +

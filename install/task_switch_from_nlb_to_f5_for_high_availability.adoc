@@ -15,11 +15,11 @@ SnapCenter HA 構成を Network Load Balancing （ NLB ）から変更して、 
 
 * 手順 *
 
-. F5 を使用して SnapCenter サーバのハイアベイラビリティを設定します。 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_SnapCenter_Servers_for_high_availability_using_F5_Load_Balancer["詳細はこちら。"^]。
+. F5 を使用して SnapCenter サーバのハイアベイラビリティを設定します。 https://["詳細はこちら。"^]。
 . SnapCenter サーバホストで、 PowerShell を起動します。
 . Open-SmConnection コマンドレットを使用してセッションを開始し、クレデンシャルを入力します。
 . SnapCenter サーバを更新して、 Update-SmServerCluster コマンドレットを使用して F5 クラスタの IP アドレスを指すようにします。
 +
-コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
 
 

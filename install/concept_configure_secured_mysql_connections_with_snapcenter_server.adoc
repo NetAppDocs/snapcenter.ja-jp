@@ -30,7 +30,7 @@ SnapCenter サーバと MySQL サーバ間の通信を保護する場合は、 S
 
 . openssl コマンドを使用して、 Windows 上の MySQL サーバおよびクライアントの SSL 証明書とキーファイルをセットアップします。
 +
-詳細については、を参照してください https://dev.mysql.com/doc/refman/5.7/en/creating-ssl-files-using-openssl.html["MySQL バージョン 5.7 ： openssl を使用した SSL 証明書およびキーの作成"^]
+詳細については、を参照してください https://["MySQL バージョン 5.7 ： openssl を使用した SSL 証明書およびキーの作成"^]
 
 +
 
@@ -146,7 +146,7 @@ SnapCenter サーバと MySQL サーバ間の通信を保護する場合は、�
 
 . 最初の HA ノードに対して、 openssl コマンドを使用して、 Windows 上の MySQL サーバおよびクライアントの SSL 証明書とキーファイルをセットアップします。
 +
-詳細については、を参照してください https://dev.mysql.com/doc/refman/5.7/en/creating-ssl-files-using-openssl.html["MySQL バージョン 5.7 ： openssl を使用した SSL 証明書およびキーの作成"^]
+詳細については、を参照してください https://["MySQL バージョン 5.7 ： openssl を使用した SSL 証明書およびキーの作成"^]
 
 +
 
@@ -221,7 +221,7 @@ NOTE: 再度 CA 証明書を作成することはできません。作成する�
 
 .. 最初の HA ノードに対して、 openssl コマンドを使用して、 Windows 上の MySQL サーバおよびクライアントの SSL 証明書とキーファイルをセットアップします。
 +
-https://dev.mysql.com/doc/refman/5.7/en/creating-ssl-files-using-openssl.html["MySQL バージョン 5.7 ： openssl を使用した SSL 証明書およびキーの作成"]
+https://["MySQL バージョン 5.7 ： openssl を使用した SSL 証明書およびキーの作成"]
 
 +
 

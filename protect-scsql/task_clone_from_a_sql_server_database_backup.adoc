@@ -152,7 +152,7 @@ NOTE: プリスクリプトまたはポストスクリプトのパスにドラ�
 NOTE: E メール通知を利用する場合は、 GUI または PowerShell コマンド Set-SmtpServer を使用して、 SMTP サーバの詳細を指定しておく必要があります。
 
 +
-EMS については、を参照してください https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_ems_data_collection.html["EMS データ収集を管理します"]
+EMS については、を参照してください https://["EMS データ収集を管理します"]
 
 . 概要を確認し、 [ 完了 ] をクリックします。
 . 操作の進行状況を監視するには、 * Monitor * > * Jobs * をクリックします。
@@ -168,6 +168,6 @@ link:reference_back_up_sql_server_database_or_instance_or_availability_group.htm
 
 link:task_clone_backups_using_powershell_cmdlets_for_sql.html["PowerShell コマンドレットを使用してバックアップをクローニングする"]
 
-https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Clone_operation_might_fail_or_take_longer_time_to_complete_with_default_TCP_TIMEOUT_value["デフォルトの TCP_TIMEOUT 値を使用すると、クローニング処理が失敗するか所要時間が長くなる可能性があります"]
+https://["デフォルトの TCP_TIMEOUT 値を使用すると、クローニング処理が失敗するか所要時間が長くなる可能性があります"]
 
-https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/The_failover_cluster_instance_database_clone_fails["フェイルオーバークラスタインスタンスのデータベースクローンが失敗します"]
+https://["フェイルオーバークラスタインスタンスのデータベースクローンが失敗します"]

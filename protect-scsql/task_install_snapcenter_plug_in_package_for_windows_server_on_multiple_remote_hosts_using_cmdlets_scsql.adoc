@@ -23,7 +23,7 @@ SmHostPackage PowerShell コマンドレットを使用して、複数のホス�
 . SnapCenter サーバホストで、 Open-SmConnection コマンドレットを使用してセッションを確立し、クレデンシャルを入力します。
 . Install-SmHostPackage コマンドレットと必要なパラメータを使用して、複数のリモートホストに SnapCenter Plug-in for Microsoft SQL Server をインストールします。
 +
-コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
 
 +
 プラグインを手動でインストール済みで、プラグインをインストールするための要件をホストが満たしているかどうかを検証しない場合は、 -skipprecheck オプションを使用できます。

@@ -21,6 +21,6 @@ SnapCenter サーバホストのコマンドラインインターフェイスで
 . SnapCenter サーバーホストで、次のように入力します。 _Open-SMConnection-SMSbaseUrl\https://SNAPCENTER_SERVER_NAME/DOMAIN_NAME_ コマンド認証情報を入力します。
 . Uninstall -SmHostPackage_cmdlet と、必要なパラメータを使用して、 Windows プラグインをアンインストールします。
 +
-コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
 
 

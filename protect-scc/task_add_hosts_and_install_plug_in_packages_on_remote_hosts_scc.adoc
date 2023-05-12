@@ -131,7 +131,7 @@ Storage Plug-In の場合は、 _C ： \ProgramData\NetApp\SnapCenter \Package R
 SnapCenter サーバにアップロードされたカスタムプラグインが表示されます。
 
 +
-MySQL または DB2 アプリケーションを管理する場合は、ネットアップが提供している MySQL および DB2 のカスタムプラグインを使用できます。MySQL と DB2 のカスタムプラグインについては、を参照してください https://automationstore.netapp.com/home.shtml["NetApp Automation Store の略"]
+MySQL または DB2 アプリケーションを管理する場合は、ネットアップが提供している MySQL および DB2 のカスタムプラグインを使用できます。MySQL と DB2 のカスタムプラグインについては、を参照してください https://["NetApp Automation Store の略"]
 
 
 

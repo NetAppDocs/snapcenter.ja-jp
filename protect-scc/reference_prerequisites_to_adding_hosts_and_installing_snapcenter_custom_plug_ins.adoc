@@ -49,7 +49,7 @@ custom_plugin_schecksum_listは、SnapCenter によってホストにインス�
 +
 .. プラグインzipファイルのSHA512ハッシュを生成しました。
 +
-などのオンラインツールを使用できます https://emn178.github.io/online-tools/sha512_file_hash.html["SHA512ハッシュ"^]。
+などのオンラインツールを使用できます https://["SHA512ハッシュ"^]。
 
 .. 生成されたSHA512ハッシュを新しい行のcustom_plugin_schecksum_listファイルに追加しました。
 +
@@ -85,10 +85,10 @@ custom_plugin_schecksum_listは、SnapCenter によってホストにインス�
 SnapCenter ServerホストにWindows Server 2019またはWindows Server 2016を使用している場合は、Java 1.8またはJava 11（64ビット）をインストールする必要があります。要件の最新情報については、 Interoperability Matrix Tool （ IMT ）を参照してください。
 
 +
-http://www.java.com/en/download/manual.jsp["すべてのオペレーティングシステム用の Java のダウンロード"]
+http://["すべてのオペレーティングシステム用の Java のダウンロード"]
 
 +
-https://imt.netapp.com/matrix/imt.jsp?components=108393;&solution=1259&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"]
+https://["NetApp Interoperability Matrix Tool で確認できます"]
 
 * いくつかのパスにアクセスできるように root 以外のユーザに sudo 権限を設定する必要があります。visudo Linux ユーティリティを使用して、 /etc/sudoers ファイルに次の行を追加します。
 +

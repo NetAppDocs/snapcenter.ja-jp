@@ -30,7 +30,7 @@ NOTE: 接続セッションは 24 時間のみ有効です。ただし、 TokenN
 
 次のコマンドを実行して、 SnapCenter サーバとの接続の確立、 Oracle データベースインスタンスの検出、ポリシーとリソースグループの追加、バックアップの作成と検証を行います。
 
-コマンドで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2885486["SnapCenter ソフトウェアコマンドリファレンスガイド"^]。
+コマンドで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。または、を参照することもできます https://["SnapCenter ソフトウェアコマンドリファレンスガイド"^]。
 
 * 手順 *
 

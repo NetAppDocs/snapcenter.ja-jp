@@ -27,7 +27,7 @@ link:task_back_up_resource_groups_sap_hana.html["リソースグループをバ�
 
 * 1 つ以上のテナントデータベースが停止しているときにファイルベースのバックアップを作成する場合は、 HANA のプロパティファイルで「 Set-SmConfigSettings 」コマンドレットを使用して allow_file_bbase_backup_IFINACTIVE_tenants_present パラメータを * YES * に設定します。
 +
-コマンドレットで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["SnapCenter ソフトウェアコマンドレットリファレンスガイド"]
+コマンドレットで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。または、を参照することもできます https://["SnapCenter ソフトウェアコマンドレットリファレンスガイド"]
 
 * 休止、Snapshotコピー、および休止解除のプリコマンドおよびポストコマンドについては、プラグインホストで次のパスから使用可能なコマンドリストにコマンドが含まれていないかどうかを確認する必要があります。
 +
@@ -155,7 +155,7 @@ _policy_name_は 、選択したポリシーの名前です。
 +
 ** MetroCluster 構成では、フェイルオーバー後に SnapCenter が保護関係を検出できない場合があります。
 +
-詳細については、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["MetroCluster のフェイルオーバー後に SnapMirror 関係または SnapVault 関係を検出できません"^]
+詳細については、を参照してください https://["MetroCluster のフェイルオーバー後に SnapMirror 関係または SnapVault 関係を検出できません"^]
 
 ** VMDK 上のアプリケーションデータおよび SnapCenter Plug-in for VMware vSphere の Java ヒープサイズが不足している場合、バックアップが失敗することがあります。
 +

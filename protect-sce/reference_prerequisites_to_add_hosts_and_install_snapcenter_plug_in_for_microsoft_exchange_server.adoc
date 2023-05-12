@@ -22,7 +22,7 @@ summary: ホストを追加してプラグインパッケージをインスト�
 * SnapManager for Microsoft Exchange Server および SnapDrive for Windows がすでにインストールされている場合は、 SnapDrive を使用してデータを確実に保護するために、同じ Exchange サーバに Plug-in for Exchange をインストールする前に、 SnapCenter for Windows で使用する VSS ハードウェアプロバイダの登録を解除する必要があります。
 * SnapManager for Microsoft Exchange Server と Plug-in for Exchange が同じサーバにインストールされている場合は、 SnapManager for Microsoft Exchange Server で作成されたすべてのスケジュールを Windows スケジューラから一時停止または削除する必要があります。
 * ホストがサーバから完全修飾ドメイン名（ FQDN ）に解決できる必要があります。hosts ファイルが解決可能になるように変更され、短縮名と FQDN の両方が hosts ファイルに指定されている場合は、 SnapCenter hosts ファイルに次の形式でエントリを作成します： _<IP_address> <host_fqdn><host_name> _ 。
-* 次のポートがファイアウォールでブロックされていないことを確認してください。ブロックされていないとホストの追加操作が失敗します。この問題を解決するには、ダイナミックポート範囲を設定する必要があります。詳細については、を参照してください https://docs.microsoft.com/en-us/troubleshoot/windows-server/networking/configure-rpc-dynamic-port-allocation-with-firewalls["Microsoft のドキュメント"^]。
+* 次のポートがファイアウォールでブロックされていないことを確認してください。ブロックされていないとホストの追加操作が失敗します。この問題を解決するには、ダイナミックポート範囲を設定する必要があります。詳細については、を参照してください https://["Microsoft のドキュメント"^]。
 +
 ** Windows 2016 および Exchange 2016 のポート範囲 50000 ~ 51000
 ** Windows Server 2012 R2 および Exchange 2013 用のポート範囲 6000-6500
@@ -57,7 +57,7 @@ SnapCenter Plug-ins Package for Windows をインストールする前に、ホ�
  a| 
 Microsoft Windows の場合
 
-サポートされているバージョンの最新情報については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=108395;&solution=1258&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。
+サポートされているバージョンの最新情報については、を参照してください https://["NetApp Interoperability Matrix Tool で確認できます"^]。
 
 
 
@@ -86,9 +86,9 @@ NOTE: 十分なディスクスペースを割り当て、 logs フォルダに�
 * PowerShell 4.0 以降
 
 
-サポートされているバージョンの最新情報については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=108395;&solution=1258&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。
+サポートされているバージョンの最新情報については、を参照してください https://["NetApp Interoperability Matrix Tool で確認できます"^]。
 
-.NET固有のトラブルシューティング情報については、を参照してください https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_upgrade_or_install_fails_with_This_KB_is_not_related_to_the_OS["インターネットに接続されていない従来型システムでは、SnapCenter のアップグレードまたはインストールが失敗します。"]
+.NET固有のトラブルシューティング情報については、を参照してください https://["インターネットに接続されていない従来型システムでは、SnapCenter のアップグレードまたはインストールが失敗します。"]
 
 |===
 
@@ -128,7 +128,7 @@ SnapCenter で Exchange サーバまたは DAG を追加し、ホストまたは
 
 
 
-== Windows Server 2012 以降で gMSA を構成します
+== SnapCenter Plug-ins Package for Windows をインストールするホストの要件
 
 SnapCenter Plug-ins Package for Windows をインストールする前に、ホストシステムのいくつかの基本的なスペース要件とサイジング要件を確認しておく必要があります。
 
@@ -141,7 +141,7 @@ SnapCenter Plug-ins Package for Windows をインストールする前に、ホ�
  a| 
 Microsoft Windows の場合
 
-サポートされているバージョンの最新情報については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=108395;&solution=1258&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。
+サポートされているバージョンの最新情報については、を参照してください https://["NetApp Interoperability Matrix Tool で確認できます"^]。
 
 
 
@@ -170,8 +170,8 @@ NOTE: 十分なディスクスペースを割り当て、 logs フォルダに�
 * PowerShell 4.0 以降
 
 
-サポートされているバージョンの最新情報については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=108395;&solution=1258&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。
+サポートされているバージョンの最新情報については、を参照してください https://["NetApp Interoperability Matrix Tool で確認できます"^]。
 
-.NET固有のトラブルシューティング情報については、を参照してください https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_upgrade_or_install_fails_with_This_KB_is_not_related_to_the_OS["インターネットに接続されていない従来型システムでは、SnapCenter のアップグレードまたはインストールが失敗します。"]
+.NET固有のトラブルシューティング情報については、を参照してください https://["インターネットに接続されていない従来型システムでは、SnapCenter のアップグレードまたはインストールが失敗します。"]
 
 |===

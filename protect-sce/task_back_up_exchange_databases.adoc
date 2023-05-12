@@ -108,7 +108,7 @@ NOTE: E メール通知を利用する場合は、 GUI または PowerShell コ�
 +
 ** MetroCluster 構成では、フェイルオーバー後に SnapCenter が保護関係を検出できない場合があります。
 +
-詳細については、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["MetroCluster のフェイルオーバー後に SnapMirror 関係または SnapVault 関係を検出できません"^]
+詳細については、を参照してください https://["MetroCluster のフェイルオーバー後に SnapMirror 関係または SnapVault 関係を検出できません"^]
 
 ** VMDK 上のアプリケーションデータおよび SnapCenter Plug-in for VMware vSphere の Java ヒープサイズが不足している場合、バックアップが失敗することがあります。
 +

@@ -40,9 +40,9 @@ NOTE: SnapCenter では、異なるクラスタにある同じ名前の SVM は�
 
 * SAN 環境で Oracle データベースを使用している場合は、次のガイドに記載された推奨事項に従って SAN 環境が設定されていることを確認してください。
 +
-** https://library.netapp.com/ecm/ecm_download_file/ECMLP2547957["Linux Unified Host Utilities の推奨されるホスト設定"^]
-** https://library.netapp.com/ecm/ecm_download_file/ECMLP2547958["『 Using Linux Hosts with ONTAP storage 』を参照してください"^]
-** https://library.netapp.com/ecm/ecm_download_file/ECMP1119218["AIX Host Utilities の影響を受けるホスト設定"^]
+** https://["Linux Unified Host Utilities の推奨されるホスト設定"^]
+** https://["『 Using Linux Hosts with ONTAP storage 』を参照してください"^]
+** https://["AIX Host Utilities の影響を受けるホスト設定"^]
 
 
 * Oracle Linux または RHEL オペレーティングシステムの LVM で Oracle データベースを使用している場合は、最新バージョンの論理ボリューム管理（ LVM ）をインストールします。
@@ -54,7 +54,7 @@ SnapCenter 4.1.1 ユーザの場合、 SnapCenter Plug-in for VMware vSphere 4.1
 
 * 詳細はこちら *
 
-* https://imt.netapp.com/matrix/imt.jsp?components=108392;&solution=1259&isHWU&src=IMT["Interoperability Matrix Tool で確認してください"^]
-* https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/index.html["SnapCenter Plug-in for VMware vSphere のドキュメント"^]
-* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Data_protection_operation_fails_in_a_non-multipath_environment_in_RHEL_7_and_later["RHEL 7 以降の非マルチパス環境でデータ保護処理が失敗する"^]
+* https://["Interoperability Matrix Tool で確認してください"^]
+* https://["SnapCenter Plug-in for VMware vSphere のドキュメント"^]
+* https://["RHEL 7 以降の非マルチパス環境でデータ保護処理が失敗する"^]
 

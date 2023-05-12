@@ -36,13 +36,13 @@ CA証明書の詳細については、を参照してください link:../instal
 * このタスクについて *
 
 * SnapCenter は、他のアプリケーションが同じAD FSで構成されている場合にSSOベースのログインをサポートします。AD FSの構成によっては、AD FSセッションの持続性に応じて、セキュリティ上の理由からSnapCenter でユーザ認証が必要になる場合があります。
-* コマンドレットで使用できるパラメータとその説明については、 Get-Help コマンドレットを実行して確認できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+* コマンドレットで使用できるパラメータとその説明については、 Get-Help コマンドレットを実行して確認できます。または、を参照することもできます https://["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
 
 
 * 手順 *
 
 . Active Directoryフェデレーションサービス（AD FS）ホストに接続します。
-. AD FSフェデレーションメタデータファイルをからダウンロードします "https://<host[] fqdn>/FederationMetadata/2007-06/FederationMetadata.xml"
+. AD FSフェデレーションメタデータファイルをからダウンロードします "https://[] fqdn>/FederationMetadata/2007-06/FederationMetadata.xml"
 . ダウンロードしたファイルをSnapCenter サーバにコピーしてMFA機能を有効にします。
 . PowerShellを使用して、SnapCenter 管理者ユーザとしてSnapCenter サーバにログインします。
 . PowerShellセッションを使用して、_New-SmMultifactorAuthenticationMetadata-path_cmdletを使用して、SnapCenter MFAメタデータファイルを生成します。
@@ -119,7 +119,7 @@ SnapCenter MFA機能は、REST APIを使用して有効にすることもでき�
 
 SnapCenter でMFA設定を有効化、更新、無効化したら、ブラウザのすべてのタブを閉じてからブラウザを再度開いてログインし直します。これにより、既存またはアクティブなセッションCookieが消去されます。
 
-トラブルシューティング情報については、を参照してください https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_MFA_login_error_The_SAML_message_response_1_doesnt_match_the_expected_response_2["複数のタブでのSnapCenter ログインでMFAエラーが表示される"^]。
+トラブルシューティング情報については、を参照してください https://["複数のタブでのSnapCenter ログインでMFAエラーが表示される"^]。
 
 
 
@@ -129,7 +129,7 @@ AD FSサーバでアップグレード、CA証明書の更新、DRなどの変�
 
 * 手順 *
 
-. AD FSフェデレーションメタデータファイルをからダウンロードします "https://<host[] fqdn>/FederationMetadata/2007-06/FederationMetadata.xml"
+. AD FSフェデレーションメタデータファイルをからダウンロードします "https://[] fqdn>/FederationMetadata/2007-06/FederationMetadata.xml"
 . ダウンロードしたファイルをSnapCenter サーバにコピーしてMFA設定を更新します。
 . 次のコマンドレットを実行して、SnapCenter 内のAD FSメタデータを更新します。
 +

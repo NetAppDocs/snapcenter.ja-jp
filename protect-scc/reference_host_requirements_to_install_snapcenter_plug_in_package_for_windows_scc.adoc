@@ -22,7 +22,7 @@ SnapCenter Plug-ins Package for Windows をインストールする前に、ホ�
  a| 
 Microsoft Windows の場合
 
-サポートされているバージョンの最新情報については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=108395;&solution=1258&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。
+サポートされているバージョンの最新情報については、を参照してください https://["NetApp Interoperability Matrix Tool で確認できます"^]。
 
 
 
@@ -51,8 +51,8 @@ NOTE: 十分なディスクスペースを割り当て、 logs フォルダに�
 * PowerShell 4.0 以降
 
 
-サポートされているバージョンの最新情報については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=108395;&solution=1258&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。
+サポートされているバージョンの最新情報については、を参照してください https://["NetApp Interoperability Matrix Tool で確認できます"^]。
 
-.NET固有のトラブルシューティング情報については、を参照してください https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_upgrade_or_install_fails_with_This_KB_is_not_related_to_the_OS["インターネットに接続されていない従来型システムでは、SnapCenter のアップグレードまたはインストールが失敗します。"]
+.NET固有のトラブルシューティング情報については、を参照してください https://["インターネットに接続されていない従来型システムでは、SnapCenter のアップグレードまたはインストールが失敗します。"]
 
 |===

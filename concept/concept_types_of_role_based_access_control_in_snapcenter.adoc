@@ -67,7 +67,7 @@ SnapCenter では、クレデンシャルを使用して、許可された SnapC
 
 VM と整合性のあるデータ保護に SnapCenter VMware プラグインを使用している場合、 vCenter Server によってさらに細かく RBAC を実装できます。SnapCenter VMware プラグインは、 vCenter Server RBAC と Data ONTAP RBAC の両方をサポートしています。
 
-詳細については、を参照してください https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_role_based_access_control.html["SnapCenter Plug-in for VMware vSphere の RBAC をサポートしています"^]
+詳細については、を参照してください https://["SnapCenter Plug-in for VMware vSphere の RBAC をサポートしています"^]
 
 
 

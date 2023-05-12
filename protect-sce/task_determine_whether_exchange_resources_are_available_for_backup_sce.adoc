@@ -17,7 +17,7 @@ summary: リソースとは、インストールしたプラグインで管理�
 
 * SnapCenter サーバのインストール、ホストの追加、ストレージシステム接続の作成、クレデンシャルの追加、 Plug-in for Exchange のインストールなどのタスクを完了しておく必要があります。
 * Single Mailbox Recovery ソフトウェアの機能を利用するには、 Single Mailbox Recovery ソフトウェアがインストールされている Exchange サーバ上に、アクティブデータベースを配置する必要があります。
-* データベースが VMware RDM LUN にある場合は、 SnapCenter Plug-in for VMware vSphere を導入し、 SnapCenter に登録する必要があります。。 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_get_started_overview.html["SnapCenter Plug-in for VMware vSphere のドキュメント"] に詳細を示します。
+* データベースが VMware RDM LUN にある場合は、 SnapCenter Plug-in for VMware vSphere を導入し、 SnapCenter に登録する必要があります。。 https://["SnapCenter Plug-in for VMware vSphere のドキュメント"] に詳細を示します。
 
 
 * このタスクについて *

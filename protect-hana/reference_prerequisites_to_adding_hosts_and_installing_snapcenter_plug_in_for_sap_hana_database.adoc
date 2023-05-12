@@ -35,10 +35,10 @@ NOTE: IBM Javaはサポートされていません。
 * root ユーザまたは root 以外のユーザ用にパスワードベースの SSH 接続を有効にしておく必要があります。
 * Windows ホストに Java 1.8 64 ビットがインストールされている必要があります。
 +
-http://www.java.com/en/download/manual.jsp["すべてのオペレーティングシステム用の Java のダウンロード"]
+http://["すべてのオペレーティングシステム用の Java のダウンロード"]
 
 +
-https://imt.netapp.com/matrix/imt.jsp?components=108391;&solution=1259&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"]
+https://["NetApp Interoperability Matrix Tool で確認できます"]
 
 
 
@@ -49,10 +49,10 @@ https://imt.netapp.com/matrix/imt.jsp?components=108391;&solution=1259&isHWU&src
 * root ユーザまたは root 以外のユーザ用にパスワードベースの SSH 接続を有効にしておく必要があります。
 * Linux ホストに Java 1.8 64 ビットがインストールされている必要があります。
 +
-http://www.java.com/en/download/manual.jsp["すべてのオペレーティングシステム用の Java のダウンロード"]
+http://["すべてのオペレーティングシステム用の Java のダウンロード"]
 
 +
-https://imt.netapp.com/matrix/imt.jsp?components=108391;&solution=1259&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"]
+https://["NetApp Interoperability Matrix Tool で確認できます"]
 
 * Linux ホストで実行されている SAP HANA データベースを Plug-in for SAP HANA Database のインストール時にインストールすると、 SnapCenter Plug-in for UNIX が自動的にインストールされます。
 

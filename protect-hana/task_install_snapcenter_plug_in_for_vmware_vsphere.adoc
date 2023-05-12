@@ -13,13 +13,13 @@ summary: データベースが仮想マシン（ VM ）に格納されている�
 [role="lead"]
 データベースが仮想マシン（ VM ）に格納されている場合や VM とデータストアを保護する場合は、 SnapCenter Plug-in for VMware vSphere 仮想アプライアンスを導入する必要があります。
 
-導入の詳細については、を参照してください https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_get_started_overview.html["導入の概要"^]。
+導入の詳細については、を参照してください https://["導入の概要"^]。
 
 
 
 == CA 証明書を導入する
 
-SnapCenter Plug-in for VMware vSphere で CA 証明書を設定するには、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_create_and_or_import_an_SSL_certificate_to_SnapCenter_Plug-in_for_VMware_vSphere_(SCV)["SSL 証明書を作成またはインポートします"^]。
+SnapCenter Plug-in for VMware vSphere で CA 証明書を設定するには、を参照してください https://["SSL 証明書を作成またはインポートします"^]。
 
 
 

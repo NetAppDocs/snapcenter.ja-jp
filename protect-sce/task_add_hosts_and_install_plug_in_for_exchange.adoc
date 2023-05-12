@@ -51,7 +51,7 @@ SnapCenter 4.6 以降では、 SCE はマルチテナンシーをサポートし
 |===
 Plug-in for Exchange は Windows 用 SnapCenter プラグインパッケージによって異なり、バージョンも同じである必要があります。Plug-in for Exchange のインストール時に、デフォルトで SnapCenter Plug-ins Package for Windows が選択され、 VSS Hardware Provider とともにインストールされます。
 
-SnapManager for Microsoft Exchange Server と SnapDrive for Windows がすでにインストールされている場合は、 同じ Exchange サーバに Plug-in for Exchange をインストールする場合は、 Plug-in for Exchange および SnapCenter Plug-ins Package for Windows と互換性がないため、 SnapDrive for Windows で使用する VSS ハードウェアプロバイダの登録を解除する必要があります。詳細については、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_manually_register_the_Data_ONTAP_VSS_Hardware_Provider["Data ONTAP VSS ハードウェアプロバイダを手動で登録する方法"]。
+SnapManager for Microsoft Exchange Server と SnapDrive for Windows がすでにインストールされている場合は、 同じ Exchange サーバに Plug-in for Exchange をインストールする場合は、 Plug-in for Exchange および SnapCenter Plug-ins Package for Windows と互換性がないため、 SnapDrive for Windows で使用する VSS ハードウェアプロバイダの登録を解除する必要があります。詳細については、を参照してください https://["Data ONTAP VSS ハードウェアプロバイダを手動で登録する方法"]。
 
 * 手順 *
 
