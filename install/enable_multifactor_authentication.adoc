@@ -4,26 +4,36 @@ sidebar: sidebar
 keywords: mfa, authentication, multifactor authentication 
 summary: SnapCenter では、データのセキュリティを確保するために厳格なセキュリティおよび認証機能を採用しています。 
 ---
-= 多要素認証（MFA）を有効にする
+= 多要素認証（MFA）を管理します。
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-MFA機能を有効にするには、Active Directoryフェデレーションサービス（AD FS）サーバとSnapCenter サーバでいくつかの手順を実行する必要があります。
+このトピックでは、Active Directoryフェデレーションサービス(AD FS)サーバーとSnapCenter サーバーで多要素認証(MFA)機能を管理する方法について説明します。
 
-* 必要なもの *
 
+
+== 多要素認証（MFA）を有効にする
+
+このトピックでは、Active Directoryフェデレーションサービス(AD FS)サーバーとSnapCenter サーバーでMFA機能を有効にする方法について説明します。
+
+.このタスクについて
+* SnapCenter は、他のアプリケーションが同じAD FSで構成されている場合にSSOベースのログインをサポートします。AD FSの構成によっては、AD FSセッションの持続性に応じて、セキュリティ上の理由からSnapCenter でユーザ認証が必要になる場合があります。
+* コマンドレットで使用できるパラメータとその説明は、を実行して確認できます `Get-Help command_name`。または、を参照することもできます https://["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+
+
+.必要なもの
 * Windows Active Directoryフェデレーションサービス（AD FS）がそれぞれのドメインで稼働している必要があります。
-* AD FSでサポートされている多要素認証サービス（Azure MFA、Cisco Duoなど）が必要です。
+* Azure MFA、Cisco Duoなど、AD FSがサポートする多要素認証サービスが必要です。
 * SnapCenter およびAD FSサーバのタイムスタンプは、タイムゾーンに関係なく同じである必要があります。
 * SnapCenter サーバの認証済みCA証明書を取得して設定します。
 +
 CA証明書は、次の理由で必須です。
 
 +
-** 自己署名証明書がノードレベルで一意であるため、ADFSとF5の通信が切断されないようにします。
+** 自己署名証明書はノードレベルで一意であるため、ADFS-F5通信が切断されないようにします。
 ** スタンドアロン構成またはハイアベイラビリティ構成でのアップグレード、修復、またはディザスタリカバリ（DR）の実行時に、自己署名証明書が再作成されないようにしてMFAの再設定を回避します。
 ** IP-FQDNの解決を保証します。
 +
@@ -33,16 +43,9 @@ CA証明書の詳細については、を参照してください link:../instal
 
 
 
-* このタスクについて *
-
-* SnapCenter は、他のアプリケーションが同じAD FSで構成されている場合にSSOベースのログインをサポートします。AD FSの構成によっては、AD FSセッションの持続性に応じて、セキュリティ上の理由からSnapCenter でユーザ認証が必要になる場合があります。
-* コマンドレットで使用できるパラメータとその説明については、 Get-Help コマンドレットを実行して確認できます。または、を参照することもできます https://["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
-
-
-* 手順 *
-
+.手順
 . Active Directoryフェデレーションサービス（AD FS）ホストに接続します。
-. AD FSフェデレーションメタデータファイルをからダウンロードします "https://[] fqdn>/FederationMetadata/2007-06/FederationMetadata.xml"
+. AD FSフェデレーションメタデータファイルをからダウンロードします "https://[] Fqdn>/FederationMetadata/2007-06/FederationMetadata.xml」を参照してください。
 . ダウンロードしたファイルをSnapCenter サーバにコピーしてMFA機能を有効にします。
 . PowerShellを使用して、SnapCenter 管理者ユーザとしてSnapCenter サーバにログインします。
 . PowerShellセッションを使用して、_New-SmMultifactorAuthenticationMetadata-path_cmdletを使用して、SnapCenter MFAメタデータファイルを生成します。
@@ -50,11 +53,11 @@ CA証明書の詳細については、を参照してください link:../instal
 pathパラメータでは、SnapCenter サーバホストにMFAメタデータファイルを保存するパスを指定します。
 
 . 生成されたファイルをAD FSホストにコピーし、SnapCenter をクライアントエンティティとして設定します。
-. SnapCenter サーバのMFAを有効にするには、_Set-SmMultiFactorAuthentication -Enable-Path_cmdletを使用します。
+. を使用して、SnapCenter サーバのMFAを有効にします `Set-SmMultiFactorAuthentication -Enable -Path` コマンドレット。
 +
 pathパラメータでは、手順3でSnapCenter サーバにコピーされたAD FS MFAメタデータXMLファイルの場所を指定します。
 
-. （オプション）_Get-SmMultiFactorAuthentication_cmdletを使用して、MFAの設定ステータスと設定を確認します。
+. （オプション）を使用して、MFAの設定のステータスと設定を確認します `Get-SmMultiFactorAuthentication` コマンドレット。
 . Microsoft管理コンソール（MMC）に移動し、次の手順を実行します。
 +
 .. [*ファイル*>*スナップインの追加と削除*]をクリックします。
@@ -65,7 +68,7 @@ pathパラメータでは、手順3でSnapCenter サーバにコピーされたA
 .. 許可ウィザードで、次の手順を実行します。
 +
 ... [ 追加（ Add ） ] をクリックします。
-... [*Locations]をクリックし、関連するホスト(階層の最上位)を選択します。
+... [場所]*をクリックし、該当するホスト（階層の最上位）を選択します。
 ... 「*場所*」ポップアップウィンドウで「* OK」をクリックします。
 ... [オブジェクト名]フィールドに「IIS_IUSRS」と入力し、[名前の確認]をクリックして、[OK]をクリックします。
 +
@@ -80,8 +83,8 @@ pathパラメータでは、手順3でSnapCenter サーバにコピーされたA
 .. [*証明書利用者信頼*（Rel証明 書利用者信頼）]>[*証明書利用者信頼の追加*（Add Rel証明 書利用者信頼）]>[*開始*
 .. 2番目のオプションを選択してSnapCenter MFAメタデータファイルを参照し、*次へ*をクリックします。
 .. 表示名を指定し、*次へ*をクリックします。
-.. 必要に応じて制御ポリシーを選択してアクセスし、「*次へ*」をクリックします。
-.. 次のタブの設定をデフォルトに設定します。
+.. 必要に応じてアクセス制御ポリシーを選択し、*[Next]*をクリックします。
+.. 次のタブでデフォルトに設定を選択します。
 .. [ 完了 ] をクリックします。
 +
 指定した表示名の証明書利用者としてSnapCenter が反映されるようになりました。
@@ -92,7 +95,7 @@ pathパラメータでは、手順3でSnapCenter サーバにコピーされたA
 +
 .. ［*クレーム発行ポリシーの編集*］をクリックします。
 .. [*ルールの追加*]をクリックし、[*次へ*]をクリックします。
-.. 要求規則の名前を指定します
+.. クレームルールの名前を指定します。
 .. 属性ストアとして「* Active Directory *」を選択します。
 .. 属性として「* User-Principal-Name *」を選択し、発信クレームタイプとして「* Name-ID *」を選択します。
 .. [ 完了 ] をクリックします。
@@ -100,10 +103,10 @@ pathパラメータでは、手順3でSnapCenter サーバにコピーされたA
 
 . ADFSサーバで次のPowerShellコマンドを実行します。
 +
-_Set-AdfsRelifyPartyTrust - TargetName‘<証明書利用者の名前を表示>’-SigningCertificateRevocationCheck None_
+`Set-AdfsRelyingPartyTrust -TargetName ‘<Display name of relying party >’ -SigningCertificateRevocationCheck None`
 
 +
-_Set-AdfsRelifyPartyTrust - TargetName‘<証明書利用者の名前を表示>-EncryptionCertificateRevocationCheck None_
+`Set-AdfsRelyingPartyTrust -TargetName ‘<Display name of relying party >’ -EncryptionCertificateRevocationCheck None`
 
 . メタデータが正常にインポートされたことを確認するには、次の手順を実行します。
 +
@@ -111,15 +114,12 @@ _Set-AdfsRelifyPartyTrust - TargetName‘<証明書利用者の名前を表示>-
 .. [エンドポイント]、[識別子]、および[署名]フィールドに値が入力されていることを確認します
 
 
+. すべてのブラウザタブを閉じ、ブラウザを再度開いて既存またはアクティブなセッションCookieをクリアし、再度ログインします。
 
 
 SnapCenter MFA機能は、REST APIを使用して有効にすることもできます。
 
-* 終了後 *
-
-SnapCenter でMFA設定を有効化、更新、無効化したら、ブラウザのすべてのタブを閉じてからブラウザを再度開いてログインし直します。これにより、既存またはアクティブなセッションCookieが消去されます。
-
-トラブルシューティング情報については、を参照してください https://["複数のタブでのSnapCenter ログインでMFAエラーが表示される"^]。
+を参照してください。を参照してください link:..https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_login_in_multiple_tabs_shows_MFA_error%3A_The_SAML_message_response_(1)_doesn%E2%80%99t_match_the_expected_response_(2)["複数のタブでのSnapCenter ログインでMFAエラーが表示される"]。
 
 
 
@@ -127,19 +127,15 @@ SnapCenter でMFA設定を有効化、更新、無効化したら、ブラウザ
 
 AD FSサーバでアップグレード、CA証明書の更新、DRなどの変更が行われた場合は、SnapCenter でAD FS MFAメタデータを更新する必要があります。
 
-* 手順 *
-
+.手順
 . AD FSフェデレーションメタデータファイルをからダウンロードします "https://[] fqdn>/FederationMetadata/2007-06/FederationMetadata.xml"
 . ダウンロードしたファイルをSnapCenter サーバにコピーしてMFA設定を更新します。
 . 次のコマンドレットを実行して、SnapCenter 内のAD FSメタデータを更新します。
 +
-_Set-SmMultiFactorAuthentication-Path <ADFS MFAメタデータXMLファイルの場所>_
+`Set-SmMultiFactorAuthentication -Path <location of ADFS MFA metadata xml file>`
 
+. すべてのブラウザタブを閉じ、ブラウザを再度開いて既存またはアクティブなセッションCookieをクリアし、再度ログインします。
 
-
-* 終了後 *
-
-SnapCenter でMFA設定を有効化、更新、無効化したら、ブラウザのすべてのタブを閉じてからブラウザを再度開いてログインし直します。これにより、既存またはアクティブなセッションCookieが消去されます。
 
 
 
@@ -147,8 +143,7 @@ SnapCenter でMFA設定を有効化、更新、無効化したら、ブラウザ
 
 ADFSサーバで修復、CA証明書の更新、DRなどに変更があった場合は、AD FSでSnapCenter MFAメタデータを更新する必要があります。
 
-* 手順 *
-
+.手順
 . AD FSホストで、AD FS管理ウィザードを開き、次の手順を実行します。
 +
 .. [*証明書利用者信頼*]をクリックします。
@@ -158,22 +153,18 @@ ADFSサーバで修復、CA証明書の更新、DRなどに変更があった場
 
 .. 多要素認証（MFA）を有効にします。
 +
-を参照してください link:../install/enable_multifactor_authentication.html["多要素認証を有効にします"]
+を参照してください link:../install/enable_multifactor_authentication.html["多要素認証を有効にします"]。
 
 
 
+. すべてのブラウザタブを閉じ、ブラウザを再度開いて既存またはアクティブなセッションCookieをクリアし、再度ログインします。
 
-
-* 終了後 *
-
-SnapCenter でMFA設定を有効化、更新、無効化したら、ブラウザのすべてのタブを閉じてからブラウザを再度開いてログインし直します。これにより、既存またはアクティブなセッションCookieが消去されます。
 
 
 
 == 多要素認証（MFA）を無効にする
 
-MFAを無効にし、_Set-SmMultiFactorAuthentication -Disable_cmdletを使用してMFAを有効にしたときに作成した構成ファイルをクリーンアップします。
+.手順
+. MFAを無効にし、を使用してMFAを有効にしたときに作成された構成ファイルをクリーンアップします `Set-SmMultiFactorAuthentication -Disable` コマンドレット。
+. すべてのブラウザタブを閉じ、ブラウザを再度開いて既存またはアクティブなセッションCookieをクリアし、再度ログインします。
 
-* 終了後 *
-
-SnapCenter でMFA設定を有効化、更新、無効化したら、ブラウザのすべてのタブを閉じてからブラウザを再度開いてログインし直します。これにより、既存またはアクティブなセッションCookieが消去されます。
