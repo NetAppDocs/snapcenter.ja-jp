@@ -20,7 +20,7 @@ summary: 著作権に関する声明、商標、特許などにアクセスで�
 
 == 著作権
 
-http://[]
+http://www.netapp.com/us/legal/copyright.aspx[]
 
 
 
@@ -28,7 +28,7 @@ http://[]
 
 NetApp 、 NetApp のロゴ、および NetApp の商標ページに記載されているマークは、 NetApp, Inc. の商標です。その他の会社名および製品名は、それぞれの所有者の商標である場合があります。
 
-http://[]
+http://www.netapp.com/us/legal/netapptmlist.aspx[]
 
 
 
@@ -36,13 +36,13 @@ http://[]
 
 ネットアップが所有する特許の最新リストは、次のサイトで入手できます。
 
-https://[]
+https://www.netapp.com/us/media/patents-page.pdf[]
 
 
 
 == プライバシーポリシー
 
-https://[]
+https://www.netapp.com/us/legal/privacypolicy/index.aspx[]
 
 
 
@@ -50,4 +50,4 @@ https://[]
 
 通知ファイルには、ネットアップソフトウェアで使用されるサードパーティの著作権およびライセンスに関する情報が記載されています。
 
-https://["SnapCenter 4.8の注意事項は以下のとおりです"^]
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2884814["SnapCenter 4.8の注意事項は以下のとおりです"^]

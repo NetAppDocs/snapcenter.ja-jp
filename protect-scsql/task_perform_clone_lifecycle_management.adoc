@@ -112,7 +112,7 @@ NOTE: プリスクリプトまたはポストスクリプトのパスにドラ�
 NOTE: E メール通知を利用する場合は、 GUI または PowerShell コマンド Set-SmtpServer を使用して、 SMTP サーバの詳細を指定しておく必要があります。
 
 +
-EMS については、を参照してください https://["EMS データ収集を管理します"]
+EMS については、を参照してください https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_ems_data_collection.html["EMS データ収集を管理します"]
 
 . 概要を確認し、 [ 完了 ] をクリックします。
 

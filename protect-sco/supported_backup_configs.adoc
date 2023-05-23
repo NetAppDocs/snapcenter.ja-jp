@@ -1,0 +1,47 @@
+---
+permalink: protect-sco/supported_backup_configs.html 
+sidebar: sidebar 
+keywords: backup type, preferred nodes, catalog backups, schedules, backup name format, retention, verification 
+summary: SnapCenter では、各種の Oracle データベース構成のバックアップがサポートされます。 
+---
+= バックアップ対象としてサポートされる Oracle データベース構成
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter では、各種の Oracle データベース構成のバックアップがサポートされます。
+
+* Oracle スタンドアロン構成
+* Oracle Real Application Clusters （ RAC ）
+* Oracle スタンドアロンレガシーです
+* Oracle スタンドアロンコンテナデータベース（ CDB ）
+* Oracle Data Guard スタンバイ
++
+Data Guard スタンバイデータベースのオフラインマウントバックアップだけを作成できます。オフラインシャットダウンバックアップ、アーカイブログのみのバックアップ、およびフルバックアップはサポートされていません。
+
+* Oracle Active Data Guard スタンバイ
++
+Active Data Guard スタンバイデータベースのオンラインバックアップだけを作成できます。アーカイブログのみのバックアップとフルバックアップはサポートされていません。
+
++
+Data Guard スタンバイデータベースまたは Active Data Guard スタンバイデータベースのバックアップを作成する前に、管理されたリカバリプロセス（ MRP ）が停止し、バックアップが作成されたあとに MRP が開始されます。
+
+* Automatic Storage Management （ ASM ；自動ストレージ管理）
++
+** 仮想マシンディスク（ VMDK ）上の ASM スタンドアロンおよび ASM RAC
++
+Oracle データベースでサポートされるどのリストア方式でも、 VMDK 上で実行できるのは ASM RAC データベースの Connect and Copy リストアだけです。
+
+** ASMスタンドアロンおよびASM RAC on Raw Device Mapping（RDM）+ ASMLibの有無にかかわらず、ASM上のOracleデータベースに対してバックアップ、リストア、およびクローニングの操作を実行できます。
+** Oracle ASM フィルタドライバ (ASMFD)
++
+PDB 移行処理と PDB クローニング処理はサポートされていません。
+
+** Oracle Flex ASM
+
+
+
+
+サポートされている Oracle のバージョンの最新情報については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=105283;&solution=1259&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。

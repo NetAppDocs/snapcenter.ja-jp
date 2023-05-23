@@ -106,6 +106,6 @@ NOTE: SnapCenter Advanced および SnapCenter NAS ファイルサービスの�
 
 SnapCenter Plug-in for Exchange を使用して Microsoft Exchange Server データベースと Single Mailbox Recovery （ SMBR ）を管理している場合は、 SMBR のライセンスが追加で必要です。 SMBR の場合は、ユーザのメールボックスに基づいて別途購入する必要があります。
 
-メールボックスが 1 、 000 、 5000 、 15000 、 25000 個という単位で提供されている SMBR ライセンスを購入する場合は、ネットアップの営業担当者にお問い合わせください。SKU の購入後、の手順に従ってライセンスを取得できます https://["SMBR リリースノート"^]。
+メールボックスが 1 、 000 、 5000 、 15000 、 25000 個という単位で提供されている SMBR ライセンスを購入する場合は、ネットアップの営業担当者にお問い合わせください。SKU の購入後、の手順に従ってライセンスを取得できます https://library.netapp.com/ecm/ecm_download_file/ECMLP2863893["SMBR リリースノート"^]。
 
 ライセンスキーのリクエストを送信すると、 Kroll Ontrack は問題 50 メールボックスライセンスキーを送信します。資格に基づいて、 Kroll Ontrack は検証後にメールボックスのライセンスをアップグレードします。

@@ -16,7 +16,7 @@ SnapCenter でハイアベイラビリティ（ HA ）をサポートするに�
 
 IMPORTANT: SnapCenter 4.2.x からアップグレードし、以前に Network Load Balancing （ NLB ）を使用していた場合は、引き続きその構成を使用するか、 F5 に切り替えることができます。
 
-ワークフローイメージには、 F5 ロードバランサを使用して SnapCenter サーバのハイアベイラビリティを設定する手順が記載されています。詳細な手順については、を参照してください https://["F5 ロードバランサを使用して SnapCenter サーバのハイアベイラビリティを設定する方法"^]。
+ワークフローイメージには、 F5 ロードバランサを使用して SnapCenter サーバのハイアベイラビリティを設定する手順が記載されています。詳細な手順については、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_SnapCenter_Servers_for_high_availability_using_F5_Load_Balancer["F5 ロードバランサを使用して SnapCenter サーバのハイアベイラビリティを設定する方法"^]。
 
 image::../media/sc-F5-configure-workflow.png[SC F5 設定ワークフロー]
 
@@ -26,7 +26,7 @@ image::../media/sc-F5-configure-workflow.png[SC F5 設定ワークフロー]
 * add-SmServer
 * remove-SmServerCluster を実行しました
 +
-詳細については、を参照してください https://["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+詳細については、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
 
 
 

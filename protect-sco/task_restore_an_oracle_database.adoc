@@ -170,8 +170,8 @@ Pluggable Database （ PDB ） tablespaces * を選択し、リストアする P
 
 NOTE: マウントパスを外部のログの場所としてリストする前に、マウントパスのパスと内容を確認する必要があります。
 
-** http://["ネットアップテクニカルレポート 4591 ：『 Database Data Protection Backup 、 Recovery 、 Replication 、 and DR 』"^]
-** https://["ORA-00308 エラーで処理が失敗します"^]
+** http://www.netapp.com/us/media/tr-4591.pdf["ネットアップテクニカルレポート 4591 ：『 Database Data Protection Backup 、 Recovery 、 Replication 、 and DR 』"^]
+** https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/ORA-00308%3A_cannot_open_archived_log_ORA_LOG_arch1_123_456789012.arc["ORA-00308 エラーで処理が失敗します"^]
 
 
 |===
@@ -232,8 +232,8 @@ NOTE: E メール通知を利用する場合は、 GUI または PowerShell コ�
 
 * 詳細はこちら *
 
-* https://["SnapCenter 処理では、 Oracle RAC One Node データベースがスキップされます"^]
-* https://["セカンダリの SnapMirror または SnapVault の場所からリストアできませんでした"^]
-* https://["孤立したインカネーションのバックアップからのリストアに失敗しました"^]
-* https://["AIX システムでのバックアップ、リストア、クローニングの各処理のパラメータをカスタマイズできます"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Oracle_RAC_One_Node_database_is_skipped_for_performing_SnapCenter_operations["SnapCenter 処理では、 Oracle RAC One Node データベースがスキップされます"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Failed_to_restore_from_a_secondary_SnapMirror_or_SnapVault_location["セカンダリの SnapMirror または SnapVault の場所からリストアできませんでした"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Failed_to_restore_when_a_backup_of_an_orphan_incarnation_is_selected["孤立したインカネーションのバックアップからのリストアに失敗しました"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/What_are_the_customizable_parameters_for_backup_restore_and_clone_operations_on_AIX_systems["AIX システムでのバックアップ、リストア、クローニングの各処理のパラメータをカスタマイズできます"^]
 

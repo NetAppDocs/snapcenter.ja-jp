@@ -55,7 +55,7 @@ Plug-in for Oracle Database には、次のようなメリットもあります�
 
 +
 ** この機能を無効にするには、ENABLE_LUNPATH_MONITORINGパラメータの値をfalseに設定します。
-** LUNパスが自動的に修正される頻度を指定するには、LUNPATH_MONITORING_INTERVALパラメータに値（時間単位）を割り当てます。SLM の詳細については、を参照してください http://["『 ONTAP 9 SAN アドミニストレーションガイド』"^]。
+** LUNパスが自動的に修正される頻度を指定するには、LUNPATH_MONITORING_INTERVALパラメータに値（時間単位）を割り当てます。SLM の詳細については、を参照してください http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanag/home.html["『 ONTAP 9 SAN アドミニストレーションガイド』"^]。
 
 
 * LinuxでのNon-Volatile Memory Express（NVMe）のサポート

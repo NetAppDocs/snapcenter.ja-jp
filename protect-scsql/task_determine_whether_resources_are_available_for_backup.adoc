@@ -25,7 +25,7 @@ summary: リソースとは、インストールしたプラグインで管理�
 * Windows クラスタで Microsoft SQL データベースを検出するには、フェイルオーバークラスタインスタンス（ FCI ）の TCP / IP ポートのブロックを解除する必要があります。
 * データベースが VMware RDM LUN または VMDK にある場合は、 SnapCenter Plug-in for VMware vSphere を導入し、 SnapCenter に登録する必要があります。
 +
-詳細については、を参照してください https://["SnapCenter Plug-in for VMware vSphere を導入"^]
+詳細については、を参照してください https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere.html["SnapCenter Plug-in for VMware vSphere を導入"^]
 
 * ホストを gMSA とともに追加し 'gMSA にログイン権限とシステム管理権限がある場合 'gMSA を使用して SQL インスタンスに接続します
 

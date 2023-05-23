@@ -24,7 +24,7 @@ NOTE: SnapCenter CLI では、 SnapCenter Custom Plug-ins コマンドはサポ�
 
 link:task_add_hosts_and_install_plug_in_packages_on_remote_hosts_scc.html["ホストを追加し、プラグインパッケージをリモートホストにインストールする。"^]
 
-ネットアップでは、 MySQL 、 MaxDB 、 DB2 、 Sybase 、 DPGLUE も提供しています。 MongoDB 、 ORASCPM 、 PostgreSQL のカスタムプラグイン。これらのプラグインは、からダウンロードできます https://["NetApp Storage Automation Store の略"^]。
+ネットアップでは、 MySQL 、 MaxDB 、 DB2 、 Sybase 、 DPGLUE も提供しています。 MongoDB 、 ORASCPM 、 PostgreSQL のカスタムプラグイン。これらのプラグインは、からダウンロードできます https://automationstore.netapp.com/home.shtml["NetApp Storage Automation Store の略"^]。
 
 
 NOTE: SnapCenter のサポートポリシーでは、 SnapCenter カスタムプラグインフレームワーク、コアエンジン、および関連する API のサポートについて説明します。サポートは、プラグインのソースコードと、カスタムプラグインフレームワーク上に構築された関連スクリプトについては説明しません。

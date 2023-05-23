@@ -334,7 +334,7 @@ stderr
 このリストには、プラグインがサーバーに返すすべてのメッセージが含まれています。これらのメッセージは、 SnapCenter サーバの CLI または GUI に表示されます。
 
 |===
-SnapCenter エージェントはビルダーを提供します (https://["ビルダパターン"]）をクリックします。これにより、これらの機能を非常に簡単に使用できます。
+SnapCenter エージェントはビルダーを提供します (https://en.wikipedia.org/wiki/Builder_pattern["ビルダパターン"]）をクリックします。これにより、これらの機能を非常に簡単に使用できます。
 
 ....
 Result result = Result.builder()

@@ -13,7 +13,7 @@ summary: SnapCenter を使用して、 FC 接続 LUN または iSCSI 接続 LUN 
 [role="lead"]
 SnapCenter を使用して、 FC 接続 LUN または iSCSI 接続 LUN を設定できます。SnapCenter を使用して、既存の LUN を Windows ホストに接続することもできます。
 
-LUN は、 SAN 構成におけるストレージの基本単位です。Windows ホストは、システム上の LUN を仮想ディスクとして認識します。詳細については、を参照してください http://["ONTAP 9 SAN 構成ガイド"^]。
+LUN は、 SAN 構成におけるストレージの基本単位です。Windows ホストは、システム上の LUN を仮想ディスクとして認識します。詳細については、を参照してください http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanconf/home.html["ONTAP 9 SAN 構成ガイド"^]。
 
 
 
@@ -24,7 +24,7 @@ iSCSI を使用して LUN に接続する場合は、 LUN を作成して通信�
 * 始める前に *
 
 * ストレージシステムのノードを iSCSI ターゲットとして定義しておく必要があります。
-* ストレージシステムで iSCSI サービスを開始しておく必要があります。 http://["詳細はこちら。"^]
+* ストレージシステムで iSCSI サービスを開始しておく必要があります。 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanag/home.html["詳細はこちら。"^]
 
 
 * このタスクについて *

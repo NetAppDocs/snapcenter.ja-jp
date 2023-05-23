@@ -40,7 +40,7 @@ VM 、 VMDK 、およびデータストアの VM 整合性のあるデータ保�
 * SCV ゲストファイルのリストア
 
 
-詳細については、を参照してください https://["SnapCenter Plug-in for VMware vSphere ユーザ用の RBAC のタイプ"^]
+詳細については、を参照してください https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_types_of_rbac_for_snapcenter_users.html["SnapCenter Plug-in for VMware vSphere ユーザ用の RBAC のタイプ"^]
 
 |===
 

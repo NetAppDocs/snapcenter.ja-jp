@@ -78,7 +78,7 @@ NOTE: セカンダリデスティネーションに SnapCenter Standard ライ�
 |===
 * その他の要件 *
 
-ONTAP およびアプリケーションプラグインの最小要件については、を参照してください https://["Interoperability Matrix Tool で確認してください"^]
+ONTAP およびアプリケーションプラグインの最小要件については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=108408;&solution=1259&isHWU&src=IMT["Interoperability Matrix Tool で確認してください"^]
 
 |===
 | ホスト | 最小要件 
@@ -87,7 +87,7 @@ ONTAP およびアプリケーションプラグインの最小要件につい�
  a| 
 オペレーティングシステム（ 64 ビット）
  a| 
-を参照してください https://["Interoperability Matrix Tool で確認してください"^]
+を参照してください https://imt.netapp.com/matrix/imt.jsp?components=108408;&solution=1259&isHWU&src=IMT["Interoperability Matrix Tool で確認してください"^]
 
 
 
@@ -171,7 +171,7 @@ Windows プラグインホスト
 
 ポート 135 および 445 に加え、 Microsoft が指定したダイナミックポート範囲も開いている必要があります。リモートインストール操作では、このポート範囲を動的に検索する Windows Management Instrumentation （ WMI ）サービスを使用します。
 
-サポートされているダイナミックポート範囲については、を参照してください https://["Windows のサービス概要とネットワークポート要件"^]。
+サポートされているダイナミックポート範囲については、を参照してください https://docs.microsoft.com/en-US/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements["Windows のサービス概要とネットワークポート要件"^]。
 
 
 
@@ -206,7 +206,7 @@ SQL Server に対して sysadmin 権限を持つユーザが必要です。こ�
 
 * 手順 *
 
-. から SnapCenter Server インストールパッケージをダウンロードします https://["ネットアップサポートサイト"^] 次に、この exe をダブルクリックします。
+. から SnapCenter Server インストールパッケージをダウンロードします https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["ネットアップサポートサイト"^] 次に、この exe をダブルクリックします。
 +
 インストールの開始後、すべての事前確認が実行され、最小要件を満たしていない場合には、対応するエラーまたは警告メッセージが表示されます。警告メッセージは無視してインストールを続行できますが、エラーは修正しておく必要があります。
 

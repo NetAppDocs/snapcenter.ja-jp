@@ -24,7 +24,7 @@ NOTE: コマンドラインからの SnapCenter サーバのサイレントイ�
 * SnapCenter サーバをインストールするホストに MySQL サーバがインストールされていないことを確認しておく必要があります。
 * Windows インストーラのデバッグを有効にしておく必要があります。
 +
-有効にする方法については、 Microsoft の Web サイトを参照してください https://["Windows インストーラのログ"^]。
+有効にする方法については、 Microsoft の Web サイトを参照してください https://support.microsoft.com/kb/223300["Windows インストーラのログ"^]。
 
 +
 
@@ -34,7 +34,7 @@ NOTE: SnapCenter サーバは、 Microsoft Exchange サーバ、 Active Director
 
 * 手順 *
 
-. から SnapCenter Server インストールパッケージをダウンロードします https://["ネットアップサポートサイト"^]。
+. から SnapCenter Server インストールパッケージをダウンロードします https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["ネットアップサポートサイト"^]。
 . ダウンロードした .exe ファイルをダブルクリックして、 SnapCenter Server のインストールを開始します。
 +
 インストールの開始後、すべての事前確認が実行され、最小要件を満たしていない場合には、対応するエラーまたは警告メッセージが表示されます。

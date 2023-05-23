@@ -38,32 +38,52 @@ entries:
   url: "/protect-sco/concept_prepare_for_protecting_oracle_databases.html"
 - title: Oracle データベースをバックアップする
   entries:
-  - title: バックアップのワークフロー
+  - title: バックアップの概要
     url: "/protect-sco/backup-workflow.html"
-  - title: Oracle データベースのバックアップ戦略を定義する
+  - title: 構成情報をバックアップします
+    entries:
+    - title: サポートされるバックアップ構成
+      url: "/protect-sco/supported_backup_configs.html"
+    - title: バックアップタイプ
+      url: "/protect-sco/backup_types.html"
+    - title: SnapCenter による Oracle データベースの検出方法
+      url: "/protect-sco/discover-oracle-database.html"
+    - title: 使用する優先ノード
+      url: "/protect-sco/preferred-nodes.html"
+    - title: バックアップをカタログ化します
+      url: "/protect-sco/catalog-backups.html"
+    - title: 事前定義された環境変数
+      url: "/protect-sco/predefined-environment-variables-prescript-postscript-backup.html"
+    - title: バックアップの保持
+      url: "/protect-sco/retention-backups.html"
+    - title: バックアップスケジュール
+      url: "/protect-sco/schedule-backups.html"
+    - title: 命名規則
+      url: "/protect-sco/naming-backups.html"
+  - title: バックアップ戦略を定義
     url: "/protect-sco/task_define_a_backup_strategy_for_oracle_databases.html"
-  - title: バックアップ固有のプリスクリプトおよびポストスクリプト用の事前定義された環境変数
-    url: "/protect-sco/predefined-environment-variables-prescript-postscript-backup.html"
-  - title: Oracle データベースをバックアップに使用できるかどうかを確認します
-    url: "/protect-sco/task_determine_whether_oracle_databases_are_available_for_backup.html"
-  - title: Oracle データベースのバックアップポリシーの作成
-    url: "/protect-sco/task_create_backup_policies_for_oracle_database.html"
-  - title: Oracle データベースのリソースグループを作成してポリシーを適用します
-    url: "/protect-sco/task_create_resource_groups_and_attaching_policies_for_oracle_databases.html"
-  - title: Oracle データベースをバックアップするための要件
+  - title: バックアップ要件を確認します
     url: "/protect-sco/reference_requirements_for_backing_up_an_oracle_database.html"
+  - title: Oracleデータベースを検出します
+    url: "/protect-sco/task_determine_whether_oracle_databases_are_available_for_backup.html"
+  - title: バックアップポリシーを作成する
+    url: "/protect-sco/task_create_backup_policies_for_oracle_database.html"
+  - title: リソースグループの作成（オプション）
+    url: "/protect-sco/task_create_resource_groups_and_attach_policies_for_oracle_databases.html"
   - title: Oracle リソースのバックアップ
     url: "/protect-sco/task_back_up_oracle_resources.html"
-  - title: Oracle データベースのリソースグループをバックアップする
+  - title: リソースグループをバックアップする
     url: "/protect-sco/task_back_up_oracle_database_resource_groups.html"
-  - title: UNIX コマンドを使用して Oracle データベースをバックアップします
-    url: "/protect-sco/task_back_up_oracle_databases_using_unix_commands.html"
-  - title: Oracle データベースのバックアップ処理を監視する
+  - title: バックアップの進行状況を監視します
     url: "/protect-sco/task_monitor_oracle_database_backup_operations.html"
-  - title: Oracle データベースのバックアップ処理をキャンセルします
-    url: "/protect-sco/task_cancel_the_snapcenter_plug_in_for_oracle_database_backup_operations.html"
-  - title: Topology ページで、 Oracle データベースのバックアップとクローンを表示します
-    url: "/protect-sco/task_view_oracle_databse_backups_and_clones_in_the_topology_page.html"
+  - title: その他のバックアップ処理
+    entries:
+    - title: UNIXコマンドを使用してバックアップします
+      url: "/protect-sco/task_back_up_oracle_databases_using_unix_commands.html"
+    - title: バックアップ処理をキャンセルします
+      url: "/protect-sco/task_cancel_the_snapcenter_plug_in_for_oracle_database_backup_operations.html"
+    - title: バックアップを表示します
+      url: "/protect-sco/task_view_oracle_databse_backups_and_clones_in_the_topology_page.html"
 - title: データベースバックアップのマウントとアンマウント
   url: "/protect-sco/task_mount_and_unmount_databases_backups.html"
 - title: Oracle データベースのリストアとリカバリを行う

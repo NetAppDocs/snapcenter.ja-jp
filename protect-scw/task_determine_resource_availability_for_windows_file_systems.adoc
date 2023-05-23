@@ -16,7 +16,7 @@ summary: リソースとは、インストールしたプラグインで管理�
 * 必要なもの *
 
 * SnapCenter サーバのインストール、ホストの追加、 Storage Virtual Machine （ SVM ）接続の作成、クレデンシャルの追加などのタスクを完了しておく必要があります。
-* ファイルが VMware RDM LUN または VMDK にある場合は、 SnapCenter Plug-in for VMware vSphere を導入し、 SnapCenter に登録する必要があります。詳細については、を参照してください https://["SnapCenter Plug-in for VMware vSphere のドキュメント"^]。
+* ファイルが VMware RDM LUN または VMDK にある場合は、 SnapCenter Plug-in for VMware vSphere を導入し、 SnapCenter に登録する必要があります。詳細については、を参照してください https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/["SnapCenter Plug-in for VMware vSphere のドキュメント"^]。
 
 
 * 手順 *

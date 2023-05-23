@@ -80,7 +80,7 @@ SnapCenter の容量ベースのライセンスのシリアル番号は、注文
 
 * 手順 *
 
-. ネットアップサポートサイトにログインします http://["mysupport.netapp.com"^]。
+. ネットアップサポートサイトにログインします http://mysupport.netapp.com/["mysupport.netapp.com"^]。
 . [ システム ] 、 [ * ソフトウェアライセンス ] の順に移動します。
 . [ 選択基準 ] 領域で、 [ すべてを表示：シリアル番号とライセンス ] ドロップダウンメニューから *SC_standard* を選択します。
 +
@@ -108,7 +108,7 @@ SnapCenter ライセンスの 9 桁のシリアル番号が 51xxxxxxx の形式�
 
 * 手順 *
 
-. に移動します https://["ネットアップライセンスファイルジェネレータ"^]。
+. に移動します https://register.netapp.com/register/eclg.xwic["ネットアップライセンスファイルジェネレータ"^]。
 . 必要な情報を入力します。
 . [ 製品ライン ] フィールドで、プルダウンメニューから *SnapCenter Standard (capacity based-)* を選択します。
 . [ 製品シリアル番号 ] フィールドに、 SnapCenter ライセンスのシリアル番号を入力します

@@ -55,7 +55,7 @@ SnapCenter の主な機能は次のとおりです。
 ユーザ定義の SnapCenter プラグインを作成するためのフレームワークを提供することで、他の標準またはカスタムのアプリケーションやデータベースでもデータ保護がサポートされます。これにより、 1 つの画面で他のアプリケーションやデータベースのデータを保護することができます。このフレームワークを活用して、ネットアップは IBM DB2 、 MongoDB 、 MySQL など用の SnapCenter カスタムプラグインを NetApp Automation Store でリリースしました。
 
 +
-https://["NetApp Storage Automation Store の略"^]
+https://automationstore.netapp.com/home.shtml["NetApp Storage Automation Store の略"^]
 
 * ポリシーベースのバックアップ
 +
@@ -82,13 +82,13 @@ SnapCenter GUI では、ハイブリッドクラウドの任意のデスティ�
 SnapCenter には、ほとんどの機能をオーケストレーションソフトウェアと統合するための REST API 、および Windows PowerShell コマンドレットとコマンドラインインターフェイスが含まれています。
 
 +
-REST APIの詳細については、を参照してください https://["REST APIの概要"]。
+REST APIの詳細については、を参照してください https://docs.netapp.com/us-en/snapcenter/sc-automation/overview_rest_apis.html["REST APIの概要"]。
 
 +
-Windowsコマンドレットの詳細については、を参照してください https://["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+Windowsコマンドレットの詳細については、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
 
 +
-UNIXコマンドの詳細については、を参照してください https://["SnapCenter ソフトウェアコマンドリファレンスガイド"^]。
+UNIXコマンドの詳細については、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2885486["SnapCenter ソフトウェアコマンドリファレンスガイド"^]。
 
 * 一元化されたデータ保護ダッシュボードとレポート作成
 * セキュリティと委譲のためのロールベースアクセス制御（ RBAC ）。
@@ -158,7 +158,7 @@ NOTE: SnapCenter Plug-in for UNIX はスタンドアロンのプラグインで�
 
 * SnapCenter カスタムプラグイン
 +
-カスタムプラグインはコミュニティでサポートされており、からダウンロードできます https://["NetApp Storage Automation Store の略"^]。
+カスタムプラグインはコミュニティでサポートされており、からダウンロードできます https://automationstore.netapp.com/home.shtml["NetApp Storage Automation Store の略"^]。
 
 
 
@@ -265,7 +265,7 @@ Linux または Windows
  a| 
 カスタムプラグイン
  a| 
-https://["NetApp Storage Automation Store の略"^]
+https://automationstore.netapp.com/home.shtml["NetApp Storage Automation Store の略"^]
  a| 
 ファイルシステムのバックアップについては、 Plug-in for Windows を参照してください
  a| 
@@ -277,7 +277,7 @@ Linux または Windows
 
 NOTE: SnapCenter Plug-in for VMware vSphere は、仮想マシン（ VM ）、データストア、および仮想マシンディスク（ VMDK ）に対して crash-consistent で VM と整合性のあるバックアップおよびリストア処理をサポートし、 SnapCenter アプリケーション固有のプラグインをサポートして、仮想化されたデータベースおよびファイルシステムに対してアプリケーションと整合性のあるバックアップおよびリストア処理を保護します。
 
-SnapCenter 4.1.1 ユーザの場合、 SnapCenter Plug-in for VMware vSphere 4.1.1 のドキュメントには、仮想化されたデータベースとファイルシステムの保護に関する情報が記載されています。SnapCenter 4.2.x ユーザの場合、 NetApp Data Broker 1.0 および 1.0.1 のドキュメントでは、 Linux ベースの NetApp Data Broker 仮想アプライアンス（オープン仮想アプライアンス形式）が提供する SnapCenter Plug-in for VMware vSphere を使用して、仮想化されたデータベースとファイルシステムを保護する方法について説明しています。SnapCenter 4.3 以降を使用しているユーザの場合は、を参照してください https://["SnapCenter Plug-in for VMware vSphere のドキュメント"^] Linux ベースの SnapCenter Plug-in for VMware vSphere 仮想アプライアンス（ Open Virtual Appliance 形式）を使用した、仮想化されたデータベースとファイルシステムの保護に関する情報を提供します。
+SnapCenter 4.1.1 ユーザの場合、 SnapCenter Plug-in for VMware vSphere 4.1.1 のドキュメントには、仮想化されたデータベースとファイルシステムの保護に関する情報が記載されています。SnapCenter 4.2.x ユーザの場合、 NetApp Data Broker 1.0 および 1.0.1 のドキュメントでは、 Linux ベースの NetApp Data Broker 仮想アプライアンス（オープン仮想アプライアンス形式）が提供する SnapCenter Plug-in for VMware vSphere を使用して、仮想化されたデータベースとファイルシステムを保護する方法について説明しています。SnapCenter 4.3 以降を使用しているユーザの場合は、を参照してください https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/index.html["SnapCenter Plug-in for VMware vSphere のドキュメント"^] Linux ベースの SnapCenter Plug-in for VMware vSphere 仮想アプライアンス（ Open Virtual Appliance 形式）を使用した、仮想化されたデータベースとファイルシステムの保護に関する情報を提供します。
 
 
 
@@ -348,7 +348,7 @@ SAN デバイス上に構築された SAN ネイティブデバイス、ファ�
 * Windows 環境と Linux 環境の両方をサポートします。Windows 環境では、カスタムプラグインに SnapCenter Plug-in for Microsoft Windows を組み合わせて使用することで、ファイルシステムの整合性のあるバックアップを作成することができます。
 
 
-SnapCenter ソフトウェア用の MySQL 、 DB2 、 MongoDB カスタムプラグインのサンプルは、からダウンロードできます https://["NetApp Storage Automation Store の略"^]。
+SnapCenter ソフトウェア用の MySQL 、 DB2 、 MongoDB カスタムプラグインのサンプルは、からダウンロードできます https://automationstore.netapp.com/home.shtml["NetApp Storage Automation Store の略"^]。
 
 
 NOTE: MySQL 、 DB2 、 MongoDB のカスタムプラグインは、ネットアップのコミュニティでのみサポートされます。

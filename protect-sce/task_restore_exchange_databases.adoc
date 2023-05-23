@@ -23,7 +23,7 @@ SnapCenter を使用して、バックアップされた Exchange データベ�
 パッシブデータベースコピーをアクティブデータベースコピーとして作成するには、「 Move-ActiveMailboxDatabase 」コマンドを実行します。
 
 +
-。 https://["Microsoft のドキュメント"^] に、このコマンドに関する情報を示します。
+。 https://docs.microsoft.com/en-us/powershell/module/exchange/move-activemailboxdatabase?view=exchange-ps["Microsoft のドキュメント"^] に、このコマンドに関する情報を示します。
 
 
 

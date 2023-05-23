@@ -30,4 +30,4 @@ SnapCenter Plug-in for VMware vSphere
 |===
 SnapCenter REST API については、を参照してください link:../sc-automation/overview_rest_apis.html["REST API の概要"^]
 
-SnapCenter Plug-in for VMware vSphere REST API については、を参照してください https://["SnapCenter Plug-in for VMware vSphere REST API"^]
+SnapCenter Plug-in for VMware vSphere REST API については、を参照してください https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_rest_apis_overview.html["SnapCenter Plug-in for VMware vSphere REST API"^]

@@ -345,7 +345,7 @@ AIX のセットアップでは、 lkdev コマンドを使用して、クロー
 
 * 詳細はこちら *
 
-* https://["リストアまたはクローニングが失敗して ORA-00308 エラーメッセージが表示されます"^]
-* https://["クローンデータベースをリカバリできませんでした"^]
-* https://["AIX システムでのバックアップ、リストア、クローニングの各処理のパラメータをカスタマイズできます"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/ORA-00308%3A_cannot_open_archived_log_ORA_LOG_arch1_123_456789012.arc["リストアまたはクローニングが失敗して ORA-00308 エラーメッセージが表示されます"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Failed_to_recover_a_cloned_database["クローンデータベースをリカバリできませんでした"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/What_are_the_customizable_parameters_for_backup_restore_and_clone_operations_on_AIX_systems["AIX システムでのバックアップ、リストア、クローニングの各処理のパラメータをカスタマイズできます"^]
 

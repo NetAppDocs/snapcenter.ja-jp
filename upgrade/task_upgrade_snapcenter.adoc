@@ -45,7 +45,7 @@ SnapCenter 構成ファイルの例： SnapDrive Service.exe.config 、 SMCoreSe
 
 . ネットアップサポートサイトから SnapCenter サーバインストールパッケージをダウンロードします。
 +
-https://[]
+https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab[]
 
 . C ： \Program Files\NetApp\Virtual \SnapCenter WebApp にある Web.config のコピーを作成します。
 . Windows タスクスケジュールからプラグインホストに関連する SnapCenter スケジュールをエクスポートして、アップグレードが失敗した場合にプラグインホストを使用してスケジュールをリストアできるようにします。

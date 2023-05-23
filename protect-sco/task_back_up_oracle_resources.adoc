@@ -13,51 +13,38 @@ summary: どのリソースグループにも含まれていないリソース�
 [role="lead"]
 どのリソースグループにも含まれていないリソースは、のリソースページからバックアップすることができます。
 
-* 手順 *
-
-. 左側のナビゲーションペインで、 * リソース * をクリックし、リストから適切なプラグインを選択します。
-. [ リソース ] ページで、 [ * 表示 ] リストから [ * データベース * ] を選択します。
-. * をクリックしますimage:../media/filter_icon.gif[""]* をクリックし、ホスト名とデータベースタイプを選択してリソースをフィルタリングします。
+.手順
+. 左側のナビゲーションペインで、*[リソース]*を選択し、リストから適切なプラグインを選択します。
+. [ リソース ] ページで、 [ 表示 ] リストから [ * データベース * ] を選択します。
+. をクリックします image:../media/filter_icon.gif["フィルタアイコン"]をクリックし、ホスト名とデータベースタイプを選択してリソースをフィルタリングします。
 +
-次に、 * をクリックしますimage:../media/filter_icon.gif[""]* をクリックすると、フィルタペインが閉じます。
+をクリックします image:../media/filter_icon.gif["フィルタアイコン"] をクリックしてフィルタペインを閉じます。
 
 . バックアップするデータベースを選択します。
 +
 Database - Protect （データベース - 保護）ページが表示されます。
 
-. リソースページで、次の操作を実行します。
+. [Resources]ページでは、次の手順を実行できます。
 +
-|===
-| フィールド | 手順 
+.. チェックボックスを選択し、Snapshotコピー名に使用するカスタムの名前形式を入力します。
++
+例： `customtext_policy_hostname` または `resource_hostname`。デフォルトでは、Snapshotコピー名にタイムスタンプが付加されます。
+
+.. バックアップの対象から外すアーカイブログファイルのデスティネーションを指定します。
 
 
- a| 
-Snapshot コピーには、カスタムの名前形式を使用します
- a| 
-Snapshot コピー名にカスタムの名前形式を使用する場合は、このチェックボックスをオンにして名前形式を入力します。
-
-たとえば 'customText_policy_hostname や resource_hostname などですデフォルトでは、 Snapshot コピー名の後ろにタイムスタンプが追加されます。
-
-
-
- a| 
-バックアップからアーカイブログデスティネーションを除外します
- a| 
-バックアップの対象から外すアーカイブログファイルのデスティネーションを指定します。
-
-|===
 . [Policies] ページで、次の手順を実行します。
 +
 .. ドロップダウンリストから 1 つ以上のポリシーを選択します。
 +
 
-NOTE: また、 * をクリックしてポリシーを作成することもできますimage:../media/add_policy_from_resourcegroup.gif[""]*
+NOTE: ポリシーを作成するには、をクリックします image:../media/add_policy_from_resourcegroup.gif["シンボルを追加します"]。
 
 +
 [ 選択したポリシーのスケジュールを設定 ] セクションに、選択したポリシーが一覧表示されます。
 
-.. をクリックします image:../media/add_policy_from_resourcegroup.gif[""] スケジュールを設定するポリシーの Configure Schedules （スケジュールの設定）列。
-.. [Add schedules for policy_name] ウィンドウで、スケジュールを設定し、 [*OK*] をクリックします。
+.. をクリックします image:../media/add_policy_from_resourcegroup.gif["シンボルを追加します"] [Configure Schedules]列で、ポリシーのスケジュールを設定します。
+.. [Add schedules for policy_policy_name_]ウィンドウでスケジュールを設定し、を選択します `OK`。
 +
 _policy_name_は 、選択したポリシーの名前です。
 
@@ -68,30 +55,14 @@ _policy_name_は 、選択したポリシーの名前です。
 
 . [Verification] ページで、次の手順を実行します。
 +
-.. Load locators * （ロケータのロード）をクリックして、 SnapMirror または SnapVault ボリュームをロードし、セカンダリ・ストレージ上で検証を実行します。
-.. をクリックします image:../media/add_policy_from_resourcegroup.gif[""] Configure Schedules （スケジュールの設定）列で、ポリシーのすべてのスケジュールタイプの検証スケジュールを設定します。
-.. Add Verification Schedules_policy_name_dialog box で、次の処理を実行します。
+.. [Load locators]*をクリックしてSnapMirrorまたはSnapVault ボリュームをロードし、セカンダリストレージを検証します。
+.. をクリックします image:../media/add_policy_from_resourcegroup.gif["シンボルを追加します"] Configure Schedules （スケジュールの設定）列で、ポリシーのすべてのスケジュールタイプの検証スケジュールを設定します。+[Add Verification Schedules_policy_name_]ダイアログボックスでは、次の手順を実行できます。
+.. [Run verification after backup] を選択します。
+.. [スケジュールされた検証を実行する]*を選択し、ドロップダウンリストからスケジュールタイプを選択します。
 +
-|===
-| 状況 | 手順 
-
-
- a| 
-バックアップ後に検証を実行します
- a| 
-[Run verification after backup] を選択します。
-
-
-
- a| 
-検証をスケジュールします
- a| 
-[Run scheduled verification] を選択し、ドロップダウン・リストからスケジュール・タイプを選択します。
-
 
 NOTE: Flex ASM 設定では、カードの数が RAC クラスタ内のノード数より少ない場合、リーフノードで検証操作を実行できません。
 
-|===
 .. セカンダリストレージ上のバックアップを検証するには、セカンダリストレージ上で * Verify on secondary location * を選択します。
 .. [OK] をクリックします。
 +
@@ -99,13 +70,13 @@ NOTE: Flex ASM 設定では、カードの数が RAC クラスタ内のノード
 
 
 
-. [ 通知 ] ページの [ 電子メールの設定 *] ドロップダウンリストから、電子メールを送信するシナリオを選択します。
+. [Notification]ページで、*[Email preference]*ドロップダウンリストからEメールを送信するシナリオを選択します。
 +
-また、送信者と受信者の E メールアドレス、および E メールの件名を指定する必要があります。リソース上で実行されたバックアップ処理のレポートを添付する場合は、 [ ジョブレポートの添付 ] を選択します。
+送信者と受信者のEメールアドレス、およびEメールの件名を指定する必要があります。リソース上で実行されたバックアップ処理のレポートを添付する場合は、 [ ジョブレポートの添付（ Attach Job Report ） ] を選択します。
 
 +
 
-NOTE: E メール通知を利用する場合は、 GUI または PowerShell コマンド Set-SmtpServer を使用して、 SMTP サーバの詳細を指定しておく必要があります。
+NOTE: Eメール通知を使用する場合は、GUIまたはPowerShellコマンドを使用して、SMTPサーバの詳細を指定しておく必要があります `Set-SmSmtpServer`。
 
 . 概要を確認し、 [ 完了 ] をクリックします。
 +
@@ -114,7 +85,7 @@ NOTE: E メール通知を利用する場合は、 GUI または PowerShell コ�
 . [ 今すぐバックアップ ] をクリックします。
 . Backup （バックアップ）ページで、次の手順を実行します。
 +
-.. リソースに複数のポリシーを適用している場合は、「 * Policy * 」ドロップダウン・リストから、バックアップに使用するポリシーを選択します。
+.. リソースに複数のポリシーを適用している場合は、ポリシーのドロップダウンリストから、バックアップに使用するポリシーを選択します。
 +
 オンデマンドバックアップ用に選択したポリシーがバックアップスケジュールに関連付けられている場合は、スケジュールタイプに指定した保持設定に基づいてオンデマンドバックアップが保持されます。
 
@@ -124,13 +95,12 @@ NOTE: E メール通知を利用する場合は、 GUI または PowerShell コ�
 . 操作の進行状況を監視するには、 * Monitor * > * Jobs * をクリックします。
 
 
-* 終了後 *
-
-* AIX のセットアップでは 'lkdev コマンドを使用してロックし 'rendev コマンドを使用して ' バックアップされたデータベースが存在するディスクの名前を変更できます
+.完了後
+* AIXのセットアップでは、を使用できます `lkdev` コマンドを使用してロックします `rendev` コマンドを使用して、バックアップされたデータベースが格納されているディスクの名前を変更します。
 +
 デバイスのロックまたは名前変更は、そのバックアップを使用してリストアしても、リストア処理には影響しません。
 
-* データベースクエリの実行時間がタイムアウト値を超えたためにバックアップ処理が失敗した場合は、 Set-SmConfigSettings コマンドレットを実行して ORACLE_SQL_QUERY_TIMEOUT パラメータと ORACLE_PLUGIN_SQL_QUERY_TIMEOUT パラメータの値を変更します。
+* データベースクエリの実行時間がタイムアウト値を超えたためにバックアップ処理が失敗した場合は、を実行してORACLE_SQL_QUERY_TIMEOUTおよびORACLE_PLUGIN_SQL_QUERY_TIMEOUTパラメータの値を変更する必要があります `Set-SmConfigSettings` コマンドレット：
 +
 パラメータの値を変更したら、次のコマンド '/opt/NetApp/snapcenter /spl/bin/spl restart ' を実行して、 SnapCenter Plug-in Loader （ SPL ）サービスを再起動します
 
@@ -145,10 +115,9 @@ Java のヒープサイズを増やすには、スクリプトファイル /opt/
 
 
 
-* 詳細はこちら *
-
-* https://["MetroCluster のフェイルオーバー後に SnapMirror 関係または SnapVault 関係を検出できません"^]
-* https://["SnapCenter 処理では、 Oracle RAC One Node データベースがスキップされます"^]
-* https://["Oracle 12c ASM データベースの状態を変更できませんでした"^]
-* https://["AIX システムでのバックアップ、リストア、クローニングの各処理のパラメータをカスタマイズできます"^]
+.詳細については、こちらをご覧ください
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["MetroCluster のフェイルオーバー後に SnapMirror 関係または SnapVault 関係を検出できません"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Oracle_RAC_One_Node_database_is_skipped_for_performing_SnapCenter_operations["SnapCenter 処理では、 Oracle RAC One Node データベースがスキップされます"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Failed_to_change_the_state_of_an_Oracle_12c_ASM_database_from_shutdown_to_mount["Oracle 12c ASM データベースの状態を変更できませんでした"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/What_are_the_customizable_parameters_for_backup_restore_and_clone_operations_on_AIX_systems["AIX システムでのバックアップ、リストア、クローニングの各処理のパラメータをカスタマイズできます"^] （ログインが必要）
 

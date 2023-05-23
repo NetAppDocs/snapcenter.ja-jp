@@ -108,7 +108,7 @@ _keytool -keypasswd -alias "alias_name_in_ca_cert" -keystore keystore.JKS__
 
 * このタスクについて *
 
-* 関連する CA 証明書の最新の CRL ファイルをダウンロードするには、を参照してください https://["SnapCenter CA 証明書の証明書失効リストファイルを更新する方法"]。
+* 関連する CA 証明書の最新の CRL ファイルをダウンロードするには、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_update_certificate_revocation_list_file_in_SnapCenter_CA_Certificate["SnapCenter CA 証明書の証明書失効リストファイルを更新する方法"]。
 * SnapCenter カスタムプラグインは、事前に設定されたディレクトリ内の CRL ファイルを検索します。
 * SnapCenter カスタムプラグインの CRL ファイルのデフォルトディレクトリは、 _'C:\Program Files\NetApp\SnapCenter \Snapcenter Plug-in Creator\etc\crl'_ です。
 

@@ -1942,7 +1942,6 @@
   <block id="01e025a69fb0e3e37bdca75ddd65d273" category="paragraph">RAC セットアップでは、データベースがリカバリされたノードでのみ PDB が開きます。RAC セットアップの他のすべてのノードで、リカバリされた PDB を手動で開く必要があります。</block>
   <block id="30cfe0e278c990bda4b09d81fbb0ec6c" category="doc">Oracle データベースのリストア処理を監視する</block>
   <block id="8d70bdd589ad1d5053591608060dd666" category="summary">リソースとは、 SnapCenter で管理されているホスト上の Oracle データベースのことです。使用可能なデータベースを検出したあとに、それらのデータベースをリソースグループに追加してデータ保護処理を実行できます。</block>
-  <block id="b235b91c85e6ff24696d87bf417b2277" category="doc">Oracle データベースをバックアップに使用できるかどうかを確認します</block>
   <block id="04e793c2d8facdc933edd3335c890a34" category="list-text">SnapCenter サーバのインストール、ホストの追加、ストレージシステム接続の作成、クレデンシャルの追加などのタスクを完了しておく必要があります。</block>
   <block id="14391af03493ba1cebd9404bb5bda74c" category="list-text">データベースが仮想マシンディスク（ VMDK ）または raw デバイスマッピング（ RDM ）上にある場合は、 SnapCenter Plug-in for VMware vSphere を導入し、 SnapCenter にプラグインを登録する必要があります。</block>
   <block id="2ab45cdd9c7a68b490dde7ff87978512" category="paragraph">詳細については、を参照してください<block ref="147b933388a6511d6c294a95b67dd2ec" category="inline-link-rx"></block>。</block>
@@ -2013,16 +2012,12 @@
   <block id="b34b9f5decf78eb62a8145da0940d7d1" category="paragraph">_policy_name_は 、選択したポリシーの名前です。</block>
   <block id="a263a024ecfc193325fde48303936fd7" category="list-text">[Verification] ページで、次の手順を実行します。</block>
   <block id="aa60fb0ff9f13cd254813c318d11d1bf" category="list-text">Load locators * （ロケータのロード）をクリックして、 SnapMirror または SnapVault ボリュームをロードし、セカンダリ・ストレージ上で検証を実行します。</block>
-  <block id="60819b0f333a60a877f3b241274ddbfd" category="list-text">をクリックします <block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block> Configure Schedules （スケジュールの設定）列で、ポリシーのすべてのスケジュールタイプの検証スケジュールを設定します。</block>
   <block id="73d5c45d8fe4cd81e69573ed4a382644" category="list-text">Add Verification Schedules_policy_name_dialog box で、次の処理を実行します。</block>
-  <block id="d3fbced85b7ea3c853c32d56707ed82f" category="paragraph">[Run scheduled verification] を選択し、ドロップダウン・リストからスケジュール・タイプを選択します。</block>
   <block id="014b5d6fbe7be4e31085d3f8a60c9445" category="admonition">Flex ASM 設定では、カードの数が RAC クラスタ内のノード数より少ない場合、リーフノードで検証操作を実行できません。</block>
   <block id="86d0a1c0a1c24b3fd3e7c61cd7b71901" category="list-text">セカンダリストレージ上のバックアップを検証するには、セカンダリストレージ上で * Verify on secondary location * を選択します。</block>
   <block id="158960e40cea9822bb4339b4f8995696" category="paragraph">設定した検証スケジュールは、 Applied Schedules 列にリスト表示されます。</block>
   <block id="f1959398bc1be9959fe83a99b07fd5d3" category="paragraph">また、送信者と受信者の E メールアドレス、および E メールの件名を指定する必要があります。リソース上で実行されたバックアップ処理のレポートを添付する場合は、 [ ジョブレポートの添付 ] を選択します。</block>
-  <block id="259d3ed1b70f5247f9e2fc2be475381a" category="list-text">AIX のセットアップでは 'lkdev コマンドを使用してロックし 'rendev コマンドを使用して ' バックアップされたデータベースが存在するディスクの名前を変更できます</block>
   <block id="8a1c4d8854ab495e687e6155302b5e31" category="paragraph">デバイスのロックまたは名前変更は、そのバックアップを使用してリストアしても、リストア処理には影響しません。</block>
-  <block id="0c2aa1683107d10f559e2505dfb5befc" category="list-text">データベースクエリの実行時間がタイムアウト値を超えたためにバックアップ処理が失敗した場合は、 Set-SmConfigSettings コマンドレットを実行して ORACLE_SQL_QUERY_TIMEOUT パラメータと ORACLE_PLUGIN_SQL_QUERY_TIMEOUT パラメータの値を変更します。</block>
   <block id="31bbfd3d5f153e5da05f4114737ea2cd" category="paragraph">パラメータの値を変更したら、次のコマンド '/opt/NetApp/snapcenter /spl/bin/spl restart ' を実行して、 SnapCenter Plug-in Loader （ SPL ）サービスを再起動します</block>
   <block id="14894175a6559422772ab07b7e553342" category="list-text">ファイルにアクセスできず、検証プロセス中にマウントポイントを使用できないと、エラーコード DBV-00100 specified file が表示されて処理が失敗することがあります。sco.properties の verification_delay パラメータと verification_retry_count パラメータの値を変更する必要があります。</block>
   <block id="2a1878497d482cf8e9e56639ad6cb01e" category="list-text">VMDK 上のアプリケーションデータおよび SnapCenter Plug-in for VMware vSphere の Java ヒープサイズが不足している場合、バックアップが失敗することがあります。</block>
@@ -2038,7 +2033,6 @@
   <block id="55abc85a57dc4521b07b9255c349e483" category="list-text">ASM ディスク・グループ上にファイルがあるデータベースが 'Oracle DBVERIFY ユーティリティを使用してバックアップを検証するには ' マウント状態またはオープン状態であることを確認しておく必要があります</block>
   <block id="3d963ba9da839641b29329d2008be606" category="list-text">ボリュームマウントポイントの長さが 240 文字を超えないことを確認しておく必要があります。</block>
   <block id="7d61484685130c3cdd5533d35c2e1a49" category="paragraph">値を変更するときに実行中のジョブがないことを確認し、値を増やしたあとに SnapCenter SMCore サービスを再起動します。</block>
-  <block id="0b467061f52733da68bf2a4d7726c3f9" category="summary">バックアップジョブを作成する前にバックアップ戦略を定義しておくと、データベースの正常なリストアやクローニングに必要なバックアップを確実に作成できます。バックアップ戦略の大部分は、サービスレベルアグリーメント（ SLA ）、目標復旧時間（ RTO ）、および目標復旧時点（ RPO ）によって決まります。</block>
   <block id="4aad6a55b7d830fe36a2a075e0a60363" category="doc">Oracle データベースのバックアップ戦略を定義する</block>
   <block id="fa8467a355232709f9161185e426b477" category="paragraph">SLA では、サービスの可用性やパフォーマンスなど、サービス関連の多くの問題に対処するために必要なサービスレベルを定義します。RTO は、サービスの停止からビジネスプロセスの復旧までに必要となる時間です。RPO は、障害発生後に通常処理を再開するためにバックアップストレージからリカバリする必要があるファイルの経過時間に関する戦略を定義したものです。SLA 、 RTO 、および RPO は、データ保護戦略に関与します。</block>
   <block id="837133a617997f77e41ae32488daeff9" category="section-title">バックアップ対象としてサポートされる Oracle データベース構成</block>
@@ -2285,10 +2279,7 @@
   <block id="083ad21990802d20fc5fdefdb7255565" category="paragraph">2 GB</block>
   <block id="3a955e6f54e73fa288537f456087e118" category="paragraph">Java 1.8.x （ 64 ビット）の Oracle Java と OpenJDK のバージョン</block>
   <block id="4e665afb5c15dd75650eeba423b153f0" category="list-text">SnapCenter Plug-ins Package for Linux をインストールする Linux ホストにログインします。</block>
-  <block id="6b33644191204350f20a3a84f6152f47" category="summary">リソースグループはコンテナであり、バックアップして保護するリソースをここに追加する必要があります。リソースグループを使用すると、特定のアプリケーションに関連付けられているすべてのデータを同時にバックアップできます。</block>
   <block id="a79101df6f2655709b2aa6b2ec32c488" category="doc">Oracle データベースのリソースグループを作成してポリシーを適用します</block>
-  <block id="e525da83465049bad6a7bf2676a73ce2" category="paragraph">Oracle DBVERIFY ユーティリティを使用してバックアップを検証するには、 ASM ディスクグループ上にファイルがあるデータベースが「 mount 」または「 open 」状態であることを確認する必要があります。</block>
-  <block id="c58481c5b8cfb4b2b7162b1b1cf5c8dd" category="paragraph">リソースグループに 1 つ以上のポリシーを適用して、実行するデータ保護ジョブのタイプを定義する必要があります。</block>
   <block id="fa4d1c967d467deb12174bc6b1b3355b" category="paragraph">リソースグループの名前を入力します。</block>
   <block id="7651838ffd9b279a9ff6c4c63159427e" category="paragraph">リソースグループを検索するときに役立つラベルを入力します。</block>
   <block id="dc5b15d16c6cbd04c1864901ca5f2732" category="paragraph">たとえば、複数のリソースグループに HR をタグとして追加すると、あとから HR タグに関連付けられたすべてのリソースグループを検索できます。</block>
@@ -2300,7 +2291,6 @@
   <block id="be00178f4e91d4901871234d117ca9d0" category="admonition">をクリックしてポリシーを作成することもできます <block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="d89a925c7347eda26320229d83214fd3" category="paragraph">ここで、 _policy_name_は 選択したポリシーの名前です。</block>
   <block id="eecd36c568b40385bb729410ba711a64" category="paragraph">サードパーティ製バックアップスケジュールが SnapCenter バックアップスケジュールと重複している場合、それらのバックアップスケジュールはサポートされません。</block>
-  <block id="52fb8cc6d977f4b0c5a28fca774e1265" category="list-text">* をクリックします<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>* Configure Schedules （スケジュールの設定）列で、ポリシーのすべてのスケジュールタイプの検証スケジュールを設定します。</block>
   <block id="5b6546a020e7d5a17b75b6f6e6be79a3" category="paragraph">[Run scheduled verification] を選択し、ドロップダウン・リストからスケジュール・タイプを選択します。</block>
   <block id="8dc3eb18807f6424ec895a845ced71bb" category="list-text">セカンダリ・ストレージ・システムのバックアップを検証するには、セカンダリ・サイトで * Verify on secondary location * を選択します。</block>
   <block id="e058be158ad9231e0b1b44d9048f0ff8" category="summary">実行中、キューに登録済み、または応答しないバックアップ処理をキャンセルできます。</block>
@@ -2487,10 +2477,8 @@
   <block id="eebf4dbc30cb79473f44b0746798f0d8" category="list-text">Run_Refresh - SmClone_ 。</block>
   <block id="2dca23ddca1615e63d449ef4dd543431" category="paragraph">"PL-SCO-20032: CanExecute 操作がエラーで失敗した場合 : PL-SCO-300331: Redo ログファイル +SC_2959770772_clmdb/clredolog/redo01_01.log Exist" エラーメッセージが表示されたときに、操作が失敗した場合は、 -WaitToTriggerClone_" に高い値を指定してください。</block>
   <block id="1aac38ab9167eb6ae3a199d0a8bc7915" category="doc">Oracle データベースをバックアップする</block>
-  <block id="cb21f64b7aa1d58307ba1cfcc254fb77" category="paragraph">リソース（データベース）またはリソースグループのバックアップを作成することができます。バックアップのワークフローには、計画、バックアップするリソースの特定、バックアップポリシーの作成、リソースグループの作成とポリシーの適用、バックアップの作成、処理の監視が含まれます。</block>
   <block id="b9721a35a6c374ded595576ccbd2f789" category="paragraph">次のワークフローは、バックアップ処理の実行順序を示しています。</block>
   <block id="fb21695f6b72866357b3e3381a3dd8d4" category="image-alt">Oracle でのバックアップワークフロー</block>
-  <block id="74be1413d8c1294602864c1d9e25f626" category="paragraph">ただし、前回のバックアップが警告付きで完了していた場合、処理ロックファイルが削除されず、次回のバックアップ処理が待機キューに登録される可能性があります。*.SM_LOCK_dbsid * ファイルが削除されていない場合、このファイルは最終的にはキャンセルされる可能性があります。このような場合は、次の手順に従って操作ロックファイルを手動で削除する必要があります。</block>
   <block id="3ab07b443e5100312a8428cab6f6a083" category="list-text">操作ロックを削除します : `rm -rf .SM_lock_dbsid.``</block>
   <block id="8bfbb41a79c1c2438e1a53e2a727fb3c" category="paragraph">Linux 用 SnapCenter Plug-ins Package または SnapCenter Plug-ins Package for AIX を複数のホストにインストールするには、 _ Install -SmHostPackage_PowerShell コマンドレットを使用する必要があります。</block>
   <block id="367659a073d284a1e67b11ac7a540d28" category="paragraph">プラグインパッケージをインストールする各ホストで、ローカル管理者の権限を持つドメインユーザとして SnapCenter にログインする必要があります。</block>
@@ -2529,7 +2517,6 @@
   <block id="912fcac3286444ef7e6ea296ea17e9b6" category="paragraph">`./snapcenter aix_host_plugin.bsx -i silent-dport=8145 - DSERVER_IP=SnapCenter _Server_FQDN -DSERVER_HTTPS_PORT=SnapCenter _Server_Port-DUSER_INSTALL_DIR=/opt/custom_path-DISKALL_LOG_LOG_NAME=SnapCenter _AIX_FILE_INSTAN_INSTAN_INSTAN_MANUALL_INSTALLATUE_FEATURE_FILE=SnapCenter _ インストール手動 MDULE=SnapCenter _ インストール _ インストール _ インストール _ インストール _ インストール _ インストール _ インストール _ インストール _ インストール _ インストール _ インストール _ オプション =SnapCenter _ インストール _ インストール _ インストール _ インストール _ ホスト名 = SnapCenter _ インストール _</block>
   <block id="543eb3b9143ccc1ed273dbc9f064ffa2" category="summary">リソースグループは、ホストまたはクラスタ上のリソースの集まりです。リソースグループのバックアップ処理は、リソースグループに定義されているすべてのリソースを対象に実行されます。</block>
   <block id="7fac35e2e64a179ee0279256e1dc195f" category="doc">Oracle データベースのリソースグループをバックアップする</block>
-  <block id="ab266f443637649193c14fb7a9370e7e" category="admonition">2 つのデータベースが統合されたリソースグループがある場合に、一方のデータベースのデータファイルがネットアップ以外のストレージにあると、もう一方のデータベースがネットアップストレージにあっても、バックアップ処理は中止されます。</block>
   <block id="cad5c11b4fef48d75eb3db98fb343e1b" category="summary">データベース内の他の表領域に影響を与えずに、破損または削除された表領域のサブセットをリストアできます。SnapCenter は、 RMAN を使用して表領域のポイントインタイムリカバリ（ PITR ）を実行します。</block>
   <block id="40114ba0156baf553fcde8f3a74bb20d" category="doc">ポイントインタイムリカバリを使用した表領域のリストアとリカバリ</block>
   <block id="4291e94658d31afa6cbfc0020f3c2c2f" category="paragraph">データベース内の他の表領域に影響を与えずに、破損または削除された表領域のサブセットをリストアできます。SnapCenter では、 RMAN を使用して表領域のポイントインタイムリカバリ（ PITR ）を実行します。</block>
@@ -7465,7 +7452,6 @@
   <block id="0ac22ed74dd628cec8a2c5e2f64bf612" category="list-text">バックアップするデータベースが大容量（TB単位）の場合は、SnapCenter サーバホストでRESTTimeoutの値を86400000msに増やして、C：\Program Files\NetApp\SMCore \SMCoreServiceHost.exe.config_fileに設定してください。</block>
   <block id="12030a592b1dcd9007e06eda350e5904" category="list-text">特定の日時にリカバリする場合は、 [ * 日付と時刻 * （ * Date and Time * ） ] を選択して、日時と補助的な保存先を指定します。</block>
   <block id="740364074f07d3ca5c0b017db01d8838" category="paragraph">SnapCenter は、指定されたSCNまたは選択された日時に基づいて、PITRの実行に必要なデータバックアップおよびログバックアップの最適な数を特定してマウントし、カタログ化します。</block>
-  <block id="46eafed7afc11552d8171b2eb6ae91d0" category="section-title">SnapCenter で非データベースエントリが検出されないようにする方法</block>
   <block id="8bd0906e1408858d04adcc36035359ac" category="paragraph">oratabファイル内に追加された非データベースエントリをSnapCenter で検出できません。</block>
   <block id="a91c1695dbc901f96299c334e515e6b0" category="list-text">Oracle用プラグインをインストールしたあと、rootユーザはディレクトリ_/var/opt/snapcenter/sco/etc/に*SC_oratab .config *ファイルを作成する必要があります。</block>
   <block id="e52e8b1290260b6f01eec0c767b91bb9" category="paragraph">Oracleバイナリの所有者とグループに書き込み権限を付与して、ファイルを将来的に保持できるようにします。</block>
@@ -7970,4 +7956,122 @@
   <block id="0f5b112cebb37022dbfe2c80e388d605" category="paragraph">を参照してください <block ref="5ec6b0ec41fc91e8184fa478c63adb14" category="inline-link-macro-rx"></block>。</block>
   <block id="a8d67928879d7cbd7d3c5d1b6d797736" category="list-text">MFAを無効にし、を使用してMFAを有効にしたときに作成された構成ファイルをクリーンアップします<block ref="3f459b2c524cc44ef57664fd75d5c093" prefix=" " category="inline-code"></block> コマンドレット。</block>
   <block id="6bcc192d7209e867a0f8afd8938c62eb" category="sidebar">多要素認証（MFA）を管理します。</block>
+  <block id="d9372adbc1bed6681e74cd02004081f0" category="summary">SnapCenter によるOracleデータベースの検出方法</block>
+  <block id="f3c021a5eae937a13601d397b792c2d2" category="paragraph">Oracle Recovery Manager（RMAN）を使用してOracleデータベースのバックアップをカタログ化し、Oracle RMANリポジトリにバックアップ情報を格納できます。</block>
+  <block id="084690c33c7b29b1780ab8f409fb8650" category="section-title">外部カタログデータベース</block>
+  <block id="c5c4e8f374f512a056ca1205e002a1fd" category="section-title">RMANコマンド</block>
+  <block id="f49c2881ffbdaf870ec7ed9ea88f4343" category="paragraph">SnapCenter GUI から Oracle バックアップポリシーを作成する際にカタログ化オプションを有効にした場合は、バックアップ処理の一環として Oracle RMAN を使用してバックアップがカタログ化されます。を実行して、バックアップのカタログ化を遅らせて実行することもできます<block ref="a0b1ab6ae251c2e9971158956eaa5c76" prefix=" " category="inline-code"></block> コマンドを実行します</block>
+  <block id="b0d14c022e51c262621e79e943a3b6d0" category="paragraph">バックアップをカタログ化したら、を実行できます<block ref="c307f2fb096a201d2b32b2d18a240364" prefix=" " category="inline-code"></block> コマンドを使用して、カタログ化されたバックアップの情報（カタログ化されたデータファイルのタグ、制御ファイルのカタログパス、カタログ化されたアーカイブログの場所など）を取得します。</block>
+  <block id="5e5ff61214eb4873285663f81049ec20" category="section-title">命名形式</block>
+  <block id="059297ebf3935d6b4bcb000628a9d653" category="section-title">クロスチェック処理</block>
+  <block id="8e03216fb8576194a8567507d59c56b7" category="paragraph">バックアップに関する RMAN リポジトリ情報が古くなってバックアップのリポジトリレコードがその物理ステータスと一致しなくなった場合は、クロスチェックを実行してリポジトリ情報を更新できます。たとえば、ユーザがオペレーティングシステムコマンドでディスクからアーカイブログを削除した場合、実際にはディスクにログがないにもかかわらず、制御ファイルにはディスクにログがあることが示されます。</block>
+  <block id="7944aae88fbc469a9edfc7d9ae22e633" category="paragraph">クロスチェック処理では、制御ファイルを情報で更新できます。クロスチェックをイネーブルにするには、 Set-SmConfigSettings コマンドを実行して、 enable_croscHCK パラメータに値 true を割り当てます。デフォルト値は FALSE です。</block>
+  <block id="14fbb4ba3858c107f2599916d3b51cbb" category="section-title">カタログ情報を削除します</block>
+  <block id="3fc370e9504ca2ebb69ee1e9030a971f" category="paragraph">コマンドで使用できるパラメータとその説明に関する情報は、 Get-Help コマンド _name を実行して取得できます。または、を参照してください<block ref="f0a304dd5eda28bc5cad0e10ba143e0a" category="inline-link-rx"></block>。</block>
+  <block id="4c4d4c133d15d97bf3bef74ffeeeb66a" category="list-text">左側のナビゲーションペインで、*[リソース]*を選択し、リストから適切なプラグインを選択します。</block>
+  <block id="ba4484b740822363967ef7dbb090de6a" category="inline-image-macro">フィルタアイコン</block>
+  <block id="bdf18e1416fb037a66cb2e8b6bf34e50" category="list-text">をクリックします <block ref="5daa1c5d91da80c848b68dcd336ec220" category="inline-image-macro-rx" type="image"></block>をクリックし、ホスト名とデータベースタイプを選択してリソースをフィルタリングします。</block>
+  <block id="36fae2ba23dbe8fc737f85fdffde333e" category="paragraph">をクリックします <block ref="5daa1c5d91da80c848b68dcd336ec220" category="inline-image-macro-rx" type="image"></block> をクリックしてフィルタペインを閉じます。</block>
+  <block id="90db41db3c301da492422a8fbb244c83" category="list-text">[Resources]ページでは、次の手順を実行できます。</block>
+  <block id="00f0529a96533b63a21705811e1addce" category="list-text">チェックボックスを選択し、Snapshotコピー名に使用するカスタムの名前形式を入力します。</block>
+  <block id="8319f5e3f98fcec5a71bd43e8454a8fd" category="paragraph">例：<block ref="6d242f6ac938ffb13709f54d68cd3c4a" prefix=" " category="inline-code"></block> または<block ref="90ea7aa0cb61dd49e32f6dcf8afac143" prefix=" " category="inline-code"></block>。デフォルトでは、Snapshotコピー名にタイムスタンプが付加されます。</block>
+  <block id="e0af3bf36c9535530ed431b3358aa176" category="inline-image-macro">シンボルを追加します</block>
+  <block id="a2fbabd2b5fd55db991eb64739e8189a" category="admonition">ポリシーを作成するには、をクリックします <block ref="494b170a0dd5e7fc7886f29293b0c5bc" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="a04dff3ca18f5d27eeb205537402b01c" category="list-text">をクリックします <block ref="494b170a0dd5e7fc7886f29293b0c5bc" category="inline-image-macro-rx" type="image"></block> [Configure Schedules]列で、ポリシーのスケジュールを設定します。</block>
+  <block id="37f44ce16715c2bf101710578d0cdd78" category="list-text">[Add schedules for policy_policy_name_]ウィンドウでスケジュールを設定し、を選択します<block ref="e0aa021e21dddbd6d8cecec71e9cf564" prefix=" " category="inline-code"></block>。</block>
+  <block id="8152b7fd31613e401469a6547fe7ab3f" category="list-text">[Load locators]*をクリックしてSnapMirrorまたはSnapVault ボリュームをロードし、セカンダリストレージを検証します。</block>
+  <block id="b4795af650dd450875d0affec7e81c42" category="list-text">をクリックします <block ref="494b170a0dd5e7fc7886f29293b0c5bc" category="inline-image-macro-rx" type="image"></block> Configure Schedules （スケジュールの設定）列で、ポリシーのすべてのスケジュールタイプの検証スケジュールを設定します。+[Add Verification Schedules_policy_name_]ダイアログボックスでは、次の手順を実行できます。</block>
+  <block id="2226a89f0e569aafd7ff5ef91e17aca2" category="list-text">[スケジュールされた検証を実行する]*を選択し、ドロップダウンリストからスケジュールタイプを選択します。</block>
+  <block id="a40e69276b6e9ce163d85fd729a42eae" category="list-text">[Notification]ページで、*[Email preference]*ドロップダウンリストからEメールを送信するシナリオを選択します。</block>
+  <block id="d7a872f323113f381eb79316af450829" category="paragraph">送信者と受信者のEメールアドレス、およびEメールの件名を指定する必要があります。リソース上で実行されたバックアップ処理のレポートを添付する場合は、 [ ジョブレポートの添付（ Attach Job Report ） ] を選択します。</block>
+  <block id="56f30e0902c1ab371ccae5be347a631e" category="admonition">Eメール通知を使用する場合は、GUIまたはPowerShellコマンドを使用して、SMTPサーバの詳細を指定しておく必要があります<block ref="997c102f406bdf4b18d046c49ffaa8f9" prefix=" " category="inline-code"></block>。</block>
+  <block id="bd965e38a0c9cf27aa1bde099308e23f" category="list-title">完了後</block>
+  <block id="b27045f6d55975ea692f5ae0a715da51" category="list-text">AIXのセットアップでは、を使用できます<block ref="9c24f53e48c98577b16ec56f199c0106" prefix=" " category="inline-code"></block> コマンドを使用してロックします<block ref="6fec2b39344b576b753af3936b8b4491" prefix=" " category="inline-code"></block> コマンドを使用して、バックアップされたデータベースが格納されているディスクの名前を変更します。</block>
+  <block id="407eab8241b7b3d334f9f6b403d230f9" category="list-text">データベースクエリの実行時間がタイムアウト値を超えたためにバックアップ処理が失敗した場合は、を実行してORACLE_SQL_QUERY_TIMEOUTおよびORACLE_PLUGIN_SQL_QUERY_TIMEOUTパラメータの値を変更する必要があります<block ref="c49971dbd0f66cf4e6b62fc441967947" prefix=" " category="inline-code"></block> コマンドレット：</block>
+  <block id="9c83e144e5481ac6766f4055e566594d" category="list-title">詳細については、こちらをご覧ください</block>
+  <block id="8dc85b73e2cb5020859a39480b17009c" category="list-text"><block ref="802c82c89baa4a09096a77864bb21fb2" category="inline-link-rx"></block> （ログインが必要）</block>
+  <block id="40a2df546d9e9d7c560fe96c630c6c74" category="doc">バックアップ手順 の概要</block>
+  <block id="e5325159577ee33e354dc9b247eb5a41" category="paragraph">リソース（データベース）またはリソースグループのバックアップを作成することができます。バックアップ手順 には、計画、バックアップするリソースの特定、バックアップポリシーの作成、リソースグループの作成とポリシーの適用、バックアップの作成、処理の監視が含まれます。</block>
+  <block id="380f9875e9dac40e8c0bc082d654be88" category="paragraph">ただし、前回のバックアップが警告付きで完了していた場合、処理ロックファイルが削除されず、次回のバックアップ処理が待機キューに登録される可能性があります。*.SM_LOCK_dbsid * ファイルが削除されていない場合、このファイルは最終的にはキャンセルされる可能性があります。このような場合は、次の手順を実行して処理ロックファイルを手動で削除する必要があります。</block>
+  <block id="bcbd15ff750a5bdd0a69b69272c96224" category="doc">バックアップに使用できるOracleデータベースを検出します</block>
+  <block id="6e511cfe87a95df884e3eeb9f86e7f6c" category="paragraph">* 必要なもの *</block>
+  <block id="43a1b5ca6be8bdd76245bbef93eb42c3" category="section-title">手順1：SnapCenter でデータベース以外のエントリが検出されないようにする</block>
+  <block id="6ff7029ca2037b63aa334483b3f6dbd1" category="section-title">ステップ2：リソースを検出する</block>
+  <block id="afe43493934ee712f4ff5ce8418fc255" category="paragraph">Oracle Real Application Clusters（RAC）セットアップでは、SnapCenter がバックアップ処理の実行に使用する優先ノードを指定できます。優先ノードを指定しない場合は、 SnapCenter によって自動的に優先ノードが割り当てられ、そのノードにバックアップが作成されます。</block>
+  <block id="9cf00451682ac5fbc7ad037c5033fbe7" category="paragraph">優先ノードには、 RAC データベースインスタンスが存在するクラスタノードを 1 つまたはすべて指定できます。バックアップ処理は、これらの優先ノードで優先順にトリガーされます。</block>
+  <block id="0a52730597fb4ffa01fc117d9e71e3a9" category="paragraph-title">例</block>
+  <block id="c9328c682f9cde36ed9275b8d6076776" category="paragraph">RACデータベースcdbracには3つのインスタンスがあります。cdbrac1はnode1に、cdbrac2はnode2に、cdbrac3はnode3にあります。</block>
+  <block id="ef86a82fdcc178a3727d5487d64da0f7" category="paragraph">node1 インスタンスと node2 インスタンスが優先ノードとして設定され、 node2 に最初の優先順位、 node1 に 2 番目の優先順位が指定されます。バックアップ処理を実行すると、まず第 1 優先ノードである node2 で処理が試行されます。</block>
+  <block id="b9a9b52da26d376bae745caa147a52ef" category="paragraph">node2 がバックアップの状態になっていない場合は、プラグインエージェントがホストで実行されていないなどの複数の理由で、ホスト上のデータベースインスタンスが指定したバックアップタイプに必要な状態になっていない可能性があります。 または、 FlexASM 構成内の node2 上のデータベースインスタンスがローカル ASM インスタンスで提供されていない場合は、 node1 で処理が試行されます。</block>
+  <block id="4002c4b6b0a844b5972c38c7594c4329" category="paragraph">node3 は、優先ノードのリストに含まれていないため、バックアップには使用されません。</block>
+  <block id="b250d1148a21c87bd22c0e130bc63078" category="section-title">Flex ASMセットアップ</block>
+  <block id="4ea8079fa2f37d718bf02e968bee364b" category="paragraph">リソースとは、SnapCenter で管理されるホスト上のOracleデータベースです。使用可能なデータベースを検出したあとに、それらのデータベースをリソースグループに追加してデータ保護処理を実行できます。</block>
+  <block id="35cd5d3812d5d01441ea27f0cc23e846" category="paragraph">次のセクションでは、SnapCenter がさまざまなタイプおよびバージョンのOracleデータベースを検出するために使用するプロセスについて説明します。</block>
+  <block id="c3840e3ab25ce9f30ec697c152655f28" category="paragraph-title">RACデータベース</block>
+  <block id="fde91ef302aa0e3bbe841036968b5490" category="paragraph">RACデータベースは、/etc/oratab`エントリに基づいてのみ検出されます。/etc/oratab ファイル内にデータベース・エントリが必要です。</block>
+  <block id="5c80f101108a356211fcb26b3f83eabb" category="paragraph-title">スタンドアロン</block>
+  <block id="bea76d34a87d4264ca025e2d88b3350d" category="paragraph">スタンドアロンデータベースは、/etc/oratabエントリに基づいてのみ検出されます。</block>
+  <block id="7ccbb03cb795734415a0b6924a8d7aed" category="paragraph-title">ASM</block>
+  <block id="10d2161a02aedfc95234b3a3456eb306" category="paragraph">ASMインスタンスエントリが/etc/oratabファイルにある必要があります。</block>
+  <block id="2e870bce056fbce1cb37f62a4e47660e" category="paragraph-title">RAC 1ノード</block>
+  <block id="14eaca04b4e6fa17b6fb76a780747d7b" category="paragraph">RAC One Nodeデータベースは、/etc/oratabエントリに基づいてのみ検出されます。データベースがnomount、mount、またはopenのいずれかの状態である必要があります。/etc/oratab ファイル内にデータベース・エントリが必要です。</block>
+  <block id="0490fa938898aedef2dc7269ec3361ba" category="list-text">リソースページからRAC One Nodeデータベースを選択し、[データベース設定]をクリックします。</block>
+  <block id="141229b009a397273fc34bf2467990b8" category="list-text">あるノードから別のノードにデータベースを再配置し、以前のノードのoratabエントリが削除されていない場合は、同じデータベースが2回表示されないように、oratabエントリを手動で削除します。</block>
+  <block id="b6b2be55c51c8c3e0d58ffcc788b57d0" category="section-title">Oracleバージョン12cR2～18cの場合</block>
+  <block id="138ac8a924ba70371a9fccc55eeffc50" category="paragraph">RACデータベースはsrvctl configコマンドを使用して検出されます。/etc/oratab ファイル内にデータベース・エントリが必要です。</block>
+  <block id="bdc631ac0c61f623f88a03e50eb10d04" category="paragraph">スタンドアロンデータベースは、/etc/oratabファイルのエントリとsrvctl configコマンドの出力に基づいて検出されます。</block>
+  <block id="065a682f6e2ff04149d8f73d3a4f075e" category="paragraph">ASMインスタンスエントリが/etc/oratabファイルに含まれている必要はありません。</block>
+  <block id="d9fa3141119141b68b1c5d32ed6a8e02" category="paragraph">RAC One Nodeデータベースは、srvctl configコマンドのみを使用して検出されます。データベースがnomount、mount、またはopenのいずれかの状態である必要があります。データベースがすでに検出され、バックアップが関連付けられている場合、 RAC One Node データベースのステータスは「 Renamed 」または「 deleted 」とマークされます。</block>
+  <block id="3d4a391fad87ee2d69bf0079369db6c0" category="paragraph">データベースが再配置された場合は、次の手順を実行する必要があります。リソースを手動で更新する。。リソースページからRAC One Nodeデータベースを選択し、[データベース設定]をクリックします。。データベースを設定して、データベースを現在ホストしている RAC ノードに優先クラスタノードを設定します。。SnapCenter 処理を実行します。</block>
+  <block id="036a4f113c3f6512ad117bb7e1be7b43" category="summary">バックアップ戦略を定義することで、データベースを正常にリストアまたはクローニングできるようになります。</block>
+  <block id="6444121a0917776aa4b9274dfa1ee288" category="paragraph">バックアップ戦略を定義して、データベースを正常にリストアまたはクローニングできるようにします。</block>
+  <block id="6716420f42ba61453a4039a2a57b594e" category="paragraph">バックアップ戦略の大部分は、サービスレベルアグリーメント（ SLA ）、目標復旧時間（ RTO ）、および目標復旧時点（ RPO ）によって決まります。</block>
+  <block id="da336ad1b4deba370d6b260076b2dcd0" category="list-text">SLAは、期待されるサービスレベルを定義し、サービスの可用性やパフォーマンスなどのサービス関連の問題に対処するものです。</block>
+  <block id="a17429e26b7d75928370e09d647110b1" category="list-text">RTOは、サービスの中断後にビジネスプロセスをリストアする必要がある時間を定義します。</block>
+  <block id="7b83aa0b7e4a5f3e6532d57158f7e601" category="list-text">RPOは、障害発生後に通常処理を再開するためにバックアップストレージからリカバリする必要があるファイルの経過時間を定義します。</block>
+  <block id="3e2d2f6a646250c8b750be0ca26e5b46" category="summary">プライマリストレージボリュームまたはセカンダリストレージボリュームを使用してバックアップコピーを検証します。</block>
+  <block id="77536321746ee899d10dbbec054c87ce" category="doc">バックアップコピーを検証する場所</block>
+  <block id="de7c468dab6738fd4fc26a1bc2e0b578" category="doc">Oracleデータベースのバックアップを監視します</block>
+  <block id="65cd6f58b54a9ee1b5e15bdbfdbaa326" category="paragraph">バックアップ処理とデータ保護処理の進捗状況を監視する方法について説明します。</block>
+  <block id="1656f43643ea92a562ccdd7e31691e03" category="summary">Oracleデータベースでサポートされるバックアップのタイプ。</block>
+  <block id="92d3f2f0912d79a31442f669496dcfa5" category="list-text">データ・ファイルと制御ファイルのみ</block>
+  <block id="5894ddcf494ce28f1eb272ca5e723710" category="list-text">データ・ファイル、制御ファイル、およびアーカイブ・ログ・ファイルを含むフル・データベース</block>
+  <block id="2d92b3df61f86e9074ba4418a26c533e" category="paragraph">データベースがマウント済み状態またはシャットダウン状態のときに作成されるバックアップを、オフラインバックアップと呼びます。オフラインバックアップはコールドバックアップとも呼ばれます。オフラインバックアップに含めることができるのは、データファイルと制御ファイルだけです。オフラインマウントバックアップまたはオフラインシャットダウンバックアップのいずれかを作成できます。</block>
+  <block id="fd9859cb151774e34b52a6d747daab3d" category="list-text">検索ボックスにリソースグループ名を入力するか、をクリックします <block ref="5daa1c5d91da80c848b68dcd336ec220" category="inline-image-macro-rx" type="image"></block>をクリックし、タグを選択します。</block>
+  <block id="6baaca80281eda4a251e4e932a39cd4b" category="paragraph">をクリックします <block ref="5daa1c5d91da80c848b68dcd336ec220" category="inline-image-macro-rx" type="image"></block> をクリックしてフィルタペインを閉じます。</block>
+  <block id="50aa129d52e712ab3c9a0f93f956d9e2" category="list-text">[Resource Group]ページで、バックアップするリソースグループを選択します。</block>
+  <block id="3ce47918d2033ed0d68d1e7c6a9b1c45" category="admonition">2つのデータベースが統合されたリソースグループがあり、一方のデータベースにネットアップ以外のストレージにデータがある場合は、もう一方のデータベースがネットアップストレージにあるにもかかわらず、バックアップ処理が中止されます。</block>
+  <block id="5655480ae4615b223f1d67d63b4ee784" category="list-text">リソースグループに複数のポリシーが関連付けられている場合は、*[ポリシー]*ドロップダウンリストから使用するバックアップポリシーを選択します。</block>
+  <block id="fec2251f36365f1f041be06f3809bae9" category="list-text">「 * Backup * 」を選択します。</block>
+  <block id="005c73b58486c2584da03a7d43bff568" category="list-text">進捗状況を監視するには、*[監視]&gt;[ジョブ]*を選択します。</block>
+  <block id="1a48e10f2aae9eca9186a1b6176fb05a" category="list-text">ファイルにアクセスできず、検証プロセス中にマウントポイントを使用できないと、エラーコード DBV-00100 specified file が表示されて処理が失敗することがあります。sco.propertiesのverification_delay_and verification_retry_countパラメータの値を変更する必要があります。</block>
+  <block id="510a95fea4bba025da5889c50cbbd219" category="summary">バックアップ保持オプション：</block>
+  <block id="47360f25b760514cfd5222ea8efb3fca" category="list-text">ASMスタンドアロンおよびASM RAC on Raw Device Mapping（RDM）+ ASMLibの有無にかかわらず、ASM上のOracleデータベースに対してバックアップ、リストア、およびクローニングの操作を実行できます。</block>
+  <block id="d9f5c0652a9a0f5a632c2b39950788b1" category="paragraph">サポートされている Oracle のバージョンの最新情報については、を参照してください<block ref="ad50fcde58174eb161421bebd1f28ec8" category="inline-link-rx"></block>。</block>
+  <block id="a725ff47fefe45fbde2b714b9bee12db" category="summary">リソースグループはコンテナであり、バックアップして保護するリソースを追加します。リソースグループを使用すると、特定のアプリケーションに関連付けられているすべてのデータを同時にバックアップできます。</block>
+  <block id="75d10fc733cbe6199ca2e7cebf31fe9c" category="paragraph">Oracle DBVERIFYユーティリティを使用してバックアップを検証するには、ASMディスクグループ内のファイルを含むデータベースが「mount」または「open」状態である必要があります。</block>
+  <block id="471e47d90bffd9838cf1d00548360b40" category="paragraph">リソースグループに1つ以上のポリシーを適用して、実行するデータ保護ジョブのタイプを定義します。</block>
+  <block id="8acf498a277189bb79aa36e916139901" category="list-text">[Name]フィールドにリソースグループの名前を入力します。</block>
+  <block id="47389d06ffe3699c36bdd3b61cbdf438" category="list-text">後でリソースグループを検索できるように、[Tag]フィールドに1つ以上のラベルを入力します。</block>
+  <block id="ff3276d4a1ffa99a43f3ee9d1c3033ae" category="admonition">をクリックしてポリシーを作成することもできます <block ref="494b170a0dd5e7fc7886f29293b0c5bc" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="21a93b161e735360df0b1231bd93b5fa" category="list-text">をクリックします <block ref="494b170a0dd5e7fc7886f29293b0c5bc" category="inline-image-macro-rx" type="image"></block> スケジュールを設定するポリシーの Configure Schedules （スケジュールの設定）列。</block>
+  <block id="4fbbc0d543d28393f6ded666ac8879d5" category="list-text">をクリックします <block ref="494b170a0dd5e7fc7886f29293b0c5bc" category="inline-image-macro-rx" type="image"></block> [Configure Schedules]列で、ポリシーのすべてのスケジュールタイプに対して検証スケジュールを設定します。</block>
+  <block id="86091b14782c404e5145daaead644698" category="sidebar">バックアップの概要</block>
+  <block id="af46c480ec54c1f970bfe4a7284749a5" category="sidebar">構成情報をバックアップします</block>
+  <block id="eb241a142f75605588c77651c591cbd7" category="sidebar">サポートされるバックアップ構成</block>
+  <block id="7b5fc8f40436e2a3bd39d3f81c4d938f" category="sidebar">バックアップタイプ</block>
+  <block id="4116ef53488b8262b4f31ee9190138d3" category="sidebar">使用する優先ノード</block>
+  <block id="43b06239a1de902160f64efacd46fd64" category="sidebar">バックアップをカタログ化します</block>
+  <block id="8d6dff35d77be2858cb012c9525717f5" category="sidebar">事前定義された環境変数</block>
+  <block id="d275b6dbfd1b9b66915ebb6018551bec" category="sidebar">バックアップの保持</block>
+  <block id="12e6d0dc88f359dcf5383de2e7e9270d" category="sidebar">命名規則</block>
+  <block id="e9dd934a8e85b48c6d3946a93f06f678" category="sidebar">バックアップ戦略を定義</block>
+  <block id="2f914c665c66ccefda5991dcf0a8eea3" category="sidebar">バックアップ要件を確認します</block>
+  <block id="a9f304050cba6c177490ec2a73015cbe" category="sidebar">Oracleデータベースを検出します</block>
+  <block id="0a4a3719bc7519d1162060e0f0e08f8a" category="sidebar">バックアップポリシーを作成する</block>
+  <block id="53a051ccb17163d7cd9ed3432619fb1d" category="sidebar">リソースグループの作成（オプション）</block>
+  <block id="dc99555922001c1adae2d9d4baee2217" category="sidebar">バックアップの進行状況を監視します</block>
+  <block id="cfe10065fd0fa721a87935a2eac20f7b" category="sidebar">その他のバックアップ処理</block>
+  <block id="75b8e448161fa30feba883267dc81521" category="sidebar">UNIXコマンドを使用してバックアップします</block>
+  <block id="de148ec1fc3c9bb7b03f1506761bed93" category="sidebar">バックアップを表示します</block>
 </blocks>

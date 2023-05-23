@@ -90,7 +90,7 @@ RBAC ユーザまたはグループをクラスタまたは DAG に再割り当�
 
 
 
-IMPORTANT: SnapCenter Plug-in for VMware vSphere の機能を使用して VM 、 VMDK 、またはデータストアを保護している場合は、 VMware vSphere GUI を使用して、 SnapCenter Plug-in for VMware vSphere ロールに vCenter ユーザを追加する必要があります。VMware vSphere のロールについては、を参照してください https://["SnapCenter Plug-in for VMware vSphere に組み込みの事前定義のロール"^]。
+IMPORTANT: SnapCenter Plug-in for VMware vSphere の機能を使用して VM 、 VMDK 、またはデータストアを保護している場合は、 VMware vSphere GUI を使用して、 SnapCenter Plug-in for VMware vSphere ロールに vCenter ユーザを追加する必要があります。VMware vSphere のロールについては、を参照してください https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_predefined_roles_packaged_with_snapcenter.html["SnapCenter Plug-in for VMware vSphere に組み込みの事前定義のロール"^]。
 
 * 手順 *
 

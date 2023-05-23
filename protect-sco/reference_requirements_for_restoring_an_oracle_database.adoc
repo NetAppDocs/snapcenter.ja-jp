@@ -23,7 +23,7 @@ Oracle データベースをリストアする前に、前提条件を満たし�
 * ASM_diskstring パラメータで、 ASMFD または configure _ORCL ： * _ を使用する場合は、 _ AFD ： * _ を設定します。
 +
 
-NOTE: asm_diskstring パラメータの編集方法については、を参照してください https://["asm_diskstring にディスクパスを追加する方法"^]
+NOTE: asm_diskstring パラメータの編集方法については、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Disk_paths_are_not_added_to_the_asm_diskstring_database_parameter["asm_diskstring にディスクパスを追加する方法"^]
 
 * OS 認証を無効にし、 Oracle データベースの Oracle データベース認証を有効にしている場合は、 _$ORACLE_HOME/network/admin_for ASM データベースで使用可能な * listener.ora * ファイルに静的リスナーを設定し、そのデータベースのデータファイルと制御ファイルをリストアする必要があります。
 * データベースサイズがテラバイト（ TB ）単位の場合は、 Set-SmConfigSettings コマンドを実行して、 SCORestoreTimeout パラメータの値を増やす必要があります。

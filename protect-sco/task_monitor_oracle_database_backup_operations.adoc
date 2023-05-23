@@ -4,13 +4,19 @@ sidebar: sidebar
 keywords: SnapCenter Server, monitor, backup, activity pane, data protection 
 summary: SnapCenter Jobs ページを使用して、各バックアップ処理の進捗状況を監視できます。進捗状況をチェックして、処理が完了するタイミングや問題があるかどうかを確認できます。 
 ---
-= Oracle データベースのバックアップ処理を監視する
+= Oracleデータベースのバックアップを監視します
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+バックアップ処理とデータ保護処理の進捗状況を監視する方法について説明します。
+
+
+
+== Oracle データベースのバックアップ処理を監視する
+
 SnapCenterJobs ページを使用して、各種バックアップ処理の進捗状況を監視できます。進捗状況をチェックして、処理が完了するタイミングや問題があるかどうかを確認できます。
 
 * このタスクについて *

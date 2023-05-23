@@ -2,7 +2,7 @@
 permalink: protect-sco/task_define_a_backup_strategy_for_oracle_databases.html 
 sidebar: sidebar 
 keywords: backup type, preferred nodes, catalog backups, schedules, backup name format, retention, verification 
-summary: バックアップジョブを作成する前にバックアップ戦略を定義しておくと、データベースの正常なリストアやクローニングに必要なバックアップを確実に作成できます。バックアップ戦略の大部分は、サービスレベルアグリーメント（ SLA ）、目標復旧時間（ RTO ）、および目標復旧時点（ RPO ）によって決まります。 
+summary: バックアップ戦略を定義することで、データベースを正常にリストアまたはクローニングできるようになります。 
 ---
 = Oracle データベースのバックアップ戦略を定義する
 :allow-uri-read: 
@@ -11,9 +11,14 @@ summary: バックアップジョブを作成する前にバックアップ戦�
 
 
 [role="lead"]
-バックアップジョブを作成する前にバックアップ戦略を定義しておくと、データベースの正常なリストアやクローニングに必要なバックアップを確実に作成できます。バックアップ戦略の大部分は、サービスレベルアグリーメント（ SLA ）、目標復旧時間（ RTO ）、および目標復旧時点（ RPO ）によって決まります。
+バックアップ戦略を定義して、データベースを正常にリストアまたはクローニングできるようにします。
 
-SLA では、サービスの可用性やパフォーマンスなど、サービス関連の多くの問題に対処するために必要なサービスレベルを定義します。RTO は、サービスの停止からビジネスプロセスの復旧までに必要となる時間です。RPO は、障害発生後に通常処理を再開するためにバックアップストレージからリカバリする必要があるファイルの経過時間に関する戦略を定義したものです。SLA 、 RTO 、および RPO は、データ保護戦略に関与します。
+バックアップ戦略の大部分は、サービスレベルアグリーメント（ SLA ）、目標復旧時間（ RTO ）、および目標復旧時点（ RPO ）によって決まります。
+
+* SLAは、期待されるサービスレベルを定義し、サービスの可用性やパフォーマンスなどのサービス関連の問題に対処するものです。
+* RTOは、サービスの中断後にビジネスプロセスをリストアする必要がある時間を定義します。
+* RPOは、障害発生後に通常処理を再開するためにバックアップストレージからリカバリする必要があるファイルの経過時間を定義します。
+
 
 
 
@@ -55,7 +60,7 @@ NOTE: PDB 移行処理と PDB クローニング処理はサポートされて�
 
 
 
-サポートされている Oracle のバージョンの最新情報については、を参照してください https://["NetApp Interoperability Matrix Tool で確認できます"^]。
+サポートされている Oracle のバージョンの最新情報については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=108392;&solution=1259&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。
 
 
 
@@ -224,7 +229,7 @@ ORACLE_PLUGIN_RMAN_CATALE_TIMEOUT パラメータに指定されたタイムア�
 
 '/opt/NetApp/SnapCenter /spl/bin/spl restart
 
-コマンドで使用できるパラメータとその説明に関する情報は、 Get-Help コマンド _name を実行して取得できます。または、を参照することもできます https://["SnapCenter ソフトウェアコマンドリファレンスガイド"^]。
+コマンドで使用できるパラメータとその説明に関する情報は、 Get-Help コマンド _name を実行して取得できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2885486["SnapCenter ソフトウェアコマンドリファレンスガイド"^]。
 
 
 

@@ -51,7 +51,7 @@ SnapCenter ディザスタリカバリ（ DR ）機能では、 REST API を使�
 
 
 
-NOTE: F5セットアップの場合、リストア処理はスタンドアロンとして実行されます。F5を再度作成するには、一連のコマンドを実行する必要があります。を参照してください。リンク： https://["SnapCenter を別のサーバに移行する方法"^]
+NOTE: F5セットアップの場合、リストア処理はスタンドアロンとして実行されます。F5を再度作成するには、一連のコマンドを実行する必要があります。を参照してください。リンク： https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_Migrate_SnapCenter_migrate_to_another_Server["SnapCenter を別のサーバに移行する方法"^]
 
 
 NOTE: DRのリストア後にホストが追加されますが、プラグインを手動でインストールする必要があります。
@@ -126,4 +126,4 @@ NOTE: DRバックアップを格納するターゲットパスを指定する必
 投稿（ Post ）
 
 |===
-詳細については、を参照してください https://["ディザスタリカバリ API"^] ビデオ：
+詳細については、を参照してください https://www.youtube.com/watch?v=Nbr_wm9Cnd4&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg["ディザスタリカバリ API"^] ビデオ：

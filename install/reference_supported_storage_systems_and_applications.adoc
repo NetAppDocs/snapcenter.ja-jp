@@ -19,10 +19,10 @@ summary: サポートされるストレージシステム、アプリケーシ�
 NetApp ONTAP に Amazon FSX を使用している場合、データ保護処理を実行するには、 SnapCenter サーバホストプラグインを 4.5 P1 以降にアップグレードする必要があります。
 
 +
-NetApp ONTAP の Amazon FSX の詳細については、を参照してください https://["Amazon FSX for NetApp ONTAP のドキュメント"^]。
+NetApp ONTAP の Amazon FSX の詳細については、を参照してください https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["Amazon FSX for NetApp ONTAP のドキュメント"^]。
 
 * SnapCenter では、さまざまなアプリケーションやデータベースの保護がサポートされます。
 +
-サポートされているアプリケーションおよびデータベースの詳細については、を参照してください https://["NetApp Interoperability Matrix Tool で確認できます"^]。
+サポートされているアプリケーションおよびデータベースの詳細については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=108380;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。
 
 
