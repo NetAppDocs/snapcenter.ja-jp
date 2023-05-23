@@ -55,7 +55,13 @@ entries:
   - title: SQL Server のクローニング戦略を定義する
     url: "/protect-scsql/task_define_a_clone_strategy_for_sql_server.html"
 - title: SnapCenter Plug-in for Microsoft SQL Server のインストールのクイックスタート
-  url: "/protect-scsql/quick_start_to_install_snapcenter_plug-in_for_sql_server.html"
+  entries:
+  - title: SnapCenter サーバとプラグインのインストールを準備します
+    url: "/protect-scsql/quick-start-to-prepare-for-snapcenter-plug-in-install-for-sql-server.html"
+  - title: SnapCenter Server for Microsoft SQL Serverをインストールします
+    url: "/protect-scsql/task-install-snapcenter-server-for-sql-server.html"
+  - title: SnapCenter Plug-in for Microsoft SQL Server をインストールします
+    url: "/protect-scsql/task-install-snapcenter-plug-in-for-sql-server.html"
 - title: SnapCenter Plug-in for Microsoft SQL Server をインストールする準備をします
   entries:
   - title: SnapCenter Plug-in for Microsoft SQL Server のインストールワークフロー

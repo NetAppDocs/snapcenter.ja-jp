@@ -1,0 +1,93 @@
+---
+permalink: protect-scsql/task-install-snapcenter-server-for-sql-server.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: SnapCenter Server for Microsoft SQL Serverのインストール手順について説明します。 
+---
+= SnapCenter Server for Microsoft SQL Serverをインストールします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter Server for Microsoft SQL Serverのインストール手順をまとめたものです。
+
+
+
+== ステップ1: SnapCenter サーバーをダウンロードしてインストールします
+
+. から SnapCenter Server インストールパッケージをダウンロードします https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["ネットアップサポートサイト"^] 次に、この exe をダブルクリックします。
++
+インストールの開始後、すべての事前確認が実行され、最小要件を満たしていない場合には、対応するエラーまたは警告メッセージが表示されます。警告メッセージは無視してインストールを続行できますが、エラーは修正しておく必要があります。
+
+. SnapCenter サーバのインストールに必要な設定済みの値を確認し、必要に応じて変更します。
++
+MySQL Server リポジトリデータベースのパスワードを指定する必要はありません。SnapCenter サーバのインストール時に、パスワードは自動生成されます。
+
++
+
+NOTE: インストール用のカスタムパスでは、特殊文字“ % ”はサポートされていません。パスに「 % 」を含めると、インストールは失敗します。
+
+. [ 今すぐインストール ] をクリックします。
+
+
+
+
+== ステップ2：SnapCenter にログインします
+
+. ホストデスクトップのショートカットまたはインストールによって提供された URL （ SnapCenter Server がインストールされているデフォルトポート 8146 の場合は、 \\ https://server:8146_ ）から SnapCenter を起動します。
+. クレデンシャルを入力します。
++
+組み込みのドメイン管理者ユーザ名の形式には、 _NetBIOS_<username>_ または _<username>@<domain>_ または _<DomainFQDN>\<username>_ を使用します。
+
++
+組み込みのローカル管理者ユーザ名の形式には、 _<username>_ を使用します。
+
+. [ * サインイン * ] をクリックします。
+
+
+
+
+== 手順3：SnapCenter Standardコントローラベースライセンスを追加する
+
+. ONTAP コマンドラインを使用してコントローラにログインし、次のように入力します。
++
+'system license add-license-code <license_key>'
+
+. ライセンスを確認します。
++
+「 license show 」を参照してください
+
+
+
+
+
+== 手順4：SnapCenter 容量ベースライセンスを追加する
+
+. SnapCenter GUI の左ペインで、 *Settings > Software* をクリックし、 License セクションで *+* をクリックします。
+. ライセンスを取得するには、次の 2 つの方法のいずれかを選択します。
++
+** ライセンスをインポートするには、ネットアップサポートサイトのログインクレデンシャルを入力します。
+** ネットアップライセンスファイルの場所を参照し、 * Open * をクリックします。
+
+
+. ウィザードの通知ページで、デフォルトの容量しきい値 90% を使用します。
+. [ 完了 ] をクリックします。
+
+
+
+
+== 手順5：ストレージシステム接続をセットアップする
+
+. 左側のペインで、 * ストレージ・システム > 新規 * をクリックします。
+. Add Storage System ページで、次の手順を実行します。
++
+.. ストレージシステムの名前または IP アドレスを入力します。
+.. ストレージシステムへのアクセスに使用するクレデンシャルを入力します。
+.. イベント管理システム（ EMS ）と AutoSupport を有効にするには、チェックボックスを選択します。
+
+
+. プラットフォーム、プロトコル、ポート、およびタイムアウトに割り当てられたデフォルト値を変更する場合は、 [ その他のオプション *] をクリックします。
+. [Submit （送信） ] をクリックします。
+

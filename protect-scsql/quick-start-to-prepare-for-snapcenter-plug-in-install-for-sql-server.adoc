@@ -1,0 +1,206 @@
+---
+permalink: protect-scsql/quick-start-to-prepare-for-snapcenter-plug-in-install-for-sql-server.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: SnapCenter ServerおよびSnapCenter Plug-in for Microsoft SQL Serverのインストールの準備手順について説明します。 
+---
+= SnapCenter サーバとプラグインのインストールを準備します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter ServerおよびSnapCenter Plug-in for Microsoft SQL Serverをインストールするための準備手順をまとめたものです。
+
+
+
+== ドメインとワークグループの要件
+
+SnapCenter サーバは、ドメインまたはワークグループ内のシステムにインストールできます。
+
+Active Directory ドメインを使用している場合は、ローカル管理者の権限を持つドメインユーザを使用する必要があります。ドメインユーザは、 Windows ホストのローカル管理者グループのメンバーである必要があります。
+
+ワークグループを使用している場合は、ローカル管理者の権限を持つローカルアカウントを使用します。
+
+
+
+== ライセンス要件
+
+インストールするライセンスのタイプは環境によって異なります。
+
+[cols="1,3"]
+|===
+| 使用許諾 | 必要に応じて 
+
+
+ a| 
+SnapCenter 標準のコントローラベース
+ a| 
+FAS または AFF ストレージコントローラの場合は必須です
+
+SnapCenter Standard ライセンスはコントローラベースのライセンスで、 Premium Bundle に含まれています。SnapManager スイートのライセンスをお持ちの場合は、 SnapCenter Standard のライセンスもご利用いただけます。FAS または AFF ストレージを使用した SnapCenter の試用版をインストールする場合は、営業担当者にお問い合わせください。
+
+
+
+ a| 
+SnapCenter - 容量ベース
+ a| 
+ONTAP Select および Cloud Volumes ONTAP で必要です
+
+Cloud Volumes ONTAP または ONTAP Select を使用している場合は、 SnapCenter で管理するデータに基づいて、容量ベースのライセンスを 1TB 単位で購入する必要があります。デフォルトでは、 SnapCenter には 90 日間の 100TB SnapCenter の標準容量ベースの試用版ライセンスが組み込まれています。その他の詳細については、営業担当者にお問い合わせください。
+
+
+
+ a| 
+SnapMirror または SnapVault
+ a| 
+ONTAP
+
+SnapCenter でレプリケーションを有効にする場合は、 SnapMirror または SnapVault のライセンスが必要です。
+
+
+
+ a| 
+追加ライセンス（オプション）
+ a| 
+を参照してください link:../install/concept_snapcenter_licenses.html["SnapCenter ライセンス"^]。
+
+
+
+ a| 
+SnapCenter 標準ライセンス（オプション）
+ a| 
+セカンダリデスティネーション
+
+
+NOTE: セカンダリデスティネーションに SnapCenter Standard ライセンスを追加することを推奨しますが、必須ではありません。セカンダリデスティネーションで SnapCenter 標準ライセンスが有効になっていない場合、フェイルオーバー処理の実行後に、 SnapCenter を使用してセカンダリデスティネーションのリソースをバックアップすることはできません。ただし、クローニング処理と検証処理を実行するには、セカンダリデスティネーションに FlexClone ライセンスが必要です。
+
+|===
+
+
+== ホストおよびポートの要件
+
+ONTAP およびアプリケーションプラグインの最小要件については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=105961;&solution=1259&isHWU&src=IMT["Interoperability Matrix Tool で確認してください"^]。
+
+[cols="1,3"]
+|===
+| ホスト | 最小要件 
+
+
+ a| 
+オペレーティングシステム（ 64 ビット）
+ a| 
+を参照してください https://imt.netapp.com/matrix/imt.jsp?components=105961;&solution=1259&isHWU&src=IMT["Interoperability Matrix Tool で確認してください"^]
+
+
+
+ a| 
+CPU
+ a| 
+* サーバホスト： 4 コア
+* プラグインホスト： 1 コア
+
+
+
+
+ a| 
+RAM
+ a| 
+* サーバホスト： 8GB
+* プラグインホスト： 1GB
+
+
+
+
+ a| 
+ハードドライブの空き容量
+ a| 
+サーバホスト：
+
+* SnapCenter サーバソフトウェアとログの場合は 4GB
+* SnapCenter リポジトリ用に 6GB
+* 各プラグインホスト：プラグインのインストールとログ用に 2GB 。専用のホストにプラグインがインストールされている場合にのみ必要です。
+
+
+
+
+ a| 
+サードパーティのライブラリ
+ a| 
+SnapCenter サーバホストおよびプラグインホストで必要：
+
+* Microsoft .NET Framework 4.7.2以降
+* Windows Management Framework （ WMF ） 4.0 以降
+* PowerShell 4.0 以降
+
+
+
+
+ a| 
+ブラウザ
+ a| 
+Chrome 、 Internet Explorer 、および Microsoft Edge
+
+|===
+[cols="1,3"]
+|===
+| ポートタイプ | デフォルトのポート 
+
+
+ a| 
+SnapCenter ポート
+ a| 
+8146 （ HTTPS ）、双方向、カスタマイズ可能。 URL は、 https://server:8146_ を参照してください
+
+
+
+ a| 
+SnapCenter SMCore の通信ポート
+ a| 
+8145 （ HTTPS ）、双方向、カスタマイズ可能
+
+
+
+ a| 
+リポジトリデータベース
+ a| 
+3306 （ HTTPS ）、双方向
+
+
+
+ a| 
+Windows プラグインホスト
+ a| 
+135 、 445 （ TCP ）
+
+ポート 135 および 445 に加え、 Microsoft が指定したダイナミックポート範囲も開いている必要があります。リモートインストール操作では、このポート範囲を動的に検索する Windows Management Instrumentation （ WMI ）サービスを使用します。
+
+サポートされているダイナミックポート範囲については、を参照してください https://docs.microsoft.com/en-US/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements["Windows のサービス概要とネットワークポート要件"^]。
+
+
+
+ a| 
+SnapCenter Plug-in for Windows の略
+ a| 
+8145 （ HTTPS ）、双方向、カスタマイズ可能
+
+
+
+ a| 
+ONTAP クラスタまたは SVM の通信ポート
+ a| 
+443 （ HTTPS ）、双方向、 80 （ HTTP ）、双方向
+
+このポートは、 SnapCenter サーバホスト、プラグインホスト、 SVM または ONTAP クラスタ間の通信に使用されます。
+
+|===
+
+
+== SnapCenter Plug-in for Microsoft SQL Server の要件
+
+ローカル管理者の権限を持つユーザが、リモートホストに対してローカルログインの権限を持っている必要があります。クラスタノードを管理する場合は、クラスタ内のすべてのノードに対する管理者権限を持つユーザが必要です。
+
+SQL Server に対して sysadmin 権限を持つユーザが必要です。このプラグインは Microsoft VDI Framework を使用しますが、これには sysadmin アクセスが必要です。
+
+SnapManager for Microsoft SQL Server を使用していて、 SnapManager for Microsoft SQL Server から SnapCenter にデータをインポートする場合は、を参照してください link:../protect-scsql/concept_import_archived_backups_from_snapmanager_for_sql_to_snapcenter.html["アーカイブバックアップをインポートする"^]

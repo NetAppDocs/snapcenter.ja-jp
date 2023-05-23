@@ -94,50 +94,36 @@
   <block id="c09e638cb8ee35698e3172550b12d8fa" category="list-text">左側のナビゲーションペインで、 * 設定 * をクリックします。</block>
   <block id="1f02ceac906eeeae0a190f295fe12381" category="list-text">[ 設定 ] ページで、 [ * ポリシー * ] をクリックします。</block>
   <block id="a5bb4561024cbac1f26c361cff68730e" category="list-text">[ 新規作成（ New ） ] をクリックする。</block>
-  <block id="1fbcfaad372de4aa8c4263630714d810" category="list-text">バックアップタイプを選択します。</block>
   <block id="5d920b501536441ea32ecc24679c72a2" category="cell">状況</block>
   <block id="5e2ad6fd9deb412d871137094ee43ef0" category="cell">手順</block>
-  <block id="881a5cadbf2af4892868c95a8925ecdd" category="paragraph">データベースファイルとトランザクションログをバックアップし、トランザクションログを切り捨てます</block>
   <block id="63afd0069eb731a8e67418ebe1db655d" category="list-text">[ フルバックアップおよびログバックアップ * ] を選択します。</block>
   <block id="18d4675bdba207949ceb7f704c54e620" category="list-text">各 Snapshot コピーにバックアップするデータベースの最大数を入力します。</block>
   <block id="b0c8f062df15022a6331b14e3bf5591e" category="admonition">同時に複数のバックアップ処理を実行する場合は、この値を増やす必要があります。</block>
-  <block id="21b100df4a632d596f4e051c57940f20" category="paragraph">データベースファイルをバックアップします</block>
   <block id="787c49e1272644a793119d13fc551e84" category="list-text">[* Full backup* ] を選択します。</block>
   <block id="846c94f31178e6465f3c62be3f42cb3d" category="list-text">各 Snapshot コピーにバックアップするデータベースの最大数を入力します。デフォルト値は 100 です</block>
-  <block id="fa9adcfe2bdc31067811e93485d16b7e" category="paragraph">トランザクションログをバックアップ</block>
   <block id="ad53595de135edab4a537a97159316b6" category="paragraph">「 * Log backup * 」を選択します。</block>
   <block id="f16fca991ae99058ce41f2b4b1614852" category="list-text">別のバックアップ・アプリケーションを使用してリソースをバックアップする場合は、 [* コピーのみのバックアップ * ] を選択します。</block>
   <block id="619da134802c3fcab97a2b7c6d14c4ec" category="paragraph">トランザクションログが変更されずに保持されるため、任意のバックアップアプリケーションでデータベースをリストアできます。通常、他の状況ではコピーのみのオプションを使用しないでください。</block>
   <block id="31bbc81dcc68057ff34be7ba42a87cf4" category="admonition">Microsoft SQL では、セカンダリ・ストレージのフル・バックアップおよびログ・バックアップ * オプションと * コピーのみのバックアップ * オプションはサポートされていません。</block>
   <block id="e55dcbdf8fe92f0410aacdc7a5cf00d7" category="list-text">可用性グループの設定セクションで、次の操作を実行します。</block>
   <block id="21f831502a413a739e20cbf9f2eefe54" category="cell">フィールド</block>
-  <block id="ed9c1af05d86fe993f785a78cddb82d4" category="paragraph">優先バックアップレプリカのみにバックアップする</block>
   <block id="6ebdb233abe23750440d3e587915a892" category="paragraph">優先バックアップレプリカのみをバックアップする場合は、このオプションを選択します。優先バックアップレプリカは、 SQL Server の AG に対して設定されているバックアップ設定によって決まります。</block>
-  <block id="f5c39ada6d74538eb8f8540a5b0f8397" category="paragraph">バックアップするレプリカを選択します</block>
   <block id="0a87197768544d35cfd757d20f1dab26" category="paragraph">バックアップするプライマリまたはセカンダリの AG レプリカを選択します。</block>
-  <block id="e7ee0e14cb9b3655f5828c64aa7cc0e9" category="paragraph">バックアップの優先度（最小および最大のバックアップ優先度）</block>
   <block id="fb8750264c3bbfea89908048e10ef06c" category="paragraph">バックアップする AG レプリカを決めるための、バックアップの最小優先順位と最大優先順位を指定します。たとえば、最小優先度を 10 、最大優先度を 50 に設定できます。この場合、優先順位が 10 より高く 50 より低いすべての AG レプリカがバックアップ用とみなされます。</block>
   <block id="4035686675283d0f53d4a20e3a9588f0" category="admonition">デフォルトでは、最小プライオリティは 1 、最大プライオリティは 100 です。</block>
   <block id="95f62fbbdd8b59bc3cdee3bd3e382046" category="admonition">クラスタ構成では、ポリシーで設定された保持設定に従って、クラスタの各ノードにバックアップが保持されます。AG の所有者ノードが変更された場合は、保持設定に従ってバックアップが作成され、以前の所有者ノードのバックアップが保持されます。AG の保持設定はノードレベルでのみ適用されます。</block>
-  <block id="17c27964395af2cc0989da0544595045" category="list-text">このポリシーを使用して作成するバックアップのスケジュールを設定する場合は、「 * on demand * 、 * Hourly * 、 * Daily * 、 * Weekly * 、または * Monthly * 」を選択して、スケジュールのタイプを指定します。</block>
-  <block id="e6383c275762841518a895807d340c7f" category="paragraph">ポリシーに対して選択できるスケジュールタイプは 1 つだけです。</block>
   <block id="6b09ab256ee91abfcbae14dc82d761dc" category="image-alt">バックアップ設定</block>
   <block id="1947481e76eb40f4adf8f5246fa95ff6" category="admonition">リソースグループを作成する際に、バックアップ処理のスケジュール（開始日、終了日、頻度）を指定することができます。これにより、ポリシーとバックアップ間隔が同じである複数のリソースグループを作成できますが、各ポリシーに異なるバックアップスケジュールを割り当てることもできます。</block>
   <block id="a16b9f3426d9cfca29c06a875b667023" category="admonition">午前 2 時にスケジュールを設定した場合、夏時間（ DST ）中はスケジュールはトリガーされません。</block>
   <block id="73d1997538c5c2799ee681d5e59023ad" category="list-text">[ 最新の状態へのリストア処理の保持の設定 ] セクションで、次のいずれかを実行します。</block>
   <block id="35c585b251342f8a3ef5f785412f91be" category="paragraph">特定の数の Snapshot コピーだけを保持します</block>
-  <block id="5556fc25e3c9c42cb802a3ec13aa865f" category="paragraph">［ * 最新の &lt; 日数 &gt; 日数に適用可能なログバックアップを保持する ］ オプションを選択し、保持する日数を指定します。この上限に近づいた場合は、古いコピーを削除できます。</block>
   <block id="94ce778033bf4abe093ce9cc1e7a0498" category="paragraph">バックアップコピーを特定の日数だけ保持します</block>
   <block id="9bbf41d74c8f89f293d3299ea7bebf83" category="paragraph">［ * 最新の &lt; 日数 &gt; フル・バックアップに適用可能なログ・バックアップを保持する ］ オプションを選択し、ログ・バックアップ・コピーを保持する日数を指定します。</block>
   <block id="9de90deec5302da2195d39aecfada280" category="list-text">On Demand の保持設定の「 * フルバックアップの保持設定 * 」セクションで、次の操作を実行します。</block>
-  <block id="e1282ba4f34b11ff282fb7d9970b2736" category="paragraph">保持する Snapshot コピーの総数</block>
-  <block id="206b2713043077c94ab3e4473a9897d7" category="paragraph">保持する Snapshot コピーの数を指定する場合は、「 * 保持する Snapshot コピーの総数 * 」を選択します。</block>
   <block id="3aaac4c94ecda8362dc70a2825de8b24" category="paragraph">Snapshot コピーの数が指定した数を超えると、古いものから順に Snapshot コピーが削除されます。</block>
   <block id="225ea283dca2590a2a542a782ac56927" category="admonition">最大保持数は、 ONTAP 9.4 以降のリソースでは 1018 、 ONTAP 9.3 以前のリソースでは 254 です。保持期間を基盤となる ONTAP バージョンの値よりも大きい値に設定すると、バックアップが失敗します。</block>
   <block id="a0257f49f5547a6ef191dd6c2f9b4c75" category="admonition">デフォルトでは、保持数の値は 2 に設定されます。保持数を 1 に設定すると、新しい Snapshot コピーがターゲットにレプリケートされるまで最初の Snapshot コピーが SnapVault 関係の参照 Snapshot コピーになるため、保持処理が失敗することがあります。</block>
-  <block id="890049ee281f6f438392008ad804b79b" category="paragraph">Snapshot コピーをのために保持します</block>
   <block id="6d8af80369897e48f5d0073fb1d5235e" category="paragraph">Snapshot コピーを削除するまで保持しておく日数を指定する場合は、「 * Snapshot コピーを保持する期間」を選択します。</block>
-  <block id="827a94fd354ba8465165672c359a430d" category="paragraph">保持する Snapshot コピーの数を指定する場合は、「 * 保持する Snapshot コピーの総数 * 」を選択します。Snapshot コピーの数が指定した数を超えると、古いものから順に Snapshot コピーが削除されます。</block>
   <block id="6127fccc91f52e5ee1702cdfa7fa1673" category="admonition">SnapVault レプリケーションを有効にする場合は、保持数を 2 以上に設定する必要があります。保持数を 1 に設定すると、新しい Snapshot コピーがターゲットにレプリケートされるまで最初の Snapshot コピーが SnapVault 関係の参照 Snapshot コピーになるため、保持処理が失敗することがあります。</block>
   <block id="efa04a2e0b433b54ed88de4c3b1b5a79" category="paragraph">ログの Snapshot コピーの保持期間は、デフォルトで 7 日に設定されています。ログの Snapshot コピーの保持期間を変更するには、 Set-SmPolicy コマンドレットを使用します。</block>
   <block id="723fe9aea6dfe1a0a822f218095c1c11" category="paragraph">ログの Snapshot コピーの保持を 2 に設定する例を次に示します。</block>
@@ -157,7 +143,6 @@
   <block id="a0e2a78c6c2fd62817afcae7e0b538f5" category="admonition">セカンダリストレージが Snapshot コピーの最大数に達しないように、 ONTAP で SnapMirror 保持ポリシーを設定する必要があります。</block>
   <block id="369cd91c3e11b99e6fa5850b92b3090a" category="paragraph">整合性構造をデータベースの物理構造に制限する（ physical_only ）</block>
   <block id="0de87de3224e64a78ce1093052a47d1d" category="paragraph">整合性チェックの対象をデータベースの物理構造に限定し、データベースに影響を与える正しくないページ、チェックサム障害、および一般的なハードウェア障害を検出するには、「 * 」を選択します。</block>
-  <block id="fdfc39464fafdd6ce6b729e0738e48a3" category="paragraph">すべての情報メッセージを無効にする（ INFOMSGS なし）</block>
   <block id="82f15136daedc726dba1051c43c28284" category="paragraph">すべての情報メッセージを停止するには、「 * 」を選択します（ NO_INFOMSGS ）。デフォルトで選択されています。</block>
   <block id="a01ae415547e2368a45ed1cc209949a9" category="paragraph">レポートされたすべてのエラー・メッセージをオブジェクトごとに表示する（ All_ERRORGS ）</block>
   <block id="afac60f293b05dc186f67c671aabe6bc" category="paragraph">レポートされたエラーをオブジェクトごとにすべて表示する場合は、このオプションを選択します。</block>
@@ -623,23 +608,16 @@
   <block id="3a1dd416224e7a96b7d4be1dfc9536cf" category="list-text">次の条件に該当する場合、 sysadmin アクセスがないロールベースアクセス制御（ RBAC ）ユーザにクレデンシャルを割り当てる必要があります。</block>
   <block id="7a16850a47fecec0d6cb2c66daae6fca" category="list-text">SQL インスタンスに資格情報が割り当てられます。</block>
   <block id="6707464a5871a6aa26dcf785bea4052c" category="list-text">SQL インスタンスまたはホストが RBAC ユーザに割り当てられている。</block>
-  <block id="4970872b4e7e80683035b5383cddcfad" category="paragraph">ユーザには、リソースグループとバックアップ権限の両方が必要です</block>
   <block id="afebb28fd320ef1336620e367e1e9af9" category="list-text">新しい資格情報を追加するには、 * New * をクリックします。</block>
-  <block id="e98129085674125eccfb10fdf1a8b903" category="paragraph">* 資格情報名 *</block>
   <block id="18274e168d1fce1bedb612015e797fb4" category="paragraph">クレデンシャルの名前を入力します。</block>
-  <block id="22a9d94cc3dd3f3f504402ee57041a90" category="paragraph">* ユーザー名 *</block>
   <block id="2babd6364b44c08eef5ab4738c3db862" category="paragraph">SQL Server 認証に使用するユーザ名を入力します。</block>
   <block id="2532aba4399cff0e09437703bc91a9d4" category="list-text">ドメイン管理者または管理者グループの任意のメンバーは、 SnapCenter プラグインをインストールするシステムのドメイン管理者または管理者グループの任意のメンバーを指定します。[*Username*] フィールドの有効な形式は次のとおりです。</block>
   <block id="e9c2622b465de104c38e33657be6878b" category="list-text">NETBIOS_USERNAME_</block>
   <block id="e945adbfe4c1a1de7443c2cb0ded2ba9" category="list-text">_ ドメイン FQDN\ ユーザ名 _</block>
   <block id="b2634f07b0a3a46ef7a5b2fe1993d6e2" category="list-text">ローカル管理者（ワークグループの場合のみ）ワークグループに属するシステムの場合は、 SnapCenter プラグインをインストールするシステムに組み込みのローカル管理者を指定します。ユーザアカウントに昇格された権限がある場合、またはホストシステムでユーザアクセス制御機能が無効になっている場合は、ローカル管理者グループに属するローカルユーザアカウントを指定できます。[* ユーザー名 *] フィールドの有効な形式は、 _username_ です</block>
-  <block id="519a06883e7db4dbb9a21eeecb16986a" category="paragraph">* パスワード *</block>
   <block id="3e63265716df2dfbce34fbae052f782c" category="paragraph">認証に使用するパスワードを入力します。</block>
-  <block id="95d647afc6713e290a68698e8521e757" category="paragraph">* 認証モード *</block>
   <block id="66c5f2a1877b1e04cfa2731f1e12aa5e" category="paragraph">SQL Server 認証モードを選択します。SQL Server に対する sysadmin 権限がある Windows ユーザの場合は、 Windows 認証を選択することもできます。</block>
-  <block id="34a7588e855afcffbec3ec292d335369" category="paragraph">* ホスト *</block>
   <block id="d82b9729484cf5fd2948c596280e72fb" category="paragraph">ホストを選択します。</block>
-  <block id="e1f1f62be4a53aaecc160ddb197e5ecd" category="paragraph">* SQL Server インスタンス *</block>
   <block id="1c6aec216640420d37199ef0555beab9" category="paragraph">SQL Server インスタンスを選択します。</block>
   <block id="a52c72cddb788a0e54ae847cfde710d9" category="list-text">[OK] をクリックしてクレデンシャルを追加します。</block>
   <block id="9cfc80fa5227a423a76220ce430d990c" category="list-text">左側のナビゲーションペインで、 * リソース * をクリックします。</block>
@@ -1006,11 +984,9 @@
   <block id="303271a6fa371310673fc55e65bf3af0" category="doc">SnapCenter Plug-in for SQL Server のインストールのクイックスタート</block>
   <block id="e05bc1fb0d09110d2709b8329ca82a1f" category="paragraph">SnapCenter Server と SnapCenter Plug-in for Microsoft SQL Server のインストール手順を簡潔にまとめたものです。</block>
   <block id="67f289221dc2b8315be57c85a28e0619" category="section-title">設置を準備</block>
-  <block id="e03ce187e39230106155230cb020dfa3" category="paragraph">* ドメインおよびワークグループの要件 *</block>
   <block id="c85265a6c5841b0f019403a50b63c44d" category="paragraph">SnapCenter サーバは、ドメインまたはワークグループ内のシステムにインストールできます。</block>
   <block id="43727cf7c1f0b9055bad0d2c9c2e19ea" category="paragraph">Active Directory ドメインを使用している場合は、ローカル管理者の権限を持つドメインユーザを使用する必要があります。ドメインユーザは、 Windows ホストのローカル管理者グループのメンバーである必要があります。</block>
   <block id="2632504d1b7b1f77434679b6906040dd" category="paragraph">ワークグループを使用している場合は、ローカル管理者の権限を持つローカルアカウントを使用します。</block>
-  <block id="8091c23d0ce9e48e2abcbbcf443c75a5" category="paragraph">* ライセンス要件 *</block>
   <block id="d5c59f9587c1784732bff8ebcc03f9fb" category="paragraph">インストールするライセンスのタイプは環境によって異なります。</block>
   <block id="794df3791a8c800841516007427a2aa3" category="cell">使用許諾</block>
   <block id="b428bd66304bced88a8f85c2e42e2a8d" category="cell">必要に応じて</block>
@@ -1029,7 +1005,6 @@
   <block id="a036788a7ed73379ca117ad8b6a48afa" category="paragraph">SnapCenter 標準ライセンス（オプション）</block>
   <block id="5be74f1e9c3cdce99e50c0e439ec19b3" category="paragraph">セカンダリデスティネーション</block>
   <block id="7dbd4083dc9a93160940c1e53d03999f" category="admonition">セカンダリデスティネーションに SnapCenter Standard ライセンスを追加することを推奨しますが、必須ではありません。セカンダリデスティネーションで SnapCenter 標準ライセンスが有効になっていない場合、フェイルオーバー処理の実行後に、 SnapCenter を使用してセカンダリデスティネーションのリソースをバックアップすることはできません。ただし、クローニング処理と検証処理を実行するには、セカンダリデスティネーションに FlexClone ライセンスが必要です。</block>
-  <block id="89a71adc7ceff2f08a2162d1abfd9de6" category="paragraph">* その他の要件 *</block>
   <block id="918d32b75f0ab883abba3a8dc0c3ae8d" category="inline-link">Interoperability Matrix Tool で確認してください</block>
   <block id="8124579383e90243e4b06323d2b37f8d" category="cell">ホスト</block>
   <block id="a55b17d8324fe50e023be8010d4b5474" category="cell">最小要件</block>
@@ -1066,7 +1041,6 @@
   <block id="48552dce4d9810446c70f66f21f08120" category="paragraph">ONTAP クラスタまたは SVM の通信ポート</block>
   <block id="de80df6466db891ed7d7a31d71335ae1" category="paragraph">443 （ HTTPS ）、双方向、 80 （ HTTP ）、双方向</block>
   <block id="228eb7fa9d28577ec427d7baedfa7ded" category="paragraph">このポートは、 SnapCenter サーバホスト、プラグインホスト、 SVM または ONTAP クラスタ間の通信に使用されます。</block>
-  <block id="353c85d985312d2d61ab0aeb4ee52759" category="paragraph">* SnapCenter Plug-in for Microsoft SQL Server の要件 *</block>
   <block id="4bd535cc745449316aa463a5f52133d6" category="paragraph">ローカル管理者の権限を持つユーザが、リモートホストに対してローカルログインの権限を持っている必要があります。クラスタノードを管理する場合は、クラスタ内のすべてのノードに対する管理者権限を持つユーザが必要です。</block>
   <block id="cf94e6be5912bb698bcc03d64c605bc4" category="paragraph">SQL Server に対して sysadmin 権限を持つユーザが必要です。このプラグインは Microsoft VDI Framework を使用しますが、これには sysadmin アクセスが必要です。</block>
   <block id="354c84f19db927b615f7e75880c69840" category="section-title">SnapCenter サーバをインストールします</block>
@@ -2662,7 +2636,6 @@
   <block id="8103ea1f974b6fe78b3263b7a1107692" category="paragraph">SnapCenter が iSCSI セッションを確立します。</block>
   <block id="d92abf366bd9060c59bb86c051a977d0" category="list-text">この手順を繰り返して、各ターゲットのセッションを確立します。</block>
   <block id="f8a549c5d60e74034419845623f5c51a" category="summary">ONTAP Select 標準容量ライセンスは、 Cloud Volumes ONTAP プラットフォームと SnapCenter プラットフォームのデータを保護するために使用します。</block>
-  <block id="a6f6b8e1900f201c352d37d7ad4eee46" category="paragraph">ライセンスには次のような特徴があります。</block>
   <block id="1e1ad6d102344db746935e8ae7b4053a" category="list-text">51xxxxxxx の形式の 9 桁のシリアル番号で構成されます</block>
   <block id="8df6c319bc0dd3bc17034d6f7b0b0d01" category="paragraph">SnapCenter GUI を使用してライセンスを有効にするには、ライセンスのシリアル番号と有効なネットアップサポートサイトのログインクレデンシャルを使用します。</block>
   <block id="f8b3fa2bcdc37eb746dd0ca2b1318a58" category="list-text">個別の永続ライセンスとして提供され、使用済みストレージ容量または保護するデータのサイズのいずれか小さい方に基づくコストと、データは SnapCenter によって管理されます</block>
@@ -2670,12 +2643,8 @@
   <block id="3ad8f1015a5748dc3e790e64bb9a4e26" category="paragraph">たとえば、 1TB 、 2TB 、 4TB などの容量ベースのライセンスを取得できます。</block>
   <block id="ec72ca404ef39d44f067aaaae39cf0e4" category="list-text">100TB の容量が使用可能な 90 日間の試用版ライセンスです</block>
   <block id="2743dc2e5d64cfecd6d65ef69f417e95" category="summary">SnapCenter の容量ベースのライセンスのシリアル番号は、注文の確認やドキュメントパッケージに記載されています。このシリアル番号がない場合は、ネットアップサポートサイトから取得できます。</block>
-  <block id="0373910e51252c7b97dcbea9f4942604" category="inline-link">mysupport.netapp.com</block>
-  <block id="260c486181bff01291b08f4368caf4e0" category="list-text">ネットアップサポートサイトにログインします<block ref="28649c93049a329043d206ec7fa0c6f8" category="inline-link-rx"></block>。</block>
   <block id="55b506dcddf68638833e19d289e73897" category="list-text">[ システム ] 、 [ * ソフトウェアライセンス ] の順に移動します。</block>
   <block id="a83a5d4a0177a0501c4a3ed3bc37cd53" category="list-text">[ 選択基準 ] 領域で、 [ すべてを表示：シリアル番号とライセンス ] ドロップダウンメニューから *SC_standard* を選択します。</block>
-  <block id="afdb1414f39146e968c3e38bd864c000" category="image-alt">NSS ライセンス選択</block>
-  <block id="969166d70500094403472cee53c7eb80" category="list-text">会社名を入力して、「 * Go!* 」をクリックします。</block>
   <block id="072c7ce9ef654fbadd39bfb8d07dd1f6" category="paragraph">SnapCenter ライセンスの 9 桁のシリアル番号が 51xxxxxxx の形式で表示されます。</block>
   <block id="4f208af6a990c3a6dbb3b1a7f78ab5d4" category="summary">Storage Virtual Machine （ SVM ）上に SMB3 共有を設定するには、 SnapCenter ユーザインターフェイスまたは PowerShell コマンドレットを使用できます。</block>
   <block id="61e81eb53b72fd5418e7a2bd125c8686" category="doc">SMB 共有を作成および管理する</block>
@@ -2710,10 +2679,7 @@
   <block id="febaac7ceadda0aca80556bfc7f22a33" category="list-text">左側のナビゲーションペインで、 * ストレージシステム * をクリックします。</block>
   <block id="9ba45610f0250c3f3d93d968194d341c" category="list-text">追加されたすべての SVM を表示するには、 * ONTAP SVM * を選択します。</block>
   <block id="91fd94b5750743b0b4db66d235c0cab9" category="list-text">追加されたすべてのクラスタを表示するには、 * ONTAP クラスタ * を選択します。</block>
-  <block id="784f9d2e91aebe7dc2a98209e667372a" category="paragraph">クラスタ名をクリックすると、クラスタに含まれるすべての SVM が SVM セクションに表示されます。</block>
   <block id="56ea331cb0dea9dc3bddc3e0e2f3ef88" category="paragraph">Controller License 列には、次のステータスが表示されます。</block>
-  <block id="2522d4d4da08f9de2686d2c18e41a94b" category="list-text"><block ref="da9849daa2aa04218f87948a7256713b" category="inline-image-macro-rx" type="image"></block> FAS スイートライセンスが AFF または SnapManager プライマリストレージシステムにインストールされていることを示します。</block>
-  <block id="3064686d0324adfa86cb183026ea8a66" category="list-text"><block ref="355b5886443669e7ad5ff1741a77218f" category="inline-image-macro-rx" type="image"></block> FAS スイートライセンスが AFF または SnapManager プライマリストレージシステムにインストールされていないことを示します。</block>
   <block id="e095aee1efd740c71961a13e76576da6" category="list-text">セカンダリストレージ</block>
   <block id="f13e95a655fb97423bd52082209d8781" category="list-text">ライセンスを追加します</block>
   <block id="c2267a540cdece9a806b765d927ba8ef" category="list-text">ライセンスの詳細を表示して、各ライセンスに関する情報を簡単に確認できます。</block>
@@ -2721,17 +2687,14 @@
   <block id="fd6d824ad448d73f9d1f6b3c5509232a" category="list-text">既存のライセンスを置き換える場合やライセンスが不要になった場合は、ライセンスを削除します。</block>
   <block id="ba2f4fc969f990edea2a0f9e7c17885f" category="admonition">トライアルライセンス（ 50 で終わるシリアル番号）は、 SnapCenter GUI では削除できません。購入した SnapCenter Standard 容量ベースのライセンスを追加すると、試用版ライセンスが自動的に上書きされます。</block>
   <block id="20788a45506cca03e1c2a88f6259baa6" category="list-text">[ 設定 ] ページで、 [* ソフトウェア ] をクリックします。</block>
-  <block id="0b5bbb1f8e9316f184ffc46a55fde594" category="list-text">[ ソフトウェア ] ページの [ ライセンス ] セクションで、 [* 追加 ] をクリックします<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>）。</block>
   <block id="d72c1df6aa761e08a22ad7e68c16406d" category="list-text">SnapCenter ライセンスの追加ウィザードで、次のいずれかの方法を選択して、追加するライセンスを取得します。</block>
   <block id="a1d8662559bac2669232432df90e6db3" category="paragraph">ライセンスをインポートするには、ネットアップサポートサイト（ NSS ）のログインクレデンシャルを入力します</block>
   <block id="a426e2b1ae7b2ed68b622079636cb9f8" category="list-text">NSS のユーザ名を入力します。</block>
   <block id="21b830aba4d35dd682d3fb99b5c39c58" category="list-text">NSS パスワードを入力します。</block>
   <block id="07cb62e97402d6f5f7ae164e960f673c" category="paragraph">ネットアップライセンスファイル</block>
   <block id="358adfd23e97ae6d9631faacdf38349f" category="list-text">ライセンスファイルの場所を参照し、選択します。</block>
-  <block id="31d9f23fbb53d2787e021e33f512537e" category="list-text">* 開く * をクリックします。</block>
   <block id="139acbc75e1fdf242ad639e953306c0d" category="list-text">通知ページで、 SnapCenter が E メール、 EMS 、および AutoSupport 通知を送信する容量のしきい値を入力します。</block>
   <block id="ca8d06ca31fa65de1d7fa189cbd9053a" category="paragraph">デフォルトのしきい値は 90% です。</block>
-  <block id="c5ac91f9d71868d67600ac6e3d555ce9" category="list-text">電子メール通知用に SMTP サーバーを設定するには、 * 設定 * &gt; * グローバル設定 * &gt; * 通知サーバー設定 * をクリックして、次の詳細を入力します。</block>
   <block id="fe7c6832f02e9c6d619cf94f17ad3887" category="paragraph">E メール設定</block>
   <block id="a4e7a8fc83bab6b154d5ea518f9f930c" category="paragraph">「 * Always * 」または「 * Never * 」のいずれかを選択します。</block>
   <block id="0ea82c1bf7269950e927586b6dba0eac" category="paragraph">E メールの設定を指定します</block>
@@ -2740,8 +2703,6 @@
   <block id="a70a5bbea3c1a0732c3b119e34ac958c" category="list-text">受信者の E メールアドレス</block>
   <block id="d97e109d66d82a3998e928297ea76bdc" category="list-text">オプション：デフォルトの件名を編集します</block>
   <block id="fb929cc1541d57b8296794b2a588840d" category="paragraph">デフォルトの件名は「 SnapCenter ライセンス容量通知」です。</block>
-  <block id="8440ad9407c2e5813eaab7eb5fa92051" category="list-text">処理に失敗した場合に Event Management System （ EMS ；イベント管理システム）メッセージをストレージシステムの syslog に送信、または AutoSupport メッセージをストレージシステムに送信するには、該当するチェックボックスを選択します。</block>
-  <block id="3327dba9ffd8c9c2d9846fc889607703" category="cell">* ベストプラクティス * ： AutoSupport の有効化は、発生する可能性のある問題のトラブルシューティングに役立つことが推奨されます。</block>
   <block id="5a378b18f7bf0c4cabc6c655cd2f535e" category="list-text">「 * 次へ * 」をクリックします。</block>
   <block id="cf3152e36e70eecd5ed2d294f623eb90" category="summary">SnapCenter ホストが FC / iSCSI 環境に配置されている場合、 ONTAP ストレージへのアクセスを有効にするために、システムに追加のソフトウェアのインストールが必要になることがあります。</block>
   <block id="8e9816159074c93c5490453d542c7149" category="doc">SAN ホストの要件</block>
@@ -2965,7 +2926,6 @@
   <block id="16e7597f6d1a1595520060010a775409" category="paragraph">ドメインコントローラの通信ポート</block>
   <block id="fa51be75ce838b88fdd3475b507591a3" category="paragraph">認証が適切に機能するために、 Microsoft のマニュアルを参照して、ドメインコントローラのファイアウォールで開く必要があるポートを確認してください。</block>
   <block id="c659718bc9e53e4da63cb36d6025798c" category="paragraph">SnapCenter サーバ、プラグインホスト、またはその他の Windows クライアントがユーザを認証できるように、ドメインコントローラで Microsoft の必要なポートを開く必要があります。</block>
-  <block id="a2e769316816cc255f9f37fbed415c69" category="doc">試用版ライセンスを削除します</block>
   <block id="87d0fa08c99bcc9a194b85ddcbe3da26" category="paragraph">トライアルライセンスを手動で削除する必要があるのは、 SnapCenter の標準コントローラベースのライセンスを使用している場合のみです。SnapCenter の Standard 容量ベースのライセンスを調達し、 SnapCenter の GUI に追加すると、試用版ライセンスが自動的に上書きされます。</block>
   <block id="68dae2573ac7874d6dd234af4fa4c752" category="list-text">SnapCenter サーバで、 PowerShell ウィンドウを開き、 MySQL パスワードをリセットします。</block>
   <block id="aa5c2438bb48bc6f9fc91294d9f5f2c1" category="list-text">Open-SmConnection コマンドレットを実行して、 SnapCenterAdmin アカウントの SnapCenter サーバとの接続セッションを開始します。</block>
@@ -3056,7 +3016,6 @@
   <block id="02f25ba36a2907c8f8d0598b962b14ed" category="list-text">レジストリエディタを閉じます。</block>
   <block id="21b55e1babd986a5f3ed39019361ea07" category="summary">VMware 環境での SnapCenter Plug-in for Microsoft Windows を使用して、 LUN の作成と管理、および Snapshot バックアップコピーの管理を行うことができます。</block>
   <block id="e2d0fdb0252253026c4030313d523287" category="doc">VMware 環境でストレージをプロビジョニング</block>
-  <block id="9c665690c697cc93e5a897a8a63d25c2" category="doc">コントローラのシリアル番号を取得します</block>
   <block id="ed996e97427b9382e039c0a5dde5d493" category="list-text">ONTAP コマンドラインを使用してコントローラにログインします。</block>
   <block id="1220394f5402b4332338e11150062d91" category="list-text">system show -instance コマンドを入力し、出力を確認してコントローラのシリアル番号を確認します。</block>
   <block id="065b83de49a875bb4bd71dbe16fad428" category="list-text">シリアル番号を記録します。</block>
@@ -3176,7 +3135,6 @@
   <block id="541eb9f7e4046db89bc6e649fea3e51d" category="admonition">[Cancel] * ボタンをクリックすると、実行中のステップが完了し、ロールバック操作が開始されます。SnapCenter サーバがホストから完全に削除されます。</block>
   <block id="0a72b5ed9e647b1bccffb29f78092df4" category="paragraph">ただし、「 SnapCenter サーバサイトの再起動」または「 SnapCenter サーバの起動を待機中」の処理が実行されているときに「 * キャンセル」をクリックすると、処理はキャンセルされずにインストールが続行されます。</block>
   <block id="bf81ea5010d5d85942a2a57301afd2ac" category="paragraph">ログファイルは常に、 admin ユーザの %temp% フォルダに古いものから順番に表示されます。ログの場所をリダイレクトする場合は 'C:\installer_location\installer_name.exe /log"C:\"`` を実行して ' コマンドプロンプトから SnapCenter Server のインストールを開始します</block>
-  <block id="b15a52a99ef14861ba148ae197add182" category="doc">SnapCenter での使用容量の計算方法</block>
   <block id="10680a7aa79949d8b454b29a782cc64a" category="summary">FC RDM LUN を使用して Microsoft クラスタ内のノード間でストレージを共有する前に、共有クォーラムディスクと共有ストレージディスクを作成し、それらをクラスタ内の両方の仮想マシンに追加しておく必要があります。</block>
   <block id="5010ac065b072d3a5a66d4913af22358" category="doc">共有 FC RDM LUN を作成</block>
   <block id="cbdb6828febec04786f22df9a1ccc748" category="inline-link">物理ホスト間で仮想マシンをクラスタ化します</block>
@@ -3310,17 +3268,13 @@
   <block id="e641334b8b39e850790bd4b25b2e3cec" category="paragraph">ライセンスキーのリクエストを送信すると、 Kroll Ontrack は問題 50 メールボックスライセンスキーを送信します。資格に基づいて、 Kroll Ontrack は検証後にメールボックスのライセンスをアップグレードします。</block>
   <block id="da68fe81ae35bfda8d512b213d4ea64f" category="summary">FAS または AFF ストレージを使用している場合、ネットアップサポートサイトから SnapCenter コントローラベースのライセンスを取得してから、 ONTAP コマンドラインを使用してインストールできます。</block>
   <block id="315713e21026e04eaaa2b9a3821e4c3d" category="paragraph">有効なクレデンシャルを入力しないと、検索結果は返されません。</block>
-  <block id="371319a0c9817abb98eea29d4567a795" category="list-text">選択基準領域で、シリアル番号（ユニットの背面にある番号）が選択されていることを確認し、コントローラのシリアル番号を入力して、 * Go!* をクリックします。</block>
-  <block id="d9996bb23744ed1a95dc297c99d45d4d" category="image-alt">NSS コントローラのライセンス選択</block>
   <block id="b5ddaee766816307a016e7736f50313d" category="paragraph">指定したコントローラのライセンスのリストが表示されます。</block>
   <block id="5da6f07d19afc1937b1b5b064152d98e" category="list-text">SnapCenter Standard または SnapManagerSuite ライセンスを探して記録します。</block>
-  <block id="aec2fa195585d5a55c735b267231ecf8" category="doc">ネットアップライセンスファイルを生成</block>
   <block id="eeb818d6636d7675fb1108e834a0fed1" category="inline-link">ネットアップライセンスファイルジェネレータ</block>
   <block id="5064ce102d4c25981e21e76e6aa515d3" category="list-text">に移動します<block ref="52825a9f9c75513bbd1f360c2df7f081" category="inline-link-rx"></block>。</block>
   <block id="cc5aaa62ea65ba445a0ca28e684ec137" category="list-text">必要な情報を入力します。</block>
   <block id="aa96972d8a9d395572c58293f4cfc359" category="list-text">[ 製品ライン ] フィールドで、プルダウンメニューから *SnapCenter Standard (capacity based-)* を選択します。</block>
   <block id="abd5fbd31eb442bc0a035e9cad7fe8f3" category="list-text">[ 製品シリアル番号 ] フィールドに、 SnapCenter ライセンスのシリアル番号を入力します</block>
-  <block id="32b485c6c6f806ed5cacdc290d9f46ae" category="list-text">NetApp Data Privacy Policy を読んで同意し、 * Submit * をクリックします。</block>
   <block id="352b74507f3abbcaae93745904ef3f5a" category="list-text">ライセンスファイルを保存し、ファイルの場所を記録します。</block>
   <block id="5fd3d0b8e71c4f64cfbad31e3fde1863" category="summary">SnapCenter サーバをインストールする前に、スペースとサイジングの要件を十分に理解しておく必要があります。また、利用可能なシステムおよびセキュリティの更新も適用する必要があります。</block>
   <block id="18cd7192921dd5ac27a1a7c5ef795c20" category="doc">スペースとサイジングの要件</block>
@@ -5897,7 +5851,6 @@
   <block id="86f7f637d3819a7b4814644b7f8d8972" category="image-alt">SCC インストール設定ワークフロー</block>
   <block id="48f5a315d78b006c306e66d7b35fa6f4" category="summary">バックアップまたはクローンを作成するリソースを追加する必要があります。環境によっては、バックアップまたはクローンを作成するデータベースインスタンスやそのコレクションもリソースに含まれます。</block>
   <block id="5acceba2cee4fe40d121e90d997fa439" category="doc">SnapCenter Custom Plug-ins にリソースを追加します</block>
-  <block id="09f1a1e976c751f8b861a75492f30752" category="list-text">カスタムプラグインを作成しておく必要があります。</block>
   <block id="797f1e031962d70e46335925184febf4" category="list-text">SnapCenter サーバにプラグインをアップロードしておく必要があります。</block>
   <block id="eb609425665410a2e3cc5d5000880798" category="paragraph">MySQL や DB2 のアプリケーション用のリソースを追加することもできます。これらのプラグインは、からダウンロードできます<block ref="14adb94a4faec9ea0e0992d90e98b640" category="inline-link-rx"></block>。</block>
   <block id="0750f05e0542388153777a63b5fa887c" category="paragraph">リソースの名前を入力します。</block>
@@ -5906,7 +5859,6 @@
   <block id="22d904afc998596607ae9259692598fb" category="paragraph">[ 資格情報 ] を選択するか、新しい資格情報を作成します。</block>
   <block id="16e83f7e57633cd58a4377b7c1b63e8b" category="paragraph">マウントパス</block>
   <block id="1b77d8b94cdc028e50a0681f82c70f25" category="paragraph">リソースのマウント先のマウントパスを入力します。これは Windows ホストにのみ適用されます。</block>
-  <block id="dc502ecfca6ae1ebeee4b624e9b44123" category="paragraph">オプション：をクリックします <block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block> アイコンをクリックして、他のストレージシステムからボリューム、 LUN 、および qtree を追加します。</block>
   <block id="e0a8c4d2ea78ad79b3f4ddb809734576" category="admonition">SnapCenter Custom Plug-ins では、リソースの自動検出がサポートされておらず、物理環境と仮想環境のストレージの詳細は取得されません。リソースの作成時に、物理環境と仮想環境のストレージの情報を指定する必要があります。</block>
   <block id="e855bfeca424d5d865b9bac0eaf01f53" category="image-alt">ストレージ容量</block>
   <block id="863fe064f77b5a2b8dd60206770de2c1" category="paragraph">リソース固有の情報を渡す場合は、カスタムのキーと値のペアを使用します。たとえば 'MySQL プラグインを使用する場合 ' ホストを host=hostname'port=port -no と指定して MySQL に使用し ' マスター / スレーブ構成を master_slave="YES'' または「 no` 」と指定する必要があります ( 名前は master_slave で ' 値は "YES" または "no")</block>
@@ -5944,16 +5896,11 @@
   <block id="ee81cae3ec3e0c9309ae63b9a03ca91a" category="list-text">Windows 環境でファイルシステムと整合性のある Snapshot コピーを作成できます。</block>
   <block id="aa5531c2ecb8be9440f8c1f83b8e7d4f" category="summary">リソースグループはコンテナであり、バックアップして保護するリソースをここに追加する必要があります。</block>
   <block id="a80db864d152c8b32afdc8aba08be8a4" category="paragraph">たとえば、 _customText_resource group_policy_hostname や resource group_hostname_hostname などです。デフォルトでは、 Snapshot コピー名の後ろにタイムスタンプが追加されます。</block>
-  <block id="b681aca5ebc16cfa17fba43067418799" category="list-text">[Backups] 矢印をクリックして、追加のバックアップオプションを設定します。</block>
-  <block id="b23b98054bcf29cc3dd1bd3464052bcb" category="list-text">スクリプト矢印をクリックし、休止、 Snapshot コピー、および休止解除の各処理の PRE および POST コマンドを入力します。障害発生時に終了する前に実行する PRE コマンドを入力することもできます。</block>
-  <block id="18c6405661af0f133718c3a6c6e5b2b9" category="list-text">[ カスタム構成 ] 矢印をクリックし、このリソースを使用するすべてのデータ保護操作に必要なカスタムキーと値のペアを入力します。</block>
   <block id="3beb0a9c61be39e8320fe0059a03c74a" category="paragraph">アーカイブログ管理を有効にしてアーカイブログを削除できます。</block>
   <block id="dc703326700303bf93d1386ba9fca6a5" category="paragraph">ファイルシステムの整合性を使用した SnapCenter を選択します。</block>
   <block id="cc1f89ce717207d3bd06c999199b9304" category="paragraph">ファイルシステムの整合性なしで SnapCenter を選択します。</block>
   <block id="fb99cb02e8a44f5112f8225ca020b979" category="paragraph">Other を選択し、ホストで実行するコマンドを入力して Snapshot コピーを作成します。</block>
   <block id="bfd0e05a188a0885b5397fae78f649b8" category="paragraph">ポリシーは、 [ 選択したポリシーのスケジュールの設定 *] セクションに一覧表示されます。</block>
-  <block id="7968dcde042f7f2966214a9d3b89b418" category="list-text">[ スケジュールの設定 *] 列で、 [ *] をクリックします<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>* をクリックします。</block>
-  <block id="1e414da00e22b0ba0fa519e7325b7ea9" category="list-text">[Add schedules for policy_name_] ダイアログボックスで、スケジュールを設定し、 [OK] をクリックします。</block>
   <block id="6041b17ee877813c3440ee714e48b911" category="paragraph">設定されたスケジュールは、 [ 適用されたスケジュール ] 列に一覧表示されます。サードパーティ製バックアップスケジュールが SnapCenter バックアップスケジュールと重複している場合、それらのバックアップスケジュールはサポートされません。</block>
   <block id="6728b4a43abbebd3cc07a2cacc5e0c06" category="paragraph">ホストを追加するユーザには、ホストに対する管理者権限が必要です。</block>
   <block id="75358aefb0b5382303d826391e171b80" category="summary">ネイティブ形式を使用してプラグインを開発します。</block>
@@ -6558,37 +6505,23 @@
   <block id="6d60bb075e677f1c265ebdaa41edebc7" category="paragraph">Plug-in for Oracle Database によって、 Oracle Recovery Manager （ RMAN ）、検証、マウント、アンマウント、リストア、 SnapCenter 環境での Oracle データベースのリカバリとクローニングPlug-in for Oracle Database は、すべてのデータ保護処理を実行するために SnapCenter Plug-in for UNIX をインストールします。</block>
   <block id="de1dc9ecd8b785149fcee2f9c27647bd" category="section-title">[Activity] ペインでデータ保護操作を監視します</block>
   <block id="247c902b5f932e2e47b98b966ab41a08" category="doc">SnapCenter の Standard 容量ベースのライセンスを追加</block>
-  <block id="b7045e270f9ec5cdf3d4a2f1516dd0fd" category="section-title">容量ベースのライセンスを追加するための前提条件</block>
-  <block id="fc839d90b395c50c0f0c94028073c2fc" category="paragraph">容量ベースのライセンスを追加する前に、容量要件を計算し、容量ベースのライセンスのシリアル番号を取得し、必要に応じてライセンスファイルを生成する必要があります。</block>
-  <block id="b0c7f3b2e1c49f12743f8681bad9f4d9" category="section-title">必要な容量を計算</block>
   <block id="fff248d88b8e6fe585098d0e2e47af26" category="paragraph">Cloud Volumes ONTAP または ONTAP Select システムのクラスタ管理者である必要があります。</block>
-  <block id="8653cfd71a4452fb9ae4b9ab1e4f43c5" category="section-title">容量ベースのライセンスのシリアル番号を取得します</block>
   <block id="8e4be97b92b5d685df7ecc1adcda7baf" category="paragraph">有効なネットアップサポートサイトのログインクレデンシャルが必要です。</block>
   <block id="2be4e86fec9db8038212e41252f1f190" category="list-text">シリアル番号を記録します。</block>
-  <block id="7ab335ae0eb6b3dd5aa9c839cf5ead00" category="paragraph">ネットアップサポートサイトのクレデンシャルと SnapCenter ライセンスのシリアル番号を SnapCenter の GUI に入力しない場合や、 SnapCenter からネットアップサポートサイトにインターネットにアクセスできない場合は、ネットアップライセンスファイル（ NLF ）を生成できます。 次に、 SnapCenter ホストからアクセス可能な場所にファイルをダウンロードして保存します。</block>
   <block id="b38bcb46a26616707e57598919123e4f" category="list-text">SnapCenter を ONTAP Select または Cloud Volumes ONTAP で使用する必要があります。</block>
   <block id="26e6565b87611c0e2e61e424bbf253a8" category="list-text">有効なネットアップサポートサイトのログインクレデンシャルが必要です。</block>
   <block id="ef37f690ac766ca61a4b063851b90274" category="list-text">ライセンスの 9 桁のシリアル番号を 51xxxxxxx の形式で用意しておく必要があります。</block>
-  <block id="2fab191a54d328d06a3a746dee5bbad2" category="section-title">容量ベースのライセンスを追加</block>
   <block id="8c1f23f212262c3300e93f874826f6e5" category="paragraph">SnapCenter を ONTAP Select プラットフォームまたは Cloud Volumes ONTAP プラットフォームで使用している場合は、 1 つ以上の SnapCenter 容量ベースのライセンスをインストールする必要があります。</block>
   <block id="7497c6eb5b40c317a0e3ac59d973ce6b" category="list-text">SnapCenter 管理者ユーザとしてログインする必要があります。</block>
   <block id="55f664ebb6051a6a8020142e125c7571" category="paragraph">ネットアップライセンスファイル（ NLF ）を使用してライセンスを追加する場合は、ライセンスファイルの場所を確認しておく必要があります。</block>
   <block id="d6cd0a28d068c868d81bfecd02276ee3" category="list-text">コントローラベースのライセンスのシリアル番号を入力します。</block>
-  <block id="33e4a71d44495d6f1fd89da8547d2ff8" category="paragraph">SnapCenter は、管理対象の ONTAP Select および Cloud Volumes ONTAP ストレージ上で、 1 日に 1 回、午前 0 時に使用容量を自動的に計算します。SnapCenter を正しく設定するには、 SnapCenter での容量の計算方法を確認しておく必要があります。</block>
-  <block id="b49e5091a9fa2af83579f7097033c636" category="paragraph">Standard 容量ライセンスを使用している場合、 SnapCenter は、ライセンスで許可された合計容量から、すべてのボリュームの使用済み容量を差し引くことによって、未使用の容量を計算します。使用容量がライセンスで許可された容量を超えた場合、 SnapCenter ダッシュボードに警告が表示されます。SnapCenter で容量のしきい値と通知を設定している場合は、使用容量が指定したしきい値に達すると E メールが送信されます。</block>
   <block id="f011a01ebc3350e546311efaf71140bc" category="doc">SnapCenter の標準コントローラベースのライセンスを追加します</block>
-  <block id="20284ac6e2b70536e661c28917c1f549" category="section-title">コントローラベースのライセンスを追加するための前提条件</block>
-  <block id="caaa0ad9310c0a99138c911b96b968e3" category="paragraph">コントローラベースのライセンスを追加する前に、 SnapManager スイートライセンスがインストールされているかどうかを確認し、コントローラにインストールされているライセンスを特定し、コントローラのシリアル番号を取得して、コントローラベースのライセンスのシリアル番号を取得する必要があります。</block>
-  <block id="3a6c1a3709f142da8374f25ad7aabeda" category="section-title">SnapManager スイートライセンスがインストールされているかどうかを確認します</block>
   <block id="6aa5717c99b34de9980debfbe3c6fa76" category="admonition">お使いのコントローラにすでに SnapManagerSuite ライセンスがある場合は、 SnapCenter の標準コントローラベースのライセンス使用権が自動的に提供されます。SnapManagerSuite ライセンスと SnapCenter 標準のコントローラベースのライセンスは同じ意味で使用されますが、同じライセンスを指します。</block>
   <block id="a909f2df296012a51dc7da77f9e20dc6" category="list-text">該当しない場合は、ストレージコントローラが Cloud Volumes ONTAP 、 ONTAP Select 、またはセカンダリストレージプラットフォーム上にあるため、 SnapManager スイートのライセンスは適用されません。</block>
-  <block id="3991b99f14bb81b2f89217b235be9e25" category="section-title">コントローラにインストールされているライセンスを特定します</block>
   <block id="6709a231567d24784eb3e160f2720365" category="paragraph">ONTAP コマンドラインを使用すると、コントローラにインストールされているすべてのライセンスを表示できます。FAS または AFF システムのクラスタ管理者である必要があります。</block>
   <block id="e7590fb47d0f1f083a0a8a323aa643a0" category="admonition">SnapCenter の標準コントローラベースのライセンスが、 SnapManagerSuite ライセンスとしてコントローラに表示されます。</block>
   <block id="aa9f3e3dd8188fb5cf1d9979b4a7a787" category="paragraph">コントローラベースのライセンスのシリアル番号を取得するには、コントローラのシリアル番号が必要です。ONTAP コマンドラインを使用すると、コントローラのシリアル番号を取得できます。FAS または AFF システムのクラスタ管理者である必要があります。</block>
-  <block id="8903a54a74657bc9f41f9375ea9d6adc" category="section-title">コントローラベースのライセンスのシリアル番号を取得します</block>
   <block id="253fa4a7008b4934e4b20001065ef254" category="list-text">コントローラのシリアル番号を確認しておく必要があります。</block>
-  <block id="f11c7003376367fce75352e6129d04ca" category="section-title">コントローラベースのライセンスを追加</block>
   <block id="8109f2b1a2b4fcb7f972be2b07c29c46" category="list-text">FAS または AFF システムのクラスタ管理者である必要があります。</block>
   <block id="9a935baf19dae6c50cae12b831745abd" category="list-text">SnapCenter Standard または SnapManagerSuite のライセンスが必要です。</block>
   <block id="f01f22cfc141e64ad20b64a9b3f2ac85" category="paragraph">コントローラベースの SnapCenter 標準ライセンスを使用していて、容量ベースの試用版ライセンス ( シリアル番号は「 50 」で終わる ) を削除する必要がある場合は、 MySQL コマンドを使用して、試用版ライセンスを手動で削除する必要があります。SnapCenter GUI でトライアルライセンスを削除することはできません。</block>
@@ -7345,10 +7278,8 @@
   <block id="726980167284c65abff52d65b5d3232b" category="list-text">[Recovery Type] ページで、次の手順を実行します。 select オプションは、ログを適用します。プラグインがリストア・タイプを選択する前に、プラグインがすべてのログとログをサポートしていることを確認してください。</block>
   <block id="80cb8ef1d01a491a4a563ec56f39cedc" category="list-text">リソースページで、カスタム名を使用する場合は、 Snapshot コピーに * カスタムの名前形式を使用する * チェックボックスをオンにし、 Snapshot コピー名のカスタム名形式を入力します。</block>
   <block id="dd4b762c191c7a235ce898c094749679" category="paragraph">カスタムプラグインとストレージプラグインは、ホストの追加ページからインストールできます。</block>
-  <block id="134848154c843b2b7ebbc0c3bf4c17a4" category="list-text">[ リソース ] ページで、 [ リソースの追加 ] をクリックします。</block>
   <block id="d98e943b0122d016274bcbbeba1d647d" category="list-text">リソース設定ページで、リソースのカスタムキーと値のペアを指定します。</block>
   <block id="fc239c2b2a79ad8ee77cc5430b1803fe" category="paragraph">クレデンシャルの設定が完了したら、 [ ユーザとアクセス（ User and Access ） ] ページで、ユーザまたはユーザグループにクレデンシャルのメンテナンスを割り当てることができます。</block>
-  <block id="f316f1145e3342e626b49461ffc2ab89" category="list-text">[ リソース ] ページで、 [ 新しいリソースグループ ] をクリックします。</block>
   <block id="94f48d06961651ce76410fb0e6059f76" category="list-text">オプション：リソースページで、 * ホスト * ドロップダウン・リストからホスト名を選択し、 * リソース・タイプ * ドロップダウン・リストからリソース・タイプを選択します。</block>
   <block id="08b935061f93c6a0dff0b7e6979bd0d5" category="list-text">オプション： [ アプリケーションの設定 ] ページで、次の操作を行います。</block>
   <block id="3b1aa43ebee12f3a0512b18010894a41" category="list-text">[ 設定 ] ページで、次の手順を実行します。</block>
@@ -7872,7 +7803,6 @@
   <block id="07a646d112ec3924e97a5c5bd588d4c2" category="paragraph">サポートされているバージョンの最新情報については、を参照してください<block ref="b7a3cb4f690df02dff49048f9cc465b2" category="inline-link-rx"></block></block>
   <block id="44dcf11fb80178db211421840242c071" category="summary">SnapCenter カスタムプラグインは、 SnapCenter ユーザインターフェイス（ UI ）を使用してインストールする必要があります。環境内でSnapCenter UIからプラグインをリモートでインストールできない場合は、コマンドラインインターフェイス（CLI）を使用して、コンソールモードまたはサイレントモードでカスタムプラグインをインストールできます。</block>
   <block id="f779fc9eb5facb1b4cb7f109a2d58be2" category="paragraph"><block ref="063c6867f0d5dcf21978239569098f3b" category="inline-link-rx"></block></block>
-  <block id="ed27eadf4ae8e8750cfd2fbc61ad72d7" category="paragraph">ONTAP およびアプリケーションプラグインの最小要件については、を参照してください<block ref="c50d85e9b4db596cb2a135c4e622135b" category="inline-link-rx"></block></block>
   <block id="6128abac450b413be3b6d65797422307" category="paragraph">を参照してください<block ref="c50d85e9b4db596cb2a135c4e622135b" category="inline-link-rx"></block></block>
   <block id="62daf6a07ef62b5f47d64602451886c4" category="paragraph">サポートされているバージョンの最新情報については、を参照してください<block ref="78bb88f9abe535c4182359f981c4d0d5" category="inline-link-rx"></block>。</block>
   <block id="8b64c44e24e9cf1c59554cf2c41479bf" category="paragraph">サポートされているアプリケーションおよびデータベースの詳細については、を参照してください<block ref="78bb88f9abe535c4182359f981c4d0d5" category="inline-link-rx"></block>。</block>
@@ -7902,12 +7832,6 @@
   <block id="b885eb831c1b0ea66dc957240ef0bacd" category="admonition">制御ファイルをリストアするときは、ディレクトリ構造が存在するか、または正しいユーザおよびグループの所有権を持つディレクトリ構造が作成されていることを確認してください（存在する場合）。これにより、リストアプロセスによってファイルがターゲットの場所にコピーされるようになります。ディレクトリが存在しない場合、リストアジョブは失敗します。</block>
   <block id="3a6eb59ee064b09b020c1a87c5de4988" category="admonition">IBM Javaはサポートされていません。</block>
   <block id="bb92d00cc055d1fa0c3023946870bfd5" category="paragraph">.NET固有のトラブルシューティング情報については、を参照してください<block ref="d20f19fe60cd205f06739b1a5caeb450" category="inline-link-rx"></block></block>
-  <block id="cf846ac585e82924ea1ad8c03b4b9bdf" category="section-title">SnapCenter サーバをダウンロードしてインストールします</block>
-  <block id="9575d89eee3d9cea045cdf8003c58424" category="section-title">SnapCenter の標準コントローラベースライセンスを追加します</block>
-  <block id="9859b0644d4667764577eb03a1fcda53" category="section-title">SnapCenter 容量ベースライセンスを追加</block>
-  <block id="cc12c6014b5ec85f58b6fb31a26a66f7" category="section-title">ストレージシステム接続をセットアップする</block>
-  <block id="1d765f352f6f5ec7cfa899be682026d8" category="section-title">Plug-in for Microsoft SQL Serverをインストールするには、Run Asクレデンシャルをセットアップします</block>
-  <block id="10976e15f1cbbbbb65eaf072d358489b" category="section-title">ホストを追加してPlug-in for Microsoft SQL Serverをインストールします</block>
   <block id="9756c6d75626032c8da05d425c1d0ca9" category="inline-link">インターネットに接続されていないレガシーシステムでは、SnapCenter のアップグレードまたはインストールが失敗します</block>
   <block id="462fbac4d281be78bedf063a9dbd9f61" category="paragraph">.NET固有のトラブルシューティング情報については、を参照してください<block ref="b173f6267e94bec8cf82a1d95b991ed7" category="inline-link-rx"></block>。</block>
   <block id="0cf3e7b313a6954f7aed921dae42be39" category="list-text"><block ref="36ad9b98fe40ea7db5d149de26f34551" prefix="" category="inline-code"></block></block>
@@ -8073,4 +7997,131 @@
   <block id="75b8e448161fa30feba883267dc81521" category="sidebar">UNIXコマンドを使用してバックアップします</block>
   <block id="de148ec1fc3c9bb7b03f1506761bed93" category="sidebar">バックアップを表示します</block>
   <block id="020a36deb114af1bb518c70d5975e940" category="sidebar">リソースグループを作成する</block>
+  <block id="0a02bf5b6e4ef63d70216baaf241dd57" category="paragraph">ユーザにはリソースグループとバックアップの両方の権限が必要です。</block>
+  <block id="476db1bd23910410216ee3e35ccd94a9" category="section-title">手順1：クレデンシャルを追加して設定します</block>
+  <block id="8471bcaa60af0da808996bbee1cb49ed" category="paragraph">認証モード</block>
+  <block id="b814c14851890120c8936eb5b4e76601" category="paragraph">SQL Serverインスタンス</block>
+  <block id="57dec0d5fea8ca9066aa74005656dde3" category="section-title">ステップ2：インスタンスを構成します</block>
+  <block id="dddaf244cf1e3908c97cc243765422db" category="summary">SnapCenter Server for Microsoft SQL Serverのインストール手順について説明します。</block>
+  <block id="5bb995f2cea5f09b3870d6cba0a2bff4" category="doc">SnapCenter Server for Microsoft SQL Serverをインストールします</block>
+  <block id="696fdc5b81985319a8afbf8c7c554de1" category="paragraph">SnapCenter Server for Microsoft SQL Serverのインストール手順をまとめたものです。</block>
+  <block id="44d77fb23ef94aa2e99acffb06349cce" category="section-title">ステップ1: SnapCenter サーバーをダウンロードしてインストールします</block>
+  <block id="182fe557d952dd099523bf0f0a12a03d" category="section-title">ステップ2：SnapCenter にログインします</block>
+  <block id="6dbb525493b617ed15acb54f48a1fb80" category="section-title">手順3：SnapCenter Standardコントローラベースライセンスを追加する</block>
+  <block id="1e6838af3ca39fb21a3ce673d779549e" category="section-title">手順4：SnapCenter 容量ベースライセンスを追加する</block>
+  <block id="a1e54ab14313eddc39c36f7ae4c3bdbf" category="section-title">手順5：ストレージシステム接続をセットアップする</block>
+  <block id="e7080d37366699598c6a93289cf833a8" category="summary">SnapCenter Plug-in for Microsoft SQL Serverをインストールする手順について説明します。</block>
+  <block id="665256d7cf5062280fa2126edee4e9ed" category="paragraph">SnapCenter Plug-in for Microsoft SQL Serverのインストール手順をまとめたものです。</block>
+  <block id="13c41a91e51556266f1446c3f3118575" category="section-title">手順1：Run AsクレデンシャルをセットアップしてPlug-in for Microsoft SQL Serverをインストールする</block>
+  <block id="50e45622cbe6ba6b72a9cba939e77623" category="section-title">手順2：ホストを追加してPlug-in for Microsoft SQL Serverをインストールする</block>
+  <block id="3f205e124554b1be0d5f3a4955ed598c" category="paragraph">デフォルト値は false です。</block>
+  <block id="398199fedb54e43a278fa46313e8a350" category="section-title">手順1：ポリシー名を作成します</block>
+  <block id="efb5373e3d8e2817008f63857d38a814" category="section-title">ステップ2：バックアップオプションを設定します</block>
+  <block id="f7b8f416ca34a425d97e1cba3100233c" category="list-text">バックアップタイプを選択します</block>
+  <block id="c4dee4ab1e265b9beacb9e140fafa516" category="open-title">フルバックアップとログバックアップ</block>
+  <block id="7e26a626a8bd9210daa716e7391b1a91" category="paragraph">データベースファイルとトランザクションログをバックアップし、トランザクションログを切り捨てます。</block>
+  <block id="daf1071588d67be46c2b3881de2b7f3e" category="open-title">フル・バックアップ</block>
+  <block id="a06cb63b4e5676ff4993e87c5a096590" category="paragraph">データベースファイルをバックアップします。</block>
+  <block id="4357e1f197bec05bc87b0ef0557cd533" category="open-title">ログバックアップ</block>
+  <block id="9bc97b084411adbb231ca53ca80640b7" category="paragraph">トランザクションログをバックアップします。。「 * Log backup * 」を選択します。</block>
+  <block id="197904dc82a19f6818f66048a61e90f9" category="open-title">コピーのみのバックアップ</block>
+  <block id="17d5127f9f01a5ee99467658118a5e9b" category="list-text">優先バックアップレプリカのみにバックアップ。</block>
+  <block id="c61f65bb5aa14eca9140c3d0e7ece927" category="list-text">バックアップするレプリカを選択します。</block>
+  <block id="868b11998351ef690a54ffedfc194731" category="list-text">バックアップ優先度の選択（最小および最大バックアップ優先度）</block>
+  <block id="a9e3835459894cca73ddb217d50af0db" category="list-text">このポリシーのバックアップ頻度をスケジュールします。スケジュールタイプを指定するには、*オンデマンド*、*毎時*、*毎日*、*毎週*、または*毎月*を選択します。</block>
+  <block id="016bcd6d9710c9d2dde84a3ff020b0de" category="paragraph">ポリシーに対して選択できるスケジュールタイプは1つだけです。</block>
+  <block id="ef077dad77fac08deaf5fe61aced7bc3" category="section-title">ステップ3：保持設定を構成する</block>
+  <block id="d8d914bba3878c80c4a43efb4e1ce72c" category="open-title">特定のコピー数</block>
+  <block id="5a0290e9f5b4a432c42379432ee6f5c8" category="paragraph">特定の数のSnapshotコピーのみを保持します。</block>
+  <block id="619f22faf39c2dfe9a11af29647bb1a6" category="list-text">［ * 最新の &lt; 日数 &gt; 日数に適用可能なログバックアップを保持する ］ オプションを選択し、保持する日数を指定します。この上限に近づいた場合は、古いコピーを削除できます。</block>
+  <block id="fe9e179b8597c5b1e7f1e2ff0644a5c8" category="open-title">特定の日数</block>
+  <block id="82c2224d099110596a9863d056598afe" category="paragraph">バックアップコピーを特定の日数だけ保持します。</block>
+  <block id="805b73e03f8c3c7c7a8238ed9766dee3" category="list-text">保持するSnapshotコピーの総数を指定します</block>
+  <block id="ffe60c98392393713d4e1d365c27b6be" category="list-text">保持するSnapshotコピーの数を指定するには、*保持するSnapshotコピーの総数*を選択します。</block>
+  <block id="d4f0bf88ec19106300653daff553435f" category="list-text">Snapshotコピーを保持する期間</block>
+  <block id="7fcb4d3ce02337b7e14c71c970e6aa6e" category="list-text">保持するSnapshotコピーの数を指定するには、*保持するSnapshotコピーの総数*を選択します。Snapshot コピーの数が指定した数を超えると、古いものから順に Snapshot コピーが削除されます。</block>
+  <block id="6618a5f84aa25633e669aa723e59a0cd" category="list-text">Snapshotコピーを削除するまで保持する日数を指定するには、*[Keep Snapshot copies for]*を選択します。</block>
+  <block id="92ac5fc0212c94ee50e6dc85913caeec" category="example-title">例を示します</block>
+  <block id="8047dd542f0833c625160d18deaef831" category="paragraph">Set-SmPolicy-PolicyName 'newpol'-PolicyType 'Backup'-PluginPolicyType 'SCSQL'-sqlbackuptype 'FullBackupAndLogBackup'-RetentionSettings@｛backupType='Hourly'；RetentionCount=2｝、@｛backupType='log_snapshot'；ScheduleType=2｝</block>
+  <block id="b1cf83519efa64342d0b96985ded3691" category="section-title">ステップ4：レプリケーション設定を構成します</block>
+  <block id="df5624cba097e4a1613f2162cfe02d72" category="open-title">SnapMirrorを更新します</block>
+  <block id="4fbf861fa73d7c46a9d919de9dba7f88" category="paragraph">ローカルSnapshotコピーの作成後にSnapMirrorを更新します。</block>
+  <block id="721dcaba6ffe06898a1264f811fd7874" category="open-title">SnapVault を更新します</block>
+  <block id="aafae6ead4b01f0afa9e2d2dcfc5ecdd" category="paragraph">Snapshotコピーの作成後にSnapVault を更新</block>
+  <block id="c174e73377b0caee145d55a594cd4122" category="open-title">セカンダリポリシーラベル</block>
+  <block id="103ff4d651f40a22f8ac13b7d439054e" category="open-title">エラー再試行回数</block>
+  <block id="d9179dd8d5b7e66714a9152a60aff94d" category="section-title">手順5：スクリプト設定を構成します</block>
+  <block id="a6e367864d05c1235a3dc068e29fb052" category="section-title">手順6：検証設定を構成します</block>
+  <block id="e11807f1f1cff5721f85802ddac261ed" category="list-text">すべての情報メッセージを抑制（INFOMSGSなし）</block>
+  <block id="79418e51dfe3ef30c9d30317f30d19e2" category="section-title">ステップ7：概要を確認します</block>
+  <block id="96ccca164f6b65c860546bba66a6485a" category="summary">SnapCenter ServerおよびSnapCenter Plug-in for Microsoft SQL Serverのインストールの準備手順について説明します。</block>
+  <block id="bb7367ec62fb74511977df150181bc7f" category="doc">SnapCenter サーバとプラグインのインストールを準備します</block>
+  <block id="63408836354c40518fc610de2ff61aef" category="paragraph">SnapCenter ServerおよびSnapCenter Plug-in for Microsoft SQL Serverをインストールするための準備手順をまとめたものです。</block>
+  <block id="7527dcedb498a9e111f7eb26b4f075a6" category="section-title">ライセンス要件</block>
+  <block id="7a98b5f499da77fa6e09b98a638328d7" category="section-title">ホストおよびポートの要件</block>
+  <block id="1cd526ed887ba66c61f02b843ef02d9d" category="paragraph">ONTAP およびアプリケーションプラグインの最小要件については、を参照してください<block ref="895e9fc4fedf805e54b700a772e16c16" category="inline-link-rx"></block>。</block>
+  <block id="cfcb453ff70ad933cab89769866a7ca8" category="paragraph">を参照してください<block ref="895e9fc4fedf805e54b700a772e16c16" category="inline-link-rx"></block></block>
+  <block id="bc6cdf099cec9fa3dce7fb43c644e659" category="section-title">SnapCenter Plug-in for Microsoft SQL Server の要件</block>
+  <block id="aa829ddf1acbdd2a8aa6a61635c33dec" category="inline-link-macro">アーカイブバックアップをインポートする</block>
+  <block id="b06af5128852d56366a94b0a3584c1a6" category="paragraph">SnapManager for Microsoft SQL Server を使用していて、 SnapManager for Microsoft SQL Server から SnapCenter にデータをインポートする場合は、を参照してください <block ref="0079f46f6850618db9fdf32f5f6051e0" category="inline-link-macro-rx"></block></block>
+  <block id="96a63fe0cf1de573b75ba5f458cbdc60" category="doc">SnapCenter でリソースグループを作成し、ポリシーを適用します</block>
+  <block id="3b6d3b427a92116014d4ee868e0f04ba" category="paragraph">リソースグループはコンテナであり、バックアップして保護するリソースをここに追加する必要があります。特定のアプリケーションに関連付けられているすべてのデータを同時にバックアップでき、あらゆるデータ保護ジョブに必要になります。リソースグループに 1 つ以上のポリシーを適用して、実行するデータ保護ジョブのタイプを定義することも必要です。</block>
+  <block id="0b5045b3b137ebb25cf08b5081075426" category="list-text">左側のナビゲーションペインで、*[リソース]*を選択し、リストから適切なプラグインを選択します。</block>
+  <block id="b68b243f9420806e3cfb840322caf2eb" category="list-text">[Resources]ページで、[New Resource Group]を選択します。</block>
+  <block id="2ace8412659382e8d9b1bc3d644b1428" category="paragraph">注：リソースグループ名は250文字以内にする必要があります。</block>
+  <block id="4cf0a65bb5f9d16da67277436248fba9" category="list-text">[Available Resources]セクションからリソースを選択し、右矢印を選択して[Selected Resources]セクションに移動します。</block>
+  <block id="7bc2103c2a80cd91e9a026c0f2b3f943" category="list-text">[Backups]の矢印を選択して、追加のバックアップオプションを設定します。</block>
+  <block id="6ab7eeea8e6b1dcd3c8360b245f0e3c0" category="inline-image-macro">整合グループのバックアップオプション（urgent、medium、relaxed）のスクリーンショット。</block>
+  <block id="072de5e2138004f9a67883cb0ff2aaa6" category="paragraph"><block ref="072de5e2138004f9a67883cb0ff2aaa6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e92d78d72bbcff05469cd98c282ac8c4" category="list-text">[Scripts]の矢印を選択し、休止、Snapshotコピー、および休止解除の処理を実行するプリコマンドとポストコマンドを入力します。障害発生時に終了する前に実行する PRE コマンドを入力することもできます。</block>
+  <block id="3328b0dbde4c99683e19eca586842ffb" category="list-text">[Custom Configurations]の矢印を選択し、このリソースを使用するすべてのデータ保護処理に必要なカスタムのキーと値のペアを入力します。</block>
+  <block id="dfa18f81ec763693ffdac89624763ae3" category="list-text">[Snapshot Copy Tool]*の矢印を選択して、Snapshotコピーを作成するツールを選択します。</block>
+  <block id="7f368ffa9ab4869382c31a28f17f3a4a" category="inline-image-macro">プラスアイコン</block>
+  <block id="f79b4ba47e778727c1290b36487ea0bc" category="admonition">[*]を選択してポリシーを作成することもできます<block ref="a55421dd685609006a21f2507444357f" category="inline-image-macro-rx" type="image"></block>*</block>
+  <block id="b11a42908bee80055dfed2bb0e9a583a" category="list-text">[スケジュールの設定]列で、*を選択します<block ref="a55421dd685609006a21f2507444357f" category="inline-image-macro-rx" type="image"></block>* をクリックします。</block>
+  <block id="729d9de2082bbc8f839869a30daadc5d" category="list-text">[Add schedules for policy_policy_name_]ダイアログボックスで、スケジュールを設定して[OK]を選択します。</block>
+  <block id="f389a38ece1c258dbc71da8826870236" category="paragraph">policy_nameは、選択したポリシーの名前です。</block>
+  <block id="8417b61ea6ac680285a40b7f679829a2" category="list-text">[Notification]ページの[Email preference]*ドロップダウンリストから、Eメールを送信するシナリオを選択します。</block>
+  <block id="7444cb400c788a3d3aad71fb264fbbee" category="list-text">概要を確認し、*[終了]*を選択します。</block>
+  <block id="135b308ed83c53f1516b7c754566d1c4" category="list-title">作業を開始する前に</block>
+  <block id="be2d786365162f9949969e2f176ef13a" category="inline-link-macro">アプリケーション用のカスタムプラグインを作成しました</block>
+  <block id="86de8a90b3fba9ddc4880b8903987555" category="list-text">が必要です <block ref="4ad0bd1144546248adc0fb1c490ceec4" category="inline-link-macro-rx"></block>。</block>
+  <block id="b828f6db4e08909e879dfbf229208eff" category="list-text">[リソース]ページで、*[リソースの追加]*を選択します。</block>
+  <block id="20fc40c342831a6dee50cd66efb74566" category="list-text">[ストレージフットプリントの入力]ページで、ストレージシステムを選択して1つ以上のボリューム、LUN、およびqtreeを選択し、*[保存]*を選択します。</block>
+  <block id="1e5544d55f6c9334a30e6a4bef8c3c4a" category="inline-image-macro">プラスアイコン</block>
+  <block id="a28f52bcf0c820558e017ed65d61bbc4" category="paragraph">オプション：を選択します <block ref="0f5cf3219ae11ea795d8e8abf4dbc7f0" category="inline-image-macro-rx" type="image"></block> アイコンをクリックして、他のストレージシステムからボリューム、 LUN 、および qtree を追加します。</block>
+  <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">結果</block>
+  <block id="da13ae3255e491cec106772af9fdae44" category="paragraph">容量ライセンスには次のような特徴があります。</block>
+  <block id="f5dfa5a7bae196d1dd8c957d9f4d6ee5" category="paragraph">SnapCenter は、管理対象の ONTAP Select および Cloud Volumes ONTAP ストレージ上で、 1 日に 1 回、午前 0 時に使用容量を自動的に計算します。Standard 容量ライセンスを使用している場合、 SnapCenter は、ライセンスで許可された合計容量から、すべてのボリュームの使用済み容量を差し引くことによって、未使用の容量を計算します。使用容量がライセンスで許可された容量を超えた場合、 SnapCenter ダッシュボードに警告が表示されます。SnapCenter で容量のしきい値と通知を設定している場合は、使用容量が指定したしきい値に達すると E メールが送信されます。</block>
+  <block id="2406c708606f0c3c933decdd65dc3b7d" category="section-title">ステップ1：必要な容量を計算する</block>
+  <block id="44cdaaa6b20a4237e33563c8be0bf929" category="section-title">手順2：容量ベースライセンスのシリアル番号を取得します</block>
+  <block id="9340114ddf8bf8ff75303afd847a3076" category="list-text">にログインします<block ref="1850de052c61829b534b07ba1a2ca402" category="inline-link-rx"></block>。</block>
+  <block id="c6faeb7fe853ef1d638674945ae59142" category="image-alt">ライセンス選択画面のスクリーンショット。シリアル番号とライセンスのドロップダウンメニューがハイライト表示されます。</block>
+  <block id="765c7784df072a40de94af7161fbb973" category="list-text">会社名を入力し、* Go！*を選択します。</block>
+  <block id="ef8acdd4fcda9cad2a21f3a15c796340" category="section-title">ステップ3：ネットアップライセンスファイルを生成する</block>
+  <block id="97ccd9ecd4ac0cb4ebb4d3d991db3790" category="paragraph">NetApp Support Site のクレデンシャルとSnapCenter ライセンスのシリアル番号をSnapCenter のGUIに入力しない場合や、SnapCenter からNetApp Support Site にインターネットアクセスできない場合は、ネットアップライセンスファイル（NLF）を生成できます。その後、SnapCenter ホストからアクセスできる場所にファイルをダウンロードして格納できます。</block>
+  <block id="af8501c4af7bf18d1d41ad63b494028d" category="list-text">ネットアップのデータプライバシーポリシーを読んで同意し、*[送信]*を選択します。</block>
+  <block id="a70eeba6b0a5bfca6c7904fd0edc9fd2" category="section-title">手順4：容量ベースのライセンスを追加する</block>
+  <block id="a79d31012252514c1817004ac27f6c78" category="list-text">左側のナビゲーションペインで、*[設定]*を選択します。</block>
+  <block id="a646fca044aab578f560ca4fc105e766" category="list-text">[設定]ページで、*[ソフトウェア]*を選択します。</block>
+  <block id="494d74fe2d3b6e8b71d672a1143d6aa0" category="list-text">[Software]ページの[License]セクションで、*[Add]*（を選択します<block ref="a55421dd685609006a21f2507444357f" category="inline-image-macro-rx" type="image"></block>）。</block>
+  <block id="91dd66dbbc7bcb9ff2accc62e548e2fa" category="list-text">「 * 開く * 」を選択します。</block>
+  <block id="cd9fa57ea794c74666a3c676c5f7a179" category="list-text">Eメール通知に使用するSMTPサーバを設定するには、*[設定]*&gt;*[グローバル設定]*&gt;*[通知サーバ設定]*を選択し、次の詳細を入力します。</block>
+  <block id="ae309cefe1783b2d190dcaf0c63c7f17" category="list-text">処理に失敗した場合に Event Management System （ EMS ；イベント管理システム）メッセージをストレージシステムの syslog に送信、または AutoSupport メッセージをストレージシステムに送信するには、該当するチェックボックスを選択します。AutoSupport を有効にすると、発生する可能性のある問題のトラブルシューティングに役立つことを推奨します。</block>
+  <block id="e6cd86d61f4639c8a27006c6c29b3e9f" category="list-text">「 * 次へ * 」を選択します。</block>
+  <block id="19a8e13fe92c770e7ed404e67e6bec99" category="section-title">手順1：SnapManager Suiteライセンスがインストールされているかどうかを確認します</block>
+  <block id="cc9c449ada243c7f7945df60c3bb511a" category="list-text">左側のナビゲーションペインで、*[ストレージシステム]*を選択します。</block>
+  <block id="d232915b5e459729c2ebb05cce4351c3" category="paragraph">クラスタ名を選択すると、そのクラスタに含まれるすべてのSVMが[Storage Virtual Machine]セクションに表示されます。</block>
+  <block id="b334c2fd16b2dbb1653525b0da09940d" category="inline-image-macro">チェックアイコン</block>
+  <block id="b708e8602f17540d711c077ef6ce5bb6" category="list-text"><block ref="1b6b7d2df953b943aed63061cd428e2b" category="inline-image-macro-rx" type="image"></block> FAS スイートライセンスが AFF または SnapManager プライマリストレージシステムにインストールされていることを示します。</block>
+  <block id="8e9f59a7ba19ac78a77252b5cc8530f6" category="inline-image-macro">キャンセルアイコン</block>
+  <block id="72acec0d06c1d26aeb0b87907c970c31" category="list-text"><block ref="1ca20f925112adf63235e58f0e4483cd" category="inline-image-macro-rx" type="image"></block> FAS スイートライセンスが AFF または SnapManager プライマリストレージシステムにインストールされていないことを示します。</block>
+  <block id="778623bf565f3d8f537019c7e81b0948" category="section-title">手順2：コントローラにインストールされているライセンスを特定します</block>
+  <block id="587b796170a9abac4701cd8aa1bb38cb" category="example-title">出力例</block>
+  <block id="09bfdac33144afac4f96f313740dc959" category="section-title">手順3：コントローラのシリアル番号を取得します</block>
+  <block id="4fb6996a4b0fc33cbed31ac896875422" category="section-title">手順4：コントローラベースライセンスのシリアル番号を取得します</block>
+  <block id="681132950ecc3ff0338e2bc9f5253c4e" category="list-text">[Selection Criteria]領域で、[Serial Number（located on back of unit）]が選択されていることを確認し、コントローラのシリアル番号を入力して*[Go！]*を選択します。</block>
+  <block id="6c0673b42ebb5475d507b9bee432a6e1" category="image-alt">選択条件とシリアル番号の入力のスクリーンショット。</block>
+  <block id="e54115ab5aedb070ef9c763b003e67f1" category="section-title">手順5：コントローラベースのライセンスを追加する</block>
+  <block id="392e651b70e91641288713738f526ce0" category="section-title">ステップ6:試用版ライセンスを削除します</block>
 </blocks>
