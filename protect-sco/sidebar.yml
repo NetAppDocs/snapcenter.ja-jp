@@ -60,15 +60,13 @@ entries:
       url: "/protect-sco/schedule-backups.html"
     - title: 命名規則
       url: "/protect-sco/naming-backups.html"
-  - title: バックアップ戦略を定義
-    url: "/protect-sco/task_define_a_backup_strategy_for_oracle_databases.html"
   - title: バックアップ要件を確認します
     url: "/protect-sco/reference_requirements_for_backing_up_an_oracle_database.html"
   - title: Oracleデータベースを検出します
     url: "/protect-sco/task_determine_whether_oracle_databases_are_available_for_backup.html"
   - title: バックアップポリシーを作成する
     url: "/protect-sco/task_create_backup_policies_for_oracle_database.html"
-  - title: リソースグループの作成（オプション）
+  - title: リソースグループを作成する
     url: "/protect-sco/task_create_resource_groups_and_attach_policies_for_oracle_databases.html"
   - title: Oracle リソースのバックアップ
     url: "/protect-sco/task_back_up_oracle_resources.html"
