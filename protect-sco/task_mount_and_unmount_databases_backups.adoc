@@ -41,6 +41,7 @@ NOTE: asm_diskstring パラメータの編集方法については、を参照�
 ** NVMeの場合、NVMe utilをインストールする必要があります
 
 
+* iSCSIプロトコルとFCプロトコルが混在するigroupを使用して、LUNがAIXホストにマッピングされていないことを確認してください。詳細については、を参照してください https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_Plug-in_for_Oracle_operations_fail_with_error_Unable_to_discover_the_device_for_LUN_LUN_PATH["LUNのデバイスを検出できませんというエラーが表示されて処理に失敗します"^]。
 
 
 * 手順 *
