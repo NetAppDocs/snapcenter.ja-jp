@@ -17,7 +17,7 @@ SnapCenter を使用して SQL Server データベースをリストアするに
 
 image::../media/all_plug_ins_restore_workflow.png[all_plug-ins_restore_workflow を実行します]
 
-PowerShell コマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、リカバリ、検証、クローニングの処理を実行することもできます。PowerShell コマンドレットの詳細については、 SnapCenter コマンドレットのヘルプを使用するか、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2874310["SnapCenter ソフトウェア 4.4 コマンドレットリファレンスガイド"]
+PowerShell コマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、リカバリ、検証、クローニングの処理を実行することもできます。PowerShell コマンドレットの詳細については、 SnapCenter コマンドレットのヘルプを使用するか、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["SnapCenter ソフトウェアコマンドレットリファレンスガイド"]
 
 * 詳細はこちら *
 

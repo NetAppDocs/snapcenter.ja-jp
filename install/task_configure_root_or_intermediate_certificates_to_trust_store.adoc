@@ -1,0 +1,56 @@
+---
+permalink: install/task_configure_root_or_intermediate_certificates_to_trust_store.html 
+sidebar: sidebar 
+keywords: enable certificate-based authentication,configure CA signed key pair,configure root, configure intermediate certificates 
+summary: ルート証明書または中間証明書をspl trust-storeに設定する必要があります。 
+---
+= ルート証明書または中間証明書を SPL の信頼ストアに設定します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ルート証明書または中間証明書をspl trust-storeに設定する必要があります。ルート CA 証明書、中間 CA 証明書の順に追加する必要があります。
+
+* 手順 *
+
+. SPLキーストアが格納されているフォルダに移動します。 `/var/opt/snapcenter/spl/etc`。
+. ファイルを探します `keystore.jks`。
+. キーストアに追加された証明書を表示します。
+`$ keytool -list -v -keystore keystore.jks`
+. ルート証明書または中間証明書を追加します。
+`$ keytool -import -trustcacerts -alias <AliasNameForCerticateToBeImported> -file /<CertificatePath> -keystore` `keystore.jks`
+. SPL の信頼ストアにルート証明書または中間証明書を設定したら、サービスを再起動します。
+
+
+
+
+== CA 署名キーペアを SPL の信頼ストアに設定します
+
+SPL trust-storeにCA署名付きキーペアを設定する必要があります。
+
+* 手順 *
+
+. SPLのキーストアが格納されているフォルダに移動します `/var/opt/snapcenter/spl/etc`。
+. ファイルを探します `keystore.jks``。
+. キーストアに追加された証明書を表示します。
+`$ keytool -list -v -keystore keystore.jks`
+. 秘密鍵と公開鍵の両方を含む CA 証明書を追加します。
+`$ keytool -importkeystore -srckeystore <CertificatePathToImport> -srcstoretype pkcs12 -destkeystore keystore.jks` `-deststoretype JKS`
+. キーストアに追加された証明書を表示します。
+`$ keytool -list -v -keystore keystore.jks`
+. キーストアに、キーストアに追加された新しい CA 証明書に対応するエイリアスが含まれていることを確認します。
+. CA 証明書用に追加された秘密鍵のパスワードをキーストアのパスワードに変更します。
++
+デフォルトのSPLキーストアパスワードは、SPL_KEYSTORE_PASS INキーの値です `spl.properties` ファイル。
+
++
+`$ keytool -keypasswd -alias "<aliasNameOfAddedCertInKeystore>" -keystore keystore.jks``
+
+. CA 証明書のエイリアス名が長く、スペースまたは特殊文字（「 * 」、「」）が含まれている場合は、エイリアス名を単純な名前に変更します。
+`$ keytool -changealias -alias "<OrignalAliasName>" -destalias "<NewAliasName>" -keystore keystore.jks``
+. にあるキーストアからエイリアス名を設定します `spl.properties` ファイル。
+この値をキー SPL の certificate_alias に更新します。
+. CA 署名済みキーペアを SPL 信頼ストアに設定したら、サービスを再起動します。
+

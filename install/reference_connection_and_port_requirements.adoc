@@ -43,6 +43,8 @@ SnapCenter ポート
 
 SnapCenter クライアント（ SnapCenter ユーザ）と SnapCenter サーバ間の通信に使用されます。プラグインホストから SnapCenter サーバへの通信にも使用されます。
 
+ポートをカスタマイズするには、を参照してください https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["インストールウィザードを使用してSnapCenterサーバをインストールします。"]
+
 
 
  a| 
@@ -51,6 +53,8 @@ SnapCenter SMCore の通信ポート
 8145 （ HTTPS ）、双方向、カスタマイズ可能
 
 このポートは、 SnapCenter サーバと SnapCenter プラグインがインストールされているホストの間の通信に使用されます。
+
+ポートをカスタマイズするには、を参照してください https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["インストールウィザードを使用してSnapCenterサーバをインストールします。"]
 
 
 
@@ -62,6 +66,8 @@ MySQL ポート
 このポートは、 SnapCenter と MySQL リポジトリデータベースの間の通信に使用されます。
 
 SnapCenter サーバから MySQL サーバへのセキュアな接続を作成できます。 link:../install/concept_configure_secured_mysql_connections_with_snapcenter_server.html["詳細はこちら。"]
+
+ポートをカスタマイズするには、を参照してください https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["インストールウィザードを使用してSnapCenterサーバをインストールします。"]
 
 
 
@@ -96,6 +102,8 @@ SnapCenter Plug-ins Package for Windows 、 SnapCenter Plug-ins Package for Linu
 
 通信パスも、 SVM 管理 LIF と SnapCenter サーバの間で開いている必要があります。
 
+ポートをカスタマイズするには、を参照してください https://docs.netapp.com/us-en/snapcenter/protect-scw/task_add_hosts_and_install_snapcenter_plug_in_for_microsoft_windows.html["ホストを追加し、 SnapCenter Plug-in for Microsoft Windows をインストールします"] または https://docs.netapp.com/us-en/snapcenter/protect-sco/task_add_hosts_and_installing_the_snapcenter_plug_ins_package_for_linux_or_aix.html["ホストを追加してLinuxまたはAIX用のSnapCenter Plug-insパッケージをインストールします。"]
+
 
 
  a| 
@@ -104,6 +112,8 @@ SnapCenter Plug-in for Oracle Database
 27216 、カスタマイズ可能
 
 デフォルトの JDBC ポートは、 Oracle データベースに接続するためにプラグイン for Oracle で使用されます。
+
+ポートをカスタマイズするには、を参照してください https://docs.netapp.com/us-en/snapcenter/protect-sco/task_add_hosts_and_installing_the_snapcenter_plug_ins_package_for_linux_or_aix.html["ホストを追加してLinuxまたはAIX用のSnapCenter Plug-insパッケージをインストールします。"]
 
 
 
@@ -135,6 +145,8 @@ SnapCenter Plug-in for SAP HANA Database vCodeスペルチェッカーポート
 マルチテナントデータベースコンテナ（ MDC ）のシングルテナントの場合は、ポート番号は 13 で終わり、 MDC 以外の場合はポート番号は 15 で終わります。
 
 たとえば、 32013 はインスタンス 20 のポート番号で、 31015 はインスタンス 10 のポート番号です。
+
+ポートをカスタマイズするには、を参照してください https://docs.netapp.com/us-en/snapcenter/protect-hana/task_add_hosts_and_install_plug_in_packages_on_remote_hosts_sap_hana.html["ホストを追加し、プラグインパッケージをリモートホストにインストールする。"]
 
 
 

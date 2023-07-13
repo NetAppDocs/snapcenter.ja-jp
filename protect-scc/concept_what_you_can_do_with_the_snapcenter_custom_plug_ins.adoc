@@ -35,7 +35,7 @@ ONTAP ボリューム、 LUN 、または qtree をバックアップできま�
 
 * SnapCenter ポリシーを使用して、プライマリで作成された Snapshot コピーを ONTAP セカンダリに対して更新し、既存のレプリケーション関係（ SnapVault/SnapMirror/ユニ ファイドレプリケーション）を利用します
 +
-ONTAP のプライマリとセカンダリには、 ONTAP FAS 、 AFF 、 Select 、 Cloud ONTAP があります。
+ONTAPのプライマリとセカンダリには、ONTAP FAS、AFF、All SAN Array（ASA）、Select、Cloud ONTAPがあります。
 
 * ONTAP ボリューム、 LUN 、またはファイルの完全なリカバリ
 +

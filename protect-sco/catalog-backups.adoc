@@ -68,4 +68,4 @@ ORACLE_PLUGIN_RMAN_CATALE_TIMEOUT パラメータに指定されたタイムア�
 
 '/opt/NetApp/SnapCenter /spl/bin/spl restart
 
-コマンドで使用できるパラメータとその説明に関する情報は、 Get-Help コマンド _name を実行して取得できます。または、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2883301["SnapCenter ソフトウェアコマンドリファレンスガイド"^]。
+コマンドで使用できるパラメータとその説明に関する情報は、 Get-Help コマンド _name を実行して取得できます。または、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2886206["SnapCenter ソフトウェアコマンドリファレンスガイド"^]。

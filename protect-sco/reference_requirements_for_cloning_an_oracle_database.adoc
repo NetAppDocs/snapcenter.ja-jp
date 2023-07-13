@@ -32,13 +32,11 @@ asm_diskstring パラメータの編集方法については、を参照して�
 ** クローンホストは、プライマリストレージまたはセカンダリストレージから LUN を検出できる必要があります。
 +
 *** プライマリストレージまたはセカンダリ（バックアップまたはミラー）ストレージから代替ホストにクローニングする場合は、セカンダリストレージと代替ホストの間に iSCSI セッションが確立されているか、 FC 用に適切にゾーニングされていることを確認してください。
-+
-**** https://library.netapp.com/ecm/ecm_download_file/ECMLP2547936["『 Linux Host Utilities Installation and Setup Guide 』"^]
-**** https://library.netapp.com/ecm/ecm_download_file/ECMP1119223["『 AIX Host Utilities Installation and Setup Guide 』"^]
-
-
 *** バックアップ・ストレージまたはミラー・ストレージから同じホストにクローニングする場合は、バックアップまたはミラー・ストレージとホストの間に iSCSI セッションが確立されているか、 FC 用に適切にゾーニングされているかを確認してください。
 *** 仮想環境でクローニングを行う場合は、プライマリストレージまたはセカンダリストレージと、代替ホストをホストする ESX サーバの間で iSCSI セッションが確立されていること、または FC 用に適切にゾーニングされていることを確認してください。
++
+詳細については、を参照してください https://docs.netapp.com/us-en/ontap-sanhost/["Host Utilitiesのマニュアル"]。
+
 
 
 ** ソースデータベースが ASM データベースの場合は、次の手順を実行します。

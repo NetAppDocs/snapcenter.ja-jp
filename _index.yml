@@ -1,12 +1,12 @@
 ---
 indexpage:
   lead: SnapCenter ソフトウェアは、シンプルで拡張性に優れた一元的なプラットフォームです。ハイブリッドクラウドの任意の場所にある ONTAP システムで実行されているアプリケーション、データベース、ホストファイルシステム、
-    VM に対して、アプリケーションと整合性のあるデータ保護を提供します。このドキュメントライブラリには、バージョン4.8の情報が含まれています。
+    VM に対して、アプリケーションと整合性のあるデータ保護を提供します。このドキュメントライブラリには、バージョン4.9の情報が含まれています。
   tiles:
   - title: はじめに
     links:
     - title: リリースノート
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2885481
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886204
     - title: SnapCenter の詳細をご確認ください
       url: "/concept/concept_snapcenter_overview.html"
     - title: SQL Server データベースの保護に関するクイックリファレンスです

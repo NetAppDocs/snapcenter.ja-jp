@@ -15,10 +15,9 @@ Single Mailbox Recovery （ SMBR ）ソフトウェアを使用すると、 Exch
 
 1 つのメールをリカバリするためだけにデータベース全体をリストアすると、時間とリソースが大量に消費されます。SMBR を使用すると、 Snapshot のクローンコピーを作成し、 Microsoft API を使用して SMBR 内のメールボックスをマウントすることで、メールを迅速にリカバリできます。SMBR の使用方法については、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2871407["『 SMBR アドミニストレーションガイド』"^]。
 
-* 詳細はこちら *
+SMBRの追加情報については、次の資料を参照してください。
 
-* link:../install/concept_snapcenter_licenses.html#single-mailbox-recovery-smbr-licenses["SMBR ライセンス"^]
-* https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=30035["SMBR のドキュメントライブラリです"^]
+* https://kb.netapp.com/Legacy/SMBR/How_to_manually_restore_a_single_item_with_SMBR["SMBRを使用して単一アイテムを手動でリストアする方法（Ontrack電源制御リストアにも適用可能）"]
 * https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Single_Mailbox_Recovery_(SMBR)/How_to_restore_from_secondary_storage_in_SMBR_with_SnapCenter["SnapCenter を使用して SMBR のセカンダリストレージからリストアする方法"^]
 * https://www.youtube.com/watch?v=fOMuaaXrreI&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg&index=3["SMBR を使用した SnapVault からの Microsoft Exchange メールのリカバリ"^]
 

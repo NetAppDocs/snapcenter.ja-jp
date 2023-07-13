@@ -104,7 +104,7 @@ NOTE: LinuxホストにJava 11の認定エディションのみがインスト�
 Java を最新バージョンにアップグレードした場合は、 /var/opt/snapcenter /etc/sp/etc/spl.properties にある JAVA_HOME オプションが正しい Java バージョンに設定されていること、および正しいパスが指定されていることを確認する必要があります。
 
 |===
-サポートされているバージョンの最新情報については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=108392;&solution=1259&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。
+サポートされているバージョンの最新情報については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=112391;&solution=1259&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。
 
 
 
@@ -228,7 +228,7 @@ NOTE: 十分なディスクスペースを割り当て、 logs フォルダに�
 Java を最新バージョンにアップグレードした場合は、 /var/opt/snapcenter /etc/sp/etc/spl.properties にある JAVA_HOME オプションが正しい Java バージョンに設定されていること、および正しいパスが指定されていることを確認する必要があります。
 
 |===
-サポートされているバージョンの最新情報については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=108392;&solution=1259&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。
+サポートされているバージョンの最新情報については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=112391;&solution=1259&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。
 
 
 

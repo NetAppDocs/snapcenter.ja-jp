@@ -19,4 +19,4 @@ image::../media/restore_workflow.gif[リストアワークフロー]
 
 PowerShell コマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、クローニングの処理を実行することもできます。PowerShell コマンドレットの詳細については、 SnapCenter のコマンドレットのヘルプを使用するか、コマンドレットのリファレンス情報を参照してください。
 
-https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。

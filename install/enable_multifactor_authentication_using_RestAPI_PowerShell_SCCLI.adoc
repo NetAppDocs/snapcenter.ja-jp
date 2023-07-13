@@ -1,0 +1,270 @@
+---
+permalink: install/enable_multifactor_authentication_using_RestAPI_PowerShell_SCCLI.html 
+sidebar: sidebar 
+keywords: mfa, authentication, multifactor authentication 
+summary: REST API、PowerShell、およびSCCLIインターフェイスを使用してMFAを管理できます。 
+---
+= REST API、PowerShell、SCCLIを使用して多要素認証（MFA）を管理
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+MFAログインは、ブラウザ、REST API、PowerShell、およびSCCLIからサポートされます。MFAは、AD FSアイデンティティマネージャを介してサポートされます。GUI、REST API、PowerShell、SCCLIを使用して、MFAの有効化、MFAの無効化、およびMFAの設定を行うことができます。
+
+
+
+== AD FSをOAuth/OIDCとしてセットアップします
+
+* Windows GUIウィザードを使用してAD FSを構成します*
+
+. Server Manager Dashboard *>* Tools *>* ADFS Management *に移動します。
+. [ADFS]*>*[アプリケーショングループ]*に移動します。
++
+.. [アプリケーショングループ]を右クリックします。
+.. [アプリケーショングループの追加]*を選択し、*[アプリケーション名]*と入力します。
+.. [サーバーアプリケーション]*を選択します。
+.. 「 * 次へ * 」をクリックします。
+
+
+. コピー*クライアントID *。
++
+これはクライアントIDです。
+。リダイレクトURLにコールバックURL（SnapCenterサーバURL）を追加します。
+。「 * 次へ * 」をクリックします。
+
+. [Generate shared secret]*を選択します。
++
+シークレット値をコピーします。これはクライアントの秘密です。
+。「 * 次へ * 」をクリックします。
+
+. [概要]ページで、*[次へ]*をクリックします。
++
+.. [完了]ページで、*[閉じる]*をクリックします。
+
+
+. 新しく追加した*アプリケーショングループ*を右クリックし、*プロパティ*を選択します。
+. [アプリケーションのプロパティ]から*[アプリケーションの追加]*を選択します。
+. [アプリケーションの追加]*をクリックします。
++
+[Web API]を選択し、*[Next]*をクリックします。
+
+. [Web APIの構成]ページで、前の手順で作成したSnapCenterサーバのURLとクライアント識別子を[識別子]セクションに入力します。
++
+.. [ 追加（ Add ） ] をクリックします。
+.. 「 * 次へ * 」をクリックします。
+
+
+. [Choose Access Control Policy]ページで、要件に基づいて制御ポリシーを選択し（[Permit Everyone and Require MFA]など）、*[Next]*をクリックします。
+. [アプリケーション権限の設定]ページでは、デフォルトでOpenIDがスコープとして選択されており、*[次へ]*をクリックします。
+. [概要]ページで、*[次へ]*をクリックします。
++
+[完了]ページで、*[閉じる]*をクリックします。
+
+. [サンプルアプリケーションのプロパティ]ページで、*[OK]*をクリックします。
+. 承認サーバー(AD FS)によって発行され、リソースによって消費されることを意図したJWTトークン。
++
+このトークンの「AUD」またはオーディエンス要求は、リソースまたはWeb APIの識別子と一致している必要があります。
+
+. 選択したWebAPIを編集し、コールバックURL（SnapCenterサーバURL）とクライアント識別子が正しく追加されていることを確認します。
++
+ユーザー名を要求として提供するようにOpenID Connectを設定します。
+
+. サーバーマネージャの右上にある* Tools *メニューの下にある* AD FS Management *ツールを開きます。
++
+.. 左側のサイドバーから* Application Groups *フォルダを選択します。
+.. Web APIを選択し、* edit *をクリックします。
+.. [発行トランスフォームルール]タブに移動します
+
+
+. [ * ルールの追加 * ] をクリックします。
++
+.. [Claim rule template]ドロップダウンで、*[Send LDAP Attributes as Claims]*を選択します。
+.. 「 * 次へ * 」をクリックします。
+
+
+. [Claim rule]*の名前を入力します。
++
+.. [属性ストア]ドロップダウンで*[Active Directory]*を選択します。
+.. [LDAP Attribute]ドロップダウンで*[User-Principal-Name]*を選択し、[O*utgoing Claim Type]*ドロップダウンで*[UPN]*を選択します。
+.. [ 完了 ] をクリックします。
+
+
+
+
+
+
+== PowerShellコマンドを使用してアプリケーショングループを作成します
+
+PowerShellコマンドを使用して、アプリケーショングループ、Web APIを作成し、スコープと要求を追加できます。これらのコマンドは、自動スクリプト形式で使用できます。詳細については、<link to KB article>を参照してください。
+
+. 次のコマンドを使用して、AD FSに新しいアプリケーショングループを作成します。
++
+`New-AdfsApplicationGroup -Name $ClientRoleIdentifier -ApplicationGroupIdentifier $ClientRoleIdentifier`
+
++
+`ClientRoleIdentifier` アプリケーショングループの名前
+
++
+`redirectURL` 許可後のリダイレクションの有効なURL
+
+. AD FSサーバアプリケーションを作成し、クライアントシークレットを生成します。
++
+`Add-AdfsServerApplication -Name "$ClientRoleIdentifier - Server app" -ApplicationGroupIdentifier` `$ClientRoleIdentifier -RedirectUri $redirectURL  -Identifier $identifier -GenerateClientSecret`
+
+. ADFS Web APIアプリケーションを作成し、使用するポリシー名を設定します。
++
+`$identifier = (New-Guid).Guid`
+
++
+`Add-AdfsWebApiApplication -ApplicationGroupIdentifier $ClientRoleIdentifier  -Name "App Web API"`
+
++
+`-Identifier $identifier -AccessControlPolicyName "Permit everyone"`
+
+. クライアントIDとクライアントシークレットは1回しか表示されないため、次のコマンドの出力から取得します。
++
+`"client_id = $identifier"`
+
++
+`"client_secret: "$($ADFSApp.ClientSecret)`
+
+. AD FSアプリケーションにallatclaims権限とOpenID権限を付与します。
++
+`Grant-AdfsApplicationPermission -ClientRoleIdentifier $identifier -ServerRoleIdentifier $identifier -ScopeNames @('openid')`
+
++
+`$transformrule = @"`
+
++
+`@RuleTemplate = "LdapClaims"`
+
++
+`@RuleName = "AD User properties and Groups"`
+
++
+`c:[Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname", Issuer ==`
+
++
+`"AD AUTHORITY"]`
+
++
+`=> issue(store = "Active Directory", types = ("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn"), query = ";userPrincipalName;{0}", param = c.Value);`
+
++
+`"@`
+
+. 変換ルールファイルを書き出します。
++
+`$transformrule |Out-File -FilePath .\issueancetransformrules.tmp -force -Encoding ascii`
+`$relativePath = Get-Item .\issueancetransformrules.tmp`
+
+. Web APIアプリケーションに名前を付け、外部ファイルを使用してその発行トランスフォームルールを定義します。
++
+`Set-AdfsWebApiApplication -Name "$ClientRoleIdentifier - Web API" -TargetIdentifier`
+
++
+`$identifier -Identifier $identifier,$redirectURL -IssuanceTransformRulesFile`
+
++
+`$relativePath`
+
+
+
+
+
+== アクセストークンの有効期限を更新します
+
+アクセストークンの有効期限は、PowerShellコマンドを使用して更新できます。
+
+* このタスクについて *
+
+* アクセストークンは、ユーザー、クライアント、およびリソースの特定の組み合わせに対してのみ使用できます。アクセストークンは無効にすることはできず、有効期限が切れるまで有効です。
+* デフォルトでは、アクセストークンの有効期限は60分です。  この最小限の有効期限は十分であり、拡張されています。ビジネスクリティカルなジョブが継続的に発生しないように、十分な価値を提供する必要があります。
+
+
+* ステップ *
+
+アプリケーショングループWebAPIのアクセストークンの有効期限を更新するには、AD FSサーバで次のコマンドを使用します。
+
+[+]
+`Set-AdfsWebApiApplication -TokenLifetime 3600 -TargetName "<Web API>"`
+
+
+
+== AD FSからBearerトークンを取得します
+
+RESTクライアント（Postmanなど）で以下のパラメータを入力する必要があり、ユーザクレデンシャルを入力するように求められます。さらに、ベアラートークンを取得するには、第2要素認証(あなたが持っているものとあなたがいるもの)を入力する必要があります。
+
+[+]
+ベアラートークンの有効期間は、アプリケーションごとにAD FSサーバから設定できます。デフォルトの有効期間は60分です。
+
+|===
+
+
+| フィールド | 価値 
+
+
+ a| 
+許可タイプ
+ a| 
+承認コード
+
+
+
+ a| 
+コールバックURL
+ a| 
+コールバックURLがない場合は、アプリケーションのベースURLを入力します。
+
+
+
+ a| 
+認証URL
+ a| 
+[ADFS-domain-name]/ADFS/OAuth2/authorize
+
+
+
+ a| 
+アクセストークンURL
+ a| 
+[ADFS-domain-name]/ADFS/OAuth2/token
+
+
+
+ a| 
+クライアント ID
+ a| 
+AD FSクライアントIDを入力します
+
+
+
+ a| 
+クライアントシークレット
+ a| 
+AD FSクライアントシークレットを入力します
+
+
+
+ a| 
+適用範囲
+ a| 
+OpenID
+
+
+
+ a| 
+クライアント認証
+ a| 
+基本認証ヘッダーとして送信します
+
+
+
+ a| 
+リソース
+ a| 
+[詳細オプション]タブで、[コールバックURL]と同じ値を持つ[リソース]フィールドを追加します。この値は、JWTトークンでは「AUD」値として表示されます。
+
+|===

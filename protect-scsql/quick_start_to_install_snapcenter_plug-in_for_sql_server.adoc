@@ -41,9 +41,10 @@ Active Directory ドメインを使用している場合は、ローカル管理
  a| 
 SnapCenter 標準のコントローラベース
  a| 
-FAS または AFF ストレージコントローラの場合は必須です
+FAS、AFF、またはAll SAN Array（ASA）ストレージコントローラに必要です
 
-SnapCenter Standard ライセンスはコントローラベースのライセンスで、 Premium Bundle に含まれています。SnapManager スイートのライセンスをお持ちの場合は、 SnapCenter Standard のライセンスもご利用いただけます。FAS または AFF ストレージを使用した SnapCenter の試用版をインストールする場合は、営業担当者にお問い合わせください。
+SnapCenter Standard ライセンスはコントローラベースのライセンスで、 Premium Bundle に含まれています。SnapManager スイートのライセンスをお持ちの場合は、 SnapCenter Standard のライセンスもご利用いただけます。
+FAS、AFF、またはASAストレージにSnapCenterの試用版をインストールする場合は、営業担当者に連絡してPremium Bundleの評価ライセンスを取得してください。
 
 
 
@@ -85,7 +86,7 @@ NOTE: セカンダリデスティネーションに SnapCenter Standard ライ�
 
 === ホストおよびポートの要件
 
-ONTAP およびアプリケーションプラグインの最小要件については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=105961;&solution=1259&isHWU&src=IMT["Interoperability Matrix Tool で確認してください"^]。
+ONTAP およびアプリケーションプラグインの最小要件については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=112389;&solution=1259&isHWU&src=IMT["Interoperability Matrix Tool で確認してください"^]。
 
 [cols="1,3"]
 |===

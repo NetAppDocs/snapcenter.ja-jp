@@ -11,20 +11,20 @@ summary: SnapCenter では、データのセキュリティを確保するため
 
 
 [role="lead"]
-このトピックでは、Active Directoryフェデレーションサービス(AD FS)サーバーとSnapCenter サーバーで多要素認証(MFA)機能を管理する方法について説明します。
+Active Directoryフェデレーションサービス（AD FS）サーバとSnapCenterサーバで多要素認証（MFA）機能を管理できます。
 
 
 
 == 多要素認証（MFA）を有効にする
 
-このトピックでは、Active Directoryフェデレーションサービス(AD FS)サーバーとSnapCenter サーバーでMFA機能を有効にする方法について説明します。
+SnapCenterサーバのMFA機能は、PowerShellコマンドを使用して有効にできます。
 
 .このタスクについて
 * SnapCenter は、他のアプリケーションが同じAD FSで構成されている場合にSSOベースのログインをサポートします。AD FSの構成によっては、AD FSセッションの持続性に応じて、セキュリティ上の理由からSnapCenter でユーザ認証が必要になる場合があります。
-* コマンドレットで使用できるパラメータとその説明は、を実行して確認できます `Get-Help command_name`。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+* コマンドレットで使用できるパラメータとその説明は、を実行して確認できます `Get-Help command_name`。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
 
 
-.必要なもの
+.作業を開始する前に
 * Windows Active Directoryフェデレーションサービス（AD FS）がそれぞれのドメインで稼働している必要があります。
 * Azure MFA、Cisco Duoなど、AD FSがサポートする多要素認証サービスが必要です。
 * SnapCenter およびAD FSサーバのタイムスタンプは、タイムゾーンに関係なく同じである必要があります。
@@ -53,10 +53,7 @@ CA証明書の詳細については、を参照してください link:../instal
 pathパラメータでは、SnapCenter サーバホストにMFAメタデータファイルを保存するパスを指定します。
 
 . 生成されたファイルをAD FSホストにコピーし、SnapCenter をクライアントエンティティとして設定します。
-. を使用して、SnapCenter サーバのMFAを有効にします `Set-SmMultiFactorAuthentication -Enable -Path` コマンドレット。
-+
-pathパラメータでは、手順3でSnapCenter サーバにコピーされたAD FS MFAメタデータXMLファイルの場所を指定します。
-
+. を使用して、SnapCenter サーバのMFAを有効にします `Set-SmMultiFactorAuthentication` コマンドレット。
 . （オプション）を使用して、MFAの設定のステータスと設定を確認します `Get-SmMultiFactorAuthentication` コマンドレット。
 . Microsoft管理コンソール（MMC）に移動し、次の手順を実行します。
 +
@@ -119,7 +116,7 @@ pathパラメータでは、手順3でSnapCenter サーバにコピーされたA
 
 SnapCenter MFA機能は、REST APIを使用して有効にすることもできます。
 
-を参照してください。を参照してください link:..https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_login_in_multiple_tabs_shows_MFA_error%3A_The_SAML_message_response_(1)_doesn%E2%80%99t_match_the_expected_response_(2)["複数のタブでのSnapCenter ログインでMFAエラーが表示される"]。
+トラブルシューティング情報については、を参照してください https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_MFA_login_error_The_SAML_message_response_1_doesnt_match_the_expected_response_2["複数のタブで同時にログインを試行すると、MFAエラーが表示されます"]。
 
 
 
@@ -165,6 +162,6 @@ ADFSサーバで修復、CA証明書の更新、DRなどに変更があった場
 == 多要素認証（MFA）を無効にする
 
 .手順
-. MFAを無効にし、を使用してMFAを有効にしたときに作成された構成ファイルをクリーンアップします `Set-SmMultiFactorAuthentication -Disable` コマンドレット。
+. MFAを無効にし、を使用してMFAを有効にしたときに作成された構成ファイルをクリーンアップします `Set-SmMultiFactorAuthentication` コマンドレット。
 . すべてのブラウザタブを閉じ、ブラウザを再度開いて既存またはアクティブなセッションCookieをクリアし、再度ログインします。
 

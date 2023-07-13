@@ -16,3 +16,6 @@ SnapCenter Plug-in for Microsoft Exchange Server は、 Exchange データベー
 Plug-in for Exchange をインストールすると、 SnapCenter で NetApp SnapMirror テクノロジを使用して別のボリュームにバックアップセットのミラーコピーを作成できるほか、 NetApp SnapVault テクノロジを使用して標準への準拠やアーカイブを目的としたディスクツーディスクのバックアップレプリケーションを実行できます。
 
 Exchange データベース全体ではなくメールやメールボックスのリストアとリカバリを行う場合は、 Single Mailbox Recovery （ SMBR ）ソフトウェアを使用します。
+NetApp®Single Mailbox Recoveryは、2023年5月12日に販売終了（EOA）になりました。NetAppは、2020年6月24日に導入されたマーケティング用パーツ番号を通じて、メールボックスの容量、メンテナンス、サポートを購入したお客様をサポート対象期間中も引き続きサポートします。
+
+NetApp Single Mailbox Recoveryは、Ontrackが提供するパートナー製品です。Ontrack PowerControlsには、NetApp Single Mailbox Recoveryと同様の機能が用意されています。お客様は、新しいOntrack PowerControlsソフトウェアライセンスとOntrack PowerControlsメンテナンスおよびサポート更新をOntrackから（licensingteam@ontrack.com経由で）購入して、メールボックスをきめ細かくリカバリできます。

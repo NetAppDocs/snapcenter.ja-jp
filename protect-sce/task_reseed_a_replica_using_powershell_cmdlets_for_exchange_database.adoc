@@ -13,7 +13,7 @@ summary: PowerShell コマンドレットを使用すると、問題のあるレ
 [role="lead"]
 PowerShell コマンドレットを使用すると、問題のあるレプリカをリストアできます。そのためには、同じホストの最新のコピーを使用するか、代替ホストの最新のコピーを使用します。
 
-コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
 
 * 手順 *
 

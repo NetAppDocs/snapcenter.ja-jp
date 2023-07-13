@@ -1,0 +1,171 @@
+---
+permalink: install/task_configure_two_way_ssl.html 
+sidebar: sidebar 
+keywords: security,two-way ssl,configure two-way ssl 
+summary: SnapCenterサーバとプラグイン間の相互通信を保護するために、双方向SSL通信を設定する必要があります。   
+---
+= 双方向SSL通信を設定します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenterサーバとプラグイン間の相互通信を保護するために、双方向SSL通信を設定する必要があります。
+
+* 始める前に *
+
+* サポートされるキーの最小長が3072のCA証明書CSRファイルを生成しておく必要があります。
+* CA証明書でサーバ認証とクライアント認証がサポートされている必要があります。
+* 秘密鍵とサムプリントの詳細が記載されたCA証明書が必要です。
+* 一方向SSL設定を有効にしておく必要があります。
++
+詳細については、を参照してください https://docs.netapp.com/us-en/snapcenter/install/reference_generate_CA_certificate_CSR_file.html["CA証明書の設定セクション"]
+
+* すべてのプラグインホストとSnapCenterサーバで双方向SSL通信を有効にしておく必要があります。
++
+一部のホストまたはサーバで双方向SSL通信が有効になっていない環境はサポートされません。
+
+
+
+* 手順 *
+
+. ポートをバインドするには、PowerShellコマンドを使用して、SnapCenter IIS Webサーバポート8146（デフォルト）およびSMCoreポート8145（デフォルト）のSnapCenterサーバホストで次の手順を実行します。
++
+.. 次のPowerShellコマンドを使用して、既存のSnapCenter自己署名証明書のポートバインドを削除します。
++
+`> netsh http delete sslcert ipport=0.0.0.0:<SMCore port/IIS port>`
+
++
+例：
+
++
+`> netsh http delete sslcert ipport=0.0.0.0:8145`
+
++
+`> netsh http delete sslcert ipport=0.0.0.0:8146`
+
+.. 新しく取得したCA証明書をSnapCenterサーバとSMCoreポートにバインドします。
++
+`> $cert = “<CA_certificate thumbprint>”`
+
++
+`> $guid = [guid]::NewGuid().ToString("B")`
+
++
+`> netsh http add sslcert ipport=0.0.0.0: <SMCore Port/IIS port> certhash=$cert appid="$guid"` `clientcertnegotiation=enable verifyclientcertrevocation=disable`
+
++
+`> netsh http show sslcert ipport=0.0.0.0:<SMCore Port/IIS port>`
+
++
+例：
+
++
+`> $cert = “abc123abc123abc123abc123”`
+
++
+`> $guid = [guid]::NewGuid().ToString("B")`
+
++
+`> netsh http add sslcert ipport=0.0.0.0:8146 certhash=$cert appid="$guid"` `clientcertnegotiation=enable verifyclientcertrevocation=disable`
+
++
+`> $guid = [guid]::NewGuid().ToString("B")`
+
++
+`> netsh http add sslcert ipport=0.0.0.0:8145 certhash=$cert appid="$guid"` `clientcertnegotiation=enable verifyclientcertrevocation=disable`
+
++
+`> netsh http show sslcert ipport=0.0.0.0:8146`
+
++
+`> netsh http show sslcert ipport=0.0.0.0:8145`
+
+
+
+. CA証明書の権限にアクセスするには、次の手順を実行して新しく取得したCA証明書にアクセスし、SnapCenterのデフォルトのIIS Webサーバユーザ「* IIS AppPool\SnapCenter *」を証明書の権限のリストに追加します。
++
+.. Microsoft管理コンソール（MMC）に移動し、*[ファイル]*>*[SnapInの追加と削除]*をクリックします。
+.. [ スナップインの追加と削除 ] ウィンドウで、 [*Certificates*] を選択し、 [*Add*] をクリックします。
+.. [ 証明書 ] スナップインウィンドウで、 [*Computer account*] オプションを選択し、 [ 完了 *] をクリックします。
+.. ［*コンソールルート*］>［*証明書–ローカルコンピューター*］>［*個人*］>［*証明書*］の順にクリックします。
+.. SnapCenter証明書を選択します。
+.. ユーザー/権限の追加ウィザードを開始するには、CA証明書を右クリックし、*[すべてのタスク]*>*[秘密鍵の管理]*を選択します。
+.. [追加]*をクリックし、[ユーザーとグループの選択]ウィザードで場所をローカルコンピュータ名（階層の最上位）に変更します。
+.. IIS AppPool\SnapCenterユーザを追加し、フルコントロール権限を付与します。
+
+
+. CA証明書IIS権限*の場合、次のパスからSnapCenterサーバーに新しいDWORDレジストリキーエントリを追加します。
++
+Windowsレジストリエディタで、次のパスに移動します。
+
++
+`HKey_Local_Machine\SYSTEM\CurrentControlSet\Control\SecurityProv
+ ders\SCHANNEL`
+
+. SCHANNELレジストリ設定のコンテキストで、新しいDWORDレジストリキーエントリを作成します。
++
+`SendTrustedIssuerList = 0`
+
++
+`ClientAuthTrustMode = 2`
+
+
+
+
+
+== 双方向SSL通信用のSnapCenter Windowsプラグインを設定します
+
+SnapCenter Windowsプラグインは、PowerShellコマンドを使用して双方向SSL通信用に設定する必要があります。
+
+* 始める前に *
+
+CA証明書サムプリントが使用可能であることを確認します。
+
+* 手順 *
+
+. ポートをバインドするには、WindowsプラグインホストでSMCoreポート8145（デフォルト）に対して次の操作を実行します。
++
+.. 次のPowerShellコマンドを使用して、既存のSnapCenter自己署名証明書のポートバインドを削除します。
++
+`> netsh http delete sslcert ipport=0.0.0.0:<SMCore port>`
+
++
+例：
+
++
+`> netsh http delete sslcert ipport=0.0.0.0:8145`
+
+.. 新しく取得したCA証明書をSMCoreポートにバインドします。
++
+`> $cert = “<CA_certificate thumbprint>”`
+
++
+`> $guid = [guid]::NewGuid().ToString("B")`
+
++
+`> netsh http add sslcert ipport=0.0.0.0: <SMCore Port> certhash=$cert appid="$guid"`
+`clientcertnegotiation=enable verifyclientcertrevocation=disable`
+
++
+`> netsh http show sslcert ipport=0.0.0.0:<SMCore Port>`
+
++
+例：
+
++
+`> $cert = “abc123abc123abc123abc123”`
+
++
+`> $guid = [guid]::NewGuid().ToString("B")`
+
++
+`> netsh http add sslcert ipport=0.0.0.0:8145 certhash=$cert appid="$guid"` `clientcertnegotiation=enable verifyclientcertrevocation=disable`
+
++
+`> netsh http show sslcert ipport=0.0.0.0:8145`
+
+
+
+

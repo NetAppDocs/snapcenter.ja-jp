@@ -535,8 +535,6 @@
   <block id="01f97c83c1f349ab154ea4e7fed85418" category="doc">SQL Server リソースをリストアする</block>
   <block id="72fab2a5b70ae095deeddf26f2a52793" category="paragraph">次のワークフローは、データベースリストア処理の実行順序を示しています。</block>
   <block id="92c488cfa68af6221db7fffbf4243861" category="image-alt">all_plug-ins_restore_workflow を実行します</block>
-  <block id="c51260ad550d9397370682d73d446602" category="inline-link">SnapCenter ソフトウェア 4.4 コマンドレットリファレンスガイド</block>
-  <block id="4a45b99dc57bfa145ace46e1fd9baa9d" category="paragraph">PowerShell コマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、リカバリ、検証、クローニングの処理を実行することもできます。PowerShell コマンドレットの詳細については、 SnapCenter コマンドレットのヘルプを使用するか、を参照してください<block ref="22d4c47c8368759c58ff9ac05ffd0e13" category="inline-link-rx"></block></block>
   <block id="69bb12bd720ba41593c0fadfa768b82e" category="paragraph"><block ref="69bb12bd720ba41593c0fadfa768b82e" category="inline-link-macro-rx"></block></block>
   <block id="6924edabeae66398839af50da876447a" category="inline-link-macro">PowerShell コマンドレットを使用してリソースをリストアおよびリカバリする</block>
   <block id="f8acea491fd41bf474c92c44e455142e" category="inline-link-macro">Windows 2008 R2 でリストア処理が失敗することがあります</block>
@@ -1528,10 +1526,6 @@
   <block id="5cfa1ed5b7279fa5a9a9f892a69f175f" category="list-text">SnapCenter Plug-in for Oracle Database を代替ホストにインストールする必要があります。</block>
   <block id="b1815397269c524f0557a5562899d82b" category="list-text">クローンホストは、プライマリストレージまたはセカンダリストレージから LUN を検出できる必要があります。</block>
   <block id="2d4350dba1907fc52580a8f201e6340e" category="list-text">プライマリストレージまたはセカンダリ（バックアップまたはミラー）ストレージから代替ホストにクローニングする場合は、セカンダリストレージと代替ホストの間に iSCSI セッションが確立されているか、 FC 用に適切にゾーニングされていることを確認してください。</block>
-  <block id="3e30bf9ff6c5058456cc15f4812939ca" category="inline-link">『 Linux Host Utilities Installation and Setup Guide 』</block>
-  <block id="a13c407c281871b27c7c646287cfb88e" category="list-text"><block ref="a13c407c281871b27c7c646287cfb88e" category="inline-link-rx"></block></block>
-  <block id="99d5e9e8be050afa5c8c0151d7a00740" category="inline-link">『 AIX Host Utilities Installation and Setup Guide 』</block>
-  <block id="cc1ac40238dd772ed5975e72e877a936" category="list-text"><block ref="cc1ac40238dd772ed5975e72e877a936" category="inline-link-rx"></block></block>
   <block id="7ab56a931702e0e68323bba5f9744b17" category="list-text">バックアップ・ストレージまたはミラー・ストレージから同じホストにクローニングする場合は、バックアップまたはミラー・ストレージとホストの間に iSCSI セッションが確立されているか、 FC 用に適切にゾーニングされているかを確認してください。</block>
   <block id="0bfae4ea7762d7ebae116652014f4cd5" category="list-text">仮想環境でクローニングを行う場合は、プライマリストレージまたはセカンダリストレージと、代替ホストをホストする ESX サーバの間で iSCSI セッションが確立されていること、または FC 用に適切にゾーニングされていることを確認してください。</block>
   <block id="b6002df6af7fac27dc362f546398ad42" category="list-text">ソースデータベースが ASM データベースの場合は、次の手順を実行します。</block>
@@ -2568,8 +2562,6 @@
   <block id="59def6ecb72ae28b473694aa037f69ba" category="list-text">SVM の igroup のリストで、削除する igroup を選択し、 * Delete * をクリックします。</block>
   <block id="298ee0d54bd96050fb56f416e8665199" category="list-text">igroup の削除ダイアログボックスで、 * OK * をクリックします。</block>
   <block id="b6014af484171e08fae6e547c92aac45" category="paragraph">SnapCenter によって igroup が削除されます。</block>
-  <block id="9c53e7ba342b700373ad570a7701ac93" category="summary">FAS または AFF システムを使用していて、 SnapCenter 標準ライセンスまたは SnapManagerSuite ライセンスがある場合は、 ONTAP コマンドラインを使用して SnapCenter コントローラベースライセンスを追加できます。</block>
-  <block id="f749923aaf47a5a4e633b49ccf2873c5" category="paragraph">FAS または AFF ストレージを使用した SnapCenter の試用版をインストールする場合は、 Premium Bundle 評価ライセンスを取得してコントローラにインストールできます。</block>
   <block id="77284acb8b512806e32e2236346e084c" category="paragraph">SnapCenter を試用版としてインストールする場合は、営業担当者にお問い合わせいただき、 Premium Bundle 評価ライセンスを取得してコントローラにインストールしてください。</block>
   <block id="62749f76fbc0b3c54c0e9340e012798d" category="list-text">ONTAP コマンドラインを使用してネットアップクラスタにログインします。</block>
   <block id="62162d6c154980e72f9774396cd832cc" category="list-text">SnapManagerSuite ライセンスキーを追加します。</block>
@@ -2675,7 +2667,6 @@
   <block id="00bfc6d5134a1b1da3cee96b35262d82" category="list-text">SVM 上の共有のリストから削除する共有を選択し、 * Delete * をクリックします。</block>
   <block id="0e2512a370e5e94220f1e12e7b6323ec" category="list-text">共有の削除ダイアログボックスで、 * OK * をクリックします。</block>
   <block id="90151f3434b36edf515d9e6630d279d9" category="paragraph">SnapCenter によって SVM から SMB 共有が削除されます。</block>
-  <block id="b7bbc11caf1a65c77460de0469d40f7d" category="summary">SnapCenter の GUI を使用して、 SnapManager スイートライセンスが FAS または AFF のプライマリストレージシステムにインストールされているかどうかを表示したり、 SnapManager スイートライセンスが必要なストレージシステムを特定したりできます。SnapManager スイートのライセンスは、プライマリストレージシステム上の FAS および AFF SVM またはクラスタにのみ適用されます。</block>
   <block id="febaac7ceadda0aca80556bfc7f22a33" category="list-text">左側のナビゲーションペインで、 * ストレージシステム * をクリックします。</block>
   <block id="9ba45610f0250c3f3d93d968194d341c" category="list-text">追加されたすべての SVM を表示するには、 * ONTAP SVM * を選択します。</block>
   <block id="91fd94b5750743b0b4db66d235c0cab9" category="list-text">追加されたすべてのクラスタを表示するには、 * ONTAP クラスタ * を選択します。</block>
@@ -2857,11 +2848,9 @@
   <block id="412589556c13a1f04b77fa8ee0e3f627" category="admonition">SnapCenter 4.1.1 以前では、 SnapCenter のインストール時にネットワーク負荷分散 (NLB) の構成がサポートされていました。</block>
   <block id="061e7171f662c103e082fe0f01a9e8d7" category="summary">ワークフロー図は、 SnapCenter サーバのインストールと設定の手順を示しています。</block>
   <block id="1b6e4426f8c688c2d09195bf31d0242c" category="paragraph">このワークフローでは、 SnapCenter サーバのインストールと設定に必要なさまざまなタスクについて説明します。</block>
-  <block id="91f32543aa28b785a5495845a7fb8cec" category="summary">FAS または AFF ストレージコントローラを使用する場合は、 SnapCenter の標準コントローラベースのライセンスが必要です。</block>
   <block id="b1c23ca4e9e67a158bfb24299743d88f" category="paragraph">コントローラベースのライセンスには次のような特徴があります。</block>
   <block id="5300768d44eab29e62cfac966d22baea" category="list-text">Premium Bundle または Flash Bundle （ベースパックには含まれません）の購入に SnapCenter Standard のライセンスが含まれます。</block>
   <block id="c55c867b9e6458f61ad9c49c7535bfab" category="list-text">無制限のストレージ使用</block>
-  <block id="b867b5a0cc0e8c022da3fb526dbf2e0d" category="list-text">ONTAP System Manager またはストレージクラスタのコマンドラインを使用して、 FAS または AFF のストレージコントローラに直接追加して有効にします</block>
   <block id="c0919ecf5802c65bf773794b7af70540" category="admonition">SnapCenter コントローラベースのライセンスについては、 SnapCenter GUI にライセンス情報を入力しません。</block>
   <block id="17449a90a0d7161db56cba83fa4f2728" category="list-text">コントローラのシリアル番号にロックされています</block>
   <block id="eb55a5732c8239cbf4f476df49cc20a3" category="paragraph">必要なライセンスの詳細については、を参照してください <block ref="6de8516502145d64739d69762f4898a1" category="inline-link-macro-rx"></block>。</block>
@@ -2944,7 +2933,6 @@
   <block id="d907195077a50076f92791c10bb76a87" category="list-text">[ ストレージシステム ] ページで、 [ 新規作成 ] をクリックします。</block>
   <block id="7e3e16c1661e45c7df525db25b2af547" category="list-text">Add Storage System （ストレージシステムの追加）ページで、次の情報を入力します。</block>
   <block id="681b332726128e95467bac25b794e99b" category="paragraph">ストレージシステムの名前または IP アドレスを入力します。</block>
-  <block id="64be74dcae05b8d33310254d7deb4567" category="admonition">ドメイン名を含まないストレージ・システム名は、 15 文字以内で、名前を解決できる必要があります。15 文字を超える名前のストレージシステム接続を作成するには、 Add-SmStorageConnectionPowerShell コマンドレットを使用します。</block>
   <block id="5ef6092750c7671199206d0245a76865" category="admonition">MetroCluster 構成（ MCC ）を使用するストレージシステムでは、ノンストップオペレーションを実現するためにローカルクラスタとピアクラスタの両方を登録することを推奨します。</block>
   <block id="9463624cf85844c6d1cc19e6bba9da4e" category="paragraph">SnapCenter では、異なるクラスタにある同じ名前の SVM は複数サポートされません。SnapCenter でサポートされる SVM には、それぞれ一意の名前を付ける必要があります。</block>
   <block id="705dab32556bf86451bf893a05e5e68e" category="admonition">SnapCenter へのストレージ接続の追加後は、 ONTAP を使用して SVM またはクラスタの名前を変更しないでください。</block>
@@ -3241,7 +3229,6 @@
   <block id="c5c74f2a0046f37ca93f6d8e3c775364" category="list-text">Internet Explorer の互換表示を無効にする必要があります。</block>
   <block id="a5c41f715c1b8a880253846c025624e9" category="list-text">Microsoft Edge の場合</block>
   <block id="c939b5dd7dddc4f1908d7f58a2ab351d" category="summary">SnapCenter でデータ保護処理を有効にするには、複数のライセンスが必要です。インストールする SnapCenter ライセンスのタイプは、ストレージ環境および使用する機能によって異なります。</block>
-  <block id="fd1eaac7fcf946084f0e116a9bbd7697" category="paragraph">SnapCenter Standard ライセンスはコントローラベースのライセンスで、 Premium Bundle に含まれています。SnapManager スイートのライセンスをお持ちの場合は、 SnapCenter Standard のライセンスもご利用いただけます。FAS または AFF ストレージを使用した SnapCenter の試用版をインストールする場合は、営業担当者にお問い合わせください。</block>
   <block id="54e6e66bc0a69ef86d9bb0b63900793e" category="admonition">SnapCenter は、データ保護バンドルの一部としても提供されます。A400 以降を購入している場合は、データ保護バンドルを購入する必要があります。</block>
   <block id="7e83a2b4de6d5d07b3058e247d247d8a" category="paragraph">Cloud Volumes ONTAP または ONTAP Select を使用している場合は、 SnapCenter で管理するデータに基づいて、容量ベースのライセンスを 1TB 単位で購入する必要があります。デフォルトでは、 SnapCenter には 90 日間の 100TB SnapCenter の標準容量ベースの試用版ライセンスが組み込まれています。その他の詳細については、営業担当者にお問い合わせください。</block>
   <block id="82ef718f4ebe0c276814ee3d51e33361" category="paragraph">SnapRestore</block>
@@ -3263,9 +3250,6 @@
   <block id="cdc31d96c535e9b4d0a4c97b0340372f" category="admonition">SnapCenter Advanced および SnapCenter NAS ファイルサービスのライセンスは廃止され、現在は提供されていません。</block>
   <block id="59746a4c33021bdc9cb716ea91eadbb0" category="section-title">Single Mailbox Recovery （ SMBR ）ライセンス</block>
   <block id="8119a3fca1d141f0d7a8e7156604c296" category="paragraph">SnapCenter Plug-in for Exchange を使用して Microsoft Exchange Server データベースと Single Mailbox Recovery （ SMBR ）を管理している場合は、 SMBR のライセンスが追加で必要です。 SMBR の場合は、ユーザのメールボックスに基づいて別途購入する必要があります。</block>
-  <block id="0d5e6d352f8f3217e51e0df5fe981349" category="inline-link">SMBR リリースノート</block>
-  <block id="3305eb9373205972a06c6092007cad70" category="paragraph">メールボックスが 1 、 000 、 5000 、 15000 、 25000 個という単位で提供されている SMBR ライセンスを購入する場合は、ネットアップの営業担当者にお問い合わせください。SKU の購入後、の手順に従ってライセンスを取得できます<block ref="26f9ebf6b2beedaef61522277c7c5b3d" category="inline-link-rx"></block>。</block>
-  <block id="e641334b8b39e850790bd4b25b2e3cec" category="paragraph">ライセンスキーのリクエストを送信すると、 Kroll Ontrack は問題 50 メールボックスライセンスキーを送信します。資格に基づいて、 Kroll Ontrack は検証後にメールボックスのライセンスをアップグレードします。</block>
   <block id="da68fe81ae35bfda8d512b213d4ea64f" category="summary">FAS または AFF ストレージを使用している場合、ネットアップサポートサイトから SnapCenter コントローラベースのライセンスを取得してから、 ONTAP コマンドラインを使用してインストールできます。</block>
   <block id="315713e21026e04eaaa2b9a3821e4c3d" category="paragraph">有効なクレデンシャルを入力しないと、検索結果は返されません。</block>
   <block id="b5ddaee766816307a016e7736f50313d" category="paragraph">指定したコントローラのライセンスのリストが表示されます。</block>
@@ -3610,7 +3594,6 @@
   <block id="28cff6abd4b7b43406436e547f34789e" category="paragraph">SnapCenter には、 SnapCenter サーバと個々の軽量プラグインの両方が含まれています。リモートアプリケーションホストへのプラグインの導入を自動化したり、バックアップ、検証、クローニングの処理をスケジュールしたり、すべてのデータ保護処理を監視したりできます。</block>
   <block id="66f12d94976f038895bab4372ee87640" category="paragraph">SnapCenter は、次の方法で導入できます。</block>
   <block id="ad5726653853fba2b5d98515c638da77" category="list-text">オンプレミスで保護：</block>
-  <block id="3b5d218d734c41cfe8d9efd5e6fc8373" category="list-text">ONTAP FAS または AFF のプライマリシステム上にあり、 ONTAP FAS または AFF のセカンダリシステムにレプリケートされるデータ</block>
   <block id="7deab53ede49d0d1a58c65f2e25ff259" category="list-text">ONTAP Select プライマリシステム上のデータ</block>
   <block id="bc549d53e5e7a7aeb8a41511751a99f2" category="list-text">ハイブリッドクラウドのオンプレミスで以下を保護：</block>
   <block id="ca5570a253e3c0a27562c65c06bb6125" category="list-text">パブリッククラウドで次のデータを保護：</block>
@@ -4383,7 +4366,6 @@
   <block id="c41e777bd921bd5fc9079273c0ed35db" category="doc">SnapCenter Plug-in for Microsoft Exchange Server の概要</block>
   <block id="e126a0dff251b10008436e2bf2a5dd06" category="paragraph">SnapCenter Plug-in for Microsoft Exchange Server は、 Exchange データベースに対応したデータ保護管理を提供する、 NetApp SnapCenter ソフトウェアのホスト側コンポーネントです。Plug-in for Exchange を使用すると、 SnapCenter 環境での Exchange データベースのバックアップとリストアが自動的に実行されます。</block>
   <block id="94bf62b5661b3bf71e7b277fd3572bb1" category="paragraph">Plug-in for Exchange をインストールすると、 SnapCenter で NetApp SnapMirror テクノロジを使用して別のボリュームにバックアップセットのミラーコピーを作成できるほか、 NetApp SnapVault テクノロジを使用して標準への準拠やアーカイブを目的としたディスクツーディスクのバックアップレプリケーションを実行できます。</block>
-  <block id="7af37c4476756504b6f4b3b595f4e558" category="paragraph">Exchange データベース全体ではなくメールやメールボックスのリストアとリカバリを行う場合は、 Single Mailbox Recovery （ SMBR ）ソフトウェアを使用します。</block>
   <block id="b2589f75fce91547cb20c051fa1935d2" category="summary">Exchange データベースをリストアするときは、 SnapCenter サーバとの接続セッションを開始し、バックアップをリストしてバックアップ情報を取得し、バックアップをリストアします。</block>
   <block id="97e9982b58636ac0e13e42585b460313" category="doc">PowerShell コマンドレットを使用して Exchange リソースをリストアします</block>
   <block id="e8b2bea378ae2d61944327f562235bbe" category="list-text">「 Open-SmConnection 」コマンドレットを使用して、指定されたユーザの SnapCenter サーバとの接続セッションを開始します。</block>
@@ -4757,10 +4739,6 @@
   <block id="2807319f8bd59affef72f0158525b495" category="doc">メールとメールボックスのきめ細かいリカバリ</block>
   <block id="504c76abf7209921081fe0b281166c22" category="inline-link">『 SMBR アドミニストレーションガイド』</block>
   <block id="21816c8bcee290d4ecb4e3f7274ead69" category="paragraph">1 つのメールをリカバリするためだけにデータベース全体をリストアすると、時間とリソースが大量に消費されます。SMBR を使用すると、 Snapshot のクローンコピーを作成し、 Microsoft API を使用して SMBR 内のメールボックスをマウントすることで、メールを迅速にリカバリできます。SMBR の使用方法については、を参照してください<block ref="ec4bbb4517dd2ded0cc504f8d58977d4" category="inline-link-rx"></block>。</block>
-  <block id="7028749c09c12f8bb923863ce2b0cebe" category="inline-link-macro">SMBR ライセンス</block>
-  <block id="e2452ab679d04cfb5a81dfcf28af1c7d" category="list-text"><block ref="e2452ab679d04cfb5a81dfcf28af1c7d" category="inline-link-macro-rx"></block></block>
-  <block id="439c7150753e853ca177cd0e1ef12492" category="inline-link">SMBR のドキュメントライブラリです</block>
-  <block id="a586bd7e9166c5253992bcdf4d8b115e" category="list-text"><block ref="a586bd7e9166c5253992bcdf4d8b115e" category="inline-link-rx"></block></block>
   <block id="f367d650e57088caf7b808e01235016d" category="inline-link">SnapCenter を使用して SMBR のセカンダリストレージからリストアする方法</block>
   <block id="41b4c689a8b0e3ba8bfecb2a1e608e46" category="list-text"><block ref="41b4c689a8b0e3ba8bfecb2a1e608e46" category="inline-link-rx"></block></block>
   <block id="f004280f6db6ea5f9302c9851388d751" category="inline-link">SMBR を使用した SnapVault からの Microsoft Exchange メールのリカバリ</block>
@@ -5845,7 +5823,6 @@
   <block id="4a7e6c3a47ec940f7e3059981cd146da" category="paragraph">独自のカスタムプラグインは、を参照して作成できます <block ref="9ef4188c6ecd9ed20479c22e2842115e" category="inline-link-macro-rx"></block>。</block>
   <block id="83aeb7b594481ad598eb0b519836777b" category="summary">SnapCenter は、物理マシンと仮想マシンの両方でさまざまなストレージタイプをサポートしています。SnapCenter カスタムプラグインをインストールする前に、ストレージタイプがサポートされているかどうかを確認する必要があります。</block>
   <block id="c48a2f5430d3aff55420b834363bcc46" category="doc">SnapCenter Custom Plug-ins でサポートされるストレージタイプ</block>
-  <block id="6da41a50505a00272cd3a44cfd33c736" category="paragraph">物理サーバと仮想サーバ（ VMDK と RDM LUN はサポートされません）</block>
   <block id="caef6d3f9e7cdd9ed1d3eaabe29db549" category="summary">カスタムプラグインリソースを保護する場合は、 SnapCenter Custom Plug-ins をインストールしてセットアップする必要があります。</block>
   <block id="86f7f637d3819a7b4814644b7f8d8972" category="image-alt">SCC インストール設定ワークフロー</block>
   <block id="48f5a315d78b006c306e66d7b35fa6f4" category="summary">バックアップまたはクローンを作成するリソースを追加する必要があります。環境によっては、バックアップまたはクローンを作成するデータベースインスタンスやそのコレクションもリソースに含まれます。</block>
@@ -6041,7 +6018,6 @@
   <block id="624aa4628c7efc536a22463b3c04e7bf" category="paragraph">ファイルシステムが削除されない場合があります。次のコマンドを実行して 'clone_delete_delay パラメータの値を大きくする必要があります `./sccli Set-SmConfigSettings``</block>
   <block id="5a2f2b525efb0333ccf2d94e71dd9708" category="admonition">clone_delete_delay パラメータでは、アプリケーションクローンの削除が完了してからファイルシステムの削除が開始されるまでに待機する秒数を指定します。</block>
   <block id="51458de5e4f348eca31269218b799aa0" category="paragraph">パラメータの値を変更したら、 SnapCenter Plug-in Loader （ SPL ）サービスを再起動します。</block>
-  <block id="49076cf727b0227582a4747208b25f26" category="summary">SnapCenter の左側のナビゲーションペインで、ダッシュボードには、最近のジョブアクティビティ、アラート、保護の概要、ストレージの効率性と使用状況、 SnapCenter ジョブのステータス（バックアップ、クローン、リストア）、スタンドアロンおよび Windows クラスタホストの構成ステータスなど、システムの健全性が一目でわかります。 SnapCenter で管理されている Storage Virtual Machine （ SVM ）の数とライセンス容量。</block>
   <block id="1842816347041f3868bc9706c9a9e69b" category="doc">ダッシュボードの概要</block>
   <block id="784e370a7c51736fcc92afb2efec1327" category="paragraph">SnapCenter の左側のナビゲーションペインで、ダッシュボードを使用すると、最近のジョブアクティビティ、アラート、保護の概要、ストレージの効率性と使用状況、 SnapCenter ジョブのステータス（バックアップ、クローン、リストア）、スタンドアロンおよび Windows クラスタホストの構成ステータスなど、システムの健全性を一目で把握できます。 SnapCenter で管理されている Storage Virtual Machine （ SVM ）の数とライセンス容量。</block>
   <block id="ddfe3037f5fe958abe596df4766dd448" category="paragraph">ダッシュボードビューに表示される情報は、 SnapCenter に現在ログインしているユーザに割り当てられたロールによって異なります。ユーザにその情報を表示する権限がない場合、一部のコンテンツが表示されないことがあります。</block>
@@ -6119,7 +6095,6 @@
   <block id="e447dfc12dc0465fe7abb875acc701ec" category="paragraph">プラグインのインストールまたはアンインストールを実行中のホストの数。</block>
   <block id="5f576237a840d1af41718f5e4d14e1ff" category="section-title">ライセンス容量</block>
   <block id="0b7df058ba8c5977c997774a2124405b" category="paragraph">Licensed Capacity タイルには、 SnapCenter の標準容量ベースのライセンスの合計ライセンス容量、使用済み容量、容量しきい値アラート、およびライセンスの有効期限に関する情報が表示されます。</block>
-  <block id="bf764a2caa0380621bd4b4ebe7b2f86c" category="admonition">この画面が表示されるのは、 Cloud Volumes ONTAP または ONTAP Select プラットフォームで SnapCenter の容量ベースのライセンスを使用している場合のみです。FAS プラットフォームまたは AFF プラットフォームの場合、 SnapCenter ライセンスはコントローラベースであり、容量無制限のライセンスです。容量ライセンスは必要ありません。</block>
   <block id="5e33a12bc16d66724cc09b67c72dbf73" category="cell">ライセンスステータス</block>
   <block id="fb13b06128391d01035d684dfb9b511b" category="paragraph">使用中</block>
   <block id="cb3ff299fc7b6fb6d55514f087e601ce" category="paragraph">現在使用中の容量。</block>
@@ -6517,11 +6492,8 @@
   <block id="f011a01ebc3350e546311efaf71140bc" category="doc">SnapCenter の標準コントローラベースのライセンスを追加します</block>
   <block id="6aa5717c99b34de9980debfbe3c6fa76" category="admonition">お使いのコントローラにすでに SnapManagerSuite ライセンスがある場合は、 SnapCenter の標準コントローラベースのライセンス使用権が自動的に提供されます。SnapManagerSuite ライセンスと SnapCenter 標準のコントローラベースのライセンスは同じ意味で使用されますが、同じライセンスを指します。</block>
   <block id="a909f2df296012a51dc7da77f9e20dc6" category="list-text">該当しない場合は、ストレージコントローラが Cloud Volumes ONTAP 、 ONTAP Select 、またはセカンダリストレージプラットフォーム上にあるため、 SnapManager スイートのライセンスは適用されません。</block>
-  <block id="6709a231567d24784eb3e160f2720365" category="paragraph">ONTAP コマンドラインを使用すると、コントローラにインストールされているすべてのライセンスを表示できます。FAS または AFF システムのクラスタ管理者である必要があります。</block>
   <block id="e7590fb47d0f1f083a0a8a323aa643a0" category="admonition">SnapCenter の標準コントローラベースのライセンスが、 SnapManagerSuite ライセンスとしてコントローラに表示されます。</block>
-  <block id="aa9f3e3dd8188fb5cf1d9979b4a7a787" category="paragraph">コントローラベースのライセンスのシリアル番号を取得するには、コントローラのシリアル番号が必要です。ONTAP コマンドラインを使用すると、コントローラのシリアル番号を取得できます。FAS または AFF システムのクラスタ管理者である必要があります。</block>
   <block id="253fa4a7008b4934e4b20001065ef254" category="list-text">コントローラのシリアル番号を確認しておく必要があります。</block>
-  <block id="8109f2b1a2b4fcb7f972be2b07c29c46" category="list-text">FAS または AFF システムのクラスタ管理者である必要があります。</block>
   <block id="9a935baf19dae6c50cae12b831745abd" category="list-text">SnapCenter Standard または SnapManagerSuite のライセンスが必要です。</block>
   <block id="f01f22cfc141e64ad20b64a9b3f2ac85" category="paragraph">コントローラベースの SnapCenter 標準ライセンスを使用していて、容量ベースの試用版ライセンス ( シリアル番号は「 50 」で終わる ) を削除する必要がある場合は、 MySQL コマンドを使用して、試用版ライセンスを手動で削除する必要があります。SnapCenter GUI でトライアルライセンスを削除することはできません。</block>
   <block id="ca92f38ec64bb5da713b4badc8620434" category="paragraph">ゲスト OS で RDM の処理を実行するには、ホストに対する次の vCenter 権限が必要です。</block>
@@ -6782,7 +6754,6 @@
   <block id="c2230088d27abaa2d470e15431fe93b5" category="list-text">組み込みのプレ / ポストスクリプトフレームワークを使用してカスタムアプリケーションをバックアップします</block>
   <block id="b7ef57ec0d80db01d4596e446c5f7c1f" category="paragraph">ONTAP ボリューム、 LUN 、または qtree をバックアップできます。</block>
   <block id="2ba3d313a9f79b9a7c6749bf2e99acfa" category="list-text">SnapCenter ポリシーを使用して、プライマリで作成された Snapshot コピーを ONTAP セカンダリに対して更新し、既存のレプリケーション関係（ SnapVault/SnapMirror/ユニ ファイドレプリケーション）を利用します</block>
-  <block id="df7badec77400518a80c3c1b8ba12ab8" category="paragraph">ONTAP のプライマリとセカンダリには、 ONTAP FAS 、 AFF 、 Select 、 Cloud ONTAP があります。</block>
   <block id="0930cbd774389ffda4b953dfada42944" category="list-text">ONTAP ボリューム、 LUN 、またはファイルの完全なリカバリ</block>
   <block id="01416c60ab0c357d59811f108a67d5bd" category="paragraph">参照機能またはインデックス付け機能が製品に組み込まれていないため、それぞれのファイルパスを手動で指定する必要があります。</block>
   <block id="17f0138477115892c87d600e535c1ed0" category="paragraph">qtree またはディレクトリのリストアはサポートされませんが、バックアップの範囲が qtree レベルで定義されている場合にのみ、 qtree のクローニングとエクスポートを実行できます。</block>
@@ -6854,7 +6825,6 @@
   <block id="71e6f64a457aae198ec095aa115ff2d0" category="paragraph">ドメインコントローラ名が SnapCenter サーバから解決できない場合は、 DNS 解決を修正する必要があります。</block>
   <block id="a679759c30b6a98b50a9a2e53167f15b" category="list-text">ジョブが実行されていないことを確認したら、 SnapCenter リポジトリ（ MySQL ）データベースをバックアップする必要があります。この方法は、 SnapCenter サーバおよび Exchange プラグインをアップグレードする前に推奨されます。</block>
   <block id="a6230500cc307e0a76e575726dcf9cdd" category="list-text">アップグレード時に、 NSM データベースの Exchange データを更新するために SQL スクリプトが実行されます。これにより、 DAG およびホストの短縮名が FQDN に変換されます。これは、 SnapCenter サーバと Exchange プラグインを使用している場合にのみ該当します。</block>
-  <block id="4b1f6cbbab8f5d76a3e1d1b2c562722e" category="paragraph">4.5.x</block>
   <block id="66ae478deb0faaf5c7e1c6c30e561515" category="list-text">SAP HANA システムレプリケーション</block>
   <block id="bf44bd646cda2a6eae32f8dcdedbe899" category="list-text">プライマリ SAP HANA システムとすべてのデータ保護処理を実行できます。</block>
   <block id="8c0704450309a78e5288d21fa9908fcd" category="list-text">セカンダリ SAP HANA システムは保護できますが、バックアップは作成できません。</block>
@@ -7130,7 +7100,6 @@
   <block id="059746e7a20d1cda609e54b500f1f87c" category="sidebar">アプリケーションボリュームを管理する</block>
   <block id="7aac9b3cc279350b75cfbec4a3feabe4" category="sidebar">アプリケーションボリュームのバックアップ</block>
   <block id="01c23a6022de21870627c656bac73ece" category="sidebar">REST API を使用して自動化</block>
-  <block id="bbbbcb8f41827abddd8ec6151fdf9e99" category="sidebar">SnapCenter ソフトウェア</block>
   <block id="27e7993c4841ae5fd670cdd945ccb96d" category="inline-link">ディザスタリカバリ API</block>
   <block id="90840bc3d6109c892e0f709274fdc6b6" category="paragraph">詳細については、を参照してください<block ref="af818973dd6acaf1e28a3bd4ca9bd4a5" category="inline-link-rx"></block> ビデオ：</block>
   <block id="c6a05503c268c70227420c852ced4926" category="admonition">/etc/fstab ファイル内の UUID マッピングは SnapCenter でサポートされません。</block>
@@ -7561,7 +7530,6 @@
   <block id="696ac2aea44e94108d138faca1e6061a" category="list-text">PowerShellセッションを使用して、_New-SmMultifactorAuthenticationMetadata-path_cmdletを使用して、SnapCenter MFAメタデータファイルを生成します。</block>
   <block id="c82bb0422af1b29a8b9694bbfe3ebe9e" category="paragraph">pathパラメータでは、SnapCenter サーバホストにMFAメタデータファイルを保存するパスを指定します。</block>
   <block id="56fcee91de3134d2db0d32a05335e432" category="list-text">生成されたファイルをAD FSホストにコピーし、SnapCenter をクライアントエンティティとして設定します。</block>
-  <block id="588a899e5cfd7ee10458176f79204605" category="paragraph">pathパラメータでは、手順3でSnapCenter サーバにコピーされたAD FS MFAメタデータXMLファイルの場所を指定します。</block>
   <block id="9e93c22d2a1e4426ec1fd94bd4ac31b3" category="list-text">Microsoft管理コンソール（MMC）に移動し、次の手順を実行します。</block>
   <block id="9bcb5adfefb899867ed5b11f042b98db" category="list-text">[*ファイル*&gt;*スナップインの追加と削除*]をクリックします。</block>
   <block id="cf424f2e43207d2c78b3d27a5dc0fda2" category="list-text">［*コンソールルート*］&gt;［*証明書–ローカルコンピューター*］&gt;［*個人*］&gt;［*証明書*］の順にクリックします。</block>
@@ -7585,7 +7553,6 @@
   <block id="c3613ef2b11238bd320ee942d11e6fe4" category="list-text">証明書利用者信頼を右クリックし、* Properties *を選択します。</block>
   <block id="35602ea96136092b8b885fe1ef749873" category="list-text">[エンドポイント]、[識別子]、および[署名]フィールドに値が入力されていることを確認します</block>
   <block id="907fe6bfcd498fe3e561f7fb3ee67c89" category="paragraph">SnapCenter MFA機能は、REST APIを使用して有効にすることもできます。</block>
-  <block id="442ed19a31ac1f651ba7bf07effe122c" category="inline-link-macro">複数のタブでのSnapCenter ログインでMFAエラーが表示される</block>
   <block id="aeb89440d41f10fd9cc43ab75d800138" category="section-title">AD FS MFAメタデータを更新します</block>
   <block id="19b3ff63dd3f3b6c1e3e48e8b3be6141" category="paragraph">AD FSサーバでアップグレード、CA証明書の更新、DRなどの変更が行われた場合は、SnapCenter でAD FS MFAメタデータを更新する必要があります。</block>
   <block id="2a18eff05051b9c720a786193ade4742" category="list-text">ダウンロードしたファイルをSnapCenter サーバにコピーしてMFA設定を更新します。</block>
@@ -7656,7 +7623,6 @@
   <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知ファイルには、ネットアップソフトウェアで使用されるサードパーティの著作権およびライセンスに関する情報が記載されています。</block>
   <block id="1dee04b6f048297be6da9f8740c99b6d" category="admonition">証明書のインポートは、秘密鍵にバンドルされている必要があります（サポートされている形式は、*.pfx、*.p12、および*.p7b）。</block>
-  <block id="bd259d74a88fa9ae4cdb9c027643d76a" category="paragraph">FAS およびAFF に必要です</block>
   <block id="56b5155701c0c0dd57595a6dd3daf917" category="list-text"><block ref="336b55519098bef0384fc43c7f43f47b" prefix="" category="inline-code"></block></block>
   <block id="eda6105c4f159883b951dcd044964c6f" category="list-text"><block ref="2c9674954a47108e373e077d3bcb8357" prefix="" category="inline-code"></block></block>
   <block id="4cf7cdb80a69806b961d32bc57f3ac26" category="list-text"><block ref="ad3921143a52d77fc513fd3dae33e149" prefix="" category="inline-code"></block></block>
@@ -7664,36 +7630,17 @@
   <block id="d8135ce9a2bd17b9c659e4605801a778" category="list-text"><block ref="f659aa294fff6eaecdf95876c173adf6" prefix="" category="inline-code"></block></block>
   <block id="dde541c94f2b033571de6bfe76fcf3c3" category="list-text"><block ref="234efccf9d477e939eeae95c37c1803f" prefix="" category="inline-code"></block></block>
   <block id="e2bb7a9783ce9c6c02e6001911562e16" category="list-text"><block ref="2e72f8b3689961923dec66f94cdf620f" prefix="" category="inline-code"></block></block>
-  <block id="6c27677d6e913bc79948a8f54acbd25c" category="list-text">ONTAP FAS またはAFF プライマリ/セカンダリシステム上にあり、ローカルStorageGRID オブジェクトストレージに保護されているデータ（ネットアップのBlueXPクラウドバックアップ統合を使用）</block>
-  <block id="88ff864aa61d80e2b8a79a0f91b36f3b" category="list-text">ONTAP FAS またはAFF プライマリシステム上にあり、Cloud Volumes ONTAP にレプリケートされるデータ</block>
-  <block id="4715420841b96150a5fff8e31c55eeb2" category="list-text">ONTAP FAS またはAFF のプライマリシステムとセカンダリシステム上にあり、クラウド上のオブジェクトストレージとアーカイブストレージに保護されているデータ（NetApp BlueXP Cloud Backup統合を使用）</block>
   <block id="b380e442ff5c6e48e283af8b6f99806f" category="list-text">Amazon FSX for ONTAP 上にあるデータ</block>
-  <block id="bb9b211047ca9fd3aa94d088f95891ee" category="paragraph">Windowsコマンドレットの詳細については、を参照してください<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>。</block>
-  <block id="491d379e6629985a2ada1aa1be5dbaff" category="paragraph">UNIXコマンドの詳細については、を参照してください<block ref="868bc9c3fbc71eae2d899862af6d942e" category="inline-link-rx"></block>。</block>
   <block id="a297bacde66e3d1853eb926b992016ec" category="list-text">IPSecは、WindowsおよびLinuxホスト・マシン用のONTAP 上のSnapCenter でサポートされます。<block ref="52c5124591037410e72e18ed041cfca4" category="inline-link-rx"></block>。</block>
   <block id="c23c7626b0637210ef5d62fd1d1df00f" category="list-text">SnapCenter サーバとONTAP 間のCA証明書認証をサポートします。<block ref="8dc6eaab1bf71e00e4e0bc0ca43579e6" category="inline-link-rx"></block>。</block>
   <block id="330847308f1658ea8a183b76b1e6b361" category="list-text">SnapCenter サーバとプラグインに整合性検証機能が追加され、新規インストールおよびアップグレード処理中に出荷されたすべてのバイナリが検証されます。</block>
   <block id="70871ac0eac7d5e43a705f18b69f6651" category="admonition">複数のスクリプトを指定することはできません。</block>
   <block id="d3873d463c5b3fb3a7750ff0ae00fee1" category="paragraph">デフォルトでは、タイムアウトは60秒に設定されています。タイムアウト値を変更できます。</block>
   <block id="7dc560127d94117067b15f71651a7211" category="paragraph">監査設定に関連する構成ファイルはDRバックアップにバックアップされず、リストア処理後にDRサーバにもバックアップされません。監査ログの設定を手動で繰り返す必要があります。</block>
-  <block id="5f3dbd65abc0c8e09475825857078de8" category="paragraph">コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>。</block>
-  <block id="7a29c89d8f76feea0ca358fb1edb3864" category="inline-link">SnapCenter 4.8の注意事項は以下のとおりです</block>
-  <block id="87cf8ed19692a681dacb14a050a89217" category="paragraph"><block ref="87cf8ed19692a681dacb14a050a89217" category="inline-link-rx"></block></block>
-  <block id="7ed3417ce7f529178e5bb25b31b39fc6" category="paragraph">PowerShell コマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、クローニングの処理を実行することもできます。SnapCenter コマンドレットのヘルプまたはを使用します<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block> PowerShell コマンドレットの詳細については、を参照してください。</block>
   <block id="cab00f169fcfeb601710dd89ecbfedf0" category="admonition">保持数を2以上に設定してください。保持数の最小値は2です。</block>
-  <block id="5efaab231bdeaf77ed795fa0e9d5b3e4" category="paragraph"><block ref="0a3e2ef7f51b42a7ddee804547031be0" category="inline-link-rx"></block>。</block>
-  <block id="c6bac95430dac4e5070788ce23acefc4" category="paragraph">コマンドレットで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。または、を参照することもできます<block ref="3f0d4c4b3a1c9cfa1189bb7484d60c1b" category="inline-link-rx"></block></block>
-  <block id="0001160fa843faa4e5294c286bd2a184" category="paragraph">PowerShell コマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、クローニングの処理を実行することもできます。PowerShell コマンドレットの詳細については、 SnapCenter のコマンドレットのヘルプを使用するか、コマンドレットのリファレンス情報を参照してください。<block ref="0a3e2ef7f51b42a7ddee804547031be0" category="inline-link-rx"></block>。</block>
-  <block id="9e9b8895f32adb6f730895bc11f2874a" category="paragraph">コマンドで使用できるパラメータとその説明については、 RUNNING Get Help command_name _ を使用して参照できます。または、を参照することもできます<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>。</block>
-  <block id="7d5e98342223338218f7d96b6f09048c" category="paragraph">コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block></block>
-  <block id="517b39b6edfcd923dff2604ce021f723" category="paragraph">また、 _Uninstall-sSmHostPackage_ コマンドレットと必要なパラメータを使用して、複数のホストからプラグインをアンインストールすることもできます。コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>。</block>
-  <block id="e125da4cc0e5138fb35b5f0e2a1ba201" category="paragraph">コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>。</block>
-  <block id="a79368498522acef202a75204e93905e" category="inline-link">SnapCenter ソフトウェア4.8リリースノート</block>
-  <block id="c9d12743ca0ae0d66da7b9ce9795a0e8" category="paragraph">詳細については、を参照してください<block ref="9b9dacb6ec864e8f90c589c7a3a6bf3e" category="inline-link-rx"></block>。</block>
   <block id="5caa66eb9aef1c67f7e4f30ff2fa96b3" category="paragraph">データベースをリストアすると、データベースで複数の処理が実行されないように、Oracleデータベースホスト上の_/var/opt/snapcenter/sco/lockディレクトリに運用ロックファイル（.SM_lock_dbsid）が作成されます。処理ロックファイルは、データベースのリストアが完了すると自動的に削除されます。</block>
   <block id="6aa52762a93e2798d142fe8255a41086" category="paragraph">オプションのプレインストールチェックを省略します</block>
   <block id="b1973a0eeb1e8eeaf3ab59ec202bef7a" category="paragraph">プラグインを手動でインストール済みで、プラグインをインストールするための要件をホストが満たしているかどうかを検証しない場合は、このチェックボックスを選択します。</block>
-  <block id="c2e2989cd34de9d2b93fbc71f60ffe4e" category="paragraph">または、を参照することもできます<block ref="868bc9c3fbc71eae2d899862af6d942e" category="inline-link-rx"></block> または<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>。</block>
   <block id="4a320bb1e5b313ab794ae3a798ba5cde" category="paragraph">SnapCenter Plug-in for Oracle Database は、 root 以外のユーザがインストールできます。ただし、プラグインプロセスをインストールして開始できるように root 以外のユーザに sudo 権限を設定する必要があります。プラグインをインストールすると、有効なroot以外のユーザとしてプロセスが実行されるようになります。</block>
   <block id="9bcf1803da6ec5a261d57713df8efcbd" category="list-text">LinuxまたはAIXホストにJava 1.8.xまたはJava 11（64ビット）をインストールしておく必要があります。</block>
   <block id="48b525b2b37df887839c2e72d7a4a780" category="admonition">LinuxホストにJava 11の認定エディションのみがインストールされていることを確認します。</block>
@@ -7709,7 +7656,6 @@
   <block id="5dcb853141d33f26c1df2f75da07200a" category="list-text">Java 1.8.x（64ビット）IBM Java</block>
   <block id="3fe85b9e16f08cb63e5aaa5c215097d7" category="list-text">Java 11（64ビット）IBM Java</block>
   <block id="449945354085db74a6111d72389e1ae2" category="paragraph">SnapCenter 4.4 以降では、 root 以外のユーザが SnapCenter Plug-ins Package for AIX をインストールしてプラグインプロセスを開始できます。プラグインプロセスは、有効なroot以外のユーザとして実行されます。いくつかのパスにアクセスできるように root 以外のユーザに sudo 権限を設定する必要があります。</block>
-  <block id="7377c325bca0c913abf66d3359e41873" category="paragraph">コマンドで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。または、を参照することもできます<block ref="868bc9c3fbc71eae2d899862af6d942e" category="inline-link-rx"></block>。</block>
   <block id="1c23de25f91ce669fff9d59cc422c0a2" category="list-text">OracleおよびGRIDではなく、デフォルト以外のすべてのユーザをサポートします。</block>
   <block id="5719854a3b7b80da5cee21080c26176d" category="paragraph">デフォルト以外のユーザをサポートするには、_ file /var/opt/snapcenter/sco/etc/_にある* sco.properties*ファイル内のパラメータの値を変更して、デフォルト以外のユーザを設定する必要があります。</block>
   <block id="596031c7fa0294b7a2d304ec2e1bce8b" category="paragraph">パラメータのデフォルト値は、OracleとGridに設定されています。</block>
@@ -7717,8 +7663,6 @@
   <block id="bd1da13993f5b5f04502598c088daa4d" category="list-text">db_group=oinstall</block>
   <block id="663b345154500cc2d3165730e7c7b6bc" category="list-text">gi_user = grid</block>
   <block id="e5df7718dd7d60593c1dd152b40b7e4c" category="list-text">gi_group = oinstall</block>
-  <block id="0711b76cd7e563341c756717999a670c" category="paragraph">コマンドで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。または、を参照することもできます<block ref="868bc9c3fbc71eae2d899862af6d942e" category="inline-link-rx"></block>。</block>
-  <block id="11e64631478998d0abd8d43e9b74d6a6" category="paragraph">UNIX コマンドの詳細については、を参照してください<block ref="868bc9c3fbc71eae2d899862af6d942e" category="inline-link-rx"></block>。</block>
   <block id="f121e384c92705c4b18570e5ff63adf9" category="paragraph">コマンドレットまたはCLIを使用して、LinuxまたはAIX用のPlug-ins Packageを手動でインストールすることもできます。</block>
   <block id="806e5ebc9beaaf28454809d5a1530f91" category="paragraph">プラグインを手動でインストールする前に、_ C：\ProgramData\NetApp\SnapCenter \Package Repository_に あるキー* snapcenter public_key.pub *と* snapcenter _ linux_host_plugin.bin .sig *を使用して、バイナリパッケージの署名を検証する必要があります。</block>
   <block id="f718f3aee36dcfdcdb35028984a1e647" category="admonition">プラグインをインストールするホストに* OpenSSL 1.0.2G*がインストールされていることを確認します。</block>
@@ -7729,27 +7673,12 @@
   <block id="6623e432bed8da22308ef3173b2ba905" category="paragraph">コマンドラインインターフェイス（CLI）を使用して、SnapCenter Plug-ins Package for Linuxをサイレントモードでインストールできます。</block>
   <block id="82c192c42c691360a69594ce2e29350e" category="paragraph">Oracleデータベースのバックアップを作成する際に、データベースで複数の処理が実行されないように、Oracleデータベースホスト上の_/var/opt/snapcenter/sco/lockディレクトリに処理ロックファイル（_.SM_lock_dbsid_）が作成されます。処理ロックファイルは、データベースのバックアップが完了すると自動的に削除されます。</block>
   <block id="8e42557ecacac1b49fb43986a24acae3" category="list-text">コマンドプロンプトで、_/var/opt/snapcenter/sco/lockに移動します。</block>
-  <block id="12e41bdd9444d355c65f1b199c10bb5f" category="paragraph">コマンドで使用できるパラメータとその説明に関する情報は、 Get-Help コマンド _name を実行して取得できます。または、を参照することもできます<block ref="868bc9c3fbc71eae2d899862af6d942e" category="inline-link-rx"></block>。</block>
-  <block id="2d68b9458c6165a5eeeb8d311718b600" category="paragraph">PowerShell コマンドレットを手動またはスクリプトで使用して、バックアップとリストアの処理を実行することもできます。PowerShell コマンドレットの詳細については、 SnapCenter コマンドレットのヘルプを使用するか、を参照してください<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>。</block>
-  <block id="c6f3b6a232739129385caa78e571328f" category="paragraph">コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照してください<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>。</block>
-  <block id="b6a1d5caea1f8fdc446d41a31f9cfe3e" category="paragraph">PowerShell コマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、クローニングの処理を実行することもできます。PowerShell コマンドレットの詳細については、 SnapCenter コマンドレットのヘルプを使用するか、を参照してください<block ref="3f0d4c4b3a1c9cfa1189bb7484d60c1b" category="inline-link-rx"></block></block>
   <block id="ae91f671bc06c1b556cc5ac890cddce0" category="list-text">Java 1.8またはJava 11（64ビット）がLinuxホストまたはWindowsホストにインストールされている必要があります。</block>
   <block id="ac9f8e08e831f7c1b56f125cc171d3e4" category="list-text">Java 1.8またはJava 11（64ビット）をLinuxホストにインストールしておく必要があります。</block>
   <block id="c4dff45b697890d0a8ca7ca9f815fee6" category="paragraph">SnapCenter ServerホストにWindows Server 2019またはWindows Server 2016を使用している場合は、Java 1.8またはJava 11（64ビット）をインストールする必要があります。要件の最新情報については、 Interoperability Matrix Tool （ IMT ）を参照してください。</block>
   <block id="8cab0b64f941cd66c63c70f6dcc91d69" category="list-text">いくつかのパスにアクセスできるように root 以外のユーザに sudo 権限を設定する必要があります。visudo Linux ユーティリティを使用して、 /etc/sudoers ファイルに次の行を追加します。</block>
   <block id="2cae85768532ad729badbc9d82df69b0" category="admonition">Sudoバージョン1.8.7以降を使用していることを確認します。</block>
-  <block id="7c17a5f75782af4f820b286a07f51777" category="paragraph">PowerShell コマンドレットについては、 SnapCenter コマンドレットのヘルプを使用するか、を参照してください<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>。</block>
-  <block id="1ef6040ccf2cfe6eabc18de550769a4f" category="list-text">SVM に複数のデータパス（ LIF ）がある場合は、 NFS クローンボリュームをマウントするための適切なデータパス（ LIF ）が SnapCenter によって選択されます。ただし、特定のデータパス（ LIF ）を指定する場合は、 Set-SvmPreferredDataPath CLI を実行する必要があります。コマンドで使用できるパラメータとその説明については、 RUNNING Get Help command_name _ を使用して参照できます。または、を参照することもできます<block ref="868bc9c3fbc71eae2d899862af6d942e" category="inline-link-rx"></block>。</block>
-  <block id="87dee260ac24c847f6318306d701cdaf" category="paragraph">PowerShell コマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、クローニングの処理を実行することもできます。PowerShell コマンドレットについては、 SnapCenter コマンドレットのヘルプを使用するか、を参照してください<block ref="3f0d4c4b3a1c9cfa1189bb7484d60c1b" category="inline-link-rx"></block>。</block>
-  <block id="3c408f97e0a21affc59c011044498f97" category="paragraph">PowerShell コマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、クローニングの処理を実行することもできます。PowerShell コマンドレットの詳細については、 SnapCenter コマンドレットのヘルプを使用するか、を参照してください<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>。</block>
-  <block id="551a33d207af23d33dc7ae8b0fcc767e" category="paragraph">PowerShell コマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、リカバリ、検証、クローニングの処理を実行することもできます。PowerShell コマンドレットの詳細については、 SnapCenter コマンドレットのヘルプを使用するか、を参照してください<block ref="3f0d4c4b3a1c9cfa1189bb7484d60c1b" category="inline-link-rx"></block></block>
-  <block id="36b5bc8569a0d58f30345b63446499e3" category="paragraph">詳細については、を参照してください<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>。</block>
-  <block id="2dfd0f9f208059d0a9543cb1558cea8f" category="paragraph">コマンドレットの実行方法については、を参照してください<block ref="3f0d4c4b3a1c9cfa1189bb7484d60c1b" category="inline-link-rx"></block></block>
-  <block id="4e8d1223f4ffd73f23495af28c3c7669" category="paragraph">コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照してください<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>。</block>
-  <block id="b1d0f68016df3655c241c0884e44b7fb" category="paragraph">コマンドレットの詳細については、を参照してください<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>。</block>
-  <block id="1e0e854d46f7fdae75748f42803b83f4" category="paragraph">詳細については、を参照してください<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>。</block>
   <block id="423dd9f09f9c39167ffc1c8d5030b8c6" category="list-text">フェイルオーバー時、監査ログの設定が2つ目のノードに反映されません。このため、F5パッシブノードがアクティブになった場合は、そのノードで監査ログ設定を手動で繰り返してください。</block>
-  <block id="b2079ecc7149f6a09b8dd46c38e9fbe6" category="paragraph">PowerShell コマンドレットを使用すると、 SnapCenter GUI に加え、設定、バックアップ、リストアの各処理を実行するスクリプトを作成できます。一部のコマンドレットは、各 SnapCenter リリースで変更された可能性があります。。<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block> に詳細を示します。</block>
   <block id="6e5f2d1e77d0e2fa921f3222dc72f4e7" category="summary">ソフトウェアプラットフォームおよびそれらのプラットフォームで実行されているすべてのソフトウェアのセキュリティイベントをログに記録するようにを設定できます。</block>
   <block id="d454841b95073c538e44b3f3299d1ce5" category="doc">監査ログを設定します</block>
   <block id="8e2dc41a491856f4fec28e22208ade0b" category="paragraph">監査ログは、SnapCenter サーバのすべてのアクティビティについて生成されます。デフォルトでは、監査ログはインストールされているデフォルトの場所である_ C：\Program Files\NetApp\Virtual \SnapCenter WebApp\audit\_にあります。</block>
@@ -7765,7 +7694,6 @@
   <block id="3c15d7a6541e416f0d13373ee63fd0c0" category="paragraph">共有ドライブまたはネットワークマウントドライブはサポートされません。</block>
   <block id="d90e9077285809de90243e91ed3a10bc" category="list-text">syslogサーバ設定でUDPプロトコルが使用されている場合、ポートが停止しているか使用できないことによるエラーは、SnapCenter ではエラーまたはアラートとしてキャプチャできません。</block>
   <block id="b398a3651d49f0eb14349eff9cfdec58" category="list-text">Set-SmAuditSettingsコマンドとGet-SmAuditSettingsコマンドを使用して、監査ログを構成できます。</block>
-  <block id="28e97aa2b5ca929ab9bd2ef8535b4f26" category="paragraph">コマンドレットで使用できるパラメータとその説明については、 Get-Help コマンドレットを実行して確認できます。または、を参照することもできます<block ref="c8399eb92bca49a664acc7e0445d090e" category="inline-link-rx"></block>。</block>
   <block id="b081c433d361cfcb39c391b352a6f526" category="list-text">[*設定*]ページで、[*設定*]&gt;[*グローバル設定*]&gt;[*監査ログ設定*]の順に選択します。</block>
   <block id="f3645e45f905156003cb2bb7741a86f3" category="list-text">監査ログセクションに詳細を入力します。</block>
   <block id="bc622cdadddc54b812b2df6bb7115372" category="list-text">監査ログ・ディレクトリ*および*監査チェックサム・ログ・ディレクトリ*を入力します</block>
@@ -7782,29 +7710,16 @@
   <block id="79e06e5c035a2c2f7382e995d5baa08e" category="list-text">「Syslog Server Protocol」と入力します</block>
   <block id="7a86ee54e2df90d7a4109938e53c1deb" category="list-text">RFC形式を入力します</block>
   <block id="ace31f9e5f442121e5c3914671ec85d3" category="list-text">監査整合性チェックとディスク領域チェックは、* Monitor *&gt;* Jobs *をクリックすると表示できます。</block>
-  <block id="d251696f5e122ef9209620841c14e519" category="sidebar">SnapCenter ソフトウェア4.8のドキュメント</block>
   <block id="3c07dcecb29c0d53519899b31b85fb61" category="paragraph">Windows Server では、 SnapCenter プロビジョニングとデータ保護がサポートされます。サポートされているバージョンの最新情報については、を参照してください <block ref="0777b5ea2405197c6a0ed1eeb8c4cc9a" category="inline-link-rx"></block>。</block>
   <block id="dfaba282a50c2055e70279d05523fba2" category="paragraph">サポートされているバージョンの最新情報については、を参照してください<block ref="0777b5ea2405197c6a0ed1eeb8c4cc9a" category="inline-link-rx"></block>。</block>
-  <block id="775fcd440db131b498769960f53ac310" category="paragraph">サポートされているバージョンの最新情報については、を参照してください<block ref="9b2c9c657bf3e52183d3c1f767265001" category="inline-link-rx"></block>。</block>
   <block id="384ecb62d880a9048cd6ee500f8ffcdb" category="summary">SnapCenter ユーザインターフェイス（ UI ）を使用して、 SnapCenter Plug-in for SAP HANA Database をインストールする必要があります。環境でSnapCenter UIからプラグインのリモートインストールが許可されていない場合は、コマンドラインインターフェイス（CLI 1）を使用して、コンソールモードまたはサイレントモードでPlug-in for SAP HANA Databaseをインストールできます。</block>
-  <block id="23760d8f892e346ebd63fac3623b2dc5" category="paragraph"><block ref="2fc9f2abb842b420f8ecb28df62e8563" category="inline-link-rx"></block></block>
   <block id="ffaafcbad8fa7abfb6f9166b4bc76388" category="doc">SAP HANA のバックアップ処理をキャンセルします</block>
   <block id="b2e1462cde70f9661bba1f1be6a19b4c" category="admonition">アプリケーションボリュームでは、直接NFS接続と直接iSCSI接続のみがサポートされます。</block>
-  <block id="11b0f8f84dad84d83f62b94ccfa1b29c" category="paragraph">サポートされているバージョンの最新情報については、を参照してください<block ref="6acebae1875d0d6142cdf2d6c44ca5c9" category="inline-link-rx"></block>。</block>
-  <block id="5a796427718586fb90b0404a63c79380" category="list-text"><block ref="fabd53b99023376bd3ff2670d534d874" category="inline-link-rx"></block></block>
-  <block id="d02b4aec015712043efb147f73173ce0" category="paragraph">SnapCenter Plug-in for Oracle Database でサポートされる構成をに示します<block ref="6acebae1875d0d6142cdf2d6c44ca5c9" category="inline-link-rx"></block>。</block>
-  <block id="8c23b286e970d7aba3f0ba4cac55a3ce" category="paragraph">。<block ref="1bc5f97517692552b0fc613a6280d44d" category="inline-link-rx"></block> サポートされているバージョンに関する最新情報が含まれています。</block>
-  <block id="b10fc427c86b36d441f4bfabc9179bfd" category="paragraph">サポートされている Oracle のバージョンの最新情報については、を参照してください<block ref="6acebae1875d0d6142cdf2d6c44ca5c9" category="inline-link-rx"></block>。</block>
   <block id="afd32bd411643d7b80e9795732fc2190" category="list-text">次のコマンドを入力して、プラグインをインストールします。</block>
   <block id="27881336d2ff10b5a1baa10f7bca34a1" category="list-text">SnapCenter Plug-in for Microsoft SQL Server、SnapCenter Plug-in for Microsoft Exchange Server、およびSnapCenter Plug-in for Microsoft Windowsの場合、サーバとプラグインホストの両方を、scripts_pathを実行する最新バージョンにアップグレードすることを推奨します。</block>
   <block id="8ab368eff7e361869ef717b446f7ec1b" category="paragraph">関連するすべてのサービスは、プラグインのアップグレード中に再開されます。</block>
-  <block id="07a646d112ec3924e97a5c5bd588d4c2" category="paragraph">サポートされているバージョンの最新情報については、を参照してください<block ref="b7a3cb4f690df02dff49048f9cc465b2" category="inline-link-rx"></block></block>
   <block id="44dcf11fb80178db211421840242c071" category="summary">SnapCenter カスタムプラグインは、 SnapCenter ユーザインターフェイス（ UI ）を使用してインストールする必要があります。環境内でSnapCenter UIからプラグインをリモートでインストールできない場合は、コマンドラインインターフェイス（CLI）を使用して、コンソールモードまたはサイレントモードでカスタムプラグインをインストールできます。</block>
-  <block id="f779fc9eb5facb1b4cb7f109a2d58be2" category="paragraph"><block ref="063c6867f0d5dcf21978239569098f3b" category="inline-link-rx"></block></block>
   <block id="6128abac450b413be3b6d65797422307" category="paragraph">を参照してください<block ref="c50d85e9b4db596cb2a135c4e622135b" category="inline-link-rx"></block></block>
-  <block id="62daf6a07ef62b5f47d64602451886c4" category="paragraph">サポートされているバージョンの最新情報については、を参照してください<block ref="78bb88f9abe535c4182359f981c4d0d5" category="inline-link-rx"></block>。</block>
-  <block id="8b64c44e24e9cf1c59554cf2c41479bf" category="paragraph">サポートされているアプリケーションおよびデータベースの詳細については、を参照してください<block ref="78bb88f9abe535c4182359f981c4d0d5" category="inline-link-rx"></block>。</block>
-  <block id="026ab5d2853d1f0c92bc7f3703d62e90" category="sidebar">SnapCenter ソフトウェアは、シンプルで拡張性に優れた一元的なプラットフォームです。ハイブリッドクラウドの任意の場所にある ONTAP システムで実行されているアプリケーション、データベース、ホストファイルシステム、 VM に対して、アプリケーションと整合性のあるデータ保護を提供します。このドキュメントライブラリには、バージョン4.8の情報が含まれています。</block>
   <block id="3f02fb62bfeb289d4be1d20d610004f0" category="doc">ディザスタリカバリ（DR）REST API</block>
   <block id="d32779bdd599ffb81c5a1d466000d56e" category="paragraph">SnapCenter ディザスタリカバリ（ DR ）機能では、 REST API を使用して SnapCenter サーバをバックアップします。DR REST APIを使用する前に、次の手順を実行します。</block>
   <block id="c78f6c96db76c1f69e91b5487e704f43" category="list-text">DRバックアップREST APIを使用して、指定したサーバDRバックアップからSnapCenter サーバをリストアする新しいサーバDRバックアップを作成します。<block ref="fe172164c0bbfbb71439d4e0d42883f5" prefix=" " category="inline-code"></block></block>
@@ -7856,15 +7771,11 @@
   <block id="a3c30c25a1e544471bac224e74207425" category="paragraph">DR は、 SnapCenter Plug-in for SQL Server でのみサポートされます。SnapCenter Plug-in for SQL Server がダウンしたときに、別の SQL ホストに切り替えてデータをリカバリする手順はいくつかあります。を参照してください <block ref="47046db67c1574cb29142c431fb68f1f" category="inline-link-macro-rx"></block>。</block>
   <block id="9fbd6c9c898d3b24f2f3cfa67bb8c2b2" category="paragraph">SnapCenter は、 ONTAP の SnapMirror テクノロジを使用してデータをレプリケートします。DR 用にセカンダリサイトにデータをレプリケートして同期し続けることができます。フェイルオーバーは、 SnapMirror のレプリケーション関係を解除することによって開始できます。フェイルバック中に、同期を反転させて DR サイトのデータをプライマリサイトにレプリケートすることができます。</block>
   <block id="d4dbc002513d2615e9e9009874835b86" category="doc">多要素認証（MFA）を管理します。</block>
-  <block id="eba5e183c4f404bb057076dc4ea10e64" category="paragraph">このトピックでは、Active Directoryフェデレーションサービス(AD FS)サーバーとSnapCenter サーバーで多要素認証(MFA)機能を管理する方法について説明します。</block>
   <block id="8e5ca8947d2ccd889e10c25276502da0" category="section-title">多要素認証（MFA）を有効にする</block>
-  <block id="cf9e251e098e2f47bcb8e04e9e5ff28a" category="paragraph">このトピックでは、Active Directoryフェデレーションサービス(AD FS)サーバーとSnapCenter サーバーでMFA機能を有効にする方法について説明します。</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="list-title">このタスクについて</block>
-  <block id="1f6600010f63592c168af66c387c499f" category="list-text">コマンドレットで使用できるパラメータとその説明は、を実行して確認できます<block ref="b306feeed6ddda97d08ef1f2a0ba62d9" prefix=" " category="inline-code"></block>。または、を参照することもできます<block ref="5df59c30e631270dc31bf843919ab849" category="inline-link-rx"></block>。</block>
   <block id="4ceb1d36799251586ba061a0c2b9a7a8" category="list-text">Azure MFA、Cisco Duoなど、AD FSがサポートする多要素認証サービスが必要です。</block>
   <block id="090c9bbbd344aa7f6441901f2b8792f8" category="list-text">自己署名証明書はノードレベルで一意であるため、ADFS-F5通信が切断されないようにします。</block>
   <block id="30c7dffa036eadcc0342139cec28fa70" category="list-text">AD FSフェデレーションメタデータファイルをからダウンロードします <block ref="a9571343becbc81f25857902551c1e72" category="inline-link-rx"></block> Fqdn&gt;/FederationMetadata/2007-06/FederationMetadata.xml」を参照してください。</block>
-  <block id="aae311364aff04070e63a86b4fe0296f" category="list-text">を使用して、SnapCenter サーバのMFAを有効にします<block ref="1254f269a5dd80690678b4df201e88a5" prefix=" " category="inline-code"></block> コマンドレット。</block>
   <block id="13cb11c142fa4483919ae32dd2a04113" category="list-text">（オプション）を使用して、MFAの設定のステータスと設定を確認します<block ref="d99b90475295700e9775deadcb723ac6" prefix=" " category="inline-code"></block> コマンドレット。</block>
   <block id="67fadfdbaf1af58c1560a82586252863" category="list-text">[場所]*をクリックし、該当するホスト（階層の最上位）を選択します。</block>
   <block id="35adcaf3c3f08c3b4becd894c0fafea3" category="list-text">必要に応じてアクセス制御ポリシーを選択し、*[Next]*をクリックします。</block>
@@ -7873,10 +7784,8 @@
   <block id="6e98d99dca8f4518c9e7567d19ce708c" category="paragraph"><block ref="513dca79729c465b5c3001bf26148c0c" prefix="" category="inline-code"></block></block>
   <block id="a339a650564d067ea1ade511a61340e3" category="paragraph"><block ref="9111d0f1b6d8fdece369a21eacf0663f" prefix="" category="inline-code"></block></block>
   <block id="e5111e1a8d09cf3b9cc87da0144221fb" category="list-text">すべてのブラウザタブを閉じ、ブラウザを再度開いて既存またはアクティブなセッションCookieをクリアし、再度ログインします。</block>
-  <block id="4df2c26ea6368491393f05baf8841e6d" category="paragraph">を参照してください。を参照してください <block ref="46642a8ad62fd1a061e94d6b7bf62dc5" category="inline-link-macro-rx"></block>。</block>
   <block id="f668cd2acef670f8b213c6c785ddf8d6" category="paragraph"><block ref="7da21d8fe0787a3171af06722db1ee6f" prefix="" category="inline-code"></block></block>
   <block id="0f5b112cebb37022dbfe2c80e388d605" category="paragraph">を参照してください <block ref="5ec6b0ec41fc91e8184fa478c63adb14" category="inline-link-macro-rx"></block>。</block>
-  <block id="a8d67928879d7cbd7d3c5d1b6d797736" category="list-text">MFAを無効にし、を使用してMFAを有効にしたときに作成された構成ファイルをクリーンアップします<block ref="3f459b2c524cc44ef57664fd75d5c093" prefix=" " category="inline-code"></block> コマンドレット。</block>
   <block id="6bcc192d7209e867a0f8afd8938c62eb" category="sidebar">多要素認証（MFA）を管理します。</block>
   <block id="d9372adbc1bed6681e74cd02004081f0" category="summary">SnapCenter によるOracleデータベースの検出方法</block>
   <block id="f3c021a5eae937a13601d397b792c2d2" category="paragraph">Oracle Recovery Manager（RMAN）を使用してOracleデータベースのバックアップをカタログ化し、Oracle RMANリポジトリにバックアップ情報を格納できます。</block>
@@ -7889,7 +7798,6 @@
   <block id="8e03216fb8576194a8567507d59c56b7" category="paragraph">バックアップに関する RMAN リポジトリ情報が古くなってバックアップのリポジトリレコードがその物理ステータスと一致しなくなった場合は、クロスチェックを実行してリポジトリ情報を更新できます。たとえば、ユーザがオペレーティングシステムコマンドでディスクからアーカイブログを削除した場合、実際にはディスクにログがないにもかかわらず、制御ファイルにはディスクにログがあることが示されます。</block>
   <block id="7944aae88fbc469a9edfc7d9ae22e633" category="paragraph">クロスチェック処理では、制御ファイルを情報で更新できます。クロスチェックをイネーブルにするには、 Set-SmConfigSettings コマンドを実行して、 enable_croscHCK パラメータに値 true を割り当てます。デフォルト値は FALSE です。</block>
   <block id="14fbb4ba3858c107f2599916d3b51cbb" category="section-title">カタログ情報を削除します</block>
-  <block id="3fc370e9504ca2ebb69ee1e9030a971f" category="paragraph">コマンドで使用できるパラメータとその説明に関する情報は、 Get-Help コマンド _name を実行して取得できます。または、を参照してください<block ref="f0a304dd5eda28bc5cad0e10ba143e0a" category="inline-link-rx"></block>。</block>
   <block id="4c4d4c133d15d97bf3bef74ffeeeb66a" category="list-text">左側のナビゲーションペインで、*[リソース]*を選択し、リストから適切なプラグインを選択します。</block>
   <block id="ba4484b740822363967ef7dbb090de6a" category="inline-image-macro">フィルタアイコン</block>
   <block id="bdf18e1416fb037a66cb2e8b6bf34e50" category="list-text">をクリックします <block ref="5daa1c5d91da80c848b68dcd336ec220" category="inline-image-macro-rx" type="image"></block>をクリックし、ホスト名とデータベースタイプを選択してリソースをフィルタリングします。</block>
@@ -7969,7 +7877,6 @@
   <block id="1a48e10f2aae9eca9186a1b6176fb05a" category="list-text">ファイルにアクセスできず、検証プロセス中にマウントポイントを使用できないと、エラーコード DBV-00100 specified file が表示されて処理が失敗することがあります。sco.propertiesのverification_delay_and verification_retry_countパラメータの値を変更する必要があります。</block>
   <block id="510a95fea4bba025da5889c50cbbd219" category="summary">バックアップ保持オプション：</block>
   <block id="47360f25b760514cfd5222ea8efb3fca" category="list-text">ASMスタンドアロンおよびASM RAC on Raw Device Mapping（RDM）+ ASMLibの有無にかかわらず、ASM上のOracleデータベースに対してバックアップ、リストア、およびクローニングの操作を実行できます。</block>
-  <block id="d9f5c0652a9a0f5a632c2b39950788b1" category="paragraph">サポートされている Oracle のバージョンの最新情報については、を参照してください<block ref="ad50fcde58174eb161421bebd1f28ec8" category="inline-link-rx"></block>。</block>
   <block id="a725ff47fefe45fbde2b714b9bee12db" category="summary">リソースグループはコンテナであり、バックアップして保護するリソースを追加します。リソースグループを使用すると、特定のアプリケーションに関連付けられているすべてのデータを同時にバックアップできます。</block>
   <block id="75d10fc733cbe6199ca2e7cebf31fe9c" category="paragraph">Oracle DBVERIFYユーティリティを使用してバックアップを検証するには、ASMディスクグループ内のファイルを含むデータベースが「mount」または「open」状態である必要があります。</block>
   <block id="471e47d90bffd9838cf1d00548360b40" category="paragraph">リソースグループに1つ以上のポリシーを適用して、実行するデータ保護ジョブのタイプを定義します。</block>
@@ -8111,9 +8018,7 @@
   <block id="cc9c449ada243c7f7945df60c3bb511a" category="list-text">左側のナビゲーションペインで、*[ストレージシステム]*を選択します。</block>
   <block id="d232915b5e459729c2ebb05cce4351c3" category="paragraph">クラスタ名を選択すると、そのクラスタに含まれるすべてのSVMが[Storage Virtual Machine]セクションに表示されます。</block>
   <block id="b334c2fd16b2dbb1653525b0da09940d" category="inline-image-macro">チェックアイコン</block>
-  <block id="b708e8602f17540d711c077ef6ce5bb6" category="list-text"><block ref="1b6b7d2df953b943aed63061cd428e2b" category="inline-image-macro-rx" type="image"></block> FAS スイートライセンスが AFF または SnapManager プライマリストレージシステムにインストールされていることを示します。</block>
   <block id="8e9f59a7ba19ac78a77252b5cc8530f6" category="inline-image-macro">キャンセルアイコン</block>
-  <block id="72acec0d06c1d26aeb0b87907c970c31" category="list-text"><block ref="1ca20f925112adf63235e58f0e4483cd" category="inline-image-macro-rx" type="image"></block> FAS スイートライセンスが AFF または SnapManager プライマリストレージシステムにインストールされていないことを示します。</block>
   <block id="778623bf565f3d8f537019c7e81b0948" category="section-title">手順2：コントローラにインストールされているライセンスを特定します</block>
   <block id="587b796170a9abac4701cd8aa1bb38cb" category="example-title">出力例</block>
   <block id="09bfdac33144afac4f96f313740dc959" category="section-title">手順3：コントローラのシリアル番号を取得します</block>
@@ -8125,5 +8030,417 @@
   <block id="46d55a8aefdec15a8ce44087c8123826" category="inline-link">LUNのデバイスを検出できませんというエラーが表示されて処理に失敗します</block>
   <block id="24642a08e354f43168ca4f1178850f84" category="list-text">iSCSIプロトコルとFCプロトコルが混在するigroupを使用して、LUNがAIXホストにマッピングされていないことを確認してください。詳細については、を参照してください<block ref="94f247529a6b6f563b3a8d4772877431" category="inline-link-rx"></block>。</block>
   <block id="4fb437564892944d73f87c822342e2bb" category="cell">4.8</block>
-  <block id="7d9be6a6877ece66779a3e8834d493df" category="admonition">たとえば、SnapCenterバージョン4.5.xを使用していて、4.8にアップグレードする場合は、まず4.6.xにアップグレードしてから、4.8へのローリングアップグレードを実行する必要があります。</block>
+  <block id="7c6508384d2ec7e90c0bc1fc6822f767" category="paragraph">コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block>。</block>
+  <block id="028a3c414b2f36abce9baa1df750ef89" category="admonition">CA証明書RSAキーの長さは3072ビット以上にする必要があります。</block>
+  <block id="3f22331bd76f7085da3a93a57ab3fb56" category="paragraph">Windows Server では、 SnapCenter プロビジョニングとデータ保護がサポートされます。サポートされているバージョンの最新情報については、を参照してください
+<block ref="efe4f421015684342bb5b0bd0175a5d9" category="inline-link-rx"></block>。</block>
+  <block id="728312abb176d22bc268d1d6b543873b" category="paragraph">コマンドレットで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。または、を参照することもできます<block ref="0d220534fc77832a0dbc95366d6cfa0d" category="inline-link-rx"></block></block>
+  <block id="2c9ac50929ec7977214fdf241525d00e" category="paragraph"><block ref="17e4ab70f92d63f82ca1960c750c9db9" category="inline-link-rx"></block></block>
+  <block id="4d77d623d198675df7c3111f7300dabc" category="paragraph">PowerShellコマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、クローニングの処理を実行することもできます。PowerShell コマンドレットの詳細については、 SnapCenter のコマンドレットのヘルプを使用するか、コマンドレットのリファレンス情報を参照してください。
+<block ref="e34908225859e3fb9e8c1d7692e49df3" category="inline-link-rx"></block>。</block>
+  <block id="deea3f8b34edb1c0cdb33001b691b29b" category="paragraph">サポートされているバージョンの最新情報については、を参照してください<block ref="b04e67b184528fc82164b880a0386a24" category="inline-link-rx"></block>。</block>
+  <block id="d0362d418472880a09debe390d09b150" category="paragraph"><block ref="e34908225859e3fb9e8c1d7692e49df3" category="inline-link-rx"></block>。</block>
+  <block id="468e24409a12d90dcf3099fc521ce383" category="paragraph">コマンドで使用できるパラメータとその説明については、 RUNNING Get Help command_name _ を使用して参照できます。または、を参照することもできます<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block>。</block>
+  <block id="36fecb1daf18c8eeaacbcc8cdc70f4a6" category="paragraph">ONTAPのプライマリとセカンダリには、ONTAP FAS、AFF、All SAN Array（ASA）、Select、Cloud ONTAPがあります。</block>
+  <block id="235699c86ac4c8ad554d546bd794dded" category="paragraph">PowerShell コマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、クローニングの処理を実行することもできます。PowerShell コマンドレットについては、 SnapCenter コマンドレットのヘルプを使用するか、を参照してください<block ref="0d220534fc77832a0dbc95366d6cfa0d" category="inline-link-rx"></block>。</block>
+  <block id="d21fbb2a5ce79a2a4ef0780b73023b2e" category="paragraph">VMホストへの物理およびNFSの直接マウント（VMDKおよびRDM LUNはサポートされません）。</block>
+  <block id="f2fcd44a44d752e71147a39c9d5bd5e2" category="paragraph">PowerShell コマンドレットについては、 SnapCenter コマンドレットのヘルプを使用するか、を参照してください<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block>。</block>
+  <block id="c2cc28b9a0f8ea19459be2208861b131" category="paragraph">PowerShell コマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、クローニングの処理を実行することもできます。PowerShell コマンドレットの詳細については、 SnapCenter コマンドレットのヘルプを使用するか、を参照してください<block ref="0d220534fc77832a0dbc95366d6cfa0d" category="inline-link-rx"></block></block>
+  <block id="191773f827b84a4a9d371b4ed6cf534a" category="paragraph">PowerShell コマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、クローニングの処理を実行することもできます。PowerShell コマンドレットの詳細については、 SnapCenter コマンドレットのヘルプを使用するか、を参照してください<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block>。</block>
+  <block id="baad7b08eca760643b82b6a1c403e309" category="paragraph">サポートされているバージョンの最新情報については、を参照してください<block ref="ceb473307a1c9c0409c57cc2f1dd9093" category="inline-link-rx"></block></block>
+  <block id="cb1432f64c959f89ac29353e0b97ded4" category="list-text">SVM に複数のデータパス（ LIF ）がある場合は、 NFS クローンボリュームをマウントするための適切なデータパス（ LIF ）が SnapCenter によって選択されます。ただし、特定のデータパス（ LIF ）を指定する場合は、 Set-SvmPreferredDataPath CLI を実行する必要があります。
+コマンドで使用できるパラメータとその説明については、 RUNNING Get Help command_name _ を使用して参照できます。または、を参照することもできます<block ref="1f7a49a613b7c2dfb834cc80b3b923ce" category="inline-link-rx"></block>。</block>
+  <block id="042ef6776c0d6409f8be7afe4398f4ca" category="paragraph"><block ref="46f8644173515685cc9cd1cd5e53cb71" category="inline-link-rx"></block></block>
+  <block id="1e68684d559313b8a3db92f82d929882" category="inline-link">SnapCenter 4.9に関する注意事項</block>
+  <block id="7277604123451bdf3a1dab65cf93a8e7" category="paragraph"><block ref="7277604123451bdf3a1dab65cf93a8e7" category="inline-link-rx"></block></block>
+  <block id="2d1b96641aa035d797928097e07311af" category="list-text"><block ref="9db717dffc69a74b6e5198a07d217cdd" category="inline-link-rx"></block></block>
+  <block id="fdcc8adf4ca5af52ee6a896d6c06e4bc" category="paragraph">コマンドで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。
+または、を参照することもできます<block ref="1f7a49a613b7c2dfb834cc80b3b923ce" category="inline-link-rx"></block>。</block>
+  <block id="9fd1d0d4c3ca44cdb6c7913ed654bee3" category="paragraph">コマンドで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。または、を参照することもできます<block ref="1f7a49a613b7c2dfb834cc80b3b923ce" category="inline-link-rx"></block>。</block>
+  <block id="fd494449112b9d26ea6f4cc5792824e6" category="paragraph">UNIX コマンドの詳細については、を参照してください<block ref="1f7a49a613b7c2dfb834cc80b3b923ce" category="inline-link-rx"></block>。</block>
+  <block id="c2d3eecc8222902d64ee2cd0f82b86d1" category="paragraph">サポートされているバージョンの最新情報については、を参照してください<block ref="edf4e33682eb2c881f774af1b8b72d07" category="inline-link-rx"></block>。</block>
+  <block id="da9056355018035981c35b88e97789cd" category="paragraph">または、を参照することもできます<block ref="1f7a49a613b7c2dfb834cc80b3b923ce" category="inline-link-rx"></block> または<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block>。</block>
+  <block id="f2688d5a483bee7fcbd80a4e666fc088" category="inline-link">Host Utilitiesのマニュアル</block>
+  <block id="8fefbd4e8dfd1fb79f89bc04af5e8001" category="paragraph">詳細については、を参照してください<block ref="ab48d7186c8a78dfaf0e19af923f0daf" category="inline-link-rx"></block>。</block>
+  <block id="b2ca50333c8f16c1c44e7305b05988cc" category="paragraph">コマンドで使用できるパラメータとその説明に関する情報は、 Get-Help コマンド _name を実行して取得できます。または、を参照してください<block ref="1f7a49a613b7c2dfb834cc80b3b923ce" category="inline-link-rx"></block>。</block>
+  <block id="9e14d7c7dd3ab3786a37e704d1da780d" category="paragraph">SnapCenter Plug-in for Oracle Database でサポートされる構成をに示します<block ref="edf4e33682eb2c881f774af1b8b72d07" category="inline-link-rx"></block>。</block>
+  <block id="95400b8283a4e34792161ec452edf43d" category="paragraph">サポートされている Oracle のバージョンの最新情報については、を参照してください<block ref="edf4e33682eb2c881f774af1b8b72d07" category="inline-link-rx"></block>。</block>
+  <block id="3e377f2849c50954b22817e97f4be5ed" category="paragraph">コマンドで使用できるパラメータとその説明に関する情報は、 Get-Help コマンド _name を実行して取得できます。または、を参照することもできます<block ref="1f7a49a613b7c2dfb834cc80b3b923ce" category="inline-link-rx"></block>。</block>
+  <block id="b28d9f1ff5db2142fa45bea6f649b117" category="paragraph">。<block ref="b4ff4342b2a4373cb1c8fb0cc58e4e08" category="inline-link-rx"></block> サポートされているバージョンに関する最新情報が含まれています。</block>
+  <block id="e1dd6c35c29a524103aa4629a282857e" category="paragraph">PowerShell コマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、リカバリ、検証、クローニングの処理を実行することもできます。PowerShell コマンドレットの詳細については、 SnapCenter コマンドレットのヘルプを使用するか、を参照してください<block ref="0d220534fc77832a0dbc95366d6cfa0d" category="inline-link-rx"></block></block>
+  <block id="08bb62da8c2fc3e9658022558d277993" category="paragraph">FAS、AFF、またはAll SAN Array（ASA）ストレージコントローラに必要です</block>
+  <block id="f0d7edda487dadb54e43cde1120715ec" category="paragraph">SnapCenter Standard ライセンスはコントローラベースのライセンスで、 Premium Bundle に含まれています。SnapManager スイートのライセンスをお持ちの場合は、 SnapCenter Standard のライセンスもご利用いただけます。
+FAS、AFF、またはASAストレージにSnapCenterの試用版をインストールする場合は、営業担当者に連絡してPremium Bundleの評価ライセンスを取得してください。</block>
+  <block id="1dd60316135a653731118d7a0c5bf3d3" category="paragraph">ONTAP およびアプリケーションプラグインの最小要件については、を参照してください<block ref="487550db215c46367b60756354cd5f0b" category="inline-link-rx"></block>。</block>
+  <block id="05c0241d0b040b2d7c0c12396071c859" category="paragraph">詳細については、を参照してください<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block>。</block>
+  <block id="167dbde87d69902272fcb39c558cea84" category="paragraph">コマンドレットの実行方法については、を参照してください<block ref="0d220534fc77832a0dbc95366d6cfa0d" category="inline-link-rx"></block></block>
+  <block id="422b2423bfd889c78d7995009091684d" category="inline-link">SnapCenterソフトウェア4.9リリースノート</block>
+  <block id="9dd36551629022e364cb0a7aff336059" category="paragraph">詳細については、を参照してください<block ref="9507fa8602312b348e22d515dda17733" category="inline-link-rx"></block>。</block>
+  <block id="855469e68aebe957582edeb7405529e1" category="section-title">双方向SSL通信</block>
+  <block id="b4cbac9ded897ac6c04027b59ec07fad" category="paragraph">双方向SSL通信は、SnapCenterサーバとプラグイン間の相互通信を保護します。</block>
+  <block id="48462a95fd8685081e58f7c123971e5b" category="section-title">証明書ベースの認証の概要</block>
+  <block id="dbb44863e91bacd01eafa49136b071d2" category="paragraph">証明書ベースの認証は、SnapCenterプラグインホストにアクセスしようとする各ユーザの信頼性を検証します。秘密鍵なしでSnapCenterサーバ証明書をエクスポートし、プラグインホストの信頼されたストアにインポートする必要があります。証明書ベースの認証は、双方向SSL機能が有効になっている場合にのみ機能します。</block>
+  <block id="f6ce44442588fc16e1d7cc2d3995eff2" category="list-text">ONTAP FAS、AFF、またはAll SAN Array（ASA）プライマリシステム上にあり、ONTAP FAS、AFF、またはASAセカンダリシステムにレプリケートされるデータ</block>
+  <block id="616472bd1da01c2fe1a46ec002e57f2b" category="list-text">ONTAP FAS、AFF、ASAのプライマリシステムとセカンダリシステムにあり、ローカルのStorageGRIDオブジェクトストレージで保護されているデータ（NetApp BlueXPクラウドバックアップ統合を使用）</block>
+  <block id="f5c37d824040662f50cbb8a32d77182d" category="list-text">ONTAP FAS、AFF、またはASAプライマリシステム上にあり、Cloud Volumes ONTAPにレプリケートされるデータ</block>
+  <block id="394619b29d62ebea0cecaad9129df0ea" category="list-text">ONTAP FAS、AFF、ASAのプライマリシステムとセカンダリシステムにあり、クラウドのオブジェクトストレージとアーカイブストレージで保護されているデータ（NetApp BlueXP Cloud Backup統合を使用）</block>
+  <block id="b250098e069eb54d9e5d847baeeca541" category="paragraph">Windowsコマンドレットの詳細については、を参照してください<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block>。</block>
+  <block id="c10c466f5857ce0ebc5a5f9e3130411a" category="paragraph">UNIXコマンドの詳細については、を参照してください<block ref="1f7a49a613b7c2dfb834cc80b3b923ce" category="inline-link-rx"></block>。</block>
+  <block id="0dfbdfeadf3f1f407a28e4f77517f070" category="paragraph">コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block></block>
+  <block id="c4345f5845efed993a9a9299f860c4bc" category="paragraph">コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block>。</block>
+  <block id="ae12fa2fb03894fe02b3d2fbdca1beb0" category="paragraph">また、 _Uninstall-sSmHostPackage_ コマンドレットと必要なパラメータを使用して、複数のホストからプラグインをアンインストールすることもできます。コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block>。</block>
+  <block id="90969e9b7bcd66fedcf0339db7d5e13e" category="admonition">DLLが破損している場合は、SnapCenterサーバを修復したり、問題のあるインストールを修正したりできます。</block>
+  <block id="936de455e68556a0f0c7a945031aded0" category="admonition">NSMファイルまたは構成ファイルが破損している場合は、同じバージョンのSnapCenterサーバをアンインストールして再インストールできます。</block>
+  <block id="743e97989091f05772e454accc001020" category="admonition">VMが破損している場合は、別のVMまたは同じ名前のマシンを起動し、同じバージョンのSnapCenterサーバをインストールします。</block>
+  <block id="622fbbcf746903b903f2af5462c8550a" category="cell">4.9</block>
+  <block id="f489bbbdc2405361afaf6f7380c7b943" category="admonition">たとえば、SnapCenterバージョン4.6.xを使用していて、4.9にアップグレードする場合は、まず4.7にアップグレードしてから、4.9へのローリングアップグレードを実行する必要があります。</block>
+  <block id="42324a0900df941e87541a0b972b834f" category="admonition">SnapCenterでは、すでにワークグループに属していて別のドメインに変更されたホスト（プラグインホスト）をSnapCenterに追加することはできません。その逆も同様です。
+同じホストを追加する場合は、SnapCenterからホストを削除して再度追加する必要があります。</block>
+  <block id="ad142a8f7de376b271d4e105dbe01a9f" category="paragraph">PowerShell コマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、クローニングの処理を実行することもできます。SnapCenter コマンドレットのヘルプまたはを使用します<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block> PowerShell コマンドレットの詳細については、を参照してください。</block>
+  <block id="be2aa64f1b64fb075f7467ccc849a45f" category="summary">SnapCenterの左側のナビゲーションペインから[Dashboard]にアクセスすると、最近のジョブアクティビティ、アラート、保護の概要、Storage Efficiencyと使用状況、SnapCenterジョブのステータス（バックアップ、クローン、リストア\）、スタンドアロンホストとWindowsクラスタホストの設定ステータスなど、システムの健常性の概要を確認できます。 SnapCenterで管理しているStorage Virtual Machine（SVM）の数とライセンス容量。</block>
+  <block id="d688c9cc9aebf4dff18182f9dc1db990" category="admonition">この画面が表示されるのは、 Cloud Volumes ONTAP または ONTAP Select プラットフォームで SnapCenter の容量ベースのライセンスを使用している場合のみです。FAS、AFF、またはオールSANアレイ（ASA）プラットフォームの場合、SnapCenterライセンスはコントローラベースで容量の制限はなく、容量ライセンスは必要ありません。</block>
+  <block id="c90d9871b4b86a10a62cd2bf2c1ea688" category="inline-link">インストールウィザードを使用してSnapCenterサーバをインストールします。</block>
+  <block id="1d72d65109e6906ab81717720199491b" category="paragraph">ポートをカスタマイズするには、を参照してください<block ref="724cb62a2271057d0541cdb8153d9260" category="inline-link-rx"></block></block>
+  <block id="60f072866c2d325a151d990670aa5b4c" category="inline-link">ホストを追加してLinuxまたはAIX用のSnapCenter Plug-insパッケージをインストールします。</block>
+  <block id="ac01fd33e160c622162b42b1f7e4fe18" category="paragraph">ポートをカスタマイズするには、を参照してください<block ref="32882cfc4755cb17eefc59506f087a6f" category="inline-link-rx"></block> または<block ref="477bb7222f583d223b46c2b591c18bd9" category="inline-link-rx"></block></block>
+  <block id="97e62e758724ab080cbfe2799c388822" category="paragraph">ポートをカスタマイズするには、を参照してください<block ref="477bb7222f583d223b46c2b591c18bd9" category="inline-link-rx"></block></block>
+  <block id="fa9e479c30699c2d65f7d1107b28b62a" category="paragraph">ポートをカスタマイズするには、を参照してください<block ref="6bb20f223531bd59e001c776ffe35812" category="inline-link-rx"></block></block>
+  <block id="86f05f2519ccd51165ec12fde362a9fc" category="paragraph">サポートされているアプリケーションおよびデータベースの詳細については、を参照してください<block ref="0cf85a116af1f28ac715e95564ad65ab" category="inline-link-rx"></block>。</block>
+  <block id="25348d43ecb7bf51733c0d315817588a" category="paragraph">コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照してください<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block>。</block>
+  <block id="fcd1a470cb019cf887869a0d9ab7787c" category="paragraph">詳細については、を参照してください<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block>。</block>
+  <block id="9e7f34933c1af065309071fd01a6cf3e" category="summary">CA証明書をUNIXプラグインホストにインポートする必要があります。</block>
+  <block id="cd4c2aff8d03392b1feec1e4027d56c6" category="doc">CA証明書をUNIXプラグインホストにインポートします</block>
+  <block id="4fb85b60b1716c8666aada43c544f696" category="list-text">SPLキーストアのパスワード、および使用中のCA署名キーペアのエイリアスを管理できます。</block>
+  <block id="f251b877a40d36cc78e6fbcb8b75fe8d" category="list-text">SPLキーストアのパスワードと、秘密鍵に関連付けられているすべてのエイリアスパスワードは同じである必要があります。</block>
+  <block id="39fed6edcd2ad80043d51eea4ac3fb3d" category="list-text">SPL プロパティファイルから SPL キーストアのデフォルトパスワードを取得できます。キーに対応する値です<block ref="6686cedf7caf3fa23512302b51634d1d" prefix=" " category="inline-code"></block>。</block>
+  <block id="cd6f5ef691756f2a57d26714b0ad1b43" category="list-text">キーストアのパスワードを変更します。<block ref="5cc4cde4421282ffdf9f287ec3199d1f" prefix=" " category="inline-code"></block></block>
+  <block id="1655ea4e2f205b3033fbe9b39f935c1f" category="list-text">キーストア内の秘密鍵エントリのすべてのエイリアスのパスワードを、キーストアに使用されているパスワードと同じパスワードに変更します。<block ref="0f214e413ff651807ab38f567542e4a7" prefix=" " category="inline-code"></block></block>
+  <block id="924399f641b3ebc78e566f9306e9ea11" category="list-text">SPL_KEYSTORE_PASS INキーについても同じ内容を更新します<block ref="bffe39d676ca31b01c3709313bdb4068" prefix=" " category="inline-code"></block> ファイル。</block>
+  <block id="818dec89e3a9e95800116c863c7f3257" category="summary">REST API、PowerShell、およびSCCLIインターフェイスを使用してMFAを管理できます。</block>
+  <block id="89c22ebd87fec289f6c2e160fd092b95" category="doc">REST API、PowerShell、SCCLIを使用して多要素認証（MFA）を管理</block>
+  <block id="1581a31f6beda086b728beb7d06862d3" category="paragraph">MFAログインは、ブラウザ、REST API、PowerShell、およびSCCLIからサポートされます。MFAは、AD FSアイデンティティマネージャを介してサポートされます。GUI、REST API、PowerShell、SCCLIを使用して、MFAの有効化、MFAの無効化、およびMFAの設定を行うことができます。</block>
+  <block id="3a73e3981a7ba8d32fc8aab6930f0784" category="section-title">AD FSをOAuth/OIDCとしてセットアップします</block>
+  <block id="71e7a2b45aaeeffe8901bf0adb8f231f" category="paragraph">* Windows GUIウィザードを使用してAD FSを構成します*</block>
+  <block id="e3276efb3b868c379fb1297daa582955" category="list-text">Server Manager Dashboard *&gt;* Tools *&gt;* ADFS Management *に移動します。</block>
+  <block id="3dde84be8e608e3cca1657d1a4a61aa8" category="list-text">[ADFS]*&gt;*[アプリケーショングループ]*に移動します。</block>
+  <block id="0c63e379dc3480ef19214393710473c1" category="list-text">[アプリケーショングループ]を右クリックします。</block>
+  <block id="7c2801a528f61a4a76655d2ae916672b" category="list-text">[アプリケーショングループの追加]*を選択し、*[アプリケーション名]*と入力します。</block>
+  <block id="a1774f1ec3d45594ce40159a52f20fcf" category="list-text">[サーバーアプリケーション]*を選択します。</block>
+  <block id="ae830e1b94332b2a2967e3df9b29efd6" category="list-text">コピー*クライアントID *。</block>
+  <block id="73b204993a37943caa2529c0b73708ca" category="paragraph">これはクライアントIDです。
+。リダイレクトURLにコールバックURL（SnapCenterサーバURL）を追加します。
+。「 * 次へ * 」をクリックします。</block>
+  <block id="0b516833d66244c2a18f5a28ecd8a8d2" category="list-text">[Generate shared secret]*を選択します。</block>
+  <block id="01d45a9643746b2a11be98170b561bcd" category="paragraph">シークレット値をコピーします。これはクライアントの秘密です。
+。「 * 次へ * 」をクリックします。</block>
+  <block id="d7d2642eade3542b40b1bc22eb60a72b" category="list-text">[概要]ページで、*[次へ]*をクリックします。</block>
+  <block id="c0b429f2081a916279944b141ca665e4" category="list-text">[完了]ページで、*[閉じる]*をクリックします。</block>
+  <block id="7079f5bc6b8601b73407e7f2c70097c9" category="list-text">新しく追加した*アプリケーショングループ*を右クリックし、*プロパティ*を選択します。</block>
+  <block id="2d0b96f166b36488970002f63a96e14b" category="list-text">[アプリケーションのプロパティ]から*[アプリケーションの追加]*を選択します。</block>
+  <block id="14ddbfceec0144d23c9b11b9cddeeab2" category="list-text">[アプリケーションの追加]*をクリックします。</block>
+  <block id="ccf372d8c65a94b93927c1ab0a3f30bf" category="paragraph">[Web API]を選択し、*[Next]*をクリックします。</block>
+  <block id="538a0f9b41c92cee5a81630cc29cb755" category="list-text">[Web APIの構成]ページで、前の手順で作成したSnapCenterサーバのURLとクライアント識別子を[識別子]セクションに入力します。</block>
+  <block id="6c0e9c32a8ddba2764de93ea7e5dda11" category="list-text">[Choose Access Control Policy]ページで、要件に基づいて制御ポリシーを選択し（[Permit Everyone and Require MFA]など）、*[Next]*をクリックします。</block>
+  <block id="6a81abdd8b066670310eff04cd351332" category="list-text">[アプリケーション権限の設定]ページでは、デフォルトでOpenIDがスコープとして選択されており、*[次へ]*をクリックします。</block>
+  <block id="8c67633e48c25a85b4941ab78ebef0a8" category="list-text">[サンプルアプリケーションのプロパティ]ページで、*[OK]*をクリックします。</block>
+  <block id="d514c3e3b1721e76833491b2bb66d66a" category="list-text">承認サーバー(AD FS)によって発行され、リソースによって消費されることを意図したJWTトークン。</block>
+  <block id="52ee8e0018503df9e255a46d05fb2de1" category="paragraph">このトークンの「AUD」またはオーディエンス要求は、リソースまたはWeb APIの識別子と一致している必要があります。</block>
+  <block id="fc37d7cd447d26f5bccc8469a726135b" category="list-text">選択したWebAPIを編集し、コールバックURL（SnapCenterサーバURL）とクライアント識別子が正しく追加されていることを確認します。</block>
+  <block id="6ba622874fc69e389e6e7eb8da931219" category="paragraph">ユーザー名を要求として提供するようにOpenID Connectを設定します。</block>
+  <block id="efcf248cf2c6ef224b807f91ad3bce35" category="list-text">サーバーマネージャの右上にある* Tools *メニューの下にある* AD FS Management *ツールを開きます。</block>
+  <block id="65d4579366befa38c489e286f3e6c120" category="list-text">左側のサイドバーから* Application Groups *フォルダを選択します。</block>
+  <block id="7fa6ebaaed8eb7dabef10f70b8870e4a" category="list-text">Web APIを選択し、* edit *をクリックします。</block>
+  <block id="338c7b898d012ef61847ef911c567c65" category="list-text">[発行トランスフォームルール]タブに移動します</block>
+  <block id="541b410bf2e70562e4ae98527a156f68" category="list-text">[ * ルールの追加 * ] をクリックします。</block>
+  <block id="f8661b90f0926221c21e8263cee02aa1" category="list-text">[Claim rule template]ドロップダウンで、*[Send LDAP Attributes as Claims]*を選択します。</block>
+  <block id="4a6c05eca54a33a0a5a13fb3cf9204a3" category="list-text">[Claim rule]*の名前を入力します。</block>
+  <block id="3b5ff64a54de1e14def777dd1d257ac2" category="list-text">[属性ストア]ドロップダウンで*[Active Directory]*を選択します。</block>
+  <block id="bd749a86c6bf05ad26d14efd170dd0d7" category="list-text">[LDAP Attribute]ドロップダウンで*[User-Principal-Name]*を選択し、[O*utgoing Claim Type]*ドロップダウンで*[UPN]*を選択します。</block>
+  <block id="a302e49d30b6db61b854ec9e6bf3b677" category="section-title">PowerShellコマンドを使用してアプリケーショングループを作成します</block>
+  <block id="f9dddf9377938c22618b3003017321a2" category="paragraph">PowerShellコマンドを使用して、アプリケーショングループ、Web APIを作成し、スコープと要求を追加できます。これらのコマンドは、自動スクリプト形式で使用できます。詳細については、&lt;link to KB article&gt;を参照してください。</block>
+  <block id="71a5f427ba89ee55d0435f8396248cf7" category="list-text">次のコマンドを使用して、AD FSに新しいアプリケーショングループを作成します。</block>
+  <block id="effd4fe85d3069af0461ff92b80cec0f" category="paragraph"><block ref="2452e7f7dff2cd0747cc69895bbba59b" prefix="" category="inline-code"></block></block>
+  <block id="76dfdc79cb75841a2fafd4c4ac13efb0" category="paragraph"><block ref="f7df16f07ada041b6e1cd993b03d9b3d" prefix="" category="inline-code"></block> アプリケーショングループの名前</block>
+  <block id="1c5f35f56484784533e57eb07d402ca2" category="paragraph"><block ref="fd6382465093c54720456ca25383ed9f" prefix="" category="inline-code"></block> 許可後のリダイレクションの有効なURL</block>
+  <block id="81ab980f6f637737c82cee958b22f73e" category="list-text">AD FSサーバアプリケーションを作成し、クライアントシークレットを生成します。</block>
+  <block id="93bd5e5b0aafcf9c06cdbb828d4b39f5" category="paragraph"><block ref="230e538f596ac4db272e7babda982bbb" prefix="" category="inline-code"></block><block ref="6571edfee1d554a182330ca623062726" prefix=" " category="inline-code"></block></block>
+  <block id="7ffd9420d466164e018e6e571aceaebf" category="list-text">ADFS Web APIアプリケーションを作成し、使用するポリシー名を設定します。</block>
+  <block id="506ba68b6a028c1fa69a31f7a8a60cca" category="paragraph"><block ref="de3afa7e1b73a57c50b139616b3e1320" prefix="" category="inline-code"></block></block>
+  <block id="c2df0a8e3b0d86082c88ad09b82c16af" category="paragraph"><block ref="f2c84752348998fd5ac3a333e8ed2998" prefix="" category="inline-code"></block></block>
+  <block id="167f6c3d677f4e1f0f35886b5fc2dcc5" category="paragraph"><block ref="5494219b5c16e27caf245311e5158a66" prefix="" category="inline-code"></block></block>
+  <block id="cf7d693e17060c9c86638e2e5bdc5ece" category="list-text">クライアントIDとクライアントシークレットは1回しか表示されないため、次のコマンドの出力から取得します。</block>
+  <block id="aba679a144169ad02eb938628e9ef054" category="paragraph"><block ref="d22c6b58e4e2a4c21c6f2635b9d8ba1f" prefix="" category="inline-code"></block></block>
+  <block id="47169aa5ecb2645e6777910d587d3d09" category="paragraph"><block ref="ad037804ee8c2b64ca62c113e891ece3" prefix="" category="inline-code"></block></block>
+  <block id="06a4a40bf160f305c779e798d79a7f24" category="list-text">AD FSアプリケーションにallatclaims権限とOpenID権限を付与します。</block>
+  <block id="ead5bce8c2e4ca84f09904c8c14f0ec4" category="paragraph"><block ref="f8c4321e386b47717c4dc96429e72bde" prefix="" category="inline-code"></block></block>
+  <block id="6be47c54d059f36a8695ca30fa7673bc" category="paragraph"><block ref="0a2f8b60bb6ffaced5ed595bf6a348ba" prefix="" category="inline-code"></block></block>
+  <block id="39849480e39a3265d94d614c2e08e714" category="paragraph"><block ref="580fa2ab4abdeac5824a58ebdef19a0e" prefix="" category="inline-code"></block></block>
+  <block id="c2fb63f161c79290aed78fb3759ef10c" category="paragraph"><block ref="003bdce8b7faf45821c5545774f258f2" prefix="" category="inline-code"></block></block>
+  <block id="9013f46d3c2288e8f6106c8e187d4f15" category="paragraph"><block ref="26fd17c1b3e90d79cfb2af09c0fe649b" prefix="" category="inline-code"></block></block>
+  <block id="ecd894c11de9ae0f0d7db8499de582f9" category="paragraph"><block ref="7cecdc877899bed7b874640295b9784b" prefix="" category="inline-code"></block></block>
+  <block id="88e581eef891e2ab0c422bd3fb755dd8" category="paragraph"><block ref="790f99d7b76f5dd0ac3f2da85b31133f" prefix="" category="inline-code"></block></block>
+  <block id="6ac6b2573a0afaa294abca3b56833026" category="paragraph"><block ref="9caec2fbe7b449449a799e62c9180439" prefix="" category="inline-code"></block></block>
+  <block id="1b7306494632f5ff50e7cc2d79905203" category="list-text">変換ルールファイルを書き出します。</block>
+  <block id="b6f3adc060604bd1cc4487943c7a11c2" category="paragraph"><block ref="1ad0d7e8948f1cad46a4bbe106c6129a" prefix="" category="inline-code"></block><block ref="b8f1e5545d792f3b10a5af5ca827cc38" prefix=" " category="inline-code"></block></block>
+  <block id="ab67837984a949e88c043906e7b25fd2" category="list-text">Web APIアプリケーションに名前を付け、外部ファイルを使用してその発行トランスフォームルールを定義します。</block>
+  <block id="b92fb7230c859b37ee03fa8d3684c33b" category="paragraph"><block ref="edb2f36eb96cad8825e3fe8e00086c5f" prefix="" category="inline-code"></block></block>
+  <block id="6a245b371c7859f21feabc3f632f1621" category="paragraph"><block ref="9edf8b0f6280adcda6151863ad826c0c" prefix="" category="inline-code"></block></block>
+  <block id="5d4629dd80b41db061655deffff008eb" category="paragraph"><block ref="b293cd0c99a2fa48a3e3ee3748ec5051" prefix="" category="inline-code"></block></block>
+  <block id="579b93366a2829fd18732da04d0fdbe1" category="section-title">アクセストークンの有効期限を更新します</block>
+  <block id="3b9de17278be2458e181a55e8c1eb515" category="paragraph">アクセストークンの有効期限は、PowerShellコマンドを使用して更新できます。</block>
+  <block id="35c8f31cfd0b6cd8740d3cb81c489245" category="list-text">アクセストークンは、ユーザー、クライアント、およびリソースの特定の組み合わせに対してのみ使用できます。アクセストークンは無効にすることはできず、有効期限が切れるまで有効です。</block>
+  <block id="2312767c66781a9bdc701b9c7b82df17" category="list-text">デフォルトでは、アクセストークンの有効期限は60分です。  この最小限の有効期限は十分であり、拡張されています。ビジネスクリティカルなジョブが継続的に発生しないように、十分な価値を提供する必要があります。</block>
+  <block id="2c46b8d9261f648b8c453ac85f992aac" category="paragraph">アプリケーショングループWebAPIのアクセストークンの有効期限を更新するには、AD FSサーバで次のコマンドを使用します。</block>
+  <block id="48277654df4a7d06db502d9ee3441eab" category="paragraph">[+]<block ref="25a85a835bbab6ed91f289f8fab49d58" prefix=" " category="inline-code"></block></block>
+  <block id="e0db9ccb1d549e7d636b1618bdf3b366" category="section-title">AD FSからBearerトークンを取得します</block>
+  <block id="eaaf070da77a2d2b6e6cc5d8be749e4a" category="paragraph">RESTクライアント（Postmanなど）で以下のパラメータを入力する必要があり、ユーザクレデンシャルを入力するように求められます。さらに、ベアラートークンを取得するには、第2要素認証(あなたが持っているものとあなたがいるもの)を入力する必要があります。</block>
+  <block id="23d1bef67f8eea088878b8454d14770a" category="paragraph">[+]
+ベアラートークンの有効期間は、アプリケーションごとにAD FSサーバから設定できます。デフォルトの有効期間は60分です。</block>
+  <block id="6f16a5f8ff5d75ab84c018adacdfcbb7" category="cell">フィールド</block>
+  <block id="47eeda83b3a3efa0c20275db90a00ecc" category="paragraph">許可タイプ</block>
+  <block id="980ee3bcda7f62fa056fb579ec70fb93" category="paragraph">承認コード</block>
+  <block id="971aa940ab12731eefcaf9864ea239c4" category="paragraph">コールバックURL</block>
+  <block id="6ef0a7cb774733424019553bf5903d98" category="paragraph">コールバックURLがない場合は、アプリケーションのベースURLを入力します。</block>
+  <block id="8f08428f87205cf8cd9ff4f01fe27e33" category="paragraph">認証URL</block>
+  <block id="0d0e80190e0b96ec315641c03a6cbdbe" category="paragraph">[ADFS-domain-name]/ADFS/OAuth2/authorize</block>
+  <block id="e51f2159e645644f251ff8a8b0d07894" category="paragraph">アクセストークンURL</block>
+  <block id="7453cd43827b5e2bd7d599fbf9ea3f26" category="paragraph">[ADFS-domain-name]/ADFS/OAuth2/token</block>
+  <block id="76525f0f34b48475e5ca33f71d296f3b" category="paragraph">クライアント ID</block>
+  <block id="da511a650288cfb795194e8d04b28033" category="paragraph">AD FSクライアントIDを入力します</block>
+  <block id="1b4739e491387ef5d8a546854308e5fe" category="paragraph">クライアントシークレット</block>
+  <block id="6b076b0a62325697a1417b84176a704a" category="paragraph">AD FSクライアントシークレットを入力します</block>
+  <block id="5d113f2038d289f391614c39043629e8" category="paragraph">適用範囲</block>
+  <block id="10d822cbb5b2266b331cdefd7410c831" category="paragraph">OpenID</block>
+  <block id="d9eee0506c2495d733480dc1fc801993" category="paragraph">クライアント認証</block>
+  <block id="b76827cae3bbfa9b3f16f50aaeeb8b94" category="paragraph">基本認証ヘッダーとして送信します</block>
+  <block id="5cd6f358fe0cd7802054f95932163e71" category="paragraph">[詳細オプション]タブで、[コールバックURL]と同じ値を持つ[リソース]フィールドを追加します。この値は、JWTトークンでは「AUD」値として表示されます。</block>
+  <block id="434b0b2d4791e06ef2ec9797163c03cc" category="paragraph">サポートされているバージョンの最新情報については、を参照してください
+<block ref="efe4f421015684342bb5b0bd0175a5d9" category="inline-link-rx"></block>。</block>
+  <block id="28f9c2d1c67ea659588c7bfc2680e96d" category="summary">FAS、AFF、またはASAストレージコントローラを使用している場合は、SnapCenter Standardコントローラベースライセンスが必要です。</block>
+  <block id="e6c51d0ec467f9742ef4d9ed2bfd5390" category="paragraph">FAS、AFF、またはオールSANアレイ（ASA）ストレージコントローラを使用している場合は、コントローラベースのSnapCenterライセンスが必要です。</block>
+  <block id="6b22646455acfe9efc53d4f10b58a5fe" category="list-text">ONTAP System Managerまたはストレージクラスタのコマンドラインを使用して、FAS、AFF、またはASAのストレージコントローラに直接追加して有効にします</block>
+  <block id="4675b365d16842b130752bb3fa27614d" category="paragraph">SnapCenter GUIを使用して、SnapManager SuiteライセンスがFAS、AFF、またはASAプライマリストレージシステムにインストールされているかどうかを確認し、SnapManager Suiteライセンスが必要なストレージシステムを特定できます。SnapManager Suiteライセンスは、プライマリストレージシステム上のFAS、AFF、ASA SVMまたはクラスタにのみ適用されます。</block>
+  <block id="bf8a4dfe438069855e34bbd2f8ec59d7" category="list-text"><block ref="1b6b7d2df953b943aed63061cd428e2b" category="inline-image-macro-rx" type="image"></block> FAS、AFF、またはASAプライマリストレージシステムにSnapManager Suiteライセンスがインストールされていることを示します。</block>
+  <block id="982c80480700680b3b8dc4d7d03053af" category="list-text"><block ref="1ca20f925112adf63235e58f0e4483cd" category="inline-image-macro-rx" type="image"></block> FAS、AFF、またはASAプライマリストレージシステムにSnapManager Suiteライセンスがインストールされていないことを示します。</block>
+  <block id="3585befdeb665365a6ab248a97882128" category="paragraph">ONTAP コマンドラインを使用すると、コントローラにインストールされているすべてのライセンスを表示できます。FAS、AFF、またはASAシステムのクラスタ管理者である必要があります。</block>
+  <block id="aad4d9def4b52672ae7f25a26b4f8fde" category="paragraph">コントローラベースのライセンスのシリアル番号を取得するには、コントローラのシリアル番号が必要です。ONTAP コマンドラインを使用すると、コントローラのシリアル番号を取得できます。FAS、AFF、またはASAシステムのクラスタ管理者である必要があります。</block>
+  <block id="c15b837a96c2882e6964418dadf776c1" category="paragraph">FAS、AFF、またはASAシステムを使用していて、SnapCenter StandardまたはSnapManager Suiteのライセンスがある場合は、ONTAPコマンドラインを使用してSnapCenterコントローラベースライセンスを追加できます。</block>
+  <block id="a2e17d154f1b1314694615de5b51003c" category="list-text">FAS、AFF、またはASAシステムのクラスタ管理者である必要があります。</block>
+  <block id="37ee5b6fcdef2d12a533711b6917c5d7" category="paragraph">FAS、AFF、またはASAストレージにSnapCenterの試用版をインストールする場合は、Premium Bundleの評価版ライセンスを取得してコントローラにインストールできます。</block>
+  <block id="de07b96d6e0726ed58c0b7506fed6a37" category="paragraph">コマンドレットの詳細については、を参照してください<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block>。</block>
+  <block id="cfee889da941f2dce080477db87781ff" category="summary">エクスポートしたSnapCenterサーバCA証明書を使用するには、関連する証明書をSnapCenter Windowsプラグインホストにインポートする必要があります</block>
+  <block id="79f05475f093d2d51a688c417ae60fbe" category="doc">認証局（CA）証明書をWindowsプラグインホストにインポートします</block>
+  <block id="670f279a24f028c7742ed1c370d5c72e" category="paragraph">エクスポートしたSnapCenterサーバCA証明書を使用するには、Microsoft管理コンソール（MMC）を使用して、関連する証明書をSnapCenter Windowsプラグインホストにインポートする必要があります。</block>
+  <block id="fa8730c22e61e95ad832838dc73fe14a" category="list-text">[証明書スナップイン]ウィンドウで*[コンピューターアカウント]*オプションを選択し、*[完了]*をクリックします。</block>
+  <block id="cd8d705b0f06c8e8e3aa612c41c7f61c" category="list-text">[コンソールルート]*&gt;*[証明書-ローカルコンピュータ]*&gt;*[個人]*&gt;*[証明書]*をクリックします。</block>
+  <block id="a3116b0cbdcd0490e1b76e0b508654c0" category="list-text">「個人」フォルダを右クリックし、*すべてのタスク*&gt;*インポート*を選択してインポートウィザードを開始します。</block>
+  <block id="a2aa1e8ade9f7ad4c7098c0604405e40" category="list-text">ウィザードで次の操作を実行します。</block>
+  <block id="7fbc991c0cd78ec9e53ea32a7f734edc" category="cell">オプション</block>
+  <block id="4337f2520c18528cac9f46239191f22b" category="paragraph">ストアの場所</block>
+  <block id="87816aec71397bdd3b7be882c2d5cce9" category="paragraph">インポートするファイル</block>
+  <block id="eb42cceb0a1f665d63e0befaa87d431d" category="paragraph">拡張子.cerで終わるSnapCenterサーバ証明書を選択します。</block>
+  <block id="7089d514c1aad028e72fc82813e3f577" category="paragraph">証明書ストア</block>
+  <block id="84319e08c219b24c0aea4c8ffe018f51" category="summary">ルート証明書または中間証明書をspl trust-storeに設定する必要があります。</block>
+  <block id="0cfab792315db1ad2f463e132e69b4a6" category="paragraph">ルート証明書または中間証明書をspl trust-storeに設定する必要があります。ルート CA 証明書、中間 CA 証明書の順に追加する必要があります。</block>
+  <block id="905ef8ad10bb90ea340ba32bba988377" category="list-text">SPLキーストアが格納されているフォルダに移動します。<block ref="0dc0b955539cf9119a9695bb3312c8cb" prefix=" " category="inline-code"></block>。</block>
+  <block id="27ee396e4bda631c1af9dc588058bf56" category="list-text">ファイルを探します<block ref="6115b18a91e4ff7f210d8477232e1265" prefix=" " category="inline-code"></block>。</block>
+  <block id="4e499dabbe17315495b9e3a0f5b1738c" category="list-text">キーストアに追加された証明書を表示します。<block ref="b259dcec4646370e1cccb265b20280d5" prefix=" " category="inline-code"></block></block>
+  <block id="addc6c4da947a2faf3346483c36cc20f" category="list-text">ルート証明書または中間証明書を追加します。<block ref="8d0582b8c424b58d9c8f51cc38658f37" prefix=" " category="inline-code"></block><block ref="6115b18a91e4ff7f210d8477232e1265" prefix=" " category="inline-code"></block></block>
+  <block id="461dcbe77c235d4b349951a40a48663d" category="paragraph">SPL trust-storeにCA署名付きキーペアを設定する必要があります。</block>
+  <block id="b4251f71507d4095c0a9cfff762ad0ca" category="list-text">SPLのキーストアが格納されているフォルダに移動します<block ref="0dc0b955539cf9119a9695bb3312c8cb" prefix=" " category="inline-code"></block>。</block>
+  <block id="d6b1eec98d8406c6651f4a58367c256d" category="list-text">ファイルを探します<block ref="caf10a822a90445db9bea66b4e029b45" prefix=" " category="inline-code"></block>。</block>
+  <block id="96dc8b7d0a4c6b5bd41944fe5663bf60" category="list-text">秘密鍵と公開鍵の両方を含む CA 証明書を追加します。<block ref="e9b69c6ce232cd969a1de69b5b7ad771" prefix=" " category="inline-code"></block><block ref="a65f672bcb7e0253084a7b9ff079afe1" prefix=" " category="inline-code"></block></block>
+  <block id="e6a1638efd12b26203266a3703ea43b9" category="list-text">キーストアに追加された証明書を表示します。<block ref="b259dcec4646370e1cccb265b20280d5" prefix=" " category="inline-code"></block></block>
+  <block id="700c0e3cd805b39f38500709f167c71d" category="paragraph">デフォルトのSPLキーストアパスワードは、SPL_KEYSTORE_PASS INキーの値です<block ref="052018eb7dd6b65a045cb7f85e1780e6" prefix=" " category="inline-code"></block> ファイル。</block>
+  <block id="d761fb7307cbc2f607e4758bcd00ec1b" category="paragraph"><block ref="4d2ec0329a8188b155850e1ab0ca438a" prefix="" category="inline-code"></block></block>
+  <block id="45c7dee3ac562bb759cb41672ab95f30" category="list-text">CA 証明書のエイリアス名が長く、スペースまたは特殊文字（「 * 」、「」）が含まれている場合は、エイリアス名を単純な名前に変更します。<block ref="f5d8ae119d7dc66fee2b1cca4d124984" prefix=" " category="inline-code"></block></block>
+  <block id="b1cbd0b7f209604aeb80671e8db6bd88" category="list-text">にあるキーストアからエイリアス名を設定します<block ref="052018eb7dd6b65a045cb7f85e1780e6" prefix=" " category="inline-code"></block> ファイル。
+この値をキー SPL の certificate_alias に更新します。</block>
+  <block id="29d2af31d571b8f6cfb156d1bb0ae3dd" category="paragraph">PowerShell コマンドレットを使用すると、 SnapCenter GUI に加え、設定、バックアップ、リストアの各処理を実行するスクリプトを作成できます。一部のコマンドレットは、各 SnapCenter リリースで変更された可能性があります。。<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block> に詳細を示します。</block>
+  <block id="9764e4439aa058bff629704e2e23fd7b" category="paragraph">サポートされているバージョンの最新情報については、を参照してください<block ref="afaa5c2ff662f28d0c8c3429effcad87" category="inline-link-rx"></block>。</block>
+  <block id="9d31f93b6415c6dc4d47047067008551" category="summary">SnapCenterサーバからプラグインホストにCA証明書をエクスポートする必要があります。</block>
+  <block id="5bdc9dfe0790a57a6fe905d1fb1e3eae" category="doc">SnapCenterサーバから認証局（CA）証明書をエクスポートします</block>
+  <block id="d061d73c2d594c5f93d58cd0750abfd2" category="paragraph">Microsoft管理コンソール（MMC）を使用して、SnapCenterサーバからプラグインホストにCA証明書をエクスポートする必要があります。</block>
+  <block id="ebbc012954ef860bf051c32d8c46da93" category="paragraph">双方向SSLを設定しておく必要があります。</block>
+  <block id="5060f5f92f4ce202b37a1124cf8e909e" category="list-text">SnapCenterサーバーで使用される調達CA証明書を右クリックし、*[すべてのタスク]*&gt;*[エクスポート]*を選択してエクスポートウィザードを開始します。</block>
+  <block id="da6ac4c12f48438b90c09b8262c1207e" category="paragraph">[いいえ、秘密鍵をエクスポートしない]*を選択し、*[次へ]*をクリックします。</block>
+  <block id="76348cf9ddb92acc65440418b185db2d" category="paragraph">ファイル名（ File Name ）</block>
+  <block id="00d7eaf591094c1fc261342becc7f305" category="paragraph">[参照]*をクリックし、証明書を保存するファイルパスを指定して*[次へ]*をクリックします。</block>
+  <block id="6071c6433af7f31e998f8d748728b519" category="admonition">証明書ベースの認証は、SnapCenter HA構成およびSnapCenter Plug-in for VMware vSphereではサポートされません。</block>
+  <block id="e9f8485c0c52ec084887222481b5cb66" category="paragraph">FAS、AFF、オールSANアレイ（ASA）に必要</block>
+  <block id="8b0745c430b04c61ef3867818f227301" category="paragraph">SnapCenter Standard ライセンスはコントローラベースのライセンスで、 Premium Bundle に含まれています。SnapManager スイートのライセンスをお持ちの場合は、 SnapCenter Standard のライセンスもご利用いただけます。FAS、AFF、またはASAストレージにSnapCenterの試用版をインストールする場合は、営業担当者に連絡してPremium Bundleの評価ライセンスを取得してください。</block>
+  <block id="8db273592868b7d940261fe8347b32b4" category="inline-link-macro">CPC-00507</block>
+  <block id="802a2285a60e079b52f32ba2c3140d0d" category="paragraph">NetApp®Single Mailbox Recoveryは、2023年5月12日に販売終了（EOA）になりました。詳細については、を参照してください <block ref="5a98ce97c5b40ecef6f220dc57d4f14a" category="inline-link-macro-rx"></block>。NetAppは、2020年6月24日に導入されたマーケティング用パーツ番号を通じて、メールボックスの容量、メンテナンス、サポートを購入したお客様をサポート対象期間中も引き続きサポートします。</block>
+  <block id="03da3b5726a1efd6df1fc511966c89a6" category="paragraph">NetApp Single Mailbox Recoveryは、Ontrackが提供するパートナー製品です。Ontrack PowerControlsには、NetApp Single Mailbox Recoveryと同様の機能が用意されています。お客様は、新しいOntrack PowerControlsソフトウェアライセンスとOntrack PowerControlsメンテナンスおよびサポートの更新をOntrackから（licensingteam@ontrack.com経由で）調達し、2023年5月12日のEOA日以降にメールボックスをきめ細かくリカバリできます。</block>
+  <block id="00555be23f4d41375bb46107e09eb1cb" category="paragraph">サポートされているバージョンの最新情報については、を参照してください<block ref="0cf85a116af1f28ac715e95564ad65ab" category="inline-link-rx"></block>。</block>
+  <block id="f58587d65108da4c76429348beba1493" category="summary">SnapCenterサーバとWindowsプラグインホストに対して、証明書ベースの認証を有効にする必要があります。</block>
+  <block id="ac91c641781bd7c7379113e123abc706" category="doc">証明書ベースの認証を有効にします</block>
+  <block id="2deb2b431122c2428813248c5cc7e3cf" category="paragraph">SnapCenter ServerおよびWindowsプラグインホストに対して証明書ベースの認証を有効にするには、次のPowerShellコマンドレットを実行します。  Linuxプラグインホストで双方向SSLを有効にすると、証明書ベースの認証が有効になります。</block>
+  <block id="012d451c2966c8058914f66afd3ff9be" category="list-text">クライアント証明書ベースの認証を有効にするには：</block>
+  <block id="c7414a7d4890863a34509bebe1bd9225" category="paragraph"><block ref="a578dd94961bb2b0ce287d29a112740b" prefix="" category="inline-code"></block><block ref="e685e5103f8306754d61ec1a0da15686" prefix=" " category="inline-code"></block><block ref="a71cdd4660400fab236be52b25300411" prefix=" " category="inline-code"></block></block>
+  <block id="8b5db05d124326542535790d2a1a0411" category="list-text">クライアント証明書ベースの認証を無効にするには：</block>
+  <block id="b5cfca9930b60b6f87f38ad0e8d31765" category="paragraph"><block ref="ee29fb805334372351c3e459eaf40ac3" prefix="" category="inline-code"></block><block ref="e685e5103f8306754d61ec1a0da15686" prefix=" " category="inline-code"></block><block ref="b1b73520f4b4ea4d2583cc59029bbe0d" prefix=" " category="inline-code"></block></block>
+  <block id="1a415d60c0654233b8e03281525e6b18" category="admonition">ストレージシステム名は、ドメイン名を含めずに15文字以下にする必要があり、解決可能な名前である必要があります。15 文字を超える名前のストレージシステム接続を作成するには、 Add-SmStorageConnectionPowerShell コマンドレットを使用します。</block>
+  <block id="542082ddc576a51ede49e11ac68a28ff" category="paragraph">SnapCenterでSVMを追加した場合は、ドロップダウンからプラットフォームタイプを手動で選択する必要があります。</block>
+  <block id="cff41786c5502cd7deaf78557f919f0f" category="admonition">FASまたはAFFストレージシステムをオールSANアレイ（ASA）にアップグレードした場合は、SnapCenterサーバのストレージ接続を更新して、SnapCenterの新しいストレージタイプを反映する必要があります。</block>
+  <block id="440355fc57f515aab537d229da6473e3" category="paragraph">Active Directoryフェデレーションサービス（AD FS）サーバとSnapCenterサーバで多要素認証（MFA）機能を管理できます。</block>
+  <block id="c8010626798701f4dd6505ffd8c7bab3" category="paragraph">SnapCenterサーバのMFA機能は、PowerShellコマンドを使用して有効にできます。</block>
+  <block id="e99272ccf624910f1086824371019fac" category="list-text">コマンドレットで使用できるパラメータとその説明は、を実行して確認できます<block ref="b306feeed6ddda97d08ef1f2a0ba62d9" prefix=" " category="inline-code"></block>。または、を参照することもできます<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block>。</block>
+  <block id="65b2ac31e28fbe23df3871ad716e40c2" category="list-text">を使用して、SnapCenter サーバのMFAを有効にします<block ref="2eb01e8a95b53a60b13860ce5cac5104" prefix=" " category="inline-code"></block> コマンドレット。</block>
+  <block id="b73f485c1067e4b3168b292142131855" category="inline-link">複数のタブで同時にログインを試行すると、MFAエラーが表示されます</block>
+  <block id="9e4f9470d66f1730ad7525f9043126be" category="paragraph">トラブルシューティング情報については、を参照してください<block ref="361c774ee5cb22be42ef8ea152ed45ad" category="inline-link-rx"></block>。</block>
+  <block id="b3844eddf099b8f80b95a7c68ca22ae5" category="list-text">MFAを無効にし、を使用してMFAを有効にしたときに作成された構成ファイルをクリーンアップします<block ref="2eb01e8a95b53a60b13860ce5cac5104" prefix=" " category="inline-code"></block> コマンドレット。</block>
+  <block id="b31ad42cda3bd1bc7787fd71d2a175bf" category="summary">REST API、PowerShell、およびSCCLIインターフェイスを使用してMFAを設定できます。</block>
+  <block id="0699cec0b36b38a01a2c7453df793209" category="doc">PowerShell、SCCLI、REST APIを使用してSnapCenterサーバでMFAを設定します</block>
+  <block id="c8fc2d751bc403a1f589d18155e0a550" category="paragraph">SnapCenter Serverでは、PowerShell、SCCLI、およびREST APIを使用してMFAを設定できます。</block>
+  <block id="cb3e4d60610a204d94495a98c6ffac79" category="section-title">SnapCenter MFA CLI認証</block>
+  <block id="7edc1c8e2fdc93487750d1362b410b6c" category="paragraph">PowerShellとSCCLIでは、既存のコマンドレット（Open-SmConnection）を「AccessToken」というもう1つのフィールドで拡張し、ベアラートークンを使用してユーザを認証します。</block>
+  <block id="1d9604a44c9689bb1bcf34e2ce47c37b" category="paragraph"><block ref="d20b3e5a41b2760d316550ac141b3e0e" prefix="" category="inline-code"></block></block>
+  <block id="023966dffc4c30c1f952b6637d58f857" category="paragraph">上記のコマンドレットを実行すると、それぞれのユーザがSnapCenterコマンドレットを実行できるようにセッションが作成されます。</block>
+  <block id="6c62d38fcd95d5bf89665ae6b17139b8" category="section-title">SnapCenter MFA REST API認証</block>
+  <block id="67eceb5481c462d5924546f299b0a1c1" category="paragraph">REST &lt;access token&gt;クライアント(Postmanやswaggerなど)でBearerトークンを_Authorization = Bearer _の形式で使用し、ヘッダーにユーザRoleNameを指定すると、SnapCenterからの応答が成功します。</block>
+  <block id="55798c01a43f2906324acf8c55ac7c10" category="section-title">MFA REST APIワークフロー</block>
+  <block id="610e0c006ec739e832da1290f901d415" category="paragraph">MFAがAD FSで設定されている場合、REST APIを使用してSnapCenterアプリケーションにアクセスするには、アクセス（Bearer）トークンを使用して認証する必要があります。</block>
+  <block id="1ec4b028e69b0809aad6ae07d23f81a8" category="list-text">Postman、Swagger UI、FireCampなど、任意のRESTクライアントを使用できます。</block>
+  <block id="085753aa54b53249d94c1b70253908ea" category="list-text">アクセストークンを取得し、それを使用して以降の要求（SnapCenter REST API）を認証し、あらゆる処理を実行します。</block>
+  <block id="30402026ecb92d997eb633513cf165c7" category="paragraph">* AD FS MFAを介して認証する場合*</block>
+  <block id="b4caeeef0442908fa1e6bc7dc8e948d3" category="list-text">AD FSエンドポイントを呼び出してアクセストークンを取得するようにRESTクライアントを設定します。</block>
+  <block id="8b7413f8fc2ebb7eb068106e7dba6c41" category="paragraph">ボタンを押してアプリケーションのアクセストークンを取得すると、AD FS SSOページにリダイレクトされ、ADクレデンシャルを入力してMFAで認証する必要があります。
+1.[AD FS SSO]ページで、[ユーザー名]テキストボックスにユーザー名または電子メールを入力します。</block>
+  <block id="84ad1465ceaf30e69cd9ad61924379dc" category="paragraph">[+]
+ユーザ名は、user@domainまたはdomain\userの形式で指定する必要があります。</block>
+  <block id="677cc1d6cbf8c114fd23938f25b7bdd6" category="list-text">[パスワード]テキストボックスにパスワードを入力します。</block>
+  <block id="52352d978b8e538f26067965a59f6fc7" category="list-text">*ログイン*をクリックします。</block>
+  <block id="ea89b06186ff53b6b9cb9238b1001fc1" category="list-text">[サインインオプション]*セクションで、認証オプションを選択し、（設定に応じて）認証します。</block>
+  <block id="83d0c0b26a7eb1649c6119a685864eae" category="list-text">プッシュ：電話機に送信されるプッシュ通知を承認します。</block>
+  <block id="798212b7335c7a4d26f0138f9079a95e" category="list-text">QRコード: AUTH Pointモバイルアプリを使用してQRコードをスキャンし、アプリに表示される認証コードを入力します</block>
+  <block id="a316b5fd0e81148fffa951463fd77df0" category="list-text">ワンタイムパスワード:トークンのワンタイムパスワードを入力します。</block>
+  <block id="0ddda96c3272042acb4be0a7963229ec" category="list-text">認証が成功すると、Access、ID、およびRefresh Tokenを含むポップアップが開きます。</block>
+  <block id="2aaa5e58823e537a854f3793f31b7148" category="paragraph">アクセストークンをコピーし、SnapCenter REST APIで使用して操作を実行します。</block>
+  <block id="f7c6df20834ef72448c5f49671a77c96" category="list-text">REST APIでは、ヘッダーセクションでアクセストークンとロール名を渡す必要があります。</block>
+  <block id="db90bb350026eba7289048cec0d22858" category="list-text">SnapCenterは、AD FSからこのアクセストークンを検証します。</block>
+  <block id="5d371ebca081571ee838c91f2b3b8eda" category="paragraph">有効なトークンである場合、SnapCenterはそれをデコードし、ユーザー名を取得します。</block>
+  <block id="2c62b617ee38c02d7111543084b0b09e" category="list-text">SnapCenterは、ユーザ名とロール名を使用して、API実行のためにユーザを認証します。</block>
+  <block id="9f94ebee44e4c5f90ddbb7381fb57111" category="paragraph">認証に成功した場合、SnapCenterは結果を返します。成功しなかった場合は、エラーメッセージが表示されます。</block>
+  <block id="bbd93b6370e78df975451775d22d34ed" category="section-title">REST API、CLI、GUIのSnapCenter MFA機能を有効または無効にします</block>
+  <block id="e0c356209d0172c9793fc3d3ed347a32" category="paragraph">* GUI *</block>
+  <block id="fcd1c1c483a974a0432e89881b9c1008" category="list-text">SnapCenter管理者としてSnapCenterサーバにログインします。</block>
+  <block id="ef86f63b7951661a91c550234bac80c5" category="list-text">[設定]*&gt;*[グローバル設定]*&gt;*[MultiFactorAuthentication（MFA）設定]*をクリックします</block>
+  <block id="66804bc5856f84fff5c4c9e9b39f7b6d" category="list-text">インターフェイス（GUI/RST API/CLI）を選択してMFAログインを有効または無効にします。</block>
+  <block id="989b27ad86f053d3822c0f7bbcab5684" category="paragraph">* PowerShellインターフェイス*</block>
+  <block id="67a453e2bf25e9b2939d5a76773bd4e1" category="list-text">PowerShellまたはCLIコマンドを実行して、GUI、REST API、PowerShell、SCCLIのMFAを有効にします。</block>
+  <block id="29661a5be1500e885abc9f1385dcab2f" category="paragraph"><block ref="c6a4b1d35f298a094cb651f5e0dcecbe" prefix="" category="inline-code"></block><block ref="dd25d075292f9fe56a03fbe443c83eee" prefix=" " category="inline-code"></block></block>
+  <block id="aff22f1d675aba740b0eea5cc900f4f1" category="paragraph">pathパラメータは、AD FS MFAメタデータXMLファイルの場所を指定します。</block>
+  <block id="34d51518bd337510d5a57880f46f8745" category="paragraph">指定したAD FSメタデータファイルパスを使用して設定されたSnapCenter GUI、REST API、PowerShell、およびSCCLIのMFAを有効にします。</block>
+  <block id="e84faa3dab6fec9caed1af21fab38e42" category="list-text">を使用して、MFAの設定のステータスと設定を確認します<block ref="d99b90475295700e9775deadcb723ac6" prefix=" " category="inline-code"></block> コマンドレット。</block>
+  <block id="0b97fd01ab8976f9b7367861bbc67f96" category="paragraph">* SCCLIインターフェイス*</block>
+  <block id="40ee035a048bf31e962cca88cbda2585" category="list-text"><block ref="70f9cdeabb0c1dc9714ea84eaf70ed21" prefix="" category="inline-code"></block></block>
+  <block id="d50f29f5527b7374e9015b618aeb7dff" category="list-text"><block ref="f3eb70856b0166d88b8f84e996dbbc0f" prefix="" category="inline-code"></block></block>
+  <block id="6ad47f25209d248f2819960d8d230e1f" category="paragraph">* REST API *</block>
+  <block id="6e0cd09ffb36f6906f7262ee34696fee" category="list-text">GUI、REST API、PowerShell、SCCLIでMFAを有効にするには、次のPOST APIを実行します。</block>
+  <block id="6465e52eccd6901d06660c8d9f4cbcf4" category="paragraph">要求されたURL</block>
+  <block id="0bf53544f7d41d17d800289b552512b6" category="paragraph">/api/4.9/settings/multifactorauthentication</block>
+  <block id="03d947a2158373c3b9d74325850cb8b9" category="paragraph">ポスト</block>
+  <block id="ef1845aa2c5377425ac03316124d29ba" category="paragraph">リクエストボディ</block>
+  <block id="40512f67baf3b1ed3eee621bc87adc5c" category="paragraph">｛
+  "IsGuiMFAEnabled"：false、
+  "IsRestApiMFAEnabled"：true、
+  "IsCliMFAEnabled"：false、
+  "ADFSConfigFilePath"："C：\\ADFS_METADATA\\abc.xml"
+｝</block>
+  <block id="b6bb6515f92dd63588798a290288f8e7" category="paragraph">応答本文</block>
+  <block id="5babbc456e7d500f0f3a5f71a48a5391" category="paragraph">｛
+  "MFAConfiguration"：{
+    "IsGuiMFAEnabled"：false、
+    "ADFSConfigFilePath"："C：\\ADFS_METADATA\\abc.xml"、
+    "SCConfigFilePath"：null、
+    "IsRestApiMFAEnabled"：true、
+    "IsCliMFAEnabled"：false、
+    "ADFSHostName"：" win-adfs-sc49.winscedom2.com
+  ｝
+｝</block>
+  <block id="a13c4b270e124c298207b35e4319dd32" category="list-text">以下のAPIを使用してMFA構成のステータスと設定を確認します。</block>
+  <block id="c55582518cba2c464f29f5bae1c68def" category="paragraph">ゲット</block>
+  <block id="b19a37df92859f602a1d598b09095dde" category="summary">PowerShellコマンドを使用して双方向SSL通信を有効にすると、SnapCenterサーバとプラグインの間の相互通信を保護できます。</block>
+  <block id="a22dc7783d83428bc5853a688adbaa99" category="doc">双方向SSL通信を有効にします</block>
+  <block id="e087a1e7d63b58aa401ef5206b4045df" category="paragraph">すべてのプラグインとSMCoreエージェントのコマンドを最初に実行し、次にサーバのコマンドを実行します。</block>
+  <block id="2658e2d3875fa3587a2eef6c24310953" category="list-text">双方向SSL通信を有効にするには、プラグイン、サーバー、および双方向SSL通信が必要な各エージェントに対して、SnapCenterサーバーで次のコマンドを実行します。</block>
+  <block id="6f1f834a8acf28858818fa0fd54b35a6" category="paragraph"><block ref="5ba37b5b52435dfa4dfd88ef055ac07d" prefix="" category="inline-code"></block></block>
+  <block id="754765745d416ab50bfdd8ffdf886427" category="paragraph"><block ref="167daacd6d47aace4fc354e8fa84a970" prefix="" category="inline-code"></block></block>
+  <block id="b7cbce0775ee05b5664db4795fa4f37d" category="paragraph"><block ref="bc5badf312d3de216c86e4291b576eab" prefix="" category="inline-code"></block></block>
+  <block id="78ed6c04942aa45356cf982f1588da37" category="list-text">次のコマンドを使用して、IIS SnapCenterアプリケーションプールのリサイクル操作を実行します。<block ref="541fcad914e41c6e8aca986da472fe2d" prefix=" " category="inline-code"></block></block>
+  <block id="f0bcea4f3a2bdac9d1c7f6881b8c07a8" category="list-text">Windowsプラグインの場合は、次のPowerShellコマンドを実行してSMCoreサービスを再起動します。</block>
+  <block id="f2bd7da53d1a6515e52a739da4329afd" category="paragraph"><block ref="bb7886a32c232f144658587951d187d2" prefix="" category="inline-code"></block></block>
+  <block id="6d5d3fb7ac098fbdd1cfb8dd29674b84" category="section-title">双方向SSL通信を無効にします</block>
+  <block id="b317f6b7cf8e9cf3d99664032fea50ea" category="paragraph">PowerShellコマンドを使用して、双方向SSL通信を無効にすることができます。</block>
+  <block id="82af86af05970c039df6936d16c3de24" category="list-text">双方向SSL通信を無効にしても、CA証明書とその設定は削除されません。</block>
+  <block id="ab9d69b140b979d1163a8258231bf681" category="list-text">SnapCenterサーバに新しいホストを追加するには、すべてのプラグインホストで双方向SSLを無効にする必要があります。</block>
+  <block id="5f46aeecc86380dbcfb9ea81a41ed89b" category="list-text">NLBとF5はサポートされません。</block>
+  <block id="8067bb3f892da888a20f7c51b6b320fe" category="list-text">双方向SSL通信を無効にするには、すべてのプラグインホストとSnapCenterホストに対してSnapCenterサーバで次のコマンドを実行します。</block>
+  <block id="106698fceaabfa22dd610a165379d87d" category="paragraph"><block ref="1ebd6e5581ae643c2c863d185c892fad" prefix="" category="inline-code"></block></block>
+  <block id="7f3467967f060a8b06e188bb59a79254" category="paragraph"><block ref="d28571296a1f592ea7dd6b4421121c3c" prefix="" category="inline-code"></block></block>
+  <block id="2562d957f23a407afadd9f495ac65558" category="paragraph"><block ref="92d8827b891332d9cc9603a4d78c8184" prefix="" category="inline-code"></block></block>
+  <block id="4ac49dffc286da5ccbd944165dd8bd7f" category="summary">SnapCenterサーバとプラグイン間の相互通信を保護するために、双方向SSL通信を設定する必要があります。  </block>
+  <block id="cafd3024d70c4714a92f3bbaf4965b57" category="doc">双方向SSL通信を設定します</block>
+  <block id="2da979e2cf96908affb6191327c911d5" category="paragraph">SnapCenterサーバとプラグイン間の相互通信を保護するために、双方向SSL通信を設定する必要があります。</block>
+  <block id="81397d9ad77b3a9e2e2df364665c61c9" category="list-text">サポートされるキーの最小長が3072のCA証明書CSRファイルを生成しておく必要があります。</block>
+  <block id="1257518a1b9c77f82d1169f7393e91e8" category="list-text">CA証明書でサーバ認証とクライアント認証がサポートされている必要があります。</block>
+  <block id="a41d1ede8efbf13047677109637f3dec" category="list-text">秘密鍵とサムプリントの詳細が記載されたCA証明書が必要です。</block>
+  <block id="b083fe6f5cfad10b990d548c633e8a65" category="list-text">一方向SSL設定を有効にしておく必要があります。</block>
+  <block id="0d595ff380766dc1d8c09ec358747cae" category="inline-link">CA証明書の設定セクション</block>
+  <block id="a7ba3ddee0a16312a2e13195df4b2433" category="paragraph">詳細については、を参照してください<block ref="6dfa2c41e53d5b3205d5fed50f7d3301" category="inline-link-rx"></block></block>
+  <block id="94c0fab32e0110a096cb4ef750e06c9d" category="list-text">すべてのプラグインホストとSnapCenterサーバで双方向SSL通信を有効にしておく必要があります。</block>
+  <block id="3a38d21be8e1d4ceb97784398a831b8d" category="paragraph">一部のホストまたはサーバで双方向SSL通信が有効になっていない環境はサポートされません。</block>
+  <block id="f1e698233e97bf3ae5cad2316d711986" category="list-text">ポートをバインドするには、PowerShellコマンドを使用して、SnapCenter IIS Webサーバポート8146（デフォルト）およびSMCoreポート8145（デフォルト）のSnapCenterサーバホストで次の手順を実行します。</block>
+  <block id="82cfdc00c004e07552d47137bbf16a9c" category="list-text">次のPowerShellコマンドを使用して、既存のSnapCenter自己署名証明書のポートバインドを削除します。</block>
+  <block id="0a0f1f3043ba3e1acc34a5b2ebac984c" category="paragraph"><block ref="7c54acf15a03e67078abd57b41f8c478" prefix="" category="inline-code"></block></block>
+  <block id="97945939d2d565d14af017b8fc6a848b" category="paragraph"><block ref="ec9d16bf504724fb7ff951cb8d5ac569" prefix="" category="inline-code"></block></block>
+  <block id="cf2f17e8228cf9f504d9ef093339cf29" category="paragraph"><block ref="184d0a373b28cdb51093745aacc96f13" prefix="" category="inline-code"></block></block>
+  <block id="eccc78428042da4779f8953d81058bc0" category="list-text">新しく取得したCA証明書をSnapCenterサーバとSMCoreポートにバインドします。</block>
+  <block id="f872a2f883b5319b48280c72563c5890" category="paragraph"><block ref="d893ce8aba8d7e0e799d3e6e565643bc" prefix="" category="inline-code"></block></block>
+  <block id="20fb30dfe9f1ec90bb124da18ae04452" category="paragraph"><block ref="c3eb69d5eb724e65ce64a58b3ed4f27a" prefix="" category="inline-code"></block></block>
+  <block id="472a2399b71957c9b52b506602e17135" category="paragraph"><block ref="f81bead81ffd81a83e72c726dcfeeeff" prefix="" category="inline-code"></block><block ref="80a2dd1060539c016ac1756b39e97974" prefix=" " category="inline-code"></block></block>
+  <block id="ecadde849f231229501c8ac9e26131fa" category="paragraph"><block ref="b08e65278d7ff10dc370262f9df141be" prefix="" category="inline-code"></block></block>
+  <block id="387826bb06a8ec006a32ea30847a7e4b" category="paragraph"><block ref="882ed2cb3e73b4db768f6098812c1136" prefix="" category="inline-code"></block></block>
+  <block id="9d4c7c0e25a6f0e0bceeffcd0091ec50" category="paragraph"><block ref="508ecc9875937125b3358540fa1fe69a" prefix="" category="inline-code"></block><block ref="80a2dd1060539c016ac1756b39e97974" prefix=" " category="inline-code"></block></block>
+  <block id="c4922065c73447187fb2dac12bfe56bc" category="paragraph"><block ref="b99b0337ef99ff2bbaa5028079ce2442" prefix="" category="inline-code"></block><block ref="80a2dd1060539c016ac1756b39e97974" prefix=" " category="inline-code"></block></block>
+  <block id="5fc94028d8c4f33296999ba45bbb387b" category="paragraph"><block ref="6b624e4f4ca6a04ec11b463d9814f0c9" prefix="" category="inline-code"></block></block>
+  <block id="9357843797bfd65b1948d6382b2a5034" category="paragraph"><block ref="14209511d46ba0d7d50930c2861a9367" prefix="" category="inline-code"></block></block>
+  <block id="06f3954dc9edecda0cb728ddafd9e61e" category="list-text">CA証明書の権限にアクセスするには、次の手順を実行して新しく取得したCA証明書にアクセスし、SnapCenterのデフォルトのIIS Webサーバユーザ「* IIS AppPool\SnapCenter *」を証明書の権限のリストに追加します。</block>
+  <block id="f090de938a3fae12191e592f63ae2510" category="list-text">Microsoft管理コンソール（MMC）に移動し、*[ファイル]*&gt;*[SnapInの追加と削除]*をクリックします。</block>
+  <block id="85ce851bf311abdfa58feb58c1f150a9" category="list-text">SnapCenter証明書を選択します。</block>
+  <block id="c41510e2be28a02aa28d3cc1f97d5a19" category="list-text">ユーザー/権限の追加ウィザードを開始するには、CA証明書を右クリックし、*[すべてのタスク]*&gt;*[秘密鍵の管理]*を選択します。</block>
+  <block id="169bb55bf062357c42b0cf57c4649ee0" category="list-text">[追加]*をクリックし、[ユーザーとグループの選択]ウィザードで場所をローカルコンピュータ名（階層の最上位）に変更します。</block>
+  <block id="7c1c131d337993bffc308150942912de" category="list-text">IIS AppPool\SnapCenterユーザを追加し、フルコントロール権限を付与します。</block>
+  <block id="df576eecac2ec87a972715a2e331f729" category="list-text">CA証明書IIS権限*の場合、次のパスからSnapCenterサーバーに新しいDWORDレジストリキーエントリを追加します。</block>
+  <block id="ad0e742bbde69b45fb45a7627f4707a7" category="paragraph">Windowsレジストリエディタで、次のパスに移動します。</block>
+  <block id="ba50ff32299ded9b005b93add237e37f" category="paragraph"><block ref="c20bcd425aa0dfde5b21e954c408550c" prefix="" category="inline-code"></block></block>
+  <block id="77e901d3c61bf70a2d72d789e44f7415" category="list-text">SCHANNELレジストリ設定のコンテキストで、新しいDWORDレジストリキーエントリを作成します。</block>
+  <block id="63dc4f7c1d9e61adbf929691b56d5072" category="paragraph"><block ref="e2b1a9261db7ce54c6ea11f85adf9cdb" prefix="" category="inline-code"></block></block>
+  <block id="8d50ba258bc153f2531cc4e43e94a373" category="paragraph"><block ref="da6a8876f4c591ea79413a09c1c8044b" prefix="" category="inline-code"></block></block>
+  <block id="29fe5acdafb008f0c4029b36efaaa699" category="section-title">双方向SSL通信用のSnapCenter Windowsプラグインを設定します</block>
+  <block id="241a76d30cc3e9addfc9a28d9266415b" category="paragraph">SnapCenter Windowsプラグインは、PowerShellコマンドを使用して双方向SSL通信用に設定する必要があります。</block>
+  <block id="457d0c1616661bbea1a67f35fdf372af" category="paragraph">CA証明書サムプリントが使用可能であることを確認します。</block>
+  <block id="c0f2e9f742b3d6f99ba8ef845fc0562c" category="list-text">ポートをバインドするには、WindowsプラグインホストでSMCoreポート8145（デフォルト）に対して次の操作を実行します。</block>
+  <block id="815da53dabe3865804ff4ba1e6665935" category="paragraph"><block ref="847e78c9ee7d14eb51b49fb024cd7d05" prefix="" category="inline-code"></block></block>
+  <block id="f4aedf5f7064779b42e2ae682e73ea48" category="list-text">新しく取得したCA証明書をSMCoreポートにバインドします。</block>
+  <block id="66a57f0083912acf6a2b65f426431c80" category="paragraph"><block ref="26b46a359f43b44dbb3ec36ca91d42ee" prefix="" category="inline-code"></block><block ref="80a2dd1060539c016ac1756b39e97974" prefix=" " category="inline-code"></block></block>
+  <block id="c611b0ac75619f5722f4d1aaf8bf4b5e" category="paragraph"><block ref="4179f87929a415ac782e2ec707eef9bd" prefix="" category="inline-code"></block></block>
+  <block id="c09eb9c06939676b5a9c04bd9bc0b777" category="paragraph">コマンドレットで使用できるパラメータとその説明については、 Get-Help コマンドレットを実行して確認できます。または、を参照することもできます<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block>。</block>
+  <block id="245360450ea9845b00af24cc4009b53f" category="paragraph">Exchange データベース全体ではなくメールやメールボックスのリストアとリカバリを行う場合は、 Single Mailbox Recovery （ SMBR ）ソフトウェアを使用します。
+NetApp®Single Mailbox Recoveryは、2023年5月12日に販売終了（EOA）になりました。NetAppは、2020年6月24日に導入されたマーケティング用パーツ番号を通じて、メールボックスの容量、メンテナンス、サポートを購入したお客様をサポート対象期間中も引き続きサポートします。</block>
+  <block id="01a1924558b81160b570c09fe8a4203c" category="paragraph">NetApp Single Mailbox Recoveryは、Ontrackが提供するパートナー製品です。Ontrack PowerControlsには、NetApp Single Mailbox Recoveryと同様の機能が用意されています。お客様は、新しいOntrack PowerControlsソフトウェアライセンスとOntrack PowerControlsメンテナンスおよびサポート更新をOntrackから（licensingteam@ontrack.com経由で）購入して、メールボックスをきめ細かくリカバリできます。</block>
+  <block id="07c049db30ed73f0d52cca0a50220fcd" category="paragraph">SMBRの追加情報については、次の資料を参照してください。</block>
+  <block id="81845e1ca99f532dc90bd83c62202fc0" category="inline-link">SMBRを使用して単一アイテムを手動でリストアする方法（Ontrack電源制御リストアにも適用可能）</block>
+  <block id="db0c2525f5f13ece537a8604a4046d7c" category="list-text"><block ref="db0c2525f5f13ece537a8604a4046d7c" category="inline-link-rx"></block></block>
+  <block id="bc4a9c7196005c449654d5ad1b755323" category="paragraph">コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照してください<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block>。</block>
+  <block id="2a29f869f54ca0c1b591922fb759c598" category="paragraph">PowerShell コマンドレットを手動またはスクリプトで使用して、バックアップとリストアの処理を実行することもできます。PowerShell コマンドレットの詳細については、 SnapCenter コマンドレットのヘルプを使用するか、を参照してください<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block>。</block>
+  <block id="5f1fb39cebd4e3f57a9da37cc25b94d2" category="sidebar">SnapCenter ソフトウェアは、シンプルで拡張性に優れた一元的なプラットフォームです。ハイブリッドクラウドの任意の場所にある ONTAP システムで実行されているアプリケーション、データベース、ホストファイルシステム、 VM に対して、アプリケーションと整合性のあるデータ保護を提供します。このドキュメントライブラリには、バージョン4.9の情報が含まれています。</block>
+  <block id="427325bcff5242696543a47f175dc4bb" category="sidebar">SnapCenterソフトウェア4.9のドキュメント</block>
+  <block id="93c0abda4c86365a68e2f0cef08f0d88" category="sidebar">双方向SSL通信を設定して有効にします</block>
+  <block id="3e918b1551870a1f28fd26d82364a6de" category="sidebar">証明書ベースの認証を設定します</block>
+  <block id="61341920d3259181ac6dce8912b43711" category="sidebar">CA証明書をWindowsホストプラグインにインポートします</block>
+  <block id="dc085c0453f245659c31e067671c65b0" category="sidebar">CA証明書をUNIXホストプラグインにインポートし、ルート証明書または中間証明書をSPL trust-storeに設定します</block>
+  <block id="78a044d413487b3c49b37567f8df9e4f" category="sidebar">CA証明書をUNIXホストプラグインにインポートします</block>
+  <block id="7fbe6e40125b7d1b2f5c5c05044e7526" category="sidebar">証明書ベースの認証を有効にします</block>
 </blocks>

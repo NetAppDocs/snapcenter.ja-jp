@@ -20,6 +20,6 @@ SnapCenter HA 構成を Network Load Balancing （ NLB ）から変更して、 
 . Open-SmConnection コマンドレットを使用してセッションを開始し、クレデンシャルを入力します。
 . SnapCenter サーバを更新して、 Update-SmServerCluster コマンドレットを使用して F5 クラスタの IP アドレスを指すようにします。
 +
-コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
 
 

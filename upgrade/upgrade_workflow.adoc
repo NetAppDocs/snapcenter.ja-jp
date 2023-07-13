@@ -25,19 +25,6 @@ image::../media/upgrade_workflow.png[アップグレードワークフロー]
 | SnapCenter サーバのバージョン | SnapCenter サーバの直接アップグレード先 | サポートされるプラグインのバージョン 
 
 
-.2+| 4.5.x | 4.6.x  a| 
-* 4.5.x
-* 4.6.x
-
-
-
-
-| 4.7  a| 
-* 4.7
-
-
-
-
 .2+| 4.6.x | 4.7  a| 
 * 4.6.x
 * 4.7
@@ -51,16 +38,29 @@ image::../media/upgrade_workflow.png[アップグレードワークフロー]
 
 
 
-| 4.7  a| 
-4.8
- a| 
+.2+| 4.7 | 4.8  a| 
 * 4.7
 * 4.8
 
 
+
+
+| 4.9  a| 
+* 4.9
+
+
+
+
+| 4.8  a| 
+4.9
+ a| 
+* 4.8
+* 4.9
+
+
 |===
 
-IMPORTANT: たとえば、SnapCenterバージョン4.5.xを使用していて、4.8にアップグレードする場合は、まず4.6.xにアップグレードしてから、4.8へのローリングアップグレードを実行する必要があります。
+IMPORTANT: たとえば、SnapCenterバージョン4.6.xを使用していて、4.9にアップグレードする場合は、まず4.7にアップグレードしてから、4.9へのローリングアップグレードを実行する必要があります。
 
 
 NOTE: SnapCenter Plug-in for VMware vSphere のアップグレードについては、を参照してください https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_upgrade.html["SnapCenter Plug-in for VMware vSphere をアップグレードします"^]。

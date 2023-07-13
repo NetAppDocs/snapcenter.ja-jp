@@ -1,0 +1,31 @@
+---
+permalink: install/task_import_ca_certificate_to_unix_plugin_hosts.html 
+sidebar: sidebar 
+keywords: security,authentication,import CA certificates 
+summary: CA証明書をUNIXプラグインホストにインポートする必要があります。 
+---
+= CA証明書をUNIXプラグインホストにインポートします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+CA証明書をUNIXプラグインホストにインポートする必要があります。
+
+* このタスクについて *
+
+* SPLキーストアのパスワード、および使用中のCA署名キーペアのエイリアスを管理できます。
+* SPLキーストアのパスワードと、秘密鍵に関連付けられているすべてのエイリアスパスワードは同じである必要があります。
+
+
+* 手順 *
+
+. SPL プロパティファイルから SPL キーストアのデフォルトパスワードを取得できます。キーに対応する値です `SPL_KEYSTORE_PASS`。
+. キーストアのパスワードを変更します。
+`$ keytool -storepasswd -keystore keystore.jks`
+. キーストア内の秘密鍵エントリのすべてのエイリアスのパスワードを、キーストアに使用されているパスワードと同じパスワードに変更します。
+`$ keytool -keypasswd -alias "<alias_name>" -keystore keystore.jks`
+. SPL_KEYSTORE_PASS INキーについても同じ内容を更新します `spl.properties`` ファイル。
+. パスワードを変更したら、サービスを再起動してください。
+

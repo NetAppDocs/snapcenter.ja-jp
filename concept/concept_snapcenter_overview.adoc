@@ -26,15 +26,15 @@ SnapCenter は、次の方法で導入できます。
 
 * オンプレミスで保護：
 +
-** ONTAP FAS または AFF のプライマリシステム上にあり、 ONTAP FAS または AFF のセカンダリシステムにレプリケートされるデータ
+** ONTAP FAS、AFF、またはAll SAN Array（ASA）プライマリシステム上にあり、ONTAP FAS、AFF、またはASAセカンダリシステムにレプリケートされるデータ
 ** ONTAP Select プライマリシステム上のデータ
-** ONTAP FAS またはAFF プライマリ/セカンダリシステム上にあり、ローカルStorageGRID オブジェクトストレージに保護されているデータ（ネットアップのBlueXPクラウドバックアップ統合を使用）
+** ONTAP FAS、AFF、ASAのプライマリシステムとセカンダリシステムにあり、ローカルのStorageGRIDオブジェクトストレージで保護されているデータ（NetApp BlueXPクラウドバックアップ統合を使用）
 
 
 * ハイブリッドクラウドのオンプレミスで以下を保護：
 +
-** ONTAP FAS またはAFF プライマリシステム上にあり、Cloud Volumes ONTAP にレプリケートされるデータ
-** ONTAP FAS またはAFF のプライマリシステムとセカンダリシステム上にあり、クラウド上のオブジェクトストレージとアーカイブストレージに保護されているデータ（NetApp BlueXP Cloud Backup統合を使用）
+** ONTAP FAS、AFF、またはASAプライマリシステム上にあり、Cloud Volumes ONTAPにレプリケートされるデータ
+** ONTAP FAS、AFF、ASAのプライマリシステムとセカンダリシステムにあり、クラウドのオブジェクトストレージとアーカイブストレージで保護されているデータ（NetApp BlueXP Cloud Backup統合を使用）
 
 
 * パブリッククラウドで次のデータを保護：
@@ -85,10 +85,10 @@ SnapCenter には、ほとんどの機能をオーケストレーションソフ
 REST APIの詳細については、を参照してください https://docs.netapp.com/us-en/snapcenter/sc-automation/overview_rest_apis.html["REST APIの概要"]。
 
 +
-Windowsコマンドレットの詳細については、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+Windowsコマンドレットの詳細については、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
 
 +
-UNIXコマンドの詳細については、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2885486["SnapCenter ソフトウェアコマンドリファレンスガイド"^]。
+UNIXコマンドの詳細については、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2886206["SnapCenter ソフトウェアコマンドリファレンスガイド"^]。
 
 * 一元化されたデータ保護ダッシュボードとレポート作成
 * セキュリティと委譲のためのロールベースアクセス制御（ RBAC ）。

@@ -18,21 +18,21 @@ SnapCenter は、物理マシンと仮想マシンの両方でさまざまなス
 
 
  a| 
-物理サーバと仮想サーバ（ VMDK と RDM LUN はサポートされません）
+VMホストへの物理およびNFSの直接マウント（VMDKおよびRDM LUNはサポートされません）。
  a| 
 FC 接続 LUN
 
 
 
  a| 
-物理サーバと仮想サーバ（ VMDK と RDM LUN はサポートされません）
+VMホストへの物理およびNFSの直接マウント（VMDKおよびRDM LUNはサポートされません）。
  a| 
 iSCSI で接続された LUN
 
 
 
  a| 
-物理サーバと仮想サーバ（ VMDK と RDM LUN はサポートされません）
+VMホストへの物理およびNFSの直接マウント（VMDKおよびRDM LUNはサポートされません）。
  a| 
 NFS-connected ボリューム
 
