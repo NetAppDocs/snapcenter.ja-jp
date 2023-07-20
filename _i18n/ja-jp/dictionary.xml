@@ -2357,7 +2357,6 @@
   <block id="03101d2d05b95aa8395d372be971ceec" category="cell">パラメータ名</block>
   <block id="e2072f9dd36121658dfb70db997cac48" category="paragraph">LOG_LEVEL の値</block>
   <block id="27ef522d71e1457c1d75f1a9fbdffdb9" category="paragraph">サポートされるログレベルを表示します。</block>
-  <block id="9dec2839914c450a2eba38fd6ed0037d" category="paragraph">指定可能な値は、 INFO 、 DEBUG 、 TRACE 、 ERROR 、 FATAL 、 警告を表示します。</block>
   <block id="54e3ff300a85eed4faafba9e929fcc68" category="paragraph">SPL プロトコル</block>
   <block id="7af9608cb14f57495b1335e877ee3b0e" category="paragraph">SnapCenter Plug-in Loader でサポートされているプロトコルを表示します。</block>
   <block id="36c24cffc745e8682deaec9e2c0960f8" category="paragraph">HTTPS プロトコルのみがサポートされています。デフォルト値がない場合は、値を追加できます。</block>
@@ -8443,4 +8442,5 @@ NetApp®Single Mailbox Recoveryは、2023年5月12日に販売終了（EOA）に
   <block id="dc085c0453f245659c31e067671c65b0" category="sidebar">CA証明書をUNIXホストプラグインにインポートし、ルート証明書または中間証明書をSPL trust-storeに設定します</block>
   <block id="78a044d413487b3c49b37567f8df9e4f" category="sidebar">CA証明書をUNIXホストプラグインにインポートします</block>
   <block id="7fbe6e40125b7d1b2f5c5c05044e7526" category="sidebar">証明書ベースの認証を有効にします</block>
+  <block id="20c5c92c0148a7ebef737c442e93b7ec" category="paragraph">指定できる値は、trace、debug、info、warn、error、 致命的だ</block>
 </blocks>

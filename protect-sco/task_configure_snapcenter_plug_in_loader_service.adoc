@@ -32,7 +32,7 @@ LOG_LEVEL の値
  a| 
 サポートされるログレベルを表示します。
 
-指定可能な値は、 INFO 、 DEBUG 、 TRACE 、 ERROR 、 FATAL 、 警告を表示します。
+指定できる値は、trace、debug、info、warn、error、 致命的だ
 
 
 
