@@ -1,7 +1,7 @@
 ---
 permalink: sc-automation/rest_api_workflows_disaster_recovery_of_snapcenter_server.html 
 sidebar: sidebar 
-keywords:  
+keywords: REST API, disaster recovery, DR 
 summary: SnapCenter のディザスタリカバリ機能では、 REST API を使用して SnapCenter サーバをバックアップします。 
 ---
 = ディザスタリカバリ（DR）REST API
@@ -74,14 +74,12 @@ NOTE: VMが破損している場合は、別のVMまたは同じ名前のマシ�
 
 REST API を使用すると、 REST API Swagger ページで次の処理を実行できます。Swagger ページへのアクセス方法については、を参照してください link:https://docs.netapp.com/us-en/snapcenter/sc-automation/task_how%20to_access_rest_apis_using_the_swagger_api_web_page.html["swagger API Web ページを使用して REST API にアクセスする方法"]。
 
-* 必要なもの *
-
+.必要なもの
 * SnapCenter 管理者ユーザとしてログインする必要があります。
 * DR リストア API を実行するには、 SnapCenter サーバが稼働している必要があります。
 
 
-* このタスクについて *
-
+.このタスクについて
 SnapCenter Server DR はすべてのプラグインをサポートします。
 
 |===
@@ -91,8 +89,7 @@ SnapCenter Server DR はすべてのプラグインをサポートします。
  a| 
 既存の SnapCenter サーバ DR バックアップを取得します
 
-
-NOTE: DRバックアップを格納するターゲットパスを指定する必要があります。
+DRバックアップを格納するターゲットパスを指定する必要があります。
  a| 
 `/4.5/disasterrecovery/sa/backup?TargetPath={path}`
  a| 
@@ -135,4 +132,5 @@ NOTE: DRバックアップを格納するターゲットパスを指定する必
 投稿（ Post ）
 
 |===
-詳細については、を参照してください https://www.youtube.com/watch?v=Nbr_wm9Cnd4&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg["ディザスタリカバリ API"^] ビデオ：
+.を参照してください。
+を参照してください link:https://www.youtube.com/watch?v=Nbr_wm9Cnd4&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg["ディザスタリカバリ API"^] ビデオ：

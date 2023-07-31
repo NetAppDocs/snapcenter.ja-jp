@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_add_resources_to_snapcenter_custom_plug_ins.html 
 sidebar: sidebar 
-keywords:  
+keywords: custom plug-in, resources, snapcenter 
 summary: バックアップまたはクローンを作成するリソースを追加する必要があります。環境によっては、バックアップまたはクローンを作成するデータベースインスタンスやそのコレクションもリソースに含まれます。 
 ---
 = SnapCenter Custom Plug-ins にリソースを追加します
@@ -13,7 +13,7 @@ summary: バックアップまたはクローンを作成するリソースを�
 [role="lead"]
 バックアップまたはクローンを作成するリソースを追加する必要があります。環境によっては、バックアップまたはクローンを作成するデータベースインスタンスやそのコレクションもリソースに含まれます。
 
-.作業を開始する前に
+.必要なもの
 * SnapCenter サーバのインストール、ホストの追加、ストレージシステム接続の作成、クレデンシャルの追加などのタスクを完了しておく必要があります。
 * が必要です link:concept_develop_a_plug_in_for_your_application.html["アプリケーション用のカスタムプラグインを作成しました"]。
 * SnapCenter サーバにプラグインをアップロードしておく必要があります。
@@ -73,7 +73,7 @@ MySQL や DB2 のアプリケーション用のリソースを追加すること
 
 +
 
-NOTE: SnapCenter Custom Plug-ins では、リソースの自動検出がサポートされておらず、物理環境と仮想環境のストレージの詳細は取得されません。リソースの作成時に、物理環境と仮想環境のストレージの情報を指定する必要があります。
+NOTE: SnapCenterカスタムプラグインでは、リソースの自動検出はサポートされていません。物理環境と仮想環境のストレージの詳細も自動検出されません。リソースの作成時に、物理環境と仮想環境のストレージの情報を指定する必要があります。
 
 +
 image::../media/storage_footprint.gif[ストレージ容量]

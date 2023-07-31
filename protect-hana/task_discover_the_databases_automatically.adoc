@@ -13,8 +13,7 @@ summary: リソースとは、 SnapCenter で管理されている Linux ホス�
 [role="lead"]
 リソースとは、 SnapCenter で管理されている Linux ホスト上の SAP HANA データベースと非データボリュームです。使用可能な SAP HANA データベースを検出したあと、それらのリソースをリソースグループに追加してデータ保護処理を実行できます。
 
-* 必要なもの *
-
+.必要なもの
 * SnapCenter サーバのインストール、 HDB ユーザ・ストア・キーの追加、ホストの追加、ストレージ・システム接続の設定などの作業を完了しておく必要があります。
 * Linux ホストで HDB Secure User Store Key および HDB SQL OS ユーザを設定しておく必要があります。
 +
@@ -24,14 +23,12 @@ summary: リソースとは、 SnapCenter で管理されている Linux ホス�
 * SnapCenter Plug-in for SAP HANA Database では、 RDM / VMDK 仮想環境にあるリソースの自動検出はサポートされません。データベースを手動で追加する場合は、仮想環境のストレージ情報を指定する必要があります。
 
 
-* このタスクについて *
-
+.このタスクについて
 プラグインをインストールすると、その Linux ホスト上のすべてのリソースが自動的に検出され、リソースページに表示されます。
 
 自動で検出されたリソースは変更または削除できません。
 
-* 手順 *
-
+.手順
 . 左側のナビゲーションペインで、 * Resources * をクリックし、リストから Plug-in for SAP HANA Database を選択します。
 . [ リソース ] ページで、 [ 表示 ] リストからリソースタイプを選択します。
 . （オプション） * をクリックしますimage:../media/filter_icon.gif[""]* をクリックし、ホスト名を選択します。
@@ -55,8 +52,7 @@ NOTE: SAP HANA データベースで HDB Secure User Store Key が設定され�
 
 IMPORTANT: データベース名が SnapCenter 以外に変更された場合は、リソースを更新する必要があります。
 
-* 終了後 *
-
+.次の手順
 データ保護処理を実行するには、データベースを保護できるように HDB Secure User Store Key および HDBSQL OS ユーザを設定するか、またはリソースグループにこのキーを追加する必要があります。
 
 link:task_configure_hdb_user_store_key_and_hdbsql_os_user_for_the_sap_hana_database.html["SAP HANA データベース用に HDB User Store Key および HDBSQL OS ユーザを設定します"]

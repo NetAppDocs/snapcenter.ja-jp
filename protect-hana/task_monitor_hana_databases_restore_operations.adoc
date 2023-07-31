@@ -1,7 +1,7 @@
 ---
 permalink: protect-hana/task_monitor_hana_databases_restore_operations.html 
 sidebar: sidebar 
-keywords: restore 
+keywords: monitor, SAP HANA databases, restore operations 
 summary: Jobs ページを使用して、 SnapCenter の各リストア処理の進捗状況を監視できます。処理の進捗状況をチェックして、処理が完了するタイミングや問題があるかどうかを確認できます。 
 ---
 = SAP HANA データベースのリストア処理を監視する

@@ -13,8 +13,7 @@ summary: 'SnapCenter に直接登録された SAP HANA ホストの場合、 Sna
 [role="lead"]
 SnapCenter に直接登録された SAP HANA ホストの場合、 SnapCenter Plug-in for SAP HANA Database をインストールまたはアップグレードすると、ホスト上のリソースが自動的に検出されます。プラグインをインストールまたはアップグレードした後、プラグインホスト上にあるすべてのマルチテナントデータベースコンテナ（ MDC ）リソースに対して、別の MDC リソースが自動的に検出されて SnapCenter に登録されます。新しいリソースは「ロック」状態になります。
 
-* このタスクについて *
-
+.このタスクについて
 たとえば、 SnapCenter 4.2 では、 E90 MDC リソースがプラグインホスト上にあり、手動で登録されている場合、 SnapCenter 4.3 にアップグレードした後に、別の GUID を持つ別の E90 MDC リソースが検出されて SnapCenter に登録されます。
 
 
@@ -24,8 +23,7 @@ NOTE: SnapCenter 4.2 以前のバージョンのリソースに関連付けら�
 
 SnapCenter 4.3 で検出された新しいリソースを使用してデータ保護処理を開始するには、次の手順を実行します。
 
-* 手順 *
-
+.手順
 . リソースページで ' 以前の SnapCenter リリースにバックアップが追加されている古い MDC リソースを選択し ' トポロジーページからメンテナンス・モードにします
 +
 リソースがリソースグループの一部である場合は、リソースグループを「メンテナンスモード」にします。
@@ -43,8 +41,7 @@ SnapCenter 4.3 で検出された新しいリソースを使用してデータ�
 
 
 
-* 詳細はこちら *
-
+.関連情報
 link:task_configure_hdb_user_store_key_and_hdbsql_os_user_for_the_sap_hana_database.html["SAP HANA データベース用に HDB User Store Key および HDBSQL OS ユーザを設定します"]
 
 link:task_view_sap_hana_database_backups_and_clones_in_the_topology_page_sap_hana.html["Topology ページで、 SAP HANA データベースのバックアップとクローンを表示します"]

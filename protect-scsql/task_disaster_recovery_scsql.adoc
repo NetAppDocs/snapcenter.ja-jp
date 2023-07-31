@@ -11,7 +11,7 @@ summary: SnapCenter Plug-in for SQL Serverが停止したら、次の手順を�
 
 
 [role="lead"]
-SnapCenter Plug-in for SQL Serverが停止した場合は、次の手順を実行して別のSQLホストに切り替え、データをリカバリします。
+SnapCenter Plug-in for SQL Serverが停止した場合は、次の手順に従って別のSQLホストに切り替えてデータをリカバリします。
 
 .必要なもの
 * セカンダリホストのオペレーティングシステム、アプリケーション、およびホスト名は、プライマリホストと同じにする必要があります。

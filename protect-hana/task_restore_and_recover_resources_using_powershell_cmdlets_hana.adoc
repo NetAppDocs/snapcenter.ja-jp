@@ -1,7 +1,7 @@
 ---
 permalink: protect-hana/task_restore_and_recover_resources_using_powershell_cmdlets_hana.html 
 sidebar: sidebar 
-keywords:  
+keywords: restore resources, snapcenter 
 summary: リソースのバックアップをリストアするときは、 SnapCenter サーバとの接続セッションを開始し、バックアップをリストしてバックアップ情報を取得し、バックアップをリストアします。 
 ---
 = PowerShell コマンドレットを使用してリソースをリストアする

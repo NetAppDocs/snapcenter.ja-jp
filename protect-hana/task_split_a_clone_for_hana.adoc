@@ -1,7 +1,7 @@
 ---
 permalink: protect-hana/task_split_a_clone_for_hana.html 
 sidebar: sidebar 
-keywords:  
+keywords: split clone, snapcenter 
 summary: SnapCenter を使用して、クローニングされたリソースを親リソースからスプリットできます。スプリットされたクローンは、親リソースに依存しません。 
 ---
 = クローンをスプリットします。
