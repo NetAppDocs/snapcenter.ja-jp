@@ -50,7 +50,7 @@ NOTE: SnapCenter でバックアップできるのは、 SQL Server Standard Edi
 . 左側のナビゲーションペインで、 * リソース * をクリックし、リストから適切なプラグインを選択します。
 . リソースページで、 * View * ドロップダウン・リストから * Database * 、 * Instance * 、または * Availability Group * を選択します。
 +
-をクリックします image:../media/filter_icon.gif[""] をクリックし、ホスト名と SQL Server インスタンスを選択してリソースをフィルタリングします。をクリックします image:../media/filter_icon.gif[""] をクリックしてフィルタペインを閉じます。
+をクリックします image:../media/filter_icon.png[""] をクリックし、ホスト名と SQL Server インスタンスを選択してリソースをフィルタリングします。をクリックします image:../media/filter_icon.png[""] をクリックしてフィルタペインを閉じます。
 
 . [ リソースの更新 ] をクリックします。
 +

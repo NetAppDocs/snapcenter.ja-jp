@@ -28,13 +28,13 @@ SnapCenter は、次の方法で導入できます。
 +
 ** ONTAP FAS、AFF、またはAll SAN Array（ASA）プライマリシステム上にあり、ONTAP FAS、AFF、またはASAセカンダリシステムにレプリケートされるデータ
 ** ONTAP Select プライマリシステム上のデータ
-** ONTAP FAS、AFF、ASAのプライマリシステムとセカンダリシステムにあり、ローカルのStorageGRIDオブジェクトストレージで保護されているデータ（NetApp BlueXPクラウドバックアップ統合を使用）
+** ONTAP FAS、AFF、またはASAのプライマリシステムとセカンダリシステムにあり、ローカルのStorageGRIDオブジェクトストレージで保護されているデータ
 
 
 * ハイブリッドクラウドのオンプレミスで以下を保護：
 +
 ** ONTAP FAS、AFF、またはASAプライマリシステム上にあり、Cloud Volumes ONTAPにレプリケートされるデータ
-** ONTAP FAS、AFF、ASAのプライマリシステムとセカンダリシステムにあり、クラウドのオブジェクトストレージとアーカイブストレージで保護されているデータ（NetApp BlueXP Cloud Backup統合を使用）
+** ONTAP FAS、AFF、ASAのプライマリシステムとセカンダリシステムにあり、クラウドのオブジェクトストレージとアーカイブストレージで保護されているデータ（BlueXPのバックアップとリカバリの統合を使用）
 
 
 * パブリッククラウドで次のデータを保護：
@@ -184,9 +184,10 @@ SnapCenter サーバは、ホストエージェントを介して Windows プラ
 
 
 
-SnapCenter サーバとプラグインは、 HTTPS を使用してホストエージェントと通信します。
+SnapCenter サーバとプラグインは、 HTTPS を使用してホストエージェントと通信します。SnapCenter 処理に関する情報は、 SnapCenter リポジトリに保存されます。
 
-SnapCenter 処理に関する情報は、 SnapCenter リポジトリに保存されます。
+
+NOTE: SnapCenterは、Windowsホスト用に分離されたネームスペースをサポートします。分離された名前空間の使用時に問題が発生した場合は、を参照してください。 https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_is_unable_to_discover_resources_when_using_disjoint_namespace["分離されたネームスペースを使用しているときにSnapCenterでリソースを検出できない"]。
 
 
 

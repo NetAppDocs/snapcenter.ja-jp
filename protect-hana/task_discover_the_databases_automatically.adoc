@@ -31,9 +31,9 @@ summary: リソースとは、 SnapCenter で管理されている Linux ホス�
 .手順
 . 左側のナビゲーションペインで、 * Resources * をクリックし、リストから Plug-in for SAP HANA Database を選択します。
 . [ リソース ] ページで、 [ 表示 ] リストからリソースタイプを選択します。
-. （オプション） * をクリックしますimage:../media/filter_icon.gif[""]* をクリックし、ホスト名を選択します。
+. （オプション） * をクリックしますimage:../media/filter_icon.png[""]* をクリックし、ホスト名を選択します。
 +
-次に、 * をクリックしますimage:../media/filter_icon.gif[""]* をクリックすると、フィルタペインが閉じます。
+次に、 * をクリックしますimage:../media/filter_icon.png[""]* をクリックすると、フィルタペインが閉じます。
 
 . [* リソースの更新 * ] をクリックして、ホストで使用可能なリソースを検出します。
 +

@@ -652,7 +652,6 @@
   <block id="d208aa08a03da9a8a8e5bd96ad0fedae" category="list-text"><block ref="ef6f1c216f28d7814323778090034017" category="inline-image-macro-rx" type="image"></block> キューに登録され</block>
   <block id="cc9dbc9fb7810be481501a3376208520" category="list-text"><block ref="c646c5e33fd3a6c1e32ebcb9f24cc88e" category="inline-image-macro-rx" type="image"></block> キャンセルされました</block>
   <block id="b40a6c0b08ac99c86eb676e2689c6996" category="list-text">左側のナビゲーションペインで、 *Monitor* をクリックします。</block>
-  <block id="1bfa745c5533e2551a662571c60d9a71" category="list-text">をクリックします <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block> リストをフィルタリングして、リストア処理のみを表示します。</block>
   <block id="7407325f29b504f9c8b87ec8da503815" category="list-text">開始日と終了日を指定します。</block>
   <block id="72703ba150df91059707035aef45dd74" category="list-text">[* タイプ *] ドロップダウン・リストから、 [* リストア *] を選択します。</block>
   <block id="a28133afd7846d1e77aa696930846108" category="list-text">[* Status *] ドロップダウン・リストから、リストア・ステータスを選択します。</block>
@@ -836,7 +835,6 @@
   <block id="bf48a7e0eb56785cdc1ed4c661d3583f" category="summary">リソースグループは、リソースページからオンデマンドでバックアップできます。リソースグループにポリシーが適用され、かつスケジュールが設定されている場合は、スケジュールに従って自動的にバックアップが実行されます。</block>
   <block id="2414432c60e82c4bed04be0e4dafda65" category="doc">SQL Server リソースグループをバックアップする</block>
   <block id="5188766c2c9e07184bb642e31a6d1193" category="list-text">[ リソース ] ページで、 [ * 表示 ] リストから [ * リソースグループ * ] を選択します。</block>
-  <block id="e169c75993af25a436c2276ecc3bbdda" category="paragraph">リソースグループを検索するには、検索ボックスにリソースグループ名を入力するか、 * をクリックします<block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block>* をクリックし、タグを選択します。次に、 * をクリックします<block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block>* をクリックすると、フィルタペインが閉じます。</block>
   <block id="44119ab6cb16491e354c029de67b6782" category="list-text">複数のポリシーをリソースグループに関連付けている場合は、「 * Policy * 」ドロップダウンリストから、バックアップに使用するポリシーを選択します。</block>
   <block id="d8a3458cd303d8d6a9529b6dbba62424" category="list-text">バックアップ後、 *verify* を選択して、オンデマンドバックアップを検証します。</block>
   <block id="8e927494c3186b26a3de09d9578e731f" category="paragraph">ポリシーの * verify * オプションは、スケジュールされたジョブにのみ適用されます。</block>
@@ -868,7 +866,6 @@
   <block id="3bb68819532539f48f629ba62348a6c6" category="paragraph">たとえば、ユーザにデータベースへの表示アクセス権しかない場合、データベースのファイルとプロパティを識別できないため、バックアップすることはできません。</block>
   <block id="7d48eed4487109a3829d0196f297a492" category="admonition">SnapCenter でバックアップできるのは、 SQL Server Standard Edition で可用性グループを設定している場合のみです。</block>
   <block id="8057ae87eee7a0579409f47c9591745e" category="list-text">リソースページで、 * View * ドロップダウン・リストから * Database * 、 * Instance * 、または * Availability Group * を選択します。</block>
-  <block id="c3a876612603db3849e76480edcc8121" category="paragraph">をクリックします <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block> をクリックし、ホスト名と SQL Server インスタンスを選択してリソースをフィルタリングします。をクリックします <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block> をクリックしてフィルタペインを閉じます。</block>
   <block id="e447517e5ec13b3c9e98a7c686d29ac7" category="paragraph">新しく追加、名前変更、または削除されたリソースは、 SnapCenter サーバインベントリに更新されます。</block>
   <block id="b8b5141218dbfab4fdbf5b5063dfa880" category="paragraph">リソースは、リソースタイプ、ホストまたはクラスタ名、関連するリソースグループ、バックアップタイプ、ポリシー、全体的なステータスなどの情報とともに表示されます。</block>
   <block id="e47a2cdbd770e8e20b9c7261dcf67926" category="list-text">データベースがネットアップ以外のストレージ上にある場合、「 Not Available for backup 」が「 Overall Status * 」列に表示されます。</block>
@@ -1086,7 +1083,6 @@
   <block id="2794927004b00b8d766ca3deca4c7096" category="paragraph">SnapCenterJobs ページを使用して、各種バックアップ処理の進捗状況を監視できます。進捗状況をチェックして、処理が完了するタイミングや問題があるかどうかを確認できます。</block>
   <block id="7944a2318d6a58176074a0d99b34c73d" category="paragraph">以下のアイコンがジョブページに表示され、操作の対応する状態を示します。</block>
   <block id="c0a63413cafa6a465f587d5835701c87" category="list-text">[ モニター ] ページで、 [ * ジョブ * ] をクリックします。</block>
-  <block id="6044156c6f0da8e8ec296448fa2d5fa5" category="list-text">をクリックします <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block> バックアップ処理だけが表示されるようにリストをフィルタリングします。</block>
   <block id="e10f73b33c1a0725b8812f08089e7788" category="list-text">[* タイプ *] ドロップダウン・リストから、 [*Backup*] を選択します。</block>
   <block id="1f8a6ebe3d4d002c37961084ee957772" category="list-text">[*Status*]( ステータス *) ドロップダウンから、バックアップステータスを選択します。</block>
   <block id="30816945c60dc2c3f5e65b0a88f9bc19" category="list-text">[ 適用（ Apply ） ] をクリックして、正常に完了した操作を表示する。</block>
@@ -1289,7 +1285,6 @@
   <block id="768ec7bd106e7f2fd93257b2c6b114ad" category="paragraph">このバックアップタイプは、定期的なログバックアップには影響しません。コピーのみのログバックアップは、オンラインのリストア処理を実行する場合に便利です。</block>
   <block id="18c6c7b07148849996bd7da366d6bf60" category="summary">Jobs ページを使用して、 SnapCenter のクローニング処理の進捗状況を監視できます。処理の進捗状況をチェックして、処理が完了するタイミングや問題があるかどうかを確認できます。</block>
   <block id="5c654ca02551a6a3a8886012f5c1fc6e" category="doc">SQL データベースのクローニング処理を監視する</block>
-  <block id="62db5b4d65c0cdab012121187a77e764" category="list-text">をクリックします <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block> をクリックして、クローニング処理のみが表示されるようにリストをフィルタリングします。</block>
   <block id="4cfa68aad234b91494e417f8012ca40d" category="list-text">[*Type*]( タイプ *) ドロップダウンリストから '[*Clone*]( クローン *) を選択します</block>
   <block id="7c18f9fe3e82229bbf88d4133dde72bd" category="list-text">[ * Status * ] ドロップダウン・リストから、クローンのステータスを選択します。</block>
   <block id="33edcafc3b101b5da89793db6c9151a5" category="list-text">[ 適用（ Apply ） ] をクリックして、正常に完了した操作を表示する。</block>
@@ -1909,7 +1904,6 @@
   <block id="6987bf979aa46f2f012544689e530ba8" category="paragraph">データベースが検出されるためには、データベースが少なくともマウント済み状態であることが必要です。Oracle Real Application Clusters （ RAC ）環境で、検出が実行されるホスト内の RAC データベースインスタンスが検出されるためには、データベースインスタンスが少なくともマウント済み状態であることが必要です。リソースグループには、正常に検出されたデータベースのみを追加できます。</block>
   <block id="719fa5cf3cf0a0fd65399dc0b9ba9597" category="paragraph">ホスト上で Oracle データベースを削除した場合、 SnapCenter サーバは認識しないため、削除されたデータベースのリストが表示されます。SnapCenter リソースのリストを更新するには、リソースを手動で更新する必要があります。</block>
   <block id="d5637dc8626943be066538cf923050b5" category="list-text">[ リソース ] ページで、 [ * 表示 ] リストから [ * データベース * ] を選択します。</block>
-  <block id="ddb5eb0de214c4f8ca63b100be025650" category="paragraph">をクリックします <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block>をクリックし、ホスト名とデータベースタイプを選択してリソースをフィルタリングします。次に、をクリックします <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block> アイコンをクリックして、フィルタペインを閉じます。</block>
   <block id="ffe07db18130be1419f3e22efa2b9af9" category="paragraph">RAC One Node シナリオでは、データベースが現在ホストされているノード上の RAC データベースとして検出されます。</block>
   <block id="8cc1dfb0736def133fbfcac21e33e8c2" category="paragraph">データベースは、データベースタイプ、ホストまたはクラスタ名、関連するリソースグループとポリシー、ステータスなどの情報とともに表示されます。</block>
   <block id="488808c65c8210343fe174817606fae0" category="list-text">データベースがネットアップ以外のストレージシステム上にある場合、ユーザインターフェイスの総体的なステータス列にはバックアップに使用できないメッセージが表示されます。</block>
@@ -1957,8 +1951,6 @@
   <block id="005a9d9d8d3ea04fe576ea51dbb37182" category="paragraph">Plug-in for Oracle Database では、 SAP アプリケーションを実行している Oracle データベースのバックアップを管理することができます。ただし、 SAP BR * Tools との統合はサポートされません。</block>
   <block id="381bb74dcb857609537acee4a3539bed" category="summary">どのリソースグループにも含まれていないリソースは、のリソースページからバックアップすることができます。</block>
   <block id="bb3bb922fc2fe1b5851c8c139e13f07b" category="doc">Oracle リソースのバックアップ</block>
-  <block id="520f85e55e2b17285c39b1ad458556a0" category="list-text">* をクリックします<block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block>* をクリックし、ホスト名とデータベースタイプを選択してリソースをフィルタリングします。</block>
-  <block id="811422b4eb759583a4051504db293f64" category="paragraph">次に、 * をクリックします<block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block>* をクリックすると、フィルタペインが閉じます。</block>
   <block id="d8e3db119b7cf9c31602a2121bfa4365" category="list-text">バックアップするデータベースを選択します。</block>
   <block id="d24902f60cccf9a4d0ef979587d1d4fd" category="paragraph">Database - Protect （データベース - 保護）ページが表示されます。</block>
   <block id="81e3d6d459d6185662dc1ac418aeba95" category="paragraph">Snapshot コピー名にカスタムの名前形式を使用する場合は、このチェックボックスをオンにして名前形式を入力します。</block>
@@ -2133,8 +2125,6 @@
   <block id="242cdc11ae22f217c93ae40e14e96194" category="paragraph">個々のリソースグループのクレデンシャルを設定していて、ユーザ名にフル管理者権限がない場合は、ユーザ名に少なくともリソースグループとバックアップ権限が必要です。</block>
   <block id="7b13621f41f0146d0ffd2434af94438a" category="paragraph">Oracle データベース認証を有効にしている場合、リソースビューに赤い鍵のアイコンが表示されます。データベースを保護できるようにデータベースのクレデンシャルを設定するか、データベースをリソースグループに追加してデータ保護処理を実行する必要があります。</block>
   <block id="9d84c90ce04a969ca09498823506ba1f" category="admonition">クレデンシャルの作成時に誤った詳細を指定すると、エラーメッセージが表示されます。[ キャンセル ] をクリックしてから、もう一度実行してください。</block>
-  <block id="f8cbfb3254bb5bd20533e8d1e586899c" category="list-text">をクリックします <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block>をクリックし、ホスト名とデータベースタイプを選択してリソースをフィルタリングします。</block>
-  <block id="e6b04dca8731f73a6232df543bed1168" category="paragraph">をクリックします <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block> をクリックしてフィルタペインを閉じます。</block>
   <block id="5de6e0a70b653c8dab85d2d2bccf04ae" category="list-text">データベースを選択し、 * データベース設定 * &gt; * データベースの設定 * をクリックします。</block>
   <block id="6df18cfefa59a0d65ea120d8247b7ba8" category="list-text">[ データベース設定の設定 ] セクションの [ 既存の資格情報を使用する *] ドロップダウンリストから、 Oracle データベースでデータ保護ジョブを実行するために使用する資格情報を選択します。</block>
   <block id="bc36b053b483bc3f05afdf22b15ab4cf" category="admonition">Oracle ユーザには sysdba 権限が必要です。</block>
@@ -3638,8 +3628,6 @@
   <block id="760e4ac18c61344254ca2b2ea3da745a" category="list-text">SnapCenter Plug-ins Package for Linux または SnapCenter Plug-ins Package for AIX を使用している場合、 SnapCenter サーバでスケジュールが Windows タスクスケジュールとして実行されます。</block>
   <block id="34491d7c290ea91e85fff45d101c134f" category="list-text">SnapCenter Plug-in for Oracle Database の場合、 SnapCenter サーバホストで実行されるホストエージェントは、 Linux ホストまたは AIX ホストで実行される SnapCenter Plug-in Loader （ SPL ）と通信して、異なるデータ保護処理を実行します。</block>
   <block id="a45f8ebdad00cd1e18e59d75c2e10a6e" category="list-text">SnapCenter Plug-in for SAP HANA Database および SnapCenter Custom Plug-ins の場合、 SnapCenter サーバはホストで実行されている SCCore エージェントを通じてこれらのプラグインと通信します。</block>
-  <block id="7f09afa1cce264e8c737c6b7357d5bd8" category="paragraph">SnapCenter サーバとプラグインは、 HTTPS を使用してホストエージェントと通信します。</block>
-  <block id="920ebfc1b280e5aee6295e39f4823b55" category="paragraph">SnapCenter 処理に関する情報は、 SnapCenter リポジトリに保存されます。</block>
   <block id="a6d093f66e362f8852d5b0ce5d1adf5a" category="section-title">SnapCenter プラグイン</block>
   <block id="e1087bd8c9bab7e111508724bff61f97" category="paragraph">各 SnapCenter プラグインは、特定の環境、データベース、およびアプリケーションをサポートしています。</block>
   <block id="9a8bf4c46d108a9dadf51b9b7637621f" category="cell">プラグイン名</block>
@@ -3884,7 +3872,6 @@
   <block id="e1eb2f8f1b503096778da6fef42f7902" category="doc">Plug-in for SAP HANA のインストールのステータスを監視します</block>
   <block id="4580f4b818b00829ad833fee80f6f773" category="summary">リソースグループは、ホスト上のリソースの集まりです。リソースグループのバックアップ処理は、リソースグループに定義されているすべてのリソースを対象に実行されます。</block>
   <block id="dbc89dfae1c6c8ad4eb43878b9171ca6" category="doc">リソースグループをバックアップする</block>
-  <block id="21364d4ce43113190e1c8a9ca29e8c66" category="paragraph">リソースグループを検索するには、検索ボックスにリソースグループ名を入力するか、をクリックします <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block>をクリックし、タグを選択します。をクリックします <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block> をクリックしてフィルタペインを閉じます。</block>
   <block id="6c22568aa6116c11fda42febcf7b796a" category="list-text">[ リソースグループ ] ページで、バックアップするリソースグループを選択し、 [ 今すぐバックアップ * ] をクリックします。</block>
   <block id="4a1c51520bfb3d170a967d4c218b52bf" category="list-text">Backup （バックアップ）ページで、次の手順を実行します。</block>
   <block id="38daee81aaf3af99133cf03d753b6a86" category="list-text">複数のポリシーをリソースグループに関連付けている場合は、「 * Policy * 」ドロップダウンリストから、バックアップに使用するポリシーを選択します。</block>
@@ -3953,7 +3940,6 @@
   <block id="19231ec7746e87de717dc81f2ffc3364" category="list-text">データ保護処理を実行するには、 HDB Secure User Store Key および HDB SQL OS ユーザーがデータベースを保護できるように設定するか、またはデータベースをリソースグループに追加する必要があります。</block>
   <block id="eebed0ac34228e0e0f38c9d860604c29" category="list-text">システムデータベースにアクセスするには、 HDB SQL OS ユーザーを構成する必要があります。HDB SQL OS ユーザがテナントデータベースのみにアクセスするように設定されていると、検出処理が失敗します。</block>
   <block id="883766d38a60b014b1f295ce741d2078" category="list-text">左側のナビゲーションペインで、 * リソース * をクリックし、リストから SnapCenter Plug-in for SAP HANA Database を選択します。</block>
-  <block id="214914d9549015d63d4b86758e66e1aa" category="list-text">（オプション）をクリックします <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block> をクリックし、ホスト名を選択します。</block>
   <block id="39e3c69c6f9d80e017de1f541e1670ca" category="list-text">データベースを選択し、 * データベースの設定 * をクリックします。</block>
   <block id="41119aa704f7776e425d802cc1efdd26" category="admonition">プラグインのホスト名が表示され、 HDB SQL OS ユーザーが &lt;sid&gt;adm に自動的に入力されます。</block>
   <block id="5c99d6884310f08896d7d62db7e21f33" category="summary">SnapCenter 4.3 にアップグレードすると、クローンは表示されなくなります。クローンを削除するか、クローンが作成されたリソースのトポロジページからクローンをスプリットします。</block>
@@ -4082,18 +4068,14 @@
   <block id="8896e4ff5c38407b9b105f9412d0f746" category="doc">SAP HANA データベースの SnapMirror および SnapVault レプリケーション用のストレージシステムを準備する</block>
   <block id="7394e84832837e7d0dc503d85eb3f36c" category="doc">SAP HANA データベースをバックアップする</block>
   <block id="8f0e9744b1000b3672d2bdcf50a74d27" category="list-text">Snapshot コピーベースのバックアップ処理の場合は、すべてのテナントデータベースが有効でアクティブになっていることを確認してください。</block>
-  <block id="127c10f681ffba1b9fa91c9bf92bcbc8" category="paragraph">* をクリックします<block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block>* をクリックし、ホスト名とリソースタイプを選択してリソースをフィルタリングします。をクリックします <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block> をクリックしてフィルタペインを閉じます。</block>
   <block id="085ab917326888bb9fd0378b5efb84b9" category="list-text">バックアップするリソースをクリックします。</block>
   <block id="8deb8aa93ea3b02fc36610daf36edad9" category="paragraph">たとえば、 _customText_policy_hostname_or_resource_hostname_hostname_1 です。デフォルトでは、 Snapshot コピー名の後ろにタイムスタンプが追加されます。</block>
   <block id="23ce0178ca7588539a792fb41d10d6d6" category="list-text">[*Backups] の矢印をクリックして、追加のバックアップ・オプションを設定します。</block>
   <block id="75acd63fc160c8f401a6e89437895634" category="paragraph">必要に応じて、整合グループのバックアップを有効にし、次の作業を実行します。</block>
   <block id="50ce6bc02d574c2cab1fc82a19854cf8" category="paragraph">整合グループ Snapshot 処理が完了するまで待機する時間を設定してください</block>
-  <block id="35d7ec08143354023f987fa79b9fde69" category="paragraph">Snapshot コピー処理が完了するまでの待機時間を指定するには、「至急」、「 * 中」、または「 * relaxed 」を選択します。Urgent = 5 秒、 Medium = 7 秒、 Relaxed = 20 秒。</block>
   <block id="33d8fc89984b399b5f14da8a76d58c5a" category="paragraph">WAFL 同期を無効にします</block>
   <block id="27a16d7d61f6682ceaf4d8022ffa250f" category="paragraph">WAFL 整合ポイントを強制しない場合は、これを選択します。</block>
-  <block id="78bc1eb0c9c9c6c68e04d6b93f620e64" category="list-text">[* Scripts] の矢印をクリックすると、休止、 Snapshot コピー、および休止解除の各処理に対して PRE および POST のコマンドが実行されます。</block>
   <block id="419f55f97321a95d51e21f7ca2e9b02d" category="paragraph">バックアップ処理を終了する前にプリコマンドを実行することもできます。プリスクリプトとポストスクリプトは SnapCenter サーバで実行されます。</block>
-  <block id="e03984f57a97abb4f741022763efa39f" category="list-text">[** カスタム構成 ** ] 矢印をクリックし、このリソースを使用するすべてのジョブに必要なカスタム値のペアを入力します。</block>
   <block id="97d85b626e97047020a03812221a5f99" category="list-text">Snapshot コピーツールの * 矢印をクリックして、 Snapshot コピーを作成するツールを選択します。</block>
   <block id="70ea5c730ba565a725b5e6a5ce34b32d" category="cell">状況</block>
   <block id="2ca1729f14a40401626e0eaac1397926" category="paragraph">SnapCenter を使用してストレージレベルの Snapshot コピーを作成する</block>
@@ -4214,7 +4196,6 @@
   <block id="93f2d6a1a85e6dc485df261b08b8eabb" category="list-text">SnapCenter Plug-in for SAP HANA Database では、 RDM / VMDK 仮想環境にあるリソースの自動検出はサポートされません。データベースを手動で追加する場合は、仮想環境のストレージ情報を指定する必要があります。</block>
   <block id="a9d0e12f10920c999cb78960286bd82a" category="paragraph">自動で検出されたリソースは変更または削除できません。</block>
   <block id="ea6799b398e3200b6531e1aa5a544d0c" category="list-text">左側のナビゲーションペインで、 * Resources * をクリックし、リストから Plug-in for SAP HANA Database を選択します。</block>
-  <block id="275739dcbd0826cc4a0ad3c63d35359a" category="list-text">（オプション） * をクリックします<block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block>* をクリックし、ホスト名を選択します。</block>
   <block id="0f034106893faef4643a4f2e45058c52" category="list-text">[* リソースの更新 * ] をクリックして、ホストで使用可能なリソースを検出します。</block>
   <block id="eb037ec78f327455a8e36a07871d70c6" category="paragraph">リソースは、リソースタイプ、ホスト名、関連するリソースグループ、バックアップタイプ、ポリシー、全体的なステータスなどの情報とともに表示されます。</block>
   <block id="d960a78735f8828146abd7c7f897adb9" category="list-text">データベースがネットアップストレージ上にあり、保護されていない場合は、総体的なステータス列に Not protected と表示されます。</block>
@@ -4310,7 +4291,6 @@
   <block id="860213bd7e47ab530bb0265db0d4d02a" category="cell">* ベストプラクティス： * アクティブデータベースとパッシブデータベースのバックアップは同時に実行しないでください。競合状態が発生し、いずれかのバックアップが失敗する可能性があります。</block>
   <block id="1aa4e724dd9a6c283aa6653b764530f0" category="list-text">左側のナビゲーションペインで、 [* リソース ] をクリックし、リストから [Microsoft Exchange Server プラグイン *] を選択します。</block>
   <block id="0ad1c36a6c3e0a80135136739263c1d7" category="admonition">DAG では、アクティブなデータベースコピーがネットアップ以外のストレージにあり、データベースのパッシブコピーが少なくとも 1 つネットアップストレージにある場合、データベースを保護できます。</block>
-  <block id="f4fccf161b5e67001656d817cbe815c9" category="paragraph">* をクリックします<block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block>* をクリックし、ホスト名とデータベースタイプを選択してリソースをフィルタリングします。次に、 * をクリックします<block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block>* をクリックすると、フィルタペインが閉じます。</block>
   <block id="bb40ccbb928b274cb38a895aef70f856" category="list-text">データベースをバックアップする場合は、データベース名をクリックします。</block>
   <block id="8373034f279dfd1570ec179c090b858c" category="list-text">Topology ビューが表示されたら、 *Protect* をクリックします。</block>
   <block id="c5f4c29439aa6c78216cfa3f9865548c" category="list-text">Database Protect Resource （データベースの保護）ウィザードが表示された場合は、手順 3 に進みます。</block>
@@ -4615,7 +4595,6 @@
   <block id="1bbe027c3f1875faca6a0e19b110374a" category="list-text">リソースグループに異なるホストの複数のデータベースが含まれている場合は、ネットワークの問題が原因で一部のホストでのバックアップ処理が遅くなる可能性があります。「 SmConfigSettings 」 PowerShell コマンドレットを使用して、「 web.config 」内の「 M axRetryForUninitializedHosts 」の値を設定する必要があります。</block>
   <block id="a1d7cae473cc035fb76e1540b76e2763" category="list-text">リソースグループに、ネットアップストレージとネットアップ以外のストレージ上にアクティブ / パッシブデータベースコピーのあるデータベースまたはデータベース可用性グループが含まれていて、ポリシーでバックアップジョブの作成時に選択するサーバでアクティブ / パッシブデータベースコピーのバックアップ * または * バックアップコピーの選択が完了している場合： その後、バックアップジョブが警告状態になります。</block>
   <block id="b9c7ed41d7e2f0a91ab873b63037fa09" category="paragraph">ネットアップストレージ上のアクティブ / パッシブデータベースコピーのバックアップは成功し、ネットアップ以外のストレージ上のアクティブ / パッシブデータベースコピーのバックアップは失敗します。</block>
-  <block id="d9ad3509ed74d62d9925203b0b85cc8b" category="paragraph">リソースグループを検索するには、検索ボックスにリソースグループ名を入力するか、 * をクリックします<block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block>* をクリックし、タグを選択します。次に、 * をクリックします<block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block>* をクリックすると、フィルタペインが閉じます。</block>
   <block id="c700cc27f0a1d981ce1c0af8b5364daa" category="summary">SnapCenter を使用して、バックアップされた Exchange データベースをリストアできます。</block>
   <block id="aa14e187b593d2a11c1d14cbbec8aadc" category="doc">Exchange データベースをリストアします</block>
   <block id="b016fed9d8e76be8e2b8327a19c79e1c" category="list-text">リソースグループ、データベース、または Database Availability Group （ DAG ；データベース可用性グループ）をバックアップしておく必要があります。</block>
@@ -4716,7 +4695,6 @@
   <block id="75e9a2879a00ab4de0f951128cd2d531" category="paragraph">マウント、アンマウント、再シード、またはリカバリを保留中の状態のデータベースは、正常な状態ではありません。</block>
   <block id="5e75febf1a7f4c71f1ddfe400df30121" category="list-text">Database Availability Group （ DAG ；データベース可用性グループ）がある場合は、 DAG からバックアップジョブを実行して、グループ内のすべてのデータベースをバックアップできます。</block>
   <block id="96b6fde24fc45821a7c8c021ba21b20b" category="list-text">左側のナビゲーションペインで、 [ リソース ] をクリックし、 [ リソース ] ページの左上にあるプラグインのドロップダウンリストから [Microsoft Exchange Server*] を選択します。</block>
-  <block id="db8c73281f0636096f5bd11fbb13289a" category="paragraph">をクリックします <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block> をクリックし、ホスト名と Exchange サーバを選択してリソースをフィルタリングします。をクリックします <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block> をクリックしてフィルタペインを閉じます。</block>
   <block id="100eb6faf67bf674d493eae8a5daad8d" category="paragraph">リソースは、リソース名、データベース可用性グループ名、データベースが現在アクティブであるサーバ、コピーを備えたサーバ、前回のバックアップ時刻、全体的なステータスなどの情報とともに表示されます。</block>
   <block id="fded0b659a27c194139769a9325685fa" category="list-text">ネットアップ以外のストレージにデータベースがある場合、バックアップに使用できない状態は Overall Status 列に表示されます。</block>
   <block id="64e0044566e982c4c7cc1ae9310cc119" category="paragraph">DAG では、アクティブなデータベースコピーがネットアップ以外のストレージにある場合に、少なくとも 1 つのパッシブデータベースコピーがネットアップストレージにあると、「全体のステータス」列には保護されていないと表示されます。</block>
@@ -4987,7 +4965,6 @@
   <block id="1dedd6c3a82ac28ce72dbc7e64c47db2" category="doc">Windows ファイルシステムのリソースグループをバックアップする</block>
   <block id="c808fe33c523c6c0014718e7feeac182" category="list-text">セカンダリストレージとの SnapMirror 関係があるリソースをバックアップする場合、ストレージユーザに割り当てられるロールには「 "'napmirror all" 」権限を含める必要があります。ただし、「 vsadmin 」ロールを使用している場合、「 'SnapMirro all 」権限は必要ありません。</block>
   <block id="bf27fad69812da8f1ea6b50d511517e0" category="list-text">リソースグループに異なるホストの複数のデータベースが含まれている場合は、ネットワークの問題が原因で、一部のホストでのバックアップ処理が遅くなる可能性があります。Set-SmConfigSettings PowerShell コマンドレットを使用して、 web.config で MaxRetryForUninitializedHosts の値を設定する必要があります</block>
-  <block id="862569d2dbddc7f68305bb1aa73accec" category="paragraph">リソースグループを検索するには、検索ボックスにリソースグループ名を入力するか、をクリックします <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block> タグを選択します。をクリックします <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block> をクリックしてフィルタペインを閉じます。</block>
   <block id="757701cec0ed310dbf31948edd1073df" category="admonition">SnapCenter Plug-in for Oracle Database では、 2 つのデータベースが統合されたリソースグループがある場合に、一方のデータベースのデータファイルがネットアップ以外のストレージにあると、もう一方のデータベースがネットアップストレージにあっても、バックアップ処理は中止されます。</block>
   <block id="54f5c477b691c07c69aae1e40705b234" category="list-text">VMDK 上のアプリケーションデータおよび SnapCenter Plug-in for VMware vSphere の Java ヒープサイズが不足している場合、バックアップが失敗することがあります。Java ヒープサイズを増やすには、スクリプトファイル「 /opt/NetApp/init_scripts/scvservice 」を検索します。このスクリプトでは、「 do_start method 」コマンドは SnapCenter VMware プラグインサービスを起動します。このコマンドを次のように更新します：「 java -jar -Xmx8192M-Xms4096M 」</block>
   <block id="c2454fba56bef1c420bd258538641b94" category="summary">リソースとは、インストールしたプラグインで管理されるファイルシステム内の LUN などのコンポーネントのことです。これらのリソースをリソースグループに追加することで複数のリソースに対してデータ保護ジョブを実行できますが、その前に利用可能なリソースを特定しておく必要があります。使用可能なリソースを検出することで、プラグインのインストールが正常に完了したことの確認にもなります。</block>
@@ -5615,7 +5592,6 @@
   <block id="e1c05a94a3712659051eb07eafa04bd4" category="paragraph">Java 1.8 （ 64 ビット） Oracle Java または OpenJDK</block>
   <block id="edc25de414c7fe73d241458dab7bca2b" category="summary">個々のカスタムプラグインリソースがどのリソースグループにも含まれていない場合は、のリソースページからリソースをバックアップできます。リソースはオンデマンドでバックアップすることも、リソースにポリシーが適用されてスケジュールが設定されている場合は、スケジュールに従って自動的にバックアップが行われるようにすることもできます。</block>
   <block id="8ffa4ba0dd2df5995fd397c72a149679" category="doc">個々のカスタムプラグインリソースをバックアップする</block>
-  <block id="d9519d94a3a4c5d7cfd38a6562e76409" category="paragraph">をクリックします <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block>をクリックし、ホスト名とリソースタイプを選択してリソースをフィルタリングします。をクリックします <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block> をクリックしてフィルタペインを閉じます。</block>
   <block id="16bfcf20ed729d5958d62a1310952406" category="paragraph">Snapshot コピー処理が完了するまでの待機時間を指定するには、「至急」、「中」、または「不完全」を選択します。</block>
   <block id="6ab61c7e4778c57cf88bc1b95a583d05" category="list-text">[* Scripts] の矢印をクリックすると、休止、 Snapshot コピー、および休止解除の各処理に対して PRE および POST のコマンドが実行されます。バックアップ処理を終了する前にプリコマンドを実行することもできます。</block>
   <block id="a5094e6952e443df9b800d4f5e45d91d" category="paragraph">プリスクリプトとポストスクリプトは SnapCenter サーバで実行されます。</block>
@@ -7777,8 +7753,6 @@
   <block id="14fbb4ba3858c107f2599916d3b51cbb" category="section-title">カタログ情報を削除します</block>
   <block id="4c4d4c133d15d97bf3bef74ffeeeb66a" category="list-text">左側のナビゲーションペインで、*[リソース]*を選択し、リストから適切なプラグインを選択します。</block>
   <block id="ba4484b740822363967ef7dbb090de6a" category="inline-image-macro">フィルタアイコン</block>
-  <block id="bdf18e1416fb037a66cb2e8b6bf34e50" category="list-text">をクリックします <block ref="5daa1c5d91da80c848b68dcd336ec220" category="inline-image-macro-rx" type="image"></block>をクリックし、ホスト名とデータベースタイプを選択してリソースをフィルタリングします。</block>
-  <block id="36fae2ba23dbe8fc737f85fdffde333e" category="paragraph">をクリックします <block ref="5daa1c5d91da80c848b68dcd336ec220" category="inline-image-macro-rx" type="image"></block> をクリックしてフィルタペインを閉じます。</block>
   <block id="90db41db3c301da492422a8fbb244c83" category="list-text">[Resources]ページでは、次の手順を実行できます。</block>
   <block id="00f0529a96533b63a21705811e1addce" category="list-text">チェックボックスを選択し、Snapshotコピー名に使用するカスタムの名前形式を入力します。</block>
   <block id="8319f5e3f98fcec5a71bd43e8454a8fd" category="paragraph">例：<block ref="6d242f6ac938ffb13709f54d68cd3c4a" prefix=" " category="inline-code"></block> または<block ref="90ea7aa0cb61dd49e32f6dcf8afac143" prefix=" " category="inline-code"></block>。デフォルトでは、Snapshotコピー名にタイムスタンプが付加されます。</block>
@@ -7844,8 +7818,6 @@
   <block id="92d3f2f0912d79a31442f669496dcfa5" category="list-text">データ・ファイルと制御ファイルのみ</block>
   <block id="5894ddcf494ce28f1eb272ca5e723710" category="list-text">データ・ファイル、制御ファイル、およびアーカイブ・ログ・ファイルを含むフル・データベース</block>
   <block id="2d92b3df61f86e9074ba4418a26c533e" category="paragraph">データベースがマウント済み状態またはシャットダウン状態のときに作成されるバックアップを、オフラインバックアップと呼びます。オフラインバックアップはコールドバックアップとも呼ばれます。オフラインバックアップに含めることができるのは、データファイルと制御ファイルだけです。オフラインマウントバックアップまたはオフラインシャットダウンバックアップのいずれかを作成できます。</block>
-  <block id="fd9859cb151774e34b52a6d747daab3d" category="list-text">検索ボックスにリソースグループ名を入力するか、をクリックします <block ref="5daa1c5d91da80c848b68dcd336ec220" category="inline-image-macro-rx" type="image"></block>をクリックし、タグを選択します。</block>
-  <block id="6baaca80281eda4a251e4e932a39cd4b" category="paragraph">をクリックします <block ref="5daa1c5d91da80c848b68dcd336ec220" category="inline-image-macro-rx" type="image"></block> をクリックしてフィルタペインを閉じます。</block>
   <block id="50aa129d52e712ab3c9a0f93f956d9e2" category="list-text">[Resource Group]ページで、バックアップするリソースグループを選択します。</block>
   <block id="3ce47918d2033ed0d68d1e7c6a9b1c45" category="admonition">2つのデータベースが統合されたリソースグループがあり、一方のデータベースにネットアップ以外のストレージにデータがある場合は、もう一方のデータベースがネットアップストレージにあるにもかかわらず、バックアップ処理が中止されます。</block>
   <block id="5655480ae4615b223f1d67d63b4ee784" category="list-text">リソースグループに複数のポリシーが関連付けられている場合は、*[ポリシー]*ドロップダウンリストから使用するバックアップポリシーを選択します。</block>
@@ -8056,9 +8028,7 @@ FAS、AFF、またはASAストレージにSnapCenterの試用版をインスト�
   <block id="48462a95fd8685081e58f7c123971e5b" category="section-title">証明書ベースの認証の概要</block>
   <block id="dbb44863e91bacd01eafa49136b071d2" category="paragraph">証明書ベースの認証は、SnapCenterプラグインホストにアクセスしようとする各ユーザの信頼性を検証します。秘密鍵なしでSnapCenterサーバ証明書をエクスポートし、プラグインホストの信頼されたストアにインポートする必要があります。証明書ベースの認証は、双方向SSL機能が有効になっている場合にのみ機能します。</block>
   <block id="f6ce44442588fc16e1d7cc2d3995eff2" category="list-text">ONTAP FAS、AFF、またはAll SAN Array（ASA）プライマリシステム上にあり、ONTAP FAS、AFF、またはASAセカンダリシステムにレプリケートされるデータ</block>
-  <block id="616472bd1da01c2fe1a46ec002e57f2b" category="list-text">ONTAP FAS、AFF、ASAのプライマリシステムとセカンダリシステムにあり、ローカルのStorageGRIDオブジェクトストレージで保護されているデータ（NetApp BlueXPクラウドバックアップ統合を使用）</block>
   <block id="f5c37d824040662f50cbb8a32d77182d" category="list-text">ONTAP FAS、AFF、またはASAプライマリシステム上にあり、Cloud Volumes ONTAPにレプリケートされるデータ</block>
-  <block id="394619b29d62ebea0cecaad9129df0ea" category="list-text">ONTAP FAS、AFF、ASAのプライマリシステムとセカンダリシステムにあり、クラウドのオブジェクトストレージとアーカイブストレージで保護されているデータ（NetApp BlueXP Cloud Backup統合を使用）</block>
   <block id="b250098e069eb54d9e5d847baeeca541" category="paragraph">Windowsコマンドレットの詳細については、を参照してください<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block>。</block>
   <block id="c10c466f5857ce0ebc5a5f9e3130411a" category="paragraph">UNIXコマンドの詳細については、を参照してください<block ref="1f7a49a613b7c2dfb834cc80b3b923ce" category="inline-link-rx"></block>。</block>
   <block id="0dfbdfeadf3f1f407a28e4f77517f070" category="paragraph">コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block></block>
@@ -8472,4 +8442,40 @@ NetApp®Single Mailbox Recoveryは、2023年5月12日に販売終了（EOA）に
   <block id="28d224f5fce20ca21cc66cf83832a2b1" category="list-text">検証スケジュールを設定するポリシーを選択し、*を選択します。<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>*</block>
   <block id="3d1c64d2c8b1e4058225a78c3ef09fa6" category="list-text">「 * OK 」を選択します。</block>
   <block id="5477ea177e290e8ac1c03a7ee8f2a92b" category="list-text">[今すぐバックアップ]*を選択します。</block>
+  <block id="e871dec81bbb55999bfb71a61279d374" category="paragraph">をクリックします <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>をクリックし、ホスト名とリソースタイプを選択してリソースをフィルタリングします。をクリックします <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> をクリックしてフィルタペインを閉じます。</block>
+  <block id="7b467581fdc2f1a9bc98397eaf9411b4" category="list-text">をクリックします <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> バックアップ処理だけが表示されるようにリストをフィルタリングします。</block>
+  <block id="8e5cdb93ac42ad2c2b35814060435396" category="paragraph">リソースグループを検索するには、検索ボックスにリソースグループ名を入力するか、をクリックします <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> タグを選択します。をクリックします <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> をクリックしてフィルタペインを閉じます。</block>
+  <block id="748e365a5533cec3628919b992bc25fa" category="list-text">をクリックします <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> リストをフィルタリングして、リストア処理のみを表示します。</block>
+  <block id="f5cb0104f9d25cac663152187398a069" category="list-text">をクリックします <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> をクリックして、クローニング処理のみが表示されるようにリストをフィルタリングします。</block>
+  <block id="5968d7d6aa7eca121c1a6ecc9d1f9bd1" category="paragraph">をクリックします <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> をクリックし、ホスト名と SQL Server インスタンスを選択してリソースをフィルタリングします。をクリックします <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> をクリックしてフィルタペインを閉じます。</block>
+  <block id="3f897d901d24f02777ff0994b7823d1a" category="list-text">ONTAP FAS、AFF、またはASAのプライマリシステムとセカンダリシステムにあり、ローカルのStorageGRIDオブジェクトストレージで保護されているデータ</block>
+  <block id="f7b38c62b0e74d318a255bc3094cf531" category="list-text">ONTAP FAS、AFF、ASAのプライマリシステムとセカンダリシステムにあり、クラウドのオブジェクトストレージとアーカイブストレージで保護されているデータ（BlueXPのバックアップとリカバリの統合を使用）</block>
+  <block id="b62cae9c23cf035ec4b43fec7f0697d6" category="paragraph">SnapCenter サーバとプラグインは、 HTTPS を使用してホストエージェントと通信します。SnapCenter 処理に関する情報は、 SnapCenter リポジトリに保存されます。</block>
+  <block id="91e3724846bcc53dbc1d1e5a3296e15f" category="inline-link">分離されたネームスペースを使用しているときにSnapCenterでリソースを検出できない</block>
+  <block id="0c6faa7f360e593d37b8a98e5281e4e7" category="admonition">SnapCenterは、Windowsホスト用に分離されたネームスペースをサポートします。分離された名前空間の使用時に問題が発生した場合は、を参照してください。<block ref="96bf41c45768bfb194201403aea10b84" category="inline-link-rx"></block>。</block>
+  <block id="b9d10a11f62e11b503698c7bbbb76969" category="list-text">* をクリックします<block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>* をクリックし、ホスト名とデータベースタイプを選択してリソースをフィルタリングします。</block>
+  <block id="c09c3cc5c352ec79b573a0262d4a9909" category="paragraph">次に、 * をクリックします<block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>* をクリックすると、フィルタペインが閉じます。</block>
+  <block id="27141c09e4c3729538eed268f4984f0a" category="paragraph">をクリックします <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>をクリックし、ホスト名とデータベースタイプを選択してリソースをフィルタリングします。次に、をクリックします <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> アイコンをクリックして、フィルタペインを閉じます。</block>
+  <block id="895c7c73b51f1f88870ff5bc421d66ff" category="paragraph">リソースグループを検索するには、検索ボックスにリソースグループ名を入力するか、 * をクリックします<block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>* をクリックし、タグを選択します。次に、 * をクリックします<block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>* をクリックすると、フィルタペインが閉じます。</block>
+  <block id="8772efe51abd031bf2630ddf99b43a79" category="list-text">をクリックします <block ref="2df6cc2e237d722aa6244879c70fd2d2" category="inline-image-macro-rx" type="image"></block>をクリックし、ホスト名とデータベースタイプを選択してリソースをフィルタリングします。</block>
+  <block id="2120056b5c6b43acb41f77a74a912128" category="paragraph">をクリックします <block ref="2df6cc2e237d722aa6244879c70fd2d2" category="inline-image-macro-rx" type="image"></block> をクリックしてフィルタペインを閉じます。</block>
+  <block id="456dd0163d1a1c34c74efc809cf6363b" category="list-text">をクリックします <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>をクリックし、ホスト名とデータベースタイプを選択してリソースをフィルタリングします。</block>
+  <block id="b5e4628eb9cb2cd7efab86c10d19965c" category="paragraph">をクリックします <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> をクリックしてフィルタペインを閉じます。</block>
+  <block id="6920404cf085bab5be2132dbc275f33b" category="paragraph">リソースグループは、ホストまたはクラスタ上のリソースの集まりです。バックアップ処理は、リソースグループに定義されているすべてのリソースに対して実行されます。</block>
+  <block id="a833804e6b707a2a653d8b6273573c9f" category="paragraph">リソースグループは、リソースページからオンデマンドでバックアップできます。リソースグループにポリシーが適用され、スケジュールが設定されている場合は、スケジュールに従ってバックアップが作成されます。</block>
+  <block id="b2ad47c7842f5e26da4387acfcdb5046" category="list-text">検索ボックスにリソースグループ名を入力するか、をクリックします <block ref="2df6cc2e237d722aa6244879c70fd2d2" category="inline-image-macro-rx" type="image"></block>をクリックし、タグを選択します。</block>
+  <block id="313b973ed20ae0f32242d787d703216d" category="paragraph">をクリックします <block ref="2df6cc2e237d722aa6244879c70fd2d2" category="inline-image-macro-rx" type="image"></block> をクリックしてフィルタペインを閉じます。</block>
+  <block id="8ec049c5812d131f3e960eb36acfe281" category="paragraph">* をクリックします<block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>* をクリックし、ホスト名とデータベースタイプを選択してリソースをフィルタリングします。次に、 * をクリックします<block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>* をクリックすると、フィルタペインが閉じます。</block>
+  <block id="a4da2725fd201053d7a850500b404971" category="paragraph">をクリックします <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> をクリックし、ホスト名と Exchange サーバを選択してリソースをフィルタリングします。をクリックします <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> をクリックしてフィルタペインを閉じます。</block>
+  <block id="3a16a5fe7a351d2059010bdd627dffd9" category="paragraph">リソースグループを検索するには、検索ボックスにリソースグループ名を入力するか、 * をクリックします<block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>* をクリックし、タグを選択します。次に、 * をクリックします<block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>* をクリックすると、フィルタペインが閉じます。</block>
+  <block id="90e14cd7255b5121e0c223d30a2cd3b7" category="list-text">（オプション）をクリックします <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> をクリックし、ホスト名を選択します。</block>
+  <block id="f2ae288f937b356dff24c08f0c1a6ec3" category="list-text">（オプション） * をクリックします<block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>* をクリックし、ホスト名を選択します。</block>
+  <block id="9eb8278143c5b25686cc1b6c525a9b8d" category="paragraph">*を選択します<block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>* をクリックし、ホスト名とリソースタイプを選択してリソースをフィルタリングします。次に、 <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> をクリックしてフィルタペインを閉じます。</block>
+  <block id="45b6721b8137bd82de1f2497a525d57a" category="list-text">バックアップするリソースを選択します。</block>
+  <block id="0666d07a296860de6e0a6f6e4fd0425e" category="list-text">[Backups]*矢印を選択して、追加のバックアップオプションを設定します。</block>
+  <block id="cd713ffb7f8ebc1fd9a44fb5ef40eefe" category="paragraph">Snapshot コピー処理が完了するまでの待機時間を指定するには、「至急」、「 * 中」、または「 * relaxed 」を選択します。Urgent = 5 秒、 Medium = 7 秒、 Relaxed = 20 秒。</block>
+  <block id="8dd7963568a06d004b4a54b651ec862f" category="list-text">[Scripts]*の矢印を選択して、休止、Snapshotコピー、および休止解除の処理のプリコマンドとポストコマンドを実行します。</block>
+  <block id="0644babb03e5024dbc898ead17e21f90" category="list-text">[**Custom Configurations**]矢印を選択し、このリソースを使用するすべてのジョブに必要なカスタム値のペアを入力します。</block>
+  <block id="100eb4bb64628d6bc8890851c8173103" category="list-text">[Add schedules for policy_policy_name_]ダイアログボックスで、スケジュールを設定し、*[OK]*を選択します。</block>
+  <block id="7dd7da1b07a05d1000eeeecb05ce4ee5" category="paragraph">リソースグループを検索するには、検索ボックスにリソースグループ名を入力するか、 <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>をクリックし、タグを選択します。次に、 <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> をクリックしてフィルタペインを閉じます。</block>
 </blocks>
