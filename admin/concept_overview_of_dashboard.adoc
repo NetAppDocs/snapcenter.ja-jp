@@ -1,7 +1,7 @@
 ---
 permalink: admin/concept_overview_of_dashboard.html 
 sidebar: sidebar 
-keywords:  
+keywords: dashboard 
 summary: 'SnapCenterの左側のナビゲーションペインから[Dashboard]にアクセスすると、最近のジョブアクティビティ、アラート、保護の概要、Storage Efficiencyと使用状況、SnapCenterジョブのステータス（バックアップ、クローン、リストア\）、スタンドアロンホストとWindowsクラスタホストの設定ステータスなど、システムの健常性の概要を確認できます。 SnapCenterで管理しているStorage Virtual Machine（SVM）の数とライセンス容量。' 
 ---
 = ダッシュボードの概要

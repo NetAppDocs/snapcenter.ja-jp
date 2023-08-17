@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/task_add_hosts_and_install_plug_in_for_exchange.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter Plug-in for Microsoft Exchange Server 
 summary: SnapCenterAdd Host ページを使用して、 Windows ホストを追加できます。指定したホストに Plug-in for Exchange が自動的にインストールされます。これはプラグインのインストールに推奨される方法です。ホストを追加してプラグインをインストールするには、個々のホストまたはクラスタを使用します。 
 ---
 = ホストを追加し、 Plug-in for Exchange をインストールします
@@ -13,16 +13,14 @@ summary: SnapCenterAdd Host ページを使用して、 Windows ホストを追�
 [role="lead"]
 SnapCenter のホストの追加ページを使用して、 Windows ホストを追加できます。指定したホストに Plug-in for Exchange が自動的にインストールされます。これはプラグインのインストールに推奨される方法です。ホストを追加してプラグインをインストールするには、個々のホストまたはクラスタを使用します。
 
-* 必要なもの *
-
+.作業を開始する前に
 * SnapCenter Admin など、プラグインのインストールとアンインストールの権限のあるロールが割り当てられているユーザが必要です
 * Windows ホストにプラグインをインストールする場合、ビルトインでないクレデンシャルを指定する場合、またはユーザがローカルワークグループユーザに属している場合は、ホストで UAC を無効にする必要があります。
 * メッセージキューサービスが実行されている必要があります。
 * Group Managed Service Account （ gMSA ；グループ管理サービスアカウント）を使用している場合は、管理者権限を持つ gMSA を設定する必要があります。詳細については、を参照してくださいlink:task_configure_gMSA_on_windows_server_2012_or_later.html["Microsoft Exchange Server 2012 以降でグループマネージドサービスアカウントを設定します"^]。
 
 
-* このタスクについて *
-
+.このタスクについて
 * SnapCenter サーバをプラグインホストとして別の SnapCenter サーバに追加することはできません。
 * ホストの追加とプラグインパッケージのインストールは、個々のホストまたはクラスタに対して実行できます。
 * Exchange ノードが DAG の一部である場合、 SnapCenter サーバに追加できるノードは 1 つだけです。
@@ -53,8 +51,7 @@ Plug-in for Exchange は Windows 用 SnapCenter プラグインパッケージ�
 
 SnapManager for Microsoft Exchange Server と SnapDrive for Windows がすでにインストールされている場合は、 同じ Exchange サーバに Plug-in for Exchange をインストールする場合は、 Plug-in for Exchange および SnapCenter Plug-ins Package for Windows と互換性がないため、 SnapDrive for Windows で使用する VSS ハードウェアプロバイダの登録を解除する必要があります。詳細については、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_manually_register_the_Data_ONTAP_VSS_Hardware_Provider["Data ONTAP VSS ハードウェアプロバイダを手動で登録する方法"]。
 
-* 手順 *
-
+.手順
 . 左側のナビゲーションペインで、 * Hosts * （ホスト）をクリックします。
 . 上部で [Managed Hosts] が選択されていることを確認します。
 . [ 追加（ Add ） ] をクリックします。

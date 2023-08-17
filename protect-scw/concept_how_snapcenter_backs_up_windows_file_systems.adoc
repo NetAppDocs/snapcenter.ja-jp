@@ -1,7 +1,7 @@
 ---
 permalink: protect-scw/concept_how_snapcenter_backs_up_windows_file_systems.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter 
 summary: SnapCenter では、 Snapshot コピーテクノロジを使用して Windows ファイルシステムのリソースがバックアップされます。これには、 Windows クラスタの LUN 、 CSV （クラスタ共有ボリューム）、 RDM （ raw デバイスマッピング）ボリューム、 ALM （非対称 LUN マッピング）、および VMFS / NFS （ NFS を使用する VMware Virtual Machine File System ）に基づく VMDK にあるリソースが含まれます。 
 ---
 = SnapCenter での Windows ファイルシステムのバックアップ方法

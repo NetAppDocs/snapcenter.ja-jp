@@ -1,7 +1,7 @@
 ---
 permalink: admin/concept_manage_the_snapcenter_server_repository.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter Server 
 summary: SnapCenter から実行される各種の処理に関する情報は、 SnapCenter サーバのデータベースリポジトリに格納されます。SnapCenter サーバをデータ損失から保護するには、リポジトリのバックアップを作成する必要があります。 
 ---
 = SnapCenter サーバリポジトリを管理します
@@ -139,8 +139,7 @@ SnapCenter サーバのデータベースリポジトリをデフォルトの場
 
 MySQL Server リポジトリデータベースのパスワードは、 SnapCenter 4.2 以降の SnapCenter Server のインストール時に自動的に生成されます。この自動生成されたパスワードは、 SnapCenter ユーザにはいかなる時点でも知られていません。リポジトリデータベースにアクセスする場合は、パスワードをリセットする必要があります。
 
-* 必要なもの *
-
+.作業を開始する前に
 パスワードをリセットするには、 SnapCenter 管理者の権限が必要です。
 
 * 手順 *
@@ -163,6 +162,5 @@ Successfully updated the MySQL server password.
 ----
 
 
-* 詳細はこちら *
-
+.関連情報
 コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。

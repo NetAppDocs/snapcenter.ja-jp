@@ -15,8 +15,7 @@ SnapCenter サーバホストのコマンドラインインターフェイスで
 
 プラグインをアンインストールする各ホストに対するローカル管理者権限を持つドメインユーザとして SnapCenter にログインしている必要があります。
 
-* 手順 *
-
+.手順
 . PowerShell を起動します。
 . SnapCenter サーバーホストで、次のように入力します。 _Open-SMConnection-SMSbaseUrl\https://SNAPCENTER_SERVER_NAME/DOMAIN_NAME_ コマンド認証情報を入力します。
 . Uninstall -SmHostPackage_cmdlet と、必要なパラメータを使用して、 Windows プラグインをアンインストールします。

@@ -13,8 +13,7 @@ summary: SnapCenter Jobs ページを使用して、各バックアップ処理�
 [role="lead"]
 SnapCenterJobs ページを使用して、各種バックアップ処理の進捗状況を監視できます。進捗状況をチェックして、処理が完了するタイミングや問題があるかどうかを確認できます。
 
-* このタスクについて *
-
+.このタスクについて
 以下のアイコンがジョブページに表示され、操作の対応する状態を示します。
 
 * image:../media/progress_icon.gif["実行中のアイコン"] 実行中です
@@ -22,11 +21,10 @@ SnapCenterJobs ページを使用して、各種バックアップ処理の進�
 * image:../media/failed_icon.gif["失敗したアイコン"] 失敗しました
 * image:../media/warning_icon.gif["警告アイコンが表示されています"] 警告で終了したか、警告が原因で起動できませんでした
 * image:../media/verification_job_in_queue.gif["検証ジョブをキューに格納します"] キューに登録され
-* image:../media/cancel_icon.gif[""] キャンセルされました
+* image:../media/cancel_icon.gif["キャンセルアイコン"] キャンセルされました
 
 
-* 手順 *
-
+.手順
 . 左側のナビゲーションペインで、 *Monitor* をクリックします。
 . [ モニター ] ページで、 [ * ジョブ * ] をクリックします。
 . Jobs （ジョブ）ページで、次の手順を実行します。

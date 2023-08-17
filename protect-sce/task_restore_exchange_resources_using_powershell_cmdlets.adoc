@@ -15,8 +15,7 @@ Exchange データベースをリストアするときは、 SnapCenter サー�
 
 PowerShell コマンドレットを実行できるように PowerShell 環境を準備しておく必要があります。
 
-* 手順 *
-
+.手順
 . 「 Open-SmConnection 」コマンドレットを使用して、指定されたユーザの SnapCenter サーバとの接続セッションを開始します。
 +
 [listing]

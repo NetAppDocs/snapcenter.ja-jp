@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_cancel_backup_operations_for_scc.html 
 sidebar: sidebar 
-keywords:  
+keywords: cancel backup, custom plug-in 
 summary: キューに登録されているバックアップ処理をキャンセルできます。 
 ---
 = カスタムプラグインのバックアップ処理をキャンセルする

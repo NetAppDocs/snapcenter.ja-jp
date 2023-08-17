@@ -1,7 +1,7 @@
 ---
 permalink: admin/concept_manage_resources_of_untrusted_domains.html 
 sidebar: sidebar 
-keywords:  
+keywords: Manage resources 
 summary: SnapCenter は、 Active Directory \ （ AD \ ）の信頼できるドメインのホストを管理するだけでなく、複数の AD 信頼されていないドメインのホストも管理します。信頼されていない AD ドメインを SnapCenter サーバに登録する必要があります。SnapCenter では、複数の信頼されていない AD ドメインのユーザとグループがサポートされます 
 ---
 = 信頼できないドメインのリソースを管理します
@@ -62,8 +62,7 @@ FQDN を指定し、 * resolve * をクリックします。
 
 ドメインに関連付けられたアセットを使用しないようにするには、信頼されていない Active Directory ドメインの登録を解除します。
 
-* 必要なもの *
-
+.作業を開始する前に
 信頼されていないドメインに関連付けられているホスト、ユーザ、グループ、およびクレデンシャルを削除しておく必要があります。
 
 * このタスクについて *

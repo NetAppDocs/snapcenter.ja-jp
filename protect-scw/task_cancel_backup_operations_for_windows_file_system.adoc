@@ -1,7 +1,7 @@
 ---
 permalink: protect-scw/task_cancel_backup_operations_for_windows_file_system.html 
 sidebar: sidebar 
-keywords:  
+keywords: cancel backup 
 summary: キューに登録されているバックアップ処理をキャンセルできます。 
 ---
 = バックアップ処理をキャンセルします

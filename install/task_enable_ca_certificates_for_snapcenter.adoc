@@ -13,8 +13,7 @@ summary: CA 証明書を設定し、 SnapCenter サーバの CA 証明書検証�
 [role="lead"]
 CA 証明書を設定し、 SnapCenter サーバの CA 証明書検証を有効にする必要があります。
 
-* 必要なもの *
-
+.作業を開始する前に
 * CA 証明書は、 Set-SmCertificateSettings コマンドレットを使用して有効または無効にできます。
 * Get-SmCertificateSettings コマンドレットを使用すると、 SnapCenter サーバの証明書のステータスを表示できます。
 

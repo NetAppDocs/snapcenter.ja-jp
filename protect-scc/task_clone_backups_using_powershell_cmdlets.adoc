@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_clone_backups_using_powershell_cmdlets.html 
 sidebar: sidebar 
-keywords:  
+keywords: clone backups 
 summary: クローニングワークフローには、計画、クローニング処理の実行、および処理の監視が含まれます。 
 ---
 = PowerShell コマンドレットを使用してバックアップをクローニングする
@@ -13,14 +13,12 @@ summary: クローニングワークフローには、計画、クローニン�
 [role="lead"]
 クローニングワークフローには、計画、クローニング処理の実行、および処理の監視が含まれます。
 
-* 必要なもの *
-
+.作業を開始する前に
 PowerShell コマンドレットを実行できるように PowerShell 環境を準備しておく必要があります。
 
 PowerShell コマンドレットについては、 SnapCenter コマンドレットのヘルプを使用するか、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
 
-* 手順 *
-
+.手順
 . Open-SmConnection コマンドレットを使用して、指定したユーザの SnapCenter サーバとの接続セッションを開始します。
 +
 [listing]

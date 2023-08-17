@@ -1,7 +1,7 @@
 ---
 permalink: admin/task_manage_resource_groups.html 
 sidebar: sidebar 
-keywords:  
+keywords: Manage resource groups 
 summary: リソースグループに対してさまざまな処理を実行できます。 
 ---
 = リソースグループの管理

@@ -13,8 +13,7 @@ summary: ストレージシステムで clustered ONTAP を実行している場
 [role="lead"]
 ストレージシステムで clustered ONTAP を実行している場合、 security login コマンドを使用して ONTAP RBAC ロールを追加できます。
 
-* 必要なもの *
-
+.作業を開始する前に
 * clustered ONTAP を実行しているストレージシステム用に ONTAP RBAC ロールを作成する前に、次の項目について確認しておく必要があります。
 +
 ** 実行するタスク

@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_create_backup_policies_for_sql_server_databases.html 
 sidebar: sidebar 
-keywords:  
+keywords: backup policy 
 summary: SnapCenter を使用して SQL Server リソースをバックアップする前に、リソースまたはリソースグループのバックアップポリシーを作成することができます。また、リソースグループの作成時や単一のリソースのバックアップ時にバックアップポリシーを作成することもできます。 
 ---
 = SQL Server データベースのバックアップポリシーを作成する
@@ -13,7 +13,7 @@ summary: SnapCenter を使用して SQL Server リソースをバックアップ
 [role="lead"]
 SnapCenter を使用して SQL Server リソースをバックアップする前に、リソースまたはリソースグループのバックアップポリシーを作成することができます。また、リソースグループの作成時や単一のリソースのバックアップ時にバックアップポリシーを作成することもできます。
 
-.必要なもの
+.作業を開始する前に
 * データ保護戦略を定義しておく必要があります。
 * SnapCenter のインストール、ホストの追加、リソースの特定、ストレージシステム接続の作成などのタスクを実行して、データ保護の準備をしておく必要があります。
 * ログバックアップ用のホストログディレクトリを設定しておく必要があります。

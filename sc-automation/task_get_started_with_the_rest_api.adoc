@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: sc-automation/task_get_started_with_the_rest_api.html 
-keywords:  
+keywords: REST API 
 summary: API にアクセスすると、ライブセットアップでより複雑なワークフロープロセスを使用する前にいくつかの情報を確認できます。 
 ---
 = REST API の使用を開始する
@@ -19,8 +19,7 @@ SnapCenter REST API はすぐに使用を開始できます。API にアクセ�
 
 システムで簡単なコマンドを実行して、 SnapCenter REST API の使用を開始し、利用可能かどうかを確認できます。
 
-* 必要なもの *
-
+.作業を開始する前に
 * Curl ユーティリティがシステムで使用できることを確認します。
 * SnapCenter サーバの IP アドレスまたはホスト名
 * SnapCenter REST API にアクセスする権限を持つアカウントのユーザ名とパスワード。
@@ -29,8 +28,7 @@ SnapCenter REST API はすぐに使用を開始できます。API にアクセ�
 
 NOTE: クレデンシャルに特殊文字が含まれている場合は、使用するシェルに基づいて Curl で許容される形式で指定する必要があります。たとえば ' 各特殊文字の前にバックスラッシュを挿入するか ' または 'username:password' 文字列全体を一重引用符で囲むことができます
 
-* ステップ *
-
+.ステップ
 コマンドラインインターフェイスで、次のコマンドを実行してプラグイン情報を取得します。
 
 curl -X get -u username ： password-k "https://<ip_address>/api/hosts?fields=IncludePluginInfo"`[]

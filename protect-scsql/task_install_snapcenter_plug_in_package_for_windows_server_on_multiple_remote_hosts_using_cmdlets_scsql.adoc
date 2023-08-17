@@ -13,12 +13,10 @@ summary: SmHostPackage PowerShell コマンドレットを使用して、複数�
 [role="lead"]
 SmHostPackage PowerShell コマンドレットを使用して、複数のホストに SnapCenter Plug-in for Microsoft SQL Server を同時にインストールできます。
 
-* 必要なもの *
-
+.作業を開始する前に
 プラグインパッケージをインストールする各ホストで、ローカル管理者の権限を持つドメインユーザとして SnapCenter にログインしている必要があります。
 
-* 手順 *
-
+.手順
 . PowerShell を起動します。
 . SnapCenter サーバホストで、 Open-SmConnection コマンドレットを使用してセッションを確立し、クレデンシャルを入力します。
 . Install-SmHostPackage コマンドレットと必要なパラメータを使用して、複数のリモートホストに SnapCenter Plug-in for Microsoft SQL Server をインストールします。

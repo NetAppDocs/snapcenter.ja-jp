@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/reference_storage_layout_recommendations_for_snapcenter_plug_in_for_microsoft_sql_server.html 
 sidebar: sidebar 
-keywords:  
+keywords: Storage layout 
 summary: ストレージレイアウトが適切に設計されているため、 SnapCenter サーバでデータベースをバックアップして、リカバリの目標を達成できます。ストレージレイアウトを定義する際には、データベースのサイズ、データベースの変更率、バックアップの実行頻度など、いくつかの要素を考慮する必要があります。 
 ---
 = SnapCenter Plug-in for Microsoft SQL Server のストレージレイアウトに関する推奨事項

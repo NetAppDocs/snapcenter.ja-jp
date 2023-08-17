@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_storage_disaster_recovery_for_scsql.html 
 sidebar: sidebar 
-keywords:  
+keywords: disaster recovery 
 summary: SnapCenter Plug-in for SQL Server ストレージをリカバリするには、グローバル設定ページでストレージの DR モードを有効にします。 
 ---
 = SnapCenter Plug-in for SQL Server の Storage Disaster Recovery （ DR ；ストレージディザスタリカバリ）
@@ -13,8 +13,7 @@ summary: SnapCenter Plug-in for SQL Server ストレージをリカバリする�
 [role="lead"]
 SnapCenter Plug-in for SQL Server ストレージをリカバリするには、グローバル設定ページでストレージの DR モードを有効にします。
 
-* 必要なもの *
-
+.作業を開始する前に
 * プラグインがメンテナンスモードになっていることを確認します。
 * SnapMirror / SnapVault 関係を解除link:https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-950/GUID-8A3F828F-CD3D-48E8-A171-393581FEB2ED.html["SnapMirror 関係を解除します"]
 * セカンダリの LUN を、同じドライブレターを使用してホストマシンに接続します。
@@ -23,20 +22,17 @@ SnapCenter Plug-in for SQL Server ストレージをリカバリするには、�
 * SQL リソースがオンラインに戻っていることを確認します。
 
 
-* このタスクについて *
-
+.このタスクについて
 ディザスタリカバリ（ DR ）は、 VMDK 構成と RDM 構成ではサポートされていません。
 
-* 手順 *
-
+.手順
 . 設定ページで、 * 設定 * > * グローバル設定 * > * ディザスタ・リカバリ * と進みます。
 . [Enable Disaster Recovery] を選択します。
 . [ 適用（ Apply ） ] をクリックします。
 . DR ジョブが有効になっているかどうかを確認するには、 * Monitor * > * Jobs * をクリックします。
 
 
-* 終了後 *
-
+.完了後
 * フェイルオーバー後に新しいデータベースが作成されると、データベースは非 DR モードになります。
 +
 新しいデータベースは、フェイルオーバー前と同様に動作します。

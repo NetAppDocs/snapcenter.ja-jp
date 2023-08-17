@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_add_hosts_and_install_plug_in_packages_on_remote_hosts_scc.html 
 sidebar: sidebar 
-keywords: credentials 
+keywords: add hosts 
 summary: ホストを追加するには、 SnapCenterAdd Host ページを使用して、プラグインパッケージをインストールする必要があります。プラグインは、自動的にリモートホストにインストールされます。ホストの追加とプラグインパッケージのインストールは、個々のホストまたはクラスタに対して実行できます。 
 ---
 = ホストを追加し、プラグインパッケージをリモートホストにインストールする
@@ -13,8 +13,7 @@ summary: ホストを追加するには、 SnapCenterAdd Host ページを使用
 [role="lead"]
 ホストを追加するには、 SnapCenterAdd Host ページを使用して、プラグインパッケージをインストールする必要があります。プラグインは、自動的にリモートホストにインストールされます。ホストの追加とプラグインパッケージのインストールは、個々のホストまたはクラスタに対して実行できます。
 
-* 必要なもの *
-
+.作業を開始する前に
 * SnapCenter Adminロールなど、プラグインのインストールとアンインストールの権限のあるロールが割り当てられているユーザが必要です。
 * メッセージキューサービスが実行されていることを確認してください。
 * Group Managed Service Account （ gMSA ；グループ管理サービスアカウント）を使用している場合は、管理者権限を持つ gMSA を設定する必要があります。
@@ -23,14 +22,12 @@ link:task_configure_gMSA_on_windows_server_2012_or_later.html["カスタムア�
 
 
 
-* このタスクについて *
-
+.このタスクについて
 SnapCenter サーバをプラグインホストとして別の SnapCenter サーバに追加することはできません。
 
 クラスタ（ WSFC ）にプラグインをインストールすると、クラスタのすべてのノードにプラグインがインストールされます。
 
-* 手順 *
-
+.手順
 . 左側のナビゲーションペインで、 *Hosts* を選択します。
 . 上部で [Managed Hosts] タブが選択されていることを確認します。
 . 「 * 追加」を選択します。
@@ -110,7 +107,7 @@ NOTE: プラグインを手動でインストールし、カスタムポート�
 +
 必要に応じて、パスをカスタマイズできます。
 
-** SnapCenter Plug-ins Package for Linux のデフォルトパスは /opt/NetApp/SnapCenter です。
+** SnapCenter Plug-ins Package for Linuxの場合、デフォルトパスはです。 `/opt/NetApp/snapcenter`。
 +
 必要に応じて、パスをカスタマイズできます。
 
@@ -121,7 +118,7 @@ NOTE: プラグインを手動でインストールし、カスタムポート�
 zip 形式のフォルダには、カスタムプラグインコードと DESCRIPTOR .xml ファイルが含まれています。
 
 +
-Storage Plug-In の場合は、 _C ： \ProgramData\NetApp\SnapCenter \Package Repository_に 移動し、「 Storage.zip 」フォルダを選択します。
+ストレージプラグインの場合は、 `_C:\ProgramData\NetApp\SnapCenter\Package Repository_` を選択します。 `Storage.zip` フォルダ。
 
 ... [アップロード]*を選択します。
 +
@@ -176,6 +173,6 @@ NOTE: 同じホストを以前に SnapCenter に追加し、フィンガープ�
 
 . インストールの進行状況を監視します。
 +
-インストール固有のログファイルは、 /custom_location/snapcenter /logs にあります。
+インストール固有のログファイルは次の場所にあります。 `/custom_location/snapcenter/` ログ。
 
 

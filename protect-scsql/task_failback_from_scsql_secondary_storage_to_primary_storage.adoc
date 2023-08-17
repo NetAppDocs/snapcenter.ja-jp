@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_failback_from_scsql_secondary_storage_to_primary_storage.html 
 sidebar: sidebar 
-keywords:  
+keywords: failback, snapcenter 
 summary: SnapCenter Plug-in for SQL Server のプライマリストレージがオンラインに戻ったら、プライマリストレージにフェイルバックする必要があります。 
 ---
 = SnapCenter Plug-in for SQL Server のセカンダリストレージからプライマリストレージへのフェイルバック
@@ -13,8 +13,7 @@ summary: SnapCenter Plug-in for SQL Server のプライマリストレージが�
 [role="lead"]
 SnapCenter Plug-in for SQL Server のプライマリストレージがオンラインに戻ったら、プライマリストレージにフェイルバックする必要があります。
 
-* 必要なもの *
-
+.作業を開始する前に
 * Managed Hosts ページから SnapCenter Plug-in for SQL Server を * Maintenance * モードにします。
 * セカンダリストレージをホストから切断して、プライマリストレージから接続します。
 * プライマリストレージにフェイルバックするには、逆再同期処理を実行して、フェイルオーバー前と同じ関係の方向が維持されることを確認します。
@@ -31,15 +30,12 @@ SnapCenter Plug-in for SQL Server のプライマリストレージがオンラ�
 
 NOTE: プラグインのフェイルオーバーまたはフェイルバックの実行中は、プラグインの全体的なステータスはすぐには更新されません。ホストおよびプラグインの全体的なステータスは、以降のホスト更新処理中に更新されます。
 
-* 手順 *
-
+.手順
 . 設定ページで、 * 設定 * > * グローバル設定 * > * ディザスタ・リカバリ * と進みます。
 . [Enable Disaster Recovery] を選択解除します。
 . [ 適用（ Apply ） ] をクリックします。
 . DR ジョブが有効になっているかどうかを確認するには、 * Monitor * > * Jobs * をクリックします。
 
 
-* 終了後 *
-
-* フェイルオーバー時に作成された SnapCenter Plug-in for SQL Server バックアップは、 UI またはコマンドレット「 Remove-SmDRFailoverBackups 」を使用して削除できます
-
+.完了後
+フェイルオーバー時に作成された SnapCenter Plug-in for SQL Server バックアップは、 UI またはコマンドレット「 Remove-SmDRFailoverBackups 」を使用して削除できます

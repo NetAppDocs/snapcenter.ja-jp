@@ -1,7 +1,7 @@
 ---
 permalink: admin/concept_what_operations_can_be_performed_from_the_resource_page.html 
 sidebar: sidebar 
-keywords:  
+keywords: Resources page 
 summary: リソースの検出とデータ保護処理の実行については、のリソースページを参照してください。実行できる処理は、リソースの管理に使用するプラグインによって異なります。 
 ---
 = Resources ページでサポートされている操作

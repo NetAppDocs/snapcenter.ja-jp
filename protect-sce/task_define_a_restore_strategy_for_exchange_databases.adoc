@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/task_define_a_restore_strategy_for_exchange_databases.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter plug-in for Exchange Server 
 summary: Exchange Server のリストア戦略を定義しておくと、それに従ってデータベースをリストアすることができます。 
 ---
 = Exchange データベースのリストア戦略を定義する

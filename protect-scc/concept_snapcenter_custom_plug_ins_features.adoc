@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/concept_snapcenter_custom_plug_ins_features.html 
 sidebar: sidebar 
-keywords:  
+keywords: Custom Plug-ins features 
 summary: SnapCenter は、プラグインアプリケーションと統合されるほか、ストレージシステム上でネットアップのテクノロジと統合されます。Custom Plug-ins の操作には、 SnapCenter のグラフィカルユーザインターフェイスを使用します。 
 ---
 = SnapCenter Custom Plug-ins の特長

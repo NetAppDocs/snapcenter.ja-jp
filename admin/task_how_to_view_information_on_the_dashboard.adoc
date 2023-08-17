@@ -1,7 +1,7 @@
 ---
 permalink: admin/task_how_to_view_information_on_the_dashboard.html 
 sidebar: sidebar 
-keywords:  
+keywords: dashboard 
 summary: SnapCenter の左側のナビゲーションペインでは、ダッシュボードの各種タイルや、関連するシステムの詳細を表示できます。ダッシュボードに表示される表示数は固定で、変更することはできません。各画面に表示される内容は、ロールベースアクセス制御（ RBAC ）によって異なります。 
 ---
 = ダッシュボードに情報を表示する方法

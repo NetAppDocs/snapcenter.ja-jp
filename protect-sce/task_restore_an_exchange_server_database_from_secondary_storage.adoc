@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/task_restore_an_exchange_server_database_from_secondary_storage.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter plug-in for Exchange Server 
 summary: セカンダリストレージ（ミラーまたはバックアップ）から、バックアップされた Exchange Server データベースをリストアすることができます。 
 ---
 = セカンダリストレージから Exchange Server データベースをリストアする
@@ -15,8 +15,7 @@ summary: セカンダリストレージ（ミラーまたはバックアップ�
 
 プライマリストレージからセカンダリストレージに Snapshot コピーをレプリケートしておく必要があります。
 
-* 手順 *
-
+.手順
 . 左側のナビゲーションペインで、 [* リソース ] をクリックし、リストから [Microsoft Exchange Server プラグイン *] を選択します。
 . [ リソース ] ページで、 [*View] ドロップダウン・リストから [*Database] または [*Resource Group] を選択します。
 . データベースまたはリソースグループを選択します。

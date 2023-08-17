@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/task_install_the_snapcenter_plug_in_for_exchange_silently_from_the_command_line.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter plug-in for Exchange Server 
 summary: Plug-in for Exchange は、 SnapCenter ユーザインターフェイス内からインストールする必要があります。ただし、何らかの理由でインストールできない場合は、 Windows のコマンドラインから、 Plug-in for Exchange のインストールプログラムをサイレントモードで自動的に実行できます。 
 ---
 = コマンドラインから SnapCenter Plug-in for Exchange をサイレントにインストールします
@@ -13,8 +13,7 @@ summary: Plug-in for Exchange は、 SnapCenter ユーザインターフェイ�
 [role="lead"]
 Plug-in for Exchange は、 SnapCenter ユーザインターフェイス内からインストールする必要があります。ただし、何らかの理由でインストールできない場合は、 Windows のコマンドラインから、 Plug-in for Exchange のインストールプログラムをサイレントモードで自動的に実行できます。
 
-* 必要なもの *
-
+.作業を開始する前に
 * Microsoft Exchange Server リソースをバックアップしておく必要があります。
 * SnapCenter プラグインパッケージをインストールしておく必要があります。
 * をインストールする前に、以前のリリースの SnapCenter Plug-in for Microsoft SQL Server を削除する必要があります。
@@ -23,8 +22,7 @@ Plug-in for Exchange は、 SnapCenter ユーザインターフェイス内か�
 
 
 
-* 手順 *
-
+.手順
 . プラグインホストに _C ： \temp_folder が存在し、ログインしているユーザにフルアクセス権があるかどうかを確認します。
 . C ： \ProgramData\NetApp\SnapCenter \Package_Repository から SnapCenter Plug-in for Microsoft Windows をダウンロードします。
 +

@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/task_configure_snapmanager_7_x_for_exchange_and_snapcenter_plug_in_for_exchange_to_coexist.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter plug-in for Exchange Server 
 summary: SnapCenter Plug-in for Microsoft Exchange Server を SnapManager for Microsoft Exchange Server と共存できるようにするには、 SnapManager for Microsoft Exchange Server がインストールされている Exchange Server と同じ Exchange Server に SnapCenter Plug-in for Microsoft Exchange Server をインストールし、 SnapManager for Exchange のスケジュールを無効にする必要があります。 および SnapCenter Plug-in for Microsoft Exchange Server を使用して新しいスケジュールとバックアップを設定します。 
 ---
 = Exchange と SnapCenter が共存するように SnapManager 7.x を設定します
@@ -13,8 +13,7 @@ summary: SnapCenter Plug-in for Microsoft Exchange Server を SnapManager for Mi
 [role="lead"]
 SnapCenter Plug-in for Microsoft Exchange Server を SnapManager for Microsoft Exchange Server と共存できるようにするには、 SnapManager for Microsoft Exchange Server がインストールされている Exchange Server と同じ Exchange Server に SnapCenter Plug-in for Microsoft Exchange Server をインストールし、 SnapManager for Exchange のスケジュールを無効にする必要があります。 および SnapCenter Plug-in for Microsoft Exchange Server を使用して新しいスケジュールとバックアップを設定します。
 
-* 必要なもの *
-
+.作業を開始する前に
 * SnapManager for Microsoft Exchange Server と SnapDrive for Windows がすでにインストールされており、システムおよび SnapInfo ディレクトリに SnapManager for Microsoft Exchange Server のバックアップが存在します。
 * SnapManager for Microsoft Exchange Server で作成された不要なバックアップを削除または再利用しておく必要があります。
 * SnapManager for Microsoft Exchange Server で作成されたすべてのスケジュールを、 Windows スケジューラから一時停止または削除しておく必要があります。
@@ -28,8 +27,7 @@ SnapCenter Plug-in for Microsoft Exchange Server のインストール後に Sna
 
 
 
-* 手順 *
-
+.手順
 . すべての DAG ノードで PowerShell を使用して、 SnapDrive for Windows VSS ハードウェアプロバイダが登録されているかどうかを確認します。 _vssadmin list provider_
 +
 [listing]

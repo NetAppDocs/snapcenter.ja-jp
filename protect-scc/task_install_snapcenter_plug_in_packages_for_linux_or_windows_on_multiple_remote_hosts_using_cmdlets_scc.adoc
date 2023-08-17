@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_install_snapcenter_plug_in_packages_for_linux_or_windows_on_multiple_remote_hosts_using_cmdlets_scc.html 
 sidebar: sidebar 
-keywords: credentials 
+keywords: install, snapcenter 
 summary: Install-SmHostPackage PowerShell コマンドレットを使用すると、複数のホストに Linux または Windows 向け SnapCenter プラグインパッケージを同時にインストールできます。 
 ---
 = コマンドレットを使用して、複数のリモートホストに Linux または Windows 用の SnapCenter プラグインパッケージをインストールします
@@ -13,12 +13,10 @@ summary: Install-SmHostPackage PowerShell コマンドレットを使用する�
 [role="lead"]
 Install-SmHostPackage PowerShell コマンドレットを使用すると、複数のホストに Linux または Windows 向け SnapCenter プラグインパッケージを同時にインストールできます。
 
-* 必要なもの *
-
+.作業を開始する前に
 ホストを追加するユーザには、ホストに対する管理者権限が必要です。
 
-* 手順 *
-
+.手順
 . PowerShell を起動します。
 . SnapCenter サーバホストで、 Open-SmConnection コマンドレットを使用してセッションを確立し、クレデンシャルを入力します。
 . Install-SmHostPackage コマンドレットと必要なパラメータを使用して、複数のホストにプラグインをインストールします。

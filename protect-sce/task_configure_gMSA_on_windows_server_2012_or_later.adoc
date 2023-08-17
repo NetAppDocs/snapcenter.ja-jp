@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/task_configure_gMSA_on_windows_server_2012_or_later.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter plug-in for Exchange Server 
 summary: Windows Server 2012 以降では、管理ドメインアカウントからサービスアカウントパスワードの自動管理を提供するグループ Managed Service Account \ （ gMSA \ ）を作成できます。 
 ---
 = Windows Server 2012 以降で gMSA を構成します
@@ -13,14 +13,12 @@ summary: Windows Server 2012 以降では、管理ドメインアカウントか
 [role="lead"]
 Windows Server 2012 以降では、管理ドメインアカウントからサービスアカウントパスワードの自動管理を提供するグループマネージドサービスアカウント（ gMSA ）を作成できます。
 
-* 必要なもの *
-
+.作業を開始する前に
 * Windows Server 2012 以降のドメインコントローラが必要です。
 * ドメインのメンバーである Windows Server 2012 以降のホストが必要です。
 
 
-* 手順 *
-
+.手順
 . GMSA のオブジェクトごとに固有のパスワードを生成するには、 KDS ルートキーを作成します。
 . ドメインごとに、 Windows ドメインコントローラから次のコマンドを実行します。 Add-KDSRootKey -EffectiveImmedient
 . GMSA を作成して構成します。

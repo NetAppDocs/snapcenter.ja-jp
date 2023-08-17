@@ -10,8 +10,7 @@
 
 == カスタムプラグインのキーストアのパスワード、および使用中の CA 署名済みキーペアのエイリアスを管理します
 
-* 手順 *
-
+.手順
 . カスタムプラグインキーストアのデフォルトパスワードは、カスタムプラグインエージェントのプロパティファイルから取得できます。
 +
 key_keystore.pass_ に対応する値です。
@@ -47,8 +46,7 @@ NOTE: カスタムプラグインキーストアのパスワード、および�
 
 カスタムプラグインの信頼ストアの秘密鍵を使用せずにルート証明書または中間証明書を設定する必要があります。
 
-* 手順 *
-
+.手順
 . カスタムプラグインの keystore _C ： \Program Files\NetApp\Virtual \SnapCenter \Snapcenter Plug-in Creator\etc\備え ているフォルダに移動します
 . ファイル 'keystore.jkS' を探します。
 . キーストアに追加された証明書を表示します。
@@ -71,8 +69,7 @@ NOTE: ルート CA 証明書、中間 CA 証明書の順に追加する必要が
 
 CA 署名キーペアをカスタムプラグインの信頼ストアに設定する必要があります。
 
-* 手順 *
-
+.手順
 . カスタムプラグインの keystore _C ： \Program Files\NetApp\Virtual \SnapCenter \Snapcenter Plug-in Creator\etc\備え ているフォルダに移動します
 . file_keystore.JKS_</Z1> を探します。
 . キーストアに追加された証明書を表示します。
@@ -106,15 +103,13 @@ _keytool -keypasswd -alias "alias_name_in_ca_cert" -keystore keystore.JKS__
 
 == SnapCenter Custom Plug-ins の証明書失効リスト（ CRL ）を設定します
 
-* このタスクについて *
-
+.このタスクについて
 * 関連する CA 証明書の最新の CRL ファイルをダウンロードするには、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_update_certificate_revocation_list_file_in_SnapCenter_CA_Certificate["SnapCenter CA 証明書の証明書失効リストファイルを更新する方法"]。
 * SnapCenter カスタムプラグインは、事前に設定されたディレクトリ内の CRL ファイルを検索します。
 * SnapCenter カスタムプラグインの CRL ファイルのデフォルトディレクトリは、 _'C:\Program Files\NetApp\SnapCenter \Snapcenter Plug-in Creator\etc\crl'_ です。
 
 
-* 手順 *
-
+.手順
 . _agent.properties_ ファイルのデフォルトディレクトリを、キー crl_path に対して変更および更新できます。
 . このディレクトリに複数の CRL ファイルを配置できます。
 +

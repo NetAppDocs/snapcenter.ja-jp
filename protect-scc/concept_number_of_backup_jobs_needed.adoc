@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/concept_number_of_backup_jobs_needed.html 
 sidebar: sidebar 
-keywords:  
+keywords: backup jobs 
 summary: 必要なバックアップジョブの数を左右する要因としては、リソースのサイズ、使用中のボリュームの数、リソースの変更率、サービスレベルアグリーメント（ SLA\ ）などがあります。 
 ---
 = 必要なバックアップジョブの数

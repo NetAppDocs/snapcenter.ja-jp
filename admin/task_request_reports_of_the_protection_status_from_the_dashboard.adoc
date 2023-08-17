@@ -1,7 +1,7 @@
 ---
 permalink: admin/task_request_reports_of_the_protection_status_from_the_dashboard.html 
 sidebar: sidebar 
-keywords:  
+keywords: dashboard 
 summary: ダッシュボードを使用して、特定のプラグインで管理されるリソースの保護の詳細を要求できます。 
 ---
 = ダッシュボードから保護ステータスのレポートを要求します

@@ -1,7 +1,7 @@
 ---
 permalink: admin/concept_manage_backups.html 
 sidebar: sidebar 
-keywords:  
+keywords: Manage backups 
 summary: バックアップは、名前変更および削除することができます。複数のバックアップを同時に削除することもできます。 
 ---
 = バックアップを管理します
@@ -44,8 +44,7 @@ Oracle Recovery Manager （ RMAN ）を使用して Oracle データベースの
 
 他のデータ保護処理に使用する必要がなくなったバックアップは、削除することができます。
 
-* 必要なもの *
-
+.作業を開始する前に
 バックアップを削除する前に、関連付けられているクローンを削除しておく必要があります。
 
 

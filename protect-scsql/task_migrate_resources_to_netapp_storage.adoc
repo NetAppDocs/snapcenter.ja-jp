@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_migrate_resources_to_netapp_storage.html 
 sidebar: sidebar 
-keywords:  
+keywords: migrate resources 
 summary: SnapCenter Plug-in for Microsoft Windows を使用してネットアップストレージシステムをプロビジョニングしたら、 SnapCenter グラフィカルユーザインターフェイス \ （ GUI\ ）または PowerShell コマンドレットを使用して、リソースをネットアップストレージシステムに移行するか、またはあるネットアップ LUN から別のネットアップ LUN に移行できます。 
 ---
 = ネットアップストレージシステムにリソースを移行
@@ -13,16 +13,14 @@ summary: SnapCenter Plug-in for Microsoft Windows を使用してネットアッ
 [role="lead"]
 SnapCenter Plug-in for Microsoft Windows を使用してネットアップストレージシステムをプロビジョニングしたら、 SnapCenter グラフィカルユーザインターフェイス（ GUI ）または PowerShell コマンドレットを使用して、リソースをネットアップストレージシステムに移行するか、またはあるネットアップ LUN から別のネットアップ LUN に移行できます。
 
-* 必要なもの *
-
+.作業を開始する前に
 * SnapCenter サーバにストレージシステムを追加しておく必要があります。
 * SQL Server リソースを更新（検出）しておく必要があります。
 
 
 ウィザードの各ページのフィールドのほとんどはわかりやすいもので、説明を必要としません。以下の手順では、説明が必要な一部のフィールドを取り上げます。
 
-* 手順 *
-
+.手順
 . 左側のナビゲーションペインで、 * リソース * をクリックし、リストから適切なプラグインを選択します。
 . [ リソース ] ページで、 [ * 表示 * ] ドロップダウン・リストから [ * データベース * ] または [ * インスタンス * ] を選択します。
 . リストからデータベースまたはインスタンスを選択し、 * Migrate * をクリックします。

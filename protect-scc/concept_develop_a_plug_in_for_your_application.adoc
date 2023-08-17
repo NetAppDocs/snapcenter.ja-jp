@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/concept_develop_a_plug_in_for_your_application.html 
 sidebar: sidebar 
-keywords:  
+keywords: overview snapcenter 
 summary: SnapCenter サーバを使用すると、 SnapCenter へのプラグインとしてアプリケーションを導入および管理できます。 
 ---
 = 概要

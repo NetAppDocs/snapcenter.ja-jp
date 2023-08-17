@@ -15,8 +15,7 @@ summary: プラグインパッケージは、 SnapCenter アップグレード�
 
 アップグレード手順は 'Windows'Linux'AIX ホストをメンテナンスモードにしますこれにより ' ホストはスケジュールされたジョブを実行できなくなります
 
-* 必要なもの *
-
+.作業を開始する前に
 * Linux マシンにアクセスできる root 以外のユーザの場合は、アップグレード操作を実行する前に、 _/etc/sudoers_file を最新のチェックサム値で更新する必要があります。
 * デフォルトでは、 SnapCenter は環境から JAVA_HOME を検出します。修正された JAVA_HOME を使用する場合、 Linux ホストでプラグインをアップグレードする場合は、 /var/opt/snapcenter /spl/etc/__ にある _spl.properties_ ファイルに skip_JAVAHOME_update パラメータを手動で追加し、値を true に設定する必要があります。
 +
@@ -28,8 +27,7 @@ SnapCenter 構成ファイルの例： SnapDrive Service.exe.config 、 SMCoreSe
 
 
 
-* このタスクについて *
-
+.このタスクについて
 * アップグレード手順は 'Windows'Linux'AIX ホストをメンテナンスモードにしますこれにより ' ホストはスケジュールされたジョブを実行できなくなります
 * SnapCenter Plug-in for Microsoft SQL Server、SnapCenter Plug-in for Microsoft Exchange Server、およびSnapCenter Plug-in for Microsoft Windowsの場合、サーバとプラグインホストの両方を、scripts_pathを実行する最新バージョンにアップグレードすることを推奨します。
 +
@@ -40,8 +38,7 @@ SnapCenter 構成ファイルの例： SnapDrive Service.exe.config 、 SMCoreSe
 
 
 
-* 手順 *
-
+.手順
 . 左側のナビゲーションペインで、 * Hosts * > * Managed Hosts * をクリックします。
 . 次のいずれかの手順を実行して、ホストをアップグレードします。
 +

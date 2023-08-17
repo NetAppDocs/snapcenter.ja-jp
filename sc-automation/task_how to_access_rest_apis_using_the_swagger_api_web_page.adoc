@@ -17,8 +17,7 @@ REST API を実行する SnapCenter サーバの管理 IP アドレスまたは�
 
 REST API クライアントを実行するための特別な権限は必要ありません。すべてのユーザが Swagger Web ページにアクセスできます。REST API を使用してアクセスするオブジェクトに対する各権限は、 REST API へのログイン時にトークンを生成するユーザに基づいています。
 
-* 手順 *
-
+.手順
 . ブラウザから、 URL を入力して Swagger Web ページにアクセスします。形式は \\ https://<SnapCenter_IP_address_or_name>:<SnapCenter_port>/swagger/_ です。
 +
 

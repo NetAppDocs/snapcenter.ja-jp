@@ -13,12 +13,10 @@ summary: コマンドラインインターフェイスを使用して、 SnapCen
 [role="lead"]
 コマンドラインインターフェイスを使用して、 SnapCenter Plug-ins Package for Linux または SnapCenter Plug-ins Package for AIX をアンインストールできます。
 
-* 必要なもの *
-
+.作業を開始する前に
 * スケジュール済みのジョブが削除されていることを確認します
 * 実行中のジョブがすべて完了していることを確認します。
 
 
-* ステップ *
-
+.ステップ
 Run _ /custom_location / netapp / snapcenter / spl / installation /plugins/uninstall_ to uninstall.

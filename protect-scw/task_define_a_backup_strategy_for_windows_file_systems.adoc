@@ -1,7 +1,7 @@
 ---
 permalink: protect-scw/task_define_a_backup_strategy_for_windows_file_systems.html 
 sidebar: sidebar 
-keywords:  
+keywords: backup strategy 
 summary: バックアップを作成する前にバックアップ戦略を定義しておくと、ファイルシステムの正常なリストアやクローニングに必要なバックアップを作成できます。バックアップ戦略の大部分は、サービスレベルアグリーメント（ SLA ）、目標復旧時間（ RTO ）、および目標復旧時点（ RPO ）によって決まります。 
 ---
 = Windows ファイルシステムのバックアップ戦略を定義する

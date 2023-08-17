@@ -15,8 +15,7 @@ summary: データ保護処理とプロビジョニング処理を実行する�
 
 スタンドアロンの SVM を追加したり、複数の SVM で構成されるクラスタを追加したりできます。NetApp ONTAP に Amazon FSX を使用している場合は、 fsxadmin アカウントを使用して複数の SVM で構成される FSX 管理 LIF を追加するか、 SnapCenter に FSX SVM を追加できます。
 
-* 必要なもの *
-
+.作業を開始する前に
 * ストレージ接続を作成するには、 Infrastructure Admin ロールに必要な権限が必要です。
 * プラグインのインストールが実行中でないことを確認してください。
 +
@@ -138,7 +137,7 @@ NOTE: FASまたはAFFストレージシステムをオールSANアレイ（ASA�
 
 クラスタ管理者は、ストレージシステムのコマンドラインから次のコマンドを実行して、各ストレージシステムノードで AutoSupport を有効にし、 SnapCenter がアクセス可能なすべてのストレージシステムから E メール通知を送信する必要があります。
 
-AutoSupport trigger modify -node nodename autosupport.message client.app.info enable -noteto enable `
+`autosupport trigger modify -node nodename -autosupport-message client.app.info -to enable -noteto enable`
 
 
 NOTE: Storage Virtual Machine （ SVM ）管理者には AutoSupport へのアクセス権はありません。

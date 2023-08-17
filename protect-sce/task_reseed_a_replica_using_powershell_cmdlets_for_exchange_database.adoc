@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/task_reseed_a_replica_using_powershell_cmdlets_for_exchange_database.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter plug-in for Exchange Server 
 summary: PowerShell コマンドレットを使用すると、問題のあるレプリカをリストアできます。そのためには、同じホストの最新のコピーを使用するか、代替ホストの最新のコピーを使用します。 
 ---
 = PowerShell コマンドレットを使用した Exchange データベースの再シード
@@ -15,8 +15,7 @@ PowerShell コマンドレットを使用すると、問題のあるレプリカ
 
 コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
 
-* 手順 *
-
+.手順
 . 「 Open-SmConnection 」コマンドレットを使用して、指定されたユーザの SnapCenter サーバとの接続セッションを開始します。
 +
 [listing]

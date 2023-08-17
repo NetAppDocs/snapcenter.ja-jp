@@ -1,7 +1,7 @@
 ---
 permalink: install/task_register_untrusted_active_directory_domains.html 
 sidebar: sidebar 
-keywords:  
+keywords: Active Directory 
 summary: 信頼されていない複数の Active Directory ドメインのホスト、ユーザ、およびグループを管理するには、 Active Directory を SnapCenter サーバに登録する必要があります。 
 ---
 = 信頼できない Active Directory ドメインを登録します
@@ -13,8 +13,7 @@ summary: 信頼されていない複数の Active Directory ドメインのホ�
 [role="lead"]
 信頼されていない複数の Active Directory ドメインのホスト、ユーザ、およびグループを管理するには、 Active Directory を SnapCenter サーバに登録する必要があります。
 
-* 必要なもの *
-
+.作業を開始する前に
 * LDAP および LDAPS プロトコル *
 
 * LDAP または LDAPS プロトコルを使用して、信頼されていない Active Directory ドメインを登録できます。

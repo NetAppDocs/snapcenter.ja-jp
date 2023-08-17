@@ -1,7 +1,7 @@
 ---
 permalink: admin/concept_monitor_jobs_schedules_events_and_logs.html 
 sidebar: sidebar 
-keywords:  
+keywords: Monitor jobs, schedules, events, logs 
 summary: 'ジョブの進捗状況の監視、スケジュールされたジョブに関する情報の取得、およびイベントとログの確認は、 [ 監視 ] ページから実行できます。' 
 ---
 = ジョブ、スケジュール、イベント、およびログを監視する
@@ -135,6 +135,5 @@ NOTE: フェイルオーバー・ジョブの完了後にヘルスまたは構�
 . [ ジョブ ] ページで、ジョブのステータスを確認します。
 
 
-* 詳細はこちら *
-
+.関連情報
 コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。

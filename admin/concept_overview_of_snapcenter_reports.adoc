@@ -1,7 +1,7 @@
 ---
 permalink: admin/concept_overview_of_snapcenter_reports.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter reports 
 summary: SnapCenter には、システムの健常性や処理の状況を監視および管理するためのさまざまなレポートオプションが用意されています。 
 ---
 = SnapCenter のレポート機能の概要
@@ -130,8 +130,7 @@ SnapCenter レポートをエクスポートすると、さまざまな形式で
 
 SnapCenter データ保護ジョブの更新情報を定期的に自分または他のユーザに送信し、更新ステータスを監視できるようするには、リソースグループの作成時に SnapCenter レポートを E メールで送信するオプションを設定します。
 
-* 必要なもの *
-
+.作業を開始する前に
 SMTP サーバーは、 [ 設定 ] の [ グローバル設定 ] ページで設定しておく必要があります。
 
 * 手順 *

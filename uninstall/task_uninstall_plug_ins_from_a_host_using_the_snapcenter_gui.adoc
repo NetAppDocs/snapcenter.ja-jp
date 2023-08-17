@@ -13,14 +13,12 @@ summary: 個々のプラグインまたはプラグインパッケージが不�
 [role="lead"]
 個々のプラグインまたはプラグインパッケージが不要になった場合は、 SnapCenter インターフェイスを使用してアンインストールできます。
 
-* 必要なもの *
-
+.作業を開始する前に
 * アンインストールするプラグインパッケージのリソースグループを削除しておく必要があります。
 * アンインストールするプラグインパッケージのリソースグループに関連付けられているポリシーを解除しておく必要があります。
 
 
-* このタスクについて *
-
+.このタスクについて
 個々のプラグインをアンインストールできます。たとえば、あるホストのリソースが不足している場合に、そのプラグインをより強力なホストに移動するために、 SnapCenter Plug-in for Microsoft SQL Server のアンインストールが必要になることがあります。プラグインパッケージ全体をアンインストールすることもできます。たとえば、 SnapCenter Plug-in for Oracle Database と SnapCenter Plug-in for UNIX が含まれている Linux 用 SnapCenter Plug-ins Package のアンインストールが必要になることがあります。
 
 * ホストの削除には、すべてのプラグインのアンインストールが含まれます。
@@ -39,16 +37,14 @@ SnapCenter GUI を使用する場合、プラグインをアンインストー�
 
 IMPORTANT: SnapCenter Server がインストールされているホストから SnapCenter Plug-ins Package for Windows をアンインストールすると、 SnapCenter Server のインストールが破損します。SnapCenter Server が不要になったことが確実である場合を除き、 SnapCenter Plug-ins Package for Windows をアンインストールしないでください。
 
-* 手順 *
-
+.手順
 . 左側のナビゲーションペインで、 * Hosts * （ホスト）をクリックします。
 . [Hosts] ページで、 [*Managed Hosts] をクリックします。
 . Managed Hosts ページで、プラグインまたはプラグインパッケージをアンインストールするホストを選択します。
 . 削除するプラグインの横にある * 削除 * > * 送信 * をクリックします。
 
 
-* 終了後 *
-
+.完了後
 5 分待ってから、そのホストにプラグインを再インストールします。この時間は、 SnapCenter GUI が管理対象ホストのステータスを更新するのに十分です。プラグインをすぐに再インストールすると、のインストールが失敗します。
 
 Linux 用の SnapCenter Plug-ins パッケージをアンインストールしている場合は、アンインストール固有のログファイルが _ / custom_location / snapcenter / log_ にあります。

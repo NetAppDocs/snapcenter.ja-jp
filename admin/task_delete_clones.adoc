@@ -1,7 +1,7 @@
 ---
 permalink: admin/task_delete_clones.html 
 sidebar: sidebar 
-keywords:  
+keywords: Delete clones 
 summary: 不要になったクローンは削除できます。 
 ---
 = クローンを削除します。

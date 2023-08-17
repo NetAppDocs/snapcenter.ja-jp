@@ -74,9 +74,12 @@ NOTE: VMが破損している場合は、別のVMまたは同じ名前のマシ�
 
 REST API を使用すると、 REST API Swagger ページで次の処理を実行できます。Swagger ページへのアクセス方法については、を参照してください link:https://docs.netapp.com/us-en/snapcenter/sc-automation/task_how%20to_access_rest_apis_using_the_swagger_api_web_page.html["swagger API Web ページを使用して REST API にアクセスする方法"]。
 
-.必要なもの
+.作業を開始する前に
 * SnapCenter 管理者ユーザとしてログインする必要があります。
 * DR リストア API を実行するには、 SnapCenter サーバが稼働している必要があります。
+* DLLが破損している場合は、SnapCenterサーバのインストールを修復します。
+* NSMが破損しているか構成ファイルが破損している場合は、同じバージョンのSnapCenterサーバをアンインストールして再インストールします。
+* VMが破損している場合は、同じ名前の別のVMを起動し、同じバージョンのSnapCenterサーバをインストールします。
 
 
 .このタスクについて
@@ -132,5 +135,5 @@ DRバックアップを格納するターゲットパスを指定する必要が
 投稿（ Post ）
 
 |===
-.を参照してください。
+.関連情報
 を参照してください link:https://www.youtube.com/watch?v=Nbr_wm9Cnd4&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg["ディザスタリカバリ API"^] ビデオ：

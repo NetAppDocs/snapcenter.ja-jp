@@ -1,7 +1,7 @@
 ---
 permalink: protect-scw/concept_snapcenter_plug_in_for_windows_features.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter 
 summary: Plug-in for Windows は、ストレージシステム上でネットアップの Snapshot コピーテクノロジと統合されます。Plug-in for Windows の操作には、 SnapCenter インターフェイスを使用します。 
 ---
 = SnapCenter Plug-in for Windows の特長

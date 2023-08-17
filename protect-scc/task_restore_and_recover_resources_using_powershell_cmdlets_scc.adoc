@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_restore_and_recover_resources_using_powershell_cmdlets_scc.html 
 sidebar: sidebar 
-keywords:  
+keywords: restore resources 
 summary: リソースのバックアップをリストアするときは、 SnapCenter サーバとの接続セッションを開始し、バックアップをリストしてバックアップ情報を取得し、バックアップをリストアします。 
 ---
 = PowerShell コマンドレットを使用してリソースをリストアする
@@ -15,8 +15,7 @@ summary: リソースのバックアップをリストアするときは、 Snap
 
 PowerShell コマンドレットを実行できるように PowerShell 環境を準備しておく必要があります。
 
-* 手順 *
-
+.手順
 . Open-SmConnection コマンドレットを使用して、指定したユーザの SnapCenter サーバとの接続セッションを開始します。
 +
 [listing]

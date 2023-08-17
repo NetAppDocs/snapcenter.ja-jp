@@ -134,7 +134,7 @@ NOTE: WindowsスケジューラまたはSQL Serverエージェントで作成さ
 . 処理の進捗状況を監視するために、*[監視]*>*[ジョブ]*を選択します。
 
 
-.次の手順
+.完了後
 * MetroCluster 構成では、フェイルオーバー後に SnapCenter が保護関係を検出できない場合があります。
 +
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["MetroCluster のフェイルオーバー後に SnapMirror 関係または SnapVault 関係を検出できません"]

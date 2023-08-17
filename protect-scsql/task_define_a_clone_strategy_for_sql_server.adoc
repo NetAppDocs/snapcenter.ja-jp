@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_define_a_clone_strategy_for_sql_server.html 
 sidebar: sidebar 
-keywords:  
+keywords: clone strategy 
 summary: クローニング戦略を定義しておくと、それに従ってデータベースのクローニングを実行することができます。 
 ---
 = SQL Server のクローニング戦略を定義する

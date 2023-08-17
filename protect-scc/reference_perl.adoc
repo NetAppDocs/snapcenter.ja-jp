@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/reference_perl.html 
 sidebar: sidebar 
-keywords:  
+keywords: custom plug-in 
 summary: Perl を使用してプラグインを開発します。 
 ---
 = Perl ベースの開発

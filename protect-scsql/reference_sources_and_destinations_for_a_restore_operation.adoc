@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/reference_sources_and_destinations_for_a_restore_operation.html 
 sidebar: sidebar 
-keywords:  
+keywords: restore operation 
 summary: プライマリストレージまたはセカンダリストレージにあるバックアップコピーから SQL Server データベースをリストアすることができます。元の場所だけでなく別のデスティネーションにデータベースをリストアして、要件に対応するデスティネーションを選択することもできます。 
 ---
 = リストア処理のソースとデスティネーション

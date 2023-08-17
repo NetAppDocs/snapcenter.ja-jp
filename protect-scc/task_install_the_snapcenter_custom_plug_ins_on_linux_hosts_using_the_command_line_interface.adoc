@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_install_the_snapcenter_custom_plug_ins_on_linux_hosts_using_the_command_line_interface.html 
 sidebar: sidebar 
-keywords:  
+keywords: install, custom plug-in 
 summary: SnapCenter カスタムプラグインは、 SnapCenter ユーザインターフェイス（ UI ）を使用してインストールする必要があります。環境内でSnapCenter UIからプラグインをリモートでインストールできない場合は、コマンドラインインターフェイス（CLI）を使用して、コンソールモードまたはサイレントモードでカスタムプラグインをインストールできます。 
 ---
 = コマンドラインインターフェイスを使用して、 Linux ホストに SnapCenter カスタムプラグインをインストールします
@@ -13,8 +13,7 @@ summary: SnapCenter カスタムプラグインは、 SnapCenter ユーザイン
 [role="lead"]
 SnapCenter カスタムプラグインは、 SnapCenter ユーザインターフェイス（ UI ）を使用してインストールする必要があります。環境内で SnapCenter UI からプラグインのリモートインストールが許可されていない場合は、カスタムプラグインをコンソールモードまたはサイレントモードでインストールできます。そのためには、コマンドラインインターフェイス（ CLI ）を使用します。
 
-* 手順 *
-
+.手順
 . SnapCenter Plug-ins Package for Linux のインストールファイル（ snapcenter linux_host_plugin.bin ）を C ： \ProgramData\NetApp\SnapCenter \Package Repository から、カスタムプラグインをインストールするホストにコピーします。
 +
 このパスには、 SnapCenter サーバがインストールされているホストからアクセスできます。

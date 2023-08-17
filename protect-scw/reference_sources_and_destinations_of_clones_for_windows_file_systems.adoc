@@ -1,7 +1,7 @@
 ---
 permalink: protect-scw/reference_sources_and_destinations_of_clones_for_windows_file_systems.html 
 sidebar: sidebar 
-keywords:  
+keywords: snapcenter 
 summary: ファイルシステムのクローニングは、プライマリストレージまたはセカンダリストレージから実行できます。デスティネーションについても、要件に応じて、バックアップの元の場所のほか、同じホストまたは別のホストの別の場所を選択することができます。クローンのデスティネーションは、ソースのバックアップと同じボリュームになければなりません。 
 ---
 = Windows ファイルシステムのクローンのソースとデスティネーション

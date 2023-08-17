@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_back_up_resources_using_powershell_cmdlets.html 
 sidebar: sidebar 
-keywords:  
+keywords: backup resources 
 summary: リソースをバックアップするときは、 SnapCenter サーバとの接続を確立してから、リソースの追加、ポリシーの追加、バックアップリソースグループの作成を行って、バックアップを実行します。 
 ---
 = PowerShell コマンドレットを使用してリソースをバックアップします
@@ -13,18 +13,15 @@ summary: リソースをバックアップするときは、 SnapCenter サー�
 [role="lead"]
 リソースをバックアップするときは、 SnapCenter サーバとの接続を確立してから、リソースの追加、ポリシーの追加、バックアップリソースグループの作成を行って、バックアップを実行します。
 
-* 必要なもの *
-
+.作業を開始する前に
 * PowerShell コマンドレットを実行できるように PowerShell 環境を準備しておく必要があります。
 * ストレージシステム接続を追加し、クレデンシャルを作成しておく必要があります。
 
 
-* このタスクについて *
-
+.このタスクについて
 コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
 
-* 手順 *
-
+.手順
 . Open-SmConnection コマンドレットを使用して、指定したユーザの SnapCenter サーバとの接続セッションを開始します。
 +
 [listing]

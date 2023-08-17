@@ -13,7 +13,7 @@ summary: PowerShell コマンドレットを使用して SAP HANA データベ�
 [role="lead"]
 PowerShell コマンドレットを使用して SAP HANA データベースのバックアップ、リストア、クローニングを行うには、 Storage Virtual Machine （ SVM ）接続とクレデンシャルを作成する必要があります。
 
-.必要なもの
+.作業を開始する前に
 * PowerShell コマンドレットを実行できるように PowerShell 環境を準備しておく必要があります。
 * ストレージ接続を作成するには、 Infrastructure Admin ロールに必要な権限が必要です。
 * プラグインのインストールが実行中でないことを確認してください。

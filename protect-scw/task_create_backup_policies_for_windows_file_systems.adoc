@@ -1,7 +1,7 @@
 ---
 permalink: protect-scw/task_create_backup_policies_for_windows_file_systems.html 
 sidebar: sidebar 
-keywords:  
+keywords: backup policy 
 summary: SnapCenter を使用して Windows ファイルシステムをバックアップする前に、リソースの新しいバックアップポリシーを作成することができます。また、リソースグループの作成時やリソースのバックアップ時に新しいバックアップポリシーを作成することもできます。 
 ---
 = Windows ファイルシステムのバックアップポリシーの作成
@@ -13,8 +13,7 @@ summary: SnapCenter を使用して Windows ファイルシステムをバック
 [role="lead"]
 SnapCenter を使用して Windows ファイルシステムをバックアップする前に、リソースの新しいバックアップポリシーを作成することができます。また、リソースグループの作成時やリソースのバックアップ時に新しいバックアップポリシーを作成することもできます。
 
-* 必要なもの *
-
+.作業を開始する前に
 * バックアップ戦略を定義しておく必要があります。 link:task_define_a_backup_strategy_for_windows_file_systems.html["詳細はこちら。"^]
 * データ保護の準備が完了している必要があります。
 +
@@ -27,8 +26,7 @@ SnapCenter を使用して Windows ファイルシステムをバックアップ
 
 
 
-* このタスクについて *
-
+.このタスクについて
 * scripts_pathは、プラグインホストのSMCoreServiceHost.exe.ConfigファイルにあるPredefinedWindowsScriptsDirectoryキーを使用して定義されます。
 +
 必要に応じて、このパスを変更し、SMcoreサービスを再起動できます。セキュリティのためにデフォルトパスを使用することを推奨します。
@@ -41,8 +39,7 @@ GET APIを使用してキーの値を表示することができます。set API
 
 
 
-* 手順 *
-
+.手順
 . 左側のナビゲーションペインで、 * 設定 * をクリックします。
 . [ 設定 ] ページで、 [ * ポリシー * ] をクリックします。
 . 既存のポリシーを使用できるかどうかを確認するには、ポリシー名を選択し、 [* 詳細 * ] をクリックします。

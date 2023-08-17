@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/concept_requirements_for_backing_up_sql_resources.html 
 sidebar: sidebar 
-keywords:  
+keywords: Requirements 
 summary: SQL リソースをバックアップする前に、いくつかの要件を満たしていることを確認する必要があります。 
 ---
 = SQL リソースのバックアップに関する要件

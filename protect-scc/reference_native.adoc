@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/reference_native.html 
 sidebar: sidebar 
-keywords:  
+keywords: custom plug-in 
 summary: ネイティブ形式を使用してプラグインを開発します。 
 ---
 = ネイティブ形式

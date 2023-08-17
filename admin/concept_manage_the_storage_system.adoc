@@ -1,7 +1,7 @@
 ---
 permalink: admin/concept_manage_the_storage_system.html 
 sidebar: sidebar 
-keywords:  
+keywords: Manage storage system 
 summary: ストレージシステムを追加したあとで、ストレージシステムの設定や接続を変更したり、ストレージシステムを削除したりできます。 
 ---
 = ストレージシステムを管理

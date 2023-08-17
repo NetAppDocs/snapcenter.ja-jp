@@ -13,8 +13,7 @@ summary: SnapCenter では、 Role-Based Access Control （ RBAC ；ロールベ
 [role="lead"]
 SnapCenter では、 Role-Based Access Control （ RBAC ；ロールベースアクセス制御）がサポートされています。SnapCenter 管理者が、 SnapCenter RBAC を使用して、ロールとリソースをワークグループまたは Active Directory 内のユーザまたは Active Directory 内のグループに割り当てます。RBAC ユーザは、割り当てられたロールを使用して SnapCenter にログインできるようになりました。
 
-* 必要なもの *
-
+.作業を開始する前に
 * Windows Server Manager で Windows Process Activation Service （ WAS ）を有効にする必要があります。
 * Internet Explorer をブラウザとして使用して SnapCenter サーバにログインする場合は、 Internet Explorer の保護モードが無効になっていることを確認する必要があります。
 
@@ -92,8 +91,7 @@ SnapCenter でサポートされる信頼されていない Active Directory ド
 
 SnapCenter サーバでは、Active Directoryに含まれるドメインアカウントに対してMFAがサポートされます。
 
-* 必要なもの *
-
+.作業を開始する前に
 * MFAを有効にしておく必要があります。
 +
 MFAを有効にする方法については、を参照してください link:../install/enable_multifactor_authentication.html["多要素認証を有効にします"]

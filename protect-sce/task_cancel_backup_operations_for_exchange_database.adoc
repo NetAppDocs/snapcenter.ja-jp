@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/task_cancel_backup_operations_for_exchange_database.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter plug-in for Exchange Server 
 summary: キューに登録されているバックアップ処理をキャンセルできます。 
 ---
 = Exchange データベースのバックアップ処理をキャンセルします

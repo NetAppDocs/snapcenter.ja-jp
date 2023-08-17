@@ -1,7 +1,7 @@
 ---
 permalink: protect-scw/task_install_the_snapcenter_plug_in_for_windows_silently_from_the_command_line.html 
 sidebar: sidebar 
-keywords:  
+keywords: install, snapcenter 
 summary: SnapCenter Plug-in for Microsoft Windows を SnapCenter の GUI からリモートでインストールできない場合は、 Windows ホスト上にローカルにインストールできます。SnapCenter Plug-in for Microsoft Windows のインストールプログラムを、 Windows のコマンドラインからサイレントモードで自動的に実行できます。 
 ---
 = コマンドラインから SnapCenter Plug-in for Microsoft Windows をサイレントにインストールします
@@ -13,16 +13,14 @@ summary: SnapCenter Plug-in for Microsoft Windows を SnapCenter の GUI から�
 [role="lead"]
 SnapCenter Plug-in for Microsoft Windows を SnapCenter の GUI からリモートでインストールできない場合は、 Windows ホスト上にローカルにインストールできます。SnapCenter Plug-in for Microsoft Windows のインストールプログラムを、 Windows のコマンドラインからサイレントモードで自動的に実行できます。
 
-* 必要なもの *
-
+.作業を開始する前に
 * Microsoft .Net 4.7.2以降がインストールされている必要があります。
 * PowerShell 4.0 以降がインストールされている必要があります。
 * Windows メッセージキューをオンにしておく必要があります。
 * ホストのローカル管理者である必要があります。
 
 
-* 手順 *
-
+.手順
 . インストールの場所から、 SnapCenter Plug-in for Microsoft Windows をダウンロードします。
 +
 たとえば、デフォルトのインストールパスは C ： \ProgramData\NetApp\SnapCenter \Package Repository です。
