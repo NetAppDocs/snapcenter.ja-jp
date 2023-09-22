@@ -66,9 +66,9 @@ indexpage:
   - title: リソースの追加
     links:
     - title: コマンドレットリファレンスガイド
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205
     - title: コマンドリファレンスガイド
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2883301
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886206
     - title: 以前のバージョンの SnapCenter のドキュメント
       url: https://www.netapp.com/data-protection/backup-recovery/snapcenter-backup-management/documentation/#ProseArticleLinkList13
     - title: ネットアップのナレッジベース - SnapCenter
