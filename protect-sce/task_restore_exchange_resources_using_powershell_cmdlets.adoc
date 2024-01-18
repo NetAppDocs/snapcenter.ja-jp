@@ -15,6 +15,9 @@ Exchange データベースをリストアするときは、 SnapCenter サー�
 
 PowerShell コマンドレットを実行できるように PowerShell 環境を準備しておく必要があります。
 
+.このタスクについて
+SnapLockが有効なポリシーの場合、ONTAP 9.12.1以前のバージョンでは、Snapshotコピーのロック期間を指定すると、リストアの一環として改ざん防止Snapshotコピーから作成されたクローンにSnapLockの有効期限が継承されます。SnapLockの有効期限が過ぎた時点で、ストレージ管理者がクローンを手動でクリーンアップする必要があります。
+
 .手順
 . 「 Open-SmConnection 」コマンドレットを使用して、指定されたユーザの SnapCenter サーバとの接続セッションを開始します。
 +
@@ -72,4 +75,4 @@ C:\ PS> Restore-SmBackup -PluginCode 'SCE' -AppObjectId 'DB2' -BackupId 81 -IsRe
 
 
 
-コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。

@@ -38,7 +38,17 @@ SAP HANA データボリュームのバックアップは作成できません�
 
 
 
+* SnapLock
++
+** [バックアップコピーを特定の日数だけ保持する]オプションを選択した場合は、SnapLockの保持期間を指定した保持日数以下にする必要があります。
+** Snapshotコピーのロック期間を指定すると、保持期間が終了するまでSnapshotコピーが削除されません。その結果、ポリシーで指定された数よりも多くのSnapshotコピーが保持される可能性があります。
+** ONTAP 9.12.1以前のバージョンでは、Snapshotコピーのロック期間を指定すると、改ざんを防止するSnapshotコピーから作成されたクローンにSnapLockの有効期限が継承されます。SnapLockの有効期限が切れたあとにクローンを手動でクリーンアップする必要があります。
 
+
+
+
+
+NOTE: プライマリSnapLock設定はSnapCenterバックアップポリシーで管理され、セカンダリSnapLock設定はONTAPで管理されます。
 
 .手順
 . 左側のナビゲーションペインで、 * 設定 * をクリックします。
@@ -116,6 +126,15 @@ Snapshot コピーを特定の日数だけ保持します
  a| 
 「 * Snapshot コピーを保持する期間」を選択し、 Snapshot コピーを削除するまで保持する日数を指定します。
 
+
+
+ a| 
+Snapshotコピーのロック期間
+ a| 
+Snapshotコピーのロック期間を選択し、日、月、または年を選択します。
+
+SnapLock保持期間は100年未満にする必要があります。
+
 |===
 . Snapshot コピーベースのバックアップの場合は、 Replication （レプリケーション）ページでレプリケーション設定を指定します。
 +
@@ -130,12 +149,26 @@ Snapshot コピーを特定の日数だけ保持します
 
 ONTAP の保護関係のタイプがミラーとバックアップの場合、このオプションのみを選択すると、プライマリで作成された Snapshot コピーがデスティネーションに転送されませんが、デスティネーションのリストに表示されます。この Snapshot コピーがリストア処理の対象としてデスティネーションで選択されると、「 Secondary Location is not available for the selected vaulted/mirrored backup 」というエラーメッセージが表示されます。
 
+セカンダリレプリケーションでは、SnapLockの有効期限によってプライマリSnapLockの有効期限がロードされます。
+
+[Topology]ページの[Refresh]*ボタンをクリックすると、ONTAPから取得されたセカンダリおよびプライマリのSnapLock有効期限が更新されます。
+
+を参照してください link:..protect-hana/task_view_sap_hana_database_backups_and_clones_in_the_topology_page_sap_hana.html["Topology ページで、 SAP HANA データベースのバックアップとクローンを表示します"]。
+
 
 
  a| 
 * ローカル Snapshot コピー作成後に SnapVault を更新 *
  a| 
 ディスクツーディスクのバックアップレプリケーション（ SnapVault バックアップ）を実行する場合は、このオプションを選択します。
+
+セカンダリレプリケーションでは、SnapLockの有効期限によってプライマリSnapLockの有効期限がロードされます。[Topology]ページの[Refresh]*ボタンをクリックすると、ONTAPから取得されたセカンダリおよびプライマリのSnapLock有効期限が更新されます。
+
+SnapLockがONTAPのセカンダリ（SnapLock Vault）にのみ設定されている場合、[Topology]ページの*[Refresh]*ボタンをクリックすると、ONTAPから取得したセカンダリのロック期間が更新されます。
+
+SnapLock Vaultの詳細については、を参照してください。 https://docs.netapp.com/us-en/ontap/snaplock/commit-snapshot-copies-worm-concept.html["SnapshotコピーをバックアップデスティネーションのWORM状態にコミットします"]
+
+を参照してください link:..protect-hana/task_view_sap_hana_database_backups_and_clones_in_the_topology_page_sap_hana.html["Topology ページで、 SAP HANA データベースのバックアップとクローンを表示します"]。
 
 
 

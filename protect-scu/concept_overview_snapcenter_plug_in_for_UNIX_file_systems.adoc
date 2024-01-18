@@ -1,0 +1,95 @@
+---
+permalink: protect-scu/concept_overview_snapcenter_plug_in_for_UNIX_file_systems.html 
+sidebar: sidebar 
+keywords: overview, unix file system, plug-in for unix file system, backup, restore, clone 
+summary: Plug-in for Unix file systemsは、TOF UNIXファイルシステムのバックアップ、リストア、およびクローニングをサポートしています。 
+---
+= UNIXファイルシステム用SnapCenterプラグインの機能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Plug-in for UNIXファイルシステムをインストールした環境では、SnapCenterを使用してUNIXファイルシステムをバックアップ、リストア、およびクローニングできます。これらの処理をサポートするタスクを実行することもできます。
+
+* リソースの検出
+* UNIXファイルシステムのバックアップ
+* バックアップ処理のスケジュールを設定します
+* ファイルシステムのバックアップをリストア
+* ファイルシステムのバックアップをクローニングする
+* バックアップ、リストア、クローニングの各処理を監視する
+
+
+
+
+== サポートされている構成
+
+|===
+| 項目 | サポートされる構成 
+
+
+ a| 
+環境
+ a| 
+* 物理サーバ
+* 仮想サーバ
+
+
+
+
+ a| 
+オペレーティングシステム
+ a| 
+* Red Hat Enterprise Linux の場合
+* Oracle Linux の場合
+* SUSE Linux Enterprise Server （ SLES ）
+
+
+
+
+ a| 
+ファイルシステム
+ a| 
+* SAN ：
++
+** LVMベースと非LVMベースの両方のファイルシステム
+** VMDK ext3、ext4、xfs経由のLVM
+
+
+* NFS：NFS v3、NFS v4.x
+
+
+
+
+ a| 
+プロトコル
+ a| 
+* FC
+* FCoE
+* iSCSI
+* NFS
+
+
+
+
+ a| 
+マルチパス
+ a| 
+はい。
+
+|===
+
+
+== 制限
+
+* ボリュームグループでのRDMと仮想ディスクの混在はサポートされていません。
+* ファイルレベルのリストアはサポートされていません。
++
+ただし、バックアップをクローニングし、ファイルを手動でコピーすることで、ファイルレベルのリストアを手動で実行できます。
+
+* NFSデータストアとVMFSデータストアの両方からの複数のVMDKにまたがるファイルシステムの混在はサポートされていません。
+* NVMeはサポートされません。
+* SnapMirrorビジネス継続性（SM-BC）はサポートされません。
+* プロビジョニングはサポートされていません。
+

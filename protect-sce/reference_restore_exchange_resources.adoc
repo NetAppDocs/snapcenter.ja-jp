@@ -17,4 +17,4 @@ SnapCenter を使用して、 1 つ以上のバックアップをアクティブ
 
 image:../media/all_plug_ins_restore_workflow.png["リストアワークフロー"]
 
-PowerShell コマンドレットを手動またはスクリプトで使用して、バックアップとリストアの処理を実行することもできます。PowerShell コマンドレットの詳細については、 SnapCenter コマンドレットのヘルプを使用するか、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+PowerShell コマンドレットを手動またはスクリプトで使用して、バックアップとリストアの処理を実行することもできます。PowerShell コマンドレットの詳細については、 SnapCenter コマンドレットのヘルプを使用するか、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。

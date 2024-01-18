@@ -19,7 +19,7 @@ SnapCenter ディザスタリカバリ（DR）機能を使用すると、リソ�
 * SnapCenter サーバのデータはバックアップされ、SnapCenter サーバにプラグインを追加したり、管理したりすることなくリカバリできます。
 * セカンダリSnapCenter サーバは、プライマリSnapCenter サーバと同じインストールディレクトリと同じポートにインストールする必要があります。
 * 多要素認証（MFA）の場合、SnapCenter サーバDR中にブラウザのすべてのタブを閉じ、ブラウザを再度開いて再度ログインします。これにより、既存またはアクティブなセッションCookieがクリアされ、正しい設定データが更新されます。
-* SnapCenter のディザスタリカバリ機能では、 REST API を使用して SnapCenter サーバをバックアップします。を参照してください link:../sc-automation/rest_api_workflows_disaster_recovery_of_snapcenter_server.html["SnapCenter サーバのディザスタリカバリ用の REST API のワークフロー"]。
+* SnapCenter のディザスタリカバリ機能では、 REST API を使用して SnapCenter サーバをバックアップします。を参照してください link:../tech-refresh/task_tech_refresh_server_host.html["SnapCenter サーバのディザスタリカバリ用の REST API のワークフロー"]。
 * 監査設定に関連する構成ファイルはDRバックアップにバックアップされず、リストア処理後にDRサーバにもバックアップされません。監査ログの設定を手動で繰り返す必要があります。
 
 

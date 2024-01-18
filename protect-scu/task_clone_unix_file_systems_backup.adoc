@@ -1,0 +1,74 @@
+---
+permalink: protect-scu/task_clone_unix_file_systems_backup.html 
+sidebar: sidebar 
+keywords: alternate host, clone, Unix file systems, file systems 
+summary: SnapCenterを使用すると、ファイルシステムのバックアップを使用してUNIXファイルシステムデータベースをクローニングできます。 
+---
+= UNIXファイルシステムのバックアップのクローニング
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenterを使用すると、ファイルシステムのバックアップを使用してUNIXファイルシステムをクローニングできます。
+
+.作業を開始する前に
+* fstabファイルの更新をスキップするには、_/opt/NetApp/snapcenter/scc/etc _にある_agent.properties_ファイルで_skip_fstab_update_to * true *の値を設定します。
+* 静的なクローンボリューム名とジャンクションパスを設定するには、_/opt/NetApp/snapcenter/scc/etc _にある_agent.properties_ファイルで_use_custom_clone_volume_name_format_の値を* true *に設定します。ファイルを更新したら、次のコマンドを実行してSnapCenter forカスタムプラグインサービスを再起動する必要があります。 `/opt/NetApp/snapcenter/scc/bin/scc restart`。
++
+例：このプロパティを指定しない場合、クローンボリュームの名前とジャンクションパスは<Source_volume_name>_<Timestamp>のようになりますが、<Source_volume_name>_<Clone_Name>になります。
+
++
+これにより、SnapCenterでfstabを更新したくない場合にfstabファイルを手動で更新できるように、名前が一定に保たれます。
+
+
+
+.手順
+. 左側のナビゲーションペインで、 * リソース * をクリックし、リストから適切なプラグインを選択します。
+. [リソース]ページで、*[表示]*リストから*[パス]*または*[リソースグループ]*を選択します。
+. 詳細ビューまたはリソースグループの詳細ビューでファイルシステムを選択します。
++
+トポロジページが表示されます。
+
+. [ コピーの管理 ] ビューで、バックアップを [ ローカルコピー ] （プライマリ）、 [ ミラーコピー ] （セカンダリ）、または [ バックアップコピー ] （セカンダリ）から選択します。
+. 表からバックアップを選択し、 * をクリックしますimage:../media/clone_icon.gif["クローンアイコン"]*
+. Location ページで、次のアクションを実行します。
++
+|===
+| フィールド | 手順 
+
+
+ a| 
+クローンサーバ
+ a| 
+ソースホストがデフォルトで入力されています。
+
+
+
+ a| 
+クローンマウントポイント
+ a| 
+ファイルシステムをマウントするパスを指定します。
+
+|===
+. Scripts ページで、次の手順を実行します。
++
+.. クローニング処理の前後に実行するプリコマンドやポストコマンドを入力します。
++
+
+NOTE: プラグインホストで使用可能なコマンドリストにコマンドが存在するかどうかを、_/opt/NetApp/snapcenter/scc/allowed _ commands.config_pathから確認する必要があります。
+
+
+
+. [ 通知 ] ページの [ 電子メールの設定 *] ドロップダウンリストから、電子メールを送信するシナリオを選択します。
++
+また、送信者と受信者の E メールアドレス、および E メールの件名を指定する必要があります。実行したクローン処理のレポートを添付する場合は、 * ジョブレポートの添付 * を選択します。
+
++
+
+NOTE: E メール通知を利用する場合は、 GUI または PowerShell コマンド Set-SmtpServer を使用して、 SMTP サーバの詳細を指定しておく必要があります。
+
+. 概要を確認し、 [ 完了 ] をクリックします。
+. 操作の進行状況を監視するには、 * Monitor * > * Jobs * をクリックします。
+

@@ -1,0 +1,149 @@
+---
+permalink: tech-refresh/task_tech_refresh_storage_system.html 
+sidebar: sidebar 
+keywords: tech refresh, storage system, 
+summary: ストレージシステムの機器更改を実行するには、古いストレージから新しいストレージにデータを移動し、新しいストレージを対応するホストにマウントしてから、データベースを起動します。 
+---
+= ストレージシステムの機器更改
+:allow-uri-read: 
+
+
+[role="lead"]
+ストレージが機器更改されると、データが新しいストレージに移行され、アプリケーションホストが新しいストレージでマウントされます。SnapCenterのバックアップワークフローで新しいストレージが特定され、新しいストレージがSnapCenterに登録されている場合はSnapshotが作成されます。
+
+ストレージの更新後に作成された新しいバックアップでは、リストア、マウント、およびクローニングを実行できます。ただし、バックアップには古いストレージの詳細が含まれているため、ストレージの更新前に作成されたバックアップに対してこれらの処理を実行すると失敗します。ストレージ機器更改のAPIまたはコマンドレットを実行して、SnapCenterの古いバックアップを新しいストレージの詳細で更新する必要があります。
+
+機器更改は次のSnapCenterプラグインでサポートされます。
+
+* SnapCenter Plug-in for Microsoft SQL Server
+* SnapCenter Plug-in for Windows の略
+* SnapCenter Plug-in for Oracle Database
+* SAP HANA データベース向け SnapCenter プラグイン
+* SnapCenter Plug-in for Microsoft Exchange Server の略
+
+
+サポートされるユースケースは次のとおりです。
+
+* プライマリストレージの更新
++
+ストレージ機器更改（Tech Refresh）では、プライマリストレージを新しいストレージに置き換えることができます。既存のセカンダリストレージをプライマリストレージに変換することはできません。
+
+* セカンダリストレージの更新
+
+
+サポートされるその他のシナリオは次のとおりです。
+
+* SVM名の変更
+* ボリューム名の変更
+
+
+
+
+== プライマリストレージのバックアップを更新する
+
+ストレージの機器更改が完了したら、storage tech refresh APIまたはコマンドレットを実行して、SnapCenter内の古いバックアップを新しいストレージの詳細で更新する必要があります。
+
+.作業を開始する前に
+このワークフローではSnapCenterリポジトリのデータが変更されるため、SnapCenterリポジトリをバックアップすることを推奨します。データに問題が発生した場合は、バックアップを使用してSnapCenterリポジトリを古い状態に戻すことができます。
+
+詳細については、を参照してください https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_the_snapcenter_server_repository.html#back-up-the-snapcenter-repository["SnapCenter リポジトリをバックアップします"]。
+
+.手順
+. 古いストレージから新しいストレージにデータを移行します。
++
+移行方法については、以下を参照してください。
+
++
+** https://kb.netapp.com/mgmt/SnapCenter/How_to_perform_Storage_tech_refresh["新しいストレージにデータを移行する方法"]
+** https://kb.netapp.com/onprem/ontap/dp/SnapMirror/How_can_I_copy_a_volume_and_preserve_all_of_the_Snapshot_copies["ボリュームをコピーし、すべてのSnapshotコピーを保持するにはどうすればよいですか。"]
+
+
+. ホストをメンテナンスモードにします。
+. 新しいストレージをそれぞれのホストでマウントし、データベースを起動します。
++
+新しいストレージは、以前と同じ方法でホストに接続する必要があります。たとえば、SANとして接続されている場合は、SANとして接続する必要があります。
+
++
+新しいストレージは、古いストレージと同じドライブまたはパスにマウントする必要があります。
+
+. すべてのリソースが稼働していることを確認します。
+. SnapCenterで新しいストレージを追加します。
++
+SnapCenterのクラスタ間でSVM名が一意であることを確認します。新しいストレージで同じSVM名を使用していて、ストレージの更新を実行する前にSVMのすべてのボリュームをマイグレートできる場合は、 その後、古いクラスタのSVMを削除してSnapCenterで古いクラスタを再検出し、SVMをキャッシュから削除することを推奨します。
+
+. ホストを本番モードにします。
+. SnapCenterで、ストレージが移行されるリソースのバックアップを作成します。SnapCenterで最新のストレージフットプリントを特定するには、新しいバックアップが必要です。このバックアップは、既存の古いバックアップのメタデータを更新するために使用されます。
++
+
+NOTE: ホストに新しいLUNを接続すると、新しいシリアル番号が割り当てられます。Windowsファイルシステムの検出中、SnapCenterはすべての一意のシリアル番号を新しいリソースとして扱います。ストレージ機器更改時に、新しいストレージのLUNが同じドライブレターまたはパスでホストに接続されている場合、 SnapCenterでWindowsファイルシステムを検出すると、同じドライブレターまたはパスでマウントされていても、既存のリソースが削除済みとしてマークされ、新しいLUNが新しいリソースとして表示されます。リソースが削除済みとマークされているため、SnapCenterではストレージ機器更改の対象とはみなされず、古いリソースのバックアップはすべて失われます。ストレージの更新が発生する場合は、Windowsファイルシステムリソースの場合、ストレージの更新APIまたはコマンドレットを実行する前にリソースの検出を実行しないでください。
+
+. 次のいずれかのストレージ更新APIを実行します。 `/5.0/techrefresh/primarystorage` またはコマンドレット：_Invoke -SmTechRefreshPrimaryStorage_。
++
+
+NOTE: リソースにレプリケーション有効ポリシーが設定されている場合は、ストレージ更新後の最新のバックアップにセカンダリストレージの詳細が表示されます。
+
++
+.. SQLフェイルオーバークラスタインスタンス（FCI）セットアップを使用している場合、バックアップはクラスタレベルで保持されます。ストレージ機器更改の場合は、クラスタ名を入力する必要があります。
+.. SQL可用性グループ（AG）セットアップを使用している場合、バックアップはノードレベルで保持されます。ストレージ機器更改では、ノード名を入力する必要があります。
+.. Oracle Real Application Clusters（RAC）セットアップを使用している場合は、任意のノードでストレージ機器更改を実行できます。
++
+_IsDryRun_属性はデフォルトでTrueに設定されています。ストレージが更新されているリソースが特定されます。リソースと変更されたストレージの詳細を表示するには、API「5.0/jobs/｛jobid｝」またはcmdlet_Get-SmJobSummaryReport_を実行します。
+
+
+
+. ストレージの詳細を確認したら、_IsDryRun_attributeをFalseに設定し、ストレージ更新APIを実行します。 `/5.0/techrefresh/primarystorage` またはコマンドレット：_Invoke -SmTechRefreshPrimaryStorage_。
++
+古いバックアップのストレージの詳細が更新されます。
+
++
+APIまたはコマンドレットは同じホストで複数回実行できます。古いバックアップのストレージの詳細はストレージが更新された場合にのみ更新されます。
+
++
+
+NOTE: ONTAPでクローン階層を移行することはできません。移行対象のストレージにSnapCenter内にクローンメタデータがある場合、クローニングされたリソースは独立したリソースとしてマークされます。クローンメタデータのクローンは再帰的に削除されます。
+
+. （オプション）すべてのスナップショットを古いプライマリストレージから新しいプライマリストレージに移動しない場合は、次のAPIを実行します。 `/5.0/hosts/primarybackupsexistencecheck` または、cmdlet_invoke-SmPrimaryBackupsExistenceCheck_を実行します。
++
+これにより、新しいプライマリストレージでSnapshotの存在チェックが実行され、対応するバックアップがSnapCenterでの処理に使用できないことがマークされます。
+
+
+
+
+
+== セカンダリストレージのバックアップを更新する
+
+ストレージの機器更改が完了したら、storage tech refresh APIまたはコマンドレットを実行して、SnapCenter内の古いバックアップを新しいストレージの詳細で更新する必要があります。
+
+.作業を開始する前に
+このワークフローではSnapCenterリポジトリのデータが変更されるため、SnapCenterリポジトリをバックアップすることを推奨します。データに問題が発生した場合は、バックアップを使用してSnapCenterリポジトリを古い状態に戻すことができます。
+
+詳細については、を参照してください https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_the_snapcenter_server_repository.html#back-up-the-snapcenter-repository["SnapCenter リポジトリをバックアップします"]。
+
+.手順
+. 古いストレージから新しいストレージにデータを移行します。
++
+移行方法については、以下を参照してください。
+
++
+** https://kb.netapp.com/mgmt/SnapCenter/How_to_perform_Storage_tech_refresh["新しいストレージにデータを移行する方法"]
+** https://kb.netapp.com/onprem/ontap/dp/SnapMirror/How_can_I_copy_a_volume_and_preserve_all_of_the_Snapshot_copies["ボリュームをコピーし、すべてのSnapshotコピーを保持するにはどうすればよいですか。"]
+
+
+. プライマリストレージと新しいセカンダリストレージの間にSnapMirror関係を確立し、関係が正常な状態であることを確認します。
+. SnapCenterで、ストレージが移行されるリソースのバックアップを作成します。
++
+SnapCenterで最新のストレージフットプリントを特定するには、新しいバックアップが必要です。このバックアップは、既存の古いバックアップのメタデータを更新するために使用されます。
+
++
+
+IMPORTANT: この処理が完了するまでお待ちください。完了前に次の手順に進むと、SnapCenterによって古いセカンダリSnapshotメタデータが完全に失われます。
+
+. ホスト内のすべてのリソースのバックアップが作成されたら、セカンダリストレージ更新APIを実行します。 `/5.0/techrefresh/secondarystorage` またはコマンドレット：_Invoke -SmTechRefreshSecondaryStorage_。
++
+指定したホスト内の古いバックアップのセカンダリストレージの詳細が更新されます。
+
++
+この処理をリソースレベルで実行する場合は、各リソースの*[リフレッシュ]*をクリックしてセカンダリストレージのメタデータを更新します。
+
+. 古いバックアップが正常に更新されたら、プライマリとの古いセカンダリストレージ関係を解除できます。
+

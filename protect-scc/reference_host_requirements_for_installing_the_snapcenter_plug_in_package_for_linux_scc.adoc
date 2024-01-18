@@ -47,7 +47,7 @@ NOTE: 十分なディスクスペースを割り当て、 logs フォルダに�
  a| 
 必要なソフトウェアパッケージ
  a| 
-Java 1.8 （ 64 ビット） Oracle Java または OpenJDK
+Java 1.8（64ビット）Oracle JavaまたはOpenJDK
 
 Java を最新バージョンにアップグレードした場合は、 /var/opt/snapcenter /etc/sp/etc/spl.properties にある JAVA_HOME オプションが正しい Java バージョンに設定されていること、および正しいパスが指定されていることを確認する必要があります。
 

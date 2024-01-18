@@ -1,0 +1,83 @@
+---
+permalink: protect-scu/reference_prerequisites_for_adding_hosts_and_installing_snapcenter_plug_ins_package_for_linux.html 
+sidebar: sidebar 
+keywords: prerequisites, iSCSI, host requirement for Linux, sudo privileges, non-root user, credentials, authenticate, domain administrator, local administrator, workgroup, sudo, root user 
+summary: ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。 
+---
+= ホストを追加してPlug-ins Package for Linuxをインストールするための前提条件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ホストを追加してLinux用のプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。
+
+* iSCSI を使用している場合は、 iSCSI サービスが実行されている必要があります。
+* rootユーザまたはroot以外のユーザ、またはSSHキーベースの認証にはパスワードベースの認証を使用できます。
++
+SnapCenter Plug-in for Unix File Systemsは、root以外のユーザがインストールできます。ただし、プラグインプロセスをインストールして開始できるように root 以外のユーザに sudo 権限を設定する必要があります。プラグインをインストールすると、有効なroot以外のユーザとしてプロセスが実行されるようになります。
+
+* インストールユーザのクレデンシャルを、認証モードをLinuxに設定して作成します。
+* Java 1.8.xまたはJava 11（64ビット）をLinuxホストにインストールしておく必要があります。
++
+
+NOTE: LinuxホストにJava 11の認定エディションのみがインストールされていることを確認します。
+
++
+Java のダウンロード方法については、次を参照してください。 http://www.java.com/en/download/manual.jsp["すべてのオペレーティングシステム用の Java のダウンロード"^]
+
+* プラグインのインストールには、デフォルトのシェルとして* bash *が必要です。
+
+
+
+
+== Linux ホストの要件
+
+SnapCenter Plug-ins Package for Linux をインストールする前に、ホストが要件を満たしていることを確認する必要があります。
+
+|===
+| 項目 | 要件 
+
+
+ a| 
+オペレーティングシステム
+ a| 
+* Red Hat Enterprise Linux の場合
+* Oracle Linux の場合
+* SUSE Linux Enterprise Server （ SLES ）
+
+
+
+
+ a| 
+ホスト上の SnapCenter プラグインの最小 RAM
+ a| 
+2 GB
+
+
+
+ a| 
+ホスト上の SnapCenter プラグインのインストールおよびログの最小スペース
+ a| 
+2 GB
+
+
+NOTE: 十分なディスクスペースを割り当て、 logs フォルダによるストレージ消費を監視する必要があります。必要なログスペースは、保護するエンティティの数とデータ保護処理の頻度によって異なります。十分なディスクスペースがない場合、最近実行した処理に対してログは作成されません。
+
+
+
+ a| 
+必要なソフトウェアパッケージ
+ a| 
+* Java 1.8.x（64ビット）Oracle JavaおよびOpenJDK
+* Java 11（64ビット）Oracle JavaおよびOpenJDK
+
+
+
+NOTE: LinuxホストにJava 11の認定エディションのみがインストールされていることを確認します。
+
+Java を最新バージョンにアップグレードした場合は、 /var/opt/snapcenter /etc/sp/etc/spl.properties にある JAVA_HOME オプションが正しい Java バージョンに設定されていること、および正しいパスが指定されていることを確認する必要があります。
+
+|===
+サポートされているバージョンの最新情報については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=112391;&solution=1259&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。

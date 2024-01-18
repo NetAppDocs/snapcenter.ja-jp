@@ -26,18 +26,39 @@ SnapCenter を使用して SQL Server リソースをバックアップする前
 +
 デフォルト値は false です。
 
+* SnapMirrorビジネス継続性（SM-BC）については、前提条件と制限事項の詳細を参照してください。 https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["SnapMirrorビジネス継続性のオブジェクト制限"]。
 
 
 .このタスクについて
-バックアップポリシーとは、バックアップを管理および保持する方法やリソースやリソースグループをバックアップする頻度を定めた一連のルールです。レプリケーションとスクリプトの設定を指定することもできます。ポリシーでオプションを指定しておくことで、別のリソースグループにポリシーを再利用して時間を節約することができます。
-
+* バックアップポリシーとは、バックアップを管理および保持する方法やリソースやリソースグループをバックアップする頻度を定めた一連のルールです。レプリケーションとスクリプトの設定を指定することもできます。ポリシーでオプションを指定しておくことで、別のリソースグループにポリシーを再利用して時間を節約することができます。
++
 scripts_pathは、プラグインホストのSMCoreServiceHost.exe.ConfigファイルにあるPredefinedWindowsScriptsDirectoryキーを使用して定義されます。
 
++
 必要に応じて、このパスを変更し、SMcoreサービスを再起動できます。セキュリティのためにデフォルトパスを使用することを推奨します。
 
++
 キーの値は、api/4.7/configsettingsを介してスワッガーから表示できます
 
++
 GET APIを使用してキーの値を表示することができます。set APIはサポートされません。
+
+* SnapLock
++
+** [バックアップコピーを特定の日数だけ保持する]オプションを選択した場合は、SnapLockの保持期間を指定した保持日数以下にする必要があります。
++
+Snapshotコピーのロック期間を指定すると、保持期間が終了するまでSnapshotコピーが削除されません。  その結果、ポリシーで指定された数よりも多くのSnapshotコピーが保持される可能性があります。
+
++
+ONTAP 9.12.1以前のバージョンでは、Snapshotコピーのロック期間を指定すると、改ざんを防止するSnapshotコピーから作成されたクローンにSnapLockの有効期限が継承されます。  SnapLockの有効期限が切れたあとにクローンを手動でクリーンアップする必要があります。
+
++
+
+NOTE: プライマリSnapLock設定はSnapCenterバックアップポリシーで管理され、セカンダリSnapLock設定はONTAPで管理されます。
+
+
+
+
 
 
 
@@ -129,7 +150,7 @@ NOTE: クラスタ構成では、ポリシーで設定された保持設定に�
 ポリシーに対して選択できるスケジュールタイプは1つだけです。
 
 +
-image::../media/backup_settings.gif[バックアップ設定]
+image::../media/backup_settings.gif[バックアップ設定画面。]
 
 +
 
@@ -192,6 +213,10 @@ NOTE: 最大保持数は、 ONTAP 9.4 以降のリソースでは 1018 、 ONTAP
 .. Snapshot コピーを削除するまで保持しておく日数を指定する場合は、「 * Snapshot コピーを保持する期間」を選択します。
 
 
+. Snapshotコピーのロック期間を指定する場合は、*[Snapshotコピーロック期間]*を選択し、日数、月数、または年数を選択します。
++
+SnapLock保持期間は100年未満にする必要があります。
+
 
 
 . [ 毎時 ] 、 [ 毎日 ] 、 [ 毎週 ] 、および [ 毎月 ] の保持設定の [ フルバックアップ保持設定 *] セクションで、 [ バックアップタイプ ] ページで選択したスケジュールタイプの保持設定を指定します。
@@ -213,9 +238,14 @@ IMPORTANT: SnapVault レプリケーションを有効にする場合は、保�
 .. Snapshotコピーを削除するまで保持する日数を指定するには、*[Keep Snapshot copies for]*を選択します。
 
 
+. Snapshotコピーのロック期間を指定する場合は、*[Snapshotコピーロック期間]*を選択し、日数、月数、または年数を選択します。
++
+SnapLock保持期間は100年未満にする必要があります。
 
-
++
 ログの Snapshot コピーの保持期間は、デフォルトで 7 日に設定されています。ログの Snapshot コピーの保持期間を変更するには、 Set-SmPolicy コマンドレットを使用します。
+
+
 
 ログの Snapshot コピーの保持を 2 に設定する例を次に示します。
 
@@ -241,6 +271,15 @@ https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/Sn
 ローカルSnapshotコピーの作成後にSnapMirrorを更新します。
 
 . 別のボリュームにバックアップセットのミラーコピーを作成する場合（ SnapMirror ）は、このオプションを選択します。
++
+このオプションは、SnapMirrorビジネス継続性（SM-BC）またはSnapMirror Sync（SM-S）で有効にする必要があります。
+
++
+セカンダリレプリケーションでは、SnapLockの有効期限によってプライマリSnapLockの有効期限がロードされます。[Topology]ページの[Refresh]*ボタンをクリックすると、ONTAPから取得されたセカンダリおよびプライマリのSnapLock有効期限が更新されます。
+
++
+を参照してください link:..protect-scsql/task_view_sql_server_backups_and_clones_in_the_topology_page.html["トポロジページで SQL Server のバックアップとクローンを表示します"]。
+
 
 
 --
@@ -249,6 +288,18 @@ https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/Sn
 Snapshotコピーの作成後にSnapVault を更新
 
 . ディスクツーディスクのバックアップレプリケーションを実行する場合は、このオプションを選択します。
++
+セカンダリレプリケーションでは、SnapLockの有効期限によってプライマリSnapLockの有効期限がロードされます。[Topology]ページの[Refresh]*ボタンをクリックすると、ONTAPから取得されたセカンダリおよびプライマリのSnapLock有効期限が更新されます。
+
++
+SnapLockがONTAPのセカンダリ（SnapLock Vault）にのみ設定されている場合、[Topology]ページの*[Refresh]*ボタンをクリックすると、ONTAPから取得したセカンダリのロック期間が更新されます。
+
++
+SnapLock Vaultの詳細については、を参照してください。 https://docs.netapp.com/us-en/ontap/snaplock/commit-snapshot-copies-worm-concept.html["SnapshotコピーをバックアップデスティネーションのWORM状態にコミットします"]
+
++
+を参照してください link:..protect-scsql/task_view_sql_server_backups_and_clones_in_the_topology_page.html["トポロジページで SQL Server のバックアップとクローンを表示します"]。
+
 
 
 --

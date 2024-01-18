@@ -1,0 +1,30 @@
+---
+permalink: protect-scu/reference_prepare_for_protecting_UNIX file systems.html 
+sidebar: sidebar 
+keywords: unix file systems, preparation for protection, prerequisites 
+summary: バックアップ、クローニング、リストアなどのデータ保護処理を実行する前に、環境をセットアップする必要があります。 
+---
+= UNIXファイルシステムの保護の準備
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+バックアップ、クローニング、リストアなどのデータ保護処理を実行する前に、環境をセットアップする必要があります。また、 SnapVault サーバで SnapMirror テクノロジと SnapCenter テクノロジを使用するように設定することもできます。
+
+SnapVault テクノロジと SnapMirror テクノロジを活用するには、ストレージデバイス上のソースボリュームとデスティネーションボリューム間のデータ保護関係を設定して初期化する必要があります。これらのタスクを実行するには、 NetAppSystem Manager を使用するか、ストレージコンソールのコマンドラインを使用します。
+
+Plug-in for UNIXファイルシステムを使用する前に、SnapCenter管理者がSnapCenterサーバをインストールして設定し、前提条件となるタスクを実行する必要があります。
+
+* SnapCenter サーバをインストールして設定します。 link:../install/task_install_the_snapcenter_server_using_the_install_wizard.html["詳細はこちら。"^]
+* ストレージシステム接続を追加して SnapCenter 環境を設定します。 link:../install/task_add_storage_systems.html["詳細はこちら。"^]
++
+
+NOTE: SnapCenter では、異なるクラスタにある同じ名前の SVM は複数サポートされません。SVM 登録またはクラスタ登録を使用して SnapCenter に登録する SVM は、それぞれ一意である必要があります。
+
+* ホストを追加し、プラグインをインストールし、リソースを検出します。
+* SnapCenterサーバを使用してVMware RDM LUNまたはVMDKにあるUNIXファイルシステムを保護する場合は、SnapCenter Plug-in for VMware vSphereを導入してSnapCenterに登録する必要があります。
+* LinuxホストにJavaをインストールします。
+* バックアップレプリケーションが必要な場合は、ONTAPでSnapMirrorとSnapVaultを設定します。
+

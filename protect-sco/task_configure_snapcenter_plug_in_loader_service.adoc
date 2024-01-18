@@ -156,25 +156,40 @@ enable_certificate_validationを実行します
 
 . 必要に応じて、次のいずれかの操作を実行します。
 +
-** root ユーザとして SnapCenter Plug-in Loader サービスを開始します。
+** SnapCenter Plug-in Loaderサービスを開始します。
 +
- `/custom_location/NetApp/snapcenter/spl/bin/spl start`
+*** rootユーザとして、次のコマンドを実行します。 `/custom_location/NetApp/snapcenter/spl/bin/spl start`
+*** root以外のユーザとして、次のコマンドを実行します。 `sudo /custom_location/NetApp/snapcenter/spl/bin/spl start`
+
+
 ** SnapCenter Plug-in Loader サービスを停止します。
 +
- `/custom_location/NetApp/snapcenter/spl/bin/spl stop`
+*** rootユーザとして、次のコマンドを実行します。 `/custom_location/NetApp/snapcenter/spl/bin/spl stop`
+*** root以外のユーザとして、次のコマンドを実行します。 `sudo /custom_location/NetApp/snapcenter/spl/bin/spl stop`
 +
 
 NOTE: stop コマンドに -force オプションを指定すると、 SnapCenter Plug-in Loader サービスを強制的に停止できます。ただし、既存の処理が終了するため、実行する前に十分に注意する必要があります。
 
+
+
 ** SnapCenter Plug-in Loader サービスを再起動します。
 +
- `/custom_location/NetApp/snapcenter/spl/bin/spl restart`
+*** rootユーザとして、次のコマンドを実行します。 `/custom_location/NetApp/snapcenter/spl/bin/spl restart`
+*** root以外のユーザとして、次のコマンドを実行します。 `sudo /custom_location/NetApp/snapcenter/spl/bin/spl restart`
+
+
 ** SnapCenter Plug-in Loader サービスのステータスを確認します。
 +
- `/custom_location/NetApp/snapcenter/spl/bin/spl status`
+*** rootユーザとして、次のコマンドを実行します。 `/custom_location/NetApp/snapcenter/spl/bin/spl status`
+*** root以外のユーザとして、次のコマンドを実行します。 `sudo /custom_location/NetApp/snapcenter/spl/bin/spl status`
+
+
 ** SnapCenter Plug-in Loader サービスで変更を探します。
 +
- `/custom_location/NetApp/snapcenter/spl/bin/spl change`
+*** rootユーザとして、次のコマンドを実行します。 `/custom_location/NetApp/snapcenter/spl/bin/spl change`
+*** root以外のユーザとして、次のコマンドを実行します。 `sudo /custom_location/NetApp/snapcenter/spl/bin/spl change`
+
+
 
 
 

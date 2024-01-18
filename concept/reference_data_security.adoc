@@ -20,6 +20,7 @@ SnapCenter には、次のセキュリティ機能が含まれています。
 * SnapCenter で使用しているセキュリティアルゴリズムは、 Federal Information Processing Standard （ FIPS ；連邦情報処理標準）に準拠しています。
 * SnapCenter では、お客様から提供された承認済みの CA 証明書の使用がサポートされます。
 * SnapCenter 4.1.1 以降では、 ONTAP との Transport Layer Security （ TLS ） 1.2 通信がサポートされています。クライアントとサーバの間の通信にも TLS 1.2 を使用できます。
+* SnapCenter 5.0では、ONTAPとのトランスポート層セキュリティ(TLS) 1.3通信がサポートされています。
 * SnapCenter は、一連のSSL暗号スイートをサポートしており、ネットワーク通信全体のセキュリティを提供します。
 +
 詳細については、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_the_supported_SSL_Cipher_Suite["サポートされているSSL暗号スイートを設定する方法"]。

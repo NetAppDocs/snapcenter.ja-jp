@@ -24,6 +24,7 @@ SnapCenter を使用して Windows ファイルシステムをバックアップ
 +
 デフォルト値は false です。
 
+* SnapMirrorビジネス継続性（SM-BC）については、前提条件と制限事項の詳細を参照してください。 https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["SnapMirrorビジネス継続性のオブジェクト制限"]。
 
 
 .このタスクについて
@@ -37,7 +38,17 @@ SnapCenter を使用して Windows ファイルシステムをバックアップ
 +
 GET APIを使用してキーの値を表示することができます。set APIはサポートされません。
 
+* SnapLock
++
+** [バックアップコピーを特定の日数だけ保持する]オプションを選択した場合は、SnapLockの保持期間を指定した保持日数以下にする必要があります。
+** Snapshotコピーのロック期間を指定すると、保持期間が終了するまでSnapshotコピーが削除されません。その結果、ポリシーで指定された数よりも多くのSnapshotコピーが保持される可能性があります。
+** ONTAP 9.12.1以前のバージョンでは、Snapshotコピーのロック期間を指定すると、改ざんを防止するSnapshotコピーから作成されたクローンにSnapLockの有効期限が継承されます。SnapLockの有効期限が切れたあとにクローンを手動でクリーンアップする必要があります。
 
+
+
+
+
+NOTE: プライマリSnapLock設定はSnapCenterバックアップポリシーで管理され、セカンダリSnapLock設定はONTAPで管理されます。
 
 .手順
 . 左側のナビゲーションペインで、 * 設定 * をクリックします。
@@ -103,6 +114,15 @@ SnapCenter ストアを自動的に削除する前に Snapshot コピー数を�
  a| 
 SnapCenter がバックアップコピーを保持する日数を指定する場合は、このオプションを選択します。指定した日数を過ぎると削除されます。
 
+
+
+ a| 
+Snapshotコピーのロック期間
+ a| 
+Snapshotコピーのロック期間を選択し、日、月、または年を選択します。
+
+SnapLock保持期間は100年未満にする必要があります。
+
 |===
 +
 
@@ -119,9 +139,15 @@ NOTE: 最大保持数は、 ONTAP 9.4 以降のリソースでは 1018 、 ONTAP
 
 
  a| 
-ローカル Snapshot コピーの作成後に SnapMirror を更新します
+* ローカル Snapshot コピー作成後に SnapMirror を更新 *
  a| 
 別のボリュームにバックアップセットのミラーコピーを作成する場合（ SnapMirror ）は、このオプションを選択します。
+
+このオプションは、SnapMirrorビジネス継続性（SM-BC）で有効にする必要があります。
+
+セカンダリレプリケーションでは、SnapLockの有効期限によってプライマリSnapLockの有効期限がロードされます。[Topology]ページの[Refresh]*ボタンをクリックすると、ONTAPから取得されたセカンダリおよびプライマリのSnapLock有効期限が更新されます。
+
+を参照してください link:../protect-scw/task_view_related_backups_and_clones_in_the_topology_page.html["トポロジページで関連するバックアップとクローンを表示します"]。
 
 
 
@@ -129,6 +155,12 @@ NOTE: 最大保持数は、 ONTAP 9.4 以降のリソースでは 1018 、 ONTAP
 Snapshot コピーの作成後に SnapVault を更新します
  a| 
 ディスクツーディスクのバックアップレプリケーションを実行する場合は、このオプションを選択します。
+
+セカンダリレプリケーションでは、SnapLockの有効期限によってプライマリSnapLockの有効期限がロードされます。[Topology]ページの[Refresh]ボタンをクリックすると、ONTAPから取得されたセカンダリおよびプライマリのSnapLock有効期限が更新されます。
+
+SnapLockがONTAPのセカンダリ（SnapLock Vault）にのみ設定されている場合は、[Topology]ページの[Refresh]ボタンをクリックすると、ONTAPから取得したセカンダリのロック期間が更新されます。
+
+SnapLock Vaultの詳細については、を参照してください。 https://docs.netapp.com/us-en/ontap/snaplock/commit-snapshot-copies-worm-concept.html["SnapshotコピーをバックアップデスティネーションのWORM状態にコミットします"]
 
 
 

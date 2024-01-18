@@ -85,10 +85,10 @@ SnapCenter には、ほとんどの機能をオーケストレーションソフ
 REST APIの詳細については、を参照してください https://docs.netapp.com/us-en/snapcenter/sc-automation/overview_rest_apis.html["REST APIの概要"]。
 
 +
-Windowsコマンドレットの詳細については、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+Windowsコマンドレットの詳細については、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
 
 +
-UNIXコマンドの詳細については、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2886206["SnapCenter ソフトウェアコマンドリファレンスガイド"^]。
+UNIXコマンドの詳細については、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2886896["SnapCenter ソフトウェアコマンドリファレンスガイド"^]。
 
 * 一元化されたデータ保護ダッシュボードとレポート作成
 * セキュリティと委譲のためのロールベースアクセス制御（ RBAC ）。
@@ -107,6 +107,33 @@ SnapCenter のハイアベイラビリティは、外部ロードバランサ（
 * ディザスタリカバリ（ DR ）
 +
 リソースの破損やサーバのクラッシュなどの災害が発生した場合に SnapCenter サーバをリカバリできます。
+
+* SnapLock
++
+SnapLockは、規制やガバナンスに準拠するためにWrite Once、Read Many（WORM）ストレージを使用して変更不可能な状態でファイルを保管する組織向けの、ハイパフォーマンスなコンプライアンス解決策です。
+
++
+SnapLockの詳細については、 https://docs.netapp.com/us-en/ontap/snaplock/["SnapLock とは"]
+
+* SnapMirror のビジネス継続性（ SM-BC ）
++
+SnapMirrorビジネス継続性（SM-BC）を使用すると、サイト全体で障害が発生してもビジネスサービスの運用を継続でき、アプリケーションがセカンダリコピーを使用して透過的にフェイルオーバーできるようになります。SM-BCでフェイルオーバーをトリガーするために、手動操作や追加のスクリプト作成は必要ありません。
+
++
+この機能でサポートされるプラグインは、SnapCenter Plug-in for SQL Server、SnapCenter Plug-in for Windows、およびSnapCenter Plug-in for Oracle Databaseです。
+
++
+SM-BCの詳細については、 https://docs.netapp.com/us-en/ontap/smbc/index.html["SnapMirror のビジネス継続性（ SM-BC ）"]
+
++
+SM-BCについて、ハードウェア、ソフトウェア、およびシステムのさまざまな設定要件を満たしていることを確認します。  詳細については、を参照してください https://docs.netapp.com/us-en/ontap/smbc/smbc_plan_prerequisites.html["前提条件"]
+
+* 同期ミラーリング
++
+同期ミラーリング機能は、遠隔地にあるストレージアレイ間で、オンラインのリアルタイムデータレプリケーションを提供します。
+
++
+同期ミラーの詳細については'を参照してください https://docs.netapp.com/us-en/e-series-santricity/sm-mirroring/overview-mirroring-sync.html["同期ミラーリングの概要"]
 
 
 
@@ -139,21 +166,13 @@ SnapCenter は、 SnapCenter Server と SnapCenter プラグインで構成さ�
 +
 ** SnapCenter Plug-in for Oracle Database
 ** SAP HANA データベース向け SnapCenter プラグイン
-** SnapCenter Plug-in for UNIX の略
-+
-
-NOTE: SnapCenter Plug-in for UNIX はスタンドアロンのプラグインではなく、個別にインストールすることはできません。このプラグインは、 SnapCenter Plug-in for Oracle Database または SnapCenter Plug-in for SAP HANA Database のインストール時に自動的にインストールされます。
-
+** UNIXファイルシステム用SnapCenterプラグイン
 
 
 * SnapCenter Plug-ins Package for AIX ：以下のプラグインが含まれています。
 +
 ** SnapCenter Plug-in for Oracle Database
-** SnapCenter Plug-in for UNIX の略
-+
-
-NOTE: SnapCenter Plug-in for UNIX はスタンドアロンのプラグインではなく、個別にインストールすることはできません。このプラグインは、 SnapCenter Plug-in for Oracle Database のインストール時に自動的にインストールされます。
-
+** UNIXファイルシステム用SnapCenterプラグイン
 
 
 * SnapCenter カスタムプラグイン
@@ -331,6 +350,7 @@ NOTE: Plug-in for Windows では、 SMB 共有および Windows ファイルシ�
 +
 SAN デバイス上に構築された SAN ネイティブデバイス、ファイルシステム、 LVM のレイアウトがサポートされます。
 
+* SnapCenter環境でのUNIXファイルシステムに対するアプリケーション対応のバックアップ、リストア、クローニングの処理を自動化
 
 
 
