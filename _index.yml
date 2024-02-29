@@ -57,6 +57,16 @@ indexpage:
       url: https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/index.html
     - title: SnapCenter Plug-in for VMware vSphere を導入
       url: https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere.html
+  - title: Azure NetApp Filesで実行されているアプリケーションを保護
+    links:
+    - title: Azure仮想マシンへのSnapCenterのインストール
+      url: "/protect-azure/install-snapcenter-azure-virtual-machine.html"
+    - title: Azure NetApp Filesで実行されているSAP HANAデータベースのバックアップ
+      url: "/protect-azure/backup-sap-hana-databases.html"
+    - title: Azure NetApp Filesで実行されているSQL Serverデータベースのバックアップ
+      url: "/protect-azure/backup-sql-server-databases.html"
+    - title: Azure NetApp Filesで実行されているOracleデータベースをバックアップする
+      url: "/protect-azure/backup-oracle-databases.html"
   - title: ブログコミュニティ
     links:
     - title: ネットアップのブログ - SnapCenter

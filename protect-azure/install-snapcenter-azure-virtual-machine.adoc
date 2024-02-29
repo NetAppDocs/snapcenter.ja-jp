@@ -1,0 +1,44 @@
+---
+permalink: protect-azure/install-snapcenter-azure-virtual-machine.html 
+sidebar: sidebar 
+keywords: snapcenter server, azure virtual machine, install 
+summary: Azure仮想マシンにSnapCenterをダウンロードしてインストールします。 
+---
+= Azure仮想マシンへのSnapCenterのインストール
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp Support SiteからSnapCenterソフトウェアをダウンロードし、Azure仮想マシンにインストールできます。
+
+.作業を開始する前に
+Azure Windows仮想マシンがSnapCenterサーバのインストール要件を満たしていることを確認します。詳細については、を参照してください link:../install/reference_domain_and_workgroup_requirements.html["SnapCenter サーバをインストールする準備をします"]。
+
+.手順
+. から SnapCenter Server インストールパッケージをダウンロードします https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["ネットアップサポートサイト"]。
+. ダウンロードした .exe ファイルをダブルクリックして、 SnapCenter Server のインストールを開始します。
++
+インストールを開始すると、すべての事前チェックが実行され、最小要件を満たしていない場合は、該当するエラーまたは警告メッセージが表示されます。警告メッセージは無視してインストールを続行できますが、エラーは修正しておく必要があります。
+
+. SnapCenter サーバのインストールに必要な設定済みの値を確認し、必要に応じて変更します。
++
+MySQL Server リポジトリデータベースのパスワードを指定する必要はありません。SnapCenter サーバのインストール時に、パスワードは自動生成されます。
+
++
+
+NOTE: リポジトリデータベースのカスタムパスでは、特殊文字「%」はサポートされていません。パスに「 % 」を含めると、インストールは失敗します。
+
+. [ 今すぐインストール ] をクリックします。
++
+無効な値を指定すると、該当するエラーメッセージが表示されます。値を再入力してから、インストールを開始してください。
+
++
+
+NOTE: [Cancel] * ボタンをクリックすると、実行中のステップが完了し、ロールバック操作が開始されます。SnapCenter サーバがホストから完全に削除されます。
+
++
+ただし、「 SnapCenter サーバサイトの再起動」または「 SnapCenter サーバの起動を待機中」の処理が実行されているときに「 * キャンセル」をクリックすると、処理はキャンセルされずにインストールが続行されます。
+
+

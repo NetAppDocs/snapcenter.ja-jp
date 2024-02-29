@@ -41,6 +41,7 @@ SnapCenter は、次の方法で導入できます。
 +
 ** Cloud Volumes ONTAP （旧 ONTAP Cloud ）プライマリシステム上のデータ
 ** Amazon FSX for ONTAP 上にあるデータ
+** プライマリAzure NetApp Files上のデータ（Oracle、Microsoft SQL、SAP HANA）
 
 
 

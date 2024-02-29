@@ -1,0 +1,43 @@
+---
+permalink: protect-azure/add-sap-hana-database.html 
+sidebar: sidebar 
+keywords: add, add SAP HANA database, manual discovery, automatic discovery 
+summary: SAP HANAデータベースを追加します。 
+---
+= SAP HANAデータベースの追加
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SAP HANAデータベースは手動で追加する必要があります。
+
+.このタスクについて
+プラグインが一元化されたサーバにインストールされている場合は、リソースを手動で追加する必要があります。SAP HANAプラグインがHANAデータベースホストにインストールされている場合は、HANAシステムが自動的に検出されます。
+
+
+NOTE: 自動検出はHANAマルチホスト構成ではサポートされていません。追加するには一元化されたプラグインを使用する必要があります。
+
+.手順
+. 左側のナビゲーションペインで、ドロップダウンリストから SnapCenter Plug-in for SAP HANA Database を選択し、 * Resources * をクリックします。
+. リソースページで、 * SAP HANA データベースの追加 * をクリックします。
+. [Provide Resource Details] ページで、次の操作を実行します。
++
+.. リソースタイプとして、[Single Container]、[Multitenant Database Container]、または[Non-data Volume]のいずれかを入力します。
+.. SAP HANAシステムの名前を入力します。
+.. システム ID （ SID ）を入力します。
+.. プラグインホストを選択します。
+.. SAP HANA システムに接続するためのキーを入力します。
+.. HDBのセキュアなユーザストアキーを設定するユーザ名を入力します。
+
+
+. [Provide Storage Footprint]ページで、ストレージタイプとして* Azure NetApp Files *を選択します。
++
+.. Azure NetAppアカウントを選択します。
+.. 容量プールと関連付けられているボリュームを選択します。
+.. [ 保存（ Save ） ] をクリックします。
+
+
+. 概要を確認し、 [ 完了 ] をクリックします。
+
