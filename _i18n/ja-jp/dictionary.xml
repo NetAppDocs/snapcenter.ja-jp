@@ -3491,7 +3491,6 @@
   <block id="96c2f121719642c9bb76de237a79a8f7" category="list-text">SnapCenter のすべてのクレデンシャルは、 Advanced Encryption Standard （ AES ）暗号化を使用して保護されます。</block>
   <block id="f8f9feb00e019b3a4905536ed6898cbc" category="list-text">SnapCenter で使用しているセキュリティアルゴリズムは、 Federal Information Processing Standard （ FIPS ；連邦情報処理標準）に準拠しています。</block>
   <block id="6e48ef9c3b9eee75beadb62ef46ee1fe" category="list-text">SnapCenter では、お客様から提供された承認済みの CA 証明書の使用がサポートされます。</block>
-  <block id="4c0acb13d249f2227e8b1f1cf0ce1119" category="list-text">SnapCenter 4.1.1 以降では、 ONTAP との Transport Layer Security （ TLS ） 1.2 通信がサポートされています。クライアントとサーバの間の通信にも TLS 1.2 を使用できます。</block>
   <block id="40739afaa7fdf9957a38216f97ce0321" category="list-text">SnapCenter は、会社のファイアウォールの内側にインストールされ、 SnapCenter サーバへのアクセス、および SnapCenter サーバとプラグイン間の通信を可能にします。</block>
   <block id="60b7c3e24f63b13c2f4abe5f1a7def8e" category="list-text">SnapCenter API および操作アクセスでは、 AES 暗号化で暗号化されたトークンが使用されます。このトークンの有効期限は 24 時間です。</block>
   <block id="52804460cb53f83bd632c8bb5678e86c" category="list-text">SnapCenter は、ログイン用に Windows Active Directory と統合されているほか、アクセス権限を制御するロールベースアクセス制御（ RBAC ）も統合されています。</block>
@@ -8607,7 +8606,6 @@ Windowsホスト：</block>
   <block id="ffc2be1279cc0930ef2358aa6770f7ff" category="paragraph">コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照してください<block ref="7fb83b6cbb928f4072ab9a7c4ce09c24" category="inline-link-rx"></block>。</block>
   <block id="43fd8846b62a01de615c215f6601836d" category="paragraph">PowerShell コマンドレットを手動またはスクリプトで使用して、バックアップとリストアの処理を実行することもできます。PowerShell コマンドレットの詳細については、 SnapCenter コマンドレットのヘルプを使用するか、を参照してください<block ref="7fb83b6cbb928f4072ab9a7c4ce09c24" category="inline-link-rx"></block>。</block>
   <block id="d239ebbabeedcdb87dfeedbd548986ac" category="list-text">SnapCenter のディザスタリカバリ機能では、 REST API を使用して SnapCenter サーバをバックアップします。を参照してください <block ref="6bd0ca01dc1606a35edfa9534e3c90d2" category="inline-link-macro-rx"></block>。</block>
-  <block id="71e2b65158ea1d86e4f878e40777dafd" category="list-text">SnapCenter 5.0では、ONTAPとのトランスポート層セキュリティ(TLS) 1.3通信がサポートされています。</block>
   <block id="c53d4394b4b820e8039b31483c1dfd5e" category="paragraph">Windowsコマンドレットの詳細については、を参照してください<block ref="7fb83b6cbb928f4072ab9a7c4ce09c24" category="inline-link-rx"></block>。</block>
   <block id="9f41dc9894f346b6e32aabf91c683469" category="paragraph">UNIXコマンドの詳細については、を参照してください<block ref="a6fc2394a8b2095d1929066d59f6fcc9" category="inline-link-rx"></block>。</block>
   <block id="e6c4248fcff66b43c157dbc37ec22080" category="paragraph">SnapLockは、規制やガバナンスに準拠するためにWrite Once、Read Many（WORM）ストレージを使用して変更不可能な状態でファイルを保管する組織向けの、ハイパフォーマンスなコンプライアンス解決策です。</block>
@@ -9046,4 +9044,16 @@ SnapLock設定はONTAPによって管理されます。</block>
   <block id="97f2c8bf124398ba05bca9cc6fb869b1" category="list-text">プライマリAzure NetApp Files上のデータ（Oracle、Microsoft SQL、SAP HANA）</block>
   <block id="3559da2fac74b3e69a2cd678efee3582" category="sidebar">Azure NetApp Filesで実行されているアプリケーションを保護</block>
   <block id="dd5c6b13be74557c3408d452b60be7a6" category="sidebar">SnapCenterのインストールとクレデンシャルの作成</block>
+  <block id="e353c96a332f0cabee61ee0d1183ced5" category="list-text">SnapCenter 4.1.1以降では、ONTAPとの通信にTransport Layer Security（TLS）1.2がサポートされています。クライアントとサーバ間の通信にもTLS 1.2を使用できます。</block>
+  <block id="35fdfe6dd04402c29d3fc6d0df727357" category="paragraph">5.0以降、SnapCenterはONTAPとの通信用に(TLS) 1.3をサポートしています。</block>
+  <block id="e9d6209daed73f3a8f0578d27a8a2a85" category="summary">アプリケーションボリュームは、Oracleデータベースに関連する情報が格納されるストレージです。</block>
+  <block id="daa2e304f0d45a22bbdaee82fe42256f" category="doc">アプリケーションボリュームとは</block>
+  <block id="b9ef14bd380b22129789d2a58055fd71" category="paragraph">Application Volumesは、Oracleデータベースに関連する設定、インストーラ、その他のデータ以外のファイルなどの情報を格納するストレージです。</block>
+  <block id="6a6e355317fc46c557aae7efee2616ae" category="paragraph">SnapCenter Plug-in for Oracle Databaseでは、アプリケーションボリューム（データボリューム以外のボリューム）とOracleデータベースの整合性のあるバックアップを作成できます。</block>
+  <block id="23c8668967f14b47c49239015f1a75e6" category="paragraph">このプラグインは、アプリケーションボリュームのバックアップとクローニングを自動化します。</block>
+  <block id="460056168fe8cfae225fcede48618f89" category="list-text">アプリケーションボリュームとOracleデータベースボリュームを1つのリソースグループで保護します。</block>
+  <block id="8d4879d1f00447108f920120663f3d07" category="list-text">アプリケーションボリュームのバックアップを作成します。</block>
+  <block id="af3d150952bdf0ab3693bd9da33bd032" category="list-text">Oracleデータベースとアプリケーションボリュームのバックアップを作成します。</block>
+  <block id="39240126e5a114efbf72c14cc21a7094" category="list-text">ポイントインタイムまでのアプリケーションボリュームとともに、データベースのクローンを作成します。</block>
+  <block id="c3f918653f9d61e3b2472e16235d9f90" category="list-text">バックアップ処理とクローニング処理のレポートを表示します。</block>
 </blocks>
