@@ -84,7 +84,6 @@
   <block id="df9aaac67048ed67c2a2f97b808aed95" category="list-text">SnapCenter のインストール、ホストの追加、リソースの特定、ストレージシステム接続の作成などのタスクを実行して、データ保護の準備をしておく必要があります。</block>
   <block id="9628575eeeb967c57fd9fea29650a3d6" category="list-text">ログバックアップ用のホストログディレクトリを設定しておく必要があります。</block>
   <block id="8c200fb6f4068d92863b1feb9c91e202" category="list-text">SQL Server リソースを更新（検出）しておく必要があります。</block>
-  <block id="938aaddabdc2e2a3ed4141288699bf43" category="list-text">Snapshot コピーをミラーまたはバックアップにレプリケートするユーザには、 SnapCenter 管理者がユーザに対してソースとデスティネーションの両方のボリューム用に Storage Virtual Machine （ SVM ）を割り当てる必要があります。</block>
   <block id="14310a3e36aca9ee4f8ae01ecce176f6" category="paragraph">管理者によるユーザへのリソースの割り当て方法については、 SnapCenter のインストール情報を参照してください。</block>
   <block id="8c47f48c6fb5493126c980bf2e721bcd" category="list-text">プリスクリプトとポストスクリプトで PowerShell スクリプトを実行する場合は、 web.config ファイルで usePowershellProcessforScripts パラメータの値を true に設定する必要があります。</block>
   <block id="9f35f4e7b1b8337e12bc210c7cc37233" category="paragraph">デフォルト値は false です。</block>
@@ -97,10 +96,8 @@
   <block id="5d920b501536441ea32ecc24679c72a2" category="cell">状況</block>
   <block id="5e2ad6fd9deb412d871137094ee43ef0" category="cell">手順</block>
   <block id="63afd0069eb731a8e67418ebe1db655d" category="list-text">[ フルバックアップおよびログバックアップ * ] を選択します。</block>
-  <block id="18d4675bdba207949ceb7f704c54e620" category="list-text">各 Snapshot コピーにバックアップするデータベースの最大数を入力します。</block>
   <block id="b0c8f062df15022a6331b14e3bf5591e" category="admonition">同時に複数のバックアップ処理を実行する場合は、この値を増やす必要があります。</block>
   <block id="787c49e1272644a793119d13fc551e84" category="list-text">[* Full backup* ] を選択します。</block>
-  <block id="846c94f31178e6465f3c62be3f42cb3d" category="list-text">各 Snapshot コピーにバックアップするデータベースの最大数を入力します。デフォルト値は 100 です</block>
   <block id="ad53595de135edab4a537a97159316b6" category="paragraph">「 * Log backup * 」を選択します。</block>
   <block id="f16fca991ae99058ce41f2b4b1614852" category="list-text">別のバックアップ・アプリケーションを使用してリソースをバックアップする場合は、 [* コピーのみのバックアップ * ] を選択します。</block>
   <block id="619da134802c3fcab97a2b7c6d14c4ec" category="paragraph">トランザクションログが変更されずに保持されるため、任意のバックアップアプリケーションでデータベースをリストアできます。通常、他の状況ではコピーのみのオプションを使用しないでください。</block>
@@ -115,17 +112,10 @@
   <block id="1947481e76eb40f4adf8f5246fa95ff6" category="admonition">リソースグループを作成する際に、バックアップ処理のスケジュール（開始日、終了日、頻度）を指定することができます。これにより、ポリシーとバックアップ間隔が同じである複数のリソースグループを作成できますが、各ポリシーに異なるバックアップスケジュールを割り当てることもできます。</block>
   <block id="a16b9f3426d9cfca29c06a875b667023" category="admonition">午前 2 時にスケジュールを設定した場合、夏時間（ DST ）中はスケジュールはトリガーされません。</block>
   <block id="73d1997538c5c2799ee681d5e59023ad" category="list-text">[ 最新の状態へのリストア処理の保持の設定 ] セクションで、次のいずれかを実行します。</block>
-  <block id="35c585b251342f8a3ef5f785412f91be" category="paragraph">特定の数の Snapshot コピーだけを保持します</block>
   <block id="94ce778033bf4abe093ce9cc1e7a0498" category="paragraph">バックアップコピーを特定の日数だけ保持します</block>
   <block id="9bbf41d74c8f89f293d3299ea7bebf83" category="paragraph">［ * 最新の &lt; 日数 &gt; フル・バックアップに適用可能なログ・バックアップを保持する ］ オプションを選択し、ログ・バックアップ・コピーを保持する日数を指定します。</block>
   <block id="9de90deec5302da2195d39aecfada280" category="list-text">On Demand の保持設定の「 * フルバックアップの保持設定 * 」セクションで、次の操作を実行します。</block>
-  <block id="3aaac4c94ecda8362dc70a2825de8b24" category="paragraph">Snapshot コピーの数が指定した数を超えると、古いものから順に Snapshot コピーが削除されます。</block>
   <block id="225ea283dca2590a2a542a782ac56927" category="admonition">最大保持数は、 ONTAP 9.4 以降のリソースでは 1018 、 ONTAP 9.3 以前のリソースでは 254 です。保持期間を基盤となる ONTAP バージョンの値よりも大きい値に設定すると、バックアップが失敗します。</block>
-  <block id="a0257f49f5547a6ef191dd6c2f9b4c75" category="admonition">デフォルトでは、保持数の値は 2 に設定されます。保持数を 1 に設定すると、新しい Snapshot コピーがターゲットにレプリケートされるまで最初の Snapshot コピーが SnapVault 関係の参照 Snapshot コピーになるため、保持処理が失敗することがあります。</block>
-  <block id="6d8af80369897e48f5d0073fb1d5235e" category="paragraph">Snapshot コピーを削除するまで保持しておく日数を指定する場合は、「 * Snapshot コピーを保持する期間」を選択します。</block>
-  <block id="6127fccc91f52e5ee1702cdfa7fa1673" category="admonition">SnapVault レプリケーションを有効にする場合は、保持数を 2 以上に設定する必要があります。保持数を 1 に設定すると、新しい Snapshot コピーがターゲットにレプリケートされるまで最初の Snapshot コピーが SnapVault 関係の参照 Snapshot コピーになるため、保持処理が失敗することがあります。</block>
-  <block id="efa04a2e0b433b54ed88de4c3b1b5a79" category="paragraph">ログの Snapshot コピーの保持期間は、デフォルトで 7 日に設定されています。ログの Snapshot コピーの保持期間を変更するには、 Set-SmPolicy コマンドレットを使用します。</block>
-  <block id="723fe9aea6dfe1a0a822f218095c1c11" category="paragraph">ログの Snapshot コピーの保持を 2 に設定する例を次に示します。</block>
   <block id="f2d35fb96ac070e63c88b1b43cf8c70b" category="inline-link">SnapCenter はデータベースの Snapshot コピーを保持します</block>
   <block id="96df6a4d32e4546cfd055ffa3e9a7097" category="paragraph"><block ref="96df6a4d32e4546cfd055ffa3e9a7097" category="inline-link-rx"></block></block>
   <block id="1841ccf0461e2eaacdadd6d0965185ca" category="paragraph">ローカル Snapshot コピーの作成後に SnapMirror を更新します</block>
@@ -134,12 +124,10 @@
   <block id="74634d46f4094928b9a2dbffb638ae7f" category="paragraph">ディスクツーディスクのバックアップレプリケーションを実行する場合は、このオプションを選択します。</block>
   <block id="58d70fc926069f010ab51ffa86e123d8" category="paragraph">セカンダリポリシーのラベル</block>
   <block id="7236d615f588fda61e35cc1fa07c46cb" category="paragraph">Snapshot ラベルを選択します。</block>
-  <block id="57f81f76ee742c3e6fdc3de05738646d" category="paragraph">選択した Snapshot コピーラベルに応じて、 ONTAP はラベルに一致するセカンダリ Snapshot コピー保持ポリシーを適用します。</block>
   <block id="f4d84b8f919668d97d6f1c1e6384cfac" category="admonition">ローカル Snapshot コピーの作成後に「 * SnapMirror を更新」を選択した場合は、必要に応じてセカンダリポリシーラベルを指定できます。ただし、ローカル Snapshot コピーの作成後に「 * Update SnapVault 」を選択した場合は、セカンダリポリシーラベルを指定する必要があります。</block>
   <block id="e64e99351ad3ec8079ffd2d91fbd7f12" category="paragraph">エラー再試行回数</block>
   <block id="39007747bb71ef47183e492e75b22469" category="paragraph">レプリケーションの最大試行回数を入力します。この回数を超えると処理が停止します。</block>
   <block id="1701175190dfd6dd06812a1b97af8f95" category="paragraph">たとえば、 SNMP トラップの更新、アラートの自動化、ログの送信などをスクリプトで実行できます。</block>
-  <block id="a0e2a78c6c2fd62817afcae7e0b538f5" category="admonition">セカンダリストレージが Snapshot コピーの最大数に達しないように、 ONTAP で SnapMirror 保持ポリシーを設定する必要があります。</block>
   <block id="369cd91c3e11b99e6fa5850b92b3090a" category="paragraph">整合性構造をデータベースの物理構造に制限する（ physical_only ）</block>
   <block id="0de87de3224e64a78ce1093052a47d1d" category="paragraph">整合性チェックの対象をデータベースの物理構造に限定し、データベースに影響を与える正しくないページ、チェックサム障害、および一般的なハードウェア障害を検出するには、「 * 」を選択します。</block>
   <block id="82f15136daedc726dba1051c43c28284" category="paragraph">すべての情報メッセージを停止するには、「 * 」を選択します（ NO_INFOMSGS ）。デフォルトで選択されています。</block>
@@ -347,7 +335,6 @@
   <block id="0a5070b538c653ac59aaa80bcbf05055" category="summary">セカンダリストレージシステム上の物理 LUN （ RDM 、 iSCSI 、または FCP ）から、バックアップされた SQL Server データベースをリストアできます。リストアは段階的に実施され、すべてのデータとログページがセカンダリストレージシステム上の指定した SQL Server バックアップから指定したデータベースにコピーされます。</block>
   <block id="86cc84259391356d6bc58883c4b14046" category="doc">セカンダリストレージから SQL Server データベースをリストアする</block>
   <block id="322e2c0228e3fa3086aa2d2caa7e24ad" category="paragraph">セカンダリストレージシステム上の物理 LUN （ RDM 、 iSCSI 、または FCP ）から、バックアップされた SQL Server データベースをリストアすることができます。リストアは段階的に実施され、すべてのデータとログページがセカンダリストレージシステム上の指定した SQL Server バックアップから指定したデータベースにコピーされます。</block>
-  <block id="6490dd6973f2704b0b377c24b0992a87" category="list-text">プライマリストレージシステムからセカンダリストレージシステムに Snapshot コピーをレプリケートしておく必要があります。</block>
   <block id="e1573e93dec4a09a53c7948b08bea942" category="list-text">SnapCenter サーバおよびプラグインホストがセカンダリストレージシステムに接続できることを確認する必要があります。</block>
   <block id="48d655df40608a314f5332ec2869cbed" category="list-text">リストア・ウィザードの各ページのフィールドのほとんどについては、基本的なリストア・プロセスで説明しています。以下の手順では、説明が必要な一部のフィールドを取り上げます。</block>
   <block id="f72a9173829a8f26c57c075519f73a90" category="paragraph">データベースまたはリソースグループのトポロジページが表示されます。</block>
@@ -382,7 +369,6 @@
   <block id="6b3f89d4de284eef9726110270f3aca6" category="list-text">バックアップするデータベース、インスタンス、または可用性グループを選択します。</block>
   <block id="8aacc4f53fdad965d551d7ddc2e431d1" category="paragraph">インスタンスをバックアップする場合、そのインスタンスの前回のバックアップステータスやタイムスタンプに関する情報はリソースページに表示されません。</block>
   <block id="9d82e2623af61fdfe7b6c68017db0226" category="paragraph">トポロジビューでは、バックアップステータス、タイムスタンプ、またはバックアップがインスタンスのものかデータベースのものかを区別できません。</block>
-  <block id="d8e872fb73120498da08d2eb2e952e1f" category="paragraph">たとえば 'customText_policy_hostname や resource_hostname などですデフォルトでは、 Snapshot コピー名の後ろにタイムスタンプが追加されます。</block>
   <block id="204b899f0e95e32b80ec8ea79f53c1ec" category="paragraph">[ 選択したポリシーのスケジュールを設定する *] セクションに、選択したポリシーが一覧表示されます。</block>
   <block id="d9efe8cd3b84ef411469a4acc1e9bb8a" category="list-text">* をクリックします<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>* スケジュールを設定するポリシーの [ スケジュールの設定 ] 列。</block>
   <block id="08fe75bd987fb2dedbe7641f478927f0" category="paragraph">ここで 'policy_name' は ' 選択したポリシーの名前です</block>
@@ -436,7 +422,6 @@
   <block id="c27ceb4a4892c429a975a62841762540" category="list-text">バックアップ処理とクローニング処理のスケジュールを設定する</block>
   <block id="aa71cd3a5a90a32aafb3072b19a68b09" category="list-text">バックアップ処理、リストア処理、クローニング処理を監視する</block>
   <block id="c343d8ab7af87f16e58b8e8040d7813a" category="admonition">Plug-in for SQL Server では、 SMB 共有の SQL Server データベースのバックアップとリカバリはサポートされません。</block>
-  <block id="60b2a4dd687e5b16ce91fc08c7273c8b" category="summary">実行中、キューに登録済み、または応答しないバックアップ処理をキャンセルできます。バックアップ処理をキャンセルすると、 SnapCenter サーバは処理を停止し、作成されたバックアップが SnapCenter サーバに登録されていない場合は、ストレージからすべての Snapshot コピーを削除します。バックアップがすでに SnapCenter サーバに登録されている場合、キャンセル後も、作成済みの Snapshot コピーはロールバックされません。</block>
   <block id="6895fc6b34ff814dd8d20f8eb70439e5" category="doc">SnapCenter Plug-in for Microsoft SQL Server のバックアップ処理をキャンセルします</block>
   <block id="d15cddcc0f2911c53261943c85948fab" category="list-text">リストア処理をキャンセルするには、 SnapCenter 管理者またはジョブ所有者としてログインする必要があります。</block>
   <block id="1e4f7aaf5f275f33488c6753583b5d84" category="list-text">キャンセルできるのは、キューに登録されたか実行中のログ処理またはフルバックアップ処理のみです。</block>
@@ -465,12 +450,7 @@
   <block id="a9a36931adb350bdf3480cb9845a8fc8" category="image-alt">SCSQL バックアップワークフロー</block>
   <block id="780c1b490607a3963a4db9b069dbf1e2" category="admonition">NetApp 以外の LUN 、破損したデータベース、またはリストア中のデータベースを選択すると、 Resources ページの Backup Now 、 Restore 、 Manage Backups 、および Clone の各オプションが無効になります。</block>
   <block id="70a3b8963fff53a1f81a125297906687" category="section-title">SnapCenter でのデータベースのバックアップ方法</block>
-  <block id="fe38a38405ced1973299d2b175c66a79" category="paragraph">SnapCenter は、 Snapshot コピーテクノロジを使用して、 LUN または VMDK に格納されている SQL Server データベースをバックアップします。SnapCenter は、データベースの Snapshot コピーを作成することによってバックアップを作成します。</block>
   <block id="05e0444569b01c1a835c376c06e5d120" category="paragraph">リソースページでフルデータベースバックアップの対象としてデータベースを選択すると、同じストレージボリューム上の他のすべてのデータベースが SnapCenter によって自動的に選択されます。LUN または VMDK にデータベースが 1 つだけ格納されている場合は、そのデータベースを個別に選択解除したり、再度選択したりできます。LUN または VMDK に複数のデータベースが格納されている場合は、それらのデータベースをグループとして選択解除したり、再度選択したりする必要があります。</block>
-  <block id="94d411efd4d509b79e37c7e4a295be9d" category="paragraph">1 つのボリューム上のすべてのデータベースが、 Snapshot コピーを使用して同時にバックアップされます。同時にバックアップ可能なデータベースの最大数が 35 で、ストレージボリュームに格納されているデータベースが 35 個よりも多い場合、データベース数を 35 で割った数の Snapshot コピーが作成されます。</block>
-  <block id="ec785954577f393169b08b9820597d33" category="admonition">Snapshot コピーごとのデータベースの最大数は、バックアップポリシーで設定できます。</block>
-  <block id="3c4ba880bf5f444b48a27b0feee215a3" category="paragraph">SnapCenter で作成される Snapshot コピーには、ストレージシステムボリューム全体がキャプチャされます。ただし、バックアップは、バックアップが作成された SQL ホストサーバに対してのみ有効になります。</block>
-  <block id="797732091f9ad14b5fbe3406e6d7ed15" category="paragraph">他の SQL ホストサーバのデータが同じボリュームに含まれている場合、それらのデータを Snapshot コピーからリストアすることはできません。</block>
   <block id="832cb1b396b5451b24475f6f96d26d25" category="paragraph"><block ref="832cb1b396b5451b24475f6f96d26d25" category="inline-link-macro-rx"></block></block>
   <block id="463e628d0fee92af59d880953c74bf11" category="summary">バックアップからデータベースリソースをクローニングする前に、 SnapCenter Server でいくつかのタスクを実行する必要があります。データベースのクローニングは、本番環境のデータベースまたはそのバックアップセットのポイントインタイムコピーを作成するプロセスです。アプリケーション開発サイクル中に実装が必要な機能を現在のデータベースの構造およびコンテンツを使用してテストする場合、データの抽出と操作を行うツールを使用してデータウェアハウスにデータを取り込む場合、誤って削除または変更されたデータをリカバリする場合などに実行します。</block>
   <block id="c53965a1bce6ec0b6c1fa17e3314a375" category="doc">SQL Server データベースリソースのクローニング</block>
@@ -776,7 +756,6 @@
   <block id="834a032ae363b3b656aaeecb6f1b7c3e" category="inline-link">Microsoft のサポート記事 2887595 ：「 Windows RT 8.1 、 Windows 8.1 、 and Windows Server 2012 R2 update rollup ： November 2013</block>
   <block id="145ee2da76e280f3ab74f8e48a4f6229" category="paragraph"><block ref="145ee2da76e280f3ab74f8e48a4f6229" category="inline-link-rx"></block></block>
   <block id="3a398ade5cc2db068632e3780c5f9812" category="list-text">リソースグループまたはデータベースをバックアップしておく必要があります。</block>
-  <block id="c9be9cc5ba5ff68efaa119bed3d4a11a" category="list-text">Snapshot コピーをミラーまたはバックアップにレプリケートするユーザには、 SnapCenter 管理者がユーザに対してソースとデスティネーションの両方のボリューム用に Storage Virtual Machine （ SVM ）を割り当てる必要があります。</block>
   <block id="9ab48724fd891b73fc67de8664319345" category="list-text">データベースをリストアする前に、バックアップジョブとクローニングジョブをすべて停止する必要があります。</block>
   <block id="10344402be0db5fed4bdb763360d91a4" category="list-text">データベースサイズがテラバイト（ TB ）単位の場合、リストア処理がタイムアウトすることがあります。</block>
   <block id="67758aec18021f6235b6a5ed9330f493" category="paragraph">データベースをオンラインにしたままリストアする場合は、リストアページでオンラインリストアオプションを有効にする必要があります。</block>
@@ -881,7 +860,6 @@
   <block id="189f63f277cd73395561651753563065" category="paragraph">タグ</block>
   <block id="80b4392036b2c71988077d45b3eedc67" category="paragraph">リソースグループを検索するときに役立つラベルを入力します。たとえば、複数のリソースグループに HR をタグとして追加すると、あとから HR タグに関連付けられたすべてのリソースグループを検索できます。</block>
   <block id="52a580de823d89b3d7b0e19883cf0a1b" category="paragraph">Snapshot コピーには、カスタムの名前形式を使用します</block>
-  <block id="14896f2f427d28611f36aa160295c034" category="paragraph">オプション： Snapshot コピー名のカスタムの名前形式を入力します。たとえば、 customtext_resourcegroup_policy_hostname や resourcegroup_hostname などの形式です。デフォルトでは、 Snapshot コピー名の後ろにタイムスタンプが追加されます。</block>
   <block id="cec46940af8355298a923d623115e6a7" category="list-text">ホスト名、リソースタイプ、および SQL Server インスタンスをドロップダウンリストから選択して、リソースのリストをフィルタリングします。</block>
   <block id="78504af1df199590dc7639bdc6191b6f" category="admonition">最近リソースを追加した場合は、リソースリストを更新しないと、使用可能なリソースのリストにリソースが表示されません。</block>
   <block id="3c8499d37e5b698773c087e64ded0e3e" category="list-text">[ 使用可能なリソース ] セクションから [ 選択したリソース ] セクションにリソースを移動するには、次のいずれかの手順を実行します。</block>
@@ -902,16 +880,13 @@
   <block id="b39614f1e3ff23cc5b5cd5fd6bf27259" category="inline-image-macro">アイコンをクリックして、設定済みスケジュールを編集します</block>
   <block id="5f11c7889df3330ff1f653f5e5702931" category="inline-image-macro">削除アイコン</block>
   <block id="028663e79f1637979085ec64bff7081d" category="paragraph">設定されたスケジュールは、 [ 適用されたスケジュール ] 列に一覧表示されます。確認して編集するには、 * をクリックします<block ref="2d7d19a80eadfa8bd69c03954ae600b5" category="inline-image-macro-rx" type="image"></block>* または * をクリックして削除します<block ref="07738f780882ec9b17642d6716f5c477" category="inline-image-macro-rx" type="image"></block>*</block>
-  <block id="0a3ee0e4442fc13af19fee91daba03ad" category="summary">Snapshot コピーのデフォルトの命名規則を使用するか、カスタマイズした命名規則を使用できます。デフォルトのバックアップ命名規則では Snapshot コピー名にタイムスタンプが追加されるため、コピーが作成されたタイミングを特定できます。</block>
   <block id="a54ab9a48da734a10b9ef93ce5ee4d05" category="doc">Plug-in for SQL Server のバックアップ命名規則</block>
-  <block id="535e5146f6710c64096ef0bec8fde052" category="paragraph">Snapshot コピーでは、次のデフォルトの命名規則が使用されます。</block>
   <block id="99bb793d8518c3738d75ad0f87e31dcf" category="paragraph">「 resourcegroupname_hostname_timestamp 」</block>
   <block id="d5cc6c862c6a1f4384bd43917710a763" category="paragraph">バックアップリソースグループには、次の例のように論理的な名前を付ける必要があります。</block>
   <block id="bdd8b7afde2c57bb177f08a155eb0f00" category="paragraph">この例では、各構文要素に次の意味があります。</block>
   <block id="0a582eb0bda617d73885518760675220" category="list-text">_dts1_は リソースグループ名です。</block>
   <block id="cbcca0e2763af2ef4379ffa9a0fee87d" category="list-text">_mach1x88_ はホスト名です。</block>
   <block id="1cd8edb6081ac8a62963443b4802377c" category="list-text">_03-12-2015_23.17.26_ は日付とタイムスタンプです。</block>
-  <block id="a17dc09f2a6c5969ecc6d4e607cd5456" category="paragraph">または、「 * Snapshot コピーにカスタム名形式を使用」を選択して、リソースまたはリソースグループを保護しながら Snapshot コピー名の形式を指定することもできます。たとえば、 customtext_resourcegroup_policy_hostname や resourcegroup_hostname などの形式です。デフォルトでは、 Snapshot コピー名にタイムスタンプのサフィックスが追加されます。</block>
   <block id="59554a37a60d4da009dea594241b0ae1" category="summary">CA 証明書のサムプリントを取得します。</block>
   <block id="9772bdc36f54d8bb6dc779a222af547c" category="doc">CA 証明書のサムプリントを取得します</block>
   <block id="cd2e2c723c403abdc6897c3987837652" category="paragraph">証明書のサムプリントは、証明書を識別する 16 進数の文字列です。サムプリントは、サムプリントアルゴリズムを使用して証明書の内容から計算されます。</block>
@@ -932,8 +907,6 @@
   <block id="bfa8c341f9069cab983b83a7b3d6e229" category="summary">バックアップポリシーにはバックアップあたりの最大データベース数を設定できるオプション（デフォルト値は 100 \ ）があるため、すべてのデータベースを同じボリュームに配置できます。</block>
   <block id="49d3d638c72a43de1071ccafc35ba79d" category="doc">同じボリューム上の複数のデータベース</block>
   <block id="4e23a71c353d487c1b39814259994b97" category="paragraph">バックアップポリシーには、バックアップあたりの最大データベース数を設定するオプション（デフォルト値は 100 ）があるため、すべてのデータベースを同じボリュームに配置できます。</block>
-  <block id="190319f351847bd1023d75c822627133" category="paragraph">たとえば、同じボリュームに 200 個のデータベースがある場合、 100 個のデータベースを含む Snapshot コピーが 2 つ作成されます。</block>
-  <block id="24743f153fb0278e1e3b6f596ac1f6fa" category="summary">Plug-in for SQL Server は、 Windows ホスト上で Microsoft SQL Server と統合されるほか、ストレージシステム上でネットアップの Snapshot コピーテクノロジと統合されます。Plug-in for SQL Server を操作するには、 SnapCenter インターフェイスを使用します。</block>
   <block id="043833147a39840644f2ff01a835f90d" category="doc">SnapCenter Plug-in for Microsoft SQL Server の特長</block>
   <block id="124dafa39d6abec3cd14b880f87c4178" category="paragraph">Plug-in for SQL Server の主な機能は次のとおりです。</block>
   <block id="fe83f9df83b3aa96b52b9e5a120baa6d" category="list-text">* SnapCenter * による統一されたグラフィカル・ユーザー・インターフェイス</block>
@@ -941,7 +914,6 @@
   <block id="8cab777e8f4d0f3134b1e688de9e3a14" category="list-text">* 中央管理の自動化 *</block>
   <block id="76269dad3b4162847b77d8ae239cead5" category="paragraph">日常的な SQL Server バックアップのスケジュールを設定したり、ポリシーベースのバックアップ保持、ポイントインタイムのリストア処理、および最新の状態へのリストア処理を設定することができます。SnapCenter から E メールアラートを送信するように設定して、 SQL Server 環境をプロアクティブに監視することもできます。</block>
   <block id="989a8d53a95cf1413d4fbd7dfdc2f013" category="list-text">* 無停止の NetApp Snapshot コピー・テクノロジー *</block>
-  <block id="a621c2443659e98a79889cf634460ecb" category="paragraph">Plug-in for SQL Server では、 NetApp SnapCenter Plug-in for Microsoft Windows でネットアップの Snapshot コピーテクノロジを使用します。これにより、データベースを数秒でバックアップし、 SQL Server をオフラインにすることなく迅速にリストアすることが可能です。Snapshot コピーはストレージスペースを最小限しか消費しません。</block>
   <block id="8a92e906457b4fafff3da6c975954701" category="paragraph">Plug-in for SQL Server には、上記の主要な機能以外にも次のようなメリットがあります。</block>
   <block id="19ad37e6b2da345ecd66a8304c75bdf0" category="list-text">バックアップ、リストア、クローニング、および検証のワークフローがサポートされます</block>
   <block id="5750866ea3f2f5172a0cbfaa24301be8" category="list-text">セキュリティが RBAC でサポートされ、ロール委譲が一元化されます</block>
@@ -959,7 +931,6 @@
   <block id="71529fb0bca8c472c240508a96afc5cb" category="list-text">SQL Server スタンドアロンデータベースでの FileStream とファイルグループのサポート。</block>
   <block id="b84d1d8c09293020f3483a11ab0dddc9" category="summary">プライマリストレージボリュームまたは SnapMirror または SnapVault セカンダリストレージボリュームでバックアップコピーを検証することができます。セカンダリストレージボリュームを使用して検証を実行すると、プライマリストレージボリュームの負荷が軽減されます。</block>
   <block id="ebae46e6c1cf802f26210eac01893036" category="doc">Plug-in for SQL Server でのプライマリストレージボリュームまたはセカンダリストレージボリュームを使用したバックアップコピーの検証</block>
-  <block id="f9265969cb3180ece98659aeee441d5a" category="paragraph">プライマリストレージボリュームまたはセカンダリストレージボリュームにあるバックアップを検証すると、すべてのプライマリ Snapshot コピーとセカンダリ Snapshot コピーが検証済みとマークされます。</block>
   <block id="7d75df615ecc318750420253367a234c" category="paragraph">SnapMirror および SnapVault セカンダリストレージボリューム上のバックアップコピーを検証するには、 SnapRestore ライセンスが必要です。</block>
   <block id="3d18a8ecd9e4c9d6e8109fc7dc46902c" category="summary">SnapCenter サーバおよび SnapCenter Plug-in for Microsoft SQL Server をインストールする手順について説明します。</block>
   <block id="303271a6fa371310673fc55e65bf3af0" category="doc">SnapCenter Plug-in for SQL Server のインストールのクイックスタート</block>
@@ -1176,11 +1147,8 @@
   <block id="949ad980c1552a4a514f54656c5e4e1e" category="paragraph">バックアップ、リストア、または別のクローンスプリットの実行中は、クローンスプリットの開始処理が失敗します。クローンスプリット処理は、実行中の処理が完了してから再開してください。</block>
   <block id="c890d8869922996dfd86a523bb9d74d4" category="inline-link">「 aggregate does not exist 」というメッセージが表示されて、 SnapCenter クローンまたは検証が失敗する</block>
   <block id="c4d1b109542fdbc8eef8e3b4cac85e00" category="paragraph"><block ref="c4d1b109542fdbc8eef8e3b4cac85e00" category="inline-link-rx"></block></block>
-  <block id="a61442d4f2c413e3792d7594050ba2cc" category="summary">Remove-SmBackup コマンドレットを使用して、 Snapshot コピーがないセカンダリバックアップのバックアップ数をクリーンアップできます。このコマンドレットは、 Manage Copies トポロジに表示される Snapshot コピーの合計数がセカンダリストレージの Snapshot コピー保持設定と一致しない場合に使用できます。</block>
   <block id="11dc6d5147b38aacb94d18c088856bed" category="doc">PowerShell コマンドレットを使用してセカンダリバックアップ数をクリーンアップします</block>
-  <block id="f71dfd6c3ba5579bcd41f13631288dbe" category="paragraph">Remove-SmBackup コマンドレットを使用して、 Snapshot コピーがないセカンダリバックアップのバックアップ数をクリーンアップできます。Manage Copies （コピーの管理）トポロジに表示される Snapshot コピーの合計数が、セカンダリ・ストレージの Snapshot コピーの保持設定と一致しない場合に、このコマンドレットを使用できます。</block>
   <block id="5d365fedd8db2449d52b5be4a9205fb5" category="list-text">CleanupSecondaryBackups パラメータを使用して、セカンダリバックアップ数をクリーンアップします。</block>
-  <block id="1bea5939f16f3388c1a175f0af134c13" category="paragraph">この例では、 Snapshot コピーがないセカンダリバックアップのバックアップ数をクリーンアップしています。</block>
   <block id="51d95bab000b8bd5e8f9d83c3f25d453" category="summary">再シードは、可用性グループ（ AG ）データベースをリストアするためのオプションです。セカンダリデータベースが AG 内のプライマリデータベースと同期していない場合は、セカンダリデータベースを再シードできます。</block>
   <block id="951ead00aca07936d7cbe2d0eaf3bdde" category="doc">可用性グループデータベースを再シードしています</block>
   <block id="86c8bce86a1532578679c840db2996d0" category="paragraph">再シードは、可用性グループ（ AG ）データベースをリストアするためのオプションです。セカンダリデータベースが AG 内のプライマリデータベースと同期していない場合は、セカンダリデータベースを再シードできます。</block>
@@ -1253,13 +1221,10 @@
   <block id="ce938ff2cd62772022d524bef4583928" category="list-text">非クラスタ化インデックスをチェックしない場合は、 * noindex * オプションを選択します。</block>
   <block id="659d429411e9bdf1792d1ee2e9be57e8" category="paragraph">SQL Server データベースは、 Microsoft SQL Server の Database Consistency Checker （ DBCC ）を使用して、データベース内のオブジェクトの論理的な整合性と物理的な整合性をチェックします。</block>
   <block id="56e4a44986eec2c6c805eb91f2eb9f57" category="admonition">このオプションを選択すると、実行時間を短縮できます。</block>
-  <block id="276a2a80c1894c38febc3b5daa0e6f1e" category="list-text">内部データベースの Snapshot コピーを使用する代わりに、チェックを制限してロックを取得するには、 **TABLOCK ** オプションを選択します。</block>
   <block id="f896d9aec3aeda8f9d538e812b63bad4" category="list-text">概要を確認し、 [** 終了 ** ] をクリックします。</block>
   <block id="0441f921ecb29005b4b309df792042a3" category="summary">SQL Server のリストア戦略を定義しておくと、それに従ってデータベースをリストアすることができます。</block>
   <block id="24fc557949539a292d3c18f3c9454f62" category="doc">SQL Server のリストア戦略を定義する</block>
-  <block id="6a34b15a40b3586e87a4c13c8590b294" category="summary">SnapCenter を使用して SQL Server システムおよびユーザデータベースをバックアップするときは、データベース、 SQL Server インスタンス、可用性グループ（ AG ）などのリソースタイプを選択する必要があります。Snapshot コピーテクノロジを使用して、リソースが存在するボリュームのオンラインの読み取り専用コピーが作成されます。</block>
   <block id="2a681580cba5d0bac1fe8b6665a6a47e" category="doc">サポートされるバックアップのタイプ</block>
-  <block id="83a6b4f4d698b5886d410ecf41ce092e" category="paragraph">SnapCenter を使用して SQL Server システムおよびユーザデータベースをバックアップするときは、データベース、 SQL Server インスタンス、可用性グループ（ AG ）などのリソースタイプを選択する必要があります。Snapshot コピーテクノロジを使用して、リソースが存在するボリュームのオンラインの読み取り専用コピーが作成されます。</block>
   <block id="3f2b6cc2adaf1a1f28214b5ed39ff5cd" category="paragraph">コピーのみのオプションを選択して、 SQL Server がトランザクションログを切り捨てないように指定できます。SQL Server の管理に他のバックアップアプリケーションも使用している場合は、このオプションを使用します。トランザクションログが変更されずに保持されるため、任意のバックアップアプリケーションでシステムデータベースをリストアできます。コピーのみのバックアップは、スケジュールされたバックアップとは関係なく実行され、データベースのバックアップおよびリストア手順には影響しません。</block>
   <block id="a3c82f66d39159c3e9d428cd534beb34" category="cell">バックアップタイプ</block>
   <block id="6c8a86b32ee2dec60604a9f5961cc1c5" category="cell">コピーのみのオプションでバックアップタイプを指定</block>
@@ -1443,7 +1408,6 @@
   <block id="a3a63bd1ddab3e696228b7b61878c09d" category="doc">Oracle データベースのバックアップポリシーの作成</block>
   <block id="ed740a0593e2888b4f41c0fd5c5e3ca9" category="list-text">バックアップ戦略を定義しておく必要があります。</block>
   <block id="e457b5ee7ca69de08b3486e30ef1d570" category="list-text">SnapCenter のインストール、ホストの追加、データベースの検出、ストレージシステム接続の作成などのタスクを実行して、データ保護の準備をしておく必要があります。</block>
-  <block id="2619f2e63fc2bcfbbef6d5861952e68b" category="list-text">Snapshot コピーをミラーセカンダリストレージまたはバックアップセカンダリストレージにレプリケートするユーザには、 SnapCenter 管理者がユーザに対してソースとデスティネーションの両方のボリューム用に SVM を割り当てる必要があります。</block>
   <block id="12a8a88fbbb12cf46de8ed3c3c9c4df5" category="list-text">ドロップダウン・リストから「 * Oracle Database * 」を選択します。</block>
   <block id="3c6544f27197f56a0b07b5ed264760dc" category="list-text">[ 名前 ] ページで、ポリシー名と概要を入力します。</block>
   <block id="49868beda0a485f260d92cbafbd9e394" category="list-text">[Backup Type] ページで、次の手順を実行します。</block>
@@ -1474,17 +1438,12 @@
   <block id="3330083979ff2e07d7e4609ee2228f08" category="paragraph">[ * バックアップの一部である保存先からアーカイブ・ログを削除する * ] を選択します。</block>
   <block id="27f6bf9956fb5d538b6d1793de7a2624" category="paragraph"><block ref="27f6bf9956fb5d538b6d1793de7a2624" category="inline-image-macro-rx" type="image"></block></block>
   <block id="33b9f4074a30cf7699528b526f1e171d" category="list-text">[ 保持 ] ページで ' バックアップ・タイプの保持設定と [ バックアップ・タイプ ] ページで選択したスケジュール・タイプを指定します</block>
-  <block id="9562758d343cb5226c22630eacf99365" category="paragraph">一定数の Snapshot コピーを保持します</block>
-  <block id="189e283fb708ef792d0d8144a72e798b" category="paragraph">保持する Snapshot コピーの総数 * を選択し、保持する Snapshot コピーの数を指定します。</block>
-  <block id="b16c2ae9651bd34c3e7c132b0b29cf32" category="paragraph">Snapshot コピーを特定の日数だけ保持します</block>
-  <block id="f4a027d3dd6468d4bcffb446d92cfde1" category="paragraph">「 * Snapshot コピーを保持する期間」を選択し、 Snapshot コピーを削除するまで保持する日数を指定します。</block>
   <block id="9696f79f02f1b72ee2751fa3ac8cee1b" category="admonition">アーカイブログバックアップを保持できるのは、アーカイブログファイルをバックアップの一部として選択した場合だけです。</block>
   <block id="7cc68b5677a3b2fc34e03106ab7871ff" category="list-text">Replication （レプリケーション）ページで、レプリケーション設定を指定します。</block>
   <block id="1275946d22bd30ab4fa43a93760353bd" category="paragraph">別のボリュームにバックアップセットのミラーコピーを作成する場合（ SnapMirror レプリケーション）は、このフィールドを選択します。</block>
   <block id="5599318ff76ac470ccc995aab6f33577" category="paragraph">ローカル Snapshot コピーの作成後に SnapVault を更新します</block>
   <block id="a8026657de84cf12f52f1113eca69500" category="paragraph">ディスクツーディスクのバックアップレプリケーション（ SnapVault バックアップ）を実行する場合は、このオプションを選択します。</block>
   <block id="b1e8c3d6aa4aee19e19fd276e7c61e0b" category="paragraph">処理が停止されるまでに試行できるレプリケーションの最大回数を入力します。</block>
-  <block id="41c1fe93c7a860adc2ee274dfe16b5f6" category="admonition">セカンダリストレージでの Snapshot コピーの最大数に達しないように、 ONTAP でセカンダリストレージの SnapMirror 保持ポリシーを設定する必要があります。</block>
   <block id="92690dd16a9c4d48908bc7f3eaf042ac" category="list-text">スクリプトページで、バックアップ処理の前後に実行するプリスクリプトまたはポストスクリプトのパスと引数を入力します。</block>
   <block id="ffb3ae9f69a62e97d1deccf8e6b8f1ff" category="paragraph">プリスクリプトとポストスクリプトは、 /var/opt/snapcenter /spl/scripts_or に保存するか、このパス内の任意のフォルダに保存する必要があります。デフォルトでは、 /var/opt/snapcenter /spl/scripts_path が読み込まれます。スクリプトを保存するフォルダをこのパス内に作成してある場合は、パス内のそれらのフォルダを指定する必要があります。</block>
   <block id="1b4b1a8701700f9bb0245d7c920ebd16" category="paragraph">スクリプトのタイムアウト値を指定することもできます。デフォルト値は 60 秒です。</block>
@@ -1567,7 +1526,6 @@
   <block id="3b12138a7f752b38337d4dfdf997ddc1" category="paragraph">SnapCenter では、 Oracle データベースに対して Connect and Copy リストアと In Place リストアがサポートされます。SnapCenter は、リストア処理中に、データを失うことなくリストアに使用するファイルシステムに適したリストア方式を決定します。</block>
   <block id="df3cf38e44637d2165eb181af223b67b" category="section-title">Connect and Copy リストア</block>
   <block id="b1e6525cac3e5ba1f6afa5b22a0816a0" category="paragraph">データベースレイアウトがバックアップと異なる場合や、バックアップ作成後に新しいファイルがある場合は、 Connect and Copy リストアが実行されます。Connect and Copy リストア方式では、次のタスクが実行されます。</block>
-  <block id="9010183ca92e32bb60cc8b7403d1d2ae" category="list-text">ボリュームは Snapshot コピーからクローニングされ、ファイルシステムスタックは、クローニングされた LUN またはボリュームを使用してホスト上に構築されます。</block>
   <block id="f829cb1081f9c94375e8005905c13c01" category="list-text">クローニングされたファイルシステムから元のファイルシステムにファイルがコピーされます。</block>
   <block id="af50d714aae8420f1fba06fef93a651c" category="list-text">クローニングされたファイルシステムがホストからアンマウントされ、クローニングされたボリュームが ONTAP から削除されます。</block>
   <block id="f3d8e7bed549389cd494b6bfbb85a42f" category="admonition">Flex ASM 設定（カードの数が RAC クラスタ内のノード数より少ない場合）または VMDK または RDM 上の ASM RAC データベースでは、 Connect and Copy リストア方式のみがサポートされます。</block>
@@ -1654,7 +1612,6 @@
   <block id="241427aa082547643032d9ac47ab0dda" category="summary">Oracle データベースをリストアする前に、前提条件を満たしていることを確認する必要があります。</block>
   <block id="e4efd46999918866976643fdf1c3041d" category="doc">Oracle データベースをリストアするための要件</block>
   <block id="58f28c7080a3b5a4d907dfdece1ece75" category="list-text">リストアとリカバリの戦略を定義しておく必要があります。</block>
-  <block id="86e3376af807930c08ffb54560870134" category="list-text">ユーザが Snapshot コピーをミラーまたはバックアップにレプリケートする場合は、ソースボリュームとデスティネーションボリューム両方の Storage Virtual Machine （ SVM ）を SnapCenter 管理者がユーザに割り当てておく必要があります。</block>
   <block id="61b9803a1cd8f34e415ade3146621c10" category="list-text">バックアップの一環としてアーカイブログが削除される場合は、必要なアーカイブログのバックアップを手動でマウントしておく必要があります。</block>
   <block id="1db970b2a6105a2ea2fd5097ac660cbe" category="list-text">仮想マシンディスク（ VMDK ）上にある Oracle データベースをリストアする場合は、クローン VMDK を割り当てるための必要な数の空きスロットがゲストマシンにあることを確認してください。</block>
   <block id="ba4dc32189ac55cef59ce8019633507c" category="list-text">データベースでセカンダリ保護が有効になっている場合は、そのデータベースに属するすべてのデータボリュームとアーカイブログボリュームが保護されていることを確認する必要があります。</block>
@@ -1947,7 +1904,6 @@
   <block id="bb3bb922fc2fe1b5851c8c139e13f07b" category="doc">Oracle リソースのバックアップ</block>
   <block id="d8e3db119b7cf9c31602a2121bfa4365" category="list-text">バックアップするデータベースを選択します。</block>
   <block id="d24902f60cccf9a4d0ef979587d1d4fd" category="paragraph">Database - Protect （データベース - 保護）ページが表示されます。</block>
-  <block id="81e3d6d459d6185662dc1ac418aeba95" category="paragraph">Snapshot コピー名にカスタムの名前形式を使用する場合は、このチェックボックスをオンにして名前形式を入力します。</block>
   <block id="056af176267461e7d6a2a9e357208bd7" category="paragraph">バックアップからアーカイブログデスティネーションを除外します</block>
   <block id="491a86dab4dbb4636159b9c8d91d9c09" category="paragraph">バックアップの対象から外すアーカイブログファイルのデスティネーションを指定します。</block>
   <block id="db9cc4a2ed12e21bb79e9346714c68b9" category="paragraph">[ 選択したポリシーのスケジュールを設定 ] セクションに、選択したポリシーが一覧表示されます。</block>
@@ -2180,8 +2136,6 @@
   <block id="7140c9ed643472273949574e79ba9b60" category="paragraph">SnapCenter のインターフェイスは、すべてのプラグインと環境で標準化され、一貫しています。SnapCenter のインターフェイスから、すべてのプラグインで、バックアップ、リストア、リカバリ、クローニングの各処理を一貫した方法で実行できるほか、ダッシュボードビューで概要を把握したり、ロールベースアクセス制御（ RBAC ）を設定したり、ジョブを監視したりすることができます。</block>
   <block id="194512dda07e4cc0aca1533656efba55" category="list-text">中央管理の自動化</block>
   <block id="25ec8c1a8c1cbba6a91ecfb52cfacecc" category="paragraph">バックアップ処理とクローニング処理のスケジュールを設定したり、ポリシーベースのバックアップ保持を設定したり、リストア処理を実行したりできます。SnapCenter から E メールアラートを送信するように設定して、環境をプロアクティブに監視することもできます。</block>
-  <block id="3823b5d9d8dc7e47a02c4aa6ea80105b" category="list-text">無停止の NetApp Snapshot コピーテクノロジ</block>
-  <block id="5b106f222bf3db55d42731c8112c039b" category="paragraph">SnapCenter では、 Plug-in for Oracle Database および Plug-in for UNIX でネットアップの Snapshot コピーテクノロジを使用してデータベースがバックアップされます。Snapshot コピーはストレージスペースを最小限しか消費しません。</block>
   <block id="07ef9882c6d102197c21c087f1bcb441" category="paragraph">Plug-in for Oracle Database には、次のようなメリットもあります。</block>
   <block id="98c168ef2d3d275c5131b78a27b98fbf" category="list-text">バックアップ、リストア、クローニング、マウント、アンマウント、 検証ワークフローなどがあります</block>
   <block id="7042e4b6e6cd168a927b1bbc1790a57e" category="list-text">ホストで設定されている Oracle データベースの自動検出</block>
@@ -2191,7 +2145,6 @@
   <block id="da7d10a7d1bd2a2e5acc1a7e98e314b4" category="paragraph">クローンを作成するストレージシステムに FlexClone ライセンスが必要です。</block>
   <block id="60c01eaf63f6f84994a18b3ef120f90f" category="list-text">SAN 環境および ASM 環境でバックアップを作成する際に、 ONTAP の整合グループ（ CG ）機能がサポートされます</block>
   <block id="791e3048ca35b220103df4a3c759f26a" category="list-text">複数のデータベースホストで同時に複数のバックアップを実行できます</block>
-  <block id="49ad63a9d87c64bd33da05af5cb09e1c" category="paragraph">1 回の処理で、 1 つのホストのデータベースが同じボリュームを共有する場合に複数の Snapshot コピーが統合されます。</block>
   <block id="ba616d0f67fed92e5664508021cbd276" category="list-text">NFS 、 iSCSI 、ファイバチャネル（ FC ）、 RDM 、 NFS および VMFS 経由の VMDK 、 NFS 、 SAN 、 RDM 、および VMDK 経由の ASM がサポートされます</block>
   <block id="abd96a9e67c87700d0ddbbf79ca1ad42" category="list-text">ONTAP の選択的 LUN マップ（ SLM ）機能がサポートされます</block>
   <block id="fcc8a219537ae52cbcb4de4b42305ef7" category="paragraph">デフォルトで有効になる SLM 機能は、最適パスを持たない LUN を定期的に検出して修正します。SLM を設定するには、 /var/opt/snapcenter /scu/etc. にある scu.properties ファイル内のパラメータを変更します</block>
@@ -2224,8 +2177,6 @@
   <block id="fa4d1c967d467deb12174bc6b1b3355b" category="paragraph">リソースグループの名前を入力します。</block>
   <block id="7651838ffd9b279a9ff6c4c63159427e" category="paragraph">リソースグループを検索するときに役立つラベルを入力します。</block>
   <block id="dc5b15d16c6cbd04c1864901ca5f2732" category="paragraph">たとえば、複数のリソースグループに HR をタグとして追加すると、あとから HR タグに関連付けられたすべてのリソースグループを検索できます。</block>
-  <block id="aff716d8309a2ea5e7dcffc15638b023" category="paragraph">Snapshot コピー名にカスタムの名前形式を使用する場合は、このチェックボックスをオンにして名前形式を入力します。</block>
-  <block id="f575e6fdc603f5206dc21a87a354406b" category="paragraph">たとえば 'customText_resource group_policy_hostname や resource group_hostname などですデフォルトでは、 Snapshot コピー名の後ろにタイムスタンプが追加されます。</block>
   <block id="dea54623aa643ec856baf8abb4233177" category="admonition">リソースが Available Resources セクションに表示されるのは、リソースが正常に検出された場合のみです。最近リソースを追加した場合は、リソースリストを更新しないと、使用可能なリソースのリストにリソースが表示されません。</block>
   <block id="5dcd20433605552bfe1ee3f21d0564ef" category="list-text">[ 使用可能なリソース（ Available Resources ） ] セクションからリソースを選択し、 [ 選択したリソース（ Selected Resources ） ] セクションに移動する。</block>
   <block id="16a4d8b6ed11330e0e6e2c8f2b58a1b0" category="admonition">1 つのリソースグループ内の Linux ホストと AIX ホストの両方からデータベースを追加することができます。</block>
@@ -2236,7 +2187,6 @@
   <block id="e058be158ad9231e0b1b44d9048f0ff8" category="summary">実行中、キューに登録済み、または応答しないバックアップ処理をキャンセルできます。</block>
   <block id="725a197c7788c699a7829d49ed273483" category="doc">Oracle データベースのバックアップ処理をキャンセルします</block>
   <block id="799f83c785fdbd8c224ff6863ef07529" category="paragraph">バックアップ処理をキャンセルするには、 SnapCenter 管理者またはジョブ所有者としてログインする必要があります。</block>
-  <block id="b9713525162207c91f2908e3c4c7af7a" category="paragraph">バックアップ処理をキャンセルすると、 SnapCenter サーバは処理を停止し、作成されたバックアップが SnapCenter サーバに登録されていない場合は、ストレージからすべての Snapshot コピーを削除します。バックアップがすでに SnapCenter サーバに登録されている場合、キャンセル後も、作成済みの Snapshot コピーはロールバックされません。</block>
   <block id="f9f556d2b6534722edff515d5f7bc15b" category="list-text">キャンセルできるのは、キューに登録されたか実行中のログ処理またはフルバックアップ処理のみです。</block>
   <block id="01e1dfaf1adc24343f71395bd122bae5" category="list-text">カタログ処理の開始後にバックアップ処理をキャンセルすることはできません。</block>
   <block id="6ead40700edacacddf2e163b14792949" category="list-text">SnapCenter GUI に加え、 CLI コマンドを使用して処理をキャンセルすることもできます。</block>
@@ -2767,9 +2717,6 @@
   <block id="d75b221a62d4c54927e045808754179b" category="list-text">シックプロビジョニング LUN の場合、拡張可能なサイズ（ボリューム内の使用可能なサイズ）が最大サイズとして表示されます。</block>
   <block id="378f0e048b351847c673c327b1b01b2f" category="list-text">MBR パーティション方式を使用した LUN の場合、最大サイズは 2TB です。</block>
   <block id="3da1df07fc5b3e4a8b649955e81299b8" category="list-text">GPT パーティション方式を使用した LUN の場合、ストレージシステムの最大サイズは 16TB です。</block>
-  <block id="b60be6496fbd5e8e48e41b61ba470027" category="list-text">LUN のサイズを変更する前に Snapshot コピーを作成しておくことを推奨します。</block>
-  <block id="95c6d63a469de5afcddc96c6c1ea3f34" category="list-text">LUN のサイズの変更前に作成された Snapshot コピーから LUN をリストアすると、 SnapCenter によって LUN のサイズが Snapshot コピーのサイズに自動的に変更されます。</block>
-  <block id="3d68d9692f770a9139cf370f132ca172" category="paragraph">リストア処理のあと、サイズ変更後に LUN に追加されたデータを、サイズ変更後に作成された Snapshot コピーからリストアする必要があります。</block>
   <block id="3015ed368b1638274f7638b11f4d1ab1" category="list-text">ホストドロップダウンリストからホストを選択します。</block>
   <block id="8cba961b1ec5d7c289472ddf43619739" category="list-text">サイズを変更するディスクを選択し、 * サイズ変更 * をクリックします。</block>
   <block id="27b4f01bf1710435fa0b0b60a7a494a0" category="list-text">ディスクのサイズ変更ダイアログボックスで、スライダツールを使用してディスクの新しいサイズを指定するか、サイズフィールドに新しいサイズを入力します。</block>
@@ -2897,7 +2844,6 @@
   <block id="70991649072f70fdb060c64c2144c8c8" category="paragraph">SnapCenter では、異なるクラスタに同じ名前のストレージシステムを複数配置することはサポートされていません。SnapCenter でサポートされるストレージシステムには、それぞれ一意の名前およびデータ LIF の IP アドレスを割り当てる必要があります。</block>
   <block id="d8c79769d1510f53b50beb7c46e3e14f" category="list-text">ストレージシステムを設定する際に、 Event Management System （ EMS ；イベント管理システム）と AutoSupport の機能を有効にすることもできます。AutoSupport ツールは、システムの健常性に関するデータを収集し、そのデータをシステムのトラブルシューティング用にネットアップテクニカルサポートに自動的に送信します。</block>
   <block id="8066687b2002e6c5af9c9a8c64166d49" category="paragraph">これらの機能を有効にすると、リソースが保護されたとき、リストアまたはクローニング処理が正常に完了したとき、または処理が失敗したときに、 SnapCenter からストレージシステムに AutoSupport 情報が、ストレージシステムの syslog に EMS メッセージが送信されます。</block>
-  <block id="90e51e88af6422ac879c0c7acebf28ca" category="list-text">SnapMirror デスティネーションまたは SnapVault デスティネーションに Snapshot コピーをレプリケートする場合は、デスティネーション SVM またはクラスタとソース SVM またはクラスタへのストレージシステム接続をセットアップする必要があります。</block>
   <block id="af0393ab7c1c21394683b80f2704864d" category="admonition">ストレージシステムのパスワードを変更すると、スケジュールされたジョブ、オンデマンドバックアップ、およびリストア処理が失敗する場合があります。ストレージ・システムのパスワードを変更した後、 Storage （ストレージ）タブで * Modify （変更） * をクリックしてパスワードを更新できます。</block>
   <block id="d907195077a50076f92791c10bb76a87" category="list-text">[ ストレージシステム ] ページで、 [ 新規作成 ] をクリックします。</block>
   <block id="7e3e16c1661e45c7df525db25b2af547" category="list-text">Add Storage System （ストレージシステムの追加）ページで、次の情報を入力します。</block>
@@ -3140,7 +3086,6 @@
   <block id="8877dc9fcfb6df8dad34589e1a225411" category="paragraph">リソースグループを作成します</block>
   <block id="3e84305a1bfb0bb3f17a78c50889f512" category="list-text">Windows クラスタまたは DAG （ Exchange Server データベース可用性グループ）のアセットに新しいノードを追加したときに、その新しいノードをユーザに割り当てた場合は、新しいノードを追加するアセットをユーザまたはグループに再割り当てする必要があります。</block>
   <block id="077b5968d54f25c57e3cff7cb71fb295" category="paragraph">RBAC ユーザまたはグループをクラスタまたは DAG に再割り当てして、新しいノードを RBAC ユーザまたはグループに追加する必要があります。たとえば、 2 ノードクラスタで RBAC ユーザまたはグループをクラスタに割り当てているとします。クラスタに別のノードを追加した場合は、 RBAC のユーザまたはグループをクラスタに再割り当てして、 RBAC ユーザまたはグループの新しいノードを追加します。</block>
-  <block id="7a2bea54d65bdb486c21225326f24168" category="list-text">Snapshot コピーをレプリケートする場合は、処理を実行するユーザにソースボリュームとデスティネーションボリュームの両方のストレージ接続を割り当てる必要があります。</block>
   <block id="1a30a23470dfab273d5a6b116e08627b" category="paragraph">ユーザにアクセスを割り当てる前にアセットを追加しておく必要があります。</block>
   <block id="3b94205bc2616f2bf8416a810bbba1b8" category="inline-link">SnapCenter Plug-in for VMware vSphere に組み込みの事前定義のロール</block>
   <block id="61dc06ea09d65aec5db611ccff43e263" category="admonition">SnapCenter Plug-in for VMware vSphere の機能を使用して VM 、 VMDK 、またはデータストアを保護している場合は、 VMware vSphere GUI を使用して、 SnapCenter Plug-in for VMware vSphere ロールに vCenter ユーザを追加する必要があります。VMware vSphere のロールについては、を参照してください<block ref="428cb7b96c1d9798e75623fa5c5801df" category="inline-link-rx"></block>。</block>
@@ -3439,7 +3384,6 @@
   <block id="c75f7811d70d17dbcd88e9d03752cbed" category="section-title">認証</block>
   <block id="f99af3f9d6fe830ae8bd2fc15f75f35f" category="paragraph">ユーザは、グラフィカルユーザインターフェイス（ GUI ）または PowerShell コマンドレットを使用して、ログイン時に認証情報を指定する必要があります。ユーザが複数のロールに属している場合は、ログインクレデンシャルの入力後に、使用するロールを指定するように求められます。また、 API を実行する際にも認証が必要になります。</block>
   <block id="4621c32301e9db3796cade120966e4ac" category="paragraph">SnapCenter では、クレデンシャルを使用して、許可された SnapCenter ユーザにアプリケーションレベルの権限もあるかどうかが検証されます</block>
-  <block id="86668b4509f462ece126907d84f808c1" category="paragraph">たとえば、 SQL Server 環境で Snapshot コピーやデータ保護の処理を実行する場合は、 Windows または SQL の適切なクレデンシャルを設定する必要があります。SnapCenter サーバは、どちらの方法で設定されたクレデンシャルも認証します。ONTAP ストレージ上の Windows ファイルシステム環境で Snapshot コピーやデータ保護の処理を実行する場合は、 SnapCenter の admin ロールに Windows ホストに対する管理者権限が必要です。</block>
   <block id="1247a4f73aec617351c15da7677f2470" category="paragraph">同様に、 Oracle データベースに対してデータ保護処理を実行する場合、データベースホストでオペレーティングシステム（ OS ）認証が無効なときは、 Oracle データベースまたは Oracle ASM のクレデンシャルを使用してクレデンシャルを設定する必要があります。SnapCenter サーバは、処理に応じて、いずれかの方法で設定されたクレデンシャルを認証します。</block>
   <block id="880474ac5a13e7ace0b497d868bfcec8" category="section-title">SnapCenter Plug-in for VMware vSphere の RBAC をサポートしています</block>
   <block id="f801aae5c222a63a7b4293067447308c" category="paragraph">VM と整合性のあるデータ保護に SnapCenter VMware プラグインを使用している場合、 vCenter Server によってさらに細かく RBAC を実装できます。SnapCenter VMware プラグインは、 vCenter Server RBAC と Data ONTAP RBAC の両方をサポートしています。</block>
@@ -3570,7 +3514,6 @@
   <block id="614d75d82c03a359210029561e76c31c" category="paragraph">データ保護は、 ONTAP システムで実行されている Microsoft Exchange Server 、 Microsoft SQL Server 、 Linux または AIX 上の Oracle データベース、 SAP HANA データベース、および Windows ホストファイルシステムでサポートされます。</block>
   <block id="91fc009ef552fe282ad4103bc4542688" category="paragraph">ユーザ定義の SnapCenter プラグインを作成するためのフレームワークを提供することで、他の標準またはカスタムのアプリケーションやデータベースでもデータ保護がサポートされます。これにより、 1 つの画面で他のアプリケーションやデータベースのデータを保護することができます。このフレームワークを活用して、ネットアップは IBM DB2 、 MongoDB 、 MySQL など用の SnapCenter カスタムプラグインを NetApp Automation Store でリリースしました。</block>
   <block id="1e06a8cc16bd3bc423f81e8ff56e4fc0" category="list-text">ポリシーベースのバックアップ</block>
-  <block id="5120c9ef4a7041813fe0f5dd0dceb9e7" category="paragraph">ポリシーベースのバックアップでは、 NetApp Snapshot コピーテクノロジを利用して、アプリケーションと整合性のある高速なディスクベースのバックアップを、スペース効率に優れた方法で作成します。必要に応じて、既存の保護関係を更新することで、セカンダリストレージに対するこれらのバックアップの保護を自動化することができます。</block>
   <block id="c6f23063f5e9e828f1d4a0d52255f07c" category="list-text">複数のリソースのバックアップ</block>
   <block id="050fe282bd8b711ba366c400655d1e2a" category="paragraph">SnapCenter リソースグループを使用して、同じタイプの複数のリソース（アプリケーション、データベース、またはホストファイルシステム）を同時にバックアップできます。</block>
   <block id="6be8f3086a30e59e908d53eb620b51dd" category="list-text">リストアとリカバリ</block>
@@ -3650,7 +3593,6 @@
   <block id="2f75224064f651f17be474084e7a7ff5" category="section-title">SnapCenter Plug-in for Microsoft Windows の特長</block>
   <block id="1b789581aeaa48640561ebae3b263a76" category="list-text">SnapCenter 環境の Windows ホストで実行されている他のプラグインに対して、アプリケーション対応のデータ保護を有効にします</block>
   <block id="d764b7be86ece9a7b21fa445a8e1493c" category="list-text">SnapCenter 環境で、アプリケーションに対応したバックアップ、リストア、およびクローニングの処理を自動化します</block>
-  <block id="6654f600f78c3ef362da3ccd2f7edf7c" category="list-text">Windows ホストのストレージのプロビジョニング、整合性のある Snapshot コピーの作成、およびスペースの再生をサポートします</block>
   <block id="dea9211ac8214ee6078ef38e9e19fd1b" category="admonition">Plug-in for Windows では、 SMB 共有および Windows ファイルシステムを物理 RDM LUN 上にプロビジョニングしますが、 SMB 共有上での Windows ファイルシステムのバックアップ処理はサポートされません。</block>
   <block id="bb1a0267e6190653f6b95ebf12a64e69" category="section-title">SnapCenter Plug-in for Microsoft Exchange Server の特長</block>
   <block id="b1af2c6f8c468738169b12e770baea8c" category="list-text">SnapCenter 環境での Microsoft Exchange Server データベースおよび Database Availability Group （ DAG ；データベース可用性グループ）で、アプリケーションに対応したバックアップおよびリストア処理を自動化します</block>
@@ -3727,14 +3669,10 @@
   <block id="b1d3c10985fe921d1cd4f1920df9beb6" category="list-text">* 統一されたグラフィカル・ユーザー・インターフェイス *</block>
   <block id="6fb6e736abe2121b5ad7a964c6879b29" category="paragraph">SnapCenter のインターフェイスは、すべてのプラグインと環境で標準化され、一貫しています。SnapCenter インターフェイスを使用すると、すべてのプラグインでバックアップ、リストア、クローニングの各処理を一貫した方法で実行できるほか、ダッシュボードビューで概要を把握したり、ロールベースアクセス制御（ RBAC ）を設定したり、ジョブを監視したりすることができます。</block>
   <block id="c977f209575b6b5d579a260964bb7de1" category="paragraph">バックアップ処理のスケジュールを設定したり、ポリシーベースのバックアップ保持を設定したり、リストア処理を実行したりできます。SnapCenter から E メールアラートを送信するように設定して、環境をプロアクティブに監視することもできます。</block>
-  <block id="cdeab085bb0baca278e3fd127c3bba01" category="paragraph">SnapCenter では、 Plug-in for SAP HANA Database でネットアップの Snapshot コピーテクノロジを使用してリソースがバックアップされます。</block>
   <block id="e7e4cc54822b6895b1ed2f1d8b2ba77b" category="paragraph">Plug-in for SAP HANA Database を使用すると、次のメリットもあります。</block>
   <block id="fda7113d1825e99bb5e099dfa43e494e" category="list-text">バックアップ、リストア、クローニングのワークフローがサポートされます</block>
   <block id="77f89c57ca9a76d1b05a0a6547343371" category="list-text">NetApp FlexClone テクノロジを使用して、スペース効率に優れたポイントインタイムコピーを作成し、テストまたはデータの抽出を行います</block>
-  <block id="9e4633462318910dca2edeae9ec80ba5" category="list-text">バックアップの作成で ONTAP の整合グループ（ CG ）の Snapshot コピー機能がサポートされます。</block>
   <block id="b2d4bf2086608858ce65205273756f72" category="list-text">複数のリソースホストで同時に複数のバックアップを実行できます</block>
-  <block id="9fbdf25f5f7438e8ad28dc70e5ff6afe" category="paragraph">1 回の処理で、 1 つのホストの複数のリソースが同じボリュームを共有する場合に複数の Snapshot コピーが統合されます。</block>
-  <block id="9596ee91c9b7773aba04b6a3a9a68174" category="list-text">外部コマンドを使用して Snapshot コピーを作成できます。</block>
   <block id="6f52ab5eb8ac5cf70bdcac9134b36a7c" category="list-text">ファイルベースのバックアップがサポートされます。</block>
   <block id="691f9dff16ebd5da65b5dbbe0c978b53" category="list-text">XFS ファイルシステムで Linux LVM がサポートされています。</block>
   <block id="8f088fc353589a53b22d09fce118b2a6" category="doc">SnapCenter Plug-in for SAP HANA Database のクレデンシャルを設定します</block>
@@ -3753,7 +3691,6 @@
   <block id="d26e732ff4468b921ec70bf797290866" category="section-title">リソース全体のリストア</block>
   <block id="6dac61f5c61b1654fa020acda2c2434d" category="list-text">リソースのすべてのボリューム、 qtree 、および LUN をリストアします</block>
   <block id="d938214bd1f967593b0d24509b05926b" category="list-text">ボリューム全体をリストアするには、 * Volume Revert * オプションを選択する必要があります。</block>
-  <block id="ce909fbfd1d823785d6ae63b6e197807" category="admonition">リソースにボリュームまたは qtree が含まれている場合、そのボリュームまたは qtree でリストア対象として選択された Snapshot コピーのあとに作成された Snapshot コピーは削除され、リカバリすることはできません。また、同じボリュームまたは qtree で他のリソースがホストされている場合、そのリソースも削除されます。</block>
   <block id="f65460564c5df7b62418453394ef7ab4" category="section-title">テナントデータベース</block>
   <block id="6740dd361543128b03c632e2f040c34a" category="list-text">テナントデータベースをリストアします</block>
   <block id="c16654b142eb8136e56ba77b732301d5" category="paragraph">「 * テナントデータベース * 」オプションが選択されている場合は、 SnapCenter 外部の HANA Studio または HANA リカバリスクリプトを使用してリカバリ処理を実行する必要があります。</block>
@@ -3808,7 +3745,6 @@
   <block id="1b5d71bcf3ad020a170874b19a197c5e" category="paragraph">ユーザが * テナントデータベース * オプションまたは * Complete Restore * オプションを選択した場合、複数のテナントに対して SnapCenter サーバがリカバリ処理をサポートしていません。リカバリ処理を実行するには、 HANA Studio または HANA Python スクリプトを使用する必要があります。</block>
   <block id="328fe5af43dcf98de458cd96c45d01e5" category="list-text">ボリューム全体をリストアする場合は、 * Volume Revert * を選択します。</block>
   <block id="688445a2db4c04104799e570d7137a10" category="paragraph">このオプションは、 NFS 環境における SnapCenter 4.3 で作成されたバックアップに使用できます。</block>
-  <block id="403cf9a84060a96d70c006583dd1730f" category="paragraph">リソースにボリュームまたは qtree が含まれている場合、そのボリュームまたは qtree でリストア対象として選択された Snapshot コピーのあとに作成された Snapshot コピーは削除され、リカバリすることはできません。また、同じボリュームまたは qtree で他のリソースがホストされている場合、そのリソースも削除されます。このオプションは、リストア対象として「 * Volume Revert * 」オプションを指定した状態で * Complete Resource * を選択した場合に使用できます。</block>
   <block id="adbdea83f9a3ed8226883751435bfbf1" category="list-text">[* Tenant Database] を選択します。</block>
   <block id="ebe1639cfdfd980b05c9bbb602656161" category="paragraph">このオプションは MDC リソースでのみ使用できます。</block>
   <block id="b8b567d4ba521c0d72dfa10acaf6a9b9" category="paragraph">リストア処理を実行する前にテナントデータベースを停止する必要があります。</block>
@@ -3844,7 +3780,6 @@
   <block id="569d7ad91ac8653d08a314e2f0c4f16d" category="paragraph">処理がキャンセルされ、リソースが以前の状態に戻ります。</block>
   <block id="1dd409d7b835d13842d9f347c93a6de3" category="doc">手動で追加したリソースバックアップをリストアおよびリカバリする</block>
   <block id="c3b3d774c585dd79fb37eb8f605a3cdc" category="list-text">Complete Resource * を選択すると、 SAP HANA データベースに設定されているすべてのデータボリュームがリストアされます。</block>
-  <block id="cbfab698f18b454fe4b80a18cff2ed7f" category="paragraph">リソースにボリュームまたは qtree が含まれている場合、そのボリュームまたは qtree でリストア対象として選択された Snapshot コピーのあとに作成された Snapshot コピーは削除され、リカバリすることはできません。また、同じボリュームまたは qtree で他のリソースがホストされている場合、そのリソースも削除されます。</block>
   <block id="5992dc084820c1bb7deda13d5ca23184" category="list-text">「 * ファイルレベル * 」を選択した場合は、「 * すべて * 」を選択するか、特定のボリュームまたは qtree を選択してから、それらのボリュームまたは qtree に関連するパスをカンマで区切って入力できます</block>
   <block id="f47a1af7a319b571a0bacba2d5bdd6cf" category="list-text">ボリュームと qtree は複数選択できます。</block>
   <block id="57235293b58bcee8f885f03c7cc2bf98" category="list-text">リソースタイプが LUN の場合は、 LUN 全体がリストアされます。</block>
@@ -3873,7 +3808,6 @@
   <block id="51637044cc8ef099cbd7a621fcec5a60" category="list-text">保持設定に基づいて、 SnapCenter 4.2 以前のリリースで作成されたバックアップを削除します。</block>
   <block id="053b2f9960ca5511b7f50f4c35408867" category="list-text">Topology ページからリソースグループを削除します。</block>
   <block id="f8e1875f1ca7bafd5da6a29fa6bcda74" category="list-text">[ リソース ] ページから古い MDC リソースを削除します。</block>
-  <block id="14b1f939d4d6ad1f9002f584e1e54fa8" category="paragraph">たとえば、プライマリ Snapshot コピーの保持期間が 7 日で、セカンダリ Snapshot コピーの保持期間が 45 日の場合、 45 日が完了してすべてのバックアップが削除されたあとに、リソースグループと古い MDC リソースを削除する必要があります。</block>
   <block id="ade90ffda7ebb71155bc6fea900cdfc2" category="inline-link-macro">SAP HANA データベース用に HDB User Store Key および HDBSQL OS ユーザを設定します</block>
   <block id="edd858f144c3c1107be70381811fd6f2" category="paragraph"><block ref="edd858f144c3c1107be70381811fd6f2" category="inline-link-macro-rx"></block></block>
   <block id="e010280946f254b9face32c9e91fa35e" category="inline-link-macro">Topology ページで、 SAP HANA データベースのバックアップとクローンを表示します</block>
@@ -3890,7 +3824,6 @@
   <block id="515099a9db2d69620b1bbc080fe5200a" category="paragraph">PowerShell コマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、クローニングの処理を実行することもできます。PowerShell コマンドレットの詳細については、 SnapCenter のコマンドレットのヘルプを使用するか、コマンドレットのリファレンス情報を参照してください。</block>
   <block id="780c0ca05b56b9c80b7a61ef7ff2efa8" category="summary">SnapCenter は、ストレージシステムレベルおよびファイルシステムレベルでの不要なログおよびデータバックアップの削除を、 SAP HANA のバックアップカタログ内で管理します。</block>
   <block id="9024e1f264db01cbcede096090ebf938" category="doc">SnapCenter による不要なログおよびデータバックアップの削除の管理</block>
-  <block id="d92a8f6f3c2b6a9c57099c523a22f5b2" category="paragraph">保持設定に基づいて、プライマリストレージまたはセカンダリストレージの Snapshot コピーと SAP HANA のカタログ内の対応するエントリが削除されます。SAP HANA のカタログのエントリは、バックアップやリソースグループを削除したときにも削除されます。</block>
   <block id="6fee97e44353ed8e1ca5358c6abe1798" category="doc">SAP HANA データベースのバックアップ処理を監視する</block>
   <block id="d03608911fb0f378ca59b86a32adfb17" category="summary">SAP HANA データベースを保護する場合は、 SnapCenter Plug-in for SAP HANA Database をインストールしてセットアップする必要があります。</block>
   <block id="8eb6eae2f08f541d02277c6746c4fa05" category="image-alt">SAP HANA のインストール設定ワークフロー</block>
@@ -4006,12 +3939,9 @@
   <block id="3ee4871644963356f98fad58d0b99216" category="paragraph">リカバリの日時を指定する必要があります。</block>
   <block id="7ba57e19f3511ec8095d5f1239ebabca" category="list-text">特定のデータバックアップまでデータベースをリカバリします</block>
   <block id="91e17023cada2b1f21dbf9949614b65a" category="paragraph">SnapCenter には、 SAP HANA データベースをリカバリするオプションもありません。</block>
-  <block id="29921091f69f41a95339ffb3d8dc4dc8" category="summary">プラグインを使用して、リソースグループの整合グループ Snapshot コピーを作成することができます。整合グループとはボリュームのコンテナであり、複数のボリュームを格納して 1 つのエンティティとして管理できます。整合グループには複数のボリュームの Snapshot コピーが同時に格納されるため、一連のボリュームのコピーの整合性が確保されます。</block>
   <block id="9e869fca025d68642fcd561a55b8416a" category="doc">SnapCenter Plug-in for SAP HANA Database での整合グループ Snapshot コピーの使用方法</block>
-  <block id="cda7be8fe8913527bfa13f746d857c84" category="paragraph">ストレージコントローラが整合性を確保しながら Snapshot コピーをグループ化するのを待機する時間も指定できます。使用可能な待機時間のオプションは、 * Urgent * 、 * Medium * 、 * Relaxed * です。また、整合グループ Snapshot コピーの処理で Write Anywhere File Layout （ WAFL ）の同期を有効または無効にすることもできます。WAFL 同期を使用すると、整合グループの Snapshot コピーのパフォーマンスが向上します。</block>
   <block id="19bbc201cd8c48b8e705b901f38df232" category="paragraph">リソースが保護されている場合は、選択したリソースのトポロジページが表示されます。</block>
   <block id="0aa6b4b4509f20915de241ab3125773b" category="list-text">サマリー・カード * を確認して、プライマリ・ストレージとセカンダリ・ストレージで使用可能なバックアップとクローンの数を確認します。</block>
-  <block id="7f6ba439286f41d27f288dd7335169c5" category="paragraph">「 * サマリカード * 」セクションには、ファイルベースのバックアップ、 Snapshot コピーバックアップ、およびクローンの合計数が表示されます。</block>
   <block id="8decbf1aae0caf98d11e0d7812d18fa5" category="list-text">表でバックアップを選択し、データ保護アイコンをクリックして、リストア、クローニング、削除の各処理を実行します。</block>
   <block id="f70451089f1e1bfca806390a988a70f9" category="summary">自動検出は、特定の HANA インスタンスではサポートされていません。これらのリソースは手動で追加する必要があります。</block>
   <block id="b39d1e4f73b157bb2f5b3a972e89eeb6" category="doc">プラグインホストにリソースを手動で追加します</block>
@@ -4050,23 +3980,16 @@
   <block id="28fcd30ab7740350640e0c975b072b39" category="doc">SAP HANA データベースのクローニング処理を監視する</block>
   <block id="8896e4ff5c38407b9b105f9412d0f746" category="doc">SAP HANA データベースの SnapMirror および SnapVault レプリケーション用のストレージシステムを準備する</block>
   <block id="7394e84832837e7d0dc503d85eb3f36c" category="doc">SAP HANA データベースをバックアップする</block>
-  <block id="8f0e9744b1000b3672d2bdcf50a74d27" category="list-text">Snapshot コピーベースのバックアップ処理の場合は、すべてのテナントデータベースが有効でアクティブになっていることを確認してください。</block>
   <block id="085ab917326888bb9fd0378b5efb84b9" category="list-text">バックアップするリソースをクリックします。</block>
-  <block id="8deb8aa93ea3b02fc36610daf36edad9" category="paragraph">たとえば、 _customText_policy_hostname_or_resource_hostname_hostname_1 です。デフォルトでは、 Snapshot コピー名の後ろにタイムスタンプが追加されます。</block>
   <block id="23ce0178ca7588539a792fb41d10d6d6" category="list-text">[*Backups] の矢印をクリックして、追加のバックアップ・オプションを設定します。</block>
   <block id="75acd63fc160c8f401a6e89437895634" category="paragraph">必要に応じて、整合グループのバックアップを有効にし、次の作業を実行します。</block>
   <block id="50ce6bc02d574c2cab1fc82a19854cf8" category="paragraph">整合グループ Snapshot 処理が完了するまで待機する時間を設定してください</block>
   <block id="33d8fc89984b399b5f14da8a76d58c5a" category="paragraph">WAFL 同期を無効にします</block>
   <block id="27a16d7d61f6682ceaf4d8022ffa250f" category="paragraph">WAFL 整合ポイントを強制しない場合は、これを選択します。</block>
   <block id="419f55f97321a95d51e21f7ca2e9b02d" category="paragraph">バックアップ処理を終了する前にプリコマンドを実行することもできます。プリスクリプトとポストスクリプトは SnapCenter サーバで実行されます。</block>
-  <block id="97d85b626e97047020a03812221a5f99" category="list-text">Snapshot コピーツールの * 矢印をクリックして、 Snapshot コピーを作成するツールを選択します。</block>
   <block id="70ea5c730ba565a725b5e6a5ce34b32d" category="cell">状況</block>
-  <block id="2ca1729f14a40401626e0eaac1397926" category="paragraph">SnapCenter を使用してストレージレベルの Snapshot コピーを作成する</block>
   <block id="6d9c2c737b6e3a27597d11ff3b1d8a05" category="paragraph">ファイルシステムの整合性なしで SnapCenter * を選択します。</block>
-  <block id="106e549635779a49f4846a54f63000c8" category="paragraph">SnapCenter ： Plug-in for Windows を使用してファイルシステムを整合性のある状態にしてから Snapshot コピーを作成する</block>
   <block id="1accc18e0f25decba79f224ccd167283" category="paragraph">ファイルシステムの整合性を維持した状態で SnapCenter を選択します。</block>
-  <block id="b0be4061cee618df981a407920b78462" category="paragraph">Snapshot コピーを作成するコマンドを入力するには、次のコマンドを入力します</block>
-  <block id="530fb3b2ba42bf6ae30b22ac27b110a9" category="paragraph">「 * other * 」を選択し、コマンドを入力して Snapshot コピーを作成します。</block>
   <block id="129db5e4908943c18847d24dd577782f" category="paragraph"><block ref="129db5e4908943c18847d24dd577782f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a4412452c9cff96f8d11e97e688ba35e" category="list-text">[Add schedules for policy_name_] ダイアログボックスで、スケジュールを設定し、 [OK] をクリックします。</block>
   <block id="90334c9b6a705f8c6dafb182257f149b" category="paragraph">_policy_name_は 、選択したポリシーの名前です。</block>
@@ -4108,33 +4031,26 @@
   <block id="96deff25f1bface148544989647467e9" category="list-text">リソースをバックアップするタイミングを決定します。</block>
   <block id="729874d0711acb352c13d8a3e53aa0b2" category="list-text">必要なバックアップジョブの数を決定します。</block>
   <block id="63942c738344e1f1c6049b7faf74c632" category="list-text">バックアップの命名方法を決定します。</block>
-  <block id="62d32bd76c6f8fcf3452d35ef4b7af47" category="list-text">Snapshot コピーベースのポリシーを作成してアプリケーションと整合性のあるデータベースの Snapshot コピーをバックアップするかどうかを決定します。</block>
   <block id="8122a0c069e9fbb65067d3355a80e0fb" category="list-text">データベースの整合性を検証するかどうかを決定します。</block>
   <block id="ef5e5410c69045de99fe88c248670ea8" category="list-text">レプリケーションのために NetApp SnapMirror テクノロジを使用するか、または長期保持のために NetApp SnapVault テクノロジを使用するかを決定します。</block>
-  <block id="3d26c33abc24209e09a71f676df43fda" category="list-text">ソースストレージシステムおよび SnapMirror デスティネーションでの Snapshot コピーの保持期間を確認します。</block>
   <block id="082307c48bdbc0df0689128d4a08ad92" category="list-text">バックアップ処理の前後にコマンドを実行するかどうかを決定し、実行する場合はプリスクリプトまたはポストスクリプトを用意します。</block>
   <block id="bb24de3098becb559d31066692208382" category="summary">SnapCenter を使用して SAP HANA データベースのリソースをバックアップする前に、バックアップ対象のリソースまたはリソースグループのバックアップポリシーを作成する必要があります。バックアップポリシーとは、バックアップを管理、スケジューリング、および保持する方法を定めた一連のルールです。</block>
   <block id="2dad511118029c962a70a1aac4b16b52" category="doc">SAP HANA データベースのバックアップポリシーを作成する</block>
   <block id="59aa9d59aeca6426e049e4b2a67f90db" category="paragraph">詳細については、 SAP HANA データベースのデータ保護戦略の定義に関する情報を参照してください。</block>
   <block id="9b6c869445c45bd1d2092d2ac627e089" category="list-text">SnapCenter のインストール、ホストの追加、ストレージシステム接続のセットアップ、リソースの追加などのタスクを実行して、データ保護の準備をしておく必要があります。</block>
-  <block id="88566b8e3d506e3456db8c4304c99e1c" category="list-text">ユーザが Snapshot コピーをミラーまたはバックアップにレプリケートする場合は、ソースボリュームとデスティネーションボリューム両方の SnapCenter に SVM を割り当てる必要があります。</block>
   <block id="51cf7b8ece53780d2da7c680d87db751" category="paragraph">また、ポリシーでレプリケーション、スクリプト、およびアプリケーションの設定を指定することもできます。これらのオプションを指定しておくことで、別のリソースグループにポリシーを再利用して時間を節約することができます。</block>
   <block id="19999b58b15a4b6c9b7d47212a32aeba" category="list-text">バックアップタイプを選択します。</block>
   <block id="1ec8e0dcd181569d863906d3db3cbc7a" category="paragraph">データベースの整合性チェックを実行します</block>
   <block id="5ea8c203a8e8ed3f981e261385d48b32" category="paragraph">ファイルベースのバックアップ * を選択します。アクティブなテナントのみがバックアップされます。</block>
-  <block id="c7ca59353b5fbf390c454a539e22a12e" category="paragraph">Snapshot コピーテクノロジを使用してバックアップを作成します</block>
   <block id="58c4ab72512763368202ec9054d5b838" category="paragraph">「 * Snapshot Based * 」を選択します。</block>
   <block id="b8d6ee3998ffd19868fb72c367024f19" category="list-text">スケジュールタイプを指定するには、「 * on demand * 」、「 * Hourly * 」、「 * Daily * 」、「 * Weekly * 」、または「 * Monthly * 」を選択します。</block>
   <block id="6dfee293c05174bbd44cb5148876cd2b" category="admonition">リソースグループを作成する際に、バックアップ処理のスケジュール（開始日、終了日、頻度）を指定することができます。これにより、ポリシーとバックアップ間隔が同じである複数のリソースグループを作成できますが、各ポリシーに異なるバックアップスケジュールを割り当てることもできます。</block>
   <block id="b093b4eff25852e5f19297a922c5587f" category="list-text">[ * カスタム・バックアップ設定 * ] セクションで、キー値形式でプラグインに渡す必要がある特定のバックアップ設定を指定します。</block>
   <block id="fc757224d0f11cae40cba577a1aa87f2" category="paragraph">プラグインに渡すキーと値の組み合わせを複数指定することができます。</block>
-  <block id="7c180945c3efa4def592180bfeae77c5" category="admonition">Snapshot コピーベースのバックアップで SnapVault レプリケーションを有効にする場合は、保持数を 2 以上に設定する必要があります。保持数を 1 に設定すると、新しい Snapshot コピーがターゲットにレプリケートされるまで最初の Snapshot コピーが SnapVault 関係の参照 Snapshot コピーになるため、保持処理が失敗することがあります。</block>
   <block id="53ef3d7584a54991b60fba81e93d201f" category="paragraph">* ローカル Snapshot コピー作成後に SnapMirror を更新 *</block>
-  <block id="b1b35a317e8c296440243c1d7986c039" category="paragraph">ONTAP の保護関係のタイプがミラーとバックアップの場合、このオプションのみを選択すると、プライマリで作成された Snapshot コピーがデスティネーションに転送されませんが、デスティネーションのリストに表示されます。この Snapshot コピーがリストア処理の対象としてデスティネーションで選択されると、「 Secondary Location is not available for the selected vaulted/mirrored backup 」というエラーメッセージが表示されます。</block>
   <block id="f5568337c8feae7a044bdfdfc53b4769" category="paragraph">* ローカル Snapshot コピー作成後に SnapVault を更新 *</block>
   <block id="e95e870e56d78f07b5959255a76d16ab" category="paragraph">* 二次ポリシーラベル *</block>
   <block id="e14f71eb0e90d4bbfc5445a42a5c2a4c" category="paragraph">* エラー再試行回数 *</block>
-  <block id="dfc2bb18d15f87135d39c7efb3d45284" category="admonition">セカンダリストレージでの Snapshot コピーの最大数に達しないように、 ONTAP でセカンダリストレージの SnapMirror 保持ポリシーを設定する必要があります。</block>
   <block id="993d084476d90eaf8ecb0ad1a0a2f901" category="summary">ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。SnapCenter Plug-in for SAP HANA Database は、 Windows と Linux のどちらの環境でも使用できます。</block>
   <block id="66cf3f797a37d99d37e260746f767101" category="doc">ホストを追加して SnapCenter Plug-in for SAP HANA Database をインストールするための前提条件</block>
   <block id="ea55c7834ccad039ebb60450265886eb" category="list-text">ホストに Java 1.8 64 ビットがインストールされている必要があります。</block>
@@ -4191,9 +4107,7 @@
   <block id="c7e757b993a892f1adbc4d9d429ada9a" category="list-text">[ 使用可能なリソース（ Available Resources ） ] セクションからリソースを選択し、右矢印をクリックして [ 選択したリソース（ * Selected Resources ） ] セクションに移動します。</block>
   <block id="8cc859910effe8112e2912d3644f0bc8" category="paragraph">整合グループのバックアップを有効にし、次の作業を実行します。</block>
   <block id="a99f0aeaf38081c20a7370fb0f80e5fb" category="paragraph">整合グループ Snapshot 処理が完了するまで待機する時間を設定してください</block>
-  <block id="ed8207a67488af27356940d5feaf9f82" category="paragraph">Snapshot コピー処理が完了するまでの待機時間を指定するには、「至急」、「 * 中」、または「 * relaxed 」を選択します。</block>
   <block id="01509b1df2505486f61f51b88bcefee0" category="paragraph">Urgent = 5 秒、 Medium = 7 秒、 Relaxed = 20 秒。</block>
-  <block id="0d7285674023c3795c1345455bf18c08" category="list-text">* Scripts * の矢印をクリックして、休止、 Snapshot コピー、および休止解除の各処理に対する PRE / POST コマンドを入力します。障害発生時に終了する前に実行する PRE コマンドを入力することもできます。</block>
   <block id="775b811b88d8fc4fc28b0d206dcc4c05" category="list-text">[ カスタム構成 *] の矢印をクリックし、このリソースを使用するすべてのデータ保護操作に必要なカスタムキーと値のペアを入力します。</block>
   <block id="83f499a540b1323009c200d6f8cc9396" category="cell">パラメータ</block>
   <block id="51ac4bf63a0c6a9cefa7ba69b4154ef1" category="cell">設定</block>
@@ -4215,11 +4129,8 @@
   <block id="f5c64a8a00482e0316a9a53b3ee3affc" category="paragraph">サブディレクトリ内のアーカイブログを管理できます。</block>
   <block id="88ff0775a15d5ae4d05b9ecdeb6b5a48" category="paragraph">アーカイブログがサブディレクトリにある場合は、このパラメータを使用してください。</block>
   <block id="0d1c37a6cf22ce8a58bdf0cb6bb40c68" category="admonition">カスタムのキーと値のペアは、 SAP HANA Linux プラグインシステムでサポートされており、一元化された Windows プラグインとして登録された SAP HANA データベースではサポートされていません。</block>
-  <block id="a2efdbdb435f556e1303999ceee52ac3" category="paragraph">SnapCenter で Plug-in for Windows を使用してファイルシステムを整合性のある状態にしてから Snapshot コピーを作成する。Linux リソースの場合、このオプションは適用されません。</block>
   <block id="62559cf2803ff56106a84e128591c337" category="paragraph">このオプションは、 SnapCenter Plug-in for SAP HANA Database には適用されません。</block>
-  <block id="e81b2d9360690a59303d1e9e24590085" category="paragraph">SnapCenter を使用して、ストレージレベルの Snapshot コピーを作成します</block>
   <block id="086beaa9afd2391b7d5204a8db47791c" category="paragraph">Snapshot コピーを作成するためにホストで実行するコマンドを入力する</block>
-  <block id="f3534eb85a79e67d42411ae7be3de94f" category="paragraph">「 * other * 」を選択し、ホストで実行するコマンドを入力して Snapshot コピーを作成します。</block>
   <block id="39fba97fa35b3e2df0e6339cd21abe23" category="paragraph">ポリシーは、 Configure schedules for selected policies セクションに表示されます。</block>
   <block id="eb40bd4c68324257632328b6d08fa139" category="list-text">Configure Schedules （スケジュールの設定）列で、 * をクリックします<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>* をクリックします。</block>
   <block id="2a7c4561536268cef70578e0e4124a6c" category="paragraph">policy_name は、選択したポリシーの名前です。</block>
@@ -4264,7 +4175,6 @@
   <block id="7856cdeaea7e701262739e1779b10aa3" category="section-title">File-Based バックアップ</block>
   <block id="4c61ae71e16d4bd98d42fac16e453319" category="paragraph">ファイルベースのバックアップでは、データベースの整合性が検証されます。ファイルベースのバックアップの処理は一定の間隔で実行するようにスケジュールを設定できます。アクティブなテナントのみがバックアップされます。ファイルベースのバックアップは SnapCenter からリストアおよびクローニングできません。</block>
   <block id="c6dba23441b7b81118b01afb845de37e" category="section-title">Snapshot コピーベースのバックアップ</block>
-  <block id="471cd56f3a3ff2711bc53c71b2a143ac" category="paragraph">Snapshot コピーベースのバックアップでは、 NetApp Snapshot コピーテクノロジを利用して、 SAP HANA データベースが格納されたボリュームのオンラインの読み取り専用コピーが作成されます。</block>
   <block id="e1470cbc380c0e4285ea434aa1f30381" category="doc">SnapMirror レプリケーションと SnapVault レプリケーションのためのストレージシステムを準備</block>
   <block id="145f4e41c29b520e1d8d5a4e3691ae25" category="summary">データベースがどのリソースグループにも含まれていない場合は、のリソースページからデータベースまたはデータベース可用性グループをバックアップできます。</block>
   <block id="3b149cd899fbd2201eebaa6d8ac21929" category="doc">Exchange データベースをバックアップします</block>
@@ -4352,7 +4262,6 @@
   <block id="3b1c41a3ee3aff318c023951dec40c5c" category="paragraph">バックアップポリシーとは、バックアップを管理および保持する方法やリソースやリソースグループをバックアップする頻度を定めた一連のルールです。また、スクリプト設定を指定することもできます。ポリシーでオプションを指定しておくことで、別のリソースグループにポリシーを再利用して時間を節約することができます。</block>
   <block id="3bfd01447cc8c1d1ca4a07e4794a25fd" category="paragraph">フルバックアップの保持は指定されたポリシーに固有です。フルバックアップ保持が 4 に設定されたポリシー A を使用するデータベースまたはリソースはフルバックアップを 4 つ保持し、同じデータベースまたはリソースのポリシー B には影響しません。これにより、フルバックアップを 3 つ保持するように 3 つ保持できます。</block>
   <block id="ec7b72a8c05860fe4c7bb1822dfccbc0" category="paragraph">ログバックアップの保持は、ポリシーを問わず有効であり、データベースやリソースのすべてのログバックアップを環境で保持できます。したがって、ポリシー B を使用してフルバックアップを実行すると、同じデータベースまたはリソース上のポリシー A で作成されるログバックアップにログ保持設定が適用されます。同様に、ポリシー A のログ保持設定は、同じデータベースのポリシー B で作成されるログバックアップに影響します。</block>
-  <block id="8de37c701110ee880cc06580b3fdfef3" category="cell">* ベストプラクティス： * 維持するフルバックアップとログバックアップの総数に基づいて、セカンダリ保持ポリシーを設定することを推奨します。セカンダリの保持ポリシーを設定する場合、異なるボリュームにあるデータベースとログの Snapshot コピーは、各バックアップに 3 つ作成できます。また、データベースとログが同じボリュームにある場合、各バックアップに 2 つの Snapshot コピーを保持できます。</block>
   <block id="18566ccb16fd84825b0033ada84ed5cc" category="paragraph">データベースファイルと必要なトランザクションログをバックアップします</block>
   <block id="6fb4b31a97c87aedb302e6ece87a9cf3" category="paragraph">データベースはログを切り捨ててバックアップされ、切り捨てられたログを含むすべてのログがバックアップされます。</block>
   <block id="47475fc6bab6ba370a9a22a7fd5bc6a2" category="admonition">これは推奨されるバックアップタイプです。</block>
@@ -4383,15 +4292,12 @@
   <block id="da7954ba99f4a804cabb7b3971ad3c05" category="paragraph">UTM （最新状態）保持の環境ログバックアップは、フルバックアップまたはログバックアップを使用して作成されます。たとえば、 UTM 保持設定が、最新の 5 つのフルバックアップのログバックアップを保持するように設定されている場合、最新の 5 つのフルバックアップのログバックアップが保持されます。</block>
   <block id="ea11649af713bda838dbd3f31bea61cf" category="paragraph">フルバックアップとログバックアップの一部として作成されたログフォルダは、 UTM の一部として自動的に削除されます。ログフォルダは手動で削除できません。たとえば、フルバックアップまたはフルバックアップの保持設定が 1 カ月に設定されていて、 UTM 保持が 10 日に設定されている場合、これらのバックアップの一部として作成されたログフォルダは UTM のように削除されます。そのため、ログフォルダは 10 日しか作成されず、それ以外のバックアップはすべてポイントインタイムリストアの対象としてマークされます。</block>
   <block id="0799f0da10f294f7e56ccccbd18b0563" category="paragraph">最新の状態へのリストアを実行しない場合は、 UTM 保持値を 0 に設定できます。これにより、ポイントインタイムリストア処理が有効になります。</block>
-  <block id="7ffbf0bc0e312d01d73b618966eaead2" category="paragraph">* ベストプラクティス： * フルバックアップ保持の設定セクションの「 Total Snapshot copies （フルバックアップ）」の設定と同じにすることを推奨します。これにより、フルバックアップのたびにログファイルが保持されます。</block>
   <block id="924bb3d49c882cde2f529f1e98dd247a" category="paragraph">「 * Keep log backups for last * 」オプションを選択し、ログバックアップコピーを保持する日数を指定します。</block>
   <block id="6ae95201d922def8d78c44a121a1c9f0" category="paragraph">フルバックアップを保持する日数までのログバックアップが作成されます。</block>
   <block id="6f5031cdcf133378861489abd6b5d343" category="paragraph">バックアップタイプとして * Log backup * を選択した場合は、フルバックアップの最新の状態へのリストア保持設定の一部としてログバックアップが保持されます。</block>
   <block id="cc9d7c0546d0c50559930bffe9ed629e" category="list-text">[ フル・バックアップ保持設定 ] セクションで、オンデマンド・バックアップ用に次のいずれかを選択し、フル・バックアップ用に 1 つ選択します。</block>
-  <block id="0c71e9e3fed0ab387a61ef5b84879b86" category="paragraph">保持するフルバックアップの数を指定する場合は、「保持する Snapshot コピーの総数」オプションを選択し、保持する Snapshot コピー（フルバックアップ）の数を指定します。</block>
   <block id="a0867498c7500f2a4591bc4f28b90d46" category="paragraph">フルバックアップの数が指定した数を超えると、指定した数を超えるフルバックアップが削除され、古いコピーから順番に削除されます。</block>
   <block id="e9ba8713c7585ec0d2ad1f92ebd3f16d" category="paragraph">フルバックアップを特定の日数だけ保持します</block>
-  <block id="4ff5a76a54ac539be51aee685c82a121" category="paragraph">「 * Snapshot コピーを保持する期間」オプションを選択し、 Snapshot コピーを保持する日数（フルバックアップ）を指定します。</block>
   <block id="f470bf7c40d41dd4f2e04814c226f575" category="admonition">DAG 構成のホストにはログバックアップのみを使用し、フルバックアップは実行しないデータベースがある場合、ログバックアップは次の方法で保持されます。</block>
   <block id="5c63811228c15739fc821ea5492e3502" category="list-text">デフォルトでは、 SnapCenter は DAG 内の他のすべてのホストでこのデータベースの最も古いフルバックアップを検出し、フルバックアップの前に作成されたこのホスト上のすべてのログバックアップを削除します。</block>
   <block id="9363a6dd8a937e03c1a0328e0f457267" category="list-text">ログバックアップのみを使用する DAG 内のホストのデフォルトの保持設定を上書きするには、 _C ： \Program Files\NetApp\SnapManager WebApp\web.config_file にキー * MaxLogBackupOnlyCountWithoutFullBackup * を追加します。</block>
@@ -4458,10 +4364,8 @@
   <block id="bb3cdc866288305ce31a483a8074dfe8" category="list-text">[ コピーの管理 ] ビューで、 [ プライマリストレージまたはセカンダリストレージからの * バックアップ * ] をクリックして、バックアップの詳細を表示します。</block>
   <block id="611ffb27775c37bf7e60cd26cf9094c8" category="paragraph">バックアップの詳細が表形式で表示されます。</block>
   <block id="85000b203e676bc7818219dc9faf5391" category="list-text">表でバックアップを選択し、データ保護アイコンをクリックして、リストア、名前変更、削除の各処理を実行します。</block>
-  <block id="940f5685e97ecab99340ae1beaa57791" category="admonition">セカンダリストレージ上のバックアップは、名前変更または削除できません。Snapshot コピーの削除は、 ONTAP の保持設定によって行います。</block>
   <block id="4f61ab8a2a0c2852922b2d5a0f7a634a" category="summary">セカンダリストレージ（ミラーまたはバックアップ）から、バックアップされた Exchange Server データベースをリストアすることができます。</block>
   <block id="877b673d5c7c5e44277b4a9a4f2c7495" category="doc">セカンダリストレージから Exchange Server データベースをリストアする</block>
-  <block id="2a2d320b7960913eaeb585eb75c4ad27" category="paragraph">プライマリストレージからセカンダリストレージに Snapshot コピーをレプリケートしておく必要があります。</block>
   <block id="f4bfc70881af07e0b233d284dd9a5c22" category="list-text">左側のナビゲーションペインで、 [* リソース ] をクリックし、リストから [Microsoft Exchange Server プラグイン *] を選択します。</block>
   <block id="55301fa99490f8c21d0fdb7c28363f5b" category="list-text">[ リソース ] ページで、 [*View] ドロップダウン・リストから [*Database] または [*Resource Group] を選択します。</block>
   <block id="66f39c9d213bfdbae4fbc70e6b626a20" category="list-text">データベースまたはリソースグループを選択します。</block>
@@ -4476,14 +4380,11 @@
   <block id="28b4b7e6162ba7285f066beb06fc6f83" category="summary">リソースグループはすべてのデータ保護ジョブに必要です。リソースグループに 1 つ以上のポリシーを適用して、実行するデータ保護ジョブのタイプと保護スケジュールを定義することも必要です。</block>
   <block id="5bd6b169e9e0ed64f898dc3a02bd5dc0" category="doc">Exchange Server のリソースグループを作成してポリシーを適用します</block>
   <block id="60fa9fd8411bf39b1b035ddbdb6f8543" category="list-text">左側のナビゲーションペインで、 [ * リソース ] をクリックし、リストから Microsoft Exchange Server プラグインを選択します。</block>
-  <block id="0394f23db0f190b75cbe21e4a5a40ee7" category="paragraph">オプション： Snapshot コピー名のカスタムの名前形式を入力します。</block>
-  <block id="03f5752c8a2bd8ac3f833f6139819b87" category="paragraph">たとえば、 _customtext_resourcegroup_policy_hostname_or_resourcegroup_hostname_hostname_or_resourcegroup_hostname_hostname_1 のようになります。デフォルトでは、 Snapshot コピー名の後ろにタイムスタンプが追加されます。</block>
   <block id="1dfefedcde6c869266d5859ab23ccea2" category="list-text">リソースタイプと Database Availability Group from ドロップダウンリストを選択して、使用可能なリソースのリストをフィルタリングします。</block>
   <block id="11ef45d816fd55939848d9cd23e6b990" category="admonition">最近リソースを追加した場合は、リソースリストを更新しないと、使用可能なリソースのリストにリソースが表示されません。</block>
   <block id="fd9b238aef877a65aa688cbed16038c8" category="list-text">検索テキストボックスにリソースの名前を入力するか、スクロールしてリソースを探します。</block>
   <block id="88fd9ea8ef5d6be2e4dbe0754f9b540c" category="list-text">[ 使用可能なリソース ] セクションから [ 選択したリソース ] セクションにリソースを移動するには、次のいずれかの手順を実行します。</block>
   <block id="7cb4d9086d6c1cf01b806f319a85cc63" category="list-text">[ 使用可能なリソース ] セクションからリソースを選択し、右矢印をクリックして [ 選択したリソース ] セクションに移動します。</block>
-  <block id="40d8f5c9b7ab33a156de7775f928f1c6" category="paragraph">SnapCenter for Microsoft Exchange Server のリソースグループに、 Snapshot コピー 1 つあたりのデータベース数を 30 個以下にする必要があります。1 つのリソースグループに 30 個を超えるデータベースがある場合、追加のデータベース用に 2 つ目の Snapshot コピーが作成されます。したがって、メインバックアップジョブの下に 2 つのサブジョブが作成されます。セカンダリレプリケーションがあるバックアップの場合、 SnapMirror または SnapVault の更新が進行中に、サブジョブが重複する状況が発生することがあります。メインのバックアップジョブは、ジョブが完了したことがログに記録されていても、常時稼働し続けます。</block>
   <block id="615d8aed25e6e033e2c4a35b84715c0e" category="admonition">バックアップ・ジョブ作成時に選択するサーバ上の * バックアップ・コピーがポリシーに含まれている場合は、サーバ選択オプションが表示され、 1 つ以上のサーバを選択できます。サーバを選択するオプションでは、選択したデータベースがネットアップストレージ上にあるサーバのみが表示されます。</block>
   <block id="13d62cafc9cfc5929565224152d9294b" category="paragraph">この処理は、ポリシーに指定されている頻度ごとに実行する必要があります。設定されたスケジュールは、 [ 選択したポリシーのスケジュールの設定 ] セクションの [ 適用されたスケジュール *] 列に一覧表示されます。</block>
   <block id="632e8f771f2b94f3016767f9170f82e3" category="paragraph">E メール通知を利用する場合は、 GUI または PowerShell コマンド「 S et-SmtpServer 」を使用して、 SMTP サーバの詳細を指定しておく必要があります。</block>
@@ -4578,7 +4479,6 @@
   <block id="aa14e187b593d2a11c1d14cbbec8aadc" category="doc">Exchange データベースをリストアします</block>
   <block id="b016fed9d8e76be8e2b8327a19c79e1c" category="list-text">リソースグループ、データベース、または Database Availability Group （ DAG ；データベース可用性グループ）をバックアップしておく必要があります。</block>
   <block id="e41a54e30fee34f56cdc085b137684ba" category="list-text">Exchange データベースを別の場所に移動した場合、古いバックアップのリストア処理は実行できません。</block>
-  <block id="dc7e224e68acf9c07eb62ae6faae36fb" category="list-text">Snapshot コピーをミラーまたはバックアップにレプリケートするユーザには、 SnapCenter 管理者がユーザに対してソースとデスティネーションの両方のボリューム用に SVM を割り当てる必要があります。</block>
   <block id="8a422d49b5d70c11466a0e5c0147bc9d" category="list-text">DAG では、ネットアップ以外のストレージにアクティブなデータベースコピーがあり、ネットアップストレージにあるデータベースのパッシブコピーバックアップからリストアする場合、パッシブコピー（ネットアップストレージ）をアクティブコピーとして作成し、リソースを更新してリストア処理を実行します。</block>
   <block id="fba073acc19f8172d74430f92eb03d51" category="paragraph">パッシブデータベースコピーをアクティブデータベースコピーとして作成するには、「 Move-ActiveMailboxDatabase 」コマンドを実行します。</block>
   <block id="727d6ec7c143ece348a58c5723f2f025" category="inline-link">Microsoft のドキュメント</block>
@@ -4651,7 +4551,6 @@
   <block id="7fc686e60d66e170f709548904c946f0" category="doc">Exchange Server リソースのバックアップ戦略を定義する</block>
   <block id="a1232051e6c5e893c86adc35d8552a57" category="paragraph">バックアップジョブを作成する前にバックアップ戦略を定義しておくと、データベースの正常なリストアに必要なバックアップを確実に作成できます。バックアップ戦略の大部分は、サービスレベルアグリーメント（ SLA ）、目標復旧時間（ RTO ）、および目標復旧時点（ RPO ）によって決まります。</block>
   <block id="5947ba0032a3037dbf7c6e98581f0d07" category="section-title">Exchange データベースでサポートされるバックアップのタイプ</block>
-  <block id="0ba326934a946ce406e1443b1fbae49f" category="paragraph">SnapCenter を使用して Exchange メールボックスをバックアップするには、データベースやデータベース可用性グループ（ DAG ）などのリソースタイプを選択する必要があります。Snapshot コピーテクノロジを使用して、リソースが存在するボリュームのオンラインの読み取り専用コピーが作成されます。</block>
   <block id="77a2dc238b9d72214020436ab4f4364f" category="paragraph">フルバックアップとログバックアップ</block>
   <block id="c0ccfcb0fa212601291c0ab7fc0d5274" category="paragraph">データベースおよび切り捨てられたログを含むすべてのトランザクションログがバックアップされます。</block>
   <block id="f1d6025290f1888db5af91ebbe3a8e9f" category="paragraph">フルバックアップが完了すると、 Exchange Server はデータベースにコミット済みのトランザクションログを切り捨てます。</block>
@@ -4762,7 +4661,6 @@
   <block id="8f8654928a0369230f1d533710a0be96" category="doc">Windows ファイルシステムのリソースグループを作成する</block>
   <block id="62305fdbdeb0bfd0c2832cfd34ad6507" category="list-text">リソースページで、リストから * ファイルシステム * を選択します。</block>
   <block id="bd268863b796bc63e2713dc5a39dbb1e" category="admonition">最近 SnapCenter にファイルシステムを追加した場合は、 [* リソースを更新 * （ Refresh Resources ） ] をクリックして、新しく追加されたリソースを表示します。</block>
-  <block id="690a9bec3617f718bd8cc89a054f296c" category="paragraph">たとえば、 customtext_resourcegroup_policy_hostname や resourcegroup_hostname などの形式です。デフォルトでは、 Snapshot コピー名の後ろにタイムスタンプが追加されます。</block>
   <block id="c101058e7ea21bbbf2a5ac893088e90b" category="paragraph">タグ（ Tag ）</block>
   <block id="97bb2f32b5c5b00dd996d61d3d89e4f8" category="paragraph">リソースグループを検索するときに役立つわかりやすいタグを入力します。</block>
   <block id="40320bb5aab2bc3ee432d214bae12756" category="list-text">ホストを選択してリソースのリストをフィルタリングします。</block>
@@ -4834,7 +4732,6 @@
   <block id="e370a7ee0bb74d7599ae4a101282e69b" category="paragraph">_debuglog_parameter には、 SnapCenter のログファイルのパスが含まれます。このログファイルにはインストールで実行されるプラグインの前提条件に関するチェック結果が記録されるため、トラブルシューティング情報を入手する方法としてこのログファイルに書き込むことを推奨します。</block>
   <block id="69aab0f4bbb32969d2c33fb5099aa4fa" category="paragraph">必要に応じて、 SnapCenter for Windows パッケージのログファイルでその他のトラブルシューティング情報を確認できます。パッケージのログファイルは、 _%Temp_folder に（最も古いものから）一覧表示されます（例： _C ： \temp\_ ）。</block>
   <block id="3d7844d331c36c05271f66508c7df774" category="admonition">Plug-in for Windows をインストールすると、 SnapCenter サーバではなくホストにプラグインが登録されます。SnapCenter サーバにプラグインを登録するには、 SnapCenter GUI または PowerShell コマンドレットを使用してホストを追加します。ホストを追加すると、プラグインが自動的に検出されます。</block>
-  <block id="8796317ad8b32fb8aef870b01b6167d3" category="summary">SnapCenter Plug-in for Microsoft Windows は、 Microsoft ファイルシステムリソースに対してアプリケーション対応のデータ保護管理を可能にする、 NetApp SnapCenter ソフトウェアのホスト側コンポーネントです。また、 Windows ファイルシステムのストレージのプロビジョニング、整合性のある Snapshot コピーの作成、およびスペースの再生が可能です。Plug-in for Windows を使用することで、 SnapCenter 環境でのファイルシステムのバックアップ、リストア、およびクローニングの処理を自動化できます。</block>
   <block id="a9a17ec2f387b7172d4f7e035744dc4b" category="doc">SnapCenter Plug-in for Microsoft Windows の概要を参照してください</block>
   <block id="da729e684f85b2f6417b12711de4813b" category="paragraph">Plug-in for Windows がインストールされている場合は、 SnapCenter で NetApp SnapMirror テクノロジを使用して別のボリュームにバックアップセットのミラーコピーを作成できるほか、 NetApp SnapVault テクノロジを使用してアーカイブや標準への準拠を目的としたディスクツーディスクバックアップレプリケーションを実行できます。</block>
   <block id="b8254bbaf2c31e637fae40e7a6bc0f8c" category="summary">SnapCenter のホストの追加ページを使用して、 Windows ホストを追加できます。指定したホストには、 SnapCenter Plug-in for Microsoft Windows が自動的にインストールされます。これはプラグインのインストールに推奨される方法です。ホストを追加してプラグインをインストールするには、個々のホストまたはクラスタを使用します。</block>
@@ -4862,11 +4759,9 @@
   <block id="89369317547508f73174b251351213fb" category="paragraph">必要に応じて、パスをカスタマイズできます。SnapCenter Plug-ins Package for Windows のデフォルトパスは C ： \Program Files\NetApp\SnapManager です。ただし、必要に応じて、デフォルトパスをカスタマイズできます。</block>
   <block id="0f24a42c91809cffb3303665febc60e6" category="paragraph">WSFC のすべてのクラスタノードを追加するには、このチェックボックスを選択します。</block>
   <block id="ef3600a5849bde43368ee5e3a3f04387" category="paragraph">「 * 事前確認をスキップ」チェックボックスを選択していない場合、プラグインのインストール要件をホストが満たしているかどうかが検証されます。ディスクスペース、 RAM 、 PowerShell のバージョン、 .NET のバージョン、および場所が、最小要件に照らして検証されます。最小要件を満たしていない場合は、対応するエラーまたは警告メッセージが表示されます。</block>
-  <block id="07117ad816bc94530a93fd42336f2f79" category="summary">Plug-in for Windows は、ストレージシステム上でネットアップの Snapshot コピーテクノロジと統合されます。Plug-in for Windows の操作には、 SnapCenter インターフェイスを使用します。</block>
   <block id="6c2908e5cc43162ef9ecea994b17389d" category="doc">SnapCenter Plug-in for Windows の特長</block>
   <block id="5152783556f9f44813fcbba2514ba270" category="paragraph">Plug-in for Windows の主な機能は次のとおりです。</block>
   <block id="f865c48aa56189960fc5c9a515903527" category="paragraph">日常的なファイルシステムのバックアップのスケジュールを設定したり、ポリシーベースのバックアップ保持を設定したり、リストア処理をセットアップしたりできます。SnapCenter から E メールアラートを送信するように設定して、ファイルシステム環境をプロアクティブに監視することもできます。</block>
-  <block id="01579da5d7cdc4848493e7de2b549b68" category="paragraph">Plug-in for Windows では、ネットアップの Snapshot コピーテクノロジを使用しています。これにより、ファイルシステムを数秒でバックアップし、ホストをオフラインにすることなく迅速にリストアすることが可能です。Snapshot コピーはストレージスペースを最小限しか消費しません。</block>
   <block id="5e552e263b3cac8a0ad4ef299469911f" category="paragraph">Plug-in for Windows には、上記の主要な機能以外にも次のようなメリットがあります。</block>
   <block id="aa3fb9fca5fdb4ad7f86964cd9fd89cc" category="list-text">バックアップ、リストア、およびクローニングのワークフローがサポートされます</block>
   <block id="4a3e39ebca9c4f0e9238b4f749f8eda1" category="list-text">NetApp FlexClone テクノロジを使用して、本番用ファイルシステムのスペース効率に優れたコピーを作成し、テストまたはデータの抽出を行います</block>
@@ -4891,7 +4786,6 @@
   <block id="1c726678cd6140171263bcf8b41347de" category="list-text">[ リソース ] ページで、 [ ファイルシステム ] リソースタイプを選択し、バックアップするリソースを選択します。</block>
   <block id="94470133339a09768284b95eccb8271a" category="list-text">File System-Protect ウィザードが自動的に起動しない場合は、 [*Protect] をクリックしてウィザードを開始します。</block>
   <block id="c62706269a2329ff51bf94ff5010638a" category="paragraph">「リソースグループの作成」のタスクの説明に従って、保護設定を指定します。</block>
-  <block id="da4b05983b1e6447f9b34c3d68c1e1e9" category="list-text">オプション：ウィザードのリソースページで、 Snapshot コピーのカスタム名形式を入力します。</block>
   <block id="fb87909a252e4e2dc396bcfb921e0428" category="list-text">[Policies] ページで、次のタスクを実行します。</block>
   <block id="1957e5ad25b71af9fcaddadddc14180d" category="paragraph">既存のポリシーを選択し、 [*Details*] をクリックすると、そのポリシーを使用できるかどうかを確認できます。</block>
   <block id="72505ce1779969b10a827b76ce40ee9f" category="paragraph">既存のポリシーがいずれも要件を満たさない場合は、既存のポリシーをコピーして変更するか、をクリックして新しいポリシーを作成できます <block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block> ポリシーウィザードを起動します。</block>
@@ -4926,7 +4820,6 @@
   <block id="52b19e85e6a29b6fe5690f47944f859f" category="paragraph">ポリシーではバックアップの頻度のみを指定します。バックアップの具体的なスケジュールは、リソースグループで定義します。したがって、複数のリソースグループで同じポリシーとバックアップ頻度を使用している場合でも、別々のバックアップスケジュールを設定できます。</block>
   <block id="de22735eba76a2843e4c2bd28dfb8f2c" category="list-text">[ 保持 ] ページで ' オン・デマンド・バックアップおよび選択した各スケジュール頻度の保持設定を指定します</block>
   <block id="8e77ee8a8b856638f0a6d0872be527cd" category="paragraph">保持する Snapshot コピーの総数</block>
-  <block id="92cc2a9a2d5824e9c2b490a8fb082801" category="paragraph">SnapCenter ストアを自動的に削除する前に Snapshot コピー数を指定する場合は、このオプションを選択します。</block>
   <block id="0a3cfeac0775871baedb24392bc4423c" category="paragraph">より古い Snapshot コピーを削除します</block>
   <block id="9fbc3fb0ee9d4d329dbc0f3053b7b871" category="paragraph">SnapCenter がバックアップコピーを保持する日数を指定する場合は、このオプションを選択します。指定した日数を過ぎると削除されます。</block>
   <block id="6c713d56e86f927e1bd66c7de2ed52c1" category="summary">SnapCenter Plug-in for Microsoft Windows を複数のホストに一度にインストールする場合は、 Install-SmHostPackage PowerShell コマンドレットを使用します。</block>
@@ -5004,17 +4897,11 @@
   <block id="1bde0647fb6f71617acb9bfadcf22c2e" category="section-title">Windows ファイルシステムに必要なバックアップの数</block>
   <block id="d2359e56e9afe6abfc78e46aebc63acc" category="paragraph">必要なバックアップの数を左右する要因としては、 Windows ファイルシステムのサイズ、使用中のボリュームの数、ファイルシステムの変更率、サービスレベルアグリーメント（ SLA ）などがあります。</block>
   <block id="14935283082f29f3ca37aae3f791f689" category="section-title">Windows ファイルシステムのバックアップ命名規則</block>
-  <block id="3d93f758a971e608a1963f204b536e13" category="paragraph">Windows ファイルシステムのバックアップでは、 Snapshot コピーのデフォルトの命名規則が使用されます。デフォルトのバックアップ命名規則では Snapshot コピー名にタイムスタンプが追加されるため、コピーが作成されたタイミングを特定できます。</block>
-  <block id="38abb24b7df715b15e98d77be09d90bc" category="paragraph">Snapshot コピーでは、次のデフォルトの命名規則が使用されます。 resourcegroupname_hostname_timestamp</block>
   <block id="ec8d9746dfb7f8cf3bf5aafdc14bcd92" category="list-text">「 TS1 」はリソースグループ名です。</block>
   <block id="c0f5323d1ade2329c48f90fc8ed6ff59" category="list-text">「 m ach1x88 」はホスト名です。</block>
   <block id="cd63eec15ecf1146374bcd2d2325467e" category="list-text">「 03-12-2015_23.17.26 」は日付とタイムスタンプです。</block>
   <block id="7aa15b9ece3853d2adab83f8a1ac2fc0" category="paragraph">バックアップの作成時に、バックアップを識別するためのタグを追加することもできます。一方、カスタマイズしたバックアップ命名規則を使用する場合は、バックアップ処理の完了後にバックアップの名前を変更する必要があります。</block>
-  <block id="eac2032108306b4ff1100113fd59c42a" category="summary">SnapCenter では、 Snapshot コピーテクノロジを使用して Windows ファイルシステムのリソースがバックアップされます。これには、 Windows クラスタの LUN 、 CSV （クラスタ共有ボリューム）、 RDM （ raw デバイスマッピング）ボリューム、 ALM （非対称 LUN マッピング）、および VMFS / NFS （ NFS を使用する VMware Virtual Machine File System ）に基づく VMDK にあるリソースが含まれます。</block>
   <block id="43c5e19fd38af83f0ab296f57f1cfdee" category="doc">SnapCenter での Windows ファイルシステムのバックアップ方法</block>
-  <block id="ff572a35b84827c88003212d894ddff1" category="paragraph">SnapCenter は、ファイルシステムの Snapshot コピーを作成することによってバックアップを作成します。ボリュームに複数のホストの LUN が含まれている場合は、フェデレーテッドバックアップを使用すると、各 LUN を個別にバックアップするよりも迅速かつ効率的に処理できます。ボリュームの Snapshot コピーを 1 つだけ作成すれば、各ファイルシステムの Snapshot を個別に作成しなくても済むからです。</block>
-  <block id="4af088960b278bd1fc6cf8e89db9376f" category="paragraph">SnapCenter で作成される Snapshot コピーには、ストレージシステムボリューム全体がキャプチャされます。ただし、バックアップは、バックアップが作成されたホストサーバに対してのみ有効になります。</block>
-  <block id="555ca970deac11b0a700273f40a51b85" category="paragraph">他のホストサーバのデータが同じボリュームに含まれている場合、それらのデータを Snapshot コピーからリストアすることはできません。</block>
   <block id="27a46746c79eda007f4ac37660e5a5d8" category="admonition">Windows ファイルシステムにデータベースが含まれている場合、ファイルシステムをバックアップしてもデータベースがバックアップされるわけではありません。データベースをバックアップするには、いずれかのデータベースプラグインを使用する必要があります。</block>
   <block id="2b286ead8eb2ff2974da65dbfdfc72f0" category="summary">Plug-in for Windows をインストールする前に、一定のインストール要件について理解しておく必要があります。</block>
   <block id="bca5d73b25b97404586748bb0cc0c9ea" category="doc">SnapCenter Plug-in for Microsoft Windows のインストール要件</block>
@@ -5318,7 +5205,6 @@
   <block id="c1fb7c552ac7beaf17dc346fda22eff6" category="list-text">リソースグループを削除すると、関連付けられているスケジュールもすべて削除されます。</block>
   <block id="622c9e28dad13fa5c04d47d33d343831" category="list-text">ホストに別のホストと共有されているリソースグループがある場合にそのホストを削除すると、リソースグループも削除されます。</block>
   <block id="759ef57c3be2a273728558ce141e699a" category="list-text">運用停止されたプラグインホストまたは到達不能なプラグインホストを削除するには、 _Remove-SmHost_cmdlet を使用してください。</block>
-  <block id="40b2be8df06289f2b15c3ba4ee7adb9d" category="list-text">ホストの削除にかかる時間は、バックアップの数と保持設定によって異なります。これは、各コントローラから Snapshot コピーが削除され、メタデータが消去されるためです。</block>
   <block id="5d892beace7b1624b071044ece982dcc" category="list-text">削除するホストを選択し、 * Remove * をクリックします。</block>
   <block id="19355742858cf70570e1a01c80a490ab" category="list-text">Oracle RAC クラスタの場合、クラスタ内のすべてのホストから SnapCenter ソフトウェアを削除するには、 * クラスタのすべてのホストを含める * を選択します。</block>
   <block id="f5e83038c41d36daffac320f7ddc3601" category="paragraph">クラスタの 1 つのノードを削除して、すべてのノードを 1 つずつ削除することもできます。</block>
@@ -5465,7 +5351,6 @@
   <block id="6aba9ab9639862100a3f951f105883b5" category="summary">バックアップジョブを作成する前にバックアップ戦略を定義しておくと、リソースの正常なリストアやクローニングに必要なバックアップを確実に作成できます。バックアップ戦略の大部分は、サービスレベルアグリーメント（ SLA\ ）、目標復旧時間（ RTO\ ）、および目標復旧時点（ RPO\ ）によって決まります。</block>
   <block id="24940fc9df90a646aba3659646256b87" category="doc">バックアップ戦略を定義する</block>
   <block id="aec3dc1357d1c4a5e8173a948d80fd3c" category="paragraph">バックアップジョブを作成する前にバックアップ戦略を定義しておくと、リソースの正常なリストアやクローニングに必要なバックアップを確実に作成できます。バックアップ戦略の大部分は、サービスレベルアグリーメント（ SLA ）、目標復旧時間（ RTO ）、および目標復旧時点（ RPO ）によって決まります。</block>
-  <block id="95aef696c73e163c6ea6099b0c1c735e" category="list-text">整合グループ Snapshot コピーを保持するかどうかを決定し、保持する場合は整合グループ Snapshot コピーを削除する適切なオプションを決定します。</block>
   <block id="3342baf28ca203b7bf1c234a26c83caf" category="list-text">レプリケーションのために NetApp SnapMirror テクノロジを使用するか、または長期保持のために NetApp SnapVault テクノロジを使用するかを決定します。</block>
   <block id="ca9c798c580412195f975431858e693e" category="list-text">バックアップ処理の前後にコマンドを実行するかどうかを決定し、実行する場合はプリスクリプトまたはポストスクリプトを用意します。</block>
   <block id="44b5e99e5c2bcf037907be7f6d205be8" category="summary">リソースのバックアップまたはクローニングを準備する際に、プライマリストレージとセカンダリストレージ上のすべてのバックアップとクローンの図を表示すると役に立ちます。トポロジページでは、選択したリソースまたはリソースグループに使用できるバックアップとクローンをすべて表示できます。これらのバックアップとクローンの詳細を確認し、対象を選択してデータ保護処理を実行できます。</block>
@@ -5566,12 +5451,8 @@
   <block id="e734e6e2e702d38ebab6ed3c050a5e72" category="doc">カスタムプラグインリソースのバックアップをクローニングする</block>
   <block id="edc25de414c7fe73d241458dab7bca2b" category="summary">個々のカスタムプラグインリソースがどのリソースグループにも含まれていない場合は、のリソースページからリソースをバックアップできます。リソースはオンデマンドでバックアップすることも、リソースにポリシーが適用されてスケジュールが設定されている場合は、スケジュールに従って自動的にバックアップが行われるようにすることもできます。</block>
   <block id="8ffa4ba0dd2df5995fd397c72a149679" category="doc">個々のカスタムプラグインリソースをバックアップする</block>
-  <block id="16bfcf20ed729d5958d62a1310952406" category="paragraph">Snapshot コピー処理が完了するまでの待機時間を指定するには、「至急」、「中」、または「不完全」を選択します。</block>
-  <block id="6ab61c7e4778c57cf88bc1b95a583d05" category="list-text">[* Scripts] の矢印をクリックすると、休止、 Snapshot コピー、および休止解除の各処理に対して PRE および POST のコマンドが実行されます。バックアップ処理を終了する前にプリコマンドを実行することもできます。</block>
   <block id="a5094e6952e443df9b800d4f5e45d91d" category="paragraph">プリスクリプトとポストスクリプトは SnapCenter サーバで実行されます。</block>
   <block id="b6b1826c899350995a39684ee19f8c7d" category="list-text">「カスタム構成」の矢印をクリックし、このリソースを使用するすべてのジョブに必要なカスタム値のペアを入力します。</block>
-  <block id="f02ae06c15b2bac3b80b81485cd916ce" category="paragraph">SnapCenter でストレージレベルの Snapshot コピーを作成します</block>
-  <block id="e668102d5b8a83e66e31f5c42dcbb239" category="paragraph">SnapCenter で Plug-in for Windows を使用してファイルシステムを整合性のある状態にしてから Snapshot コピーを作成する</block>
   <block id="53899dcc4360d3b8622ce5dc08a12950" category="list-text">[Policies] ページで、次の手順を実行します。</block>
   <block id="30b65b6968f11ce5399cacf995839f65" category="list-text">[ 通知 ] ページの [ 電子メールの設定 *] ドロップダウンリストから、電子メールを送信するシナリオを選択します。</block>
   <block id="fab91412eb5d45bdeeca565417bd43bb" category="summary">バックアップのワークフローには、計画、バックアップするリソースの特定、バックアップポリシーの管理、リソースグループの作成とポリシーの適用、バックアップの作成、処理の監視が含まれます。</block>
@@ -5604,11 +5485,9 @@
   <block id="6034a2219adc98364247fafa6c7ac86e" category="paragraph">プラグインのバージョンを返す必要があります。</block>
   <block id="158432aca9b72e6906771c2e2fddbb8c" category="paragraph">SnapCenter サーバまたはエージェントがプラグインのバージョンを要求します。</block>
   <block id="b55904d7759e5a6f24d4ca0dbdafd019" category="paragraph">休止</block>
-  <block id="6498844a78720752efd31c7ceef96db9" category="paragraph">アプリケーションで休止を実行する必要があります。ほとんどの場合、この状態になると、 SnapCenter サーバでバックアップ（ Snapshot コピーなど）を作成できるようになります。</block>
   <block id="15f6d11fd1f65efe57d9b506c0e06313" category="paragraph">SnapCenter サーバが Snapshot コピーを作成する前、または一般的なバックアップを実行します。</block>
   <block id="b52dd62394b28fe653e8d770689ea60c" category="paragraph">休止解除</block>
   <block id="09ed5f9b77aca4b8dd337f525d41ea4c" category="paragraph">アプリケーションに対して休止解除を実行する必要があります。ほとんどの場合、これはアプリケーションを通常の動作状態に戻すことを意味します。</block>
-  <block id="0d8437d4c5f061421beecf8d457549e5" category="paragraph">SnapCenter サーバで Snapshot コピーが作成されるか、または一般的にバックアップが実行されます。</block>
   <block id="8c6384dda98d8864d00e29dc96179970" category="paragraph">クリーンアップ</block>
   <block id="ff36b404767cd635ab945ad85f4f04b9" category="paragraph">プラグインがクリーンアップする必要があるすべての項目をクリーンアップする責任があります。</block>
   <block id="5c34b664bab5b91f3ebdcd206cf4d801" category="paragraph">SnapCenter サーバでワークフローが完了したとき（正常終了したとき、または障害が発生したとき）。</block>
@@ -5728,8 +5607,6 @@
   <block id="34c6a8e1099863a52dbf55536f87b658" category="admonition">Linux ファイルシステム（ Linux フレーバ）がサポートされています。AIX/Solaris （ UNIX 版）はサポートされていません。</block>
   <block id="8cf57b0816d44a1b975402b721da2725" category="paragraph">Discovery_complete の手順を実行します</block>
   <block id="ce9d724a7186956382a6ad763f302ffc" category="admonition">Linux ファイルシステム（ Linux フレーバ）がサポートされています。AIX および Solaris （ UNIX 版）はサポートされていません。</block>
-  <block id="74df5012c8bd1283c16b4d90e5045b5e" category="paragraph">このスタブは、アプリケーションを Snapshot コピーの作成が可能な状態にする休止を実行します。これは、 Snapshot コピー処理の前に呼び出されます。保持するアプリケーションのメタデータは応答の一部として設定する必要があります。これは、対応するストレージ Snapshot コピーの以降のクローニング処理またはリストア処理中に、構成パラメータの形式で返されます。</block>
-  <block id="e1744ce71adaa3e31ac1cefb33719ea8" category="paragraph">このスタブは、アプリケーションを通常の状態に戻すことを意味し、休止解除を実行します。この呼び出しは、 Snapshot コピーの作成後に行われます。</block>
   <block id="6cf49b275e3f780958fd8f3a3d44acb5" category="paragraph">clone_pre</block>
   <block id="d57c24f3fe52d16e7169b912dd647f0d" category="paragraph">任意。</block>
   <block id="34db83eb305843e804a58cb6bd2946a1" category="paragraph">このスタブは、クローニング前タスクを実行する役割を果たします。このパラメータは、組み込みの SnapCenter サーバクローニングインターフェイスを使用していることを前提としており、クローニング処理の実行時にトリガーされます。</block>
@@ -5781,7 +5658,6 @@
   <block id="cc6d690e073824b8326c599c6b544c1f" category="paragraph">リソースを追加したあとに、リソースの詳細を変更することができます。カスタムプラグインリソースにバックアップが関連付けられている場合、リソース名、リソースタイプ、およびホスト名のフィールドは変更できません。</block>
   <block id="15672c6e3417ee4aa0cd7381b560f34d" category="summary">SnapCenter を使用してリソースをリストアすることができます。リストア処理の機能は、使用するプラグインによって異なります。</block>
   <block id="d697fbdd5eef7a80e3797fe363484b61" category="doc">リソースのバックアップをリストアする</block>
-  <block id="6f07fad9174a2429e52c321216b14548" category="list-text">ユーザが Snapshot コピーをミラーまたはバックアップにレプリケートする場合は、ソースボリュームとデスティネーションボリューム両方の Storage Virtual Machine （ SVM ）を SnapCenter 管理者がユーザに割り当てる必要があります。</block>
   <block id="fdb09cc42e4c011a17d475c9e1a1815e" category="list-text">リストアするリソースまたはリソースグループに対して現在実行中のバックアップ処理がある場合は、すべてキャンセルしておく必要があります。</block>
   <block id="2124f96b55bd8bcfe23c27d4d7c30129" category="paragraph">デフォルトのリストア処理でリストアされるのは、ストレージオブジェクトのみです。アプリケーションレベルのリストア処理は、その機能がカスタムプラグインで提供されている場合にのみ実行できます。</block>
   <block id="d40ea75f2b075d0e778b5d5f091abd87" category="paragraph">リソースは、タイプ、ホストまたはクラスタ名、関連するリソースグループとポリシー、ステータスなどの情報とともに表示されます。</block>
@@ -5791,7 +5667,6 @@
   <block id="038a510e6124e7cea7f4514a9473584a" category="list-text">[ コピーの管理 ] 表示から、プライマリまたはセカンダリ（ミラーまたはバックアップ）ストレージシステムから [ * バックアップ ] を選択します。</block>
   <block id="26d6fe8240bb84db3aac12f067bd7006" category="list-text">[Primary backup （ s ） ] テーブルで、リストア元のバックアップを選択し、をクリックします <block ref="401f8f248ae37b21256b9fc8e83bcaa3" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="e665a840f7240ecfe0bd9c88c7d36b0c" category="list-text">[*Complete Resource] を選択した場合、リソースのバックアップがリストアされます。</block>
-  <block id="de21de4104bb03728916aa887ea228d0" category="paragraph">リソースにストレージ容量としてボリュームまたは qtree が含まれている場合、それらのボリュームまたは qtree の以降の Snapshot コピーは削除され、リカバリすることはできません。また、同じボリュームまたは qtree で他のリソースがホストされている場合、そのリソースも削除されます。</block>
   <block id="15390094a70f6891fc6b5bf032f36c29" category="list-text">「 * ファイルレベル * 」を選択した場合は、「 * すべて * 」を選択するか、ボリュームまたは qtree を選択して、カンマで区切って選択したボリュームまたは qtree に関連するパスを入力できます。</block>
   <block id="5778b765a422af2fc3146858308856d0" category="list-text">リソースタイプが LUN の場合は、 LUN 全体がリストアされます。LUN は複数選択できます。+ 注：「すべて * 」を選択すると、ボリューム、 qtree 、または LUN 上のすべてのファイルがリストアされます。</block>
   <block id="31bd137fb863f9fc2588f7a75e79de3d" category="paragraph">すべてのログをリストアします</block>
@@ -5802,16 +5677,9 @@
   <block id="a26531ddd22c342a5bd9860ea919b50d" category="paragraph">「 * なし * 」を選択します。</block>
   <block id="53582adf49551bf81650e7c9447e3a03" category="paragraph">また、送信者と受信者の E メールアドレス、および E メールの件名を指定する必要があります。SMTP は、 [* 設定 * &gt; * グローバル設定 * （ * Settings * &gt; * Global Settings * ） ] ページでも設定する必要があります。</block>
   <block id="e0fbca907db95ebcd8e259b32ff0c736" category="summary">SnapCenter は、プラグインアプリケーションと統合されるほか、ストレージシステム上でネットアップのテクノロジと統合されます。Custom Plug-ins の操作には、 SnapCenter のグラフィカルユーザインターフェイスを使用します。</block>
-  <block id="132bc3bfff5021446bf1eec491193e6f" category="paragraph">SnapCenter では、 SnapCenter Custom Plug-ins でネットアップの Snapshot コピーテクノロジを使用してリソースがバックアップされます。Snapshot コピーはストレージスペースを最小限しか消費しません。</block>
   <block id="69dcda31e57641c96f304474f66756ca" category="paragraph">Custom Plug-ins 機能を使用すると、次のメリットもあります。</block>
-  <block id="49bc745c5af6e687a7001eeef19edb34" category="list-text">外部コマンドを使用して Snapshot コピーを作成できます。</block>
-  <block id="ee81cae3ec3e0c9309ae63b9a03ca91a" category="list-text">Windows 環境でファイルシステムと整合性のある Snapshot コピーを作成できます。</block>
   <block id="aa5531c2ecb8be9440f8c1f83b8e7d4f" category="summary">リソースグループはコンテナであり、バックアップして保護するリソースをここに追加する必要があります。</block>
-  <block id="a80db864d152c8b32afdc8aba08be8a4" category="paragraph">たとえば、 _customText_resource group_policy_hostname や resource group_hostname_hostname などです。デフォルトでは、 Snapshot コピー名の後ろにタイムスタンプが追加されます。</block>
   <block id="3beb0a9c61be39e8320fe0059a03c74a" category="paragraph">アーカイブログ管理を有効にしてアーカイブログを削除できます。</block>
-  <block id="dc703326700303bf93d1386ba9fca6a5" category="paragraph">ファイルシステムの整合性を使用した SnapCenter を選択します。</block>
-  <block id="cc1f89ce717207d3bd06c999199b9304" category="paragraph">ファイルシステムの整合性なしで SnapCenter を選択します。</block>
-  <block id="fb99cb02e8a44f5112f8225ca020b979" category="paragraph">Other を選択し、ホストで実行するコマンドを入力して Snapshot コピーを作成します。</block>
   <block id="bfd0e05a188a0885b5397fae78f649b8" category="paragraph">ポリシーは、 [ 選択したポリシーのスケジュールの設定 *] セクションに一覧表示されます。</block>
   <block id="6041b17ee877813c3440ee714e48b911" category="paragraph">設定されたスケジュールは、 [ 適用されたスケジュール ] 列に一覧表示されます。サードパーティ製バックアップスケジュールが SnapCenter バックアップスケジュールと重複している場合、それらのバックアップスケジュールはサポートされません。</block>
   <block id="6728b4a43abbebd3cc07a2cacc5e0c06" category="paragraph">ホストを追加するユーザには、ホストに対する管理者権限が必要です。</block>
@@ -5829,8 +5697,6 @@
   <block id="b17bab2e169e781f68778276e3c1ff06" category="paragraph">各オペレーションは ' サーバにメッセージを送信することができますサーバは ' コンテンツを表示して保存しますメッセージには、メッセージレベル、タイムスタンプ、およびメッセージテキストが含まれます。複数行のメッセージがサポートされます。</block>
   <block id="fb2ea703b13d059f6b7ea5da806021df" category="paragraph">の形式で入力し</block>
   <block id="ef7349bf7e64c5812dde44dfe1ea9ed5" category="paragraph">SnapCenter プラグインはプラグインスタブを実装する必要があります。SnapCenter サーバが呼び出すメソッドは、特定のワークフローに基づいています。</block>
-  <block id="4305bf9c0dcb1a2a6873aac14cbecaca" category="paragraph">このスタブは休止を実行します。Snapshot コピーを作成できる状態にアプリケーションを配置します。これは、ストレージ Snapshot コピー処理の前に呼び出されます。</block>
-  <block id="449021fc86b4250dcd4ffecba5f61ca8" category="paragraph">休止解除を実行する場合は、このスタブを指定します。アプリケーションは通常の状態になります。ストレージ Snapshot コピー処理のあとに呼び出されます。</block>
   <block id="f7eeb12c0ae87e1a428729d93636f705" category="paragraph">このスタブは、クローニング前のタスクを実行する役割を果たします。この場合、組み込みの SnapCenter クローニングインターフェイスを使用しており、「 clone_vol または clone_lun 」操作の実行時にのみトリガーされることを前提としています。</block>
   <block id="7d08df91908649fc980c6e4561c46d42" category="paragraph">この STUB は、クローニング後のタスクの実行を担当します。このパラメータは、組み込みの SnapCenter クローニングインターフェイスを使用していること、および「 clone_vol 」または「 clone_lun 」処理を実行するときにのみトリガーされることを前提としています。</block>
   <block id="aadbc30f9f18452d76bb86a523d4013d" category="paragraph">このスタブはリストア前のタスクを実行するためのものです。この処理は、組み込みの SnapCenter リストアインターフェイスを使用していることを前提としており、リストア処理の実行中にのみ実行されます。</block>
@@ -5853,7 +5719,6 @@
   <block id="0b15a431b87402bce4bdb3d69d72102d" category="list-text">バックアップポリシーとは、バックアップを管理、スケジューリング、および保持する方法を定めた一連のルールです。レプリケーション、スクリプト、アプリケーション設定を指定することもできます。</block>
   <block id="f29871ab419804e987d1bfb5f3274244" category="list-text">ポリシーでオプションを指定しておくことで、別のリソースグループにポリシーを再利用して時間を節約することができます。</block>
   <block id="42671d398be6103911a06f9936ab9855" category="admonition">リソースグループを作成する際に、バックアップ処理のスケジュール（開始日、終了日、頻度）を指定することができます。これにより、ポリシーとバックアップ間隔が同じである複数のリソースグループを作成できますが、各ポリシーに異なるバックアップスケジュールを割り当てることもできます。</block>
-  <block id="3a30bd3496c2190790bc5bd919e52d87" category="paragraph">ONTAP の保護関係のタイプがミラーとバックアップの場合、このオプションのみを選択すると、プライマリで作成された Snapshot コピーがデスティネーションに転送されませんが、デスティネーションのリストに表示されます。この Snapshot コピーがリストア処理の対象としてデスティネーションで選択されると、「 Secondary Location is not available for the selected vaulted/mirrored backup 」というエラーメッセージが表示されます。</block>
   <block id="76ff1ceb8558ff2b4e47757b810cbdef" category="doc">カスタムプラグインのバックアップ処理をキャンセルする</block>
   <block id="6af1ebe4d54e4d359cfda12fdfc23a05" category="doc">カスタムプラグインの SnapMirror および SnapVault レプリケーション用のストレージシステムを準備する</block>
   <block id="2c680d95270ab9050da54ca67f598551" category="summary">SnapCenter を使用してバックアップをクローニングすることができます。クローニングはプライマリとセカンダリのどちらのバックアップからも実行できます。クローニング処理の機能は、使用するプラグインによって異なります。</block>
@@ -5966,11 +5831,9 @@
   <block id="0834ce0d0048d3f30b3ba331b3fbfaeb" category="paragraph">重大および警告カテゴリのアラートの総数が、ディスプレイの上部に表示されます。[Critical] または [Warning] の合計をクリックすると、 [Alerts] ページに特定のフィルタが適用された状態で [Alerts] ページにリダイレクトされます。</block>
   <block id="730fa47453e87908aa833516ccc3ea45" category="paragraph">特定のアラートをクリックすると、そのアラートの詳細が [Alerts] ページに表示されます。ディスプレイの下部にある [*See All*]( すべてを表示 ) をクリックすると、 [Alerts] ページにすべてのアラートのリストが表示されます。</block>
   <block id="d99a5786ad85001e24562511072e0438" category="section-title">最新の保護の概要</block>
-  <block id="bded8d2469365a9282915f5f79cd9142" category="paragraph">最新の保護サマリタイルには、アクセス可能なすべてのエンティティの保護ステータスが表示されます。デフォルトでは、すべてのプラグインにステータスが表示されるように設定されています。ステータス情報は、プライマリストレージに Snapshot コピーとしてバックアップされたリソース、および SnapMirror テクノロジと SnapVault テクノロジを使用してセカンダリストレージに提供されます。セカンダリストレージの保護ステータス情報は、選択したプラグインタイプに基づいています。</block>
   <block id="e1008495c688afceab4f2b4a2cf57b5f" category="admonition">ミラーバックアップ保護ポリシーを使用している場合は、 SnapMirror チャートではなく、保護の概要のカウンタが SnapVault の概要チャートに表示されます。</block>
   <block id="ce7dbf4c6cf16891692544eda41583e7" category="paragraph">ドロップダウンメニューからプラグインを選択すると、個々のプラグインの保護ステータスを確認できます。ドーナツグラフには、選択したプラグインの保護されているリソースの割合が表示されます。ドーナツスライスをクリックすると、 *Reports*&gt;*Plug-In * ページに移動します。このページには、指定されたプラグインのすべてのプライマリおよびセカンダリストレージアクティビティの詳細なレポートが表示されます。</block>
   <block id="61918a19fed1a6f7aac77a6c590a36c8" category="admonition">セカンダリストレージに関するレポートは SnapVault のみに適用されます。 SnapMirror レポートはサポートされません。</block>
-  <block id="0ead2b8872977656919ce9f01f840af9" category="admonition">SAP HANA は、 Snapshot コピーのプライマリストレージとセカンダリストレージの保護ステータス情報を提供します。ファイルベースのバックアップでは、プライマリストレージの保護ステータスのみを使用できます。</block>
   <block id="0306f309d85c77b515e2062211ad3b92" category="cell">保護ステータス</block>
   <block id="86b11f41cdd4202ed814b1453f2dd058" category="cell">プライマリストレージ</block>
   <block id="d7c8c85bf79bbe1b7188497c32c3b0ca" category="paragraph">失敗しました</block>
@@ -5995,8 +5858,6 @@
   <block id="5bda814c4aedb126839228f1a3d92f09" category="paragraph">実行中です</block>
   <block id="29f9814bc81dd214edb0b6be347f7229" category="paragraph">現在実行中のジョブの数。</block>
   <block id="f7dba3d6d7c9c3429f0c58a4580df905" category="paragraph">ストレージタイルには、 90 日間の保護ジョブで使用されるプライマリストレージとセカンダリストレージが表示され、消費傾向をグラフィカルに表示して、プライマリストレージの削減量を計算します。ストレージ情報は、 24 時間ごとに午前 12 時に更新されます</block>
-  <block id="8855900d93f9838e82c77bf6f804e8c3" category="paragraph">この日の合計消費量は、 SnapCenter で使用できるバックアップの合計数と、これらのバックアップが占有するサイズで構成され、画面の上部に表示されます。1 つのバックアップに複数の Snapshot コピーが関連付けられることがあり、その数は同じになります。これは、プライマリとセカンダリの両方の Snapshot コピーに当てはまります。たとえば、バックアップを 10 個作成し、そのうち 2 個はポリシーベースのバックアップ保持のために削除され、 1 個はユーザが明示的に削除するように設定したとします。したがって、この 7 つのバックアップが占有している数と 7 個のバックアップが表示されます。</block>
-  <block id="d612286045a1daee2c40c6d4f0b3c319" category="paragraph">プライマリストレージのストレージ削減率係数は、プライマリストレージの物理容量に対する論理容量（クローンと Snapshot コピーによる削減量とストレージ消費量）の比率です。棒グラフは、ストレージの削減量を示します。</block>
   <block id="b75814af78ac77b110a1f29425b27be2" category="paragraph">このグラフには、連続した 90 日間におけるプライマリとセカンダリのストレージ消費量が 1 日単位で表示されます。グラフにカーソルを合わせると、詳細な日単位の結果が表示されます。</block>
   <block id="e4b0253123055e5f41b264b422ac0484" category="admonition">SnapCenter Server 4.2 以前のバージョンのプラグイン（ 4.2 より前）を使用してバックアップを作成する場合、「ストレージ」タイルには、バックアップ数、バックアップで消費されるストレージ容量、 Snapshot の削減量、クローンの削減量、および Snapshot のサイズは表示されません。</block>
   <block id="dda9cd1a94e969f6dac4fc6afb775de5" category="paragraph">[ 構成 ] タイルには、 SnapCenter が管理しているすべてのアクティブなスタンドアロンホストと Windows クラスタホストのステータス情報が統合されて表示され、にアクセスできます。これには、ホストに関連付けられているプラグインのステータス情報も含まれます。</block>
@@ -6075,7 +5936,6 @@
   <block id="3fcbfa7e53e0d1486b04ef88744e654b" category="list-text">[ ユーザ名またはグループ名 ] リストで、変更するユーザまたはグループをクリックします。</block>
   <block id="0a2a28430d9f7066f6a8e5f614a42f52" category="summary">リソースまたはリソースグループからポリシーの適用を解除したり、ポリシーの変更、削除、表示、コピーを行ったりすることができます。</block>
   <block id="8a83564fb6cc1ce1968a698b16797b87" category="section-title">ポリシーを変更する</block>
-  <block id="ba036c6de008cc90f19810d74054495f" category="paragraph">リソースまたはリソースグループにポリシーが適用されている場合は、レプリケーションのオプション、 Snapshot コピーの保持の設定、エラーの再試行回数、またはスクリプトの情報を変更できます。スケジュールタイプ（頻度）は、ポリシーを適用解除しないと変更できません。</block>
   <block id="039310fa3be7e08e1e978c195979fc63" category="paragraph">SnapCenter サーバでは、リソースまたはリソースグループにポリシーが適用されるときにのみスケジュールタイプが登録されるため、ポリシーのスケジュールタイプを変更するには追加の手順が必要です。</block>
   <block id="c420c685f1c370d3495ae3f69ab2178a" category="paragraph">新しいスケジュールタイプを追加します</block>
   <block id="d3862d52cd407d98a5060531bcc67094" category="paragraph">新しいポリシーを作成し、必要なリソースまたはリソースグループに適用します。</block>
@@ -6230,7 +6090,6 @@
   <block id="09a6d5e712449f112a3dcd2169dac55a" category="paragraph">SnapCenter リポジトリをリストアする場合は、リストア処理中にリポジトリデータベースにアクセスできないため、実行中の他の SnapCenter 処理に影響します。</block>
   <block id="f65a265b9c1e948edcb4b8b5bd492a18" category="list-text">_Restore-SmRepositoryBackup_cmdlet を使用して、リポジトリのバックアップをリストアします。</block>
   <block id="ec9dad1ea2b1a5314f82d20d3bf23f49" category="paragraph">次のコマンドレットでは、 iSCSI LUN または VMDK にあるバックアップから SnapCenter MySQL データベースリポジトリをリストアします。</block>
-  <block id="8157c1b74c579bf8df97655493bf3034" category="paragraph">次のコマンドレットは、バックアップファイルが iSCSI LUN 内で誤って削除された場合に、 SnapCenter MySQL データベースをリストアします。VMDK の場合、 ONTAP Snapshot コピーからバックアップを手動でリストアします。</block>
   <block id="071788d560dec04e39684f7e9734f7f8" category="section-title">SnapCenter リポジトリを移行する</block>
   <block id="36a43a17d046b7175ef97b0dd0dbf8f8" category="paragraph">SnapCenter サーバのデータベースリポジトリをデフォルトの場所から別のディスクに移行することができます。リポジトリの移行は、より多くのスペースを持つディスクに再配置する場合などに行います。</block>
   <block id="22789a017f9102ab9838cbf20e824cdc" category="list-text">Windows で MYSQL57 サービスを停止します。</block>
@@ -6269,9 +6128,7 @@
   <block id="b5e3f82dbe3b26af86ad24f52d33eca5" category="paragraph">保守モードにしたリソースグループの操作を再開する場合は ' リソースグループを選択して ' 本番環境をクリックします</block>
   <block id="ad9a47e46e4ad7c3e60285f394572957" category="section-title">リソースグループを削除する</block>
   <block id="51ebd5fa5a40caec4ed936fe9898a298" category="paragraph">リソースグループ内のリソースを保護する必要がなくなった場合は、リソースグループを削除することができます。SnapCenter からプラグインを削除する前に、リソースグループを削除する必要があります。</block>
-  <block id="96f3b8867aaf11c3ad817e34c18cd41e" category="paragraph">リソースグループ内のリソースに対して作成されたすべてのクローンを手動で削除する必要があります。必要に応じて、リソースグループに関連付けられているすべてのバックアップ、メタデータ、ポリシー、 Snapshot コピーを強制的に削除することができます。</block>
   <block id="0c2afed1ed2cb68e29011a87d947fe86" category="list-text">リソースグループを選択し、 * 削除 * をクリックします。</block>
-  <block id="e6367c97237b87006cded5c41a446fc2" category="list-text">オプション：リソースグループに関連付けられたバックアップ、メタデータ、ポリシー、 Snapshot コピーをすべて削除するには、 * このリソースグループに関連付けられたバックアップとバックアップポリシーの削除 * チェックボックスを選択します。</block>
   <block id="14a4c05c50e64f982159ddb53b74d93a" category="summary">ジョブの進捗状況の監視、スケジュールされたジョブに関する情報の取得、およびイベントとログの確認は、 [ 監視 ] ページから実行できます。</block>
   <block id="f63bb2ed2f077a58e42dc5713a5d5843" category="doc">ジョブ、スケジュール、イベント、およびログを監視する</block>
   <block id="4639d0e2e2909a747265c2f704128bca" category="section-title">ジョブを監視する</block>
@@ -6677,19 +6534,14 @@
   <block id="74ae0888147d892b12bb807a0b81b3af" category="paragraph">FSX SVM を追加した場合は、ここに FSX SVM が表示されます。</block>
   <block id="6f9f8c6ff90de911912e63ac72e07121" category="paragraph">fsxadmin を使用して FSX クラスタを追加した場合、 FSX クラスタがここに表示されます。</block>
   <block id="74e84f9442fdb7717385ee092400869a" category="paragraph">IE 10 以前のバージョンを使用している場合、 SnapCenter UI が正しくロードされません。IE 11 にアップグレードする必要があります。</block>
-  <block id="3b9b501ce9ff4819d459190476007edc" category="paragraph">たとえば 'customText_policy_hostname や resource_hostname などですデフォルトでは、 Snapshot コピー名の後ろにタイムスタンプが追加されます。</block>
-  <block id="88d8212b57ef4a806bbe46dc391aebdf" category="paragraph">内部データベースの Snapshot コピー（ TABLOCK ）を使用せずに、チェックを制限してロックを取得します。</block>
-  <block id="bed7a5b2a53899a17a7ddb2e244ad497" category="paragraph">内部データベースの Snapshot コピーを使用する代わりに、チェックを制限してロックを取得する場合は、「 * 」を選択します。このオプションを選択すると、チェックが制限され、内部データベースの Snapshot コピーを使用する代わりにロックが取得されます。</block>
   <block id="cddfaa01c32e2362546c78364751248b" category="admonition">SnapCenter Plug-ins Package for AIX に含まれている SnapCenter Plug-in for UNIX では、同時ボリュームグループはサポートされていません。</block>
   <block id="6ae61d1454f759ea3eb40a95ec0ab1b7" category="admonition">SnapCenter は * sync-mirror * レプリケーションをサポートしていません。</block>
   <block id="885b1f9eef36019d672ac62796ed326d" category="doc">SnapCenter Custom Plug-ins および Storage プラグインの機能</block>
   <block id="130912ed126ed1a0d1b727e3293210ed" category="paragraph">* カスタムプラグイン *</block>
   <block id="08762ef2fe73d944789541451485f737" category="paragraph">* ストレージプラグイン *</block>
   <block id="22f14629dccbccb3ea736a953a3743c7" category="paragraph">このプラグインは、データ保護処理に使用できます。</block>
-  <block id="ba35678f07666a4f1a46da2ff07d3be9" category="list-text">複数の ONTAP クラスタ間でストレージボリュームの整合グループ Snapshot コピーを作成する。</block>
   <block id="c2230088d27abaa2d470e15431fe93b5" category="list-text">組み込みのプレ / ポストスクリプトフレームワークを使用してカスタムアプリケーションをバックアップします</block>
   <block id="b7ef57ec0d80db01d4596e446c5f7c1f" category="paragraph">ONTAP ボリューム、 LUN 、または qtree をバックアップできます。</block>
-  <block id="2ba3d313a9f79b9a7c6749bf2e99acfa" category="list-text">SnapCenter ポリシーを使用して、プライマリで作成された Snapshot コピーを ONTAP セカンダリに対して更新し、既存のレプリケーション関係（ SnapVault/SnapMirror/ユニ ファイドレプリケーション）を利用します</block>
   <block id="0930cbd774389ffda4b953dfada42944" category="list-text">ONTAP ボリューム、 LUN 、またはファイルの完全なリカバリ</block>
   <block id="01416c60ab0c357d59811f108a67d5bd" category="paragraph">参照機能またはインデックス付け機能が製品に組み込まれていないため、それぞれのファイルパスを手動で指定する必要があります。</block>
   <block id="17f0138477115892c87d600e535c1ed0" category="paragraph">qtree またはディレクトリのリストアはサポートされませんが、バックアップの範囲が qtree レベルで定義されている場合にのみ、 qtree のクローニングとエクスポートを実行できます。</block>
@@ -6765,7 +6617,6 @@
   <block id="7e88bcd72ecc2784bced6913c338faa7" category="paragraph">フェイルオーバー後は、セカンダリ SAP HANA システムがプライマリ SAP HANA システムになるため、すべてのデータ保護処理を実行できます。</block>
   <block id="4bc5b2b92d8dcb711bd827f42e5409d1" category="paragraph">SAP HANA データボリュームのバックアップは作成できませんが、 SnapCenter は非データボリューム（ NDV ）の保護を継続します。</block>
   <block id="c0ab35de65d78830f03751afe7a38d7b" category="admonition">SAP HANA システムのレプリケーションでは、 SAP HANA システムのすべてのリソースを 1 つのリソースグループに追加することを推奨します。これにより、適切な数のバックアップが保持されます。</block>
-  <block id="a6be6f24e838a4da069bddb143958a11" category="admonition">SAP HANA システムレプリケーションの場合、作成される Snapshot コピーの合計数は、リソースグループに対して設定された保持数と同じになります。最も古い Snapshot コピーの削除は、最も古い Snapshot コピーが配置されているノードに基づいて行われます。たとえば、 SAP HANA システムレプリケーションがプライマリ、 SAP HANA システムレプリケーションがセカンダリのリソースグループの場合、保持期間は 7 に設定されます。SAP HANA システムレプリケーションプライマリと SAP HANA システムレプリケーションセカンダリの両方を含め、一度に最大 7 個の Snapshot コピーを作成できます。</block>
   <block id="41d38b2eca9ea765772bfdd8438f72b8" category="admonition">SAP HANA システムレプリケーションのプライマリリソースの場合は、リストア処理と削除処理がサポートされ、セカンダリリソースの場合はクローン処理がサポートされます。</block>
   <block id="9ea78ced3285e07c1b4382084f2c8082" category="list-text">マルチティアスケールアウト HANA システムレプリケーション</block>
   <block id="ca008dbe9fac2013096d5e5cf923c44e" category="list-text">システムレプリケーションモードでのカスケードレプリケーション環境</block>
@@ -6943,7 +6794,6 @@
   <block id="9e2e9c4d3a7b699f2c9da7b1c1f252d5" category="list-text">* 、 * は、同じ DB の変数のセットを区切るために使用されます。</block>
   <block id="087342b75abe5b9e56fe1ef5c1366716" category="paragraph">例： NFSB32@buck ： /vol/scspr2417819002_NFS_CDB_NFSB32_data/Rg2_scspr2417819002_07-21-202_02.28.26.3973_0 、 NFS19002_017819002_nfs_sc019002_002_41_scspbucK_24002_24002_24002_cdr21_nfs21_sc1621_r17202_17202_17202_17202_17202_17202_17202_17202_122_122_17202_122_17202_17202_122_ NFS 9_17202_17202_17202_17202_17202_17202_017202_017202_122_ NFS 9_172_ NFS 9_R17202_017202_017202_017202_017202_017202_017202_017202_017202_017202_017202_017202_017202_017202_</block>
   <block id="98ecfe0d837e77006a17452ca412bc0a" category="doc">Oracle データベースのリストアとリカバリを行う</block>
-  <block id="588fdca387b41a3ed6e9915f94a10eb5" category="paragraph">リカバリは、設定したアーカイブログの場所にあるアーカイブログを使用して実行します。データベースが ARCHIVELOG モードで実行されている場合、 Oracle データベースは、アーカイブ REDO ログと呼ばれる 1 つ以上のオフラインデスティネーションに、満杯の REDO ログファイルを保存します。SnapCenter は、指定された SCN 、選択された日時、またはすべてのログオプションに基づいて、最適な数のログバックアップを特定してマウントします。リカバリに必要なアーカイブログが設定済みの場所にない場合は、ログを含む Snapshot コピーをマウントし、外部アーカイブログとしてパスを指定する必要があります。</block>
   <block id="835be123689a0c878d2a9b458e5bf334" category="paragraph">データベースが ARCHIVELOG モードで実行されている場合、 SnapCenter は、指定された SCN 、選択された日時、またはすべてのログオプションに基づいて、最適な数のログバックアップを特定してマウントします。</block>
   <block id="f99510060ae91e89fdabd39c0e222578" category="paragraph">外部アーカイブログファイルの場所を指定する場合は、 * 外部アーカイブログの場所を指定 * を選択します。</block>
   <block id="8d0b25f92b903a24620536866eec34e9" category="paragraph">SnapCenter では、プリスクリプトとポストスクリプトを実行する際に、事前定義された環境変数を使用できます。 <block ref="5b7d02e10c9ec6b7cbb457e491f8bd48" category="inline-link-macro-rx"></block></block>
@@ -7026,7 +6876,6 @@
   <block id="1c41074e44dc2e55551dfb68d2bc354d" category="list-text">［ ジョブの詳細 ］ ページで、 ［ * ログの表示 * ］ をクリックします。</block>
   <block id="c6c1feaee0176e99111e0aef49c594be" category="list-text">[ 証明書 ] スナップインウィンドウで、 [*Computer account*] オプションを選択し、 [ 完了 *] をクリックします。</block>
   <block id="a2286f0c6fbfecb0501c43aa965242b6" category="list-text">リソースページで、リソースタイプに基づいて *View*] ドロップダウンリストからリソースをフィルタリングします。</block>
-  <block id="0ab7e5f8a6ae4c1833f0606e717b782e" category="list-text">リソースページで、 Snapshot コピーに * カスタム名形式を使用する * を選択し、 Snapshot コピー名に使用するカスタム名形式を入力します。</block>
   <block id="007bb45dbc12aff746ee53defa1f784f" category="list-text">[ アプリケーションの設定 ] ページで、次の操作を行います。</block>
   <block id="1bf25096670c9621cda8c9d3e8bee4ad" category="list-text">[ リソース ] ページで、リソースタイプに基づいて、 *View*] ドロップダウンリストからリソースをフィルタリングします。</block>
   <block id="4da4dfc97db1c4c71939b200e576ecc4" category="list-text">Location ページで、次のアクションを実行します。</block>
@@ -7095,7 +6944,6 @@
   <block id="f03c757efff1b7a92c7b30cbc8c7c0b8" category="doc">SnapCenter Plug-in for Microsoft SQL Server のインストールワークフロー</block>
   <block id="5d1ccbabeac3da21e18ec5dee9e1b5d3" category="list-text">DR モードで作成された新しいバックアップは、トポロジページの SnapMirror または SnapVault （セカンダリ）の下に表示されます。</block>
   <block id="1e898ea74f227f6f8576a3c8a19476db" category="list-text">リソースページで、 * 表示 * ドロップダウン・リストから * データベース * 、 * インスタンス * 、または * 可用性グループ * を選択します。</block>
-  <block id="53c98fb3ede460fb23424f1db6ea0273" category="list-text">リソースページで、 Snapshot コピーの * カスタム名形式 * チェックボックスを選択し、 Snapshot コピー名に使用するカスタム名形式を入力します。</block>
   <block id="075e5d48960664645c5727a530a7c640" category="list-text">[Policies] セクションで、ドロップダウンリストから 1 つ以上のポリシーを選択します。</block>
   <block id="1ca9ef3a64115b9b5155a63404740914" category="paragraph">暗黙的なリソースグループが作成されます。これを表示するには、 [ ユーザーアクセス（ User Access ） ] ページで該当するユーザーまたはグループを選択します。暗黙的なリソースグループタイプは「リソース」です。</block>
   <block id="e5acff5734e40c3c2497b77505329dc5" category="paragraph">設定ページでは、次のタスクを実行できます。</block>
@@ -7146,7 +6994,6 @@
   <block id="ea651e7d348fad133122cd96d8a57514" category="paragraph">Available Resources セクションおよび Selected Resources セクションに、ホストの FQDN がデータベース名として表示されます。この FQDN は、指定したホスト上でデータベースがアクティブであり、このホストでバックアップを作成しない可能性があることを示します。バックアップ・ジョブ作成時に選択するサーバ上の * バックアップ・コピーのバックアップ・オプションを選択した場合に、バックアップを作成するサーバ選択オプションから 1 つ以上のバックアップ・サーバを選択する必要があります。</block>
   <block id="56211ba6636186607e13945dac559a10" category="list-text">リソースページで、 * 表示 * リストから * データベース * または * データベース可用性グループ * のいずれかを選択します。</block>
   <block id="6da272f1d69c440674470ba19591ba05" category="paragraph">リソースページで、を参照してください <block ref="362bbfc4e46b557d6a4f1f7a4cbeaf25" category="inline-image-macro-rx" type="image"></block> アイコンは、データベースがネットアップ以外のストレージにあることを示します。</block>
-  <block id="15729e255e75ea1df4e86881a1909cec" category="list-text">カスタム Snapshot コピー名を指定する場合は、リソースページで Snapshot コピーにカスタム名形式を使用する * チェックボックスを選択し、 Snapshot コピー名に使用するカスタム名形式を入力します。</block>
   <block id="d99fed20823b9c8ab623e15a5dda6022" category="list-text">[ 保持 ] ページで ' 保持設定を構成します</block>
   <block id="5aeb9e6d879dba508efed2806a37d0b1" category="list-text">レプリケーションページで、次のセカンダリレプリケーションオプションのいずれかまたは両方を選択します。</block>
   <block id="31db120ce3e7f7d5198a060e87905d01" category="doc">SnapCenter Plug-in for Microsoft Exchange Server のインストールワークフロー</block>
@@ -7156,7 +7003,6 @@
   <block id="5693c7d2b02d83427ab807d73a04e2e7" category="list-text">[ 場所 ] ページで、選択したリソースを復元する宛先ボリュームを選択します。</block>
   <block id="ce6e296d4e6f07e1cb707c2eaeaf04ad" category="list-text">Custom backup settings （カスタムバックアップ設定）セクションで、プラグインにキーバリュー形式で渡す必要がある特定のバックアップ設定を指定します。プラグインに渡すキーと値の組み合わせを複数指定することができます。</block>
   <block id="d9ac41630ae6a20177466403e2d328d8" category="doc">SnapCenter Custom Plug-ins のインストールワークフロー</block>
-  <block id="80cb8ef1d01a491a4a563ec56f39cedc" category="list-text">リソースページで、カスタム名を使用する場合は、 Snapshot コピーに * カスタムの名前形式を使用する * チェックボックスをオンにし、 Snapshot コピー名のカスタム名形式を入力します。</block>
   <block id="dd4b762c191c7a235ce898c094749679" category="paragraph">カスタムプラグインとストレージプラグインは、ホストの追加ページからインストールできます。</block>
   <block id="d98e943b0122d016274bcbbeba1d647d" category="list-text">リソース設定ページで、リソースのカスタムキーと値のペアを指定します。</block>
   <block id="fc239c2b2a79ad8ee77cc5430b1803fe" category="paragraph">クレデンシャルの設定が完了したら、 [ ユーザとアクセス（ User and Access ） ] ページで、ユーザまたはユーザグループにクレデンシャルのメンテナンスを割り当てることができます。</block>
@@ -7209,7 +7055,6 @@
   <block id="d80b7e944064bf3bd382ae2be696ab9e" category="list-text">「security login role create -vserver svm_name -role SVM_Role_Name -cmddirname」vserver export-policy show「-access all</block>
   <block id="1c1ebdb4d2cea4a9f1b480ef6387ebbd" category="list-text">「security login role create -vserver svm_name -role SVM_Role_Name -cmddirname」vserver iscsi connection show「-access all」</block>
   <block id="2bad882b7fb5945b0373cf8c526cb4ac" category="list-text">「security login role create -vserver svm_name -role SVM_Role_Name -cmddirname」volume clone split status「-access all」を指定します</block>
-  <block id="af9210ab244187eb84af56c8e51b082c" category="paragraph">VMware環境でSnapCenter Plug-in for Microsoft Windowsを使用すると、LUNの作成と管理、およびSnapshotコピーの管理を行うことができます。</block>
   <block id="c9956993c3473df3ea1961fead514074" category="paragraph">logs_MAX_COUNT</block>
   <block id="9b24859b2a7f9c7d8afb9ec3b025e927" category="paragraph">LOG_MAX_SIZE</block>
   <block id="92cb537bc0c912cec1e9669f256ebc89" category="paragraph">ジョブログファイルの最大サイズを表示します。</block>
@@ -7239,7 +7084,6 @@
   <block id="487a34d280250073f86b353bd430b05b" category="paragraph">必要に応じて、このパスを変更し、SMcoreサービスを再起動できます。セキュリティのためにデフォルトパスを使用することを推奨します。</block>
   <block id="cb0f6b6fa4cffa93ac67dd15850cae3d" category="paragraph">キーの値は、api/4.7/configsettingsを介してスワッガーから表示できます</block>
   <block id="cf2ded6f4d7ccf880ce7a042e4726b3e" category="paragraph">GET APIを使用してキーの値を表示することができます。set APIはサポートされません。</block>
-  <block id="3bcbed691a828d3bec798c7f504ae72f" category="paragraph">SnapCenter は、Snapshotコピー処理の完了後に、SnapMirrorとSnapVault に対する更新を実行します。SnapMirror更新とSnapVault 更新はSnapCenter ジョブの一部として実行されるため、ONTAP スケジュールを別途作成しないでください。</block>
   <block id="d332f88a3886e736c322b3643225a6cd" category="admonition">SnapCenter は、 SnapMirror ボリュームと SnapVault ボリュームのカスケード関係をサポートしていません（ * プライマリ * &gt; * ミラー * &gt; * バックアップ * ）。ファンアウト関係を使用する必要があります。</block>
   <block id="08e9631e1208ded677a67844beb7e0f6" category="list-text">Microsoft .Net 4.7.2以降がインストールされている必要があります。</block>
   <block id="f9e40bd22b133e93e9c9d3b4c3adef6e" category="list-text">Microsoft .NET Framework 4.7.2以降</block>
@@ -7489,7 +7333,6 @@
   <block id="e7b4efc5dd5b16a36c26e91652b78194" category="paragraph">Linuxの場合：_/var/opt/snapcenter/scc/allowed _commands _list.txt_</block>
   <block id="2dd7c4421097b3d796ff9bf355ebaa6e" category="admonition">コマンドリストにコマンドがない場合、処理は失敗します。</block>
   <block id="e61e5d73b3b042b28dcdf96a5c438a4e" category="list-text">クローニング前またはクローニング後のPREコマンドについては、次のパスから、プラグインホストのコマンドリストにコマンドが含まれているかどうかを確認する必要があります。</block>
-  <block id="d5d9a4c4e51c27e556fb89bfdd11f0b0" category="list-text">休止、Snapshotコピー、および休止解除のプリコマンドおよびポストコマンドについては、プラグインホストで次のパスから使用可能なコマンドリストにコマンドが含まれていないかどうかを確認する必要があります。</block>
   <block id="3c8f1b708d97734299340f633acf1b28" category="paragraph">iSCSIを使用している場合は、iSCSIサービスが実行されている必要があります。</block>
   <block id="9415aa73bf3f3a2a034e0e07c5d506cf" category="section-title">SHA512ハッシュ</block>
   <block id="aeff1fc8cacc5ff5c9b086664b2f5560" category="list-text">ネットアップが提供するカスタムプラグインでは、カスタムプラグインファイルのSHA512ハッシュを_custom_plugin_checksum_list _ fileに追加しておく必要があります。</block>
@@ -7674,8 +7517,6 @@
   <block id="4c4d4c133d15d97bf3bef74ffeeeb66a" category="list-text">左側のナビゲーションペインで、*[リソース]*を選択し、リストから適切なプラグインを選択します。</block>
   <block id="ba4484b740822363967ef7dbb090de6a" category="inline-image-macro">フィルタアイコン</block>
   <block id="90db41db3c301da492422a8fbb244c83" category="list-text">[Resources]ページでは、次の手順を実行できます。</block>
-  <block id="00f0529a96533b63a21705811e1addce" category="list-text">チェックボックスを選択し、Snapshotコピー名に使用するカスタムの名前形式を入力します。</block>
-  <block id="8319f5e3f98fcec5a71bd43e8454a8fd" category="paragraph">例：<block ref="6d242f6ac938ffb13709f54d68cd3c4a" prefix=" " category="inline-code"></block> または<block ref="90ea7aa0cb61dd49e32f6dcf8afac143" prefix=" " category="inline-code"></block>。デフォルトでは、Snapshotコピー名にタイムスタンプが付加されます。</block>
   <block id="e0af3bf36c9535530ed431b3358aa176" category="inline-image-macro">シンボルを追加します</block>
   <block id="a2fbabd2b5fd55db991eb64739e8189a" category="admonition">ポリシーを作成するには、をクリックします <block ref="494b170a0dd5e7fc7886f29293b0c5bc" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="a04dff3ca18f5d27eeb205537402b01c" category="list-text">をクリックします <block ref="494b170a0dd5e7fc7886f29293b0c5bc" category="inline-image-macro-rx" type="image"></block> [Configure Schedules]列で、ポリシーのスケジュールを設定します。</block>
@@ -7806,15 +7647,9 @@
   <block id="016bcd6d9710c9d2dde84a3ff020b0de" category="paragraph">ポリシーに対して選択できるスケジュールタイプは1つだけです。</block>
   <block id="ef077dad77fac08deaf5fe61aced7bc3" category="section-title">ステップ3：保持設定を構成する</block>
   <block id="d8d914bba3878c80c4a43efb4e1ce72c" category="open-title">特定のコピー数</block>
-  <block id="5a0290e9f5b4a432c42379432ee6f5c8" category="paragraph">特定の数のSnapshotコピーのみを保持します。</block>
   <block id="619f22faf39c2dfe9a11af29647bb1a6" category="list-text">［ * 最新の &lt; 日数 &gt; 日数に適用可能なログバックアップを保持する ］ オプションを選択し、保持する日数を指定します。この上限に近づいた場合は、古いコピーを削除できます。</block>
   <block id="fe9e179b8597c5b1e7f1e2ff0644a5c8" category="open-title">特定の日数</block>
   <block id="82c2224d099110596a9863d056598afe" category="paragraph">バックアップコピーを特定の日数だけ保持します。</block>
-  <block id="805b73e03f8c3c7c7a8238ed9766dee3" category="list-text">保持するSnapshotコピーの総数を指定します</block>
-  <block id="ffe60c98392393713d4e1d365c27b6be" category="list-text">保持するSnapshotコピーの数を指定するには、*保持するSnapshotコピーの総数*を選択します。</block>
-  <block id="d4f0bf88ec19106300653daff553435f" category="list-text">Snapshotコピーを保持する期間</block>
-  <block id="7fcb4d3ce02337b7e14c71c970e6aa6e" category="list-text">保持するSnapshotコピーの数を指定するには、*保持するSnapshotコピーの総数*を選択します。Snapshot コピーの数が指定した数を超えると、古いものから順に Snapshot コピーが削除されます。</block>
-  <block id="6618a5f84aa25633e669aa723e59a0cd" category="list-text">Snapshotコピーを削除するまで保持する日数を指定するには、*[Keep Snapshot copies for]*を選択します。</block>
   <block id="92ac5fc0212c94ee50e6dc85913caeec" category="example-title">例を示します</block>
   <block id="8047dd542f0833c625160d18deaef831" category="paragraph">Set-SmPolicy-PolicyName 'newpol'-PolicyType 'Backup'-PluginPolicyType 'SCSQL'-sqlbackuptype 'FullBackupAndLogBackup'-RetentionSettings@｛backupType='Hourly'；RetentionCount=2｝、@｛backupType='log_snapshot'；ScheduleType=2｝</block>
   <block id="b1cf83519efa64342d0b96985ded3691" category="section-title">ステップ4：レプリケーション設定を構成します</block>
@@ -7844,9 +7679,7 @@
   <block id="7bc2103c2a80cd91e9a026c0f2b3f943" category="list-text">[Backups]の矢印を選択して、追加のバックアップオプションを設定します。</block>
   <block id="6ab7eeea8e6b1dcd3c8360b245f0e3c0" category="inline-image-macro">整合グループのバックアップオプション（urgent、medium、relaxed）のスクリーンショット。</block>
   <block id="072de5e2138004f9a67883cb0ff2aaa6" category="paragraph"><block ref="072de5e2138004f9a67883cb0ff2aaa6" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="e92d78d72bbcff05469cd98c282ac8c4" category="list-text">[Scripts]の矢印を選択し、休止、Snapshotコピー、および休止解除の処理を実行するプリコマンドとポストコマンドを入力します。障害発生時に終了する前に実行する PRE コマンドを入力することもできます。</block>
   <block id="3328b0dbde4c99683e19eca586842ffb" category="list-text">[Custom Configurations]の矢印を選択し、このリソースを使用するすべてのデータ保護処理に必要なカスタムのキーと値のペアを入力します。</block>
-  <block id="dfa18f81ec763693ffdac89624763ae3" category="list-text">[Snapshot Copy Tool]*の矢印を選択して、Snapshotコピーを作成するツールを選択します。</block>
   <block id="7f368ffa9ab4869382c31a28f17f3a4a" category="inline-image-macro">プラスアイコン</block>
   <block id="f79b4ba47e778727c1290b36487ea0bc" category="admonition">[*]を選択してポリシーを作成することもできます<block ref="a55421dd685609006a21f2507444357f" category="inline-image-macro-rx" type="image"></block>*</block>
   <block id="b11a42908bee80055dfed2bb0e9a583a" category="list-text">[スケジュールの設定]列で、*を選択します<block ref="a55421dd685609006a21f2507444357f" category="inline-image-macro-rx" type="image"></block>* をクリックします。</block>
@@ -8322,8 +8155,6 @@ NetApp®Single Mailbox Recoveryは、2023年5月12日に販売終了（EOA）に
   <block id="9eb8278143c5b25686cc1b6c525a9b8d" category="paragraph">*を選択します<block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>* をクリックし、ホスト名とリソースタイプを選択してリソースをフィルタリングします。次に、 <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> をクリックしてフィルタペインを閉じます。</block>
   <block id="45b6721b8137bd82de1f2497a525d57a" category="list-text">バックアップするリソースを選択します。</block>
   <block id="0666d07a296860de6e0a6f6e4fd0425e" category="list-text">[Backups]*矢印を選択して、追加のバックアップオプションを設定します。</block>
-  <block id="cd713ffb7f8ebc1fd9a44fb5ef40eefe" category="paragraph">Snapshot コピー処理が完了するまでの待機時間を指定するには、「至急」、「 * 中」、または「 * relaxed 」を選択します。Urgent = 5 秒、 Medium = 7 秒、 Relaxed = 20 秒。</block>
-  <block id="8dd7963568a06d004b4a54b651ec862f" category="list-text">[Scripts]*の矢印を選択して、休止、Snapshotコピー、および休止解除の処理のプリコマンドとポストコマンドを実行します。</block>
   <block id="0644babb03e5024dbc898ead17e21f90" category="list-text">[**Custom Configurations**]矢印を選択し、このリソースを使用するすべてのジョブに必要なカスタム値のペアを入力します。</block>
   <block id="100eb4bb64628d6bc8890851c8173103" category="list-text">[Add schedules for policy_policy_name_]ダイアログボックスで、スケジュールを設定し、*[OK]*を選択します。</block>
   <block id="7dd7da1b07a05d1000eeeecb05ce4ee5" category="paragraph">リソースグループを検索するには、検索ボックスにリソースグループ名を入力するか、 <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>をクリックし、タグを選択します。次に、 <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> をクリックしてフィルタペインを閉じます。</block>
@@ -8423,8 +8254,6 @@ Windowsホスト：</block>
   <block id="c58fd0a9a81f974b5b3b5db215383ed4" category="paragraph">コマンドレットの実行方法については、を参照してください<block ref="b70cb1971d6e57b9289aed553ef357cb" category="inline-link-rx"></block></block>
   <block id="6f5877ce1b560e325ddcea6ec5f7f838" category="paragraph">詳細については、を参照してください<block ref="7fb83b6cbb928f4072ab9a7c4ce09c24" category="inline-link-rx"></block>。</block>
   <block id="6fe2ae3bc136b86813d15d08bd3465f4" category="list-text">SnapMirror Business Continuity（SM-BC）リストア処理を実行するには、プライマリロケーションからバックアップを選択する必要があります。</block>
-  <block id="1b117b973aa08e222958e556130f2f75" category="list-text">SnapLockが有効なポリシーの場合、ONTAP 9.12.1以前のバージョンでは、Snapshotコピーのロック期間を指定すると、リストアの一環として改ざん防止Snapshotコピーから作成されたクローンにSnapLockの有効期限が継承されます。SnapLockの有効期限が過ぎた時点で、ストレージ管理者がクローンを手動でクリーンアップする必要があります。</block>
-  <block id="3377f6aa07593543e3eae7ef14e25899" category="list-text">ONTAP 9.12.1以前のバージョンでは、Snapshotコピーのロック期間を指定すると、改ざんを防止するSnapshotコピーから作成されたクローンにSnapLockの有効期限が継承されます。SnapLockの有効期限が過ぎた時点で、ストレージ管理者がクローンを手動でクリーンアップする必要があります。</block>
   <block id="920deed37c528e013939d546655305ff" category="paragraph">[Activity （アクティビティ） ] ペインには、バックアップ、リストア、クローン、およびスケジュールされたバックアップ処理に関する情報が表示されます。</block>
   <block id="1d37b803d962597d71711e7a279d95e7" category="paragraph">セカンダリ関係がSnapMirrorビジネス継続性（SM-BC）として設定されている場合は、次のアイコンも表示されます。</block>
   <block id="11ff410db3b99c0f2b2278663ad47a29" category="inline-image-macro">レプリカサイトアップ</block>
@@ -8434,7 +8263,6 @@ Windowsホスト：</block>
   <block id="c0b99067667278701462d9633e3d936b" category="inline-image-macro">関係が再確立されました</block>
   <block id="75b158522c29b4264f91885a3f9d64cd" category="list-text"><block ref="129c9657fb84202dacfb694c718f35e3" category="inline-image-macro-rx" type="image"></block> セカンダリのミラー関係やバックアップ関係が再確立されていないことを示します。</block>
   <block id="719868bb6bc8ea409a4ca9e3c6f76bb8" category="paragraph">SnapLockが有効なバックアップが作成された場合、*[Refresh]*ボタンをクリックすると、ONTAPから取得されたプライマリおよびセカンダリSnapLockの有効期限が更新されます。週次スケジュールでは、ONTAPから取得したプライマリおよびセカンダリのSnapLock有効期限も更新されます。</block>
-  <block id="8e99534f6af691fd41e00adb6770ed45" category="paragraph">アプリケーションリソースが複数のボリュームに分散している場合、バックアップのSnapLock有効期限は、ボリューム内のSnapshotコピーに設定されている最長のSnapLock有効期限になります。最長のSnapLock有効期限がONTAPから取得されます。</block>
   <block id="d7b7ea0231f53dacd1c85813eafc068c" category="paragraph">SnapMirrorビジネス継続性（SM-BC）の場合、*[リフレッシュ]*ボタンをクリックすると、ONTAPにプライマリサイトとレプリカサイトの両方が照会され、SnapCenterバックアップインベントリが更新されます。週次スケジュールでは、SM-BC関係を含むすべてのデータベースに対してこの処理も実行されます。</block>
   <block id="51ec87329d3b31d6af2f107c3cc08b52" category="list-text">SM-BC、非同期ミラー、バックアップ、またはミラーバックアップ関係では、フェイルオーバー後に新しいプライマリデスティネーションに対する設定を手動で行う必要があります。</block>
   <block id="3f7fe170db20f91655f6252fba4f2d1f" category="list-text">フェイルオーバーが完了したら、SnapCenterがフェイルオーバーを認識できるようにバックアップを作成する必要があります。[リフレッシュ]*をクリックできるのは、バックアップが作成されてからです。</block>
@@ -8445,10 +8273,8 @@ Windowsホスト：</block>
   <block id="c38a6a60f8cb7ca5af460cfef37c8426" category="list-text">SnapMirrorビジネス継続性（SM-BC）については、前提条件と制限事項の詳細を参照してください。<block ref="cbb2c6fbcad65bcfffa8c7bece4e8d6b" category="inline-link-rx"></block>。</block>
   <block id="acdc6b4f6edd40f37bce01247a32ff86" category="list-text">SnapLock</block>
   <block id="5645df6d49a903d3e2faf86e08d87813" category="list-text">[バックアップコピーを特定の日数だけ保持する]オプションを選択した場合は、SnapLockの保持期間を指定した保持日数以下にする必要があります。</block>
-  <block id="98a5daf42cec235d66d75e2276273e50" category="paragraph">Snapshotコピーのロック期間を指定すると、保持期間が終了するまでSnapshotコピーが削除されません。  その結果、ポリシーで指定された数よりも多くのSnapshotコピーが保持される可能性があります。</block>
   <block id="e07d82366bc71bb060becb82a0e09448" category="admonition">プライマリSnapLock設定はSnapCenterバックアップポリシーで管理され、セカンダリSnapLock設定はONTAPで管理されます。</block>
   <block id="c7075c18b2e266ad847d25c7cdafc611" category="image-alt">バックアップ設定画面。</block>
-  <block id="e528a1fd853f0dc6774eed55270c67fb" category="list-text">Snapshotコピーのロック期間を指定する場合は、*[Snapshotコピーロック期間]*を選択し、日数、月数、または年数を選択します。</block>
   <block id="0e549e42000cf1cd2bd13dc132e61448" category="paragraph">SnapLock保持期間は100年未満にする必要があります。</block>
   <block id="e7c020bcc5fc6c46eea0af3b48696115" category="paragraph">SnapLock保持期間は100年未満にする必要があります。</block>
   <block id="5354b0db72154dc0430cb5a653a4402c" category="paragraph">このオプションは、SnapMirrorビジネス継続性（SM-BC）またはSnapMirror Sync（SM-S）で有効にする必要があります。</block>
@@ -8460,14 +8286,11 @@ Windowsホスト：</block>
   <block id="8932ab6e3b2afa64d560fca67a0712b7" category="paragraph"><block ref="12abf3d0b43747b4f372f737c28b4029" category="inline-link-rx"></block>。</block>
   <block id="10fe11299ffddacc5ffb826021d50abb" category="paragraph">PowerShell コマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、クローニングの処理を実行することもできます。PowerShell コマンドレットの詳細については、 SnapCenter コマンドレットのヘルプを使用するか、を参照してください<block ref="7fb83b6cbb928f4072ab9a7c4ce09c24" category="inline-link-rx"></block>。</block>
   <block id="c07c083ab1174f81e5a8dab86d345954" category="paragraph">Java 1.8（64ビット）Oracle JavaまたはOpenJDK</block>
-  <block id="7533ab96da9180bf079f4c8dff903a17" category="list-text">Snapshotコピーのロック期間を指定すると、保持期間が終了するまでSnapshotコピーが削除されません。その結果、ポリシーで指定された数よりも多くのSnapshotコピーが保持される可能性があります。</block>
   <block id="971b3c1d99a5aa6f2b187690d01d852c" category="paragraph">Snapshotコピーのロック期間</block>
   <block id="86b78accb82bf0596de946657114e7dd" category="paragraph">Snapshotコピーのロック期間を選択し、日、月、または年を選択します。</block>
   <block id="cad9d181a2b84fefcf0bef1326b5660c" category="paragraph">セカンダリレプリケーションでは、SnapLockの有効期限によってプライマリSnapLockの有効期限がロードされます。</block>
   <block id="08ec8ae585abf03648f1d4e2cb173c27" category="paragraph">[Topology]ページの[Refresh]*ボタンをクリックすると、ONTAPから取得されたセカンダリおよびプライマリのSnapLock有効期限が更新されます。</block>
   <block id="6ce9eaa0f0e54448047c63d46dc547b2" category="paragraph">を参照してください <block ref="e93d68617e6aa08ec2871acfeebf51e9" category="inline-link-macro-rx"></block>。</block>
-  <block id="9bfc68bbc5769d2721e29f9f8cf04fc8" category="paragraph">SnapLock Vaultの詳細については、「バックアップでSnapshotコピーをWORM状態にコミットする」を参照してください。
-デスティネーション</block>
   <block id="9b4a73dc1c87ef95e6224c8753affd51" category="paragraph">PowerShell コマンドレットについては、 SnapCenter コマンドレットのヘルプを使用するか、を参照してください<block ref="7fb83b6cbb928f4072ab9a7c4ce09c24" category="inline-link-rx"></block>。</block>
   <block id="36402f90f435da43f279f9a1a4c88f5e" category="list-text">SVM に複数のデータパス（ LIF ）がある場合は、 NFS クローンボリュームをマウントするための適切なデータパス（ LIF ）が SnapCenter によって選択されます。ただし、特定のデータパス（ LIF ）を指定する場合は、 Set-SvmPreferredDataPath CLI を実行する必要があります。
 コマンドで使用できるパラメータとその説明については、 RUNNING Get Help command_name _ を使用して参照できます。または、を参照することもできます<block ref="a6fc2394a8b2095d1929066d59f6fcc9" category="inline-link-rx"></block>。</block>
@@ -8637,7 +8460,6 @@ Windowsホスト：</block>
   <block id="d9a37470fe419a246aa1213c6650926f" category="paragraph">コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます<block ref="7fb83b6cbb928f4072ab9a7c4ce09c24" category="inline-link-rx"></block></block>
   <block id="54f98e61788c175cab05b17b3fd5f1f6" category="paragraph">また、 _Uninstall-sSmHostPackage_ コマンドレットと必要なパラメータを使用して、複数のホストからプラグインをアンインストールすることもできます。コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます<block ref="7fb83b6cbb928f4072ab9a7c4ce09c24" category="inline-link-rx"></block>。</block>
   <block id="ffb7780c8ab56bba323c1d49615fbd2f" category="paragraph">コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます<block ref="7fb83b6cbb928f4072ab9a7c4ce09c24" category="inline-link-rx"></block>。</block>
-  <block id="29a6b619c3a60caa3635eee92628065c" category="admonition">休止、Snapshotコピー、および休止解除の処理を実行するプリコマンドとポストコマンドの場合は、該当するコマンドがプラグインホストのコマンドリストにあるかどうかを確認する必要があります。Linuxの場合は_/opt/snapcenter/snapenter/scc/allowed commands.config_path、Windowsの場合は_C：\Program Files\NetApp\Snapcenter\Snapcenter Plug-in Creator\etc\allowed_commands_list.txt_ for Windowsの順に指定します。</block>
   <block id="bf62a235cd24baabab2de8cbe3e62354" category="paragraph">PowerShellコマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、クローニングの処理を実行することもできます。PowerShell コマンドレットの詳細については、 SnapCenter のコマンドレットのヘルプを使用するか、コマンドレットのリファレンス情報を参照してください。
 <block ref="12abf3d0b43747b4f372f737c28b4029" category="inline-link-rx"></block>。</block>
   <block id="633ff87a38ba5733ad482699222e5df6" category="paragraph">コマンドレットで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。または、を参照することもできます<block ref="b70cb1971d6e57b9289aed553ef357cb" category="inline-link-rx"></block></block>
@@ -8815,7 +8637,6 @@ SnapLock設定はONTAPによって管理されます。</block>
   <block id="acebdece1b3734e875859ee761ab347e" category="sidebar">UNIXファイルシステムのクローニング</block>
   <block id="1121f6eb8ee08b3fbbc4d05a5ee6ca76" category="sidebar">Tech Refresh</block>
   <block id="72e3ebd15de33a3a4ac48a1468899e30" category="paragraph">サポートされているバージョンの最新情報については、を参照してください<block ref="96a4ccff2c2cba2d64ff2f5bfcf95100" category="inline-link-rx"></block>。</block>
-  <block id="6ef414d9ea1c137360c49ffc62ff4036" category="paragraph">ONTAP 9.12.1以前のバージョンでは、リストアの一環としてSnapLockヴォールトSnapshotコピーから作成されたクローンにSnapLockヴォールトの有効期限が継承されます。SnapLockの有効期限が過ぎた時点で、ストレージ管理者がクローンを手動でクリーンアップする必要があります。</block>
   <block id="8585a7e2d9203547a9e1b2e127f530dc" category="paragraph">。<block ref="3c59f2e9aad2adb626f5cfbb7cd6a195" category="inline-link-rx"></block> サポートされているバージョンに関する最新情報が含まれています。</block>
   <block id="059617cda1a3061ea2a2b4188965fe4d" category="paragraph">サポートされているバージョンの最新情報については、を参照してください<block ref="f6a41fefbf1f1f164dbf4b318a39da2c" category="inline-link-rx"></block>。</block>
   <block id="dc01c492280ce1fd1596d5e3bfe5bf41" category="list-text"><block ref="7a8856912beac423472b387a1e95361d" category="inline-link-rx"></block></block>
@@ -8835,7 +8656,6 @@ SnapLock設定はONTAPによって管理されます。</block>
   <block id="9dddc634db431dab44c50f3fd8460055" category="paragraph">サポートされているバージョンの最新情報については、を参照してください<block ref="f427499ed0a5ab6c4e27afbbda198682" category="inline-link-rx"></block></block>
   <block id="649d8184d4bc981264b0d66852b40d56" category="paragraph"><block ref="5274e0d1c22af55a55e01a625855ced0" category="inline-link-rx"></block></block>
   <block id="924dbab7608ad7bebe0adaf9e15b8542" category="paragraph">Windows Server では、 SnapCenter プロビジョニングとデータ保護がサポートされます。サポートされているバージョンの最新情報については、を参照してください <block ref="c16ce45673244a1fe516b0ed4d92ee5c" category="inline-link-rx"></block>。</block>
-  <block id="f70e7af7132291b170364c37c143af5f" category="paragraph">ONTAP 9.12.1以前のバージョンでは、SnapLockヴォールトSnapshotコピーから作成されたクローンにSnapLockヴォールトの有効期限が継承されます。SnapLockの有効期限が過ぎた時点で、ストレージ管理者がクローンを手動でクリーンアップする必要があります。</block>
   <block id="d24a44cebb5d893d4a6ffefcfde236ea" category="paragraph">ONTAP およびアプリケーションプラグインの最小要件については、を参照してください<block ref="fb6518117a57311639cf7e25ef1c11e1" category="inline-link-rx"></block>。</block>
   <block id="9f15a95270d57c31e3fbf8e82eb6d5a6" category="paragraph">を参照してください<block ref="fb6518117a57311639cf7e25ef1c11e1" category="inline-link-rx"></block></block>
   <block id="9166c380efba6c6a0d61dc08bcc135ee" category="summary">バックアップするリソースまたはリソースグループのバックアップポリシーを作成します。</block>
@@ -8968,7 +8788,6 @@ SnapLock設定はONTAPによって管理されます。</block>
   <block id="b75f291f313008e72d9ff0963164ee31" category="doc">リソースグループの作成とSQLバックアップポリシーの適用</block>
   <block id="2fd8d5ede56ca6e33060f1eb3dd0734b" category="paragraph">SnapCenter を使用して SAP HANA データベースのリソースをバックアップする前に、バックアップ対象のリソースまたはリソースグループのバックアップポリシーを作成する必要があります。</block>
   <block id="e479da34c5ed7685fcd981da443e348b" category="list-text">データベースの整合性チェックを実行する場合は、*[ファイルベースのバックアップ]*を選択します。</block>
-  <block id="9b13b3a5ddf2908f3bd7c006d6b212ee" category="list-text">Snapshotコピーテクノロジを使用してバックアップを作成する場合は、* Snapshotベース*を選択します。</block>
   <block id="ed5262a9aab3035c8548c5f3793c76f6" category="list-text">[Retention]ページで、選択したバックアップタイプとスケジュールタイプの保持設定を指定します。</block>
   <block id="98950caea953c79d817eba870ba7ae48" category="summary">SnapCenterでAzureクレデンシャルを作成し、Azure NetAppアカウントにアクセスします。</block>
   <block id="1ed01bab203e8745a0dcfe58f019c1d9" category="doc">SnapCenterでAzureクレデンシャルを作成する</block>
@@ -8986,7 +8805,6 @@ SnapLock設定はONTAPによって管理されます。</block>
   <block id="5c197ff6b8d148a9f919430a485adff2" category="list-text">既存のバックアップからクローニングするSAP HANA SIDを入力します。</block>
   <block id="11dae6129ac88bf8ce4b74a3f04b2931" category="list-text">SAP HANAデータベースANFボリュームが手動のQoS容量プールに設定されている場合は、クローンボリュームのQoSを指定します。</block>
   <block id="db72f6a27d253d274b29062a99ea2856" category="paragraph">ソースHANAシステムが自動検出され、クローンターゲットホストプラグインがSAP HANAホストにインストールされている場合、SnapCenterはクローンターゲットホスト上の既存のHANAデータボリュームを自動的にアンマウントし、新しくクローニングされたHANAデータボリュームをマウントします。</block>
-  <block id="42558f3e0d13c5a3ab297f0a09e3dce0" category="admonition">[Clone Split]は、ANFクローンはすでに選択したSnapshotコピーから作成された独立したボリュームであるため、ANFクローンでは無効になっています。</block>
   <block id="1d085da91833ced7df79bd36f6ed095f" category="doc">SQL Serverデータベースバックアップのクローニング</block>
   <block id="98649dd054e392acef8b60637dd1e4eb" category="list-text">[コピーの管理]ビューページで、プライマリストレージシステムからバックアップを選択します。</block>
   <block id="064cfc5ceb5ed3cddf1bdbcfa6887172" category="list-text">[クローンオプション]*ページで、必要なすべての詳細を指定します。</block>
@@ -9017,7 +8835,6 @@ SnapLock設定はONTAPによって管理されます。</block>
   <block id="10ee6df71b74c57a6b9f1595f3efce16" category="doc">Azure NetApp Filesで実行されているSAP HANAデータベースのバックアップ</block>
   <block id="13c7c834f7b8414cef2ddebbd37e4d86" category="list-text">[Backups]*矢印を選択して、追加のバックアップオプションを設定します。</block>
   <block id="820ce0339ce64af93adc295b0695c2f8" category="list-text">[Custom Configurations]*の矢印を選択し、このリソースを使用するすべてのジョブに必要なカスタム値のペアを入力します。</block>
-  <block id="54e4bfc320112c89c44dab7ba656c966" category="list-text">Snapshotコピーを作成するには、* Snapshotコピーツール&gt;ファイルシステムの整合性を伴わないSnapCenter *を選択します。</block>
   <block id="40defed757ae2b8a311e0272f6d77f1b" category="paragraph">[ファイルシステムの整合性]オプションは、Windowsホストで実行されているアプリケーションにのみ適用されます。</block>
   <block id="f3d79571b40021bb0ad32b78398ef057" category="doc">Azure NetApp Filesで実行されているOracleデータベースをバックアップする</block>
   <block id="5afb14e7449db1f35fc15f6f85899c21" category="list-text">[リソース]ページで、[表示]ドロップダウンリストから*[データベース]*を選択します。</block>
@@ -9059,4 +8876,202 @@ SnapLock設定はONTAPによって管理されます。</block>
   <block id="4db35e04fa48549bd85b1a6d4d43fb09" category="list-text">SnapCenter 4.9 P1以降では、Amazon Web Services（AWS）のSoftware-Defined Data Center（SDDC）環境上のVMware Cloudで、OracleとMicrosoft SQLのワークロードの保護がサポートされます。</block>
   <block id="38012dbc6542f17135111019d1839fa1" category="inline-link">VMware Cloud on AWS SDDC環境でNetApp SnapCenterを使用してOracleやMS SQLのワークロードを保護</block>
   <block id="50fc2fe54f751b9b7639d7a2f1fb2027" category="paragraph">詳細については、を参照してください<block ref="4adac1bb1a663de205d28f66d3207227" category="inline-link-rx"></block>。</block>
+  <block id="726d39dceafdcf2a244cb0bcdb262380" category="paragraph">このスタブは休止を実行します。が配置されます
+Snapshotを作成できる状態にアプリケーションを移行します。これは、ストレージSnapshot処理の前に呼び出されます。</block>
+  <block id="2b8b2c493b09b013588a02ac57204e14" category="paragraph">休止解除を実行する場合は、このスタブを指定します。配置されます
+通常の状態のアプリケーション。これは保管後に呼び出されます
+Snapshot処理。</block>
+  <block id="e337fc3b0c344eaa85525958668d8591" category="admonition">リソースにボリュームまたはqtreeが含まれている場合、そのボリュームまたはqtreeでリストア対象として選択されたSnapshotのあとに作成されたSnapshotは削除され、リカバリすることはできません。また、同じボリュームまたは qtree で他のリソースがホストされている場合、そのリソースも削除されます。</block>
+  <block id="ad8d3fc8faebdc68585dd1240b9fc90c" category="paragraph">このチェックボックスをオンにして、Snapshot名に使用するカスタムの名前形式を入力します。</block>
+  <block id="f73a752fef5027614ec32183c0ee993b" category="paragraph">たとえば、 _customText_resource group_policy_hostname や resource group_hostname_hostname などです。デフォルトでは、Snapshot名にタイムスタンプが追加されます。</block>
+  <block id="168d37e62ff50182379a645020cf7152" category="paragraph">Snapshot処理が完了するまでの待機時間として、[Urgent]、[Medium]、または[Relaxed]のいずれかを選択します。</block>
+  <block id="b9b6466d5860f878a4a60dda95135881" category="list-text">[Scripts]の矢印を選択し、休止、Snapshot、および休止解除の処理を実行するプリコマンドとポストコマンドを入力します。障害発生時に終了する前に実行する PRE コマンドを入力することもできます。</block>
+  <block id="ea57a48a86501646953b0992c55066ad" category="list-text">Snapshotコピーツール*の矢印を選択して、Snapshotを作成するツールを選択します。</block>
+  <block id="b74a1dd6c2da66e7e33c0f14344382d7" category="paragraph">SnapCenterを使用してPlug-in for Windowsを使用し、ファイルシステムを整合性のある状態にしてからSnapshotを作成します。Linux リソースの場合、このオプションは適用されません。</block>
+  <block id="45e5304bd8ba98d8e58920d13f8503a9" category="paragraph">SnapCenter：ストレージレベルのSnapshotを作成</block>
+  <block id="a19bb018830c78e2d5637fcf602ec4d4" category="paragraph">Snapshotを作成するためにホストで実行するコマンドを入力します。</block>
+  <block id="94687babf968f2e9f2633c4704893c9e" category="paragraph">[その他]*を選択し、ホストで実行するSnapshotを作成するコマンドを入力します。</block>
+  <block id="98a696ecad4b4de122d523af3692ca6e" category="paragraph">Snapshotをミラーまたはバックアップにレプリケートする場合は、ソースボリュームとデスティネーションボリュームの両方に対応するSVMをSnapCenter管理者がユーザに割り当てておく必要があります。</block>
+  <block id="4fcec4fe97075a54e91b04a9e79f56ff" category="list-text">Snapshotのロック期間を指定すると、保持期間が終了するまでSnapshotが削除されません。その結果、保持されるSnapshotの数がポリシーで指定されている数よりも多くなる可能性があります。</block>
+  <block id="f2c85d871e7c5ae1520349e8a3869fea" category="list-text">ONTAP 9.12.1以前のバージョンでは、リストアの一環としてSnapLockヴォールトSnapshotから作成されたクローンにSnapLockヴォールトの有効期限が継承されます。SnapLockの有効期限が過ぎた時点で、ストレージ管理者がクローンを手動でクリーンアップする必要があります。</block>
+  <block id="cee00ab879a477aea09f4b1f404b14fc" category="paragraph">一定数のSnapshotを保持</block>
+  <block id="b19465911649130b0ad9e7ed87b43f2f" category="paragraph">[保持するSnapshotコピーの総数]*を選択し、保持するSnapshotの数を指定します。</block>
+  <block id="7537e0d42ad63b5bae18964aee575640" category="paragraph">Snapshotの数が指定した数を超えると、最も古いコピーから順にSnapshotが削除されます。</block>
+  <block id="95dfd611f9419ea2abdea4d84377aeab" category="admonition">SnapVault レプリケーションを有効にする場合は、保持数を 2 以上に設定する必要があります。保持数を1に設定すると、新しいSnapshotがターゲットにレプリケートされるまで最初のSnapshotがSnapVault関係の参照Snapshotになるため、保持処理が失敗する可能性があります。</block>
+  <block id="298d4bea409e146b0187ec130a39fb72" category="paragraph">Snapshotを特定の日数だけ保持</block>
+  <block id="e736f4106d35f31cff1a51f091e56c06" category="paragraph">[Keep Snapshot copies for]*を選択し、Snapshotを削除するまでの日数を指定します。</block>
+  <block id="7cd1d77689881addd5facf23970563df" category="paragraph">[Snapshot locking period]を選択し、日、月、または年を選択します。</block>
+  <block id="7630e21f8142849489483b7354d0643a" category="paragraph">ONTAPの保護関係のタイプがミラーとバックアップの場合、このオプションのみを選択すると、プライマリで作成されたSnapshotはデスティネーションに転送されませんが、デスティネーションのリストに表示されます。このSnapshotをリストア処理の対象としてデスティネーションで選択すると、「Secondary Location is not available for the selected vaulted/mirrored backup」というエラーメッセージが表示されます。</block>
+  <block id="d2f577cb0769d7c31f2785dd590b9f27" category="paragraph">SnapLock Vaultの詳細については、「バックアップでSnapshotをWORM状態にコミットする」を参照してください。
+デスティネーション</block>
+  <block id="9a5f5dfff4956ecfacfdc016d25c212b" category="paragraph">選択したSnapshotラベルに応じて、ラベルに一致するセカンダリSnapshot保持ポリシーがONTAPによって適用されます。</block>
+  <block id="4f2f5ecb6e9ddbc65d919530d4364ba6" category="admonition">セカンダリストレージのSnapshotの最大数に達しないように、ONTAPでセカンダリストレージのSnapMirror保持ポリシーを設定する必要があります。</block>
+  <block id="2cd86db6267706ae2b61eb8f47d98ca8" category="list-text">整合グループSnapshotが必要かどうかを決定し、整合グループSnapshotを削除するための適切なオプションを決定します。</block>
+  <block id="6ec295ec28557a4fa3d2b8d853589f33" category="list-text">ソースストレージシステムとSnapMirrorデスティネーションのSnapshotの保持期間を決定します。</block>
+  <block id="542226a75e67e826476b8a6313eb2a61" category="list-text">*無停止のNetAppスナップショットテクノロジ*</block>
+  <block id="d7aeb41edb7600997bc3b48f534dd071" category="paragraph">SnapCenterでは、NetApp SnapshotテクノロジとSnapCenterカスタムプラグインを使用してリソースがバックアップされます。Snapshotはストレージスペースを最小限しか消費しません。</block>
+  <block id="270b0961f4ad36c55a31c15e64b7ff91" category="list-text">バックアップ作成時に、ONTAPの整合グループ（CG）Snapshot機能がサポートされます。</block>
+  <block id="2e7557b222d681ee77b3f7d1103d9851" category="paragraph">1回の処理では、1つのホスト内のリソースが同じボリュームを共有する場合にSnapshotが統合されます。</block>
+  <block id="bd3d40e64c749fcba4bd5710c7b184ab" category="list-text">外部コマンドを使用してSnapshotを作成する機能。</block>
+  <block id="0096aecb189c35a600788218923fbf90" category="list-text">Windows環境でファイルシステムと整合性のあるSnapshotを作成する機能。</block>
+  <block id="aeae183dfc696fe75906213d043a525b" category="list-text">カスタムの名前を使用する場合は、[Resource]ページで*[Use custom name format for Snapshot copy]*チェックボックスを選択し、Snapshot名のカスタムの名前形式を入力します。</block>
+  <block id="3df4bf361c2bfb2dfa84fc1cffa5779e" category="paragraph">たとえば、 _customText_policy_hostname_or_resource_hostname_hostname_1 です。デフォルトでは、Snapshot名にタイムスタンプが追加されます。</block>
+  <block id="54c33b2bcea395f4a04e336452fdf01b" category="list-text">[Scripts]*の矢印をクリックして、休止、Snapshot、および休止解除の処理のプリコマンドとポストコマンドを実行します。バックアップ処理を終了する前にプリコマンドを実行することもできます。</block>
+  <block id="c9127adbadee36ca206638ad1cccd8ad" category="list-text">Snapshotコピーツール*の矢印をクリックして、Snapshotを作成するツールを選択します。</block>
+  <block id="7abbc88f0fd37782c0173c64624bd002" category="paragraph">SnapCenterでストレージレベルのSnapshotを作成</block>
+  <block id="4cdad3fc327406a192cf8fddec7132e3" category="paragraph">SnapCenterでPlug-in for Windowsを使用してファイルシステムを整合性のある状態にしてからSnapshotを作成</block>
+  <block id="d03489d8edb47ae534fd09e8de3121c2" category="paragraph">Snapshotを作成するコマンドを入力するには</block>
+  <block id="60c069fc0d03d8cbfeabe67ca031a729" category="paragraph">[その他]*を選択し、コマンドを入力してSnapshotを作成します。</block>
+  <block id="0fd08e22cd8a21cd901e68b42968c2e6" category="paragraph">このスタブは休止を実行します。つまり、アプリケーションをSnapshotを作成できる状態にします。これは、Snapshot処理の前に呼び出されます。保持するアプリケーションのメタデータは、応答の一部として設定する必要があります。このメタデータは、対応するストレージSnapshotでの後続のクローニングまたはリストア処理中に、構成パラメータの形式で返されます。</block>
+  <block id="7371795f7797164be99265838bc9b9fa" category="paragraph">このスタブは、アプリケーションを通常の状態に戻すことを意味し、休止解除を実行します。これは、Snapshotの作成後に呼び出されます。</block>
+  <block id="b57d7f6c59e14cd0c1b2ec157185a6bc" category="paragraph">アプリケーションリソースが複数のボリュームに分散している場合、バックアップのSnapLock有効期限は、ボリューム内のSnapshotに設定されている最長のSnapLock有効期限になります。最長のSnapLock有効期限がONTAPから取得されます。</block>
+  <block id="433b97b9fd0c63b0de421dea32bde9c2" category="list-text">ONTAPクラスタ間でストレージボリュームの整合グループSnapshotを作成します。</block>
+  <block id="b24c71863603f1e22b9646ccb63beac7" category="list-text">SnapCenterポリシーを使用して、既存のレプリケーション関係（SnapVault / SnapMirror /ユニファイドレプリケーション）を利用して、プライマリで作成されたSnapshotをONTAPセカンダリに更新します。</block>
+  <block id="7a7937f1bd01629dfc078d9cfaca3c7f" category="paragraph">アプリケーションで休止を実行する必要があります。ほとんどの場合、これは、アプリケーションをSnapCenterサーバがバックアップ（スナップショットなど）を作成できる状態にすることを意味します。</block>
+  <block id="2de9454fcd2f1befcb26b81a260ae3c9" category="paragraph">SnapCenterサーバがスナップショットを作成した後、または
+一般的にバックアップを実行しました。</block>
+  <block id="2033dc98d1198d5069b9ced87c4c15a3" category="list-text">Snapshotをミラーまたはバックアップにレプリケートする場合は、SnapCenter管理者がユーザにソースボリュームとデスティネーションボリュームの両方のStorage Virtual Machine（SVM）を割り当てておく必要があります。</block>
+  <block id="5c2dc81500d1cc825407033c35b56981" category="paragraph">リソースにストレージフットプリントとしてボリュームまたはqtreeが含まれている場合、それらのボリュームまたはqtreeの新しいSnapshotは削除され、リカバリすることはできません。また、同じボリュームまたは qtree で他のリソースがホストされている場合、そのリソースも削除されます。</block>
+  <block id="970623891ebb3c641166d7ce5d32a406" category="paragraph">SnapCenterは、Snapshot処理の完了後にSnapMirrorとSnapVaultの更新を実行します。SnapMirror更新とSnapVault 更新はSnapCenter ジョブの一部として実行されるため、ONTAP スケジュールを別途作成しないでください。</block>
+  <block id="b4565188a0190ae6d3db6b545812a7a1" category="list-text">LUNのサイズを変更する前にSnapshotを作成しておくことを推奨します。</block>
+  <block id="7d4ca5d55cf34e28c22880cf6ec2eedb" category="list-text">LUNのサイズ変更前に作成されたSnapshotからLUNをリストアする必要がある場合は、SnapCenterによってLUNのサイズがSnapshotのサイズに自動的に変更されます。</block>
+  <block id="3e47f97ded2b44c6f82b5673388c4cf5" category="paragraph">リストア処理後、サイズ変更後にLUNに追加されたデータを、サイズ変更後に作成されたSnapshotからリストアする必要があります。</block>
+  <block id="6d301ee444a1c13b7da1bf8953d5daa2" category="list-text">Snapshotをレプリケートする場合は、処理を実行するユーザにソースボリュームとデスティネーションボリュームの両方に対するストレージ接続を割り当てる必要があります。</block>
+  <block id="1de0023c56f6d86fc751b551520774b6" category="paragraph">VMware環境では、SnapCenter Plug-in for Microsoft Windowsを使用して、LUNの作成と管理やSnapshotの管理を行うことができます。</block>
+  <block id="9233a91d798c38a1e42098d2e0bdf521" category="list-text">SnapMirrorデスティネーションまたはSnapVaultデスティネーションにSnapshotをレプリケートする場合は、デスティネーションSVMまたはデスティネーションクラスタとソースSVMまたはクラスタへのストレージシステム接続をセットアップする必要があります。</block>
+  <block id="0855d4a7efcc5d7db4786a318d5517e6" category="paragraph">SnapCenterでは、Snapshotテクノロジを使用して、LUNまたはVMDK上にあるSQL Serverデータベースをバックアップします。SnapCenterは、データベースのSnapshotを作成することによってバックアップを作成します。</block>
+  <block id="2b0e03a4cda838c9297e1f7e7ff4a27f" category="paragraph">1つのボリューム上のすべてのデータベースは、Snapshotを使用して同時にバックアップされます。同時バックアップデータベースの最大数が35で、ストレージボリュームに格納されているデータベースが35を超える場合は、データベース数を35で割った数のSnapshotが作成されます。</block>
+  <block id="72dafb1a5239fa5a8bc929bf6951f900" category="admonition">バックアップポリシーでは、Snapshotごとの最大データベース数を設定できます。</block>
+  <block id="9bdd40947ff9b3833cc4fa3ca7493f5f" category="paragraph">SnapCenterがSnapshotを作成すると、ストレージ・システム・ボリューム全体がSnapshotにキャプチャされます。ただし、バックアップは、バックアップが作成された SQL ホストサーバに対してのみ有効になります。</block>
+  <block id="00446608fea557ce7f8e6f3b5b02c95a" category="paragraph">他のSQLホストサーバのデータが同じボリューム上にある場合、このデータをSnapshotからリストアすることはできません。</block>
+  <block id="7bd2019ba682b552d23b81c38e266cb4" category="summary">Plug-in for SQL Serverは、Windowsホスト上でMicrosoft SQL Serverと統合され、ストレージシステム上でNetApp Snapshotテクノロジと統合されます。Plug-in for SQL Server を操作するには、 SnapCenter インターフェイスを使用します。</block>
+  <block id="c45d74eb4e3b48419f3ffdacf64df379" category="paragraph">Plug-in for SQL Serverでは、NetApp SnapCenter Plug-in for Microsoft WindowsでNetAppのSnapshotテクノロジを使用します。これにより、データベースを数秒でバックアップし、 SQL Server をオフラインにすることなく迅速にリストアすることが可能です。Snapshotはストレージスペースを最小限しか消費しません。</block>
+  <block id="4a62dc47918eb3194a2597130c3e3478" category="paragraph">プライマリストレージボリュームまたはセカンダリストレージボリュームにあるバックアップを検証すると、すべてのプライマリSnapshotとセカンダリSnapshotが検証済みとマークされます。</block>
+  <block id="f22fa01ea126a4b35d7d1a7cadaacfb4" category="summary">実行中、キューに登録済み、または応答しないバックアップ処理をキャンセルできます。バックアップ処理をキャンセルすると、作成されたバックアップがSnapCenterサーバに登録されていない場合、SnapCenterサーバは処理を停止し、ストレージからすべてのSnapshotを削除します。バックアップがすでにSnapCenterサーバに登録されている場合、キャンセルがトリガーされても、作成済みのSnapshotはロールバックされません。</block>
+  <block id="c6e33317d1c640092fa79c411076f1ac" category="list-text">ONTAP 9.12.1以前のバージョンでは、Snapshotロック期間を指定すると、改ざん防止Snapshotから作成されたクローンにSnapLockの有効期限が継承されます。SnapLockの有効期限が過ぎた時点で、ストレージ管理者がクローンを手動でクリーンアップする必要があります。</block>
+  <block id="ea0a2ffd065abd8f244c2b5ba8d2eb61" category="paragraph">オプション：Snapshotのカスタムの名前と形式を入力します。     たとえば、 customtext_resourcegroup_policy_hostname や resourcegroup_hostname などの形式です。デフォルトでは、Snapshot名にタイムスタンプが追加されます。</block>
+  <block id="fc2e7a6d3781a1a4d36b65845b17034f" category="list-text">SnapLockが有効なポリシーの場合、ONTAP 9.12.1以前のバージョンでは、Snapshotロック期間を指定すると、リストアの一環として改ざん防止Snapshotから作成されたクローンにSnapLockの有効期限が継承されます。SnapLockの有効期限が過ぎた時点で、ストレージ管理者がクローンを手動でクリーンアップする必要があります。</block>
+  <block id="09b1825e6e4164ad9ae7bee22660c8a1" category="list-text">内部データベーススナップショットを使用する代わりに、チェックを制限してロックを取得するには、**TABLOCK**オプションを選択します。</block>
+  <block id="77da8eeb12f1568fe3ed9dda9f91d348" category="summary">Snapshotがないセカンダリバックアップのバックアップ数をクリーンアップするには、Remove-SmBackupコマンドレットを使用します。このコマンドレットは、[Manage Copies]トポロジに表示されるSnapshotの総数が、セカンダリストレージのSnapshotの保持設定と一致しない場合に使用します。</block>
+  <block id="f4efb7f60eb91fbd6aa1b8aca204f531" category="paragraph">Snapshotがないセカンダリバックアップのバックアップ数をクリーンアップするには、Remove-SmBackupコマンドレットを使用します。このコマンドレットは、[Manage Copies]トポロジに表示されるSnapshotの総数が、セカンダリストレージのSnapshotの保持設定と一致しない場合に使用できます。</block>
+  <block id="b3d3023e1077ceaca98543a186ce5cf3" category="paragraph">この例では、Snapshotを含まないセカンダリバックアップのバックアップ数をクリーンアップしています。</block>
+  <block id="e5de086f995e9adace26013b3afa493b" category="list-text">Snapshotをミラーまたはバックアップにレプリケートする場合は、SnapCenter管理者がソースボリュームとデスティネーションボリュームの両方のStorage Virtual Machine（SVM）をユーザに割り当てておく必要があります。</block>
+  <block id="d389a87e1086ac0f4d1de66ca0bb0ef6" category="paragraph">Snapshotのロック期間を指定すると、保持期間が終了するまでSnapshotが削除されません。  その結果、保持されるSnapshotの数がポリシーで指定されている数よりも多くなる可能性があります。</block>
+  <block id="367e13921e2255a8cbd12c7825418d0e" category="list-text">Snapshotごとにバックアップするデータベースの最大数を入力します。</block>
+  <block id="40e1269ad4c969b2e34a183b8fe9f42e" category="list-text">Snapshotごとにバックアップするデータベースの最大数を入力します。
+デフォルト値は 100 です</block>
+  <block id="8822b1db0297028652e02db3e4af760f" category="paragraph">特定の数のSnapshotのみを保持します。</block>
+  <block id="01161b2ea6c2a575567c66cd20fb2d2b" category="list-text">保持するSnapshotの総数を指定</block>
+  <block id="3e44a8badc4e63dbe09602ec7a645d6d" category="list-text">保持するSnapshotの数を指定するには、*保持するSnapshotコピーの総数*を選択します。</block>
+  <block id="77a7fd8cca8cbeb3ef776e9176ff5639" category="admonition">デフォルトでは、保持数の値は 2 に設定されます。保持数を1に設定すると、新しいSnapshotがターゲットにレプリケートされるまで最初のSnapshotがSnapVault関係の参照Snapshotになるため、保持処理が失敗する可能性があります。</block>
+  <block id="785922db862c289384ffb00097fa1b09" category="list-text">Snapshotを保持する期間</block>
+  <block id="b02e59c697fe2e431d0b9971224415f2" category="list-text">Snapshotを保持してから削除するまでの日数を指定する場合は、*[Keep Snapshot copies for]*を選択します。</block>
+  <block id="22a17a0f81564b386d059bfef330f60f" category="list-text">Snapshotのロック期間を指定する場合は、*[Snapshot copy locking period（Snapshotコピーロック期間）]*を選択し、日数、月数、または年数を選択します。</block>
+  <block id="c5de403e1806c217cf2924175f84c487" category="list-text">保持するSnapshotの数を指定するには、*保持するSnapshotコピーの総数*を選択します。Snapshotの数が指定した数を超えると、最も古いコピーから順にSnapshotが削除されます。</block>
+  <block id="6dbf7587b461da1c5b97d671cf358311" category="list-text">Snapshotを削除するまで保持する日数を指定するには、*[Keep Snapshot copies for]*を選択します。</block>
+  <block id="8e21880c3d6be6527ce936f273c2dfdb" category="paragraph">ログSnapshotの保持期間は、デフォルトで7日に設定されています。Set-SmPolicyコマンドレットを使用して、ログのSnapshot保持期間を変更します。</block>
+  <block id="4caf8c069465c53a1a175fa4a08aa0a8" category="paragraph">この例では、ログのSnapshot保持数を2に設定しています。</block>
+  <block id="149450cb3a9e3ecae5eaba7a4573516f" category="paragraph">選択したSnapshotラベルに応じて、ラベルに一致するセカンダリSnapshot保持ポリシーがONTAPによって適用されます。</block>
+  <block id="dccc8011e6f51f002aae83ff00479c7d" category="admonition">セカンダリストレージがSnapshotの最大数に達しないように、ONTAPでSnapMirror保持ポリシーを設定する必要があります。</block>
+  <block id="610559e33fd2c1c02990a8421918d746" category="list-text">内部データベーススナップショット（TABLOCK）を使用する代わりに、チェックを制限してロックを取得する</block>
+  <block id="3ec8d83deb8081e2273aae284a9a87c1" category="list-text">内部データベースSnapshotを使用する代わりにチェックを制限してロックを取得する場合は、*[内部データベースSnapshotコピー（TABLOCK）を使用する代わりにチェックを制限してロックを取得する]*を選択します。</block>
+  <block id="f8037ac04b4b9ad5f1f4efa485f02267" category="list-text">プライマリストレージシステムからセカンダリストレージシステムにSnapshotをレプリケートしておく必要があります。</block>
+  <block id="be7d1513fcb4c496cc0a08dc4180b0c0" category="summary">Snapshotのデフォルトの命名規則を使用することも、カスタマイズした命名規則を使用することもできます。デフォルトのバックアップ命名規則では、Snapshot名にタイムスタンプが追加されるため、コピーがいつ作成されたかを確認できます。</block>
+  <block id="994822d5c1500de0f9f8d5222f1d1a08" category="paragraph">Snapshotのデフォルトの命名規則を使用することも、カスタマイズした命名規則を使用することもできます。デフォルトのバックアップ命名規則では、Snapshot名にタイムスタンプが追加されるため、コピーがいつ作成されたかを確認できます。</block>
+  <block id="1d220412a989e3409a81972981a34269" category="paragraph">Snapshotでは、次のデフォルトの命名規則が使用されます。</block>
+  <block id="5aacd591ac321cf50f17ba6d6b99482c" category="paragraph">または、*[Use custom name format for Snapshot copy]*を選択して、リソースまたはリソースグループを保護しながらSnapshot名の形式を指定することもできます。たとえば、 customtext_resourcegroup_policy_hostname や resourcegroup_hostname などの形式です。デフォルトでは、タイムスタンプのサフィックスがSnapshot名に追加されます。</block>
+  <block id="27d1d8a7545b265c4bdec73aaeb38eed" category="paragraph">たとえば、同じボリューム内に200個のデータベースがある場合、2つのSnapshotがそれぞれ100個のデータベースで作成されます。</block>
+  <block id="ad040426d6a404a4c17cacc91a28049d" category="list-text">[リソース]ページで、[Snapshotコピーのカスタム名形式]*チェックボックスを選択し、Snapshot名に使用するカスタムの名前形式を入力します。</block>
+  <block id="99eb5243897677d4ecbe85a62d686e8c" category="paragraph">たとえば 'customText_policy_hostname や resource_hostname などですデフォルトでは、Snapshot名にタイムスタンプが追加されます。</block>
+  <block id="1dc16d578df13bb68e843ba44a6ec58e" category="list-text">Snapshotをミラーまたはバックアップにレプリケートする場合は、SnapCenter管理者がユーザにソースボリュームとデスティネーションボリュームの両方に対してStorage Virtual Machine（SVM）を割り当てておく必要があります。</block>
+  <block id="0bfdfbd1ef58fc826a8deec759820453" category="summary">SnapCenter を使用して SQL Server システムおよびユーザデータベースをバックアップするときは、データベース、 SQL Server インスタンス、可用性グループ（ AG ）などのリソースタイプを選択する必要があります。Snapshotテクノロジを使用して、リソースが配置されているボリュームのオンラインの読み取り専用コピーが作成されます。</block>
+  <block id="b4d3eba987f9528647b8ea2102ac055f" category="paragraph">SnapCenter を使用して SQL Server システムおよびユーザデータベースをバックアップするときは、データベース、 SQL Server インスタンス、可用性グループ（ AG ）などのリソースタイプを選択する必要があります。Snapshotテクノロジを使用して、リソースが配置されているボリュームのオンラインの読み取り専用コピーが作成されます。</block>
+  <block id="37467ff0195d6765df22bdc34e035d04" category="list-text">Snapshotをミラーセカンダリストレージまたはバックアップセカンダリストレージにレプリケートする場合は、SnapCenter管理者がソースとデスティネーションの両方のボリューム用にSVMを割り当てておく必要があります。</block>
+  <block id="099321e862ba2170dc1c3e6b1f02ef72" category="paragraph">ONTAP 9.12.1以前のバージョンでは、リストアの一環としてSnapLockヴォールトSnapshotから作成されたクローンにSnapLockヴォールトの有効期限が継承されます。SnapLockの有効期限が過ぎた時点で、ストレージ管理者がクローンを手動でクリーンアップする必要があります。</block>
+  <block id="1635764350a12c1ff0349008881e57dd" category="paragraph">Snapshotロック期間</block>
+  <block id="3c2828ba75d966a57611ae076f53de62" category="paragraph">ローカルSnapshot作成後にSnapMirrorを更新する</block>
+  <block id="d515aa4634219e7d2319e5e18234ff1a" category="paragraph">ローカルSnapshot作成後にSnapVaultを更新</block>
+  <block id="ea25009673ccb8c2097d73f240946554" category="list-text">チェックボックスを選択し、Snapshot名に使用するカスタムの名前形式を入力します。</block>
+  <block id="3b191506717d044b1c6c116437856fa8" category="paragraph">例：<block ref="6d242f6ac938ffb13709f54d68cd3c4a" prefix=" " category="inline-code"></block> または<block ref="90ea7aa0cb61dd49e32f6dcf8afac143" prefix=" " category="inline-code"></block>。デフォルトでは、Snapshot名にタイムスタンプが追加されます。</block>
+  <block id="65086066849df85532ada3ce3b32fabb" category="paragraph">たとえば 'customText_resource group_policy_hostname や resource group_hostname などですデフォルトでは、Snapshot名にタイムスタンプが追加されます。</block>
+  <block id="edadde14dd023edf408c56082534fb18" category="paragraph">バックアップ処理をキャンセルすると、作成されたバックアップがSnapCenterサーバに登録されていない場合、SnapCenterサーバは処理を停止し、ストレージからすべてのSnapshotを削除します。バックアップがすでにSnapCenterサーバに登録されている場合、キャンセルがトリガーされても、作成済みのSnapshotはロールバックされません。</block>
+  <block id="4283444ce0d2e5af852c09c8c490c9b2" category="list-text">無停止のNetApp Snapshotテクノロジ</block>
+  <block id="e9c2c7f52b66305a7519773fdcb971a2" category="paragraph">SnapCenterでは、Plug-in for Oracle DatabaseおよびPlug-in for UNIXでNetAppのSnapshotテクノロジを使用してデータベースがバックアップされます。Snapshotはストレージスペースを最小限しか消費しません。</block>
+  <block id="6254fd4e626c978541c1f2e7fa8e13fd" category="paragraph">単一のホストのデータベースが同じボリュームを共有している場合、1回の処理でSnapshotが統合されます。</block>
+  <block id="39777df60ae8ddc1548b34cdead2def2" category="list-text">リカバリは、設定したアーカイブログの場所にあるアーカイブログを使用して実行します。データベースが ARCHIVELOG モードで実行されている場合、 Oracle データベースは、アーカイブ REDO ログと呼ばれる 1 つ以上のオフラインデスティネーションに、満杯の REDO ログファイルを保存します。SnapCenter は、指定された SCN 、選択された日時、またはすべてのログオプションに基づいて、最適な数のログバックアップを特定してマウントします。
+リカバリに必要なアーカイブログが設定された場所にない場合は、ログを含むSnapshotをマウントし、パスを外部アーカイブログとして指定する必要があります。</block>
+  <block id="adeb26b62f8ee06b6b6bae7b4ceacf27" category="list-text">Snapshotをミラーまたはバックアップにレプリケートする場合は、ソースボリュームとデスティネーションボリュームの両方のStorage Virtual Machine（SVM）をSnapCenter管理者がユーザに割り当てておく必要があります。</block>
+  <block id="ba0a9122f311e85ab0505c551b651192" category="list-text">ボリュームはSnapshotからクローニングされ、クローニングされたLUNまたはボリュームを使用してホスト上にファイルシステムスタックが構築されます。</block>
+  <block id="9e1730c2573e54b5d90f6eb3254bfc8e" category="paragraph">このチェックボックスをオンにして、Snapshot名に使用するカスタムの名前形式を入力します。</block>
+  <block id="99b1f696253ffa3a8fb97bceb5991c38" category="paragraph">たとえば 'customText_policy_hostname や resource_hostname などですデフォルトでは、Snapshot名にタイムスタンプが追加されます。</block>
+  <block id="d75cc4ee2a6f5a9c8f73c954b5b8dfb1" category="summary">プラグインを使用して、リソースグループの整合グループSnapshotを作成できます。整合グループとはボリュームのコンテナであり、複数のボリュームを格納して 1 つのエンティティとして管理できます。整合グループは、複数のボリュームの同時Snapshotであり、ボリュームグループの整合性のあるコピーを提供します。</block>
+  <block id="fb38bbae125d9d388142d3e839171085" category="doc">SnapCenter Plug-in for SAP HANA Databaseでの整合グループSnapshotの使用方法</block>
+  <block id="d9be525eef97aa0a1757edb1b36e0668" category="paragraph">ストレージコントローラが整合性のあるSnapshotをグループ化するまでの待機時間を指定することもできます。使用可能な待機時間のオプションは、 * Urgent * 、 * Medium * 、 * Relaxed * です。また、整合グループSnapshotの処理中にWrite Anywhere File Layout（WAFL）の同期を有効または無効にすることもできます。WAFLの同期により、整合グループSnapshotのパフォーマンスが向上します。</block>
+  <block id="dc82007d2d72fe3595e4a12ab929226d" category="paragraph">Snapshotテクノロジを使用したバックアップの作成</block>
+  <block id="a73c04130d1785278e42ce85b94c154d" category="admonition">Snapshot コピーベースのバックアップで SnapVault レプリケーションを有効にする場合は、保持数を 2 以上に設定する必要があります。保持数を1に設定すると、新しいSnapshotがターゲットにレプリケートされるまで最初のSnapshotがSnapVault関係の参照Snapshotになるため、保持処理が失敗する可能性があります。</block>
+  <block id="3d721f84f4ba496ced30bffcfa1591da" category="admonition">SAP HANAシステムレプリケーションでは、作成されたSnapshotの合計数はリソースグループに設定された保持数と同じになります。  最も古いSnapshotの削除は、最も古いSnapshotが配置されているノードに基づいて行われます。
+たとえば、 SAP HANA システムレプリケーションがプライマリ、 SAP HANA システムレプリケーションがセカンダリのリソースグループの場合、保持期間は 7 に設定されます。  一度に作成できるSnapshotの数は、SAP HANAシステムレプリケーションプライマリとSAP HANAシステムレプリケーションセカンダリの両方を含め、最大7つです。</block>
+  <block id="87f3bd22fc3dd40b1b5252aca5beb91f" category="paragraph">ONTAPの保護関係のタイプがミラーとバックアップの場合、このオプションのみを選択すると、プライマリで作成されたSnapshotはデスティネーションに転送されず、デスティネーションのリストに表示されます。このSnapshotをリストア処理の対象としてデスティネーションで選択すると、「Secondary Location is not available for the selected vaulted/mirrored backup」というエラーメッセージが表示されます。</block>
+  <block id="79bbfd966b301fcff4a657ffa7b4883b" category="admonition"> セカンダリストレージのSnapshotの最大数に達しないように、ONTAPでセカンダリストレージのSnapMirror保持ポリシーを設定する必要があります。</block>
+  <block id="f73eb370f8bbfa82c1bb4c40f02b65ce" category="list-text">アプリケーションと整合性のあるデータベースのSnapshotをバックアップするSnapshotコピーベースのポリシーを作成するかどうかを決定します。</block>
+  <block id="2bf2937ec53ec68b5e4f4ecdeab22229" category="paragraph">SnapCenterは、Plug-in for SAP HANA DatabaseでNetAppのSnapshotテクノロジを使用してリソースをバックアップします。</block>
+  <block id="32d574f28776ee8b2deb390451f88886" category="list-text">外部コマンドを使用してSnapshotを作成する機能。</block>
+  <block id="b98ec889f59de061a4caf0f10c44b599" category="list-text">Snapshotコピーベースのバックアップ処理の場合は、すべてのテナントデータベースが有効でアクティブであることを確認してください。</block>
+  <block id="734b47c3d3034ecc47486b3b7c947423" category="list-text">休止、Snapshot、および休止解除の処理を実行するプリコマンドとポストコマンドの場合は、該当するコマンドがプラグインホストのコマンドリストで次のパスから使用できるかどうかを確認する必要があります。</block>
+  <block id="9322b02cbab1e9e30696c6f18aa5b45e" category="list-text">[Resource]ページで、*[Use custom name format for Snapshot copy]*を選択し、Snapshot名に使用するカスタムの名前形式を入力します。</block>
+  <block id="1ddf419f4244e28efab4ce0d4d2a7429" category="paragraph">Snapshot処理が完了するまでの待機時間を指定するには、* Urgent *、* Medium *、または* Relaxed *を選択します。Urgent = 5 秒、 Medium = 7 秒、 Relaxed = 20 秒。</block>
+  <block id="6fa0e3128174a7e08f019a67d401084d" category="list-text">[Scripts]*の矢印を選択して、休止、Snapshot、および休止解除の処理のプリコマンドとポストコマンドを実行します。</block>
+  <block id="5b0cda43c7e63de2868d2bf0d3b62f53" category="paragraph">SnapCenter：ストレージレベルのSnapshotを作成</block>
+  <block id="d00226243bd3282875e3647e34ef9ac2" category="paragraph">SnapCenterでPlug-in for Windowsを使用してファイルシステムを整合性のある状態にしてからSnapshotを作成する</block>
+  <block id="513e9e5c9242c20cd3a0e1af2c91141c" category="paragraph">Snapshot処理が完了するまでの待機時間を指定するには、* Urgent *、* Medium *、または* Relaxed *を選択します。</block>
+  <block id="7753c7b112c057fc94bcaa18ecc0f343" category="list-text">[Scripts]*の矢印をクリックし、休止、Snapshot、および休止解除の処理を実行するプリコマンドとポストコマンドを入力します。障害発生時に終了する前に実行する PRE コマンドを入力することもできます。</block>
+  <block id="660ee777f341ef8a02048c649ceb5033" category="admonition">リソースにボリュームまたはqtreeが含まれている場合、そのボリュームまたはqtreeでリストア対象として選択されたSnapshotのあとに作成されたSnapshotは削除され、リカバリすることはできません。また、同じボリュームまたは qtree で他のリソースがホストされている場合、そのリソースも削除されます。</block>
+  <block id="99b447de4897ad60ae2d4ef832acc11d" category="paragraph">たとえば、プライマリSnapshotの保持期間が7日、セカンダリSnapshotの保持期間が45日の場合、45日が経過してすべてのバックアップが削除されたあとは、リソースグループと古いMDCリソースを削除する必要があります。</block>
+  <block id="d7d148a2da0b4f8f54f724e577240359" category="paragraph">リソースにボリュームまたはqtreeが含まれている場合、そのボリュームまたはqtreeでリストア対象として選択されたSnapshotのあとに作成されたSnapshotは削除され、リカバリすることはできません。また、同じボリュームまたは qtree で他のリソースがホストされている場合、そのリソースも削除されます。このオプションは、リストア対象として「 * Volume Revert * 」オプションを指定した状態で * Complete Resource * を選択した場合に使用できます。</block>
+  <block id="a559b2571e56d5cca36de86e59757d8d" category="admonition">休止、Snapshot、および休止解除の処理を実行するプリコマンドとポストコマンドの場合は、Linuxの場合は_/opt/snapcenter/snapenter/scc/allowed commands.config_path、Windowsの場合は_C：\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands_list.txt_からプラグインホストで使用できるコマンドリストにコマンドがあるかどうかを確認する必要があります。</block>
+  <block id="bc0228a3b27171e08e61e5a457460cc1" category="paragraph">[サマリカード]セクションには、ファイルベースのバックアップ、Snapshotコピーベースのバックアップ、およびクローンの総数が表示されます。</block>
+  <block id="be786b6916e284b80ab94c9292822f55" category="paragraph">リソースにボリュームまたはqtreeが含まれている場合、そのボリュームまたはqtreeでリストア対象として選択されたSnapshotのあとに作成されたSnapshotは削除され、リカバリすることはできません。また、同じボリュームまたは qtree で他のリソースがホストされている場合、そのリソースも削除されます。</block>
+  <block id="726c62039b2a1ccfba1cc9d89c1b6047" category="paragraph">保持設定に基づいて、プライマリストレージまたはセカンダリストレージのSnapshotと、SAP HANAカタログ内の対応するエントリが削除されます。SAP HANA のカタログのエントリは、バックアップやリソースグループを削除したときにも削除されます。</block>
+  <block id="360b1745b63d8c10b566bfa854abc3ac" category="paragraph">Snapshotコピーベースのバックアップでは、NetApp Snapshotテクノロジを活用して、SAP HANAデータベースが格納されているボリュームのオンラインの読み取り専用コピーを作成します。</block>
+  <block id="6fe96fe83e4fe586b0886b2e5017d10d" category="paragraph">たとえば、SQL Server環境でSnapshot処理やデータ保護処理を実行する場合は、WindowsまたはSQLの適切なクレデンシャルを使用してクレデンシャルを設定する必要があります。SnapCenter サーバは、どちらの方法で設定されたクレデンシャルも認証します。Windowsファイルシステム環境でONTAPストレージ上でSnapshot処理とデータ保護処理を実行する場合は、SnapCenterのadminロールにWindowsホストに対するadmin権限が必要です。</block>
+  <block id="9939c592ab7bc8c3264f4ed7fde3bd18" category="paragraph">ポリシーベースのバックアップでは、NetApp Snapshotテクノロジを活用して、スペース効率に優れた、アプリケーションと整合性のあるディスクベースのバックアップを高速で作成できます。必要に応じて、既存の保護関係を更新することで、セカンダリストレージに対するこれらのバックアップの保護を自動化することができます。</block>
+  <block id="a156a2baa4fc7e4c8c93e2f496941e06" category="list-text">Windowsホストのストレージプロビジョニング、整合性のあるSnapshot、スペース再生をサポート</block>
+  <block id="3fd5f1108d9e6e2f31a2b951b94fcc66" category="list-text">ホストの削除にかかる時間は、バックアップの数と保持設定によって異なります。これは、各コントローラからSnapshotが削除され、メタデータが消去されるためです。</block>
+  <block id="921eceabf04ab9f25c362a6542724dba" category="paragraph">最新の保護サマリタイルには、アクセス可能なすべてのエンティティの保護ステータスが表示されます。デフォルトでは、すべてのプラグインにステータスが表示されるように設定されています。ステータス情報は、Snapshotとしてプライマリストレージにバックアップされたリソース、およびSnapMirrorテクノロジとSnapVaultテクノロジを使用してセカンダリストレージにバックアップされたリソースについて提供されます。セカンダリストレージの保護ステータス情報は、選択したプラグインタイプに基づいています。</block>
+  <block id="9bb33d5498eacebb490e288aa3ce44b5" category="admonition">SAP HANAは、Snapshotのプライマリストレージとセカンダリストレージの保護ステータス情報を提供します。ファイルベースのバックアップでは、プライマリストレージの保護ステータスのみを使用できます。</block>
+  <block id="b4f406ad371d4f39621c6ae9315cada8" category="paragraph">この日の合計消費量は、 SnapCenter で使用できるバックアップの合計数と、これらのバックアップが占有するサイズで構成され、画面の上部に表示されます。1つのバックアップに複数のSnapshotが関連付けられている場合、その数には同じSnapshotが含まれます。これは、プライマリSnapshotとセカンダリSnapshotの両方に該当します。たとえば、バックアップを 10 個作成し、そのうち 2 個はポリシーベースのバックアップ保持のために削除され、 1 個はユーザが明示的に削除するように設定したとします。したがって、この 7 つのバックアップが占有している数と 7 個のバックアップが表示されます。</block>
+  <block id="c3bdf8281e5e51911c7ebc0640da8222" category="paragraph">プライマリストレージのストレージ削減率は、プライマリストレージの物理容量に対する論理容量（クローンとSnapshotによる削減量とストレージ消費量の合計）の比率です。棒グラフは、ストレージの削減量を示します。</block>
+  <block id="fd0998113f77a0321315b7e0948f05e1" category="paragraph">リソースまたはリソースグループにポリシーが適用されている場合は、レプリケーションオプション、Snapshotの保持設定、エラーの再試行回数、またはスクリプトの情報を変更できます。スケジュールタイプ（頻度）は、ポリシーを適用解除しないと変更できません。</block>
+  <block id="c3322261b5e365126f3bbd22ae033f3e" category="paragraph">リソースグループ内のリソースに対して作成されたすべてのクローンを手動で削除する必要があります。必要に応じて、リソースグループに関連付けられているすべてのバックアップ、メタデータ、ポリシー、およびSnapshotを強制的に削除することができます。</block>
+  <block id="4ac647997500ae801e90be76a0f09421" category="list-text">オプション：リソースグループに関連付けられているバックアップ、メタデータ、ポリシー、およびSnapshotをすべて削除する場合は、*[Delete backups and detach policies associated with this Resource Group]*チェックボックスを選択します。</block>
+  <block id="322c20f898d5631d47f9131b0ff643f9" category="paragraph">次のコマンドレットは、バックアップファイルが iSCSI LUN 内で誤って削除された場合に、 SnapCenter MySQL データベースをリストアします。VMDKの場合は、ONTAPスナップショットからバックアップを手動でリストアします。</block>
+  <block id="4954c41a9a08ab45a310519b5fd1e579" category="list-text">Snapshotテクノロジを使用してバックアップを作成する場合は、* Snapshotベース*を選択します。</block>
+  <block id="fd67ba398eb305129b3dffed5a367994" category="admonition">ANFクローンはすでに選択したSnapshotから作成された独立したボリュームであるため、ANFクローンではクローンスプリットは無効になります。</block>
+  <block id="e809483d1a49ec9268e55af716571abf" category="list-text">Snapshotコピーツール&gt; SnapCenter without File System Consistency *を選択してSnapshotを作成します。</block>
+  <block id="4e84e965e1d16cd7b3116d29b62142fc" category="summary">SnapCenterでは、Snapshotテクノロジを使用して、WindowsクラスタのLUN、CSV（クラスタ共有ボリューム）、RDM（rawデバイスマッピング）ボリューム、ALM（非対称LUNマッピング）、およびVMFS/NFS（NFSを使用するVMware仮想マシンファイルシステム）に基づくVMDKに存在するWindowsファイルシステムリソースをバックアップします。</block>
+  <block id="f084fdf8914e7a02d5263759b465833b" category="paragraph">SnapCenterでは、ファイルシステムのSnapshotを作成してバックアップを作成します。ボリュームに複数のホストのLUNが含まれているフェデレーテッドバックアップは、各LUNを個別にバックアップするよりも高速で効率的です。これは、各ファイルシステムの個 々 のSnapshotと比較して、ボリュームのSnapshotが1つだけ作成されるためです。</block>
+  <block id="1925a06d08d617bc50d7a3d659b0f2a7" category="paragraph">SnapCenterがSnapshotを作成すると、ストレージ・システム・ボリューム全体がSnapshotにキャプチャされます。ただし、バックアップは、バックアップが作成されたホストサーバに対してのみ有効になります。</block>
+  <block id="6a9942daeda54f016240682d869fe238" category="paragraph">他のホストサーバのデータが同じボリューム上にある場合、このデータをSnapshotからリストアすることはできません。</block>
+  <block id="7e038afa02819cb4c7edd12ab0c9a3cf" category="paragraph">SnapCenterストアのSnapshot数を指定してからSnapshotを自動的に削除する場合は、このオプションを選択します。</block>
+  <block id="39ede0b6680ded15631aad7474467c6a" category="list-text">オプション：ウィザードの[Resource]ページで、Snapshotのカスタムの名前形式を入力します。</block>
+  <block id="3cb5c9bda561968bd773237393992ae0" category="paragraph">たとえば、 customtext_resourcegroup_policy_hostname や resourcegroup_hostname などの形式です。デフォルトでは、Snapshot名にタイムスタンプが追加されます。</block>
+  <block id="dbb4720e991689c622a9db7249c8c661" category="paragraph">Windowsファイルシステムのバックアップでは、Snapshotのデフォルトの命名規則が使用されます。デフォルトのバックアップ命名規則では、Snapshot名にタイムスタンプが追加されるため、コピーがいつ作成されたかを確認できます。</block>
+  <block id="85f1de84fc13e82033f35724d5886e91" category="paragraph">Snapshotでは、次のデフォルトの命名規則が使用されます。resourcegroupname_hostname_timestamp</block>
+  <block id="ab4ef81968bb65a88c3886c889131244" category="paragraph">オプション：Snapshotのカスタムの名前と形式を入力します。</block>
+  <block id="ddcb2243e0913e22a7bdaa62e5aba43f" category="summary">Plug-in for Windowsは、ストレージシステム上でNetApp Snapshotテクノロジと統合されます。Plug-in for Windows の操作には、 SnapCenter インターフェイスを使用します。</block>
+  <block id="515ccc782ae168ef3b657e96aa4edf37" category="paragraph">Plug-in for Windowsでは、NetAppのSnapshotテクノロジを使用しています。これにより、ファイルシステムを数秒でバックアップし、ホストをオフラインにすることなく迅速にリストアすることが可能です。Snapshotはストレージスペースを最小限しか消費しません。</block>
+  <block id="e0f0874a46e8d0e6a5ac3a9235a1074e" category="summary">SnapCenter Plug-in for Microsoft Windows は、 Microsoft ファイルシステムリソースに対してアプリケーション対応のデータ保護管理を可能にする、 NetApp SnapCenter ソフトウェアのホスト側コンポーネントです。また、Windowsファイルシステムのストレージプロビジョニング、整合性のあるSnapshot、スペース再生も可能です。Plug-in for Windows を使用することで、 SnapCenter 環境でのファイルシステムのバックアップ、リストア、およびクローニングの処理を自動化できます。</block>
+  <block id="d0ed77b6d80df72d0d6acae2c4e9db85" category="list-text">Snapshotをミラーまたはバックアップにレプリケートする場合は、SnapCenter管理者がユーザにソースボリュームとデスティネーションボリュームの両方にSVMを割り当てておく必要があります。</block>
+  <block id="be733ae25c1f590e21e985ae94968449" category="paragraph">プライマリストレージからセカンダリストレージにSnapshotをレプリケートしておく必要があります。</block>
+  <block id="44946d9385e466f803e84b161d44c49d" category="cell">* ベストプラクティス： * 維持するフルバックアップとログバックアップの総数に基づいて、セカンダリ保持ポリシーを設定することを推奨します。セカンダリの保持ポリシーを設定する場合は、異なるボリュームにあるデータベースとログの場合、各バックアップに3つのSnapshotを保持でき、データベースとログが同じボリュームにある場合は、各バックアップに2つのSnapshotを保持できることに注意してください。</block>
+  <block id="9284db278aa00bd072e713a907999f2e" category="paragraph">ONTAP 9.12.1以前のバージョンでは、SnapLockヴォールトSnapshotから作成されたクローンにSnapLockヴォールトの有効期限が継承されます。SnapLockの有効期限が過ぎた時点で、ストレージ管理者がクローンを手動でクリーンアップする必要があります。</block>
+  <block id="74f0af58207cfeaf671266f54dd2fef4" category="paragraph">*ベストプラクティス：*[Full backup retention settings]セクションの[Total Snapshots（フルバックアップ）]の設定と同じにすることを推奨します。これにより、フルバックアップのたびにログファイルが保持されます。</block>
+  <block id="161fa80fbfb00806b2721800e0738514" category="paragraph">特定の数のSnapshotのみを保持</block>
+  <block id="0d64a89a155466b599d67bf78b6d1097" category="paragraph">保持するフルバックアップの数を指定する場合は、*保持するSnapshotコピーの総数*オプションを選択し、保持するSnapshot（フルバックアップ）の数を指定します。</block>
+  <block id="4afc4cedb01e8b3555973ac1d7338bfd" category="paragraph">[Keep Snapshot copies for]*オプションを選択し、Snapshot（フルバックアップ）を保持する日数を指定します。</block>
+  <block id="165d18348f040abed6010459ceae9a6d" category="paragraph">たとえば、 _customtext_resourcegroup_policy_hostname_or_resourcegroup_hostname_hostname_or_resourcegroup_hostname_hostname_1 のようになります。デフォルトでは、Snapshot名にタイムスタンプが追加されます。</block>
+  <block id="d7d2c8824fad4976a2cd5e20ba3ec375" category="paragraph">SnapCenter for Microsoft Exchange Serverのリソースグループに含めることができるデータベースは、Snapshotあたり30個までです。1つのリソースグループに30を超えるデータベースがある場合は、追加のデータベース用に2つ目のSnapshotが作成されます。したがって、メインバックアップジョブの下に 2 つのサブジョブが作成されます。セカンダリレプリケーションがあるバックアップの場合、 SnapMirror または SnapVault の更新が進行中に、サブジョブが重複する状況が発生することがあります。メインのバックアップジョブは、ジョブが完了したことがログに記録されていても、常時稼働し続けます。</block>
+  <block id="bf971f3c72b83a1aac6d9fe1cb39850c" category="admonition">セカンダリストレージ上のバックアップは、名前変更または削除できません。Snapshotの削除は、ONTAPの保持設定で処理されます。</block>
+  <block id="eb71c7e77b1cb5486117cdac9d378fb6" category="list-text">カスタムのSnapshot名を指定する場合は、[リソース]ページで*[Snapshotコピーにカスタムの名前形式を使用する]*チェックボックスを選択し、Snapshot名に使用するカスタムの名前形式を入力します。</block>
+  <block id="2457e427df18c87448fa7fa796d115c7" category="paragraph">SnapCenter を使用して Exchange メールボックスをバックアップするには、データベースやデータベース可用性グループ（ DAG ）などのリソースタイプを選択する必要があります。Snapshotテクノロジを使用して、リソースが配置されているボリュームのオンラインの読み取り専用コピーが作成されます。</block>
 </blocks>

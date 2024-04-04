@@ -42,9 +42,9 @@ summary: リソースグループはコンテナであり、バックアップ�
  a| 
 Snapshot コピーには、カスタムの名前形式を使用します
  a| 
-Snapshot コピー名にカスタムの名前形式を使用する場合は、このチェックボックスをオンにして名前形式を入力します。
+このチェックボックスをオンにして、Snapshot名に使用するカスタムの名前形式を入力します。
 
-たとえば、 _customText_resource group_policy_hostname や resource group_hostname_hostname などです。デフォルトでは、 Snapshot コピー名の後ろにタイムスタンプが追加されます。
+たとえば、 _customText_resource group_policy_hostname や resource group_hostname_hostname などです。デフォルトでは、Snapshot名にタイムスタンプが追加されます。
 
 |===
 . オプション：[リソース]ページで、*[ホスト]*ドロップダウンリストからホスト名を選択し、*[リソースタイプ]*ドロップダウンリストからリソースタイプを選択します。
@@ -66,7 +66,7 @@ Snapshot コピー名にカスタムの名前形式を使用する場合は、�
  a| 
 整合グループ Snapshot 処理が完了するまで待機する時間を設定してください
  a| 
-Snapshot コピー処理が完了するまでの待機時間を指定するには、「至急」、「中」、または「不完全」を選択します。
+Snapshot処理が完了するまでの待機時間として、[Urgent]、[Medium]、または[Relaxed]のいずれかを選択します。
 
 Urgent = 5 秒、 Medium = 7 秒、 Relaxed = 20 秒。
 
@@ -81,7 +81,7 @@ WAFL 整合ポイントを強制しない場合は、これを選択します。
 +
 image:../media/application_settings.gif["整合グループのバックアップオプション（urgent、medium、relaxed）のスクリーンショット。"]
 
-.. [Scripts]の矢印を選択し、休止、Snapshotコピー、および休止解除の処理を実行するプリコマンドとポストコマンドを入力します。障害発生時に終了する前に実行する PRE コマンドを入力することもできます。
+.. [Scripts]の矢印を選択し、休止、Snapshot、および休止解除の処理を実行するプリコマンドとポストコマンドを入力します。障害発生時に終了する前に実行する PRE コマンドを入力することもできます。
 .. [Custom Configurations]の矢印を選択し、このリソースを使用するすべてのデータ保護処理に必要なカスタムのキーと値のペアを入力します。
 +
 |===
@@ -138,32 +138,32 @@ archive_log_recursive_SE arch
 アーカイブログがサブディレクトリにある場合は、このパラメータを使用してください。
 
 |===
-.. [Snapshot Copy Tool]*の矢印を選択して、Snapshotコピーを作成するツールを選択します。
+.. Snapshotコピーツール*の矢印を選択して、Snapshotを作成するツールを選択します。
 +
 |===
 | 状況 | 作業 
 
 
  a| 
-SnapCenter で Plug-in for Windows を使用してファイルシステムを整合性のある状態にしてから Snapshot コピーを作成する。Linux リソースの場合、このオプションは適用されません。
+SnapCenterを使用してPlug-in for Windowsを使用し、ファイルシステムを整合性のある状態にしてからSnapshotを作成します。Linux リソースの場合、このオプションは適用されません。
  a| 
-ファイルシステムの整合性を使用した SnapCenter を選択します。
+ファイルシステムの整合性を維持した状態で SnapCenter を選択します。
 
 このオプションは、 SnapCenter Plug-in for SAP HANA Database には適用されません。
 
 
 
  a| 
-SnapCenter を使用して、ストレージレベルの Snapshot コピーを作成します
+SnapCenter：ストレージレベルのSnapshotを作成
  a| 
-ファイルシステムの整合性なしで SnapCenter を選択します。
+ファイルシステムの整合性なしで SnapCenter * を選択します。
 
 
 
  a| 
-Snapshot コピーを作成するためにホストで実行するコマンドを入力する
+Snapshotを作成するためにホストで実行するコマンドを入力します。
  a| 
-Other を選択し、ホストで実行するコマンドを入力して Snapshot コピーを作成します。
+[その他]*を選択し、ホストで実行するSnapshotを作成するコマンドを入力します。
 
 |===
 

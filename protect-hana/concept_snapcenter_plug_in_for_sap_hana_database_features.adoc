@@ -23,7 +23,7 @@ SnapCenter のインターフェイスは、すべてのプラグインと環境
 
 * * 無停止の NetApp Snapshot コピー・テクノロジー *
 +
-SnapCenter では、 Plug-in for SAP HANA Database でネットアップの Snapshot コピーテクノロジを使用してリソースがバックアップされます。
+SnapCenterは、Plug-in for SAP HANA DatabaseでNetAppのSnapshotテクノロジを使用してリソースをバックアップします。
 
 
 
@@ -38,12 +38,12 @@ Plug-in for SAP HANA Database を使用すると、次のメリットもあり�
 +
 クローンを作成するストレージシステムに FlexClone ライセンスが必要です。
 
-* バックアップの作成で ONTAP の整合グループ（ CG ）の Snapshot コピー機能がサポートされます。
+* バックアップ作成時に、ONTAPの整合グループ（CG）Snapshot機能がサポートされます。
 * 複数のリソースホストで同時に複数のバックアップを実行できます
 +
-1 回の処理で、 1 つのホストの複数のリソースが同じボリュームを共有する場合に複数の Snapshot コピーが統合されます。
+1回の処理では、1つのホスト内のリソースが同じボリュームを共有する場合にSnapshotが統合されます。
 
-* 外部コマンドを使用して Snapshot コピーを作成できます。
+* 外部コマンドを使用してSnapshotを作成する機能。
 * ファイルベースのバックアップがサポートされます。
 * XFS ファイルシステムで Linux LVM がサポートされています。
 

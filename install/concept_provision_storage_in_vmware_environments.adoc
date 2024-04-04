@@ -11,7 +11,7 @@ summary: VMware 環境での SnapCenter Plug-in for Microsoft Windows を使用�
 
 
 [role="lead"]
-VMware環境でSnapCenter Plug-in for Microsoft Windowsを使用すると、LUNの作成と管理、およびSnapshotコピーの管理を行うことができます。
+VMware環境では、SnapCenter Plug-in for Microsoft Windowsを使用して、LUNの作成と管理やSnapshotの管理を行うことができます。
 
 
 

@@ -2,7 +2,7 @@
 permalink: protect-scsql/task_cancel_the_snapcenter_plug_in_for_sql_server_operations.html 
 sidebar: sidebar 
 keywords: cancel, backup 
-summary: 実行中、キューに登録済み、または応答しないバックアップ処理をキャンセルできます。バックアップ処理をキャンセルすると、 SnapCenter サーバは処理を停止し、作成されたバックアップが SnapCenter サーバに登録されていない場合は、ストレージからすべての Snapshot コピーを削除します。バックアップがすでに SnapCenter サーバに登録されている場合、キャンセル後も、作成済みの Snapshot コピーはロールバックされません。 
+summary: 実行中、キューに登録済み、または応答しないバックアップ処理をキャンセルできます。バックアップ処理をキャンセルすると、作成されたバックアップがSnapCenterサーバに登録されていない場合、SnapCenterサーバは処理を停止し、ストレージからすべてのSnapshotを削除します。バックアップがすでにSnapCenterサーバに登録されている場合、キャンセルがトリガーされても、作成済みのSnapshotはロールバックされません。 
 ---
 = SnapCenter Plug-in for Microsoft SQL Server のバックアップ処理をキャンセルします
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 実行中、キューに登録済み、または応答しないバッ�
 
 
 [role="lead"]
-実行中、キューに登録済み、または応答しないバックアップ処理をキャンセルできます。バックアップ処理をキャンセルすると、 SnapCenter サーバは処理を停止し、作成されたバックアップが SnapCenter サーバに登録されていない場合は、ストレージからすべての Snapshot コピーを削除します。バックアップがすでに SnapCenter サーバに登録されている場合、キャンセル後も、作成済みの Snapshot コピーはロールバックされません。
+実行中、キューに登録済み、または応答しないバックアップ処理をキャンセルできます。バックアップ処理をキャンセルすると、作成されたバックアップがSnapCenterサーバに登録されていない場合、SnapCenterサーバは処理を停止し、ストレージからすべてのSnapshotを削除します。バックアップがすでにSnapCenterサーバに登録されている場合、キャンセルがトリガーされても、作成済みのSnapshotはロールバックされません。
 
 .作業を開始する前に
 * リストア処理をキャンセルするには、 SnapCenter 管理者またはジョブ所有者としてログインする必要があります。

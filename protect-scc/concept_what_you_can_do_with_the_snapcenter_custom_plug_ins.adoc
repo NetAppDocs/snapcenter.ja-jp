@@ -28,12 +28,12 @@ SnapCenter Custom Plug-ins を使用してデータ保護処理を実行でき�
 
 このプラグインは、データ保護処理に使用できます。
 
-* 複数の ONTAP クラスタ間でストレージボリュームの整合グループ Snapshot コピーを作成する。
+* ONTAPクラスタ間でストレージボリュームの整合グループSnapshotを作成します。
 * 組み込みのプレ / ポストスクリプトフレームワークを使用してカスタムアプリケーションをバックアップします
 +
 ONTAP ボリューム、 LUN 、または qtree をバックアップできます。
 
-* SnapCenter ポリシーを使用して、プライマリで作成された Snapshot コピーを ONTAP セカンダリに対して更新し、既存のレプリケーション関係（ SnapVault/SnapMirror/ユニ ファイドレプリケーション）を利用します
+* SnapCenterポリシーを使用して、既存のレプリケーション関係（SnapVault / SnapMirror /ユニファイドレプリケーション）を利用して、プライマリで作成されたSnapshotをONTAPセカンダリに更新します。
 +
 ONTAPのプライマリとセカンダリには、ONTAP FAS、AFF、All SAN Array（ASA）、Select、Cloud ONTAPがあります。
 

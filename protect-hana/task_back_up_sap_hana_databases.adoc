@@ -16,7 +16,7 @@ summary: どのリソースグループにも含まれていないリソース�
 .作業を開始する前に
 * バックアップポリシーを作成しておく必要があります。
 * セカンダリストレージとの SnapMirror 関係があるリソースをバックアップする場合、ストレージユーザに割り当てられた ONTAP ロールには「「 'SnapMirro all' 」権限を含める必要があります。ただし、「 vsadmin 」ロールを使用している場合、「 'SnapMirro all 」権限は必要ありません。
-* Snapshot コピーベースのバックアップ処理の場合は、すべてのテナントデータベースが有効でアクティブになっていることを確認してください。
+* Snapshotコピーベースのバックアップ処理の場合は、すべてのテナントデータベースが有効でアクティブであることを確認してください。
 * SAP HANA システムのレプリケーションバックアップを作成するには、 SAP HANA システムのすべてのリソースを 1 つのリソースグループに追加することを推奨します。これにより、テイクオーバー / フェイルバックモードでのシームレスなバックアップが可能になります。
 +
 link:task_create_resource_groups_and_attach_policies.html["リソースグループを作成してポリシーを適用"]。
@@ -28,7 +28,7 @@ link:task_back_up_resource_groups_sap_hana.html["リソースグループをバ�
 +
 コマンドレットで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["SnapCenter ソフトウェアコマンドレットリファレンスガイド"]
 
-* 休止、Snapshotコピー、および休止解除のプリコマンドおよびポストコマンドについては、プラグインホストで次のパスから使用可能なコマンドリストにコマンドが含まれていないかどうかを確認する必要があります。
+* 休止、Snapshot、および休止解除の処理を実行するプリコマンドとポストコマンドの場合は、該当するコマンドがプラグインホストのコマンドリストで次のパスから使用できるかどうかを確認する必要があります。
 +
 Windowsの場合：_ C：\Program Files\NetApp\SnapCenter \Snapcenter Plug-in Creator\etc\allowed_commands _list .txt_
 
@@ -47,9 +47,9 @@ NOTE: コマンドリストにコマンドがない場合、処理は失敗し�
 *を選択しますimage:../media/filter_icon.png[""]* をクリックし、ホスト名とリソースタイプを選択してリソースをフィルタリングします。次に、 image:../media/filter_icon.png[""] をクリックしてフィルタペインを閉じます。
 
 . バックアップするリソースを選択します。
-. リソースページで、 Snapshot コピーに * カスタム名形式を使用する * を選択し、 Snapshot コピー名に使用するカスタム名形式を入力します。
+. [Resource]ページで、*[Use custom name format for Snapshot copy]*を選択し、Snapshot名に使用するカスタムの名前形式を入力します。
 +
-たとえば、 _customText_policy_hostname_or_resource_hostname_hostname_1 です。デフォルトでは、 Snapshot コピー名の後ろにタイムスタンプが追加されます。
+たとえば、 _customText_policy_hostname_or_resource_hostname_hostname_1 です。デフォルトでは、Snapshot名にタイムスタンプが追加されます。
 
 . [ アプリケーションの設定 ] ページで、次の操作を行います。
 +
@@ -65,7 +65,7 @@ NOTE: コマンドリストにコマンドがない場合、処理は失敗し�
  a| 
 整合グループ Snapshot 処理が完了するまで待機する時間を設定してください
  a| 
-Snapshot コピー処理が完了するまでの待機時間を指定するには、「至急」、「 * 中」、または「 * relaxed 」を選択します。Urgent = 5 秒、 Medium = 7 秒、 Relaxed = 20 秒。
+Snapshot処理が完了するまでの待機時間を指定するには、* Urgent *、* Medium *、または* Relaxed *を選択します。Urgent = 5 秒、 Medium = 7 秒、 Relaxed = 20 秒。
 
 
 
@@ -75,35 +75,35 @@ WAFL 同期を無効にします
 WAFL 整合ポイントを強制しない場合は、これを選択します。
 
 |===
-** [Scripts]*の矢印を選択して、休止、Snapshotコピー、および休止解除の処理のプリコマンドとポストコマンドを実行します。
+** [Scripts]*の矢印を選択して、休止、Snapshot、および休止解除の処理のプリコマンドとポストコマンドを実行します。
 +
 バックアップ処理を終了する前にプリコマンドを実行することもできます。プリスクリプトとポストスクリプトは SnapCenter サーバで実行されます。
 
 ** [**Custom Configurations**]矢印を選択し、このリソースを使用するすべてのジョブに必要なカスタム値のペアを入力します。
-** [Snapshot Copy Tool]*の矢印を選択して、Snapshotコピーを作成するツールを選択します。
+** Snapshotコピーツール*の矢印を選択して、Snapshotを作成するツールを選択します。
 +
 |===
 | 状況 | 作業 
 
 
  a| 
-SnapCenter を使用してストレージレベルの Snapshot コピーを作成する
+SnapCenter：ストレージレベルのSnapshotを作成
  a| 
 ファイルシステムの整合性なしで SnapCenter * を選択します。
 
 
 
  a| 
-SnapCenter ： Plug-in for Windows を使用してファイルシステムを整合性のある状態にしてから Snapshot コピーを作成する
+SnapCenterでPlug-in for Windowsを使用してファイルシステムを整合性のある状態にしてからSnapshotを作成する
  a| 
 ファイルシステムの整合性を維持した状態で SnapCenter を選択します。
 
 
 
  a| 
-Snapshot コピーを作成するコマンドを入力するには、次のコマンドを入力します
+Snapshotを作成するコマンドを入力するには
  a| 
-「 * other * 」を選択し、コマンドを入力して Snapshot コピーを作成します。
+[その他]*を選択し、コマンドを入力してSnapshotを作成します。
 
 |===
 +

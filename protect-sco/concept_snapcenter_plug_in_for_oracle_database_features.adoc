@@ -21,9 +21,9 @@ SnapCenter のインターフェイスは、すべてのプラグインと環境
 +
 バックアップ処理とクローニング処理のスケジュールを設定したり、ポリシーベースのバックアップ保持を設定したり、リストア処理を実行したりできます。SnapCenter から E メールアラートを送信するように設定して、環境をプロアクティブに監視することもできます。
 
-* 無停止の NetApp Snapshot コピーテクノロジ
+* 無停止のNetApp Snapshotテクノロジ
 +
-SnapCenter では、 Plug-in for Oracle Database および Plug-in for UNIX でネットアップの Snapshot コピーテクノロジを使用してデータベースがバックアップされます。Snapshot コピーはストレージスペースを最小限しか消費しません。
+SnapCenterでは、Plug-in for Oracle DatabaseおよびPlug-in for UNIXでNetAppのSnapshotテクノロジを使用してデータベースがバックアップされます。Snapshotはストレージスペースを最小限しか消費しません。
 
 
 
@@ -45,7 +45,7 @@ Plug-in for Oracle Database には、次のようなメリットもあります�
 * 自動化された無停止のバックアップ検証
 * 複数のデータベースホストで同時に複数のバックアップを実行できます
 +
-1 回の処理で、 1 つのホストのデータベースが同じボリュームを共有する場合に複数の Snapshot コピーが統合されます。
+単一のホストのデータベースが同じボリュームを共有している場合、1回の処理でSnapshotが統合されます。
 
 * 物理インフラと仮想インフラがサポートされます
 * NFS 、 iSCSI 、ファイバチャネル（ FC ）、 RDM 、 NFS および VMFS 経由の VMDK 、 NFS 、 SAN 、 RDM 、および VMDK 経由の ASM がサポートされます

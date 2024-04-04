@@ -49,9 +49,9 @@ NOTE: DAG では、アクティブなデータベースコピーがネットア�
 ** データベース可用性グループをバックアップする場合は、データベース可用性グループの名前をクリックします。
 
 
-. カスタム Snapshot コピー名を指定する場合は、リソースページで Snapshot コピーにカスタム名形式を使用する * チェックボックスを選択し、 Snapshot コピー名に使用するカスタム名形式を入力します。
+. カスタムのSnapshot名を指定する場合は、[リソース]ページで*[Snapshotコピーにカスタムの名前形式を使用する]*チェックボックスを選択し、Snapshot名に使用するカスタムの名前形式を入力します。
 +
-たとえば、 _customText_policy_hostname_or_resource_hostname_hostname_1 です。デフォルトでは、 Snapshot コピー名の後ろにタイムスタンプが追加されます。
+たとえば、 _customText_policy_hostname_or_resource_hostname_hostname_1 です。デフォルトでは、Snapshot名にタイムスタンプが追加されます。
 
 . [Policies] ページで、次の手順を実行します。
 +

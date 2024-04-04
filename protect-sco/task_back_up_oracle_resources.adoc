@@ -26,9 +26,9 @@ Database - Protect （データベース - 保護）ページが表示されま�
 
 . [Resources]ページでは、次の手順を実行できます。
 +
-.. チェックボックスを選択し、Snapshotコピー名に使用するカスタムの名前形式を入力します。
+.. チェックボックスを選択し、Snapshot名に使用するカスタムの名前形式を入力します。
 +
-例： `customtext_policy_hostname` または `resource_hostname`。デフォルトでは、Snapshotコピー名にタイムスタンプが付加されます。
+例： `customtext_policy_hostname` または `resource_hostname`。デフォルトでは、Snapshot名にタイムスタンプが追加されます。
 
 .. バックアップの対象から外すアーカイブログファイルのデスティネーションを指定します。
 

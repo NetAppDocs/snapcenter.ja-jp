@@ -57,7 +57,7 @@ NOTE: カスタムロールを作成する場合は、 SnapCenter Admin ロー�
 
 SnapCenter では、クレデンシャルを使用して、許可された SnapCenter ユーザにアプリケーションレベルの権限もあるかどうかが検証されます
 
-たとえば、 SQL Server 環境で Snapshot コピーやデータ保護の処理を実行する場合は、 Windows または SQL の適切なクレデンシャルを設定する必要があります。SnapCenter サーバは、どちらの方法で設定されたクレデンシャルも認証します。ONTAP ストレージ上の Windows ファイルシステム環境で Snapshot コピーやデータ保護の処理を実行する場合は、 SnapCenter の admin ロールに Windows ホストに対する管理者権限が必要です。
+たとえば、SQL Server環境でSnapshot処理やデータ保護処理を実行する場合は、WindowsまたはSQLの適切なクレデンシャルを使用してクレデンシャルを設定する必要があります。SnapCenter サーバは、どちらの方法で設定されたクレデンシャルも認証します。Windowsファイルシステム環境でONTAPストレージ上でSnapshot処理とデータ保護処理を実行する場合は、SnapCenterのadminロールにWindowsホストに対するadmin権限が必要です。
 
 同様に、 Oracle データベースに対してデータ保護処理を実行する場合、データベースホストでオペレーティングシステム（ OS ）認証が無効なときは、 Oracle データベースまたは Oracle ASM のクレデンシャルを使用してクレデンシャルを設定する必要があります。SnapCenter サーバは、処理に応じて、いずれかの方法で設定されたクレデンシャルを認証します。
 

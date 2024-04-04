@@ -33,9 +33,9 @@ summary: どのリソースグループにも含まれていないリソース�
 
 
 
-. リソースページで、 Snapshot コピーの * カスタム名形式 * チェックボックスを選択し、 Snapshot コピー名に使用するカスタム名形式を入力します。
+. [リソース]ページで、[Snapshotコピーのカスタム名形式]*チェックボックスを選択し、Snapshot名に使用するカスタムの名前形式を入力します。
 +
-たとえば 'customText_policy_hostname や resource_hostname などですデフォルトでは、 Snapshot コピー名の後ろにタイムスタンプが追加されます。
+たとえば 'customText_policy_hostname や resource_hostname などですデフォルトでは、Snapshot名にタイムスタンプが追加されます。
 
 . [Policies] ページで、次のタスクを実行します。
 +

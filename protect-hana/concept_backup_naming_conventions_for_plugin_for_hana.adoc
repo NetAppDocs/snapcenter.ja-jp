@@ -2,7 +2,7 @@
 permalink: protect-hana/concept_backup_naming_conventions_for_plugin_for_hana.html 
 sidebar: sidebar 
 keywords: Backup naming conventions 
-summary: Snapshot コピーのデフォルトの命名規則を使用するか、カスタマイズした命名規則を使用できます。デフォルトのバックアップ命名規則では Snapshot コピー名にタイムスタンプが追加されるため、コピーが作成されたタイミングを特定できます。 
+summary: Snapshotのデフォルトの命名規則を使用することも、カスタマイズした命名規則を使用することもできます。デフォルトのバックアップ命名規則では、Snapshot名にタイムスタンプが追加されるため、コピーがいつ作成されたかを確認できます。 
 ---
 = Plug-in for SAP HANA Database のバックアップ命名規則
 :allow-uri-read: 
@@ -11,9 +11,9 @@ summary: Snapshot コピーのデフォルトの命名規則を使用するか�
 
 
 [role="lead"]
-Snapshot コピーのデフォルトの命名規則を使用するか、カスタマイズした命名規則を使用できます。デフォルトのバックアップ命名規則では Snapshot コピー名にタイムスタンプが追加されるため、コピーが作成されたタイミングを特定できます。
+Snapshotのデフォルトの命名規則を使用することも、カスタマイズした命名規則を使用することもできます。デフォルトのバックアップ命名規則では、Snapshot名にタイムスタンプが追加されるため、コピーがいつ作成されたかを確認できます。
 
-Snapshot コピーでは、次のデフォルトの命名規則が使用されます。
+Snapshotでは、次のデフォルトの命名規則が使用されます。
 
 「 resourcegroupname_hostname_timestamp 」
 
@@ -30,4 +30,4 @@ dts1_mach1x88_03-12-2015_23.17.26
 * _03-12-2015_23.17.26_ は日付とタイムスタンプです。
 
 
-または、「 * Snapshot コピーにカスタム名形式を使用」を選択して、リソースまたはリソースグループを保護しながら Snapshot コピー名の形式を指定することもできます。たとえば、 customtext_resourcegroup_policy_hostname や resourcegroup_hostname などの形式です。デフォルトでは、 Snapshot コピー名にタイムスタンプのサフィックスが追加されます。
+または、*[Use custom name format for Snapshot copy]*を選択して、リソースまたはリソースグループを保護しながらSnapshot名の形式を指定することもできます。たとえば、 customtext_resourcegroup_policy_hostname や resourcegroup_hostname などの形式です。デフォルトでは、タイムスタンプのサフィックスがSnapshot名に追加されます。

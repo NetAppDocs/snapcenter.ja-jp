@@ -24,7 +24,7 @@ summary: リソースグループはすべてのデータ保護ジョブに必�
 +
 GET APIを使用してキーの値を表示することができます。set APIはサポートされません。
 
-* ONTAP 9.12.1以前のバージョンでは、リストアの一環としてSnapLockヴォールトSnapshotコピーから作成されたクローンにSnapLockヴォールトの有効期限が継承されます。SnapLockの有効期限が過ぎた時点で、ストレージ管理者がクローンを手動でクリーンアップする必要があります。
+* ONTAP 9.12.1以前のバージョンでは、リストアの一環としてSnapLockヴォールトSnapshotから作成されたクローンにSnapLockヴォールトの有効期限が継承されます。SnapLockの有効期限が過ぎた時点で、ストレージ管理者がクローンを手動でクリーンアップする必要があります。
 
 
 .手順
@@ -63,9 +63,9 @@ NOTE: リソースグループ名は 250 文字以内にする必要がありま
  a| 
 Snapshot コピーには、カスタムの名前形式を使用します
  a| 
-オプション： Snapshot コピー名のカスタムの名前形式を入力します。
+オプション：Snapshotのカスタムの名前と形式を入力します。
 
-たとえば、 _customtext_resourcegroup_policy_hostname_or_resourcegroup_hostname_hostname_or_resourcegroup_hostname_hostname_1 のようになります。デフォルトでは、 Snapshot コピー名の後ろにタイムスタンプが追加されます。
+たとえば、 _customtext_resourcegroup_policy_hostname_or_resourcegroup_hostname_hostname_or_resourcegroup_hostname_hostname_1 のようになります。デフォルトでは、Snapshot名にタイムスタンプが追加されます。
 
 |===
 . Resources ページで、次の手順を実行します。
@@ -87,7 +87,7 @@ Available Resources セクションおよび Selected Resources セクション�
 *** 同じボリューム上のすべてのリソースを [ 選択したリソース ] セクションに移動するには、 * 同一ストレージボリューム上のすべてのリソースを自動選択 * を選択します。
 *** [ 使用可能なリソース ] セクションからリソースを選択し、右矢印をクリックして [ 選択したリソース ] セクションに移動します。
 +
-SnapCenter for Microsoft Exchange Server のリソースグループに、 Snapshot コピー 1 つあたりのデータベース数を 30 個以下にする必要があります。1 つのリソースグループに 30 個を超えるデータベースがある場合、追加のデータベース用に 2 つ目の Snapshot コピーが作成されます。したがって、メインバックアップジョブの下に 2 つのサブジョブが作成されます。セカンダリレプリケーションがあるバックアップの場合、 SnapMirror または SnapVault の更新が進行中に、サブジョブが重複する状況が発生することがあります。メインのバックアップジョブは、ジョブが完了したことがログに記録されていても、常時稼働し続けます。
+SnapCenter for Microsoft Exchange Serverのリソースグループに含めることができるデータベースは、Snapshotあたり30個までです。1つのリソースグループに30を超えるデータベースがある場合は、追加のデータベース用に2つ目のSnapshotが作成されます。したがって、メインバックアップジョブの下に 2 つのサブジョブが作成されます。セカンダリレプリケーションがあるバックアップの場合、 SnapMirror または SnapVault の更新が進行中に、サブジョブが重複する状況が発生することがあります。メインのバックアップジョブは、ジョブが完了したことがログに記録されていても、常時稼働し続けます。
 
 
 

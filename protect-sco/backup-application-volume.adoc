@@ -38,9 +38,9 @@ Application volume-Protect ページが表示されます。
  a| 
 Snapshot コピーには、カスタムの名前形式を使用します
  a| 
-Snapshot コピー名にカスタムの名前形式を使用する場合は、このチェックボックスをオンにして名前形式を入力します。
+このチェックボックスをオンにして、Snapshot名に使用するカスタムの名前形式を入力します。
 
-たとえば 'customText_policy_hostname や resource_hostname などですデフォルトでは、 Snapshot コピー名の後ろにタイムスタンプが追加されます。
+たとえば 'customText_policy_hostname や resource_hostname などですデフォルトでは、Snapshot名にタイムスタンプが追加されます。
 
 
 

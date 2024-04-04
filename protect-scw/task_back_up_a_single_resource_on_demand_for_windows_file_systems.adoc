@@ -29,9 +29,9 @@ IMPORTANT: Windows ファイルシステムのコンテキストで作業して�
 +
 「リソースグループの作成」のタスクの説明に従って、保護設定を指定します。
 
-. オプション：ウィザードのリソースページで、 Snapshot コピーのカスタム名形式を入力します。
+. オプション：ウィザードの[Resource]ページで、Snapshotのカスタムの名前形式を入力します。
 +
-たとえば、 customtext_resourcegroup_policy_hostname や resourcegroup_hostname などの形式です。デフォルトでは、 Snapshot コピー名の後ろにタイムスタンプが追加されます。
+たとえば、 customtext_resourcegroup_policy_hostname や resourcegroup_hostname などの形式です。デフォルトでは、Snapshot名にタイムスタンプが追加されます。
 
 . [Policies] ページで、次のタスクを実行します。
 +

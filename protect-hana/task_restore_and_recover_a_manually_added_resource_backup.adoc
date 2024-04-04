@@ -32,7 +32,7 @@ NOTE: コマンドリストにコマンドがない場合、処理は失敗し�
 .このタスクについて
 * ファイルベースのバックアップのコピーを SnapCenter からリストアすることはできません。
 * SnapCenter 4.3 にアップグレードすると、 SnapCenter 4.2 で作成されたバックアップはリストアできますが、リカバリすることはできません。SnapCenter 4.2 で作成されたバックアップをリカバリするには、 SnapCenter の外部で HANA Studio または HANA リカバリスクリプトを使用する必要があります。
-* ONTAP 9.12.1以前のバージョンでは、リストアの一環としてSnapLockヴォールトSnapshotコピーから作成されたクローンにSnapLockヴォールトの有効期限が継承されます。SnapLockの有効期限が過ぎた時点で、ストレージ管理者がクローンを手動でクリーンアップする必要があります。
+* ONTAP 9.12.1以前のバージョンでは、リストアの一環としてSnapLockヴォールトSnapshotから作成されたクローンにSnapLockヴォールトの有効期限が継承されます。SnapLockの有効期限が過ぎた時点で、ストレージ管理者がクローンを手動でクリーンアップする必要があります。
 
 
 .手順
@@ -61,7 +61,7 @@ image::../media/restoring_resource.gif[リソースのリストア]
 +
 .. Complete Resource * を選択すると、 SAP HANA データベースに設定されているすべてのデータボリュームがリストアされます。
 +
-リソースにボリュームまたは qtree が含まれている場合、そのボリュームまたは qtree でリストア対象として選択された Snapshot コピーのあとに作成された Snapshot コピーは削除され、リカバリすることはできません。また、同じボリュームまたは qtree で他のリソースがホストされている場合、そのリソースも削除されます。
+リソースにボリュームまたはqtreeが含まれている場合、そのボリュームまたはqtreeでリストア対象として選択されたSnapshotのあとに作成されたSnapshotは削除され、リカバリすることはできません。また、同じボリュームまたは qtree で他のリソースがホストされている場合、そのリソースも削除されます。
 
 .. 「 * ファイルレベル * 」を選択した場合は、「 * すべて * 」を選択するか、特定のボリュームまたは qtree を選択してから、それらのボリュームまたは qtree に関連するパスをカンマで区切って入力できます
 +
@@ -88,7 +88,7 @@ NOTE: 「 * all * 」を選択すると、ボリューム、 qtree 、または 
 
 +
 
-NOTE: 休止、Snapshotコピー、および休止解除の処理を実行するプリコマンドとポストコマンドの場合は、該当するコマンドがプラグインホストのコマンドリストにあるかどうかを確認する必要があります。Linuxの場合は_/opt/snapcenter/snapenter/scc/allowed commands.config_path、Windowsの場合は_C：\Program Files\NetApp\Snapcenter\Snapcenter Plug-in Creator\etc\allowed_commands_list.txt_ for Windowsの順に指定します。
+NOTE: 休止、Snapshot、および休止解除の処理を実行するプリコマンドとポストコマンドの場合は、Linuxの場合は_/opt/snapcenter/snapenter/scc/allowed commands.config_path、Windowsの場合は_C：\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands_list.txt_からプラグインホストで使用できるコマンドリストにコマンドがあるかどうかを確認する必要があります。
 
 . [ 通知 ] ページの [ 電子メールの設定 *] ドロップダウンリストから、電子メールを送信するシナリオを選択します。
 +

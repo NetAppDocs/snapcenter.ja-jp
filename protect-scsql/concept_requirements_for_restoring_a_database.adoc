@@ -34,7 +34,7 @@ SnapCenter Plug-in for Microsoft SQL Server のバックアップから SQL Serv
 https://support.microsoft.com/kb/2887595["Microsoft のサポート記事 2887595 ：「 Windows RT 8.1 、 Windows 8.1 、 and Windows Server 2012 R2 update rollup ： November 2013"]
 
 * リソースグループまたはデータベースをバックアップしておく必要があります。
-* Snapshot コピーをミラーまたはバックアップにレプリケートするユーザには、 SnapCenter 管理者がユーザに対してソースとデスティネーションの両方のボリューム用に Storage Virtual Machine （ SVM ）を割り当てる必要があります。
+* Snapshotをミラーまたはバックアップにレプリケートする場合は、SnapCenter管理者がユーザにソースボリュームとデスティネーションボリュームの両方に対してStorage Virtual Machine（SVM）を割り当てておく必要があります。
 +
 管理者によるユーザへのリソースの割り当て方法については、 SnapCenter のインストール情報を参照してください。
 

@@ -25,9 +25,9 @@ summary: 個々のカスタムプラグインリソースがどのリソース�
 をクリックします image:../media/filter_icon.png[""]をクリックし、ホスト名とリソースタイプを選択してリソースをフィルタリングします。をクリックします image:../media/filter_icon.png["フィルタアイコン"] をクリックしてフィルタペインを閉じます。
 
 . バックアップするリソースをクリックします。
-. リソースページで、カスタム名を使用する場合は、 Snapshot コピーに * カスタムの名前形式を使用する * チェックボックスをオンにし、 Snapshot コピー名のカスタム名形式を入力します。
+. カスタムの名前を使用する場合は、[Resource]ページで*[Use custom name format for Snapshot copy]*チェックボックスを選択し、Snapshot名のカスタムの名前形式を入力します。
 +
-たとえば、 _customText_policy_hostname_or_resource_hostname_hostname_1 です。デフォルトでは、 Snapshot コピー名の後ろにタイムスタンプが追加されます。
+たとえば、 _customText_policy_hostname_or_resource_hostname_hostname_1 です。デフォルトでは、Snapshot名にタイムスタンプが追加されます。
 
 . [ アプリケーションの設定 ] ページで、次の操作を行います。
 +
@@ -43,7 +43,7 @@ summary: 個々のカスタムプラグインリソースがどのリソース�
  a| 
 整合グループ Snapshot 処理が完了するまで待機する時間を設定してください
  a| 
-Snapshot コピー処理が完了するまでの待機時間を指定するには、「至急」、「中」、または「不完全」を選択します。
+Snapshot処理が完了するまでの待機時間として、[Urgent]、[Medium]、または[Relaxed]のいずれかを選択します。
 
 Urgent = 5 秒、 Medium = 7 秒、 Relaxed = 20 秒。
 
@@ -58,35 +58,35 @@ WAFL 整合ポイントを強制しない場合は、これを選択します。
 +
 image:../media/application_settings.gif["[アプリケーション設定]ページ"]
 
-.. [* Scripts] の矢印をクリックすると、休止、 Snapshot コピー、および休止解除の各処理に対して PRE および POST のコマンドが実行されます。バックアップ処理を終了する前にプリコマンドを実行することもできます。
+.. [Scripts]*の矢印をクリックして、休止、Snapshot、および休止解除の処理のプリコマンドとポストコマンドを実行します。バックアップ処理を終了する前にプリコマンドを実行することもできます。
 +
 プリスクリプトとポストスクリプトは SnapCenter サーバで実行されます。
 
 .. 「カスタム構成」の矢印をクリックし、このリソースを使用するすべてのジョブに必要なカスタム値のペアを入力します。
-.. Snapshot コピーツールの * 矢印をクリックして、 Snapshot コピーを作成するツールを選択します。
+.. Snapshotコピーツール*の矢印をクリックして、Snapshotを作成するツールを選択します。
 +
 |===
 | 状況 | 作業 
 
 
  a| 
-SnapCenter でストレージレベルの Snapshot コピーを作成します
+SnapCenterでストレージレベルのSnapshotを作成
  a| 
 ファイルシステムの整合性なしで SnapCenter * を選択します。
 
 
 
  a| 
-SnapCenter で Plug-in for Windows を使用してファイルシステムを整合性のある状態にしてから Snapshot コピーを作成する
+SnapCenterでPlug-in for Windowsを使用してファイルシステムを整合性のある状態にしてからSnapshotを作成
  a| 
 ファイルシステムの整合性を維持した状態で SnapCenter を選択します。
 
 
 
  a| 
-Snapshot コピーを作成するコマンドを入力するには、次のコマンドを入力します
+Snapshotを作成するコマンドを入力するには
  a| 
-「 * other * 」を選択し、コマンドを入力して Snapshot コピーを作成します。
+[その他]*を選択し、コマンドを入力してSnapshotを作成します。
 
 |===
 

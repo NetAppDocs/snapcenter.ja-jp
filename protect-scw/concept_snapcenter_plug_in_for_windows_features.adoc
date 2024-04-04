@@ -2,7 +2,7 @@
 permalink: protect-scw/concept_snapcenter_plug_in_for_windows_features.html 
 sidebar: sidebar 
 keywords: SnapCenter 
-summary: Plug-in for Windows は、ストレージシステム上でネットアップの Snapshot コピーテクノロジと統合されます。Plug-in for Windows の操作には、 SnapCenter インターフェイスを使用します。 
+summary: Plug-in for Windowsは、ストレージシステム上でNetApp Snapshotテクノロジと統合されます。Plug-in for Windows の操作には、 SnapCenter インターフェイスを使用します。 
 ---
 = SnapCenter Plug-in for Windows の特長
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Plug-in for Windows は、ストレージシステム上でネットア
 
 
 [role="lead"]
-Plug-in for Windows は、ストレージシステム上でネットアップの Snapshot コピーテクノロジと統合されます。Plug-in for Windows の操作には、 SnapCenter インターフェイスを使用します。
+Plug-in for Windowsは、ストレージシステム上でNetApp Snapshotテクノロジと統合されます。Plug-in for Windows の操作には、 SnapCenter インターフェイスを使用します。
 
 Plug-in for Windows の主な機能は次のとおりです。
 
@@ -23,9 +23,9 @@ SnapCenter のインターフェイスは、すべてのプラグインと環境
 +
 日常的なファイルシステムのバックアップのスケジュールを設定したり、ポリシーベースのバックアップ保持を設定したり、リストア処理をセットアップしたりできます。SnapCenter から E メールアラートを送信するように設定して、ファイルシステム環境をプロアクティブに監視することもできます。
 
-* * 無停止の NetApp Snapshot コピー・テクノロジー *
+* *無停止のNetAppスナップショットテクノロジ*
 +
-Plug-in for Windows では、ネットアップの Snapshot コピーテクノロジを使用しています。これにより、ファイルシステムを数秒でバックアップし、ホストをオフラインにすることなく迅速にリストアすることが可能です。Snapshot コピーはストレージスペースを最小限しか消費しません。
+Plug-in for Windowsでは、NetAppのSnapshotテクノロジを使用しています。これにより、ファイルシステムを数秒でバックアップし、ホストをオフラインにすることなく迅速にリストアすることが可能です。Snapshotはストレージスペースを最小限しか消費しません。
 
 
 
