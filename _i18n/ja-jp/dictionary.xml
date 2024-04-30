@@ -8298,14 +8298,6 @@ Windowsホスト：</block>
   <block id="40b141d81ebc81d0277454ddd95983be" category="paragraph">オンデマンドバックアップのあと、*[リフレッシュ]*ボタンをクリックすると、バックアップまたはクローンの詳細がリフレッシュされます。</block>
   <block id="e3eb3098d9512640ba3691ccfbed50f5" category="paragraph">PowerShell コマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、クローニングの処理を実行することもできます。PowerShell コマンドレットの詳細については、 SnapCenter コマンドレットのヘルプを使用するか、を参照してください<block ref="b70cb1971d6e57b9289aed553ef357cb" category="inline-link-rx"></block></block>
   <block id="f1472e722e81a79d38810332425a4e76" category="paragraph">PowerShell コマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、クローニングの処理を実行することもできます。PowerShell コマンドレットについては、 SnapCenter コマンドレットのヘルプを使用するか、を参照してください<block ref="b70cb1971d6e57b9289aed553ef357cb" category="inline-link-rx"></block>。</block>
-  <block id="5145b2adfb55517e007962efd2a08be6" category="paragraph">permalink:protect-scu / task_split_a_clone.html
-サイドバー：サイドバー[サイドバー：サイドバー]
-キーワード：スプリットクローン、SnapCenter
-概要：「SnapCenterを使用して、クローニングされたリソースを親リソースからスプリットできます。スプリットされたクローンは親リソースから独立します。
-- - -
-=クローンのスプリット
-:アイコン:フォント
-:imagesdir:../media/</block>
   <block id="e9b924bbf420ab11fb241e13f75a92c1" category="summary">Plug-in for UNIXファイルシステムをインストールすると、ホスト上のファイルシステムが自動的に検出されて[Resources]ページに表示されます。</block>
   <block id="5f6bb3736007978d5604be7df99325f8" category="doc">バックアップに使用できるUNIXファイルシステムの検出</block>
   <block id="c94588b5932cbd964b99829c9c53f185" category="paragraph">プラグインをインストールすると、そのホスト上のすべてのファイルシステムが自動的に検出されて[Resources]ページに表示されます。これらのファイルシステムをリソースグループに追加してデータ保護処理を実行できます。</block>
@@ -9074,4 +9066,7 @@ Snapshot処理。</block>
   <block id="bf971f3c72b83a1aac6d9fe1cb39850c" category="admonition">セカンダリストレージ上のバックアップは、名前変更または削除できません。Snapshotの削除は、ONTAPの保持設定で処理されます。</block>
   <block id="eb71c7e77b1cb5486117cdac9d378fb6" category="list-text">カスタムのSnapshot名を指定する場合は、[リソース]ページで*[Snapshotコピーにカスタムの名前形式を使用する]*チェックボックスを選択し、Snapshot名に使用するカスタムの名前形式を入力します。</block>
   <block id="2457e427df18c87448fa7fa796d115c7" category="paragraph">SnapCenter を使用して Exchange メールボックスをバックアップするには、データベースやデータベース可用性グループ（ DAG ）などのリソースタイプを選択する必要があります。Snapshotテクノロジを使用して、リソースが配置されているボリュームのオンラインの読み取り専用コピーが作成されます。</block>
+  <block id="495685c9e0a33087f4a235b8fe0d5e1c" category="section-title">保護を解除します</block>
+  <block id="d315d492e2b430b33a4c4cd7b63eda74" category="paragraph">保護の解除：すべてのバックアップが削除され、すべてのポリシーが解除されます。保護を解除する前に、バックアップがマウントされておらず、バックアップにクローンが関連付けられていないことを確認する必要があります。</block>
+  <block id="58184ed57b20efbfac17064f1bc0e4f4" category="list-text">バックアップを選択し、*[保護の削除]*をクリックします。</block>
 </blocks>

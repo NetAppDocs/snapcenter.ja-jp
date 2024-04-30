@@ -1,16 +1,14 @@
-= 
+---
+permalink: protect-scu/task_split_a_clone.html 
+sidebar: sidebar 
+keywords: split clone, snapcenter 
+summary: SnapCenter を使用して、クローニングされたリソースを親リソースからスプリットできます。スプリットされたクローンは、親リソースに依存しません。 
+---
+= クローンをスプリットします。
 :allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
 
-
---
-permalink:protect-scu / task_split_a_clone.html
-サイドバー：サイドバー[サイドバー：サイドバー]
-キーワード：スプリットクローン、SnapCenter
-概要：「SnapCenterを使用して、クローニングされたリソースを親リソースからスプリットできます。スプリットされたクローンは親リソースから独立します。
-- - -
-=クローンのスプリット
-:アイコン:フォント
-:imagesdir:../media/
 
 [role="lead"]
 SnapCenter を使用して、クローニングされたリソースを親リソースからスプリットできます。スプリットされたクローンは、親リソースに依存しません。
@@ -77,5 +75,3 @@ SMCore サービスが再起動すると、クローンスプリット処理が�
 
 .関連情報
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_clone_or_verfication_fails_with_aggregate_does_not_exist["「 aggregate does not exist 」というメッセージが表示されて、 SnapCenter クローンまたは検証が失敗する"]
-
---
