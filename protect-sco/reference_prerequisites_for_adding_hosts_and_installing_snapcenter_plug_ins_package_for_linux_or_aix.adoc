@@ -197,7 +197,7 @@ NOTE: SnapCenter Plug-ins Package for AIX に含まれている SnapCenter Plug-
  a| 
 オペレーティングシステム
  a| 
-AIX 4.3 以降
+AIX 7.1以降
 
 
 

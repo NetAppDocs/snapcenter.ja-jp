@@ -1481,7 +1481,6 @@
   <block id="30dca629b8dd44dcc3eb42720281eefa" category="list-text">Oracle データベース 11.2.0.3 以降を使用していて、 NID スクリプトを使用して補助インスタンスのデータベース ID を変更している場合は、 13366202 Oracle パッチをインストールする必要があります。</block>
   <block id="fed30036a3caffc826b4e66f434f67ea" category="summary">SnapCenter Plug-ins Package for AIX をインストールする前に、ホストが要件を満たしていることを確認する必要があります。</block>
   <block id="43574ab73a6cbc674506ff003387dcb1" category="paragraph">オペレーティングシステム</block>
-  <block id="895327977020e495debf0b375c7541d8" category="paragraph">AIX 4.3 以降</block>
   <block id="974c2262615af73433567515efbb80e9" category="paragraph">4 GB</block>
   <block id="bac8e3a852c936b4db89afd35d4d962a" category="paragraph">Java を最新バージョンにアップグレードした場合は、 /var/opt/snapcenter /etc/sp/etc/spl.properties にある JAVA_HOME オプションが正しい Java バージョンに設定されていること、および正しいパスが指定されていることを確認する必要があります。</block>
   <block id="9fc7e0af2d8808b59624854d31dab1bb" category="list-text">/etc/ssh/sshd_config_file を編集して、メッセージ認証コードアルゴリズム MACs HMAC-sha2-256 および MACs HMAC-sha2-512 を設定します。</block>
@@ -9069,4 +9068,5 @@ Snapshot処理。</block>
   <block id="495685c9e0a33087f4a235b8fe0d5e1c" category="section-title">保護を解除します</block>
   <block id="d315d492e2b430b33a4c4cd7b63eda74" category="paragraph">保護の解除：すべてのバックアップが削除され、すべてのポリシーが解除されます。保護を解除する前に、バックアップがマウントされておらず、バックアップにクローンが関連付けられていないことを確認する必要があります。</block>
   <block id="58184ed57b20efbfac17064f1bc0e4f4" category="list-text">バックアップを選択し、*[保護の削除]*をクリックします。</block>
+  <block id="ad569cc1cca820033bb20ffe1d5bc4a5" category="paragraph">AIX 7.1以降</block>
 </blocks>
