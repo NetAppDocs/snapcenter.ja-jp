@@ -1,12 +1,11 @@
 ---
 indexpage:
-  lead: SnapCenter ソフトウェアは、シンプルで拡張性に優れた一元的なプラットフォームです。ハイブリッドクラウドの任意の場所にある ONTAP システムで実行されているアプリケーション、データベース、ホストファイルシステム、
-    VM に対して、アプリケーションと整合性のあるデータ保護を提供します。このドキュメントライブラリには、バージョン5.0の情報が含まれています。
+  lead: SnapCenterソフトウェアは、シンプルで拡張性に優れた一元管理型プラットフォームです。ハイブリッドクラウドのどこにいても、ONTAPシステムで実行されているアプリケーション、データベース、ホストファイルシステム、VMに対して、アプリケーションと整合性のあるデータ保護を提供します。このドキュメントライブラリには、バージョン6.0の情報が含まれています。
   tiles:
   - title: はじめに
     links:
     - title: リリースノート
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886893
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3323468
     - title: SnapCenter の詳細をご確認ください
       url: "/concept/concept_snapcenter_overview.html"
     - title: SQL Server データベースの保護に関するクイックリファレンスです
@@ -19,8 +18,12 @@ indexpage:
       url: "/install/concept_snapcenter_licenses.html"
     - title: ポートを設定します
       url: "/install/reference_connection_and_port_requirements.html"
-    - title: SnapCenter サーバをインストールします
+    - title: 登録してSnapCenterソフトウェアにアクセス
+      url: "/install/register_enable_software_access.html"
+    - title: WindowsホストへのSnapCenterサーバのインストール
       url: "/install/task_install_the_snapcenter_server_using_the_install_wizard.html"
+    - title: LinuxホストへのSnapCenterサーバのインストール
+      url: "/install/install_snapcenter_server_linux.html"
     - title: F5 を使用してハイアベイラビリティを設定します
       url: "/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html"
     - title: SnapCenter サーバのディザスタリカバリ
@@ -76,9 +79,9 @@ indexpage:
   - title: リソースの追加
     links:
     - title: コマンドレットリファレンスガイド
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895
+      url: https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html
     - title: コマンドリファレンスガイド
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886896
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3323470
     - title: 以前のバージョンの SnapCenter のドキュメント
       url: https://www.netapp.com/data-protection/backup-recovery/snapcenter-backup-management/documentation/#ProseArticleLinkList13
     - title: ネットアップのナレッジベース - SnapCenter

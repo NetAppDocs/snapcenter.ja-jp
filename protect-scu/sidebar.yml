@@ -34,6 +34,8 @@ entries:
     url: "/protect-scu/task_back_up_unix_file_systems_resource_groups.html"
   - title: バックアップの進行状況を監視します
     url: "/protect-scu/task_monitor_unix_file_systems_backup_operations.html"
+  - title: "[Topology]ページで保護されているUNIXファイルシステムを表示する"
+    url: "/protect-scu/view_protected_unix_file_systems_in_the_topology_page.html"
 - title: UNIXファイル・システムのリストアとリカバリ
   entries:
   - title: UNIXファイル・システムのリストアとリカバリ

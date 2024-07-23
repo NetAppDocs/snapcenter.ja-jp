@@ -1,0 +1,27 @@
+---
+permalink: protect-mysql/types-of-restore-strategies-supported-for-manually-added-mysql.html 
+sidebar: sidebar 
+keywords: SnapCenter 
+summary: SnapCenterを使用してリストア処理を正常に実行するには、戦略を定義する必要があります。手動で追加したMySQLリソースには、2種類のリストア戦略があります。手動で追加したMySQLリソースはリカバリできません。 
+---
+= 手動で追加したMySQLリソースでサポートされるリストア戦略のタイプ
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenterを使用してリストア処理を正常に実行するには、戦略を定義する必要があります。手動で追加したMySQLリソースには、2種類のリストア戦略があります。
+
+
+NOTE: 手動で追加したMySQLリソースはリカバリできません。
+
+
+
+== リソース全体のリストア
+
+* リソースのすべてのボリューム、 qtree 、および LUN をリストアします
+
+
+
+NOTE: リソースにボリュームまたはqtreeが含まれている場合、そのボリュームまたはqtreeでリストア対象として選択されたSnapshotのあとに作成されたSnapshotは削除され、リカバリできません。また、同じボリュームまたはqtreeで他のリソースがホストされている場合、そのリソースも削除されます。

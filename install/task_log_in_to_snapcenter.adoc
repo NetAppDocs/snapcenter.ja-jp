@@ -16,6 +16,7 @@ SnapCenter では、 Role-Based Access Control （ RBAC ；ロールベースア
 .作業を開始する前に
 * Windows Server Manager で Windows Process Activation Service （ WAS ）を有効にする必要があります。
 * Internet Explorer をブラウザとして使用して SnapCenter サーバにログインする場合は、 Internet Explorer の保護モードが無効になっていることを確認する必要があります。
+* SnapCenterサーバがLinuxホストにインストールされている場合は、SnapCenterサーバのインストールに使用したユーザアカウントを使用してログインする必要があります。
 
 
 * このタスクについて *
@@ -34,7 +35,7 @@ GUI のデフォルトの URL は、 SnapCenter サーバがインストール�
 
 ハイアベイラビリティ（ HA ）構成の場合は、仮想クラスタ IP_https://Virtual_Cluster_IP_or_FQDN:8146_ を使用して SnapCenter にアクセスする必要があります。Internet Explorer （ IE ）で \\ https://Virtual_Cluster_IP_or_FQDN:8146_ に移動しても SnapCenter UI が表示されない場合は、各プラグインホストで IE の信頼済みサイトに仮想クラスタの IP アドレスまたは FQDN を追加するか、あるいは各プラグインホストで IE のセキュリティ強化オプションを無効にする必要があります。詳細については、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_access_cluster_IP_address_from_outside_network["ネットワーク外からクラスタ IP アドレスにアクセスできません"^]。
 
-PowerShell コマンドレットを使用すると、 SnapCenter GUI に加え、設定、バックアップ、リストアの各処理を実行するスクリプトを作成できます。一部のコマンドレットは、各 SnapCenter リリースで変更された可能性があります。。 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^] に詳細を示します。
+SnapCenter GUIに加えて、PowerShellコマンドレットを使用してスクリプトを作成し、設定、バックアップ、リストアの各処理を実行できます。一部のコマンドレットは、SnapCenterのリリースごとに変更されている場合があります。詳細については、を https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^] 参照してください。
 
 
 NOTE: SnapCenter への初回ログイン時は、インストールプロセスで指定したクレデンシャルを使用してログインする必要があります。
@@ -83,7 +84,11 @@ NOTE: SnapCenter への初回ログイン時は、インストールプロセス
 
 SnapCenter サーバに初めて RBAC ユーザとしてログインしたあと、リソースのリストを更新します。
 
-SnapCenter でサポートされる信頼されていない Active Directory ドメインがある場合は、信頼されていないドメインのユーザにロールを設定する前に、それらのドメインを SnapCenter に登録する必要があります。 link:../install/task_register_untrusted_active_directory_domains.html["詳細はこちら。"^]
+SnapCenter でサポートされる信頼されていない Active Directory ドメインがある場合は、信頼されていないドメインのユーザにロールを設定する前に、それらのドメインを SnapCenter に登録する必要があります。link:../install/task_register_untrusted_active_directory_domains.html["詳細はこちら。"^]です。
+
+Linuxホストで実行されているSnapCenterにプラグインホストを追加する場合は、_/opt/NetApp/snapcenter/SnapManagerWeb/Repository _からチェックサムファイルを取得する必要があります。
+
+6.0リリース以降、デスクトップにSnapCenter PowerShellのショートカットが作成されます。ショートカットを使用すると、SnapCenter PowerShellコマンドレットに直接アクセスできます。
 
 
 
@@ -92,11 +97,7 @@ SnapCenter でサポートされる信頼されていない Active Directory ド
 SnapCenter サーバでは、Active Directoryに含まれるドメインアカウントに対してMFAがサポートされます。
 
 .作業を開始する前に
-* MFAを有効にしておく必要があります。
-+
-MFAを有効にする方法については、を参照してください link:../install/enable_multifactor_authentication.html["多要素認証を有効にします"]
-
-
+MFAを有効にしておく必要があります。MFAを有効にする方法については、を参照してください。 link:../install/enable_multifactor_authentication.html["多要素認証を有効にします"]
 
 * このタスクについて *
 

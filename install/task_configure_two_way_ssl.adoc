@@ -1,20 +1,19 @@
 ---
 permalink: install/task_configure_two_way_ssl.html 
 sidebar: sidebar 
-keywords: security,two-way ssl,configure two-way ssl 
-summary: SnapCenterサーバとプラグイン間の相互通信を保護するために、双方向SSL通信を設定する必要があります。   
+keywords: security,two-way ssl,configure two-way ssl, windows host 
+summary: Windowsホスト上のSnapCenterサーバとプラグインの間の相互通信を保護するために、双方向SSL通信を設定する必要があります。 
 ---
-= 双方向SSL通信を設定します
+= Windowsホストでの双方向SSL通信の設定
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenterサーバとプラグイン間の相互通信を保護するために、双方向SSL通信を設定する必要があります。
+Windowsホスト上のSnapCenterサーバとプラグインの間の相互通信を保護するために、双方向SSL通信を設定する必要があります。
 
-* 始める前に *
-
+.作業を開始する前に
 * サポートされるキーの最小長が3072のCA証明書CSRファイルを生成しておく必要があります。
 * CA証明書でサーバ認証とクライアント認証がサポートされている必要があります。
 * 秘密鍵とサムプリントの詳細が記載されたCA証明書が必要です。
@@ -28,8 +27,7 @@ SnapCenterサーバとプラグイン間の相互通信を保護するために�
 
 
 
-* 手順 *
-
+.手順
 . ポートをバインドするには、PowerShellコマンドを使用して、SnapCenter IIS Webサーバポート8146（デフォルト）およびSMCoreポート8145（デフォルト）のSnapCenterサーバホストで次の手順を実行します。
 +
 .. 次のPowerShellコマンドを使用して、既存のSnapCenter自己署名証明書のポートバインドを削除します。
@@ -119,12 +117,10 @@ Windowsレジストリエディタで、次のパスに移動します。
 
 SnapCenter Windowsプラグインは、PowerShellコマンドを使用して双方向SSL通信用に設定する必要があります。
 
-* 始める前に *
-
+.作業を開始する前に
 CA証明書サムプリントが使用可能であることを確認します。
 
-* 手順 *
-
+.手順
 . ポートをバインドするには、WindowsプラグインホストでSMCoreポート8145（デフォルト）に対して次の操作を実行します。
 +
 .. 次のPowerShellコマンドを使用して、既存のSnapCenter自己署名証明書のポートバインドを削除します。

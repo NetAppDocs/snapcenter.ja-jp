@@ -59,9 +59,20 @@ SnapCenter SMCore の通信ポート
 
 
  a| 
+スケジューラサービスポート
+ a| 
+8154（HTTPS）、
+
+このポートは、SnapCenterサーバホスト内で管理されるすべてのプラグインのSnapCenterスケジューラワークフローを一元的にオーケストレーションするために使用されます。
+
+ポートをカスタマイズするには、を参照してください https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["インストールウィザードを使用してSnapCenterサーバをインストールします。"]
+
+
+
+ a| 
 MySQL ポート
  a| 
-3306 （ HTTPS ）、双方向
+3306（HTTPS）、双方向、カスタマイズ可能
 
 このポートは、 SnapCenter と MySQL リポジトリデータベースの間の通信に使用されます。
 
@@ -118,7 +129,18 @@ SnapCenter Plug-in for Oracle Database
 
 
  a| 
-SnapCenter 用のカスタムプラグイン
+SnapCenter Plug-in for Exchangeデータベース
+ a| 
+909、カスタマイズ可能
+
+デフォルトのNETです。 TCPポートは、Plug-in for WindowsでExchange VSSコールバックに接続するために使用されます。
+
+ポートをカスタマイズするには、を参照してください link:../protect-sce/task_add_hosts_and_install_plug_in_for_exchange.html["ホストを追加し、 Plug-in for Exchange をインストールします"]。
+
+
+
+ a| 
+NetAppでサポートされるSnapCenter用プラグイン
  a| 
 9090 （ HTTPS ）、固定
 

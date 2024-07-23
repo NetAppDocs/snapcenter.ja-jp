@@ -1,10 +1,10 @@
 ---
 permalink: uninstall/task_uninstalling_the_snapcenter_server.html 
 sidebar: sidebar 
-keywords: uninstall, snapcenter server 
+keywords: uninstall, snapcenter server, windows 
 summary: 'データ保護ジョブの管理に SnapCenter サーバを使用しない場合は、 SnapCenter サーバホストの [ プログラムと機能 ] コントロールパネルを使用して SnapCenter サーバをアンインストールできます。SnapCenter サーバをアンインストールすると、そのコンポーネントがすべて削除されます。' 
 ---
-= SnapCenter サーバをアンインストールします
+= WindowsホストでのSnapCenterサーバのアンインストール
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -12,7 +12,7 @@ entries:
     url: "/protect-scw/concept_snapcenter_plug_in_for_windows_features.html"
   - title: SnapCenter での Windows ファイルシステムのバックアップ方法
     url: "/protect-scw/concept_how_snapcenter_backs_up_windows_file_systems.html"
-  - title: SnapCenter Plug-in for Microsoft Windows でサポートされるストレージタイプ
+  - title: SnapCenter Plug-in for Microsoft Windowsでサポートされるストレージタイプ
     url: "/protect-scw/reference_storage_types_supported_by_snapcenter_plug_ins_for_microsoft_windows.html"
   - title: Windows プラグインに必要な最小限の ONTAP 権限
     url: "/protect-scw/reference_minimum_ontap_privileges_required_for_windows_plug_in.html"

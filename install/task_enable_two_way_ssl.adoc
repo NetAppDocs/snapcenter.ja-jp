@@ -1,17 +1,17 @@
 ---
 permalink: install/task_enable_two_way_ssl.html 
 sidebar: sidebar 
-keywords: security,disable two-way SSL,enable two-way SSL 
-summary: PowerShellコマンドを使用して双方向SSL通信を有効にすると、SnapCenterサーバとプラグインの間の相互通信を保護できます。 
+keywords: security,disable two-way SSL,enable two-way SSL, windows host 
+summary: PowerShellコマンドを使用して、Windowsホスト上のSnapCenterサーバとプラグインの間の相互通信を保護するために、双方向SSL通信を有効にすることができます。 
 ---
-= 双方向SSL通信を有効にします
+= Windowsホストで双方向SSL通信を有効にする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-PowerShellコマンドを使用して双方向SSL通信を有効にすると、SnapCenterサーバとプラグインの間の相互通信を保護できます。
+PowerShellコマンドを使用して、Windowsホスト上のSnapCenterサーバとプラグインの間の相互通信を保護するために、双方向SSL通信を有効にすることができます。
 
 * 始める前に *
 

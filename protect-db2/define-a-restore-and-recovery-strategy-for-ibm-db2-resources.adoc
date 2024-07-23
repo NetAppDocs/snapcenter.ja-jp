@@ -1,0 +1,22 @@
+---
+permalink: protect-db2/define-a-restore-and-recovery-strategy-for-ibm-db2-resources.html 
+sidebar: sidebar 
+keywords: restore and recovery strategy, IBM Db2 resources, snapcenter 
+summary: データベースのリストアとリカバリを行う前に戦略を定義しておくと、リストア処理とリカバリ処理を正常に実行できるようになります。 
+---
+= IBM DB2リソースのリストアおよびリカバリ戦略の定義
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+データベースのリストアとリカバリを行う前に戦略を定義しておくと、リストア処理とリカバリ処理を正常に実行できるようになります。
+
+
+NOTE: データベースの手動リカバリのみがサポートされます。
+
+.手順
+. 手動で追加したIBM DB2リソースでサポートされるリストア戦略を確認する
+. 自動検出されたIBM DB2データベースでサポートされているリストア戦略を確認する
+

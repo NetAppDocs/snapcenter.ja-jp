@@ -25,6 +25,7 @@ SnapCenter を使用して Microsoft Exchange Server リソースをバックア
 +
 デフォルト値は false です。
 
+* SnapMirrorアクティブ同期に固有の前提条件と制限事項を確認します。詳細については、を参照してください https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["SnapMirrorアクティブ同期のオブジェクト数の制限"]。
 
 
 .このタスクについて
@@ -250,8 +251,7 @@ SnapLock保持期間は100年未満にする必要があります。
 
 |===
 +
-
-NOTE: DAG 構成のホストにはログバックアップのみを使用し、フルバックアップは実行しないデータベースがある場合、ログバックアップは次の方法で保持されます。
+DAG 構成のホストにはログバックアップのみを使用し、フルバックアップは実行しないデータベースがある場合、ログバックアップは次の方法で保持されます。
 
 +
 *** デフォルトでは、 SnapCenter は DAG 内の他のすべてのホストでこのデータベースの最も古いフルバックアップを検出し、フルバックアップの前に作成されたこのホスト上のすべてのログバックアップを削除します。
@@ -273,14 +273,19 @@ NOTE: DAG 構成のホストにはログバックアップのみを使用し、�
 
  a| 
 ローカルSnapshot作成後にSnapMirrorを更新する
+ a| 
+別のボリュームにバックアップセットのミラーコピーを保持する場合（ SnapMirror ）は、このオプションを選択します。
 
 セカンダリレプリケーションでは、SnapLockの有効期限によってプライマリSnapLockの有効期限がロードされます。
+
+このオプションは、SnapMirrorのアクティブな同期に対して有効にする必要があります。
+
+
+IMPORTANT: プライマリのみのポリシーは、Exchange ONTAPボリュームに対してSnapMirrorのアクティブな同期が設定されている場合は使用できません。SnapCenterではこれが許可されていません。「ミラー」オプションを有効にする必要があります。
 
 [Topology]ページの[Refresh]*ボタンをクリックすると、ONTAPから取得されたセカンダリおよびプライマリのSnapLock有効期限が更新されます。
 
 を参照してください link:..protect-sce/task_view_exchange_backups_in_the_topology_page.html["Topology ページで Exchange バックアップを表示します"]。
- a| 
-別のボリュームにバックアップセットのミラーコピーを保持する場合（ SnapMirror ）は、このオプションを選択します。
 
 
 

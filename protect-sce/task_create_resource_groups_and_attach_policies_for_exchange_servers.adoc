@@ -25,6 +25,8 @@ summary: リソースグループはすべてのデータ保護ジョブに必�
 GET APIを使用してキーの値を表示することができます。set APIはサポートされません。
 
 * ONTAP 9.12.1以前のバージョンでは、リストアの一環としてSnapLockヴォールトSnapshotから作成されたクローンにSnapLockヴォールトの有効期限が継承されます。SnapLockの有効期限が過ぎた時点で、ストレージ管理者がクローンを手動でクリーンアップする必要があります。
+* SnapMirrorアクティブ同期が設定されていない新しいデータベースを、SnapMirrorアクティブ同期が設定されたリソースを含む既存のリソースグループに追加することはできません。
+* SnapMirror Active Syncのフェイルオーバーモードでは、既存のリソースグループに新しいデータベースを追加することはできません。リソースグループにリソースを追加できるのは、通常の状態またはフェイルバック状態のみです。
 
 
 .手順
@@ -125,7 +127,7 @@ NOTE: バックアップ・ジョブ作成時に選択するサーバ上の * �
 E メール通知を利用する場合は、 GUI または PowerShell コマンド「 S et-SmtpServer 」を使用して、 SMTP サーバの詳細を指定しておく必要があります。
 
 +
-コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、『Software Cmdlet Reference Guide ^]』も参照して https://docs.netapp.com/us-en/snapcenter-cmdlets/index.htmlnapCenter[] ください。
 
 . 概要を確認し、 [ 完了 ] をクリックします。
 

@@ -1,0 +1,470 @@
+---
+permalink: protect-nsp/java.html 
+sidebar: sidebar 
+keywords: Custom plug-in 
+summary: Java スタイルを使用してプラグインを開発します。 
+---
+= Java スタイル
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Java カスタムプラグインは、データベースやインスタンスなどのアプリケーションと直接対話します。
+
+
+
+== 制限
+
+Java プログラミング言語を使用してプラグインを開発する場合は、一定の制限事項に注意する必要があります。
+
+|===
+| プラグインの特性 | Java プラグイン 
+
+
+ a| 
+複雑さ
+ a| 
+低 ~ 中
+
+
+
+ a| 
+メモリフットプリント
+ a| 
+最大 10 ～ 20 MB
+
+
+
+ a| 
+他のライブラリとの依存関係
+ a| 
+アプリケーション通信用ライブラリ
+
+
+
+ a| 
+スレッド数
+ a| 
+1.
+
+
+
+ a| 
+スレッドランタイム
+ a| 
+1 時間未満
+
+|===
+
+
+=== Java の制限の理由
+
+SnapCenter エージェントの目標は、継続的、安全、堅牢なアプリケーション統合を実現することです。Java プラグインをサポートすることで、プラグインがメモリリークなどの不要な問題をもたらす可能性があります。これらの課題に取り組むことは困難です。特に、使いやすいものを維持することが目的である場合には困難です。プラグインの複雑さがそれほど複雑でない場合は、開発者がエラーを発生させてしまう可能性ははるかに低くなります。Java プラグインの危険性は、 SnapCenter エージェント自体と同じ JVM で実行されていることです。プラグインがクラッシュしたりメモリがリークしたりすると、 Agent に悪影響を与える可能性もあります。
+
+
+
+== サポートされている方法
+
+|===
+| メソッド | 必須 | 説明 | いつ、誰が電話をかけましたか？ 
+
+
+ a| 
+バージョン
+ a| 
+はい。
+ a| 
+プラグインのバージョンを返す必要があります。
+ a| 
+SnapCenter サーバまたはエージェントがプラグインのバージョンを要求します。
+
+
+
+ a| 
+休止
+ a| 
+はい。
+ a| 
+アプリケーションで休止を実行する必要があります。ほとんどの場合、これは、アプリケーションをSnapCenterサーバがバックアップ（スナップショットなど）を作成できる状態にすることを意味します。
+ a| 
+SnapCenter サーバが Snapshot コピーを作成する前、または一般的なバックアップを実行します。
+
+
+
+ a| 
+休止解除
+ a| 
+はい。
+ a| 
+アプリケーションに対して休止解除を実行する必要があります。ほとんどの場合、これはアプリケーションを通常の動作状態に戻すことを意味します。
+ a| 
+SnapCenterサーバがスナップショットを作成した後、または
+一般的にバックアップを実行しました。
+
+
+
+ a| 
+クリーンアップ
+ a| 
+いいえ
+ a| 
+プラグインがクリーンアップする必要があるすべての項目をクリーンアップする責任があります。
+ a| 
+SnapCenter サーバでワークフローが完了したとき（正常終了したとき、または障害が発生したとき）。
+
+
+
+ a| 
+clonePre-
+ a| 
+いいえ
+ a| 
+クローニング処理を実行する前に、必要な処理を実行する必要があります。
+ a| 
+ユーザが「 cloneVol 」または「 cloneLun 」アクションをトリガーし、組み込みのクローニングウィザード（ GUI / CLI ）を使用する場合。
+
+
+
+ a| 
+clonePost を実行します
+ a| 
+いいえ
+ a| 
+クローニング処理の実行後に必要な処理を実行する必要があります。
+ a| 
+ユーザが「 cloneVol 」または「 cloneLun 」アクションをトリガーし、組み込みのクローニングウィザード（ GUI / CLI ）を使用する場合。
+
+
+
+ a| 
+restorePre
+ a| 
+いいえ
+ a| 
+は、リストア処理が呼び出される前に実行する必要がある操作を実行します。
+ a| 
+ユーザがリストア処理をトリガーした場合。
+
+
+
+ a| 
+リストア
+ a| 
+いいえ
+ a| 
+アプリケーションのリストア / リカバリを実行します。
+ a| 
+ユーザがリストア処理をトリガーした場合。
+
+
+
+ a| 
+AppVersion （アプリバージョン）
+ a| 
+いいえ
+ a| 
+プラグインによって管理されているアプリケーションバージョンを取得する。
+ a| 
+バックアップ / リストア / クローンなど、すべてのワークフローで ASUP データ収集の一部として実行
+
+|===
+
+
+== チュートリアル
+
+このセクションでは、 Java プログラミング言語を使用してカスタムプラグインを作成する方法について説明します。
+
+
+
+=== Eclipse のセットアップ
+
+. Eclipse で新しい Java プロジェクト「 TutorialPlugin 」を作成します
+. [ 完了 ] をクリックします。
+. 新しいプロジェクト * -> * プロパティ * -> * Java ビルドパス * -> * ライブラリ * -> * 外部 JAR の追加 * を右クリックします
+. ホスト・エージェントの ./lib/folder に移動し 'jar scAgent-5.0-core.jar と common-5.0.jar を選択します
+. プロジェクトを選択し、 * src フォルダー * -> * New * -> * Package * を右クリックして、 com.netapp.snapcreator.agent.plugin.TutorialPlugin という名前で新しいパッケージを作成します
+. 新しいパッケージを右クリックし ' 新規作成 > Java クラスを選択します
++
+.. TutorialPlugin という名前を入力してください。
+.. スーパークラスの参照ボタンをクリックし、「 * AbstractPlugin 」を検索します。表示される結果は 1 つだけです。
++
+ "AbstractPlugin - com.netapp.snapcreator.agent.nextgen.plugin".
+.. [ 完了 ] をクリックします。
+.. Java クラス :
++
+....
+package com.netapp.snapcreator.agent.plugin.TutorialPlugin;
+import
+com.netapp.snapcreator.agent.nextgen.common.result.Describe
+Result;
+import
+com.netapp.snapcreator.agent.nextgen.common.result.Result;
+import
+com.netapp.snapcreator.agent.nextgen.common.result.VersionR
+esult;
+import
+com.netapp.snapcreator.agent.nextgen.context.Context;
+import
+com.netapp.snapcreator.agent.nextgen.plugin.AbstractPlugin;
+public class TutorialPlugin extends AbstractPlugin {
+  @Override
+  public DescribeResult describe(Context context) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+  @Override
+  public Result quiesce(Context context) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+  @Override
+  public Result unquiesce(Context context) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+  @Override
+  public VersionResult version() {
+    // TODO Auto-generated method stub
+    return null;
+  }
+}
+....
+
+
+
+
+
+
+=== 必要なメソッドを実装する
+
+カスタム Java プラグインを実装するには、休止、休止解除、およびバージョンの各必須メソッドが必要です。
+
+以下は、プラグインのバージョンを返すバージョンメソッドです。
+
+....
+@Override
+public VersionResult version() {
+    VersionResult versionResult = VersionResult.builder()
+                                            .withMajor(1)
+                                            .withMinor(0)
+                                            .withPatch(0)
+                                            .withBuild(0)
+                                            .build();
+    return versionResult;
+}
+....
+....
+Below is the implementation of quiesce and unquiesce method. These will be interacting with   the application, which is being protected by SnapCenter Server. As this is just a tutorial, the
+application part is not explained, and the focus is more on the functionality that SnapCenter   Agent provides the following to the plug-in developers:
+....
+....
+@Override
+  public Result quiesce(Context context) {
+    final Logger logger = context.getLogger();
+    /*
+      * TODO: Add application interaction here
+    */
+....
+....
+logger.error("Something bad happened.");
+logger.info("Successfully handled application");
+....
+....
+    Result result = Result.builder()
+                    .withExitCode(0)
+                    .withMessages(logger.getMessages())
+                    .build();
+    return result;
+}
+....
+メソッドは Context オブジェクトで渡されます。これには、ロガーとコンテキストストアなどの複数のヘルパーと、現在の操作に関する情報（ワークフロー ID 、ジョブ ID ）が含まれます。ロガーは、最終ロガーロガー = context.getLogger(); を呼び出すことで取得できます。logger オブジェクトは、 logback などの他のロギングフレームワークで知られている同様のメソッドを提供します。結果オブジェクトでは、終了コードを指定することもできます。この例では、問題が存在しないため 0 が返されます。その他の終了コードは、さまざまな障害シナリオに対応する場合があります。
+
+
+
+=== 結果オブジェクトを使用します
+
+result オブジェクトには、次のパラメータが含まれます。
+
+|===
+| パラメータ | デフォルト | 説明 
+
+
+ a| 
+構成
+ a| 
+構成が空です
+ a| 
+このパラメータを使用すると、設定パラメータをサーバに返送できます。プラグインで更新するパラメータを指定できます。この変更が SnapCenter サーバの構成に実際に反映されるかどうかは、設定の APP_CONF_PERSISTENCE = Y または N パラメータに依存します。
+
+
+
+ a| 
+イキシコード
+ a| 
+0
+ a| 
+処理のステータスを示します。「 0 」は、操作が正常に実行されたことを示します。その他の値は、エラーまたは警告を示します。
+
+
+
+ a| 
+標準出力
+ a| 
+リストが空です
+ a| 
+これは、 stdout メッセージを SnapCenter サーバに返送するために使用できます。
+
+
+
+ a| 
+stderr
+ a| 
+リストが空です
+ a| 
+このオプションを使用すると、 stderr メッセージを SnapCenter サーバに返送できます。
+
+
+
+ a| 
+メッセージ
+ a| 
+リストが空です
+ a| 
+このリストには、プラグインがサーバーに返すすべてのメッセージが含まれています。これらのメッセージは、 SnapCenter サーバの CLI または GUI に表示されます。
+
+|===
+SnapCenter エージェントはビルダーを提供します (https://en.wikipedia.org/wiki/Builder_pattern["ビルダパターン"]）をクリックします。これにより、これらの機能を非常に簡単に使用できます。
+
+....
+Result result = Result.builder()
+                    .withExitCode(0)
+                    .withStdout(stdout)
+                    .withStderr(stderr)
+                    .withConfig(config)
+                    .withMessages(logger.getMessages())
+                    .build()
+....
+たとえば、終了コードを 0 に設定し、 stdout と stderr のリストを設定し、 config パラメータを設定して、サーバに送信されるログメッセージを追加します。すべてのパラメータが不要な場合は、必要なパラメータのみを送信します。各パラメータにはデフォルト値が設定されているため、以下のコードから .withExitCode(0) を削除しても、結果は影響を受けません。
+
+....
+Result result = Result.builder()
+                      .withExitCode(0)
+                      .withMessages(logger.getMessages())
+                      .build();
+....
+
+
+=== VersionResult
+
+VersionResult は、 SnapCenter サーバにプラグインのバージョンを通知します。また、 result から継承されるため、 config 、 exitCode 、 stdout 、 stderr 、および messages パラメータが含まれます。
+
+|===
+| パラメータ | デフォルト | 説明 
+
+
+ a| 
+メジャー（ Major ）
+ a| 
+0
+ a| 
+プラグインのメジャーバージョンフィールド。
+
+
+
+ a| 
+マイナー
+ a| 
+0
+ a| 
+プラグインのマイナーバージョンフィールド。
+
+
+
+ a| 
+パッチ
+ a| 
+0
+ a| 
+プラグインの PATCH version フィールド。
+
+
+
+ a| 
+構築
+ a| 
+0
+ a| 
+プラグインのビルドバージョンフィールド。
+
+|===
+例：
+
+....
+VersionResult result = VersionResult.builder()
+                                  .withMajor(1)
+                                  .withMinor(0)
+                                  .withPatch(0)
+                                  .withBuild(0)
+                                  .build();
+....
+
+
+=== コンテキストオブジェクトの使用
+
+コンテキストオブジェクトには、次のメソッドがあります。
+
+|===
+| コンテキストメソッド | 目的 
+
+
+ a| 
+文字列 getWorkflowId();
+ a| 
+現在のワークフローで SnapCenter サーバによって使用されているワークフロー ID を返します。
+
+
+
+ a| 
+Config GetConfig （）；
+ a| 
+SnapCenter サーバからエージェントに送信されている設定を返します。
+
+|===
+
+
+=== ワークフロー ID
+
+ワークフロー ID は、実行中の特定のワークフローを SnapCenter サーバが参照するために使用する ID です。
+
+
+
+=== 構成
+
+このオブジェクトには、ユーザが SnapCenter サーバの設定で設定できるパラメータのほとんどが含まれます。ただし、セキュリティ上の理由から、これらのパラメータの一部はサーバ側でフィルタリングされる場合があります。次に、 Config にアクセスしてパラメータを取得する例を示します。
+
+....
+final Config config = context.getConfig();
+String myParameter =
+config.getParameter("PLUGIN_MANDATORY_PARAMETER");
+....
+"//MyParameter" に、設定パラメータキーが存在しない場合に SnapCenter サーバの設定から読み取られたパラメータが含まれるようになりました。空の文字列 ("") が返されます。
+
+
+
+=== プラグインのエクスポート
+
+SnapCenter ホストにインストールするには、プラグインをエクスポートする必要があります。
+
+Eclipse では、次のタスクを実行します。
+
+. プラグインのベースパッケージを右クリックします（この例では com.netapp.snapcreator.agent.plugin.TutorialPlugin ）。
+. 「 * Export * -> * Java * -> * JAR File * 」を選択します
+. 「 * 次へ * 」をクリックします。
+. 次のウィンドウで、インストール先の jar ファイルのパスを指定します。 tutorial_plugin.jar プラグインのベースクラスは TutorialPlugin.class という名前で、同じ名前のフォルダにプラグインを追加する必要があります。
+
+
+プラグインが追加のライブラリに依存している場合は、 lib/ というフォルダを作成できます
+
+jar ファイルを追加できます。このプラグインは従属ファイルに依存します（たとえば、データベース・ドライバ）。SnapCenter は、プラグインをロードすると、このフォルダ内のすべての jar ファイルを自動的に関連付けて、クラスパスに追加します。

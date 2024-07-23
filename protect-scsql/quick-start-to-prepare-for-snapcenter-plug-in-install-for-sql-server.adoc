@@ -44,15 +44,6 @@ SnapCenter Standard ライセンスはコントローラベースのライセン
 
 
  a| 
-SnapCenter - 容量ベース
- a| 
-ONTAP Select および Cloud Volumes ONTAP で必要です
-
-Cloud Volumes ONTAP または ONTAP Select を使用している場合は、 SnapCenter で管理するデータに基づいて、容量ベースのライセンスを 1TB 単位で購入する必要があります。デフォルトでは、 SnapCenter には 90 日間の 100TB SnapCenter の標準容量ベースの試用版ライセンスが組み込まれています。その他の詳細については、営業担当者にお問い合わせください。
-
-
-
- a| 
 SnapMirror または SnapVault
  a| 
 ONTAP
@@ -99,7 +90,7 @@ ONTAP およびアプリケーションプラグインの最小要件につい�
 CPU
  a| 
 * サーバホスト： 4 コア
-* プラグインホスト： 1 コア
+* プラグインホスト：4コア
 
 
 
@@ -108,7 +99,7 @@ CPU
 RAM
  a| 
 * サーバホスト： 8GB
-* プラグインホスト： 1GB
+* プラグインホスト：4GB
 
 
 
@@ -118,8 +109,8 @@ RAM
  a| 
 サーバホスト：
 
-* SnapCenter サーバソフトウェアとログの場合は 4GB
-* SnapCenter リポジトリ用に 6GB
+* SnapCenterサーバソフトウェアおよびログ用に7 GB
+* SnapCenterリポジトリ用に8GB
 * 各プラグインホスト：プラグインのインストールとログ用に 2GB 。専用のホストにプラグインがインストールされている場合にのみ必要です。
 
 
@@ -131,8 +122,8 @@ RAM
 SnapCenter サーバホストおよびプラグインホストで必要：
 
 * Microsoft .NET Framework 4.7.2以降
-* Windows Management Framework （ WMF ） 4.0 以降
-* PowerShell 4.0 以降
+* ASP。 Net Core Hosting Bundle（8.0.5以降）
+* PowerShell 7.4.2以降
 
 
 

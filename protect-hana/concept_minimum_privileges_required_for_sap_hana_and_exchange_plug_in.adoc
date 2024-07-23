@@ -73,6 +73,7 @@ summary: 必要な最小 ONTAP 権限は、データ保護に使用する SnapCe
 ** volume snapshot create を実行します
 ** ボリューム Snapshot の削除
 ** volume snapshot modify の実行
+** volume snapshot modify -snaplock-expiry-time
 ** ボリューム Snapshot の名前が変更されます
 ** ボリューム Snapshot リストア
 ** ボリューム Snapshot の restore-file

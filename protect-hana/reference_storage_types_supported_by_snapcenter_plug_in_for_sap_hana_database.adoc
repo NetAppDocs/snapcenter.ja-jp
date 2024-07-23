@@ -18,13 +18,6 @@ SnapCenter は、物理マシンと仮想マシン（ VM ）の両方でさま�
 
 
  a| 
-物理サーバと仮想サーバ
- a| 
-FC 接続 LUN
-
-
-
- a| 
 物理サーバ
  a| 
 iSCSI で接続された LUN
@@ -34,6 +27,17 @@ iSCSI で接続された LUN
  a| 
 物理サーバと仮想サーバ
  a| 
-NFS-connected ボリューム
+* FC 接続 LUN
+* NFS-connected ボリューム
+
+
+
+
+ a| 
+VMware ESXi
+ a| 
+NFSとSANの両方にVVOLデータストアを配置
+
+VVOLデータストアは、ONTAP Tools for VMware vSphereでのみプロビジョニングできます。
 
 |===

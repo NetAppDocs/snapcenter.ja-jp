@@ -1,0 +1,48 @@
+---
+permalink: protect-nsp/storage_types_supported_by_netapp_supported_plugins.html 
+sidebar: sidebar 
+keywords: NetApp supported plug-ins 
+summary: SnapCenter は、物理マシンと仮想マシンの両方でさまざまなストレージタイプをサポートしています。NetAppでサポートされているプラグインをインストールする前に、ストレージタイプがサポートされているかどうかを確認する必要があります。 
+---
+= NetAppでサポートされるプラグインでサポートされるストレージタイプ
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter は、物理マシンと仮想マシンの両方でさまざまなストレージタイプをサポートしています。NetAppでサポートされているプラグインをインストールする前に、ストレージタイプがサポートされているかどうかを確認する必要があります。
+
+|===
+| マシン | ストレージタイプ 
+
+
+ a| 
+VMホストへの物理およびNFSの直接マウント（VMDKおよびRDM LUNはサポートされません）。
+ a| 
+FC 接続 LUN
+
+
+
+ a| 
+VMホストへの物理およびNFSの直接マウント（VMDKおよびRDM LUNはサポートされません）。
+ a| 
+iSCSI で接続された LUN
+
+
+
+ a| 
+VMホストへの物理およびNFSの直接マウント（VMDKおよびRDM LUNはサポートされません）。
+ a| 
+NFS-connected ボリューム
+
+
+
+ a| 
+VMware ESXi
+ a| 
+NFSとSANの両方にVVOLデータストアを配置
+
+VVOLデータストアは、ONTAP Tools for VMware vSphereでのみプロビジョニングできます。
+
+|===

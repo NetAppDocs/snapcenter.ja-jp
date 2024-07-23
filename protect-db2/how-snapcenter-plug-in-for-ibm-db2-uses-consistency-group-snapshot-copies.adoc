@@ -1,0 +1,16 @@
+---
+permalink: protect-db2/how-snapcenter-plug-in-for-ibm-db2-uses-consistency-group-snapshot-copies.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for IBM Db2 
+summary: プラグインを使用して、リソースグループの整合性グループのSnapshotを作成できます。整合グループはコンテナであり、複数のボリュームを格納して1つのエンティティとして管理できます。整合グループは、複数のボリュームの同時Snapshotであり、ボリュームグループの整合性のあるコピーを提供します。 
+---
+= SnapCenter Plug-in for IBM DB2での整合グループSnapshotの使用方法
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+プラグインを使用して、リソースグループの整合性グループのSnapshotを作成できます。整合グループはコンテナであり、複数のボリュームを格納して1つのエンティティとして管理できます。整合グループは、複数のボリュームの同時Snapshotであり、ボリュームグループの整合性のあるコピーを提供します。
+
+ストレージコントローラが整合性のあるSnapshotをグループ化するまでの待機時間を指定することもできます。使用可能な待機時間のオプションは、 * Urgent * 、 * Medium * 、 * Relaxed * です。また、整合グループSnapshotの処理中にWrite Anywhere File Layout（WAFL）の同期を有効または無効にすることもできます。WAFLの同期により、整合性グループSnapshotのパフォーマンスが向上します。

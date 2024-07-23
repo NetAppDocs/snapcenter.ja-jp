@@ -19,3 +19,7 @@ Exchange データベース全体ではなくメールやメールボックス�
 NetApp®Single Mailbox Recoveryは、2023年5月12日に販売終了（EOA）になりました。NetAppは、2020年6月24日に導入されたマーケティング用パーツ番号を通じて、メールボックスの容量、メンテナンス、サポートを購入したお客様をサポート対象期間中も引き続きサポートします。
 
 NetApp Single Mailbox Recoveryは、Ontrackが提供するパートナー製品です。Ontrack PowerControlsには、NetApp Single Mailbox Recoveryと同様の機能が用意されています。お客様は、新しいOntrack PowerControlsソフトウェアライセンスとOntrack PowerControlsメンテナンスおよびサポート更新をOntrackから（licensingteam@ontrack.com経由で）購入して、メールボックスをきめ細かくリカバリできます。
+
+Plug-in for ExchangeはSnapMirror Active Sync（当初はSnapMirror Business Continuity [SM-BC]としてリリース）をサポートしています。これにより、サイト全体に障害が発生してもビジネスサービスの運用を継続でき、アプリケーションがセカンダリコピーを使用して透過的にフェイルオーバーできるようになります。SnapMirror Active Syncでフェイルオーバーをトリガーするために、手動操作や追加のスクリプト作成は必要ありません。
+
+SnapMirror Active Syncの非対称モード、フェイルオーバーモード、または二重モード以外のモードがサポートされます。これは、最適パスがプライマリ側のLUNの所有者ノードからのみ作成されるソリューションを意味します。セカンダリクラスタパス上のI/Oは、プライマリクラスタにプロキシ経由で処理されます。同期レプリケーションは、プライマリからセカンダリへの単方向です。

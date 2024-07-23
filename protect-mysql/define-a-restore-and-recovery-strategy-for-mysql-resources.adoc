@@ -1,0 +1,23 @@
+---
+permalink: protect-mysql/define-a-restore-and-recovery-strategy-for-mysql-resources.html 
+sidebar: sidebar 
+keywords: restore and recovery strategy, MySQL resources, snapcenter 
+summary: データベースのリストアとリカバリを行う前に戦略を定義しておくと、リストア処理とリカバリ処理を正常に実行できるようになります。 
+---
+= MySQLリソースのリストアとリカバリの戦略を定義する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+データベースのリストアとリカバリを行う前に戦略を定義しておくと、リストア処理とリカバリ処理を正常に実行できるようになります。
+
+
+NOTE: データベースの手動リカバリのみがサポートされます。
+
+.手順
+. 手動で追加したMySQLリソースでサポートされるリストア戦略を確認する
+. 自動検出されたMySQLデータベースに対してサポートされるリストア戦略を確認する
+. 実行するリカバリ処理のタイプを決定します。
+

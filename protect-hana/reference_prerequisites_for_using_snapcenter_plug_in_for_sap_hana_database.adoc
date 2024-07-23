@@ -16,7 +16,7 @@ SnapCenter Plug-in for SAP HANA Database を使用するには、 SnapCenter 管
 * SnapCenter サーバをインストールして設定します。
 * SnapCenter サーバにログインします。
 * 必要に応じて、ストレージシステム接続を追加し、クレデンシャルを作成して、 SnapCenter 環境を設定します。
-* Java 1.7 または Java 1.8 を Linux ホストまたは Windows ホストにインストールします。
+* LinuxホストまたはWindowsホストにJava 11をインストールします。
 +
 ホストマシンの環境パス変数に Java パスを設定する必要があります。
 

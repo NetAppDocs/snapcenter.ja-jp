@@ -1,0 +1,22 @@
+---
+permalink: install/features_enabled_on_linux_host.html 
+sidebar: sidebar 
+keywords: install, snapcenter, linux host, features 
+summary: SnapCenterサーバインストーラを使用すると、インストール時にLinuxホストでLinuxの機能とロールが有効になります。これらは、トラブルシューティングやホストシステムのメンテナンスに役立つ場合があります。 
+---
+= インストルチユウニLinuxホストテユウコウニナルキノウ
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenterサーバは以下のソフトウェアパッケージをインストールします。これらのパッケージは、トラブルシューティングやホストシステムのメンテナンスに役立ちます。
+
+* RabbitMQ
+* nginx
+* アーラン
+* .NET Framework 8.0.5
+* PAM -デベル
+* PowerShell
+

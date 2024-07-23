@@ -14,7 +14,7 @@ summary: SnapCenter サーバをインストールする前に、スペースと
 SnapCenter サーバをインストールする前に、スペースとサイジングの要件を十分に理解しておく必要があります。また、利用可能なシステムおよびセキュリティの更新も適用する必要があります。
 
 |===
-| 項目 | 要件 
+| 項目 | Windowsホストノヨウケン | Linux ホストの要件 
 
 
  a| 
@@ -26,11 +26,20 @@ Microsoft Windows の場合
 
 サポートされているバージョンの最新情報については、を参照してください
 https://imt.netapp.com/matrix/imt.jsp?components=116859;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。
+ a| 
+* Red Hat Enterprise Linux（RHEL）8および9
+* SUSE Linux Enterprise Server（SLES）15
+
+
+サポートされているバージョンの最新情報については、を参照してください
+https://imt.netapp.com/matrix/imt.jsp?components=116859;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。
 
 
 
  a| 
 最小 CPU 数
+ a| 
+4 コア
  a| 
 4 コア
 
@@ -43,26 +52,32 @@ https://imt.netapp.com/matrix/imt.jsp?components=116859;&solution=1257&isHWU&src
 
 
 NOTE: MySQL Server のバッファプールでは、 RAM の合計の 20% が使用されます。
+ a| 
+8 GB
 
 
 
  a| 
 SnapCenter サーバソフトウェアおよびログ用のハードドライブの最小容量
  a| 
-4 GB
+7 GB
 
 
-NOTE: SnapCenter サーバがインストールされているドライブに SnapCenter リポジトリがある場合は、 10GB にすることを推奨します。
+NOTE: SnapCenterサーバがインストールされているドライブと同じドライブにSnapCenterリポジトリがある場合は、15 GBを使用することを推奨します。
+ a| 
+15 GB
 
 
 
  a| 
 SnapCenter リポジトリ用のハードドライブの最小容量
  a| 
-6 GB
+8 GB
 
 
-NOTE: メモ： SnapCenter リポジトリがインストールされているドライブに SnapCenter サーバがある場合は、 10GB にすることを推奨します。
+NOTE: メモ： SnapCenter リポジトリがインストールされているドライブに SnapCenter サーバがある場合は、 15 GB にすることを推奨します。
+ a| 
+該当なし
 
 
 
@@ -70,10 +85,19 @@ NOTE: メモ： SnapCenter リポジトリがインストールされている�
 必要なソフトウェアパッケージ
  a| 
 * Microsoft .NET Framework 4.7.2以降
-* Windows Management Framework （ WMF ） 4.0 以降
-* PowerShell 4.0 以降
+* ASP。 Net Core Hosting Bundle（8.0.5以降）
+* PowerShell 7.4.2以降
 
 
 .NET固有のトラブルシューティング情報については、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_upgrade_or_install_fails_with_%22This_KB_is_not_related_to_the_OS%22["インターネットに接続されていないレガシーシステムでは、SnapCenter のアップグレードまたはインストールが失敗します"^]。
+ a| 
+* ASP。 Net Core Runtime 8.0.5以降
+* PowerShell 7.4.2以降
+* nginxはリバースプロキシとして使用できるWebサーバ
+* PAM -デベル
++
+PAM（Pluggable Authentication Modules）は、システム管理者が認証を行うプログラムを再コンパイルすることなく認証ポリシーを設定できるシステムセキュリティツールです。
+
+
 
 |===

@@ -23,6 +23,7 @@ SnapCenter を使用して SAP HANA データベースのリソースをバッ�
 +
 また、ポリシーでレプリケーション、スクリプト、およびアプリケーションの設定を指定することもできます。これらのオプションを指定しておくことで、別のリソースグループにポリシーを再利用して時間を節約することができます。
 
+* SnapMirrorアクティブ同期に固有の前提条件と制限事項を確認します。詳しくは、を参照してください https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["SnapMirrorアクティブ同期のオブジェクト数の制限"]。
 
 
 .このタスクについて
@@ -147,6 +148,8 @@ SnapLock保持期間は100年未満にする必要があります。
 * ローカル Snapshot コピー作成後に SnapMirror を更新 *
  a| 
 別のボリュームにバックアップセットのミラーコピーを作成する場合（ SnapMirror レプリケーション）は、このフィールドを選択します。
+
+このオプションは、SnapMirrorのアクティブな同期に対して有効にする必要があります。
 
 ONTAPの保護関係のタイプがミラーとバックアップの場合、このオプションのみを選択すると、プライマリで作成されたSnapshotはデスティネーションに転送されず、デスティネーションのリストに表示されます。このSnapshotをリストア処理の対象としてデスティネーションで選択すると、「Secondary Location is not available for the selected vaulted/mirrored backup」というエラーメッセージが表示されます。
 

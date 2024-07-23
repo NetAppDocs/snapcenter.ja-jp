@@ -1,0 +1,148 @@
+---
+section: protect-db2
+title: IBM DB2の保護
+entries:
+- title: IBM DB2用SnapCenterプラグイン
+  entries:
+  - title: SnapCenter Plug-in for IBM DB2の概要
+    url: "/protect-db2/snapcenter-plug-in-for-ibm-db2-overview.html"
+  - title: SnapCenter Plug-in for IBM DB2の機能
+    url: "/protect-db2/what-you-can-do-using-the-snapcenter-plug-in-for-ibm-db2.html"
+  - title: SnapCenter Plug-in for IBM DB2の機能
+    url: "/protect-db2/snapcenter-plug-in-for-ibm-db2-features.html"
+  - title: SnapCenter Plug-in for IBM DB2でサポートされるストレージタイプ
+    url: "/protect-db2/storage-types-supported-by-snapcenter-plug-in-for-ibm-db2.html"
+  - title: 必要な最小 ONTAP 権限
+    url: "/protect-db2/minimum-privileges-required-for-ibm-db2.html"
+  - title: SnapMirror レプリケーションと SnapVault レプリケーションのためのストレージシステムを準備
+    url: "/protect-db2/prepare-storage-systems-for-snapmirror-and-snapvault-replication-for-plugin-for-db2.html"
+  - title: IBM DB2のバックアップ戦略
+    entries:
+    - title: IBM DB2のバックアップ戦略の定義
+      url: "/protect-db2/define-a-backup-strategy-for-ibm-db2.html"
+    - title: Linux ホスト上のリソースの自動検出
+      url: "/protect-db2/auto-discovery-of-resources-on-linux-host.html"
+    - title: サポートされるバックアップのタイプ
+      url: "/protect-db2/type-of-backups-supported.html"
+    - title: SnapCenter Plug-in for IBM DB2での整合グループSnapshotコピーの使用方法
+      url: "/protect-db2/how-snapcenter-plug-in-for-ibm-db2-uses-consistency-group-snapshot-copies.html"
+    - title: SnapCenterによる不要なログバックアップの削除の管理方法
+      url: "/protect-db2/housekeeping-of-log-backups.html"
+    - title: IBM DB2のバックアップスケジュールを決定する際の考慮事項
+      url: "/protect-db2/considerations-for-determining-backup-schedules-for-ibm-db2.html"
+    - title: IBM DB2に必要なバックアップジョブの数
+      url: "/protect-db2/number-of-backup-jobs-needed-for-ibm-db2.html"
+    - title: バックアップの命名規則
+      url: "/protect-db2/backup-naming-conventions-for-plugin-for-ibm-db2.html"
+  - title: IBM DB2のリストアおよびリカバリ戦略
+    entries:
+    - title: IBM DB2リソースのリストアおよびリカバリ戦略の定義
+      url: "/protect-db2/define-a-restore-and-recovery-strategy-for-ibm-db2-resources.html"
+    - title: 手動で追加したIBM DB2リソースでサポートされるリストア戦略のタイプ
+      url: "/protect-db2/types-of-restore-strategies-supported-for-manually-added-ibm-db2.html"
+    - title: 自動検出されたIBM DB2でサポートされるリストア戦略のタイプ
+      url: "/protect-db2/types-of-restore-strategies-supported-for-auto-discovered-ibm-db2.html"
+    - title: 自動検出されたIBM DB2のリストア処理のタイプ
+      url: "/protect-db2/types-of-restore-performed-for-auto-discovered-ibm-db2.html"
+- title: SnapCenter Plug-in for IBM DB2のインストールの準備
+  entries:
+  - title: SnapCenter Plug-in for IBM DB2のインストールワークフロー
+    url: "/protect-db2/install-snapcenter-plug-in-for-ibm-db2.html"
+  - title: ホストを追加してSnapCenter Plug-in for IBM DB2をインストールするための前提条件
+    url: "/protect-db2/prerequisites-to-adding-hosts-and-installing-snapcenter-plug-in-for-ibm-db2.html"
+  - title: SnapCenter Plug-ins Package for Windows をインストールするホストの要件
+    url: "/protect-db2/host-requirements-to-install-snapcenter-plug-in-package-for-windows-db2.html"
+  - title: SnapCenter Plug-ins Package for Linux をインストールするためのホストの要件
+    url: "/protect-db2/host-requirements-to-install-snapcenter-plug-in-package-for-linux.html"
+  - title: SnapCenter Plug-in for IBM DB2のクレデンシャルを設定する
+    url: "/protect-db2/set-up-credentials-for-snapcenter-plug-in-for-ibm-db2.html"
+  - title: Windows Server 2016以降でのgMSAの設定
+    url: "/protect-db2/configure-gMSA-on-windows-server-2012-or-later.html"
+  - title: SnapCenter Plug-in for IBM DB2のインストール
+    entries:
+    - title: ホストを追加し、プラグインパッケージをリモートホストにインストールする
+      url: "/protect-db2/add-hosts-and-install-plug-in-packages-on-remote-hosts-ibm-db2.html"
+    - title: コマンドレットを使用して、複数のリモートホストに Linux または Windows 用の SnapCenter プラグインパッケージをインストールします
+      url: "/protect-db2/install-snapcenter-plug-in-packages-for-linux-or-windows-on-multiple-remote-hosts-using-cmdlets-ibm-db2.html"
+    - title: コマンドラインインターフェイスを使用して、LinuxホストにSnapCenter Plug-in for IBM DB2をインストールする
+      url: "/protect-db2/install-the-snapcenter-plug-in-for-ibm-db2-on-linux-hosts-using-the-command-line-interface.html"
+    - title: SnapCenter プラグインパッケージのインストールステータスを監視する
+      url: "/protect-db2/monitor-the-status-of-installing-plugin-for-ibm-db2.html"
+  - title: CA 証明書を設定します
+    entries:
+    - title: CA 証明書 CSR ファイルを生成します
+      url: "/protect-db2/generate-CA-certificate-CSR-file.html"
+    - title: CA 証明書をインポートする
+      url: "/protect-db2/import-CA-certificates.html"
+    - title: CA 証明書のサムプリントを取得します
+      url: "/protect-db2/get-the-CA-certificate-thumbprint.html"
+    - title: Windows ホストプラグインサービスを使用して CA 証明書を設定する
+      url: "/protect-db2/configure-CA-certificate-with-Windows-host-plug-in-services.html"
+    - title: Linuxホスト上のSnapCenter IBM DB2 Plug-insサービスのCA証明書の設定
+      url: "/protect-db2/configure-CA-certificate-for-ibm-db2-on-Linux-host.html"
+    - title: Windowsホスト上のSnapCenter IBM DB2 Plug-insサービス用のCA証明書の設定
+      url: "/protect-db2/configure-CA-certificate-for-ibm-db2-on-windows-host.html"
+    - title: プラグインの CA 証明書を有効にします
+      url: "/protect-db2/enable-ca-certificates-for-plug-ins.html"
+- title: データ保護を準備
+  entries:
+  - title: SnapCenter Plug-in for IBM DB2を使用するための前提条件
+    url: "/protect-db2/prerequisites-for-using-snapcenter-plug-in-for-ibm-db2.html"
+  - title: IBM DB2の保護におけるリソース、リソースグループ、ポリシーの使用方法
+    url: "/protect-db2/how-resources-resource-groups-and-policies-are-used-for-protecting-ibm-db2.html"
+- title: IBM DB2リソースのバックアップ
+  entries:
+  - title: バックアップのワークフロー
+    url: "/protect-db2/back-up-ibm-db2-resources.html"
+  - title: データベースを自動的に検出します
+    url: "/protect-db2/discover-the-databases-automatically.html"
+  - title: プラグインホストにリソースを手動で追加します
+    url: "/protect-db2/add-resources-manually-to-the-plug-in-host.html"
+  - title: IBM DB2のバックアップポリシーの作成
+    url: "/protect-db2/create-backup-policies-for-ibm-db2.html"
+  - title: リソースグループを作成してポリシーを適用
+    url: "/protect-db2/create-resource-groups-and-attach-policies.html"
+  - title: IBM DB2のバックアップ
+    url: "/protect-db2/back-up-ibm-db2.html"
+  - title: リソースグループをバックアップする
+    url: "/protect-db2/back-up-resource-groups-ibm-db2.html"
+  - title: IBM DB2用のPowerShellコマンドレットを使用して、ストレージシステム接続とクレデンシャルを作成する
+    url: "/protect-db2/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-ibm-db2.html"
+  - title: PowerShell コマンドレットを使用してデータベースをバックアップします
+    url: "/protect-db2/back-up-databases-using-powershell-cmdlets-ibm-db2.html"
+  - title: バックアップ処理を監視する
+    entries:
+    - title: SnapCenter Jobs ページでバックアップ処理を監視します
+      url: "/protect-db2/monitor-db2-backup-operations.html"
+    - title: アクティビティペインで操作を監視します
+      url: "/protect-db2/monitor-dataprotection-operations-on-db2-in-the-activity-pane.html"
+  - title: バックアップ処理をキャンセルします
+    url: "/protect-db2/cancel-backup-operations-for-ibm-db2.html"
+  - title: "[Topology]ページでのIBM DB2データベースのバックアップとクローンの表示"
+    url: "/protect-db2/view-ibm-db2-database-backups-and-clones-in-the-topology-page.html"
+- title: IBM DB2のリストア
+  entries:
+  - title: リストアワークフロー
+    url: "/protect-db2/restore-ibm-db2.html"
+  - title: 手動で追加したリソースバックアップのリストア
+    url: "/protect-db2/restore-manually-added-resource-backup.html"
+  - title: 自動検出されたデータベースバックアップのリストア
+    url: "/protect-db2/restore-auto-discovered-database-backup.html"
+  - title: PowerShellコマンドレットを使用したIBM DB2のリストア
+    url: "/protect-db2/restore-ibm-db2-database-using-powershell-cmdlets.html"
+  - title: リストア処理を監視する
+    url: "/protect-db2/monitor-db2-restore-operations.html"
+- title: IBM DB2リソースバックアップのクローニング
+  entries:
+  - title: クローニングワークフロー
+    url: "/protect-db2/clone-ibm-db2-resource-backups.html"
+  - title: IBM DB2データベースのバックアップのクローニング
+    url: "/protect-db2/clone-ibm-db2-backup.html"
+  - title: PowerShellコマンドレットを使用したIBM DB2データベースのバックアップのクローニング
+    url: "/protect-db2/clone-ibm-db2-backups-using-powershell-cmdlets.html"
+  - title: SnapCenter でクローニング処理を監視する
+    url: "/protect-db2/monitor-db2-clone-operations.html"
+  - title: クローンをスプリットします。
+    url: "/protect-db2/split-a-clone-for-db2.html"
+  - title: SnapCenterのアップグレード後にIBM DB2データベースクローンを削除またはスプリットする
+    url: "/protect-db2/delete-or-split-ibm-db2-clones-after-upgrading-snapcenter.html"

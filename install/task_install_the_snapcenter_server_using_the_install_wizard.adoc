@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: install, snapcenter software, install wizard 
 summary: SnapCenter サーバインストーラの実行ファイルを実行して、 SnapCenter サーバをインストールできます。 
 ---
-= SnapCenter サーバをインストールします
+= WindowsホストへのSnapCenterサーバのインストール
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -63,4 +63,23 @@ NOTE: [Cancel] * ボタンをクリックすると、実行中のステップが
 +
 ログファイルは常に、 admin ユーザの %temp% フォルダに古いものから順番に表示されます。ログの場所をリダイレクトする場合は 'C:\installer_location\installer_name.exe /log"C:\"`` を実行して ' コマンドプロンプトから SnapCenter Server のインストールを開始します
 
+
+
+
+
+== 製品を登録してサポートを有効にする
+
+NetApp製品を初めてご利用になり、既存のNetAppアカウントをお持ちでない場合は、製品を登録してサポートを有効にする必要があります。
+
+.手順
+. SnapCenterのインストール後、*[ヘルプ]>[バージョン情報]*に移動します。
+. [_About SnapCenter _]ダイアログボックスで、971で始まる20桁のSnapCenterインスタンスをメモします。
+. をクリックします https://register.netapp.com[]
+. [* I am not a registered NetApp Customer* ] をクリックします。
+. 自分自身を登録するには、詳細を指定してください。
+. NetApp Reference SNフィールドは空白のままにします。
+. [Product Line]ドロップダウンから[* SnapCenter *]を選択します。
+. 課金プロバイダを選択します。
+. 20桁のSnapCenterインスタンスIDを入力します。
+. [Submit （送信） ] をクリックします。
 

@@ -1,0 +1,162 @@
+---
+permalink: install/install_snapcenter_server_linux.html 
+sidebar: sidebar 
+keywords: install, snapcenter software, install, linux host 
+summary: SnapCenterサーバはLinuxホストにインストールできます。 
+---
+= LinuxホストへのSnapCenterサーバのインストール
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter サーバインストーラの実行ファイルを実行して、 SnapCenter サーバをインストールできます。
+
+.作業を開始する前に
+* SnapCenterをインストールするための十分な権限がないroot以外のユーザを使用してSnapCenterサーバをインストールする場合は、NetAppサポートサイトからsudoersチェックサムファイルを入手してください。Linuxのバージョンに基づいて適切なチェックサムファイルを使用する必要があります。
+* のインストール中。 NETランタイム。インストール時に_libicu_libraryの依存関係の解決に失敗した場合は、次のコマンドを実行してinstall_libicu_を実行します。 `yum install -y libicu`
+* _perl_が使用できないためにSnapCenterサーバのインストールが失敗した場合は、次のコマンドを実行してinstall_perl_をインストールします。 `yum install -y perl`
+* SUSE Linuxでsudoパッケージを使用できない場合は、認証エラーを回避するためにsudoパッケージをインストールします。
+* SUSE Linuxの場合は、インストールの失敗を回避するためにホスト名を設定します。
+* コマンドを実行して、セキュアなLinuxのステータスを確認します `sestatus`。SELinux status_が「enabled」で、_current mode_が「enforcing」の場合は、次の手順を実行します。
++
+** 次のコマンドを実行します。 `sudo semanage port -a -t http_port_t -p tcp <WEBAPP_EXTERNAL_PORT_>`
++
+_webapp_external_port_のデフォルト値は8146です。
+
+** ファイアウォールがポートをブロックしている場合は、 `sudo firewall-cmd --add-port <WEBAPP_EXTERNAL_PORT_>/tcp`
++
+_webapp_external_port_のデフォルト値は8146です。
+
+** 読み取りおよび書き込み権限があるディレクトリから、次のコマンドを実行します。
++
+*** `sudo ausearch -c 'nginx' --raw | audit2allow -M my-nginx`
++
+コマンドから「Nothing to do」が返された場合は、SnapCenterサーバのインストール後にコマンドを再実行します。
+
+*** コマンドがcreates_my-nginx.pp_を作成する場合は、コマンドを実行してポリシーパッケージをアクティブにします。 `sudo semodule -i my-nginx.pp`
+
+
+** MySQL PIDディレクトリに使用されるパスは_/ var/opt/mysqld_です。次のコマンドを実行して、MySQLインストールの権限を設定します。
++
+*** `mkdir /var/opt/mysqld`
+*** `sudo semanage fcontext -a -t mysqld_var_run_t "/var/opt/mysqld(/.*)?"`
+*** `sudo restorecon -Rv /var/opt/mysqld`
+
+
+** MySQLのデータディレクトリのパスは、_/ INSTALL_DIR /NetApp/snapcenter/SnapManagerWeb/Repository/mysql/_です。次のコマンドを実行して、MySQLのデータディレクトリの権限を設定します。
++
+*** `mkdir -p /INSTALL_DIR/NetApp/snapcenter/SnapManagerWeb/Repository/MySQL`
+*** `sudo semanage fcontext -a -t mysqld_db_t "/INSTALL_DIR/NetApp/snapcenter/SnapManagerWeb/Repository/MySQL(/.*)?"`
+*** `sudo restorecon -Rv /INSTALL_DIR/NetApp/snapcenter/SnapManagerWeb/Repository/MySQL`
+
+
+
+
+
+
+.このタスクについて
+* SnapCenterサーバをLinuxホストにインストールすると、MySQL、RabbitMQ、Errlangなどのサードパーティサービスがインストールされます。アンインストールしないでください。
+* LinuxホストにインストールされているSnapCenterサーバは、次の機能をサポートしていません。
++
+** 高可用性
+** Windows プラグイン
+** Active Directory（Credを使用するrootユーザとroot以外のユーザの両方で、ローカルユーザのみをサポート）
+** SnapCenterへのログインに使用するキーベースの認証
+
+
+
+
+.手順
+. 次のファイルをから_/ホームディレクトリ_にダウンロードし https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["ネットアップサポートサイト"^] ます。
++
+** SnapCenterサーバインストールパッケージ-* snapcenter-linux-server-(el8/el9/sles15).bin*
+** 公開キーファイル-* snapcenter_public_key.pub *
+** それぞれのシグネチャファイル-* snapcenter-linux-server-(el8/el9/sles15).bin.sig*
+
+
+. 署名ファイルを検証します。
+`$openssl dgst -sha256 -verify snapcenter_public_key.pub -signature <path to signature file> <path to bin file>`
+. root以外のユーザをインストールする場合は、.binインストーラとともに* snapcenter_server_checksum_（el8/el9/sles15）.txt *で指定したvisudoコンテンツを追加します。
+. .binインストーラの実行権限を割り当てます。
+`chmod +x snapcenter-linux-server-(el8/el9/sles15).bin`
+. いずれかの操作を実行して、SnapCenterサーバをインストールします。
++
+|===
+| 実行する処理 | 手順 
+
+
+ a| 
+対話型インストール
+ a| 
+`./snapcenter-linux-server-(el8/el9/sles15).bin`
+
+次の詳細を入力するように求められます。
+
+** Linuxホスト外のSnapCenterサーバにアクセスするために使用されるwebapp外部ポート。デフォルト値は8146です。
+** SnapCenterサーバをインストールするSnapCenterサーバユーザ。
+** パッケージがインストールされるインストールディレクトリ。
+
+
+
+
+ a| 
+非対話型インストール
+ a| 
+`sudo ./snapcenter-linux-server-(el8/el9/sles15).bin -i silent -DWEBAPP_EXTERNAL_PORT=<port> -DWEBAPP_INTERNAL_PORT=<port> -DSMCORE_PORT=<port> -DSCHEDULER_PORT=<port>  -DSNAPCENTER_SERVER_USER=<user> -DUSER_INSTALL_DIR=<dir> -DINSTALL_LOG_NAME=<filename>`
+
+例：sudo ./ snapcenter_linux_server.bin -i silent -dwebapp_external_port=8146 -DSNAPCENTER_SERVER_USER=root -Duser_install_DIR=/opt-DINSTALL_LOG_NAME=InstallerLog.log
+
+ログは_/var/opt/snapcenter/logs _に保存されます。
+
+SnapCenterサーバをインストールするために渡されるパラメータ：
+
+** DWEBAPP_EXTERNAL_PORT：Linuxホスト外のSnapCenterサーバにアクセスするために使用されるwebapp外部ポート。デフォルト値は8146です。
+** DWEBAPP_INTERNAL_PORT：Linuxホスト内のSnapCenterサーバへのアクセスに使用されるwebapp内部ポート。デフォルト値は8147です。
+** DSMCORE_PORT：smcoreサービスが実行されているSMCoreポート。デフォルト値は8145です。
+** DSCHEDULER_PORT：スケジューラサービスが実行されているスケジューラポート。デフォルト値は8154です。
+** DSNAPCENTER_SERVER_USER：SnapCenterサーバをインストールするSnapCenterサーバユーザ。DSNAPCENTER_SERVER_USER_の場合、デフォルトはインストーラを実行しているユーザです。
+** DUSER_INSTALL_DIR:パッケージがインストールされるインストールディレクトリ。_DUSER_INSTALL_DIR_の場合、デフォルトのインストールディレクトリは_/ opt_です。
+** DINSTALL_LOG_NAME：インストールログを格納するログファイルの名前。これはオプションパラメータで、指定するとログはコンソールに表示されません。 このパラメータを指定しない場合、ログはコンソールに表示され、デフォルトのログファイルにも格納されます。
+** DSELINUX：_SELinux STATUS_が「Enabled」、_CURRENT MODE_が「Enforcing」で、「Before You Begin」セクションで説明したコマンドを実行した場合は、このパラメータを指定して値を1に割り当てる必要があります。デフォルト値は0です。
+** DUPGRADE：デフォルト値は0です。SnapCenterサーバをアップグレードするには、このパラメータと0以外の任意の整数を指定します。
+
+
+|===
+
+
+.次の手順
+* _SELinux status_が「enabled」で、_current mode_が「enforcing」の場合、* nginx *サービスは起動しません。次のコマンドを実行する必要があります。
++
+.. ホームディレクトリに移動します。
+.. コマンドを実行します `jorunalctl -x|grep nginx`。
+.. webapp内部ポート（8147）がリッスンできない場合は、次のコマンドを実行します。
++
+*** `ausearch -c 'nginx' --raw | audit2allow -M my-nginx`
+*** `semodule -i my-nginx.pp`
+
+
+.. 実行 `setsebool -P httpd_can_network_connect on`
+
+
+
+
+
+
+== 製品を登録してサポートを有効にする
+
+NetAppを初めてご利用になり、NetAppアカウントをお持ちでない場合は、製品を登録してサポートを有効にする必要があります。
+
+.手順
+. SnapCenterのインストール後、*[ヘルプ]>[バージョン情報]*に移動します。
+. [_About SnapCenter _]ダイアログボックスで、971で始まる20桁のSnapCenterインスタンスをメモします。
+. をクリックします https://register.netapp.com[]
+. [* I am not a registered NetApp Customer* ] をクリックします。
+. 自分自身を登録するには、詳細を指定してください。
+. NetApp Reference SNフィールドは空白のままにします。
+. [Product Line]ドロップダウンから[* SnapCenter *]を選択します。
+. 課金プロバイダを選択します。
+. 20桁のSnapCenterインスタンスIDを入力します。
+. [Submit （送信） ] をクリックします。
+

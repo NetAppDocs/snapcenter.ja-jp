@@ -1,0 +1,178 @@
+---
+permalink: protect-mysql/prerequisites-to-adding-hosts-and-installing-snapcenter-plug-in-for-mysql.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。SnapCenter Plug-in for MySQLは、WindowsとLinuxの両方の環境で使用できます。 
+---
+= ホストを追加してSnapCenter Plug-in for MySQLをインストールするための前提条件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。SnapCenter Plug-in for MySQLは、WindowsとLinuxの両方の環境で使用できます。
+
+* Java 11をホストにインストールしておく必要があります。
++
+
+NOTE: IBM Javaはサポートされていません。
+
+* Windowsの場合、Plug-in CreatorサービスはWindowsユーザ「LocalSystem」を使用して実行する必要があります。これは、Plug-in for MySQLがドメイン管理者としてインストールされている場合のデフォルトの動作です。
+* Windowsホストにプラグインをインストールするときに、組み込みでないクレデンシャルを指定した場合やユーザがローカルワークグループに属している場合は、ホストのUACを無効にする必要があります。SnapCenter Plug-in for Microsoft Windowsは、WindowsホストへのMySQLプラグインと一緒にデフォルトで導入されます。
+* SnapCenterサーバがPlug-in for MySQLホストの8145ポートまたはカスタムポートにアクセスできる必要があります。
+* MySQL 5.7の場合は、MySQLの設定ファイル（my.cnfまたはmysql-server.cnf）にbinlogを指定する必要があります。
+
+
+
+
+== Windows ホスト
+
+* ローカル管理者権限を持つドメインユーザがあり、リモートホストに対してローカルログイン権限が付与されている必要があります。
+* Plug-in for MySQLをWindowsホストにインストールすると、SnapCenter Plug-in for Microsoft Windowsが自動的にインストールされます。
+* root ユーザまたは root 以外のユーザ用にパスワードベースの SSH 接続を有効にしておく必要があります。
+* Java 11をWindowsホストにインストールしておく必要があります。
++
+http://www.java.com/en/download/manual.jsp["すべてのオペレーティングシステム用の Java のダウンロード"]
+
++
+https://imt.netapp.com/matrix/imt.jsp?components=117015;&solution=1259&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"]
+
+
+
+
+
+== Linux ホスト
+
+* root ユーザまたは root 以外のユーザ用にパスワードベースの SSH 接続を有効にしておく必要があります。
+* Java 11をLinuxホストにインストールしておく必要があります。
++
+http://www.java.com/en/download/manual.jsp["すべてのオペレーティングシステム用の Java のダウンロード"]
+
++
+https://imt.netapp.com/matrix/imt.jsp?components=117015;&solution=1259&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"]
+
+* LinuxホストでMySQLデータベースを実行している場合は、Plug-in for MySQLのインストール時にSnapCenter Plug-in for UNIXが自動的にインストールされます。
+* プラグインのインストールには、デフォルトのシェルとして* bash *が必要です。
+
+
+
+
+== 補助コマンド
+
+SnapCenter Plug-in for MySQLで補助的なコマンドを実行するには、ファイルにそのコマンドを含める必要があります `allowed_commands.config` 。
+
+`allowed_commands.config` ファイルは、SnapCenter Plug-in for MySQLディレクトリの「etc」サブディレクトリにあります。
+
+.Windows ホスト
+デフォルト： `C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands.config`
+
+カスタムパス： `<Custom_Directory>\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands.config`
+
+.Linux ホスト
+デフォルト： `/opt/NetApp/snapcenter/scc/etc/allowed_commands.config`
+
+カスタムパス： `<Custom_Directory>allowed_commands.config`
+
+プラグインホストで追加のコマンドを許可するには、 `allowed_commands.config` エディタ内のファイル。各コマンドを別 々 の行に入力します。大文字と小文字は区別されません。
+例：
+
+コマンド:mount
+
+コマンド：umount
+
+完全修飾パス名を指定してください。パス名にスペースが含まれている場合は、パス名を引用符（"）で囲みます。
+例：
+
+コマンド："C：\Program Files\NetApp\SnapCreator commands\sdcli.exe"
+
+コマンド：myscript.bat
+
+状況に応じて `allowed_commands.config` ファイルが存在しません。コマンドまたはスクリプトの実行はブロックされ、次のエラーでワークフローが失敗します。
+
+"[/mnt/mount-a]の実行は許可されていません。プラグインホストのファイル%sにコマンドを追加して許可します。"
+
+コマンドまたはスクリプトが `allowed_commands.config`をクリックすると、コマンドまたはスクリプトの実行がブロックされ、次のエラーでワークフローが失敗します。
+
+"[/mnt/mount-a]の実行は許可されていません。プラグインホストのファイル%sにコマンドを追加して許可します。"
+
+
+NOTE: ワイルドカードエントリ（*）を使用してすべてのコマンドを許可しないでください。
+
+
+
+== Linux ホストの root 以外のユーザに sudo 権限を設定する
+
+SnapCenter 2.0 以降のリリースでは、 root 以外のユーザが SnapCenter Plug-ins Package for Linux をインストールしてプラグインプロセスを開始できます。プラグインプロセスは、有効なroot以外のユーザとして実行されます。いくつかのパスにアクセスできるように root 以外のユーザに sudo 権限を設定する必要があります。
+
+* 必要なもの *
+
+* sudoバージョン1.8.7以降。
+* root以外のユーザについては、root以外のユーザの名前とユーザのグループが同じであることを確認してください。
+* /etc/ssh/sshd_config_file を編集して、メッセージ認証コードアルゴリズム MACs HMAC-sha2-256 および MACs HMAC-sha2-512 を設定します。
++
+構成ファイルを更新したら、 sshd サービスを再起動します。
+
++
+例
+
++
+[listing]
+----
+#Port 22
+#AddressFamily any
+#ListenAddress 0.0.0.0
+#ListenAddress ::
+#Legacy changes
+#KexAlgorithms diffie-hellman-group1-sha1
+#Ciphers aes128-cbc
+#The default requires explicit activation of protocol
+Protocol 2
+HostKey/etc/ssh/ssh_host_rsa_key
+MACs hmac-sha2-256
+----
+
+
+* このタスクについて *
+
+次のパスにアクセスできるように root 以外のユーザに sudo 権限を設定する必要があります。
+
+* /home/_linux_user_//.sc_netapp / snapcenter_linux_host_plugin.bin
+* /custom_location/NetApp/snapcenter /spl/installing/plugins/uninstall
+* /custom_location/NetApp/snapcenter /spl/bin/spl になります
+
+
+* 手順 *
+
+. SnapCenter Plug-ins Package for Linux をインストールする Linux ホストにログインします。
+. visudo Linux ユーティリティを使用して、 /etc/sudoers ファイルに次の行を追加します。
++
+[listing, subs="+quotes"]
+----
+Cmnd_Alias HPPLCMD = sha224:checksum_value== /home/_LINUX_USER_/.sc_netapp/snapcenter_linux_host_plugin.bin, /opt/NetApp/snapcenter/spl/installation/plugins/uninstall, /opt/NetApp/snapcenter/spl/bin/spl, /opt/NetApp/snapcenter/scc/bin/scc
+Cmnd_Alias PRECHECKCMD = sha224:checksum_value== /home/_LINUX_USER_/.sc_netapp/Linux_Prechecks.sh
+Cmnd_Alias CONFIGCHECKCMD = sha224:checksum_value== /opt/NetApp/snapcenter/spl/plugins/scu/scucore/configurationcheck/Config_Check.sh
+Cmnd_Alias SCCMD = sha224:checksum_value== /opt/NetApp/snapcenter/spl/bin/sc_command_executor
+Cmnd_Alias SCCCMDEXECUTOR =checksum_value== /opt/NetApp/snapcenter/scc/bin/sccCommandExecutor
+_LINUX_USER_ ALL=(ALL) NOPASSWD:SETENV: HPPLCMD, PRECHECKCMD, CONFIGCHECKCMD, SCCCMDEXECUTOR, SCCMD
+Defaults: _LINUX_USER_ !visiblepw
+Defaults: _LINUX_USER_ !requiretty
+----
++
+
+NOTE: RACセットアップを実行している場合は、他の許可されているコマンドとともに、/etc/sudoersファイルに次のように追加します。'/RAC/bin/olsnodes'<crs_home>
+
+
+
+_crs_home_fileの値は、/etc/oracle/olr.loc_fileから取得できます。
+
+_linux_user_は、作成したroot以外のユーザの名前です。
+
+_checksum_value_は、次の場所にある* sc_unix_plugins_checksum.txt *ファイルから取得できます。
+
+* _C：\ProgramData\NetApp\SnapCenter\Package Repository\sc_unix_plugins_checksum.txt（SnapCenter ServerがWindowsホストにインストールされている場合）。
+* _/opt/NetApp/snapcenter/SnapManagerWeb/Repository/sc _ unix_plugins_checksum.txt _ LinuxホストにSnapCenterサーバがインストールされている場合。
+
+
+
+IMPORTANT: この例は、独自のデータを作成するための参照としてのみ使用してください。

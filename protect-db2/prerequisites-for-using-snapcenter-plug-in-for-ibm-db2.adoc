@@ -1,0 +1,24 @@
+---
+permalink: protect-db2/prerequisites-for-using-snapcenter-plug-in-for-ibm-db2.html 
+sidebar: sidebar 
+keywords: Credentials,SnapCenter Plug-in for IBM Db2 
+summary: SnapCenter Plug-in for IBM DB2を使用する前に、SnapCenter管理者がSnapCenterサーバをインストールして設定し、前提条件となるタスクを実行する必要があります。 
+---
+= SnapCenter Plug-in for IBM DB2を使用するための前提条件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter Plug-in for IBM DB2を使用する前に、SnapCenter管理者がSnapCenterサーバをインストールして設定し、前提条件となるタスクを実行する必要があります。
+
+* SnapCenter サーバをインストールして設定します。
+* SnapCenter サーバにログインします。
+* 必要に応じて、ストレージシステム接続を追加し、クレデンシャルを作成して、 SnapCenter 環境を設定します。
+* LinuxホストまたはWindowsホストにJava 11をインストールします。
++
+ホストマシンの環境パス変数に Java パスを設定する必要があります。
+
+* バックアップレプリケーションが必要である場合は、 SnapMirror と SnapVault をセットアップします。
+

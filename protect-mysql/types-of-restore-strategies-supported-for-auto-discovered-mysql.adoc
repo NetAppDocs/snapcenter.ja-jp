@@ -1,0 +1,16 @@
+---
+permalink: protect-mysql/types-of-restore-strategies-supported-for-auto-discovered-mysql.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for mysql 
+summary: SnapCenterを使用してリストア処理を正常に実行するには、戦略を定義する必要があります。自動的に検出されたMySQLデータベースには、2種類のリストア戦略があります。 
+---
+= 自動検出されたMySQLでサポートされるリストア戦略のタイプ
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenterを使用してリストア処理を正常に実行するには、戦略を定義する必要があります。
+
+リソースの完全リストアは、自動検出されたMySQLデータベースに対してサポートされるリストア戦略です。これにより、リソースのすべてのボリューム、qtree、およびLUNがリストアされます。

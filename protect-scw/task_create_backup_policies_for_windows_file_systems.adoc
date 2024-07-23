@@ -24,7 +24,7 @@ SnapCenter を使用して Windows ファイルシステムをバックアップ
 +
 デフォルト値は false です。
 
-* SnapMirrorビジネス継続性（SM-BC）については、前提条件と制限事項の詳細を参照してください。 https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["SnapMirrorビジネス継続性のオブジェクト制限"]。
+* SnapMirrorアクティブ同期に固有の前提条件と制限事項を確認します。詳細については、を参照してください https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["SnapMirrorアクティブ同期のオブジェクト数の制限"]。
 
 
 .このタスクについて
@@ -143,7 +143,7 @@ NOTE: 最大保持数は、 ONTAP 9.4 以降のリソースでは 1018 、 ONTAP
  a| 
 別のボリュームにバックアップセットのミラーコピーを作成する場合（ SnapMirror ）は、このオプションを選択します。
 
-このオプションは、SnapMirrorビジネス継続性（SM-BC）で有効にする必要があります。
+このオプションは、SnapSnapMirrorのアクティブな同期に対して有効にする必要があります。
 
 セカンダリレプリケーションでは、SnapLockの有効期限によってプライマリSnapLockの有効期限がロードされます。[Topology]ページの[Refresh]*ボタンをクリックすると、ONTAPから取得されたセカンダリおよびプライマリのSnapLock有効期限が更新されます。
 

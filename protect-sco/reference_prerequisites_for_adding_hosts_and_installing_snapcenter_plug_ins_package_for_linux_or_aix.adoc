@@ -23,7 +23,7 @@ SnapCenter Plug-in for Oracle Database は、 root 以外のユーザがイン�
 SnapCenter Plug-ins Package for AIX は、ファイルレベルのシンボリックリンクを自動的に解決しますが、 JAVA_HOME の絶対パスを取得するためのディレクトリレベルのシンボリックリンクは解決しません。
 
 * インストールユーザ用に、認証モードを Linux または AIX に設定してクレデンシャルを作成します。
-* LinuxまたはAIXホストにJava 1.8.xまたはJava 11（64ビット）をインストールしておく必要があります。
+* Java 11をLinuxホストまたはAIXホストにインストールしておく必要があります。
 +
 
 NOTE: LinuxホストにJava 11の認定エディションのみがインストールされていることを確認します。
@@ -94,9 +94,7 @@ NOTE: 十分なディスクスペースを割り当て、 logs フォルダに�
  a| 
 必要なソフトウェアパッケージ
  a| 
-* Java 1.8.x（64ビット）Oracle JavaおよびOpenJDK
-* Java 11（64ビット）Oracle JavaおよびOpenJDK
-
+Java 11 Oracle JavaおよびOpenJDK
 
 
 NOTE: LinuxホストにJava 11の認定エディションのみがインストールされていることを確認します。
@@ -115,6 +113,7 @@ SnapCenter 2.0 以降のリリースでは、 root 以外のユーザが SnapCen
 * 必要なもの *
 
 * sudoバージョン1.8.7以降。
+* root以外のユーザについては、root以外のユーザの名前とユーザのグループが同じであることを確認してください。
 * /etc/ssh/sshd_config_file を編集して、メッセージ認証コードアルゴリズム MACs HMAC-sha2-256 および MACs HMAC-sha2-512 を設定します。
 +
 構成ファイルを更新したら、 sshd サービスを再起動します。
@@ -174,9 +173,11 @@ _crs_home_fileの値は、/etc/oracle/olr.loc_fileから取得できます。
 
 _linux_user_は、作成したroot以外のユーザの名前です。
 
-checksum_value_xは、_ C：\ProgramData\NetApp\SnapCenter \Package Repository_に ある* ORACLE_checksum.txt *ファイルから取得できます。
+_checksum_value_は、次の場所にある* sc_unix_plugins_checksum.txt *ファイルから取得できます。
 
-カスタムの場所を指定した場合、場所は _custom_path \NetApp\SnapCenter \Package Repository_に なります。
+* _C：\ProgramData\NetApp\SnapCenter\Package Repository\SC_UNIX_plugins_checksum.txt_ SnapCenter ServerがWindowsホストにインストールされている場合。
+* _/opt/NetApp/snapcenter/SnapManagerWeb/Repository/sc _ unix_plugins_checksum.txt _ SnapCenterサーバーがLinuxホストにインストールされている場合。
+
 
 
 IMPORTANT: この例は、独自のデータを作成するための参照としてのみ使用してください。
@@ -221,9 +222,7 @@ NOTE: 十分なディスクスペースを割り当て、 logs フォルダに�
  a| 
 必要なソフトウェアパッケージ
  a| 
-* Java 1.8.x（64ビット）IBM Java
-* Java 11（64ビット）IBM Java
-
+Java 11 IBM Java
 
 Java を最新バージョンにアップグレードした場合は、 /var/opt/snapcenter /etc/sp/etc/spl.properties にある JAVA_HOME オプションが正しい Java バージョンに設定されていること、および正しいパスが指定されていることを確認する必要があります。
 
@@ -298,9 +297,11 @@ _crs_home_fileの値は、/etc/oracle/olr.loc_fileから取得できます。
 
 _aix_user_は 、作成した root 以外のユーザの名前です。
 
-checksum_value_xは、_ C：\ProgramData\NetApp\SnapCenter \Package Repository_に ある* ORACLE_checksum.txt *ファイルから取得できます。
+_checksum_value_は、次の場所にある* sc_unix_plugins_checksum.txt *ファイルから取得できます。
 
-カスタムの場所を指定した場合、場所は _custom_path \NetApp\SnapCenter \Package Repository_に なります。
+* _C：\ProgramData\NetApp\SnapCenter\Package Repository\SC_UNIX_plugins_checksum.txt_ SnapCenter ServerがWindowsホストにインストールされている場合。
+* _/opt/NetApp/snapcenter/SnapManagerWeb/Repository/sc _ unix_plugins_checksum.txt _ SnapCenterサーバーがLinuxホストにインストールされている場合。
+
 
 
 IMPORTANT: この例は、独自のデータを作成するための参照としてのみ使用してください。

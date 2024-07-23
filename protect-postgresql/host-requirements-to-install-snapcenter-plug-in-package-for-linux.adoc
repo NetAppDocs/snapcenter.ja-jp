@@ -1,0 +1,57 @@
+---
+permalink: protect-postgresql/host-requirements-to-install-snapcenter-plug-in-package-for-linux.html 
+sidebar: sidebar 
+keywords: SnapCenter 
+summary: SnapCenter Plug-ins Package for Linux をインストールする前に、ホストシステムの基本的なスペースとサイジング要件を理解しておく必要があります。 
+---
+= SnapCenter Plug-ins Package for Linux をインストールするためのホストの要件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter Plug-ins Package for Linux をインストールする前に、ホストシステムの基本的なスペースとサイジング要件を理解しておく必要があります。
+
+|===
+| 項目 | 要件 
+
+
+ a| 
+オペレーティングシステム
+ a| 
+* Red Hat Enterprise Linux の場合
+* SUSE Linux Enterprise Server （ SLES ）
+
+
+サポートされているバージョンの最新情報については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=112389;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"]。
+
+
+
+ a| 
+ホスト上の SnapCenter プラグインの最小 RAM
+ a| 
+1 GB
+
+
+
+ a| 
+ホスト上の SnapCenter プラグインのインストールおよびログの最小スペース
+ a| 
+2 GB
+
+
+NOTE: 十分なディスクスペースを割り当て、 logs フォルダによるストレージ消費を監視する必要があります。必要なログスペースは、保護するエンティティの数とデータ保護処理の頻度によって異なります。十分なディスクスペースがない場合、最近実行した処理に対してログは作成されません。
+
+
+
+ a| 
+必要なソフトウェアパッケージ
+ a| 
+Java 11 Oracle JavaおよびOpenJDK
+
+Java を最新バージョンにアップグレードした場合は、 /var/opt/snapcenter /etc/sp/etc/spl.properties にある JAVA_HOME オプションが正しい Java バージョンに設定されていること、および正しいパスが指定されていることを確認する必要があります。
+
+サポートされているバージョンの最新情報については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=112389;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"]。
+
+|===

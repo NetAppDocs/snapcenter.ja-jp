@@ -50,4 +50,12 @@ Plug-in for SQL Server には、上記の主要な機能以外にも次のよう
 NOTE: NAS ボリュームには、 Storage Virtual Machine （ SVM ）内にデフォルトのエクスポートポリシーが必要です。
 
 * SQL Server スタンドアロンデータベースでの FileStream とファイルグループのサポート。
+* Windows Server 2022でのNon-Volatile Memory Express（NVMe）のサポート
++
+** NVMe over TCP / IPで作成されたVMDKレイアウト上のバックアップ、リストア、クローニング、検証のワークフロー
+** ESX 8.0 Update 2以降のNVMeファームウェアバージョン1.3をサポートします。Virtualハードウェアバージョン21が必要です。
+** Windows Serverフェイルオーバークラスタリング（WSFC）は、NVMe over TCP/IP上のVMDKを介したアプリケーションではサポートされません。
+
+
+* SnapMirror Active Sync（当初はSnapMirror Business Continuity [SM-BC]としてリリース）をサポート。これにより、サイト全体に障害が発生してもビジネスサービスの運用を継続でき、アプリケーションがセカンダリコピーを使用して透過的にフェイルオーバーできるようになります。SnapMirror Active Syncでフェイルオーバーをトリガーするために、手動操作や追加のスクリプト作成は必要ありません。
 

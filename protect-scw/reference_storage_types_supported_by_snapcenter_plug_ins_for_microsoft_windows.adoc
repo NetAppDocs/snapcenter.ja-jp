@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Storage types 
 summary: SnapCenter は、物理マシンと仮想マシンの両方でさまざまなストレージタイプをサポートしています。ホストに対応したパッケージをインストールする前に、ストレージタイプがサポートされているかどうかを確認する必要があります。 
 ---
-= SnapCenter Plug-in for Microsoft Windows でサポートされるストレージタイプ
+= SnapCenter Plug-in for Microsoft Windowsでサポートされるストレージタイプ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -93,6 +93,16 @@ SnapCenter GUI または PowerShell コマンドレット
 プロビジョニングのみがサポートされます。
 
 SnapCenter プロトコルを使用してデータや共有をバックアップすることはできません。
+
+
+
+ a| 
+VMware VM
+ a| 
+NFSとSANの両方にVVOLデータストアを配置
+ a| 
+VMware vSphere 向け ONTAP ツール
+ a| 
 
 
 

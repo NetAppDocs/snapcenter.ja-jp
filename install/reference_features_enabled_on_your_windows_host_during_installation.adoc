@@ -63,7 +63,7 @@ Web サーバ
 +
 ** .NET 拡張機能 4.5
 ** アプリケーションの初期化
-** ASP.NET 4.7.2.
+** ASP。 Net Core Hosting Bundle（8.0.5以降）
 ** サーバー側インクルード
 ** WebSocket プロトコル
 
@@ -87,15 +87,14 @@ IIS 管理スクリプトおよびツール
 
 
  a| 
-+.NET Framework 4.7.2の機能+
++.NET Framework 8.0.5の機能+
  a| 
-* .NET Framework 4.7.2
-* ASP.NET 4.7.2.
+* .NET Framework 8.0.5
+* ASP。 正味8.0.5
 * Windows Communication Foundation (WCF) HTTP Activation 45
 +
 ** TCP のアクティブ化
 ** HTTP アクティブ化
-** メッセージキュー（ MSMQ ）のアクティブ化
 
 
 
@@ -112,7 +111,7 @@ IIS 管理スクリプトおよびツール
 
 NOTE: SnapCenter が作成および管理する MSMQ サービスを他のアプリケーションが使用していないことを確認します。
 
-* MSMQ サーバ
+* RabbitMQ
 
 
 

@@ -1,0 +1,53 @@
+---
+permalink: protect-mysql/install-the-snapcenter-plug-in-for-mysql-on-linux-hosts-using-the-command-line-interface.html 
+sidebar: sidebar 
+keywords: install, SnapCenter Plug-in for MySQL 
+summary: SnapCenterユーザインターフェイス（UI）を使用して、SnapCenter Plug-in for MySQL Databaseをインストールする必要があります。ご使用の環境でSnapCenter UIからのプラグインのリモートインストールが許可されていない場合は、コマンドラインインターフェイス（CLI1）を使用して、コンソールモードまたはサイレントモードでPlug-in for MySQL Databaseをインストールできます。 
+---
+= コマンドラインインターフェイスを使用して、LinuxホストにSnapCenter Plug-in for MySQLをインストールする
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenterユーザインターフェイス（UI）を使用して、SnapCenter Plug-in for MySQL Databaseをインストールする必要があります。ご使用の環境でSnapCenter UIからのプラグインのリモートインストールが許可されていない場合は、コマンドラインインターフェイス（CLI）を使用して、コンソールモードまたはサイレントモードでPlug-in for MySQL Databaseをインストールできます。
+
+.作業を開始する前に
+* Plug-in for MySQL Databaseは、MySQLインスタンスを保護する必要がある各Linuxホストにインストールする必要があります。
+* SnapCenter Plug-in for MySQL DatabaseをインストールするLinuxホストは、依存するソフトウェア、データベース、およびオペレーティングシステムの要件を満たしている必要があります。
++
+サポートされる構成の最新情報については、 Interoperability Matrix Tool （ IMT ）を参照してください。
+
++
+https://imt.netapp.com/matrix/imt.jsp?components=117015;&solution=1259&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"]
+
+* SnapCenter Plug-in for MySQL Databaseは、SnapCenter Plug-ins Package for Linuxに含まれています。SnapCenter Plug-ins Package for Linuxをインストールする前に、SnapCenterをWindowsホストにインストールしておく必要があります。
+
+
+.手順
+. SnapCenter Plug-ins Package for Linuxのインストールファイル（snapcenter_linux_host_plugin.bin）をC：\ProgramData\NetApp\SnapCenter\Package RepositoryからPlug-in for MySQLをインストールするホストにコピーします。
++
+このパスには、 SnapCenter サーバがインストールされているホストからアクセスできます。
+
+. コマンドプロンプトで、インストールファイルをコピーしたディレクトリに移動します。
+. プラグインをインストールします。 'path-to_installation_bin_file/ snapcenter_linux_host_plugin.bin -i silent -dport=port_number_for _host-DSERVER_IP=server_name_or_IP_address -DSERVER_HTTPS_port=port_number_for _server
++
+** -dport には、 SMCore HTTPS 通信ポートを指定します。
+** - DSERVER_IP は、 SnapCenter サーバの IP アドレスを指定します。
+** - DSERVER_HTTPS_PORT には、 SnapCenter サーバの HTTPS ポートを指定します。
+** -duser_install_DIR - SnapCenter Plug-ins Package for Linux をインストールするディレクトリを指定します
+** DINSTALL_LOG_name は、ログファイルの名前を指定します。
+
+
++
+[listing]
+----
+/tmp/sc-plugin-installer/snapcenter_linux_host_plugin.bin -i silent  -DPORT=8145 -DSERVER_IP=scserver.domain.com -DSERVER_HTTPS_PORT=8146 -DUSER_INSTALL_DIR=/opt -DINSTALL_LOG_NAME=SnapCenter_Linux_Host_Plugin_Install_2.log -DCHOSEN_FEATURE_LIST=CUSTOM
+----
+. /<installation directory>/NetApp/snapcenter/scc/etc/SC _ SMS_Services.propertiesファイルを編集し、plugins_enabled=mysql：3.0パラメータを追加します。
+. Add-Smhost コマンドレットと必要なパラメータを使用して、ホストを SnapCenter サーバに追加します。
++
+コマンドで使用できるパラメータとその説明については、 RUNNING Get Help command_name _ を使用して参照できます。または、を参照することもできます https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+
+

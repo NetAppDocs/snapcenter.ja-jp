@@ -1,0 +1,58 @@
+---
+permalink: protect-db2/host-requirements-to-install-snapcenter-plug-in-package-for-windows-db2.html 
+sidebar: sidebar 
+keywords: IBM Db2 
+summary: SnapCenter Plug-ins Package for Windows をインストールする前に、ホストシステムのいくつかの基本的なスペース要件とサイジング要件を確認しておく必要があります。 
+---
+= SnapCenter Plug-ins Package for Windows をインストールするホストの要件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter Plug-ins Package for Windows をインストールする前に、ホストシステムのいくつかの基本的なスペース要件とサイジング要件を確認しておく必要があります。
+
+|===
+| 項目 | 要件 
+
+
+ a| 
+オペレーティングシステム
+ a| 
+Microsoft Windows の場合
+
+サポートされているバージョンの最新情報については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=117007;&solution=1258&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。
+
+
+
+ a| 
+ホスト上の SnapCenter プラグインの最小 RAM
+ a| 
+1 GB
+
+
+
+ a| 
+ホスト上の SnapCenter プラグインのインストールおよびログの最小スペース
+ a| 
+5 GB
+
+
+NOTE: 十分なディスクスペースを割り当て、 logs フォルダによるストレージ消費を監視する必要があります。必要なログスペースは、保護するエンティティの数とデータ保護処理の頻度によって異なります。十分なディスクスペースがない場合、最近実行した処理に対してログは作成されません。
+
+
+
+ a| 
+必要なソフトウェアパッケージ
+ a| 
+* です。 ネットコア8.0.5
+* PowerShell Core 7.4.2
+* Java 11 Oracle JavaおよびOpenJDK
+
+
+サポートされているバージョンの最新情報については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=117007;&solution=1258&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。
+
+.NET固有のトラブルシューティング情報については、を参照してください https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_upgrade_or_install_fails_with_This_KB_is_not_related_to_the_OS["インターネットに接続されていない従来型システムでは、SnapCenter のアップグレードまたはインストールが失敗します。"]
+
+|===

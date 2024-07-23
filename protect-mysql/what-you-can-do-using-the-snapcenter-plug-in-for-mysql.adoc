@@ -1,0 +1,23 @@
+---
+permalink: protect-mysql/what-you-can-do-using-the-snapcenter-plug-in-for-mysql.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for mysql 
+summary: Plug-in for MySQLをインストールした環境では、SnapCenterを使用してMySQLとそのリソースをバックアップ、リストア、およびクローニングすることができます。これらの処理をサポートするタスクを実行することもできます。 
+---
+= SnapCenter Plug-in for MySQLの機能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Plug-in for MySQL Databaseをインストールした環境では、SnapCenterを使用してMySQLインスタンスをバックアップ、リストア、およびクローニングできます。これらの処理をサポートするタスクを実行することもできます。
+
+* インスタンスを追加します。
+* バックアップを作成します
+* バックアップからリストアします
+* バックアップをクローニングする。
+* バックアップ処理のスケジュールを設定します。
+* バックアップ、リストア、クローニングの各処理を監視する。
+* バックアップ、リストア、クローニングの各処理のレポートを表示します。
+

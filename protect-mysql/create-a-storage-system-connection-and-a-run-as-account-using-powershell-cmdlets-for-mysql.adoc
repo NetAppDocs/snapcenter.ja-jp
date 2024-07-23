@@ -1,0 +1,92 @@
+---
+permalink: protect-mysql/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-mysql.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for MySQL 
+summary: PowerShellコマンドレットを使用してMySQLデータベースをバックアップ、リストア、またはクローニングするには、Storage Virtual Machine（SVM）接続とクレデンシャルを作成する必要があります。 
+---
+= MySQL用のPowerShellコマンドレットを使用して、ストレージシステム接続とクレデンシャルを作成する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+PowerShellコマンドレットを使用してMySQLデータベースをバックアップ、リストア、またはクローニングするには、Storage Virtual Machine（SVM）接続とクレデンシャルを作成する必要があります。
+
+.作業を開始する前に
+* PowerShell コマンドレットを実行できるように PowerShell 環境を準備しておく必要があります。
+* ストレージ接続を作成するには、 Infrastructure Admin ロールに必要な権限が必要です。
+* プラグインのインストールが実行中でないことを確認してください。
++
+ホスト・プラグインのインストールは ' ストレージ・システム接続の追加中は実行しないでくださいホスト・キャッシュが更新されず ' データベース・ステータスが SnapCenter GUI に表示される場合がありますこれは ' バックアップには使用できませんまたは NetApp ストレージには使用できません
+
+* ストレージシステム名は一意である必要があります。
++
+SnapCenter では、異なるクラスタに同じ名前のストレージシステムを複数配置することはサポートされていません。SnapCenter でサポートされるストレージシステムには、それぞれ一意の名前およびデータ LIF の IP アドレスを割り当てる必要があります。
+
+
+
+.手順
+. Open-SmConnectionコマンドレットを使用して、PowerShell Core接続セッションを開始します。
++
+[listing]
+----
+PS C:\> Open-SmConnection
+----
+. Add-SmStorageConnection コマンドレットを使用して、ストレージシステムへの新しい接続を作成します。
++
+[listing]
+----
+PS C:\> Add-SmStorageConnection -Storage test_vs1 -Protocol Https
+-Timeout 60
+----
+. Add-SmCredential コマンドレットを使用して新しいクレデンシャルを作成します。
++
+次の例は、 Windows クレデンシャルを使用して FinanceAdmin という名前の新しいクレデンシャルを作成する方法を示しています。
+
++
+[listing]
+----
+PS C:> Add-SmCredential -Name FinanceAdmin -AuthMode Windows
+-Credential sddev\administrator
+----
+. MySQL通信ホストをSnapCenterサーバに追加します。
++
+[listing]
+----
+PS C:> Add-SmHost -HostName 10.232.204.61 -OSType Windows -RunAsName FinanceAdmin -PluginCode mysql
+----
+. パッケージとSnapCenter Plug-in for MySQLをホストにインストールします。
++
+Linux の場合：
+
++
+[listing]
+----
+PS C:> Install-SmHostPackage -HostNames 10.232.204.61 -ApplicationCode mysql
+----
++
+Windows の場合：
+
++
+[listing]
+----
+Install-SmHostPackage -HostNames 10.232.204.61 -ApplicationCode mysql -FilesystemCode scw -RunAsName FinanceAdmin
+----
+. SQLLIBへのパスを設定します。
++
+Windowsの場合、MySQLプラグインはSQLLIBフォルダのデフォルトパス「C：\Program Files\IBM\SQLLIB\bin」を使用します。
+
++
+デフォルトのパスを上書きする場合は、次のコマンドを使用します。
+
++
+[listing]
+----
+PS C:> Set-SmConfigSettings -Plugin -HostName 10.232.204.61 -PluginCode
+MySQL -configSettings @{“MySQL_SQLLIB_CMD” = “<custom_path>\IBM\SQLLIB\BIN”}
+
+----
+
+
+コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。

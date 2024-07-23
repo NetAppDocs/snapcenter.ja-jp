@@ -1,0 +1,14 @@
+---
+permalink: protect-mysql/housekeeping-of-log-backups.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for MySQL 
+summary: SnapCenterは、ストレージシステムレベルおよびファイルシステムレベルでの不要なログおよびデータバックアップの削除、およびMySQLバックアップカタログ内での削除を管理します。 
+---
+= SnapCenterによる不要なログバックアップの削除の管理方法
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenterは、ストレージシステムレベルおよびファイルシステムレベルでの不要なデータバックアップの削除を管理します。

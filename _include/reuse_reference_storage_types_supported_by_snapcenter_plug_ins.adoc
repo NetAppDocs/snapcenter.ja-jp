@@ -88,6 +88,16 @@ SnapCenter プロトコルを使用してデータや共有をバックアップ
 
 
  a| 
+VMware VM
+ a| 
+NFSとSANの両方にVVOLデータストアを配置
+ a| 
+VMware vSphere 向け ONTAP ツール
+ a| 
+
+
+
+ a| 
 Hyper-V VM
  a| 
 仮想ファイバチャネルスイッチで接続された仮想 FC （ vFC ） LUN

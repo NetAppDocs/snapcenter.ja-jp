@@ -14,13 +14,19 @@ summary: SnapCenter のホストの追加ページを使用して、 Windows ホ
 SnapCenter のホストの追加ページを使用して、 Windows ホストを追加できます。指定したホストには、 SnapCenter Plug-in for Microsoft Windows が自動的にインストールされます。これはプラグインのインストールに推奨される方法です。ホストを追加してプラグインをインストールするには、個々のホストまたはクラスタを使用します。
 
 .作業を開始する前に
+* SnapCenter ServerホストのオペレーティングシステムがWindows 2019で、プラグインホストのオペレーティングシステムがWindows 2022の場合は、次の手順を実行する必要があります。
++
+** Windows Server 2019（OSビルド17763.5936）以降にアップグレードする
+** Windows Server 2022（OSビルド20348.2402）以降にアップグレードする
+
+
 * SnapCenter Admin ロールなど、プラグインのインストールとアンインストールの権限のあるロールが割り当てられているユーザが必要です。
 * Windows ホストにプラグインをインストールする場合、ビルトインでないクレデンシャルを指定する場合、またはユーザがローカルワークグループユーザに属している場合は、ホストで UAC を無効にする必要があります。
 * SnapCenter ユーザーは 'Windows Server のサービスとしてログオンロールに追加する必要があります
 * メッセージキューイングサービスが実行中状態であることを確認する必要があります。
 * Group Managed Service Account （ gMSA ；グループ管理サービスアカウント）を使用している場合は、管理者権限を持つ gMSA を設定する必要があります。
 +
-link:task_configure_gMSA_on_windows_server_2012_or_later.html["Windows ファイルシステム用に、 Windows Server 2012 以降のグループマネージドサービスアカウントを設定します"]
+link:task_configure_gMSA_on_windows_server_2012_or_later.html["Windows Server 2016以降でWindowsファイルシステム用にグループ管理サービスアカウントを設定する"]
 
 
 

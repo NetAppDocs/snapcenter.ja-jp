@@ -1,0 +1,16 @@
+---
+permalink: protect-db2/housekeeping-of-log-backups.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for IBM DB2 
+summary: SnapCenterは、ストレージシステムレベルおよびファイルシステムレベルでの不要なログおよびデータバックアップの削除、およびIBM DB2バックアップカタログ内での削除を管理します。 
+---
+= SnapCenterによる不要なデータバックアップの削除の管理方法
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenterは、ストレージシステムレベルおよびファイルシステムレベルでの不要なデータバックアップの削除を管理します。
+
+保持設定に基づいて、プライマリストレージまたはセカンダリストレージ上のSnapshotと、IBM DB2カタログ内の対応するエントリが削除されます。

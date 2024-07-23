@@ -31,6 +31,8 @@ SnapCenter では、 Linux および AIX のストレージプロビジョニン
 * FC 接続 LUN
 * iSCSI で接続された LUN
 * NFS-connected ボリューム
+* NVMe-FC
+* nvme-tcpが表示されます
 
 
 
@@ -43,8 +45,17 @@ VMware ESXi
 /opt/NetApp/SnapCenter /spl/plugins/SCU/scucore /modules/SCU/ConfigU/Config_に ある * LinuxConfig.pm * ファイルを編集して、 * scsi_hosts _optimized_rescan * パラメーターの値を 1 に設定し、 ha_driver_names にリストされている HBA のみを再スキャンすることができます。
 
 * iSCSI イニシエータによってゲストシステムに直接接続された iSCSI LUN
-* VMFS データストアまたは NFS データストア上の VMDK
+* NFSデータストア上のVMDK
+* NVMe-TCP経由で作成されたVMFS上のVMDK
++
+
+NOTE: RACは、共有VMDKをサポートするESX 8.0U2でサポートされます。
+
 * ゲストシステムに直接接続された NFS ボリューム
+* NFSとSANの両方にVVOLデータストアを配置
++
+VVOLデータストアは、ONTAP Tools for VMware vSphereでのみプロビジョニングできます。
+
 
 
 |===

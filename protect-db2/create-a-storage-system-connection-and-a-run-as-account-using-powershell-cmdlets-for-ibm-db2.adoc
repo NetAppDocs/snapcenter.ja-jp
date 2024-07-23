@@ -1,0 +1,95 @@
+---
+permalink: protect-db2/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-ibm-db2.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for IBM Db2 
+summary: PowerShellコマンドレットを使用してIBM DB2データベースをバックアップ、リストア、またはクローニングするには、Storage Virtual Machine（SVM）接続とクレデンシャルを作成する必要があります。 
+---
+= IBM DB2用のPowerShellコマンドレットを使用して、ストレージシステム接続とクレデンシャルを作成する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+PowerShellコマンドレットを使用してIBM DB2データベースをバックアップ、リストア、またはクローニングするには、Storage Virtual Machine（SVM）接続とクレデンシャルを作成する必要があります。
+
+.作業を開始する前に
+* PowerShell コマンドレットを実行できるように PowerShell 環境を準備しておく必要があります。
+* ストレージ接続を作成するには、 Infrastructure Admin ロールに必要な権限が必要です。
+* プラグインのインストールが実行中でないことを確認してください。
++
+ホスト・プラグインのインストールは ' ストレージ・システム接続の追加中は実行しないでくださいホスト・キャッシュが更新されず ' データベース・ステータスが SnapCenter GUI に表示される場合がありますこれは ' バックアップには使用できませんまたは NetApp ストレージには使用できません
+
+* ストレージシステム名は一意である必要があります。
++
+SnapCenter では、異なるクラスタに同じ名前のストレージシステムを複数配置することはサポートされていません。SnapCenter でサポートされるストレージシステムには、それぞれ一意の名前およびデータ LIF の IP アドレスを割り当てる必要があります。
+
+
+
+.手順
+. [SnapCenterPS]*をクリックしてPowerShell Coreを起動します。
+. Add-SmStorageConnection コマンドレットを使用して、ストレージシステムへの新しい接続を作成します。
++
+[listing]
+----
+PS C:\> Add-SmStorageConnection -StorageType DataOntap -Type DataOntap -OntapStorage ‘scsnfssvm’ -Protocol Https -Timeout 60
+----
+. Add-SmCredential コマンドレットを使用して新しいクレデンシャルを作成します。
++
+次の例は、 Windows クレデンシャルを使用して FinanceAdmin という名前の新しいクレデンシャルを作成する方法を示しています。
+
++
+[listing]
+----
+PS C:\> Add-SmCredential -Name 'FinanceAdmin' -Type Linux -AuthenticationType PasswordBased -Credential db2hostuser -EnableSudoPrevileges:$true
+----
+. IBM DB2通信ホストをSnapCenterサーバに追加します。
++
+Linux の場合：
+
++
+[listing]
+----
+PS C:\> Add-SmHost -HostType Linux -HostName '10.232.204.61' -CredentialName 'defaultcreds'
+----
++
+Windows の場合：
+
++
+[listing]
+----
+PS C:\> Add-SmHost -HostType Windows -HostName '10.232.204.61' -CredentialName 'defaultcreds'
+----
+. パッケージとSnapCenter Plug-in for IBM DB2をホストにインストールします。
++
+Linux の場合：
+
++
+[listing]
+----
+PS C:\> Install-SmHostPackage -HostNames '10.232.204.61' -PluginCodes DB2
+----
++
+Windows の場合：
+
++
+[listing]
+----
+PS C:\> Install-SmHostPackage -HostNames '10.232.204.61' -PluginCodes DB2,SCW
+----
+. SQLLIBへのパスを設定します。
++
+Windowsの場合、DB2プラグインはSQLLIBフォルダのデフォルトパス「C：\Program Files\IBM\SQLLIB\bin」を使用します。
+
++
+デフォルトのパスを上書きする場合は、次のコマンドを使用します。
+
++
+[listing]
+----
+PS C:\> Set-SmConfigSettings -Plugin -HostName '10.232.204.61' -PluginCode DB2 -configSettings @{"DB2_SQLLIB_CMD"="<custom_path>\IBM\SQLLIB\BIN"}
+
+----
+
+
+コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。

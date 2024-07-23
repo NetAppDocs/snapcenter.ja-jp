@@ -81,9 +81,9 @@ NOTE: 十分なディスクスペースを割り当て、 logs フォルダに�
  a| 
 必要なソフトウェアパッケージ
  a| 
-* Microsoft .NET Framework 4.7.2以降
-* Windows Management Framework （ WMF ） 4.0 以降
-* PowerShell 4.0 以降
+* です。 ネットコア8.0.5
+* PowerShell Core 7.4.2
+* Java 11 Oracle JavaおよびOpenJDK
 
 
 サポートされているバージョンの最新情報については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=117007;&solution=1258&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。
@@ -165,9 +165,9 @@ NOTE: 十分なディスクスペースを割り当て、 logs フォルダに�
  a| 
 必要なソフトウェアパッケージ
  a| 
-* Microsoft .NET Framework 4.7.2以降
-* Windows Management Framework （ WMF ） 4.0 以降
-* PowerShell 4.0 以降
+* です。 ネットコア8.0.5
+* PowerShell Core 7.4.2
+* Java 11 Oracle JavaおよびOpenJDK
 
 
 サポートされているバージョンの最新情報については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=117007;&solution=1258&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。

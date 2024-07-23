@@ -14,12 +14,18 @@ summary: ホストの追加とプラグインパッケージのインストー�
 ホストの追加およびプラグインパッケージのインストールには、 SnapCenter * ホストの追加ページを使用する必要があります。プラグインは、自動的にリモートホストにインストールされます。
 
 .作業を開始する前に
+* SnapCenter ServerホストのオペレーティングシステムがWindows 2019で、プラグインホストのオペレーティングシステムがWindows 2022の場合は、次の手順を実行する必要があります。
++
+** Windows Server 2019（OSビルド17763.5936）以降にアップグレードする
+** Windows Server 2022（OSビルド20348.2402）以降にアップグレードする
+
+
 * SnapCenter Admin ロールなど、プラグインのインストールとアンインストールの権限のあるロールが割り当てられているユーザが必要です。
 * Windows ホストにプラグインをインストールするときに、ビルトインでないクレデンシャルを指定する場合は、ホストで UAC を無効にします。
 * メッセージキューイングサービスが実行中状態であることを確認する必要があります。
 * Group Managed Service Account （ gMSA ；グループ管理サービスアカウント）を使用している場合は、管理者権限を持つ gMSA を設定する必要があります。
 +
-link:task_configure_gMSA_on_windows_server_2012_or_later.html["Windows Server 2012 以降で SQL 用のグループマネージドサービスアカウントを設定します"^]
+link:task_configure_gMSA_on_windows_server_2012_or_later.html["Windows Server 2016 以降で SQL 用のグループマネージドサービスアカウントを設定します"^]
 
 
 
