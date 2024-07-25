@@ -8953,7 +8953,6 @@ Snapshot処理。</block>
   <block id="58eaebf972358f1cf03d386a4ade1a0f" category="list-title">次の手順</block>
   <block id="eafc328b587e3beef3dbe108a3dedcf8" category="list-text">_SELinux status_が「enabled」で、_current mode_が「enforcing」の場合、* nginx *サービスは起動しません。次のコマンドを実行する必要があります。</block>
   <block id="9c7abc376e895129105e281972c9f24c" category="list-text">ホームディレクトリに移動します。</block>
-  <block id="fffce54e1b9446cd2fa32f9d3350c088" category="list-text">コマンドを実行します<block ref="4a8e78821c4854328b05bdd52e9bee4b" prefix=" " category="inline-code"></block>。</block>
   <block id="dbc1e96eaa4b3649ea27aa8dc172aef0" category="list-text">webapp内部ポート（8147）がリッスンできない場合は、次のコマンドを実行します。</block>
   <block id="d8febff31d9105c404a858b1d61e0262" category="list-text"><block ref="d59b1175be1c68f2945ba0ad1856a015" prefix="" category="inline-code"></block></block>
   <block id="f1c7a9d24546d515c477f616b931f8fe" category="list-text"><block ref="d772e354c2fa82d230ec267576cbcac4" prefix="" category="inline-code"></block></block>
@@ -9875,4 +9874,5 @@ Snapshot処理。</block>
   <block id="57318c547ffe570761f4a3f4b7899d67" category="sidebar">PowerShellコマンドレットを使用したPostgreSQLのリストア</block>
   <block id="480aaec5aa69b781016a62284565640a" category="sidebar">PostgreSQLリソースバックアップのクローニング</block>
   <block id="680c5ccf46f4a728694c590785dc9cda" category="sidebar">PostgreSQLクラスタバックアップのクローニング</block>
+  <block id="4e07c38c016a099592ed905ac7e037f7" category="list-text">コマンドを実行します<block ref="1031a5113d1c9ac03f4fa3db4c69d3a4" prefix=" " category="inline-code"></block>。</block>
 </blocks>

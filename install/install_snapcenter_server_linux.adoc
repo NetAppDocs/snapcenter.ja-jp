@@ -130,7 +130,7 @@ SnapCenterサーバをインストールするために渡されるパラメー�
 * _SELinux status_が「enabled」で、_current mode_が「enforcing」の場合、* nginx *サービスは起動しません。次のコマンドを実行する必要があります。
 +
 .. ホームディレクトリに移動します。
-.. コマンドを実行します `jorunalctl -x|grep nginx`。
+.. コマンドを実行します `journalctl -x|grep nginx`。
 .. webapp内部ポート（8147）がリッスンできない場合は、次のコマンドを実行します。
 +
 *** `ausearch -c 'nginx' --raw | audit2allow -M my-nginx`
