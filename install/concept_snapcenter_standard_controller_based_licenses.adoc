@@ -54,7 +54,7 @@ Controller License 列には、次のステータスが表示されます。
 +
 ** image:../media/controller_licensed_icon.gif["チェックアイコン"] FAS、AFF、またはASAプライマリストレージシステムにSnapManager Suiteライセンスがインストールされていることを示します。
 ** image:../media/controller_not_licensed_icon.gif["キャンセルアイコン"] FAS、AFF、またはASAプライマリストレージシステムにSnapManager Suiteライセンスがインストールされていないことを示します。
-** 該当しない場合は、ストレージコントローラが Cloud Volumes ONTAP 、 ONTAP Select 、またはセカンダリストレージプラットフォーム上にあるため、 SnapManager スイートのライセンスは適用されません。
+** [Not Applicable]は、Amazon FSx for NetApp ONTAP、Cloud Volumes ONTAP、ONTAP Select、またはセカンダリストレージプラットフォーム上にストレージコントローラがあるため、SnapManager Suiteライセンスが適用されないことを示します。
 
 
 

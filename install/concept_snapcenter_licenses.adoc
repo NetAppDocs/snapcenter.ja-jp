@@ -87,7 +87,7 @@ NOTE: セカンダリデスティネーションに SnapCenter Standard ライ�
 
 |===
 
-NOTE: SnapCenter Advanced および SnapCenter NAS ファイルサービスのライセンスは廃止され、現在は提供されていません。Amazon FSx for NetApp ONTAPおよびCloud Volumes ONTAPでは、容量ベースのライセンスは不要になりました。
+NOTE: SnapCenter Advanced および SnapCenter NAS ファイルサービスのライセンスは廃止され、現在は提供されていません。Amazon FSx for NetApp ONTAPおよびCloud Volumes ONTAPでは、容量ベースのライセンスは不要になりました。Azure NetApp Filesには標準ライセンスと容量ベースライセンスは必要ありません。
 
 1つ以上のSnapCenterライセンスをインストールする必要があります。ライセンスの追加方法については、を参照してください link:../install/concept_snapcenter_standard_controller_based_licenses.html["SnapCenter の標準コントローラベースのライセンスを追加します"]。
 

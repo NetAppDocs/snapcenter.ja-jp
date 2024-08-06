@@ -6094,7 +6094,6 @@
   <block id="26e6565b87611c0e2e61e424bbf253a8" category="list-text">有効なネットアップサポートサイトのログインクレデンシャルが必要です。</block>
   <block id="f011a01ebc3350e546311efaf71140bc" category="doc">SnapCenter の標準コントローラベースのライセンスを追加します</block>
   <block id="6aa5717c99b34de9980debfbe3c6fa76" category="admonition">お使いのコントローラにすでに SnapManagerSuite ライセンスがある場合は、 SnapCenter の標準コントローラベースのライセンス使用権が自動的に提供されます。SnapManagerSuite ライセンスと SnapCenter 標準のコントローラベースのライセンスは同じ意味で使用されますが、同じライセンスを指します。</block>
-  <block id="a909f2df296012a51dc7da77f9e20dc6" category="list-text">該当しない場合は、ストレージコントローラが Cloud Volumes ONTAP 、 ONTAP Select 、またはセカンダリストレージプラットフォーム上にあるため、 SnapManager スイートのライセンスは適用されません。</block>
   <block id="e7590fb47d0f1f083a0a8a323aa643a0" category="admonition">SnapCenter の標準コントローラベースのライセンスが、 SnapManagerSuite ライセンスとしてコントローラに表示されます。</block>
   <block id="253fa4a7008b4934e4b20001065ef254" category="list-text">コントローラのシリアル番号を確認しておく必要があります。</block>
   <block id="9a935baf19dae6c50cae12b831745abd" category="list-text">SnapCenter Standard または SnapManagerSuite のライセンスが必要です。</block>
@@ -8790,7 +8789,6 @@ Snapshot処理。</block>
   <block id="15d048e327e80031abf5c8b2302df43b" category="paragraph">SnapCenter では、 SnapCenter リポジトリデータベースとして MySQL Server 8.0.37 以降をサポートしています。以前のリリースの SnapCenter を搭載した以前のバージョンの MySQL Server を使用していた場合、 SnapCenter のアップグレード中に MySQL Server が 8.0.37 以降にアップグレードされます。</block>
   <block id="1dc4cb439c92e9e74deaa08a6206fd89" category="admonition">SnapCenterは、AWS Elastic Load Balancing（ELB）とAzureのロードバランシングもサポートしています。</block>
   <block id="e9782ad9d0230912b51a2e508d0dd653" category="paragraph">詳細については、を参照してください<block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block>。</block>
-  <block id="953ceaee3fd51554dfa1935fc3bed9c7" category="admonition">SnapCenter Advanced および SnapCenter NAS ファイルサービスのライセンスは廃止され、現在は提供されていません。Amazon FSx for NetApp ONTAPおよびCloud Volumes ONTAPでは、容量ベースのライセンスは不要になりました。</block>
   <block id="c11dc4986aae3f449b65e2cc978cb5da" category="paragraph">1つ以上のSnapCenterライセンスをインストールする必要があります。ライセンスの追加方法については、を参照してください <block ref="978050eb868e07441781781da059ebc5" category="inline-link-macro-rx"></block>。</block>
   <block id="b69cd8afc7ba47f5300e7eb1864b6e2f" category="admonition">トライアルライセンスを手動で削除する必要があるのは、 SnapCenter の標準コントローラベースのライセンスを使用している場合のみです。</block>
   <block id="de07b96d6e0726ed58c0b7506fed6a37" category="paragraph">コマンドレットの詳細については、を参照してください<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block>。</block>
@@ -9875,4 +9873,7 @@ Snapshot処理。</block>
   <block id="480aaec5aa69b781016a62284565640a" category="sidebar">PostgreSQLリソースバックアップのクローニング</block>
   <block id="680c5ccf46f4a728694c590785dc9cda" category="sidebar">PostgreSQLクラスタバックアップのクローニング</block>
   <block id="4e07c38c016a099592ed905ac7e037f7" category="list-text">コマンドを実行します<block ref="1031a5113d1c9ac03f4fa3db4c69d3a4" prefix=" " category="inline-code"></block>。</block>
+  <block id="881cbdbe2345b7472ef428b8c524734a" category="admonition">SnapCenter Advanced および SnapCenter NAS ファイルサービスのライセンスは廃止され、現在は提供されていません。Amazon FSx for NetApp ONTAPおよびCloud Volumes ONTAPでは、容量ベースのライセンスは不要になりました。Azure NetApp Filesには標準ライセンスと容量ベースライセンスは必要ありません。</block>
+  <block id="eba5bfa2c0dc8d9f24998cf70fa891a6" category="list-text">[Not Applicable]は、Amazon FSx for NetApp ONTAP、Cloud Volumes ONTAP、ONTAP Select、またはセカンダリストレージプラットフォーム上にストレージコントローラがあるため、SnapManager Suiteライセンスが適用されないことを示します。</block>
+  <block id="a2706d1c365c79f6f2378228b67eb95a" category="admonition">Azure NetApp Filesには標準ライセンスと容量ベースライセンスは必要ありません。</block>
 </blocks>
