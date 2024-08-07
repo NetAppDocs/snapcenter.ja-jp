@@ -1769,8 +1769,6 @@
   <block id="2243d9f85be8c57105c8d2eaabc0b881" category="paragraph">「 * リカバリなし * 」を選択します。</block>
   <block id="48607cd1d278aa7004b0e2145533fde0" category="paragraph">外部アーカイブログの場所を指定する</block>
   <block id="5207ebbbc32a1a4bd295b43498ad0913" category="paragraph">バックアップの一環としてアーカイブログが削除される場合に、必要なアーカイブログのバックアップを手動でマウントしたときは、リカバリのために、マウントしたバックアップのパスを外部アーカイブログの場所として指定する必要があります。</block>
-  <block id="58fa648380c73e758318652a30ff424d" category="inline-link">ネットアップテクニカルレポート 4591 ：『 Database Data Protection Backup 、 Recovery 、 Replication 、 and DR 』</block>
-  <block id="5e8af025f634ab1bdb43a04eac96f1c3" category="list-text"><block ref="5e8af025f634ab1bdb43a04eac96f1c3" category="inline-link-rx"></block></block>
   <block id="d4242c48bd0d5641374fbc107c7d9f14" category="inline-link">ORA-00308 エラーで処理が失敗します</block>
   <block id="79ca58af823b457a1798d606cfd6d6ae" category="list-text"><block ref="79ca58af823b457a1798d606cfd6d6ae" category="inline-link-rx"></block></block>
   <block id="73ee3801ba5f54ed62d44865741a046d" category="paragraph">アーカイブログボリュームが保護されておらず、データボリュームが保護されている場合は、セカンダリバックアップからリカバリを伴うリストアを実行できません。リストアするには、「 * リカバリなし * 」を選択する必要があります。</block>
@@ -9876,4 +9874,6 @@ Snapshot処理。</block>
   <block id="881cbdbe2345b7472ef428b8c524734a" category="admonition">SnapCenter Advanced および SnapCenter NAS ファイルサービスのライセンスは廃止され、現在は提供されていません。Amazon FSx for NetApp ONTAPおよびCloud Volumes ONTAPでは、容量ベースのライセンスは不要になりました。Azure NetApp Filesには標準ライセンスと容量ベースライセンスは必要ありません。</block>
   <block id="eba5bfa2c0dc8d9f24998cf70fa891a6" category="list-text">[Not Applicable]は、Amazon FSx for NetApp ONTAP、Cloud Volumes ONTAP、ONTAP Select、またはセカンダリストレージプラットフォーム上にストレージコントローラがあるため、SnapManager Suiteライセンスが適用されないことを示します。</block>
   <block id="a2706d1c365c79f6f2378228b67eb95a" category="admonition">Azure NetApp Filesには標準ライセンスと容量ベースライセンスは必要ありません。</block>
+  <block id="9e19caeb431a5e29a1a63e3cee4b36c9" category="inline-link">ONTAPによるOracleデータ保護</block>
+  <block id="d118010bb2b3542007c6749bfd237123" category="list-text"><block ref="d118010bb2b3542007c6749bfd237123" category="inline-link-rx"></block></block>
 </blocks>
