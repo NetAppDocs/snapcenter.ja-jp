@@ -39,6 +39,9 @@ NOTE: このコマンドは権限ごとに実行する必要があります。
 
 クラスタロールを作成して権限を割り当てるには、いくつかの ONTAP CLI コマンドを実行する必要があります。
 
+
+NOTE: SnapCenter 5.0以降では、クラスタ管理者ユーザはREST APIでのみサポートされます。クラスタ管理者以外のユーザを使用してロールを作成する場合は、ZAPIを使用してください。
+
 * `security login role create -vserver Cluster_name or cluster_name -role Role_Name -cmddirname "metrocluster show" -access readonly`
 * `security login role create -vserver Cluster_name or cluster_name -role Role_Name -cmddirname "cluster identity modify" -access all`
 * `security login role create -vserver Cluster_name -role Role_Name -cmddirname "cluster identity show" -access all`

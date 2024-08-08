@@ -39,6 +39,9 @@ NOTE: このコマンドは権限ごとに実行する必要があります。
 
 SVM ロールを作成して権限を割り当てるには、いくつかの ONTAP CLI コマンドを実行する必要があります。
 
+
+NOTE: 5.0以降では、SVM管理者ユーザはREST APIでのみサポートされます。SVM管理者以外を使用してロールを作成する場合は、ZAPIを使用してください。
+
 * `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "snapmirror list-destinations" -access all`
 * `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "event generate-autosupport-log" -access all`
 * 「security login role create -vserver svm_name -role SVM_Role_Name -cmddirname」job history show「-access all

@@ -9876,4 +9876,6 @@ Snapshot処理。</block>
   <block id="a2706d1c365c79f6f2378228b67eb95a" category="admonition">Azure NetApp Filesには標準ライセンスと容量ベースライセンスは必要ありません。</block>
   <block id="9e19caeb431a5e29a1a63e3cee4b36c9" category="inline-link">ONTAPによるOracleデータ保護</block>
   <block id="d118010bb2b3542007c6749bfd237123" category="list-text"><block ref="d118010bb2b3542007c6749bfd237123" category="inline-link-rx"></block></block>
+  <block id="26d0f7d5ea2b87e82f98d6e622ecf6a0" category="admonition">5.0以降では、SVM管理者ユーザはREST APIでのみサポートされます。SVM管理者以外を使用してロールを作成する場合は、ZAPIを使用してください。</block>
+  <block id="3955db71dd681bf23ceee85c567a0129" category="admonition">SnapCenter 5.0以降では、クラスタ管理者ユーザはREST APIでのみサポートされます。クラスタ管理者以外のユーザを使用してロールを作成する場合は、ZAPIを使用してください。</block>
 </blocks>
