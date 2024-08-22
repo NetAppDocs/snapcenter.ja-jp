@@ -72,7 +72,7 @@ NOTE: セカンダリデスティネーションに SnapCenter Standard ライ�
 
 == ホストおよびポートの要件
 
-ONTAP およびアプリケーションプラグインの最小要件については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=117008;&solution=1259&isHWU&src=IMT["Interoperability Matrix Tool で確認してください"^]。
+ONTAPおよびアプリケーションプラグインの最小要件については https://imt.netapp.com/matrix/imt.jsp?components=121030;&solution=1259&isHWU&src=IMT[]、[Interoperability Matrix Tool^]を参照してください。
 
 [cols="1,3"]
 |===
@@ -82,7 +82,7 @@ ONTAP およびアプリケーションプラグインの最小要件につい�
  a| 
 オペレーティングシステム（ 64 ビット）
  a| 
-を参照してください https://imt.netapp.com/matrix/imt.jsp?components=117008;&solution=1259&isHWU&src=IMT["Interoperability Matrix Tool で確認してください"^]
+を参照し https://imt.netapp.com/matrix/imt.jsp?components=121030;&solution=1259&isHWU&src=IMT["Interoperability Matrix Tool で確認してください"^]
 
 
 

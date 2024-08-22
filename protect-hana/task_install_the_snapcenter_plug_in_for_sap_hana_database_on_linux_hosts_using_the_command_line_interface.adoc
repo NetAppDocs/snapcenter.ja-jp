@@ -20,7 +20,7 @@ SnapCenter ユーザインターフェイス（ UI ）を使用して、 SnapCen
 サポートされる構成の最新情報については、 Interoperability Matrix Tool （ IMT ）を参照してください。
 
 +
-https://imt.netapp.com/matrix/imt.jsp?components=117015;&solution=1259&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"]
+https://imt.netapp.com/matrix/imt.jsp?components=121029;&solution=1259&isHWU&src=IMT[]
 
 * SnapCenter Plug-in for SAP HANA Database は、 SnapCenter Plug-ins Package for Linux の一部です。SnapCenter Plug-ins Package for Linux をインストールする前に、 Windows ホストに SnapCenter がインストールされている必要があります。
 

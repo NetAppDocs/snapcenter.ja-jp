@@ -26,7 +26,7 @@ NetApp ONTAP の Amazon FSX の詳細については、を参照してくださ�
 
 * SnapCenter では、さまざまなアプリケーションやデータベースの保護がサポートされます。
 +
-サポートされているアプリケーションおよびデータベースの詳細については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=116859;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。
+サポートされているアプリケーションとデータベースの詳細については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。
 
 * SnapCenter 4.9 P1以降では、Amazon Web Services（AWS）のSoftware-Defined Data Center（SDDC）環境上のVMware Cloudで、OracleとMicrosoft SQLのワークロードの保護がサポートされます。
 +

@@ -20,7 +20,7 @@ SnapCenter Plug-in for PostgreSQLクラスタは、SnapCenterユーザインタ�
 サポートされる構成の最新情報については、 Interoperability Matrix Tool （ IMT ）を参照してください。
 
 +
-https://imt.netapp.com/matrix/imt.jsp?components=117015;&solution=1259&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"]
+https://imt.netapp.com/matrix/imt.jsp?components=121069;&solution=1259&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"]
 
 * SnapCenter Plug-in for PostgreSQLクラスタは、SnapCenter Plug-ins Package for Linuxに含まれています。SnapCenter Plug-ins Package for Linuxをインストールする前に、SnapCenterをWindowsホストにインストールしておく必要があります。
 

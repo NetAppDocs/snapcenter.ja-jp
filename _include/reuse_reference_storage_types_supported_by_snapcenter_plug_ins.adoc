@@ -4,8 +4,7 @@
 
 SnapCenter は、物理マシンと仮想マシンの両方でさまざまなストレージタイプをサポートしています。ホストに対応したパッケージをインストールする前に、ストレージタイプがサポートされているかどうかを確認する必要があります。
 
-Windows Server では、 SnapCenter プロビジョニングとデータ保護がサポートされます。サポートされているバージョンの最新情報については、を参照してください
-https://imt.netapp.com/matrix/imt.jsp?components=116859;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。
+Windows Serverでは、SnapCenterプロビジョニングとデータ保護がサポートされています。サポートされるバージョンの最新情報についてはhttps://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT[]、NetApp Interoperability Matrix Tool^]を参照してください。
 
 |===
 | マシン | ストレージタイプ | を使用してプロビジョニング | サポートのメモ 

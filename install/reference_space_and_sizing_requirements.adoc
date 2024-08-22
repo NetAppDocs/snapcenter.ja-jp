@@ -24,15 +24,13 @@ Microsoft Windows の場合
 
 サポートされているのは、英語版、ドイツ語版、日本語版、簡体字中国語版のオペレーティングシステムのみです。
 
-サポートされているバージョンの最新情報については、を参照してください
-https://imt.netapp.com/matrix/imt.jsp?components=116859;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。
+サポートされているバージョンの最新情報については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=121033;&solution=1258&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。
  a| 
 * Red Hat Enterprise Linux（RHEL）8および9
 * SUSE Linux Enterprise Server（SLES）15
 
 
-サポートされているバージョンの最新情報については、を参照してください
-https://imt.netapp.com/matrix/imt.jsp?components=116859;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。
+サポートされているバージョンの最新情報については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=121032;&solution=1258&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。
 
 
 
