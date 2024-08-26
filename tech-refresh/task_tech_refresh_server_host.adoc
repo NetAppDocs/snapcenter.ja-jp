@@ -20,7 +20,7 @@ SnapCenterサーバホストの更新が必要な場合は、同じバージョ�
 
 
 . SnapCenter管理者ユーザとしてログインします。
-. 次のいずれかのAPIを使用して、古いホストにSnapCenterサーバのバックアップを作成します。 `/5.0/server/backup` または、_New-SmServerBackup_というコマンドレットを使用します。
+. API：またはコマンドレット：_New-SmServerBackup_を使用して、古いホストにSnapCenterサーバのバックアップを作成します `/<snapcenter_version>/server/backup` 。
 +
 
 NOTE: バックアップを作成する前に、スケジュールされたすべてのジョブを一時停止し、実行中のジョブがないことを確認します。
@@ -30,9 +30,9 @@ NOTE: バックアップを作成する前に、スケジュールされたす�
 IMPORTANT: 新しいドメインで実行されているSnapCenterサーバでバックアップをリストアする場合は、バックアップを作成する前に、古いSnapCenterホストに新しいドメインユーザを追加し、SnapCenter adminロールを割り当てる必要があります。
 
 . 古いホストから新しいホストにバックアップをコピーします。
-. 次のいずれかのAPIを使用して、新しいホストにSnapCenterサーバのバックアップをリストアします。 `/5.0/server/restore` またはコマンドレット：_Restore -SmServerBackup_。
+. API：またはコマンドレット：_Restore -SmServerBackup_を使用して、新しいホストにSnapCenterサーバのバックアップをリストアします `/<snapcenter_version>/server/restore` 。
 +
-リストアでは、デフォルトですべてのホストの新しいSnapCenterサーバURLが更新されます。更新をスキップする場合は、_- SkipSMSURLInHosts_attributeを使用し、次のいずれかのAPIを使用してを実行してサーバURLを個別に更新します。 `/5.0/server/configureurl` または、_Set-SmServerConfig_コマンドレットを使用します。
+リストアでは、デフォルトですべてのホストの新しいSnapCenterサーバURLが更新されます。更新をスキップする場合は、_- SkipSMSURLInHosts_attributeを使用し、API：またはコマンドレット：_Set -SmServerConfig_を使用してサーバURLを個別に更新します。 `/<snapcenter_version>/server/configureurl`
 
 +
 
@@ -49,7 +49,7 @@ NOTE: server_etc/host_entriesはリストアされません。古いサーバか
 
 NOTE: 古いSnapCenterホストでweb.configファイルを手動で更新した場合、更新は新しいホストにコピーされません。新しいホストのweb.configファイルでも、同じ変更を手動で行う必要があります。
 
-. SnapCenterサーバURLの更新をスキップした場合、またはリストアプロセス中にいずれかのホストが停止していた場合は、次のいずれかのAPIを使用してSnapCenterで管理されるすべてのホストまたは指定したホストで新しいサーバ名を更新します。 `/5.0/server/configureurl` または、_Set-SmServerConfig_コマンドレットを使用します。
+. SnapCenterサーバのURLの更新をスキップした場合、またはリストアプロセス中にいずれかのホストが停止していた場合は、API：またはコマンドレット：_Set -SmServerConfig_を使用して、SnapCenterで管理されているすべてのホストまたは指定したホストで新しいサーバ名を更新し `/<snapcenter_version>/server/configureurl` ます。
 . 新しいSnapCenterサーバから、すべてのホストでスケジュール済みジョブをアクティブ化します。
 
 
@@ -62,7 +62,7 @@ F5クラスタ内のノードを削除して新しいノードを追加すると
 F5クラスタにノードを追加する方法については、を参照してください。 https://docs.netapp.com/us-en/snapcenter/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html["F5 を使用して SnapCenter サーバのハイアベイラビリティを構成します"]。
 
 
-NOTE: F5クラスタのURLが変更された場合は、次のいずれかのAPIを使用して、すべてのホストでURLを更新できます。 `/5.0/server/configureurl` または、_Set-SmServerConfig_コマンドレットを使用します。
+NOTE: F5クラスタのURLが変更された場合は、API：またはコマンドレット：_Set-SmServerConfig_を使用して、すべてのホストでURLを更新できます `/<snapcenter_version>/server/configureurl` 。
 
 
 
@@ -74,7 +74,7 @@ NOTE: F5クラスタのURLが変更された場合は、次のいずれかのAPI
 
 == 古いSnapCenterサーバホストへのロールバック
 
-問題が発生した場合は、次のいずれかのAPIを使用してすべてのホストのSnapCenterサーバURLを更新することで、古いSnapCenterサーバホストを元に戻すことができます。 `/5.0/server/configureurl` または、_Set-SmServerConfig_コマンドレットを使用します。
+問題が発生した場合は、API：またはコマンドレット：_Set-SmServerConfig_を使用して、すべてのホストのSnapCenterサーバURLを更新することで、古いSnapCenterサーバホストを元に戻すことができます `/<snapcenter_version>/server/configureurl` 。
 
 
 
@@ -98,9 +98,9 @@ NOTE: F5クラスタのURLが変更された場合は、次のいずれかのAPI
 
 . SnapCenterサーバの古いバックアップを新しいホストにコピーします。
 . SnapCenter管理者ユーザとしてログインします。
-. 次のいずれかのAPIを使用して、新しいホストにSnapCenterサーバのバックアップをリストアします。 `/5.0/server/restore` またはコマンドレット：_Restore -SmServerBackup_。
+. API：またはコマンドレット：_Restore -SmServerBackup_を使用して、新しいホストにSnapCenterサーバのバックアップをリストアします `/<snapcenter_version>/server/restore` 。
 +
-リストアでは、デフォルトですべてのホストの新しいSnapCenterサーバURLが更新されます。更新をスキップする場合は、_- SkipSMSURLInHosts_属性を使用し、次のいずれかのAPIを使用してサーバURLを個別に更新します。 `/5.0/server/configureurl` または、_Set-SmServerConfig_コマンドレットを使用します。
+リストアでは、デフォルトですべてのホストの新しいSnapCenterサーバURLが更新されます。更新をスキップする場合は、_- SkipSMSURLInHosts_attributeを使用し、API：またはコマンドレット：_Set-SmServerConfig_を使用してサーバURLを個別に更新します `/<snapcenter_version>/server/configureurl` 。
 
 +
 
@@ -110,7 +110,7 @@ NOTE: プラグインホストがサーバのホスト名を解決できない�
 
 NOTE: server_etc/host_entriesはリストアされません。古いサーバから手動でリストアできます。
 
-. URLの更新をスキップした場合、またはリストアプロセス中にいずれかのホストが停止していた場合は、次のいずれかのAPIを使用してSnapCenterで管理されるすべてのホストまたは指定したホストで新しいサーバ名を更新します。 `/5.0/server/configureurl` または、_Set-SmServerConfig_コマンドレットを使用します。
+. URLの更新をスキップした場合、またはリストアプロセス中にいずれかのホストが停止した場合は、API：またはコマンドレット：_Set -SmServerConfig_を使用して、SnapCenterで管理されるすべてのホストまたは指定したホストで新しいサーバ名を更新します `/<snapcenter_version>/server/configureurl` 。
 
 
 
@@ -131,9 +131,9 @@ NOTE: server_etc/host_entriesはリストアされません。古いサーバか
 
 . SnapCenterサーバの古いバックアップを新しいホストにコピーします。
 . SnapCenter管理者ユーザとしてログインします。
-. 次のいずれかのAPIを使用して、新しいホストにSnapCenterサーバのバックアップをリストアします。 `/5.0/server/restore` またはコマンドレット：_Restore -SmServerBackup_。
+. API：またはコマンドレット：_Restore -SmServerBackup_を使用して、新しいホストにSnapCenterサーバのバックアップをリストアします `/<snapcenter_version>/server/restore` 。
 +
-リストアでは、デフォルトですべてのホストの新しいSnapCenterサーバURLが更新されます。更新をスキップする場合は、_- SkipSMSURLInHosts_属性を使用し、次のいずれかのAPIを使用してサーバURLを個別に更新します。 `/5.0/server/configureurl` または、_Set-SmServerConfig_コマンドレットを使用します。
+リストアでは、デフォルトですべてのホストの新しいSnapCenterサーバURLが更新されます。更新をスキップする場合は、_- SkipSMSURLInHosts_attributeを使用し、API：またはコマンドレット：_Set-SmServerConfig_を使用してサーバURLを個別に更新します `/<snapcenter_version>/server/configureurl` 。
 
 +
 
@@ -143,7 +143,7 @@ NOTE: プラグインホストがサーバのホスト名を解決できない�
 
 NOTE: server_etc/host_entriesはリストアされません。古いサーバから手動でリストアできます。
 
-. URLの更新をスキップした場合、またはリストアプロセス中にいずれかのホストが停止していた場合は、次のいずれかのAPIを使用してSnapCenterで管理されるすべてのホストまたは指定したホストで新しいサーバ名を更新します。 `/5.0/server/configureurl` または、_Set-SmServerConfig_コマンドレットを使用します。
+. URLの更新をスキップした場合、またはリストアプロセス中にいずれかのホストが停止した場合は、API：またはコマンドレット：_Set -SmServerConfig_を使用して、SnapCenterで管理されるすべてのホストまたは指定したホストで新しいサーバ名を更新します `/<snapcenter_version>/server/configureurl` 。
 . スタンドアロンホストをF5クラスタに変換します。
 +
 F5の設定方法については、を参照してください。 https://docs.netapp.com/us-en/snapcenter/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html["F5 を使用して SnapCenter サーバのハイアベイラビリティを構成します"]。

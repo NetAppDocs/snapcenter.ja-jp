@@ -77,7 +77,7 @@ SnapCenterのクラスタ間でSVM名が一意であることを確認します�
 
 NOTE: ホストに新しいLUNを接続すると、新しいシリアル番号が割り当てられます。Windowsファイルシステムの検出中、SnapCenterはすべての一意のシリアル番号を新しいリソースとして扱います。ストレージ機器更改時に、新しいストレージのLUNが同じドライブレターまたはパスでホストに接続されている場合、 SnapCenterでWindowsファイルシステムを検出すると、同じドライブレターまたはパスでマウントされていても、既存のリソースが削除済みとしてマークされ、新しいLUNが新しいリソースとして表示されます。リソースが削除済みとマークされているため、SnapCenterではストレージ機器更改の対象とはみなされず、古いリソースのバックアップはすべて失われます。ストレージの更新が発生する場合は、Windowsファイルシステムリソースの場合、ストレージの更新APIまたはコマンドレットを実行する前にリソースの検出を実行しないでください。
 
-. 次のいずれかのストレージ更新APIを実行します。 `/5.0/techrefresh/primarystorage` またはコマンドレット：_Invoke -SmTechRefreshPrimaryStorage_。
+. ストレージ更新API：またはコマンドレット：_invoke -SmTechRefreshPrimaryStorage_を実行します `/<snapcenter_version>/techrefresh/primarystorage` 。
 +
 
 NOTE: リソースにレプリケーション有効ポリシーが設定されている場合は、ストレージ更新後の最新のバックアップにセカンダリストレージの詳細が表示されます。
@@ -87,11 +87,11 @@ NOTE: リソースにレプリケーション有効ポリシーが設定され�
 .. SQL可用性グループ（AG）セットアップを使用している場合、バックアップはノードレベルで保持されます。ストレージ機器更改では、ノード名を入力する必要があります。
 .. Oracle Real Application Clusters（RAC）セットアップを使用している場合は、任意のノードでストレージ機器更改を実行できます。
 +
-_IsDryRun_属性はデフォルトでTrueに設定されています。ストレージが更新されているリソースが特定されます。リソースと変更されたストレージの詳細を表示するには、API「5.0/jobs/｛jobid｝」またはcmdlet_Get-SmJobSummaryReport_を実行します。
+_IsDryRun_属性はデフォルトでTrueに設定されています。ストレージが更新されているリソースが特定されます。リソースと変更されたストレージの詳細を表示するには、API「<API_version>/jobs/ SnapCenter｛jobid｝」またはcmdlet_Get-SmJobSummaryReport_を実行します。
 
 
 
-. ストレージの詳細を確認したら、_IsDryRun_attributeをFalseに設定し、ストレージ更新APIを実行します。 `/5.0/techrefresh/primarystorage` またはコマンドレット：_Invoke -SmTechRefreshPrimaryStorage_。
+. ストレージの詳細を確認したら、_IsDryRun_属性をFalseに設定し、ストレージ更新API：またはコマンドレット：_invoke -SmTechRefreshPrimaryStorage_を実行し `/<snapcenter_version>/techrefresh/primarystorage` ます。
 +
 古いバックアップのストレージの詳細が更新されます。
 
@@ -102,7 +102,7 @@ APIまたはコマンドレットは同じホストで複数回実行できま�
 
 NOTE: ONTAPでクローン階層を移行することはできません。移行対象のストレージにSnapCenter内にクローンメタデータがある場合、クローニングされたリソースは独立したリソースとしてマークされます。クローンメタデータのクローンは再帰的に削除されます。
 
-. （オプション）すべてのスナップショットを古いプライマリストレージから新しいプライマリストレージに移動しない場合は、次のAPIを実行します。 `/5.0/hosts/primarybackupsexistencecheck` または、cmdlet_invoke-SmPrimaryBackupsExistenceCheck_を実行します。
+. （オプション）すべてのSnapshotを古いプライマリストレージから新しいプライマリストレージに移動しない場合は、次のAPIまたはcmdlet_invoke -SmPrimaryBackupsExistenceCheck_を実行し `/<snapcenter_version>/hosts/primarybackupsexistencecheck` ます。
 +
 これにより、新しいプライマリストレージでSnapshotの存在チェックが実行され、対応するバックアップがSnapCenterでの処理に使用できないことがマークされます。
 
@@ -138,7 +138,7 @@ SnapCenterで最新のストレージフットプリントを特定するには�
 
 IMPORTANT: この処理が完了するまでお待ちください。完了前に次の手順に進むと、SnapCenterによって古いセカンダリSnapshotメタデータが完全に失われます。
 
-. ホスト内のすべてのリソースのバックアップが作成されたら、セカンダリストレージ更新APIを実行します。 `/5.0/techrefresh/secondarystorage` またはコマンドレット：_Invoke -SmTechRefreshSecondaryStorage_。
+. ホスト内のすべてのリソースのバックアップが作成されたら、セカンダリストレージ更新API：またはコマンドレット：_Invoke -SmTechRefreshSecondaryStorage_を実行し `/<snapcenter_version>/techrefresh/secondarystorage` ます。
 +
 指定したホスト内の古いバックアップのセカンダリストレージの詳細が更新されます。
 

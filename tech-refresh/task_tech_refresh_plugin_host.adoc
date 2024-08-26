@@ -91,7 +91,7 @@ NOTE: デフォルトでは、次に使用可能なドライブが自動的に�
 
 . 新しいホストをSnapCenterに追加します。
 . すべてのリソースが検出されたかどうかを確認します。
-. ホスト更新APIを実行します。 `/5.0/techrefresh/host` またはコマンドレット：_invoke -SmTechRefreshHost_。
+. ホスト更新API：またはコマンドレット：_invoke -SmTechRefreshHost_を実行します `/<snapcenter_version>/techrefresh/host` 。
 +
 
 NOTE: ドライランはデフォルトで有効になっており、再リンクされる一致するリソースが識別されます。リソースを確認するには、API「/jobs/｛jobid｝」またはcmdlet_Get-SmJobSummaryReport_を実行します。
