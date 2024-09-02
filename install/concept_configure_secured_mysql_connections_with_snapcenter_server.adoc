@@ -95,16 +95,16 @@ ssl-key="C:/ProgramData/NetApp/SnapCenter/MySQL Data/Data/client-key.pem"
 ----
 . インターネットインフォメーションサーバー (IIS) で SnapCenter サーバーの Web アプリケーションを停止します。
 . MySQL サービスを再起動します。
-. web.config ファイルで MySQLProtocol キーの値を更新します。
+. MySQLProtocolキーの値をSnapManager .Web.UI.dll.configファイルで更新します。
 +
-次の例は、 web.config ファイルで更新された MySQLProtocol キーの値を示しています。
+次の例は、SnapManager .Web.UI.dll.configファイルで更新されたMySQLProtocolキーの値を示しています。
 
 +
 [listing]
 ----
 <add key="MySQLProtocol" value="SSL" />
 ----
-. my.ini ファイルの [client] セクションに指定されたパスで web.config ファイルを更新します。
+. my.iniファイルの[client]セクションに指定されているパスを使用して、SnapManager .Web.UI.dll.configファイルを更新します。
 +
 次の例は、 my.ini ファイルの [client] セクションで更新されたパスを示しています。
 
@@ -279,16 +279,16 @@ ssl-key="C:/ProgramData/NetApp/SnapCenter/MySQL Data/Data/server-key.pem"
 
 . 両方の HA ノードのインターネットインフォメーションサーバ (IIS) で、 SnapCenter サーバ Web アプリケーションを停止します。
 . 両方の HA ノードで MySQL サービスを再起動します。
-. 両方の HA ノードについて、 web.config ファイルで MySQLProtocol キーの値を更新します。
+. 両方のHAノードのMySQLProtocolキーの値をSnapManager .Web.UI.dll.configファイルで更新します。
 +
-次の例は、 web.config ファイルで更新された MySQLProtocol キーの値を示しています。
+次の例は、SnapManager .Web.UI.dll.configファイルで更新されたMySQLProtocolキーの値を示しています。
 
 +
 [listing]
 ----
 <add key="MySQLProtocol" value="SSL" />
 ----
-. 両方の HA ノードについて、 my.ini ファイルの [client] セクションで指定したパスで web.config ファイルを更新します。
+. 両方のHAノードについて、my.iniファイルの[client]セクションで指定したパスを使用してSnapManagerの.Web.UI.dll.configファイルを更新します。
 +
 次の例は、 my.ini ファイルの [client] セクションで更新されたパスを示しています。
 

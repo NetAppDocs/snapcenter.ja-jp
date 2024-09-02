@@ -4,7 +4,7 @@
 
 SnapCenter は、物理マシンと仮想マシンの両方でさまざまなストレージタイプをサポートしています。ホストに対応したパッケージをインストールする前に、ストレージタイプがサポートされているかどうかを確認する必要があります。
 
-Windows Serverでは、SnapCenterプロビジョニングとデータ保護がサポートされています。サポートされるバージョンの最新情報についてはhttps://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT[]、NetApp Interoperability Matrix Tool^]を参照してください。
+Windows Serverでは、SnapCenterプロビジョニングとデータ保護がサポートされています。サポートされているバージョンの最新情報については、を参照して https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]ください。
 
 |===
 | マシン | ストレージタイプ | を使用してプロビジョニング | サポートのメモ 
@@ -38,8 +38,6 @@ Storage Virtual Machine （ SVM ）上の SMB3 （ CIFS ）共有
 SnapCenter GUI または PowerShell コマンドレット
  a| 
 プロビジョニングのみがサポートされます。
-
-SnapCenter プロトコルを使用してデータや共有をバックアップすることはできません。
 
 
 
@@ -81,8 +79,6 @@ SVM 上の SMB3 共有に接続されたゲストシステム
 SnapCenter GUI または PowerShell コマンドレット
  a| 
 プロビジョニングのみがサポートされます。
-
-SnapCenter プロトコルを使用してデータや共有をバックアップすることはできません。
 
 
 
@@ -130,8 +126,6 @@ SVM 上の SMB3 共有に接続されたゲストシステム
 SnapCenter GUI または PowerShell コマンドレット
  a| 
 プロビジョニングのみがサポートされます。
-
-SnapCenter プロトコルを使用してデータや共有をバックアップすることはできません。
 
 
 NOTE: Hyper-V のパススルーディスク、およびネットアップストレージでプロビジョニングされた VHD （ x ）でのデータベースのバックアップはサポートされていません。
