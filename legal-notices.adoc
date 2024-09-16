@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: legal-notices.html 
 keywords: copyrights, notice, trademarks, patents, privacy, open source 
-summary: 著作権に関する声明、商標、特許などにアクセスできます。 
+summary: e9c44bbfd795a5d63d74c6a77afee70d 
 ---
-= 法的通知
+= 30d965eef5ba25c6b9998ae38270b43e
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,40 +14,40 @@ summary: 著作権に関する声明、商標、特許などにアクセスで�
 
 
 [role="lead"]
-著作権に関する声明、商標、特許などにアクセスできます。
+e9c44bbfd795a5d63d74c6a77afee70d
 
 
 
-== 著作権
+== 6016a2b341113bf496b719905398ecd2
 
-link:https://www.netapp.com/company/legal/copyright/["https://www.netapp.com/company/legal/copyright/"^]
-
-
-
-== 商標
-
-NetApp 、 NetApp のロゴ、および NetApp の商標ページに記載されているマークは、 NetApp, Inc. の商標です。その他の会社名および製品名は、それぞれの所有者の商標である場合があります。
-
-link:https://www.netapp.com/company/legal/trademarks/["https://www.netapp.com/company/legal/trademarks/"^]
+a1a9afcf552a769c282769271829889a
 
 
 
-== 特許
+== 126a02652da6de02962cf1b654fd6376
 
-ネットアップが所有する特許の最新リストは、次のサイトで入手できます。
+c4ce4761e466527d26b3e3d5ed1006fd
 
-link:https://www.netapp.com/pdf.html?item=/media/11887-patentspage.pdf["https://www.netapp.com/pdf.html?item=/media/11887-patentspage.pdf"^]
-
-
-
-== プライバシーポリシー
-
-link:https://www.netapp.com/company/legal/privacy-policy/["https://www.netapp.com/company/legal/privacy-policy/"^]
+5d545fe5152641e2ebe654e336e520e5
 
 
 
-== オープンソース
+== be89498d2f8a22ce47c02ba9795fe2af
 
-通知ファイルには、ネットアップソフトウェアで使用されるサードパーティの著作権およびライセンスに関する情報が記載されています。
+d0b19d36be2c5f16e9aef46c8a452d3d
 
-https://library.netapp.com/ecm/ecm_download_file/ECMLP3323471["SnapCenter 6.0に関する注意事項"^]
+dd38f906b37d412de7d1c1dcf4cbf31c
+
+
+
+== 56c34c6410dd45c5cec44149ad0ce037
+
+2352c4e1f4d0024ade0869e00e6243f4
+
+
+
+== c0227cef6f07a8cd2ac72f2945b031aa
+
+9b73989307c1975dfa4d5e1581e4afe8
+
+936428293f9124add31f34823746f405

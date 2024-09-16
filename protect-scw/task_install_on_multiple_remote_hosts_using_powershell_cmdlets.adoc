@@ -2,28 +2,28 @@
 permalink: protect-scw/task_install_on_multiple_remote_hosts_using_powershell_cmdlets.html 
 sidebar: sidebar 
 keywords: install, snapcenter 
-summary: SnapCenter Plug-in for Microsoft Windows を複数のホストに一度にインストールする場合は、 Install-SmHostPackage PowerShell コマンドレットを使用します。 
+summary: 6c713d56e86f927e1bd66c7de2ed52c1 
 ---
-= PowerShell コマンドレットを使用して、複数のリモートホストに SnapCenter Plug-in for Microsoft Windows をインストールします
+= 5e384e3303c9f77f2d01c5c5ef33a4d5
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter Plug-in for Microsoft Windows を複数のホストに一度にインストールする場合は、「 Install-SmHostPackage 」 PowerShell コマンドレットを使用します。
+0d9483465e761bb4492b6191a84c809a
 
-プラグインをインストールする各ホストで、ローカル管理者の権限を持つドメインユーザとして SnapCenter にログインしている必要があります。
+29ebee46d261b82db54007c3c27d7c62
 
-.手順
-. PowerShell を起動します。
-. SnapCenter サーバ・ホストで 'Open-SmConnection' コマンドレットを使用してセッションを確立し ' 認証情報を入力します
-. 「 Add-SmHost 」コマンドレットと必要なパラメータを使用して、スタンドアロン・ホストまたはクラスタを SnapCenter に追加します。
+.f3a29486bed19a90f2da6d007818b427
+. 31ce9f1bb2cc71cb2dc10cfb787f6377
+. 52ac29fd1849b94f98ca82ac6e71bb20
+. d6f103dff6712467f9550cf016599f13
 +
-コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+74db7181476f94f0e2927d8c8d98cb97
 
-. Install-SmHostPackage コマンドレットと必要なパラメータを使用して、複数のホストにプラグインをインストールします。
+. f0d699c721a4dfe5de85ad5df9660579
 +
-プラグインを手動でインストールし ' プラグインをインストールするための要件をホストが満たしているかどうかを検証しない場合は '-skipprecheck オプションを使用できます
+b9eabe260cd8a0a2c241b35d09dfb062
 
 

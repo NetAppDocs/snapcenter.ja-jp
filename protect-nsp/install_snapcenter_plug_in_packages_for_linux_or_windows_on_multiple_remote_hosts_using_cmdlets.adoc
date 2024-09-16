@@ -2,29 +2,29 @@
 permalink: protect-nsp/install_snapcenter_plug_in_packages_for_linux_or_windows_on_multiple_remote_hosts_using_cmdlets.html 
 sidebar: sidebar 
 keywords: install, snapcenter 
-summary: Install-SmHostPackage PowerShell コマンドレットを使用すると、複数のホストに Linux または Windows 向け SnapCenter プラグインパッケージを同時にインストールできます。 
+summary: 65c7bdc0c946f828cd443cfb3a30afb1 
 ---
-= コマンドレットを使用して、複数のリモートホストに Linux または Windows 用の SnapCenter プラグインパッケージをインストールします
+= 85e03b5aac12ea0d7a83ca6e7fa64654
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Install-SmHostPackage PowerShell コマンドレットを使用すると、複数のホストに Linux または Windows 向け SnapCenter プラグインパッケージを同時にインストールできます。
+65c7bdc0c946f828cd443cfb3a30afb1
 
-.作業を開始する前に
-ホストを追加するユーザには、ホストに対する管理者権限が必要です。
+.135b308ed83c53f1516b7c754566d1c4
+6728b4a43abbebd3cc07a2cacc5e0c06
 
-.手順
-. PowerShell を起動します。
-. SnapCenter サーバホストで、 Open-SmConnection コマンドレットを使用してセッションを確立し、クレデンシャルを入力します。
-. Install-SmHostPackage コマンドレットと必要なパラメータを使用して、複数のホストにプラグインをインストールします。
+.f3a29486bed19a90f2da6d007818b427
+. 31ce9f1bb2cc71cb2dc10cfb787f6377
+. 763ba2973bbd52fd1b9e6ef8a17001ff
+. c82d11661e23f7e1c1c9dba5537554ed
 +
-コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+74db7181476f94f0e2927d8c8d98cb97
 
 +
-プラグインを手動でインストールし、プラグインをインストールするための要件をホストが満たしているかどうかを検証しない場合は、 -skipprecheck オプションを使用できます。
+9e28cd7963a581ccc44be9795e68b347
 
-. リモートインストールのクレデンシャルを入力します。
+. fb6b3e3a502ac26107b3d7836e7155db
 

@@ -2,57 +2,57 @@
 permalink: protect-azure/backup-sap-hana-databases.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for SAP HANA Database, back up, databases, Azure NetApp Files 
-summary: '[Resources]ページからリソースをバックアップします。' 
+summary: 7ce3afddd78d2c95f3288b6c71328476 
 ---
-= Azure NetApp Filesで実行されているSAP HANAデータベースのバックアップ
+= 10ee6df71b74c57a6b9f1595f3efce16
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-どのリソースグループにも含まれていないリソースは、のページからバックアップすることができます。
+1c9948efe4bec2e09636b9c816bd9d20
 
-.手順
-. 左側のナビゲーションペインで、*[リソース]*を選択し、リストから適切なプラグインを選択します。
-. リソースページで、リソースタイプに基づいて *View*] ドロップダウンリストからリソースをフィルタリングします。
-. バックアップするリソースを選択します。
-. [Resource]ページで、*[Use custom name format for Snapshot copy]*を選択し、Snapshot名に使用するカスタムの名前形式を入力します。
-. [ アプリケーションの設定 ] ページで、次の操作を行います。
+.f3a29486bed19a90f2da6d007818b427
+. 0b5045b3b137ebb25cf08b5081075426
+. a2286f0c6fbfecb0501c43aa965242b6
+. 45b6721b8137bd82de1f2497a525d57a
+. 9322b02cbab1e9e30696c6f18aa5b45e
+. 007bb45dbc12aff746ee53defa1f784f
 +
-.. [Backups]*矢印を選択して、追加のバックアップオプションを設定します。
-.. [Scripts]*の矢印を選択して、休止、Snapshot、および休止解除の処理のプリコマンドとポストコマンドを実行します。
-.. [Custom Configurations]*の矢印を選択し、このリソースを使用するすべてのジョブに必要なカスタム値のペアを入力します。
-.. Snapshotコピーツール> SnapCenter without File System Consistency *を選択してSnapshotを作成します。
+.. 13c7c834f7b8414cef2ddebbd37e4d86
+.. 6fa0e3128174a7e08f019a67d401084d
+.. 820ce0339ce64af93adc295b0695c2f8
+.. e809483d1a49ec9268e55af716571abf
 +
-[ファイルシステムの整合性]オプションは、Windowsホストで実行されているアプリケーションにのみ適用されます。
+40defed757ae2b8a311e0272f6d77f1b
 
 
 
-. [Policies] ページで、次の手順を実行します。
+. 53899dcc4360d3b8622ce5dc08a12950
 +
-.. ドロップダウンリストから 1 つ以上のポリシーを選択します。
-.. *を選択しますimage:../media/add_policy_from_resourcegroup.gif[""]* スケジュールを設定するポリシーの [ スケジュールの設定 ] 列。
-.. [Add schedules for policy_policy_name_]ダイアログボックスで、スケジュールを設定し、*[OK]*を選択します。
+.. 70c30c71587e2d0c71b7f9e97a8aad7d
+.. c59876ddcf6af9e6a82eee54645805c2
+.. 100eb4bb64628d6bc8890851c8173103
 +
-_policy_name_は 、選択したポリシーの名前です。
+90334c9b6a705f8c6dafb182257f149b
 
 
 
-. [ 通知 ] ページの [ 電子メールの設定 *] ドロップダウンリストから、電子メールを送信するシナリオを選択します。
+. 30b65b6968f11ce5399cacf995839f65
 +
-また、送信者と受信者の E メールアドレス、および E メールの件名を指定する必要があります。SMTP は、 * Settings * > * Global Settings * でも設定する必要があります。
+902d6ec48bd5e4115dbca7fd7cfb67a8
 
-. 概要を確認し、*[終了]*を選択します。
-. [今すぐバックアップ]*を選択します。
-. Backup （バックアップ）ページで、次の手順を実行します。
+. 7444cb400c788a3d3aad71fb264fbbee
+. 5477ea177e290e8ac1c03a7ee8f2a92b
+. 4a1c51520bfb3d170a967d4c218b52bf
 +
-.. リソースに複数のポリシーが関連付けられている場合は、*[ポリシー]*ドロップダウンリストから、バックアップに使用するポリシーを選択します。
+.. 2c7804d18e9ae000973714b450e90bee
 +
-オンデマンドバックアップ用に選択したポリシーがバックアップスケジュールに関連付けられている場合は、スケジュールタイプに指定した保持設定に基づいてオンデマンドバックアップが保持されます。
+b1b9720160580fd5949d50bf10097dc5
 
 
 
-. 「 * Backup * 」を選択します。
-. 操作の進行状況を監視するには、 * Monitor * > * Jobs * をクリックします。
+. fec2251f36365f1f041be06f3809bae9
+. 8b9460bf38a68108bcdd278a386b3156
 

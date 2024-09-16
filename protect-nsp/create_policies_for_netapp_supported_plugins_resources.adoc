@@ -2,164 +2,163 @@
 permalink: protect-nsp/create_policies_for_netapp_supported_plugins_resources.html 
 sidebar: sidebar 
 keywords: create policies, custom plnetapp_supported_pluginsug-in 
-summary: SnapCenterを使用してNetAppでサポートされるプラグイン固有のリソースをバックアップする前に、バックアップ対象のリソースまたはリソースグループのバックアップポリシーを作成する必要があります。 
+summary: c8decdbf430021dfc0d8d243973909b6 
 ---
-= NetAppでサポートされるプラグインリソースのポリシーの作成
+= 3dd6642ca499d1f7ea549635f37b1c82
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenterを使用してNetAppでサポートされるプラグイン固有のリソースをバックアップする前に、バックアップ対象のリソースまたはリソースグループのバックアップポリシーを作成する必要があります。
+c8decdbf430021dfc0d8d243973909b6
 
-.作業を開始する前に
-* バックアップ戦略を定義しておく必要があります。
+.135b308ed83c53f1516b7c754566d1c4
+* 62e6a1133bb3b325c9c50ce9cf7ba340
 +
-詳細については、NetAppでサポートされるプラグインのデータ保護戦略の定義に関する情報を参照してください。
+19648bb3ed0d97dbf793f0f414a626a8
 
-* データ保護の準備が完了している必要があります。
+* 989d21bc746b2aa2290eee8f0b763fb5
 +
-データ保護の準備作業には、 SnapCenter のインストール、ホストの追加、ストレージシステム接続の作成、リソースの追加などがあります。
+c8c80a063313a16e12f03127e0328584
 
-* ミラー処理またはバックアップ処理を実行する場合は、 Storage Virtual Machine （ SVM ）をユーザに割り当てる必要があります。
+* 6ba578b908540138040a1f4cf18b620a
 +
-Snapshotをミラーまたはバックアップにレプリケートする場合は、ソースボリュームとデスティネーションボリュームの両方に対応するSVMをSnapCenter管理者がユーザに割り当てておく必要があります。
+98a696ecad4b4de122d523af3692ca6e
 
-* 保護するリソースを手動で追加しておく必要があります。
+* aa641a0fba7a425b10304145921df291
 
 
-.このタスクについて
-* バックアップポリシーとは、バックアップを管理、スケジューリング、および保持する方法を定めた一連のルールです。レプリケーション、スクリプト、アプリケーション設定を指定することもできます。
-* ポリシーでオプションを指定しておくことで、別のリソースグループにポリシーを再利用して時間を節約することができます。
-* SnapLock
+.bbe48fb854ea022537208eeeff822f91
+* 0b15a431b87402bce4bdb3d69d72102d
+* f29871ab419804e987d1bfb5f3274244
+* acdc6b4f6edd40f37bce01247a32ff86
 +
-** [バックアップコピーを特定の日数だけ保持する]オプションを選択した場合は、SnapLockの保持期間を指定した保持日数以下にする必要があります。
-** Snapshotのロック期間を指定すると、保持期間が終了するまでSnapshotが削除されません。その結果、保持されるSnapshotの数がポリシーで指定されている数よりも多くなる可能性があります。
-** ONTAP 9.12.1以前のバージョンでは、リストアの一環としてSnapLockヴォールトSnapshotから作成されたクローンにSnapLockヴォールトの有効期限が継承されます。SnapLockの有効期限が過ぎた時点で、ストレージ管理者がクローンを手動でクリーンアップする必要があります。
+** 5645df6d49a903d3e2faf86e08d87813
+** 4fcec4fe97075a54e91b04a9e79f56ff
+** f2c85d871e7c5ae1520349e8a3869fea
 
 
 
 
 
-NOTE: プライマリSnapLock設定はSnapCenterバックアップポリシーで管理され、セカンダリSnapLock設定はONTAPで管理されます。
+NOTE: e07d82366bc71bb060becb82a0e09448
 
-.手順
-. 左側のナビゲーションペインで、 * 設定 * をクリックします。
-. [ 設定 ] ページで、 [ * ポリシー * ] をクリックします。
-. [ 新規作成（ New ） ] をクリックする。
-. [ 名前 ] ページで、ポリシー名と概要を入力します。
-. 設定ページで、次の手順を実行します。
+.f3a29486bed19a90f2da6d007818b427
+. c09e638cb8ee35698e3172550b12d8fa
+. 1f02ceac906eeeae0a190f295fe12381
+. a5bb4561024cbac1f26c361cff68730e
+. 3c6544f27197f56a0b07b5ed264760dc
+. c741f40a4fb7e6bd9a457120a09a6498
 +
-** スケジュールタイプを指定するには、「 * on demand * 」、「 * Hourly * 」、「 * Daily * 」、「 * Weekly * 」、または「 * Monthly * 」を選択します。
-+
-
-NOTE: リソースグループを作成する際に、バックアップ処理のスケジュール（開始日、終了日、頻度）を指定することができます。これにより、ポリシーとバックアップ間隔が同じである複数のリソースグループを作成できますが、各ポリシーに異なるバックアップスケジュールを割り当てることもできます。
-
-+
-image::../media/backup_settings.gif[バックアップ設定ページ]
-
+** b8d6ee3998ffd19868fb72c367024f19
 +
 
-NOTE: 午前 2 時にスケジュールを設定した場合、夏時間（ DST ）中はスケジュールはトリガーされません。
+NOTE: 42671d398be6103911a06f9936ab9855
 
-** Custom backup settings （カスタムバックアップ設定）セクションで、プラグインにキーバリュー形式で渡す必要がある特定のバックアップ設定を指定します。プラグインに渡すキーと値の組み合わせを複数指定することができます。
-
-
-. [Retention]*ページで、*[Backup Type]*ページで選択したバックアップタイプとスケジュールタイプの保持設定を指定します。
 +
-|===
-| 状況 | 作業 
+image::../media/backup_settings.gif[81c16fb186449755e5295df30b1def81]
+
++
+
+NOTE: a16b9f3426d9cfca29c06a875b667023
+
+** ce6e296d4e6f07e1cb707c2eaeaf04ad
 
 
- a| 
-一定数のSnapshotを保持
- a| 
-[保持するSnapshotコピーの総数]*を選択し、保持するSnapshotの数を指定します。
-
-Snapshotの数が指定した数を超えると、最も古いコピーから順にSnapshotが削除されます。
-
-
-NOTE: SnapVault レプリケーションを有効にする場合は、保持数を 2 以上に設定する必要があります。保持数を1に設定すると、新しいSnapshotがターゲットにレプリケートされるまで最初のSnapshotがSnapVault関係の参照Snapshotになるため、保持処理が失敗する可能性があります。
-
-
-NOTE: 最大保持数は、 ONTAP 9.4 以降のリソースでは 1018 、 ONTAP 9.3 以前のリソースでは 254 です。保持期間を基盤となる ONTAP バージョンの値よりも大きい値に設定すると、バックアップが失敗します。
-
-
-
- a| 
-Snapshotを特定の日数だけ保持
- a| 
-[Keep Snapshot copies for]*を選択し、Snapshotを削除するまでの日数を指定します。
-
-
-
- a| 
-Snapshotコピーのロック期間
- a| 
-[Snapshot locking period]を選択し、日、月、または年を選択します。
-
-SnapLock保持期間は100年未満にする必要があります。
-
-|===
-. [レプリケーション]*ページで、レプリケーション設定を指定します。
+. 73a585528f834ea371b34dbbb981d2fc
 +
 |===
-| フィールド | 手順 
+| 5d920b501536441ea32ecc24679c72a2 | c1325f6903ebb5ebb2bb519a73ddb1b0 
 
 
  a| 
-* ローカル Snapshot コピー作成後に SnapMirror を更新 *
+cee00ab879a477aea09f4b1f404b14fc
  a| 
-別のボリュームにバックアップセットのミラーコピーを作成する場合（ SnapMirror レプリケーション）は、このフィールドを選択します。
+b19465911649130b0ad9e7ed87b43f2f
 
-ONTAPの保護関係のタイプがミラーとバックアップの場合、このオプションのみを選択すると、プライマリで作成されたSnapshotはデスティネーションに転送されませんが、デスティネーションのリストに表示されます。このSnapshotをリストア処理の対象としてデスティネーションで選択すると、「Secondary Location is not available for the selected vaulted/mirrored backup」というエラーメッセージが表示されます。
-
-セカンダリレプリケーションでは、SnapLockの有効期限によってプライマリSnapLockの有効期限がロードされます。
-
-[Topology]ページの[Refresh]*ボタンをクリックすると、ONTAPから取得されたセカンダリおよびプライマリのSnapLock有効期限が更新されます。
-
-を参照して link:protect-nsp/view_custom_plug_in_resource_backups_and_clones_in_the_topology_page.html["NetAppでサポートされているプラグインリソースに関連するバックアップとクローンを[Topology]ページで表示する"]
+7537e0d42ad63b5bae18964aee575640
 
 
+NOTE: 95dfd611f9419ea2abdea4d84377aeab
 
- a| 
-* ローカル Snapshot コピー作成後に SnapVault を更新 *
- a| 
-ディスクツーディスクのバックアップレプリケーション（ SnapVault バックアップ）を実行する場合は、このオプションを選択します。
 
-セカンダリレプリケーションでは、SnapLockの有効期限によってプライマリSnapLockの有効期限がロードされます。[Topology]ページの[Refresh]*ボタンをクリックすると、ONTAPから取得されたセカンダリおよびプライマリのSnapLock有効期限が更新されます。
-
-SnapLockがONTAPのセカンダリ（SnapLock Vault）にのみ設定されている場合、[Topology]ページの*[Refresh]*ボタンをクリックすると、ONTAPから取得したセカンダリのロック期間が更新されます。
-
-SnapLock Vaultの詳細については、「バックアップでSnapshotをWORM状態にコミットする」を参照してください。
-デスティネーション
-
-を参照して link:protect-nsp/view_netapp_supported_plugins_resource_backups_and_clones_in_the_topology_page.html["NetAppでサポートされているプラグインリソースに関連するバックアップとクローンを[Topology]ページで表示する"]
+NOTE: 225ea283dca2590a2a542a782ac56927
 
 
 
  a| 
-* 二次ポリシーラベル *
+298d4bea409e146b0187ec130a39fb72
  a| 
-Snapshot ラベルを選択します。
-
-選択したSnapshotラベルに応じて、ラベルに一致するセカンダリSnapshot保持ポリシーがONTAPによって適用されます。
-
-
-NOTE: ローカル Snapshot コピーの作成後に「 * SnapMirror を更新」を選択した場合は、必要に応じてセカンダリポリシーラベルを指定できます。ただし、ローカル Snapshot コピーの作成後に「 * Update SnapVault 」を選択した場合は、セカンダリポリシーラベルを指定する必要があります。
+e736f4106d35f31cff1a51f091e56c06
 
 
 
  a| 
-* エラー再試行回数 *
+971b3c1d99a5aa6f2b187690d01d852c
  a| 
-処理が停止されるまでに試行できるレプリケーションの最大回数を入力します。
+7cd1d77689881addd5facf23970563df
+
+e7c020bcc5fc6c46eea0af3b48696115
+
+|===
+. 7a81b88ed3ac8ca5e67c201e36eca211
++
+|===
+| 21f831502a413a739e20cbf9f2eefe54 | 5e2ad6fd9deb412d871137094ee43ef0 
+
+
+ a| 
+53ef3d7584a54991b60fba81e93d201f
+ a| 
+1275946d22bd30ab4fa43a93760353bd
+
+7630e21f8142849489483b7354d0643a
+
+cad9d181a2b84fefcf0bef1326b5660c
+
+08ec8ae585abf03648f1d4e2cb173c27
+
+b39f96a8465a8bc1b39ac4874c77a9f7
+
+
+
+ a| 
+f5568337c8feae7a044bdfdfc53b4769
+ a| 
+a8026657de84cf12f52f1113eca69500
+
+59affd7f6a76b1148ee2481cf98f64e1
+
+7389de2f41b1c6eb64e4d894ab05e286
+
+d2f577cb0769d7c31f2785dd590b9f27
+
+76ca46e5d0a6b2e4c37239cdad03c953
+
+
+
+ a| 
+e95e870e56d78f07b5959255a76d16ab
+ a| 
+7236d615f588fda61e35cc1fa07c46cb
+
+9a5f5dfff4956ecfacfdc016d25c212b
+
+
+NOTE: f4d84b8f919668d97d6f1c1e6384cfac
+
+
+
+ a| 
+e14f71eb0e90d4bbfc5445a42a5c2a4c
+ a| 
+b1e8c3d6aa4aee19e19fd276e7c61e0b
 
 |===
 +
 
-NOTE: セカンダリストレージのSnapshotの最大数に達しないように、ONTAPでセカンダリストレージのSnapMirror保持ポリシーを設定する必要があります。
+NOTE: 4f2f5ecb6e9ddbc65d919530d4364ba6
 
-. 概要を確認し、 [ 完了 ] をクリックします。
+. fed1c121dc4f5a5484e5623e297385fb
 

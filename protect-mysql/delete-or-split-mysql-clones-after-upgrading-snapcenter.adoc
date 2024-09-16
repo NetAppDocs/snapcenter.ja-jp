@@ -2,29 +2,29 @@
 permalink: protect-mysql/delete-or-split-mysql-clones-after-upgrading-snapcenter.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for MySQL Database 
-summary: SnapCenter 4.3 にアップグレードすると、クローンは表示されなくなります。クローンを削除するか、クローンが作成されたリソースのトポロジページからクローンをスプリットします。 
+summary: 5c99d6884310f08896d7d62db7e21f33 
 ---
-= SnapCenterのアップグレード後にMySQLデータベースクローンを削除またはスプリットする
+= c454521ddc9c833a88969e46bb311833
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter 4.3 にアップグレードすると、クローンは表示されなくなります。クローンを削除するか、クローンが作成されたリソースのトポロジページからクローンをスプリットします。
+5c99d6884310f08896d7d62db7e21f33
 
-.このタスクについて
-非表示クローンのストレージフットプリントを確認するには、「 Get-SmClone-ListStorageFootprint 」コマンドを実行します
+.bbe48fb854ea022537208eeeff822f91
+ffcc2464d1648bd84da782c40ee03a5b
 
-.手順
-. remove-smbackup コマンドレットを使用して、クローニングしたリソースのバックアップを削除します。
-. remove-smresourcegroup コマンドレットを使用して、クローニングされたリソースのリソースグループを削除します。
-. remove-smprotectresource コマンドレットを使用して、クローニングされたリソースの保護を解除します。
-. [ リソース ] ページから親リソースを選択します。
+.f3a29486bed19a90f2da6d007818b427
+. e15be16f18110aa6552081897dc73df4
+. 5e3250069d03b2e8ebc3f52f29980a1b
+. 660aad66a7be47efbd614fddb4ff93b8
+. 2a251da54f18e5dbcf2e7040051b6002
 +
-リソースのトポロジページが表示されます。
+e984402842ada9bf4703b2df6ce206b3
 
-. Manage Copies （コピーの管理）ビューから、プライマリまたはセカンダリ（ミラーまたはレプリケートされた）ストレージシステムからクローンを選択します。
-. クローンを選択し、をクリックします image:../media/delete_icon.gif[""] クローンを削除するには、をクリックします image:../media/split_cone.gif[""] をクリックしてクローンをスプリットします。
-. [OK] をクリックします。
+. 9fbd721fcf9b4830fd6828081be6f142
+. 90021265060d6610a36239d59c25b4e1
+. a72cc47fad7d1846d19b085d2e77e5ba
 

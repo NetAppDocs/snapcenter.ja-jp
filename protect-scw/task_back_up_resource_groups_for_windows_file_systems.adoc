@@ -2,56 +2,56 @@
 permalink: protect-scw/task_back_up_resource_groups_for_windows_file_systems.html 
 sidebar: sidebar 
 keywords: backing up 
-summary: リソースグループは、ホストまたはクラスタ上のリソースの集まりです。リソースグループのバックアップ処理は、リソースグループに定義されているすべてのリソースを対象に実行されます。リソースグループは、リソースページからオンデマンドでバックアップできます。リソースグループにポリシーが適用され、かつスケジュールが設定されている場合は、スケジュールに従って自動的にバックアップが実行されます。 
+summary: ca17573aca9005e853182f441de0bfdf 
 ---
-= Windows ファイルシステムのリソースグループをバックアップする
+= 1dedd6c3a82ac28ce72dbc7e64c47db2
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-リソースグループは、ホストまたはクラスタ上のリソースの集まりです。リソースグループのバックアップ処理は、リソースグループに定義されているすべてのリソースを対象に実行されます。リソースグループは、リソースページからオンデマンドでバックアップできます。リソースグループにポリシーが適用され、かつスケジュールが設定されている場合は、スケジュールに従って自動的にバックアップが実行されます。
+ca17573aca9005e853182f441de0bfdf
 
-.作業を開始する前に
-* ポリシーを適用したリソースグループを作成しておく必要があります。
-* セカンダリストレージとの SnapMirror 関係があるリソースをバックアップする場合、ストレージユーザに割り当てられるロールには「 "'napmirror all" 」権限を含める必要があります。ただし、「 vsadmin 」ロールを使用している場合、「 'SnapMirro all 」権限は必要ありません。
-* リソースグループに異なるホストの複数のデータベースが含まれている場合は、ネットワークの問題が原因で、一部のホストでのバックアップ処理が遅くなる可能性があります。Set-SmConfigSettings PowerShell コマンドレットを使用して、 web.config で MaxRetryForUninitializedHosts の値を設定する必要があります
-
-
-
-NOTE: ファイルシステムをバックアップする場合、 SnapCenter は、バックアップするファイルシステムのボリュームマウントポイント（ VMP ）にマウントされている LUN をバックアップしません。
+.135b308ed83c53f1516b7c754566d1c4
+* 92ae04a417b2b1bf95cb914953f21cce
+* c808fe33c523c6c0014718e7feeac182
+* bf27fad69812da8f1ea6b50d511517e0
 
 
-IMPORTANT: Windows ファイルシステムのコンテキストで作業している場合は、データベースファイルをバックアップしないでください。バックアップを作成しても整合性に欠け、リストア時にデータが失われる可能性があります。データベースファイルを保護するには、データベースに適した SnapCenter プラグイン（ SnapCenter Plug-in for Microsoft SQL Server 、 SnapCenter Plug-in for Microsoft Exchange Server 、データベースファイル用のカスタムプラグインなど）を使用する必要があります。
 
-.手順
-. 左側のナビゲーションペインで、 * リソース * をクリックし、リストから適切なプラグインを選択します。
-. [ リソース ] ページで、 [ * 表示 ] リストから [ * リソースグループ * ] を選択します。
+NOTE: cd56c631927fec23fdd13a60faf10217
+
+
+IMPORTANT: 22f16e8b28f69b96450fdb879b633af1
+
+.f3a29486bed19a90f2da6d007818b427
+. 530a5fa7e8fbaa4c796dbd46c93a55dd
+. 5188766c2c9e07184bb642e31a6d1193
 +
-リソースグループを検索するには、検索ボックスにリソースグループ名を入力するか、をクリックします image:../media/filter_icon.png[""] タグを選択します。をクリックします image:../media/filter_icon.png[""] をクリックしてフィルタペインを閉じます。
+8e5cdb93ac42ad2c2b35814060435396
 
-. [ リソースグループ ] ページで、バックアップするリソースグループを選択し、 [ 今すぐバックアップ * ] をクリックします。
+. 6c22568aa6116c11fda42febcf7b796a
 +
 
-NOTE: SnapCenter Plug-in for Oracle Database では、 2 つのデータベースが統合されたリソースグループがある場合に、一方のデータベースのデータファイルがネットアップ以外のストレージにあると、もう一方のデータベースがネットアップストレージにあっても、バックアップ処理は中止されます。
+NOTE: 757701cec0ed310dbf31948edd1073df
 
-. Backup （バックアップ）ページで、次の手順を実行します。
+. 4a1c51520bfb3d170a967d4c218b52bf
 +
-.. 複数のポリシーをリソースグループに関連付けている場合は、「 * Policy * 」ドロップダウンリストから、バックアップに使用するポリシーを選択します。
+.. 44119ab6cb16491e354c029de67b6782
 +
-オンデマンドバックアップ用に選択したポリシーがバックアップスケジュールに関連付けられている場合は、スケジュールタイプに指定した保持設定に基づいてオンデマンドバックアップが保持されます。
+b1b9720160580fd5949d50bf10097dc5
 
-.. [ バックアップ ] をクリックします。
+.. 96dd2bdaca6a007b13c9f42158b860a6
 
 
-. 操作の進行状況を監視するには、 * Monitor * > * Jobs * をクリックします。
+. 8b9460bf38a68108bcdd278a386b3156
 +
-** MetroCluster 構成では、フェイルオーバー後に SnapCenter が保護関係を検出できない場合があります。
+** 71a692c1ca2878f83f4cd08d817a4dd9
 +
-https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["MetroCluster のフェイルオーバー後に SnapMirror 関係または SnapVault 関係を検出できません"^]
+1b5a94f080e8e24185e7f38f47081df9
 
-** VMDK 上のアプリケーションデータおよび SnapCenter Plug-in for VMware vSphere の Java ヒープサイズが不足している場合、バックアップが失敗することがあります。Java ヒープサイズを増やすには、スクリプトファイル「 /opt/NetApp/init_scripts/scvservice 」を検索します。このスクリプトでは、「 do_start method 」コマンドは SnapCenter VMware プラグインサービスを起動します。このコマンドを次のように更新します：「 java -jar -Xmx8192M-Xms4096M 」
+** 54f5c477b691c07c69aae1e40705b234
 
 
 

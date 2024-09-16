@@ -2,19 +2,19 @@
 permalink: protect-db2/back-up-ibm-db2-resources.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for IBM Db2 
-summary: リソース（データベース）またはリソースグループのバックアップを作成することができます。バックアップのワークフローには、計画、バックアップするデータベースの特定、バックアップポリシーの管理、リソースグループの作成とポリシーの適用、バックアップの作成、処理の監視が含まれます。 
+summary: d22047afaa5fcff0c93fc9cb30e1d95a 
 ---
-= IBM DB2リソースのバックアップ
+= 73bb0c3e029e657eee721094d9dfd4a4
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-リソース（データベース）またはリソースグループのバックアップを作成することができます。バックアップのワークフローには、計画、バックアップするデータベースの特定、バックアップポリシーの管理、リソースグループの作成とポリシーの適用、バックアップの作成、処理の監視が含まれます。
+15fda0d23b806181f091668c1c1e55bf
 
-次のワークフローは、バックアップ処理の実行順序を示しています。
+b9721a35a6c374ded595576ccbd2f789
 
-image::../media/db2_backup_workflow.png[DB2バックアップのワークフロー]
+image::../media/db2_backup_workflow.png[9bb1086732d729daa5079011da1d7f58]
 
-PowerShellコマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、クローニングの処理を実行することもできます。PowerShellコマンドレットの詳細については、SnapCenterのコマンドレットのヘルプを使用するか、コマンドレットのリファレンス情報を参照してください。https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]です。
+f6ca7431c38f4f9103a7165ce76ebf07

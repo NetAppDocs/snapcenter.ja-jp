@@ -2,31 +2,19 @@
 permalink: install/reference_supported_browsers.html 
 sidebar: sidebar 
 keywords: SnapCenter, browsers, chrome, IE, Edge 
-summary: SnapCenter ソフトウェアは、複数のブラウザで使用できます。 
+summary: 14c90652b0a2e523d6e8630706107e75 
 ---
-= サポートされているブラウザ
+= 6d84e3718084e0db779da4ff8791a2f2
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter ソフトウェアは、複数のブラウザで使用できます。
+14c90652b0a2e523d6e8630706107e75
 
-* Chromeバージョン125以降
-* Internet Explorer の略
-+
-IE 10 以前のバージョンを使用している場合、 SnapCenter UI が正しくロードされません。IE 11 にアップグレードする必要があります。
-
-+
-** デフォルトレベルのセキュリティのみがサポートされています。
-+
-Internet Explorer のセキュリティ設定を変更すると、ブラウザの表示に重大な問題が発生します。
-
-** Internet Explorer の互換表示を無効にする必要があります。
+* e49b0f86241cddbd59f6488d104741df
+* Microsoft Edge 110.0.1587.17以降
 
 
-* Microsoft Edge の場合
-
-
-サポートされているバージョンの最新情報については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。
+abac3270d109e89fa7d33d34cb7eace2

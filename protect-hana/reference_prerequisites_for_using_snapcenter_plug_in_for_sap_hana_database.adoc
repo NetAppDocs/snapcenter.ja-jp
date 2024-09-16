@@ -2,35 +2,35 @@
 permalink: protect-hana/reference_prerequisites_for_using_snapcenter_plug_in_for_sap_hana_database.html 
 sidebar: sidebar 
 keywords: Credentials,SnapCenter Plug-in for SAP HANA Database 
-summary: SnapCenter Plug-in for SAP HANA Database を使用するには、 SnapCenter 管理者が事前に SnapCenter サーバをインストールして設定し、前提条件となるタスクを実行する必要があります。 
+summary: 81d542f25e96a46a7bd9990a1921dd0b 
 ---
-= SnapCenter Plug-in for SAP HANA Database を使用するための前提条件
+= 789f8038d433cb036f0619af86008034
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter Plug-in for SAP HANA Database を使用するには、 SnapCenter 管理者が事前に SnapCenter サーバをインストールして設定し、前提条件となるタスクを実行する必要があります。
+81d542f25e96a46a7bd9990a1921dd0b
 
-* SnapCenter サーバをインストールして設定します。
-* SnapCenter サーバにログインします。
-* 必要に応じて、ストレージシステム接続を追加し、クレデンシャルを作成して、 SnapCenter 環境を設定します。
-* LinuxホストまたはWindowsホストにJava 11をインストールします。
+* d3bd1679f97e986f5eabfb3cb076e96b
+* a5d8946536d3ffa699ada66ee92654d6
+* 521e4c748d90979b116ba375769e0ef9
+* 80718846c9ca830ee95177bb30f81b82
 +
-ホストマシンの環境パス変数に Java パスを設定する必要があります。
+c783d48d811b4aab13eb61840dc3ee7c
 
-* バックアップレプリケーションが必要である場合は、 SnapMirror と SnapVault をセットアップします。
-* Plug-in for SAP HANA Database をインストールするホストに HDBSQL クライアントをインストールします。
+* 94a5e03dcafcb993f53258c83811415f
+* ba289808b4928ada94b3ee7042d3ef6e
 +
-このホストで管理する SAP HANA ノードのユーザストアキーを設定します。
+9c113823f49db02b7c886d24874ecdaf
 
-* SAP HANA データベース 2.0SPS05 で SAP HANA データベースのユーザアカウントを使用している場合は、 SnapCenter サーバでバックアップ、リストア、およびクローニングの処理を実行するための次の権限があることを確認します。
+* 749d063b1ca4e6ac83fbdd8b253e5e19
 +
-** バックアップ管理者
-** カタログの読み取り
-** データベースバックアップ管理者
-** データベースリカバリオペレータ
+** c2112b64567956e9064b970d35ad6be4
+** cbfd371962913d0f1e68d6d08d139762
+** f9ea96179a0c3f142da2c30a6ee04164
+** 9e7e3b470f2241f5dddd9cc056481b28
 
 
 

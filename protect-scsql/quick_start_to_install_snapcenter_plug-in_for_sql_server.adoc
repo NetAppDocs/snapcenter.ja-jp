@@ -2,312 +2,311 @@
 permalink: protect-scsql/quick_start_to_install_snapcenter_plug-in_for_sql_server.html 
 sidebar: sidebar 
 keywords: credentials 
-summary: SnapCenter サーバおよび SnapCenter Plug-in for Microsoft SQL Server をインストールする手順について説明します。 
+summary: 3d18a8ecd9e4c9d6e8109fc7dc46902c 
 ---
-= SnapCenter Plug-in for SQL Server のインストールのクイックスタート
+= 303271a6fa371310673fc55e65bf3af0
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter Server と SnapCenter Plug-in for Microsoft SQL Server のインストール手順を簡潔にまとめたものです。
+e05bc1fb0d09110d2709b8329ca82a1f
 
 
 
-== 設置を準備
+== 67f289221dc2b8315be57c85a28e0619
 
 
 
-=== ドメインとワークグループの要件
+=== 0322b41f8bf313240d64c3e6923b4ee4
 
-SnapCenter サーバは、ドメインまたはワークグループ内のシステムにインストールできます。
+c85265a6c5841b0f019403a50b63c44d
 
-Active Directory ドメインを使用している場合は、ローカル管理者の権限を持つドメインユーザを使用する必要があります。ドメインユーザは、 Windows ホストのローカル管理者グループのメンバーである必要があります。
+43727cf7c1f0b9055bad0d2c9c2e19ea
 
-ワークグループを使用している場合は、ローカル管理者の権限を持つローカルアカウントを使用します。
-
-
-
-=== ライセンス要件
-
-インストールするライセンスのタイプは環境によって異なります。
-
-[cols="1,3"]
-|===
-| 使用許諾 | 必要に応じて 
-
-
- a| 
-SnapCenter 標準のコントローラベース
- a| 
-FAS、AFF、またはAll SAN Array（ASA）ストレージコントローラに必要です
-
-SnapCenter Standard ライセンスはコントローラベースのライセンスで、 Premium Bundle に含まれています。SnapManager スイートのライセンスをお持ちの場合は、 SnapCenter Standard のライセンスもご利用いただけます。
-FAS、AFF、またはASAストレージにSnapCenterの試用版をインストールする場合は、営業担当者に連絡してPremium Bundleの評価ライセンスを取得してください。
+2632504d1b7b1f77434679b6906040dd
 
 
 
- a| 
-SnapMirror または SnapVault
- a| 
-ONTAP
+=== 7527dcedb498a9e111f7eb26b4f075a6
 
-SnapCenter でレプリケーションを有効にする場合は、 SnapMirror または SnapVault のライセンスが必要です。
-
-
-
- a| 
-追加ライセンス（オプション）
- a| 
-を参照してください link:../install/concept_snapcenter_licenses.html["SnapCenter ライセンス"^]。
-
-
-
- a| 
-SnapCenter 標準ライセンス（オプション）
- a| 
-セカンダリデスティネーション
-
-
-NOTE: セカンダリデスティネーションに SnapCenter Standard ライセンスを追加することを推奨しますが、必須ではありません。セカンダリデスティネーションで SnapCenter 標準ライセンスが有効になっていない場合、フェイルオーバー処理の実行後に、 SnapCenter を使用してセカンダリデスティネーションのリソースをバックアップすることはできません。ただし、クローニング処理と検証処理を実行するには、セカンダリデスティネーションに FlexClone ライセンスが必要です。
-
-|===
-
-
-=== ホストおよびポートの要件
-
-ONTAPおよびアプリケーションプラグインの最小要件については https://imt.netapp.com/matrix/imt.jsp?components=121030;&solution=1259&isHWU&src=IMT[]、[Interoperability Matrix Tool^]を参照してください。
+d5c59f9587c1784732bff8ebcc03f9fb
 
 [cols="1,3"]
 |===
-| ホスト | 最小要件 
+| 794df3791a8c800841516007427a2aa3 | b428bd66304bced88a8f85c2e42e2a8d 
 
 
  a| 
-オペレーティングシステム（ 64 ビット）
+932a86c21601cea5fd4dd8e8496f1347
  a| 
-を参照し https://imt.netapp.com/matrix/imt.jsp?components=121030;&solution=1259&isHWU&src=IMT["Interoperability Matrix Tool で確認してください"^]
+08bb62da8c2fc3e9658022558d277993
 
-
-
- a| 
-CPU
- a| 
-* サーバホスト： 4 コア
-* プラグインホスト： 1 コア
-
+f0d7edda487dadb54e43cde1120715ec
 
 
 
  a| 
-RAM
+06bfcdba3ea733216950ad2dd53126d5
  a| 
-* サーバホスト： 8GB
-* プラグインホスト：4GB
+253b40ae359ba25b56231803430c4873
 
-
-
-
- a| 
-ハードドライブの空き容量
- a| 
-サーバホスト：
-
-* SnapCenterサーバソフトウェアおよびログ用に7 GB
-* SnapCenterリポジトリ用に8GB
-* 各プラグインホスト：プラグインのインストールとログ用に 2GB 。専用のホストにプラグインがインストールされている場合にのみ必要です。
-
-
-
-NOTE: SnapCenterリポジトリがインストールされているホストにSnapCenterサーバがある場合は、15GBを推奨します。
+2f41a86e87d9df44dc6d43f0b52bd052
 
 
 
  a| 
-サードパーティのライブラリ
+faf896433eeb20fca1eb114937251b50
  a| 
-SnapCenter サーバホストおよびプラグインホストで必要：
-
-* Microsoft .NET Framework 4.7.2以降
-* ASP。 Net Core Hosting Bundle（8.0.5以降）
-* PowerShell 7.4.2以降
-
+9d09cebdc5095408e7e5f8bc09c08c42
 
 
 
  a| 
-ブラウザ
+a036788a7ed73379ca117ad8b6a48afa
  a| 
-Chrome 、 Internet Explorer 、および Microsoft Edge
+5be74f1e9c3cdce99e50c0e439ec19b3
+
+
+NOTE: 7dbd4083dc9a93160940c1e53d03999f
+
+|===
+
+
+=== 7a98b5f499da77fa6e09b98a638328d7
+
+266df807c209259b6527f0402eec5ecc
+
+[cols="1,3"]
+|===
+| 8124579383e90243e4b06323d2b37f8d | a55b17d8324fe50e023be8010d4b5474 
+
+
+ a| 
+a0315547f70da02dc3ae867b333d7a34
+ a| 
+0d9aba31602daa8aa7c78b179f23a57a
+
+
+
+ a| 
+2b55387dd066c5bac646ac61543d152d
+ a| 
+* 0e6a971ec5306b612f39cb5f57db7161
+* 30a4532a5bee2de6dedd7d0dd519c56c
+
+
+
+
+ a| 
+e53619c1fe611a51eeeb8d148ba6e532
+ a| 
+* cd8d1469016f031f922bb333a970cfd3
+* 2ee9a06a2f3e6e2ca52cee448cb93f0d
+
+
+
+
+ a| 
+98e13d99df22e8a0a2bae6e969834be4
+ a| 
+21dce67a57cd833547ff3fd4e9e03823
+
+* 068a44bd0181cde83ae2d162ab70836c
+* d167c06085657bbc05a48ca527f73219
+* 96e96c23ced7f362fb4cc50d9e3d4bfa
+
+
+
+NOTE: d202821014e7daf2d865aeb8539d7cdf
+
+
+
+ a| 
+8aba88ca961faed346aac654b3d29bdb
+ a| 
+20a50fb41923e75d6b62c157ac6f1a69
+
+* f9e40bd22b133e93e9c9d3b4c3adef6e
+* 77e6d1d743590f1944df090df04f64fb
+* 4c6ec01f6ae03e08c146fe6865423a4b
+
+
+
+
+ a| 
+e30a7ddbf46e9a12a9d9cfebd31fe25a
+ a| 
+f4c498441e8fe15aea27e35f1b2876a6
 
 |===
 [cols="1,3"]
 |===
-| ポートタイプ | デフォルトのポート 
+| 182aeb116dd563a6020ec9b2d5b6595e | 4d4690457f78e9e5cbfbcd0e36fbeff0 
 
 
  a| 
-SnapCenter ポート
+ed00b70cc595a411eff2cc42510a291f
  a| 
-8146 （ HTTPS ）、双方向、カスタマイズ可能。 URL は、 https://server:8146_ を参照してください
-
-
-
- a| 
-SnapCenter SMCore の通信ポート
- a| 
-8145 （ HTTPS ）、双方向、カスタマイズ可能
+b213e31ffc319fa7b61f00a8dfad6e75
 
 
 
  a| 
-リポジトリデータベース
+18622e175ff22b2375f9cbc2314b3285
  a| 
-3306 （ HTTPS ）、双方向
-
-
-
- a| 
-Windows プラグインホスト
- a| 
-135 、 445 （ TCP ）
-
-ポート 135 および 445 に加え、 Microsoft が指定したダイナミックポート範囲も開いている必要があります。リモートインストール操作では、このポート範囲を動的に検索する Windows Management Instrumentation （ WMI ）サービスを使用します。
-
-サポートされているダイナミックポート範囲については、を参照してください https://docs.microsoft.com/en-US/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements["Windows のサービス概要とネットワークポート要件"^]。
+c69cfd47967e253717494d2c7047647d
 
 
 
  a| 
-SnapCenter Plug-in for Windows の略
+7d9d926d5125803fd97000a20abb897d
  a| 
-8145 （ HTTPS ）、双方向、カスタマイズ可能
+ced7e40a06bd114bdd410398e025c7bd
 
 
 
  a| 
-ONTAP クラスタまたは SVM の通信ポート
+4abc501abe98e95144eba2c4d17174ad
  a| 
-443 （ HTTPS ）、双方向、 80 （ HTTP ）、双方向
+0d1c7f3b029cde2163a99c08de7fc3c3
 
-このポートは、 SnapCenter サーバホスト、プラグインホスト、 SVM または ONTAP クラスタ間の通信に使用されます。
+9ce593479d7ce75e23fe1f85463ed78d
+
+507c0c7f0b8b0e908ce3263a2104c06c
+
+
+
+ a| 
+5ae5c2db7baad917cb8389420693266d
+ a| 
+c69cfd47967e253717494d2c7047647d
+
+
+
+ a| 
+48552dce4d9810446c70f66f21f08120
+ a| 
+de80df6466db891ed7d7a31d71335ae1
+
+228eb7fa9d28577ec427d7baedfa7ded
 
 |===
 
 
-=== SnapCenter Plug-in for Microsoft SQL Server の要件
+=== bc6cdf099cec9fa3dce7fb43c644e659
 
-ローカル管理者の権限を持つユーザが、リモートホストに対してローカルログインの権限を持っている必要があります。クラスタノードを管理する場合は、クラスタ内のすべてのノードに対する管理者権限を持つユーザが必要です。
+4bd535cc745449316aa463a5f52133d6
 
-SQL Server に対して sysadmin 権限を持つユーザが必要です。このプラグインは Microsoft VDI Framework を使用しますが、これには sysadmin アクセスが必要です。
-
-
-
-== SnapCenter サーバをインストールします
+cf94e6be5912bb698bcc03d64c605bc4
 
 
 
-=== ステップ1: SnapCenter サーバーをダウンロードしてインストールします
+== 354c84f19db927b615f7e75880c69840
 
-. から SnapCenter Server インストールパッケージをダウンロードします https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["ネットアップサポートサイト"^] 次に、この exe をダブルクリックします。
+
+
+=== 44d77fb23ef94aa2e99acffb06349cce
+
+. 72de9cea28a7cca58f8423279c68e8c6
 +
-インストールの開始後、すべての事前確認が実行され、最小要件を満たしていない場合には、対応するエラーまたは警告メッセージが表示されます。警告メッセージは無視してインストールを続行できますが、エラーは修正しておく必要があります。
+f3202cac117dff2d56e44da0f9a51af3
 
-. SnapCenter サーバのインストールに必要な設定済みの値を確認し、必要に応じて変更します。
+. ab691c5a64104aec1f94c41a8e516324
 +
-MySQL Server リポジトリデータベースのパスワードを指定する必要はありません。SnapCenter サーバのインストール時に、パスワードは自動生成されます。
-
-+
-
-NOTE: インストール用のカスタムパスでは、特殊文字“ % ”はサポートされていません。パスに「 % 」を含めると、インストールは失敗します。
-
-. [ 今すぐインストール ] をクリックします。
-
-
-
-
-=== ステップ2：SnapCenter にログインします
-
-. ホストデスクトップのショートカットまたはインストールによって提供された URL （ SnapCenter Server がインストールされているデフォルトポート 8146 の場合は、 \\ https://server:8146_ ）から SnapCenter を起動します。
-. クレデンシャルを入力します。
-+
-組み込みのドメイン管理者ユーザ名の形式には、 _NetBIOS_<username>_ または _<username>@<domain>_ または _<DomainFQDN>\<username>_ を使用します。
+7b5a4e2264ffc57e8ea3a6d11bf48d98
 
 +
-組み込みのローカル管理者ユーザ名の形式には、 _<username>_ を使用します。
 
-. [ * サインイン * ] をクリックします。
+NOTE: e33036e6b56fd2a33a6a10030cb94299
+
+. 73fc97baa9d12b2441a7cf6ee8b57363
 
 
 
 
-=== 手順3：SnapCenter Standardコントローラベースライセンスを追加する
+=== 182fe557d952dd099523bf0f0a12a03d
 
-. ONTAP コマンドラインを使用してコントローラにログインし、次のように入力します。
+. 852f5d8fb35ebdb357cf3bc24e003d7b
+. 61f012eff86118543feffb3e0c63fba5
 +
-'system license add-license-code <license_key>'
-
-. ライセンスを確認します。
-+
-「 license show 」を参照してください
-
-
-
-
-
-=== 手順4：ストレージシステム接続をセットアップする
-
-. 左側のペインで、 * ストレージ・システム > 新規 * をクリックします。
-. Add Storage System ページで、次の手順を実行します。
-+
-.. ストレージシステムの名前または IP アドレスを入力します。
-.. ストレージシステムへのアクセスに使用するクレデンシャルを入力します。
-.. イベント管理システム（ EMS ）と AutoSupport を有効にするには、チェックボックスを選択します。
-
-
-. プラットフォーム、プロトコル、ポート、およびタイムアウトに割り当てられたデフォルト値を変更する場合は、 [ その他のオプション *] をクリックします。
-. [Submit （送信） ] をクリックします。
-
-
-
-
-== Plug-in for Microsoft SQL Server をインストールします
-
-
-
-=== 手順1：Run AsクレデンシャルをセットアップしてPlug-in for Microsoft SQL Serverをインストールする
-
-. 左側のペインで、 * Settings > Credentials > New * をクリックします。
-. クレデンシャルを入力します。
-+
-組み込みのドメイン管理者ユーザ名の形式には、 _NetBIOS_<username>_ または _<username>@<domain>_ または _<DomainFQDN>\<username>_ を使用します。
+47459be4bca5ade3cc059a063f2917cd
 
 +
-組み込みのローカル管理者ユーザ名の形式には、 _<username>_ を使用します。
+283cf02b37e194a97bc09e5143839de4
+
+. 639377ecc4f9660d152b47ac6257004c
 
 
 
 
+=== 6dbb525493b617ed15acb54f48a1fb80
 
-=== 手順2：ホストを追加してPlug-in for Microsoft SQL Serverをインストールする
-
-. SnapCenter GUI の左ペインで、 *Hosts > Managed Hosts > Add* の順にクリックします。
-. ウィザードのホストページで、次の手順を実行します。
+. a4e7093c6cc2e4ee72e50b2a954be3f3
 +
-.. Host Type ： Windows ホストタイプを選択します。
-.. ホスト名： SQL ホストを使用するか、専用の Windows ホストの FQDN を指定します。
-.. credentials ：作成したホストの有効なクレデンシャル名を選択するか、新しいクレデンシャルを作成します。
+a2f9f72a3753905e11a8704d1d64ef7e
 
-
-. インストールするプラグインの選択セクションで、 * Microsoft SQL Server * を選択します。
-. [ その他のオプション ] をクリックして、次の詳細を指定します。
+. cb7e3c5033b506aed36b6425ab46d746
 +
-.. Port ：デフォルトのポート番号をそのまま使用するか、ポート番号を指定します。
-.. インストールパス：デフォルトのパスは、 _C ： \Program Files\NetApp\SnapManager _ です。必要に応じて、パスをカスタマイズできます。
-.. Add all hosts in the cluster ： SQL in WSFC を使用している場合は、このチェックボックスを選択します。
-.. インストール前チェックをスキップ：プラグインを手動でインストール済みの場合、またはプラグインのインストール要件をホストが満たしているかどうかを検証しない場合は、このチェックボックスを選択します。
+8822a9cc146d06e4ec77936054fb11ca
 
 
-. [Submit （送信） ] をクリックします。
+
+
+
+=== ed04342b9541f163902926f71be8548c
+
+. 4e47abeee8d7eb5a872182a350fecedb
+. 610cac9ef97d97974dfcf5de0b7e0f1e
++
+.. 2384730978fb31977e9e4d8d6cd269a1
+.. cc264bb31c32343deef41c8d3130ed2c
+.. 270527cce60385f686064c6eef36e8dd
+
+
+. ebd85b740e18643ed1055826c9bcddf6
+. 4b5d2dd70af718ebe67bfea5b43d8667
+
+
+
+
+== 1b536db2490e46d75b679a68d1866ff2
+
+
+
+=== 13c41a91e51556266f1446c3f3118575
+
+. edb3f96af88f92a47b3be973152729fe
+. 61f012eff86118543feffb3e0c63fba5
++
+47459be4bca5ade3cc059a063f2917cd
+
++
+283cf02b37e194a97bc09e5143839de4
+
+
+
+
+
+=== 50e45622cbe6ba6b72a9cba939e77623
+
+. 585cc1564f4cb6953e8c9f28c1437b7a
+. 391f0cfb81e64e89ce06d9fb74afdee6
++
+.. 7200cb512c65b6adfa2cab18de8e420d
+.. f8b8dda743e9c21b3090c210ba7bcccb
+.. 5ddd08abdb13ac2a88aeaf83ceb4601a
+
+
+. 4d63758b95c6d0c2ba2de8cf3a7fd468
+. 07dc47ec108fc5c1091c1070b5576d30
++
+.. de89dc05a0fcefa6418af22a996ddce7
+.. 4e1e18a050e419f3f3ea98cb64006151
+.. b8cd91b1f45642b914e070ba649ce2e9
+.. 005967742046b2c05fd77c1710d06376
+
+
+. 4b5d2dd70af718ebe67bfea5b43d8667
 

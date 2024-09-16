@@ -2,192 +2,192 @@
 permalink: protect-scu/task_configure_snapcenter_plug_in_loader_service.html 
 sidebar: sidebar 
 keywords: SPL, plug-in loader service 
-summary: SnapCenter Plug-in Loaderサービスは、SnapCenterサーバと対話するために、Linux用のプラグインパッケージをロードします。SnapCenter Plug-in Loaderサービスは、SnapCenter Plug-ins Package for Linuxをインストールするとインストールされます。 
+summary: 8f3f1f4bd7a4cb48e47b37c5e1835a1d 
 ---
-= SnapCenter Plug-in Loader サービスを設定します
+= 58217bc6f1b79fc60156611e99bd9aa8
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter Plug-in Loaderサービスは、SnapCenterサーバと対話するために、Linux用のプラグインパッケージをロードします。SnapCenter Plug-in Loaderサービスは、SnapCenter Plug-ins Package for Linuxをインストールするとインストールされます。
+8f3f1f4bd7a4cb48e47b37c5e1835a1d
 
-* このタスクについて *
+78166ce4ccceeedfbf6aeb8682851072
 
-SnapCenter Plug-ins Package for Linuxをインストールすると、SnapCenter Plug-in Loaderサービスが自動的に開始されます。SnapCenter Plug-in Loader サービスが自動的に開始されない場合は、次のことを行う必要があります。
+baf107c36bf7e02ded0220884bb7c532
 
-* プラグインが動作しているディレクトリが削除されていないことを確認してください
-* Java 仮想マシンに割り当てられているメモリ容量を増やします
-
-
-spl.properties ファイルは、 _/custom_location/NetApp/snapcenter /spl/etc/_ にあり、次のパラメータを含みます。これらのパラメータにはデフォルト値が割り当てられています。
-
-|===
-| パラメータ名 | 説明 
+* 90e6ccabb202c3fbec49055b36072d77
+* 6adc77628e74ad67c6a80a934a657113
 
 
- a| 
-LOG_LEVEL の値
- a| 
-サポートされるログレベルを表示します。
-
-指定できる値は、trace、debug、info、warn、error、 致命的だ
-
-
-
- a| 
-SPL プロトコル
- a| 
-SnapCenter Plug-in Loader でサポートされているプロトコルを表示します。
-
-HTTPS プロトコルのみがサポートされています。デフォルト値がない場合は、値を追加できます。
-
-
-
- a| 
-SNAPCENTER_server_protocol 」を参照してください
- a| 
-SnapCenter サーバでサポートされているプロトコルを表示します。
-
-HTTPS プロトコルのみがサポートされています。デフォルト値がない場合は、値を追加できます。
-
-
-
- a| 
-ske_JAVAHOME_update を実行します
- a| 
-デフォルトでは、 SPL サービスは Java パスを検出し、 JAVA_HOME パラメータを更新します。
-
-したがって、デフォルト値は FALSE に設定されます。デフォルトの動作を無効にして Java パスを手動で修正する場合は、 true に設定します。
-
-
-
- a| 
-SPL キーストアパス
- a| 
-キーストアファイルのパスワードを表示します。
-
-この値は、パスワードを変更する場合や新しいキーストアファイルを作成する場合にのみ変更できます。
-
-
-
- a| 
-SPL ポート
- a| 
-SnapCenter Plug-in Loader サービスが実行されているポート番号を表示します。
-
-デフォルト値がない場合は、値を追加できます。
-
-
-NOTE: プラグインのインストール後は値を変更しないでください。
-
-
-
- a| 
-SNAPCENTER_server_host が必要です
- a| 
-SnapCenter サーバの IP アドレスまたはホスト名を表示します。
-
-
-
- a| 
-SPL キーストアパス
- a| 
-キーストアファイルの絶対パスを表示します。
-
-
-
- a| 
-SNAPCENTER_SERVER_PORT
- a| 
-SnapCenter サーバが稼働しているポート番号を表示します。
-
-
-
- a| 
-logs_MAX_COUNT
- a| 
-SnapCenter Plug-in Loader ログファイルのうち、 _/custom_location/snapcenter /spl/logs_folder に保持されているファイルの数を表示します。
-
-デフォルト値は 5000 に設定されています。指定した値よりも多い数のファイルがある場合は、変更後の最新の 5000 個のファイルが保持されます。ファイル数のチェックは、 SnapCenter Plug-in Loader サービスが開始されたときから 24 時間ごとに自動的に行われます。
-
-
-NOTE: spl.properties ファイルを手動で削除すると、保持されるファイル数は 9999 に設定されます。
-
-
-
- a| 
-JAVA_HOME にアクセスします
- a| 
-SPL サービスの開始に使用される JAVA_HOME の絶対ディレクトリパスを表示します。
-
-このパスは、インストール時および SPL の開始時に決定されます。
-
-
-
- a| 
-LOG_MAX_SIZE
- a| 
-ジョブログファイルの最大サイズを表示します。
-
-最大サイズに達すると、ログファイルが圧縮され、そのジョブの新しいファイルにログが書き込まれます。
-
-
-
- a| 
-retain_logs_of _last_days
- a| 
-ログを保持する日数が表示されます。
-
-
-
- a| 
-enable_certificate_validationを実行します
- a| 
-ホストでCA証明書の検証が有効になっている場合はtrueと表示されます。
-
-このパラメータを有効または無効にするには、spl.propertiesを編集するか、SnapCenter GUIまたはコマンドレットを使用します。
+62588e51ba2815837be6483c3880057d
 
 |===
-これらのパラメータのいずれかがデフォルト値に割り当てられていない場合、または値を割り当てたり変更したりする場合は、 spl.properties ファイルを変更します。また、 spl.properties ファイルを確認して編集し、パラメータに割り当てられている値に関連する問題のトラブルシューティングを行うこともできます。spl.properties ファイルを変更したら、 SnapCenter Plug-in Loader サービスを再起動する必要があります。
+| 03101d2d05b95aa8395d372be971ceec | b5a7adde1af5c87d7fd797b6245c2a39 
 
-* 手順 *
 
-. 必要に応じて、次のいずれかの操作を実行します。
+ a| 
+e2072f9dd36121658dfb70db997cac48
+ a| 
+27ef522d71e1457c1d75f1a9fbdffdb9
+
+20c5c92c0148a7ebef737c442e93b7ec
+
+
+
+ a| 
+54e3ff300a85eed4faafba9e929fcc68
+ a| 
+7af9608cb14f57495b1335e877ee3b0e
+
+36c24cffc745e8682deaec9e2c0960f8
+
+
+
+ a| 
+3f32865e612f77b8ff0ae26159cb8123
+ a| 
+1ca21424ca9846008958a3821a751928
+
+36c24cffc745e8682deaec9e2c0960f8
+
+
+
+ a| 
+938fd112f95f815e59b61477374e52d7
+ a| 
+b35eb515a34149d465067be879ed2be2
+
+8eb62fe55f5c303ace2cefedd042a766
+
+
+
+ a| 
+6686cedf7caf3fa23512302b51634d1d
+ a| 
+669d31059c6b31a36ad1270dccbf74f4
+
+0e3dbbc006c5251aeeefae5328bbcf78
+
+
+
+ a| 
+3126891abe125c3c8db51d0be9c69e00
+ a| 
+a93e5aace5d0dcc246eb2bd5eee48895
+
+ff79ea2e0039b5dfee4b78c655afa82c
+
+
+NOTE: 2316b8a329e2e62827875343d1014d23
+
+
+
+ a| 
+a6874811ff14ffc30b63ea801e60b098
+ a| 
+7a9bc681f0df5fcf1cb123408cd70528
+
+
+
+ a| 
+ee4bbf3895b0df6fa87ff80436c8a698
+ a| 
+0ab847ca1ec1d021003071c720300912
+
+
+
+ a| 
+732ad24112805352918b98d2d2fe992b
+ a| 
+7aeb909709612da033f3993a0e728a27
+
+
+
+ a| 
+c9956993c3473df3ea1961fead514074
+ a| 
+311a6927001a0f29e0c3f5a5c31d4242
+
+543a5f51e636298cf3ed33a0e1d218db
+
+
+NOTE: 763a333a6966604fcf8fe0eee9f23c9f
+
+
+
+ a| 
+9687b2072b5af8d9d6bfee01412a8ab8
+ a| 
+51ad7876a0c505d5928e22675694744c
+
+c2cf7dfc1bbbf69f56770d61fd74921d
+
+
+
+ a| 
+9b24859b2a7f9c7d8afb9ec3b025e927
+ a| 
+92cb537bc0c912cec1e9669f256ebc89
+
+7618cb309cdd6214baddcc65ec4c89f4
+
+
+
+ a| 
+e9345db0fc7d18cab70b42d9af5c38a2
+ a| 
+7c8e4d34b8c6cc18e06524f05da1a10d
+
+
+
+ a| 
+664943be24af2306e90a21dd26536e1c
+ a| 
+22d8a94cf37cc6d66c941a43b9d79fa8
+
+f5834ae40c2c791cfe589857bdad345c
+
+|===
+da10b4ad075e32104e9d3572a5c56d5d
+
+4839d2f25cc35b249d5db15efa1afd75
+
+. 4358c2223130e9143f036c26f0a56928
 +
-** SnapCenter Plug-in Loaderサービスを開始します。
+** 48358bdc6f3172b38c61de2ca9e51e04
 +
-*** rootユーザとして、次のコマンドを実行します。 `/custom_location/NetApp/snapcenter/spl/bin/spl start`
-*** root以外のユーザとして、次のコマンドを実行します。 `sudo /custom_location/NetApp/snapcenter/spl/bin/spl start`
+*** de41a65794e813fc1179a53692d93d0c
+*** 9c62b6ba5ebbff5bda975b0ac8dbde36
 
 
-** SnapCenter Plug-in Loader サービスを停止します。
+** 9ba1d7fda6d74fc8ea4ac997f4bcc700
 +
-*** rootユーザとして、次のコマンドを実行します。 `/custom_location/NetApp/snapcenter/spl/bin/spl stop`
-*** root以外のユーザとして、次のコマンドを実行します。 `sudo /custom_location/NetApp/snapcenter/spl/bin/spl stop`
+*** 1e8352cca261b942dbbf153a1e2f21a3
+*** 8e0e2c97c5b10e6bb02ef73ace8ba586
 +
 
-NOTE: stop コマンドに -force オプションを指定すると、 SnapCenter Plug-in Loader サービスを強制的に停止できます。ただし、既存の処理が終了するため、実行する前に十分に注意する必要があります。
+NOTE: 2285203d0a54a15c8abcefd3451121b6
 
 
 
-** SnapCenter Plug-in Loader サービスを再起動します。
+** a73e123f3d1ee7d2db965a0784590cd9
 +
-*** rootユーザとして、次のコマンドを実行します。 `/custom_location/NetApp/snapcenter/spl/bin/spl restart`
-*** root以外のユーザとして、次のコマンドを実行します。 `sudo /custom_location/NetApp/snapcenter/spl/bin/spl restart`
+*** e85bcd1f63d3c61caf66d8a76e5aa3a7
+*** dcfadfccd50f8eeedf94966a1294d97f
 
 
-** SnapCenter Plug-in Loader サービスのステータスを確認します。
+** 720f2f026c6bddcf31ae0284bddbdc19
 +
-*** rootユーザとして、次のコマンドを実行します。 `/custom_location/NetApp/snapcenter/spl/bin/spl status`
-*** root以外のユーザとして、次のコマンドを実行します。 `sudo /custom_location/NetApp/snapcenter/spl/bin/spl status`
+*** 58997f79b1345abf18afa21fae35aac3
+*** ba0bf1abeade8a957ed6602bf80c3c9b
 
 
-** SnapCenter Plug-in Loader サービスで変更を探します。
+** 8b0b2a1839f41290933219798e6b836c
 +
-*** rootユーザとして、次のコマンドを実行します。 `/custom_location/NetApp/snapcenter/spl/bin/spl change`
-*** root以外のユーザとして、次のコマンドを実行します。 `sudo /custom_location/NetApp/snapcenter/spl/bin/spl change`
+*** 1f744b1a392db8f68ab3253751d612f8
+*** 22fdb5acc3cbb314d376959df2c3746e
 
 
 

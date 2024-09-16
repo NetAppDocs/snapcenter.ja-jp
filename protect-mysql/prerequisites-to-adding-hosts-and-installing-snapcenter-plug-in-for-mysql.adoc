@@ -2,119 +2,117 @@
 permalink: protect-mysql/prerequisites-to-adding-hosts-and-installing-snapcenter-plug-in-for-mysql.html 
 sidebar: sidebar 
 keywords: credentials 
-summary: ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。SnapCenter Plug-in for MySQLは、WindowsとLinuxの両方の環境で使用できます。 
+summary: 1a7e78f9f25e00b993b04a68a96b1c05 
 ---
-= ホストを追加してSnapCenter Plug-in for MySQLをインストールするための前提条件
+= 92d7d9bec3bacb90681d535bc67f2c90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。SnapCenter Plug-in for MySQLは、WindowsとLinuxの両方の環境で使用できます。
+1a7e78f9f25e00b993b04a68a96b1c05
 
-* Java 11をホストにインストールしておく必要があります。
+* 8b78d81fcf70311e0778d7ca1a1da748
 +
 
-NOTE: IBM Javaはサポートされていません。
+NOTE: 3a6eb59ee064b09b020c1a87c5de4988
 
-* Windowsの場合、Plug-in CreatorサービスはWindowsユーザ「LocalSystem」を使用して実行する必要があります。これは、Plug-in for MySQLがドメイン管理者としてインストールされている場合のデフォルトの動作です。
-* Windowsホストにプラグインをインストールするときに、組み込みでないクレデンシャルを指定した場合やユーザがローカルワークグループに属している場合は、ホストのUACを無効にする必要があります。SnapCenter Plug-in for Microsoft Windowsは、WindowsホストへのMySQLプラグインと一緒にデフォルトで導入されます。
-* SnapCenterサーバがPlug-in for MySQLホストの8145ポートまたはカスタムポートにアクセスできる必要があります。
-* MySQL 5.7の場合は、MySQLの設定ファイル（my.cnfまたはmysql-server.cnf）にbinlogを指定する必要があります。
-
-
+* 5448a3c6ec7643791a6703de7bf7c87e
+* fb0ea60c5ef805dc7b66c05f490ce2b7
+* 8bf0cd91395067e991bd0d07c2ea8663
+* b28abaa511d9b446609dfc244e8c4032
 
 
-== Windows ホスト
 
-* ローカル管理者権限を持つドメインユーザがあり、リモートホストに対してローカルログイン権限が付与されている必要があります。
-* Plug-in for MySQLをWindowsホストにインストールすると、SnapCenter Plug-in for Microsoft Windowsが自動的にインストールされます。
-* root ユーザまたは root 以外のユーザ用にパスワードベースの SSH 接続を有効にしておく必要があります。
-* Java 11をWindowsホストにインストールしておく必要があります。
+
+== bd5ca81744f222d9b9a956e81e4db9d4
+
+* 361ef555cc4b1de8cd252d68a14901af
+* 0a0c8849659ce9e3159e34406f7b691e
+* 92f854eabda8c2aa761e01fba1c6ffd4
+* 74b8e77de0b5018c5ab2ca7eb523ff31
 +
-http://www.java.com/en/download/manual.jsp["すべてのオペレーティングシステム用の Java のダウンロード"]
-
-+
-https://imt.netapp.com/matrix/imt.jsp?components=121071;&solution=1259&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"]
-
-
-
-
-
-== Linux ホスト
-
-* root ユーザまたは root 以外のユーザ用にパスワードベースの SSH 接続を有効にしておく必要があります。
-* Java 11をLinuxホストにインストールしておく必要があります。
-+
-http://www.java.com/en/download/manual.jsp["すべてのオペレーティングシステム用の Java のダウンロード"]
+9226092112d9484949841b47e3b0500e
 
 +
-https://imt.netapp.com/matrix/imt.jsp?components=121071;&solution=1259&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"]
-
-* LinuxホストでMySQLデータベースを実行している場合は、Plug-in for MySQLのインストール時にSnapCenter Plug-in for UNIXが自動的にインストールされます。
-* プラグインのインストールには、デフォルトのシェルとして* bash *が必要です。
+15819c8f1b3ff9ce9e18a6765617b72f
 
 
 
 
-== 補助コマンド
 
-SnapCenter Plug-in for MySQLで補助的なコマンドを実行するには、ファイルにそのコマンドを含める必要があります `allowed_commands.config` 。
+== cfe19b0ae08454358fbe515d88fd6095
 
-`allowed_commands.config` ファイルは、SnapCenter Plug-in for MySQLディレクトリの「etc」サブディレクトリにあります。
-
-.Windows ホスト
-デフォルト： `C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands.config`
-
-カスタムパス： `<Custom_Directory>\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands.config`
-
-.Linux ホスト
-デフォルト： `/opt/NetApp/snapcenter/scc/etc/allowed_commands.config`
-
-カスタムパス： `<Custom_Directory>allowed_commands.config`
-
-プラグインホストで追加のコマンドを許可するには、 `allowed_commands.config` エディタ内のファイル。各コマンドを別 々 の行に入力します。大文字と小文字は区別されません。
-例：
-
-コマンド:mount
-
-コマンド：umount
-
-完全修飾パス名を指定してください。パス名にスペースが含まれている場合は、パス名を引用符（"）で囲みます。
-例：
-
-コマンド："C：\Program Files\NetApp\SnapCreator commands\sdcli.exe"
-
-コマンド：myscript.bat
-
-状況に応じて `allowed_commands.config` ファイルが存在しません。コマンドまたはスクリプトの実行はブロックされ、次のエラーでワークフローが失敗します。
-
-"[/mnt/mount-a]の実行は許可されていません。プラグインホストのファイル%sにコマンドを追加して許可します。"
-
-コマンドまたはスクリプトが `allowed_commands.config`をクリックすると、コマンドまたはスクリプトの実行がブロックされ、次のエラーでワークフローが失敗します。
-
-"[/mnt/mount-a]の実行は許可されていません。プラグインホストのファイル%sにコマンドを追加して許可します。"
-
-
-NOTE: ワイルドカードエントリ（*）を使用してすべてのコマンドを許可しないでください。
-
-
-
-== Linux ホストの root 以外のユーザに sudo 権限を設定する
-
-SnapCenter 2.0 以降のリリースでは、 root 以外のユーザが SnapCenter Plug-ins Package for Linux をインストールしてプラグインプロセスを開始できます。プラグインプロセスは、有効なroot以外のユーザとして実行されます。いくつかのパスにアクセスできるように root 以外のユーザに sudo 権限を設定する必要があります。
-
-* 必要なもの *
-
-* sudoバージョン1.8.7以降。
-* root以外のユーザについては、root以外のユーザの名前とユーザのグループが同じであることを確認してください。
-* /etc/ssh/sshd_config_file を編集して、メッセージ認証コードアルゴリズム MACs HMAC-sha2-256 および MACs HMAC-sha2-512 を設定します。
+* 92f854eabda8c2aa761e01fba1c6ffd4
+* 129fdeda5a8637916b3b579b072e4eaa
 +
-構成ファイルを更新したら、 sshd サービスを再起動します。
+9226092112d9484949841b47e3b0500e
 
 +
-例
+15819c8f1b3ff9ce9e18a6765617b72f
+
+* 4e2c731cfc406e009dd7705e2f1b9a70
+* 17049c1cdf73c2b4b41219f99ace3f81
+
+
+
+
+== c1c3f7f413cbbea9483f5bb44d108a05
+
+f09c068ffb3f98bd4cdfab1012276d85
+
+150e685d9be21996df2dd62e4a7b63a3
+
+.bd5ca81744f222d9b9a956e81e4db9d4
+90691a25fee5015199c658915d54937f
+
+6fc4095a95637298f76900a520be49a6
+
+.cfe19b0ae08454358fbe515d88fd6095
+774e75f6a92e8ce03eae50224bd05ba6
+
+fad6f40b574d1f4a18fc151b6c0f4e20
+
+41e74f60c5f3f06b8573c9cea4d7bab4
+
+b5ae206d8cc918377a24fe4f421f1df6
+
+ec2ddb7f6d7bd8ee6c1859f58f04e543
+
+2f71d67b0d47e188626ac45f66b1bdb9
+
+bb9358c22dd46f6320560b712e3f01b1
+
+ee9daf1566bf315f7653952b044f6dad
+
+caac2bb3479b413da9fbcd502a30e7b6
+
+fa85be9f75b57a1177464bcfbf682501
+
+58b5d0a2d25a0f5bc44c92a94090d1ea
+
+fa85be9f75b57a1177464bcfbf682501
+
+
+NOTE: 0d97f66d4b1a95477e15aa1423a18629
+
+
+
+== b8be58329edfa59d774ce8216f3afcfe
+
+f9c6e2752992927f2c51ce2a85236ca9
+
+d428ebb7ac02e1484781b38a799a4f99
+
+* e3f6dee76e478bb44341e47d36be0f01
+* a2e3df47ed947a4f17566f6f4c728ec8
+* 9fc7e0af2d8808b59624854d31dab1bb
++
+a522c9aaeab8d877d6b5ee133ac06025
+
++
+81eeab9506186e2dca8faefa78d54067
 
 +
 [listing]
@@ -133,19 +131,19 @@ MACs hmac-sha2-256
 ----
 
 
-* このタスクについて *
+78166ce4ccceeedfbf6aeb8682851072
 
-次のパスにアクセスできるように root 以外のユーザに sudo 権限を設定する必要があります。
+a7016f1c2daee7897ce7d4eca17cda75
 
-* /home/_linux_user_//.sc_netapp / snapcenter_linux_host_plugin.bin
-* /custom_location/NetApp/snapcenter /spl/installing/plugins/uninstall
-* /custom_location/NetApp/snapcenter /spl/bin/spl になります
+* 8e2de751f9a0d6e07b10791d5aec1925
+* 9bdf1f7010d0194ec04db4d5e52f9b98
+* 662f0ac9bbed9d4111fe177372a0dc72
 
 
-* 手順 *
+4839d2f25cc35b249d5db15efa1afd75
 
-. SnapCenter Plug-ins Package for Linux をインストールする Linux ホストにログインします。
-. visudo Linux ユーティリティを使用して、 /etc/sudoers ファイルに次の行を追加します。
+. 4e665afb5c15dd75650eeba423b153f0
+. 45eaa72ccd2ef9b50e78fc8cce523fc1
 +
 [listing, subs="+quotes"]
 ----
@@ -160,19 +158,19 @@ Defaults: _LINUX_USER_ !requiretty
 ----
 +
 
-NOTE: RACセットアップを実行している場合は、他の許可されているコマンドとともに、/etc/sudoersファイルに次のように追加します。'/RAC/bin/olsnodes'<crs_home>
+NOTE: 8ccb5ba037aab4670372942b6305b04b
 
 
 
-_crs_home_fileの値は、/etc/oracle/olr.loc_fileから取得できます。
+be02fb47e5ce9564292c10ef20e0af69
 
-_linux_user_は、作成したroot以外のユーザの名前です。
+656c356e64e4c0be274c5c901e543686
 
-_checksum_value_は、次の場所にある* sc_unix_plugins_checksum.txt *ファイルから取得できます。
+31245bdedaeb267e7e5c6f53cf9e708d
 
-* _C：\ProgramData\NetApp\SnapCenter\Package Repository\sc_unix_plugins_checksum.txt（SnapCenter ServerがWindowsホストにインストールされている場合）。
-* _/opt/NetApp/snapcenter/SnapManagerWeb/Repository/sc _ unix_plugins_checksum.txt _ LinuxホストにSnapCenterサーバがインストールされている場合。
+* d08ecc47ff5fa041f6e7d4e346ccc284
+* fdd8302a17106d7ed409290aad614ac8
 
 
 
-IMPORTANT: この例は、独自のデータを作成するための参照としてのみ使用してください。
+IMPORTANT: 74781435cbc6fb9ba200eaf23bcdeaf1

@@ -2,30 +2,30 @@
 permalink: protect-postgresql/restore-postgresql-using-powershell-cmdlets.html 
 sidebar: sidebar 
 keywords: restore, postgresql, snapcenter 
-summary: PostgreSQLバックアップをリストアするには、SnapCenterサーバとの接続セッションを開始し、バックアップをリストしてバックアップ情報を取得し、バックアップをリストアします。 
+summary: 77d20f777995de612db657a54e3dd05e 
 ---
-= PowerShellコマンドレットを使用したPostgreSQLクラスタのリストア
+= 327dedb40ce8a6597f0c43633fac8ff6
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-PostgreSQLバックアップをリストアするには、SnapCenterサーバとの接続セッションを開始し、バックアップをリストしてバックアップ情報を取得し、バックアップをリストアします。
+77d20f777995de612db657a54e3dd05e
 
-.作業を開始する前に
-PowerShell コマンドレットを実行できるように PowerShell 環境を準備しておく必要があります。
+.135b308ed83c53f1516b7c754566d1c4
+c90de0347e94ade70c96034e2ffca3ba
 
-.手順
-. Open-SmConnection コマンドレットを使用して、指定したユーザの SnapCenter サーバとの接続セッションを開始します。
+.f3a29486bed19a90f2da6d007818b427
+. 623aa9b9d36889377a728b1284e5485e
 +
 [listing]
 ----
 PS C:\> Open-SmConnection
 ----
-. Get-SmBackup コマンドレットと Get-SmBackupReport コマンドレットを使用して、リストアするバックアップを特定します。
+. 0be208f27c2aea320f1d6d221e131551
 +
-この例では、リストアできるバックアップが 2 つあります。
+2004c840a5bc74f37ca5c26f2dfd5e0e
 
 +
 [listing]
@@ -38,7 +38,7 @@ PS C:\> Open-SmConnection
          2          Payroll Dataset_vise-f6_08... 8/4/2015 11:23:17 AM
 ----
 +
-この例では、 2015 年 1 月 29 日から 2015 年 2 月 3 日までのバックアップに関する詳細な情報を示しています。
+d1024e540ddbde0c895907728f551025
 
 +
 [listing]
@@ -73,10 +73,10 @@ SmBackupId           : 113
    BackupName           : Clone_SCSPR0019366001_02-02-2015_13.02.45
    VerificationStatus   : NotVerified
 ----
-. Restore-SmBackup コマンドレットを使用して、バックアップからデータをリストアします。
+. 4544315cf8cf4a9ef7dd5ae463d9557d
 +
 
-NOTE: AppObjectIdは「Host\Plugin\UID」です。UID =<instance_name>は手動で検出されたPostgreSQLインスタンスリソース用、UID =<instance_name>\<databse_name>はPostgreSQLクラスタリソース用です。ResourceIDは、Get-smResourcesコマンドレットで取得できます。
+NOTE: 9211fb254b9418c89e77590ae03a0ae8
 
 +
 [listing]
@@ -84,7 +84,7 @@ NOTE: AppObjectIdは「Host\Plugin\UID」です。UID =<instance_name>は手動�
 Get-smResources  -HostName cn24.sccore.test.com  -PluginCode PostgreSQL
 ----
 +
-この例は、プライマリストレージからクラスタをリストアする方法を示しています。
+b5c3bf7715665388a63229be96401c77
 
 +
 [listing]
@@ -92,7 +92,7 @@ Get-smResources  -HostName cn24.sccore.test.com  -PluginCode PostgreSQL
 Restore-SmBackup -PluginCode PostgreSQL -AppObjectId cn24.sccore.test.com\PostgreSQL\PostgreSQLinst1\DB01 -BackupId 3
 ----
 +
-次の例は、セカンダリストレージからクラスタをリストアする方法を示しています。
+68457f3725741703167e8a741dfb53a5
 
 +
 [listing]
@@ -100,6 +100,6 @@ Restore-SmBackup -PluginCode PostgreSQL -AppObjectId cn24.sccore.test.com\Postgr
 Restore-SmBackup -PluginCode 'PostgreSQL' -AppObjectId cn24.sccore.test.com\DB2\db2inst1\DB01 -BackupId 399 -Confirm:$false  -Archive @( @{"Primary"="<Primary Vserver>:<PrimaryVolume>";"Secondary"="<Secondary Vserver>:<SecondaryVolume>"})
 ----
 +
-コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+74db7181476f94f0e2927d8c8d98cb97
 
 

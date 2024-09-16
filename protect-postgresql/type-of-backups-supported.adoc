@@ -2,19 +2,19 @@
 permalink: protect-postgresql/type-of-backups-supported.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for postgresql 
-summary: Backup typeには、作成するバックアップのタイプを指定します。SnapCenterでは、PostgreSQLクラスタに対してSnapshotコピーベースのバックアップタイプがサポートされます。 
+summary: b4988589f3a9e9f24d49ce750ee55e3e 
 ---
-= サポートされるバックアップのタイプ
+= 2a681580cba5d0bac1fe8b6665a6a47e
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Backup typeには、作成するバックアップのタイプを指定します。SnapCenterでは、PostgreSQLクラスタに対してSnapshotコピーベースのバックアップタイプがサポートされます。
+b4988589f3a9e9f24d49ce750ee55e3e
 
 
 
-== Snapshot コピーベースのバックアップ
+== c6dba23441b7b81118b01afb845de37e
 
-Snapshotコピーベースのバックアップでは、NetApp Snapshotテクノロジを利用して、PostgreSQLクラスタが配置されているボリュームのオンラインの読み取り専用コピーを作成します。
+fe86ef6be8f5bd76c7a72cc22e0e6676

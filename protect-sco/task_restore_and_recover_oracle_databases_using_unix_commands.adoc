@@ -2,33 +2,33 @@
 permalink: protect-sco/task_restore_and_recover_oracle_databases_using_unix_commands.html 
 sidebar: sidebar 
 keywords: restore, recover, CLI 
-summary: リストアとリカバリのワークフローには、計画、リストア処理とリカバリ処理の実行、および処理の監視が含まれます。 
+summary: dae71de3db9b8ca8a505e2ba72dca103 
 ---
-= UNIX コマンドを使用して Oracle データベースをリストアおよびリカバリする
+= d75122950244af54ca4e4eec97be936c
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-リストアとリカバリのワークフローには、計画、リストア処理とリカバリ処理の実行、および処理の監視が含まれます。
+dae71de3db9b8ca8a505e2ba72dca103
 
-* このタスクについて *
+78166ce4ccceeedfbf6aeb8682851072
 
-* 次のコマンドを実行して、 SnapCenter サーバとの接続を確立し、バックアップをリストしてその情報を取得し、バックアップをリストアする必要があります。
+* 22b572eba58965669b192b1084592874
 +
-コマンドで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP3323470["SnapCenter ソフトウェアコマンドリファレンスガイド"^]。
+bc3f01c8b7967405e08d06ae461bdcd7
 
-* SnapMirrorのアクティブな同期のリストア処理では、プライマリの場所からバックアップを選択する必要があります。
+* 8985c27809c4d716846c0e17b0f6ff0d
 
 
-* 手順 *
+4839d2f25cc35b249d5db15efa1afd75
 
-. 指定されたユーザ用に SnapCenter サーバとの接続セッションを開始します： _Open-SmConnection_
-. リストアするバックアップに関する情報を取得します： _Get-SmBackup_
-. 指定したバックアップに関する詳細情報を取得します： _Get-SmBackupDetails_
+. 0f7d3f55b83a8ace70fddcd69afec394
+. 349637cb4b7236126306d37fb5ba4b53
+. 65f23999a47a9d1a67b492919b7a71e2
 +
-このコマンドは、指定されたバックアップ ID に一致する指定されたリソースのバックアップに関する詳細情報を取得します。情報には、データベース名、バージョン、ホーム、開始 SCN と終了 SCN 、表領域、 Pluggable Database とその表領域などがあります。
+f93390a0e3ad758bd81456069379fc0d
 
-. バックアップからデータをリストアする： _Restore-SmBackup_
+. 0db67b7a2811a90349f1fdde49eaff2d
 

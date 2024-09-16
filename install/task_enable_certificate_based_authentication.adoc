@@ -2,23 +2,23 @@
 permalink: install/task_enable_certificate_based_authentication.html 
 sidebar: sidebar 
 keywords: enable certificate-based authentication, certificate-based authentication 
-summary: SnapCenterサーバとWindowsプラグインホストに対して、証明書ベースの認証を有効にする必要があります。 
+summary: f58587d65108da4c76429348beba1493 
 ---
-= 証明書ベースの認証を有効にします
+= ac91c641781bd7c7379113e123abc706
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter ServerおよびWindowsプラグインホストに対して証明書ベースの認証を有効にするには、次のPowerShellコマンドレットを実行します。  Linuxプラグインホストで双方向SSLを有効にすると、証明書ベースの認証が有効になります。
+2deb2b431122c2428813248c5cc7e3cf
 
-* クライアント証明書ベースの認証を有効にするには：
+* 012d451c2966c8058914f66afd3ff9be
 +
-`Set-SmConfigSettings -Agent –configSettings @{"EnableClientCertificateAuthentication"="true"}` `-HostName`<<hostname>>
+c7414a7d4890863a34509bebe1bd9225
 
-* クライアント証明書ベースの認証を無効にするには：
+* 8b5db05d124326542535790d2a1a0411
 +
-`Set-SmConfigSettings -Agent –configSettings @{"EnableClientCertificateAuthentication"="false"}` `-HostName` `<<hostname>>``
+b5cfca9930b60b6f87f38ad0e8d31765
 
 

@@ -2,197 +2,196 @@
 permalink: protect-nsp/java.html 
 sidebar: sidebar 
 keywords: Custom plug-in 
-summary: Java スタイルを使用してプラグインを開発します。 
+summary: 3c67b94e6822d49d50263c7db382c071 
 ---
-= Java スタイル
+= 731641b378060335e231f40a61efb08e
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Java カスタムプラグインは、データベースやインスタンスなどのアプリケーションと直接対話します。
+8a01447d4257ebcaab42390ee2f4240d
 
 
 
-== 制限
+== e646e16bee8b32e6ea29e30d01970a6c
 
-Java プログラミング言語を使用してプラグインを開発する場合は、一定の制限事項に注意する必要があります。
-
-|===
-| プラグインの特性 | Java プラグイン 
-
-
- a| 
-複雑さ
- a| 
-低 ~ 中
-
-
-
- a| 
-メモリフットプリント
- a| 
-最大 10 ～ 20 MB
-
-
-
- a| 
-他のライブラリとの依存関係
- a| 
-アプリケーション通信用ライブラリ
-
-
-
- a| 
-スレッド数
- a| 
-1.
-
-
-
- a| 
-スレッドランタイム
- a| 
-1 時間未満
+19560bbbab2877a2271992ff54c2acf6
 
 |===
-
-
-=== Java の制限の理由
-
-SnapCenter エージェントの目標は、継続的、安全、堅牢なアプリケーション統合を実現することです。Java プラグインをサポートすることで、プラグインがメモリリークなどの不要な問題をもたらす可能性があります。これらの課題に取り組むことは困難です。特に、使いやすいものを維持することが目的である場合には困難です。プラグインの複雑さがそれほど複雑でない場合は、開発者がエラーを発生させてしまう可能性ははるかに低くなります。Java プラグインの危険性は、 SnapCenter エージェント自体と同じ JVM で実行されていることです。プラグインがクラッシュしたりメモリがリークしたりすると、 Agent に悪影響を与える可能性もあります。
-
-
-
-== サポートされている方法
-
-|===
-| メソッド | 必須 | 説明 | いつ、誰が電話をかけましたか？ 
+| 109df424c58b79c2ecda4d66296b6c11 | 18c21c5db5968d04ad5d182fe7fa9835 
 
 
  a| 
-バージョン
+7971813474da107714e72f8fd7b40a67
  a| 
-はい。
- a| 
-プラグインのバージョンを返す必要があります。
- a| 
-SnapCenter サーバまたはエージェントがプラグインのバージョンを要求します。
+63bcaffdaf5f82923762b545238b463d
 
 
 
  a| 
-休止
+5feb6a47efae7a2d8887389df8701873
  a| 
-はい。
- a| 
-アプリケーションで休止を実行する必要があります。ほとんどの場合、これは、アプリケーションをSnapCenterサーバがバックアップ（スナップショットなど）を作成できる状態にすることを意味します。
- a| 
-SnapCenter サーバが Snapshot コピーを作成する前、または一般的なバックアップを実行します。
+e6044c19b3a51182a3d4997958319ec9
 
 
 
  a| 
-休止解除
+47fafe578fde976b0ee978115a8d193b
  a| 
-はい。
- a| 
-アプリケーションに対して休止解除を実行する必要があります。ほとんどの場合、これはアプリケーションを通常の動作状態に戻すことを意味します。
- a| 
-SnapCenterサーバがスナップショットを作成した後、または
-一般的にバックアップを実行しました。
+ae048ccf4cb143d7894ff3509eed7c9e
 
 
 
  a| 
-クリーンアップ
+5906becd36463d6d7a26b280f6afaa5e
  a| 
-いいえ
- a| 
-プラグインがクリーンアップする必要があるすべての項目をクリーンアップする責任があります。
- a| 
-SnapCenter サーバでワークフローが完了したとき（正常終了したとき、または障害が発生したとき）。
+c4ca4238a0b923820dcc509a6f75849b
 
 
 
  a| 
-clonePre-
+a23d40c086cc8a7ddcc39dd3d7747fd5
  a| 
-いいえ
- a| 
-クローニング処理を実行する前に、必要な処理を実行する必要があります。
- a| 
-ユーザが「 cloneVol 」または「 cloneLun 」アクションをトリガーし、組み込みのクローニングウィザード（ GUI / CLI ）を使用する場合。
-
-
-
- a| 
-clonePost を実行します
- a| 
-いいえ
- a| 
-クローニング処理の実行後に必要な処理を実行する必要があります。
- a| 
-ユーザが「 cloneVol 」または「 cloneLun 」アクションをトリガーし、組み込みのクローニングウィザード（ GUI / CLI ）を使用する場合。
-
-
-
- a| 
-restorePre
- a| 
-いいえ
- a| 
-は、リストア処理が呼び出される前に実行する必要がある操作を実行します。
- a| 
-ユーザがリストア処理をトリガーした場合。
-
-
-
- a| 
-リストア
- a| 
-いいえ
- a| 
-アプリケーションのリストア / リカバリを実行します。
- a| 
-ユーザがリストア処理をトリガーした場合。
-
-
-
- a| 
-AppVersion （アプリバージョン）
- a| 
-いいえ
- a| 
-プラグインによって管理されているアプリケーションバージョンを取得する。
- a| 
-バックアップ / リストア / クローンなど、すべてのワークフローで ASUP データ収集の一部として実行
+d69f265ea27772294d467d9ce2f7c976
 
 |===
 
 
-== チュートリアル
+=== 70709e4ff5198c12de87c5bb1ef4d7e1
 
-このセクションでは、 Java プログラミング言語を使用してカスタムプラグインを作成する方法について説明します。
+95c0a67d0cfd35b1a8a48578d91c0495
 
 
 
-=== Eclipse のセットアップ
+== 5516fae9f196982df00a03b33d90be7d
 
-. Eclipse で新しい Java プロジェクト「 TutorialPlugin 」を作成します
-. [ 完了 ] をクリックします。
-. 新しいプロジェクト * -> * プロパティ * -> * Java ビルドパス * -> * ライブラリ * -> * 外部 JAR の追加 * を右クリックします
-. ホスト・エージェントの ./lib/folder に移動し 'jar scAgent-5.0-core.jar と common-5.0.jar を選択します
-. プロジェクトを選択し、 * src フォルダー * -> * New * -> * Package * を右クリックして、 com.netapp.snapcreator.agent.plugin.TutorialPlugin という名前で新しいパッケージを作成します
-. 新しいパッケージを右クリックし ' 新規作成 > Java クラスを選択します
+|===
+| 4c3880bb027f159e801041b1021e88e8 | b651efdb98a5d6bd2b3935d0c3f4a5e2 | b5a7adde1af5c87d7fd797b6245c2a39 | a9e54eef51002049412033909783cd2f 
+
+
+ a| 
+34b6cd75171affba6957e308dcbd92be
+ a| 
+93cba07454f06a4a960172bbd6e2a435
+ a| 
+6034a2219adc98364247fafa6c7ac86e
+ a| 
+158432aca9b72e6906771c2e2fddbb8c
+
+
+
+ a| 
+b55904d7759e5a6f24d4ca0dbdafd019
+ a| 
+93cba07454f06a4a960172bbd6e2a435
+ a| 
+7a7937f1bd01629dfc078d9cfaca3c7f
+ a| 
+15f6d11fd1f65efe57d9b506c0e06313
+
+
+
+ a| 
+b52dd62394b28fe653e8d770689ea60c
+ a| 
+93cba07454f06a4a960172bbd6e2a435
+ a| 
+09ed5f9b77aca4b8dd337f525d41ea4c
+ a| 
+2de9454fcd2f1befcb26b81a260ae3c9
+
+
+
+ a| 
+8c6384dda98d8864d00e29dc96179970
+ a| 
+bafd7322c6e97d25b6299b5d6fe8920b
+ a| 
+ff36b404767cd635ab945ad85f4f04b9
+ a| 
+5c34b664bab5b91f3ebdcd206cf4d801
+
+
+
+ a| 
+2dba998b900ac4660779ce6a046d48b2
+ a| 
+bafd7322c6e97d25b6299b5d6fe8920b
+ a| 
+47f24b1cf1e23bb722f60f453ffd948b
+ a| 
+dc3a3a59937dce595851a0e3c9e62ed8
+
+
+
+ a| 
+42db709c3bb49ea37396262616eeac0b
+ a| 
+bafd7322c6e97d25b6299b5d6fe8920b
+ a| 
+f7e930c0ca4b6495b9a8cb8417e2f98c
+ a| 
+dc3a3a59937dce595851a0e3c9e62ed8
+
+
+
+ a| 
+359714a793ff358ab1a5390adaa15c7f
+ a| 
+bafd7322c6e97d25b6299b5d6fe8920b
+ a| 
+5690bc55e76e08851a976d18b9bc3459
+ a| 
+cfb841a76e5c0388b7181075bba9ada0
+
+
+
+ a| 
+2bd339d85ee3b33e513359ce781b60cc
+ a| 
+bafd7322c6e97d25b6299b5d6fe8920b
+ a| 
+d063ebca2216dedd83b697b745d3372e
+ a| 
+cfb841a76e5c0388b7181075bba9ada0
+
+
+
+ a| 
+b64c136408bbb80dfa6717a62d239726
+ a| 
+bafd7322c6e97d25b6299b5d6fe8920b
+ a| 
+34baf03c93a4a627f25d6fc913b37041
+ a| 
+665d60e7553e146d8e88c2b9877fa0e0
+
+|===
+
+
+== 368fe771261fcb18f7988833c9294a20
+
+1cecf8d2916dc8f549c641e76e5c659a
+
+
+
+=== dd2ea46cec759c9daa1731186a69847a
+
+. 5059336e047b64e5cc20bd336d53cded
+. b978a7bf524628221c941358ed3b236b
+. da571635edcc3b6941bcbb47f042963f
+. afce1d4d057bf9e937eca261048a8a7d
+. 4c2d5f28ee3c2d47fa766db121601ccc
+. 9aa678f69b6fbd924a453ac88be2da01
 +
-.. TutorialPlugin という名前を入力してください。
-.. スーパークラスの参照ボタンをクリックし、「 * AbstractPlugin 」を検索します。表示される結果は 1 つだけです。
+.. cc5b6288914bdaaf663a91781a25ff9e
+.. 8a5763cf603724a39de4260b78d1c6ef
 +
  "AbstractPlugin - com.netapp.snapcreator.agent.nextgen.plugin".
-.. [ 完了 ] をクリックします。
-.. Java クラス :
+.. 1859e92122e266181cafb9c13d7400a0
+.. 8c7e2b6bfd819565c59f2b392665abef
 +
 ....
 package com.netapp.snapcreator.agent.plugin.TutorialPlugin;
@@ -237,11 +236,11 @@ public class TutorialPlugin extends AbstractPlugin {
 
 
 
-=== 必要なメソッドを実装する
+=== 27b2b5799cd8f27199a041f901952b56
 
-カスタム Java プラグインを実装するには、休止、休止解除、およびバージョンの各必須メソッドが必要です。
+ee5587e793308a8685469da87916cd09
 
-以下は、プラグインのバージョンを返すバージョンメソッドです。
+a385e5de06fb17f83d17b95cff5edd39
 
 ....
 @Override
@@ -279,63 +278,63 @@ logger.info("Successfully handled application");
     return result;
 }
 ....
-メソッドは Context オブジェクトで渡されます。これには、ロガーとコンテキストストアなどの複数のヘルパーと、現在の操作に関する情報（ワークフロー ID 、ジョブ ID ）が含まれます。ロガーは、最終ロガーロガー = context.getLogger(); を呼び出すことで取得できます。logger オブジェクトは、 logback などの他のロギングフレームワークで知られている同様のメソッドを提供します。結果オブジェクトでは、終了コードを指定することもできます。この例では、問題が存在しないため 0 が返されます。その他の終了コードは、さまざまな障害シナリオに対応する場合があります。
+cf7c15f920ccc654c43c2a5340be404e
 
 
 
-=== 結果オブジェクトを使用します
+=== 61880f414ea2ba4bed74bf724a7efde5
 
-result オブジェクトには、次のパラメータが含まれます。
-
-|===
-| パラメータ | デフォルト | 説明 
-
-
- a| 
-構成
- a| 
-構成が空です
- a| 
-このパラメータを使用すると、設定パラメータをサーバに返送できます。プラグインで更新するパラメータを指定できます。この変更が SnapCenter サーバの構成に実際に反映されるかどうかは、設定の APP_CONF_PERSISTENCE = Y または N パラメータに依存します。
-
-
-
- a| 
-イキシコード
- a| 
-0
- a| 
-処理のステータスを示します。「 0 」は、操作が正常に実行されたことを示します。その他の値は、エラーまたは警告を示します。
-
-
-
- a| 
-標準出力
- a| 
-リストが空です
- a| 
-これは、 stdout メッセージを SnapCenter サーバに返送するために使用できます。
-
-
-
- a| 
-stderr
- a| 
-リストが空です
- a| 
-このオプションを使用すると、 stderr メッセージを SnapCenter サーバに返送できます。
-
-
-
- a| 
-メッセージ
- a| 
-リストが空です
- a| 
-このリストには、プラグインがサーバーに返すすべてのメッセージが含まれています。これらのメッセージは、 SnapCenter サーバの CLI または GUI に表示されます。
+d15e98368b4822d2679ffe319f70bca0
 
 |===
-SnapCenter エージェントはビルダーを提供します (https://en.wikipedia.org/wiki/Builder_pattern["ビルダパターン"]）をクリックします。これにより、これらの機能を非常に簡単に使用できます。
+| 83f499a540b1323009c200d6f8cc9396 | 7a1920d61156abc05a60135aefe8bc67 | b5a7adde1af5c87d7fd797b6245c2a39 
+
+
+ a| 
+fa535ffb25e1fd20341652f9be21e06e
+ a| 
+84c917becdd45097d9cc6311fe2d384c
+ a| 
+91c257476f447587fd9c6bbc2d3fd998
+
+
+
+ a| 
+dc64d90dcdc95c2383f1db1b60ae0079
+ a| 
+cfcd208495d565ef66e7dff9f98764da
+ a| 
+04b19c92f619855670b011d1450a3753
+
+
+
+ a| 
+21d983484658a89e3070776fae2261f5
+ a| 
+7314d91688d87d3e5c9b52feb712ab26
+ a| 
+655ca11c9140ec6288b58b79c6bb4a09
+
+
+
+ a| 
+8c475733023face864f545eeca057033
+ a| 
+7314d91688d87d3e5c9b52feb712ab26
+ a| 
+21ef94ba119907117f364df896f3dec8
+
+
+
+ a| 
+41de6d6cfb8953c021bbe4ba0701c8a1
+ a| 
+7314d91688d87d3e5c9b52feb712ab26
+ a| 
+987747103127b1269c03daef522318fe
+
+|===
+3950454679ab5b1fb320d0285a746f19
 
 ....
 Result result = Result.builder()
@@ -346,7 +345,7 @@ Result result = Result.builder()
                     .withMessages(logger.getMessages())
                     .build()
 ....
-たとえば、終了コードを 0 に設定し、 stdout と stderr のリストを設定し、 config パラメータを設定して、サーバに送信されるログメッセージを追加します。すべてのパラメータが不要な場合は、必要なパラメータのみを送信します。各パラメータにはデフォルト値が設定されているため、以下のコードから .withExitCode(0) を削除しても、結果は影響を受けません。
+f16224a7d2e117c1c6004388a38e5a1f
 
 ....
 Result result = Result.builder()
@@ -356,50 +355,50 @@ Result result = Result.builder()
 ....
 
 
-=== VersionResult
+=== 8860923af296bdac25a4497406b57662
 
-VersionResult は、 SnapCenter サーバにプラグインのバージョンを通知します。また、 result から継承されるため、 config 、 exitCode 、 stdout 、 stderr 、および messages パラメータが含まれます。
-
-|===
-| パラメータ | デフォルト | 説明 
-
-
- a| 
-メジャー（ Major ）
- a| 
-0
- a| 
-プラグインのメジャーバージョンフィールド。
-
-
-
- a| 
-マイナー
- a| 
-0
- a| 
-プラグインのマイナーバージョンフィールド。
-
-
-
- a| 
-パッチ
- a| 
-0
- a| 
-プラグインの PATCH version フィールド。
-
-
-
- a| 
-構築
- a| 
-0
- a| 
-プラグインのビルドバージョンフィールド。
+5e2c436a0c1116523458920900625aa7
 
 |===
-例：
+| 83f499a540b1323009c200d6f8cc9396 | 7a1920d61156abc05a60135aefe8bc67 | b5a7adde1af5c87d7fd797b6245c2a39 
+
+
+ a| 
+3b329734e45b57e60f3df64c2cf412a9
+ a| 
+cfcd208495d565ef66e7dff9f98764da
+ a| 
+e9fe51210c5ecbbdc30bc9326fa943b1
+
+
+
+ a| 
+6fed0c378a4b4e8c1e7dc5c16dabb388
+ a| 
+cfcd208495d565ef66e7dff9f98764da
+ a| 
+3550287ffc4359734a0031c175193fdd
+
+
+
+ a| 
+156e10596fdc76ee5300bab931d89c0f
+ a| 
+cfcd208495d565ef66e7dff9f98764da
+ a| 
+76e77e1098ad643957d7c5c9df22f01b
+
+
+
+ a| 
+c74c1f42f141c011ca6bd8b1114fc3d0
+ a| 
+cfcd208495d565ef66e7dff9f98764da
+ a| 
+04feeef72aa7060480f2ff21cb04404b
+
+|===
+506c2c0c7f5b70af3df68c45c46f45a7
 
 ....
 VersionResult result = VersionResult.builder()
@@ -411,60 +410,60 @@ VersionResult result = VersionResult.builder()
 ....
 
 
-=== コンテキストオブジェクトの使用
+=== fdd378ed98ea7cd4f7a8bd10d40352b3
 
-コンテキストオブジェクトには、次のメソッドがあります。
-
-|===
-| コンテキストメソッド | 目的 
-
-
- a| 
-文字列 getWorkflowId();
- a| 
-現在のワークフローで SnapCenter サーバによって使用されているワークフロー ID を返します。
-
-
-
- a| 
-Config GetConfig （）；
- a| 
-SnapCenter サーバからエージェントに送信されている設定を返します。
+1d2371f72c4ef61cbb3e573ca275f8f3
 
 |===
+| 237c5740526e5a5fabdce09eb2155078 | 261addf78c7b2c961032b3dd08ba0b1f 
 
 
-=== ワークフロー ID
+ a| 
+ed90d972be4b4cc0150929cd58469816
+ a| 
+df1e3aa8600b8512002fe0822a7d768d
 
-ワークフロー ID は、実行中の特定のワークフローを SnapCenter サーバが参照するために使用する ID です。
+
+
+ a| 
+bdb6c277ff6a1becf6660510785d77b3
+ a| 
+0ed8b4c7dca05c28c63be3280f70e3d7
+
+|===
+
+
+=== 04b3c4ea531620d4fc4ced9c79e3dfb0
+
+9654c976940a07a77d7f08ca8e9ca7c7
 
 
 
-=== 構成
+=== fa535ffb25e1fd20341652f9be21e06e
 
-このオブジェクトには、ユーザが SnapCenter サーバの設定で設定できるパラメータのほとんどが含まれます。ただし、セキュリティ上の理由から、これらのパラメータの一部はサーバ側でフィルタリングされる場合があります。次に、 Config にアクセスしてパラメータを取得する例を示します。
+37d64f01ccd77885519f2a946af921e6
 
 ....
 final Config config = context.getConfig();
 String myParameter =
 config.getParameter("PLUGIN_MANDATORY_PARAMETER");
 ....
-"//MyParameter" に、設定パラメータキーが存在しない場合に SnapCenter サーバの設定から読み取られたパラメータが含まれるようになりました。空の文字列 ("") が返されます。
+fb4b95f7efbccbc9f673de67cb4a063c
 
 
 
-=== プラグインのエクスポート
+=== 308a084b70c4908d42de7192cbf8efe1
 
-SnapCenter ホストにインストールするには、プラグインをエクスポートする必要があります。
+7cac39bd02f3b909f147bea7e251deba
 
-Eclipse では、次のタスクを実行します。
+ff0741643ca10baccfc83aad90426d28
 
-. プラグインのベースパッケージを右クリックします（この例では com.netapp.snapcreator.agent.plugin.TutorialPlugin ）。
-. 「 * Export * -> * Java * -> * JAR File * 」を選択します
-. 「 * 次へ * 」をクリックします。
-. 次のウィンドウで、インストール先の jar ファイルのパスを指定します。 tutorial_plugin.jar プラグインのベースクラスは TutorialPlugin.class という名前で、同じ名前のフォルダにプラグインを追加する必要があります。
+. 9b3f778b7349e7c6a31e5dd3a35d16f3
+. 37233c4c635b4449c6d038a07e100c20
+. 5a378b18f7bf0c4cabc6c655cd2f535e
+. 8167729e48b2ebf78082747fb306ad04
 
 
-プラグインが追加のライブラリに依存している場合は、 lib/ というフォルダを作成できます
+956dcc9eb4dcc7a9760461455f0c02d3
 
-jar ファイルを追加できます。このプラグインは従属ファイルに依存します（たとえば、データベース・ドライバ）。SnapCenter は、プラグインをロードすると、このフォルダ内のすべての jar ファイルを自動的に関連付けて、クラスパスに追加します。
+bc60c50c66a380f1b4c5ad98a8a84f77

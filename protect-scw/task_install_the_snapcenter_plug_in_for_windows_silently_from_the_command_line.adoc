@@ -2,104 +2,104 @@
 permalink: protect-scw/task_install_the_snapcenter_plug_in_for_windows_silently_from_the_command_line.html 
 sidebar: sidebar 
 keywords: install, snapcenter 
-summary: SnapCenter Plug-in for Microsoft Windows を SnapCenter の GUI からリモートでインストールできない場合は、 Windows ホスト上にローカルにインストールできます。SnapCenter Plug-in for Microsoft Windows のインストールプログラムを、 Windows のコマンドラインからサイレントモードで自動的に実行できます。 
+summary: 7372096d67d7a00d21e644f03bd6b3f6 
 ---
-= コマンドラインから SnapCenter Plug-in for Microsoft Windows をサイレントにインストールします
+= 3065bc79c85488f5e9c34540aa589dee
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter Plug-in for Microsoft Windows を SnapCenter の GUI からリモートでインストールできない場合は、 Windows ホスト上にローカルにインストールできます。SnapCenter Plug-in for Microsoft Windows のインストールプログラムを、 Windows のコマンドラインからサイレントモードで自動的に実行できます。
+7372096d67d7a00d21e644f03bd6b3f6
 
-.作業を開始する前に
-* Microsoft .Net 4.7.2以降がインストールされている必要があります。
-* PowerShell 7.4.2以降がインストールされている必要があります。
-* Windows メッセージキューをオンにしておく必要があります。
-* ホストのローカル管理者である必要があります。
+.135b308ed83c53f1516b7c754566d1c4
+* 08e9631e1208ded677a67844beb7e0f6
+* 06b79cf9e641e40d79092a668abcecac
+* 45305b0c2be46c68805c14c7667e37d1
+* 3f9e658ebdc571b944cc7a6bb94fa2fc
 
 
-.手順
-. インストールの場所から、 SnapCenter Plug-in for Microsoft Windows をダウンロードします。
+.f3a29486bed19a90f2da6d007818b427
+. 012cef6769a01d5c95c3bd84a1587de6
 +
-たとえば、デフォルトのインストールパスは C ： \ProgramData\NetApp\SnapCenter \Package Repository です。
-
-+
-このパスには、 SnapCenter サーバがインストールされているホストからアクセスできます。
-
-. プラグインをインストールするホストにインストールファイルをコピーします。
-. コマンドプロンプトで、インストールファイルをダウンロードしたディレクトリに移動します。
-. 変数を実際のデータに置き換えて、次のコマンドを入力します。
-+
-「 snapcenter _windows_host_plugin.exe 」 /silent/debuglog 「 /log 」 by_SNAPCENTER_port=SUIT_INSTALLDIR="by_ServiceAccount=BI_SERVICEPWD=ISFeatureInstall=SCW`
+e0080a28dd770f19702e65fb9e7b8c86
 
 +
-例：
+034c5f14c518f47816188b94e9a8c076
+
+. 5bab9653208d5b37a0eac3869bbd0887
+. 5c1710bcbaa54d3596474a1772fb16f8
+. 424b633375f0c25b6599ad41cd5c8834
++
+e559b6a335235bf0d42e119acfec64ee
+
++
+506c2c0c7f5b70af3df68c45c46f45a7
 
 +
  `"C:\ProgramData\NetApp\SnapCenter\Package Repository \snapcenter_windows_host_plugin.exe"/silent /debuglog"C: \HPPW_SCW_Install.log" /log"C:\" BI_SNAPCENTER_PORT=8145 SUITE_INSTALLDIR="C: \Program Files\NetApp\SnapCenter" BI_SERVICEACCOUNT=domain\administrator BI_SERVICEPWD=password ISFeatureInstall=SCW`
 +
 
-NOTE: Plug-in for Windows のインストール中に渡されるすべてのパラメータでは、大文字と小文字が区別されます。
+NOTE: a9ed368eca2fcc1d3ad4f6e42059e309
 
 +
-次の変数の値を入力します。
+a9df8fefa98612b0f841fb4835526229
 
 +
 |===
-| 変数（ Variable ） | 価値 
+| 47c14840d8e15331fa420b9b2f757cd9 | 689202409e48743b914713f96d93947c 
 
 
  a| 
-// debuglog "<Debug_Log_Path>_
+193ff195e30956aa211931348e16eab2
  a| 
-インストーラのログファイルの名前と場所を次のように指定します。 Setup.exe /debuglog "C:\PathToLog\setupexe.log"
-
-
-
- a| 
-BI _ SNAPCENTER_PORT
- a| 
-SnapCenter が SMCore と通信するポートを指定します。
+2483a10daa005b9522a8bee43fcfcb92
 
 
 
  a| 
-SUITE_INSTALLDIR
+73685e43dc2de0e167941f023cd06dd6
  a| 
-ホストのプラグインパッケージのインストールディレクトリを指定します。
-
-
-
- a| 
-BY_ServiceAccount の場合
- a| 
-SnapCenter Plug-in for Microsoft Windows の Web サービスアカウントを指定します。
+97795425d2d417a2bc6791cdd5846cbe
 
 
 
  a| 
-BI_SERVVICEPWD
+71dabf9947e2c37aca2fcbf8357c5fd9
  a| 
-SnapCenter Plug-in for Microsoft Windows の Web サービスアカウントのパスワードを指定します。
+0fa235337ee6356fb65ad4ac56f35afd
 
 
 
  a| 
-ISFeatureInstall
+79c344bd182d5784ae4a41cfa126aca2
  a| 
-SnapCenter によってリモートホストに導入される解決策を指定します。
+f00564c21d005394fe5907bc3a1b08df
+
+
+
+ a| 
+89ce1d1f16532f56caebecf11811e703
+ a| 
+93052680e36d7df2c5c10397ee0bc479
+
+
+
+ a| 
+d95132b1645bfc6a3bb0a31f752c1b7f
+ a| 
+ba14ee3fc494e3631e69614f63bbabc4
 
 |===
 +
-_debuglog_parameter には、 SnapCenter のログファイルのパスが含まれます。このログファイルにはインストールで実行されるプラグインの前提条件に関するチェック結果が記録されるため、トラブルシューティング情報を入手する方法としてこのログファイルに書き込むことを推奨します。
+e370a7ee0bb74d7599ae4a101282e69b
 
 +
-必要に応じて、 SnapCenter for Windows パッケージのログファイルでその他のトラブルシューティング情報を確認できます。パッケージのログファイルは、 _%Temp_folder に（最も古いものから）一覧表示されます（例： _C ： \temp\_ ）。
+69aab0f4bbb32969d2c33fb5099aa4fa
 
 +
 
-NOTE: Plug-in for Windows をインストールすると、 SnapCenter サーバではなくホストにプラグインが登録されます。SnapCenter サーバにプラグインを登録するには、 SnapCenter GUI または PowerShell コマンドレットを使用してホストを追加します。ホストを追加すると、プラグインが自動的に検出されます。
+NOTE: 3d7844d331c36c05271f66508c7df774
 
 

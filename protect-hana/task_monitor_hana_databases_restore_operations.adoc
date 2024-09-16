@@ -2,45 +2,45 @@
 permalink: protect-hana/task_monitor_hana_databases_restore_operations.html 
 sidebar: sidebar 
 keywords: monitor, SAP HANA databases, restore operations 
-summary: Jobs ページを使用して、 SnapCenter の各リストア処理の進捗状況を監視できます。処理の進捗状況をチェックして、処理が完了するタイミングや問題があるかどうかを確認できます。 
+summary: 883f217b99bc288ae19aa7d6d60b021f 
 ---
-= SAP HANA データベースのリストア処理を監視する
+= 2065a62a889c7d875ea69c2c53fffe7c
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Jobs ページを使用して、 SnapCenter の各リストア処理の進捗状況を監視できます。処理の進捗状況をチェックして、処理が完了するタイミングや問題があるかどうかを確認できます。
+883f217b99bc288ae19aa7d6d60b021f
 
-.このタスクについて
-リストア後の状態によって、リストア処理後のリソースの状況と、追加で実行できるリストア操作がわかります。
+.bbe48fb854ea022537208eeeff822f91
+ee9237c14a6c4cc7b6b4a10fbf38aa79
 
-以下のアイコンがジョブページに表示され、操作の状態を示します。
+ec0ce2a8340fde4668c9c369e1e0a781
 
-* image:../media/progress_icon.gif["実行中のアイコン"] 実行中です
-* image:../media/success_icon.gif["完了アイコン"] 正常に完了しました
-* image:../media/failed_icon.gif["失敗したアイコン"] 失敗しました
-* image:../media/warning_icon.gif["警告アイコンが表示されています"] 警告で終了したか、警告が原因で起動できませんでした
-* image:../media/verification_job_in_queue.gif["検証ジョブをキューに格納します"] キューに登録され
-* image:../media/cancel_icon.gif["キャンセルアイコン"] キャンセルされました
+* cad8bf0bd55afaa12be11cc29f347052
+* 3a62ae015b4ba6f0dc48c424c0a0fe86
+* 4066ea01819c2bfdcb0dbbc680a26a0a
+* 54cc5efef9b7edd3fd699fc1e5a0ff50
+* d208aa08a03da9a8a8e5bd96ad0fedae
+* 596771a00ab2893deb5c8fa7fe5873f5
 
 
-.手順
-. 左側のナビゲーションペインで、 *Monitor* をクリックします。
-. [* Monitor*] ページで、 [* Jobs] をクリックします。
-. [* ジョブ * ] ページで、次の手順を実行します。
+.f3a29486bed19a90f2da6d007818b427
+. b40a6c0b08ac99c86eb676e2689c6996
+. 7f3e84692f24d61327601751bb201dc8
+. 7ece64d8d9ea3a89221dea21761b07d9
 +
-.. をクリックします image:../media/filter_icon.png["フィルタアイコン"] リストをフィルタリングして、リストア処理のみを表示します。
-.. 開始日と終了日を指定します。
-.. [* タイプ *] ドロップダウン・リストから、 [* リストア *] を選択します。
-.. [* Status *] ドロップダウン・リストから、リストア・ステータスを選択します。
-.. [ 適用（ Apply ） ] をクリックして、正常に完了した操作を表示する。
+.. 069fa852337561671b88be2afd1ea4ef
+.. 7407325f29b504f9c8b87ec8da503815
+.. 72703ba150df91059707035aef45dd74
+.. a28133afd7846d1e77aa696930846108
+.. e12538143afda34a18dc094aa39a01ff
 
 
-. リストアジョブを選択し、 * Details * をクリックして、ジョブの詳細を表示します。
-. ［ * ジョブの詳細 * ］ ページで、 ［ * ログの表示 * ］ をクリックします。
+. ece9c93963dca272468918a5414d7e34
+. b69ca9a37b35f7d7f9d83f9069243f8e
 +
-*View logs* ボタンをクリックすると、選択した操作の詳細なログが表示されます。
+2063f930237a8cb9c2f18d14af2c0772
 
 

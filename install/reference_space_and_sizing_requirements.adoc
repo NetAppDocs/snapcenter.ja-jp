@@ -2,99 +2,99 @@
 permalink: install/reference_space_and_sizing_requirements.html 
 sidebar: sidebar 
 keywords: SnapCenter 
-summary: SnapCenter サーバをインストールする前に、スペースとサイジングの要件を十分に理解しておく必要があります。また、利用可能なシステムおよびセキュリティの更新も適用する必要があります。 
+summary: 5fd3d0b8e71c4f64cfbad31e3fde1863 
 ---
-= スペースとサイジングの要件
+= 18cd7192921dd5ac27a1a7c5ef795c20
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter サーバをインストールする前に、スペースとサイジングの要件を十分に理解しておく必要があります。また、利用可能なシステムおよびセキュリティの更新も適用する必要があります。
+5fd3d0b8e71c4f64cfbad31e3fde1863
 
 |===
-| 項目 | Windowsホストノヨウケン | Linux ホストの要件 
+| 7d74f3b92b19da5e606d737d339a9679 | 6905661e5d7f8f3e6a4faffbbab0f627 | ace028fe1c5dc8fb39091440d89fd9fd 
 
 
  a| 
-オペレーティングシステム
+aab338915e32b60e92c8de3a23aa5c5d
  a| 
-Microsoft Windows の場合
+bb79f96acbff544ded541446c9c7c894
 
-サポートされているのは、英語版、ドイツ語版、日本語版、簡体字中国語版のオペレーティングシステムのみです。
+3dbe205a1db3f8f677f2e971edc8976d
 
-サポートされているバージョンの最新情報については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=121033;&solution=1258&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。
+580a1e1b3bc67640f27785bacfdba10c
  a| 
-* Red Hat Enterprise Linux（RHEL）8および9
-* SUSE Linux Enterprise Server（SLES）15
+* e7074f744b12e993cbdc6c77ee980b3e
+* 447430d602cceb081264e037425cd96e
 
 
-サポートされているバージョンの最新情報については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=121032;&solution=1258&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。
-
-
-
- a| 
-最小 CPU 数
- a| 
-4 コア
- a| 
-4 コア
+f773b518874c315e0079bcc43b41dafb
 
 
 
  a| 
-最小 RAM
+44e5a606cb3fbfaed79ce8eb853ed886
  a| 
-8 GB
-
-
-NOTE: MySQL Server のバッファプールでは、 RAM の合計の 20% が使用されます。
+39d305d656d2efca941f50ce8253a426
  a| 
-8 GB
+39d305d656d2efca941f50ce8253a426
 
 
 
  a| 
-SnapCenter サーバソフトウェアおよびログ用のハードドライブの最小容量
+a88605ea0ad2e6919ae06fa5bb9e26d2
  a| 
-7 GB
+af5700014f646d2567efa6288d85ab2b
 
 
-NOTE: SnapCenterサーバがインストールされているドライブと同じドライブにSnapCenterリポジトリがある場合は、15 GBを使用することを推奨します。
+NOTE: ff8928d92667dc6822457922171f6a8b
  a| 
-15 GB
-
-
-
- a| 
-SnapCenter リポジトリ用のハードドライブの最小容量
- a| 
-8 GB
-
-
-NOTE: メモ： SnapCenter リポジトリがインストールされているドライブに SnapCenter サーバがある場合は、 15 GB にすることを推奨します。
- a| 
-該当なし
+af5700014f646d2567efa6288d85ab2b
 
 
 
  a| 
-必要なソフトウェアパッケージ
+b2f68f095897733ed9e569751132d444
  a| 
-* Microsoft .NET Framework 4.7.2以降
-* ASP。 Net Core Hosting Bundle（8.0.5以降）
-* PowerShell 7.4.2以降
+58fcf439498ea50f357222fa8b3b151e
 
 
-.NET固有のトラブルシューティング情報については、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_upgrade_or_install_fails_with_%22This_KB_is_not_related_to_the_OS%22["インターネットに接続されていないレガシーシステムでは、SnapCenter のアップグレードまたはインストールが失敗します"^]。
+NOTE: a1fb12d161d2304544584ed2d9b82082
  a| 
-* ASP。 Net Core Runtime 8.0.5以降
-* PowerShell 7.4.2以降
-* nginxはリバースプロキシとして使用できるWebサーバ
-* PAM -デベル
+9f101c0e6e5929a04c9e7663fdf91eda
+
+
+
+ a| 
+eab6f98d53a6f96361c17edca2b02553
+ a| 
+af5700014f646d2567efa6288d85ab2b
+
+
+NOTE: d6874413f4fac004d1cb83f02eccc33c
+ a| 
+e681a3b45989b468533c4b90ee960bf9
+
+
+
+ a| 
+c02f07fcd7047bf35e0bb82decca0939
+ a| 
+* f9e40bd22b133e93e9c9d3b4c3adef6e
+* 77e6d1d743590f1944df090df04f64fb
+* 4c6ec01f6ae03e08c146fe6865423a4b
+
+
+462fbac4d281be78bedf063a9dbd9f61
+ a| 
+* 43e185b7580feec0acd79569efc4e099
+* 4c6ec01f6ae03e08c146fe6865423a4b
+* 149d1be25c7d76696b875863179ac66d
+* 21624173efc06090951170116cd13563
 +
-PAM（Pluggable Authentication Modules）は、システム管理者が認証を行うプログラムを再コンパイルすることなく認証ポリシーを設定できるシステムセキュリティツールです。
+6d4ed4face9b51c5caae12208e47fa1e
 
 
 

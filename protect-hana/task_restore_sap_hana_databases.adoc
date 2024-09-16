@@ -2,21 +2,21 @@
 permalink: protect-hana/task_restore_sap_hana_databases.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for SAP HANA Database 
-summary: リストアとリカバリのワークフローには、計画、リストア処理の実行、および処理の監視が含まれます。 
+summary: dd5f630f41cdfc02249f05e881feeef5 
 ---
-= リストアワークフロー
+= e30c3d908a4ed515e16791b672cc0709
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-リストアとリカバリのワークフローには、計画、リストア処理の実行、および処理の監視が含まれます。
+dd5f630f41cdfc02249f05e881feeef5
 
-次のワークフローは、リストア処理の実行順序を示しています。
+f221802dd348fa7fec376c674a7bceda
 
-image::../media/restore_workflow.gif[リストアワークフロー]
+image::../media/restore_workflow.gif[e30c3d908a4ed515e16791b672cc0709]
 
-PowerShell コマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、クローニングの処理を実行することもできます。PowerShell コマンドレットの詳細については、 SnapCenter のコマンドレットのヘルプを使用するか、コマンドレットのリファレンス情報を参照してください。
+515099a9db2d69620b1bbc080fe5200a
 
-https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]です。
+6bd0747e41f5cc71876f961107d5cde4

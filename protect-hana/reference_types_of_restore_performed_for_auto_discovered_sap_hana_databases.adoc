@@ -2,49 +2,49 @@
 permalink: protect-hana/reference_types_of_restore_performed_for_auto_discovered_sap_hana_databases.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for SAP HANA Databases 
-summary: SnapCenter では、自動検出された SAP HANA データベースについて、ボリュームベースの SnapRestore （ VBSR ）、単一ファイル SnapRestore 、および接続とコピーのリストアタイプがサポートされます。 
+summary: a30cbc0a03f03c5c43937ad1f7927038 
 ---
-= 自動検出された SAP HANA データベースのリストア処理のタイプ
+= 956114026450e935573541a200bd51a7
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter では、自動検出された SAP HANA データベースについて、 Volume-Based SnapRestore （ VBSR ）、 Single File SnapRestore 、 Connect and Copy のリストアタイプがサポートされています。
+cce48356cb2b15c37720771a9ef414c4
 
 
 
-== NFS 環境で Volume-Based SnapRestore （ VBSR ）を使用すると、次のようなシナリオが発生します。
+== 75bb2846113f16e696f05fb74edd409b
 
-* リストア用に選択されたバックアップが SnapCenter 4.3 より前のリリースで実行され '** Complete Resource** オプションが選択されている場合のみ
-* リストア用に選択されたバックアップが SnapCenter 4.3 で選択されていて、 * Volume Revert * オプションが選択されている場合
-
-
-
-
-== NFS 環境で単一ファイル SnapRestore を実行するシナリオを次に示します。
-
-* リストア用に選択したバックアップが SnapCenter 4.3 で実行されていて、 [ リソースを完全にバックアップ ] オプションのみが選択されている場合
-* マルチテナントデータベースコンテナ（ MDC ）の場合は、リストア対象に選択されたバックアップが SnapCenter 4.3 で作成され、「 * テナントデータベース * 」オプションが選択されているとみなされます
-* バックアップを SnapMirror または SnapVault セカンダリの場所から選択し、 * Complete Resource * オプションが選択されている場合
+* 301be1c4719babdd3211992183893743
+* b789dfc7ed3495667bb612189f565100
 
 
 
 
-== 単一ファイル SnapRestore は、次のような状況で SAN 環境で実行されます。
+== b84bb31b9e5d09baf5905b34fa16035f
 
-* SnapCenter 4.3 より前のリリースでバックアップを作成する場合、 [ リソースの完了 ] オプションが選択されている場合のみ
-* SnapCenter 4.3 でバックアップを実行する場合、 * Complete Resource * オプションが選択されている場合のみ
-* SnapMirror または SnapVault セカンダリストレージからバックアップを選択し、 * Complete Resource * オプションを選択した場合
-
-
-
-
-== Connect and Copy ベースのリストアは、 SAN 環境で次のシナリオに基づいて実行されます。
-
-* MDC の場合は、リストア用に選択されたバックアップが SnapCenter 4.3 で作成され、 * テナントデータベース * オプションが選択されている場合
+* dd04d6d6a0e47e6743bb551349adcc31
+* 6e54701ef77a09acf0cc8d8b1cf7cd66
+* 8a40b0d9d049d6cfff611f823df8c79d
 
 
 
-NOTE: * リソース全体 * 、 * ボリューム復帰 * 、 * テナントデータベース * の各オプションは、 [ リストア範囲 ] ページから選択できます。
+
+== d93ff0f7aebe8aeef2555625334e6c0c
+
+* 27222bec32db7bfbd9179df1dd44e9e2
+* 0de4c90cf334ff114fd42f740208729e
+* 942e528bc97cc5b31f14fe2c8b3b5c89
+
+
+
+
+== 23edb4a7d4602022c4b99d5bc27e1f72
+
+* f808a90cfca6fba9b898b1538139e4db
+
+
+
+NOTE: 7b18e7982680756715913942984f5be2

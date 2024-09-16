@@ -2,64 +2,64 @@
 permalink: protect-sco/discover-oracle-database.html 
 sidebar: sidebar 
 keywords: oracle databases discover 
-summary: SnapCenter によるOracleデータベースの検出方法 
+summary: d9372adbc1bed6681e74cd02004081f0 
 ---
-= SnapCenter による Oracle データベースの検出方法
+= f33e947663ea7594521f672ec085dfa1
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-リソースとは、SnapCenter で管理されるホスト上のOracleデータベースです。使用可能なデータベースを検出したあとに、それらのデータベースをリソースグループに追加してデータ保護処理を実行できます。
+4ea8079fa2f37d718bf02e968bee364b
 
-次のセクションでは、SnapCenter がさまざまなタイプおよびバージョンのOracleデータベースを検出するために使用するプロセスについて説明します。
-
-
-
-== Oracle バージョン 11_________ ～ 12_c_R1
-
-.RACデータベース
-RACデータベースは、/etc/oratab`エントリに基づいてのみ検出されます。/etc/oratab ファイル内にデータベース・エントリが必要です。
-
-.スタンドアロン
-スタンドアロンデータベースは、/etc/oratabエントリに基づいてのみ検出されます。
-
-.ASM
-ASMインスタンスエントリが/etc/oratabファイルにある必要があります。
-
-.RAC 1ノード
-RAC One Nodeデータベースは、/etc/oratabエントリに基づいてのみ検出されます。データベースがnomount、mount、またはopenのいずれかの状態である必要があります。/etc/oratab ファイル内にデータベース・エントリが必要です。
-
-データベースがすでに検出され、バックアップが関連付けられている場合、 RAC One Node データベースのステータスは「 Renamed 」または「 deleted 」とマークされます。
-
-データベースを再配置する場合は、次の手順を実行する必要があります。
-
-. フェイルオーバーが発生した RAC ノードの /etc/oratab ファイルに、再配置されたデータベース・エントリを手動で追加します。
-. リソースを手動で更新する。
-. リソースページからRAC One Nodeデータベースを選択し、[データベース設定]をクリックします。
-. データベースを設定して、データベースを現在ホストしている RAC ノードに優先クラスタノードを設定します。
-. SnapCenter 処理を実行します。
-. あるノードから別のノードにデータベースを再配置し、以前のノードのoratabエントリが削除されていない場合は、同じデータベースが2回表示されないように、oratabエントリを手動で削除します。
+35cd5d3812d5d01441ea27f0cc23e846
 
 
 
+== d1baa1985c557079454c081480936f1c
 
-== Oracleバージョン12cR2～18cの場合
+.c3840e3ab25ce9f30ec697c152655f28
+fde91ef302aa0e3bbe841036968b5490
 
-.RACデータベース
-RACデータベースはsrvctl configコマンドを使用して検出されます。/etc/oratab ファイル内にデータベース・エントリが必要です。
+.5c80f101108a356211fcb26b3f83eabb
+bea76d34a87d4264ca025e2d88b3350d
 
-.スタンドアロン
-スタンドアロンデータベースは、/etc/oratabファイルのエントリとsrvctl configコマンドの出力に基づいて検出されます。
+.7ccbb03cb795734415a0b6924a8d7aed
+10d2161a02aedfc95234b3a3456eb306
 
-.ASM
-ASMインスタンスエントリが/etc/oratabファイルに含まれている必要はありません。
+.2e870bce056fbce1cb37f62a4e47660e
+14eaca04b4e6fa17b6fb76a780747d7b
 
-.RAC 1ノード
-RAC One Nodeデータベースは、srvctl configコマンドのみを使用して検出されます。データベースがnomount、mount、またはopenのいずれかの状態である必要があります。データベースがすでに検出され、バックアップが関連付けられている場合、 RAC One Node データベースのステータスは「 Renamed 」または「 deleted 」とマークされます。
+1e72d22e833be8897f91b2c655906514
 
-データベースが再配置された場合は、次の手順を実行する必要があります。リソースを手動で更新する。。リソースページからRAC One Nodeデータベースを選択し、[データベース設定]をクリックします。。データベースを設定して、データベースを現在ホストしている RAC ノードに優先クラスタノードを設定します。。SnapCenter 処理を実行します。
+054e18922cd3115bd0028a57e37f7a49
+
+. 3b872478f6ef5787a42a2b9eb7cd231c
+. 802694f436252b6d66875341f764c29a
+. 0490fa938898aedef2dc7269ec3361ba
+. 11613abc39d8e8292f1f4cdb70891ead
+. 902cf12e6ae4c932d59179746fe738be
+. 141229b009a397273fc34bf2467990b8
 
 
-NOTE: /etc/oratab ファイル内に Oracle 12_c__R2 および 18_c_database のエントリがあり、同じデータベースが srvctl config コマンドで登録されている場合、 SnapCenter は重複するデータベースエントリを削除します。古いデータベースエントリがある場合は、データベースは検出されますが、データベースにアクセスできず、ステータスはオフラインになります。
+
+
+== b6b2be55c51c8c3e0d58ffcc788b57d0
+
+.c3840e3ab25ce9f30ec697c152655f28
+138ac8a924ba70371a9fccc55eeffc50
+
+.5c80f101108a356211fcb26b3f83eabb
+bdc631ac0c61f623f88a03e50eb10d04
+
+.7ccbb03cb795734415a0b6924a8d7aed
+065a682f6e2ff04149d8f73d3a4f075e
+
+.2e870bce056fbce1cb37f62a4e47660e
+d9fa3141119141b68b1c5d32ed6a8e02
+
+3d4a391fad87ee2d69bf0079369db6c0
+
+
+NOTE: 4ea1770ff0a5b7262162a1b74b727299

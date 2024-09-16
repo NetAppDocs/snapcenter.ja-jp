@@ -2,102 +2,99 @@
 permalink: protect-hana/reference_prerequisites_to_adding_hosts_and_installing_snapcenter_plug_in_for_sap_hana_database.html 
 sidebar: sidebar 
 keywords: credentials 
-summary: ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。SnapCenter Plug-in for SAP HANA Database は、 Windows と Linux のどちらの環境でも使用できます。 
+summary: 993d084476d90eaf8ecb0ad1a0a2f901 
 ---
-= ホストを追加して SnapCenter Plug-in for SAP HANA Database をインストールするための前提条件
+= 66cf3f797a37d99d37e260746f767101
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。SnapCenter Plug-in for SAP HANA Database は、 Windows と Linux のどちらの環境でも使用できます。
+993d084476d90eaf8ecb0ad1a0a2f901
 
-* Java 11をホストにインストールしておく必要があります。
+* 8b78d81fcf70311e0778d7ca1a1da748
 +
 
-NOTE: IBM Javaはサポートされていません。
+NOTE: 3a6eb59ee064b09b020c1a87c5de4988
 
-* SAP HANA データベースの対話型端末（ HDBSQL クライアント）をホストにインストールしておく必要があります。
-* Windows の場合は、「 LocalSystem 」 Windows ユーザを使用してプラグインの Creator Service が実行されている必要があります。これは、 Plug-in for SAP HANA Database がドメイン管理者としてインストールされている場合のデフォルトの動作です。
-* Windows の場合は、ユーザストアキーを SYSTEM ユーザとして作成する必要があります。
-* Windows ホストにプラグインをインストールする場合、ビルトインでないクレデンシャルを指定する場合、またはユーザがローカルワークグループユーザに属している場合は、ホストで UAC を無効にする必要があります。SnapCenter Plug-in for Microsoft Windows は、 Windows ホストに SAP HANA プラグインを使用してデフォルトで導入されます。
-* Linux ホストの場合は、 HDB Secure User Store キーに HDBSQL OS ユーザとしてアクセスします。
-* SnapCenter サーバが、 Plug-in for SAP HANA Database ホストの 8145 ポートまたはカスタムポートにアクセスできる必要があります。
-
-
+* f75d6b3895c7e3dc12c8aebce148b694
+* 6af0ddf64964f87eaafc79f93b164227
+* b5d183d4ef5aaa89ffb0925b9e6e4c0c
+* 4af6f0beed5d0447de31a73e1cb47b08
+* 0e79390d9d157c53cbc0f30c423c081c
+* 0f2988f218fcef3499e2c75fddafd96e
 
 
-== Windows ホスト
 
-* ローカル管理者権限を持つドメインユーザがあり、リモートホストに対してローカルログイン権限が付与されている必要があります。
-* Plug-in for SAP HANA Database を Windows ホストにインストールする際に、 SnapCenter Plug-in for Microsoft Windows が自動的にインストールされます。
-* root ユーザまたは root 以外のユーザ用にパスワードベースの SSH 接続を有効にしておく必要があります。
-* Java 11をWindowsホストにインストールしておく必要があります。
+
+== bd5ca81744f222d9b9a956e81e4db9d4
+
+* 361ef555cc4b1de8cd252d68a14901af
+* 19651d78354411794cd21f4636d9840b
+* 92f854eabda8c2aa761e01fba1c6ffd4
+* 74b8e77de0b5018c5ab2ca7eb523ff31
 +
-http://www.java.com/en/download/manual.jsp["すべてのオペレーティングシステム用の Java のダウンロード"]
-
-+
-https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"]
-
-
-
-
-
-== Linux ホスト
-
-* root ユーザまたは root 以外のユーザ用にパスワードベースの SSH 接続を有効にしておく必要があります。
-* Java 11をLinuxホストにインストールしておく必要があります。
-+
-http://www.java.com/en/download/manual.jsp["すべてのオペレーティングシステム用の Java のダウンロード"]
+9226092112d9484949841b47e3b0500e
 
 +
-https://imt.netapp.com/matrix/imt.jsp?components=121073;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"]
-
-* Linux ホストで実行されている SAP HANA データベースを Plug-in for SAP HANA Database のインストール時にインストールすると、 SnapCenter Plug-in for UNIX が自動的にインストールされます。
-* プラグインのインストールには、デフォルトのシェルとして* bash *が必要です。
+f2a30e95b118ce2c4e84d94437f4a891
 
 
 
 
-== 補助コマンド
 
-SnapCenter Plug-in for SAP HANAで補足コマンドを実行するには、 `allowed_commands.config` ファイル。
+== cfe19b0ae08454358fbe515d88fd6095
 
-`allowed_commands.config` ファイルは、SnapCenter Plug-in for SAP HANAディレクトリの「etc」サブディレクトリにあります。
+* 92f854eabda8c2aa761e01fba1c6ffd4
+* 129fdeda5a8637916b3b579b072e4eaa
++
+9226092112d9484949841b47e3b0500e
 
-.Windows ホスト
-デフォルト： `C:\Program Files\NetApp\SnapCenter\HANA\etc\allowed_commands.config`
++
+ae40aaa559a1bbbe76fec5e022433b75
 
-カスタムパス： `<Custome_Directory>\NetApp\SnapCenter\HANA\etc\allowed_commands.config`
-Windowsホスト：
-
-.Linux ホスト
-デフォルト： `/opt/NetApp/snapcenter/scc/etc/allowed_commands.config`
-
-カスタムパス： `<Custome_Directory>/NetApp/snapcenter/scc/etc/allowed_commands.config`
-
-プラグインホストで追加のコマンドを許可するには、 `allowed_commands.config` エディタ内のファイル。各コマンドを別 々 の行に入力します。大文字と小文字は区別されません。
-例：
-
-コマンド:mount
-
-コマンド：umount
-
-完全修飾パス名を指定してください。パス名にスペースが含まれている場合は、パス名を引用符（"）で囲みます。
-例：
-
-コマンド："C：\Program Files\NetApp\SnapCreator commands\sdcli.exe"
-
-コマンド：myscript.bat
-
-状況に応じて `allowed_commands.config` ファイルが存在しません。コマンドまたはスクリプトの実行はブロックされ、次のエラーでワークフローが失敗します。
-
-"[/mnt/mount-a]の実行は許可されていません。プラグインホストのファイル%sにコマンドを追加して許可します。"
-
-コマンドまたはスクリプトが `allowed_commands.config`をクリックすると、コマンドまたはスクリプトの実行がブロックされ、次のエラーでワークフローが失敗します。
-
-"[/mnt/mount-a]の実行は許可されていません。プラグインホストのファイル%sにコマンドを追加して許可します。"
+* f551df54591f7eef7409f694b7b0cc08
+* 17049c1cdf73c2b4b41219f99ace3f81
 
 
-NOTE: ワイルドカードエントリ（*）を使用してすべてのコマンドを許可しないでください。
+
+
+== c1c3f7f413cbbea9483f5bb44d108a05
+
+181d94b371cac820d4a5cb6b937f2a2d
+
+d4ca0088b9ea3ac58559ca038f491750
+
+.bd5ca81744f222d9b9a956e81e4db9d4
+e9f586ce563376114ff135842f727168
+
+dd66365112c4ceb674b385656f6a112e
+
+.cfe19b0ae08454358fbe515d88fd6095
+774e75f6a92e8ce03eae50224bd05ba6
+
+95195429ca43c35246ae63fae7c824d9
+
+41e74f60c5f3f06b8573c9cea4d7bab4
+
+b5ae206d8cc918377a24fe4f421f1df6
+
+ec2ddb7f6d7bd8ee6c1859f58f04e543
+
+2f71d67b0d47e188626ac45f66b1bdb9
+
+bb9358c22dd46f6320560b712e3f01b1
+
+ee9daf1566bf315f7653952b044f6dad
+
+caac2bb3479b413da9fbcd502a30e7b6
+
+fa85be9f75b57a1177464bcfbf682501
+
+58b5d0a2d25a0f5bc44c92a94090d1ea
+
+fa85be9f75b57a1177464bcfbf682501
+
+
+NOTE: 0d97f66d4b1a95477e15aa1423a18629

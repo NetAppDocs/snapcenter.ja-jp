@@ -1,52 +1,52 @@
 ---
 section: protect-scu
-title: UNIXファイルシステムの保護
+title: d870eaea945733794144bfd9a00d6f90
 entries:
-- title: SnapCenter Plug-in for Unixフアイルシステムノカイヨウ
+- title: d2722d0761743b37cc139d47e792645e
   url: "/protect-scu/concept_overview_snapcenter_plug_in_for_UNIX_file_systems.html"
-- title: SnapCenter Plug-in for Unixファイルシステムのインストール
+- title: 14de9629b26c25067e30a722ac2c6100
   entries:
-  - title: ホストを追加してPlug-ins Package for Linuxをインストールするための前提条件
+  - title: f1f465def756f6b27cd966a38b826a76
     url: "/protect-scu/reference_prerequisites_for_adding_hosts_and_installing_snapcenter_plug_ins_package_for_linux.html"
-  - title: ホストを追加してPlug-ins Package for Linuxをインストールする
+  - title: 7fa6ec35e6b1df100bc5ac0086903bf5
     url: "/protect-scu/task_add_hosts_and_install_the_snapcenter_plug_ins_package_for_linux.html"
-  - title: SnapCenter Plug-in Loader サービスを設定します
+  - title: 58217bc6f1b79fc60156611e99bd9aa8
     url: "/protect-scu/task_configure_snapcenter_plug_in_loader_service.html"
-  - title: Linux ホストで SnapCenter Plug-in Loader サービスを使用して CA 証明書を設定します
+  - title: 43d6157cf7a3c69fb4fc5a0558535738
     url: "/protect-scu/task_configure_CA_certificate_with_SPL_on_Linux_host.html"
-  - title: プラグインの CA 証明書を有効にします
+  - title: 0b65a155991bcbd016cf199f401ea183
     url: "/protect-scu/task_enable_ca_certificates_for_plug-ins.html"
-- title: SnapCenter Plug-in for VMware vSphere をインストール
+- title: 6f01b59c00a65f99d3b7a7226c0e4472
   url: "/protect-scu/reference_install_snapcenter_plug_in_for_vmware_vsphere.html"
-- title: UNIXファイルシステムの保護の準備
+- title: 5dbed049c5c52c1bd1201153eb2dd988
   url: "/protect-scu/reference_prepare_for_protecting_UNIX file systems.html"
-- title: UNIXファイルシステムのバックアップ
+- title: eef1f01baa0cefb3f1e750871fe5d85e
   entries:
-  - title: UNIXファイルシステムの検出
+  - title: 78bee965865f10ccd41edb00f2b9c9c3
     url: "/protect-scu/task_determine_whether_unix_file_systems_are_available_for_backup.html"
-  - title: バックアップポリシーを作成する
+  - title: 0a4a3719bc7519d1162060e0f0e08f8a
     url: "/protect-scu/task_create_backup_policies_for_unix_file_systems.html"
-  - title: リソースグループを作成する
+  - title: 020a36deb114af1bb518c70d5975e940
     url: "/protect-scu/task_create_resource_groups_and_attach_policies_for_unix_file_systems.html"
-  - title: UNIXファイルシステムのバックアップ
+  - title: c1a0a718f4c10ffcf3fce2ef0d611e7e
     url: "/protect-scu/task_back_up_unix_file_systems.html"
-  - title: リソースグループをバックアップする
+  - title: dbc89dfae1c6c8ad4eb43878b9171ca6
     url: "/protect-scu/task_back_up_unix_file_systems_resource_groups.html"
-  - title: バックアップの進行状況を監視します
+  - title: dc99555922001c1adae2d9d4baee2217
     url: "/protect-scu/task_monitor_unix_file_systems_backup_operations.html"
-  - title: "[Topology]ページで保護されているUNIXファイルシステムを表示する"
+  - title: a2eac4b52ae43e3574aa398757478225
     url: "/protect-scu/view_protected_unix_file_systems_in_the_topology_page.html"
-- title: UNIXファイル・システムのリストアとリカバリ
+- title: 106eca4a643cd4a82ba724aaf63cf399
   entries:
-  - title: UNIXファイル・システムのリストアとリカバリ
+  - title: 106eca4a643cd4a82ba724aaf63cf399
     url: "/protect-scu/task_restore_unix_file_systems.html"
-  - title: UNIXファイルシステムのリストア処理を監視する
+  - title: 8a237be619f5a9b6c8fa72c8b6a8eef1
     url: "/protect-scu/task_monitor_unix_file_systems_restore_operations.html"
-- title: UNIXファイルシステムのクローニング
+- title: acebdece1b3734e875859ee761ab347e
   entries:
-  - title: UNIXファイルシステムのクローニング
+  - title: acebdece1b3734e875859ee761ab347e
     url: "/protect-scu/task_clone_unix_file_systems_backup.html"
-  - title: クローンをスプリットします。
+  - title: d91a0b52cfc5d0c3e4b59e8544b3c61d
     url: "/protect-scu/task_split_a_clone.html"
-  - title: UNIXファイルシステムのクローニング処理を監視する
+  - title: 8a30d8cf378561286e148ae42cdbda26
     url: "/protect-scu/task_monitor_unix_file_systems_clone_operations.html"

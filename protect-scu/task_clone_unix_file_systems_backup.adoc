@@ -2,73 +2,73 @@
 permalink: protect-scu/task_clone_unix_file_systems_backup.html 
 sidebar: sidebar 
 keywords: alternate host, clone, Unix file systems, file systems 
-summary: SnapCenterを使用すると、ファイルシステムのバックアップを使用してUNIXファイルシステムデータベースをクローニングできます。 
+summary: ea2641c7bc8715db510c58b3bbed88c7 
 ---
-= UNIXファイルシステムのバックアップのクローニング
+= a5ca52319667a9026b1bc2e22f2beb97
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenterを使用すると、ファイルシステムのバックアップを使用してUNIXファイルシステムをクローニングできます。
+e9c28603a5457f192761e9b2f99dbd6f
 
-.作業を開始する前に
-* fstabファイルの更新をスキップするには、_/opt/NetApp/snapcenter/scc/etc _にある_agent.properties_ファイルで_skip_fstab_update_to * true *の値を設定します。
-* 静的なクローンボリューム名とジャンクションパスを設定するには、_/opt/NetApp/snapcenter/scc/etc _にある_agent.properties_ファイルで_use_custom_clone_volume_name_format_の値を* true *に設定します。ファイルを更新したら、次のコマンドを実行してSnapCenter forカスタムプラグインサービスを再起動する必要があります。 `/opt/NetApp/snapcenter/scc/bin/scc restart`。
+.135b308ed83c53f1516b7c754566d1c4
+* c047b1e4cdd418f78d9226b059701f24
+* 89085a9fdaa76a7c7b97a098e68225e5
 +
-例：このプロパティを指定しない場合、クローンボリュームの名前とジャンクションパスは<Source_volume_name>_<Timestamp>のようになりますが、<Source_volume_name>_<Clone_Name>になります。
+acd9911e42880fa2170c4c68b4e0559a
 
 +
-これにより、SnapCenterでfstabを更新したくない場合にfstabファイルを手動で更新できるように、名前が一定に保たれます。
+b3881d2c47f92a4fc24d4bd513af4d3a
 
 
 
-.手順
-. 左側のナビゲーションペインで、 * リソース * をクリックし、リストから適切なプラグインを選択します。
-. [リソース]ページで、*[表示]*リストから*[パス]*または*[リソースグループ]*を選択します。
-. 詳細ビューまたはリソースグループの詳細ビューでファイルシステムを選択します。
+.f3a29486bed19a90f2da6d007818b427
+. 530a5fa7e8fbaa4c796dbd46c93a55dd
+. 6fefea88d23f9f3cedd5fd8b05ce984f
+. b3711170555326f577aa45a2ca7ee71b
 +
-トポロジページが表示されます。
+bac2e1a55f1e8e5ab31625d729ac8827
 
-. [ コピーの管理 ] ビューで、バックアップを [ ローカルコピー ] （プライマリ）、 [ ミラーコピー ] （セカンダリ）、または [ バックアップコピー ] （セカンダリ）から選択します。
-. 表からバックアップを選択し、 * をクリックしますimage:../media/clone_icon.gif["クローンアイコン"]*
-. Location ページで、次のアクションを実行します。
+. 4f5cb898869a8929f58b07a5c20963d9
+. 631cf41948fc52de126d72473852b029
+. 4da4dfc97db1c4c71939b200e576ecc4
 +
 |===
-| フィールド | 手順 
+| 21f831502a413a739e20cbf9f2eefe54 | 5e2ad6fd9deb412d871137094ee43ef0 
 
 
  a| 
-クローンサーバ
+663e29ac880070fb899c85ec16f8743b
  a| 
-ソースホストがデフォルトで入力されています。
+063961c59acee8c0ab23d2881229ccd3
 
 
 
  a| 
-クローンマウントポイント
+167511337a70a9a4a1704e6b6fbf5568
  a| 
-ファイルシステムをマウントするパスを指定します。
+800da396dfc6aaaee63470c0dc60f3e6
 
 |===
-. Scripts ページで、次の手順を実行します。
+. ece79c0a7a1f1af0f056c2757943a57b
 +
-.. クローニング処理の前後に実行するプリコマンドやポストコマンドを入力します。
-+
-
-NOTE: プラグインホストで使用可能なコマンドリストにコマンドが存在するかどうかを、_/opt/NetApp/snapcenter/scc/allowed _ commands.config_pathから確認する必要があります。
-
-
-
-. [ 通知 ] ページの [ 電子メールの設定 *] ドロップダウンリストから、電子メールを送信するシナリオを選択します。
-+
-また、送信者と受信者の E メールアドレス、および E メールの件名を指定する必要があります。実行したクローン処理のレポートを添付する場合は、 * ジョブレポートの添付 * を選択します。
-
+.. 5d786448af7775a55478237de43bc63f
 +
 
-NOTE: E メール通知を利用する場合は、 GUI または PowerShell コマンド Set-SmtpServer を使用して、 SMTP サーバの詳細を指定しておく必要があります。
+NOTE: e02bcdb8ce97aab4c70530d5ffeba9ba
 
-. 概要を確認し、 [ 完了 ] をクリックします。
-. 操作の進行状況を監視するには、 * Monitor * > * Jobs * をクリックします。
+
+
+. 30b65b6968f11ce5399cacf995839f65
++
+914e3ed381a18db751f3d27cad180ad7
+
++
+
+NOTE: 4dcb8f86b6b59353b86d64a1b6090e41
+
+. fed1c121dc4f5a5484e5623e297385fb
+. 8b9460bf38a68108bcdd278a386b3156
 

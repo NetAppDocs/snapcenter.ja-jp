@@ -2,32 +2,32 @@
 permalink: protect-db2/backup-naming-conventions-for-plugin-for-ibm-db2.html 
 sidebar: sidebar 
 keywords: Backup naming conventions 
-summary: Snapshotのデフォルトの命名規則を使用することも、カスタマイズした命名規則を使用することもできます。デフォルトのバックアップ命名規則では、Snapshot名にタイムスタンプが追加されるため、コピーがいつ作成されたかを確認できます。 
+summary: f4ec0d473fd093ff1515ec698ec93238 
 ---
-= Plug-in for IBM DB2テエタヘエスノハツクアツフノメイメイキソク
+= 8608c53a4a9556ecc201f0af5343b547
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Snapshotのデフォルトの命名規則を使用することも、カスタマイズした命名規則を使用することもできます。デフォルトのバックアップ命名規則では、Snapshot名にタイムスタンプが追加されるため、コピーがいつ作成されたかを確認できます。
+994822d5c1500de0f9f8d5222f1d1a08
 
-Snapshotでは、次のデフォルトの命名規則が使用されます。
+1d220412a989e3409a81972981a34269
 
-「 resourcegroupname_hostname_timestamp 」
+99bb793d8518c3738d75ad0f87e31dcf
 
-バックアップリソースグループには、次の例のように論理的な名前を付ける必要があります。
+d5cc6c862c6a1f4384bd43917710a763
 
 [listing]
 ----
 dts1_mach1x88_03-12-2015_23.17.26
 ----
-この例では、各構文要素に次の意味があります。
+bdd8b7afde2c57bb177f08a155eb0f00
 
-* _dts1_は リソースグループ名です。
-* _mach1x88_ はホスト名です。
-* _03-12-2015_23.17.26_ は日付とタイムスタンプです。
+* 0a582eb0bda617d73885518760675220
+* cbcca0e2763af2ef4379ffa9a0fee87d
+* 1cd8edb6081ac8a62963443b4802377c
 
 
-または、*[Use custom name format for Snapshot copy]*を選択して、リソースまたはリソースグループを保護しながらSnapshot名の形式を指定することもできます。たとえば、 customtext_resourcegroup_policy_hostname や resourcegroup_hostname などの形式です。デフォルトでは、タイムスタンプのサフィックスがSnapshot名に追加されます。
+5aacd591ac321cf50f17ba6d6b99482c

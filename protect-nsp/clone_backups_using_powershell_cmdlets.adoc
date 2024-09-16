@@ -2,32 +2,32 @@
 permalink: protect-nsp/clone_backups_using_powershell_cmdlets.html 
 sidebar: sidebar 
 keywords: clone backups 
-summary: クローニングワークフローには、計画、クローニング処理の実行、および処理の監視が含まれます。 
+summary: e174be7156154463517dfe3b864d0329 
 ---
-= PowerShell コマンドレットを使用してバックアップをクローニングする
+= 8c922e6a0134954b667b072d00b58ce3
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-クローニングワークフローには、計画、クローニング処理の実行、および処理の監視が含まれます。
+e174be7156154463517dfe3b864d0329
 
-.作業を開始する前に
-PowerShell コマンドレットを実行できるように PowerShell 環境を準備しておく必要があります。
+.135b308ed83c53f1516b7c754566d1c4
+c90de0347e94ade70c96034e2ffca3ba
 
-PowerShellコマンドレットの詳細については、SnapCenterコマンドレットのヘルプを使用するか、を参照してください https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+dbde28811975e59f9d793cdbedffa379
 
-.手順
-. Open-SmConnection コマンドレットを使用して、指定したユーザの SnapCenter サーバとの接続セッションを開始します。
+.f3a29486bed19a90f2da6d007818b427
+. 623aa9b9d36889377a728b1284e5485e
 +
 [listing]
 ----
 Open-SmConnection  -SMSbaseurl  https:\\snapctr.demo.netapp.com:8146/
 ----
-. Get-SmBackup コマンドレットまたは Get-SmResourceGroup コマンドレットを使用して、クローニングできるバックアップのリストを表示します。
+. e8afddd41cf3a716324442f7a4538460
 +
-この例は、使用可能なすべてのバックアップに関する情報を表示します。
+ca85b74e61d8e4c683f3c66af932ac63
 
 +
 [listing]
@@ -40,7 +40,7 @@ BackupId                      BackupName                    BackupTime          
    2              Payroll Dataset_vise-f6_08... 8/4/2015    11:23:17 AM
 ----
 +
-この例では、指定したリソースグループに関する情報を表示しています。
+b92d70c39b6e5b77f828b04b1f8cf2e7
 
 +
 [listing]
@@ -139,9 +139,9 @@ PS C:\> Get-SmResourceGroup
     ResourceGroupNames          :
     PolicyNames                 :
 ----
-. New-SmClone コマンドレットを使用して、クローンリソースグループまたは既存のバックアップからクローニング処理を開始する。
+. 490bfe5ade57157a35bf58b686acb1cf
 +
-この例では、指定したバックアップからすべてのログを含めてクローンを作成しています。
+659df023c0fb00fee12f813c06a492ec
 
 +
 [listing]
@@ -150,9 +150,9 @@ New-SmClone -BackupName Verify_delete_clone_on_qtree_windows_scc54_10-04-2016_19
 CloneToInstance scc54.sccore.test.com -Suffix '_QtreeCloneWin9'  -AutoAssignMountPoint -AppPluginCode 'DummyPlugin' -initiatorname 'iqn.1991-
 05.com.microsoft:scc54.sccore.test.com' -igroupprotocol 'mixed'
 ----
-. Get-SmCloneReport コマンドレットを使用して、クローニングジョブのステータスを表示します。
+. 8bba4e71f54b16435c964d34ad49c363
 +
-この例では、指定したジョブ ID のクローンレポートを表示しています。
+4351322fd6537f248b9b6c0f176648c0
 
 +
 [listing]

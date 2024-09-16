@@ -1,22 +1,22 @@
 ---
 section: uninstall
-title: SnapCenter Server とプラグインをアンインストールします
+title: 76eb854ee139a484003d75645a214f2b
 entries:
-- title: SnapCenter プラグインパッケージをアンインストールします
+- title: 60bea4969590084ae9e74b765b209fad
   entries:
-  - title: ホストを削除するための前提条件
+  - title: 0b9b2afb477e54bc6c5d26158d80077a
     url: "/uninstall/reference_prerequisites_for_removing_a_host.html"
-  - title: ホストを削除します
+  - title: 2425983d8196e314ffb29c49e451ba2e
     url: "/uninstall/task_remove_a_host.html"
-  - title: SnapCenter GUI を使用してプラグインをアンインストールします
+  - title: 76af7718f89458bae85fc299897539a1
     url: "/uninstall/task_uninstall_plug_ins_from_a_host_using_the_snapcenter_gui.html"
-  - title: PowerShell コマンドレットを使用して Windows プラグインをアンインストールします
+  - title: '094c4c26cc4a7b195b53e8717c2371f5'
     url: "/uninstall/task_uninstalling_windows_plug_ins_using_the_command_line_interface_on_the_snapcenter_server_host.html"
-  - title: プラグインをホスト上でローカルにアンインストールします
+  - title: d5d4a6227e7796d7106e554275bb0848
     url: "/uninstall/task_uninstall_plug_ins_locally_on_a_host.html"
-  - title: CLI を使用して、 Linux または AIX 用のプラグインパッケージをアンインストールします
+  - title: b67e16350266a218b700f80817e7dec0
     url: "/uninstall/task_uninstall_snapcenter_plug_ins_package_for_linux_or_aix_using_command_line_interface.html"
-- title: WindowsホストでのSnapCenterサーバのアンインストール
+- title: 47c13313a36775d5496488ab9bc51657
   url: "/uninstall/task_uninstalling_the_snapcenter_server.html"
-- title: LinuxホストでのSnapCenterサーバのアンインストール
+- title: 02a9b6e97655041e95fdc3137ed84675
   url: "/uninstall/uninstall_snapcenter_server_linux.html"

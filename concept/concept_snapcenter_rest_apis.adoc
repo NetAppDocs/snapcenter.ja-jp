@@ -2,32 +2,32 @@
 permalink: concept/concept_snapcenter_rest_apis.html 
 sidebar: sidebar 
 keywords: REST APIs 
-summary: REST API を使用して、 SnapCenter のいくつかの管理操作を実行できます。REST API は Swagger Web ページから利用できます。REST API ドキュメントを表示する場合、および API 呼び出しを手動で問題する場合は、 Swagger Web ページにアクセスします。REST API を使用して、 SnapCenter サーバや SnapCenter vSphere ホストを管理できます。 
+summary: 34c24f1d15647adba6dcde96f1a84b95 
 ---
-= REST API を使用した SnapCenter の自動化
+= c8e5654e4bfafe9239ad785c178eec35
 :allow-uri-read: 
 
 
 [role="lead"]
-REST API を使用して、 SnapCenter のいくつかの管理操作を実行できます。REST API は Swagger Web ページから利用できます。REST API ドキュメントを表示する場合、および API 呼び出しを手動で問題する場合は、 Swagger Web ページにアクセスします。REST API を使用して、 SnapCenter サーバや SnapCenter vSphere ホストを管理できます。
+34c24f1d15647adba6dcde96f1a84b95
 
 |===
-| 対象の REST API | 場所 
+| 4da05a98f7d43c6ecf97005050dd8b4c | 2c6812090ddb6f677005b672004a90f9 
 
 
  a| 
-SnapCenter サーバ
+f709ed2f05802131924f53cb483d0216
  a| 
-\ https://<SnapCenter_IP_address_or_name>:<SnapCenter_port>/swagger/
+d135836b52c7cbef5a21dc4d58946e36
 
 
 
  a| 
-SnapCenter Plug-in for VMware vSphere
+3390e3575b3e341afa2b7172ff5b33a7
  a| 
-\ https://<OVA_IP_address_or_host_name>:<scv_plugin_port>/api/swagger-ui.html#
+9b9a4a4434a1ec2dd5fcbed32b17f5af
 
 |===
-SnapCenter REST API については、を参照してください link:../sc-automation/overview_rest_apis.html["REST API の概要"^]
+c3e1b81c639b755bd5245222004fcec1
 
-SnapCenter Plug-in for VMware vSphere REST API については、を参照してください https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_rest_apis_overview.html["SnapCenter Plug-in for VMware vSphere REST API"^]
+2d058bff360144951b6c9212e64bf5d8

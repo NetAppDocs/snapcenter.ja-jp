@@ -2,47 +2,47 @@
 permalink: protect-mysql/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-mysql.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for MySQL 
-summary: PowerShellコマンドレットを使用してMySQLデータベースをバックアップ、リストア、またはクローニングするには、Storage Virtual Machine（SVM）接続とクレデンシャルを作成する必要があります。 
+summary: 5699692c0f3d3574c5fb0cec1b16ab71 
 ---
-= MySQL用のPowerShellコマンドレットを使用して、ストレージシステム接続とクレデンシャルを作成する
+= 7bb3a0079265cf09b29eff89ba4c9107
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-PowerShellコマンドレットを使用してMySQLデータベースをバックアップ、リストア、またはクローニングするには、Storage Virtual Machine（SVM）接続とクレデンシャルを作成する必要があります。
+5699692c0f3d3574c5fb0cec1b16ab71
 
-.作業を開始する前に
-* PowerShell コマンドレットを実行できるように PowerShell 環境を準備しておく必要があります。
-* ストレージ接続を作成するには、 Infrastructure Admin ロールに必要な権限が必要です。
-* プラグインのインストールが実行中でないことを確認してください。
+.135b308ed83c53f1516b7c754566d1c4
+* 2d3dd877f482d5e495bedaecc930ab1e
+* 7371a8e10304e81cee00e43c4dada4a0
+* 5f15a8281618c8add8ea167014465c88
 +
-ホスト・プラグインのインストールは ' ストレージ・システム接続の追加中は実行しないでくださいホスト・キャッシュが更新されず ' データベース・ステータスが SnapCenter GUI に表示される場合がありますこれは ' バックアップには使用できませんまたは NetApp ストレージには使用できません
+d1b003977a68c3208b9ef1bf9532d449
 
-* ストレージシステム名は一意である必要があります。
+* bf4755d91b7ab31c59d1db6e3e0d486c
 +
-SnapCenter では、異なるクラスタに同じ名前のストレージシステムを複数配置することはサポートされていません。SnapCenter でサポートされるストレージシステムには、それぞれ一意の名前およびデータ LIF の IP アドレスを割り当てる必要があります。
+70991649072f70fdb060c64c2144c8c8
 
 
 
-.手順
-. Open-SmConnectionコマンドレットを使用して、PowerShell Core接続セッションを開始します。
+.f3a29486bed19a90f2da6d007818b427
+. 13d1cfa343dd610d15ad68b43ed6733b
 +
 [listing]
 ----
 PS C:\> Open-SmConnection
 ----
-. Add-SmStorageConnection コマンドレットを使用して、ストレージシステムへの新しい接続を作成します。
+. 14b1dd1b0650310a574acd9df305fcf6
 +
 [listing]
 ----
 PS C:\> Add-SmStorageConnection -Storage test_vs1 -Protocol Https
 -Timeout 60
 ----
-. Add-SmCredential コマンドレットを使用して新しいクレデンシャルを作成します。
+. eceac2462f6267b1a77d8f264a46d4de
 +
-次の例は、 Windows クレデンシャルを使用して FinanceAdmin という名前の新しいクレデンシャルを作成する方法を示しています。
+e31df119bb2635e68229d174653ee578
 
 +
 [listing]
@@ -50,15 +50,15 @@ PS C:\> Add-SmStorageConnection -Storage test_vs1 -Protocol Https
 PS C:> Add-SmCredential -Name FinanceAdmin -AuthMode Windows
 -Credential sddev\administrator
 ----
-. MySQL通信ホストをSnapCenterサーバに追加します。
+. 715498a748edf2f793067d61a18ef1f1
 +
 [listing]
 ----
 PS C:> Add-SmHost -HostName 10.232.204.61 -OSType Windows -RunAsName FinanceAdmin -PluginCode mysql
 ----
-. パッケージとSnapCenter Plug-in for MySQLをホストにインストールします。
+. 158a222dc837e367c04c3160863b5bf4
 +
-Linux の場合：
+5f425eebf9102e123afb94bd2d71ff06
 
 +
 [listing]
@@ -66,19 +66,19 @@ Linux の場合：
 PS C:> Install-SmHostPackage -HostNames 10.232.204.61 -ApplicationCode mysql
 ----
 +
-Windows の場合：
+950ec0214988f2cee4280a4a29075cf3
 
 +
 [listing]
 ----
 Install-SmHostPackage -HostNames 10.232.204.61 -ApplicationCode mysql -FilesystemCode scw -RunAsName FinanceAdmin
 ----
-. SQLLIBへのパスを設定します。
+. 1b859fa3e819f0a2c67e3a9c24c49334
 +
-Windowsの場合、MySQLプラグインはSQLLIBフォルダのデフォルトパス「C：\Program Files\IBM\SQLLIB\bin」を使用します。
+56dc850d067ff27b536a2f4bccbe5513
 
 +
-デフォルトのパスを上書きする場合は、次のコマンドを使用します。
+67e397e9a54b75aae603a8eea4b08856
 
 +
 [listing]
@@ -89,4 +89,4 @@ MySQL -configSettings @{“MySQL_SQLLIB_CMD” = “<custom_path>\IBM\SQLLIB\BIN
 ----
 
 
-コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+74db7181476f94f0e2927d8c8d98cb97

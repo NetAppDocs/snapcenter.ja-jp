@@ -2,9 +2,9 @@
 permalink: protect-nsp/custom_plugins_in_snapcenter.html 
 sidebar: sidebar 
 keywords: Custom plug-in 
-summary: SnapCenter サーバを使用して作成したカスタムプラグインをホストにインストールすると、アプリケーションのデータ保護を有効にすることができます。 
+summary: 2ed40d52224af2dfedf93c8eb0550f77 
 ---
-= SnapCenter のカスタムプラグイン
+= 3a08617a6dcc882e91018fc505870b76
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -12,105 +12,105 @@ summary: SnapCenter サーバを使用して作成したカスタムプラグイ
 
 
 
-== SnapCenter のカスタムプラグイン
+== 3a08617a6dcc882e91018fc505870b76
 
-Java 、 Perl 、またはネイティブ形式を使用して作成したカスタムプラグインを、 SnapCenter サーバを使用してホストにインストールし、アプリケーションのデータを保護することができます。このチュートリアルで提供されている手順を使用して SnapCenter ホストにインストールするには、プラグインをエクスポートしておく必要があります。
-
-
-
-=== プラグイン概要ファイルを作成しています
-
-プラグインを作成するたびに、概要ファイルが必要になります。概要ファイルには、プラグインの詳細が記述されています。ファイルの名前は、プラグイン記述子 .xml である必要があります。
+b5c77f66454d4e3d57521e8099507412
 
 
 
-==== プラグイン記述子ファイルの属性とその重要度を使用する
+=== def6cbe35e3566226b7c54e977f98930
 
-|===
-| 属性 | 説明 
-
-
- a| 
-名前
- a| 
-プラグインの名前。英数字を使用できます。たとえば、 DB2 、 MySQL 、 MongoDB などです
-
-ネイティブ形式で作成したプラグインの場合は、ファイルの拡張子を指定しないでください。たとえば、プラグインの名前が MongoDB である場合は、 MongoDB という名前を指定します。
+976aa48091e83c884b1bc20161aa0e8d
 
 
 
- a| 
-バージョン
- a| 
-プラグインのバージョン。メジャーバージョンとマイナーバージョンの両方を含めることができます。たとえば、 1.0 、 1.1 、 2.0 、 2.1 のようになります
-
-
-
- a| 
-表示名
- a| 
-SnapCenter サーバに表示されるプラグインの名前。同じプラグインの複数のバージョンが書き込まれている場合は、表示名がすべてのバージョンで同じであることを確認してください。
-
-
-
- a| 
-プラグインタイプ（ PluginType ）
- a| 
-プラグインの作成に使用する言語。サポートされている値は Perl 、 Java 、および Native です。標準のプラグインタイプには、 Unix/Linux シェルスクリプト、 Windows スクリプト、 Python 、またはその他のスクリプト言語が含まれています。
-
-
-
- a| 
-osname のように指定し
- a| 
-プラグインがインストールされているホスト OS の名前。有効な値は Windows と Linux です。1 つのプラグインを、 Perl タイププラグインなど、複数の OS タイプに導入できます。
-
-
-
- a| 
-osVersion をクリックします
- a| 
-プラグインがインストールされているホスト OS のバージョン。
-
-
-
- a| 
-ResourceName の略
- a| 
-プラグインでサポート可能なリソースタイプの名前。たとえば、データベース、インスタンス、コレクションなどです。
-
-
-
- a| 
-親（ Parent ）
- a| 
-場合、 ResourceName は階層的に別のリソースタイプに依存し、 Parent は親のリソースタイプを決定します。
-
-たとえば、 DB2 プラグインの場合、 ResourceName 「 Database 」には親の「 Instance 」があります。
-
-
-
- a| 
-FileSystemPlugin が必要です
- a| 
-はいまたはいいえリストアウィザードにリカバリタブを表示するかどうかを指定します。
-
-
-
- a| 
-ResourceRequiresAuthentication の略
- a| 
-はいまたはいいえ自動で検出されたリソース、または自動で検出されなかったリソースに、ストレージの検出後にデータ保護処理を実行するためのクレデンシャルが必要かどうかを指定します。
-
-
-
- a| 
-FileSystemClone が必要です
- a| 
-はいまたはいいえクローンワークフローにファイルシステムプラグインを統合する必要があるかどうかを指定します。
+==== 2a858e5af94e1d82cb7fd1f759d4baca
 
 |===
-カスタムプラグイン DB2 の Plugin_descriptor.xml ファイルの例は次のとおりです。
+| f2bbdf9f72c085adc4d0404e370f0f4c | b5a7adde1af5c87d7fd797b6245c2a39 
+
+
+ a| 
+49ee3087348e8d44e1feda1917443987
+ a| 
+ee951528ab77b8d58d90d5ab615dd4aa
+
+ff1642648bf25086a549307da08e818d
+
+
+
+ a| 
+34b6cd75171affba6957e308dcbd92be
+ a| 
+96472ac7d17b3fa637c939c5dbe7aa2c
+
+
+
+ a| 
+3b868ced6f60acf5ee565ac021d42941
+ a| 
+0c5cf3f9437d836d57e97dfa37ce8453
+
+
+
+ a| 
+54d2dab039ee358ddca7d63d0f413e56
+ a| 
+326b513459a506fbe18fb4f520147f3a
+
+
+
+ a| 
+fa1a5da2f5e6077f069628887da13577
+ a| 
+17c0dd84a508c3b3e37bfd914e437f4e
+
+
+
+ a| 
+3c25d129875719f5f76e5fa54f1b1eb6
+ a| 
+2f3304349b38afaa2855ab50c05c0003
+
+
+
+ a| 
+68754c5409cf75557f589988d16e70a8
+ a| 
+45ca72149d5299e90bdfd0611fdaef0a
+
+
+
+ a| 
+30269022e9d8f51beaabb52e5d0de2b7
+ a| 
+6e8218f013ee42d0412f9d978960d8a0
+
+356fa51a18abd3979458137c245e26dd
+
+
+
+ a| 
+2d1c51425a11058cd7d38ce3e170cac2
+ a| 
+12e4a7a7f5584eca1707daff9799ddcb
+
+
+
+ a| 
+99d7049aa2436fc0274fe8143ee9980d
+ a| 
+682ea36f3e6a876888f478562923ef91
+
+
+
+ a| 
+3b6e31accf8f7d471ccede19bef9c46e
+ a| 
+12ddbad8eb62f87e7653d4724c724ae8
+
+|===
+08468ea67deda9eabf4c738efb3e0a08
 
 ....
 <Plugin>
@@ -145,55 +145,55 @@ FileSystemClone が必要です
 ....
 
 
-=== ZIP ファイルを作成しています
+=== 8594c7cccef100e5c0eb21345360ebac
 
-プラグインが開発されて記述子ファイルが作成されたら、プラグインファイルと Plugin_descriptor.xml ファイルをフォルダに追加して zip する必要があります。
+3f3dfb2bed1ad4a9c0c24a5f9d35ee33
 
-ZIP ファイルを作成する前に、次の点を考慮してください。
+5eb723e8c62415c9fa399f579b9e3a0c
 
-* スクリプト名はプラグイン名と同じである必要があります。
-* Perl プラグインの場合、 ZIP フォルダにスクリプトファイルが格納されているフォルダと、記述ファイルがこのフォルダの外部にある必要があります。フォルダ名はプラグイン名と同じである必要があります。
-* Perl プラグイン以外のプラグインを使用する場合は、 ZIP フォルダに記述子とスクリプトファイルが含まれている必要があります。
-* OS のバージョンは番号である必要があります。
-
-
-例
-
-* DB2 プラグイン： DB2.pm と Plugin_descriptor.xml ファイルを「 DB2.zip 」に追加します。
-* Java を使用して開発されたプラグイン： jar ファイル、依存する jar ファイル、 Plugin_descriptor.xml ファイルをフォルダに追加して zip ファイルを保存します。
+* 97b7d14580cb5042f27c97545e119962
+* 8294fc13032dd7dea44bf40d376c0536
+* 24058605bd3c5f43ac3119235935f3dd
+* 0b09ff35492353da9faf3a44ec77f0b1
 
 
+fd05d7f6bfc90e815087880e8e915b43
+
+* 14f6f665a52b2f183f6d5b54aed98391
+* caa156f24a82b8a7670c99f131312f67
 
 
-=== プラグインの ZIP ファイルをアップロードしています
-
-プラグインを目的のホストに導入できるように、プラグインの ZIP ファイルを SnapCenter サーバにアップロードする必要があります。
-
-UI またはコマンドレットを使用して、プラグインをアップロードできます。
-
-* UI ： *
-
-* プラグインの ZIP ファイルを * Add * または * Modify Host * ワークフローウィザードの一部としてアップロードします
-* [ 選択 ] をクリックしてカスタムプラグインをアップロードします。 *
 
 
-* PowerShell ： *
+=== bd4678e87b1f9d0f9ca2818993233e7b
 
-* uploadSmPluginPackage コマンドレット
+82c8db559767b2ba0d057500c849d4ef
+
+c99cbda86a0df9c85a90522320e83b3c
+
+0bbe49164732887d91aedfbb7323cd9f
+
+* ff266e0a81aeb28d8bd639d0e6747ca5
+* b1ce1fadb8885384867d388e4cb04034
+
+
+d903a152f577e4c5d7d652897f5b1937
+
+* 55b8e92bcb8dde8186cf4ceac6338bce
 +
-たとえば、 PS> Upload-SmPluginPackage-AbsolutePath c ： \DB2_1.zip のように入力します
+3b1bcb11ca95b8e7cac83075102f8b18
 
 +
-PowerShell コマンドレットの詳細については、 SnapCenter のコマンドレットのヘルプを使用するか、コマンドレットのリファレンス情報を参照してください。
+30b91011e7233366bf6fe72b9e39581e
 
 
 
-https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]です。
+6bd0747e41f5cc71876f961107d5cde4
 
 
 
-=== カスタムプラグインの導入
+=== fdd90a3a6fddb98b5af79243529077e9
 
-アップロードしたカスタムプラグインを、 * Add * および * Modify Host * ワークフローの一環として、目的のホストに導入できるようになりました。SnapCenter サーバに複数のバージョンのプラグインをアップロードして、特定のホストに導入するバージョンを選択できます。
+22a9a756176e1eda572d9437ffccee0c
 
-プラグインをアップロードする方法の詳細については、を参照してください。 link:add_hosts_and_install_plug_in_packages_on_remote_hosts.html["ホストを追加し、プラグインパッケージをリモートホストにインストールする"]
+cba124a80c7364b61d7d348bd9115983

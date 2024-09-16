@@ -2,28 +2,28 @@
 permalink: protect-scw/reference_prepare_storage_system_for_snapmirror_and_snapvault.html 
 sidebar: sidebar 
 keywords: requirements 
-summary: SnapCenter プラグインと ONTAP の SnapMirror テクノロジを使用すると、バックアップセットのミラーコピーを別のボリュームに作成できます。また、 ONTAP SnapVault テクノロジを使用すると、標準への準拠やその他のガバナンス関連の目的でディスクツーディスクのバックアップレプリケーションを実行できます。これらのタスクを実行する前に、ソースボリュームとデスティネーションボリュームの間にデータ保護関係を設定し、その関係を初期化する必要があります。 
+summary: bd5309e59a4bca83b633c90ae5daf38b 
 ---
-= SnapMirror レプリケーションと SnapVault レプリケーションのためのストレージシステムを準備
+= e1470cbc380c0e4285ea434aa1f30381
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter プラグインと ONTAP の SnapMirror テクノロジを使用すると、バックアップセットのミラーコピーを別のボリュームに作成できます。また、 ONTAP SnapVault テクノロジを使用すると、標準への準拠やその他のガバナンス関連の目的でディスクツーディスクのバックアップレプリケーションを実行できます。これらのタスクを実行する前に、ソースボリュームとデスティネーションボリュームの間にデータ保護関係を設定し、その関係を初期化する必要があります。
+bd5309e59a4bca83b633c90ae5daf38b
 
-SnapCenterは、Snapshot処理の完了後にSnapMirrorとSnapVaultの更新を実行します。SnapMirror更新とSnapVault 更新はSnapCenter ジョブの一部として実行されるため、ONTAP スケジュールを別途作成しないでください。
-
-
-NOTE: ネットアップの SnapManager 製品から SnapCenter に移行した場合、データ保護関係が適切に設定されていれば、このセクションは省略してかまいません。
-
-データ保護関係では、プライマリストレージ（ソースボリューム）上のデータがセカンダリストレージ（デスティネーションボリューム）にレプリケートされます。この関係を初期化すると、 ONTAP はソースボリュームで参照されるデータブロックをデスティネーションボリュームに転送します。
+970623891ebb3c641166d7ce5d32a406
 
 
-NOTE: SnapCenter は、 SnapMirror ボリュームと SnapVault ボリュームのカスケード関係をサポートしていません（ * プライマリ * > * ミラー * > * バックアップ * ）。ファンアウト関係を使用する必要があります。
+NOTE: 9b646613b64beb84f0dd23de8375c5b4
 
-SnapCenter では、バージョンに依存しない SnapMirror 関係の管理がサポートされます。バージョンに依存しない SnapMirror 関係の詳細およびその設定方法については、を参照してください http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.ic-base%2Fresources%2Fhome.html["ONTAP のドキュメント"^]。
+6ff146878a4540cb5c56e41c5dc907df
 
 
-NOTE: SnapCenter は * sync-mirror * レプリケーションをサポートしていません。
+NOTE: d332f88a3886e736c322b3643225a6cd
+
+85f4322e48905f6a2043ad68d659cc9b
+
+
+NOTE: 6ae61d1454f759ea3eb40a95ec0ab1b7

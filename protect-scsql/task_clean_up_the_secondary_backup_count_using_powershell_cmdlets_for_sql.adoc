@@ -2,31 +2,31 @@
 permalink: protect-scsql/task_clean_up_the_secondary_backup_count_using_powershell_cmdlets_for_sql.html 
 sidebar: sidebar 
 keywords: backups 
-summary: 'Snapshotがないセカンダリバックアップのバックアップ数をクリーンアップするには、Remove-SmBackupコマンドレットを使用します。このコマンドレットは、[Manage Copies]トポロジに表示されるSnapshotの総数が、セカンダリストレージのSnapshotの保持設定と一致しない場合に使用します。' 
+summary: 77da8eeb12f1568fe3ed9dda9f91d348 
 ---
-= PowerShell コマンドレットを使用してセカンダリバックアップ数をクリーンアップします
+= 11dc6d5147b38aacb94d18c088856bed
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Snapshotがないセカンダリバックアップのバックアップ数をクリーンアップするには、Remove-SmBackupコマンドレットを使用します。このコマンドレットは、[Manage Copies]トポロジに表示されるSnapshotの総数が、セカンダリストレージのSnapshotの保持設定と一致しない場合に使用できます。
+f4efb7f60eb91fbd6aa1b8aca204f531
 
-PowerShell コマンドレットを実行できるように PowerShell 環境を準備しておく必要があります。
+c90de0347e94ade70c96034e2ffca3ba
 
-コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+74db7181476f94f0e2927d8c8d98cb97
 
-.手順
-. Open-SmConnection コマンドレットを使用して、指定したユーザの SnapCenter サーバとの接続セッションを開始します。
+.f3a29486bed19a90f2da6d007818b427
+. 623aa9b9d36889377a728b1284e5485e
 +
 [listing]
 ----
 Open-SmConnection  -SMSbaseurl  https:\\snapctr.demo.netapp.com:8146/
 ----
-. CleanupSecondaryBackups パラメータを使用して、セカンダリバックアップ数をクリーンアップします。
+. 5d365fedd8db2449d52b5be4a9205fb5
 +
-この例では、Snapshotを含まないセカンダリバックアップのバックアップ数をクリーンアップしています。
+b3d3023e1077ceaca98543a186ce5cf3
 
 +
 [listing]

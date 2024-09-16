@@ -2,107 +2,107 @@
 permalink: protect-scw/task_back_up_a_single_resource_on_demand_for_windows_file_systems.html 
 sidebar: sidebar 
 keywords: backing up 
-summary: リソースグループに含まれていないリソースは、のリソースページからオンデマンドでバックアップすることができます。 
+summary: e30725bfa240d5ea8772d145f781e859 
 ---
-= Windows ファイルシステムの単一のリソースをオンデマンドでバックアップする
+= 61be258ec26cd6598544b7c05bf8b36a
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-リソースグループに含まれていないリソースは、のリソースページからオンデマンドでバックアップすることができます。
+e30725bfa240d5ea8772d145f781e859
 
-.このタスクについて
-セカンダリストレージとの SnapMirror 関係があるリソースをバックアップする場合、ストレージユーザに割り当てられたロールには「 "'napmirror all" 」権限を含める必要があります。ただし、「 vsadmin 」ロールを使用している場合、「 'SnapMirro all 」権限は必要ありません。
-
-
-NOTE: ファイルシステムをバックアップする場合、 SnapCenter は、バックアップするファイルシステムのボリュームマウントポイント（ VMP ）にマウントされている LUN をバックアップしません。
+.bbe48fb854ea022537208eeeff822f91
+866879cbf88bb77398ac3c336063ceea
 
 
-IMPORTANT: Windows ファイルシステムのコンテキストで作業している場合は、データベースファイルをバックアップしないでください。バックアップを作成しても整合性に欠け、リストア時にデータが失われる可能性があります。データベースファイルを保護するには、データベースに適した SnapCenter プラグイン（ SnapCenter Plug-in for Microsoft SQL Server 、 SnapCenter Plug-in for Microsoft Exchange Server 、データベースファイル用のカスタムプラグインなど）を使用する必要があります。
+NOTE: cd56c631927fec23fdd13a60faf10217
 
-.手順
-. 左側のナビゲーションペインで、 * リソース * をクリックし、リストから適切なプラグインを選択します。
-. [ リソース ] ページで、 [ ファイルシステム ] リソースタイプを選択し、バックアップするリソースを選択します。
-. File System-Protect ウィザードが自動的に起動しない場合は、 [*Protect] をクリックしてウィザードを開始します。
+
+IMPORTANT: 22f16e8b28f69b96450fdb879b633af1
+
+.f3a29486bed19a90f2da6d007818b427
+. 530a5fa7e8fbaa4c796dbd46c93a55dd
+. 1c726678cd6140171263bcf8b41347de
+. 94470133339a09768284b95eccb8271a
 +
-「リソースグループの作成」のタスクの説明に従って、保護設定を指定します。
+c62706269a2329ff51bf94ff5010638a
 
-. オプション：ウィザードの[Resource]ページで、Snapshotのカスタムの名前形式を入力します。
+. 39ede0b6680ded15631aad7474467c6a
 +
-たとえば、 customtext_resourcegroup_policy_hostname や resourcegroup_hostname などの形式です。デフォルトでは、Snapshot名にタイムスタンプが追加されます。
+3cb5c9bda561968bd773237393992ae0
 
-. [Policies] ページで、次のタスクを実行します。
+. fb87909a252e4e2dc396bcfb921e0428
 +
-.. ドロップダウンリストから 1 つ以上のポリシーを選択します。
+.. 70c30c71587e2d0c71b7f9e97a8aad7d
 +
-既存のポリシーを選択し、 [*Details*] をクリックすると、そのポリシーを使用できるかどうかを確認できます。
-
-+
-既存のポリシーがいずれも要件を満たさない場合は、既存のポリシーをコピーして変更するか、をクリックして新しいポリシーを作成できます image:../media/add_policy_from_resourcegroup.gif[""] ポリシーウィザードを起動します。
+1957e5ad25b71af9fcaddadddc14180d
 
 +
-選択したポリシーは、 [Configure schedules for selected policies] セクションの [Policy （ポリシー） ] カラムに表示されます。
-
-.. Configure schedules for selected policies セクションで、をクリックします image:../media/add_policy_from_resourcegroup.gif[""] スケジュールを設定するポリシーの Configure Schedules （スケジュールの設定）列。
-.. [Add schedules for policy_name_] ダイアログボックスで、開始日、有効期限、頻度を指定してスケジュールを設定し、 [*Finish] をクリックします。
-+
-設定されたスケジュールは、 [Configure schedules for selected policies] セクションの [Applied Schedules] カラムに表示されます。
+72505ce1779969b10a827b76ce40ee9f
 
 +
-https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Scheduled_data_protection_operations_fail_if_the_number_of_operations_running_reaches_maximum_limit["スケジュールされた処理が失敗する可能性が"]
+ab549fb31447afed81e3fd9e890b0394
+
+.. 664f868df734376691b6f2603ef04ff9
+.. e44e5d659314ff509ecc4d0c16427d88
++
+e863e63daf1b528f8857d33e4d2e28bf
+
++
+bddd7b60b51755712256b3b46ef0c101
 
 
 
-. [ 通知 ] ページで、次のタスクを実行します。
+. 6dbe642189d028e1d830c44817108644
 +
 |===
-| フィールド | 手順 
+| 21f831502a413a739e20cbf9f2eefe54 | 5e2ad6fd9deb412d871137094ee43ef0 
 
 
  a| 
-E メール設定
+fe7c6832f02e9c6d619cf94f17ad3887
  a| 
-バックアップリソースグループの作成後、ポリシーの適用後、スケジュールの設定後に受信者に E メールを送信するには、「 Always * 」、「 On Failure * 」、または「 On Failure * 」または「 On Failure / Warning * 」を選択します。
+7f317bbc8e2277ae3359d00f7b3b697b
 
-SMTP サーバの情報 ' デフォルトの電子メールの件名 ' およびからの電子メールアドレスを入力します
-
-
-
- a| 
-移動元
- a| 
-E メールアドレス
+abf0bd9dec5ed840cac7798ec293ff16
 
 
 
  a| 
-終了：
+5da618e8e4b89c66fe86e32cdafde142
  a| 
-E メールの送信先アドレス
+b357b524e740bc85b9790a0712d84a30
 
 
 
  a| 
-件名
+e12167aa0a7698e6ebc92b4ce3909b53
  a| 
-E メールのデフォルトの件名
+d287f94176c31557b2e0d10d92eca7fe
+
+
+
+ a| 
+c7892ebbb139886662c6f2fc8c450710
+ a| 
+24d3cf0f5473545c6724bd068a62d82e
 
 |===
-. 概要を確認し、 [ 完了 ] をクリックします。
+. fed1c121dc4f5a5484e5623e297385fb
 +
-データベーストポロジのページが表示されます。
+6e20353bd5ea6118ce22e0b4e81aef53
 
-. [ 今すぐバックアップ ] をクリックします。
-. Backup （バックアップ）ページで、次の手順を実行します。
+. 2473f0a75a438700af9cf3aca0761dd5
+. 4a1c51520bfb3d170a967d4c218b52bf
 +
-.. リソースに複数のポリシーを適用している場合は、ポリシーのドロップダウンリストから、バックアップに使用するポリシーを選択します。
+.. 247652df99b4d20119ac1c9851ca09ce
 +
-オンデマンドバックアップ用に選択したポリシーがバックアップスケジュールに関連付けられている場合は、スケジュールタイプに指定した保持設定に基づいてオンデマンドバックアップが保持されます。
+b1b9720160580fd5949d50bf10097dc5
 
-.. [ バックアップ ] をクリックします。
+.. 96dd2bdaca6a007b13c9f42158b860a6
 
 
-. 操作の進行状況を監視するには、 * Monitor * > * Jobs * をクリックします。
+. 8b9460bf38a68108bcdd278a386b3156
 

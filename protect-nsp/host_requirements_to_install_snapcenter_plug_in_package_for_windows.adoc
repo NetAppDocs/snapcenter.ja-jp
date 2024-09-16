@@ -2,57 +2,57 @@
 permalink: protect-nsp/host_requirements_to_install_snapcenter_plug_in_package_for_windows.html 
 sidebar: sidebar 
 keywords: SAP HANA, NetApp supported plug-in 
-summary: SnapCenter Plug-ins Package for Windows をインストールする前に、ホストシステムのいくつかの基本的なスペース要件とサイジング要件を確認しておく必要があります。 
+summary: fdace28a15a0c32d01477d6a6f02b764 
 ---
-= SnapCenter Plug-ins Package for Windows をインストールするホストの要件
+= 05fc12ecf449ac264abfd66ddab37332
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter Plug-ins Package for Windows をインストールする前に、ホストシステムのいくつかの基本的なスペース要件とサイジング要件を確認しておく必要があります。
+fdace28a15a0c32d01477d6a6f02b764
 
 |===
-| 項目 | 要件 
+| 7d74f3b92b19da5e606d737d339a9679 | 5a2ebfb8baa378cfcfcba58bbb1380c2 
 
 
  a| 
-オペレーティングシステム
+aab338915e32b60e92c8de3a23aa5c5d
  a| 
-Microsoft Windows の場合
+bb79f96acbff544ded541446c9c7c894
 
-サポートされているバージョンの最新情報については、を参照して https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]ください。
-
-
-
- a| 
-ホスト上の SnapCenter プラグインの最小 RAM
- a| 
-1 GB
+3fd57bbce38ee807b2553fd56f562c3a
 
 
 
  a| 
-ホスト上の SnapCenter プラグインのインストールおよびログの最小スペース
+97d747ad5d4878c60364b9ba961fd5a4
  a| 
-5 GB
-
-
-NOTE: 十分なディスクスペースを割り当て、 logs フォルダによるストレージ消費を監視する必要があります。必要なログスペースは、保護するエンティティの数とデータ保護処理の頻度によって異なります。十分なディスクスペースがない場合、最近実行した処理に対してログは作成されません。
+0d642755e7f12f7563e3db33bd0c39cb
 
 
 
  a| 
-必要なソフトウェアパッケージ
+94ca5bd1fc6971f402b85442105f093f
  a| 
-* です。 ネットコア8.0.5
-* PowerShell Core 7.4.2
-* Java 11 Oracle JavaおよびOpenJDK
+074c2f1dacf9047766e7f8d5dce71060
 
 
-サポートされているバージョンの最新情報については、を参照して https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]ください。
+NOTE: a5074b94ccbd0ad683e6ad6eb63da188
 
-.NET固有のトラブルシューティング情報については、を参照してください https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_upgrade_or_install_fails_with_This_KB_is_not_related_to_the_OS["インターネットに接続されていない従来型システムでは、SnapCenter のアップグレードまたはインストールが失敗します。"]
+
+
+ a| 
+c02f07fcd7047bf35e0bb82decca0939
+ a| 
+* ce67e9a5c3006b689a5f150a9c30d732
+* 4a58751c57809081912e30803a16d52e
+* b7ccd7f577996dd33bde8070db971b93
+
+
+3fd57bbce38ee807b2553fd56f562c3a
+
+bb92d00cc055d1fa0c3023946870bfd5
 
 |===

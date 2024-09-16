@@ -2,119 +2,119 @@
 permalink: tech-refresh/task_tech_refresh_plugin_host.html 
 sidebar: sidebar 
 keywords: tech refresh, plug-in host, supported plug-ins, prerequisites to refresh plug-in hosts, application hosts, limitations for tech refresh of plug-in hosts 
-summary: プラグインホストの機器更改を実行するために、古いホストから新しいホストにリソースを移動します。 
+summary: a4d972033d940066d652026cbb3c0de2 
 ---
-= SnapCenterプラグインホストの機器更改
+= 238e5683fd9ecfd1b7cf79faea48b55c
 :allow-uri-read: 
 
 
 [role="lead"]
-SnapCenterプラグインホストの更新が必要な場合は、古いホストから新しいホストにリソースを移動する必要があります。新しいホストをSnapCenterに追加すると、すべてのリソースが検出されますが、新しいリソースとして扱われます。
+9290eb4a31ee7c8add0b950575cd2b73
 
-.このタスクについて
-古いホスト名と新しいホスト名を入力として使用するAPIまたはコマンドレットを実行し、リソースを名前で比較して、一致するリソースのオブジェクトを古いホストから新しいホストに再リンクする必要があります。一致するリソースは保護対象としてマークされます。
+.bbe48fb854ea022537208eeeff822f91
+e37d62dc2633814fe95ce5d687a64026
 
-* _IsDryRun_パラメータはデフォルトでTrueに設定されており、これにより、古いホストと新しいホストの一致するリソースが識別されます。
+* 52067d1ed86b49ecd26a0a70363505ce
 +
-一致するリソースを確認したら、_IsDryRun_パラメータをFalseに設定して、一致するリソースのオブジェクトを古いホストから新しいホストに再リンクする必要があります。
+70a3abcc4a0f57c7809ec6093d090c17
 
-* _AutoMigrateManualyAddedResources_パラメータはデフォルトでTrueに設定されており、手動で追加したリソースが古いホストから新しいホストに自動的にコピーされます。
+* ac6e7e5998e943d5dc5310ff5e4399fa
 +
-_AutoMigrateManuallyAddedResources_パラメータは、OracleリソースとSAP HANAリソースにのみ適用されます。
+8378b5607668ef57804cd1f79334b3eb
 
-* 古いホストと新しいホストでインスタンス名が異なる場合は、_SQLInstanceMapping_パラメータを使用する必要があります。デフォルトインスタンスの場合は、_default_instance_asインスタンス名を使用します。
+* 8a711105f2a0dd482f3dcae1d6bb0e79
 
 
-機器更改は次のSnapCenterプラグインでサポートされます。
+f56387092841e43012c9f187a082eafc
 
-* SnapCenter Plug-in for Microsoft SQL Server
+* 4b2565450d503764049f6fd2bae4ee64
 +
-** SQLデータベースがインスタンスレベルで保護されていて、ホストの機器更改の一環として一部のリソースのみが新しいホストに移動されると、既存のインスタンスレベルの保護がリソースグループ保護に変換され、両方のホストのインスタンスがリソースグループに追加されます。
-** SQLホスト（host1など）が別のホスト（host2など）のリソースのスケジューラまたは検証サーバとして使用されている場合は、host1で機器更改を実行している間、スケジュールまたは検証の詳細は移行されず、host1で引き続き実行されます。変更が必要な場合は、対応するホストで手動で変更する必要があります。
-** SQLフェイルオーバークラスタインスタンス（FCI）セットアップを使用している場合は、FCIクラスタに新しいノードを追加し、SnapCenterでプラグインホストを更新することで、機器更改を実行できます。
-** SQL可用性グループ（AG）のセットアップを使用している場合は、機器更改は必要ありません。新しいノードをAGに追加し、SnapCenterでホストを更新できます。
+** 339707050170912cdbd147553b17312e
+** 304312be06c68581f9af63e822876f75
+** a04f0428dae3cfff4ec297d83f455477
+** 3915a5851e0487081bb87d9842d0630e
 
 
-* SnapCenter Plug-in for Windows の略
-* SnapCenter Plug-in for Oracle Database
+* 5ae5c2db7baad917cb8389420693266d
+* 2e41c2081a8838f41650e76a978d4057
 +
-Oracle Real Application Cluster（RAC）セットアップを使用している場合は、RACクラスタに新しいノードを追加し、SnapCenterのプラグインホストを更新することで、機器更改を実行できます。
+13505b6f649e746699de530062537112
 
-* SAP HANA データベース向け SnapCenter プラグイン
-
-
-サポートされるユースケースは次のとおりです。
-
-* あるホストから別のホストへのリソースの移行。
-* 複数のホストから1つ以上のホストへのリソースの移行。
-* 1つのホストから複数のホストへのリソースの移行。
+* 51edbc830d9024f2e4139814d748cb86
 
 
-サポートされるシナリオは次のとおりです。
+09e2cafd78238dbdffadebdec0540de5
 
-* 新しいホストの名前が古いホストと異なります
-* 既存のホストの名前が変更されました
+* f5332ad4830531776aefe860ba45c4c7
+* 9b8666e953518e081e6d07d0442b1303
+* a8e3ccf40df1a82bd40141f546ffda91
 
 
-.作業を開始する前に
-このワークフローではSnapCenterリポジトリのデータが変更されるため、SnapCenterリポジトリをバックアップすることを推奨します。データに問題が発生した場合は、バックアップを使用してSnapCenterリポジトリを古い状態に戻すことができます。
+e4cbf0520c1d3d16edefbc8bd3d495c7
 
-詳細については、を参照してください https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_the_snapcenter_server_repository.html#back-up-the-snapcenter-repository["SnapCenter リポジトリをバックアップします"]。
+* f7e75d270a1b875c6e211c2cfc610989
+* 77ccb8ab6b2fb047d2eee6874a62e322
 
-.手順
-. 新しいホストを導入し、アプリケーションをインストールします。
-. 古いホストのスケジュールを一時停止します。
-. 必要なリソースを古いホストから新しいホストに移動します。
+
+.135b308ed83c53f1516b7c754566d1c4
+b8930b1c7c2681a672baaa832a3e3cd0
+
+683811434f5aea4609740c6f3bc00797
+
+.f3a29486bed19a90f2da6d007818b427
+. f3d94994729049e6b395135df366e6ca
+. 91eb5d7b4b2b41bee4ac23ec7acc031d
+. 700764d0a8585a4c8d5e8df77e2a3c55
 +
-.. 新しいホストで同じストレージから必要なデータベースを起動します。
+.. af27be9eae050c7e1b3e3364516bfc4b
 +
-*** ストレージが古いホストと同じドライブまたは同じマウントパスにマッピングされていることを確認します。ストレージが正しくマッピングされていないと、古いホストで作成されたバックアップをリストアに使用できません。
-+
-
-NOTE: デフォルトでは、次に使用可能なドライブが自動的に割り当てられます。
-
-*** Storage DRが有効になっている場合は、それぞれのストレージを新しいホストにマウントする必要があります。
-
-
-.. アプリケーションのバージョンに変更がある場合は、互換性を確認してください。
-.. Oracleプラグインホストの場合のみ、OracleおよびそのグループユーザのUIDとGIDが古いホストのUIDとGIDと同じであることを確認してください。
-+
-詳細については、以下を参照してください。
-
-+
-*** https://kb.netapp.com/mgmt/SnapCenter/How_to_perform_SQL_host_tech_refresh["古いホストから新しいホストにSQLデータベースを移行する方法"]
-*** https://kb.netapp.com/mgmt/SnapCenter/How_to_perform_Oracle_host_tech_refresh["古いホストから新しいホストにOracleデータベースを移行する方法"]
-*** https://kb.netapp.com/mgmt/SnapCenter/How_to_perform_Hana_host_tech_refresh["新しいホストでSAP HANAデータベースを起動する方法"]
-
-
-
-
-. 新しいホストをSnapCenterに追加します。
-. すべてのリソースが検出されたかどうかを確認します。
-. ホスト更新API：またはコマンドレット：_invoke -SmTechRefreshHost_を実行します `/<snapcenter_version>/techrefresh/host` 。
+*** a2bc58d7f1009594ff4c5b6d72b53fae
 +
 
-NOTE: ドライランはデフォルトで有効になっており、再リンクされる一致するリソースが識別されます。リソースを確認するには、API「/jobs/｛jobid｝」またはcmdlet_Get-SmJobSummaryReport_を実行します。
+NOTE: 6e4a2e21aab402ab8b132b9681a89eb9
+
+*** e19ead3ab0e19eb32c7d288a5a06c6f5
+
+
+.. cba5b5f16f81cea955bc3786533c0def
+.. 825121d2c51fc5dd7efbc0d0dd065996
++
+cec2810e9e17b7ad84f6a121671ebad6
 
 +
-複数のホストからリソースを移行した場合は、すべてのホストに対してAPIまたはコマンドレットを実行する必要があります。新しいホストのドライブまたはマウントパスが古いホストと同じでない場合、次のリストア処理が失敗します。
+*** 1de0def278e1803a938da2a43125cc12
+*** 7c306603505206399b60c4f4737b3762
+*** 6c03857b78b3ff4a2451717b9e9827af
+
+
+
+
+. 24cc9a88d9606665061c39212e66c652
+. 2e14e69362b4369a7145c71a12b474ac
+. f726f8fd5eef7b55d41228aa71d0a7e9
++
+
+NOTE: e99761d4e8fe46eed81bf6ce40a1f791
 
 +
-** SQL In Placeリストアが失敗します。ただし、RTAL機能は利用できます。
-** OracleデータベースとSAP HANAデータベースのリストアは失敗します。
-+
-複数のホストに移行する場合は、すべてのホストについて手順1のすべての手順を実行する必要があります。
+fdaf38234b737e7c032ee2cecc41f45b
 
 +
+** 865482b788ba7410d72bd211cc0f90c4
+** c06e06a23264af7f0a36f3e7dabf4f81
++
+8701408a8f37ac424c547433707679b0
 
-NOTE: 同じホストでAPIまたはコマンドレットを複数回実行できます。再リンクは、新しいリソースが特定された場合にのみ実行されます。
++
+
+NOTE: 72c1f1ea8b9051889e2490c422c86a80
 
 
 
-. （オプション）古いホストをSnapCenterから削除します。
+. af70373152fc173748b0316e804ebfb9
 
 
-.関連情報
-APIの詳細については、Swaggerページにアクセスする必要があります。を参照してください link:https://docs.netapp.com/us-en/snapcenter/sc-automation/task_how%20to_access_rest_apis_using_the_swagger_api_web_page.html["swagger API Web ページを使用して REST API にアクセスする方法"]。
+.30f60d67f457bb040dffde52197a54da
+38da9351af8aca2c80c95ea491874f49
 
-コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+aff86e576d5506698bb4e7f32cd2b64c

@@ -2,37 +2,37 @@
 sidebar: sidebar 
 permalink: sc-automation/task_get_started_with_the_rest_api.html 
 keywords: REST API 
-summary: API にアクセスすると、ライブセットアップでより複雑なワークフロープロセスを使用する前にいくつかの情報を確認できます。 
+summary: 5f5192bbcb78a1952f0c1de27add636d 
 ---
-= REST API の使用を開始する
+= 6f800f16fa2f6cc79e50877afd6a63ea
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-SnapCenter REST API はすぐに使用を開始できます。API にアクセスすると、ライブセットアップでより複雑なワークフロープロセスを使用する前にいくつかの情報を確認できます。
+fdd4d0c913b5ae7ea60dd3bd11cc6109
 
 
 
-== Hello world
+== b10a8db164e0754105b7a99be72e3fe5
 
-システムで簡単なコマンドを実行して、 SnapCenter REST API の使用を開始し、利用可能かどうかを確認できます。
+eb1650ade823c0ca9597cd9ba6c65112
 
-.作業を開始する前に
-* Curl ユーティリティがシステムで使用できることを確認します。
-* SnapCenter サーバの IP アドレスまたはホスト名
-* SnapCenter REST API にアクセスする権限を持つアカウントのユーザ名とパスワード。
+.135b308ed83c53f1516b7c754566d1c4
+* d35295349c96319976125d2295393ac0
+* 562f2e28147bfb7379c6c87892389909
+* a73680e46fee2e6655e79585044e0138
 
 
 
-NOTE: クレデンシャルに特殊文字が含まれている場合は、使用するシェルに基づいて Curl で許容される形式で指定する必要があります。たとえば ' 各特殊文字の前にバックスラッシュを挿入するか ' または 'username:password' 文字列全体を一重引用符で囲むことができます
+NOTE: da932131b500d8e907961663d8ef346b
 
-.ステップ
-コマンドラインインターフェイスで、次のコマンドを実行してプラグイン情報を取得します。
+.48c7c41b72e1d678923ce3571aa65b2d
+34d07047db39e17aa64415185872d7ba
 
-curl -X get -u username ： password-k "https://<ip_address>/api/hosts?fields=IncludePluginInfo"`[]
+0a5ab7e6abf43020dd6ed115a7c409fe
 
-例
+81eeab9506186e2dca8faefa78d54067
 
-curl -X get -u admin ： password-k'https://10.225.87.97/api/hosts?fields=IncludePluginInfo"`[]
+1f385cae5df5836eb1455a948a521b54

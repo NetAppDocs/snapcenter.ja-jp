@@ -2,169 +2,169 @@
 permalink: install/task_log_in_to_snapcenter.html 
 sidebar: sidebar 
 keywords: log in, logging, SnapCenter UI, modify timeout, GUI session timeout, disbale SSL 3.0, SSL 3.0, security 
-summary: SnapCenter では、 Role-Based Access Control （ RBAC ；ロールベースアクセス制御）がサポートされています。SnapCenter 管理者が、 SnapCenter RBAC を使用して、ロールとリソースをワークグループまたは Active Directory 内のユーザまたは Active Directory 内のグループに割り当てます。RBAC ユーザは、割り当てられたロールを使用して SnapCenter にログインできるようになりました。 
+summary: 9a1e93115df18651562a9dbdedd4b61d 
 ---
-= RBAC許可を使用してSnapCenter にログインします
+= 3ff2f50a0428ccd330fd2b2e2baa3b97
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter では、 Role-Based Access Control （ RBAC ；ロールベースアクセス制御）がサポートされています。SnapCenter 管理者が、 SnapCenter RBAC を使用して、ロールとリソースをワークグループまたは Active Directory 内のユーザまたは Active Directory 内のグループに割り当てます。RBAC ユーザは、割り当てられたロールを使用して SnapCenter にログインできるようになりました。
+9a1e93115df18651562a9dbdedd4b61d
 
-.作業を開始する前に
-* Windows Server Manager で Windows Process Activation Service （ WAS ）を有効にする必要があります。
-* Internet Explorer をブラウザとして使用して SnapCenter サーバにログインする場合は、 Internet Explorer の保護モードが無効になっていることを確認する必要があります。
-* SnapCenterサーバがLinuxホストにインストールされている場合は、SnapCenterサーバのインストールに使用したユーザアカウントを使用してログインする必要があります。
-
-
-* このタスクについて *
-
-インストール中に、 SnapCenter サーバーインストールウィザードによってショートカットが作成され、 SnapCenter がインストールされているホストのデスクトップと [ スタート ] メニューに表示されます。また、インストールが終了すると、インストールウィザードに、インストール時に指定した情報に基づいて SnapCenter の URL が表示されます。この URL は、リモートシステムからログインする場合にコピーできます。
+.135b308ed83c53f1516b7c754566d1c4
+* adc5fe8b45ecd95856d19e35346df6c7
+* 4fc2afb0eabdd44c2078264e0d415538
+* f8dce588e787c01533733e2fa0b71c31
 
 
-IMPORTANT: Web ブラウザで複数のタブを開いている場合は、 SnapCenter ブラウザのタブだけを閉じても SnapCenter からはログアウトされません。SnapCenter との接続を終了するには、 [* サインアウト * ] ボタンをクリックするか、 Web ブラウザ全体を閉じて、 SnapCenter からログアウトする必要があります。
+78166ce4ccceeedfbf6aeb8682851072
+
+d7fa6eed23cf51d0ab4bf36019a67b1d
+
+
+IMPORTANT: 04bc8e48437fcd294fe872e0ce1fe6c7
 
 |===
 
 
-| * ベストプラクティス：セキュリティ上の理由から、ブラウザで SnapCenter パスワードを保存しないことを推奨します。 
+| 857abd60bdd675690fef7b14d1005675 
 |===
-GUI のデフォルトの URL は、 SnapCenter サーバがインストールされているサーバのデフォルトポート 8146 へのセキュアな接続です（ \\ https://server:8146_ ）。SnapCenter のインストール時に別のサーバポートを指定した場合は、そのポートが代わりに使用されます。
+1f351ed7a1738376fcd9632d3db7e0dd
 
-ハイアベイラビリティ（ HA ）構成の場合は、仮想クラスタ IP_https://Virtual_Cluster_IP_or_FQDN:8146_ を使用して SnapCenter にアクセスする必要があります。Internet Explorer （ IE ）で \\ https://Virtual_Cluster_IP_or_FQDN:8146_ に移動しても SnapCenter UI が表示されない場合は、各プラグインホストで IE の信頼済みサイトに仮想クラスタの IP アドレスまたは FQDN を追加するか、あるいは各プラグインホストで IE のセキュリティ強化オプションを無効にする必要があります。詳細については、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_access_cluster_IP_address_from_outside_network["ネットワーク外からクラスタ IP アドレスにアクセスできません"^]。
+59985d4c0ad9df334fed4d44ff0991fa
 
-SnapCenter GUIに加えて、PowerShellコマンドレットを使用してスクリプトを作成し、設定、バックアップ、リストアの各処理を実行できます。一部のコマンドレットは、SnapCenterのリリースごとに変更されている場合があります。詳細については、を https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^] 参照してください。
+46dec77a42774510138109e49bf02071
 
 
-NOTE: SnapCenter への初回ログイン時は、インストールプロセスで指定したクレデンシャルを使用してログインする必要があります。
+NOTE: d6b96565adbb70c53ae14b5070be8651
 
-* 手順 *
+4839d2f25cc35b249d5db15efa1afd75
 
-. ローカルホストのデスクトップにあるショートカット、インストールの終了時に表示された URL 、または SnapCenter 管理者から提供された URL から、 SnapCenter を起動します。
-. ユーザクレデンシャルを入力します
+. 31a7d97d557b06d288bae46db80c8d67
+. 578cd680813c62df612b39c490acb2bc
 +
 |===
-| 指定する項目 | 次のいずれかの形式を使用 ... 
+| 51596d3504cdb979762a76690b2e32e5 | 3ef6bd8b9606c78952c001e9ba9fd6ab 
 
 
  a| 
-ドメイン管理者
+53b3b8631fe3992624447324cadc1de5
  a| 
-** NETBIOs\ ユーザー名
-** ユーザー名 @UPN サフィックス
+** 2765acab740def531fb14547715da38b
+** c8804661f0d6fcb2c0a7cd9a63524faa
 +
-たとえば、「 \username@netapp.com 」と入力します
+2892a4afd2cbdd87a83b893cc32edf0a
 
-** ドメイン FQDN\ ユーザ名
+** 6c02c8fb93b5180a0f6131b5887e8788
 
 
 
 
  a| 
-ローカル管理者
+d565a5fcd28dfddc13d455ebd8b7c6d2
  a| 
-ユーザ名
+7e20d471144b1bff4e1f5d953e05ed15
 
 |===
-. 複数のロールが割り当てられている場合は、 [ ロール ] ボックスで、このログインセッションに使用するロールを選択します。
+. 95229c0e9bafe7503c923ea611608947
 +
-ログインすると、現在のユーザとそのロールが SnapCenter の右上に表示されます。
+99ce0efec833deb9d7875447b4055c4c
 
 
 
-* 結果 *
+600901e70afccc50e18676048766ba78
 
-ダッシュボードページが表示されます。
+e9d3b5a3d1afd5fb9c202b34ca152f94
 
-ログにサイトにアクセスできないというエラーが表示されて失敗した場合は、 SSL 証明書を SnapCenter にマッピングする必要があります。 https://kb.netapp.com/?title=Advice_and_Troubleshooting%2FData_Protection_and_Security%2FSnapCenter%2FSnapCenter_will_not_open_with_error_%2522This_site_can%2527t_be_reached%2522["詳細はこちら。"^]
+f24f841da2cc66fbc4e0a6f2c40b72db
 
-* 終了後 *
+a2635d75789f249837881cc5136979e1
 
-SnapCenter サーバに初めて RBAC ユーザとしてログインしたあと、リソースのリストを更新します。
+d3e5cee34eb3f13b87152af755031a7c
 
-SnapCenter でサポートされる信頼されていない Active Directory ドメインがある場合は、信頼されていないドメインのユーザにロールを設定する前に、それらのドメインを SnapCenter に登録する必要があります。link:../install/task_register_untrusted_active_directory_domains.html["詳細はこちら。"^]です。
+aa77be93f54702f5bcb53281e79e7783
 
-Linuxホストで実行されているSnapCenterにプラグインホストを追加する場合は、_/opt/NetApp/snapcenter/SnapManagerWeb/Repository _からチェックサムファイルを取得する必要があります。
+83b6563ae402deb65d5d6a940e36b9a9
 
-6.0リリース以降、デスクトップにSnapCenter PowerShellのショートカットが作成されます。ショートカットを使用すると、SnapCenter PowerShellコマンドレットに直接アクセスできます。
-
-
-
-== 多要素認証（MFA）を使用したSnapCenter へのログイン
-
-SnapCenter サーバでは、Active Directoryに含まれるドメインアカウントに対してMFAがサポートされます。
-
-.作業を開始する前に
-MFAを有効にしておく必要があります。MFAを有効にする方法については、を参照してください。 link:../install/enable_multifactor_authentication.html["多要素認証を有効にします"]
-
-* このタスクについて *
-
-* FQDNのみがサポートされます
-* ワークグループユーザとクロスドメインユーザはMFAを使用してログインできません
+0b1f3fb4d9dd112d2fa95922a9981ab8
 
 
-* 手順 *
 
-. ローカルホストのデスクトップにあるショートカット、インストールの終了時に表示された URL 、または SnapCenter 管理者から提供された URL から、 SnapCenter を起動します。
-. AD FSのログインページで、ユーザ名とパスワードを入力します。
+== 8674ed970a497f68c8817c2f50e67e43
+
+87f394d82c9a69653bdcd732b405a220
+
+.135b308ed83c53f1516b7c754566d1c4
+43e6b1ee8c19205895d512713eafebdb
+
+78166ce4ccceeedfbf6aeb8682851072
+
+* 3c48cbcc7e635cd5b49ae0bb34585acb
+* 2da45b9ae7393a39164f98eb0d6733f1
+
+
+4839d2f25cc35b249d5db15efa1afd75
+
+. 31a7d97d557b06d288bae46db80c8d67
+. 57668cd160f4a88e501e4fc1d458e972
 +
-AD FSページにユーザ名またはパスワードが無効であることを示すエラーメッセージが表示された場合は、次の点を確認してください。
+956a11e2298b4495848a2dee41f3211f
 
 +
-** ユーザ名またはパスワードが有効かどうか
+** e00216ddce4b49d4cc8b7724c9ed7f92
 +
-ユーザアカウントがActive Directory（AD）に存在している必要があります。
+df83de2f1142c69999c260b19f81239e
 
-** ADで設定された最大試行回数を超えたかどうか
-** ADおよびAD FSが稼働しているかどうか
-
-
+** f7d89272be4f4a54f90ac672c9001efc
+** 00bb96dadf000907b7f5bff0ae2a1a57
 
 
 
 
-== SnapCenter のデフォルトの GUI セッションタイムアウトを変更します
-
-SnapCenter GUI のセッションタイムアウト時間を変更して、デフォルトのタイムアウト時間である 20 分以上に設定できます。
-
-セキュリティ機能として、デフォルトでは、操作を行わないまま 15 分が経過すると、 SnapCenter は GUI セッションから 5 分後にログアウトすることを警告するメッセージを表示します。デフォルトでは、操作を行わないまま 20 分が経過すると SnapCenter によって GUI セッションからログアウトされ、再度ログインする必要があります。
-
-* 手順 *
-
-. 左側のナビゲーションペインで、 * 設定 * > * グローバル設定 * をクリックします。
-. [ グローバル設定 ] ページで、 [ * 構成設定 * ] をクリックします。
-. [Session Timeout] フィールドに、新しいセッションタイムアウトを分単位で入力し、 [*Save*] をクリックします。
 
 
+== 1172c15007ca68c1b90073346a6a074d
+
+3458d735b953761f129072db28628ed9
+
+23e9decf10a1a25392f45ffc6db99671
+
+4839d2f25cc35b249d5db15efa1afd75
+
+. d6a724719c4f73f770f6a0dfeb48dd33
+. 826498eaf62f83ae2ae62ba3241bbb1e
+. 0ebe352758c4656842bb219b3382812b
 
 
-== SSL 3.0 を無効にして、 SnapCenter Web サーバを保護します
 
-セキュリティ上の理由から、 SnapCenter Web サーバで SSL (Secure Socket Layer) 3.0 プロトコルが有効になっている場合は、 Microsoft IIS で無効にする必要があります。
 
-SSL 3.0 プロトコルに脆弱性が存在します。攻撃者はこの脆弱性を悪用して、原因接続に失敗したり、中間者攻撃を実行したり、 Web サイトと訪問者の間の暗号化トラフィックを監視したりできます。
+== 3139da61534003bfa10aeeff4a637a06
 
-* 手順 *
+f186daff37390de0c366be72be78ccc7
 
-. SnapCenter Web サーバ・ホストでレジストリ・エディタを起動するには、 [ スタート *>*Run*] をクリックし、 regedit と入力します。
-. レジストリエディタで、 HKEY_LOCAL_MACHINE\SOFTWARE\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\ に移動します。
+fa0e27048f38c8c45601b4c2475b9119
+
+4839d2f25cc35b249d5db15efa1afd75
+
+. 5e10b9e8a7d9d0bf40e251221983e71b
+. 885e6deacecd85269cd199f4a4eae887
 +
-** サーバキーがすでに存在する場合：
+** 402fdb1fe8678e176f4a65f765af1b02
 +
-... 有効な DWORD を選択し、 * 編集 * > * 変更 * をクリックします。
-... 値を 0 に変更し、 * OK * をクリックします。
+... 7c06311a8cbf6c821f2e042f11959e95
+... 96e85512978c2a5c6cd28fb8991c4ae4
 
 
-** サーバキーが存在しない場合は、次の手順を実行します。
+** f9874429366418956639cb8b2c2318b2
 +
-... [ * 編集 * ] 、 [ * 新規 * ] 、 [ * キー * ] の順にクリックし、キーサーバーに名前を付けます。
-... 新しいサーバーキーを選択した状態で、 * 編集 * > * 新規 * > * DWORD * をクリックします。
-... 新しい DWORD に有効という名前を付け、値として 0 を入力します。
+... ed03581e152b47389064269f5f8b17b6
+... 6889301958ab5651f7c46e3f9450f6a3
+... 5a72b7f7670b9a6769bd60ba55a4ccf4
 
 
 
 
-. レジストリエディタを閉じます。
+. 02f25ba36a2907c8f8d0598b962b14ed
 

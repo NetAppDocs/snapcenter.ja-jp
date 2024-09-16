@@ -2,89 +2,89 @@
 permalink: protect-sco/reference_storage_types_supported_by_snapcenter_plug_in_for_oracle_database.html 
 sidebar: sidebar 
 keywords: storage types, iSCSI, NFS, RDM, VMDK, NFS, LVM, ASM, SAN filesystem 
-summary: SnapCenter は、物理マシンと仮想マシンの両方でさまざまなストレージタイプをサポートしています。SnapCenter Plug-ins Package for Linux または SnapCenter Plug-ins Package for AIX をインストールする前に、ストレージタイプがサポートされているかどうかを確認する必要があります。 
+summary: 7c6f16336592abc4754b54fc401cdfcb 
 ---
-= Plug-in for Oracle Database でサポートされるストレージタイプ
+= 29b88b5fad7a2e8cb0dd25b5acee4028
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter は、物理マシンと仮想マシンの両方でさまざまなストレージタイプをサポートしています。SnapCenter Plug-ins Package for Linux または SnapCenter Plug-ins Package for AIX をインストールする前に、ストレージタイプがサポートされているかどうかを確認する必要があります。
+7c6f16336592abc4754b54fc401cdfcb
 
-SnapCenter では、 Linux および AIX のストレージプロビジョニングはサポートされていません。
-
-
-
-== Linux でサポートされているストレージタイプ
-
-次の表に、 Linux でサポートされるストレージタイプを示します。
-
-|===
-| マシン | ストレージタイプ 
-
-
- a| 
-物理サーバ
- a| 
-* FC 接続 LUN
-* iSCSI で接続された LUN
-* NFS-connected ボリューム
-* NVMe-FC
-* nvme-tcpが表示されます
+7c4ced940e43257706e858ec620a5694
 
 
 
+== c99406925608b95afee1b44a09a0a366
 
- a| 
-VMware ESXi
- a| 
-* FC または iSCSI ESXi HBA によって接続された RDM LUN は、ホストに存在するすべてのホストバスアダプタを SnapCenter がスキャンするため、完了までに時間がかかることがあります。
-+
-/opt/NetApp/SnapCenter /spl/plugins/SCU/scucore /modules/SCU/ConfigU/Config_に ある * LinuxConfig.pm * ファイルを編集して、 * scsi_hosts _optimized_rescan * パラメーターの値を 1 に設定し、 ha_driver_names にリストされている HBA のみを再スキャンすることができます。
-
-* iSCSI イニシエータによってゲストシステムに直接接続された iSCSI LUN
-* NFSデータストア上のVMDK
-* NVMe-TCP経由で作成されたVMFS上のVMDK
-+
-
-NOTE: RACは、共有VMDKをサポートするESX 8.0U2でサポートされます。
-
-* ゲストシステムに直接接続された NFS ボリューム
-* NFSとSANの両方にVVOLデータストアを配置
-+
-VVOLデータストアは、ONTAP Tools for VMware vSphereでのみプロビジョニングできます。
-
-
+1857c63aa94eb5c973b42cb622d32509
 
 |===
-
-
-== AIX でサポートされているストレージタイプ
-
-次の表に、 AIX でサポートされるストレージタイプを示します。
-
-|===
-| マシン | ストレージタイプ 
+| 47c954121886a5e5aaca7eece461b56f | f0cb6783b152b19ceab16227ca3976a2 
 
 
  a| 
-物理サーバ
+e042e676706d93b3b14ce12e4d00a002
  a| 
-* FC 接続 LUN と iSCSI 接続 LUN ：
-+
-SAN 環境では、 ASM 、 LVM 、および SAN のファイルシステムがサポートされます。
+* 3a14bc2a9e80eb39a44cd07a0d40b62b
+* f83bf140a9f6b8a345e508ecdc999c4b
+* df750015db6d85e88db15a90ebbf9147
+* 3ab5865f7b3fcc5851ae24144b15f370
+* ad18d9aa7c4c9bdbf86e39bd6dd5b727
 
+
+
+
+ a| 
+f7eea647714641318ee86fedbbed4691
+ a| 
+* 2d9498b8e7a706c04828e3a27d452cf3
++
+e0c7a63acdb6963a9d6b2419d93f5f5a
+
+* 681eb44a9cbd6da8f7c3f918a64f2c6c
+* bb2676e02f9905c86303b7f1988d2898
+* 13d64591a6e2c6389e1896047405d742
 +
 
-NOTE: AIX およびファイルシステムでの NFS はサポートされていません。
+NOTE: ae1d120b56beba9c6f5a7802f3e3d61d
 
-* 拡張ジャーナルファイルシステム（ JFS2 ）
+* a58b8b421b0a6170e7380151af742f28
+* 9b722cfab4d80b751e95d2565746573a
 +
-SAN ファイルシステムおよび LVM レイアウトでのインラインロギングをサポートします。
+e3ad757f2539d14ca2692f3fabff82fc
 
 
 
 |===
-サポートされるバージョンの最新情報については、を参照 https://imt.netapp.com/matrix/imt.jsp?components=121071;&solution=1259&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"] してください。
+
+
+== cbb0646c609fcc3aa70c6c5ae0bdf3fc
+
+fc4ec73696f0d9225f59c6260ebb1a65
+
+|===
+| 47c954121886a5e5aaca7eece461b56f | f0cb6783b152b19ceab16227ca3976a2 
+
+
+ a| 
+e042e676706d93b3b14ce12e4d00a002
+ a| 
+* 80b97edba16f76c3a7c416c0858545f5
++
+b0b7cdbbd7e0a5322a84ce329ed839fc
+
++
+
+NOTE: db92e82cf9323a4bf5e79b2df0216f85
+
+* e2b3d28069205cc6f75b17751511da77
++
+41732556fe47d0ec2b02e18e88410f6b
+
+
+
+|===
+b394be29329a30bfde3ff6670085b4f8

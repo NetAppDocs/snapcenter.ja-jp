@@ -1,24 +1,24 @@
 ---
 section: concept
-title: 概念
+title: '0460583622f03a52d7693094d6fa2452'
 entries:
-- title: SnapCenter の概要
+- title: 6309043436d4e7e5bad9a81c89ff15e4
   url: "/concept/concept_snapcenter_overview.html"
-- title: セキュリティ機能
+- title: c81d278ed6d59212379f4589585fc795
   url: "/concept/reference_data_security.html"
-- title: SnapCenter の RBAC
+- title: c16c43065a548034a76faadb18015c27
   entries:
-  - title: RBAC のタイプ
+  - title: 00d2bcee9fb3434640337cf4287d3a2b
     url: "/concept/concept_types_of_role_based_access_control_in_snapcenter.html"
-  - title: RBAC の権限とロール
+  - title: 45538cf22616d249e70f0697a94497d7
     url: "/concept/reference_role_based_access_control_permissions_and_roles.html"
-  - title: 事前定義された SnapCenter ロールと権限
+  - title: a607c43df1ec34570cfd92c7f8f85068
     url: "/concept/reference_pre_defined_snapcenter_roles_and_permissions.html"
-- title: ディザスタリカバリ
+- title: e413eba49b15917b0c9dbf2620f3e66e
   url: "/concept/concept_disaster_recovery.html"
-- title: リソース、リソースグループ、ポリシー
+- title: 12c254b6e514e7d479282efdf4ebc497
   url: "/concept/concept_resources_resource_groups_and_policies.html"
-- title: プリスクリプトとポストスクリプト
+- title: 7322146fa0278b7076d42a67da3ca68f
   url: "/concept/concept_prescripts_and_postscripts.html"
-- title: REST API を使用した SnapCenter の自動化
+- title: c8e5654e4bfafe9239ad785c178eec35
   url: "/concept/concept_snapcenter_rest_apis.html"

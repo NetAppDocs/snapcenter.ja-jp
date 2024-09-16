@@ -2,57 +2,57 @@
 permalink: protect-hana/task_discover_the_databases_automatically.html 
 sidebar: sidebar 
 keywords: credentials 
-summary: リソースとは、 SnapCenter で管理されている Linux ホスト上の SAP HANA データベースと非データボリュームです。使用可能な SAP HANA データベースを検出したあと、それらのリソースをリソースグループに追加してデータ保護処理を実行できます。 
+summary: 8a9acf145456ddf488e58afbf2c913a1 
 ---
-= データベースを自動的に検出します
+= 7ae0ad473e0b444f584e63e025e0d4e0
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-リソースとは、 SnapCenter で管理されている Linux ホスト上の SAP HANA データベースと非データボリュームです。使用可能な SAP HANA データベースを検出したあと、それらのリソースをリソースグループに追加してデータ保護処理を実行できます。
+8a9acf145456ddf488e58afbf2c913a1
 
-.作業を開始する前に
-* SnapCenter サーバのインストール、 HDB ユーザ・ストア・キーの追加、ホストの追加、ストレージ・システム接続の設定などの作業を完了しておく必要があります。
-* Linux ホストで HDB Secure User Store Key および HDB SQL OS ユーザを設定しておく必要があります。
+.135b308ed83c53f1516b7c754566d1c4
+* 990aced1e85209fa5ddea1ba17374d81
+* 675eca4beb722810465328bbd683d9dd
 +
-** SID adm ユーザーを使用して HDB ユーザーストアキーを構成する必要がありますたとえば、 A22 を SID として使用する HANA システムの場合、 HDB User Store Key は a22adm で構成する必要があります。
+** 49e4d875540c673c8cf54539ae691bd3
 
 
-* SnapCenter Plug-in for SAP HANA Database では、 RDM / VMDK 仮想環境にあるリソースの自動検出はサポートされません。データベースを手動で追加する場合は、仮想環境のストレージ情報を指定する必要があります。
+* 93f2d6a1a85e6dc485df261b08b8eabb
 
 
-.このタスクについて
-プラグインをインストールすると、その Linux ホスト上のすべてのリソースが自動的に検出され、リソースページに表示されます。
+.bbe48fb854ea022537208eeeff822f91
+69b78244df6d0e155ae65ee682dd4e8d
 
-自動で検出されたリソースは変更または削除できません。
+a9d0e12f10920c999cb78960286bd82a
 
-.手順
-. 左側のナビゲーションペインで、 * Resources * をクリックし、リストから Plug-in for SAP HANA Database を選択します。
-. [ リソース ] ページで、 [ 表示 ] リストからリソースタイプを選択します。
-. （オプション） * をクリックしますimage:../media/filter_icon.png["フィルタアイコン"]* をクリックし、ホスト名を選択します。
+.f3a29486bed19a90f2da6d007818b427
+. ea6799b398e3200b6531e1aa5a544d0c
+. 3e025b4a685d145a938552cff1a33612
+. 539da50c1cfbe2a04bb6b229f1dd0ee9
 +
-次に、 * をクリックしますimage:../media/filter_icon.png["フィルタアイコン"]* をクリックすると、フィルタペインが閉じます。
+dc56c1ed4d6e6f9e0b65bd544aa90f17
 
-. [* リソースの更新 * ] をクリックして、ホストで使用可能なリソースを検出します。
+. 0f034106893faef4643a4f2e45058c52
 +
-リソースは、リソースタイプ、ホスト名、関連するリソースグループ、バックアップタイプ、ポリシー、全体的なステータスなどの情報とともに表示されます。
+eb037ec78f327455a8e36a07871d70c6
 
 +
-** データベースがネットアップストレージ上にあり、保護されていない場合は、総体的なステータス列に Not protected と表示されます。
-** データベースがネットアップストレージシステム上にあり、保護されている場合に、バックアップ処理が実行されていないと、 [ 全体のステータス ] 列に [ バックアップが実行されていません ] と表示されます。それ以外の場合は、前回のバックアップステータスに基づいて、「 Backup failed 」または「 Backup succeeded 」に変わります。
+** d960a78735f8828146abd7c7f897adb9
+** bcf06a966b74c2d00f9c785c9e6ac8a9
 
 
 
 
 
-NOTE: SAP HANA データベースで HDB Secure User Store Key が設定されていない場合は、リソースの横に赤い南京錠のアイコンが表示されます。その後の検出操作中に、設定されている HDB Secure User Store Key が正しくないか、データベース自体へのアクセスを提供していない場合は、赤い南京錠のアイコンが再表示されます。
+NOTE: 7fefafad0f6958649c708f8fd8d6d26a
 
 
-IMPORTANT: データベース名が SnapCenter 以外に変更された場合は、リソースを更新する必要があります。
+IMPORTANT: 82f28b0f3a541b232ddcbe7c091f64e7
 
-.完了後
-データ保護処理を実行するには、データベースを保護できるように HDB Secure User Store Key および HDBSQL OS ユーザを設定するか、またはリソースグループにこのキーを追加する必要があります。
+.bd965e38a0c9cf27aa1bde099308e23f
+a15f58d3dd24727d1438694a4654dcd1
 
-link:task_configure_hdb_user_store_key_and_hdbsql_os_user_for_the_sap_hana_database.html["SAP HANA データベース用に HDB User Store Key および HDBSQL OS ユーザを設定します"]
+edd858f144c3c1107be70381811fd6f2

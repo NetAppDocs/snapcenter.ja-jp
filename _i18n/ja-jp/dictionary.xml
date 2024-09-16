@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blocks>
+  <block id="be9f9eca92a7b91f5cf9f485b92f2f33" category="admonition">CA証明書RSAキーの長さは3072ビット以上にする必要があります。</block>
+  <block id="76f30afe00c2fd9de2c57b507789aa7c" category="paragraph">8154（HTTPS）</block>
+  <block id="064270f4c1b637c782011391ccc057cb" category="paragraph">RabbitMQポート</block>
+  <block id="310b8da14055c2cf4702264e02854d3d" category="paragraph">5672（TCP）</block>
+  <block id="c55a170d16570920e099a9e43d38db67" category="paragraph">これはRabbitMQがリッスンするデフォルトポートで、スケジューラサービスとSnapCenter間のパブリッシャ/サブスクライバモデル通信に使用されます。</block>
+  <block id="f5a551e6a3161ca6d9ee33d926d734d5" category="list-text">Microsoft Edge 110.0.1587.17以降</block>
+</blocks>

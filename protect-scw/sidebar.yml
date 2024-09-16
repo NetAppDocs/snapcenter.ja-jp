@@ -1,103 +1,102 @@
 ---
 section: protect-scw
-title: Windows ファイルシステムを保護
+title: 1ddd4c0c643f60a5dd1c48060a99d3b9
 entries:
-- title: SnapCenter Plug-in for Microsoft Windows の概念
+- title: bb02d89ec46fa9ff65099dc0fc0d1737
   entries:
-  - title: SnapCenter Plug-in for Microsoft Windows の概要を参照してください
+  - title: a9a17ec2f387b7172d4f7e035744dc4b
     url: "/protect-scw/concept_snapcenter_plug_in_for_microsoft_windows_overview.html"
-  - title: SnapCenter Plug-in for Microsoft Windows の機能
+  - title: e78102d1f4d367f5c7058a49f091b873
     url: "/protect-scw/reference_what_you_can_do_with_the_snapcenter_plug_in_for_microsoft_windows.html"
-  - title: SnapCenter Plug-in for Windows の特長
+  - title: 6c2908e5cc43162ef9ecea994b17389d
     url: "/protect-scw/concept_snapcenter_plug_in_for_windows_features.html"
-  - title: SnapCenter での Windows ファイルシステムのバックアップ方法
+  - title: 43c5e19fd38af83f0ab296f57f1cfdee
     url: "/protect-scw/concept_how_snapcenter_backs_up_windows_file_systems.html"
-  - title: SnapCenter Plug-in for Microsoft Windowsでサポートされるストレージタイプ
+  - title: 12517f3601532ad88185ff0f3172e63e
     url: "/protect-scw/reference_storage_types_supported_by_snapcenter_plug_ins_for_microsoft_windows.html"
-  - title: Windows プラグインに必要な最小限の ONTAP 権限
+  - title: 4af5fb57be9f36297fe4f700fd3875b5
     url: "/protect-scw/reference_minimum_ontap_privileges_required_for_windows_plug_in.html"
-  - title: SnapMirror レプリケーションと SnapVault レプリケーションのためのストレージシステムを準備
+  - title: e1470cbc380c0e4285ea434aa1f30381
     url: "/protect-scw/reference_prepare_storage_system_for_snapmirror_and_snapvault.html"
-  - title: Windows ファイルシステムのバックアップ戦略を定義する
+  - title: 256a24bb2bbfd11bdbce6eda99d9c9f4
     url: "/protect-scw/task_define_a_backup_strategy_for_windows_file_systems.html"
-  - title: Windows ファイルシステムのクローンのソースとデスティネーション
+  - title: 70ad71185ca59c8324ad10cefb069335
     url: "/protect-scw/reference_sources_and_destinations_of_clones_for_windows_file_systems.html"
-- title: SnapCenter Plug-in for Microsoft Windows をインストールします
+- title: ef2985f3dd99d53cf00e294e4bdbdfdc
   entries:
-  - title: SnapCenter Plug-in for Microsoft Windows のインストールワークフロー
+  - title: 15e336a500bbc8b78c88e27a721b8803
     url: "/protect-scw/concept_install_snapcenter_plug_in_for_microsoft_windows.html"
-  - title: SnapCenter Plug-in for Microsoft Windows のインストール要件
+  - title: bca5d73b25b97404586748bb0cc0c9ea
     url: "/protect-scw/reference_installation_requirements_for_snapcenter_plug_in_for_microsoft_windows.html"
-  - title: ホストを追加し、 SnapCenter Plug-in for Microsoft Windows をインストールします
+  - title: 6999d09aed9c7b160e001c5345554e29
     url: "/protect-scw/task_add_hosts_and_install_snapcenter_plug_in_for_microsoft_windows.html"
-  - title: PowerShell コマンドレットを使用して、複数のリモートホストに SnapCenter Plug-in for Microsoft Windows
-      をインストールします
+  - title: 5e384e3303c9f77f2d01c5c5ef33a4d5
     url: "/protect-scw/task_install_on_multiple_remote_hosts_using_powershell_cmdlets.html"
-  - title: コマンドラインから SnapCenter Plug-in for Microsoft Windows をサイレントにインストールします
+  - title: 3065bc79c85488f5e9c34540aa589dee
     url: "/protect-scw/task_install_the_snapcenter_plug_in_for_windows_silently_from_the_command_line.html"
-  - title: SnapCenter プラグインパッケージのインストールステータスを監視する
+  - title: 8b8199b2cc69508101df27784ccae8d5
     url: "/protect-scw/task_monitor_snapcenter_plug_in_package_installation_status.html"
-  - title: CA 証明書を設定します
+  - title: 268dbeaafbfc6c1c4598d5990f02d4ee
     entries:
-    - title: CA 証明書 CSR ファイルを生成します
+    - title: 5c4de78a2b621074bf68ab1c644af297
       url: "/protect-scw/reference_generate_CA_certificate_CSR_file.html"
-    - title: CA 証明書をインポートする
+    - title: 463f3aea4c7a61c6bfaa026c1c1c490c
       url: "/protect-scw/task_import_CA_certificates.html"
-    - title: CA 証明書のサムプリントを取得します
+    - title: 9772bdc36f54d8bb6dc779a222af547c
       url: "/protect-scw/task_get_the_CA_certificate_thumbprint.html"
-    - title: Windows ホストプラグインサービスを使用して CA 証明書を設定する
+    - title: 1067e8b574748bfd5d0147a621c7ca24
       url: "/protect-scw/task_configure_CA_certificate_with_Windows_host_plug-in_services.html"
-    - title: プラグインの CA 証明書を有効にします
+    - title: 0b65a155991bcbd016cf199f401ea183
       url: "/protect-scw/task_enable_ca_certificates_for_plug-ins.html"
-- title: SnapCenter Plug-in for VMware vSphere をインストール
+- title: 6f01b59c00a65f99d3b7a7226c0e4472
   url: "/protect-scw/task_install_snapcenter_plug_in_for_vmware_vsphere.html"
-- title: Windows ファイルシステムのバックアップ
+- title: '039222161d01f984ede1d0056c724389'
   entries:
-  - title: バックアップのワークフロー
+  - title: f395a8aee7b6b7007a1b6a64b54468f1
     url: "/protect-scw/reference_back_up_windows_file_systems.html"
-  - title: Windows ファイルシステムで使用可能なリソースを確認します
+  - title: 70cf762cdd3aa89823e4e389544ea08c
     url: "/protect-scw/task_determine_resource_availability_for_windows_file_systems.html"
-  - title: Windows ファイルシステムのバックアップポリシーの作成
+  - title: c0c9f4292e57393eeac8994682aede6e
     url: "/protect-scw/task_create_backup_policies_for_windows_file_systems.html"
-  - title: Windows ファイルシステムのリソースグループを作成する
+  - title: 8f8654928a0369230f1d533710a0be96
     url: "/protect-scw/task_create_resource_groups_for_windows_file_systems.html"
-  - title: Windows ファイルシステムの単一のリソースをオンデマンドでバックアップする
+  - title: 61be258ec26cd6598544b7c05bf8b36a
     url: "/protect-scw/task_back_up_a_single_resource_on_demand_for_windows_file_systems.html"
-  - title: Windows ファイルシステムのリソースグループをバックアップする
+  - title: 1dedd6c3a82ac28ce72dbc7e64c47db2
     url: "/protect-scw/task_back_up_resource_groups_for_windows_file_systems.html"
-  - title: PowerShell コマンドレットを使用してストレージシステム接続とクレデンシャルを作成します
+  - title: 7dae2f9bbc61653b98d6b0f906ccb0dc
     url: "/protect-scw/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_windows.html"
-  - title: PowerShell コマンドレットを使用してリソースをバックアップします
+  - title: d2a5f76428abadccd7b24ea08a0eee1e
     url: "/protect-scw/task_back_up_resources_using_powershell_cmdlets_for_windows.html"
-  - title: バックアップ処理を監視する
+  - title: 419e354d2124d18b011fd9f9fecbed3d
     url: "/protect-scw/task_monitor_backup_operations.html"
-  - title: バックアップ処理をキャンセルします
+  - title: f2098dd68244eba28833e305c4c720a3
     url: "/protect-scw/task_cancel_backup_operations_for_windows_file_system.html"
-  - title: トポロジページで関連するバックアップとクローンを表示します
+  - title: 1b756b9da2644838105069f2ae8ca2a5
     url: "/protect-scw/task_view_related_backups_and_clones_in_the_topology_page.html"
-  - title: PowerShell コマンドレットを使用してバックアップを削除します
+  - title: c7abd5797dbf501112fdb42c49a4df92
     url: "/protect-scw/task_remove_backups_using_powershell_cmdlets_for_windows.html"
-  - title: PowerShell コマンドレットを使用してセカンダリバックアップ数をクリーンアップします
+  - title: 11dc6d5147b38aacb94d18c088856bed
     url: "/protect-scw/task_clean_up_the_secondary_backup_count_using_powershell_cmdlets_for_windows.html"
-- title: Windows ファイルシステムをリストア
+- title: 87ab0eaad6e67624f5afc8ca70f468a6
   entries:
-  - title: Windows ファイルシステムのバックアップをリストアする
+  - title: e5f298a946cfb073b8df5f7f6a72f268
     url: "/protect-scw/task_restore_windows_file_system_backups.html"
-  - title: PowerShell コマンドレットを使用してリソースをリストアおよびリカバリする
+  - title: 6924edabeae66398839af50da876447a
     url: "/protect-scw/task_restore_and_recover_resources_using_powershell_cmdlets_for_windows.html"
-  - title: リストア処理を監視する
+  - title: 5eaf8dd6f947b26a0ad9f982dce18311
     url: "/protect-scw/task_monitor_restore_operations.html"
-  - title: リストア処理をキャンセルします
+  - title: f0eee44a5ea73e8e986af8ed4ae99c75
     url: "/protect-scw/task_cancel_restore_operations.html"
-- title: Windows ファイルシステムのクローニング
+- title: 52d2606cbe14d34b900ce50e86a67b13
   entries:
-  - title: Windows ファイルシステムのバックアップからのクローニング
+  - title: 377de594c5f8c420bf26c37d31d4ddf4
     url: "/protect-scw/task_clone_from_a_windows_file_system_backup.html"
-  - title: PowerShell コマンドレットを使用してバックアップをクローニングする
+  - title: 8c922e6a0134954b667b072d00b58ce3
     url: "/protect-scw/task_clone_backups_using_powershell_cmdlets_for_windows.html"
-  - title: クローニング処理を監視する
+  - title: 64095c20adc24a03dbae2f21ec58ed74
     url: "/protect-scw/task_monitor_clone_operations.html"
-  - title: クローニング処理をキャンセルします
+  - title: 4f5cec6aded1bfa9aaa9e5456b29dd92
     url: "/protect-scw/task_cancel_clone_operations.html"
-  - title: クローンをスプリットします。
+  - title: d91a0b52cfc5d0c3e4b59e8544b3c61d
     url: "/protect-scw/task_split_a_clone_for_windows.html"

@@ -2,21 +2,21 @@
 permalink: protect-scw/reference_back_up_windows_file_systems.html 
 sidebar: sidebar 
 keywords: SnapCenter 
-summary: SnapCenter Plug-in for Microsoft Windows をインストールした環境では、 SnapCenter を使用して Windows ファイルシステムをバックアップすることができます。単一のファイルシステム、または複数のファイルシステムを含むリソースグループをバックアップできます。バックアップは、オンデマンドで実行することも、定義した保護スケジュールに従って実行することもできます。 
+summary: bf9022cd459d82bda5c1defee5acb8ac 
 ---
-= Windows ファイルシステムのバックアップ
+= 039222161d01f984ede1d0056c724389
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter Plug-in for Microsoft Windows をインストールした環境では、 SnapCenter を使用して Windows ファイルシステムをバックアップすることができます。単一のファイルシステム、または複数のファイルシステムを含むリソースグループをバックアップできます。バックアップは、オンデマンドで実行することも、定義した保護スケジュールに従って実行することもできます。
+bf9022cd459d82bda5c1defee5acb8ac
 
-スケジュールを設定して、複数のサーバで同時に複数のバックアップを実行することができます。バックアップ処理とリストア処理を同じリソースで同時に実行することはできません。
+6213c4aa6c3d759b708f391038b515e2
 
-次のワークフローは、バックアップ処理の実行順序を示しています。
+a1a0f86f12eb6f7b0a51545fae87d6ed
 
-image::../media/sce_backup_workflow.gif[SCE バックアップワークフロー]
+image::../media/sce_backup_workflow.gif[0d267aa6a5980521c50d3bb9b62d9419]
 
-PowerShellコマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、クローニングの処理を実行することもできます。PowerShellコマンドレットの詳細については、SnapCenterコマンドレットのヘルプまたはを https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^] 参照してください。
+eb32801e00520ea11fbb136dd57e3d97

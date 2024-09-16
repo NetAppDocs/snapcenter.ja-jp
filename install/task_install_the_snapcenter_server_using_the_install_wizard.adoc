@@ -2,84 +2,84 @@
 permalink: install/task_install_the_snapcenter_server_using_the_install_wizard.html 
 sidebar: sidebar 
 keywords: install, snapcenter software, install wizard 
-summary: SnapCenter サーバインストーラの実行ファイルを実行して、 SnapCenter サーバをインストールできます。 
+summary: 01030a4579e57d7bfe53d02858238c30 
 ---
-= WindowsホストへのSnapCenterサーバのインストール
+= 74d2914d1d5af620488c6d1b4ffeb64b
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter サーバインストーラの実行ファイルを実行して、 SnapCenter サーバをインストールできます。
+01030a4579e57d7bfe53d02858238c30
 
-必要に応じて、 PowerShell コマンドレットを使用して複数のインストール手順や設定手順を実行することができます。
+5a2aba37dfbd8f76d67354d36f074246
 
 
-NOTE: コマンドラインからの SnapCenter サーバのサイレントインストールはサポートされていません。
+NOTE: 6bbbc97f76f0cc1fe72bf085e402d899
 
-.作業を開始する前に
-* SnapCenter サーバホストは、保留中のシステムの再起動がない Windows アップデートで最新の状態になっている必要があります。
-* SnapCenter サーバをインストールするホストに MySQL サーバがインストールされていないことを確認しておく必要があります。
-* Windows インストーラのデバッグを有効にしておく必要があります。
+.135b308ed83c53f1516b7c754566d1c4
+* 43ee0e34a532e1eabe2077111168d79c
+* f1261aa42b37e3f9eb4ec53b77dc01ec
+* b0af67f94e7022b90682d300c402cd36
 +
-有効にする方法については、 Microsoft の Web サイトを参照してください https://support.microsoft.com/kb/223300["Windows インストーラのログ"^]。
-
-+
-
-NOTE: SnapCenter サーバは、 Microsoft Exchange サーバ、 Active Directory サーバ、またはドメインネームサーバが配置されたホストにはインストールしないでください。
-
-
-
-* 手順 *
-
-. から SnapCenter Server インストールパッケージをダウンロードします https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["ネットアップサポートサイト"^]。
-. ダウンロードした .exe ファイルをダブルクリックして、 SnapCenter Server のインストールを開始します。
-+
-インストールの開始後、すべての事前確認が実行され、最小要件を満たしていない場合には、対応するエラーまたは警告メッセージが表示されます。
-
-+
-警告メッセージは無視してインストールを続行できますが、エラーは修正しておく必要があります。
-
-. SnapCenter サーバのインストールに必要な設定済みの値を確認し、必要に応じて変更します。
-+
-MySQL Server リポジトリデータベースのパスワードを指定する必要はありません。SnapCenter サーバのインストール時に、パスワードは自動生成されます。
+71734a3845aa0041b91f2071e937b00f
 
 +
 
-NOTE: リポジトリ・データベースのカスタム・パスでは ' 特殊文字 "`%`" はサポートされていませんパスに "%" を含めると ' インストールは失敗します
+NOTE: 4ea3b1b04570901409c3e77aeef85582
 
-. [ 今すぐインストール ] をクリックします。
+
+
+4839d2f25cc35b249d5db15efa1afd75
+
+. 706237c62022a65538305a9b059847f2
+. 265989a97ac4dd0184cbdfc5c65453d5
 +
-無効な値を指定すると、該当するエラーメッセージが表示されます。値を再入力してからインストールを開始してください。
-
-+
-
-NOTE: [Cancel] * ボタンをクリックすると、実行中のステップが完了し、ロールバック操作が開始されます。SnapCenter サーバがホストから完全に削除されます。
-
-+
-ただし、「 SnapCenter サーバサイトの再起動」または「 SnapCenter サーバの起動を待機中」の処理が実行されているときに「 * キャンセル」をクリックすると、処理はキャンセルされずにインストールが続行されます。
+b55d025446a41f6be9b762182a3199ab
 
 +
-ログファイルは常に、 admin ユーザの %temp% フォルダに古いものから順番に表示されます。ログの場所をリダイレクトする場合は 'C:\installer_location\installer_name.exe /log"C:\"`` を実行して ' コマンドプロンプトから SnapCenter Server のインストールを開始します
+62d2fd96615063cf75e405caf66e7f0b
+
+. ab691c5a64104aec1f94c41a8e516324
++
+7b5a4e2264ffc57e8ea3a6d11bf48d98
+
++
+
+NOTE: c21302063d9fb55af92c82a681618679
+
+. 73fc97baa9d12b2441a7cf6ee8b57363
++
+33d1fe149987adc0a7db183f1f13fda6
+
++
+
+NOTE: 541eb9f7e4046db89bc6e649fea3e51d
+
++
+0a72b5ed9e647b1bccffb29f78092df4
+
++
+bf81ea5010d5d85942a2a57301afd2ac
 
 
 
 
 
-== 製品を登録してサポートを有効にする
+== 509996c9084eee8ec4042ea11d0d40b5
 
-NetApp製品を初めてご利用になり、既存のNetAppアカウントをお持ちでない場合は、製品を登録してサポートを有効にする必要があります。
+27690795c4a480f678c940457451380d
 
-.手順
-. SnapCenterのインストール後、*[ヘルプ]>[バージョン情報]*に移動します。
-. [_About SnapCenter _]ダイアログボックスで、971で始まる20桁のSnapCenterインスタンスをメモします。
-. をクリックします https://register.netapp.com[]
-. [* I am not a registered NetApp Customer* ] をクリックします。
-. 自分自身を登録するには、詳細を指定してください。
-. NetApp Reference SNフィールドは空白のままにします。
-. [Product Line]ドロップダウンから[* SnapCenter *]を選択します。
-. 課金プロバイダを選択します。
-. 20桁のSnapCenterインスタンスIDを入力します。
-. [Submit （送信） ] をクリックします。
+.f3a29486bed19a90f2da6d007818b427
+. da4d818a1335c4c0c623753733182b1a
+. f176ac456003ae547c90edbc5d81ec1e
+. f3c0990bb1a2ae775ec30feffbc58be0
+. a3381c7414a338cceaa125118a74b420
+. 3847ac30d33734cc62ecd81b181d93f2
+. 9289a81163d5e2905fefe2835a6ab045
+. e229f2a31adf5bd88e8925c96feb81d2
+. cf46417d06a0356fc053eba2626759a2
+. 98d7dda5167a79acadd993f0ad819512
+. 4b5d2dd70af718ebe67bfea5b43d8667
 

@@ -2,77 +2,77 @@
 permalink: protect-scsql/task-install-snapcenter-server-for-sql-server.html 
 sidebar: sidebar 
 keywords: credentials 
-summary: SnapCenter Server for Microsoft SQL Serverのインストール手順について説明します。 
+summary: dddaf244cf1e3908c97cc243765422db 
 ---
-= SnapCenter Server for Microsoft SQL Serverをインストールします
+= 5bb995f2cea5f09b3870d6cba0a2bff4
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter Server for Microsoft SQL Serverのインストール手順をまとめたものです。
+696fdc5b81985319a8afbf8c7c554de1
 
 
 
-== ステップ1: SnapCenter サーバーをダウンロードしてインストールします
+== 44d77fb23ef94aa2e99acffb06349cce
 
-. から SnapCenter Server インストールパッケージをダウンロードします https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["ネットアップサポートサイト"^] 次に、この exe をダブルクリックします。
+. 72de9cea28a7cca58f8423279c68e8c6
 +
-インストールの開始後、すべての事前確認が実行され、最小要件を満たしていない場合には、対応するエラーまたは警告メッセージが表示されます。警告メッセージは無視してインストールを続行できますが、エラーは修正しておく必要があります。
+f3202cac117dff2d56e44da0f9a51af3
 
-. SnapCenter サーバのインストールに必要な設定済みの値を確認し、必要に応じて変更します。
+. ab691c5a64104aec1f94c41a8e516324
 +
-MySQL Server リポジトリデータベースのパスワードを指定する必要はありません。SnapCenter サーバのインストール時に、パスワードは自動生成されます。
-
-+
-
-NOTE: インストール用のカスタムパスでは、特殊文字“ % ”はサポートされていません。パスに「 % 」を含めると、インストールは失敗します。
-
-. [ 今すぐインストール ] をクリックします。
-
-
-
-
-== ステップ2：SnapCenter にログインします
-
-. ホストデスクトップのショートカットまたはインストールによって提供された URL （ SnapCenter Server がインストールされているデフォルトポート 8146 の場合は、 \\ https://server:8146_ ）から SnapCenter を起動します。
-. クレデンシャルを入力します。
-+
-組み込みのドメイン管理者ユーザ名の形式には、 _NetBIOS_<username>_ または _<username>@<domain>_ または _<DomainFQDN>\<username>_ を使用します。
+7b5a4e2264ffc57e8ea3a6d11bf48d98
 
 +
-組み込みのローカル管理者ユーザ名の形式には、 _<username>_ を使用します。
 
-. [ * サインイン * ] をクリックします。
+NOTE: e33036e6b56fd2a33a6a10030cb94299
+
+. 73fc97baa9d12b2441a7cf6ee8b57363
 
 
 
 
-== 手順3：SnapCenter Standardコントローラベースライセンスを追加する
+== 182fe557d952dd099523bf0f0a12a03d
 
-. ONTAP コマンドラインを使用してコントローラにログインし、次のように入力します。
+. 852f5d8fb35ebdb357cf3bc24e003d7b
+. 61f012eff86118543feffb3e0c63fba5
 +
-'system license add-license-code <license_key>'
+47459be4bca5ade3cc059a063f2917cd
 
-. ライセンスを確認します。
 +
-「 license show 」を参照してください
+283cf02b37e194a97bc09e5143839de4
+
+. 639377ecc4f9660d152b47ac6257004c
 
 
 
 
+== 6dbb525493b617ed15acb54f48a1fb80
 
-== 手順4：ストレージシステム接続をセットアップする
-
-. 左側のペインで、 * ストレージ・システム > 新規 * をクリックします。
-. Add Storage System ページで、次の手順を実行します。
+. a4e7093c6cc2e4ee72e50b2a954be3f3
 +
-.. ストレージシステムの名前または IP アドレスを入力します。
-.. ストレージシステムへのアクセスに使用するクレデンシャルを入力します。
-.. イベント管理システム（ EMS ）と AutoSupport を有効にするには、チェックボックスを選択します。
+a2f9f72a3753905e11a8704d1d64ef7e
+
+. cb7e3c5033b506aed36b6425ab46d746
++
+8822a9cc146d06e4ec77936054fb11ca
 
 
-. プラットフォーム、プロトコル、ポート、およびタイムアウトに割り当てられたデフォルト値を変更する場合は、 [ その他のオプション *] をクリックします。
-. [Submit （送信） ] をクリックします。
+
+
+
+== ed04342b9541f163902926f71be8548c
+
+. 4e47abeee8d7eb5a872182a350fecedb
+. 610cac9ef97d97974dfcf5de0b7e0f1e
++
+.. 2384730978fb31977e9e4d8d6cd269a1
+.. cc264bb31c32343deef41c8d3130ed2c
+.. 270527cce60385f686064c6eef36e8dd
+
+
+. ebd85b740e18643ed1055826c9bcddf6
+. 4b5d2dd70af718ebe67bfea5b43d8667
 

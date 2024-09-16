@@ -2,15 +2,15 @@
 permalink: protect-postgresql/housekeeping-of-log-backups.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for PostgreSQL 
-summary: SnapCenterは、ストレージシステムレベルおよびファイルシステムレベルでの不要なログおよびデータバックアップの削除、およびPostgreSQLバックアップカタログ内での削除を管理します。 
+summary: 647c8614324199b90200d1e6992a1f2a 
 ---
-= SnapCenterによる不要なデータバックアップの削除の管理方法
+= 352752e5faea0777db6f96a1ad413289
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenterは、ストレージシステムレベルおよびファイルシステムレベルでの不要なデータバックアップの削除を管理します。
+d9840bbd3f7656be5e34aea4c361bc70
 
-保持設定に基づいて、プライマリストレージまたはセカンダリストレージ上のSnapshotと、PostgreSQLカタログ内の対応するエントリが削除されます。
+081e5d91983e459a90232e60bbbcbffa

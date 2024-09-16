@@ -2,73 +2,73 @@
 permalink: protect-sco/task_define_a_clone_strategy_for_oracle_databases.html 
 sidebar: sidebar 
 keywords: backup types, cloning type, clone name, limitations 
-summary: データベースをクローニングする前に戦略を定義しておくと、クローニング処理を確実に成功させることができます。 
+summary: 0aaa1195903b8c3291fdc5c0850cc98a 
 ---
-= Oracle データベースのクローニング戦略を定義する
+= f41173dd94f009e5a3617883b76d2aeb
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-データベースをクローニングする前に戦略を定義しておくと、クローニング処理を確実に成功させることができます。
+0aaa1195903b8c3291fdc5c0850cc98a
 
 
 
-== クローニングでサポートされるバックアップのタイプ
+== 0b43fa1aa16b779f05178364e5c62664
 
-SnapCenter では、 Oracle データベースの各種バックアップのクローニングがサポートされます。
+ac9cc930050799863837caf7064904c1
 
-* オンラインデータバックアップ
-* オンラインフルバックアップ
-* オフラインマウントバックアップ
-* オフラインシャットダウンバックアップ
-* Data Guard スタンバイデータベースおよび Active Data Guard スタンバイデータベースのバックアップ
-* Real Application Clusters （ RAC ）構成でのオンラインデータバックアップ、オンラインフルバックアップ、オフラインマウントバックアップ、オフラインシャットダウンバックアップ
-* Automatic Storage Management （ ASM ）構成でのオンラインデータバックアップ、オンラインフルバックアップ、オフラインマウントバックアップ、オフラインシャットダウンバックアップ
+* 552bee158dea84ab12992ce308ab5514
+* a4e066c16d1b26a03a83fe32b6299616
+* 01e68d5655a01e54fb5027616f590fd2
+* 2e4bdeccde8318fa75a497d93f6e9c2b
+* 81e63b5a91ea892b6224da11b246a5cf
+* f8dda3857554e1226b870b9cbea9dde3
+* f6dd4c2ee90b6e2d5d7d51586c61564b
 +
 
-IMPORTANT: マルチパス構成ファイルの user_friendy_names オプションが yes に設定されている場合、 SAN 構成はサポートされません。
+IMPORTANT: 67c5ed4921b287cb12a0c466f01e9689
 
 
 
 
-NOTE: アーカイブログのバックアップのクローニングはサポートされていません。
+NOTE: 0d296b92c09b34ffa602cfd268c9bde2
 
 
 
-== Oracle データベースでサポートされるクローニングのタイプ
+== 069e204626201110538d5c5c80f7886a
 
-Oracle データベース環境では、 SnapCenter がデータベースバックアップのクローニングをサポートします。バックアップのクローニングは、プライマリストレージシステムおよびセカンダリストレージシステムから行うことができます。
+9af986db528c988b61119454f9ef1f9e
 
-SnapCenter サーバは、 NetApp FlexClone テクノロジを使用してバックアップをクローニングします。
+b9a32e171989e21a4970fc5e515fe87e
 
-クローンを更新するには、「 Refresh-SmClone 」コマンドを実行します。このコマンドは、データベースのバックアップを作成し、既存のクローンを削除し、同じ名前でクローンを作成します。
-
-
-NOTE: クローンの更新処理は、 UNIX コマンドでのみ実行できます。
+98bdc410866fe4322ad38d7c16e3698c
 
 
+NOTE: 76d42bf3f3dc7a8930a99e815ff69a14
 
-== Oracle データベースのクローンの命名規則
 
-SnapCenter 3.0 以降では、ファイルシステムのクローンに、 ASM ディスクグループのクローンとは異なる命名規則が使用されます。
 
-* SAN または NFS ファイルシステムの命名規則は、 FileSystemNameofsourcedatabE_CLONESID です。
-* ASM ディスクグループの命名規則は、 SC_HASHCODEofDISKGROUP_CLONESID です。
+== d685c464e403bcc1f4607c4fb80876c0
+
+4390a9384fb31093da8d49c36064ce16
+
+* 9b9658c20aeb00daeb5da4d5cb8dd7bf
+* 158ab28541deef782557866662184868
 +
-HASHCODEofDISKGROUP は、 ASM ディスクグループごとに一意の自動生成番号（ 2 ～ 10 桁）です。
+7d85b07c134483330a9fdf1732d81012
 
 
 
 
 
-== Oracle データベースのクローニングの制限
+== e0d01f2df2a1f84d0e83db5020bffc69
 
-データベースをクローニングする前に、クローニング処理の制限事項を確認しておく必要があります。
+f7f688e4882a5739870694cef45db1cb
 
-* Oracle 11.2.0.4 ～ 12.1.0.1 のいずれかのバージョンを使用している場合、 _renamedg_command の実行時にクローン操作がハング状態になります。この問題を修正するには、 Oracle パッチ 19544733 を適用します。
-* ホストに直接接続された LUN （ Windows ホストで Microsoft iSCSI イニシエータを使用した場合など）から、同じ Windows ホストまたは別の Windows ホスト上の VMDK または RDM LUN に、あるいはその逆に、データベースをクローニングすることはできません。
-* ボリュームマウントポイントのルートディレクトリを共有ディレクトリにすることはできません。
-* クローンが含まれている LUN を新しいボリュームに移動した場合、そのクローンは削除できません。
+* 418b1a5180f6e11a6f72cad7a57424db
+* f53e56a4d19d8e8ec1f0bcbeb8901201
+* ad46b8b1523a0368e045a980f630da67
+* 6ff9813cf10eee24bae3ad8efcbd236f
 

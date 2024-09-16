@@ -2,29 +2,29 @@
 permalink: protect-scsql/task_install_snapcenter_plug_in_package_for_windows_server_on_multiple_remote_hosts_using_cmdlets_scsql.html 
 sidebar: sidebar 
 keywords: credentials 
-summary: SmHostPackage PowerShell コマンドレットを使用して、複数のホストに SnapCenter Plug-in for Microsoft SQL Server を同時にインストールできます。 
+summary: 644eab038211ec38a5152cd27b434902 
 ---
-= コマンドレットを使用して、複数のリモートホストに SnapCenter Plug-in for Microsoft SQL Server をインストールします
+= e0b10be8cc5f61360278c4b43700dec9
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SmHostPackage PowerShell コマンドレットを使用して、複数のホストに SnapCenter Plug-in for Microsoft SQL Server を同時にインストールできます。
+644eab038211ec38a5152cd27b434902
 
-.作業を開始する前に
-プラグインパッケージをインストールする各ホストで、ローカル管理者の権限を持つドメインユーザとして SnapCenter にログインしている必要があります。
+.135b308ed83c53f1516b7c754566d1c4
+96f483d89b964507a30894203906a711
 
-.手順
-. PowerShell を起動します。
-. SnapCenter サーバホストで、 Open-SmConnection コマンドレットを使用してセッションを確立し、クレデンシャルを入力します。
-. Install-SmHostPackage コマンドレットと必要なパラメータを使用して、複数のリモートホストに SnapCenter Plug-in for Microsoft SQL Server をインストールします。
+.f3a29486bed19a90f2da6d007818b427
+. 31ce9f1bb2cc71cb2dc10cfb787f6377
+. 763ba2973bbd52fd1b9e6ef8a17001ff
+. 51befe228aab4baf41c05e92b094947e
 +
-コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+74db7181476f94f0e2927d8c8d98cb97
 
 +
-プラグインを手動でインストール済みで、プラグインをインストールするための要件をホストが満たしているかどうかを検証しない場合は、 -skipprecheck オプションを使用できます。
+0485b387f4826217d395265d02e4267b
 
-. リモートインストールのクレデンシャルを入力します。
+. fb6b3e3a502ac26107b3d7836e7155db
 

@@ -1,107 +1,106 @@
 ---
 section: protect-sce
-title: Microsoft Exchange Server データベースを保護する
+title: 43a8d144e52087845c210b591cf8af3b
 entries:
-- title: SnapCenter Plug-in for Microsoft Exchange Server の概念
+- title: 409bf5fec45b4fdc568b8daf282ddbde
   entries:
-  - title: 概要
+  - title: 3b878279a04dc47d60932cb294d96259
     url: "/protect-sce/concept_snapcenter_plug_in_for_exchange_server_overview.html"
-  - title: SnapCenter Plug-in for Microsoft Exchange Server の機能
+  - title: 7fc349d8cb7afc38c854d192b59d0edb
     url: "/protect-sce/concept_what_you_can_do_with_snapcenter_plug_in_for_microsoft_exchange_server.html"
-  - title: SnapCenter Plug-in for Microsoft Windows および Microsoft Exchange Server
-      でサポートされるストレージタイプ
+  - title: 4ca48d63db1547d2aa6b271f22219b7b
     url: "/protect-sce/reference_storage_types_supported_by_snapcenter_plug_in_for_microsoft_windows_and_for_microsoft_exchange_server.html"
-  - title: 必要な最小 ONTAP 権限
+  - title: fa82b0b99da0e46e629baf5081d8fee2
     url: "/protect-sce/concept_minimum_privileges_required_exchange_plug_in.html"
-  - title: SnapMirror レプリケーションと SnapVault レプリケーションのためのストレージシステムを準備
+  - title: e1470cbc380c0e4285ea434aa1f30381
     url: "/protect-sce/reference_prepare_storage_system_for_snapmirror_and_snapvault.html"
-  - title: Exchange Server リソースのバックアップ戦略を定義する
+  - title: 7fc686e60d66e170f709548904c946f0
     url: "/protect-sce/task_define_a_backup_strategy_for_exchange_server_resources.html"
-  - title: Exchange データベースのリストア戦略を定義する
+  - title: d21865bd5c6bde2b3334a20e500f9b18
     url: "/protect-sce/task_define_a_restore_strategy_for_exchange_databases.html"
-- title: SnapCenter Plug-in for Microsoft Exchange Server をインストールします
+- title: 3decceabe454f8ecfa994c03d979b0bb
   entries:
-  - title: SnapCenter Plug-in for Microsoft Exchange Server のインストールワークフロー
+  - title: 31db120ce3e7f7d5198a060e87905d01
     url: "/protect-sce/concept_install_snapcenter_plug_in_for_microsoft_exchange_server.html"
-  - title: ホストを追加して SnapCenter Plug-in for Microsoft Exchange Server をインストールするための前提条件
+  - title: 690761e3a499ee562da842d3bd6f2db0
     url: "/protect-sce/reference_prerequisites_to_add_hosts_and_install_snapcenter_plug_in_for_microsoft_exchange_server.html"
-  - title: SnapCenter Plug-in for Windows のクレデンシャルを設定します
+  - title: 37e746f5f4d67e8899811af29e020176
     url: "/protect-sce/task_set_up_credentials_for_the_snapcenter_plug_in_for_windows_sce.html"
-  - title: Windows Server 2016以降でのgMSAの設定
+  - title: 4f96a9b27e2a438e2024bd3f65ccc8ee
     url: "/protect-sce/task_configure_gMSA_on_windows_server_2012_or_later.html"
-  - title: ホストを追加し、 Plug-in for Exchange をインストールします
+  - title: 43e4843cc378c4665771060dbab161eb
     url: "/protect-sce/task_add_hosts_and_install_plug_in_for_exchange.html"
-  - title: PowerShell コマンドレットを使用して、 SnapCenter サーバホストから Plug-in for Exchange をインストールします
+  - title: fad8eb99976e19badbb476ac4f9a159a
     url: "/protect-sce/task_install_plug_in_for_exchange_from_the_snapcenter_server_host_using_powershell_cmdlets.html"
-  - title: コマンドラインから SnapCenter Plug-in for Exchange をサイレントにインストールします
+  - title: d09d97061d337ca456268467edcaf423
     url: "/protect-sce/task_install_the_snapcenter_plug_in_for_exchange_silently_from_the_command_line.html"
-  - title: SnapCenter プラグインパッケージのインストールステータスを監視する
+  - title: 8b8199b2cc69508101df27784ccae8d5
     url: "/protect-sce/task_monitor_snapcenter_plug_in_package_installation_status.html"
-  - title: CA 証明書を設定します
+  - title: e94a41320f7b470ab4c94c28575be94e
     entries:
-    - title: CA 証明書 CSR ファイルを生成します
+    - title: 5c4de78a2b621074bf68ab1c644af297
       url: "/protect-sce/reference_generate_CA_certificate_CSR_file.html"
-    - title: CA 証明書をインポートする
+    - title: 463f3aea4c7a61c6bfaa026c1c1c490c
       url: "/protect-sce/task_import_CA_certificates.html"
-    - title: CA 証明書のサムプリントを取得します
+    - title: 9772bdc36f54d8bb6dc779a222af547c
       url: "/protect-sce/task_get_the_CA_certificate_thumbprint.html"
-    - title: Windows ホストプラグインサービスを使用して CA 証明書を設定する
+    - title: 1067e8b574748bfd5d0147a621c7ca24
       url: "/protect-sce/task_configure_CA_certificate_with_Windows_host_plug-in_services.html"
-    - title: プラグインの CA 証明書を有効にします
+    - title: 0b65a155991bcbd016cf199f401ea183
       url: "/protect-sce/task_enable_ca_certificates_for_plug-ins.html"
-  - title: Exchange と SnapCenter が共存するように SnapManager 7.x を設定します
+  - title: 63ba211dad3aac83191d707f6a3ce749
     url: "/protect-sce/task_configure_snapmanager_7_x_for_exchange_and_snapcenter_plug_in_for_exchange_to_coexist.html"
-- title: SnapCenter Plug-in for VMware vSphere をインストール
+- title: 6f01b59c00a65f99d3b7a7226c0e4472
   url: "/protect-sce/task_install_snapcenter_plug_in_for_vmware_vsphere.html"
-- title: データ保護を準備
+- title: 391acd305e11894b8f29370b098d9f25
   url: "/protect-sce/concept_prepare_for_data_protection.html"
-- title: Exchange リソースをバックアップする
+- title: 16a46d711b809ec337c7f5488089048a
   entries:
-  - title: バックアップのワークフロー
+  - title: f395a8aee7b6b7007a1b6a64b54468f1
     url: "/protect-sce/concept_back_up_exchange_resources.html"
-  - title: Exchange データベースおよびバックアップの検証
+  - title: fd28a24d64e009870115aaf8c946e67a
     url: "/protect-sce/reference_exchange_database_and_backup_verification.html"
-  - title: Exchange リソースをバックアップに使用できるかどうかを確認します
+  - title: 064d0323e24a5aa6dbad2233994ca3e4
     url: "/protect-sce/task_determine_whether_exchange_resources_are_available_for_backup_sce.html"
-  - title: Exchange Server データベースのバックアップポリシーを作成する
+  - title: 3e2e6e4ee4c239def662c1ce84ff5933
     url: "/protect-sce/task_create_backup_policies_for_exchange_server_databases.html"
-  - title: Exchange Server のリソースグループを作成してポリシーを適用します
+  - title: 5bd6b169e9e0ed64f898dc3a02bd5dc0
     url: "/protect-sce/task_create_resource_groups_and_attach_policies_for_exchange_servers.html"
-  - title: Exchange データベースをバックアップします
+  - title: 3b149cd899fbd2201eebaa6d8ac21929
     url: "/protect-sce/task_back_up_exchange_databases.html"
-  - title: Exchange リソースグループをバックアップする
+  - title: 95d9a53adc7dad069af7237498e45373
     url: "/protect-sce/task_back_up_exchange_resources_groups.html"
-  - title: Exchange Server 用の PowerShell コマンドレットを使用して、ストレージシステム接続とクレデンシャルを作成します
+  - title: 8a09c01ad5dee966673a5026d38e1304
     url: "/protect-sce/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_exchange_database.html"
-  - title: PowerShell コマンドレットを使用して Exchange リソースをバックアップします
+  - title: 6c40f1cde52cc35bedb76a6ac167d83e
     url: "/protect-sce/task_back_up_exchange_resources_using_powershell_cmdlets.html"
-  - title: バックアップ処理を監視する
+  - title: 419e354d2124d18b011fd9f9fecbed3d
     url: "/protect-sce/task_monitor_backup_operations.html"
-  - title: Exchange データベースのバックアップ処理をキャンセルします
+  - title: fd8673b90ff8150879994409704fd7d2
     url: "/protect-sce/task_cancel_backup_operations_for_exchange_database.html"
-  - title: PowerShell コマンドレットを使用して Exchange バックアップを削除します
+  - title: c67cf2b105f14a1f28e583dd29d713ba
     url: "/protect-sce/task_remove_exchange_backups_using_powershell_cmdlets.html"
-  - title: Topology ページで Exchange バックアップを表示します
+  - title: baf51638fcd69f7ad248b14cc9899660
     url: "/protect-sce/task_view_exchange_backups_in_the_topology_page.html"
-- title: Exchange リソースをリストアします
+- title: e846bcfd3a099fef65a4bf829013b44e
   entries:
-  - title: リストアワークフロー
+  - title: e30c3d908a4ed515e16791b672cc0709
     url: "/protect-sce/reference_restore_exchange_resources.html"
-  - title: Exchange データベースをリストアするための要件
+  - title: 0a85ee51b9d331a550e21deab31b4cd2
     url: "/protect-sce/concept_requirements_for_restoring_an_exchange_database.html"
-  - title: Exchange データベースをリストアします
+  - title: aa14e187b593d2a11c1d14cbbec8aadc
     url: "/protect-sce/task_restore_exchange_databases.html"
-  - title: メールとメールボックスのきめ細かいリカバリ
+  - title: 2807319f8bd59affef72f0158525b495
     url: "/protect-sce/reference_granular_recovery_of_mails_and_mailbox.html"
-  - title: セカンダリストレージから Exchange Server データベースをリストアする
+  - title: 877b673d5c7c5e44277b4a9a4f2c7495
     url: "/protect-sce/task_restore_an_exchange_server_database_from_secondary_storage.html"
-  - title: PowerShell コマンドレットを使用して Exchange リソースをリストアします
+  - title: 97e9982b58636ac0e13e42585b460313
     url: "/protect-sce/task_restore_exchange_resources_using_powershell_cmdlets.html"
-  - title: Exchange のパッシブノードレプリカを再シードします
+  - title: aabc88376ed488867dcbd5ebe7ee5f24
     url: "/protect-sce/task_reseed_a_passive_exchange_node_replica.html"
-  - title: PowerShell コマンドレットを使用した Exchange データベースの再シード
+  - title: b472988863abcfb897af4f291e7a410f
     url: "/protect-sce/task_reseed_a_replica_using_powershell_cmdlets_for_exchange_database.html"
-  - title: リストア処理を監視する
+  - title: 5eaf8dd6f947b26a0ad9f982dce18311
     url: "/protect-sce/task_monitor_restore_operations.html"
-  - title: リストア処理をキャンセルします
+  - title: f0eee44a5ea73e8e986af8ed4ae99c75
     url: "/protect-sce/task_cancel_restore_operations.html"

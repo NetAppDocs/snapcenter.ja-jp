@@ -2,52 +2,52 @@
 permalink: protect-scw/concept_snapcenter_plug_in_for_windows_features.html 
 sidebar: sidebar 
 keywords: SnapCenter 
-summary: Plug-in for Windowsは、ストレージシステム上でNetApp Snapshotテクノロジと統合されます。Plug-in for Windows の操作には、 SnapCenter インターフェイスを使用します。 
+summary: ddcb2243e0913e22a7bdaa62e5aba43f 
 ---
-= SnapCenter Plug-in for Windows の特長
+= 6c2908e5cc43162ef9ecea994b17389d
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Plug-in for Windowsは、ストレージシステム上でNetApp Snapshotテクノロジと統合されます。Plug-in for Windows の操作には、 SnapCenter インターフェイスを使用します。
+ddcb2243e0913e22a7bdaa62e5aba43f
 
-Plug-in for Windows の主な機能は次のとおりです。
+5152783556f9f44813fcbba2514ba270
 
-* * SnapCenter * による統一されたグラフィカル・ユーザー・インターフェイス
+* fe83f9df83b3aa96b52b9e5a120baa6d
 +
-SnapCenter のインターフェイスは、すべてのプラグインと環境で標準化され、一貫しています。SnapCenter インターフェイスを使用すると、すべてのプラグインでバックアッププロセスとリストアプロセスを一貫した方法で実行できるほか、ダッシュボードビューで概要を把握したり、ロールベースアクセス制御（ RBAC ）を設定したり、ジョブを監視したりすることができます。SnapCenter では、バックアップ処理とクローニング処理に対応したスケジュールとポリシーの一元管理も可能です。
+790dc446b8ddf495165446e72a4fec35
 
-* * 中央管理の自動化 *
+* 8cab777e8f4d0f3134b1e688de9e3a14
 +
-日常的なファイルシステムのバックアップのスケジュールを設定したり、ポリシーベースのバックアップ保持を設定したり、リストア処理をセットアップしたりできます。SnapCenter から E メールアラートを送信するように設定して、ファイルシステム環境をプロアクティブに監視することもできます。
+f865c48aa56189960fc5c9a515903527
 
-* *無停止のNetAppスナップショットテクノロジ*
+* 542226a75e67e826476b8a6313eb2a61
 +
-Plug-in for Windowsでは、NetAppのSnapshotテクノロジを使用しています。これにより、ファイルシステムを数秒でバックアップし、ホストをオフラインにすることなく迅速にリストアすることが可能です。Snapshotはストレージスペースを最小限しか消費しません。
+515ccc782ae168ef3b657e96aa4edf37
 
 
 
-Plug-in for Windows には、上記の主要な機能以外にも次のようなメリットがあります。
+5e552e263b3cac8a0ad4ef299469911f
 
-* バックアップ、リストア、およびクローニングのワークフローがサポートされます
-* セキュリティが RBAC でサポートされ、ロール委譲が一元化されます
-* NetApp FlexClone テクノロジを使用して、本番用ファイルシステムのスペース効率に優れたコピーを作成し、テストまたはデータの抽出を行います
+* aa3fb9fca5fdb4ad7f86964cd9fd89cc
+* 5750866ea3f2f5172a0cbfaa24301be8
+* 4a3e39ebca9c4f0e9238b4f749f8eda1
 +
-FlexClone のライセンス情報については、を参照してください link:../install/concept_snapcenter_licenses.html["SnapCenter ライセンス"^]。
+096e71fc77d918a544bb07d1ea387d60
 
-* 複数のサーバで同時に複数のバックアップを実行できます
-* PowerShell コマンドレットを使用して、バックアップ、リストア、クローニングの各処理のスクリプトを作成できます
-* ファイルシステムと仮想マシンディスク（ VMDK ）のバックアップがサポートされます。
-* 物理インフラと仮想インフラがサポートされます
-* iSCSI 、ファイバチャネル、 FCoE 、 raw デバイスマッピング（ RDM ）、非対称 LUN マッピング（ ALM ）、 NFS および VMFS 経由の VMDK 、および仮想 FC がサポートされます
-* Windows Server 2022でのNon-Volatile Memory Express（NVMe）のサポート
+* 0ef4b1751f70723459f9f0b21d7df71a
+* 293ffa565c196a3a07f5a591b4fc1d00
+* 714cad43018665a21e4e9f0075f71077
+* 2f6b08e8b7841ff545c1fb1427f9a842
+* ea43d587d8a6676a0f6fb181a8acea22
+* c5fd90ba02a9c9e9de50508b759fb9f3
 +
-** NVMe over TCP / IPで作成されたVMDKレイアウト上のバックアップ、リストア、クローニング、検証のワークフロー
-** ESX 8.0 Update 2以降のNVMeファームウェアバージョン1.3をサポートします。Virtualハードウェアバージョン21が必要です。
-** Windows Serverフェイルオーバークラスタリング（WSFC）は、NVMe over TCP/IP上のVMDKを介したアプリケーションではサポートされません。
+** 22f7ff572d6ec6105866924667182634
+** 0a599a35acba23887835fd51e75dd12a
+** 780798273c2d1e3e471299921fabdac4
 
 
-* SnapMirror Active Sync（当初はSnapMirror Business Continuity [SM-BC]としてリリース）をサポート。これにより、サイト全体に障害が発生してもビジネスサービスの運用を継続でき、アプリケーションがセカンダリコピーを使用して透過的にフェイルオーバーできるようになります。SnapMirror Active Syncでフェイルオーバーをトリガーするために、手動操作や追加のスクリプト作成は必要ありません。
+* 0520e3156de98e2c722c4ebe7fe303c7
 

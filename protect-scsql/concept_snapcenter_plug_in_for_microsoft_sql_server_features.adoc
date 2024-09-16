@@ -2,60 +2,60 @@
 permalink: protect-scsql/concept_snapcenter_plug_in_for_microsoft_sql_server_features.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for Microsoft SQL Server 
-summary: Plug-in for SQL Serverは、Windowsホスト上でMicrosoft SQL Serverと統合され、ストレージシステム上でNetApp Snapshotテクノロジと統合されます。Plug-in for SQL Server を操作するには、 SnapCenter インターフェイスを使用します。 
+summary: 7bd2019ba682b552d23b81c38e266cb4 
 ---
-= SnapCenter Plug-in for Microsoft SQL Server の特長
+= 043833147a39840644f2ff01a835f90d
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Plug-in for SQL Serverは、Windowsホスト上でMicrosoft SQL Serverと統合され、ストレージシステム上でNetApp Snapshotテクノロジと統合されます。Plug-in for SQL Server を操作するには、 SnapCenter インターフェイスを使用します。
+7bd2019ba682b552d23b81c38e266cb4
 
-Plug-in for SQL Server の主な機能は次のとおりです。
+124dafa39d6abec3cd14b880f87c4178
 
-* * SnapCenter * による統一されたグラフィカル・ユーザー・インターフェイス
+* fe83f9df83b3aa96b52b9e5a120baa6d
 +
-SnapCenter のインターフェイスは、すべてのプラグインと環境で標準化され、一貫しています。SnapCenter インターフェイスを使用すると、すべてのプラグインでバックアッププロセスとリストアプロセスを一貫した方法で実行できるほか、ダッシュボードビューで概要を把握したり、ロールベースアクセス制御（ RBAC ）を設定したり、ジョブを監視したりすることができます。SnapCenter では、バックアップ処理とクローニング処理に対応したスケジュールとポリシーの一元管理も可能です。
+790dc446b8ddf495165446e72a4fec35
 
-* * 中央管理の自動化 *
+* 8cab777e8f4d0f3134b1e688de9e3a14
 +
-日常的な SQL Server バックアップのスケジュールを設定したり、ポリシーベースのバックアップ保持、ポイントインタイムのリストア処理、および最新の状態へのリストア処理を設定することができます。SnapCenter から E メールアラートを送信するように設定して、 SQL Server 環境をプロアクティブに監視することもできます。
+76269dad3b4162847b77d8ae239cead5
 
-* *無停止のNetAppスナップショットテクノロジ*
+* 542226a75e67e826476b8a6313eb2a61
 +
-Plug-in for SQL Serverでは、NetApp SnapCenter Plug-in for Microsoft WindowsでNetAppのSnapshotテクノロジを使用します。これにより、データベースを数秒でバックアップし、 SQL Server をオフラインにすることなく迅速にリストアすることが可能です。Snapshotはストレージスペースを最小限しか消費しません。
+c45d74eb4e3b48419f3ffdacf64df379
 
 
 
-Plug-in for SQL Server には、上記の主要な機能以外にも次のようなメリットがあります。
+8a92e906457b4fafff3da6c975954701
 
-* バックアップ、リストア、クローニング、および検証のワークフローがサポートされます
-* セキュリティが RBAC でサポートされ、ロール委譲が一元化されます
-* NetApp FlexClone テクノロジを使用して、本番環境のデータベースのスペース効率に優れたポイントインタイムコピーを作成し、テストまたはデータの抽出を行います
+* 19ad37e6b2da345ecd66a8304c75bdf0
+* 5750866ea3f2f5172a0cbfaa24301be8
+* eac9b389c34d711cb6f83d963db0f2cb
 +
-クローンを保持するストレージシステムに FlexClone ライセンスが必要です。
+52354d6eb17c57e5c85d3b7def28114b
 
-* 自動化された無停止のバックアップ検証
-* 複数のサーバで同時に複数のバックアップを実行できます
-* PowerShell コマンドレットを使用して、バックアップ、検証、リストア、クローニングの各処理のスクリプトを作成できます
-* SQL Server の AlwaysOn 可用性グループ（ AG ）をサポートしているため、 AG のセットアップ、バックアップ、リストアの各処理を迅速に実行できます
-* SQL Server 2014 の機能であるインメモリデータベースとバッファプール拡張（ BPE ）がサポートされます
-* LUN と仮想マシンディスク（ VMDK ）のバックアップがサポートされます。
-* 物理インフラと仮想インフラがサポートされます
-* iSCSI 、ファイバチャネル、 FCoE 、 raw デバイスマッピング（ RDM ）、および NFS / VMFS 経由の VMDK がサポートされます
+* 069e98228d13c52461ac7c6e9c4ef0cc
+* 0ef4b1751f70723459f9f0b21d7df71a
+* a69590b52e4f4e9e33c45225bd69d869
+* 028f6f12fc16bd0692130a0778e6af99
+* b88dd5e1dd182d78a127c42c08d4661c
+* 962dc11c3b0d78c0f8c804f1e8e6463a
+* 2f6b08e8b7841ff545c1fb1427f9a842
+* 33bb3e5179cb77197c408e3621983948
 +
 
-NOTE: NAS ボリュームには、 Storage Virtual Machine （ SVM ）内にデフォルトのエクスポートポリシーが必要です。
+NOTE: f9379bb6d98fe082a9a2aa540d17b956
 
-* SQL Server スタンドアロンデータベースでの FileStream とファイルグループのサポート。
-* Windows Server 2022でのNon-Volatile Memory Express（NVMe）のサポート
+* 71529fb0bca8c472c240508a96afc5cb
+* c5fd90ba02a9c9e9de50508b759fb9f3
 +
-** NVMe over TCP / IPで作成されたVMDKレイアウト上のバックアップ、リストア、クローニング、検証のワークフロー
-** ESX 8.0 Update 2以降のNVMeファームウェアバージョン1.3をサポートします。Virtualハードウェアバージョン21が必要です。
-** Windows Serverフェイルオーバークラスタリング（WSFC）は、NVMe over TCP/IP上のVMDKを介したアプリケーションではサポートされません。
+** 22f7ff572d6ec6105866924667182634
+** 0a599a35acba23887835fd51e75dd12a
+** 780798273c2d1e3e471299921fabdac4
 
 
-* SnapMirror Active Sync（当初はSnapMirror Business Continuity [SM-BC]としてリリース）をサポート。これにより、サイト全体に障害が発生してもビジネスサービスの運用を継続でき、アプリケーションがセカンダリコピーを使用して透過的にフェイルオーバーできるようになります。SnapMirror Active Syncでフェイルオーバーをトリガーするために、手動操作や追加のスクリプト作成は必要ありません。
+* 0520e3156de98e2c722c4ebe7fe303c7
 

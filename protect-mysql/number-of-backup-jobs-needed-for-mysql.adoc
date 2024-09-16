@@ -2,13 +2,13 @@
 permalink: protect-mysql/number-of-backup-jobs-needed-for-mysql.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for MySQL 
-summary: 必要なバックアップジョブの数を左右する要因としては、リソースのサイズ、使用中のボリュームの数、リソースの変更率、サービスレベルアグリーメント（ SLA\ ）などがあります。 
+summary: 5e398ea531b7d56ad433ce2103049eab 
 ---
-= MySQLに必要なバックアップジョブの数
+= 75efa3866cb2052e4610e184f8b70784
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-必要なバックアップジョブの数を左右する要因としては、リソースのサイズ、使用中のボリュームの数、リソースの変更率、サービスレベルアグリーメント（ SLA ）などがあります。
+8b3a2edf035fc93730de54663ee89cc2

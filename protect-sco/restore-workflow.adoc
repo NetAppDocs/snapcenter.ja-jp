@@ -2,17 +2,17 @@
 permalink: protect-sco/restore-workflow.html 
 sidebar: sidebar 
 keywords: restore, workflow 
-summary: リストアワークフローには、計画、リストア処理の実行、および処理の監視が含まれます。 
+summary: 4a33fcf6d48bb7f648ebc49217cba162 
 ---
-= リストアワークフロー
+= e30c3d908a4ed515e16791b672cc0709
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-リストアワークフローには、計画、リストア処理の実行、および処理の監視が含まれます。
+4a33fcf6d48bb7f648ebc49217cba162
 
-次のワークフローは、リストア処理の実行順序を示しています。
+f221802dd348fa7fec376c674a7bceda
 
-image::../media/all_plug_ins_restore_workflow.png[all_plug-ins_restore_workflow を実行します]
+image::../media/all_plug_ins_restore_workflow.png[92c488cfa68af6221db7fffbf4243861]

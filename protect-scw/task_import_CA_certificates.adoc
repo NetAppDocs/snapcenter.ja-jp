@@ -2,59 +2,59 @@
 permalink: protect-scw/task_import_CA_certificates.html 
 sidebar: sidebar 
 keywords: SnapCenter 
-summary: SnapCenter サーバと Windows ホストプラグインの CA 証明書をインポートします 
+summary: a522de1c9e8142024caf95a576334245 
 ---
-= CA 証明書をインポートする
+= 463f3aea4c7a61c6bfaa026c1c1c490c
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Microsoft の管理コンソール（ MMC ）を使用して、 SnapCenter サーバと Windows ホストプラグインに CA 証明書をインポートする必要があります。
+04ec13527bec85c0b8e335fdace7f1fe
 
-.手順
-. Microsoft 管理コンソール (MMC) に移動し、 [ * ファイル * ] 、 [ スナップインの追加と削除 ] の順にクリックします。
-. [ スナップインの追加と削除 ] ウィンドウで、 [*Certificates*] を選択し、 [*Add*] をクリックします。
-. [ 証明書 ] スナップインウィンドウで、 [*Computer account*] オプションを選択し、 [ 完了 *] をクリックします。
-. [ * コンソールルート *>* 証明書–ローカルコンピュータ *>* 信頼されたルート証明機関 *>* 証明書 *] をクリックします。
-. [ 信頼されたルート証明機関 ] フォルダを右クリックし、 [ すべてのタスク *>*Import* ] を選択してインポートウィザードを開始します。
-. 次の手順でウィザードを完了します。
+.f3a29486bed19a90f2da6d007818b427
+. b86fdb531ae29f629485f72c257ce9f0
+. a49966f708056a4c549673b5bec3414c
+. c6c1feaee0176e99111e0aef49c594be
+. accc52b05ff00dfcf027649214e40a24
+. 237137d809be4e190c42d063e80272ab
+. fbfdc821247ce02333095312b300d2f1
 +
 |===
-| ウィザードウィンドウ | 実行する処理 
+| ca617f785f7156a6f104acabd5354e73 | af51caa4cf3947fff83e6451cb09644a 
 
 
  a| 
-秘密鍵をインポートします
+f2d415df9446efd16d61c33093a6fed9
  a| 
-オプション * はい * を選択し、秘密鍵をインポートして、 * 次へ * をクリックします。
-
-
-
- a| 
-インポートファイル形式
- a| 
-変更せずに、 * 次へ * をクリックします。
+7f1835e39e9ab013fadf152eae86e3b5
 
 
 
  a| 
-セキュリティ
+410284a6e9772849ba381718c3f22932
  a| 
-エクスポートされた証明書に使用する新しいパスワードを指定し、 * Next * をクリックします。
+2744c82cad75426c79ff32c75319465b
 
 
 
  a| 
-証明書のインポートウィザードを完了しています
+2fae32629d4ef4fc6341f1751b405e45
  a| 
-概要を確認し、 [ 完了 ] をクリックしてインポートを開始します。
+91817a3c4feab4788ad5f16317cd2b5e
+
+
+
+ a| 
+262ae19666f55b8c3fbe02b43c8f93b8
+ a| 
+addd3f74b675e28bf71a9fb679c0fac1
 
 |===
 +
 
-NOTE: 証明書のインポートは、秘密鍵にバンドルされている必要があります（サポートされている形式は、*.pfx、*.p12、および*.p7b）。
+NOTE: 1dee04b6f048297be6da9f8740c99b6d
 
-. 「 Personal 」フォルダについて、手順 5 を繰り返します。
+. 104bdf61dc45d8330dd81b72891ea1ad
 

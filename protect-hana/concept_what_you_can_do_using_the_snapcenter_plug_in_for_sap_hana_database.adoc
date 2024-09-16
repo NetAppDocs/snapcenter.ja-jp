@@ -2,22 +2,22 @@
 permalink: protect-hana/concept_what_you_can_do_using_the_snapcenter_plug_in_for_sap_hana_database.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for SAP HANA Database 
-summary: Plug-in for SAP HANA Database をインストールした環境では、 SnapCenter を使用して SAP HANA データベースとそのリソースをバックアップ、リストア、クローニングできます。これらの処理をサポートするタスクを実行することもできます。 
+summary: 349cd6d8e61213a447b8c5adb6059071 
 ---
-= SnapCenter Plug-in for SAP HANA Database の機能
+= d7e57286a93aa6e133dea4119815f1e5
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Plug-in for SAP HANA Database をインストールした環境では、 SnapCenter を使用して SAP HANA データベースとそのリソースをバックアップ、リストア、クローニングできます。これらの処理をサポートするタスクを実行することもできます。
+349cd6d8e61213a447b8c5adb6059071
 
-* データベースを追加します。
-* バックアップを作成します
-* バックアップからリストアします
-* バックアップをクローニングする。
-* バックアップ処理のスケジュールを設定します。
-* バックアップ、リストア、クローニングの各処理を監視する。
-* バックアップ、リストア、クローニングの各処理のレポートを表示します。
+* 753bcb78018d8547668b0dda3334e5a2
+* a96099f01951c42b20b0f220f82cddeb
+* f3d82f8a8e916f06796aa4ac952e9208
+* 5575806b0477c07d0be57dd6ef045e8a
+* 44c8eaf80f0322d31922b637d3f206f4
+* 4f749cf56361e248661706aa3c29ab1c
+* 04a26f096e312ade5bd651748180efd4
 

@@ -2,56 +2,56 @@
 permalink: protect-mysql/host-requirements-to-install-snapcenter-plug-in-package-for-linux.html 
 sidebar: sidebar 
 keywords: SnapCenter 
-summary: SnapCenter Plug-ins Package for Linux をインストールする前に、ホストシステムの基本的なスペースとサイジング要件を理解しておく必要があります。 
+summary: 47d403518b5a7a92c3f199666b9bade9 
 ---
-= SnapCenter Plug-ins Package for Linux をインストールするためのホストの要件
+= ac33edef4526164e3c7c9a4df9986310
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter Plug-ins Package for Linux をインストールする前に、ホストシステムの基本的なスペースとサイジング要件を理解しておく必要があります。
+47d403518b5a7a92c3f199666b9bade9
 
 |===
-| 項目 | 要件 
+| 7d74f3b92b19da5e606d737d339a9679 | 5a2ebfb8baa378cfcfcba58bbb1380c2 
 
 
  a| 
-オペレーティングシステム
+43574ab73a6cbc674506ff003387dcb1
  a| 
-* Red Hat Enterprise Linux の場合
-* SUSE Linux Enterprise Server （ SLES ）
+* c73bbd3786350b0a8d3577d82afdf489
+* a51e41e4cd7b03dd48ce2e65ed3e1736
 
 
-サポートされているバージョンの最新情報については、を参照して https://imt.netapp.com/matrix/imt.jsp?components=121073;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"]ください。
-
-
-
- a| 
-ホスト上の SnapCenter プラグインの最小 RAM
- a| 
-1 GB
+5ff7954c3f2b829e25e83d1cec41fd90
 
 
 
  a| 
-ホスト上の SnapCenter プラグインのインストールおよびログの最小スペース
+97d747ad5d4878c60364b9ba961fd5a4
  a| 
-2 GB
-
-
-NOTE: 十分なディスクスペースを割り当て、 logs フォルダによるストレージ消費を監視する必要があります。必要なログスペースは、保護するエンティティの数とデータ保護処理の頻度によって異なります。十分なディスクスペースがない場合、最近実行した処理に対してログは作成されません。
+0d642755e7f12f7563e3db33bd0c39cb
 
 
 
  a| 
-必要なソフトウェアパッケージ
+94ca5bd1fc6971f402b85442105f093f
  a| 
-Java 11 Oracle JavaおよびOpenJDK
+083ad21990802d20fc5fdefdb7255565
 
-Java を最新バージョンにアップグレードした場合は、 /var/opt/snapcenter /etc/sp/etc/spl.properties にある JAVA_HOME オプションが正しい Java バージョンに設定されていること、および正しいパスが指定されていることを確認する必要があります。
 
-サポートされているバージョンの最新情報については、を参照して https://imt.netapp.com/matrix/imt.jsp?components=121073;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"]ください。
+NOTE: 1ec72ff98c807b748e55dd0ff1dbf757
+
+
+
+ a| 
+c02f07fcd7047bf35e0bb82decca0939
+ a| 
+b7ccd7f577996dd33bde8070db971b93
+
+bac8e3a852c936b4db89afd35d4d962a
+
+5ff7954c3f2b829e25e83d1cec41fd90
 
 |===

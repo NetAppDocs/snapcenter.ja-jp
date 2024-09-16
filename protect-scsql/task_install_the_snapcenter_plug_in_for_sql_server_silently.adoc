@@ -2,56 +2,56 @@
 permalink: protect-scsql/task_install_the_snapcenter_plug_in_for_sql_server_silently.html 
 sidebar: sidebar 
 keywords: install, snapcenter 
-summary: SnapCenter Plug-in for Microsoft SQL Server は、 SnapCenter ユーザインターフェイス内からインストールする必要があります。ただし、何らかの理由でインストールできない場合は、 Windows のコマンドラインから、 Plug-in for SQL Server のインストールプログラムをサイレントモードで自動的に実行できます。 
+summary: 8c2706ff7c5260b28a36b7642f3fdcf7 
 ---
-= コマンドラインから SnapCenter Plug-in for Microsoft SQL Server をサイレントインストールします
+= 07fae625128f8e6e897e2445f74b4b56
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter Plug-in for Microsoft SQL Server は、 SnapCenter ユーザインターフェイス内からインストールする必要があります。ただし、何らかの理由でインストールできない場合は、 Windows のコマンドラインから、 Plug-in for SQL Server のインストールプログラムをサイレントモードで自動的に実行できます。
+8c2706ff7c5260b28a36b7642f3fdcf7
 
-.作業を開始する前に
-* をインストールする前に、以前のバージョンの SnapCenter Plug-in for Microsoft SQL Server を削除する必要があります。
+.135b308ed83c53f1516b7c754566d1c4
+* 468f02bca0faed69b67b6e6ad5db542a
 +
-詳細については、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_Install_a_SnapCenter_Plug-In_manually_and_directly_from_thePlug-In_Host["SnapCenter Plug-in をプラグインホストから手動で直接インストールする方法"^]。
+ce41201cc230c8b36eefca03f828f829
 
 
 
-.手順
-. C ： \temp フォルダがプラグインホストに存在し、ログインしているユーザにそのフォルダへのフルアクセス権があるかどうかを確認してください。
-. C ： \ProgramData\NetApp\SnapCenter \Package Repository から Plug-in for SQL Server ソフトウェアをダウンロードします。
+.f3a29486bed19a90f2da6d007818b427
+. 6af9a7798d22b108c6c9f38a2a77d866
+. e9be294a9d9351e17b16f8689e9915cf
 +
-このパスには、 SnapCenter サーバがインストールされているホストからアクセスできます。
+034c5f14c518f47816188b94e9a8c076
 
-. プラグインをインストールするホストにインストールファイルをコピーします。
-. ローカルホストの Windows コマンドプロンプトで、プラグインのインストールファイルを保存したディレクトリに移動します。
-. Plug-in for SQL Server ソフトウェアをインストールします。
+. 5bab9653208d5b37a0eac3869bbd0887
+. d9c2b6a27937feb2af3cfc648ba30664
+. 37d2cc43f44bd04ac9f1d1c2b4e25027
 +
-「 "snapcenter _windows_host_plugin.exe" /silent /debuglog "Debug_Log_Path" /log " log_Path" by_snapCENTER_port="Num Suite_Path" BV_ServiceAccount="domain\\administrator BV_SERVITCEPWD=password ISFeatureInstall=SCW 、 SCSQL
-
-+
-プレースホルダの値をデータに置き換えます
+7f1fc4de9d4dda07605bfc8ac6d2aeb4
 
 +
-** debug_log_Path は、スイートインストーラログファイルの名前と場所です。
-** LOG_Path はプラグインコンポーネント（ SCW 、 SCSQL 、および SMCore ）のインストールログの場所です。
-** num は、 SnapCenter が SMCore と通信するポートです
-** install_Directory_Path は、ホストプラグインパッケージのインストールディレクトリです。
-** domain\administrator は、 SnapCenter Plug-in for Microsoft Windows の Web サービスアカウントです。
-** password は、 SnapCenter Plug-in for Microsoft Windows Web サービスアカウントのパスワードです。+`"snapcenter windows _host_plugin.exe"/silent /debuglog" C ： \HPPW_SCSQL_Install.log "/log" C ： \"BV_SNAPCENTER_PORT=8145 Suite_INSTALLDIR=" C ： \Program Files\NetApp\SnapManager "BV_ServiceAccount=domain\administrator BY_SERVISSCPRI_ パスワード = SQL\SCPRISSCPRI_ インストール
+251d012202fc3667bc3afcb5bf1cddd0
+
++
+** 9f68195688f5f8eda8c01c26e3aef0f5
+** 629cade82004b4f4895373792dc46068
+** 0c1339836cca6548cfcc55d55e2fcce9
+** 7cfab32eccdb166fed2ce191abf7cd34
+** 36f6b4d0aa6f02dbd7a14b2c1bcc5192
+** b898a04f327ab1cb1c13b5419828b6ad
 
 
 +
 
-NOTE: Plug-in for SQL Server のインストール時に渡されるすべてのパラメータでは、大文字と小文字が区別されます。
+NOTE: 1b966d650881602cbc1d61138e9f5ee3
 
-. Windows タスクスケジューラ、メインインストールログファイル C:\Installdebug.log 、および C:\Temp 内の追加インストールファイルを監視します。
-. %temp% ディレクトリを監視して、 msiexe.exe インストーラがエラーなしでソフトウェアをインストールしていることを確認します。
+. fe607551f6d30b5693e84243bc691f1f
+. 1d3ff9161bd935afda9c159ee83f701a
 +
 
-NOTE: Plug-in for SQL Server をインストールすると、 SnapCenter Server ではなくホストにプラグインが登録されます。SnapCenter サーバにプラグインを登録するには、 SnapCenter GUI または PowerShell コマンドレットを使用してホストを追加します。ホストを追加すると、プラグインが自動的に検出されます。
+NOTE: 341266b7169d2c0293fcd15ceda7d923
 
 

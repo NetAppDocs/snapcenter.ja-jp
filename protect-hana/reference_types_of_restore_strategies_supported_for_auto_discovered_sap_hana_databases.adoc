@@ -2,27 +2,27 @@
 permalink: protect-hana/reference_types_of_restore_strategies_supported_for_auto_discovered_sap_hana_databases.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for SAP HANA Databases 
-summary: SnapCenter を使用してリストア処理を正常に実行するには、事前に戦略を定義しておく必要があります。自動検出された SAP HANA データベースには、 2 種類のリストア戦略があります。 
+summary: 3edd74de1f47818f3f21d91ae6232de2 
 ---
-= 自動検出された SAP HANA データベースでサポートされるリストア戦略のタイプ
+= 9f03145f1db5d9c1114fdd6e88c92bd6
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter を使用してリストア処理を正常に実行するには、事前に戦略を定義しておく必要があります。自動検出された SAP HANA データベースには、 2 種類のリストア戦略があります。
+3edd74de1f47818f3f21d91ae6232de2
 
 
 
-== リソース全体のリストア
+== d26e732ff4468b921ec70bf797290866
 
-* リソースのすべてのボリューム、 qtree 、および LUN をリストアします
+* 6dac61f5c61b1654fa020acda2c2434d
 +
-** ボリューム全体をリストアするには、 * Volume Revert * オプションを選択する必要があります。
+** d938214bd1f967593b0d24509b05926b
 +
 
-NOTE: リソースにボリュームまたはqtreeが含まれている場合、そのボリュームまたはqtreeでリストア対象として選択されたSnapshotのあとに作成されたSnapshotは削除され、リカバリすることはできません。また、同じボリュームまたは qtree で他のリソースがホストされている場合、そのリソースも削除されます。
+NOTE: 660ee777f341ef8a02048c649ceb5033
 
 
 
@@ -30,9 +30,9 @@ NOTE: リソースにボリュームまたはqtreeが含まれている場合、
 
 
 
-== テナントデータベース
+== f65460564c5df7b62418453394ef7ab4
 
-* テナントデータベースをリストアします
+* 6740dd361543128b03c632e2f040c34a
 
 
-「 * テナントデータベース * 」オプションが選択されている場合は、 SnapCenter 外部の HANA Studio または HANA リカバリスクリプトを使用してリカバリ処理を実行する必要があります。
+c16654b142eb8136e56ba77b732301d5

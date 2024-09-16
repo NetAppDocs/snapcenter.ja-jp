@@ -2,197 +2,197 @@
 permalink: protect-scw/task_create_backup_policies_for_windows_file_systems.html 
 sidebar: sidebar 
 keywords: backup policy 
-summary: SnapCenter を使用して Windows ファイルシステムをバックアップする前に、リソースの新しいバックアップポリシーを作成することができます。また、リソースグループの作成時やリソースのバックアップ時に新しいバックアップポリシーを作成することもできます。 
+summary: 46ed341f9f915fe6db9d6a75b0eddb7f 
 ---
-= Windows ファイルシステムのバックアップポリシーの作成
+= c0c9f4292e57393eeac8994682aede6e
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter を使用して Windows ファイルシステムをバックアップする前に、リソースの新しいバックアップポリシーを作成することができます。また、リソースグループの作成時やリソースのバックアップ時に新しいバックアップポリシーを作成することもできます。
+46ed341f9f915fe6db9d6a75b0eddb7f
 
-.作業を開始する前に
-* バックアップ戦略を定義しておく必要があります。 link:task_define_a_backup_strategy_for_windows_file_systems.html["詳細はこちら。"^]
-* データ保護の準備が完了している必要があります。
+.135b308ed83c53f1516b7c754566d1c4
+* a8c2a93c92fc947d10f63fe5a8147d50
+* d178d4da02a7bf832ce07d2c8808aad5
 +
-データ保護の準備として、 SnapCenter のインストール、ホストの追加、リソースの検出、 Storage Virtual Machine （ SVM ）接続の作成などのタスクを完了しておく必要があります。
+b86339a65c66fe618ad5df64a1271357
 
-* Snapshotをミラーセカンダリストレージまたはバックアップセカンダリストレージにレプリケートする場合は、SnapCenter管理者がソースとデスティネーションの両方のボリューム用にSVMを割り当てておく必要があります。
-* プリスクリプトとポストスクリプトで PowerShell スクリプトを実行する場合は、 web.config ファイルで usePowershellProcessforScripts パラメータの値を true に設定する必要があります。
+* 37467ff0195d6765df22bdc34e035d04
+* 8c47f48c6fb5493126c980bf2e721bcd
 +
-デフォルト値は false です。
+9f35f4e7b1b8337e12bc210c7cc37233
 
-* SnapMirrorアクティブ同期に固有の前提条件と制限事項を確認します。詳細については、を参照してください https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["SnapMirrorアクティブ同期のオブジェクト数の制限"]。
+* f1efde4939a624968d1a1875e58f975b
 
 
-.このタスクについて
-* scripts_pathは、プラグインホストのSMCoreServiceHost.exe.ConfigファイルにあるPredefinedWindowsScriptsDirectoryキーを使用して定義されます。
+.bbe48fb854ea022537208eeeff822f91
+* 780fc7bdbc05c3ae8dcfc1e6ea26a283
 +
-必要に応じて、このパスを変更し、SMcoreサービスを再起動できます。セキュリティのためにデフォルトパスを使用することを推奨します。
-
-+
-キーの値は、api/4.7/configsettingsを介してスワッガーから表示できます
+487a34d280250073f86b353bd430b05b
 
 +
-GET APIを使用してキーの値を表示することができます。set APIはサポートされません。
-
-* SnapLock
-+
-** [バックアップコピーを特定の日数だけ保持する]オプションを選択した場合は、SnapLockの保持期間を指定した保持日数以下にする必要があります。
-** Snapshotのロック期間を指定すると、保持期間が終了するまでSnapshotが削除されません。その結果、保持されるSnapshotの数がポリシーで指定されている数よりも多くなる可能性があります。
-** ONTAP 9.12.1以前のバージョンでは、リストアの一環としてSnapLockヴォールトSnapshotから作成されたクローンにSnapLockヴォールトの有効期限が継承されます。SnapLockの有効期限が過ぎた時点で、ストレージ管理者がクローンを手動でクリーンアップする必要があります。
-
-
-
-
-
-NOTE: プライマリSnapLock設定はSnapCenterバックアップポリシーで管理され、セカンダリSnapLock設定はONTAPで管理されます。
-
-.手順
-. 左側のナビゲーションペインで、 * 設定 * をクリックします。
-. [ 設定 ] ページで、 [ * ポリシー * ] をクリックします。
-. 既存のポリシーを使用できるかどうかを確認するには、ポリシー名を選択し、 [* 詳細 * ] をクリックします。
-+
-既存のポリシーを確認したあと、次のいずれかを実行できます。
+cb0f6b6fa4cffa93ac67dd15850cae3d
 
 +
-** 既存のポリシーを使用する。
-** 既存のポリシーをコピーしてポリシー設定を変更する。
-** 新しいポリシーを作成します。
+cf2ded6f4d7ccf880ce7a042e4726b3e
 
-
-. 新しいポリシーを作成するには、 * New * をクリックします。
-. [ 名前 ] ページで、ポリシー名と概要 を入力します。
-. [ バックアップオプション ] ページで、次のタスクを実行します。
+* acdc6b4f6edd40f37bce01247a32ff86
 +
-.. バックアップ設定を選択します。
+** 5645df6d49a903d3e2faf86e08d87813
+** 4fcec4fe97075a54e91b04a9e79f56ff
+** f2c85d871e7c5ae1520349e8a3869fea
+
+
+
+
+
+NOTE: e07d82366bc71bb060becb82a0e09448
+
+.f3a29486bed19a90f2da6d007818b427
+. c09e638cb8ee35698e3172550b12d8fa
+. 1f02ceac906eeeae0a190f295fe12381
+. 7e27b1bb2d5d912d937124cbd703bfd5
 +
-|===
-| オプション | 説明 
-
-
- a| 
-File System Consistent Backup の略
- a| 
-ファイルシステムが配置されたディスクドライブをバックアップ処理の開始前に SnapCenter で休止し、バックアップ処理の終了後に再開する場合は、このオプションを選択します。
-
-
-
- a| 
-ファイルシステムのクラッシュ整合性バックアップ
- a| 
-ファイルシステムが配置されたディスクドライブを SnapCenter で休止しない場合は、このオプションを選択します。
-
-|===
-.. スケジュール頻度（ポリシータイプ）を選択します。
-+
-ポリシーではバックアップの頻度のみを指定します。バックアップの具体的なスケジュールは、リソースグループで定義します。したがって、複数のリソースグループで同じポリシーとバックアップ頻度を使用している場合でも、別々のバックアップスケジュールを設定できます。
+ab9f87626b98185c7aa3a7012ed804c3
 
 +
+** e386e4a454a71b532f5461e182e6ea32
+** 4de3c0c7a329c036679ae5d6debd6837
+** 8c80ab949b8c4f5204c34e59ffd5d6db
 
-NOTE: 午前 2 時にスケジュールを設定した場合、夏時間（ DST ）中はスケジュールはトリガーされません。
 
-
-
-. [ 保持 ] ページで ' オン・デマンド・バックアップおよび選択した各スケジュール頻度の保持設定を指定します
+. e8c762de3a8dd5521656740e398525de
+. d3a7899ba84bc1cba2dbfdbfddb73d2b
+. f471a8ee4242d9fbaf7751c9646120e4
++
+.. 6f43068825ab7b26f4e535c04ac19468
 +
 |===
-| オプション | 説明 
+| 054b4f3ea543c990f6b125f41af6ebf7 | b5a7adde1af5c87d7fd797b6245c2a39 
 
 
  a| 
-保持する Snapshot コピーの総数
+99ab5dae334a718f97e7fe69ed4dead8
  a| 
-SnapCenterストアのSnapshot数を指定してからSnapshotを自動的に削除する場合は、このオプションを選択します。
-
-
-
- a| 
-より古い Snapshot コピーを削除します
- a| 
-SnapCenter がバックアップコピーを保持する日数を指定する場合は、このオプションを選択します。指定した日数を過ぎると削除されます。
+f8c8c78e7ffffce80ffbd21d203b7d09
 
 
 
  a| 
-Snapshotコピーのロック期間
+4b844c1aef959e4e3c1d3ae0ced4cc9e
  a| 
-[Snapshot locking period]を選択し、日、月、または年を選択します。
-
-SnapLock保持期間は100年未満にする必要があります。
+6fcd2b366746426d9183a35adf0558b9
 
 |===
+.. e969e3b78211d3360385217cc17ba23b
++
+52b19e85e6a29b6fe5690f47944f859f
+
 +
 
-IMPORTANT: 保持数を2以上に設定してください。保持数の最小値は2です。
+NOTE: a16b9f3426d9cfca29c06a875b667023
 
-+
 
-NOTE: 最大保持数は、 ONTAP 9.4 以降のリソースでは 1018 、 ONTAP 9.3 以前のリソースでは 254 です。保持期間を基盤となる ONTAP バージョンの値よりも大きい値に設定すると、バックアップが失敗します。
 
-. Replication （レプリケーション）ページで、セカンダリストレージシステムへのレプリケーションを指定します。
+. de22735eba76a2843e4c2bd28dfb8f2c
 +
 |===
-| フィールド | 手順 
+| 054b4f3ea543c990f6b125f41af6ebf7 | b5a7adde1af5c87d7fd797b6245c2a39 
 
 
  a| 
-* ローカル Snapshot コピー作成後に SnapMirror を更新 *
+8e77ee8a8b856638f0a6d0872be527cd
  a| 
-別のボリュームにバックアップセットのミラーコピーを作成する場合（ SnapMirror ）は、このオプションを選択します。
-
-このオプションは、SnapSnapMirrorのアクティブな同期に対して有効にする必要があります。
-
-セカンダリレプリケーションでは、SnapLockの有効期限によってプライマリSnapLockの有効期限がロードされます。[Topology]ページの[Refresh]*ボタンをクリックすると、ONTAPから取得されたセカンダリおよびプライマリのSnapLock有効期限が更新されます。
-
-を参照してください link:../protect-scw/task_view_related_backups_and_clones_in_the_topology_page.html["トポロジページで関連するバックアップとクローンを表示します"]。
+7e038afa02819cb4c7edd12ab0c9a3cf
 
 
 
  a| 
-Snapshot コピーの作成後に SnapVault を更新します
+0a3cfeac0775871baedb24392bc4423c
  a| 
-ディスクツーディスクのバックアップレプリケーションを実行する場合は、このオプションを選択します。
-
-セカンダリレプリケーションでは、SnapLockの有効期限によってプライマリSnapLockの有効期限がロードされます。[Topology]ページの[Refresh]ボタンをクリックすると、ONTAPから取得されたセカンダリおよびプライマリのSnapLock有効期限が更新されます。
-
-SnapLockがONTAPのセカンダリ（SnapLock Vault）にのみ設定されている場合は、[Topology]ページの[Refresh]ボタンをクリックすると、ONTAPから取得したセカンダリのロック期間が更新されます。
-
-SnapLock Vaultの詳細については、を参照してください。 https://docs.netapp.com/us-en/ontap/snaplock/commit-snapshot-copies-worm-concept.html["SnapshotコピーをバックアップデスティネーションのWORM状態にコミットします"]
+9fbc3fb0ee9d4d329dbc0f3053b7b871
 
 
 
  a| 
-セカンダリポリシーのラベル
+971b3c1d99a5aa6f2b187690d01d852c
  a| 
-Snapshot ラベルを選択します。
+7cd1d77689881addd5facf23970563df
 
-選択したSnapshotラベルに応じて、ラベルに一致するセカンダリSnapshot保持ポリシーがONTAPによって適用されます。
-
-
-NOTE: ローカル Snapshot コピーの作成後に「 * SnapMirror を更新」を選択した場合は、必要に応じてセカンダリポリシーラベルを指定できます。ただし、ローカル Snapshot コピーの作成後に「 * Update SnapVault 」を選択した場合は、セカンダリポリシーラベルを指定する必要があります。
-
-
-
- a| 
-エラー再試行回数
- a| 
-レプリケーションの最大試行回数を入力します。この回数を超えると処理が停止します。
+e7c020bcc5fc6c46eea0af3b48696115
 
 |===
 +
 
-NOTE: セカンダリストレージのSnapshotの最大数に達しないように、ONTAPでセカンダリストレージのSnapMirror保持ポリシーを設定する必要があります。
-
-. スクリプトページで、 SnapCenter サーバでバックアップ処理の前後に実行するプリスクリプトまたはポストスクリプトのパスと、 SnapCenter がスクリプトの実行を待機してからタイムアウトするまでの時間を入力します。
-+
-たとえば、 SNMP トラップの更新、アラートの自動化、ログの送信などをスクリプトで実行できます。
+IMPORTANT: cab00f169fcfeb601710dd89ecbfedf0
 
 +
 
-NOTE: プリスクリプトまたはポストスクリプトのパスにドライブまたは共有を含めることはできません。パスはscripts_pathに対する相対パスでなければなりません。
+NOTE: 225ea283dca2590a2a542a782ac56927
 
-. 概要を確認し、 [ 完了 ] をクリックします。
+. 91c72a64980863f26bec585770f3d671
++
+|===
+| 21f831502a413a739e20cbf9f2eefe54 | 5e2ad6fd9deb412d871137094ee43ef0 
+
+
+ a| 
+53ef3d7584a54991b60fba81e93d201f
+ a| 
+b62913a5294dae473801568644e4e8a8
+
+f6be498f0ce984a9f472edc345bed193
+
+59affd7f6a76b1148ee2481cf98f64e1
+
+9bdfe7e4016fd18f73fd42401d001e71
+
+
+
+ a| 
+289c48679623091e500c33f4b820d032
+ a| 
+74634d46f4094928b9a2dbffb638ae7f
+
+2e27a3162e5343283ad85d26799ba895
+
+0d4b1ca327c2b772c70371d81ee9ba8c
+
+64c2ad2359ef41b8550053e63b4db5d2
+
+
+
+ a| 
+58d70fc926069f010ab51ffa86e123d8
+ a| 
+7236d615f588fda61e35cc1fa07c46cb
+
+9a5f5dfff4956ecfacfdc016d25c212b
+
+
+NOTE: f4d84b8f919668d97d6f1c1e6384cfac
+
+
+
+ a| 
+e64e99351ad3ec8079ffd2d91fbd7f12
+ a| 
+39007747bb71ef47183e492e75b22469
+
+|===
++
+
+NOTE: 4f2f5ecb6e9ddbc65d919530d4364ba6
+
+. fe096510391eb2244a7625318c206713
++
+1701175190dfd6dd06812a1b97af8f95
+
++
+
+NOTE: 13e879c5832931b24329a65364023ff4
+
+. fed1c121dc4f5a5484e5623e297385fb
 

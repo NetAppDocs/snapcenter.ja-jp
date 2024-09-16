@@ -2,15 +2,15 @@
 permalink: protect-sce/concept_install_snapcenter_plug_in_for_microsoft_exchange_server.html 
 sidebar: sidebar 
 keywords: installing 
-summary: Exchange データベースを保護する場合は、 SnapCenter Plug-in for Microsoft Exchange Server をインストールしてセットアップする必要があります。 
+summary: 5060fe17eb15393a38b634cfabf7122a 
 ---
-= SnapCenter Plug-in for Microsoft Exchange Server のインストールワークフロー
+= 31db120ce3e7f7d5198a060e87905d01
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Exchange データベースを保護する場合は、 SnapCenter Plug-in for Microsoft Exchange Server をインストールしてセットアップする必要があります。
+5060fe17eb15393a38b634cfabf7122a
 
-image::../media/sce_install_configure_workflow.gif[インストールワークフロー]
+image::../media/sce_install_configure_workflow.gif[706c1d4933d296d42d61b064f4e637ae]

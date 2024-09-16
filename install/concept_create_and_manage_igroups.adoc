@@ -2,119 +2,119 @@
 permalink: install/concept_create_and_manage_igroups.html 
 sidebar: sidebar 
 keywords: igroup 
-summary: イニシエータグループ（ igroup ）を作成して、ストレージシステム上の特定の LUN にアクセスできるホストを指定します。SnapCenter を使用して、 Windows ホストの igroup の作成、名前変更、変更、削除を行うことができます。 
+summary: dc21700cbaa8624c2d6a070d54c558d6 
 ---
-= igroup を作成して管理します
+= 9d8cd3d6c4d32d67237a696ecf4924be
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-イニシエータグループ（ igroup ）を作成して、ストレージシステム上の特定の LUN にアクセスできるホストを指定します。SnapCenter を使用して、 Windows ホストの igroup の作成、名前変更、変更、削除を行うことができます。
+dc21700cbaa8624c2d6a070d54c558d6
 
 
 
-== igroup を作成
+== d8ad6fc6096c88d41f98b91f0043eebe
 
-SnapCenter を使用して、 Windows ホスト上に igroup を作成できます。igroup を LUN にマッピングすると、ディスクの作成ウィザードまたはディスク接続ウィザードでこの igroup を使用できるようになります。
+5c1e04a6025fc80696f9956e473b1da1
 
-* 手順 *
+4839d2f25cc35b249d5db15efa1afd75
 
-. 左側のナビゲーションペインで、 * Hosts * （ホスト）をクリックします。
-. Hosts ページで、 * igroup * をクリックします。
-. [ イニシエータグループ ] ページで、 [* 新規作成 ] をクリックします。
-. igroup の作成ダイアログボックスで、 igroup を定義します。
+. e3496f6d2696003cd08139c96386cc45
+. 4622e05731e4f69f8fe9f73fcb40c02c
+. d8f999fe593a16221a54ec826ce27708
+. 67f22bb434b864112f87e54e07606d8d
 +
 |===
-| フィールド | 手順 
+| f9878439df1fe9ad3ff8ed218f2f1d0d | 5e2ad6fd9deb412d871137094ee43ef0 
 
 
  a| 
-ストレージシステム
+1552eec8291d257c4b855dcfa425d802
  a| 
-igroup にマッピングする LUN の SVM を選択します。
-
-
-
- a| 
-ホスト
- a| 
-igroup を作成するホストを選択します。
+bb4330335ca7f8c76ca5f08d650804ff
 
 
 
  a| 
-igroup 名
+c2ca16d048ec66e04bca283eab048ec2
  a| 
-igroup の名前を入力します。
-
-
-
- a| 
-イニシエータ
- a| 
-イニシエータを選択します。
+cecf1f4c4a2dd84d258644a20d50f1af
 
 
 
  a| 
-を入力します
+8d577aca4531f6d48920e3a4389b07e5
  a| 
-イニシエータタイプとして、 iSCSI 、 FCP 、または混在（ FCP と iSCSI ）のいずれかを選択します。
+1c55d11f8ddecf47825db0f4ab5ddbc3
+
+
+
+ a| 
+6430db21988dbbdfca7783c89a7710df
+ a| 
+adf2c83f3537e908f9936eca3f5a1088
+
+
+
+ a| 
+a1fa27779242b4902f7ae3bdd5c6d508
+ a| 
+df87d95c72d3ee18a8e80a231bdf1d81
 
 |===
-. 入力に問題がなければ、「 * OK * 」をクリックします。
+. 5abac1f5b479ef4d02ce0c15a3ae8923
 +
-SnapCenter により、ストレージシステムに igroup が作成されます。
+114dbf6f688b0e0bf22f9c6af1631510
 
 
 
 
 
-== igroup の名前を変更する
+== b618801dbdb71afe6938672be6d74626
 
-SnapCenter を使用して、既存の igroup の名前を変更できます。
+323a70cdc6844d38daba10adb26e316d
 
-* 手順 *
+4839d2f25cc35b249d5db15efa1afd75
 
-. 左側のナビゲーションペインで、 * Hosts * （ホスト）をクリックします。
-. Hosts ページで、 * igroup * をクリックします。
-. イニシエータグループページで、 * Storage Virtual Machine * フィールドをクリックして使用可能な SVM のリストを表示し、名前を変更する igroup の SVM を選択します。
-. SVM の igroup のリストで、名前を変更する igroup を選択し、 * Rename * をクリックします。
-. igroup の名前変更ダイアログボックスで、 igroup の新しい名前を入力し、 * 名前の変更 * をクリックします。
-
-
-
-
-== igroup を変更する
-
-SnapCenter を使用すると、既存の igroup にイニシエータを追加できます。igroup の作成時に追加できるホストは 1 つだけです。クラスタに対して igroup を作成するには、 igroup を変更して他のノードをその igroup に追加します。
-
-* 手順 *
-
-. 左側のナビゲーションペインで、 * Hosts * （ホスト）をクリックします。
-. Hosts ページで、 * igroup * をクリックします。
-. イニシエータグループページで、 * Storage Virtual Machine * フィールドをクリックして使用可能な SVM のドロップダウンリストを表示し、変更する igroup の SVM を選択します。
-. igroup のリストで igroup を選択し、 * イニシエータを igroup に追加 * をクリックします。
-. ホストを選択します。
-. イニシエータを選択し、 * OK * をクリックします。
+. e3496f6d2696003cd08139c96386cc45
+. 4622e05731e4f69f8fe9f73fcb40c02c
+. a855c69f2448609122abf245e634ca9e
+. 0ea18eb563293b52843e139e597af9ac
+. 3b9a4c11fb3170011af4c09f11fcc589
 
 
 
 
-== igroup を削除する
+== 207b00e5c9d0efda837e398568d32bed
 
-SnapCenter を使用して、不要になった igroup を削除できます。
+3ca32090fb8dda914b659d4962df22f4
 
-* 手順 *
+4839d2f25cc35b249d5db15efa1afd75
 
-. 左側のナビゲーションペインで、 * Hosts * （ホスト）をクリックします。
-. Hosts ページで、 * igroup * をクリックします。
-. イニシエータグループページで、 * Storage Virtual Machine * フィールドをクリックして使用可能な SVM のドロップダウンリストを表示し、削除する igroup の SVM を選択します。
-. SVM の igroup のリストで、削除する igroup を選択し、 * Delete * をクリックします。
-. igroup の削除ダイアログボックスで、 * OK * をクリックします。
+. e3496f6d2696003cd08139c96386cc45
+. 4622e05731e4f69f8fe9f73fcb40c02c
+. 4d3420db38960dc5190abf028255e6a6
+. a478dd542834e2cf23f2dd526df10e03
+. f664fa7f8e8f64dd3b179d0894c484df
+. 197d743554e6981a70575938f6677a88
+
+
+
+
+== 74066c25b1bbad95426e7c5b36a2a7a6
+
+6cab6c820f2ac32535084d3ea8080019
+
+4839d2f25cc35b249d5db15efa1afd75
+
+. e3496f6d2696003cd08139c96386cc45
+. 4622e05731e4f69f8fe9f73fcb40c02c
+. b90957227a66d962bc1285ca33ac6eea
+. 59def6ecb72ae28b473694aa037f69ba
+. 298ee0d54bd96050fb56f416e8665199
 +
-SnapCenter によって igroup が削除されます。
+b6014af484171e08fae6e547c92aac45
 
 

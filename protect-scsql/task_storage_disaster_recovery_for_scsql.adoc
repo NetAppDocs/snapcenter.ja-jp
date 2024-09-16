@@ -2,49 +2,49 @@
 permalink: protect-scsql/task_storage_disaster_recovery_for_scsql.html 
 sidebar: sidebar 
 keywords: disaster recovery 
-summary: SnapCenter Plug-in for SQL Server ストレージをリカバリするには、グローバル設定ページでストレージの DR モードを有効にします。 
+summary: f912f80c08d358e074ac7a8094ee08f8 
 ---
-= SnapCenter Plug-in for SQL Server の Storage Disaster Recovery （ DR ；ストレージディザスタリカバリ）
+= 3e2111f7bc94dc6561a302251b84a32e
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter Plug-in for SQL Server ストレージをリカバリするには、グローバル設定ページでストレージの DR モードを有効にします。
+f912f80c08d358e074ac7a8094ee08f8
 
-.作業を開始する前に
-* プラグインがメンテナンスモードになっていることを確認します。
-* SnapMirror / SnapVault 関係を解除link:https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-950/GUID-8A3F828F-CD3D-48E8-A171-393581FEB2ED.html["SnapMirror 関係を解除します"]
-* セカンダリの LUN を、同じドライブレターを使用してホストマシンに接続します。
-* DR の前に使用したのと同じドライブレターを使用して、すべてのディスクが接続されていることを確認してください。
-* MSSQL サーバサービスを再起動します。
-* SQL リソースがオンラインに戻っていることを確認します。
-
-
-.このタスクについて
-ディザスタリカバリ（ DR ）は、 VMDK 構成と RDM 構成ではサポートされていません。
-
-.手順
-. 設定ページで、 * 設定 * > * グローバル設定 * > * ディザスタ・リカバリ * と進みます。
-. [Enable Disaster Recovery] を選択します。
-. [ 適用（ Apply ） ] をクリックします。
-. DR ジョブが有効になっているかどうかを確認するには、 * Monitor * > * Jobs * をクリックします。
+.135b308ed83c53f1516b7c754566d1c4
+* c4293a4e65f083bda8909c115c524834
+* 9925d7679d8cfed4f5d94f8dc304fe87
+* 778777d5fc7a829e4087bd079607d757
+* d93a592d5a366b79c518bb5281e80ce8
+* 106152eddfd0777601f34fbcb5a4530f
+* 6e965c5316b4dc760e2b4d3fcb1b1266
 
 
-.完了後
-* フェイルオーバー後に新しいデータベースが作成されると、データベースは非 DR モードになります。
+.bbe48fb854ea022537208eeeff822f91
+814edee34440283cced16298f89a35c7
+
+.f3a29486bed19a90f2da6d007818b427
+. 7dfa5abc2b998d3aad88a3f5fe324a1f
+. 111dbdd7d01f5fee0a3a3a63d17a0892
+. 400fae8e788b3721b9ac25fe01f04f50
+. 7e7dac5c0403377139032fc9b9d33aef
+
+
+.bd965e38a0c9cf27aa1bde099308e23f
+* 80cb891c25496669e60c048f0fa8c262
 +
-新しいデータベースは、フェイルオーバー前と同様に動作します。
+f325c3bd1e3f0543a887367f1dbb2720
 
-* DR モードで作成された新しいバックアップは、トポロジページの SnapMirror または SnapVault （セカンダリ）の下に表示されます。
+* 5d1ccbabeac3da21e18ec5dee9e1b5d3
 +
-新しいバックアップの横に「 i 」アイコンが表示され、 DR モードで作成されたバックアップであることが示されます。
+200173e810f24d588054234ea90379a4
 
-* フェイルオーバー時に作成された SnapCenter Plug-in for SQL Server のバックアップは、 UI またはコマンドレットの「 Remove-SmBackup 」を使用して削除できます
-* フェールオーバー後に、一部のリソースを非 DR モードにする場合は、「 Remove-SmResourceDRMode 」コマンドレットを使用します
+* 5e7078fc2c5f11497c9f2a56ffd9b736
+* b46fdb28b1bf03616f61fcda6f266b96
 +
-詳細については、を参照して https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]ください。
+280d727831654ce0ce2e6a9c19ff685a
 
-* SnapCenter サーバは、 DR モードまたは非 DR モードの個々のストレージリソース（ SQL データベース）を管理しますが、 DR モードまたは非 DR モードのストレージリソースを含むリソースグループは管理しません。
+* 7ccaeb1e46c3ede7b5c8c6431b09266a
 

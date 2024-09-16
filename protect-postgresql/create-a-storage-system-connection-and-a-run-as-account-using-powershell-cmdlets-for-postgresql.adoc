@@ -2,47 +2,47 @@
 permalink: protect-postgresql/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-postgresql.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for PostgreSQL 
-summary: PowerShellコマンドレットを使用してPostgreSQLクラスタをバックアップ、リストア、またはクローニングするには、Storage Virtual Machine（SVM）接続とクレデンシャルを作成する必要があります。 
+summary: f251a1b525058a66b0d6ff82a2a95dba 
 ---
-= PostgreSQL用のPowerShellコマンドレットを使用して、ストレージシステム接続とクレデンシャルを作成する
+= bc90c2f229362047d182b37af0ef27f3
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-PowerShellコマンドレットを使用してPostgreSQLクラスタをバックアップ、リストア、またはクローニングするには、Storage Virtual Machine（SVM）接続とクレデンシャルを作成する必要があります。
+f251a1b525058a66b0d6ff82a2a95dba
 
-.作業を開始する前に
-* PowerShell コマンドレットを実行できるように PowerShell 環境を準備しておく必要があります。
-* ストレージ接続を作成するには、 Infrastructure Admin ロールに必要な権限が必要です。
-* プラグインのインストールが実行中でないことを確認してください。
+.135b308ed83c53f1516b7c754566d1c4
+* 2d3dd877f482d5e495bedaecc930ab1e
+* 7371a8e10304e81cee00e43c4dada4a0
+* 5f15a8281618c8add8ea167014465c88
 +
-ストレージシステム接続の追加中にホストプラグインのインストールを実行しないでください。ホストキャッシュが更新されず、SnapCenter GUIでクラスタのステータスが「Not available for backup」または「Not on NetApp storage」と表示されることがあります。
+9009bfc4375adbbbcaaec1fa85aee86d
 
-* ストレージシステム名は一意である必要があります。
+* bf4755d91b7ab31c59d1db6e3e0d486c
 +
-SnapCenter では、異なるクラスタに同じ名前のストレージシステムを複数配置することはサポートされていません。SnapCenter でサポートされるストレージシステムには、それぞれ一意の名前およびデータ LIF の IP アドレスを割り当てる必要があります。
+70991649072f70fdb060c64c2144c8c8
 
 
 
-.手順
-. Open-SmConnectionコマンドレットを使用して、PowerShell Core接続セッションを開始します。
+.f3a29486bed19a90f2da6d007818b427
+. 13d1cfa343dd610d15ad68b43ed6733b
 +
 [listing]
 ----
 PS C:\> Open-SmConnection
 ----
-. Add-SmStorageConnection コマンドレットを使用して、ストレージシステムへの新しい接続を作成します。
+. 14b1dd1b0650310a574acd9df305fcf6
 +
 [listing]
 ----
 PS C:\> Add-SmStorageConnection -Storage test_vs1 -Protocol Https
 -Timeout 60
 ----
-. Add-SmCredential コマンドレットを使用して新しいクレデンシャルを作成します。
+. eceac2462f6267b1a77d8f264a46d4de
 +
-次の例は、 Windows クレデンシャルを使用して FinanceAdmin という名前の新しいクレデンシャルを作成する方法を示しています。
+e31df119bb2635e68229d174653ee578
 
 +
 [listing]
@@ -50,15 +50,15 @@ PS C:\> Add-SmStorageConnection -Storage test_vs1 -Protocol Https
 PS C:> Add-SmCredential -Name FinanceAdmin -AuthMode Windows
 -Credential sddev\administrator
 ----
-. SnapCenterサーバにPostgreSQL通信ホストを追加します。
+. 34e46b2371703e5c2618b05475eb6b8b
 +
 [listing]
 ----
 PS C:> Add-SmHost -HostName 10.232.204.61 -OSType Windows -RunAsName FinanceAdmin -PluginCode PostgreSQL
 ----
-. パッケージとSnapCenter Plug-in for PostgreSQLをホストにインストールします。
+. 82e1c0613001bc06eee559de3e6c315e
 +
-Linux の場合：
+5f425eebf9102e123afb94bd2d71ff06
 
 +
 [listing]
@@ -66,19 +66,19 @@ Linux の場合：
 PS C:> Install-SmHostPackage -HostNames 10.232.204.61 -ApplicationCode PostgreSQL
 ----
 +
-Windows の場合：
+950ec0214988f2cee4280a4a29075cf3
 
 +
 [listing]
 ----
 Install-SmHostPackage -HostNames 10.232.204.61 -ApplicationCode PostgreSQL -FilesystemCode scw -RunAsName FinanceAdmin
 ----
-. SQLLIBへのパスを設定します。
+. 1b859fa3e819f0a2c67e3a9c24c49334
 +
-Windowsの場合、PostgreSQLプラグインはSQLLIBフォルダのデフォルトパス「C：\Program Files\IBM\SQLLIB\bin」を使用します。
+145b1dd5fb4caed6d556fea54ad78cc8
 
 +
-デフォルトのパスを上書きする場合は、次のコマンドを使用します。
+67e397e9a54b75aae603a8eea4b08856
 
 +
 [listing]
@@ -89,4 +89,4 @@ PostgreSQL -configSettings @{“PostgreSQL_SQLLIB_CMD” = “<custom_path>\IBM\
 ----
 
 
-コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、『Software Cmdlet Reference Guide ^]』も参照して https://docs.netapp.com/us-en/snapcenter-cmdlets/index.htmlnapCenter[] ください。
+a5ee570937dd0489dbcfd34e35d0cf51

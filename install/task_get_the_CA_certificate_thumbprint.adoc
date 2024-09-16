@@ -2,37 +2,37 @@
 permalink: install/task_get_the_CA_certificate_thumbprint.html 
 sidebar: sidebar 
 keywords: SnapCenter, certificate thumbprint 
-summary: 証明書のサムプリントは、証明書を識別する 16 進数の文字列です。サムプリントは、サムプリントアルゴリズムを使用して証明書の内容から計算されます。 
+summary: cd2e2c723c403abdc6897c3987837652 
 ---
-= CA 証明書のサムプリントを取得します
+= 9772bdc36f54d8bb6dc779a222af547c
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-証明書のサムプリントは、証明書を識別する 16 進数の文字列です。サムプリントは、サムプリントアルゴリズムを使用して証明書の内容から計算されます。
+cd2e2c723c403abdc6897c3987837652
 
-.手順
-. GUI で次の手順を実行します。
+.f3a29486bed19a90f2da6d007818b427
+. 8b2033ee038f3ffe4ada7fc0ecc59fbe
 +
-.. 証明書をダブルクリックします。
-.. [ 証明書 ] ダイアログボックスで、 [ * 詳細 * ] タブをクリックします。
-.. フィールドのリストをスクロールし、 [*Thumbprint*] をクリックします。
-.. ボックスから 16 進文字をコピーします。
-.. 16 進数の間のスペースを削除します。
+.. 3c409c2d84087302c5de3855b68c7aab
+.. 1ceb2e3e83e286b0f0a347d253edcab0
+.. 73a198f90957ae4854c452b9d85e6a41
+.. 6e8f55870a065b38c508b19cbe46d8f7
+.. 63bba446a2146012201c4c2027e3e3ea
 +
-たとえば、サムプリントが「 A9 09 50 2D d8 2a 14 33 e6 F8 38 86 b0 0d 42 77 A3 2a 7b 」の場合、スペースを削除すると、「 a909502dd82ae41433e6f83886b00d4277a32a7b 」となります。
+a79743c002bd44f98b376ef77a462712
 
 
 
-. PowerShell で次の手順を実行します。
+. 0cb6620bf1411c0c99e89057d3b1cd0b
 +
-.. 次のコマンドを実行して、インストールされている証明書のサムプリントを一覧表示し、最近インストールされた証明書を件名で識別します。
+.. 4c212e317852ac4ae9331380671ec2e2
 +
-_Get-ChildItem - パス証明書： \localmachine\My_
+eb324a0bcd793bce95da852c11a1a568
 
-.. サムプリントをコピーします。
+.. 4a258e7f05f08d57a4acdbacea054638
 
 
 

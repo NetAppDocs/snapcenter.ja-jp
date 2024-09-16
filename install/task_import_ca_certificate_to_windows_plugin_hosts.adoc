@@ -2,55 +2,55 @@
 permalink: install/task_import_ca_certificate_to_windows_plugin_hosts.html 
 sidebar: sidebar 
 keywords: security,authentication, export CA certificates 
-summary: エクスポートしたSnapCenterサーバCA証明書を使用するには、関連する証明書をSnapCenter Windowsプラグインホストにインポートする必要があります 
+summary: cfee889da941f2dce080477db87781ff 
 ---
-= 認証局（CA）証明書をWindowsプラグインホストにインポートします
+= 79f05475f093d2d51a688c417ae60fbe
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-エクスポートしたSnapCenterサーバCA証明書を使用するには、Microsoft管理コンソール（MMC）を使用して、関連する証明書をSnapCenter Windowsプラグインホストにインポートする必要があります。
+670f279a24f028c7742ed1c370d5c72e
 
-* 手順 *
+4839d2f25cc35b249d5db15efa1afd75
 
-. Microsoft 管理コンソール (MMC) に移動し、 [ * ファイル * ] 、 [ スナップインの追加と削除 ] の順にクリックします。
-. [ スナップインの追加と削除 ] ウィンドウで、 [*Certificates*] を選択し、 [*Add*] をクリックします。
-. [証明書スナップイン]ウィンドウで*[コンピューターアカウント]*オプションを選択し、*[完了]*をクリックします。
-. [コンソールルート]*>*[証明書-ローカルコンピュータ]*>*[個人]*>*[証明書]*をクリックします。
-. 「個人」フォルダを右クリックし、*すべてのタスク*>*インポート*を選択してインポートウィザードを開始します。
-. ウィザードで次の操作を実行します。
+. b86fdb531ae29f629485f72c257ce9f0
+. a49966f708056a4c549673b5bec3414c
+. fa8730c22e61e95ad832838dc73fe14a
+. cd8d705b0f06c8e8e3aa612c41c7f61c
+. a3116b0cbdcd0490e1b76e0b508654c0
+. a2aa1e8ade9f7ad4c7098c0604405e40
 
 
 |===
-| オプション | 実行する処理 
+| 7fbc991c0cd78ec9e53ea32a7f734edc | af51caa4cf3947fff83e6451cb09644a 
 
 
  a| 
-ストアの場所
+4337f2520c18528cac9f46239191f22b
  a| 
-「 * 次へ * 」をクリックします。
-
-
-
- a| 
-インポートするファイル
- a| 
-拡張子.cerで終わるSnapCenterサーバ証明書を選択します。
+5a378b18f7bf0c4cabc6c655cd2f535e
 
 
 
  a| 
-証明書ストア
+87816aec71397bdd3b7be882c2d5cce9
  a| 
-「 * 次へ * 」をクリックします。
+eb42cceb0a1f665d63e0befaa87d431d
 
 
 
  a| 
-証明書のエクスポートウィザードの完了
+7089d514c1aad028e72fc82813e3f577
  a| 
-概要を確認し、 [ 完了 ] をクリックしてインポートを開始します。
+5a378b18f7bf0c4cabc6c655cd2f535e
+
+
+
+ a| 
+f174092f7aa23177cd860471c5f8d2ed
+ a| 
+addd3f74b675e28bf71a9fb679c0fac1
 
 |===

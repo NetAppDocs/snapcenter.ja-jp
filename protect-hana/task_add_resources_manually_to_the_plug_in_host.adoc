@@ -2,111 +2,111 @@
 permalink: protect-hana/task_add_resources_manually_to_the_plug_in_host.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for SAP HANA Database 
-summary: 自動検出は、特定の HANA インスタンスではサポートされていません。これらのリソースは手動で追加する必要があります。 
+summary: f70451089f1e1bfca806390a988a70f9 
 ---
-= プラグインホストにリソースを手動で追加します
+= b39d1e4f73b157bb2f5b3a972e89eeb6
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-自動検出は、特定の HANA インスタンスではサポートされていません。これらのリソースは手動で追加する必要があります。
+f70451089f1e1bfca806390a988a70f9
 
-.作業を開始する前に
-* SnapCenter サーバのインストール、ホストの追加、ストレージシステム接続のセットアップ、 HDB ユーザストアキーの追加などのタスクを完了しておく必要があります。
-* SAP HANA システムのレプリケーションでは、その HANA システムのすべてのリソースを 1 つのリソースグループに追加して、リソースグループのバックアップを作成することを推奨します。これにより、テイクオーバー / フェイルバックモードでのシームレスなバックアップが可能になります。
+.135b308ed83c53f1516b7c754566d1c4
+* 529693f008bf73338af648fe1d20d733
+* 9cd58488a30b1e2a8252c0303b4a18d2
 
 
-link:task_create_resource_groups_and_attach_policies.html["リソースグループを作成してポリシーを適用"]。
+378c4677444d1c0a4a5f7af5b98179fa
 
-.このタスクについて
-自動検出は、次の構成ではサポートされません。
+.bbe48fb854ea022537208eeeff822f91
+660496d454f8c62fac1e483a48bb073a
 
-* RDM と VMDK のレイアウト
+* 238f9ee47b0694879bca4ad15ab7cfe7
 +
 
-NOTE: 上記のリソースが検出された場合、これらのリソースではデータ保護処理はサポートされていません。
+NOTE: 38c9efd9b38a52c1465875bfa38c1838
 
-* HANA マルチホスト構成
-* 同じホスト上の複数のインスタンス
-* マルチティアスケールアウト HANA システムレプリケーション
-* システムレプリケーションモードでのカスケードレプリケーション環境
+* 4b74597e82292ec27dea29bbd7683901
+* a4876889c88ac7bc0f1ec9259fe39e51
+* 9ea78ced3285e07c1b4382084f2c8082
+* ca008dbe9fac2013096d5e5cf923c44e
 
 
-.手順
-. 左側のナビゲーションペインで、ドロップダウンリストから SnapCenter Plug-in for SAP HANA Database を選択し、 * Resources * をクリックします。
-. リソースページで、 * SAP HANA データベースの追加 * をクリックします。
-. [Provide Resource Details] ページで、次の操作を実行します。
+.f3a29486bed19a90f2da6d007818b427
+. debb5252d4104d6fc24f89b3d71bc23b
+. 560aff56bcecef38b5d4c7891081bbc3
+. 14fdd328e53552c727d0f36c3d306b64
 +
 |===
-| フィールド | 手順 
+| 21f831502a413a739e20cbf9f2eefe54 | 5e2ad6fd9deb412d871137094ee43ef0 
 
 
  a| 
-リソースタイプ（ Resource Type ）
+0ae55e3aeda2ed34504cdb299750c35e
  a| 
-リソースタイプを入力します。リソースタイプは、単一コンテナ、マルチテナントデータベースコンテナ（ MDC ）、非データボリュームです。
-
-
-
- a| 
-HANA システム名
- a| 
-SAP HANA システムのわかりやすい名前を入力します。このオプションは、単一コンテナまたは MDC リソースタイプを選択した場合にのみ使用できます。
+f87b54c1e1b36fd8fdf7fe10d53c8f8c
 
 
 
  a| 
-SID
+be5ab51d888f9dacb41587c99306d7cc
  a| 
-システム ID （ SID ）を入力します。インストールされた SAP HANA システムは単一の SID で識別されます。
-
-
-
- a| 
-プラグインホスト
- a| 
-プラグインホストを選択します。
+38e82d8074a21d4e6cc51e67e58c9cc2
 
 
 
  a| 
-hdb セキュアユーザストアキー
+1c2684566717c78cd97248bd9b26c55b
  a| 
-SAP HANA システムに接続するためのキーを入力します。
-
-このキーには、データベースに接続するためのログイン情報が含まれています。
-
-SAP HANA システムレプリケーションでは、セカンダリユーザキーは検証されません。この値はテイクオーバー時に使用されます。
+1db1efa9a360be7c9183d433804fee89
 
 
 
  a| 
-HDBSQL OS ユーザ
+e979ea7eef0ef246823a9861bce1500a
  a| 
-HDB Secure User Store Key が設定されているユーザー名を入力します。Windows の場合は、 HDBSQL OS ユーザがシステムユーザであることが必須です。そのため、システムユーザーに対して HDB Secure User Store Key を設定する必要があります。
+989131e62bf8a317c4f8cef573379336
+
+
+
+ a| 
+b5a921b4f977e783bd167dd44c02d491
+ a| 
+a81b91d7d1d982d9748f7c921ddef6f5
+
+416846cc2d6684fcda5ed01768c14980
+
+99e729822359383d3878548f668ad032
+
+
+
+ a| 
+cee248575d109b963f54afafda4720a1
+ a| 
+596bf9414108fb79d00ec3039e739625
 
 |===
-. ストレージ容量の提供ページで、ストレージシステムを選択し、ボリューム、 LUN 、および qtree を 1 つ以上選択して、 * 保存 * をクリックします。
+. 44dab87fe2da08cd26ee4f07dbdf1d56
 +
-オプション：「 * 」をクリックしますimage:../media/add_policy_from_resourcegroup.gif[""]* アイコンをクリックして、他のストレージ・システムからボリューム、 LUN 、および qtree を追加します。
+266587454e01a92f0bfd85f3e920b6e9
 
-. 概要を確認し、 [ 完了 ] をクリックします。
+. fed1c121dc4f5a5484e5623e297385fb
 +
-データベースは、 SID 、プラグインホスト、関連するリソースグループとポリシー、全体的なステータスなどの情報とともに表示されます
+88b9a84562729de4f24eef1b144f1867
 
 
 
-リソースへのアクセスをユーザに許可する場合は、ユーザにリソースを割り当てる必要があります。これにより、ユーザは、自身に割り当てられたアセットに対して権限のある処理を実行できます。
+3f1fe53287c04e073da002e39b799896
 
-link:https://docs.netapp.com/us-en/snapcenter/install/task_add_a_user_or_group_and_assign_role_and_assets.html["ユーザまたはグループを追加し、ロールとアセットを割り当てます"]
+65029b82973fe89d2af9288d26c3e30b
 
-データベースの追加が完了したら、 SAP HANA データベースの詳細を変更できます。
+c10e25f3cfc1a1e38bbbb9bacf35aa2d
 
-SAP HANA リソースにバックアップが関連付けられている場合、次の項目は変更できません。
+abe175cac2897f907056ac4845d0fecd
 
-* マルチテナントデータベースコンテナ（ MDC ）： SID または HDBSQL Client （プラグイン）ホスト
-* Single Container ： SID または HDBSQL Client （プラグイン）ホスト
-* データボリューム以外：リソース名、関連付けられた SID 、またはプラグインホスト
+* 14ded6d8dedd87e6fc2549e97428ffd6
+* 5462999c0f2d8eed2a8ceb2a740a8b10
+* d6db5f12a9d3e76b6481e5a2ecd860ad
 

@@ -2,165 +2,163 @@
 permalink: install/task_configure_two_way_ssl.html 
 sidebar: sidebar 
 keywords: security,two-way ssl,configure two-way ssl, windows host 
-summary: Windowsホスト上のSnapCenterサーバとプラグインの間の相互通信を保護するために、双方向SSL通信を設定する必要があります。 
+summary: eb8b969fdff84d71ede1142f9c2633d9 
 ---
-= Windowsホストでの双方向SSL通信の設定
+= c38eb95b49d08208a5a69dbeb37cbf8a
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Windowsホスト上のSnapCenterサーバとプラグインの間の相互通信を保護するために、双方向SSL通信を設定する必要があります。
+f966dc5fff541e8e8270d89b2379a318
 
-.作業を開始する前に
-* サポートされるキーの最小長が3072のCA証明書CSRファイルを生成しておく必要があります。
-* CA証明書でサーバ認証とクライアント認証がサポートされている必要があります。
-* 秘密鍵とサムプリントの詳細が記載されたCA証明書が必要です。
-* 一方向SSL設定を有効にしておく必要があります。
+.135b308ed83c53f1516b7c754566d1c4
+* 81397d9ad77b3a9e2e2df364665c61c9
+* 1257518a1b9c77f82d1169f7393e91e8
+* a41d1ede8efbf13047677109637f3dec
+* b083fe6f5cfad10b990d548c633e8a65
 +
-詳細については、を参照してください https://docs.netapp.com/us-en/snapcenter/install/reference_generate_CA_certificate_CSR_file.html["CA証明書の設定セクション"]
+a7ba3ddee0a16312a2e13195df4b2433
 
-* すべてのプラグインホストとSnapCenterサーバで双方向SSL通信を有効にしておく必要があります。
+* 94c0fab32e0110a096cb4ef750e06c9d
 +
-一部のホストまたはサーバで双方向SSL通信が有効になっていない環境はサポートされません。
+3a38d21be8e1d4ceb97784398a831b8d
 
 
 
-.手順
-. ポートをバインドするには、PowerShellコマンドを使用して、SnapCenter IIS Webサーバポート8146（デフォルト）およびSMCoreポート8145（デフォルト）のSnapCenterサーバホストで次の手順を実行します。
+.f3a29486bed19a90f2da6d007818b427
+. f1e698233e97bf3ae5cad2316d711986
 +
-.. 次のPowerShellコマンドを使用して、既存のSnapCenter自己署名証明書のポートバインドを削除します。
+.. 82cfdc00c004e07552d47137bbf16a9c
 +
-`> netsh http delete sslcert ipport=0.0.0.0:<SMCore port/IIS port>`
-
-+
-例：
+0a0f1f3043ba3e1acc34a5b2ebac984c
 
 +
-`> netsh http delete sslcert ipport=0.0.0.0:8145`
+cabbc139b7f74771c47e3eb24d94c92b
 
 +
-`> netsh http delete sslcert ipport=0.0.0.0:8146`
-
-.. 新しく取得したCA証明書をSnapCenterサーバとSMCoreポートにバインドします。
-+
-`> $cert = “<CA_certificate thumbprint>”`
+97945939d2d565d14af017b8fc6a848b
 
 +
-`> $guid = [guid]::NewGuid().ToString("B")`
+cf2f17e8228cf9f504d9ef093339cf29
+
+.. eccc78428042da4779f8953d81058bc0
++
+f872a2f883b5319b48280c72563c5890
 
 +
-`> netsh http add sslcert ipport=0.0.0.0: <SMCore Port/IIS port> certhash=$cert appid="$guid"` `clientcertnegotiation=enable verifyclientcertrevocation=disable`
+20fb30dfe9f1ec90bb124da18ae04452
 
 +
-`> netsh http show sslcert ipport=0.0.0.0:<SMCore Port/IIS port>`
+472a2399b71957c9b52b506602e17135
 
 +
-例：
+ecadde849f231229501c8ac9e26131fa
 
 +
-`> $cert = “abc123abc123abc123abc123”`
+cabbc139b7f74771c47e3eb24d94c92b
 
 +
-`> $guid = [guid]::NewGuid().ToString("B")`
+387826bb06a8ec006a32ea30847a7e4b
 
 +
-`> netsh http add sslcert ipport=0.0.0.0:8146 certhash=$cert appid="$guid"` `clientcertnegotiation=enable verifyclientcertrevocation=disable`
+20fb30dfe9f1ec90bb124da18ae04452
 
 +
-`> $guid = [guid]::NewGuid().ToString("B")`
+9d4c7c0e25a6f0e0bceeffcd0091ec50
 
 +
-`> netsh http add sslcert ipport=0.0.0.0:8145 certhash=$cert appid="$guid"` `clientcertnegotiation=enable verifyclientcertrevocation=disable`
+20fb30dfe9f1ec90bb124da18ae04452
 
 +
-`> netsh http show sslcert ipport=0.0.0.0:8146`
+c4922065c73447187fb2dac12bfe56bc
 
 +
-`> netsh http show sslcert ipport=0.0.0.0:8145`
-
-
-
-. CA証明書の権限にアクセスするには、次の手順を実行して新しく取得したCA証明書にアクセスし、SnapCenterのデフォルトのIIS Webサーバユーザ「* IIS AppPool\SnapCenter *」を証明書の権限のリストに追加します。
-+
-.. Microsoft管理コンソール（MMC）に移動し、*[ファイル]*>*[SnapInの追加と削除]*をクリックします。
-.. [ スナップインの追加と削除 ] ウィンドウで、 [*Certificates*] を選択し、 [*Add*] をクリックします。
-.. [ 証明書 ] スナップインウィンドウで、 [*Computer account*] オプションを選択し、 [ 完了 *] をクリックします。
-.. ［*コンソールルート*］>［*証明書–ローカルコンピューター*］>［*個人*］>［*証明書*］の順にクリックします。
-.. SnapCenter証明書を選択します。
-.. ユーザー/権限の追加ウィザードを開始するには、CA証明書を右クリックし、*[すべてのタスク]*>*[秘密鍵の管理]*を選択します。
-.. [追加]*をクリックし、[ユーザーとグループの選択]ウィザードで場所をローカルコンピュータ名（階層の最上位）に変更します。
-.. IIS AppPool\SnapCenterユーザを追加し、フルコントロール権限を付与します。
-
-
-. CA証明書IIS権限*の場合、次のパスからSnapCenterサーバーに新しいDWORDレジストリキーエントリを追加します。
-+
-Windowsレジストリエディタで、次のパスに移動します。
+5fc94028d8c4f33296999ba45bbb387b
 
 +
-`HKey_Local_Machine\SYSTEM\CurrentControlSet\Control\SecurityProv
- ders\SCHANNEL`
+9357843797bfd65b1948d6382b2a5034
 
-. SCHANNELレジストリ設定のコンテキストで、新しいDWORDレジストリキーエントリを作成します。
+
+
+. 06f3954dc9edecda0cb728ddafd9e61e
 +
-`SendTrustedIssuerList = 0`
+.. f090de938a3fae12191e592f63ae2510
+.. a49966f708056a4c549673b5bec3414c
+.. c6c1feaee0176e99111e0aef49c594be
+.. cf424f2e43207d2c78b3d27a5dc0fda2
+.. 85ce851bf311abdfa58feb58c1f150a9
+.. c41510e2be28a02aa28d3cc1f97d5a19
+.. 169bb55bf062357c42b0cf57c4649ee0
+.. 7c1c131d337993bffc308150942912de
 
+
+. df576eecac2ec87a972715a2e331f729
 +
-`ClientAuthTrustMode = 2`
-
-
-
-
-
-== 双方向SSL通信用のSnapCenter Windowsプラグインを設定します
-
-SnapCenter Windowsプラグインは、PowerShellコマンドを使用して双方向SSL通信用に設定する必要があります。
-
-.作業を開始する前に
-CA証明書サムプリントが使用可能であることを確認します。
-
-.手順
-. ポートをバインドするには、WindowsプラグインホストでSMCoreポート8145（デフォルト）に対して次の操作を実行します。
-+
-.. 次のPowerShellコマンドを使用して、既存のSnapCenter自己署名証明書のポートバインドを削除します。
-+
-`> netsh http delete sslcert ipport=0.0.0.0:<SMCore port>`
+ad0e742bbde69b45fb45a7627f4707a7
 
 +
-例：
+ba50ff32299ded9b005b93add237e37f
+
+. 77e901d3c61bf70a2d72d789e44f7415
++
+63dc4f7c1d9e61adbf929691b56d5072
 
 +
-`> netsh http delete sslcert ipport=0.0.0.0:8145`
+8d50ba258bc153f2531cc4e43e94a373
 
-.. 新しく取得したCA証明書をSMCoreポートにバインドします。
-+
-`> $cert = “<CA_certificate thumbprint>”`
 
-+
-`> $guid = [guid]::NewGuid().ToString("B")`
 
-+
-`> netsh http add sslcert ipport=0.0.0.0: <SMCore Port> certhash=$cert appid="$guid"`
-`clientcertnegotiation=enable verifyclientcertrevocation=disable`
 
-+
-`> netsh http show sslcert ipport=0.0.0.0:<SMCore Port>`
 
-+
-例：
+== 29fe5acdafb008f0c4029b36efaaa699
 
+241a76d30cc3e9addfc9a28d9266415b
+
+.135b308ed83c53f1516b7c754566d1c4
+457d0c1616661bbea1a67f35fdf372af
+
+.f3a29486bed19a90f2da6d007818b427
+. c0f2e9f742b3d6f99ba8ef845fc0562c
 +
-`> $cert = “abc123abc123abc123abc123”`
+.. 82cfdc00c004e07552d47137bbf16a9c
++
+815da53dabe3865804ff4ba1e6665935
 
 +
-`> $guid = [guid]::NewGuid().ToString("B")`
+cabbc139b7f74771c47e3eb24d94c92b
 
 +
-`> netsh http add sslcert ipport=0.0.0.0:8145 certhash=$cert appid="$guid"` `clientcertnegotiation=enable verifyclientcertrevocation=disable`
+97945939d2d565d14af017b8fc6a848b
+
+.. f4aedf5f7064779b42e2ae682e73ea48
++
+f872a2f883b5319b48280c72563c5890
 
 +
-`> netsh http show sslcert ipport=0.0.0.0:8145`
+20fb30dfe9f1ec90bb124da18ae04452
+
++
+66a57f0083912acf6a2b65f426431c80
+
++
+c611b0ac75619f5722f4d1aaf8bf4b5e
+
++
+cabbc139b7f74771c47e3eb24d94c92b
+
++
+387826bb06a8ec006a32ea30847a7e4b
+
++
+20fb30dfe9f1ec90bb124da18ae04452
+
++
+c4922065c73447187fb2dac12bfe56bc
+
++
+9357843797bfd65b1948d6382b2a5034
 
 
 

@@ -2,41 +2,41 @@
 permalink: protect-scsql/concept_what_you_can_do_with_the_snapcenter_plug_in_for_microsoft_sql_server.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for Microsoft SQL Server 
-summary: SnapCenter Plug-in for Microsoft SQL Server をインストールした環境では、 SnapCenter を使用して SQL Server データベースをバックアップ、リストア、およびクローニングすることができます。 
+summary: 1f30844854c96f58460be92dc3cf6cca 
 ---
-= SnapCenter Plug-in for Microsoft SQL Server の機能
+= e711517a23398b98d1b1f9a1ef29f16c
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter Plug-in for Microsoft SQL Server をインストールした環境では、 SnapCenter を使用して SQL Server データベースをバックアップ、リストア、およびクローニングすることができます。
+1f30844854c96f58460be92dc3cf6cca
 
-SQL Server データベースおよびデータベースリソースのバックアップ処理、リストア処理、およびクローニング処理で実行できるタスクを次に示します。
+05a560bb0a1f342b789943bb729c17d8
 
-* SQL Server データベースおよび関連するトランザクションログをバックアップする
+* 9d0799e658f43dae98c64e546b8d2015
 +
-master システムデータベースと msdb システムデータベースについては、ログバックアップを作成できません。model システムデータベースのログバックアップは作成できます。
+1977a336bc4b17cf6588f74d2bd38d5c
 
-* データベースリソースをリストアする
+* e83624508063a09ee03ffc0a6805fb32
 +
-** master システムデータベース、 msdb システムデータベース、および model システムデータベースをリストアできます。
-** 複数のデータベース、インスタンス、および可用性グループをリストアすることはできません。
-** システムデータベースを別のパスにリストアすることはできません。
+** 17ff0af55be65ec18f5a31904af7a234
+** 449086c34644b0f43806ce1791a3f0e0
+** dc5a9b81d1013e495ba6cf76df279929
 
 
-* 本番環境のデータベースのポイントインタイムクローンを作成します
+* ccc9f0179963e81770f9334b155c85ef
 +
-tempdb システムデータベースでは、バックアップ、リストア、クローニング、クローニングのライフサイクル処理を実行できません。
+b5a9247c30efc3cff3329cccbe4ff8d9
 
-* バックアップ処理をただちに検証するか、あとで検証する
+* 260ca7a36b4d58a4cc9740bfdf27ba01
 +
-SQL Server システムデータベースの検証はサポートされていません。SnapCenter がデータベースのクローンを作成し、検証処理を実行します。SnapCenter では SQL Server システムデータベースをクローニングできないため、これらのデータベースの検証はサポートされていません。
+c48d82f0b1e5949ce3d34dc8ac74b4b5
 
-* バックアップ処理とクローニング処理のスケジュールを設定する
-* バックアップ処理、リストア処理、クローニング処理を監視する
+* c27ceb4a4892c429a975a62841762540
+* aa71cd3a5a90a32aafb3072b19a68b09
 
 
 
-NOTE: Plug-in for SQL Server では、 SMB 共有の SQL Server データベースのバックアップとリカバリはサポートされません。
+NOTE: c343d8ab7af87f16e58b8e8040d7813a

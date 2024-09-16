@@ -2,45 +2,45 @@
 permalink: protect-db2/install-the-snapcenter-plug-in-for-ibm-db2-on-linux-hosts-using-the-command-line-interface.html 
 sidebar: sidebar 
 keywords: install, SnapCenter Plug-in for IBM Db2 
-summary: SnapCenter Plug-in for IBM DB2 Databaseは、SnapCenterのユーザインターフェイス（UI）を使用してインストールする必要があります。ご使用の環境でSnapCenter UIからのプラグインのリモートインストールが許可されていない場合は、コマンドラインインターフェイス（CLI1）を使用して、コンソールモードまたはサイレントモードでPlug-in for IBM DB2 Databaseをインストールできます。 
+summary: d057d7ce6b90b782f658a9bea372c1c1 
 ---
-= コマンドラインインターフェイスを使用して、LinuxホストにSnapCenter Plug-in for IBM DB2をインストールする
+= 5ca3bbad7e3b6a827699be12241ce6f1
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter Plug-in for IBM DB2 Databaseは、SnapCenterのユーザインターフェイス（UI）を使用してインストールする必要があります。ご使用の環境でSnapCenter UIからのプラグインのリモートインストールが許可されていない場合は、コマンドラインインターフェイス（CLI）を使用して、コンソールモードまたはサイレントモードでPlug-in for IBM DB2 Databaseをインストールできます。
+0e0f1583471590647c687f9a7a173ca8
 
-.作業を開始する前に
-* Plug-in for IBM DB2 Databaseは、IBM DB2クライアントが配置されている各Linuxホストにインストールする必要があります。
-* SnapCenter Plug-in for IBM DB2 DatabaseをインストールするLinuxホストは、依存するソフトウェア、データベース、およびオペレーティングシステムの要件を満たしている必要があります。
+.135b308ed83c53f1516b7c754566d1c4
+* d7949b068ae873299278455425370ddb
+* b5751708c7b39e8fe1c58734b6b11e21
 +
-サポートされる構成の最新情報については、 Interoperability Matrix Tool （ IMT ）を参照してください。
+9e8c841a17bd4c0ec7d85ab94b954bca
 
 +
-https://imt.netapp.com/matrix/imt.jsp?components=121066;&solution=1259&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"]
+752a11b4b210ea35436698a7cd80caea
 
-* SnapCenter Plug-in for IBM DB2 Databaseは、SnapCenter Plug-ins Package for Linuxに含まれています。SnapCenter Plug-ins Package for Linuxをインストールする前に、SnapCenterをWindowsホストにインストールしておく必要があります。
+* 063c4fd9e5154b06d0098e0ae96b107f
 
 
-.このタスクについて
-パラメータが指定されていない場合、SnapCenterはデフォルト値でインストールされます。
+.bbe48fb854ea022537208eeeff822f91
+d78ead0428ea94146c43decd8b22d80e
 
-.手順
-. SnapCenter Plug-ins Package for Linuxのインストールファイル（snapcenter_linux_host_plugin.bin）をC：\ProgramData\NetApp\SnapCenter\Package RepositoryからPlug-in for IBM DB2をインストールするホストにコピーします。
+.f3a29486bed19a90f2da6d007818b427
+. 752c215644fc87e536ecbffe5105eff4
 +
-このパスには、 SnapCenter サーバがインストールされているホストからアクセスできます。
+992f38bde8f2d7155c3cdabe41a08043
 
-. コマンドプロンプトで、インストールファイルをコピーしたディレクトリに移動します。
-. プラグインをインストールします。 'path-to_installation_bin_file/ snapcenter_linux_host_plugin.bin -i silent -dport=port_number_for _host-DSERVER_IP=server_name_or_IP_address -DSERVER_HTTPS_port=port_number_for _server
+. 96a4e529d61aba905d76ea9d1580f4e6
+. 00cf201fd6c05ff3ac0cc37bc2e5f9b1
 +
-** -dport には、 SMCore HTTPS 通信ポートを指定します。
-** - DSERVER_IP は、 SnapCenter サーバの IP アドレスを指定します。
-** - DSERVER_HTTPS_PORT には、 SnapCenter サーバの HTTPS ポートを指定します。
-** -duser_install_DIR - SnapCenter Plug-ins Package for Linux をインストールするディレクトリを指定します
-** DINSTALL_LOG_name は、ログファイルの名前を指定します。
+** 24b55cc03337b3c54809279aa9100537
+** 44af3259ecb23f20dc2fc936860c3823
+** 02dc973965d194cde88cf66fb96c4ee5
+** 205817910a1a93bf11b2a09ae379895c
+** 294b56a283e4d5bb64865a3cf0a721fa
 
 
 +
@@ -48,9 +48,9 @@ https://imt.netapp.com/matrix/imt.jsp?components=121066;&solution=1259&isHWU&src
 ----
 /tmp/sc-plugin-installer/snapcenter_linux_host_plugin.bin -i silent  -DPORT=8145 -DSERVER_IP=scserver.domain.com -DSERVER_HTTPS_PORT=8146 -DUSER_INSTALL_DIR=/opt -DINSTALL_LOG_NAME=SnapCenter_Linux_Host_Plugin_Install_2.log -DCHOSEN_FEATURE_LIST=CUSTOM
 ----
-. /<installation directory>/NetApp/snapcenter/scc/etc/SC _ SMS_Services.propertiesファイルを編集し、plugins_enabled=DB2：3.0パラメータを追加します。
-. Add-Smhost コマンドレットと必要なパラメータを使用して、ホストを SnapCenter サーバに追加します。
+. 129b677708dc259884ff741218c3c810
+. 550b8e3545b2126ab5138fd027e787fa
 +
-コマンドで使用できるパラメータとその説明については、 RUNNING Get Help command_name _ を使用して参照できます。または、を参照することもできます https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+72c4d5bc612a304d82653189ff27c3e8
 
 

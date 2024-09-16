@@ -2,175 +2,174 @@
 permalink: protect-scw/task_add_hosts_and_install_snapcenter_plug_in_for_microsoft_windows.html 
 sidebar: sidebar 
 keywords: installing 
-summary: SnapCenter のホストの追加ページを使用して、 Windows ホストを追加できます。指定したホストには、 SnapCenter Plug-in for Microsoft Windows が自動的にインストールされます。これはプラグインのインストールに推奨される方法です。ホストを追加してプラグインをインストールするには、個々のホストまたはクラスタを使用します。 
+summary: b8254bbaf2c31e637fae40e7a6bc0f8c 
 ---
-= ホストを追加し、 SnapCenter Plug-in for Microsoft Windows をインストールします
+= 6999d09aed9c7b160e001c5345554e29
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter のホストの追加ページを使用して、 Windows ホストを追加できます。指定したホストには、 SnapCenter Plug-in for Microsoft Windows が自動的にインストールされます。これはプラグインのインストールに推奨される方法です。ホストを追加してプラグインをインストールするには、個々のホストまたはクラスタを使用します。
+b8254bbaf2c31e637fae40e7a6bc0f8c
 
-.作業を開始する前に
-* SnapCenter ServerホストのオペレーティングシステムがWindows 2019で、プラグインホストのオペレーティングシステムがWindows 2022の場合は、次の手順を実行する必要があります。
+.135b308ed83c53f1516b7c754566d1c4
+* 5ae66aec97f2faf97a351f36d528053c
 +
-** Windows Server 2019（OSビルド17763.5936）以降にアップグレードする
-** Windows Server 2022（OSビルド20348.2402）以降にアップグレードする
+** 49e0aad8716e0dbb7231841900443133
+** c174e6f1e3fc4dbc9bbc743e12554a33
 
 
-* SnapCenter Admin ロールなど、プラグインのインストールとアンインストールの権限のあるロールが割り当てられているユーザが必要です。
-* Windows ホストにプラグインをインストールする場合、ビルトインでないクレデンシャルを指定する場合、またはユーザがローカルワークグループユーザに属している場合は、ホストで UAC を無効にする必要があります。
-* SnapCenter ユーザーは 'Windows Server のサービスとしてログオンロールに追加する必要があります
-* メッセージキューイングサービスが実行中状態であることを確認する必要があります。
-* Group Managed Service Account （ gMSA ；グループ管理サービスアカウント）を使用している場合は、管理者権限を持つ gMSA を設定する必要があります。
+* 8f05fee715847e93ae80e8cf617cceb9
+* 6f4630c11483dcb4143ae30dadd50487
+* 7cfe72b14626cbdfa82c7d1d900586aa
+* b5eb0b5304f9fc2eda1c4758804a309a
+* 495a029c5d7c250f801f4d0c65513c50
 +
-link:task_configure_gMSA_on_windows_server_2012_or_later.html["Windows Server 2016以降でWindowsファイルシステム用にグループ管理サービスアカウントを設定する"]
+b902f9b136db8785ffebe07191e9ef90
 
 
 
-.このタスクについて
-* SnapCenter サーバをプラグインホストとして別の SnapCenter サーバに追加することはできません。
-* Windows プラグイン
+.bbe48fb854ea022537208eeeff822f91
+* 302ca62990c674aa6f608e6444c00482
+* cce76c1c114e69fd9b5ed7b130742034
 +
-** Microsoft Windows の場合
-** Microsoft Exchange Server の略
-** Microsoft SQL Server の場合
-** SAP HANA のサポート
-** カスタムプラグイン
+** bb79f96acbff544ded541446c9c7c894
+** a561a8020c6cf9c0bfcf2c0057ac1550
+** 78898e52fcbdc5337204a384f2456d4f
+** 86083f3ea21c2385b4f013aae3c57858
+** 9633d377e08af5a450ec353928e1d24b
 
 
-* クラスタへのプラグインのインストール
+* f66a5076dc4b38e6e6f6d1850002d8e7
 +
-クラスタ（ WSFC 、 Oracle RAC 、または Exchange DAG ）にプラグインをインストールすると、クラスタのすべてのノードにインストールされます。
+d5567ab77d3010f86325ff6576826879
 
-* E-Series ストレージ
+* 6b138857d259637a1bf0819ec12805f4
 +
-E シリーズストレージに接続された Windows ホストに Plug-in for Windows をインストールすることはできません。
+985a682f49f5796a4ea6a9800816a6f3
 
 
 
 
-NOTE: SnapCenterでは、すでにワークグループに属していて別のドメインに変更されたホスト（プラグインホスト）をSnapCenterに追加することはできません。その逆も同様です。
-同じホストを追加する場合は、SnapCenterからホストを削除して再度追加する必要があります。
+NOTE: 42324a0900df941e87541a0b972b834f
 
-.手順
-. 左側のナビゲーションペインで、 * Hosts * （ホスト）をクリックします。
-. 上部で [Managed Hosts] が選択されていることを確認します。
-. [ 追加（ Add ） ] をクリックします。
-. Hosts ページで、次の手順を実行します。
-+
-|===
-| フィールド | 手順 
-
-
- a| 
-ホストタイプ
- a| 
-Windows * タイプのホストを選択します。
-
-SnapCenter Server によってホストが追加され、 Plug-in for Windows がまだホストにインストールされていない場合はインストールされます。
-
-
-
- a| 
-ホスト名
- a| 
-ホストの完全修飾ドメイン名（ FQDN ）または IP アドレスを入力します。
-
-SnapCenter は、 DNS の適切な設定によって異なります。そのため、ベストプラクティスは Fully Qualified Domain Name （ FQDN ；完全修飾ドメイン名）を入力することです。
-
-次のいずれかの IP アドレスまたは FQDN を入力できます。
-
-** スタンドアロンホスト
-** Windows Server フェイルオーバークラスタリング（ WSFC ）
-+
-SnapCenter を使用してホストを追加する際、ホストがサブドメインの一部である場合は、 FQDN を指定する必要があります。
-
-
-
-
-
- a| 
-クレデンシャル
- a| 
-作成したクレデンシャルの名前を選択するか、新しいクレデンシャルを作成します。
-
-このクレデンシャルには、リモートホストに対する管理者権限が必要です。詳細については、クレデンシャルの作成に関する情報を参照してください。
-
-ユーザ名、ドメイン、ホストタイプなど、クレデンシャルの詳細は、指定したクレデンシャル名にカーソルを合わせると表示されます。
-
-
-NOTE: 認証モードは、ホストの追加ウィザードで指定したホストタイプによって決まります。
-
-|===
-. インストールするプラグインの選択セクションで、インストールするプラグインを選択します。
-+
-新規導入の場合、プラグインパッケージは表示されません。
-
-. （オプション） * その他のオプション * をクリックします。
+.f3a29486bed19a90f2da6d007818b427
+. e3496f6d2696003cd08139c96386cc45
+. 07716054933755edaa9ed4c5d855a4c5
+. 7dee7e783d13b6d5d415926ce0bfc306
+. e0902178b3a4911c34f934ab886ffefa
 +
 |===
-| フィールド | 手順 
+| 21f831502a413a739e20cbf9f2eefe54 | 5e2ad6fd9deb412d871137094ee43ef0 
 
 
  a| 
-ポート
+c2ece9a18147c056e75e4008644a9526
  a| 
-デフォルトのポート番号をそのまま使用するか、ポート番号を指定します。
+89fc61a18422cc5ac697346cdc638c8a
 
-デフォルトのポート番号は 8145 です。SnapCenter サーバがカスタムポートにインストールされている場合は、そのポート番号がデフォルトポートとして表示されます。
-
-
-NOTE: プラグインを手動でインストールし、カスタムポートを指定した場合は、同じポートを指定する必要があります。そうしないと、処理は失敗します。
+854fb7c261d9424b7afc73ff6ae9fcf8
 
 
 
  a| 
-インストールパス
+dae4a538d4ca7b6c0789932062fe718d
  a| 
-デフォルトパスは C ： \Program Files\NetApp\SnapManager です。
+72a13f30a6788edd22e63a276048ccc0
 
-必要に応じて、パスをカスタマイズできます。SnapCenter Plug-ins Package for Windows のデフォルトパスは C ： \Program Files\NetApp\SnapManager です。ただし、必要に応じて、デフォルトパスをカスタマイズできます。
+5fcdfa70c27641da2a37dfbd1c9eea7d
+
+ad0f209682d80f1f65a22a0d900f6e44
+
+** 54f3045d4ebbbd4bbe0a0648d758b68f
+** 9fdebe93de822a51a910e1d372114579
++
+8bfb44cd1688c0e149cc1bbc2d43f842
 
 
-
- a| 
-クラスタ内のすべてのホストを追加します
- a| 
-WSFC のすべてのクラスタノードを追加するには、このチェックボックスを選択します。
-
-
-
- a| 
-インストール前のチェックをスキップします
- a| 
-プラグインを手動でインストール済みで、プラグインのインストール要件をホストが満たしているかどうかを検証しない場合は、このチェックボックスを選択します。
 
 
 
  a| 
-プラグインサービスを実行するには、 Group Managed Service Account （ gMSA ；グループ管理サービスアカウント）を使用します
+2daf1cb573c2c61422faf64610cf9402
  a| 
-グループ管理サービスアカウント（ GMSA ）を使用してプラグインサービスを実行する場合は、このチェックボックスをオンにします。
+99b372fe9195ca551199aedf4919b434
 
-gMSA 名を _domainName\accountName$_ の形式で指定します。
+1b68d93087eab33da5f5cd84be89db7d
+
+8c815702bcd69199ccba71b293171ff3
 
 
-NOTE: gMSA は、 SnapCenter Plug-in for Windows サービスのログオンサービスアカウントとしてのみ使用されます。
+NOTE: b456a3f3094e965f066bd64eda5a0c70
 
 |===
-. [Submit （送信） ] をクリックします。
+. 6b692819d998ae388c39a67efd81ebbd
 +
-「 * 事前確認をスキップ」チェックボックスを選択していない場合、プラグインのインストール要件をホストが満たしているかどうかが検証されます。ディスクスペース、 RAM 、 PowerShell のバージョン、 .NET のバージョン、および場所が、最小要件に照らして検証されます。最小要件を満たしていない場合は、対応するエラーまたは警告メッセージが表示されます。
+954a1dc8e8d54ba169349be140c6d797
+
+. 7c69d0be774577dea935bd27ecfffc7e
++
+|===
+| 21f831502a413a739e20cbf9f2eefe54 | 5e2ad6fd9deb412d871137094ee43ef0 
+
+
+ a| 
+60aaf44d4b562252c04db7f98497e9aa
+ a| 
+89a7299757b60000d5637c7fe6acdfe3
+
+4960663d88bb5e09eca4e1af717a14d8
+
+
+NOTE: 715f053db5d8f4a2009a86dc1edc360a
+
+
+
+ a| 
+5dc1b0641298a4446796a3eaf96c13d9
+ a| 
+3f47b1eed98cdbfd1b8339f5c7ff76e1
+
+89369317547508f73174b251351213fb
+
+
+
+ a| 
+3c8b950c84a4de35d80a465ed87f5fc3
+ a| 
+0f24a42c91809cffb3303665febc60e6
+
+
+
+ a| 
+8c52a2170baa38b939bd1890216f50b0
+ a| 
+66fbc10672da3dc1e4451a1850b5e5b1
+
+
+
+ a| 
+193c67ad9a593e499fcbd4795d42fe04
+ a| 
+8726526590ca684b1f852927da592b2b
+
+3855235b9d39f566dd99d988273951b6
+
+
+NOTE: 3258f498fadd468c49c745cd6710c797
+
+|===
+. 4b5d2dd70af718ebe67bfea5b43d8667
++
+ef3600a5849bde43368ee5e3a3f04387
 
 +
-エラーがディスクスペースまたは RAM に関連している場合は、「 C ： \Program Files\NetApp\SnapCenter ’ WebApp 」にある web.config ファイルを更新して、デフォルト値を変更できます。エラーが他のパラメータに関連している場合は、問題を修正する必要があります。
+29fe637bbb7672fbfc5c4cdb45aa775b
 
 +
 
-NOTE: HA セットアップで web.config ファイルを更新する場合は、両方のノードでファイルを更新する必要があります。
+NOTE: dd81c680ca1fd86d935da9ccaf370cee
 
-. インストールの進行状況を監視します。
+. d85bbbe120029d5b6ffbe773f5192a80
 

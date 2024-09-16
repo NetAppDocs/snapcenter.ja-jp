@@ -2,126 +2,126 @@
 permalink: protect-hana/task_configure_CA_certificate_for_saphana_on_windows_host.html 
 sidebar: sidebar 
 keywords: SnapCenter 
-summary: Windows ホストで SnapCenter Custom Plug-ins サービスの CA 証明書を設定します 
+summary: 56e9f299379f1f27ee946b3cc5197ca7 
 ---
-= Windows ホストで SnapCenter SAP HANA Plug-ins サービスの CA 証明書を設定します
+= 6abd8b687a0e2a8c4da6b246a16a0af1
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-カスタムプラグインキーストアとその証明書のパスワードの管理、 CA 証明書の設定、カスタムプラグインの信頼ストアへのルート証明書または中間証明書の設定、 SnapCenter Custom Plug-ins の信頼ストアを使用したカスタムプラグインの信頼ストアへの CA 署名キーペアの設定、インストールされたデジタル証明書のアクティブ化が必要です。
+51a29df7437c4fa534c9d8e3649160c0
 
-カスタムプラグインは、 _ C ： \Program Files\NetApp\SnapManager \Snapcenter Plug-in Creator\etc_both にある file_keystore.JKS_を 信頼ストアおよびキーストアとして使用します。
+1b212b031e5ee4eaf1c77f008a7bd0b9
 
 
 
-== カスタムプラグインのキーストアのパスワード、および使用中の CA 署名済みキーペアのエイリアスを管理します
+== 9da463b2b61e23d3fe7ab13642c5e3aa
 
-.手順
-. カスタムプラグインキーストアのデフォルトパスワードは、カスタムプラグインエージェントのプロパティファイルから取得できます。
+.f3a29486bed19a90f2da6d007818b427
+. b741c1960e79b37abf87bc732960670f
 +
-key_keystore.pass_ に対応する値です。
+4f2ba1a9b499a3443a6a6c444cbd8466
 
-. キーストアのパスワードを変更します。
+. e32ebbb17be02a7eaf806904e218c1c1
 +
-_keytool -storepasswd -keystore keystore.JKS_
-
-+
-
-NOTE: Windows のコマンドプロンプトで「 keytool 」コマンドが認識されない場合は、 keytool コマンドを完全なパスに置き換えます。
+19dced36a23aa4c7507c49068eb2c03e
 
 +
-_C ： \Program Files\Java\<JDK_version >\bin\keytool .exe "-storepasswd -keystore keystore.JKS_
 
-. キーストア内の秘密鍵エントリのすべてのエイリアスのパスワードを、キーストアに使用されているパスワードと同じパスワードに変更します。
-+
-_keytool -keypasswd -alias "alias_name_in_cert" -keystore keystore.JKS_
+NOTE: 2538e30b14698ab0bf9957f2d5adcee5
 
 +
-_agent.properties_ ファイル内のキー keystore.pass に対しても同じキーを更新します。
+66a51628c6dd933a877f720913f2b927
 
-. パスワードを変更したら、サービスを再起動してください。
+. 9c53ace0e3dbdc38d844dcf02f4304ba
 +
-
-NOTE: カスタムプラグインキーストアのパスワード、および秘密鍵に関連付けられているすべてのエイリアスパスワードが同じである必要があります。
-
-
-
-
-
-== ルート証明書または中間証明書をカスタムプラグインの信頼ストアに設定します
-
-カスタムプラグインの信頼ストアの秘密鍵を使用せずにルート証明書または中間証明書を設定する必要があります。
-
-.手順
-. カスタムプラグインの keystore _C ： \Program Files\NetApp\Virtual \SnapCenter \Snapcenter Plug-in Creator\etc\備え ているフォルダに移動します
-. ファイル 'keystore.jkS' を探します。
-. キーストアに追加された証明書を表示します。
-+
-_keytool -list -v キーストア .JKS_
-
-. ルート証明書または中間証明書を追加します。
-+
-_keytool -import-trustcacerts -alias myRootCA -file/root/USERTrustRSA_Root.cer -keystore keystore.JKS_
-
-. カスタムプラグインの信頼ストアにルート証明書または中間証明書を設定したら、サービスを再起動してください。
-
-
-
-NOTE: ルート CA 証明書、中間 CA 証明書の順に追加する必要があります。
-
-
-
-== CA 署名キーペアをカスタムプラグインの信頼ストアに設定します
-
-CA 署名キーペアをカスタムプラグインの信頼ストアに設定する必要があります。
-
-.手順
-. カスタムプラグインの keystore _C ： \Program Files\NetApp\Virtual \SnapCenter \Snapcenter Plug-in Creator\etc\備え ているフォルダに移動します
-. file_keystore.JKS_</Z1> を探します。
-. キーストアに追加された証明書を表示します。
-+
-_keytool -list -v キーストア .JKS_
-
-. 秘密鍵と公開鍵の両方を含む CA 証明書を追加します。
-+
-_keytool -importkeystore -srckeystore.root/ snapcenter.ssl.test.netapp.com.pfx -srcstoretype pkcs12 -destkeystore keystore.JKS -deststoretype JKS_
-
-. キーストアに追加された証明書を表示します。
-+
-_keytool -list -v キーストア .JKS_
-
-. キーストアに、キーストアに追加された新しい CA 証明書に対応するエイリアスが含まれていることを確認します。
-. CA 証明書用に追加された秘密鍵のパスワードをキーストアのパスワードに変更します。
-+
-デフォルトのカスタムプラグインキーストアパスワードは、 agent.properties ファイル内のキー keystore.pass の値です。
+fae24c68746428bc01a6976996e11eb6
 
 +
-_keytool -keypasswd -alias "alias_name_in_ca_cert" -keystore keystore.JKS__
+d4cf07e2f6f2f8f14d91659efdc82d0f
 
-. _agent.properties_ ファイルの CA 証明書からエイリアス名を設定します。
+. e1114844301394bfab9164689b3f9f77
 +
-この値をキー SCC_CERTIFICATE_ALIAS に更新します。
 
-. CA 署名済みキーペアをカスタムプラグインの信頼ストアに設定したら、サービスを再起動します。
-
+NOTE: 1746a736dc1a04cee7ebe7c17449348d
 
 
 
-== SnapCenter Custom Plug-ins の証明書失効リスト（ CRL ）を設定します
-
-.このタスクについて
-* 関連する CA 証明書の最新の CRL ファイルをダウンロードするには、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_update_certificate_revocation_list_file_in_SnapCenter_CA_Certificate["SnapCenter CA 証明書の証明書失効リストファイルを更新する方法"]。
-* SnapCenter カスタムプラグインは、事前に設定されたディレクトリ内の CRL ファイルを検索します。
-* SnapCenter カスタムプラグインの CRL ファイルのデフォルトディレクトリは、 _'C:\Program Files\NetApp\SnapCenter \Snapcenter Plug-in Creator\etc\crl'_ です。
 
 
-.手順
-. _agent.properties_ ファイルのデフォルトディレクトリを、キー crl_path に対して変更および更新できます。
-. このディレクトリに複数の CRL ファイルを配置できます。
+== 256bd726c5c8cab1c5ea0f9e796f5965
+
+155033ac3710d50f11dcf73b23618ff9
+
+.f3a29486bed19a90f2da6d007818b427
+. ce01b951440a84341498063a416262a0
+. 7d315e2f30c60f7b0d5a4fe26f119ab2
+. 706343adbd839cf9e73fb5f15c1cb3b9
 +
-着信証明書は各 CRL に対して検証されます。
+40fdd302087eb1ad5eb70b4d6ab94188
+
+. e792c32ecac1acaff7821d45e1e214d7
++
+c9e96240b81287a92a56796f491e6a47
+
+. 9712b66959e53dd56caee0b446a4b341
+
+
+
+NOTE: 1df512af62f1258662a90107366384d7
+
+
+
+== fa022a8acd4a44b539e8d7e8455ffe19
+
+9d74dd7b3f156596731e7aa28b4bb608
+
+.f3a29486bed19a90f2da6d007818b427
+. da800a422c568642a01c09610b340ea4
+. 86970546fa51f1a9590e947c5a0e3735
+. 706343adbd839cf9e73fb5f15c1cb3b9
++
+40fdd302087eb1ad5eb70b4d6ab94188
+
+. bf9029c481f886c6ac95d1935371b6f0
++
+7814f27ab5a9368264f40840cdf8b5bc
+
+. ea64c68df49294aed2c5b2fcf603e243
++
+40fdd302087eb1ad5eb70b4d6ab94188
+
+. d57e9c478525aa47932eeb7d8b217240
+. 4b80542fc3ef5daca43d02c37fe3b113
++
+da4bc7b82286be276a29a9685b0b51a1
+
++
+008f667e8b400f4409460460559f3b36
+
+. 78fbcacb199632d7e1e185a59b3d6969
++
+56362f2790b041340e92aa3c79fb1cf8
+
+. c3600e2dd0c2139061208ea301e0862e
+
+
+
+
+== a6d1b1f70aba7a076e87d9ee31c17824
+
+.bbe48fb854ea022537208eeeff822f91
+* 24a2e65207c09cf282d93673b4d914e6
+* 64b09f6e0509cd50f9f53e4d3b8816dc
+* 078b96147129ddd471a2936a85c4743b
+
+
+.f3a29486bed19a90f2da6d007818b427
+. 30a5a3b4225672f77174a7923dcd20be
+. 0915303fa7e4b0735941130c587f9dbe
++
+08a3d5b2eaf4018edc7c9931318d54df
 
 

@@ -2,42 +2,42 @@
 permalink: protect-sco/task_clone_oracle_database_backups_using_unix_commands.html 
 sidebar: sidebar 
 keywords: clone, CLI, commands 
-summary: クローニングワークフローには、計画、クローニング処理の実行、および処理の監視が含まれます。 
+summary: e174be7156154463517dfe3b864d0329 
 ---
-= UNIX コマンドを使用して Oracle データベースバックアップをクローニングする
+= 7a617b0be4f39d4aa3728e5b589f610a
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-クローニングワークフローには、計画、クローニング処理の実行、および処理の監視が含まれます。
+e174be7156154463517dfe3b864d0329
 
-* このタスクについて *
+78166ce4ccceeedfbf6aeb8682851072
 
-次のコマンドを実行して、 Oracle データベースのクローン仕様ファイルを作成し、クローニング処理を開始する必要があります。
+ea8127768d4129b7c37a087dcade33cf
 
-コマンドで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP3323470["SnapCenter ソフトウェアコマンドリファレンスガイド"^]。
+bc3f01c8b7967405e08d06ae461bdcd7
 
-* 手順 *
+4839d2f25cc35b249d5db15efa1afd75
 
-. 指定したバックアップから Oracle データベースのクローン仕様を作成します： _New-SmOracleCloneSpecification_
+. 8f13a433d171fd7f3247ac54ccf09c57
 +
 
-NOTE: セカンダリデータ保護ポリシーが Unified mirror-vault の場合は、 -IncludeSecondaryDetails のみを指定します。SecondaryStorageType を指定する必要はありません。
+NOTE: 9d7d7be8b1bc025fbe4393721048e1bc
 
 +
-このコマンドは、指定したソースデータベースとそのバックアップに対して、 Oracle データベースのクローン仕様ファイルを自動的に作成します。作成するクローンデータベースに対して自動的に生成される値がこの仕様ファイルに取り込まれるようにするために、クローンデータベースの SID も指定する必要があります。
+24ef1fcf0ca84aee2e7486698f0aebdc
 
 +
 
-NOTE: クローン仕様ファイルは、 /var/opt/snapcenter /sca/clone_specs__ に作成されます。
+NOTE: 7823dfb5ecaef5d19a625f4ccd19e242
 
-. クローンリソースグループまたは既存のバックアップからクローン処理を開始する： _New-SmClone_
+. 6d88e17c6a3850b031316b0bbb02956e
 +
-このコマンドによってクローニング処理が開始されます。クローニング処理では、 Oracle クローン仕様ファイルのパスも指定する必要があります。リカバリオプション、クローニング処理が実行されるホスト、プリスクリプト、ポストスクリプト、およびその他の詳細を指定することもできます。
+f4a6eee40693b9670ad61e088f1ceea9
 
 +
-デフォルトでは、クローンデータベースのアーカイブログデスティネーションファイルには、 _$ORACLE_HOME/clone_SID_ が自動的に入力されます。
+351c543ba3f20ac3ad00ddfe3515f145
 
 

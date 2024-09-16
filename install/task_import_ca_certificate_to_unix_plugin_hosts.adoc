@@ -2,30 +2,28 @@
 permalink: install/task_import_ca_certificate_to_unix_plugin_hosts.html 
 sidebar: sidebar 
 keywords: security,authentication,import CA certificates 
-summary: CA証明書をUNIXプラグインホストにインポートする必要があります。 
+summary: 9e7f34933c1af065309071fd01a6cf3e 
 ---
-= CA証明書をUNIXプラグインホストにインポートします
+= cd4c2aff8d03392b1feec1e4027d56c6
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-CA証明書をUNIXプラグインホストにインポートする必要があります。
+9e7f34933c1af065309071fd01a6cf3e
 
-* このタスクについて *
+78166ce4ccceeedfbf6aeb8682851072
 
-* SPLキーストアのパスワード、および使用中のCA署名キーペアのエイリアスを管理できます。
-* SPLキーストアのパスワードと、秘密鍵に関連付けられているすべてのエイリアスパスワードは同じである必要があります。
+* 4fb85b60b1716c8666aada43c544f696
+* f251b877a40d36cc78e6fbcb8b75fe8d
 
 
-* 手順 *
+4839d2f25cc35b249d5db15efa1afd75
 
-. SPL プロパティファイルから SPL キーストアのデフォルトパスワードを取得できます。キーに対応する値です `SPL_KEYSTORE_PASS`。
-. キーストアのパスワードを変更します。
-`$ keytool -storepasswd -keystore keystore.jks`
-. キーストア内の秘密鍵エントリのすべてのエイリアスのパスワードを、キーストアに使用されているパスワードと同じパスワードに変更します。
-`$ keytool -keypasswd -alias "<alias_name>" -keystore keystore.jks`
-. SPL_KEYSTORE_PASS INキーについても同じ内容を更新します `spl.properties`` ファイル。
-. パスワードを変更したら、サービスを再起動してください。
+. 39fed6edcd2ad80043d51eea4ac3fb3d
+. cd6f5ef691756f2a57d26714b0ad1b43
+. 1655ea4e2f205b3033fbe9b39f935c1f
+. 924399f641b3ebc78e566f9306e9ea11
+. e1114844301394bfab9164689b3f9f77
 

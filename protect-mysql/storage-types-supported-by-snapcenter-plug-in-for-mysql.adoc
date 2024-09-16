@@ -2,38 +2,38 @@
 permalink: protect-mysql/storage-types-supported-by-snapcenter-plug-in-for-mysql.html 
 sidebar: sidebar 
 keywords: storage types, 
-summary: SnapCenter は、物理マシンと仮想マシン（ VM ）の両方でさまざまなストレージタイプをサポートしています。SnapCenter Plug-in for MySQLをインストールする前に、ストレージタイプがサポートされていることを確認する必要があります。 
+summary: 3a16a89981eac15a65e1d123f0f768f0 
 ---
-= SnapCenter Plug-in for MySQLでサポートされるストレージタイプ
+= a8e3ba965f3e160532b9d3ee582e1c53
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter は、物理マシンと仮想マシン（ VM ）の両方でさまざまなストレージタイプをサポートしています。SnapCenter Plug-in for MySQLをインストールする前に、ストレージタイプがサポートされていることを確認する必要があります。
+3a16a89981eac15a65e1d123f0f768f0
 
 |===
-| マシン | ストレージタイプ 
+| 47c954121886a5e5aaca7eece461b56f | f0cb6783b152b19ceab16227ca3976a2 
 
 
  a| 
-物理サーバと仮想サーバ
+faa63149f52ece978423f5b04c274cf6
  a| 
-FC 接続 LUN
-
-
-
- a| 
-物理サーバ
- a| 
-iSCSI で接続された LUN
+3a14bc2a9e80eb39a44cd07a0d40b62b
 
 
 
  a| 
-物理サーバと仮想サーバ
+e042e676706d93b3b14ce12e4d00a002
  a| 
-NFS-connected ボリューム
+f83bf140a9f6b8a345e508ecdc999c4b
+
+
+
+ a| 
+faa63149f52ece978423f5b04c274cf6
+ a| 
+df750015db6d85e88db15a90ebbf9147
 
 |===

@@ -2,22 +2,22 @@
 permalink: protect-postgresql/define-a-restore-and-recovery-strategy-for-postgresql-resources.html 
 sidebar: sidebar 
 keywords: restore and recovery strategy, postgresql resources, snapcenter 
-summary: クラスタのリストアとリカバリを実行する前に戦略を定義しておくと、リストア処理とリカバリ処理を正常に実行できるようになります。 
+summary: 6fc70bfe89e0ee0939b1aecf11f33396 
 ---
-= PostgreSQLリソースのリストアおよびリカバリ戦略の定義
+= e82a2bff93a0cfe272d3ead3e0475b2f
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-クラスタのリストアとリカバリを実行する前に戦略を定義しておくと、リストア処理とリカバリ処理を正常に実行できるようになります。
+6fc70bfe89e0ee0939b1aecf11f33396
 
 
-NOTE: クラスタの手動リカバリのみがサポートされます。
+NOTE: 566c831c5f4f5c07275263b3fdf6e160
 
-.手順
-. 手動で追加したPostgreSQLリソースでサポートされているリストア戦略を確認する
-. 自動検出されたPostgreSQLクラスタでサポートされているリストア戦略を確認する
-. 実行するリカバリ処理のタイプを決定します。
+.f3a29486bed19a90f2da6d007818b427
+. 13170ce7d008bee17f3c3747a28280b9
+. 4f48e498e8a0c5d594d54d093923fb89
+. 800d9ecff276a543c6a41dcc0239d94b
 

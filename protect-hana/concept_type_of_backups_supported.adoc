@@ -2,25 +2,25 @@
 permalink: protect-hana/concept_type_of_backups_supported.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for SAP HANA Database 
-summary: バックアップタイプでは、作成するバックアップのタイプを指定します。SnapCenter では、 SAP HANA データベースについて、ファイルベースのバックアップと Snapshot コピーベースのバックアップをサポートしています。 
+summary: 624da959c6b9ec232f2bebd4c11e271a 
 ---
-= サポートされるバックアップのタイプ
+= 2a681580cba5d0bac1fe8b6665a6a47e
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-バックアップタイプでは、作成するバックアップのタイプを指定します。SnapCenter では、 SAP HANA データベースについて、ファイルベースのバックアップと Snapshot コピーベースのバックアップをサポートしています。
+624da959c6b9ec232f2bebd4c11e271a
 
 
 
-== File-Based バックアップ
+== 7856cdeaea7e701262739e1779b10aa3
 
-ファイルベースのバックアップでは、データベースの整合性が検証されます。ファイルベースのバックアップの処理は一定の間隔で実行するようにスケジュールを設定できます。アクティブなテナントのみがバックアップされます。ファイルベースのバックアップは SnapCenter からリストアおよびクローニングできません。
+4c61ae71e16d4bd98d42fac16e453319
 
 
 
-== Snapshot コピーベースのバックアップ
+== c6dba23441b7b81118b01afb845de37e
 
-Snapshotコピーベースのバックアップでは、NetApp Snapshotテクノロジを活用して、SAP HANAデータベースが格納されているボリュームのオンラインの読み取り専用コピーを作成します。
+360b1745b63d8c10b566bfa854abc3ac

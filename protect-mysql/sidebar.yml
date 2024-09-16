@@ -1,148 +1,148 @@
 ---
 section: protect-mysql
-title: MySQLの保護
+title: '018574050002dfdb703111e592ace12f'
 entries:
-- title: MySQL用SnapCenterプラグイン
+- title: aa96d0986aa898ff8efdb0e691f15a6c
   entries:
-  - title: SnapCenter Plug-in for MySQLの概要
+  - title: 0f64e6a9887a50782cb776f9fd8cd49a
     url: "/protect-mysql/snapcenter-plug-in-for-mysql-overview.html"
-  - title: SnapCenter Plug-in for MySQLの機能
+  - title: 2e5607daa260d8cb7d3ee3e88bb0dac6
     url: "/protect-mysql/what-you-can-do-using-the-snapcenter-plug-in-for-mysql.html"
-  - title: SnapCenter Plug-in for MySQLの特長
+  - title: 0ce8bb1c11c9d867461ad1c0b83e04c0
     url: "/protect-mysql/snapcenter-plug-in-for-mysql-features.html"
-  - title: SnapCenter Plug-in for MySQLでサポートされるストレージタイプ
+  - title: a8e3ba965f3e160532b9d3ee582e1c53
     url: "/protect-mysql/storage-types-supported-by-snapcenter-plug-in-for-mysql.html"
-  - title: 必要な最小 ONTAP 権限
+  - title: fa82b0b99da0e46e629baf5081d8fee2
     url: "/protect-mysql/minimum-privileges-required-for-mysql.html"
-  - title: SnapMirror レプリケーションと SnapVault レプリケーションのためのストレージシステムを準備
+  - title: e1470cbc380c0e4285ea434aa1f30381
     url: "/protect-mysql/prepare-storage-systems-for-snapmirror-and-snapvault-replication-for-plugin-for-mysql.html"
-  - title: MySQLノハツクアツフセンリヤク
+  - title: 480a58f957113c013a4f97a97225f455
     entries:
-    - title: MySQLのバックアップ戦略を定義する
+    - title: e932d8ba8fc72da511207a7c3a8028c2
       url: "/protect-mysql/define-a-backup-strategy-for-mysql.html"
-    - title: Linux ホスト上のリソースの自動検出
+    - title: d63d0f9078f63941d9f67771c5293aac
       url: "/protect-mysql/auto-discovery-of-resources-on-linux-host.html"
-    - title: サポートされるバックアップのタイプ
+    - title: 2a681580cba5d0bac1fe8b6665a6a47e
       url: "/protect-mysql/type-of-backups-supported.html"
-    - title: SnapCenter Plug-in for MySQLでの整合グループSnapshotコピーの使用方法
+    - title: bbf3a953a485653e64b0cb23731f98b5
       url: "/protect-mysql/how-snapcenter-plug-in-for-mysql-uses-consistency-group-snapshot-copies.html"
-    - title: SnapCenterによる不要なデータバックアップの削除の管理方法
+    - title: 352752e5faea0777db6f96a1ad413289
       url: "/protect-mysql/housekeeping-of-log-backups.html"
-    - title: MySQLのバックアップスケジュールを決定する際の考慮事項
+    - title: c2a08d843dd8829b772d59022d3e804d
       url: "/protect-mysql/considerations-for-determining-backup-schedules-for-mysql.html"
-    - title: MySQLに必要なバックアップジョブの数
+    - title: 75efa3866cb2052e4610e184f8b70784
       url: "/protect-mysql/number-of-backup-jobs-needed-for-mysql.html"
-    - title: バックアップの命名規則
+    - title: b45046fe84c0ce347f0d9ea08f2991c3
       url: "/protect-mysql/backup-naming-conventions-for-plugin-for-mysql.html"
-  - title: MySQLノリストアオヨヒリカハリセンリヤク
+  - title: 4d13a16d32bf4b1327fadcf5f2aa372d
     entries:
-    - title: MySQLリソースのリストアとリカバリの戦略を定義する
+    - title: e3879d14076d16c108d7b3f29fb2912f
       url: "/protect-mysql/define-a-restore-and-recovery-strategy-for-mysql-resources.html"
-    - title: 手動で追加したMySQLリソースでサポートされるリストア戦略のタイプ
+    - title: eeba29ead31232775d1664e9b3919c4a
       url: "/protect-mysql/types-of-restore-strategies-supported-for-manually-added-mysql.html"
-    - title: 自動検出されたMySQLでサポートされるリストア戦略のタイプ
+    - title: 153a2925fb90e14d2b20aaa8af9e7660
       url: "/protect-mysql/types-of-restore-strategies-supported-for-auto-discovered-mysql.html"
-    - title: 自動検出されたMySQLのリストア処理のタイプ
+    - title: ada7dc28b5c70bef4ecf0c92798d1e43
       url: "/protect-mysql/types-of-restore-performed-for-auto-discovered-mysql.html"
-- title: SnapCenter Plug-in for MySQLのインストールの準備
+- title: c531e5b5d02ee03ac4fecc8615a14d57
   entries:
-  - title: SnapCenter Plug-in for MySQLのインストールワークフロー
+  - title: 0fbfc51622bb59626e732f6b2e434d9f
     url: "/protect-mysql/install-snapcenter-plug-in-for-mysql.html"
-  - title: ホストを追加してSnapCenter Plug-in for MySQLをインストールするための前提条件
+  - title: ab82ab41fa1594c9a4a69bff729855ba
     url: "/protect-mysql/prerequisites-to-adding-hosts-and-installing-snapcenter-plug-in-for-mysql.html"
-  - title: SnapCenter Plug-ins Package for Windows をインストールするホストの要件
+  - title: 05fc12ecf449ac264abfd66ddab37332
     url: "/protect-mysql/host-requirements-to-install-snapcenter-plug-in-package-for-windows-mysql.html"
-  - title: SnapCenter Plug-ins Package for Linux をインストールするためのホストの要件
+  - title: ac33edef4526164e3c7c9a4df9986310
     url: "/protect-mysql/host-requirements-to-install-snapcenter-plug-in-package-for-linux.html"
-  - title: SnapCenter Plug-in for MySQLのクレデンシャルを設定
+  - title: 26f012751d0422897cf8be8bfbe0e184
     url: "/protect-mysql/set-up-credentials-for-snapcenter-plug-in-for-mysql.html"
-  - title: SnapCenter Plug-in for MySQLのインストール
+  - title: 0d1aafd347801e1c28235ed9f606913b
     entries:
-    - title: ホストを追加し、プラグインパッケージをリモートホストにインストールする
+    - title: d959bbdfecd7dd6a3f75f5a871cbbe02
       url: "/protect-mysql/add-hosts-and-install-plug-in-packages-on-remote-hosts-mysql.html"
-    - title: コマンドレットを使用して、複数のリモートホストに Linux または Windows 用の SnapCenter プラグインパッケージをインストールします
+    - title: 85e03b5aac12ea0d7a83ca6e7fa64654
       url: "/protect-mysql/install-snapcenter-plug-in-packages-for-linux-or-windows-on-multiple-remote-hosts-using-cmdlets-mysql.html"
-    - title: コマンドラインインターフェイスを使用して、LinuxホストにSnapCenter Plug-in for MySQLをインストールする
+    - title: 50c8ccf3394227f18c53f0a10359a567
       url: "/protect-mysql/install-the-snapcenter-plug-in-for-mysql-on-linux-hosts-using-the-command-line-interface.html"
-    - title: SnapCenter プラグインパッケージのインストールステータスを監視する
+    - title: 8b8199b2cc69508101df27784ccae8d5
       url: "/protect-mysql/monitor-the-status-of-installing-plugin-for-mysql.html"
-  - title: CA 証明書を設定します
+  - title: e94a41320f7b470ab4c94c28575be94e
     entries:
-    - title: CA 証明書 CSR ファイルを生成します
+    - title: 5c4de78a2b621074bf68ab1c644af297
       url: "/protect-mysql/generate-CA-certificate-CSR-file.html"
-    - title: CA 証明書をインポートする
+    - title: 463f3aea4c7a61c6bfaa026c1c1c490c
       url: "/protect-mysql/import-CA-certificates.html"
-    - title: CA 証明書のサムプリントを取得します
+    - title: 9772bdc36f54d8bb6dc779a222af547c
       url: "/protect-mysql/get-the-CA-certificate-thumbprint.html"
-    - title: Windows ホストプラグインサービスを使用して CA 証明書を設定する
+    - title: 1067e8b574748bfd5d0147a621c7ca24
       url: "/protect-mysql/configure-CA-certificate-with-Windows-host-plug-in-services.html"
-    - title: LinuxホストでのSnapCenter MySQLプラグインサービス用のCA証明書の設定
+    - title: 0dfabcb39ba57463ff60fac9a6ef98b9
       url: "/protect-mysql/configure-CA-certificate-for-mysql-on-Linux-host.html"
-    - title: Windowsホスト上のSnapCenter MySQLプラグインサービス用のCA証明書の設定
+    - title: fcf09390b67d36433a1b5d8a3baa2685
       url: "/protect-mysql/configure-CA-certificate-for-mysql-on-windows-host.html"
-    - title: プラグインの CA 証明書を有効にします
+    - title: 0b65a155991bcbd016cf199f401ea183
       url: "/protect-mysql/enable-ca-certificates-for-plug-ins.html"
-- title: データ保護を準備
+- title: 391acd305e11894b8f29370b098d9f25
   entries:
-  - title: SnapCenter Plug-in for MySQLを使用するための前提条件
+  - title: bcba27ed7b96126699c23b4eaa441449
     url: "/protect-mysql/prerequisites-for-using-snapcenter-plug-in-for-mysql.html"
-  - title: MySQLを保護するためのリソース、リソースグループ、ポリシーの使用方法
+  - title: a44bea300ebfa8b4240129a005791668
     url: "/protect-mysql/how-resources-resource-groups-and-policies-are-used-for-protecting-mysql.html"
-- title: MySQLリソースのバックアップ
+- title: a409a6484e53d60a1a0601527b6015bd
   entries:
-  - title: バックアップのワークフロー
+  - title: 0e1b3005c7d7fef8012117ae579df248
     url: "/protect-mysql/back-up-mysql-resources.html"
-  - title: データベースを自動的に検出します
+  - title: 7ae0ad473e0b444f584e63e025e0d4e0
     url: "/protect-mysql/discover-the-databases-automatically.html"
-  - title: プラグインホストにリソースを手動で追加します
+  - title: b39d1e4f73b157bb2f5b3a972e89eeb6
     url: "/protect-mysql/add-resources-manually-to-the-plug-in-host.html"
-  - title: MySQLのバックアップポリシーの作成
+  - title: 457cf0ddd03ecb5723cf0e0995711f91
     url: "/protect-mysql/create-backup-policies-for-mysql.html"
-  - title: リソースグループを作成してポリシーを適用
+  - title: 7f9a1e0f8fc64e3f207d5cd83dd8e67f
     url: "/protect-mysql/create-resource-groups-and-attach-policies.html"
-  - title: MySQLのバックアップ
+  - title: e6770a787cde99b145a6de020f6a9d3e
     url: "/protect-mysql/back-up-mysql.html"
-  - title: リソースグループをバックアップする
+  - title: dbc89dfae1c6c8ad4eb43878b9171ca6
     url: "/protect-mysql/back-up-resource-groups-mysql.html"
-  - title: MySQL用のPowerShellコマンドレットを使用して、ストレージシステム接続とクレデンシャルを作成する
+  - title: 7bb3a0079265cf09b29eff89ba4c9107
     url: "/protect-mysql/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-mysql.html"
-  - title: PowerShell コマンドレットを使用してデータベースをバックアップします
+  - title: 0db7de34dbf5c1c143a3f3c98858115e
     url: "/protect-mysql/back-up-databases-using-powershell-cmdlets-mysql.html"
-  - title: バックアップ処理を監視する
+  - title: 419e354d2124d18b011fd9f9fecbed3d
     entries:
-    - title: SnapCenter Jobs ページでバックアップ処理を監視します
+    - title: 6119871227cfd0ac53fa00369e5ea153
       url: "/protect-mysql/monitor-mysql-backup-operations.html"
-    - title: アクティビティペインで操作を監視します
+    - title: de446367e805aef49330ce87fc36fc93
       url: "/protect-mysql/monitor-dataprotection-operations-on-mysql-in-the-activity-pane.html"
-  - title: バックアップ処理をキャンセルします
+  - title: f2098dd68244eba28833e305c4c720a3
     url: "/protect-mysql/cancel-backup-operations-for-mysql.html"
-  - title: "[Topology]ページでのMySQLデータベースのバックアップとクローンの表示"
+  - title: f8ec35321e854dc696eede14c98e61f0
     url: "/protect-mysql/view-mysql-database-backups-and-clones-in-the-topology-page.html"
-- title: MySQLのリストア
+- title: 74f11b6391f86775587d7212c298b439
   entries:
-  - title: リストアワークフロー
+  - title: e30c3d908a4ed515e16791b672cc0709
     url: "/protect-mysql/restore-mysql.html"
-  - title: 手動で追加したリソースバックアップをリストアおよびリカバリする
+  - title: 1dd409d7b835d13842d9f347c93a6de3
     url: "/protect-mysql/restore-and-recover-a-manually-added-resource-backup.html"
-  - title: 自動検出されたデータベースバックアップをリストアおよびリカバリする
+  - title: d1dcb191b3293b8d153cab7dba108004
     url: "/protect-mysql/restore-and-recover-an-auto-discovered-database-backup.html"
-  - title: PowerShellコマンドレットを使用したMySQLのリストア
+  - title: 2fd821a84f4f2d04dfd883d9e831b487
     url: "/protect-mysql/restore-mysql-using-powershell-cmdlets.html"
-  - title: PowerShell コマンドレットを使用してリソースをリストアする
+  - title: 3f90ba06baa30f2e66df25302c79cd63
     url: "/protect-mysql/restore-and-recover-resources-using-powershell-cmdlets-mysql.html"
-  - title: リストア処理を監視する
+  - title: 5eaf8dd6f947b26a0ad9f982dce18311
     url: "/protect-mysql/monitor-mysql-restore-operations.html"
-- title: MySQLリソースのバックアップをクローニング
+- title: 66d8fc5dc91943dfb2a42f390879dbaa
   entries:
-  - title: クローニングワークフロー
+  - title: 7f9567749606082611d69fd511d51593
     url: "/protect-mysql/clone-mysql-resource-backups.html"
-  - title: MySQLデータベースのバックアップをクローニング
+  - title: e21d8a65aeaef70217d9755dfc6ca944
     url: "/protect-mysql/clone-mysql-backup.html"
-  - title: PowerShellコマンドレットを使用したMySQLデータベースのバックアップのクローニング
+  - title: 7bf249a0d2f6ca34f234e49a7c6ae839
     url: "/protect-mysql/clone-mysql-backups-using-powershell-cmdlets.html"
-  - title: SnapCenter でクローニング処理を監視する
+  - title: 5cb6a75832518fd27c8d399ca2772808
     url: "/protect-mysql/monitor-mysql-clone-operations.html"
-  - title: クローンをスプリットします。
+  - title: d91a0b52cfc5d0c3e4b59e8544b3c61d
     url: "/protect-mysql/split-a-clone-for-mysql.html"
-  - title: SnapCenterのアップグレード後にMySQLデータベースクローンを削除またはスプリットする
+  - title: c454521ddc9c833a88969e46bb311833
     url: "/protect-mysql/delete-or-split-mysql-clones-after-upgrading-snapcenter.html"

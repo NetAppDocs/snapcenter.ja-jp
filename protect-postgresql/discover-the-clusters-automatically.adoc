@@ -2,46 +2,46 @@
 permalink: protect-postgresql/discover-the-clusters-automatically.html 
 sidebar: sidebar 
 keywords: credentials 
-summary: リソースとは、SnapCenterで管理されるLinuxホスト上のPostgreSQLクラスタです。これらのリソースをリソースグループに追加して、使用可能なPostgreSQLクラスタを検出したあとにデータ保護処理を実行できます。 
+summary: be0333a5327898998d299a16c30c5d2f 
 ---
-= クラスタの自動検出
+= a307ddaec8ef5ce7fda627549ce43ee6
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-リソースとは、SnapCenterで管理されるLinuxホスト上のPostgreSQLクラスタです。使用可能なPostgreSQLクラスタを検出したら、リソースをリソースグループに追加してデータ保護処理を実行できます。
+567bae5ee285d6f2c2938ee9db26580a
 
-.作業を開始する前に
-* SnapCenterサーバのインストール、ホストの追加、ストレージシステム接続のセットアップなどのタスクを完了しておく必要があります。
-* SnapCenter Plug-in for PostgreSQLでは、RDM / VMDK仮想環境にあるリソースの自動検出はサポートされていません。
-
-
-.このタスクについて
-* プラグインをインストールすると、そのLinuxホスト上のすべてのクラスタが自動的に検出されて[リソース]ページに表示されます。
-* 自動検出されるのはクラスタのみです。
+.135b308ed83c53f1516b7c754566d1c4
+* c39495ad9bcb958b9080a36f441abbbe
+* 7a2a64b9e34b83829db54174768bdcfb
 
 
-自動で検出されたリソースは変更または削除できません。
+.bbe48fb854ea022537208eeeff822f91
+* 1e87064c6fc048d30353f7cf823b5d0f
+* 65f657878fd634de133b2215d1251ccb
 
-.手順
-. 左側のナビゲーションペインで*[リソース]*をクリックし、リストからPlug-in for PostgreSQLを選択します。
-. [ リソース ] ページで、 [ 表示 ] リストからリソースタイプを選択します。
-. （オプション） * をクリックしますimage:../media/filter_icon.png["フィルタアイコン"]* をクリックし、ホスト名を選択します。
+
+a9d0e12f10920c999cb78960286bd82a
+
+.f3a29486bed19a90f2da6d007818b427
+. 218817147c54a1d8c207c78ad561bb47
+. 3e025b4a685d145a938552cff1a33612
+. 539da50c1cfbe2a04bb6b229f1dd0ee9
 +
-次に、 * をクリックしますimage:../media/filter_icon.png["フィルタアイコン"]* をクリックすると、フィルタペインが閉じます。
+dc56c1ed4d6e6f9e0b65bd544aa90f17
 
-. [* リソースの更新 * ] をクリックして、ホストで使用可能なリソースを検出します。
+. 0f034106893faef4643a4f2e45058c52
 +
-リソースは、リソースタイプ、ホスト名、関連するリソースグループ、バックアップタイプ、ポリシー、全体的なステータスなどの情報とともに表示されます。
+eb037ec78f327455a8e36a07871d70c6
 
 +
-** クラスタがNetAppストレージに配置されていて保護されていない場合は、[全体のステータス]列に「保護されていません」と表示されます。
-** クラスタがNetAppストレージシステム上にあり保護されている場合、バックアップ処理が実行されていないと、[全体のステータス]列に[バックアップが実行されていません]と表示されます。それ以外の場合は、前回のバックアップステータスに基づいて、「 Backup failed 」または「 Backup succeeded 」に変わります。
+** e736fa129907bb2140589421b89d11a0
+** 6616c30b44c4117b292e10b587f9c59d
 
 
 
 
 
-IMPORTANT: SnapCenterの外部でクラスタの名前を変更した場合は、リソースを更新する必要があります。
+IMPORTANT: 751aae135017ba7ff53fef9594dabf3a

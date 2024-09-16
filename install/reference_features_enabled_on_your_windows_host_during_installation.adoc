@@ -2,75 +2,75 @@
 permalink: install/reference_features_enabled_on_your_windows_host_during_installation.html 
 sidebar: sidebar 
 keywords: install, snapcenter 
-summary: SnapCenter Server インストーラを使用すると、インストール中に Windows ホストで Windows の機能とロールが有効になります。これらの情報は、トラブルシューティングやホストシステムのメンテナンスに役立つ場合があります。 
+summary: b6ac2f945924adc12a6cced3f4732d89 
 ---
-= インストール中に Windows ホストで有効になる機能
+= 03b777e98e70f41a1b91fc53f61e82ae
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter Server インストーラを使用すると、インストール中に Windows ホストで Windows の機能とロールが有効になります。これらの情報は、トラブルシューティングやホストシステムのメンテナンスに役立つ場合があります。
+b6ac2f945924adc12a6cced3f4732d89
 
 |===
-| カテゴリ | フィーチャー（ Feature ） 
+| 3adbdb3ac060038aa0e6e6c138ef9873 | 21021ea0e52be8e9c599f4dff41e5be0 
 
 
  a| 
-Web サーバ
+3e197446d1794d1838e3734e66b2162c
  a| 
-* インターネットインフォメーションサービス
-* World Wide Web Services の略
-* Common HTTP Features （共通 HTTP 機能）
+* f2a0788e92e0824f86d398809ea895d4
+* 9527c62ef2c51ec2bfb41840d6b7c0e0
+* 2e683288050e74c97e395a9ec4fc42ad
 +
-** 既定のドキュメント
-** ディレクトリの参照
-** HTTP エラー
-** HTTP リダイレクション
-** 静的なコンテンツ
-** WebDAV 発行
+** 66ed5c11b280849468ba05b9a0bbc74b
+** d64a2b697cdbb07e51b3f89ac8ba33fe
+** ac3d1eeebf6e9becc43fd0c4859152d2
+** ebcaba8e707027b3fbd9f4baf8e7fc75
+** 20d8b7f3d8fa7dfd00a18ef8eb889ee8
+** f55d75836977c89ec3f988237d348720
 
 
-* 正常性と診断
+* 43e1f823263352be952cdf1cf348d333
 +
-** カスタムログ
-** HTTP ログ
-** ログツール
-** Request Monitor サービスの略
-** トレース
+** 0c4ee168fcbcc4b7263dd5c2e104f459
+** 0614e3f62e86e9da61fdaaf4fae58ecd
+** d88d8e1050653a82dd9487369b1b47a9
+** 490df5b98f53fb446397816e41ed8cc8
+** 148619be153175b8437f4b6a93215128
 
 
-* パフォーマンス機能
+* 8c34bd093d30dada52c5a2224bc36f73
 +
-** 静的なコンテンツの圧縮
+** fb20a78153b0607014dee827cfabbd70
 
 
-* セキュリティ
+* 2fae32629d4ef4fc6341f1751b405e45
 +
-** IP セキュリティ
-** Basic Authentication の略
-** 一元的な SSL 証明書のサポート
-** クライアント証明書マッピング認証
-** IIS クライアント証明書マッピング認証
-** IP およびドメインの制限
-** 要求フィルタリング
-** URL 承認
-** Windows 認証
+** ce03433233b39cf4bbc2d47b0b3378f3
+** 9c15e77aa7c234ebed5eebea9e930c1d
+** 10f42e2abf03ad92c9a12b53eae89def
+** c66f2c526dc4aff933f4b55825763a5f
+** bf985b4d26fd5af0a3e4f2a4cf6dc59f
+** aea3591d0cc4923e4a07d3b1feff9773
+** 89654ebfc80421d7e5d9000d296f9e5c
+** c92559006f872ff6ee42408a3b26cac1
+** ebf82e954960a1d80c2f5873ec46c25a
 
 
-* アプリケーション開発機能
+* 59d694aee32de613287d82bc05ca6d1c
 +
-** .NET 拡張機能 4.5
-** アプリケーションの初期化
-** ASP。 Net Core Hosting Bundle（8.0.5以降）
-** サーバー側インクルード
-** WebSocket プロトコル
+** 21d38223d7b05411dcffa3cf951f4951
+** 4a4a6b90f0cd2faf953337dd66e1ebb5
+** 77e6d1d743590f1944df090df04f64fb
+** 523b9bc8b75666ec69cfaf422f6c2140
+** ab0b54125d50a09e75f3829e7e90b8ea
 
 
-* 管理ツール
+* 897489f143e2ade13f1fadcd00d4cc7b
 +
-** IIS Management Console の略
+** 42486cc2908a93d45dc761e701ad48d8
 
 
 
@@ -78,55 +78,55 @@ Web サーバ
 
 
  a| 
-IIS 管理スクリプトおよびツール
+78c975d196302e5a815b5039fb07ae94
  a| 
-* IIS 管理サービス
-* Web 管理ツール
+* c198bc954443adcf11c90c285f3d7c07
+* 80d3af8b299e19c823acbbffefc4856a
 
 
 
 
  a| 
-+.NET Framework 8.0.5の機能+
+628b02e3b9750945ce37b6d84682cd2b
  a| 
-* .NET Framework 8.0.5
-* ASP。 正味8.0.5
-* Windows Communication Foundation (WCF) HTTP Activation 45
+* 4b895fbdf0b21e04dc01c9b2f52bd5ee
+* aaf9b73d8f0e71b5b8ed41944e56091d
+* 623ef35114e69633221d2c9bf99f6cab
 +
-** TCP のアクティブ化
-** HTTP アクティブ化
+** c38d32373eca3e6335e44b42893f0034
+** cb6ddd90b08469e2479460ec34538fe2
 
 
 
 
-.NET固有のトラブルシューティング情報については、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_upgrade_or_install_fails_with_%22This_KB_is_not_related_to_the_OS%22["インターネットに接続されていないレガシーシステムでは、SnapCenter のアップグレードまたはインストールが失敗します"^]。
+462fbac4d281be78bedf063a9dbd9f61
 
 
 
  a| 
-メッセージキュー
+c3dbd8c35d4829310dd57365a749f10f
  a| 
-* メッセージキューサービス
+* 9c7750973d73f078f45c6bfd80cbfc85
 +
 
-NOTE: SnapCenter が作成および管理する MSMQ サービスを他のアプリケーションが使用していないことを確認します。
+NOTE: be0efd214f0b56cf8372d18ec1837f53
 
-* RabbitMQ
-
-
-
-
- a| 
-Windows プロセスアクティブ化サービス
- a| 
-* プロセスモデル
+* 7eaa993723e57b3bfc99923c196e2e17
 
 
 
 
  a| 
-設定 API
+a8e1305e0c86caf1fec261807b3362ef
  a| 
-すべて
+* 494ecde4fb6ee77e99799902ed23cd14
+
+
+
+
+ a| 
+293616622aeda675821b42e39b4d4e7b
+ a| 
+b1c94ca2fbc3e78fc30069c8d0f01680
 
 |===

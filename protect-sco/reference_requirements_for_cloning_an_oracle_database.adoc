@@ -2,80 +2,80 @@
 permalink: protect-sco/reference_requirements_for_cloning_an_oracle_database.html 
 sidebar: sidebar 
 keywords:  
-summary: Oracle データベースをクローニングする前に、前提条件を満たしていることを確認する必要があります。 
+summary: 23257e3404df9a371ee4e65b5f6db441 
 ---
-= Oracle データベースをクローニングするための要件
+= c3f3510a6fc8f24504e19e3fa075dcd8
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Oracle データベースをクローニングする前に、前提条件を満たしていることを確認する必要があります。
+23257e3404df9a371ee4e65b5f6db441
 
-* SnapCenter を使用してデータベースのバックアップを作成しておく必要があります。
+* bfb53a478bb9e82caa1db74ed66d2437
 +
-クローニング処理が成功するためには、オンラインデータバックアップとログバックアップ、またはオフライン（マウントまたはシャットダウン）バックアップが正常に作成されている必要があります。
+9193bccade6c14fbad65776e5a4e31ef
 
-* 制御ファイルまたは REDO ログファイルのパスをカスタマイズする場合は、必要なファイルシステムまたは Automatic Storage Management （ ASM ）ディスクグループを事前にプロビジョニングしておく必要があります。
+* 9b807f2918f38d06e220bd7676b098dd
 +
-デフォルトでは、クローンデータベースの REDO ログおよび制御ファイルは、 ASM ディスクグループ、またはクローンデータベースのデータファイル用に SnapCenter でプロビジョニングされたファイルシステムに作成されます。
+52c5396c843b8f531b40e80da6120054
 
-* NFS 経由で ASM を使用している場合は、 ASM_diskstring パラメータで定義された既存のパスに /var/opt/snapcenter /scu/clones/*/*_ を追加する必要があります。
-* ASM_diskstring パラメータで、 ASMFD または configure _ORCL ： * _ を使用する場合は、 _ AFD ： * _ を設定します。
+* 82c64956fe241447230a3cbc1193276c
+* 0aa1fb8d5fabc3bbed7c0d5c1bacd011
 +
-asm_diskstring パラメータの編集方法については、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Disk_paths_are_not_added_to_the_asm_diskstring_database_parameter["asm_diskstring にディスクパスを追加する方法"^]。
+0b955ccac06bdc609cc8c19c588bfe09
 
-* 代替ホストでクローンを作成する場合、代替ホストは次の要件を満たす必要があります。
+* 6770d02cdfcce5e5a328bcdb59e80669
 +
-** SnapCenter Plug-in for Oracle Database を代替ホストにインストールする必要があります。
-** クローンホストは、プライマリストレージまたはセカンダリストレージから LUN を検出できる必要があります。
+** 5cfa1ed5b7279fa5a9a9f892a69f175f
+** b1815397269c524f0557a5562899d82b
 +
-*** プライマリストレージまたはセカンダリ（バックアップまたはミラー）ストレージから代替ホストにクローニングする場合は、セカンダリストレージと代替ホストの間に iSCSI セッションが確立されているか、 FC 用に適切にゾーニングされていることを確認してください。
-*** バックアップ・ストレージまたはミラー・ストレージから同じホストにクローニングする場合は、バックアップまたはミラー・ストレージとホストの間に iSCSI セッションが確立されているか、 FC 用に適切にゾーニングされているかを確認してください。
-*** 仮想環境でクローニングを行う場合は、プライマリストレージまたはセカンダリストレージと、代替ホストをホストする ESX サーバの間で iSCSI セッションが確立されていること、または FC 用に適切にゾーニングされていることを確認してください。
+*** 2d4350dba1907fc52580a8f201e6340e
+*** 7ab56a931702e0e68323bba5f9744b17
+*** 0bfae4ea7762d7ebae116652014f4cd5
 +
-詳細については、を参照してください https://docs.netapp.com/us-en/ontap-sanhost/["Host Utilitiesのマニュアル"]。
+8fefbd4e8dfd1fb79f89bc04af5e8001
 
 
 
-** ソースデータベースが ASM データベースの場合は、次の手順を実行します。
+** b6002df6af7fac27dc362f546398ad42
 +
-*** クローンを実行するホスト上で、 ASM インスタンスが稼働している必要があります。
-*** クローニングされたデータベースのアーカイブログファイルを専用の ASM ディスクグループに配置する場合は、クローン処理の前に ASM ディスクグループをプロビジョニングする必要があります。
-*** データディスクグループの名前は設定できますが、クローンを実行するホスト上の他の ASM ディスクグループでは名前が使用されないようにしてください。
+*** 201c11864b685f8dcf2d90b5b22cd818
+*** 9154cf1449b0c872a99006c07487631d
+*** b7a9dc8480c6c9ddaf18628dd79ad61c
 +
-ASM ディスクグループにあるデータファイルは、 SnapCenter のクローニングワークフローの一環としてプロビジョニングされます。
+c014ba7a65ae579a2708beb53f5cb976
 
 
 
-** NVMeの場合、NVMe utilをインストールする必要があります
+** 1dd4fbdaa30b28c2614e7e12c52dc73c
 
 
-* データ LUN の保護タイプと、ミラー、バックアップ、ミラー - ヴォールトなどのログ LUN は、ログバックアップを使用して代替ホストへのクローニング中にセカンダリロケータを検出するために同じである必要があります。
-* 12_c_databaseのバックアップをクローニングするためのシードPDB関連情報を取得するには、ソースデータベースのパラメータファイルでexclude_seed_cdb_viewの値をFALSEに設定する必要があります。
+* 24aa4d1e777d4325bd7a1077e581f96f
+* 654c0ff0573689496c47502d09cfe7a8
 +
-シード PDB とは、 CDB が PDB を作成する際に使用する、システム付属のテンプレートです。シード PDB の名前は PDB$SEED です。PDB$SEED については、 Oracle Doc ID 1940806.1 を参照してください。
-
-+
-
-NOTE: この値は、12_c_databaseをバックアップする前に設定する必要があります。
-
-* SnapCenter は 'autofs サブシステムによって管理されるファイル・システムのバックアップをサポートしますデータベースを複製する場合は ' データ・マウント・ポイントが autofs マウント・ポイントのルートにないことを確認してくださいこれは ' プラグイン・ホストのルート・ユーザには 'autofs マウント・ポイントのルートの下にディレクトリを作成する権限がないためです
-+
-制御ログファイルと REDO ログファイルがデータマウントポイントにある場合は、制御ファイルのパスを変更し、それに応じてログファイルのパスをやり直す必要があります。
+b110267fdfa8216b83e8bc846b22d07d
 
 +
 
-NOTE: 新しいクローン・マウント・ポイントを 'autofs サブシステムに手動で登録できます新しいクローンマウントポイントは自動的には登録されません。
+NOTE: dfb3e8f24407538f95c7f42d27411d1b
 
-* TDE （自動ログイン）を使用していて、同じホストまたは代替ホスト上にデータベースのクローンを作成する場合は、 /etc/oracle/ウォ レット /$ORACLE_SID_ の下にあるウォレット（キーファイル）をソースデータベースからクローンデータベースにコピーする必要があります。
-* Oracle Linux 7 以降または Red Hat Enterprise Linux （ RHEL ） 7 以降の Storage Area Network （ SAN ；ストレージエリアネットワーク）環境でのクローニングを正常に実行するには、の値として、 /etc/lvm/lvmlvm/lvmmetad=0 を設定し、 lvm2-lvmetad サービスを停止する必要があります。
-* Oracle データベース 11.2.0.3 以降を使用していて、 NID スクリプトを使用して補助インスタンスのデータベース ID を変更している場合は、 13366202 Oracle パッチをインストールする必要があります。
-* ボリュームをホストするアグリゲートが Storage Virtual Machine （ SVM ）に割り当てられたアグリゲートリストに含まれていることを確認する必要があります。
-* NVMeの場合、接続から除外するターゲットポートがあるときは、/var/opt/snapcenter/scu/etc/nvme.confファイルにターゲットノード名とポート名を追加します。
+* 940b5af8a20e62b932b6d5f2cb0da283
 +
-ファイルが存在しない場合は、次の例に示すようにファイルを作成する必要があります。
+baa3ce4e65add470c5afafe3bbd7cb96
+
++
+
+NOTE: e49a081ca61f3da79922a289670f328d
+
+* 1557c15b3dbccec29a8c1666ec549177
+* d80214d2bee819ffe96b11b6af4643e9
+* 30dca629b8dd44dcc3eb42720281eefa
+* fabf637440019959d8ef2c0d09ef5988
+* 7de59fae501cc41425b292c47c8d9c12
++
+71ce3de936c35ae0967019943cb6334a
 
 +
 ....
@@ -84,5 +84,5 @@ nn-0x<target_node_name_1>:pn-0x<target_port_name_1>
 nn-0x<target_node_name_2>:pn-0x<target_port_name_2>
 }
 ....
-* iSCSIプロトコルとFCプロトコルが混在するigroupを使用して、LUNがAIXホストにマッピングされていないことを確認してください。詳細については、を参照してください https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_Plug-in_for_Oracle_operations_fail_with_error_Unable_to_discover_the_device_for_LUN_LUN_PATH["LUNのデバイスを検出できませんというエラーが表示されて処理に失敗します"^]。
+* 24642a08e354f43168ca4f1178850f84
 

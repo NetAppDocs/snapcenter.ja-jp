@@ -2,60 +2,60 @@
 permalink: protect-nsp/prerequisites_to_adding_hosts_and_installing_netapp_supported_plugins.html 
 sidebar: sidebar 
 keywords: credentials 
-summary: ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。NetAppでサポートされているプラグインは、WindowsとLinuxのどちらの環境でも使用できます。 
+summary: bf141cdebf5daef18e4981545288f2a4 
 ---
-= ホストを追加してNetAppでサポートされるプラグインをインストールするための前提条件
+= db39871b690a95f007f3b71acd6533d2
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。NetAppでサポートされているプラグインは、WindowsとLinuxのどちらの環境でも使用できます。
+bf141cdebf5daef18e4981545288f2a4
 
-* カスタムプラグインを作成しておく必要があります。詳細については、開発者情報を参照してください。
+* e26fb7c625f4366f8f4f984c45ecd6fc
 +
-link:develop_a_plug_in_for_your_application.html["アプリケーション用のプラグインを開発します"]
+935a5e63802feb7c41be8f11c154dcc4
 
-* Java 11をLinuxホストまたはWindowsホストにインストールしておく必要があります。
-* Windows ホストにプラグインをインストールする場合、ビルトインでないクレデンシャルを指定する場合、またはユーザがローカルワークグループユーザに属している場合は、ホストで UAC を無効にする必要があります。
-* ホストの追加処理を実行するクライアントホストに、NetAppでサポートされているプラグインがインストールされている必要があります。
-
-
-
-
-== 全般
-
-iSCSIを使用している場合は、iSCSIサービスが実行されている必要があります。
+* 896f53a1228bbdd8ed2cd52ad89184a3
+* 0653ebf18e2e782a5156c7cfd676052f
+* 47ca16829f36965b6a8f742d83988318
 
 
 
-== SHA512ハッシュ
 
-* NetAppでサポートされるプラグインの場合は、NetAppでサポートされるプラグインファイルのSHA512ハッシュを_custom_plugin_checksum_list_fileに追加しておく必要があります。
+== 0db377921f4ce762c62526131097968f
+
+3c8f1b708d97734299340f633acf1b28
+
+
+
+== 9415aa73bf3f3a2a034e0e07c5d506cf
+
+* f76395bec51952170480338f3e52b5b5
 +
-** Linuxホストでは、SHA512ハッシュは、_/var/opt/snapcenter/scc/custom plugin _checksum_list .txt_にあります
-** Windowsホストでは、SHA512ハッシュは_ C：\Program Files\NetApp\SnapManager Plug-in Creator\etc\custom_plugin_schecksum_list .txt_にあります
+** c0d35e9a1cb18fc944b55e22f446f2b2
+** d0f01849d252d5215ffa795d5e7a4791
 +
-カスタムのインストールパスでは、SHA512ハッシュは_<custom path>\NetApp\SnapCenter \Snapcenter Plug-in Creator\etc\custom_plugin_checksum_list .txt_にあります
+f362104a88b92368af76c609011528ab
 
 
-
-+
-custom_plugin_checksum_listは、SnapCenterによるNetApp対応プラグインのホストへのインストールに含まれています。
-
-* アプリケーション用に作成されたNetApp対応プラグインの場合は、次の手順を実行しておく必要があります。
-+
-.. プラグインzipファイルのSHA512ハッシュを生成しました。
-+
-などのオンラインツールを使用できます https://emn178.github.io/online-tools/sha512_file_hash.html["SHA512ハッシュ"^]。
-
-.. 生成されたSHA512ハッシュを新しい行のcustom_plugin_schecksum_listファイルに追加しました。
-+
-コメントは、ハッシュが属するプラグインを識別するために#記号で始まります。
 
 +
-次に、チェックサムファイルでSHAN512ハッシュを使用する例を示します。
+f0dfe7239e8a77a9af63c70290df922b
+
+* 1e05dd04f8ec23e47584027ef040654b
++
+.. f550adf3d7f52f3afc0e6e45b71e2055
++
+9e4265226dcf4f703d217f82220d17ea
+
+.. 94e0e32bde2e2ee99521f81221ceee7a
++
+17bc29e04b5123febcd35bdbc90142b4
+
++
+7867996900fccc9a8502aad8682cccfe
 
 +
 ....
@@ -68,31 +68,31 @@ custom_plugin_checksum_listは、SnapCenterによるNetApp対応プラグイン�
 
 
 
-== Windows ホスト
+== bd5ca81744f222d9b9a956e81e4db9d4
 
-* ローカル管理者権限を持つドメインユーザがあり、リモートホストに対してローカルログイン権限が付与されている必要があります。
-* SnapCenter でクラスタノードを管理する場合は、クラスタ内のすべてのノードに対する管理者権限を持つユーザが必要です。
-
-
+* 361ef555cc4b1de8cd252d68a14901af
+* dbef26874057ae0be535fee20766f8cb
 
 
-== Linux ホスト
 
-* root ユーザまたは root 以外のユーザ用にパスワードベースの SSH 接続を有効にしておく必要があります。
-* Java 11をLinuxホストにインストールしておく必要があります。
+
+== cfe19b0ae08454358fbe515d88fd6095
+
+* 92f854eabda8c2aa761e01fba1c6ffd4
+* 129fdeda5a8637916b3b579b072e4eaa
 +
-SnapCenter ServerホストにWindows Server 2019またはWindows Server 2016を使用している場合は、Java 11をインストールする必要があります。要件の最新情報については、 Interoperability Matrix Tool （ IMT ）を参照してください。
-
-+
-http://www.java.com/en/download/manual.jsp["すべてのオペレーティングシステム用の Java のダウンロード"]
+1bd7b03e9e6f0b21298c8109c8f483ce
 
 +
-https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"]
+9226092112d9484949841b47e3b0500e
 
-* いくつかのパスにアクセスできるように root 以外のユーザに sudo 権限を設定する必要があります。visudo Linux ユーティリティを使用して、 /etc/sudoers ファイルに次の行を追加します。
++
+4bb4114cf33351f203faec5f1e34960e
+
+* 8cab0b64f941cd66c63c70f6dcc91d69
 +
 
-NOTE: Sudoバージョン1.8.7以降を使用していることを確認します。
+NOTE: 2cae85768532ad729badbc9d82df69b0
 
 +
 [listing, subs="+quotes"]
@@ -107,17 +107,17 @@ Defaults: _LINUX_USER_ !visiblepw
 Defaults: _LINUX_USER_ !requiretty
 ----
 +
-_linux_user_は、作成したroot以外のユーザの名前です。
+656c356e64e4c0be274c5c901e543686
 
 +
-_checksum_value_は、次の場所にある* sc_unix_plugins_checksum.txt *ファイルから取得できます。
+31245bdedaeb267e7e5c6f53cf9e708d
 
 +
-** _C：\ProgramData\NetApp\SnapCenter\Package Repository\SC_UNIX_plugins_checksum.txt_ SnapCenter ServerがWindowsホストにインストールされている場合。
-** _/opt/NetApp/snapcenter/SnapManagerWeb/Repository/sc _ unix_plugins_checksum.txt _ SnapCenterサーバーがLinuxホストにインストールされている場合。
+** 610946fc2ae3e350d344b41adc49fa56
+** a66f61607659e55e7eada5fa0eae6772
 +
 
-IMPORTANT: この例は、独自のデータを作成するための参照としてのみ使用してください。
+IMPORTANT: 74781435cbc6fb9ba200eaf23bcdeaf1
 
 
 

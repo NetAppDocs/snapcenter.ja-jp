@@ -2,103 +2,103 @@
 permalink: protect-sce/task_install_the_snapcenter_plug_in_for_exchange_silently_from_the_command_line.html 
 sidebar: sidebar 
 keywords: SnapCenter plug-in for Exchange Server 
-summary: Plug-in for Exchange は、 SnapCenter ユーザインターフェイス内からインストールする必要があります。ただし、何らかの理由でインストールできない場合は、 Windows のコマンドラインから、 Plug-in for Exchange のインストールプログラムをサイレントモードで自動的に実行できます。 
+summary: a60fa87356b70c5ce00706b76533d56c 
 ---
-= コマンドラインから SnapCenter Plug-in for Exchange をサイレントにインストールします
+= d09d97061d337ca456268467edcaf423
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Plug-in for Exchange は、 SnapCenter ユーザインターフェイス内からインストールする必要があります。ただし、何らかの理由でインストールできない場合は、 Windows のコマンドラインから、 Plug-in for Exchange のインストールプログラムをサイレントモードで自動的に実行できます。
+a60fa87356b70c5ce00706b76533d56c
 
-.作業を開始する前に
-* Microsoft Exchange Server リソースをバックアップしておく必要があります。
-* SnapCenter プラグインパッケージをインストールしておく必要があります。
-* をインストールする前に、以前のリリースの SnapCenter Plug-in for Microsoft SQL Server を削除する必要があります。
+.135b308ed83c53f1516b7c754566d1c4
+* cd61155a270b0e3cba1a35778af0b9ce
+* e286d26010b4274e5f02a52bf16a3166
+* 0a5e492d5c20971eb78770aa30946e68
 +
-詳細については、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_Install_a_SnapCenter_Plug-In_manually_and_directly_from_thePlug-In_Host["SnapCenter Plug-in をプラグインホストから手動で直接インストールする方法"^]。
+ce41201cc230c8b36eefca03f828f829
 
 
 
-.手順
-. プラグインホストに _C ： \temp_folder が存在し、ログインしているユーザにフルアクセス権があるかどうかを確認します。
-. C ： \ProgramData\NetApp\SnapCenter \Package_Repository から SnapCenter Plug-in for Microsoft Windows をダウンロードします。
+.f3a29486bed19a90f2da6d007818b427
+. 952ebe7df95b2b139729838342d9961c
+. 3ed46fcd7972b69e881e33d164e0b1d6
 +
-このパスには、 SnapCenter サーバがインストールされているホストからアクセスできます。
+034c5f14c518f47816188b94e9a8c076
 
-. プラグインをインストールするホストにインストールファイルをコピーします。
-. ローカルホストの Windows コマンドプロンプトで、プラグインのインストールファイルを保存したディレクトリに移動します。
-. 次のコマンドを入力して、プラグインをインストールします。
+. 5bab9653208d5b37a0eac3869bbd0887
+. d9c2b6a27937feb2af3cfc648ba30664
+. afd32bd411643d7b80e9795732fc2190
 +
-_snapcenter _windows_host_plugin.exe "/silent/debuglog "<Debug_Log_Path>" /log" <Log_Path>" b_SNAPCENTER_port=<Num>Suite_INSTALLDIR="<Install_Directory_Path>" BV_ServiceAccount=<domain\administrator> BV_SERVICEPCPWD = <SCW> インストール、 ISW>
-
-+
-例：
+e96211aaefa5c5acb9e8a5937f5834a6
 
 +
-_C ： \ProgramData\NetApp\SnapCenter \Package Repository_snapcenter _windows_host_plugin.exe "/silent/debuglog" C ： \HPPW_SCSQL_Install.log "/log" C ： \temp\temp\b_SNAPCENTER_PORT = 8145 Suite_INSTALLDIR=" C ： \Program Files\NetApp\SnapManager SnapCenter \BIT_VISPRI_ 管理者パスワードです
+506c2c0c7f5b70af3df68c45c46f45a7
+
++
+866a71ae8c421f4ad7c84acad9063476
 
 +
 
-NOTE: Plug-in for Exchange のインストール時に渡されるすべてのパラメータでは、大文字と小文字が区別されます。
+NOTE: f9921358f0106db02cf91d4489d50754
 
 +
-変数には次の値を入力します。
+25139d942390294a2d96f47497ee4155
 
 +
 |===
-| 変数（ Variable ） | 価値 
+| 47c14840d8e15331fa420b9b2f757cd9 | 689202409e48743b914713f96d93947c 
 
 
  a| 
-// debuglog "<Debug_Log_Path>_
+193ff195e30956aa211931348e16eab2
  a| 
-インストーラのログファイルの名前と場所を次のように指定します。
+a6baabe81eec998dd78e4ca7135610ce
 
-_Setup.exe /debuglog "C:\PathToLog\setupexe.log_
-
-
-
- a| 
-BI _ SNAPCENTER_PORT
- a| 
-SnapCenter が SMCore と通信するポートを指定します。
+9e350ce19397dc6ced2b7c678ed49657
 
 
 
  a| 
-SUITE_INSTALLDIR
+73685e43dc2de0e167941f023cd06dd6
  a| 
-ホストのプラグインパッケージのインストールディレクトリを指定します。
-
-
-
- a| 
-BY_ServiceAccount の場合
- a| 
-SnapCenter Plug-in for Microsoft Windows の Web サービスアカウントを指定します。
+97795425d2d417a2bc6791cdd5846cbe
 
 
 
  a| 
-BI_SERVVICEPWD
+71dabf9947e2c37aca2fcbf8357c5fd9
  a| 
-SnapCenter Plug-in for Microsoft Windows の Web サービスアカウントのパスワードを指定します。
+0fa235337ee6356fb65ad4ac56f35afd
 
 
 
  a| 
-ISFeatureInstall
+79c344bd182d5784ae4a41cfa126aca2
  a| 
-SnapCenter によってリモートホストに導入される解決策を指定します。
+f00564c21d005394fe5907bc3a1b08df
+
+
+
+ a| 
+89ce1d1f16532f56caebecf11811e703
+ a| 
+93052680e36d7df2c5c10397ee0bc479
+
+
+
+ a| 
+d95132b1645bfc6a3bb0a31f752c1b7f
+ a| 
+ba14ee3fc494e3631e69614f63bbabc4
 
 |===
-. Windows タスクスケジューラ、メインインストールログファイル _C:\Installdebug.log_ 、およびその他のインストールファイルを _C:\Temp_. で監視します。
-. _%temp%_ ディレクトリを監視して、 _msiexe.exe_installers がエラーなしでソフトウェアをインストールしているかどうかを確認します。
+. 8af6ed5dc7571ee73262201d6b19a38b
+. 1ae7195aa147ff8c62f47f349e2a3bd3
 +
 
-NOTE: Plug-in for Exchange をインストールすると、 SnapCenter サーバではなくホストにプラグインが登録されます。SnapCenter サーバにプラグインを登録するには、 SnapCenter GUI または PowerShell コマンドレットを使用してホストを追加します。ホストを追加すると、プラグインが自動的に検出されます。
+NOTE: c8af5214f27019c3fdac6adea2095e20
 
 

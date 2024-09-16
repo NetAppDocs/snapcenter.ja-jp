@@ -2,29 +2,29 @@
 permalink: protect-scsql/concept_sql_server_recovery_models_snapcenter_plug_in_for_microsoft_sql_server.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for Microsoft SQL Server 
-summary: デフォルトでは、各データベースタイプに特定の復旧モデルが割り当てられます。SQL Server データベース管理者は、各データベースを別の復旧モデルに再割り当てできます。 
+summary: 03aec48a1392a75e035647bb7b9f190b 
 ---
-= SnapCenter でサポートされている SQL Server 復旧モデル
+= 4be39d40645ee3666c8949ae4f085dd9
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-デフォルトでは、各データベースタイプに特定の復旧モデルが割り当てられます。SQL Server データベース管理者は、各データベースを別の復旧モデルに再割り当てできます。
+03aec48a1392a75e035647bb7b9f190b
 
-SnapCenter は、 3 種類の SQL Server 復旧モデルをサポートしています。
+628e7a9f62e25a7947450f9f3f0712d6
 
-* 単純復旧モデル
+* c5c3d97bfa2cab5a201a4d19112aceec
 +
-単純復旧モデルを使用する場合は、トランザクションログをバックアップできません。
+10b43f366903429a921145a5db7c95ed
 
-* 完全復旧モデル
+* ad2fd802bb76359ab68b475a2420bce9
 +
-完全復旧モデルを使用する場合は、障害発生時点からデータベースを以前の状態にリストアできます。
+cc8872fd3647eea5077aab482b8a8315
 
-* 一括ログ復旧モデル
+* a93af87c8649f227602a94864e899324
 +
-一括ログ復旧モデルを使用する場合は、ログに一括記録された処理を手動で再実行する必要があります。ログに一括記録された処理のコミットレコードを含むトランザクションログがリストア前にバックアップされていない場合は、一括記録された処理を実行する必要があります。ログに一括記録された処理でデータベースに 1 、 000 万行が挿入され、トランザクションログがバックアップされる前にデータベースで障害が発生した場合、リストアされたデータベースに挿入された行は反映されません。
+75f9316c993a023ec1a7767f5f57f99b
 
 

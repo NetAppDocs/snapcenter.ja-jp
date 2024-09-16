@@ -2,27 +2,27 @@
 permalink: protect-scsql/reference_restore_sql_server_resources.html 
 sidebar: sidebar 
 keywords: Restore workflow 
-summary: SnapCenter を使用して SQL Server データベースをリストアするには、 1 つ以上のバックアップからアクティブファイルシステムにデータをリストアし、データベースをリカバリします。可用性グループ内のデータベースをリストアし、リストアしたデータベースを可用性グループに追加することもできます。SQL Server データベースをリストアする前に、いくつかの準備作業を実行する必要があります。 
+summary: d49c54f6a3e8fbb1a5ae389fb2b4aafd 
 ---
-= リストアワークフロー
+= e30c3d908a4ed515e16791b672cc0709
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter を使用して SQL Server データベースをリストアするには、 1 つ以上のバックアップからアクティブファイルシステムにデータをリストアし、データベースをリカバリします。可用性グループ内のデータベースをリストアし、リストアしたデータベースを可用性グループに追加することもできます。SQL Server データベースをリストアする前に、いくつかの準備作業を実行する必要があります。
+d49c54f6a3e8fbb1a5ae389fb2b4aafd
 
-次のワークフローは、データベースリストア処理の実行順序を示しています。
+72fab2a5b70ae095deeddf26f2a52793
 
-image::../media/all_plug_ins_restore_workflow.png[all_plug-ins_restore_workflow を実行します]
+image::../media/all_plug_ins_restore_workflow.png[92c488cfa68af6221db7fffbf4243861]
 
-PowerShellコマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、リカバリ、検証、クローニングの各処理を実行することもできます。PowerShellコマンドレットの詳細については、SnapCenterコマンドレットのヘルプを使用するか、 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"]
+8d815f55ddec2cbd3a8fb998077c1279
 
-* 詳細はこちら *
+fad3dbbe9841f42de249b688f1d47a80
 
-link:task_restore_a_sql_server_database_from_secondary_storage.html["セカンダリストレージから SQL Server データベースをリストアする"]
+69bb12bd720ba41593c0fadfa768b82e
 
-link:task_restore_and_recover_resources_using_powershell_cmdlets_for_sql.html["PowerShell コマンドレットを使用してリソースをリストアおよびリカバリする"]
+b7ee450a891722e2248bf6edbef84f21
 
-link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Restore_operation_might_fail_on_Windows_2008_R2["Windows 2008 R2 でリストア処理が失敗することがあります"]
+cf33f62e19ff3bb795452fe592555ee3

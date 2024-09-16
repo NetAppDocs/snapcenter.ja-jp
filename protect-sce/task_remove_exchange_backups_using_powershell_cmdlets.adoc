@@ -2,31 +2,31 @@
 permalink: protect-sce/task_remove_exchange_backups_using_powershell_cmdlets.html 
 sidebar: sidebar 
 keywords: backups 
-summary: Remove-SmBackup コマンドレットを使用すると、他のデータ保護処理に Exchange バックアップが不要になった場合に Exchange バックアップを削除できます。 
+summary: c542c48c5883f05c53ef29a5ecb69599 
 ---
-= PowerShell コマンドレットを使用して Exchange バックアップを削除します
+= c67cf2b105f14a1f28e583dd29d713ba
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Remove-SmBackup コマンドレットを使用すると、他のデータ保護処理に Exchange バックアップが不要になった場合に Exchange バックアップを削除できます。
+c542c48c5883f05c53ef29a5ecb69599
 
-PowerShell コマンドレットを実行できるように PowerShell 環境を準備しておく必要があります。
+c90de0347e94ade70c96034e2ffca3ba
 
-コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+74db7181476f94f0e2927d8c8d98cb97
 
-.手順
-. Open-SmConnection コマンドレットを使用して、指定したユーザの SnapCenter サーバとの接続セッションを開始します。
+.f3a29486bed19a90f2da6d007818b427
+. 623aa9b9d36889377a728b1284e5485e
 +
 [listing]
 ----
 Open-SmConnection  -SMSbaseurl  https://snapctr.demo.netapp.com:8146/
 ----
-. Remove-SmBackup' コマンドレットを使用して 1 つ以上のバックアップを削除します
+. dd120ab3ab1d158cb796d4df28443c51
 +
-この例では、バックアップ ID を指定してバックアップを 2 つ削除しています。
+ea2acdbc1a4fb35cdfb9da7003b18901
 
 +
 [listing]

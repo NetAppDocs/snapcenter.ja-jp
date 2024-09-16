@@ -2,23 +2,23 @@
 permalink: sc-automation/overview_rest_apis.html 
 sidebar: sidebar 
 keywords: REST APIs, swagger 
-summary: REST API を使用して SnapCenter のいくつかの管理操作を実行する方法について説明します。REST API は Swagger Web ページから利用できます。 
+summary: 88fe5dc687615e8d7a6594570ed65df2 
 ---
-= REST API の概要
+= 0c889d77d71512ceb7241bd0f6d6ca23
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-REST API を使用して、 SnapCenter のいくつかの管理処理を実行できます。REST API は Swagger Web ページから利用できます。
+b1cb2610ec57bfba865feaa69174b692
 
-REST API ドキュメントを表示する場合、および API 呼び出しを手動で問題する場合は、 \\ https://<SnapCenter_IP_address_or_name>:<SnapCenter_port>/swagger/_ で Swagger Web ページにアクセスします。
+dcddc43fec5e5fa500cf485861b6ccfe
 
-REST API をサポートするプラグインは次のとおりです。
+535a045ab09a3efb03cb36f59e57279c
 
-* Microsoft SQL Server 用プラグイン
-* Plug-in for SAP HANA Database の略
-* カスタムプラグイン
-* Plug-in for Oracle Database の略
+* 989300043d75df1f584271de0f5b22cb
+* ec068fb3d4dea4c520ab13a179930564
+* 98c5825b9b497a5e2a61777325ed802f
+* 85101367016c9d3b3a2358db405464f9
 

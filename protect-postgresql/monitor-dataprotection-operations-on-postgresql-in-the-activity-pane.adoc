@@ -2,23 +2,23 @@
 permalink: protect-postgresql/monitor-dataprotection-operations-on-postgresql-in-the-activity-pane.html 
 sidebar: sidebar 
 keywords: SnapCenter Server 
-summary: '[ アクティビティ（ Activity ） ] パネルには、最近実行された 5 つの操作が表示されまた、操作が開始された日時と操作のステータスも表示されます。' 
+summary: 508d1ec07ef963e40e719409d5aa0885 
 ---
-= [Activity]ペインで、PostgreSQLクラスタのデータ保護処理を監視します。
+= 6f05d355961398e9cc5860aea757c0e3
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-[ アクティビティ（ Activity ） ] パネルには、最近実行された 5 つの操作が表示されまた、操作が開始された日時と操作のステータスも表示されます。
+508d1ec07ef963e40e719409d5aa0885
 
-[Activity （アクティビティ） ] ペインには、バックアップ、リストア、クローン、およびスケジュールされたバックアップ処理に関する情報が表示されます。
+920deed37c528e013939d546655305ff
 
-.手順
-. 左側のナビゲーションペインで、 * リソース * をクリックし、リストから適切なプラグインを選択します。
-. をクリックします image:../media/activity_pane_icon.gif[""] をクリックして、最近の 5 つの操作を表示します。
+.f3a29486bed19a90f2da6d007818b427
+. 530a5fa7e8fbaa4c796dbd46c93a55dd
+. 9db06cff1e8eb604a482b82e3fc0ca83
 +
-いずれかの処理をクリックすると、*[ジョブの詳細]*ページに処理の詳細が表示されます。
+c5b4990f8ae878fb8402d7252a8784c6
 
 

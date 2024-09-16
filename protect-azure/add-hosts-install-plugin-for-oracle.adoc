@@ -2,36 +2,36 @@
 permalink: protect-azure/add-hosts-install-plugin-for-oracle.html 
 sidebar: sidebar 
 keywords: add host, install, install plug-in, oracle, database 
-summary: ホストを追加してプラグインパッケージをインストールしてください。 
+summary: 4b94425e098b41d12bc8e290ef43106f 
 ---
-= ホストを追加してSnapCenter Plug-in for Oracle Databaseをインストールする
+= 5a19eafc64d4b27754e1ea4fcdfa49f1
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-ホストの追加ページを使用してホストを追加し、 SnapCenter Plug-ins Package for Linux または SnapCenter Plug-ins Package for AIX をインストールできます。プラグインは、自動的にリモートホストにインストールされます。
+c4442e1ad348b99929c68427ef54fee7
 
-ホストの追加とプラグインパッケージのインストールは、個々のホストまたはクラスタに対して実行できます。クラスタ（Oracle RAC）にプラグインをインストールする場合、プラグインはクラスタのすべてのノードにインストールされます。Oracle RAC One Node の場合、このプラグインはアクティブノードとパッシブノードの両方にインストールする必要があります。
+836b7a28ba9782fad01628dc33073d15
 
-.手順
-. 左側のナビゲーションペインで、 * Hosts * （ホスト）をクリックします。
-. [管理対象ホスト]*タブが選択されていることを確認します。
-. [ 追加（ Add ） ] をクリックします。
-. Hosts ページで、次の操作を実行します。
+.f3a29486bed19a90f2da6d007818b427
+. e3496f6d2696003cd08139c96386cc45
+. 25df78dd01892122ff0e8b622af903f3
+. 7dee7e783d13b6d5d415926ce0bfc306
+. 980b59d7d9d445544dc02109e7629575
 +
-.. [Host Type]フィールドで、ホストタイプを選択します。
-.. [Host name]フィールドに、ホストの完全修飾ドメイン名（FQDN）またはIPアドレスを入力します。
-.. [Credentials]フィールドに、作成したクレデンシャルを入力します。
+.. 70d62db3cdc3b09c944b95bb46579a2d
+.. aee77bbd57baf3f9ef22c7fc4d9bdef8
+.. 2e22c5b13053f3515b22c9c1ede2d7a8
 
 
-. インストールするプラグインの選択セクションで、インストールするプラグインを選択します。
-. （オプション）*[その他のオプション]*をクリックし、詳細を指定します。
-. [Submit （送信） ] をクリックします。
-. 指紋を確認し、 * 確認して送信 * をクリックします。
+. 6b692819d998ae388c39a67efd81ebbd
+. cc01060000f3f813df5ac7a397f6c747
+. 4b5d2dd70af718ebe67bfea5b43d8667
+. a125bbbbecba4b209b69d2cb22b86e21
 +
-クラスタセットアップでは、クラスタ内の各ノードのフィンガープリントを検証する必要があります。
+6d4d60f2bdbce47317df88ef283c8b22
 
-. インストールの進行状況を監視します。
+. d85bbbe120029d5b6ffbe773f5192a80
 

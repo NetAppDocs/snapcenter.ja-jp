@@ -2,132 +2,132 @@
 permalink: protect-hana/task_clone_a_sap_hana_database_backup.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for SAP HANA Database,run as 
-summary: SnapCenter を使用してバックアップをクローニングすることができます。クローニングはプライマリとセカンダリのどちらのバックアップからも実行できます。 
+summary: e53ba889508b719f73b0223755d7a145 
 ---
-= SAP HANA データベースのバックアップをクローニングします
+= cc9ec1117ac60bf06e35d58497993679
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter を使用してバックアップをクローニングすることができます。クローニングはプライマリとセカンダリのどちらのバックアップからも実行できます。
+e53ba889508b719f73b0223755d7a145
 
-.作業を開始する前に
-* リソースまたはリソースグループをバックアップしておく必要があります。
-* ボリュームをホストするアグリゲートが Storage Virtual Machine （ SVM ）に割り当てられたアグリゲートリストに含まれていることを確認する必要があります。
-* ファイルベースのバックアップはクローニングできません。
-* ターゲットクローンサーバの SAP HANA インスタンス SID が、 Target Clone SID フィールドに入力されたものと同じであることが必要です。
-* クローニング前またはクローニング後のPREコマンドについては、次のパスから、プラグインホストのコマンドリストにコマンドが含まれているかどうかを確認する必要があります。
+.135b308ed83c53f1516b7c754566d1c4
+* ff9ea1d5d9e34a2e53ae21ce93b5318b
+* fabf637440019959d8ef2c0d09ef5988
+* 44f04e37a47a11aeeedb139b1fbfe8d6
+* a297443b1c16f57079ed8452e38d60a4
+* e61e5d73b3b042b28dcdf96a5c438a4e
 +
-Windowsの場合：_ C：\Program Files\NetApp\SnapCenter \Snapcenter Plug-in Creator\etc\allowed_commands _list .txt_
-
-+
-Linuxの場合：_/var/opt/snapcenter/scc/allowed _commands _list.txt_
-
-
-
-
-NOTE: コマンドリストにコマンドがない場合、処理は失敗します。
-
-.このタスクについて
-* クローンスプリット処理の制限事項については、を参照してください http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["ONTAP 9 論理ストレージ管理ガイド"^]。
-* ONTAP 9.12.1以前のバージョンでは、リストアの一環としてSnapLockヴォールトSnapshotから作成されたクローンにSnapLockヴォールトの有効期限が継承されます。SnapLockの有効期限が過ぎた時点で、ストレージ管理者がクローンを手動でクリーンアップする必要があります。
-
-
-.手順
-. 左側のナビゲーションペインで、 * リソース * をクリックし、リストから適切なプラグインを選択します。
-. [ リソース ] ページで、リソースタイプに基づいて、 *View*] ドロップダウンリストからリソースをフィルタリングします。
-+
-リソースは、タイプ、ホスト、関連付けられているリソースグループとポリシー、ステータスなどの情報とともに表示されます。
-
-. リソースまたはリソースグループを選択します。
-+
-リソースグループを選択する場合は、リソースを選択する必要があります。
+19650f12fd9f269a497d4edc60754137
 
 +
-リソースまたはリソースグループのトポロジページが表示されます。
+e7b4efc5dd5b16a36c26e91652b78194
 
-. Manage Copies （コピーの管理）ビューから、プライマリまたはセカンダリ（ミラーまたはバックアップ）ストレージシステムから * Backups （バックアップ）を選択します。
-. 表からデータバックアップを選択し、をクリックします image:../media/clone_icon.gif["クローンアイコン"]。
-. Location ページで、次のアクションを実行します。
+
+
+
+NOTE: 2dd7c4421097b3d796ff9bf355ebaa6e
+
+.bbe48fb854ea022537208eeeff822f91
+* c2ba780614c613756fa4439bc5df6c19
+* f2c85d871e7c5ae1520349e8a3869fea
+
+
+.f3a29486bed19a90f2da6d007818b427
+. 530a5fa7e8fbaa4c796dbd46c93a55dd
+. 1bf25096670c9621cda8c9d3e8bee4ad
++
+03217f5a3bcb2ad8ec13a7298d3c340e
+
+. cdf19c0501e1633fc4a63c1138fda0a6
++
+ac4ed821474f66c75b8a7b28169cea80
+
++
+e3f56aa0bce767daf2b14864c354b8c0
+
+. 442a89e785b868e06305d5c98337997d
+. 0054963881af69d880f61446f2c0c3f4
+. 4da4dfc97db1c4c71939b200e576ecc4
 +
 |===
-| フィールド | 手順 
+| 21f831502a413a739e20cbf9f2eefe54 | 5e2ad6fd9deb412d871137094ee43ef0 
 
 
  a| 
-プラグインホスト
+01b968d19930c6a09e89b9a532f5e28c
  a| 
-クローンのマウント先のプラグインがインストールされたホストを選択します。
-
-
-
- a| 
-ターゲットクローンの SID
- a| 
-既存のバックアップからクローニングする SAP HANA インスタンス ID を入力します。
+b960252a9e8d3c5abdf0f620698a96f5
 
 
 
  a| 
-NFS エクスポートの IP アドレス
+209072f7b35f3ff691fd8faa61f3c0a8
  a| 
-クローニングしたボリュームをエクスポートする IP アドレスまたはホスト名を入力します。
-
-
-
- a| 
-iSCSI イニシエータ
- a| 
-LUN のエクスポート先であるホストの iSCSI イニシエータ名を入力します。このオプションは、 LUN リソースタイプを選択した場合にのみ使用できます。
+d937011080688f35550eb43f2b8b12e2
 
 
 
  a| 
-プロトコル
+be7b5f6060b2de524d5e5db5b76ef3e3
  a| 
-LUN プロトコルを入力します。このオプションは、 LUN リソースタイプを選択した場合にのみ使用できます。
+31cb4e3045f056a767cb72bc8438d115
+
+
+
+ a| 
+ea1672c458249f4cd963963cb02f7aef
+ a| 
+cca6a85f5065269f712b6122c56bcc23
+
+
+
+ a| 
+888a77f5ac0748b6c8001822417df8b6
+ a| 
+19ca9a39b837f0de2cd60194c3115a82
 
 |===
 +
-リソースとして LUN を選択し、セカンダリバックアップからクローニングする場合、デスティネーションボリュームのリストが表示されます。1 つのソースについて複数のデスティネーションボリュームを選択することができます。
+4e783e8dfeae9de37071ca1aacd853de
 
 +
 
-NOTE: クローニングを実行する前に、 iSCSI イニシエータまたは FCP が存在し、代替ホストに設定およびログインしていることを確認する必要があります。
+NOTE: d21ab82b42875e082ef4574c36d6c5e4
 
-. Scripts ページで、次の手順を実行します。
+. ece79c0a7a1f1af0f056c2757943a57b
 +
 
-NOTE: スクリプトはプラグインホストで実行されます。
+NOTE: dc14b8500a0b854f9aa01d447cd6350b
 
 +
-.. クローニング処理の前後に実行するプリコマンドやポストコマンドを入力します。
+.. 5d786448af7775a55478237de43bc63f
 +
-*** クローニング前のコマンド：同じ名前の既存のデータベースを削除します
-*** クローニング後のコマンド：データベースの検証やデータベースの起動
+*** d2f811cffe0f9a1380a49f7f5961cb09
+*** 5fddd416d7d0fdc83ff16f74a6ee1443
 
 
-.. ホストにファイルシステムをマウントするには、 mount コマンドを入力します。
+.. 7771886b7e2cd056f9cc9817d8f1b5aa
 +
-Linux マシンのボリュームまたは qtree に対する mount コマンド：
+004a54b587273cf718e893abb97bf09f
 
 +
-NFS の例：
+2c0cb3a89096a4479719e4293ed5a8c6
 
 +
  mount VSERVER_DATA_IP:%VOLUME_NAME_Clone /mnt
 +
 
-NOTE: 休止、Snapshot、および休止解除の処理を実行するプリコマンドとポストコマンドの場合は、Linuxの場合は_/opt/snapcenter/snapenter/scc/allowed commands.config_path、Windowsの場合は_C：\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands_list.txt_からプラグインホストで使用できるコマンドリストにコマンドがあるかどうかを確認する必要があります。
+NOTE: a559b2571e56d5cca36de86e59757d8d
 
 
 
-. [ 通知 ] ページの [ 電子メールの設定 *] ドロップダウンリストから、電子メールを送信するシナリオを選択します。
+. 30b65b6968f11ce5399cacf995839f65
 +
-また、送信者と受信者の E メールアドレス、および E メールの件名を指定する必要があります。
+f13996192c5cd583e2ff57912b5401e3
 
-. 概要を確認し、 [ 完了 ] をクリックします。
-. 操作の進行状況を監視するには、 * Monitor * > * Jobs * をクリックします。
+. fed1c121dc4f5a5484e5623e297385fb
+. 8b9460bf38a68108bcdd278a386b3156
 

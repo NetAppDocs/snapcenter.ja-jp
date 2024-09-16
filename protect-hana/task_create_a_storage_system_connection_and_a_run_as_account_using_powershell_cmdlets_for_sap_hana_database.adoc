@@ -2,46 +2,46 @@
 permalink: protect-hana/task_create_a_storage_system_connection_and_a_run_as_account_using_powershell_cmdlets_for_sap_hana_database.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for SAP HANA Database 
-summary: PowerShell コマンドレットを使用して SAP HANA データベースのバックアップ、リストア、クローニングを行うには、 Storage Virtual Machine （ SVM ）接続とクレデンシャルを作成する必要があります。 
+summary: 391b68bcb3d6f9d643ee0cb78ff1dfde 
 ---
-= PowerShell コマンドレットを使用して SAP HANA データベース用のストレージシステム接続とクレデンシャルを作成します
+= cc33ddff1a25485bc2416a9b57a9f8c5
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-PowerShell コマンドレットを使用して SAP HANA データベースのバックアップ、リストア、クローニングを行うには、 Storage Virtual Machine （ SVM ）接続とクレデンシャルを作成する必要があります。
+391b68bcb3d6f9d643ee0cb78ff1dfde
 
-.作業を開始する前に
-* PowerShell コマンドレットを実行できるように PowerShell 環境を準備しておく必要があります。
-* ストレージ接続を作成するには、 Infrastructure Admin ロールに必要な権限が必要です。
-* プラグインのインストールが実行中でないことを確認してください。
+.135b308ed83c53f1516b7c754566d1c4
+* 2d3dd877f482d5e495bedaecc930ab1e
+* 7371a8e10304e81cee00e43c4dada4a0
+* 5f15a8281618c8add8ea167014465c88
 +
-ホスト・プラグインのインストールは ' ストレージ・システム接続の追加中は実行しないでくださいホスト・キャッシュが更新されず ' データベース・ステータスが SnapCenter GUI に表示される場合がありますこれは ' バックアップには使用できませんまたは NetApp ストレージには使用できません
+d1b003977a68c3208b9ef1bf9532d449
 
-* ストレージシステム名は一意である必要があります。
+* bf4755d91b7ab31c59d1db6e3e0d486c
 +
-SnapCenter では、異なるクラスタに同じ名前のストレージシステムを複数配置することはサポートされていません。SnapCenter でサポートされるストレージシステムには、それぞれ一意の名前およびデータ LIF の IP アドレスを割り当てる必要があります。
+70991649072f70fdb060c64c2144c8c8
 
 
 
-.手順
-. Open-SmConnection コマンドレットを使用して、 PowerShell 接続セッションを開始します。
+.f3a29486bed19a90f2da6d007818b427
+. f7ba9632108fb30ff5c52cf7b1516d74
 +
 [listing]
 ----
 PS C:\> Open-SmStorageConnection
 ----
-. Add-SmStorageConnection コマンドレットを使用して、ストレージシステムへの新しい接続を作成します。
+. 14b1dd1b0650310a574acd9df305fcf6
 +
 [listing]
 ----
 PS C:\> Add-SmStorageConnection -StorageType DataOntap -Type DataOntap -OntapStorage ‘scsnfssvm’ -Protocol Https -Timeout 60
 ----
-. Add-SmCredential コマンドレットを使用して新しいクレデンシャルを作成します。
+. eceac2462f6267b1a77d8f264a46d4de
 +
-次の例は、 Windows クレデンシャルを使用して FinanceAdmin という名前の新しいクレデンシャルを作成する方法を示しています。
+e31df119bb2635e68229d174653ee578
 
 +
 [listing]
@@ -49,15 +49,15 @@ PS C:\> Add-SmStorageConnection -StorageType DataOntap -Type DataOntap -OntapSto
 PS C:> Add-SmCredential -Name FinanceAdmin -AuthMode Windows
 -Credential sddev\administrator
 ----
-. SnapCenter サーバに SAP HANA 通信ホストを追加します。
+. 75a39856a5eab53cb4506cc2e012edd6
 +
 [listing]
 ----
 PS C:> Add-SmHost -HostName 10.232.204.61 -OSType Windows -RunAsName FinanceAdmin -PluginCode hana
 ----
-. パッケージと SnapCenter Plug-in for SAP HANA Database をホストにインストールします。
+. ce240153578289d851feab1a32431c2d
 +
-Linux の場合：
+5f425eebf9102e123afb94bd2d71ff06
 
 +
 [listing]
@@ -65,16 +65,16 @@ Linux の場合：
 PS C:> Install-SmHostPackage -HostNames 10.232.204.61 -ApplicationCode hana
 ----
 +
-Windows の場合：
+950ec0214988f2cee4280a4a29075cf3
 
 +
 [listing]
 ----
 Install-SmHostPackage -HostNames 10.232.204.61 -ApplicationCode hana -FilesystemCode scw -RunAsName FinanceAdmin
 ----
-. HDBSQL クライアントのパスを設定します。
+. 407b04b96597bfd636217f14c76066d2
 +
-Windows の場合：
+950ec0214988f2cee4280a4a29075cf3
 
 +
 [listing]
@@ -82,7 +82,7 @@ Windows の場合：
 PS C:> Set-SmConfigSettings -Plugin -HostName 10.232.204.61 -PluginCode hana -configSettings @{"HANA_HDBSQL_CMD" = "C:\Program Files\sap\hdbclient\hdbsql.exe"}
 ----
 +
-Linux の場合：
+5f425eebf9102e123afb94bd2d71ff06
 
 +
 [listing]
@@ -91,4 +91,4 @@ Set-SmConfigSettings -Plugin -HostName scs-hana.gdl.englab.netapp.com -PluginCod
 ----
 
 
-コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+74db7181476f94f0e2927d8c8d98cb97

@@ -1,40 +1,40 @@
 ---
 section: admin
-title: SnapCenter サーバとプラグインを管理します
+title: b3121ceac9c3b1c097a1f53db3eff2a7
 entries:
-- title: ダッシュボードを表示します
+- title: fea84990764109b117844dae6e7232a7
   entries:
-  - title: ダッシュボードの概要
+  - title: 1842816347041f3868bc9706c9a9e69b
     url: "/admin/concept_overview_of_dashboard.html"
-  - title: ダッシュボードに情報を表示する方法
+  - title: 946f52ba41d1b2bfd627afbf56e71b34
     url: "/admin/task_how_to_view_information_on_the_dashboard.html"
-  - title: ダッシュボードからジョブのステータスレポートを要求します
+  - title: 0b421aef4e2a6824e12019d1a2729de5
     url: "/admin/task_request_status_reports_of_the_jobs_from_the_dashboard.html"
-  - title: ダッシュボードから保護ステータスのレポートを要求します
+  - title: ca8d4718959530d7081a06567ef1affb
     url: "/admin/task_request_reports_of_the_protection_status_from_the_dashboard.html"
-- title: RBAC を管理します
+- title: 829270664cf71125df26b9b98866a401
   url: "/admin/task_manage_rbac.html"
-- title: ホストを管理します
+- title: 51929aa5ac08be2aca8dda46b9a095b1
   url: "/admin/concept_manage_hosts.html"
-- title: Resources ページでサポートされている操作
+- title: ab086c14cb132b8320c7cbc2ff98beb8
   url: "/admin/concept_what_operations_can_be_performed_from_the_resource_page.html"
-- title: ポリシーを管理する
+- title: e7326f303b8abf78625da7d8f22fa0b4
   url: "/admin/concept_manage_policies.html"
-- title: リソースグループの管理
+- title: ec972bce7640d5d440d3549702031815
   url: "/admin/task_manage_resource_groups.html"
-- title: バックアップを管理します
+- title: 65d964d49665477bbec39032d9f3ca8a
   url: "/admin/concept_manage_backups.html"
-- title: クローンを削除します。
+- title: d99b44bc53929e5f28f34c661930817f
   url: "/admin/task_delete_clones.html"
-- title: ジョブ、スケジュール、イベント、およびログを監視する
+- title: f63bb2ed2f077a58e42dc5713a5d5843
   url: "/admin/concept_monitor_jobs_schedules_events_and_logs.html"
-- title: SnapCenter のレポート機能の概要
+- title: 41da5980aacd018c69ecb95b6d1885ac
   url: "/admin/concept_overview_of_snapcenter_reports.html"
-- title: SnapCenter サーバリポジトリを管理します
+- title: 7d0bb889cb0b99adea9fd13298f9dc65
   url: "/admin/concept_manage_the_snapcenter_server_repository.html"
-- title: 信頼できないドメインのリソースを管理します
+- title: d9da99afcff86f0b4a156a1f2b5c56d1
   url: "/admin/concept_manage_resources_of_untrusted_domains.html"
-- title: ストレージシステムを管理
+- title: eb47178020d0a5d2852ff2a43d2991e3
   url: "/admin/concept_manage_the_storage_system.html"
-- title: EMS データ収集を管理します
+- title: 4b77029241e362a83eda111b72aa5feb
   url: "/admin/concept_manage_ems_data_collection.html"

@@ -2,19 +2,19 @@
 permalink: protect-postgresql/back-up-postgresql-resources.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for PostgreSQL 
-summary: リソース\（cluster\）またはリソースグループのバックアップを作成できます。バックアップのワークフローには、計画、バックアップするクラスタの特定、バックアップポリシーの管理、リソースグループの作成とポリシーの適用、バックアップの作成、処理の監視が含まれます。 
+summary: 76c214e24b03aa4168d09074b6e14e3f 
 ---
-= PostgreSQLリソースのバックアップ
+= 530895ccaf7ffc619f25f8f9d8ec3597
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-リソース（クラスタ）またはリソースグループのバックアップを作成できます。バックアップのワークフローには、計画、バックアップするクラスタの特定、バックアップポリシーの管理、リソースグループの作成とポリシーの適用、バックアップの作成、処理の監視が含まれます。
+7ac906e4114d3c1fc1afbc68526373d1
 
-次のワークフローは、バックアップ処理の実行順序を示しています。
+b9721a35a6c374ded595576ccbd2f789
 
-image::../media/db2_backup_workflow.gif[PostgreSQLバックアップのワークフロー]
+image::../media/db2_backup_workflow.gif[8dd18363015f7db73665c4d7f82edb52]
 
-PowerShellコマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、クローニングの処理を実行することもできます。PowerShellコマンドレットの詳細については、SnapCenterのコマンドレットのヘルプを使用するか、コマンドレットのリファレンス情報を参照してください。https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]です。
+f6ca7431c38f4f9103a7165ce76ebf07

@@ -2,201 +2,201 @@
 permalink: protect-nsp/add_resources_to_netapp_supported_plugins.html 
 sidebar: sidebar 
 keywords: NetApp supported plug-in, resources, snapcenter 
-summary: バックアップまたはクローンを作成するリソースを追加する必要があります。環境によっては、バックアップまたはクローンを作成するデータベースインスタンスやそのコレクションもリソースに含まれます。 
+summary: 48f5a315d78b006c306e66d7b35fa6f4 
 ---
-= NetAppがサポートするプラグインにリソースを追加する
+= fdadbc4689c75884565947c7d9c98734
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-バックアップまたはクローンを作成するリソースを追加する必要があります。環境によっては、バックアップまたはクローンを作成するデータベースインスタンスやそのコレクションもリソースに含まれます。
+48f5a315d78b006c306e66d7b35fa6f4
 
-.作業を開始する前に
-* SnapCenter サーバのインストール、ホストの追加、ストレージシステム接続の作成、クレデンシャルの追加などのタスクを完了しておく必要があります。
-* そうだろうな link:develop_a_plug_in_for_your_application.html["アプリケーション用のカスタムプラグインを作成しました"]
-* SnapCenter サーバにプラグインをアップロードしておく必要があります。
+.135b308ed83c53f1516b7c754566d1c4
+* 04e793c2d8facdc933edd3335c890a34
+* 2f1bb1e2ce78c864a4c44750e9b9b27c
+* 797f1e031962d70e46335925184febf4
 
 
-.手順
-. 左側のナビゲーションペインで、*[リソース]*を選択し、リストから適切なプラグインを選択します。
-. [リソース]ページで、*[リソースの追加]*を選択します。
-. [Provide Resource Details] ページで、次の操作を実行します。
+.f3a29486bed19a90f2da6d007818b427
+. 0b5045b3b137ebb25cf08b5081075426
+. b828f6db4e08909e879dfbf229208eff
+. 14fdd328e53552c727d0f36c3d306b64
 +
 |===
-| フィールド | 手順 
+| 21f831502a413a739e20cbf9f2eefe54 | 5e2ad6fd9deb412d871137094ee43ef0 
 
 
  a| 
-名前
+49ee3087348e8d44e1feda1917443987
  a| 
-リソースの名前を入力します。
-
-
-
- a| 
-ホスト名
- a| 
-ホストを選択します。
+0750f05e0542388153777a63b5fa887c
 
 
 
  a| 
-を入力します
+dae4a538d4ca7b6c0789932062fe718d
  a| 
-タイプを選択します。type は、プラグインの概要ファイルに基づいてユーザが定義します。たとえば、データベースやインスタンスなどです。
-
-選択したタイプに親がある場合は、親の詳細を入力します。たとえば、タイプがデータベースで親がインスタンスの場合、インスタンスの詳細を入力します。
+d82b9729484cf5fd2948c596280e72fb
 
 
 
  a| 
-クレデンシャル名
+a1fa27779242b4902f7ae3bdd5c6d508
  a| 
-[ 資格情報 ] を選択するか、新しい資格情報を作成します。
+0e4c9e1ee0802a727d5dd0fcacc4a158
+
+d51f353d18e7a9243a31897eda8f33de
 
 
 
  a| 
-マウントパス
+a5f3bff0d7667c1bb37c185dbaac3ff8
  a| 
-リソースのマウント先のマウントパスを入力します。これは Windows ホストにのみ適用されます。
+22d904afc998596607ae9259692598fb
+
+
+
+ a| 
+16e83f7e57633cd58a4377b7c1b63e8b
+ a| 
+1b77d8b94cdc028e50a0681f82c70f25
 
 |===
-. [ストレージフットプリントの入力]ページで、ストレージシステムを選択して1つ以上のボリューム、LUN、およびqtreeを選択し、*[保存]*を選択します。
+. 20fc40c342831a6dee50cd66efb74566
 +
-オプション：を選択します image:../media/add_policy_from_resourcegroup.gif["プラスアイコン"] アイコンをクリックして、他のストレージシステムからボリューム、 LUN 、および qtree を追加します。
-
-+
-
-NOTE: NetAppでサポートされているプラグインでは、リソースの自動検出がサポートされていません。物理環境と仮想環境のストレージの詳細も自動検出されません。リソースの作成時に、物理環境と仮想環境のストレージの情報を指定する必要があります。
+a28f52bcf0c820558e017ed65d61bbc4
 
 +
-image::../media/storage_footprint.gif[ストレージ容量]
 
-. リソース設定ページで、リソースのカスタムキーと値のペアを指定します。
-+
-
-NOTE: カスタムキー名が大文字であることを確認します。
+NOTE: 5b31c6defa650e8eede236c9a524ad39
 
 +
-image::../media/resource_settings.gif[リソース設定]
+image::../media/storage_footprint.gif[e855bfeca424d5d865b9bac0eaf01f53]
+
+. d98e943b0122d016274bcbbeba1d647d
++
+
+NOTE: 5c2c5b6203d8891127217c96e3fbe1b9
 
 +
-各プラグインパラメータについては、を参照してください。 link:add_resources_to_netapp_supported_plugins.html#parameters-to-configure-the-resource["リソースを構成するパラメータ"]
-
-. 概要を確認し、*[終了]*を選択します。
-
-
-.結果
-リソースは、タイプ、ホストまたはクラスタ名、関連するリソースグループとポリシー、全体的なステータスなどの情報とともに表示されます。
-
-
-IMPORTANT: データベース名が SnapCenter 以外に変更された場合は、リソースを更新する必要があります。
-
-.完了後
-アセットへのアクセスを他のユーザに許可する場合は、 SnapCenter 管理者が対象のユーザにアセットを割り当てる必要があります。これにより、ユーザは、自身に割り当てられたアセットに対して権限のある処理を実行できます。
-
-リソースを追加したら、リソースの詳細を変更できます。NetAppでサポートされるプラグインリソースにバックアップが関連付けられている場合、リソース名、リソースタイプ、およびホスト名のフィールドは変更できません。
-
-
-
-== リソースを構成するパラメータ
-
-プラグインを手動で追加する場合は、[Resource Settings]ページで次のパラメータを使用してリソースを設定できます。
-
-
-
-=== MongoDB向けプラグイン
-
-リソース設定：
-
-* MongoDB_APP_SERVER=（リソースタイプが共有クラスタの場合）またはMongoDB_ReplicaSet_SERVER=（リソースタイプがレプリカセットの場合）
-* oplog_path=（MongoDB.propertiesfileから提供される場合はオプションパラメータ）
-* MongoDB_authentication_type=（LDAP認証の場合はplain、その他の場合はNone）
-
-
-MongoDB.propertiesファイルには、次のパラメータを指定する必要があります。
-
-* disable_starting_stoping_services=
-+
-** n：プラグインによって開始/停止サービスが実行される場合。
-** ユーザがSTART/** STOPサービスを実行した場合はY。
-** オプションのパラメータをデフォルト値としてNに設定します。
-
-
-* oplog_path_=（SnapCenterでカスタムのキーと値のペアとしてすでに指定されている場合はオプションパラメータ）
-
-
-
-
-=== MaxDB用プラグイン
-
-リソース設定：
-
-* XUSER_ENABLE(Y|N)データベースユーザにパスワードを要求しないように、MaxDBのxuserの使用を有効または無効にします。
-* HANDLE_LOGWRITER(Y|N)一時停止Logwriter(N)または再開Logwriter(Y)操作を実行します。
-* DBMCLICMD（path_to_dbmcli_cmd）は、MaxDBのdbmcliコマンドへのパスを指定します。設定しない場合は、検索パスのdbmcliが使用されます。
-
-
-
-NOTE: Windows環境では、パスは二重引用符（"..."）で囲む必要があります。
-
-* SQLCLICMD（path_to_sqlcli_cmd）は、MaxDB sqlcliコマンドへのパスを指定します。パスが設定されていない場合は、検索パスにsqlcliが使用されます。
-* MaxDB_UPDATE_HIST_LOG (Y|N)は、MaxDBバックアッププログラムにMaxDB履歴ログを更新するかどうかを指示します。
-* MaxDB_CHECK_SNAPSHOT_DIR：例、SID1：DIRECTORY [、DIRECTORY ...]；[SID2：DIRECTORY [、DIRECTORY ...] Snap CreatorのSnapshotコピー処理が成功したこと、およびSnapshotが作成されたことを確認します。
-+
-この環境 NFS のみ。このディレクトリには、 .snapshot ディレクトリが含まれている場所を指定する必要があります。複数のディレクトリを指定する場合は、カンマで区切って指定できます。
+image::../media/resource_settings.gif[e7406b64381fc805ceaee3d2f62a905c]
 
 +
-MaxDB 7.8 以降のバージョンでは、データベースバックアップ要求がバックアップ履歴で失敗とマークされています。
+3f7f4b4e15fb13c07226ae5e8b35a6f8
 
-* maxDB_backup_templates：各データベースのバックアップテンプレートを指定します。
+. 7444cb400c788a3d3aad71fb264fbbee
+
+
+.8eea62084ca7e541d918e823422bd82e
+e17cc09362fa60a61b045f3553620d2c
+
+
+IMPORTANT: 82f28b0f3a541b232ddcbe7c091f64e7
+
+.bd965e38a0c9cf27aa1bde099308e23f
+3ccbcc5da83c6d1a88dc8bcc16bad81b
+
+19e0df9603aca24ac2e353610c9a2595
+
+
+
+== 908ce55b9da44ee27d03ed171ddea2e7
+
+953d8aa26b3ddc6ef9cb0d313bf6b37c
+
+
+
+=== 73983f1a2e95d99410b33aa88c8d1553
+
+600e3309232549251ca640cb2342dfde
+
+* e9ddc733b3e6c17e18926d04d62986de
+* 927bec3e40fa9a147f44662b84721dd9
+* 03736e919d63a5b6c12cd3932b0ee757
+
+
+004fbb3dfd245e71dabcc6a75db3fbb2
+
+* df4a3aea55de7806974b34f710fe9e4d
 +
-テンプレートが存在し、外部タイプのバックアップテンプレートである必要があります。MaxDB 7.8以降でスナップショット統合を有効にするには、MaxDBバックグラウンドサーバ機能があり、外部タイプのMaxDBバックアップテンプレートがすでに設定されている必要があります。
+** 98109f825501c3cb72b00e1fe79695b2
+** 2d313527d9889e015fd736c0788d3146
+** 5773ae9a295e538d0059e98db38eeba6
 
-* MaxDB_BG_SERVER_PREFIX：バックグラウンドサーバ名のプレフィックスを指定します。
+
+* 65353844f406b5f277c2298c9de28a4d
+
+
+
+
+=== 49511ddb8201bb96603eb808d2a3e28f
+
+600e3309232549251ca640cb2342dfde
+
+* b411eb4c2fa661e74171410d1ab4bd48
+* 8cd4cecb4cdb8d9c30223764a3a903eb
+* 3145067569fb820b87645966c6f53b09
+
+
+
+NOTE: 66619cba37760dcecc43382e0d79b255
+
+* 70540c6eb6372721dc72da9704b0e951
+* 553db31592e8608dc154043f1277223f
+* 31d8946dd7b37335bf135433dfba1c1e
 +
-MaxDB のバックアップテンプレートパラメータを設定する場合は、 MaxDB の BG_server_prefix パラメータも設定する必要があります。プレフィックスを設定しない場合は、デフォルト値na_bg_が使用されます。
+a83970415359c312ddce75ae580f0225
 
-
-
-
-
-=== Sybase ASE用プラグイン
-
-リソース設定：
-
-* sybase_server（data_server_name）は、Sybaseデータサーバ名を指定します（isqlコマンドの-Sオプション）。たとえば、p_testのように指定します。
-* sybase_databases_exclude（db_name）を使用すると、「all」構成要素が使用されている場合にデータベースを除外できます。
 +
-複数のデータベースを指定するには、セミコロンで区切ったリストを使用します。例：pubs2;test_db1。
+4417fa132d4a54d57723d3e0c10c8d49
 
-* sybase_user: user_nameには'isqlコマンドを実行できるオペレーティング・システム・ユーザを指定します
+* 3822bf8d2dc90b4a6f73ef50d9ea775b
 +
-UNIXの場合は必須です。このパラメータは、Snap Creatorエージェントのstartコマンドとstopコマンドを実行するユーザ（通常はrootユーザ）とisqlコマンドを実行するユーザが異なる場合に必要です。
+eebb4c734f3f1079fd5d41eea32a2d1e
 
-* Sybase_Tran_dump db_name：directory_pathを使用すると'スナップショットの作成後にSybaseトランザクションダンプを実行できます例：pubs2:/sybasedumps/pubs2
+* 9477337b7878a4f25ccde00ea9416b9b
 +
-トランザクションダンプが必要な各データベースを指定する必要があります。
-
-* Sybase_Tran_dump_compress (Y|N) Sybaseトランザクションダンプのネイティブ圧縮を有効または無効にします。
-* Sybase_ISQL_CMD（たとえば、/opt/Sybase/OCS-15_0/bin/isql）は、isqlコマンドへのパスを定義します。
-* Sybase_exclude_tempdb（Y|N）を使用すると、ユーザが作成した一時データベースを自動的に除外できます。
+16bfac97af8708431c25ec2291a1e479
 
 
 
 
-=== Oracleアプリケーション向けプラグイン（ORASCPM）
 
-リソース設定：
+=== 00776d7e76d2ff924005283f8a850e22
 
-* sqlplus_cmdは、sqlplusへのパスを指定します。
-* ORACLE_DATABASESには、バックアップするOracleデータベースと対応するユーザ（database：user）が一覧表示されます。
-* CNTL_FILE_BACKUP_DIRは、制御ファイルのバックアップ先ディレクトリを指定します。
-* ORA_TEMPは、一時ファイルのディレクトリを指定します。
-* ORACLE_HOMEには、Oracleソフトウェアがインストールされているディレクトリを指定します。
-* archive_log_onlyは、アーカイブログをバックアップするかどうかを指定します。
-* oracle_backup_modeは、オンラインバックアップとオフラインバックアップのどちらを実行するかを指定します。
+600e3309232549251ca640cb2342dfde
+
+* 341a000d7d6fb3a7fffdc617dffab5d1
+* b86cb3989b481da0c083baf1da18da20
++
+940b268cac3ed1330e0f7e0319d1e859
+
+* 97cc319bb457d56d47830d6de77ba4ad
++
+ebf4dad38777f88ec1b5e116ba37b3a4
+
+* e46a8315478b6b916cdbb1fd118de1c0
++
+66afa311d7576c91c34cb54fcf03b40b
+
+* f3ff800bf59b3e292e273cbb5144e981
+* eb733da6d91024122221fa2aa260156e
+* cd740fe9314eab6d0c2592fc2105153a
+
+
+
+
+=== a7d333f84206b65d56d2716470463c89
+
+600e3309232549251ca640cb2342dfde
+
+* 06c9ae76a61320ac1c236face000c979
+* 5f379444506221aba90e302dc3c20d38
+* c97084cff38819819afb580bd07f2b05
+* 0b12a00876503fb1813afee6ad9b0a76
+* e1ab4aa639aa539548c7d55759dc7004
+* 57808f9033b6670d0e1ff1ecc8197488
+* 6d6058c414d1170875e11ce8a19484f0
 

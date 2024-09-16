@@ -2,46 +2,46 @@
 permalink: protect-hana/task_prepare_multitenant_database_containers_for_data_protection.html 
 sidebar: sidebar 
 keywords: multitenant database containers 
-summary: 'SnapCenter に直接登録された SAP HANA ホストの場合、 SnapCenter Plug-in for SAP HANA Database をインストールまたはアップグレードすると、ホスト上のリソースが自動的に検出されます。プラグインをインストールまたはアップグレードした後、プラグインホスト上にあるすべてのマルチテナントデータベースコンテナ \(MDC\) リソースに対して、別の MDC リソースが自動的に別の GUID 形式で検出され、 SnapCenter に登録されます。新しいリソースは「ロック」状態になります。' 
+summary: b77f43243ff7824de010f233cda7884a 
 ---
-= マルチテナントデータベースコンテナでデータ保護を準備
+= 2d31622eca840c7473dfc8841b0fcd75
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter に直接登録された SAP HANA ホストの場合、 SnapCenter Plug-in for SAP HANA Database をインストールまたはアップグレードすると、ホスト上のリソースが自動的に検出されます。プラグインをインストールまたはアップグレードした後、プラグインホスト上にあるすべてのマルチテナントデータベースコンテナ（ MDC ）リソースに対して、別の MDC リソースが自動的に検出されて SnapCenter に登録されます。新しいリソースは「ロック」状態になります。
+db9199418ff0f829220632ad691b417e
 
-.このタスクについて
-たとえば、 SnapCenter 4.2 では、 E90 MDC リソースがプラグインホスト上にあり、手動で登録されている場合、 SnapCenter 4.3 にアップグレードした後に、別の GUID を持つ別の E90 MDC リソースが検出されて SnapCenter に登録されます。
+.bbe48fb854ea022537208eeeff822f91
+966e9d5b532b7c6f319bcc286d848db9
 
 
-NOTE: SnapCenter 4.2 以前のバージョンのリソースに関連付けられたバックアップは、保持期間が満了するまで保持される必要があります。保存期間が終了したら、古い MDC リソースを削除して、新しい自動検出された MDC リソースを引き続き管理できます。
+NOTE: d1cb961e923b4db159abec1766c6b4a9
 
-「古い MDC リソース」は、 SnapCenter 4.2 以前のリリースで手動で追加されたプラグインホストの MDC リソースです。
+362399f498ca9970e978590a1a110ca0
 
-SnapCenter 4.3 で検出された新しいリソースを使用してデータ保護処理を開始するには、次の手順を実行します。
+3330b4f2854f9b1e778b516e0e6e3546
 
-.手順
-. リソースページで ' 以前の SnapCenter リリースにバックアップが追加されている古い MDC リソースを選択し ' トポロジーページからメンテナンス・モードにします
+.f3a29486bed19a90f2da6d007818b427
+. b1de5eba37ffd3b926bf5e26b51748a1
 +
-リソースがリソースグループの一部である場合は、リソースグループを「メンテナンスモード」にします。
+86737276597e20e473f024ae6e4e193f
 
-. リソースページから新しいリソースを選択して、 SnapCenter 4.3 にアップグレードした後に検出された新しい MDC リソースを構成します。
+. a4b619e8c6563e533bbd1ec034445744
 +
-「新しい MDC リソース」は、 SnapCenter サーバとプラグインホストが 4.3 にアップグレードされたときに検出された、新しく検出された MDC リソースです。新しい MDC リソースは、古い MDC リソースと同じ SID を持つリソース、特定のホスト、およびリソースページのその横に赤い南京錠のアイコンで識別できます。
+d1598cea691871a6e0560cde4f9d6739
 
-. SnapCenter 4.3 へのアップグレード後に検出された新しい MDC リソースを保護するには ' 保護ポリシー ' スケジュール ' 通知設定を選択します
-. 保持設定に基づいて、 SnapCenter 4.2 以前のリリースで作成されたバックアップを削除します。
-. Topology ページからリソースグループを削除します。
-. [ リソース ] ページから古い MDC リソースを削除します。
+. 19fd7f26beb9f664c27a5c0178692c30
+. 51637044cc8ef099cbd7a621fcec5a60
+. 053b2f9960ca5511b7f50f4c35408867
+. f8e1875f1ca7bafd5da6a29fa6bcda74
 +
-たとえば、プライマリSnapshotの保持期間が7日、セカンダリSnapshotの保持期間が45日の場合、45日が経過してすべてのバックアップが削除されたあとは、リソースグループと古いMDCリソースを削除する必要があります。
+99b447de4897ad60ae2d4ef832acc11d
 
 
 
-.関連情報
-link:task_configure_hdb_user_store_key_and_hdbsql_os_user_for_the_sap_hana_database.html["SAP HANA データベース用に HDB User Store Key および HDBSQL OS ユーザを設定します"]
+.30f60d67f457bb040dffde52197a54da
+edd858f144c3c1107be70381811fd6f2
 
-link:task_view_sap_hana_database_backups_and_clones_in_the_topology_page_sap_hana.html["Topology ページで、 SAP HANA データベースのバックアップとクローンを表示します"]
+7b61486d739fb4f1d37092b600cea0e2

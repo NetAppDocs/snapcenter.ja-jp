@@ -2,26 +2,26 @@
 permalink: protect-sco/overview-application-volume.html 
 sidebar: sidebar 
 keywords: application volume, overview, backup, non-data volumes 
-summary: アプリケーションボリュームは、Oracleデータベースに関連する情報が格納されるストレージです。 
+summary: e9d6209daed73f3a8f0578d27a8a2a85 
 ---
-= アプリケーションボリュームとは
+= daa2e304f0d45a22bbdaee82fe42256f
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Application Volumesは、Oracleデータベースに関連する設定、インストーラ、その他のデータ以外のファイルなどの情報を格納するストレージです。
+b9ef14bd380b22129789d2a58055fd71
 
-SnapCenter Plug-in for Oracle Databaseでは、アプリケーションボリューム（データボリューム以外のボリューム）とOracleデータベースの整合性のあるバックアップを作成できます。
+6a6e355317fc46c557aae7efee2616ae
 
-このプラグインは、アプリケーションボリュームのバックアップとクローニングを自動化します。
+23c8668967f14b47c49239015f1a75e6
 
-* アプリケーションボリュームとOracleデータベースボリュームを1つのリソースグループで保護します。
-* アプリケーションボリュームのバックアップを作成します。
-* Oracleデータベースとアプリケーションボリュームのバックアップを作成します。
-* ポイントインタイムまでのアプリケーションボリュームとともに、データベースのクローンを作成します。
-* バックアップ処理のスケジュールを設定します。
-* すべての処理を監視します。
-* バックアップ処理とクローニング処理のレポートを表示します。
+* 460056168fe8cfae225fcede48618f89
+* 8d4879d1f00447108f920120663f3d07
+* af3d150952bdf0ab3693bd9da33bd032
+* 39240126e5a114efbf72c14cc21a7094
+* 44c8eaf80f0322d31922b637d3f206f4
+* 0fe13cbed941598ea2afd2f3d08a8605
+* c3f918653f9d61e3b2472e16235d9f90
 

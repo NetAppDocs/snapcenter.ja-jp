@@ -1,146 +1,146 @@
 ---
 section: install
-title: SnapCenter サーバのインストール
+title: ab5f4e39159ac71e7f3f1e7080905a20
 entries:
-- title: インストールワークフロー
+- title: 706c1d4933d296d42d61b064f4e637ae
   url: "/install/install_workflow.html"
-- title: SnapCenter サーバをインストールする準備をします
+- title: f514139bd8bb4cc318cbbff458dd2226
   entries:
-  - title: ドメインとワークグループの要件
+  - title: 0322b41f8bf313240d64c3e6923b4ee4
     url: "/install/reference_domain_and_workgroup_requirements.html"
-  - title: スペースとサイジングの要件
+  - title: 18cd7192921dd5ac27a1a7c5ef795c20
     url: "/install/reference_space_and_sizing_requirements.html"
-  - title: SAN ホストの要件
+  - title: 8e9816159074c93c5490453d542c7149
     url: "/install/reference_san_host_requirements.html"
-  - title: サポートされるストレージシステムおよびアプリケーション
+  - title: 1e1ed4854c77f284f3e97b0843b6e570
     url: "/install/reference_supported_storage_systems_and_applications.html"
-  - title: サポートされているブラウザ
+  - title: 6d84e3718084e0db779da4ff8791a2f2
     url: "/install/reference_supported_browsers.html"
-  - title: 接続とポートの要件
+  - title: 9a0980e2d2a75eb076f41f7a4d439162
     url: "/install/reference_connection_and_port_requirements.html"
-  - title: SnapCenter ライセンス
+  - title: 07cdb1cc7dcc527060e65d98659cb1d4
     url: "/install/concept_snapcenter_licenses.html"
-  - title: 登録してSnapCenterソフトウェアにアクセス
+  - title: 377990998ce406bfbee44e98450fd025
     url: "/install/register_enable_software_access.html"
-  - title: クレデンシャルの認証方式を指定します
+  - title: 5b00a6bb860d50a1c997c998160e673c
     url: "/install/concept_authentication_methods_for_your_credentials.html"
-  - title: Storage Virtual Machine の接続とクレデンシャル
+  - title: bb8e9cdba9e13f92c0ca73c3ae3f6c05
     url: "/install/concept_svm_connections_and_credentials.html"
-  - title: 多要素認証（ MFA ）
+  - title: 2519e52723b63d73b91fe9567002e2ad
     entries:
-    - title: 多要素認証（MFA）を管理します。
+    - title: 6bcc192d7209e867a0f8afd8938c62eb
       url: "/install/enable_multifactor_authentication.html"
-    - title: REST API、PowerShell、SCCLIを使用して多要素認証（MFA）を管理
+    - title: 89c22ebd87fec289f6c2e160fd092b95
       url: "/install/enable_multifactor_authentication_using_RestAPI_PowerShell_SCCLI.html"
-    - title: PowerShell、SCCLI、REST APIを使用してSnapCenterサーバでMFAを設定します
+    - title: '0699cec0b36b38a01a2c7453df793209'
       url: "/install/configure_mfa_using_powershell_sccli_restapi.html"
-- title: WindowsホストへのSnapCenterサーバのインストール
+- title: 74d2914d1d5af620488c6d1b4ffeb64b
   url: "/install/task_install_the_snapcenter_server_using_the_install_wizard.html"
-- title: LinuxホストへのSnapCenterサーバのインストール
+- title: a5133039db74945642b3f4bbb769135d
   url: "/install/install_snapcenter_server_linux.html"
-- title: SnapCenter にログインします
+- title: 3a42fbb761150585f7eaf7c0a04e8c90
   url: "/install/task_log_in_to_snapcenter.html"
-- title: WindowsホストのCA証明書の設定
+- title: 1231c8ea8da87c73515938fe7d9cafd5
   entries:
-  - title: CA 証明書 CSR ファイルを生成します
+  - title: 5c4de78a2b621074bf68ab1c644af297
     url: "/install/reference_generate_CA_certificate_CSR_file.html"
-  - title: CA 証明書をインポートします
+  - title: d816b0b5150b290e2a4a44bdb570d328
     url: "/install/task_import_CA_certificates.html"
-  - title: CA 証明書のサムプリントを取得します
+  - title: 9772bdc36f54d8bb6dc779a222af547c
     url: "/install/task_get_the_CA_certificate_thumbprint.html"
-  - title: Windows ホストプラグインサービスを使用して CA 証明書を設定する
+  - title: 1067e8b574748bfd5d0147a621c7ca24
     url: "/install/task_configure_CA_certificate_with_Windows_host_plug-in_services.html"
-  - title: SnapCenter サイトで CA 証明書を設定します
+  - title: 5205f040dade47615e253c8910e0a023
     url: "/install/task_configure_CA_certificate_with_snapcenter_site.html"
-  - title: SnapCenter サーバの CA 証明書を有効にします
+  - title: d15484ff4ea42a9f2e2b7d78bd97103b
     url: "/install/task_enable_ca_certificates_for_snapcenter.html"
-- title: LinuxホストのCA証明書の設定
+- title: a4edcfdfc889aead495fa92bc734d112
   url: "/install/configure_ca_certificate_linux_host.html"
-- title: Windowsホストで双方向SSL通信を設定して有効にする
+- title: 871fc681c918eeb8bc97c43c286a51ca
   entries:
-  - title: Windowsホストでの双方向SSL通信の設定
+  - title: c38eb95b49d08208a5a69dbeb37cbf8a
     url: "/install/task_configure_two_way_ssl.html"
-  - title: Windowsホストで双方向SSL通信を有効にする
+  - title: fb1f4d52b01df105765d83ddca95f1be
     url: "/install/task_enable_two_way_ssl.html"
-- title: Linuxホストでの双方向SSL通信の設定と有効化
+- title: b4a3c04aec1d573cc0ee1d415ca27eae
   entries:
-  - title: Linuxホストでの双方向SSL通信の設定
+  - title: d56dc2b3f073ecdd8f0c3afa0be15539
     url: "/install/configure_two_way_ssl_linux.html"
-  - title: LinuxホストでSSL通信を有効にする
+  - title: c0e05b70434937fc67575b621fdb5b23
     url: "/install/enable_two_way_ssl_linux.html"
-- title: 証明書ベースの認証を設定します
+- title: 3e918b1551870a1f28fd26d82364a6de
   entries:
-  - title: SnapCenterサーバから認証局（CA）証明書をエクスポートします
+  - title: 5bdc9dfe0790a57a6fe905d1fb1e3eae
     url: "/install/task_export_ca_certificates_from_snapcenter_server.html"
-  - title: CA証明書をWindowsホストプラグインにインポートします
+  - title: 61341920d3259181ac6dce8912b43711
     url: "/install/task_import_ca_certificate_to_windows_plugin_hosts.html"
-  - title: CA証明書をUNIXホストプラグインにインポートし、ルート証明書または中間証明書をSPL trust-storeに設定します
+  - title: dc085c0453f245659c31e067671c65b0
     entries:
-    - title: CA証明書をUNIXホストプラグインにインポートします
+    - title: 78a044d413487b3c49b37567f8df9e4f
       url: "/install/task_import_ca_certificate_to_unix_plugin_hosts.html"
-    - title: ルート証明書または中間証明書を SPL の信頼ストアに設定します
+    - title: e652c695959b284573e47a48717c7976
       url: "/install/task_configure_root_or_intermediate_certificates_to_trust_store.html"
-  - title: 証明書ベースの認証を有効にします
+  - title: 7fbe6e40125b7d1b2f5c5c05044e7526
     url: "/install/task_enable_certificate_based_authentication.html"
-- title: Active Directory 、 LDAP 、 LDAPS を設定します
+- title: '0095bd100c1750fd3bff002bda60502e'
   entries:
-  - title: 信頼できない Active Directory ドメインを登録します
+  - title: 378f0ed69bcfd27611f3fb3d8d53ebde
     url: "/install/task_register_untrusted_active_directory_domains.html"
-  - title: LDAPS の CA クライアント証明書を設定します
+  - title: 00e951b7db736ab04c403ede9ffcf398
     url: "/install/task_configure_CA_client_certificate_for_LDAPS.html"
-- title: ハイアベイラビリティを設定する
+- title: 055367d73c719054881d2c3df6cfb418
   entries:
-  - title: F5 を使用して SnapCenter サーバのハイアベイラビリティを構成します
+  - title: 5077e1bfbb44c5e6a1f4e30f0abe56cb
     url: "/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html"
-  - title: Microsoft Network Load Balancer を手動で設定します
+  - title: 2d5db85f748f26999514af33f7603cc0
     url: "/install/concept_network_load_balanacing_and_application_request_routing_requirements.html"
-  - title: NLB から F5 に切り替えて高可用性を実現します
+  - title: 9b53ef06c602a510643b8407a2b83b67
     url: "/install/task_switch_from_nlb_to_f5_for_high_availability.html"
-  - title: SnapCenter MySQL リポジトリの高可用性
+  - title: 8224276261b116399d0b43fb7d7143fc
     url: "/install/concept_high_availability_for_snapcenter_mysql_repository.html"
-  - title: SnapCenter 証明書をエクスポートする
+  - title: 4b7e01d00c62bc7cc219f57128db2b48
     url: "/install/task_export_snapcenter_certificates.html"
-- title: ロールベースアクセス制御（ RBAC ）の設定
+- title: 66533c4e3134a6b220ad1336cd288c49
   entries:
-  - title: ユーザまたはグループを追加し、ロールとアセットを割り当てます
+  - title: 7c5e9452cf45e8b93c00a930bef68613
     url: "/install/task_add_a_user_or_group_and_assign_role_and_assets.html"
-  - title: ロールを作成します
+  - title: 57cf47fd5cdb4fa24f625917dbf7b4cb
     url: "/install/task_create_a_role.html"
-  - title: security login コマンドを使用して、 ONTAP RBAC ロールを追加します
+  - title: a69e754efca1b9623b6b0f65a2d8dc73
     url: "/install/task_add_an_rbac_role_using_security_login_commands.html"
-  - title: 最小権限を持つ SVM ロールを作成します
+  - title: 56e14ee5960cfe37cfc3964b6597babb
     url: "/install/create-svm-roles-minimum-privileges.html"
-  - title: 最小限の権限で ONTAP クラスタロールを作成します
+  - title: 822239f41b07c86cff067dac38fab7f4
     url: "/install/task_create_an_ontap_cluster_role_with_minimum_privileges.html"
-  - title: Active Directory の読み取り権限を有効にするように IIS アプリケーションプールを設定します
+  - title: 852f965b48b17a73b0751ade963c60d7
     url: "/install/task_configure_iis_application_pools_to_enable_active_directory_read_permissions.html"
-- title: 監査ログを設定します
+- title: d454841b95073c538e44b3f3299d1ce5
   url: "/install/task_configure_audit_log_settings.html"
-- title: ストレージシステムを追加
+- title: 787d250b4622b9b1f34f52b01f5768aa
   url: "/install/task_add_storage_systems.html"
-- title: SnapCenter の標準コントローラベースのライセンスを追加します
+- title: f011a01ebc3350e546311efaf71140bc
   url: "/install/concept_snapcenter_standard_controller_based_licenses.html"
-- title: ストレージシステムをプロビジョニング
+- title: 5d4caff07857398d579cdda92ce3f34f
   entries:
-  - title: Windows ホストでストレージをプロビジョニングする
+  - title: 0daccd45abdac281e7508c5de0fa492c
     entries:
-    - title: LUN ストレージを設定します
+    - title: 30837f98cbd95f5a4cd8f19178a695e8
       url: "/install/concept_configure_lun_storage.html"
-    - title: igroup を作成して管理します
+    - title: 9d8cd3d6c4d32d67237a696ecf4924be
       url: "/install/concept_create_and_manage_igroups.html"
-    - title: ディスクを作成および管理する
+    - title: 1b7557792c66607ae44880c91345062e
       url: "/install/task_create_and_manage_disks.html"
-    - title: SMB 共有を作成および管理する
+    - title: 61e81eb53b72fd5418e7a2bd125c8686
       url: "/install/concept_create_and_manage_smb_shares.html"
-    - title: ストレージシステム上のスペースを再生する
+    - title: d42a857617c39acde55da72ff994c884
       url: "/install/task_reclaim_space_on_the_storage_system.html"
-    - title: PowerShell コマンドレットを使用してストレージをプロビジョニング
+    - title: 7237d45fe61f4bbc73cd8a2c246ec386
       url: "/install/reference_provision_storage_using_powershell_cmdlets.html"
-  - title: VMware 環境でストレージをプロビジョニング
+  - title: e2d0fdb0252253026c4030313d523287
     url: "/install/concept_provision_storage_in_vmware_environments.html"
-- title: SnapCenter サーバとの安全な MySQL 接続を設定します
+- title: 2c83e33769333482559e227de9729593
   url: "/install/concept_configure_secured_mysql_connections_with_snapcenter_server.html"
-- title: インストール中に Windows ホストで有効になる機能
+- title: 03b777e98e70f41a1b91fc53f61e82ae
   url: "/install/reference_features_enabled_on_your_windows_host_during_installation.html"
-- title: インストルチユウニLinuxホストテユウコウニナルキノウ
+- title: 0615d0e2ee2ca176a2602bdbb3cbf96e
   url: "/install/features_enabled_on_linux_host.html"

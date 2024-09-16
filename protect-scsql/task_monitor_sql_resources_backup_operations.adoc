@@ -2,47 +2,47 @@
 permalink: protect-scsql/task_monitor_sql_resources_backup_operations.html 
 sidebar: sidebar 
 keywords: SnapCenter Server 
-summary: SnapCenter Jobs ページを使用して、各バックアップ処理の進捗状況を監視できます。進捗状況をチェックして、処理が完了するタイミングや問題があるかどうかを確認できます。 
+summary: 4b0b8f3dcc1d02bb62d5a7533b295209 
 ---
-= SnapCenter Jobs ページで、 SQL リソースのバックアップ処理を監視します
+= dad5746df11efbf1248f8053bbe1226d
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenterJobs ページを使用して、各種バックアップ処理の進捗状況を監視できます。進捗状況をチェックして、処理が完了するタイミングや問題があるかどうかを確認できます。
+2794927004b00b8d766ca3deca4c7096
 
-.このタスクについて
-以下のアイコンがジョブページに表示され、操作の対応する状態を示します。
+.bbe48fb854ea022537208eeeff822f91
+7944a2318d6a58176074a0d99b34c73d
 
-* image:../media/progress_icon.gif["実行中のアイコン"] 実行中です
-* image:../media/success_icon.gif["完了アイコン"] 正常に完了しました
-* image:../media/failed_icon.gif["失敗したアイコン"] 失敗しました
-* image:../media/warning_icon.gif["警告アイコンが表示されています"] 警告で終了したか、警告が原因で起動できませんでした
-* image:../media/verification_job_in_queue.gif["検証ジョブをキューに格納します"] キューに登録され
-* image:../media/cancel_icon.gif["キャンセルアイコン"] キャンセルされました
+* cad8bf0bd55afaa12be11cc29f347052
+* 3a62ae015b4ba6f0dc48c424c0a0fe86
+* 4066ea01819c2bfdcb0dbbc680a26a0a
+* 54cc5efef9b7edd3fd699fc1e5a0ff50
+* d208aa08a03da9a8a8e5bd96ad0fedae
+* 596771a00ab2893deb5c8fa7fe5873f5
 
 
-.手順
-. 左側のナビゲーションペインで、 *Monitor* をクリックします。
-. [ モニター ] ページで、 [ * ジョブ * ] をクリックします。
-. Jobs （ジョブ）ページで、次の手順を実行します。
+.f3a29486bed19a90f2da6d007818b427
+. b40a6c0b08ac99c86eb676e2689c6996
+. c0a63413cafa6a465f587d5835701c87
+. 3160f4991d365988a865df5567f2147f
 +
-.. をクリックします image:../media/filter_icon.png[""] バックアップ処理だけが表示されるようにリストをフィルタリングします。
-.. 開始日と終了日を指定します。
-.. [* タイプ *] ドロップダウン・リストから、 [*Backup*] を選択します。
-.. [*Status*]( ステータス *) ドロップダウンから、バックアップステータスを選択します。
-.. [ 適用（ Apply ） ] をクリックして、正常に完了した操作を表示する。
+.. 7b467581fdc2f1a9bc98397eaf9411b4
+.. 7407325f29b504f9c8b87ec8da503815
+.. e10f73b33c1a0725b8812f08089e7788
+.. 1f8a6ebe3d4d002c37961084ee957772
+.. 30816945c60dc2c3f5e65b0a88f9bc19
 
 
-. バックアップジョブを選択し、 ［ * 詳細 * ］ をクリックしてジョブの詳細を表示します。
+. 5f31a909a716e6e46492a1095c0444d8
 +
 
-NOTE: バックアップジョブのステータスがと表示されますimage:../media/success_icon.gif["完了アイコン"]で、ジョブの詳細をクリックすると、バックアップ処理の子タスクの一部がまだ実行中であるか、警告の兆候がマークされていることがわかります。
+NOTE: f4d8f263741562ac4c8e18153f44e752
 
-. ［ ジョブの詳細 ］ ページで、 ［ * ログの表示 * ］ をクリックします。
+. 1c41074e44dc2e55551dfb68d2bc354d
 +
-*View logs* ボタンをクリックすると、選択した操作の詳細なログが表示されます。
+2063f930237a8cb9c2f18d14af2c0772
 
 

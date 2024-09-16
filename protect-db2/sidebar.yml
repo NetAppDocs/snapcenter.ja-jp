@@ -1,148 +1,148 @@
 ---
 section: protect-db2
-title: IBM DB2の保護
+title: 5534321a47754ebc6b65953a14037ee4
 entries:
-- title: IBM DB2用SnapCenterプラグイン
+- title: 03720547c7eaf5a2184cb04e804c96dc
   entries:
-  - title: SnapCenter Plug-in for IBM DB2の概要
+  - title: 886f63447d5b4f38c651bbc3e12ffbb6
     url: "/protect-db2/snapcenter-plug-in-for-ibm-db2-overview.html"
-  - title: SnapCenter Plug-in for IBM DB2の機能
+  - title: 5ff676b44b8e1689869b0d9ec82d80ca
     url: "/protect-db2/what-you-can-do-using-the-snapcenter-plug-in-for-ibm-db2.html"
-  - title: SnapCenter Plug-in for IBM DB2の機能
+  - title: 95902d624b69ea4a39c19f5b019d49fe
     url: "/protect-db2/snapcenter-plug-in-for-ibm-db2-features.html"
-  - title: SnapCenter Plug-in for IBM DB2でサポートされるストレージタイプ
+  - title: 6426213ce16798143b0b51f16c7f4f53
     url: "/protect-db2/storage-types-supported-by-snapcenter-plug-in-for-ibm-db2.html"
-  - title: 必要な最小 ONTAP 権限
+  - title: fa82b0b99da0e46e629baf5081d8fee2
     url: "/protect-db2/minimum-privileges-required-for-ibm-db2.html"
-  - title: SnapMirror レプリケーションと SnapVault レプリケーションのためのストレージシステムを準備
+  - title: e1470cbc380c0e4285ea434aa1f30381
     url: "/protect-db2/prepare-storage-systems-for-snapmirror-and-snapvault-replication-for-plugin-for-db2.html"
-  - title: IBM DB2のバックアップ戦略
+  - title: d46ad3788954a51acc3a9ec89da88e7b
     entries:
-    - title: IBM DB2のバックアップ戦略の定義
+    - title: 438775167d054f53795eefbfe90a56db
       url: "/protect-db2/define-a-backup-strategy-for-ibm-db2.html"
-    - title: Linux ホスト上のリソースの自動検出
+    - title: d63d0f9078f63941d9f67771c5293aac
       url: "/protect-db2/auto-discovery-of-resources-on-linux-host.html"
-    - title: サポートされるバックアップのタイプ
+    - title: 2a681580cba5d0bac1fe8b6665a6a47e
       url: "/protect-db2/type-of-backups-supported.html"
-    - title: SnapCenter Plug-in for IBM DB2での整合グループSnapshotコピーの使用方法
+    - title: 55419698460ec93bd245a30c3cc3df59
       url: "/protect-db2/how-snapcenter-plug-in-for-ibm-db2-uses-consistency-group-snapshot-copies.html"
-    - title: SnapCenterによる不要なログバックアップの削除の管理方法
+    - title: 62fded2795270fcd11011954ceeb813b
       url: "/protect-db2/housekeeping-of-log-backups.html"
-    - title: IBM DB2のバックアップスケジュールを決定する際の考慮事項
+    - title: 938d7b512488434ede64cfdba5004463
       url: "/protect-db2/considerations-for-determining-backup-schedules-for-ibm-db2.html"
-    - title: IBM DB2に必要なバックアップジョブの数
+    - title: a84788f54000c40469694497a702a0c6
       url: "/protect-db2/number-of-backup-jobs-needed-for-ibm-db2.html"
-    - title: バックアップの命名規則
+    - title: b45046fe84c0ce347f0d9ea08f2991c3
       url: "/protect-db2/backup-naming-conventions-for-plugin-for-ibm-db2.html"
-  - title: IBM DB2のリストアおよびリカバリ戦略
+  - title: 94eaead08da6adaf97395999aef42fca
     entries:
-    - title: IBM DB2リソースのリストアおよびリカバリ戦略の定義
+    - title: 4e83322369fb31888678e00ec776f072
       url: "/protect-db2/define-a-restore-and-recovery-strategy-for-ibm-db2-resources.html"
-    - title: 手動で追加したIBM DB2リソースでサポートされるリストア戦略のタイプ
+    - title: 8ad32eceb919006b59f8320cfe91527f
       url: "/protect-db2/types-of-restore-strategies-supported-for-manually-added-ibm-db2.html"
-    - title: 自動検出されたIBM DB2でサポートされるリストア戦略のタイプ
+    - title: 358dd8af7fa4e998922027ca7e2f11bd
       url: "/protect-db2/types-of-restore-strategies-supported-for-auto-discovered-ibm-db2.html"
-    - title: 自動検出されたIBM DB2のリストア処理のタイプ
+    - title: ff70e08b6b702c923422d7ca798d9a2e
       url: "/protect-db2/types-of-restore-performed-for-auto-discovered-ibm-db2.html"
-- title: SnapCenter Plug-in for IBM DB2のインストールの準備
+- title: 777cab33129d25de103cfc6de14a0f6b
   entries:
-  - title: SnapCenter Plug-in for IBM DB2のインストールワークフロー
+  - title: d108e95df09590929d9febe67419a084
     url: "/protect-db2/install-snapcenter-plug-in-for-ibm-db2.html"
-  - title: ホストを追加してSnapCenter Plug-in for IBM DB2をインストールするための前提条件
+  - title: e5e3601a70bce8e58f18b8b1a14e6889
     url: "/protect-db2/prerequisites-to-adding-hosts-and-installing-snapcenter-plug-in-for-ibm-db2.html"
-  - title: SnapCenter Plug-ins Package for Windows をインストールするホストの要件
+  - title: 05fc12ecf449ac264abfd66ddab37332
     url: "/protect-db2/host-requirements-to-install-snapcenter-plug-in-package-for-windows-db2.html"
-  - title: SnapCenter Plug-ins Package for Linux をインストールするためのホストの要件
+  - title: ac33edef4526164e3c7c9a4df9986310
     url: "/protect-db2/host-requirements-to-install-snapcenter-plug-in-package-for-linux.html"
-  - title: SnapCenter Plug-in for IBM DB2のクレデンシャルを設定する
+  - title: f710888d31ffa378d3f09201379fa846
     url: "/protect-db2/set-up-credentials-for-snapcenter-plug-in-for-ibm-db2.html"
-  - title: Windows Server 2016以降でのgMSAの設定
+  - title: 4f96a9b27e2a438e2024bd3f65ccc8ee
     url: "/protect-db2/configure-gMSA-on-windows-server-2012-or-later.html"
-  - title: SnapCenter Plug-in for IBM DB2のインストール
+  - title: c028a0980998ad46ace5de88f7e5d722
     entries:
-    - title: ホストを追加し、プラグインパッケージをリモートホストにインストールする
+    - title: d959bbdfecd7dd6a3f75f5a871cbbe02
       url: "/protect-db2/add-hosts-and-install-plug-in-packages-on-remote-hosts-ibm-db2.html"
-    - title: コマンドレットを使用して、複数のリモートホストに Linux または Windows 用の SnapCenter プラグインパッケージをインストールします
+    - title: 85e03b5aac12ea0d7a83ca6e7fa64654
       url: "/protect-db2/install-snapcenter-plug-in-packages-for-linux-or-windows-on-multiple-remote-hosts-using-cmdlets-ibm-db2.html"
-    - title: コマンドラインインターフェイスを使用して、LinuxホストにSnapCenter Plug-in for IBM DB2をインストールする
+    - title: 5ca3bbad7e3b6a827699be12241ce6f1
       url: "/protect-db2/install-the-snapcenter-plug-in-for-ibm-db2-on-linux-hosts-using-the-command-line-interface.html"
-    - title: SnapCenter プラグインパッケージのインストールステータスを監視する
+    - title: 8b8199b2cc69508101df27784ccae8d5
       url: "/protect-db2/monitor-the-status-of-installing-plugin-for-ibm-db2.html"
-  - title: CA 証明書を設定します
+  - title: e94a41320f7b470ab4c94c28575be94e
     entries:
-    - title: CA 証明書 CSR ファイルを生成します
+    - title: 5c4de78a2b621074bf68ab1c644af297
       url: "/protect-db2/generate-CA-certificate-CSR-file.html"
-    - title: CA 証明書をインポートする
+    - title: 463f3aea4c7a61c6bfaa026c1c1c490c
       url: "/protect-db2/import-CA-certificates.html"
-    - title: CA 証明書のサムプリントを取得します
+    - title: 9772bdc36f54d8bb6dc779a222af547c
       url: "/protect-db2/get-the-CA-certificate-thumbprint.html"
-    - title: Windows ホストプラグインサービスを使用して CA 証明書を設定する
+    - title: 1067e8b574748bfd5d0147a621c7ca24
       url: "/protect-db2/configure-CA-certificate-with-Windows-host-plug-in-services.html"
-    - title: Linuxホスト上のSnapCenter IBM DB2 Plug-insサービスのCA証明書の設定
+    - title: 62efa2c3113bfa21f93723855cb62c9a
       url: "/protect-db2/configure-CA-certificate-for-ibm-db2-on-Linux-host.html"
-    - title: Windowsホスト上のSnapCenter IBM DB2 Plug-insサービス用のCA証明書の設定
+    - title: a601121a2919d3d268279f81d4b8569b
       url: "/protect-db2/configure-CA-certificate-for-ibm-db2-on-windows-host.html"
-    - title: プラグインの CA 証明書を有効にします
+    - title: 0b65a155991bcbd016cf199f401ea183
       url: "/protect-db2/enable-ca-certificates-for-plug-ins.html"
-- title: データ保護を準備
+- title: 391acd305e11894b8f29370b098d9f25
   entries:
-  - title: SnapCenter Plug-in for IBM DB2を使用するための前提条件
+  - title: 5a57722bded3e33c1b6bf551ed3ea25f
     url: "/protect-db2/prerequisites-for-using-snapcenter-plug-in-for-ibm-db2.html"
-  - title: IBM DB2の保護におけるリソース、リソースグループ、ポリシーの使用方法
+  - title: 42b9896739c8a43b9e5fd4c832b3ff1c
     url: "/protect-db2/how-resources-resource-groups-and-policies-are-used-for-protecting-ibm-db2.html"
-- title: IBM DB2リソースのバックアップ
+- title: 73bb0c3e029e657eee721094d9dfd4a4
   entries:
-  - title: バックアップのワークフロー
+  - title: 0e1b3005c7d7fef8012117ae579df248
     url: "/protect-db2/back-up-ibm-db2-resources.html"
-  - title: データベースを自動的に検出します
+  - title: 7ae0ad473e0b444f584e63e025e0d4e0
     url: "/protect-db2/discover-the-databases-automatically.html"
-  - title: プラグインホストにリソースを手動で追加します
+  - title: b39d1e4f73b157bb2f5b3a972e89eeb6
     url: "/protect-db2/add-resources-manually-to-the-plug-in-host.html"
-  - title: IBM DB2のバックアップポリシーの作成
+  - title: e43a7f0d269c29e87ee6ddca701dfed9
     url: "/protect-db2/create-backup-policies-for-ibm-db2.html"
-  - title: リソースグループを作成してポリシーを適用
+  - title: 7f9a1e0f8fc64e3f207d5cd83dd8e67f
     url: "/protect-db2/create-resource-groups-and-attach-policies.html"
-  - title: IBM DB2のバックアップ
+  - title: 524291bce284c7a322c8064a7d402ef7
     url: "/protect-db2/back-up-ibm-db2.html"
-  - title: リソースグループをバックアップする
+  - title: dbc89dfae1c6c8ad4eb43878b9171ca6
     url: "/protect-db2/back-up-resource-groups-ibm-db2.html"
-  - title: IBM DB2用のPowerShellコマンドレットを使用して、ストレージシステム接続とクレデンシャルを作成する
+  - title: 7df89a57cd954d9fccb7460aba44487f
     url: "/protect-db2/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-ibm-db2.html"
-  - title: PowerShell コマンドレットを使用してデータベースをバックアップします
+  - title: 0db7de34dbf5c1c143a3f3c98858115e
     url: "/protect-db2/back-up-databases-using-powershell-cmdlets-ibm-db2.html"
-  - title: バックアップ処理を監視する
+  - title: 419e354d2124d18b011fd9f9fecbed3d
     entries:
-    - title: SnapCenter Jobs ページでバックアップ処理を監視します
+    - title: 6119871227cfd0ac53fa00369e5ea153
       url: "/protect-db2/monitor-db2-backup-operations.html"
-    - title: アクティビティペインで操作を監視します
+    - title: de446367e805aef49330ce87fc36fc93
       url: "/protect-db2/monitor-dataprotection-operations-on-db2-in-the-activity-pane.html"
-  - title: バックアップ処理をキャンセルします
+  - title: f2098dd68244eba28833e305c4c720a3
     url: "/protect-db2/cancel-backup-operations-for-ibm-db2.html"
-  - title: "[Topology]ページでのIBM DB2データベースのバックアップとクローンの表示"
+  - title: d2a6c0fe906c34dcc3199d46b0f064eb
     url: "/protect-db2/view-ibm-db2-database-backups-and-clones-in-the-topology-page.html"
-- title: IBM DB2のリストア
+- title: 1f70c9e1700c704dfec3fabce3ea1e61
   entries:
-  - title: リストアワークフロー
+  - title: e30c3d908a4ed515e16791b672cc0709
     url: "/protect-db2/restore-ibm-db2.html"
-  - title: 手動で追加したリソースバックアップのリストア
+  - title: ba315e9de1111ac853f33529fa2cd3d3
     url: "/protect-db2/restore-manually-added-resource-backup.html"
-  - title: 自動検出されたデータベースバックアップのリストア
+  - title: 3f1b13e4c36844e70f5e441d547e538a
     url: "/protect-db2/restore-auto-discovered-database-backup.html"
-  - title: PowerShellコマンドレットを使用したIBM DB2のリストア
+  - title: 6430c6d3f6715feb3c81d928f75f4ef5
     url: "/protect-db2/restore-ibm-db2-database-using-powershell-cmdlets.html"
-  - title: リストア処理を監視する
+  - title: 5eaf8dd6f947b26a0ad9f982dce18311
     url: "/protect-db2/monitor-db2-restore-operations.html"
-- title: IBM DB2リソースバックアップのクローニング
+- title: 1c72949dbb5a015cff1821967cce106f
   entries:
-  - title: クローニングワークフロー
+  - title: 7f9567749606082611d69fd511d51593
     url: "/protect-db2/clone-ibm-db2-resource-backups.html"
-  - title: IBM DB2データベースのバックアップのクローニング
+  - title: b0b60126f154fbea1109285d09dabe64
     url: "/protect-db2/clone-ibm-db2-backup.html"
-  - title: PowerShellコマンドレットを使用したIBM DB2データベースのバックアップのクローニング
+  - title: 0dba3293d94fffec6acecd31b797abb1
     url: "/protect-db2/clone-ibm-db2-backups-using-powershell-cmdlets.html"
-  - title: SnapCenter でクローニング処理を監視する
+  - title: 5cb6a75832518fd27c8d399ca2772808
     url: "/protect-db2/monitor-db2-clone-operations.html"
-  - title: クローンをスプリットします。
+  - title: d91a0b52cfc5d0c3e4b59e8544b3c61d
     url: "/protect-db2/split-a-clone-for-db2.html"
-  - title: SnapCenterのアップグレード後にIBM DB2データベースクローンを削除またはスプリットする
+  - title: 7b1286f8d19b14a2545adb95addc4fd5
     url: "/protect-db2/delete-or-split-ibm-db2-clones-after-upgrading-snapcenter.html"

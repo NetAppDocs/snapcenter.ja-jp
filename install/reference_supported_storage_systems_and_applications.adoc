@@ -2,34 +2,34 @@
 permalink: install/reference_supported_storage_systems_and_applications.html 
 sidebar: sidebar 
 keywords: storage system, ONTAP version 
-summary: サポートされるストレージシステム、アプリケーション、およびデータベースを確認しておく必要があります。 
+summary: ba7cbf773bd0f0004c4d97fba5034cdb 
 ---
-= サポートされるストレージシステムおよびアプリケーション
+= 1e1ed4854c77f284f3e97b0843b6e570
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-サポートされるストレージシステム、アプリケーション、およびデータベースを確認しておく必要があります。
+ed3518bf4a914f119b6bdecebdd5768f
 
-* SnapCenter では、データを保護するために ONTAP 9.12.1 以降がサポートされています。
-* SnapCenter は、 ONTAP ソフトウェア 4.5 P1 パッチリリースからデータを保護するために、 NetApp SnapCenter 用の Amazon FSX をサポートしています。
+* 16f0739cf9b014b8e0cab25818f1687c
+* 213ee580d561421ab50f46ea0b22affa
 +
-NetApp ONTAP に Amazon FSX を使用している場合、データ保護処理を実行するには、 SnapCenter サーバホストプラグインを 4.5 P1 以降にアップグレードする必要があります。
-
-+
-Non-Volatile Memory Express（NVMe）over Transport Control Protocol（TCP）をサポートします。
+dc39fb71951ab3bfb20cab9c1beb9446
 
 +
-NetApp ONTAP の Amazon FSX の詳細については、を参照してください https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["Amazon FSX for NetApp ONTAP のドキュメント"^]。
+47217be9e2af813e09f7a7760c32e8ce
 
-* SnapCenter では、さまざまなアプリケーションやデータベースの保護がサポートされます。
 +
-サポートされているアプリケーションとデータベースの詳細については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]。
+6ae4072dd3f83211384c8e5499a7935c
 
-* SnapCenter 4.9 P1以降では、Amazon Web Services（AWS）のSoftware-Defined Data Center（SDDC）環境上のVMware Cloudで、OracleとMicrosoft SQLのワークロードの保護がサポートされます。
+* cf12f1baaed2b3c195374322d8d857bc
 +
-詳細については、を参照してください https://community.netapp.com/t5/Tech-ONTAP-Blogs/Protect-Oracle-MS-SQL-workloads-using-NetApp-SnapCenter-in-VMware-Cloud-on-AWS/ba-p/449168["VMware Cloud on AWS SDDC環境でNetApp SnapCenterを使用してOracleやMS SQLのワークロードを保護"]。
+bb3f099cca59ac36a7f16baec282b9bb
+
+* 4db35e04fa48549bd85b1a6d4d43fb09
++
+50fc2fe54f751b9b7639d7a2f1fb2027
 
 

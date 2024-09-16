@@ -2,30 +2,30 @@
 permalink: protect-hana/task_clone_sap_hana_resource_backups.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for SAP HANA Database 
-summary: クローニングワークフローには、クローニング処理の実行と処理の監視が含まれます。 
+summary: ff0708dbc029ffc456a4dec0d739ddc0 
 ---
-= クローニングワークフロー
+= 7f9567749606082611d69fd511d51593
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-クローニングワークフローには、クローニング処理の実行と処理の監視が含まれます。
+ff0708dbc029ffc456a4dec0d739ddc0
 
-.このタスクについて
-* ソースの SAP HANA サーバでクローニングを実行できます。
-* リソースのバックアップをクローニングする理由には次のものがあります。
+.bbe48fb854ea022537208eeeff822f91
+* 7049a25bdae22fafbe95070b989df286
+* 845774eebc04e21e75686a7a609647f8
 +
-** アプリケーション開発のライフサイクルで、実装が必要な機能を、現在のリソースの構造およびコンテンツを使用してテストするため
-** データの抽出と操作を行うツールで、データウェアハウスにデータを取り込むため
-** 誤って削除または変更されたデータをリカバリするため
+** 6bcef561864efa1c7ae10f464c2a27e7
+** a20cb088522504f561a73aacb364a55c
+** 131fcad5beed0c840fb92cba21bbb148
 
 
 
 
-次のワークフローは、クローニング処理の実行順序を示しています。
+b37c1f7095772e66402cd084c5dc13a3
 
-image::../media/sco_scc_wfs_clone_workflow.png[クローニングワークフロー]
+image::../media/sco_scc_wfs_clone_workflow.png[7f9567749606082611d69fd511d51593]
 
-PowerShell コマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、クローニングの処理を実行することもできます。PowerShell コマンドレットの詳細については、 SnapCenter のコマンドレットのヘルプを使用するか、コマンドレットのリファレンス情報を参照してください。
+515099a9db2d69620b1bbc080fe5200a

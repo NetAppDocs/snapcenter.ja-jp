@@ -2,201 +2,200 @@
 permalink: protect-hana/task_create_backup_policies_for_sap_hana_databases.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for SAP HANA Database 
-summary: SnapCenter を使用して SAP HANA データベースのリソースをバックアップする前に、バックアップ対象のリソースまたはリソースグループのバックアップポリシーを作成する必要があります。バックアップポリシーとは、バックアップを管理、スケジューリング、および保持する方法を定めた一連のルールです。 
+summary: bb24de3098becb559d31066692208382 
 ---
-= SAP HANA データベースのバックアップポリシーを作成する
+= 2dad511118029c962a70a1aac4b16b52
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter を使用して SAP HANA データベースのリソースをバックアップする前に、バックアップ対象のリソースまたはリソースグループのバックアップポリシーを作成する必要があります。バックアップポリシーとは、バックアップを管理、スケジューリング、および保持する方法を定めた一連のルールです。
+bb24de3098becb559d31066692208382
 
-.作業を開始する前に
-* バックアップ戦略を定義しておく必要があります。
+.135b308ed83c53f1516b7c754566d1c4
+* ed740a0593e2888b4f41c0fd5c5e3ca9
 +
-詳細については、 SAP HANA データベースのデータ保護戦略の定義に関する情報を参照してください。
+59aa9d59aeca6426e049e4b2a67f90db
 
-* SnapCenter のインストール、ホストの追加、ストレージシステム接続のセットアップ、リソースの追加などのタスクを実行して、データ保護の準備をしておく必要があります。
-* Snapshotをミラーまたはバックアップにレプリケートする場合は、ソースボリュームとデスティネーションボリュームの両方に対応するSVMをSnapCenter管理者がユーザに割り当てておく必要があります。
+* 9b6c869445c45bd1d2092d2ac627e089
+* 98a696ecad4b4de122d523af3692ca6e
 +
-また、ポリシーでレプリケーション、スクリプト、およびアプリケーションの設定を指定することもできます。これらのオプションを指定しておくことで、別のリソースグループにポリシーを再利用して時間を節約することができます。
+51cf7b8ece53780d2da7c680d87db751
 
-* SnapMirrorアクティブ同期に固有の前提条件と制限事項を確認します。詳しくは、を参照してください https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["SnapMirrorアクティブ同期のオブジェクト数の制限"]。
+* 6daefd34c08722479eabf5094d0f96bc
 
 
-.このタスクについて
-* SAP HANA システムレプリケーション
+.bbe48fb854ea022537208eeeff822f91
+* 66ae478deb0faaf5c7e1c6c30e561515
 +
-** プライマリ SAP HANA システムとすべてのデータ保護処理を実行できます。
-** セカンダリ SAP HANA システムは保護できますが、バックアップは作成できません。
+** bf44bd646cda2a6eae32f8dcdedbe899
+** 8c0704450309a78e5288d21fa9908fcd
 +
-フェイルオーバー後は、セカンダリ SAP HANA システムがプライマリ SAP HANA システムになるため、すべてのデータ保護処理を実行できます。
-
-+
-SAP HANA データボリュームのバックアップは作成できませんが、 SnapCenter は非データボリューム（ NDV ）の保護を継続します。
-
-
-
-* SnapLock
-+
-** [バックアップコピーを特定の日数だけ保持する]オプションを選択した場合は、SnapLockの保持期間を指定した保持日数以下にする必要があります。
-** Snapshotのロック期間を指定すると、保持期間が終了するまでSnapshotが削除されません。その結果、保持されるSnapshotの数がポリシーで指定されている数よりも多くなる可能性があります。
-** ONTAP 9.12.1以前のバージョンでは、リストアの一環としてSnapLockヴォールトSnapshotから作成されたクローンにSnapLockヴォールトの有効期限が継承されます。SnapLockの有効期限が過ぎた時点で、ストレージ管理者がクローンを手動でクリーンアップする必要があります。
-
-
-
-
-
-NOTE: プライマリSnapLock設定はSnapCenterバックアップポリシーで管理され、セカンダリSnapLock設定はONTAPで管理されます。
-
-.手順
-. 左側のナビゲーションペインで、 * 設定 * をクリックします。
-. [ 設定 ] ページで、 [ * ポリシー * ] をクリックします。
-. [ 新規作成（ New ） ] をクリックする。
-. [ 名前 ] ページで、ポリシー名と概要を入力します。
-. 設定ページで、次の手順を実行します。
-+
-** バックアップタイプを選択します。
-+
-|===
-| 状況 | 手順 
-
-
- a| 
-データベースの整合性チェックを実行します
- a| 
-ファイルベースのバックアップ * を選択します。アクティブなテナントのみがバックアップされます。
-
-
-
- a| 
-Snapshotテクノロジを使用したバックアップの作成
- a| 
-「 * Snapshot Based * 」を選択します。
-
-|===
-** スケジュールタイプを指定するには、「 * on demand * 」、「 * Hourly * 」、「 * Daily * 」、「 * Weekly * 」、または「 * Monthly * 」を選択します。
-+
-
-NOTE: リソースグループを作成する際に、バックアップ処理のスケジュール（開始日、終了日、頻度）を指定することができます。これにより、ポリシーとバックアップ間隔が同じである複数のリソースグループを作成できますが、各ポリシーに異なるバックアップスケジュールを割り当てることもできます。
+7e88bcd72ecc2784bced6913c338faa7
 
 +
-image::../media/backup_settings.gif[バックアップ設定]
+4bc5b2b92d8dcb711bd827f42e5409d1
 
+
+
+* acdc6b4f6edd40f37bce01247a32ff86
 +
+** 5645df6d49a903d3e2faf86e08d87813
+** 4fcec4fe97075a54e91b04a9e79f56ff
+** f2c85d871e7c5ae1520349e8a3869fea
 
-NOTE: 午前 2 時にスケジュールを設定した場合、夏時間（ DST ）中はスケジュールはトリガーされません。
 
-** [ * カスタム・バックアップ設定 * ] セクションで、キー値形式でプラグインに渡す必要がある特定のバックアップ設定を指定します。
+
+
+
+NOTE: e07d82366bc71bb060becb82a0e09448
+
+.f3a29486bed19a90f2da6d007818b427
+. c09e638cb8ee35698e3172550b12d8fa
+. 1f02ceac906eeeae0a190f295fe12381
+. a5bb4561024cbac1f26c361cff68730e
+. 3c6544f27197f56a0b07b5ed264760dc
+. c741f40a4fb7e6bd9a457120a09a6498
 +
-プラグインに渡すキーと値の組み合わせを複数指定することができます。
-
-
-
-. [ 保持 ] ページで ' バックアップ・タイプの保持設定と [ バックアップ・タイプ ] ページで選択したスケジュール・タイプを指定します
+** 19999b58b15a4b6c9b7d47212a32aeba
 +
 |===
-| 状況 | 作業 
+| 5d920b501536441ea32ecc24679c72a2 | 5e2ad6fd9deb412d871137094ee43ef0 
 
 
  a| 
-一定数のSnapshotを保持
+1ec8e0dcd181569d863906d3db3cbc7a
  a| 
-[保持するSnapshotコピーの総数]*を選択し、保持するSnapshotの数を指定します。
-
-Snapshotの数が指定した数を超えると、最も古いコピーから順にSnapshotが削除されます。
-
-
-NOTE: 最大保持数は、 ONTAP 9.4 以降のリソースでは 1018 、 ONTAP 9.3 以前のリソースでは 254 です。保持期間を基盤となる ONTAP バージョンの値よりも大きい値に設定すると、バックアップが失敗します。
-
-
-IMPORTANT: Snapshot コピーベースのバックアップで SnapVault レプリケーションを有効にする場合は、保持数を 2 以上に設定する必要があります。保持数を1に設定すると、新しいSnapshotがターゲットにレプリケートされるまで最初のSnapshotがSnapVault関係の参照Snapshotになるため、保持処理が失敗する可能性があります。
-
-
-NOTE: SAP HANA システムのレプリケーションでは、 SAP HANA システムのすべてのリソースを 1 つのリソースグループに追加することを推奨します。これにより、適切な数のバックアップが保持されます。
-
-
-NOTE: SAP HANAシステムレプリケーションでは、作成されたSnapshotの合計数はリソースグループに設定された保持数と同じになります。  最も古いSnapshotの削除は、最も古いSnapshotが配置されているノードに基づいて行われます。
-たとえば、 SAP HANA システムレプリケーションがプライマリ、 SAP HANA システムレプリケーションがセカンダリのリソースグループの場合、保持期間は 7 に設定されます。  一度に作成できるSnapshotの数は、SAP HANAシステムレプリケーションプライマリとSAP HANAシステムレプリケーションセカンダリの両方を含め、最大7つです。
+5ea8c203a8e8ed3f981e261385d48b32
 
 
 
  a| 
-Snapshotを特定の日数だけ保持
+dc82007d2d72fe3595e4a12ab929226d
  a| 
-[Keep Snapshot copies for]*を選択し、Snapshotを削除するまでの日数を指定します。
-
-
-
- a| 
-Snapshotコピーのロック期間
- a| 
-Snapshotコピーのロック期間を選択し、日、月、または年を選択します。
-
-SnapLock保持期間は100年未満にする必要があります。
+58c4ab72512763368202ec9054d5b838
 
 |===
-. Snapshot コピーベースのバックアップの場合は、 Replication （レプリケーション）ページでレプリケーション設定を指定します。
-+
-|===
-| フィールド | 手順 
-
-
- a| 
-* ローカル Snapshot コピー作成後に SnapMirror を更新 *
- a| 
-別のボリュームにバックアップセットのミラーコピーを作成する場合（ SnapMirror レプリケーション）は、このフィールドを選択します。
-
-このオプションは、SnapMirrorのアクティブな同期に対して有効にする必要があります。
-
-ONTAPの保護関係のタイプがミラーとバックアップの場合、このオプションのみを選択すると、プライマリで作成されたSnapshotはデスティネーションに転送されず、デスティネーションのリストに表示されます。このSnapshotをリストア処理の対象としてデスティネーションで選択すると、「Secondary Location is not available for the selected vaulted/mirrored backup」というエラーメッセージが表示されます。
-
-セカンダリレプリケーションでは、SnapLockの有効期限によってプライマリSnapLockの有効期限がロードされます。
-
-[Topology]ページの[Refresh]*ボタンをクリックすると、ONTAPから取得されたセカンダリおよびプライマリのSnapLock有効期限が更新されます。
-
-を参照してください link:..protect-hana/task_view_sap_hana_database_backups_and_clones_in_the_topology_page_sap_hana.html["Topology ページで、 SAP HANA データベースのバックアップとクローンを表示します"]。
-
-
-
- a| 
-* ローカル Snapshot コピー作成後に SnapVault を更新 *
- a| 
-ディスクツーディスクのバックアップレプリケーション（ SnapVault バックアップ）を実行する場合は、このオプションを選択します。
-
-セカンダリレプリケーションでは、SnapLockの有効期限によってプライマリSnapLockの有効期限がロードされます。[Topology]ページの[Refresh]*ボタンをクリックすると、ONTAPから取得されたセカンダリおよびプライマリのSnapLock有効期限が更新されます。
-
-SnapLockがONTAPのセカンダリ（SnapLock Vault）にのみ設定されている場合、[Topology]ページの*[Refresh]*ボタンをクリックすると、ONTAPから取得したセカンダリのロック期間が更新されます。
-
-SnapLock Vaultの詳細については、を参照してください。 https://docs.netapp.com/us-en/ontap/snaplock/commit-snapshot-copies-worm-concept.html["SnapshotコピーをバックアップデスティネーションのWORM状態にコミットします"]
-
-を参照してください link:..protect-hana/task_view_sap_hana_database_backups_and_clones_in_the_topology_page_sap_hana.html["Topology ページで、 SAP HANA データベースのバックアップとクローンを表示します"]。
-
-
-
- a| 
-* 二次ポリシーラベル *
- a| 
-Snapshot ラベルを選択します。
-
-選択したSnapshotラベルに応じて、ラベルに一致するセカンダリSnapshot保持ポリシーがONTAPによって適用されます。
-
-
-NOTE: ローカル Snapshot コピーの作成後に「 * SnapMirror を更新」を選択した場合は、必要に応じてセカンダリポリシーラベルを指定できます。ただし、ローカル Snapshot コピーの作成後に「 * Update SnapVault 」を選択した場合は、セカンダリポリシーラベルを指定する必要があります。
-
-
-
- a| 
-* エラー再試行回数 *
- a| 
-処理が停止されるまでに試行できるレプリケーションの最大回数を入力します。
-
-|===
+** b8d6ee3998ffd19868fb72c367024f19
 +
 
-NOTE:  セカンダリストレージのSnapshotの最大数に達しないように、ONTAPでセカンダリストレージのSnapMirror保持ポリシーを設定する必要があります。
+NOTE: 6dfee293c05174bbd44cb5148876cd2b
 
-. 概要を確認し、 [ 完了 ] をクリックします。
++
+image::../media/backup_settings.gif[6b09ab256ee91abfcbae14dc82d761dc]
+
++
+
+NOTE: a16b9f3426d9cfca29c06a875b667023
+
+** b093b4eff25852e5f19297a922c5587f
++
+fc757224d0f11cae40cba577a1aa87f2
+
+
+
+. 33b9f4074a30cf7699528b526f1e171d
++
+|===
+| 5d920b501536441ea32ecc24679c72a2 | c1325f6903ebb5ebb2bb519a73ddb1b0 
+
+
+ a| 
+cee00ab879a477aea09f4b1f404b14fc
+ a| 
+b19465911649130b0ad9e7ed87b43f2f
+
+7537e0d42ad63b5bae18964aee575640
+
+
+NOTE: 225ea283dca2590a2a542a782ac56927
+
+
+IMPORTANT: a73c04130d1785278e42ce85b94c154d
+
+
+NOTE: c0ab35de65d78830f03751afe7a38d7b
+
+
+NOTE: 3d721f84f4ba496ced30bffcfa1591da
+
+
+
+ a| 
+298d4bea409e146b0187ec130a39fb72
+ a| 
+e736f4106d35f31cff1a51f091e56c06
+
+
+
+ a| 
+971b3c1d99a5aa6f2b187690d01d852c
+ a| 
+86b78accb82bf0596de946657114e7dd
+
+e7c020bcc5fc6c46eea0af3b48696115
+
+|===
+. d19356a2f0a6b22cf9697eeb6f1aaab2
++
+|===
+| 21f831502a413a739e20cbf9f2eefe54 | 5e2ad6fd9deb412d871137094ee43ef0 
+
+
+ a| 
+53ef3d7584a54991b60fba81e93d201f
+ a| 
+1275946d22bd30ab4fa43a93760353bd
+
+fd109b0493348c99a956dc708f79412f
+
+87f3bd22fc3dd40b1b5252aca5beb91f
+
+cad9d181a2b84fefcf0bef1326b5660c
+
+08ec8ae585abf03648f1d4e2cb173c27
+
+e5b1a643ff29c023df4fc00549fcf14a
+
+
+
+ a| 
+f5568337c8feae7a044bdfdfc53b4769
+ a| 
+a8026657de84cf12f52f1113eca69500
+
+59affd7f6a76b1148ee2481cf98f64e1
+
+7389de2f41b1c6eb64e4d894ab05e286
+
+64c2ad2359ef41b8550053e63b4db5d2
+
+e5b1a643ff29c023df4fc00549fcf14a
+
+
+
+ a| 
+e95e870e56d78f07b5959255a76d16ab
+ a| 
+7236d615f588fda61e35cc1fa07c46cb
+
+9a5f5dfff4956ecfacfdc016d25c212b
+
+
+NOTE: f4d84b8f919668d97d6f1c1e6384cfac
+
+
+
+ a| 
+e14f71eb0e90d4bbfc5445a42a5c2a4c
+ a| 
+b1e8c3d6aa4aee19e19fd276e7c61e0b
+
+|===
++
+
+NOTE: 79bbfd966b301fcff4a657ffa7b4883b
+
+. fed1c121dc4f5a5484e5623e297385fb
 

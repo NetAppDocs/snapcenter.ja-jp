@@ -2,49 +2,49 @@
 permalink: uninstall/reference_prerequisites_for_removing_a_host.html 
 sidebar: sidebar 
 keywords: uninstall, prerequisites, plug-in, plug-in packages 
-summary: データ保護ジョブの管理に SnapCenter を使用する必要がなくなった場合は、ホストを削除できます。たとえば、保護が必要なデータがなくなったホストを削除できます。SnapCenter サーバからホストを削除する前に、前提条件となるタスクを実行する必要があります。 
+summary: e0898373b2f666f171a7f4036db43bea 
 ---
-= ホストを削除するための前提条件
+= 0b9b2afb477e54bc6c5d26158d80077a
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter GUI を使用して、ホストを削除し、個々のプラグインまたはプラグインパッケージをアンインストールできます。また、 SnapCenter Server ホストのコマンドラインインターフェイス（ CLI ）を使用するか、または任意のホストでローカルに Windows * プログラムのアンインストール * オプションを使用して、リモートホスト上の個々のプラグインまたはプラグインパッケージをアンインストールすることもできます。
+f3442009cf8c0e228473ba15a66ac563
 
-SnapCenter サーバからホストを削除する前に、前提条件を完了しておく必要があります。
+bf3d95dececb2ee8a103358b2c9b04f2
 
-* 管理者としてログインする必要があります。
-* SnapCenter Custom Plug-ins を使用している場合は、ホストに関連付けられている SnapCenter からすべてのクローンを削除する必要があります。
-* ホストで検出ジョブが実行されていないことを確認する必要があります。
-* ホストに関連付けられているすべてのオブジェクトを削除するために必要な権限を持つロールが割り当てられている必要があります。削除しないと、削除処理は失敗します。
-* SnapCenter へのホストの追加後に SSH キーが変更された場合は、フィンガープリントを確認する必要があります。
-* SnapCenter ホストが新しいバージョンの SnapCenter にアップグレードされ、プラグインホストで以前のバージョンのプラグインが実行されている場合は、フィンガープリントを確認する必要があります。
-
-
+* af429d236566c534d6dc055192e779cf
+* 50f2247c873481cfb368dd204a79a45d
+* 9030d3b6bdc2b1e3d07fcc87c359b081
+* 7cf2b1be955f9e0063c5ff9339bec7a6
+* 58577ea8db4fe9fa7618604aa126c15d
+* 137da411fe360c471658df3afbcfece8
 
 
-== ロールベースアクセス制御を使用するホストを削除する場合の前提条件
 
-* ホストの読み取りと削除、プラグインのインストールとアンインストール、およびオブジェクトの削除を行う権限を持つ RBAC ロールを使用してログインしておく必要があります。
+
+== caa08f5b09c700115852039701c2eb58
+
+* 6950f24c77767dc20e29385e4b33c9a1
 +
-オブジェクトは、クローン、バックアップ、リソースグループ、ストレージシステムなどです。
+1a121fac384d24d2f6e39b2dba73f83b
 
-* RBAC ロールに RBAC ユーザを追加しておく必要があります。
-* 削除するホスト、プラグイン、クレデンシャル、リソースグループ、およびストレージシステム（クローンの場合）に RBAC ユーザを割り当てる必要があります。
-* SnapCenter に RBAC ユーザとしてログインしておく必要があります。
-
-
+* 65f28a7e98d50d07db889c11cb53b403
+* 9f9953220c20099c427d926b1782ab40
+* 4213ef8703e1cb62cbb871bfd3c23d9d
 
 
-== クローンライフサイクル処理で作成されたクローンを含むホストを削除する場合の前提条件
-
-* SQL データベースのクローンライフサイクル管理を使用してクローニングジョブを作成しておく必要があります。
-* クローンの読み取りと削除、リソースの読み取りと削除、リソースグループの読み取りと削除、ストレージの読み取りと削除、プロビジョニングの読み取りと削除、マウント、アンマウント、プラグインのインストールとアンインストール、およびホストの読み取りと削除を行う権限を持つ RBAC ロールを作成しておく必要があります。
-* RBAC ロールに RBAC ユーザを割り当てておく必要があります。
-* ホスト、 SnapCenter Plug-in for Microsoft SQL Server 、クレデンシャル、クローンライフサイクルリソースグループ、およびストレージシステムに RBAC ユーザを割り当てておく必要があります。
-* SnapCenter に RBAC ユーザとしてログインしておく必要があります。
 
 
-SnapCenter Plug-in for VMware vSphere のアンインストールについては、を参照してください https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_manage_snapcenter_plug-in_for_vmware_vsphere.html#remove-snapcenter-plug-in-for-vmware-vsphere["SnapCenter Plug-in for VMware vSphere を削除します"^]。
+== 1d16dd915902bb4c1ca157d96bad1aac
+
+* dbabd6bc7b6dbd1c5d81e4fa82246acd
+* a199f16d0bf9e60bba77be4a6ad6a614
+* 06b047d338ab216568f24797a92a475a
+* 4fcc15e06159b8ced3ec8f0100fa1a04
+* 4213ef8703e1cb62cbb871bfd3c23d9d
+
+
+00b3864f3eb01692ecdfe4f18c19971c

@@ -2,91 +2,91 @@
 permalink: protect-sce/reference_storage_types_supported_by_snapcenter_plug_in_for_microsoft_windows_and_for_microsoft_exchange_server.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for Microsoft Exchange Server 
-summary: SnapCenter は、物理マシンと仮想マシンの両方でさまざまなストレージタイプをサポートしています。ホストに対応したパッケージをインストールする前に、ストレージタイプがサポートされているかどうかを確認する必要があります。 
+summary: a418089089559a000c49aa3b9a686667 
 ---
-= SnapCenter Plug-in for Microsoft Windows および Microsoft Exchange Server でサポートされるストレージタイプ
+= 4ca48d63db1547d2aa6b271f22219b7b
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter は、物理マシンと仮想マシンの両方でさまざまなストレージタイプをサポートしています。ホストに対応したパッケージをインストールする前に、ストレージタイプがサポートされているかどうかを確認する必要があります。
+a418089089559a000c49aa3b9a686667
 
-Windows Serverでは、SnapCenterプロビジョニングとデータ保護がサポートされています。サポートされるバージョンの最新情報については https://imt.netapp.com/matrix/imt.jsp?components=121031;&solution=1259&isHWU&src=IMT[]、NetApp Interoperability Matrix Tool^]を参照してください。
+cbf06340cf7e3ebe82b098559b7d3b1d
 
 |===
-| マシン | ストレージタイプ | を使用してプロビジョニング | サポートのメモ 
+| 47c954121886a5e5aaca7eece461b56f | f0cb6783b152b19ceab16227ca3976a2 | 2bfe08a4f62392e52d13ca1c380c81d4 | df6a8597815322c8f7bb6463d78f2f2c 
 
 
  a| 
-物理サーバ
+e042e676706d93b3b14ce12e4d00a002
  a| 
-FC 接続 LUN
+3a14bc2a9e80eb39a44cd07a0d40b62b
  a| 
-SnapCenter のグラフィカルユーザインターフェイス（ GUI ）または PowerShell コマンドレット
- a| 
-
-
-
- a| 
-物理サーバ
- a| 
-iSCSI で接続された LUN
- a| 
-SnapCenter GUI または PowerShell コマンドレット
+ca54d3965d23826e2a4bb8d10764da21
  a| 
 
 
 
  a| 
-VMware VM
+e042e676706d93b3b14ce12e4d00a002
  a| 
-FC または iSCSI HBA で接続された RDM LUN
+f83bf140a9f6b8a345e508ecdc999c4b
  a| 
-PowerShell コマンドレット
+539ba05c387c505e5829bcee612dec7c
  a| 
-物理的な互換性のみ
-
-
-NOTE: VMDK はサポートされません。
 
 
 
  a| 
-VMware VM
+86cbd38e0939fb9a14eea3387d05d7b4
  a| 
-iSCSI イニシエータによってゲストシステムに直接接続された iSCSI LUN
+a200c15748125d289ffe86820ffcd19f
  a| 
-SnapCenter GUI または PowerShell コマンドレット
+a5e23c97dd15d671c82b090f4480878c
  a| 
-
-NOTE: VMDK はサポートされません。
-
+ea29cdcae37307c1c67337a9e8dca9ea
 
 
- a| 
-Hyper-V VM
- a| 
-仮想ファイバチャネルスイッチで接続された仮想 FC （ vFC ） LUN
- a| 
-SnapCenter GUI または PowerShell コマンドレット
- a| 
-仮想ファイバチャネルスイッチで接続された仮想 FC （ vFC ） LUN のプロビジョニングには、 Hyper-V Manager を使用する必要があります。
-
-
-NOTE: Hyper-V のパススルーディスク、およびネットアップストレージでプロビジョニングされた VHD （ x ）でのデータベースのバックアップはサポートされていません。
+NOTE: 82aa61b2e297d51ca625fed099ebdaef
 
 
 
  a| 
-Hyper-V VM
+86cbd38e0939fb9a14eea3387d05d7b4
  a| 
-iSCSI イニシエータによってゲストシステムに直接接続された iSCSI LUN
+681eb44a9cbd6da8f7c3f918a64f2c6c
  a| 
-SnapCenter GUI または PowerShell コマンドレット
+539ba05c387c505e5829bcee612dec7c
  a| 
 
-NOTE: Hyper-V のパススルーディスク、およびネットアップストレージでプロビジョニングされた VHD （ x ）でのデータベースのバックアップはサポートされていません。
+NOTE: 82aa61b2e297d51ca625fed099ebdaef
+
+
+
+ a| 
+8389b191652a37792de566d96af881d9
+ a| 
+bface44d9eafe9939661dba269100705
+ a| 
+539ba05c387c505e5829bcee612dec7c
+ a| 
+8e5abf7ae61642b07fd36f663d41227f
+
+
+NOTE: 215653e704c2ad428517df1dcbfafbf8
+
+
+
+ a| 
+8389b191652a37792de566d96af881d9
+ a| 
+681eb44a9cbd6da8f7c3f918a64f2c6c
+ a| 
+539ba05c387c505e5829bcee612dec7c
+ a| 
+
+NOTE: 215653e704c2ad428517df1dcbfafbf8
 
 |===

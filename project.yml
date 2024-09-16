@@ -24,9 +24,9 @@ settings:
   langs: ja-jp,us-en,ko-kr,zh-cn,zh-tw,de-de,es-es,fr-fr,it-it
 sidebar:
   entries:
-  - title: SnapCenterソフトウェア6.0のドキュメント
+  - title: 6e91a2dc60b4347cdbac1d690aabcd92
     url: "/index.html"
-  - title: リリースノート
+  - title: 7d0ee6fed10d3d4e5c9ee496729ab519
     url: "/release-notes.html"
   - section: concept
   - section: install
@@ -46,5 +46,5 @@ sidebar:
   - section: tech-refresh
   - section: uninstall
   - section: sc-automation
-  - title: 法的通知
+  - title: 30d965eef5ba25c6b9998ae38270b43e
     url: "/legal-notices.html"

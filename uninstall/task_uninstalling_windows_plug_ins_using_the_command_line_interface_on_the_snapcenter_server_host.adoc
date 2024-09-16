@@ -2,24 +2,24 @@
 permalink: uninstall/task_uninstalling_windows_plug_ins_using_the_command_line_interface_on_the_snapcenter_server_host.html 
 sidebar: sidebar 
 keywords: uninstall, windows plug-ins, powershell cmdlet 
-summary: SnapCenter Server ホストのコマンドラインインターフェイスで Uninstall-SmHostPackage コマンドレットを使用すると、 1 つ以上のホストから個々のプラグインまたはプラグインパッケージをアンインストールできます。 
+summary: 73774af5b9f09fd6e97f25d297c2e0c6 
 ---
-= PowerShell コマンドレットを使用して Windows プラグインをアンインストールします
+= 094c4c26cc4a7b195b53e8717c2371f5
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter サーバホストのコマンドラインインターフェイスで _Uninstall-SmHostPackage_cmdlet を使用すると、 1 つ以上のホストから個々のプラグインまたはプラグインパッケージをアンインストールできます。
+cacde508a0dbdf19cdb7bdf0dcb881b9
 
-プラグインをアンインストールする各ホストに対するローカル管理者権限を持つドメインユーザとして SnapCenter にログインしている必要があります。
+fca66b9c4df401b3975637ceacad7ed3
 
-.手順
-. PowerShell を起動します。
-. SnapCenter サーバーホストで、次のように入力します。 _Open-SMConnection-SMSbaseUrl\https://SNAPCENTER_SERVER_NAME/DOMAIN_NAME_ コマンド認証情報を入力します。
-. Uninstall -SmHostPackage_cmdlet と、必要なパラメータを使用して、 Windows プラグインをアンインストールします。
+.f3a29486bed19a90f2da6d007818b427
+. 31ce9f1bb2cc71cb2dc10cfb787f6377
+. 8804fc7cd8650f0fe7f3181b69a373af
+. 0262b115df575f2dc8bf11b8e4a86e10
 +
-コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+aff86e576d5506698bb4e7f32cd2b64c
 
 

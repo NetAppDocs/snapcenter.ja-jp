@@ -2,28 +2,28 @@
 permalink: concept/concept_disaster_recovery.html 
 sidebar: sidebar 
 keywords: Disaster Recovery 
-summary: SnapCenter ディザスタリカバリ機能を使用すると、リソースの破損やサーバクラッシュなどの災害が発生した場合に SnapCenter サーバをリカバリできます。 
+summary: 3d94bcd4444e768c821c4af7214a7a73 
 ---
-= SnapCenter ディザスタリカバリ
+= 94c4200231b3891f27561beda5d4e31f
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter ディザスタリカバリ（DR）機能を使用すると、リソースの破損やサーバのクラッシュなどの災害が発生した場合にSnapCenter サーバをリカバリできます。SnapCenter リポジトリ、サーバスケジュール、およびサーバ構成コンポーネントをリカバリできます。また、 SnapCenter Plug-in for SQL Server および SnapCenter Plug-in for SQL Server ストレージをリカバリすることもできます。
+1da5a00a663269fc81a2098b0d91e4d6
 
-ここでは、SnapCenter での2種類のディザスタリカバリ（DR）について説明します。
+68e856b5be6554a8e4ee8b393b327b0b
 
-.SnapCenter サーバDR
-* SnapCenter サーバのデータはバックアップされ、SnapCenter サーバにプラグインを追加したり、管理したりすることなくリカバリできます。
-* セカンダリSnapCenter サーバは、プライマリSnapCenter サーバと同じインストールディレクトリと同じポートにインストールする必要があります。
-* 多要素認証（MFA）の場合、SnapCenter サーバDR中にブラウザのすべてのタブを閉じ、ブラウザを再度開いて再度ログインします。これにより、既存またはアクティブなセッションCookieがクリアされ、正しい設定データが更新されます。
-* SnapCenter のディザスタリカバリ機能では、 REST API を使用して SnapCenter サーバをバックアップします。を参照してください link:../tech-refresh/task_tech_refresh_server_host.html["SnapCenter サーバのディザスタリカバリ用の REST API のワークフロー"]。
-* 監査設定に関連する構成ファイルはDRバックアップにバックアップされず、リストア処理後にDRサーバにもバックアップされません。監査ログの設定を手動で繰り返す必要があります。
+.4bafae51c760477df325c1b3815da1aa
+* 4561e7fcd617a663505d8992af88d242
+* db73b4bff7f9b92f00d36e2a3fa01152
+* 3dbcd484a9ede0a6feaf76cb9d8a6868
+* d239ebbabeedcdb87dfeedbd548986ac
+* 7dc560127d94117067b15f71651a7211
 
 
-.SnapCenter プラグインとストレージDR
-DR は、 SnapCenter Plug-in for SQL Server でのみサポートされます。SnapCenter Plug-in for SQL Server がダウンしたときに、別の SQL ホストに切り替えてデータをリカバリする手順はいくつかあります。を参照してください link:../protect-scsql/task_disaster_recovery_scsql.html["SnapCenter Plug-in for SQL Server のディザスタリカバリ"]。
+.717bb61127675bdfbac9d09d06c4bd89
+a3c30c25a1e544471bac224e74207425
 
-SnapCenter は、 ONTAP の SnapMirror テクノロジを使用してデータをレプリケートします。DR 用にセカンダリサイトにデータをレプリケートして同期し続けることができます。フェイルオーバーは、 SnapMirror のレプリケーション関係を解除することによって開始できます。フェイルバック中に、同期を反転させて DR サイトのデータをプライマリサイトにレプリケートすることができます。
+9fbd6c9c898d3b24f2f3cfa67bb8c2b2

@@ -2,42 +2,42 @@
 permalink: protect-hana/reference_storage_types_supported_by_snapcenter_plug_in_for_sap_hana_database.html 
 sidebar: sidebar 
 keywords: storage types, 
-summary: SnapCenter は、物理マシンと仮想マシン（ VM ）の両方でさまざまなストレージタイプをサポートしています。SnapCenter Plug-in for SAP HANA Database をインストールする前に、ストレージタイプがサポートされているかどうかを確認する必要があります。 
+summary: 478593976233dfc3e57256f78404f939 
 ---
-= SnapCenter Plug-in for SAP HANA Database でサポートされるストレージタイプ
+= 0b42d90235dd8ef6ec97a9268c77b113
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter は、物理マシンと仮想マシン（ VM ）の両方でさまざまなストレージタイプをサポートしています。SnapCenter Plug-in for SAP HANA Database をインストールする前に、ストレージタイプがサポートされているかどうかを確認する必要があります。
+478593976233dfc3e57256f78404f939
 
 |===
-| マシン | ストレージタイプ 
+| 47c954121886a5e5aaca7eece461b56f | f0cb6783b152b19ceab16227ca3976a2 
 
 
  a| 
-物理サーバ
+e042e676706d93b3b14ce12e4d00a002
  a| 
-iSCSI で接続された LUN
-
-
-
- a| 
-物理サーバと仮想サーバ
- a| 
-* FC 接続 LUN
-* NFS-connected ボリューム
-
+f83bf140a9f6b8a345e508ecdc999c4b
 
 
 
  a| 
-VMware ESXi
+faa63149f52ece978423f5b04c274cf6
  a| 
-NFSとSANの両方にVVOLデータストアを配置
+* 3a14bc2a9e80eb39a44cd07a0d40b62b
+* df750015db6d85e88db15a90ebbf9147
 
-VVOLデータストアは、ONTAP Tools for VMware vSphereでのみプロビジョニングできます。
+
+
+
+ a| 
+f7eea647714641318ee86fedbbed4691
+ a| 
+9b722cfab4d80b751e95d2565746573a
+
+e3ad757f2539d14ca2692f3fabff82fc
 
 |===

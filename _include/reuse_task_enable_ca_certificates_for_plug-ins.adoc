@@ -1,33 +1,33 @@
-= 
+= d41d8cd98f00b204e9800998ecf8427e
 :allow-uri-read: 
 
 
-CA 証明書を設定し、 SnapCenter サーバと対応するプラグインホストに CA 証明書を導入する必要があります。プラグインの CA 証明書検証を有効にする必要があります。
+5bdaa230bd223b63ee44dc6865402ddb
 
-.作業を開始する前に
-* CA 証明書を有効または無効にするには、 run_Set-SmCertificateSetting_cmdlet を使用します。
-* このプラグインの証明書ステータスは、 _Get-SmCertificateSettings_ を使用して表示できます。
-
-
-コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
-
-.手順
-. 左側のナビゲーションペインで、 * Hosts * （ホスト）をクリックします。
-. [Hosts] ページで、 [*Managed Hosts] をクリックします。
-. 1 つまたは複数のプラグインホストを選択します。
-. [ * その他のオプション * ] をクリックします。
-. [ 証明書の検証を有効にする ] を選択します。
+.135b308ed83c53f1516b7c754566d1c4
+* 260d48875b5f8dd6df118d96f41fae32
+* 0b8e4c21643d060ddc3ab8b77952d58c
 
 
-.完了後
-管理対象ホストタブのホストには鍵が表示され、 SnapCenter サーバとプラグインホストの間の接続のステータスが南京錠の色で示されます。
+74db7181476f94f0e2927d8c8d98cb97
 
-* *image:../media/enable_ca_issues_icon.png["CA証明書が有効になっておらず、プラグインホストアイコンに割り当てられていません"]* は、 CA 証明書が有効になっておらず、プラグインホストにも割り当てられていないことを示します。
-* *image:../media/enable_ca_good_icon.png["CA証明書が正常に検証されましたアイコン"]* CA 証明書が正常に検証されたことを示します。
-* *image:../media/enable_ca_failed_icon.png["CA証明書を検証できませんでしたアイコン"]* は、 CA 証明書を検証できなかったことを示します。
-* *image:../media/enable_ca_undefined_icon.png["接続情報を取得できませんでしたアイコン"]* 接続情報を取得できなかったことを示します。
+.f3a29486bed19a90f2da6d007818b427
+. e3496f6d2696003cd08139c96386cc45
+. 1fb1c7da13751553d9822a326bcffe06
+. c59169129dc76fe856feed46d028c5f7
+. b72c1a4ab7bb6fc983db42dc53c66195
+. 375a181d7ebb0615169d54c45e53d2bc
+
+
+.bd965e38a0c9cf27aa1bde099308e23f
+b4d0227107743ec31d2715eb9e3909db
+
+* ffc839a5ed37506f26d40259e5180d52
+* f4d2a8ee22f7ebf26708847214f1290c
+* 02274517129f27aa0fbb69db1bb0df55
+* add2fda0c68eeaa23272704fcb107013
 +
 
-NOTE: ステータスが黄色または緑のときは、データ保護処理が正常に完了しています。
+NOTE: 1212c8451f1eb514e22c729091069eea
 
 

@@ -2,39 +2,39 @@
 permalink: uninstall/uninstall_snapcenter_server_linux.html 
 sidebar: sidebar 
 keywords: uninstall, snapcenter server, linux 
-summary: データ保護ジョブの管理にSnapCenterサーバを使用する必要がなくなった場合は、SnapCenterサーバをアンインストールできます。 
+summary: 8915a6b482d2d6b1763d40e64044c1e6 
 ---
-= LinuxホストでのSnapCenterサーバのアンインストール
+= 02a9b6e97655041e95fdc3137ed84675
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-データ保護ジョブの管理にSnapCenterサーバを使用する必要がなくなった場合は、SnapCenterサーバをアンインストールできます。SnapCenter サーバをアンインストールすると、そのコンポーネントがすべて削除されます。
+5ed9bc857dc6ff1b56a80fd44fd7da72
 
-.手順
-. いずれかの操作を実行して、SnapCenterサーバをアンインストールします。
+.f3a29486bed19a90f2da6d007818b427
+. 358a8a52a73d81c406c6aa697f95f412
 +
 |===
-| 実行する処理 | 手順 
+| 0773a07fce321af691e449b79e58672d | 5e2ad6fd9deb412d871137094ee43ef0 
 
 
  a| 
-非対話型アンインストール
+8bb8471fc98ff64ad4a49d0b23c1db89
  a| 
-`$ sudo /opt/NetApp/snapcenter/SnapManagerWeb/installation/uninstall -i silent -DCONFIRM=1`
+950c70bad8c3e08264b47ff2fa874282
 
-例：sudo /opt/NetApp/snapcenter/SnapManagerWeb/installation/uninstall
+ad8e81ad98c00fd4d934114a5a7b455b
 
 
 
  a| 
-タイワガタアンインストール
+de219dd70f43b6298781f0dbb0ab21ff
  a| 
-`$ sudo <USER_INSTALL_DIR>/NetApp/snapcenter/SnapManagerWeb/installation/uninstall`
+ea896b3f128b6cf97516a32dcacdbcd6
 
-アンインストールを確認するための確認入力に0以外の値を入力します。
+41d1b82d8194a6e390428f5e2eace78b
 
 |===
 

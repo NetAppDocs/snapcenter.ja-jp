@@ -2,71 +2,71 @@
 permalink: install/task_configure_audit_log_settings.html 
 sidebar: sidebar 
 keywords: audit, log, configure 
-summary: ソフトウェアプラットフォームおよびそれらのプラットフォームで実行されているすべてのソフトウェアのセキュリティイベントをログに記録するようにを設定できます。 
+summary: 6e5f2d1e77d0e2fa921f3222dc72f4e7 
 ---
-= 監査ログを設定します
+= d454841b95073c538e44b3f3299d1ce5
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-監査ログは、SnapCenter サーバのすべてのアクティビティについて生成されます。デフォルトでは、監査ログはインストールされているデフォルトの場所である_ C：\Program Files\NetApp\Virtual \SnapCenter WebApp\audit\_にあります。
+8e2dc41a491856f4fec28e22208ade0b
 
-監査ログは、各監査イベントに対してデジタル署名されたダイジェストを生成することで保護され、不正な変更から保護されます。生成されたダイジェストは個別の監査チェックサムファイルに保持され、の定期的な整合性チェックでコンテンツの整合性を確保します。
+5ed1b0e090dc9a05e51d817a1c55c890
 
-「 SnapCenterAdmin 」ロールでログインする必要があります。
+736f3871653c42d5fc23c7b63472291d
 
-* このタスクについて *
+78166ce4ccceeedfbf6aeb8682851072
 
-* アラートは次のシナリオで送信されます。
+* 734c77935d0e356a02cffa5bdcf4eeea
 +
-** 監査ログの整合性チェックのスケジュール、またはsyslogサーバが有効または無効になっています
-** 監査ログの整合性チェック、監査ログ、またはsyslogサーバのログに障害が発生しました
-** ディスクスペースが不足しています
+** f1f8c5af0be546c7d0628f3709a3e94d
+** 878218ae1c3f1a803da46fc67047328e
+** 1f4f6bb6a3727e7259a572df780132e9
 
 
-* 整合性チェックが失敗した場合にのみ、電子メールが送信されます。
-* 監査ログディレクトリと監査チェックサムログディレクトリの両方のパスを一緒に変更する必要があります。変更できるのはどちらか一方だけです。
-* 監査ログディレクトリと監査チェックサムログディレクトリのパスが変更された場合、以前の場所にある監査ログに対して整合性チェックを実行することはできません。
-* 監査ログディレクトリと監査チェックサムログディレクトリのパスは、SnapCenter サーバのローカルドライブにある必要があります。
+* a8b829b4549eb0268e8a4bcfdb283ccd
+* 5653bc89f7b74b08b75280647c8e7814
+* 3561daaa2a73d8e47ede784f533c90f0
+* f2b056d9585421258b6725769cc3ef78
 +
-共有ドライブまたはネットワークマウントドライブはサポートされません。
+3c15d7a6541e416f0d13373ee63fd0c0
 
-* syslogサーバ設定でUDPプロトコルが使用されている場合、ポートが停止しているか使用できないことによるエラーは、SnapCenter ではエラーまたはアラートとしてキャプチャできません。
-* Set-SmAuditSettingsコマンドとGet-SmAuditSettingsコマンドを使用して、監査ログを構成できます。
+* d90e9077285809de90243e91ed3a10bc
+* b398a3651d49f0eb14349eff9cfdec58
 +
-コマンドレットで使用できるパラメータとその説明は、Get-Help Command_nameを実行して確認できます。または、を参照することもできます https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+3563d311015c9882bea76aa6637d4e99
 
 
 
-* 手順 *
+4839d2f25cc35b249d5db15efa1afd75
 
-. [*設定*]ページで、[*設定*]>[*グローバル設定*]>[*監査ログ設定*]の順に選択します。
-. 監査ログセクションに詳細を入力します。
-. 監査ログ・ディレクトリ*および*監査チェックサム・ログ・ディレクトリ*を入力します
+. b081c433d361cfcb39c391b352a6f526
+. f3645e45f905156003cb2bb7741a86f3
+. bc622cdadddc54b812b2df6bb7115372
 +
-.. 最大ファイルサイズを入力します
-.. 最大ログファイル数を入力します
-.. アラートを送信するためのディスクスペース使用率を入力します
+.. 0f0fe34e5db47bfababf3c8feae7d98c
+.. 0e8e39045f055a207d497573e149652d
+.. 935cb3c2695f175068a87c5d68e847d5
 
 
-. （任意）*Log UTC time *をイネーブルにします。
-. （オプション）* Audit Log Integrity Check Schedule *を有効にし、* Start Integrity Check * for On Demand integrity checkをクリックします。
+. 9ab05ba909846c3d7f2f7c066b084728
+. 7f2d97437d7de429ba8a4765db91d854
 +
-また、*Start-SmAuditIntegrityCheck*コマンドを実行して、必要に応じて整合性チェックを開始することもできます。
+8aee3d0fefbd000c19b3ee35aa2bc680
 
-. （任意）転送された監査ログをリモートsyslogサーバに対してイネーブルにし、Syslogサーバの詳細を入力します。
+. 69a043658ef8489e6882e8795cebb91b
 +
-syslogサーバからTLS 1.2プロトコルの「信頼されたルート」に証明書をインポートする必要があります。
+3ea690d333a0676fa4a069c2a47f4d15
 
 +
-.. 「Syslog Server Host」と入力します
-.. 「Syslog Server Port」と入力します
-.. 「Syslog Server Protocol」と入力します
-.. RFC形式を入力します
+.. d8fd61c62424b805c059b1d8a8802558
+.. fe221223e4b9ae05f1cf4d2a3acb3e2b
+.. 79e06e5c035a2c2f7382e995d5baa08e
+.. 7a86ee54e2df90d7a4109938e53c1deb
 
 
-. [ 保存（ Save ） ] をクリックします。
-. 監査整合性チェックとディスク領域チェックは、* Monitor *>* Jobs *をクリックすると表示できます。
+. 4cc186df234138a57b2e8c5d8e5f7f8d
+. ace31f9e5f442121e5c3914671ec85d3
 

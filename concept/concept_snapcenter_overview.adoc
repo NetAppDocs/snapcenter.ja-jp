@@ -2,467 +2,467 @@
 permalink: concept/concept_snapcenter_overview.html 
 sidebar: sidebar 
 keywords: SnapCenter overview 
-summary: SnapCenter ソフトウェアは、シンプルで拡張性に優れた一元的なプラットフォームです。ハイブリッドクラウド内の任意の場所にある ONTAP システムで実行されているアプリケーション、データベース、ホストファイルシステム、 VM に対して、アプリケーションと整合性のあるデータ保護を提供します。 
+summary: 0344fda8fff2d8c5a125ffa5ba5f19a7 
 ---
-= SnapCenter の概要
+= 6309043436d4e7e5bad9a81c89ff15e4
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter ソフトウェアは、シンプルで拡張性に優れた一元的なプラットフォームです。ハイブリッドクラウド内の任意の場所にある ONTAP システムで実行されているアプリケーション、データベース、ホストファイルシステム、 VM に対して、アプリケーションと整合性のあるデータ保護を提供します。
+0344fda8fff2d8c5a125ffa5ba5f19a7
 
-SnapCenter では、ネットアップの Snapshot 、 SnapRestore 、 FlexClone 、 SnapMirror 、および SnapVault テクノロジを活用して、次の機能を提供します。
+edaafea0543ae64ebb79a2ed2e7a055b
 
-* アプリケーションと整合性のある、高速でスペース効率に優れたディスクベースのバックアップ
-* 迅速できめ細かなリストアと、アプリケーションと整合性のあるリカバリを実現
-* スペース効率に優れた高速クローニング
+* 6d02db19251dfec578c356202bfb1bdc
+* 3f47ac8ce2ea087a29a167d91aa9f473
+* 730379f67cffd2b9f827972fda727e5c
 
 
-SnapCenter には、 SnapCenter サーバと個々の軽量プラグインの両方が含まれています。リモートアプリケーションホストへのプラグインの導入を自動化したり、バックアップ、検証、クローニングの処理をスケジュールしたり、すべてのデータ保護処理を監視したりできます。
+28cff6abd4b7b43406436e547f34789e
 
-SnapCenter は、次の方法で導入できます。
+66f12d94976f038895bab4372ee87640
 
-* オンプレミスで保護：
+* ad5726653853fba2b5d98515c638da77
 +
-** ONTAP FAS、AFF、またはAll SAN Array（ASA）プライマリシステム上にあり、ONTAP FAS、AFF、またはASAセカンダリシステムにレプリケートされるデータ
-** ONTAP Select プライマリシステム上のデータ
-** ONTAP FAS、AFF、またはASAのプライマリシステムとセカンダリシステムにあり、ローカルのStorageGRIDオブジェクトストレージで保護されているデータ
+** f6ce44442588fc16e1d7cc2d3995eff2
+** 7deab53ede49d0d1a58c65f2e25ff259
+** 3f897d901d24f02777ff0994b7823d1a
 
 
-* ハイブリッドクラウドのオンプレミスで以下を保護：
+* bc549d53e5e7a7aeb8a41511751a99f2
 +
-** ONTAP FAS、AFF、またはASAプライマリシステム上にあり、Cloud Volumes ONTAPにレプリケートされるデータ
-** ONTAP FAS、AFF、ASAのプライマリシステムとセカンダリシステムにあり、クラウドのオブジェクトストレージとアーカイブストレージで保護されているデータ（BlueXPのバックアップとリカバリの統合を使用）
+** f5c37d824040662f50cbb8a32d77182d
+** f7b38c62b0e74d318a255bc3094cf531
 
 
-* パブリッククラウドで次のデータを保護：
+* ca5570a253e3c0a27562c65c06bb6125
 +
-** Cloud Volumes ONTAP （旧 ONTAP Cloud ）プライマリシステム上のデータ
-** Amazon FSX for ONTAP 上にあるデータ
-** プライマリAzure NetApp Files上のデータ（Oracle、Microsoft SQL、SAP HANA）
+** b340c2b4a7a978a510c8ebb351622143
+** b380e442ff5c6e48e283af8b6f99806f
+** 97f2c8bf124398ba05bca9cc6fb869b1
 
 
 
 
-SnapCenter の主な機能は次のとおりです。
+1b195709096f08d5640d18382cb88214
 
-* アプリケーションと整合性のある一元的なデータ保護
+* 0d5a14c7c275ceabc6219ec9ab60645f
 +
-データ保護は、ONTAPシステムで実行されているMicrosoft Exchange Server、Microsoft SQL Server、LinuxまたはAIX上のOracleデータベース、SAP HANAデータベース、IBM DB2、およびWindowsホストのファイルシステムでサポートされます。
-
-+
-ユーザ定義のSnapCenterプラグインを作成するフレームワークを提供することで、他の標準またはカスタムのアプリケーションやデータベースでもデータ保護がサポートされます。これにより、同じ単一コンソールから他のアプリケーションやデータベースのデータを保護できます。このフレームワークを活用して、NetAppはMongoDB、MySQL、PostgreSQL、ストレージ、MaxDB向けのSnapCenterプラグインをリリースしました。 Sybase ASE、ORASCPM、MongoDB、DPGlue。これとは別に、開発者ガイドを使用して独自のプラグインを作成できます。
+7e696b73307c35d33f22e93f357502ae
 
 +
-link:concept_develop_a_plug_in_for_your_application.html["アプリケーション用のプラグインを開発します"]
-
-* ポリシーベースのバックアップ
-+
-ポリシーベースのバックアップでは、NetApp Snapshotテクノロジを活用して、スペース効率に優れた、アプリケーションと整合性のあるディスクベースのバックアップを高速で作成できます。必要に応じて、既存の保護関係を更新することで、セカンダリストレージに対するこれらのバックアップの保護を自動化することができます。
-
-* 複数のリソースのバックアップ
-+
-SnapCenter リソースグループを使用して、同じタイプの複数のリソース（アプリケーション、データベース、またはホストファイルシステム）を同時にバックアップできます。
-
-* リストアとリカバリ
-+
-SnapCenter を使用すると、バックアップとアプリケーションと整合性のある、時間ベースのリカバリを迅速かつきめ細かくリストアできます。ハイブリッドクラウドの任意のデスティネーションからリストアできます。
-
-* クローニング
-+
-SnapCenter は、スペース効率に優れた、アプリケーションと整合性のある高速クローニングを実現し、ソフトウェア開発期間を短縮します。ハイブリッドクラウドの任意のデスティネーションにクローニングできます。
-
-* 単一のユーザ管理グラフィカルユーザインターフェイス（ GUI ）
-+
-SnapCenter GUI では、ハイブリッドクラウドの任意のデスティネーションにあるリソースのバックアップとクローンを管理するための単一の停止インターフェイスが提供されます。
-
-* REST API 、 Windows コマンドレット、 UNIX コマンド
-+
-SnapCenter には、ほとんどの機能をオーケストレーションソフトウェアと統合するための REST API 、および Windows PowerShell コマンドレットとコマンドラインインターフェイスが含まれています。
+105319d494017b38d930283a957371b2
 
 +
-REST APIの詳細については、を参照してください https://docs.netapp.com/us-en/snapcenter/sc-automation/overview_rest_apis.html["REST APIの概要"]。
+0f06c6acfdc3dffd800e63c8779e7702
+
+* 1e06a8cc16bd3bc423f81e8ff56e4fc0
++
+9939c592ab7bc8c3264f4ed7fde3bd18
+
+* c6f23063f5e9e828f1d4a0d52255f07c
++
+050fe282bd8b711ba366c400655d1e2a
+
+* 6be8f3086a30e59e908d53eb620b51dd
++
+b28420c602ed165d9f1cc771175a4c88
+
+* 217601d383b816e6a2548e57b5006f92
++
+e83cfee5e1167f2033d1e804f1841a96
+
+* 4f6da05ed76330876dac0fffae948e27
++
+79cb5b6ee15ef97e043769469fa6934f
+
+* c534b8c3e9d947f12540681e6b032d6e
++
+7ef2193aefa38af010eb09987c5e35ec
 
 +
-Windowsコマンドレットの詳細については、を参照してください https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+9a9a51f1993f5461829d8466a8fb013e
 
 +
-UNIXコマンドの詳細については、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP3323470["SnapCenter ソフトウェアコマンドリファレンスガイド"^]。
-
-* 一元化されたデータ保護ダッシュボードとレポート作成
-* セキュリティと委譲のためのロールベースアクセス制御（ RBAC ）。
-* 高可用性を備えたリポジトリデータベース
-+
-SnapCenter には、すべてのバックアップメタデータを格納するための高可用性機能を備えたリポジトリデータベースが組み込まれています。
-
-* プラグインの自動プッシュインストール
-+
-SnapCenter サーバホストからアプリケーションホストへの SnapCenter プラグインのリモートプッシュを自動化できます。
-
-* 高可用性
-+
-SnapCenter のハイアベイラビリティは、外部ロードバランサ（ F5 ）を使用して設定されています。同じデータセンター内で最大 2 つのノードがサポートされます。
-
-* ディザスタリカバリ（ DR ）
-+
-リソースの破損やサーバのクラッシュなどの災害が発生した場合に SnapCenter サーバをリカバリできます。
-
-* SnapLock
-+
-SnapLockは、規制やガバナンスに準拠するためにWrite Once、Read Many（WORM）ストレージを使用して変更不可能な状態でファイルを保管する組織向けの、ハイパフォーマンスなコンプライアンス解決策です。
+c4c043cf140b5a7134a11a4a9825d3a1
 
 +
-SnapLockの詳細については、 https://docs.netapp.com/us-en/ontap/snaplock/["SnapLock とは"]
+6626df1bb0990520c9816604ec788dbd
 
-* SnapMirrorアクティブ同期（当初はSnapMirrorビジネス継続性[SM-BC]としてリリース）
+* 44764ea524336d8792197315c021bc65
+* 36fbf00d5877eca259aff6ad5fc25b19
+* 571dae8a7f248327dfd110856b096a06
 +
-SnapMirror Active Syncを使用すると、サイト全体に障害が発生してもビジネスサービスの運用を継続できるため、アプリケーションをセカンダリコピーを使用して透過的にフェイルオーバーできます。SnapMirror Active Syncでフェイルオーバーをトリガーするために、手動操作や追加のスクリプト作成は必要ありません。
+45c4b930a6370709b2fb231c5711f324
 
+* aa4473d6d9a217be25c4635b52860652
 +
-この機能でサポートされるプラグインは、SnapCenter Plug-in for SQL Server、SnapCenter Plug-in for Windows、SnapCenter Plug-in for Oracle Database、SnapCenter Plug-in for SAP HANA Database、SnapCenter Plug-in for Microsoft Exchange Server、SnapCenter Plug-in for UNIXです。
+89ea065c3c74f05616217a18c8d2f94c
 
+* 520b661a272c9e6f55f469cc9c24193d
 +
+6bb8422b104a0a46085c0103ad9847a6
 
-NOTE: SnapCenterでホストイニシエータとの近接をサポートするには、この値（sourceまたはdestination）をONTAPで設定する必要があります。
-
+* e7cf8487e37960d508be850cc465db13
 +
-SnapCenterでサポートされないSnapMirrorアクティブ同期機能：
+c4e950e6ae10611fc22e75c70937d0c1
 
+* acdc6b4f6edd40f37bce01247a32ff86
 +
-** ONTAPでSnapMirrorアクティブ同期関係のポリシーを_automatedfailover_to_automatedfailoverduplex_inから変更して、既存の非対称SnapMirrorアクティブ同期ワークロードを対称に変換する場合、SnapCenterでも同じ処理はサポートされません。
-** リソースグループ（SnapCenterですでに保護されている）のバックアップがある場合に、ONTAPのアクティブなSnapMirror同期関係のストレージポリシーが_automatedfailover_to_automatedfailoverduplex_inから変更された場合、SnapCenterでも同じ設定はサポートされません。
-+
-SnapMirrorアクティブ同期の詳細については、 https://docs.netapp.com/us-en/ontap/smbc/index.html["SnapMirror Active Syncの概要"]
-
-+
-SnapMirrorのアクティブな同期を行うには、ハードウェア、ソフトウェア、およびシステム構成に関するさまざまな要件を満たしている必要があります。詳細については、 https://docs.netapp.com/us-en/ontap/smbc/smbc_plan_prerequisites.html["前提条件"]
-
-
-
-* 同期ミラーリング
-+
-同期ミラーリング機能は、遠隔地にあるストレージアレイ間で、オンラインのリアルタイムデータレプリケーションを提供します。
+e6c4248fcff66b43c157dbc37ec22080
 
 +
-同期ミラーの詳細については'を参照してください https://docs.netapp.com/us-en/e-series-santricity/sm-mirroring/overview-mirroring-sync.html["同期ミラーリングの概要"]
+9568c3d36fdcbbda09d1ee5c2f00b57a
 
-
-
-
-
-== SnapCenter アーキテクチャ
-
-SnapCenter プラットフォームは、集中管理サーバー（ SnapCenter サーバー）と SnapCenter プラグインホストを含む多層アーキテクチャに基づいています。
-
-SnapCenter はマルチサイトデータセンターをサポートしている。SnapCenter サーバとプラグインホストは、地理的に離れた場所に配置することもできます。
-
-image::../media/snapcenter_architecture.gif[SnapCenter アーキテクチャ]
-
-
-
-== SnapCenter コンポーネント
-
-SnapCenter は、 SnapCenter Server と SnapCenter プラグインで構成されています。インストールするプラグインは、保護するデータに適したプラグインだけにしてください。
-
-* SnapCenter サーバ
-* SnapCenter Plug-ins Package for Windows には次のプラグインが含まれています。
+* 09e67fdf7831d393b41ce0d8f15d404a
 +
-** SnapCenter Plug-in for Microsoft SQL Server
-** SnapCenter Plug-in for Microsoft Windows の略
-** SnapCenter Plug-in for Microsoft Exchange Server の略
-** SAP HANA データベース向け SnapCenter プラグイン
-** IBM DB2用SnapCenterプラグイン
-** PostgreSQL向けSnapCenterプラグイン
-** MySQL用SnapCenterプラグイン
+e0dffcf4f6e23c33a87445934bfed926
 
-
-* SnapCenter Plug-ins Package for Linux 。 Linux には次のプラグインが含まれています。
 +
-** SnapCenter Plug-in for Oracle Database
-** SAP HANA データベース向け SnapCenter プラグイン
-** UNIXファイルシステム用SnapCenterプラグイン
-** IBM DB2用SnapCenterプラグイン
-** PostgreSQL向けSnapCenterプラグイン
-** MySQL用SnapCenterプラグイン
+108b992c720e99adbd1f893194020c9a
 
-
-* SnapCenter Plug-ins Package for AIX ：以下のプラグインが含まれています。
 +
-** SnapCenter Plug-in for Oracle Database
-** UNIXファイルシステム用SnapCenterプラグイン
+
+NOTE: c3b24ca654a7950d4bad9f6faf738040
+
++
+902e0904329b45926164b6b7032c1a94
+
++
+** 28ec9bb7161f9f7cbea0f9792f8c6ee7
+** df3cc8d4fdd0fe554f12ddf2704663a5
++
+1cc705d062d72b3d56c8c0e4c2089925
+
++
+887682b9c04fe04102469c6bfc66a6b9
 
 
-* SnapCenter NetAppでサポートされるプラグイン
 
+* 67680376f85af0a668d2b1da4df68375
++
+a29cff3cfb7c24ba08368273081b8abe
 
-SnapCenter Plug-in for VMware vSphere は、ネットアップのデータブローカーです。仮想化されたデータベースやファイルシステムに対する SnapCenter のデータ保護処理をサポートする、スタンドアロンの仮想アプライアンスです。
-
-
-
-== SnapCenter サーバ
-
-SnapCenter サーバには、 Web サーバ、一元化された HTML5 ベースのユーザインターフェイス、 PowerShell コマンドレット、 REST API 、および SnapCenter リポジトリが含まれています。
-
-SnapCenter Serverは、Microsoft WindowsとLinuxの両方をサポートしています（RHEL 8.x、RHEL 9.x、SLES 15 SP5）。
-
-SnapCenter Plug-ins Package for LinuxまたはSnapCenter Plug-ins Package for AIXを使用する場合、スケジュールはQuartzスケジューラを使用して一元的に実行されます。
-
-* SnapCenter Plug-in for Oracle Database の場合、 SnapCenter サーバホストで実行されるホストエージェントは、 Linux ホストまたは AIX ホストで実行される SnapCenter Plug-in Loader （ SPL ）と通信して、異なるデータ保護処理を実行します。
-* SnapCenter Plug-in for SAP HANA Database および SnapCenter Custom Plug-ins の場合、 SnapCenter サーバはホストで実行されている SCCore エージェントを通じてこれらのプラグインと通信します。
-
-
-SnapCenter サーバとプラグインは、 HTTPS を使用してホストエージェントと通信します。SnapCenter 処理に関する情報は、 SnapCenter リポジトリに保存されます。
-
-
-NOTE: SnapCenterは、Windowsホスト用に分離されたネームスペースをサポートします。分離された名前空間の使用時に問題が発生した場合は、を参照してください。 https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_is_unable_to_discover_resources_when_using_disjoint_namespace["分離されたネームスペースを使用しているときにSnapCenterでリソースを検出できない"]。
-
-Linuxホストで実行されているSnapCenterコンポーネントのステータスを確認するには、次のコマンドを実行する必要があります。
-
-* `systemctl status snapmanagerweb`
-* `systemctl status scheduler`
-* `systemctl status smcore`
-* `systemctl status nginx`
-* `systemctl status rabbitmq-server`
++
+a9314244914bf1f4587a6c4aa7129dc3
 
 
 
 
-== SnapCenter プラグイン
 
-各 SnapCenter プラグインは、特定の環境、データベース、およびアプリケーションをサポートしています。
+== 26e2418d177df1dddb008e455ce28752
+
+a8eee41e395faca880e51b4fdfd9f5c4
+
+cd7120d7b7b9a237440ccfd5b7694671
+
+image::../media/snapcenter_architecture.gif[21c5e3a34f1b7d7f8403a2ffbab1364c]
+
+
+
+== 4a8478781fce30dd0844fa495323657c
+
+cf24b0c24f360df578fe1cb64878f30f
+
+* f709ed2f05802131924f53cb483d0216
+* bbfce10ba1cee1672b10ec42c0b22053
++
+** 4b2565450d503764049f6fd2bae4ee64
+** 36a92a010308100e1efc10d9eb98c369
+** 76a0ff76d49e2e625dab109d55123b8e
+** 51edbc830d9024f2e4139814d748cb86
+** 03720547c7eaf5a2184cb04e804c96dc
+** 3245d8514a844d08673af1fb25bec2f4
+** aa96d0986aa898ff8efdb0e691f15a6c
+
+
+* 540808ccc7df5d84b1442ccc4f14797d
++
+** 2e41c2081a8838f41650e76a978d4057
+** 51edbc830d9024f2e4139814d748cb86
+** 2215a3a36ae9bad6bae7dd09aa015343
+** 03720547c7eaf5a2184cb04e804c96dc
+** 3245d8514a844d08673af1fb25bec2f4
+** aa96d0986aa898ff8efdb0e691f15a6c
+
+
+* 41055e583e58ee1a92771580cdfe9b3f
++
+** 2e41c2081a8838f41650e76a978d4057
+** 2215a3a36ae9bad6bae7dd09aa015343
+
+
+* 411354ef95b9378a1c795d3ab431dc1b
+
+
+4bfa416280fc4f5037348c904859e18f
+
+
+
+== f709ed2f05802131924f53cb483d0216
+
+e4b70dc0a2377b7bbef832a55b2d603c
+
+a46edffb8a36d10263fe5881dfb121f5
+
+94b7d8402eae2cedafc0012930db7112
+
+* 34491d7c290ea91e85fff45d101c134f
+* a45f8ebdad00cd1e18e59d75c2e10a6e
+
+
+b62cae9c23cf035ec4b43fec7f0697d6
+
+
+NOTE: 0c6faa7f360e593d37b8a98e5281e4e7
+
+e9f0ead185217526014d410774e0c02d
+
+* 91a89e84ff068fecedee5cdb97a98565
+* 018711c946e27a5728eba091ba0c341c
+* 15e1d1bc077ba982b23c741635929fe8
+* 82958a7d67f72ffbc63a735562462509
+* cdf4292e2b40a9d1b4de9f92f6bc8dc0
+
+
+
+
+== a6d093f66e362f8852d5b0ce5d1adf5a
+
+e1087bd8c9bab7e111508724bff61f97
 
 |===
-| プラグイン名 | インストールパッケージに含まれています | 他のプラグインが必要です | ホストにインストール済みである | サポートされているプラットフォーム 
+| 9a8bf4c46d108a9dadf51b9b7637621f | 1a808d98ab71fe2c485a61bb9a8e34b5 | 7d2ba3b97f3aab58caeba3b5018ddbb9 | bb73505c097bd61c1fcc4430d2a38c41 | f66bfcfeebc3b396ab9d87fb382940e8 
 
 
  a| 
-Plug-in for SQL Server のこと
+b7fbe764824282400630c2688855f643
  a| 
-Windows 用プラグインパッケージ
+1b56d64a91a049474d624d61865df0e5
  a| 
-Plug-in for Windows のこと
+4bd5f1ead0d86ce18467a87e3a1a2420
  a| 
-SQL Server ホスト
+d1395d300c3eb2d6389098837ce303ae
  a| 
-Windows の場合
-
-
-
- a| 
-Plug-in for Windows のこと
- a| 
-Windows 用プラグインパッケージ
- a| 
- a| 
-Windows ホスト
- a| 
-Windows の場合
+aea23489ce3aa9b6406ebb28e0cda430
 
 
 
  a| 
-Plug-in for Exchange の略
+4bd5f1ead0d86ce18467a87e3a1a2420
  a| 
-Windows 用プラグインパッケージ
+1b56d64a91a049474d624d61865df0e5
  a| 
-Plug-in for Windows のこと
  a| 
-Exchange Server ホスト
+0b059e758179ae9106a6228fd71a42cb
  a| 
-Windows の場合
+aea23489ce3aa9b6406ebb28e0cda430
 
 
 
  a| 
-Plug-in for Oracle Database の略
+73384374c38d7037d15b34d093d9221c
  a| 
-Linux 用プラグインパッケージおよび AIX 用プラグインパッケージ
+1b56d64a91a049474d624d61865df0e5
  a| 
-Plug-in for UNIX のこと
+4bd5f1ead0d86ce18467a87e3a1a2420
  a| 
-Oracle ホスト
+0a39d95d53ff8629bb834199d1c7a40d
  a| 
-Linux または AIX
+aea23489ce3aa9b6406ebb28e0cda430
 
 
 
  a| 
-Plug-in for SAP HANA Database の略
+85101367016c9d3b3a2358db405464f9
  a| 
-Plug-in Package for Linux and Plug-ins Package for Windows 』を参照してください
+cadac0894f43abf9c33b9327f0f80e59
  a| 
-Plug-in for UNIX or Plug-in for Windows のいずれかです
+edfe16ec78fecac4fc9f4239fe727d7b
  a| 
-HDBSQL クライアントホスト
+5d797905d64e803732cc61497e40d3cd
  a| 
-Linux または Windows
+692efed951a032e2a70ff014b92f87bb
 
 
 
  a| 
-カスタムプラグイン
+ec068fb3d4dea4c520ab13a179930564
  a| 
-Plug-in Package for Linux and Plug-ins Package for Windows 』を参照してください
+fd4fbbf78285b947d3b440c75bcb9489
  a| 
-ファイルシステムのバックアップについては、 Plug-in for Windows を参照してください
+d2d37741a3c204436d78ca699e0e7154
  a| 
-カスタムアプリケーションホスト
+5d5cde1005f814f00d44032094a9a04f
  a| 
-Linux または Windows
+4abb41aae1dfe9c81afb3c3672df559c
 
 
 
  a| 
-IBM DB2用プラグイン
+98c5825b9b497a5e2a61777325ed802f
  a| 
-Plug-in Package for Linux and Plug-ins Package for Windows 』を参照してください
+fd4fbbf78285b947d3b440c75bcb9489
  a| 
-Plug-in for UNIX or Plug-in for Windows のいずれかです
+fde05c42841c2ef404a5ed9e7babdf62
  a| 
-DB2ホスト
+0c6a45824d8aa208ef88a943b710cb80
  a| 
-Linux または Windows
+4abb41aae1dfe9c81afb3c3672df559c
 
 
 
  a| 
-PostgreSQL用プラグイン
+c74acc8210aba80290a20a7458476e6f
  a| 
-Plug-in Package for Linux and Plug-ins Package for Windows 』を参照してください
+fd4fbbf78285b947d3b440c75bcb9489
  a| 
-Plug-in for UNIX or Plug-in for Windows のいずれかです
+d2d37741a3c204436d78ca699e0e7154
  a| 
-PostgreSQLホスト
+7affc9aa382d06b530a170abd5ed58b0
  a| 
-Linux または Windows
+4abb41aae1dfe9c81afb3c3672df559c
 
 
 
  a| 
-MySQL用プラグイン
+913f55628bc69e673add45d88f36a89e
  a| 
-Plug-in Package for Linux and Plug-ins Package for Windows 』を参照してください
+fd4fbbf78285b947d3b440c75bcb9489
  a| 
-Plug-in for UNIX or Plug-in for Windows のいずれかです
+d2d37741a3c204436d78ca699e0e7154
  a| 
-Db2MySQLホスト
+de2f98bb47449438a4cc0f3280943d06
  a| 
-Linux または Windows
+4abb41aae1dfe9c81afb3c3672df559c
+
+
+
+ a| 
+54c99346904c81a433d45388157e7f4f
+ a| 
+fd4fbbf78285b947d3b440c75bcb9489
+ a| 
+d2d37741a3c204436d78ca699e0e7154
+ a| 
+8ca02aa304dba71d65516a19860e4e61
+ a| 
+4abb41aae1dfe9c81afb3c3672df559c
 
 |===
 
-NOTE: SnapCenter Plug-in for VMware vSphere は、仮想マシン（ VM ）、データストア、および仮想マシンディスク（ VMDK ）に対して crash-consistent で VM と整合性のあるバックアップおよびリストア処理をサポートし、 SnapCenter アプリケーション固有のプラグインをサポートして、仮想化されたデータベースおよびファイルシステムに対してアプリケーションと整合性のあるバックアップおよびリストア処理を保護します。
+NOTE: a364132418180f0b14b5eb7db8b87808
 
-SnapCenter 4.1.1 ユーザの場合、 SnapCenter Plug-in for VMware vSphere 4.1.1 のドキュメントには、仮想化されたデータベースとファイルシステムの保護に関する情報が記載されています。SnapCenter 4.2.x ユーザの場合、 NetApp Data Broker 1.0 および 1.0.1 のドキュメントでは、 Linux ベースの NetApp Data Broker 仮想アプライアンス（オープン仮想アプライアンス形式）が提供する SnapCenter Plug-in for VMware vSphere を使用して、仮想化されたデータベースとファイルシステムを保護する方法について説明しています。SnapCenter 4.3 以降を使用しているユーザの場合は、を参照してください https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/index.html["SnapCenter Plug-in for VMware vSphere のドキュメント"^] Linux ベースの SnapCenter Plug-in for VMware vSphere 仮想アプライアンス（ Open Virtual Appliance 形式）を使用した、仮想化されたデータベースとファイルシステムの保護に関する情報を提供します。
-
-
-
-=== SnapCenter Plug-in for Microsoft SQL Server の特長
-
-* SnapCenter 環境で、アプリケーションに対応したバックアップ、リストア、およびクローニングの処理を自動化します。
-* SnapCenter Plug-in for VMware vSphere を導入して SnapCenter に登録すると、 VMDK および raw デバイスマッピング（ RDM ） LUN 上の Microsoft SQL Server データベースがサポートされます
-* SMB 共有のプロビジョニングのみをサポートします。SMB 共有での SQL Server データベースのバックアップはサポートされていません。
-* SnapManager for Microsoft SQL Server から SnapCenter へのバックアップのインポートをサポートします。
+62f7213e474f9b816a1b8dc7abf5a528
 
 
 
+=== 043833147a39840644f2ff01a835f90d
 
-=== SnapCenter Plug-in for Microsoft Windows の特長
+* 50e95eafa6faf8d2ee3f01921820b42b
+* e40237d2b53363bc373f8134071d1be1
+* a7e3ff2bca34971756f1600032ff8b61
+* 6bff10ef4d0d0d6d7ed28de9adc0169d
 
-* SnapCenter 環境の Windows ホストで実行されている他のプラグインに対して、アプリケーション対応のデータ保護を有効にします
-* SnapCenter 環境で、アプリケーションに対応したバックアップ、リストア、およびクローニングの処理を自動化します
-* Windowsホストのストレージプロビジョニング、整合性のあるSnapshot、スペース再生をサポート
+
+
+
+=== 2f75224064f651f17be474084e7a7ff5
+
+* 1b789581aeaa48640561ebae3b263a76
+* d764b7be86ece9a7b21fa445a8e1493c
+* a156a2baa4fc7e4c8c93e2f496941e06
 +
 
-NOTE: Plug-in for Windows では、 SMB 共有および Windows ファイルシステムを物理 RDM LUN 上にプロビジョニングしますが、 SMB 共有上での Windows ファイルシステムのバックアップ処理はサポートされません。
+NOTE: dea9211ac8214ee6078ef38e9e19fd1b
 
 
 
 
 
-=== SnapCenter Plug-in for Microsoft Exchange Server の特長
+=== bb1a0267e6190653f6b95ebf12a64e69
 
-* SnapCenter 環境での Microsoft Exchange Server データベースおよび Database Availability Group （ DAG ；データベース可用性グループ）で、アプリケーションに対応したバックアップおよびリストア処理を自動化します
-* は、 SnapCenter Plug-in for VMware vSphere を導入して SnapCenter に登録する際に、 RDM LUN 上の仮想 Exchange Server をサポートします
-
-
-
-
-=== SnapCenter Plug-in for Oracle Database の特長
-
-* アプリケーションに対応したバックアップ、リストア、リカバリ、検証、マウント、 SnapCenter 環境での Oracle データベースのアンマウントおよびクローニング処理
-* SAP 対応の Oracle データベースをサポートしますが、 SAP BR * Tools との統合は提供されません
+* b1af2c6f8c468738169b12e770baea8c
+* 916a82194899f7648d08a0282d32c9c0
 
 
 
 
-=== SnapCenter Plug-in for UNIX の特長
+=== 0b097b0a8b52154e1f44510513daf112
 
-* Plug-in for Oracle Database で、 Linux または AIX システム上の基盤となるホストストレージスタックを処理することで、 Oracle データベースに対するデータ保護処理を実行できます
-* ONTAP を実行するストレージシステムで、 Network File System （ NFS ；ネットワークファイルシステム）プロトコルおよび Storage Area Network （ SAN ；ストレージエリアネットワーク）プロトコルをサポートします。
-* Linux システムの場合、 VMDK および RDM LUN 上の Oracle データベースは、 SnapCenter Plug-in for VMware vSphere を導入して SnapCenter に登録するとサポートされます。
-* SAN ファイルシステムおよび LVM レイアウトで AIX 用のマウントガードをサポートします。
-* SAN ファイルシステムのインラインロギングと AIX システムの LVM レイアウトでのみ、 Enhanced Journaled File System （ JFS2 ）をサポートします。
+* a220880aac504c9f55528c3222ffa997
+* 3cd50b9048607f4d77076208b701991a
+
+
+
+
+=== 20af11fdcaf5cc09c6db373d456919d2
+
+* 3a9c0d21c2708025f8baec1b565ee73f
+* 4e5230cc046ad82de5ae1c42f1637ac0
+* 0f26023ea65ffc1c3268c3e139f5c5fa
+* 5ae5874f04859a4666b6202c117eb9c0
+* 1743a1db6e40cf42ac060e518112deca
 +
-SAN デバイス上に構築された SAN ネイティブデバイス、ファイルシステム、 LVM のレイアウトがサポートされます。
+cfabe0d0cba6624b9b2e7f3035476fac
 
-* SnapCenter環境でのUNIXファイルシステムに対するアプリケーション対応のバックアップ、リストア、クローニングの処理を自動化
-
-
-
-
-=== SnapCenter Plug-in for SAP HANA Database の特長
-
-SnapCenter環境でのSAP HANAデータベースの、アプリケーションに対応したバックアップ、リストア、クローニングを自動化します。
+* 57d3d56ffc8f4753281c212e5858ddc0
 
 
 
-=== NetAppでサポートされるプラグイン機能
 
-* 他のプラグインをサポートして、他のSnapCenterプラグインでサポートされていないアプリケーションやデータベースを管理します。NetAppでサポートされるプラグインは、SnapCenterのインストールには含まれていません。
-* では、別のボリュームにバックアップセットのミラーコピーを作成し、ディスクツーディスクのバックアップレプリケーションを実行できます。
-* Windows 環境と Linux 環境の両方をサポートします。Windows 環境では、カスタムプラグインに SnapCenter Plug-in for Microsoft Windows を組み合わせて使用することで、ファイルシステムの整合性のあるバックアップを作成することができます。
+=== d7fdaf85ee16b5bdacd134994a4bb218
 
-
-NetAppでは、サポートされているプラグインの作成と使用がサポートされていますが、作成するプラグインはNetAppでサポートされていません。
-
-詳細については、を参照してください。 link:../protect-nsp/develop_a_plug_in_for_your_application.html["アプリケーション用のプラグインを開発します"]
+1ade112f397a6c37ee3b78569cf208fe
 
 
 
-=== IBM DB2用SnapCenterプラグイン
+=== b0e07179f36c91a15e47f4d7a80a4360
 
-SnapCenter環境でのIBM DB2データベースのアプリケーション対応のバックアップ、リストア、クローニングを自動化します。
-
-
-
-=== PostgreSQL向けSnapCenterプラグイン
-
-SnapCenter環境で、アプリケーションに対応したPostgreSQLインスタンスのバックアップ、リストア、クローニングを自動化します。
+* 649904e9a32ebd4b1593438f64d1745b
+* 7f8b22ee024d485fad8d1c95beda80f7
+* 0bdb27719827039d79994d2a17575b2e
 
 
+c4c8512c2acfb63d2aa9d918f8686ea0
 
-=== MySQL用SnapCenterプラグイン
-
-SnapCenter環境でのMySQLインスタンスの、アプリケーションに対応したバックアップ、リストア、クローニングを自動化します。
+cbff97d11cc046bce11fc74b670383ea
 
 
 
-== SnapCenter リポジトリ
+=== 03720547c7eaf5a2184cb04e804c96dc
 
-SnapCenter リポジトリは NSM データベースとも呼ばれ、 SnapCenter のすべての処理の情報とメタデータを格納します。
+e1694ebeb85fe94bccea1c7ce60bcf95
 
-MySQL Server リポジトリデータベースは、 SnapCenter Server のインストール時にデフォルトでインストールされます。MySQL Server がすでにインストールされていて、 SnapCenter Server を新規にインストールする場合は、 MySQL Server をアンインストールする必要があります。
 
-SnapCenter では、 SnapCenter リポジトリデータベースとして MySQL Server 8.0.37 以降をサポートしています。以前のリリースの SnapCenter を搭載した以前のバージョンの MySQL Server を使用していた場合、 SnapCenter のアップグレード中に MySQL Server が 8.0.37 以降にアップグレードされます。
 
-SnapCenter リポジトリには、次の情報とメタデータが格納されます。
+=== 3245d8514a844d08673af1fb25bec2f4
 
-* バックアップ、クローニング、リストア、検証の各メタデータ
-* レポート作成、ジョブ、イベントの情報
-* ホストおよびプラグインの情報
-* ロール、ユーザ、および権限の詳細
-* ストレージシステムの接続情報
+14a02484b22cd41372b79139584ea8df
+
+
+
+=== aa96d0986aa898ff8efdb0e691f15a6c
+
+af671f4e28804df81a33c5ddbbc096d9
+
+
+
+== 3012455ba6e0ba02dfa333bdecc83c57
+
+cc1d85843af98a2ce08e58f1408e6364
+
+b795272c033653aa88e12f8f4fd442ca
+
+15d048e327e80031abf5c8b2302df43b
+
+132ec4f136226945615e1d3845afb9d0
+
+* 5a26534ccd7cfe885d29bb4751dbc4af
+* 9ceb046e6eba84331a9300ae7040cfa9
+* 6957b567ff1defaf2eef0c1ffe991895
+* 208d10ac82cfe46116253733eb2517ca
+* 60447d3b3bc038702ae4d3d05aeee01c
 

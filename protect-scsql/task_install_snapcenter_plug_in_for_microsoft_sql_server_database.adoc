@@ -2,15 +2,15 @@
 permalink: protect-scsql/task_install_snapcenter_plug_in_for_microsoft_sql_server_database.html 
 sidebar: sidebar 
 keywords: installing 
-summary: SQL Server データベースを保護する場合は、 SnapCenter Plug-in for Microsoft SQL Server をインストールしてセットアップする必要があります。 
+summary: 230797cd257f4279279a678587ed7d3e 
 ---
-= SnapCenter Plug-in for Microsoft SQL Server のインストールワークフロー
+= f03c757efff1b7a92c7b30cbc8c7c0b8
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SQL Server データベースを保護する場合は、 SnapCenter Plug-in for Microsoft SQL Server をインストールしてセットアップする必要があります。
+230797cd257f4279279a678587ed7d3e
 
-image::../media/scsql_install_configure_workflow.gif[scsql install configure ワークフロー]
+image::../media/scsql_install_configure_workflow.gif[33666019cac43e63f53db79cad8f33ac]

@@ -2,60 +2,60 @@
 permalink: install/task_export_ca_certificates_from_snapcenter_server.html 
 sidebar: sidebar 
 keywords: security,authentication, export CA certificates 
-summary: SnapCenterサーバからプラグインホストにCA証明書をエクスポートする必要があります。 
+summary: 9d31f93b6415c6dc4d47047067008551 
 ---
-= SnapCenterサーバから認証局（CA）証明書をエクスポートします
+= 5bdc9dfe0790a57a6fe905d1fb1e3eae
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Microsoft管理コンソール（MMC）を使用して、SnapCenterサーバからプラグインホストにCA証明書をエクスポートする必要があります。
+d061d73c2d594c5f93d58cd0750abfd2
 
-.作業を開始する前に
-双方向SSLを設定しておく必要があります。
+.135b308ed83c53f1516b7c754566d1c4
+ebbc012954ef860bf051c32d8c46da93
 
-* 手順 *
+4839d2f25cc35b249d5db15efa1afd75
 
-. Microsoft 管理コンソール (MMC) に移動し、 [ * ファイル * ] 、 [ スナップインの追加と削除 ] の順にクリックします。
-. [ スナップインの追加と削除 ] ウィンドウで、 [*Certificates*] を選択し、 [*Add*] をクリックします。
-. [証明書スナップイン]ウィンドウで*[コンピューターアカウント]*オプションを選択し、*[完了]*をクリックします。
-. [コンソールルート]*>*[証明書-ローカルコンピュータ]*>*[個人]*>*[証明書]*をクリックします。
-. SnapCenterサーバーで使用される調達CA証明書を右クリックし、*[すべてのタスク]*>*[エクスポート]*を選択してエクスポートウィザードを開始します。
-. ウィザードで次の操作を実行します。
+. b86fdb531ae29f629485f72c257ce9f0
+. a49966f708056a4c549673b5bec3414c
+. fa8730c22e61e95ad832838dc73fe14a
+. cd8d705b0f06c8e8e3aa612c41c7f61c
+. 5060f5f92f4ce202b37a1124cf8e909e
+. a2aa1e8ade9f7ad4c7098c0604405e40
 
 
 |===
-| オプション | 実行する処理 
+| 7fbc991c0cd78ec9e53ea32a7f734edc | af51caa4cf3947fff83e6451cb09644a 
 
 
  a| 
-秘密鍵をエクスポートします
+32145dfb79fda362cdaa8fbef1449f04
  a| 
-[いいえ、秘密鍵をエクスポートしない]*を選択し、*[次へ]*をクリックします。
-
-
-
- a| 
-エクスポートファイル形式（ Export File Format ）
- a| 
-「 * 次へ * 」をクリックします。
+da6ac4c12f48438b90c09b8262c1207e
 
 
 
  a| 
-ファイル名（ File Name ）
+3cfa6983bcec5ccdc5da07c27527c4e5
  a| 
-[参照]*をクリックし、証明書を保存するファイルパスを指定して*[次へ]*をクリックします。
+5a378b18f7bf0c4cabc6c655cd2f535e
 
 
 
  a| 
-証明書のエクスポートウィザードの完了
+76348cf9ddb92acc65440418b185db2d
  a| 
-概要を確認し、 * 完了 * をクリックしてエクスポートを開始します。
+00d7eaf591094c1fc261342becc7f305
+
+
+
+ a| 
+f174092f7aa23177cd860471c5f8d2ed
+ a| 
+afc1ad5af537889ff64cb2f4ef8646d9
 
 |===
 
-NOTE: 証明書ベースの認証は、SnapCenter HA構成およびSnapCenter Plug-in for VMware vSphereではサポートされません。
+NOTE: 6071c6433af7f31e998f8d748728b519

@@ -2,93 +2,93 @@
 permalink: protect-sco/concept_snapcenter_plug_in_for_oracle_database_features.html 
 sidebar: sidebar 
 keywords: plug-in for Oracle features 
-summary: Plug-in for Oracle Database は、 Linux または AIX ホスト上で Oracle データベースと統合されるほか、ストレージシステム上でネットアップのテクノロジと統合されます。 
+summary: ce94fae285739739eefbd4f5dc7a6c09 
 ---
-= Plug-in for Oracle Database の特長
+= 9f792426e334e83de3bd9f4df681ce3b
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Plug-in for Oracle Database は、 Linux または AIX ホスト上で Oracle データベースと統合されるほか、ストレージシステム上でネットアップのテクノロジと統合されます。
+ce94fae285739739eefbd4f5dc7a6c09
 
-* 統一されたグラフィカルユーザインターフェイス
+* 0a310341874ed9df279229cc94989cd0
 +
-SnapCenter のインターフェイスは、すべてのプラグインと環境で標準化され、一貫しています。SnapCenter のインターフェイスから、すべてのプラグインで、バックアップ、リストア、リカバリ、クローニングの各処理を一貫した方法で実行できるほか、ダッシュボードビューで概要を把握したり、ロールベースアクセス制御（ RBAC ）を設定したり、ジョブを監視したりすることができます。
+7140c9ed643472273949574e79ba9b60
 
-* 中央管理の自動化
+* 194512dda07e4cc0aca1533656efba55
 +
-バックアップ処理とクローニング処理のスケジュールを設定したり、ポリシーベースのバックアップ保持を設定したり、リストア処理を実行したりできます。SnapCenter から E メールアラートを送信するように設定して、環境をプロアクティブに監視することもできます。
+25ec8c1a8c1cbba6a91ecfb52cfacecc
 
-* 無停止のNetApp Snapshotテクノロジ
+* 4283444ce0d2e5af852c09c8c490c9b2
 +
-SnapCenterでは、Plug-in for Oracle DatabaseおよびPlug-in for UNIXでNetAppのSnapshotテクノロジを使用してデータベースがバックアップされます。Snapshotはストレージスペースを最小限しか消費しません。
+e9c2c7f52b66305a7519773fdcb971a2
 
 
 
-Plug-in for Oracle Database には、次のようなメリットもあります。
+07ef9882c6d102197c21c087f1bcb441
 
-* バックアップ、リストア、クローニング、マウント、アンマウント、 検証ワークフローなどがあります
-* ホストで設定されている Oracle データベースの自動検出
-* Oracle Recovery Manager （ RMAN ）を使用したカタログ化とカタログ化解除がサポートされます。
-* セキュリティが RBAC でサポートされ、ロール委譲が一元化されます
+* 98c168ef2d3d275c5131b78a27b98fbf
+* 7042e4b6e6cd168a927b1bbc1790a57e
+* a155941a36ec9b659c27924293911528
+* 5750866ea3f2f5172a0cbfaa24301be8
 +
-また、許可された SnapCenter ユーザにアプリケーションレベルの権限を付与するようにクレデンシャルを設定することもできます。
+67e3dbc43236eaec5752f527574fc4fa
 
-* アーカイブログ管理（ALM）でリストア処理とクローニング処理がサポートされます
-* NetApp FlexClone テクノロジを使用して、本番環境のデータベースのスペース効率に優れたポイントインタイムコピーを作成し、テストまたはデータの抽出を行います
+* 75274e3b5c9387e61941a9dbd37f3bda
+* affdab7a1cc1814609e3b44953accbbd
 +
-クローンを作成するストレージシステムに FlexClone ライセンスが必要です。
+da7d10a7d1bd2a2e5acc1a7e98e314b4
 
-* SAN 環境および ASM 環境でバックアップを作成する際に、 ONTAP の整合グループ（ CG ）機能がサポートされます
-* 自動化された無停止のバックアップ検証
-* 複数のデータベースホストで同時に複数のバックアップを実行できます
+* 60c01eaf63f6f84994a18b3ef120f90f
+* 069e98228d13c52461ac7c6e9c4ef0cc
+* 791e3048ca35b220103df4a3c759f26a
 +
-単一のホストのデータベースが同じボリュームを共有している場合、1回の処理でSnapshotが統合されます。
+6254fd4e626c978541c1f2e7fa8e13fd
 
-* 物理インフラと仮想インフラがサポートされます
-* NFS 、 iSCSI 、ファイバチャネル（ FC ）、 RDM 、 NFS および VMFS 経由の VMDK 、 NFS 、 SAN 、 RDM 、および VMDK 経由の ASM がサポートされます
-* ONTAP の選択的 LUN マップ（ SLM ）機能がサポートされます
+* 2f6b08e8b7841ff545c1fb1427f9a842
+* ba616d0f67fed92e5664508021cbd276
+* abd96a9e67c87700d0ddbbf79ca1ad42
 +
-デフォルトで有効になる SLM 機能は、最適パスを持たない LUN を定期的に検出して修正します。SLM を設定するには、 /var/opt/snapcenter /scu/etc. にある scu.properties ファイル内のパラメータを変更します
-
-+
-** この機能を無効にするには、ENABLE_LUNPATH_MONITORINGパラメータの値をfalseに設定します。
-** LUNパスが自動的に修正される頻度を指定するには、LUNPATH_MONITORING_INTERVALパラメータに値（時間単位）を割り当てます。SLM の詳細については、を参照してください http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanag/home.html["『 ONTAP 9 SAN アドミニストレーションガイド』"^]。
-
-
-* LinuxでのNon-Volatile Memory Express（NVMe）のサポート
-+
-** NVMe utilをホストにインストールする必要があります。
-+
-代替ホストにクローニングまたはマウントするには、NVMe utilをインストールする必要があります。
-
-** バックアップ、リストア、クローニング、マウント、アンマウント、 カタログ化、カタログ化解除、および検証の処理は、RDMなどの仮想環境を除き、NVMeハードウェアでサポートされます。
-+
-上記の操作は、パーティションがないデバイスまたはシングルパーティションでサポートされています。
+fcc8a219537ae52cbcb4de4b42305ef7
 
 +
-
-NOTE: NVMeデバイス用のマルチパス解決策 は、カーネルで標準のマルチパスオプションを設定することで設定できます。Device Mapper（DM）マルチパスはサポートされていません。
-
-** バックアップ、リストア、クローニング、マウント、アンマウント、 NVMe over TCP/IPでは、カタログ化、カタログ化解除、および検証のワークフローがサポートされます。
-** バックアップ、リストア、クローニング、マウント、アンマウント、 NVMe over TCP / IPで作成されたVMDKレイアウトでは、カタログ、カタログ解除、および検証のワークフローがサポートされます。
+** 5bc73a697938fe752e1c9b686f4c9bca
+** bb05b6e20b4cf14467757d0be8887ff0
 
 
-* SnapMirror Active Sync（当初はSnapMirror Business Continuity [SM-BC]としてリリース）をサポート。これにより、サイト全体に障害が発生してもビジネスサービスの運用を継続でき、アプリケーションがセカンダリコピーを使用して透過的にフェイルオーバーできるようになります。SnapMirror Active Syncでフェイルオーバーをトリガーするために、手動操作や追加のスクリプト作成は必要ありません。
-* OracleおよびGRIDではなく、デフォルト以外のすべてのユーザをサポートします。
+* 5773f6440e36169f1e12e5bf94061c09
 +
-デフォルト以外のユーザをサポートするには、_ file /var/opt/snapcenter/sco/etc/_にある* sco.properties*ファイル内のパラメータの値を変更して、デフォルト以外のユーザを設定する必要があります。
+** 258f389f9aaafec4ce1ef8c36ad97497
++
+ab89efb871fba5e381bbef07f0387285
+
+** 3377e8572fd9a080914d6e1276b42331
++
+77e1aff98fab667da904795d94a0856d
 
 +
-パラメータのデフォルト値は、OracleとGridに設定されています。
+
+NOTE: 3bf355c6205f457fe62af33466b47331
+
+** 7de40efacefbbc10736955fb76d4f312
+** 449c889358b05b8939d81d9dfd5ad5a4
+
+
+* 0520e3156de98e2c722c4ebe7fe303c7
+* 1c23de25f91ce669fff9d59cc422c0a2
++
+5719854a3b7b80da5cee21080c26176d
 
 +
-** db_user = Oracleの場合
-** db_group=oinstall
-** gi_user = grid
-** gi_group = oinstall
+596031c7fa0294b7a2d304ec2e1bce8b
+
++
+** 4a85b53e62777e7f5c185c944d3c55a1
+** bd1da13993f5b5f04502598c088daa4d
+** 663b345154500cc2d3165730e7c7b6bc
+** e5df7718dd7d60593c1dd152b40b7e4c
 
 
 

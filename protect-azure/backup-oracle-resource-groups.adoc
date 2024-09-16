@@ -2,26 +2,26 @@
 permalink: protect-azure/backup-oracle-resource-groups.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for Oracle Database, back up, resource groups 
-summary: リソースグループは、ホスト上のリソースの集まりです。リソースグループのバックアップ処理は、リソースグループに定義されているすべてのリソースを対象に実行されます。 
+summary: 4580f4b818b00829ad833fee80f6f773 
 ---
-= Oracleリソースグループのバックアップ
+= ad7e2b46dbd658b836afa67739728364
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-複数のリソースで構成されるリソースグループをバックアップできます。リソースグループのバックアップ処理は、リソースグループに定義されているすべてのリソースを対象に実行されます。
+3e069730cfbdc79be14782b101342cba
 
-.手順
-. 左側のナビゲーションペインで、*[リソース]*を選択し、リストから適切なプラグインを選択します。
-. [ リソース ] ページで、 [ * 表示 ] リストから [ * リソースグループ * ] を選択します。
-. [Resource Groups]ページで、バックアップするリソースグループを選択し、*[Back up Now]*を選択します。
-. Backup （バックアップ）ページで、次の手順を実行します。
+.f3a29486bed19a90f2da6d007818b427
+. 0b5045b3b137ebb25cf08b5081075426
+. 5188766c2c9e07184bb642e31a6d1193
+. 8689f97c3da81b19465f71f756e66bdf
+. 4a1c51520bfb3d170a967d4c218b52bf
 +
-.. リソースグループに複数のポリシーが関連付けられている場合は、*[ポリシー]*ドロップダウンリストから、バックアップに使用するポリシーを選択します。
-.. 「 * Backup * 」を選択します。
+.. 5aec80aae3b9f1be4549537d901f39a5
+.. fec2251f36365f1f041be06f3809bae9
 
 
-. 処理の進捗状況を監視するために、*[監視]*>*[ジョブ]*を選択します。
+. 4a3f04f42ebeabccfad7128de3983c4a
 

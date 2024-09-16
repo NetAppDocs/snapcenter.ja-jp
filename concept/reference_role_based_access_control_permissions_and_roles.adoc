@@ -2,85 +2,85 @@
 permalink: concept/reference_role_based_access_control_permissions_and_roles.html 
 sidebar: sidebar 
 keywords: RBAC, roles, permissions 
-summary: SnapCenter のロールベースアクセス制御（ RBAC ）では、ロールを作成して権限を追加し、そのロールにユーザやそのグループを割り当てることができます。これにより、 SnapCenter 管理者は環境を一元的に管理しながら、アプリケーション管理者はデータ保護ジョブを管理できます。SnapCenter には、事前定義されたロールと権限がいくつか付属してい 
+summary: 2dccbe897666a5dff6976fa3fd6bab8f 
 ---
-= RBAC の権限とロール
+= 45538cf22616d249e70f0697a94497d7
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter のロールベースアクセス制御（ RBAC ）では、ロールを作成して権限を割り当てることができ、そのロールにユーザやそのグループを割り当てることができます。これにより、 SnapCenter 管理者は環境を一元的に管理しながら、アプリケーション管理者はデータ保護ジョブを管理できます。SnapCenter には、事前定義されたロールと権限がいくつか付属してい
+e2bd415c54b23599a45de668297fed62
 
 
 
-== SnapCenter ロール
+== 6f2b9123037415e1c4ee558b86867278
 
-SnapCenter には、次のロールがあらかじめ定義されています。これらのロールにユーザやグループを割り当てて使用できるほか、新しいロールを作成することもできます。
+d254e8f4a31353bc72578aa530de88cc
 
-ロールをユーザに割り当てると、 SnapCenter Admin ロールを割り当てていない限り、そのユーザに関連するジョブだけが Jobs ページに表示されます。
+d8b7af13624032633603f96aba18fc96
 
-* App Backup and Clone Admin の登録を確認します
-* Backup and Clone Viewer に表示されます
-* インフラ管理者
-* SnapCenter Admin
-
-
+* a0a7bcaf6bffd1d06d24902b4eaa4e6b
+* e2b8ac1ef51f75fac2feb6479d64b808
+* 311fcd5356ecfe4bcebbb4f1b21841ec
+* a9af97dec932d202dfe3b1d4d3ca62c1
 
 
-== SnapCenter Plug-in for VMware vSphere のロール
-
-VM 、 VMDK 、およびデータストアの VM 整合性のあるデータ保護を管理するために、 SnapCenter Plug-in for VMware vSphere によって vCenter で次のロールが作成されます。
-
-* SCV 管理者
-* SCV ビュー
-* SCV バックアップ
-* SCV Restore （ SCV リストア）
-* SCV ゲストファイルのリストア
 
 
-詳細については、を参照してください https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_types_of_rbac_for_snapcenter_users.html["SnapCenter Plug-in for VMware vSphere ユーザ用の RBAC のタイプ"^]
+== 8cfd3baf68c2b27d02222abba8a6df4f
+
+a0c4d2521f313132bf09148b977e7639
+
+* 3d0f61a1174e21cbdd43433a0cdd1587
+* 68296ccb11b96c0cb3577e08d79079a8
+* 9e5d312df6041327157130535c90513a
+* b64ee0fdf90244f79181f1afb007c08b
+* fab80f3b151fabee7b9febb22c2ebc54
+
+
+ba86853e186ca041d7868fc551063ec1
 
 |===
 
 
-| * ベストプラクティス： * SnapCenter Plug-in for VMware vSphere の処理用に ONTAP ロールを 1 つ作成し、必要な権限をすべて割り当てることを推奨します。 
+| 8e9100a341414c9d65801258490fe489 
 |===
 
 
-== SnapCenter 権限
+== a63a6d2b630398075f4d0205b6f9b914
 
-SnapCenter から提供される権限は次のとおりです。
+0eafe3392f100f2ba4743cade6981657
 
-* リソースグループ
-* ポリシー
-* バックアップ
-* ホスト
-* ストレージ接続
-* クローン
-* Provision （ Microsoft SQL データベースのみ）
-* ダッシュボード
-* レポート
-* リストア
+* dd23acac46f17cbfd4d5541f8ee3c7a1
+* 51359e8b51c63b87d50cb1bab73380e2
+* 3500ba09d0538297440ca620c9dd46bf
+* c2ca16d048ec66e04bca283eab048ec2
+* 1a207e1c839db0b921558b34cc67a80d
+* ff24590464659ee8cdec688128c35f89
+* 6eec4ae86a04b574bb1038a2fd5b23b6
+* 2938c7f7e560ed972f8a4f68e80ff834
+* c91c7b93c28cd18741b71f727ee81ee3
+* 2bd339d85ee3b33e513359ce781b60cc
 +
-** Full Volume Restore （ Custom Plug-ins のみ）
+** 11aacfaa0f44474b2e542372195d12cd
 
 
-* リソース
+* be8545ae7ab0276e15898aae7acfbd7a
 +
-管理者以外のユーザがリソース検出処理を実行する場合、管理者からプラグインの権限が求められます。
+3547f61f8a20979cfc8d704aee6d5a33
 
-* プラグインのインストールまたはアンインストール
+* 1c96f491085052805ab8d6703593928f
 +
 
-NOTE: Plug-in Installation 権限を有効にする場合は、 Host 権限も変更して読み取りと更新を有効にする必要があります。
+NOTE: 99b6b01da25c8cf6380bde15f9e4d603
 
-* データ移行
-* mount （ Oracle データベースのみ）
-* Unmount （ Oracle データベースのみ）
-* Job Monitor サービスの略
+* 19f59b74448f6a27519db281a44e4b12
+* 2968590fdb19353b9fdbc6088dd778eb
+* 5a3f263989738cd612ecc94d6ff5f735
+* c3c73b7f9d382d2231b0aa3e8a26db67
 +
-ジョブ監視権限を使用すると、さまざまなロールのメンバーが、割り当てられているすべてのオブジェクトの処理を確認できます。
+a90c9bf6b95fa2c04eefdb89d6650e4b
 
 

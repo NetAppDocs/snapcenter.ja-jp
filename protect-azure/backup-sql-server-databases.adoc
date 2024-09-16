@@ -2,52 +2,52 @@
 permalink: protect-azure/backup-sql-server-databases.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for SQL Server Database, back up, databases, Azure NetApp Files 
-summary: '[Resources]ページからリソースをバックアップします。' 
+summary: 7ce3afddd78d2c95f3288b6c71328476 
 ---
-= Azure NetApp Filesで実行されているSQL Serverデータベースのバックアップ
+= cffecc178cc1b99a91effece6bd4417b
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-どのリソースグループにも含まれていないリソースは、のページからバックアップすることができます。
+1c9948efe4bec2e09636b9c816bd9d20
 
-.作業を開始する前に
-Azure WindowsフェイルオーバークラスタにクラスタIPが割り当てられていない場合やSnapCenterから到達できない場合は、ロードバランサを作成する必要があります。ロードバランサのIPが設定され、SnapCenterサーバから到達可能である必要があります。
+.135b308ed83c53f1516b7c754566d1c4
+c4a59bcd677dc60a0d842d0481a00dea
 
-.手順
-. 左側のナビゲーションペインで、*[リソース]*を選択し、リストから適切なプラグインを選択します。
-. [リソース]ページで、[表示]ドロップダウンリストから*[データベース]*、*[インスタンス]*、または*[可用性グループ]*を選択します。
-. [Resource]ページで、*[Use custom name format for Snapshot copy]*を選択し、Snapshot名に使用するカスタムの名前形式を入力します。
-. [Policies] ページで、次の手順を実行します。
+.f3a29486bed19a90f2da6d007818b427
+. 0b5045b3b137ebb25cf08b5081075426
+. 79acc61170d146040e6782f199b67161
+. 9322b02cbab1e9e30696c6f18aa5b45e
+. 53899dcc4360d3b8622ce5dc08a12950
 +
-.. ドロップダウンリストから 1 つ以上のポリシーを選択します。
-.. *を選択しますimage:../media/add_policy_from_resourcegroup.gif[""]* スケジュールを設定するポリシーの [ スケジュールの設定 ] 列。
-.. [Add schedules for policy_policy_name_]ダイアログボックスで、スケジュールを設定し、*[OK]*を選択します。
+.. 70c30c71587e2d0c71b7f9e97a8aad7d
+.. c59876ddcf6af9e6a82eee54645805c2
+.. 100eb4bb64628d6bc8890851c8173103
 +
-_policy_name_は 、選択したポリシーの名前です。
+90334c9b6a705f8c6dafb182257f149b
 
-.. [Microsoft SQL Serverスケジューラを使用する]*を選択し、スケジュールポリシーに関連付けられている*[スケジューラインスタンス]*ドロップダウンリストからスケジューラインスタンスを選択します。
+.. fddaa056d058e982a13036e05323d6f8
 
 
-. [Verification] ページで、次の手順を実行します。
+. 8aad6e1ddba0855250f3f027cd30ba41
 +
-.. 検証サーバを選択します。
-.. 検証スケジュールを設定するポリシーを選択し、 * をクリックしますimage:../media/add_policy_from_resourcegroup.gif[""]*
-.. [バックアップ後に検証を実行する]*または*[スケジュールされた検証を実行する]*を選択します。
-.. [OK] をクリックします。
+.. 444abdb0adbf904dfeb2b6b85da3e698
+.. a69de308424c0233fb5435c6ed27ec7d
+.. 102beeaa44096cb1c4640f46b3cabe69
+.. 18d0ad44a1e563aaf9f5871e32535a6c
 
 
-. [ 通知 ] ページの [ 電子メールの設定 *] ドロップダウンリストから、電子メールを送信するシナリオを選択します。
-. 概要を確認し、 [ 完了 ] をクリックします。
-. [今すぐバックアップ]*を選択します。
-. Backup （バックアップ）ページで、次の手順を実行します。
+. 30b65b6968f11ce5399cacf995839f65
+. fed1c121dc4f5a5484e5623e297385fb
+. 5477ea177e290e8ac1c03a7ee8f2a92b
+. 4a1c51520bfb3d170a967d4c218b52bf
 +
-.. リソースに複数のポリシーが関連付けられている場合は、*[ポリシー]*ドロップダウンリストから、バックアップに使用するポリシーを選択します。
-.. [Verify after backup]*を選択します。
-.. 「 * Backup * 」を選択します。
+.. 2c7804d18e9ae000973714b450e90bee
+.. 51bfdba913c7ca3420c862bcfa885fba
+.. fec2251f36365f1f041be06f3809bae9
 
 
-. 操作の進行状況を監視するには、 * Monitor * > * Jobs * をクリックします。
+. 8b9460bf38a68108bcdd278a386b3156
 

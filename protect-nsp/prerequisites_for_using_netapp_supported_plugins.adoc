@@ -2,31 +2,31 @@
 permalink: protect-nsp/prerequisites_for_using_netapp_supported_plugins.html 
 sidebar: sidebar 
 keywords: Credentials 
-summary: SnapCenter NetAppでサポートされるプラグインを使用する前に、SnapCenter管理者がSnapCenterサーバをインストールして設定し、前提条件となるタスクを実行する必要があります。 
+summary: b5d24747e2254cd74a278959e55db769 
 ---
-= NetAppでサポートされるプラグインを使用するための前提条件
+= 6f9abdf4e6349ffead799b7fe0fb5848
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter NetAppでサポートされるプラグインを使用する前に、SnapCenter管理者がSnapCenterサーバをインストールして設定し、前提条件となるタスクを実行する必要があります。
+b5d24747e2254cd74a278959e55db769
 
-* SnapCenter サーバをインストールして設定します。
-* SnapCenter サーバにログインします。
-* 必要に応じて、ストレージシステム接続を追加し、クレデンシャルを作成して、 SnapCenter 環境を設定します。
-* ホストを追加し、プラグインをインストールしてアップロードします。
-* 必要に応じて、プラグインホストにJava 11をインストールします。
-* データパス（ LIF ）が複数ある場合、または dNFS 構成を使用している場合は、データベースホストで SnapCenter CLI を使用して次の作業を実行できます。
+* d3bd1679f97e986f5eabfb3cb076e96b
+* a5d8946536d3ffa699ada66ee92654d6
+* 521e4c748d90979b116ba375769e0ef9
+* 0b6e81623d0567d25f80dc022436e00c
+* b64964f7c6cb3e2d0ad50647f28415f4
+* 48b0f0fb43e0a3e1a7bac0922b6b61c9
 +
-** デフォルトでは、データベースホストのすべての IP アドレスが、クローンボリュームの Storage Virtual Machine （ SVM ）の NFS ストレージエクスポートポリシーに追加されます。特定の IP アドレスを使用する場合、または IP アドレスのサブセットに制限する場合は、 Set-PreferredHostIPsInStorageExportPolicy CLI を実行します。
-** SVM に複数のデータパス（ LIF ）がある場合は、 NFS クローンボリュームをマウントするための適切なデータパス（ LIF ）が SnapCenter によって選択されます。ただし、特定のデータパス（LIF）を指定する場合は、Set-SvmPreferredDataPath CLIを実行する必要があります。コマンドで使用できるパラメータとその説明については、 RUNNING Get Help command_name _ を使用して参照できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP3323470["SnapCenter ソフトウェアコマンドリファレンスガイド"^]。
+** d3af75b5ec004883495ea045fb886b21
+** de748d4f218eb82701a830c41d04af9f
 
 
-* バックアップレプリケーションが必要である場合は、 SnapMirror と SnapVault をセットアップします。
-* ポート 9090 がホストの他のアプリケーションで使用されていないことを確認します。
+* 94a5e03dcafcb993f53258c83811415f
+* 17f9957a5b4dff4ca41989ac66b4057b
 +
-ポート9090は、SnapCenterで必要な他のポートに加えて、NetAppでサポートされるプラグイン用にリザーブする必要があります。
+70470fa292d95a8fc9a82053e4e3efc0
 
 

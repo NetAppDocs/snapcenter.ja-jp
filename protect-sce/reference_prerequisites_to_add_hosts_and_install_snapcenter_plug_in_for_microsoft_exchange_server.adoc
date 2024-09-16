@@ -2,176 +2,176 @@
 permalink: protect-sce/reference_prerequisites_to_add_hosts_and_install_snapcenter_plug_in_for_microsoft_exchange_server.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for Microsoft Exchange Server 
-summary: ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。 
+summary: e53c11d95478892635e2a7753106adc5 
 ---
-= ホストを追加して SnapCenter Plug-in for Microsoft Exchange Server をインストールするための前提条件
+= 690761e3a499ee562da842d3bd6f2db0
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。
+e53c11d95478892635e2a7753106adc5
 
-* iSCSI を使用している場合は、 iSCSI サービスが実行されている必要があります。
-* ローカル管理者権限を持つドメインユーザがあり、リモートホストに対してローカルログイン権限が付与されている必要があります。
-* スタンドアロン構成およびデータベース可用性グループ構成で Microsoft Exchange Server 2013 、 2016 、または 2019 を使用している必要があります。
-* Windows ホストにプラグインをインストールする場合、ビルトインでないクレデンシャルを指定する場合、またはユーザがローカルワークグループユーザに属している場合は、ホストで UAC を無効にする必要があります。
-* SnapCenter でクラスタノードを管理する場合は、クラスタ内のすべてのノードに対する管理者権限を持つユーザが必要です。
-* Exchange Server に対する管理者権限を持つユーザが必要です。
-* SnapManager for Microsoft Exchange Server および SnapDrive for Windows がすでにインストールされている場合は、 SnapDrive を使用してデータを確実に保護するために、同じ Exchange サーバに Plug-in for Exchange をインストールする前に、 SnapCenter for Windows で使用する VSS ハードウェアプロバイダの登録を解除する必要があります。
-* SnapManager for Microsoft Exchange Server と Plug-in for Exchange が同じサーバにインストールされている場合は、 SnapManager for Microsoft Exchange Server で作成されたすべてのスケジュールを Windows スケジューラから一時停止または削除する必要があります。
-* ホストがサーバから完全修飾ドメイン名（ FQDN ）に解決できる必要があります。hosts ファイルが解決可能になるように変更され、短縮名と FQDN の両方が hosts ファイルに指定されている場合は、 SnapCenter hosts ファイルに次の形式でエントリを作成します： _<IP_address> <host_fqdn><host_name> _ 。
-* 次のポートがファイアウォールでブロックされていないことを確認してください。ブロックされていないとホストの追加操作が失敗します。この問題を解決するには、ダイナミックポート範囲を設定する必要があります。詳細については、を参照してください https://docs.microsoft.com/en-us/troubleshoot/windows-server/networking/configure-rpc-dynamic-port-allocation-with-firewalls["Microsoft のドキュメント"^]。
+* 8dd7d2aae8c4a449ae4eb17577d64964
+* 361ef555cc4b1de8cd252d68a14901af
+* 3135b36cd939fa03c3be552b0fbe8534
+* 6f4630c11483dcb4143ae30dadd50487
+* dbef26874057ae0be535fee20766f8cb
+* 28d2b8ff10c1db028f2426c313a6f6ac
+* b387198e1b998aa635e2ad89704fa61e
+* e14f254ce5508b044595b70ba76e2dd9
+* 363807fbbec214888e9bb4ab89312c45
+* 49178d8917274413da493299118d6557
 +
-** Windows 2016 および Exchange 2016 のポート範囲 50000 ~ 51000
-** Windows Server 2012 R2 および Exchange 2013 用のポート範囲 6000-6500
-** Windows 2019 のポート範囲は 49152~65536 です
+** 16b480a328aa6342db0d1f44787d9eaf
+** 3d865e6796dba371ef2bbaf9003ed1eb
+** 2973bd6a9b781fc2968849d58205311c
 
 
 
 
 [NOTE]
 ====
-ポート範囲を特定するには、次のコマンドを実行します。
+fe76fc133ce5d0e6aa2e73fa56ca464c
 
-* netsh int ipv4 show dynamicport tcp
-* netsh int ipv4 show dynamicport udp
-* netsh int ipv6 show dynamicport tcp を実行します
-* netsh int ipv6 show dynamicport udp
+* 70766abc1e0d9fa835c550fd65fe8108
+* a93524c7ce74bfb10fdd0fcbd38fb81a
+* 2c96e470eb2241a7251fea5747194f79
+* 60164a3b49ae9e6d0a2f8ca1ca1b0ac3
 
 
 ====
 
 
-== SnapCenter Plug-ins Package for Windows をインストールするホストの要件
+== 05fc12ecf449ac264abfd66ddab37332
 
-SnapCenter Plug-ins Package for Windows をインストールする前に、ホストシステムのいくつかの基本的なスペース要件とサイジング要件を確認しておく必要があります。
-
-|===
-| 項目 | 要件 
-
-
- a| 
-オペレーティングシステム
- a| 
-Microsoft Windows の場合
-
-サポートされているバージョンの最新情報については、を参照して https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]ください。
-
-
-
- a| 
-ホスト上の SnapCenter プラグインの最小 RAM
- a| 
-1 GB
-
-
-
- a| 
-ホスト上の SnapCenter プラグインのインストールおよびログの最小スペース
- a| 
-5 GB
-
-
-NOTE: 十分なディスクスペースを割り当て、 logs フォルダによるストレージ消費を監視する必要があります。必要なログスペースは、保護するエンティティの数とデータ保護処理の頻度によって異なります。十分なディスクスペースがない場合、最近実行した処理に対してログは作成されません。
-
-
-
- a| 
-必要なソフトウェアパッケージ
- a| 
-* です。 ネットコア8.0.5
-* PowerShell Core 7.4.2
-* Java 11 Oracle JavaおよびOpenJDK
-
-
-サポートされているバージョンの最新情報については、を参照して https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]ください。
-
-.NET固有のトラブルシューティング情報については、を参照してください https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_upgrade_or_install_fails_with_This_KB_is_not_related_to_the_OS["インターネットに接続されていない従来型システムでは、SnapCenter のアップグレードまたはインストールが失敗します。"]
+fdace28a15a0c32d01477d6a6f02b764
 
 |===
+| 7d74f3b92b19da5e606d737d339a9679 | 5a2ebfb8baa378cfcfcba58bbb1380c2 
 
 
-== Exchange Server の権限が必要です
+ a| 
+aab338915e32b60e92c8de3a23aa5c5d
+ a| 
+bb79f96acbff544ded541446c9c7c894
 
-SnapCenter で Exchange サーバまたは DAG を追加し、ホストまたは DAG に SnapCenter Plug-in for Microsoft Exchange Server をインストールできるようにするには、最小限の権限と権限を持つユーザのクレデンシャルを SnapCenter に設定する必要があります。
-
-ローカル管理者の権限を持つドメインユーザと、リモート Exchange ホストに対するローカルログイン権限、および DAG 内のすべてのノードに対する管理権限を持つドメインユーザが必要です。ドメインユーザには、次の最小権限が必要です。
-
-* Add-MailboxDatabaseCopy を追加します
-* dismount - データベース
-* Get-AdServerSettings
-* Get-DatabaseAvailabilityGroup 」を参照してください
-* Get-ExchangeServer
-* MailboxDatabase を取得します
-* Get-MailboxDatabaseCopyStatus
-* Get-MailboxServer
-* Get-MailboxStatistics を実行します
-* Get-PublicFolderDatabase を参照してください
-* MOVE - ActiveMailboxDatabase
-* move-DatabasePath-ConfigurationOnly:$true
-* mount - データベース
-* New-MailboxDatabase
-* 新規 - PublicFolderDatabase
-* MailboxDatabase を削除します
-* MailboxDatabaseCopy を削除します
-* -PublicFolderDatabase を削除します
-* 履歴書 -MailboxDatabaseCopy
-* 「設定」 - 「サーバ設定
-* MailboxDatabase-allowfilerestore を $true に設定します
-* MailboxDatabaseCopy を設定します
-* 「 - PublicFolderDatabase 」を設定します
-* Suspend-MailboxDatabaseCopy を実行します
-* Update-MailboxDatabaseCopy
+3fd57bbce38ee807b2553fd56f562c3a
 
 
 
+ a| 
+97d747ad5d4878c60364b9ba961fd5a4
+ a| 
+0d642755e7f12f7563e3db33bd0c39cb
 
-== SnapCenter Plug-ins Package for Windows をインストールするホストの要件
 
-SnapCenter Plug-ins Package for Windows をインストールする前に、ホストシステムのいくつかの基本的なスペース要件とサイジング要件を確認しておく必要があります。
+
+ a| 
+94ca5bd1fc6971f402b85442105f093f
+ a| 
+074c2f1dacf9047766e7f8d5dce71060
+
+
+NOTE: a5074b94ccbd0ad683e6ad6eb63da188
+
+
+
+ a| 
+c02f07fcd7047bf35e0bb82decca0939
+ a| 
+* ce67e9a5c3006b689a5f150a9c30d732
+* 4a58751c57809081912e30803a16d52e
+* b7ccd7f577996dd33bde8070db971b93
+
+
+3fd57bbce38ee807b2553fd56f562c3a
+
+bb92d00cc055d1fa0c3023946870bfd5
 
 |===
-| 項目 | 要件 
+
+
+== 0b01428a9870f7d745f979cf019b81c4
+
+07c0febe008281ee63a476cd376764cd
+
+738ba90339ae23468280221a650c1225
+
+* dbff8d6d65b97bdfc7054fc9b5f55c11
+* 42af79a2f6c0d91bca3566e23dc755d1
+* 0c152a46347635b25656fbccd55299cb
+* 6cad9f9a7e398519e866f3486af2ee41
+* d6309ce833d37e02d0dd29e29b2fdcd1
+* 466695e4ac8a48bdb231b82e9323a88f
+* 1c5e1437bf5b73e625cea94632bd079a
+* 7b4e53a82842e57c5bcbde6116087a94
+* 8cf96d7c082856f0b5889131d655b54d
+* 133fde3998259aacff4fa2c1977e7280
+* e34febf6062e1f607ceaf84f9dbe5499
+* c33fbcf5f446efab408a4a55aee150e2
+* 194401b87c056b6616ff363c5d10f06b
+* 43bfea67d54db9224131650ef6c1f669
+* efb567c24989ac14db9ee7be5752757c
+* e34b283a45348ae5ce51463c221e806e
+* b45a47b69c27267c1a3ca54b37fa5aee
+* 205ef4296dc619b572f8dbfe2c62df19
+* 70c2282846a349a04f2cdd004b53d618
+* acdf6f623f724ba46dba9d6b21f90226
+* 8bf5a8122e0dff22716c53ff3dbd2231
+* 1577afbb2cd82fc50633ac8dfda1f645
+* f6ae042602a5e6a24dd5b88075acbfbf
+* 8bccb70426abb90d42f7cf84202972d1
+* 5aa777c1f960829a25522e1d2a549871
+
+
+
+
+== 05fc12ecf449ac264abfd66ddab37332
+
+fdace28a15a0c32d01477d6a6f02b764
+
+|===
+| 7d74f3b92b19da5e606d737d339a9679 | 5a2ebfb8baa378cfcfcba58bbb1380c2 
 
 
  a| 
-オペレーティングシステム
+aab338915e32b60e92c8de3a23aa5c5d
  a| 
-Microsoft Windows の場合
+bb79f96acbff544ded541446c9c7c894
 
-サポートされているバージョンの最新情報については、を参照して https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]ください。
-
-
-
- a| 
-ホスト上の SnapCenter プラグインの最小 RAM
- a| 
-1 GB
+3fd57bbce38ee807b2553fd56f562c3a
 
 
 
  a| 
-ホスト上の SnapCenter プラグインのインストールおよびログの最小スペース
+97d747ad5d4878c60364b9ba961fd5a4
  a| 
-5 GB
-
-
-NOTE: 十分なディスクスペースを割り当て、 logs フォルダによるストレージ消費を監視する必要があります。必要なログスペースは、保護するエンティティの数とデータ保護処理の頻度によって異なります。十分なディスクスペースがない場合、最近実行した処理に対してログは作成されません。
+0d642755e7f12f7563e3db33bd0c39cb
 
 
 
  a| 
-必要なソフトウェアパッケージ
+94ca5bd1fc6971f402b85442105f093f
  a| 
-* です。 ネットコア8.0.5
-* PowerShell Core 7.4.2
-* Java 11 Oracle JavaおよびOpenJDK
+074c2f1dacf9047766e7f8d5dce71060
 
 
-サポートされているバージョンの最新情報については、を参照して https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool で確認できます"^]ください。
+NOTE: a5074b94ccbd0ad683e6ad6eb63da188
 
-.NET固有のトラブルシューティング情報については、を参照してください https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_upgrade_or_install_fails_with_This_KB_is_not_related_to_the_OS["インターネットに接続されていない従来型システムでは、SnapCenter のアップグレードまたはインストールが失敗します。"]
+
+
+ a| 
+c02f07fcd7047bf35e0bb82decca0939
+ a| 
+* ce67e9a5c3006b689a5f150a9c30d732
+* 4a58751c57809081912e30803a16d52e
+* b7ccd7f577996dd33bde8070db971b93
+
+
+3fd57bbce38ee807b2553fd56f562c3a
+
+bb92d00cc055d1fa0c3023946870bfd5
 
 |===

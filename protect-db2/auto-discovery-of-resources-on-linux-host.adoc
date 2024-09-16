@@ -2,13 +2,13 @@
 permalink: protect-db2/auto-discovery-of-resources-on-linux-host.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for IBM DB2 
-summary: 'リソースとは、SnapCenterによって管理されるLinuxホスト上のIBM DB2データベースとインスタンスです。SnapCenter Plug-in for IBM DB2プラグインをインストールすると、そのLinuxホスト上のIBM DB2データベースが自動的に検出されて[リソース]ページに表示されます。' 
+summary: 8c1a9a6f582efdb1bcf39b24b3a86ac7 
 ---
-= Linux ホスト上のリソースの自動検出
+= d63d0f9078f63941d9f67771c5293aac
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-リソースとは、SnapCenterによって管理されるLinuxホスト上のIBM DB2データベースとインスタンスです。SnapCenter Plug-in for IBM DB2プラグインをインストールすると、そのLinuxホスト上のすべてのインスタンスのIBM DB2データベースが自動的に検出され、[Resources]ページに表示されます。
+de8a0eac61e71a8d2ba2498bdbf156b2

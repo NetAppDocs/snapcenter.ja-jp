@@ -2,15 +2,15 @@
 permalink: protect-hana/concept_how_snapcenter_plug_in_for_sap_hana_database_uses_consistency_group_snapshot_copies.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for SAP HANA Database 
-summary: プラグインを使用して、リソースグループの整合グループSnapshotを作成できます。整合グループとはボリュームのコンテナであり、複数のボリュームを格納して 1 つのエンティティとして管理できます。整合グループは、複数のボリュームの同時Snapshotであり、ボリュームグループの整合性のあるコピーを提供します。 
+summary: d75cc4ee2a6f5a9c8f73c954b5b8dfb1 
 ---
-= SnapCenter Plug-in for SAP HANA Databaseでの整合グループSnapshotの使用方法
+= fb38bbae125d9d388142d3e839171085
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-プラグインを使用して、リソースグループの整合グループSnapshotを作成できます。整合グループとはボリュームのコンテナであり、複数のボリュームを格納して 1 つのエンティティとして管理できます。整合グループは、複数のボリュームの同時Snapshotであり、ボリュームグループの整合性のあるコピーを提供します。
+d75cc4ee2a6f5a9c8f73c954b5b8dfb1
 
-ストレージコントローラが整合性のあるSnapshotをグループ化するまでの待機時間を指定することもできます。使用可能な待機時間のオプションは、 * Urgent * 、 * Medium * 、 * Relaxed * です。また、整合グループSnapshotの処理中にWrite Anywhere File Layout（WAFL）の同期を有効または無効にすることもできます。WAFLの同期により、整合グループSnapshotのパフォーマンスが向上します。
+d9be525eef97aa0a1757edb1b36e0668

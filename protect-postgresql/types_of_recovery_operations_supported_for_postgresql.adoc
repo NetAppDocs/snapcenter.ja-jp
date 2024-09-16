@@ -2,22 +2,22 @@
 permalink: protect-postgresql/types_of_recovery_operations_supported_for_postgresql.html 
 sidebar: sidebar 
 keywords: recovery operations 
-summary: SnapCenterを使用すると、PostgreSQLに対してさまざまな種類のリカバリ操作を実行できます。 
+summary: 23f5175203ace8e80b13ce0d5e930b35 
 ---
-= PostgreSQLクラスタでサポートされるリカバリ処理のタイプ
+= a465d6c778796665424348f3ff9cde05
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenterを使用すると、PostgreSQLクラスタに対してさまざまな種類のリカバリ操作を実行できます。
+9194380c5ad2037136c4a6765f9b0649
 
-* クラスタを最新の状態までリカバリします。
-* 特定のポイントインタイムまでクラスタをリカバリします。
+* e376a006d8d5e2f8e0aebeaabeb839bc
+* 206c76482c5d51b8ba63b407880987bb
 +
-リカバリの日時を指定する必要があります。
+3ee4871644963356f98fad58d0b99216
 
 
 
-SnapCenterには、PostgreSQLクラスタ用のNo recoveryオプションも用意されています。
+531f20e65f055a927eb8eed8dc3814d2

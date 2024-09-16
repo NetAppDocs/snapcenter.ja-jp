@@ -2,30 +2,30 @@
 permalink: protect-scu/task_determine_whether_unix_file_systems_are_available_for_backup.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for UNIX file systems, discovery,file systems, UNIX, Unix file systems 
-summary: 'Plug-in for UNIXファイルシステムをインストールすると、ホスト上のファイルシステムが自動的に検出されて[Resources]ページに表示されます。' 
+summary: e9b924bbf420ab11fb241e13f75a92c1 
 ---
-= バックアップに使用できるUNIXファイルシステムの検出
+= 5f6bb3736007978d5604be7df99325f8
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-プラグインをインストールすると、そのホスト上のすべてのファイルシステムが自動的に検出されて[Resources]ページに表示されます。これらのファイルシステムをリソースグループに追加してデータ保護処理を実行できます。
+c94588b5932cbd964b99829c9c53f185
 
-.作業を開始する前に
-* SnapCenterサーバのインストール、ホストの追加、ストレージシステム接続の作成などのタスクを完了しておく必要があります。
-* ファイルシステムが仮想マシンディスク（VMDK）またはrawデバイスマッピング（RDM）にある場合は、SnapCenter Plug-in for VMware vSphereを導入してSnapCenterに登録する必要があります。
+.135b308ed83c53f1516b7c754566d1c4
+* 281d5bef3b52305b61ab3325cdc665ac
+* 6893b3ec8daa395410ad25aed877a62d
 +
-詳細については、を参照してください https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere.html["SnapCenter Plug-in for VMware vSphere を導入"^]。
+2ab45cdd9c7a68b490dde7ff87978512
 
 
 
-.手順
-. 左側のナビゲーションペインで、 * リソース * をクリックし、リストから適切なプラグインを選択します。
-. [リソース]ページで、[表示]リストから*[パス]*を選択します。
-. [ リソースの更新 ] をクリックします。
+.f3a29486bed19a90f2da6d007818b427
+. 530a5fa7e8fbaa4c796dbd46c93a55dd
+. 3f1950eacb4451e75dc9187ae778c567
+. a52716605edda155f499cf4c4572c6d5
 +
-ファイルシステムは、タイプ、ホスト名、関連するリソースグループとポリシー、ステータスなどの情報とともに表示されます。
+6e52597282ad4d8ad537cad30a42a965
 
 

@@ -2,37 +2,37 @@
 permalink: install/concept_high_availability_for_snapcenter_mysql_repository.html 
 sidebar: sidebar 
 keywords: SnapCenter, MySQL high availability 
-summary: MySQL Server の機能である MySQL レプリケーションを使用すると、 MySQL データベースサーバ（マスター）から別の MySQL データベースサーバ（スレーブ）にデータをレプリケートできます。SnapCenter では、 Network Load Balancing （ NLB ）が有効な 2 つのノード間でのみ、高可用性実現のために MySQL レプリケーションをサポートしています。 
+summary: 7f0ad5f9e335a87abef96413ee1ec298 
 ---
-= SnapCenter MySQL リポジトリの高可用性
+= 8224276261b116399d0b43fb7d7143fc
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-MySQL Server の機能である MySQL レプリケーションを使用すると、 MySQL データベースサーバ（マスター）から別の MySQL データベースサーバ（スレーブ）にデータをレプリケートできます。SnapCenter では、 Network Load Balancing （ NLB ）が有効な 2 つのノード間でのみ、高可用性実現のために MySQL レプリケーションをサポートしています。
+7f0ad5f9e335a87abef96413ee1ec298
 
-SnapCenter は、マスターリポジトリに対して読み取りまたは書き込み操作を実行し、マスターリポジトリに障害が発生した場合はスレーブリポジトリに接続をルーティングします。スレーブリポジトリがマスターリポジトリになります。SnapCenter は逆方向のレプリケーションもサポートしており、これはフェイルオーバー時にのみ有効になります。
+a453beb9b47d78b53bc10af953410b80
 
-MySQL の高可用性（ HA ）機能を使用する場合は、 1 つ目のノードに Network Load Balancer （ NLB ）を設定する必要があります。MySQL リポジトリは、インストール中にこのノードにインストールされます。2 つ目のノードに SnapCenter をインストールするときは、 1 つ目のノードの F5 に参加して、 2 つ目のノードに MySQL リポジトリのコピーを作成する必要があります。
+e1e22ef4a2850ab0dd24b150d91348a5
 
-SnapCenter には、 MySQL レプリケーションを管理するための _Get-SmRepositoryConfig_and _Set -SmRepositoryConfig_PowerShell コマンドレットが用意されています。
+ed98acdf8a2d09bf259b2a61db0296c9
 
-コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+74db7181476f94f0e2927d8c8d98cb97
 
-MySQL HA 機能に関連する次の制限事項を確認しておく必要があります。
+b0f609888347926667da94b4ebb66d65
 
-* NLB と MySQL HA がサポートされるのは、 2 つのノードまでです。
-* SnapCenter スタンドアロンインストールから NLB インストールまたはその逆の切り替えや、 MySQL スタンドアロンセットアップから MySQL HA への切り替えはサポートされていません。
-* スレーブリポジトリのデータがマスターリポジトリのデータと同期されていない場合、自動フェイルオーバーはサポートされません。
+* d4ccd125e10226c4eada54e2e24b51df
+* 771d8fb15015776a1705f12c83dd4edb
+* 311806165de25865d9c58b8ec3eced24
 +
-強制フェイルオーバーを開始するには、 _Set-SmRepositoryConfig_cmdlet を使用します。
+db1a670118651ee2cc4842dd7c187e9d
 
-* フェイルオーバーが開始されると、実行中のジョブが失敗する可能性があります。
+* 784555fc5bcd383422f61e8e407e35a8
 +
-MySQL Server または SnapCenter Server がダウンしたためにフェイルオーバーが発生した場合、実行中のすべてのジョブが失敗する可能性があります。2 つ目のノードへのフェイルオーバー後、後続のすべてのジョブは正常に実行されます。
+d02cc6e54205ca08e9e82cac8e1eecfb
 
 
 
-ハイアベイラビリティの設定については、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_NLB_and_ARR_with_SnapCenter["SnapCenter で NLB と ARR を設定する方法"^]。
+ff8ebcd3db2a0433d94d5787e5eb9e10

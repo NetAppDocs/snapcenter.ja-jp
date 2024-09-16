@@ -2,70 +2,70 @@
 permalink: concept/reference_data_security.html 
 sidebar: sidebar 
 keywords: security,authentication, CA certificates 
-summary: SnapCenter では、データのセキュリティを確保するために厳格なセキュリティおよび認証機能を採用しています。 
+summary: c30d59401403b986989fc4a149ff2aea 
 ---
-= セキュリティ機能
+= c81d278ed6d59212379f4589585fc795
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter では、データのセキュリティを確保するために厳格なセキュリティおよび認証機能を採用しています。
+c30d59401403b986989fc4a149ff2aea
 
-SnapCenter には、次のセキュリティ機能が含まれています。
+79333b6bf46efb54b1410de6b731a635
 
-* SnapCenter へのすべての通信には、 HTTP over SSL （ HTTPS ）が使用されます。
-* SnapCenter のすべてのクレデンシャルは、 Advanced Encryption Standard （ AES ）暗号化を使用して保護されます。
-* SnapCenter で使用しているセキュリティアルゴリズムは、 Federal Information Processing Standard （ FIPS ；連邦情報処理標準）に準拠しています。
-* SnapCenter では、お客様から提供された承認済みの CA 証明書の使用がサポートされます。
-* SnapCenter 4.1.1以降では、ONTAPとの通信にTransport Layer Security（TLS）1.2がサポートされています。クライアントとサーバ間の通信にもTLS 1.2を使用できます。
+* 7aa130f755e7e55f6623edf4c997caa6
+* 96c2f121719642c9bb76de237a79a8f7
+* f8f9feb00e019b3a4905536ed6898cbc
+* 6e48ef9c3b9eee75beadb62ef46ee1fe
+* e353c96a332f0cabee61ee0d1183ced5
 +
-5.0以降、SnapCenterはONTAPとの通信用に(TLS) 1.3をサポートしています。
+35fdfe6dd04402c29d3fc6d0df727357
 
-* SnapCenter は、一連のSSL暗号スイートをサポートしており、ネットワーク通信全体のセキュリティを提供します。
+* bf3e76e4f1322979745fbde954cda8f3
 +
-詳細については、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_the_supported_SSL_Cipher_Suite["サポートされているSSL暗号スイートを設定する方法"]。
+f63adc493855850c393ed81600d0452d
 
-* SnapCenter は、会社のファイアウォールの内側にインストールされ、 SnapCenter サーバへのアクセス、および SnapCenter サーバとプラグイン間の通信を可能にします。
-* SnapCenter API および操作アクセスでは、 AES 暗号化で暗号化されたトークンが使用されます。このトークンの有効期限は 24 時間です。
-* SnapCenter は、ログイン用に Windows Active Directory と統合されているほか、アクセス権限を制御するロールベースアクセス制御（ RBAC ）も統合されています。
-* IPSecは、WindowsおよびLinuxホスト・マシン用のONTAP 上のSnapCenter でサポートされます。 https://docs.netapp.com/us-en/ontap/networking/configure_ip_security_@ipsec@_over_wire_encryption.html#use-ipsec-identities["詳細はこちら。"]。
-* SnapCenter PowerShell コマンドレットセッションはセキュリティで保護されます。
-* デフォルトでは、操作を行わないまま 15 分が経過すると、 5 分後に SnapCenter からログアウトすることを示す警告が表示されます。操作を行わないまま 20 分が経過すると、 SnapCenter からログアウトされ、再度ログインする必要があります。ログアウト期間を変更できます。
-* ログインに 5 回以上失敗すると、一時的にログインが無効になります。
-* SnapCenter サーバとONTAP 間のCA証明書認証をサポートします。 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_securely_connect_SnapCenter_with_ONTAP_using_CA_certificate["詳細はこちら。"]。
-* SnapCenter サーバとプラグインに整合性検証機能が追加され、新規インストールおよびアップグレード処理中に出荷されたすべてのバイナリが検証されます。
-
-
-
-
-== CA 証明書の概要
-
-SnapCenter サーバーインストーラを使用すると、インストール中に集中型 SSL 証明書サポートを有効にできます。サーバとプラグイン間のセキュアな通信を強化するために、 SnapCenter では、お客様から提供された許可済み CA 証明書の使用をサポートしています。
-
-SnapCenter サーバとそれぞれのプラグインをインストールしたあとに、 CA 証明書を導入する必要があります。詳細については、を参照してください link:../install/reference_generate_CA_certificate_CSR_file.html["CA 証明書 CSR ファイルを生成します"]。
-
-また、 SnapCenter Plug-in for VMware vSphere の CA 証明書を導入することもできます。詳細については、を参照してください https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_manage_snapcenter_plug-in_for_vmware_vsphere.html#create-and-import-certificates["証明書を作成してインポートします"^]。
+* 40739afaa7fdf9957a38216f97ce0321
+* 60b7c3e24f63b13c2f4abe5f1a7def8e
+* 52804460cb53f83bd632c8bb5678e86c
+* a297bacde66e3d1853eb926b992016ec
+* cb5c82581641e1dabd92ad60a73474f3
+* bc5a939b1a6add561b31c4e7e57a2ab2
+* 5a9d252685a800ffeee18062aac9e777
+* c23c7626b0637210ef5d62fd1d1df00f
+* 330847308f1658ea8a183b76b1e6b361
 
 
 
-== 双方向SSL通信
 
-双方向SSL通信は、SnapCenterサーバとプラグイン間の相互通信を保護します。
+== 80fb25677b8df85f97f35720d0f5755b
 
+d7c0f46fb7673d8302d28d92b968cbd3
 
+9e5309714d9094e413324e0abf1a2c00
 
-== 証明書ベースの認証の概要
-
-証明書ベースの認証は、SnapCenterプラグインホストにアクセスしようとする各ユーザの信頼性を検証します。秘密鍵なしでSnapCenterサーバ証明書をエクスポートし、プラグインホストの信頼されたストアにインポートする必要があります。証明書ベースの認証は、双方向SSL機能が有効になっている場合にのみ機能します。
-
+c0ddbdc2a9782e98d40c313e95e09705
 
 
-== 多要素認証（ MFA ）
 
-MFAでは、Security Assertion Markup Language（SAML）を使用してサードパーティのアイデンティティプロバイダ（IdP）を使用してユーザセッションを管理します。この機能は、TOTP、生体認証、プッシュ通知などの複数の要素を既存のユーザ名とパスワードとともに使用するオプションを備えているため、認証セキュリティが強化されます。また、お客様は独自のユーザアイデンティティプロバイダを使用して、ポートフォリオ全体でユニファイドユーザログイン（SSO）を取得できます。
+== 855469e68aebe957582edeb7405529e1
 
-MFAは、SnapCenter サーバUIへのログインにのみ適用されます。ログインは、IdPのActive Directoryフェデレーションサービス（AD FS）を使用して認証されます。AD FSでは、さまざまな認証要素を構成できます。SnapCenter はサービスプロバイダであり、AD FSの証明書利用者としてSnapCenter を設定する必要があります。SnapCenter でMFAを有効にするには、AD FSメタデータが必要です。
+b4cbac9ded897ac6c04027b59ec07fad
 
-MFAを有効にする方法については、を参照してください link:../install/enable_multifactor_authentication.html["多要素認証を有効にします"]。
+
+
+== 48462a95fd8685081e58f7c123971e5b
+
+dbb44863e91bacd01eafa49136b071d2
+
+
+
+== 2519e52723b63d73b91fe9567002e2ad
+
+3b657229f02ff903eb873f61703af749
+
+3d687b72d27aa3959c593b27cbc44d4c
+
+ead2412064891fbb9b123e509e3e73da

@@ -2,101 +2,101 @@
 permalink: protect-sco/task_mount_and_unmount_databases_backups.html 
 sidebar: sidebar 
 keywords: mount, unmount, backup, ASM, asm_diskstring 
-summary: バックアップ内のファイルにアクセスする必要がある場合は、 1 つまたは複数のデータバックアップおよびログのみのバックアップをマウントできます。バックアップは、バックアップが作成されたホストにも、同じタイプの Oracle およびホスト構成を使用するリモートホストにもマウントできます。バックアップを手動でマウントした場合は、処理の完了後にバックアップを手動でアンマウントする必要があります。データベースバックアップは、特定のデータベースのホストに 1 回だけマウントできます。処理を実行する際には、バックアップを 1 つだけマウントできます。 
+summary: 0d7e311afcb478a86e539bf4d153c131 
 ---
-= データベースバックアップのマウントとアンマウント
+= 153a24bf2520bcf6ddf0f871f9d46cce
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-バックアップ内のファイルにアクセスする必要がある場合は、 1 つまたは複数のデータバックアップおよびログのみのバックアップをマウントできます。バックアップは、バックアップが作成されたホストにも、同じタイプの Oracle およびホスト構成を使用するリモートホストにもマウントできます。バックアップを手動でマウントした場合は、処理の完了後にバックアップを手動でアンマウントする必要があります。任意のインスタンスで、データベースのバックアップを任意のホストにマウントできます。処理を実行する際には、バックアップを 1 つだけマウントできます。
+2c66b530e639b39dbde0e104e4e57478
 
 
-NOTE: Flex ASM 設定では、カードの数が RAC クラスタ内のノード数より少ない場合、リーフノードでマウント操作を実行できません。
-
-
-
-== データベースバックアップをマウント
-
-バックアップ内のファイルにアクセスする場合は、データベースバックアップを手動でマウントする必要があります。
-
-* 必要なもの *
-
-* NFS 環境に Automatic Storage Management （ ASM ）データベースインスタンスがあり、 ASM バックアップをマウントする場合は、 ASM_diskstring パラメータで定義されている既存のパスに ASM ディスクパス /var/opt/snapcenter /scors/backup_*/_*_/_*_/_*_ を追加しておく必要があります。
-* NFS 環境に ASM データベースインスタンスがあり、リカバリ操作の一環として ASM ログバックアップをマウントする場合は、 ASM_diskstring パラメータで定義されている既存のパスに ASM ディスクパス /var/opt/snapcenter /scu/clones/_*__*_ を追加しておく必要があります。
-* ASM_diskstring パラメータで、 ASMFD または configure _ORCL ： * _ を使用する場合は、 _ AFD ： * _ を設定します。
+NOTE: d16e991d227832185fea1dc700b8036d
 
 
 
-NOTE: asm_diskstring パラメータの編集方法については、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Disk_paths_are_not_added_to_the_asm_diskstring_database_parameter["asm_diskstring にディスクパスを追加する方法"^]。
+== a08dcdb57e93e7204eb01b4e8f4e4942
 
-* バックアップのマウント時にソースデータベースホストと異なる ASM ポートを使用する場合は、 ASM のクレデンシャルと ASM ポートを設定する必要があります。
-* 代替ホストにマウントする場合は、代替ホストが次の要件を満たしていることを確認する必要があります。
+2311c0dd85ac2710997aaf0568b30464
+
+d428ebb7ac02e1484781b38a799a4f99
+
+* da8a9a79bae0f4f7c64805f2adbec551
+* 730137f4b84353729b479ce0b9d97eb8
+* 0aa1fb8d5fabc3bbed7c0d5c1bacd011
+
+
+
+NOTE: 0b955ccac06bdc609cc8c19c588bfe09
+
+* c4951ad4ae8b4db2bcc5aa5c0fc61987
+* aa0787ab89996f06c60590daa825a976
 +
-** UID と GID が元のホストと同じである
-** Oracle のバージョンが元のホストと同じである
-** OS のディストリビューションとバージョンが元のホストと同じである
-** NVMeの場合、NVMe utilをインストールする必要があります
+** 12fabaab322b9bcad591f3240dfef1cb
+** 7de86530570cec8d70209e42dcd11e10
+** a8e168713154d3f8b502a582535b85dd
+** 1dd4fbdaa30b28c2614e7e12c52dc73c
 
 
-* iSCSIプロトコルとFCプロトコルが混在するigroupを使用して、LUNがAIXホストにマッピングされていないことを確認してください。詳細については、を参照してください https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_Plug-in_for_Oracle_operations_fail_with_error_Unable_to_discover_the_device_for_LUN_LUN_PATH["LUNのデバイスを検出できませんというエラーが表示されて処理に失敗します"^]。
+* 24642a08e354f43168ca4f1178850f84
 
 
-* 手順 *
+4839d2f25cc35b249d5db15efa1afd75
 
-. 左側のナビゲーションペインで、 * リソース * をクリックし、リストから適切なプラグインを選択します。
-. [ リソース ] ページで、 [ * 表示 ] リストから [ * データベース * ] または [ * リソースグループ * ] を選択します。
-. データベースの詳細ビューまたはリソースグループの詳細ビューでデータベースを選択します。
+. 530a5fa7e8fbaa4c796dbd46c93a55dd
+. 90bd362d47c27a1c1824b4146fe8499c
+. 57c9a9fb675caf65f1a3ace001cf652d
 +
-データベーストポロジのページが表示されます。
+6e20353bd5ea6118ce22e0b4e81aef53
 
-. Manage Copies （コピーの管理）ビューから、プライマリまたはセカンダリ（ミラーまたはレプリケートされた）ストレージシステムから * Backups （バックアップ） * を選択します。
-. 表からバックアップを選択し、をクリックします image:../media/mount_icon.gif["マウントアイコン"]。
-. バックアップのマウントページで、バックアップをマウントするホストを * から選択し、バックアップをマウントするホストを * ドロップダウン・リストから選択します。
+. 05d1cf74e3edfddad0eb9da9be1c9cbb
+. 5c98eb58536b22b92221b78563e4151d
+. 35e1ce92dc0badd322b744b3a6bab31d
 +
-mount path_/var/opt/snapcenter /scx/backup_mount/backup_name/database-name_name _ が表示されます。
-
-+
-ASM データベースのバックアップをマウントする場合は、マウントパス + diskgroupname_SID_backupid が表示されます。
-
-. [ マウント ] をクリックします。
-
-
-* 終了後 *
-
-* マウントされたバックアップに関する情報を取得するには、次のコマンドを実行します。
-+
-`./sccli get-SmBackup - BackupName backup_name -ListMountInfo`
-
-* ASM データベースをマウントした場合、マウントされたバックアップに関する情報を取得するには、次のコマンドを実行します。
-+
-`./sccli get-smbackup-BackupNamediskgroupname_SID_backupid-listmountinfo`
-
-* バックアップ ID を取得するには、次のコマンドを実行します。
-+
-`./sccli get-Smbackup - BackupNamebackup_name`
+d760f9f180656d1ce73bc6ba8da35c4d
 
 +
-コマンドで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP3323470["SnapCenter ソフトウェアコマンドリファレンスガイド"^]。
+e51cc6e66f54d96735ac636f3a57899f
+
+. 8ece1a3075cf82b4a6288d5a36855ff2
 
 
+a2635d75789f249837881cc5136979e1
 
-
-
-== データベースバックアップをアンマウント
-
-マウントされたデータベースバックアップ上のファイルにアクセスする必要がなくなった場合は、そのバックアップを手動でアンマウントできます。
-
-* 手順 *
-
-. 左側のナビゲーションペインで、 * リソース * をクリックし、リストから適切なプラグインを選択します。
-. [ リソース ] ページで、 [ * 表示 ] リストから [ * データベース * ] または [ * リソースグループ * ] を選択します。
-. データベースの詳細ビューまたはリソースグループの詳細ビューでデータベースを選択します。
+* e64a2d077d617ceb381c7bfd66063f10
 +
-データベーストポロジのページが表示されます。
+61928a5a990b47ec85d53d8119afbe62
 
-. マウントされているバックアップを選択し、をクリックします image:../media/unmount_icon.gif["アンマウントアイコン"]。
-. [OK] をクリックします。
+* d6b7bb30fea09cb9cb3dbe862bdae1cf
++
+69e42ea21f7ea24c6b6f4e546e5fd834
+
+* bc22dd302511c4acf4836040c65325d5
++
+a00ce87c37f466b173bc4525b9e62be8
+
++
+417dd85a136c799492c1ff6bac4c3407
+
+
+
+
+
+== 9637bf398b0d618db1f07c6ac29233d8
+
+c4b42b6394982de365aef2dea04b7478
+
+4839d2f25cc35b249d5db15efa1afd75
+
+. 530a5fa7e8fbaa4c796dbd46c93a55dd
+. 90bd362d47c27a1c1824b4146fe8499c
+. 57c9a9fb675caf65f1a3ace001cf652d
++
+6e20353bd5ea6118ce22e0b4e81aef53
+
+. 168ab792c2cf9b011ce6299d37acc0db
+. a72cc47fad7d1846d19b085d2e77e5ba
 

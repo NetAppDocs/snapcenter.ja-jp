@@ -2,70 +2,70 @@
 permalink: protect-sco/catalog-backups.html 
 sidebar: sidebar 
 keywords: oracle databases discover 
-summary: SnapCenter によるOracleデータベースの検出方法 
+summary: d9372adbc1bed6681e74cd02004081f0 
 ---
-= Oracle Recovery Manager を使用してバックアップをカタログ化する方法
+= 538f484c4213ead46996ca2a7b117345
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Oracle Recovery Manager（RMAN）を使用してOracleデータベースのバックアップをカタログ化し、Oracle RMANリポジトリにバックアップ情報を格納できます。
+f3c021a5eae937a13601d397b792c2d2
 
-カタログ化されたバックアップは、あとでブロックレベルのリストア処理や表領域のポイントインタイムリカバリ処理に使用できます。カタログ化されたバックアップが不要となった場合は、カタログ情報を削除できます。
+547555ab26594767a073cf67b6bdfc3f
 
-カタログ化するためには、データベースの状態が少なくともマウント済み状態であることが必要です。カタログ化を実行できるのは、データバックアップ、アーカイブログバックアップ、およびフルバックアップです。複数のデータベースを含むリソースグループのバックアップに対してカタログ化を有効にすると、データベースごとにカタログ化が実行されます。Oracle RAC データベースの場合は、データベースが少なくともマウント済み状態にある優先ノードでカタログ化が実行されます。
+188d383930d2a3b0b5abbd74f2cd5299
 
-RAC データベースのバックアップをカタログ化する場合は、そのデータベースに対して他のジョブが実行されていないことを確認します。別のジョブが実行されている場合は、カタログ化処理がキューに登録されずに失敗します。
-
-
-
-== 外部カタログデータベース
-
-デフォルトでは、ターゲットデータベースの制御ファイルがカタログ化に使用されます。外部カタログデータベースを追加する場合は、 SnapCenter グラフィカルユーザーインタフェース（ GUI ）のデータベース設定ウィザードを使用して、外部カタログの資格情報と透過ネットワーク印刷材（ TNS ）名を指定して構成できます。CLI から外部カタログデータベースを設定するには、 Configure-SmOracleDatabase コマンドで -OracleRmanCatalogCredentialName オプションおよび -OracleRmanCatalogTnsName オプションを実行します。
+c9aaa3e2b76409b32690a78fab859380
 
 
 
-== RMANコマンド
+== 084690c33c7b29b1780ab8f409fb8650
 
-SnapCenter GUI から Oracle バックアップポリシーを作成する際にカタログ化オプションを有効にした場合は、バックアップ処理の一環として Oracle RMAN を使用してバックアップがカタログ化されます。を実行して、バックアップのカタログ化を遅らせて実行することもできます `Catalog-SmBackupWithOracleRMAN` コマンドを実行します
-
-バックアップをカタログ化したら、を実行できます `Get-SmBackupDetails` コマンドを使用して、カタログ化されたバックアップの情報（カタログ化されたデータファイルのタグ、制御ファイルのカタログパス、カタログ化されたアーカイブログの場所など）を取得します。
+600f045f5d954e78ff5c2da441689d62
 
 
 
-== 命名形式
+== c5c4e8f374f512a056ca1205e002a1fd
 
-SnapCenter 3.0 では、 ASM ディスクグループ名が 16 文字以上である場合、バックアップに使用される命名形式は SC_HASHCODEofDISKGROUP_DBSID_backupid です。ただし、ディスク・グループ名が 16 文字未満の場合、バックアップに使用される命名形式は DISKGROUPNAME_DBSID_backupid です。これは、 SnapCenter 2.0 で使用される形式と同じです。
+f49c2881ffbdaf870ec7ed9ea88f4343
 
-HASHCODEofDISKGROUP は、各 ASM ディスクグループに固有の自動生成番号（ 2 ～ 10 桁）です。
-
-
-
-== クロスチェック処理
-
-バックアップに関する RMAN リポジトリ情報が古くなってバックアップのリポジトリレコードがその物理ステータスと一致しなくなった場合は、クロスチェックを実行してリポジトリ情報を更新できます。たとえば、ユーザがオペレーティングシステムコマンドでディスクからアーカイブログを削除した場合、実際にはディスクにログがないにもかかわらず、制御ファイルにはディスクにログがあることが示されます。
-
-クロスチェック処理では、制御ファイルを情報で更新できます。クロスチェックをイネーブルにするには、 Set-SmConfigSettings コマンドを実行して、 enable_croscHCK パラメータに値 true を割り当てます。デフォルト値は FALSE です。
-
-'scli Set-SmConfigSettings - ConfigSettingsTypePlugin - PluginCodeSCO-ConfigSettings" key=enable_CROSCHECK 、 value=true"
+b0d14c022e51c262621e79e943a3b6d0
 
 
 
-== カタログ情報を削除します
+== 5e5ff61214eb4873285663f81049ec20
 
-カタログ情報を削除するには、 Uncatalog-SmBackupWithOracleRMAN コマンドを実行します。SnapCenter GUI ではカタログ情報を削除できません。ただし、バックアップを削除するとき、またはカタログ化されたバックアップに関連する保持設定とリソースグループを削除するときに、カタログ化されたバックアップの情報も削除されます。
+ca3faf8cc2895635be2b3deb4a5d89cb
+
+0b8287c761a5e7c1631298056ac30f05
 
 
-NOTE: SnapCenter ホストを強制的に削除する場合は、そのホストに関連するカタログ化されたバックアップの情報が削除されません。ホストを強制的に削除する場合は、事前にそのホストに関連するすべてのカタログ化されたバックアップの情報を削除しておく必要があります。
 
-ORACLE_PLUGIN_RMAN_CATALE_TIMEOUT パラメータに指定されたタイムアウト値を超えたためにカタログ化とカタログ化解除が失敗した場合は、次のコマンドを実行して、パラメータの値を変更する必要があります。
+== 059297ebf3935d6b4bcb000628a9d653
 
-`/opt/NetApp/snapcenter /spl/bin/sccli Set-SmConfigSettings - 構成設定タイププラグイン - プラグインコード sc-ConfigSettings" key=oracle_plugin_rman_catala_catalog_timeout 、 value=user_defined_value"
+8e03216fb8576194a8567507d59c56b7
 
-パラメータの値を変更したら、次のコマンドを実行して SnapCenter Plug-in Loader （ SPL ）サービスを再起動します。
+7944aae88fbc469a9edfc7d9ae22e633
 
-'/opt/NetApp/SnapCenter /spl/bin/spl restart
+82a1cabfef0d0e6eee8042b9175e689f
 
-コマンドで使用できるパラメータとその説明については、Get-Help Command_nameを実行して確認できます。または、を参照して https://library.netapp.com/ecm/ecm_download_file/ECMLP3323470["SnapCenter ソフトウェアコマンドリファレンスガイド"^]ください。
+
+
+== 14fbb4ba3858c107f2599916d3b51cbb
+
+d04964471206dcd790a7dadb6ad6ac54
+
+
+NOTE: 5483e3c7d026ea95109fb401e0876400
+
+2e524f9c3f6fa9b965648af6cb7b5457
+
+8d966b8b205c32c6438a2938fdfb039e
+
+7a5e7be0933e3148df8c1083de81b020
+
+b2db2a6d191f5b90f084ac27e053d277
+
+33b308bb22974faaabb712d6ca8f8cc4

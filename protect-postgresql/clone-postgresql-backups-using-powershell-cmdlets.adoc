@@ -2,31 +2,31 @@
 permalink: protect-postgresql/clone-postgresql-backups-using-powershell-cmdlets.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for PostgreSQL 
-summary: クローニングワークフローには、計画、クローニング処理の実行、および処理の監視が含まれます。 
+summary: e174be7156154463517dfe3b864d0329 
 ---
-= PowerShellコマンドレットを使用したPostgreSQLクラスタバックアップのクローニング
+= c5f5244e6930e3be5fb9358a7fb198ec
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-クローニングワークフローには、計画、クローニング処理の実行、および処理の監視が含まれます。
+e174be7156154463517dfe3b864d0329
 
-PowerShell コマンドレットを実行できるように PowerShell 環境を準備しておく必要があります。
+c90de0347e94ade70c96034e2ffca3ba
 
-コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+74db7181476f94f0e2927d8c8d98cb97
 
-.手順
-. Open-SmConnection コマンドレットを使用して、指定したユーザの SnapCenter サーバとの接続セッションを開始します。
+.f3a29486bed19a90f2da6d007818b427
+. 623aa9b9d36889377a728b1284e5485e
 +
 [listing]
 ----
 PS C:\> Open-SmConnection
 ----
-. Get-SmBackup コマンドレットを使用して、クローニング処理を実行するバックアップを取得します。
+. 7efd97c2a4471de87de7e99332374e4a
 +
-この例では、クローニングできるバックアップが 2 つあります。
+f03d64352eff2c5a90a8790e99accb55
 
 +
 [listing]
@@ -38,12 +38,12 @@ PS C:\> Open-SmConnection
          1                     Payroll Dataset_vise-f6_08... 8/4/2015 11:02:32 AM          Full Backup
          2                     Payroll Dataset_vise-f6_08... 8/4/2015 11:23:17 AM
 ----
-. 既存のバックアップからクローニング処理を開始し、クローニングされたボリュームをエクスポートする NFS エクスポートの IP アドレスを指定します。
+. d7272ca580c1be43c009610e69bf10d3
 +
-この例では、NFSExportIPsアドレスが10.32.212.14であるバックアップをクローニングしています。
+7b5f6d9e0f208631c0910d81fcd84413
 
 +
-PostgreSQLクラスタの場合：
+a46c7c9051556410e34daf87555e4af7
 
 +
 [listing]
@@ -52,11 +52,11 @@ PS C:\> New-SmClone -AppPluginCode PostgreSQL -BackupName " scpostgresql01_ open
 ----
 +
 
-NOTE: NFSExportIPs を指定しない場合、デフォルトでクローンターゲットホストにエクスポートされます。
+NOTE: b7abd75bd8327fa92ee489faffc1ce74
 
-. Get-SmCloneReport コマンドレットを使用してクローニングジョブの詳細を表示し、バックアップが正常にクローニングされたことを確認します。
+. e4eeb55e3e0cd2267e0daa6e20349545
 +
-クローン ID 、開始日時、終了日時などの詳細を確認できます。
+46ca186cb22f8dea3bb75049b7f0e17e
 
 +
 [listing]

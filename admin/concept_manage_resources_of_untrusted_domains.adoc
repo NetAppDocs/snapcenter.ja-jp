@@ -2,81 +2,81 @@
 permalink: admin/concept_manage_resources_of_untrusted_domains.html 
 sidebar: sidebar 
 keywords: Manage resources 
-summary: SnapCenter は、 Active Directory \ （ AD \ ）の信頼できるドメインのホストを管理するだけでなく、複数の AD 信頼されていないドメインのホストも管理します。信頼されていない AD ドメインを SnapCenter サーバに登録する必要があります。SnapCenter では、複数の信頼されていない AD ドメインのユーザとグループがサポートされます 
+summary: 9bbbd908c36125f841bedc2e6a71693b 
 ---
-= 信頼できないドメインのリソースを管理します
+= d9da99afcff86f0b4a156a1f2b5c56d1
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter は、 Active Directory （ AD ）の信頼できるドメイン内のホストの管理に加えて、複数の AD の信頼されていないドメイン内のホストも管理します。信頼されていない AD ドメインを SnapCenter サーバに登録する必要があります。SnapCenter では、複数の信頼されていない AD ドメインのユーザとグループがサポートされます
+59d70ce40a9e697537123ee978630105
 
-SnapCenter サーバは、ドメインまたはワークグループ内のマシンにインストールできます。SnapCenter サーバをインストールするには、マシンがドメイン内にある場合はドメインのクレデンシャル、ワークグループ内にある場合はローカルの管理者クレデンシャルを指定する必要があります。
+526aa9a917f9b353e8479368ebf3d9b1
 
-SnapCenter サーバに登録されていないドメインに属する Active Directory （ AD ）グループはサポートされていません。これらの AD グループを使用して SnapCenter ロールを作成できますが、 SnapCenter サーバへのログインが失敗し、次のエラーメッセージが表示されます。 The user are trying to login does not belong to any roles管理者に問い合わせてください。
+0f820fb58fcccabccee18d0a21cfa2af
 
 
 
-== 信頼できないドメインを変更します
+== 04a1fac89869c158c92200f35a6712a5
 
-信頼されていないドメインを変更するのは、ドメインコントローラの IP アドレスまたは Fully Qualified Domain Name （ FQDN ；完全修飾ドメイン名）を更新する場合です。
+6917dcbff4ecb4fb8b28e866ff29521f
 
-* このタスクについて *
+78166ce4ccceeedfbf6aeb8682851072
 
-FQDN を変更すると、関連付けられているアセット（ホスト、ユーザ、およびグループ）が想定どおりに機能しなくなる場合があります。
+6722c71c8c6dc529429af07b75d014cb
 
-信頼されていないドメインを変更するには、 SnapCenter ユーザインターフェイスまたは PowerShell コマンドレットを使用します。
+20c078be50de52f1ef6e46249647ebb8
 
-* 手順 *
+4839d2f25cc35b249d5db15efa1afd75
 
-. 左側のナビゲーションペインで、 * 設定 * をクリックします。
-. 設定ページで、 * グローバル設定 * をクリックします。
-. [ グローバル設定 ] ページで、 [* ドメイン設定 * ] をクリックします。
-. をクリックします image:../media/edit_icon.gif["編集アイコン"]をクリックし、次の情報を指定します。
+. c09e638cb8ee35698e3172550b12d8fa
+. ed8959471d3227784f7ac8eef2f2298b
+. 54ac97eccb6e0fba30d0902882852803
+. 989c71882d3d5434c182717cb7a3b417
 +
 |===
-| フィールド | 手順 
+| 21f831502a413a739e20cbf9f2eefe54 | 5e2ad6fd9deb412d871137094ee43ef0 
 
 
  a| 
-ドメイン FQDN
+1a20645a3dbb9fd77556631cf5f0aa5f
  a| 
-FQDN を指定し、 * resolve * をクリックします。
+c89304bcee5639341f9efe8dbd555611
 
 
 
  a| 
-ドメインコントローラの IP アドレス
+86d02fb78a59479a1546fff1471f674c
  a| 
-ドメイン FQDN を解決できない場合は、ドメインコントローラの IP アドレスを 1 つ以上指定します。
+fd74edf78b593ed5af4cb85f47dcc753
 
 |===
-. [OK] をクリックします。
+. a72cc47fad7d1846d19b085d2e77e5ba
 
 
 
 
-== 信頼されていない Active Directory ドメインの登録を解除
+== 0f52016de0db873c36b51f8c801cfee0
 
-ドメインに関連付けられたアセットを使用しないようにするには、信頼されていない Active Directory ドメインの登録を解除します。
+7b41e4904f5969fe3b5353aedd5f8ce2
 
-.作業を開始する前に
-信頼されていないドメインに関連付けられているホスト、ユーザ、グループ、およびクレデンシャルを削除しておく必要があります。
+.135b308ed83c53f1516b7c754566d1c4
+8c9b8cb2c2bdcf393381c289223f0f78
 
-* このタスクについて *
+78166ce4ccceeedfbf6aeb8682851072
 
-* ドメインを SnapCenter サーバから登録解除すると、そのドメインのユーザは SnapCenter サーバにアクセスできなくなります。
-* 関連付けられているアセット（ホスト、ユーザ、およびグループ）がある場合、ドメインの登録を解除すると、アセットを操作できなくなります。
-* 信頼されていないドメインの登録を解除するには、 SnapCenter ユーザインターフェイスまたは PowerShell コマンドレットを使用します。
+* e24869dd087a6e11e0322d24230c1af5
+* 33e064f29b9e817a8e3b29ebdbe9e58d
+* 882dc26e2380d66f18dab972132841dc
 
 
-* 手順 *
+4839d2f25cc35b249d5db15efa1afd75
 
-. 左側のナビゲーションペインで、 * 設定 * をクリックします。
-. 設定ページで、 * グローバル設定 * をクリックします。
-. [ グローバル設定 ] ページで、 [* ドメイン設定 * ] をクリックします。
-. ドメインのリストから、登録を解除するドメインを選択します。
-. をクリックします image:../media/delete_icon.gif[""]をクリックし、 * OK * をクリックします。
+. c09e638cb8ee35698e3172550b12d8fa
+. ed8959471d3227784f7ac8eef2f2298b
+. 54ac97eccb6e0fba30d0902882852803
+. 120ccafdaf964af639f60c4ed26eaafb
+. cde4c5c90d02e08fbdbc0d8eed8ec493
 
