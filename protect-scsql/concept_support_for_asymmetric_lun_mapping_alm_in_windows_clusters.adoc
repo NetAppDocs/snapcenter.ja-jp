@@ -2,29 +2,29 @@
 permalink: protect-scsql/concept_support_for_asymmetric_lun_mapping_alm_in_windows_clusters.html 
 sidebar: sidebar 
 keywords: ALM 
-summary: 5abc04a0058572b3476c739ab8f716ae 
+summary: SnapCenter Plug-in for Microsoft SQL Server は、 SQL Server 2012 以降、非対称 LUN マッピング（ ALM ）構成の高可用性、およびディザスタリカバリ用の可用性グループの検出をサポートしています。SnapCenter は、リソースを検出する際に、 ALM 構成のローカルホストとリモートホストにあるデータベースを検出します。 
 ---
-= 142782e834c9014d923c3a1905a8dcdc
+= Windowsクラスタでの非対称LUNマッピングのサポート
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-2bf8e92ae2c79563e9a8c5f6c833c5a6
+SnapCenter Plug-in for Microsoft SQL Serverでは、SQL Server 2012以降での検出、高可用性用の非対称LUNマッピング（ALM）構成、ディザスタリカバリ用の可用性グループがサポートされます。SnapCenter は、リソースを検出する際に、 ALM 構成のローカルホストとリモートホストにあるデータベースを検出します。
 
-918162f12ad57f4382a7a53bb6d775b3
+ALM構成は、プライマリデータセンターに1つ以上のノード、ディザスタリカバリセンターに1つ以上のノードを含む、単一のWindowsサーバフェイルオーバークラスタです。
 
-c0c5b186e05df9e6ae423f4ea8250abf
+次に、ALM設定の例を示します。
 
-* daeb552c90aac11e349828429974d376
-* 09952efebe47747a2be28706fb559f5c
+* マルチサイトデータセンターに2つのフェイルオーバークラスタインスタンス（FCI）
+* ローカルのハイアベイラビリティ（HA）にはFCI、ディザスタリカバリサイトにスタンドアロンインスタンスを配置したディザスタリカバリには可用性グループ（AG）を使用
 
 
-image::../media/asymmetric_lun_mapping_diagram.gif[64e8969e45b911603c0aa0dc2d3f743f]
+image::../media/asymmetric_lun_mapping_diagram.gif[非対称 LUN マッピングの図]
 
-047292a89758275d763e235a846b8712
+プライマリデータセンター内のストレージは、プライマリデータセンター内のFCIノード間で共有されます。ディザスタリカバリデータセンター内のストレージは、ディザスタリカバリデータセンター内のFCIノード間で共有されます。
 
-7d6c564058645b974e7a066a328c9765
+プライマリデータセンターのストレージは、ディザスタリカバリデータセンターのノードには認識されず、その逆も同様です。
 
-19f41a1b89c8c0b2bc4c7041effadc74
+ALMアーキテクチャは、FCIで使用される2つの共有ストレージソリューションと、SQL AGで使用される非共有または専用ストレージソリューションを組み合わせたものです。AGソリューションでは、データセンター間で共有ディスクリソースに同じドライブレターを使用します。このストレージの配置（WSFC内のノードのサブセット間でクラスタディスクが共有される）は、ALMと呼ばれます。

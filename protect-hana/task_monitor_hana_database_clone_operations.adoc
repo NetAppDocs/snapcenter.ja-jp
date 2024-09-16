@@ -2,41 +2,41 @@
 permalink: protect-hana/task_monitor_hana_database_clone_operations.html 
 sidebar: sidebar 
 keywords: monitor, SAP HANA database, clone operations 
-summary: 18c6c7b07148849996bd7da366d6bf60 
+summary: Jobs ページを使用して、 SnapCenter のクローニング処理の進捗状況を監視できます。処理の進捗状況を確認して、処理が完了するタイミングや問題が発生していないかを確認できます。 
 ---
-= 28fcd30ab7740350640e0c975b072b39
+= SAP HANAデータベースのクローニング処理を監視する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-18c6c7b07148849996bd7da366d6bf60
+Jobs ページを使用して、 SnapCenter のクローニング処理の進捗状況を監視できます。処理の進捗状況を確認して、処理が完了するタイミングや問題が発生していないかを確認できます。
 
-.bbe48fb854ea022537208eeeff822f91
-ec0ce2a8340fde4668c9c369e1e0a781
+.タスクの内容
+[Jobs]ページには、処理の状態を示す次のアイコンが表示されます。
 
-* cad8bf0bd55afaa12be11cc29f347052
-* 3a62ae015b4ba6f0dc48c424c0a0fe86
-* 4066ea01819c2bfdcb0dbbc680a26a0a
-* 54cc5efef9b7edd3fd699fc1e5a0ff50
-* d208aa08a03da9a8a8e5bd96ad0fedae
-* 596771a00ab2893deb5c8fa7fe5873f5
+* image:../media/progress_icon.gif["実行中のアイコン"] 実行中
+* image:../media/success_icon.gif["完了アイコン"] 完了しまし
+* image:../media/failed_icon.gif["失敗したアイコン"] 失敗
+* image:../media/warning_icon.gif["警告アイコンが表示されています"] 完了（警告あり）または警告のため開始できませんでした
+* image:../media/verification_job_in_queue.gif["検証ジョブをキューに格納"] キューに登録済み
+* image:../media/cancel_icon.gif["キャンセルアイコン"] キャンセル済み
 
 
-4839d2f25cc35b249d5db15efa1afd75
+* 手順 *
 
-. b40a6c0b08ac99c86eb676e2689c6996
-. 7f3e84692f24d61327601751bb201dc8
-. 7ece64d8d9ea3a89221dea21761b07d9
+. 左側のナビゲーションペインで、 *Monitor* をクリックします。
+. [* Monitor*] ページで、 [* Jobs] をクリックします。
+. [* ジョブ * ] ページで、次の手順を実行します。
 +
-.. e513bb233ea5be3f5a949deebfe7811f
-.. 7407325f29b504f9c8b87ec8da503815
-.. 4cfa68aad234b91494e417f8012ca40d
-.. 7c18f9fe3e82229bbf88d4133dde72bd
-.. 33edcafc3b101b5da89793db6c9151a5
+.. をクリックしてリストをフィルタリングし、クローニング処理のみを表示します。
+.. 開始日と終了日を指定します。
+.. [*Type*]( タイプ *) ドロップダウンリストから '[*Clone*]( クローン *) を選択します
+.. [ * Status * ] ドロップダウン・リストから、クローンのステータスを選択します。
+.. [ 適用（ Apply ） ] をクリックして、正常に完了した操作を表示する。
 
 
-. eeb79409fc232a879e36607073907346
-. 1c41074e44dc2e55551dfb68d2bc354d
+. クローンジョブを選択し、 * Details * をクリックして、ジョブの詳細を表示します。
+. ［ ジョブの詳細 ］ ページで、 ［ * ログの表示 * ］ をクリックします。
 

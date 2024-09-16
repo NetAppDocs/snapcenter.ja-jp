@@ -2,99 +2,99 @@
 permalink: protect-hana/task_restore_and_recover_a_manually_added_resource_backup.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for SAP HANA Database 
-summary: fd14c72aa485d900359d9e76eccfff6c 
+summary: SnapCenterを使用すると、1つ以上のバックアップからデータをリストアおよびリカバリできます。 
 ---
-= 1dd409d7b835d13842d9f347c93a6de3
+= 手動で追加したリソースバックアップのリストアとリカバリ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-fd14c72aa485d900359d9e76eccfff6c
+SnapCenterを使用すると、1つ以上のバックアップからデータをリストアおよびリカバリできます。
 
-.135b308ed83c53f1516b7c754566d1c4
-* fc2b6e19a895939771bd04f9bc9f7af2
-* 61686c99da00981a4798e50d18088b64
-* 773a4c1c97f6070d698ee85302dc51cf
+.開始する前に
+* リソースまたはリソースグループをバックアップしておく必要があります。
+* リストアするリソースまたはリソースグループに対して実行中のバックアップ処理がある場合は、キャンセルしておく必要があります。
+* リストア前、リストア後、マウント、およびアンマウントの各コマンドを実行する場合は、プラグインホストで使用可能なコマンドリストにコマンドが存在するかどうかを次のパスから確認する必要があります。
 +
-19650f12fd9f269a497d4edc60754137
-
-+
-e7b4efc5dd5b16a36c26e91652b78194
+Windowsの場合：_ C：\Program Files\NetApp\SnapCenter \Snapcenter Plug-in Creator\etc\allowed_commands _list .txt_
 
 +
-
-NOTE: 2dd7c4421097b3d796ff9bf355ebaa6e
-
-
-
-.bbe48fb854ea022537208eeeff822f91
-* 84f9db11567ac33c4869aa6d75a3145c
-* e32067064fc1cac141f0e078ce44a514
-* f2c85d871e7c5ae1520349e8a3869fea
-* 8985c27809c4d716846c0e17b0f6ff0d
-
-
-.f3a29486bed19a90f2da6d007818b427
-. 530a5fa7e8fbaa4c796dbd46c93a55dd
-. 1bf25096670c9621cda8c9d3e8bee4ad
-+
-efada42e2701f3b873f103dd72d2f9d2
+Linuxの場合：_/var/opt/snapcenter/scc/allowed _commands _list.txt_
 
 +
 
-NOTE: 52715e18d74a43b14662045edb61d16e
+NOTE: コマンドがコマンドリストに存在しない場合、処理は失敗します。
 
+
+
+.タスクの内容
+* ファイルベースのバックアップコピーをSnapCenterからリストアすることはできません。
+* SnapCenter 4.3にアップグレードすると、SnapCenter 4.2で作成したバックアップはリストアできますが、リカバリすることはできません。SnapCenter 4.2で作成されたバックアップをリカバリするには、SnapCenter外部のHANA StudioまたはHANAリカバリスクリプトを使用する必要があります。
+* ONTAP 9.12.1以前のバージョンでは、リストアの一環としてSnapLockヴォールトSnapshotから作成されたクローンにSnapLockヴォールトの有効期限が継承されます。SnapLockの有効期限が過ぎた時点で、ストレージ管理者がクローンを手動でクリーンアップする必要があります。
+* SnapMirrorのアクティブな同期のリストア処理では、プライマリの場所からバックアップを選択する必要があります。
+
+
+.手順
+. 左側のナビゲーションペインで、 * リソース * をクリックし、リストから適切なプラグインを選択します。
+. [ リソース ] ページで、リソースタイプに基づいて、 *View*] ドロップダウンリストからリソースをフィルタリングします。
 +
-dbe6efc32c385295f1a9ba3e243e0be2
-
-. 8472a70cb1c7c9b05987720df3eec96a
-+
-e984402842ada9bf4703b2df6ce206b3
-
-. 442a89e785b868e06305d5c98337997d
-. 95f6eb92fbeb97a90be9bb0507f326c9
-+
-image::../media/restoring_resource.gif[498bd352a95e11b9ca37bc1c4bfbc11d]
-
-. dd948b85f562407a9aee87c28c0fd30e
-+
-.. c3b3d774c585dd79fb37eb8f605a3cdc
-+
-be786b6916e284b80ab94c9292822f55
-
-.. 5992dc084820c1bb7deda13d5ca23184
-+
-*** f47a1af7a319b571a0bacba2d5bdd6cf
-*** 57235293b58bcee8f885f03c7cc2bf98
-+
-e57982197dd9cb2dade8d5ebc3ffa4ab
-
-
-
-
+リソースがタイプ、ホスト、関連するリソースグループとポリシー、およびステータスとともに表示されます。
 
 +
 
-NOTE: 5c18d7aa6631fa3200cd47964b878e6b
-
-. f8ea625073f716b15f3e5f9e95cfb620
-+
-fcf4ecdfd88713c0d570a4f8e0b97580
-
-. 2e9892fdbfed0b91269baed4bcb0a87e
-+
-acba32a20bc1d94f470c6a5492751764
+NOTE: バックアップはリソースグループのものである場合もありますが、リストアするリソースを個別に選択する必要があります。
 
 +
+リソースが保護されていない場合は ' 保護されていないというメッセージが [ 全体のステータス ] 列に表示されますリソースが保護されていないか、別のユーザによってバックアップされている可能性があります。
 
-NOTE: a559b2571e56d5cca36de86e59757d8d
-
-. 30b65b6968f11ce5399cacf995839f65
+. リソースを選択するか、リソースグループを選択してそのグループ内のリソースを選択します。
 +
-53d187685aedd87c48a1c968cc264e39
+リソーストポロジページが表示されます。
 
-. fed1c121dc4f5a5484e5623e297385fb
-. 8b9460bf38a68108bcdd278a386b3156
+. Manage Copies （コピーの管理）ビューから、プライマリまたはセカンダリ（ミラーまたはバックアップ）ストレージシステムから * Backups （バックアップ）を選択します。
+. [Primary backup（s）]テーブルで、リストア元のバックアップを選択し、***をクリックしますimage:../media/restore_icon.gif["リストアアイコン"]。
++
+image::../media/restoring_resource.gif[リソースのリストア]
+
+. [ リストア範囲 ] ページで、 [ * リソース全体 * ] または [ * ファイルレベル * ] を選択します。
++
+.. Complete Resource * を選択すると、 SAP HANA データベースに設定されているすべてのデータボリュームがリストアされます。
++
+リソースにボリュームまたはqtreeが含まれている場合、そのボリュームまたはqtreeでリストア対象として選択されたSnapshotのあとに作成されたSnapshotは削除され、リカバリすることはできません。また、同じボリュームまたはqtreeで他のリソースがホストされている場合、そのリソースも削除されます。
+
+.. 「 * ファイルレベル * 」を選択した場合は、「 * すべて * 」を選択するか、特定のボリュームまたは qtree を選択してから、それらのボリュームまたは qtree に関連するパスをカンマで区切って入力できます
++
+*** 複数のボリュームとqtreeを選択できます。
+*** リソースタイプがLUNの場合は、LUN全体がリストアされます。
++
+LUNは複数選択できます。
+
+
+
+
+
++
+
+NOTE: 「 * all * 」を選択すると、ボリューム、 qtree 、または LUN 上のすべてのファイルがリストアされます。
+
+. [ リストア前 ] ページで、リストア・ジョブを実行する前に実行するプリ・リストアおよびアンマウント・コマンドを入力します。
++
+自動検出されたリソースにはアンマウントコマンドを使用できません。
+
+. [ ポスト・オペレーション ] ページで、マウントおよびリストア後のコマンドを入力して、リストア・ジョブの実行後に実行します。
++
+自動検出されたリソースにはマウントコマンドを使用できません。
+
++
+
+NOTE: 休止、Snapshot、および休止解除の処理を実行するプリコマンドとポストコマンドの場合は、Linuxの場合は_/opt/snapcenter/snapenter/scc/allowed commands.config_path、Windowsの場合は_C：\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands_list.txt_からプラグインホストで使用できるコマンドリストにコマンドがあるかどうかを確認する必要があります。
+
+. [ 通知 ] ページの [ 電子メールの設定 *] ドロップダウンリストから、電子メールを送信するシナリオを選択します。
++
+また、送信者と受信者のEメールアドレスとEメールの件名を指定する必要があります。また、 [* 設定 * （ Settings * ） ] > [* グローバル設定 * （ * Global Settings * ） ] ページでも SMTP を設定する必要があります。
+
+. 概要を確認し、 [ 完了 ] をクリックします。
+. 操作の進行状況を監視するには、 * Monitor * > * Jobs * をクリックします。
 

@@ -2,47 +2,47 @@
 permalink: protect-db2/snapcenter-plug-in-for-ibm-db2-features.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for IBM Db2 
-summary: 9acfd3e3a78cc13a8e1c2817f7b54348 
+summary: SnapCenterは、プラグインアプリケーションおよびストレージシステム上でNetAppテクノロジと統合されます。Plug-in for IBM DB2 Databaseを操作するには、SnapCenterグラフィカルユーザーインターフェイスを使用します。 
 ---
-= 95902d624b69ea4a39c19f5b019d49fe
+= SnapCenter Plug-in for IBM DB2の機能
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-9acfd3e3a78cc13a8e1c2817f7b54348
+SnapCenterは、プラグインアプリケーションおよびストレージシステム上でNetAppテクノロジと統合されます。Plug-in for IBM DB2 Databaseを操作するには、SnapCenterグラフィカルユーザーインターフェイスを使用します。
 
-* b1d3c10985fe921d1cd4f1920df9beb6
+* * 統一されたグラフィカル・ユーザー・インターフェイス *
 +
-6fb6e736abe2121b5ad7a964c6879b29
+SnapCenter のインターフェイスは、すべてのプラグインと環境で標準化され、一貫しています。SnapCenter インターフェイスを使用すると、すべてのプラグインでバックアップ、リストア、クローニングの各処理を一貫した方法で実行できるほか、ダッシュボードビューで概要を把握したり、ロールベースアクセス制御（ RBAC ）を設定したり、ジョブを監視したりすることができます。
 
-* 8cab777e8f4d0f3134b1e688de9e3a14
+* * 中央管理の自動化 *
 +
-c977f209575b6b5d579a260964bb7de1
+バックアップ処理のスケジュールを設定したり、ポリシーベースのバックアップ保持を設定したり、リストア処理を実行したりできます。SnapCenter から E メールアラートを送信するように設定して、環境をプロアクティブに監視することもできます。
 
-* 039e04c42b2f000cca3aa4851d886236
+* *無停止のNetApp Snapshotコピーテクノロジ*
 +
-91bf4509c0fa8c47331d989699fd6d0a
+SnapCenterは、Plug-in for IBM DB2 DatabaseでNetAppスナップショットテクノロジを使用してリソースをバックアップします。
 
 
 
-dee1cfb5826bdc1d89b085402e1435c1
+Plug-in for IBM DB2を使用すると、次のようなメリットもあります。
 
-* fda7113d1825e99bb5e099dfa43e494e
-* 5750866ea3f2f5172a0cbfaa24301be8
+* バックアップ、リストア、クローニングのワークフローがサポートされます。
+* RBACでサポートされるセキュリティと一元化されたロール委譲
 +
-67e3dbc43236eaec5752f527574fc4fa
+クレデンシャルを設定して、許可されたSnapCenterユーザにアプリケーションレベルの権限を付与することもできます。
 
-* 77f89c57ca9a76d1b05a0a6547343371
+* NetApp FlexCloneテクノロジを使用して、テストまたはデータ抽出に使用するリソースのスペース効率に優れたポイントインタイムコピーを作成できます。
 +
-da7d10a7d1bd2a2e5acc1a7e98e314b4
+クローンを作成するストレージシステムにFlexCloneライセンスが必要です。
 
-* 11e5bf8d0753781dd4434da568b8da29
-* b2d4bf2086608858ce65205273756f72
+* バックアップ作成時にONTAPの整合グループ（CG）Snapshot機能がサポートされるようになりました。
+* 複数のリソースホストで同時に複数のバックアップを実行可能
 +
-fc61ab2f2e2f4b5cf0127ffb1dc0796a
+1回の操作で、1つのホスト内のリソースが同じボリュームを共有すると、スナップショットが統合されます。
 
-* b2fa02d62a134098aefe75ad2acf0793
-* 691f9dff16ebd5da65b5dbbe0c978b53
+* 外部コマンドを使用してスナップショットを作成する機能。
+* XFSファイルシステムでのLinux LVMのサポート。
 

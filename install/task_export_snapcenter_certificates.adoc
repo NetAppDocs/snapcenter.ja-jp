@@ -2,64 +2,64 @@
 permalink: install/task_export_snapcenter_certificates.html 
 sidebar: sidebar 
 keywords: exporting certificates 
-summary: 4ce9ef971363d62abcf2c6d2b1234486 
+summary: SnapCenter 証明書をエクスポートする。 
 ---
-= 4b7e01d00c62bc7cc219f57128db2b48
+= SnapCenter証明書のエクスポート
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-4839d2f25cc35b249d5db15efa1afd75
+* 手順 *
 
-. 23d304f4f8ba5a36ae5e430eb209adc8
-. a49966f708056a4c549673b5bec3414c
-. 0e5767b994aa66a4607313ad76190a10
-. b16c78a8be2f11d4d4f9ab65d0403668
-. cf663cce5827f3e2c22a5d59efb62e13
-. fbfdc821247ce02333095312b300d2f1
+. Microsoft 管理コンソール (MMC) に移動し、 [ * ファイル * ] 、 [ * スナップインの追加と削除 ] の順にクリックします。
+. [ スナップインの追加と削除 ] ウィンドウで、 [*Certificates*] を選択し、 [*Add*] をクリックします。
+. [ 証明書 ] スナップインウィンドウで、 [ マイユーザーアカウント *] オプションを選択し、 [ 完了 *] をクリックします。
+. [ * コンソールルート *>*Certificates - Current User*>*Trusted Root Certification Authorities*>*Certificates* ] をクリックします。
+. SnapCenter フレンドリ名が表示されている証明書を右クリックし、 * すべてのタスク * > * エクスポート * を選択してエクスポートウィザードを開始します。
+. 次の手順でウィザードを完了します。
 +
 |===
-| ca617f785f7156a6f104acabd5354e73 | af51caa4cf3947fff83e6451cb09644a 
+| ウィザードウィンドウ | 操作 
 
 
  a| 
-32145dfb79fda362cdaa8fbef1449f04
+秘密キーのエクスポート
  a| 
-27683628aa53b46a33edc9e7fa65b5ac
-
-
-
- a| 
-3cfa6983bcec5ccdc5da07c27527c4e5
- a| 
-2744c82cad75426c79ff32c75319465b
+[ はい ] を選択し、秘密鍵 * をエクスポートして、 [ 次へ ] をクリックします。
 
 
 
  a| 
-2fae32629d4ef4fc6341f1751b405e45
+エクスポートファイル形式
  a| 
-91817a3c4feab4788ad5f16317cd2b5e
-
-
-
- a| 
-c0a89231526b12e5fb8bcd772c0fd15b
- a| 
-eacd537cef2ec78c3157d3ba9332ecf9
+変更せずに、 * 次へ * をクリックします。
 
 
 
  a| 
-f174092f7aa23177cd860471c5f8d2ed
+セキュリティ
  a| 
-afc1ad5af537889ff64cb2f4ef8646d9
+エクスポートされた証明書に使用する新しいパスワードを指定し、 * Next * をクリックします。
+
+
+
+ a| 
+エクスポートするファイル
+ a| 
+エクスポートされた証明書のファイル名を指定し（ .pfx を使用する必要があります）、 * 次へ * をクリックします。
+
+
+
+ a| 
+証明書のエクスポートウィザードの完了
+ a| 
+概要を確認し、 * 完了 * をクリックしてエクスポートを開始します。
 
 |===
 
 
-600901e70afccc50e18676048766ba78
+* 結果 *
 
-0e9123db0a5e31511722b6879134d611
+証明書は.pfx形式でエクスポートされます。

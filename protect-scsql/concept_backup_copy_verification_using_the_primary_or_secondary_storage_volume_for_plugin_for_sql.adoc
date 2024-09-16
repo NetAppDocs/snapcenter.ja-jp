@@ -2,17 +2,17 @@
 permalink: protect-scsql/concept_backup_copy_verification_using_the_primary_or_secondary_storage_volume_for_plugin_for_sql.html 
 sidebar: sidebar 
 keywords: Backup copy verification 
-summary: b84d1d8c09293020f3483a11ab0dddc9 
+summary: バックアップコピーは、プライマリストレージボリューム、またはSnapMirrorまたはSnapVaultセカンダリストレージボリュームで検証できます。セカンダリストレージボリュームを使用した検証により、プライマリストレージボリュームの負荷が軽減されます。 
 ---
-= ebae46e6c1cf802f26210eac01893036
+= Plug-in for SQL Serverのプライマリストレージボリュームまたはセカンダリストレージボリュームを使用したバックアップコピーの検証
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-b84d1d8c09293020f3483a11ab0dddc9
+バックアップコピーは、プライマリストレージボリューム、またはSnapMirrorまたはSnapVaultセカンダリストレージボリュームで検証できます。セカンダリストレージボリュームを使用した検証により、プライマリストレージボリュームの負荷が軽減されます。
 
-4a62dc47918eb3194a2597130c3e3478
+プライマリストレージボリュームまたはセカンダリストレージボリュームにあるバックアップを検証すると、すべてのプライマリSnapshotとセカンダリSnapshotが検証済みとマークされます。
 
-7d75df615ecc318750420253367a234c
+SnapMirrorおよびSnapVaultセカンダリストレージボリューム上のバックアップコピーを検証するには、SnapRestoreライセンスが必要です。

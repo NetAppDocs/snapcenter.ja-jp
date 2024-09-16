@@ -2,117 +2,117 @@
 permalink: install/task_register_untrusted_active_directory_domains.html 
 sidebar: sidebar 
 keywords: Active Directory 
-summary: 4c7a5eef4043ff1b8837e34761c5a044 
+summary: 信頼されていない複数のActive Directoryドメインのホスト、ユーザ、およびグループを管理するには、Active DirectoryをSnapCenterサーバに登録する必要があります。 
 ---
-= 378f0ed69bcfd27611f3fb3d8d53ebde
+= 信頼されていないActive Directoryドメインの登録
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-4c7a5eef4043ff1b8837e34761c5a044
+信頼されていない複数のActive Directoryドメインのホスト、ユーザ、およびグループを管理するには、Active DirectoryをSnapCenterサーバに登録する必要があります。
 
-.135b308ed83c53f1516b7c754566d1c4
-94c2b7958941d951841e81064297ae50
+.開始する前に
+* LDAP および LDAPS プロトコル *
 
-* 5c68692ab4a28a5c58d0ba6a0738072d
-* 4772c1749805723059aa6224c15933f5
-* ee605bf58738228501e40696c808a38e
+* 信頼されていないActive Directoryドメインは、LDAPまたはLDAPSプロトコルを使用して登録できます。
+* プラグインホストとSnapCenterサーバの間の双方向の通信を有効にしておく必要があります。
+* DNSによる解決は、SnapCenterサーバからプラグインホストへ（またはその逆）設定する必要があります。
 
 
-e1d6c6edfbf860e9988dc0fda4b52740
+* LDAPプロトコル*
 
-* 8836ed11fc93745f4775f9017afb2df0
+* 完全修飾ドメイン名（FQDN）をSnapCenterサーバから解決できる必要があります。
 +
-4e7eaa6eaede3709adab632e49dd9ffa
+信頼されていないドメインはFQDNを使用して登録できます。FQDNをSnapCenterサーバから解決できない場合は、ドメインコントローラのIPアドレスを使用して登録できます。このアドレスはSnapCenterサーバから解決できる必要があります。
 
 
 
-9eb4d2adbb5c961021b4949302d43d27
+* LDAPSプロトコル*
 
-* 1e1748f389e483ae8bbc6359504f2c9a
+* CA証明書は、Active Directory通信中にLDAPSでエンドツーエンドの暗号化を提供するために必要です。
 +
-5c38a0cc17c9e9647e4b9d2b11eb931f
+link:task_configure_CA_client_certificate_for_LDAPS.html["LDAPS用のCAクライアント証明書の設定"]
 
-* 2789cdc77c14e8b5a14e86f2057a7d4f
-
-
-78166ce4ccceeedfbf6aeb8682851072
-
-* 88f43ff19ffe5badc539c95171485d40
+* ドメインコントローラのホスト名（DCHostName）にSnapCenterサーバから到達できる必要があります。
 
 
-4839d2f25cc35b249d5db15efa1afd75
+* このタスクについて *
 
-. c09e638cb8ee35698e3172550b12d8fa
-. 55914843f9768acffcc6d6ee07b8942f
-. 54ac97eccb6e0fba30d0902882852803
-. 6367d0504b967e287008a2edf347cff7
-. 300306e9217bd45a67a1d98a4048e8f6
+* 信頼されていないドメインは、SnapCenterユーザインターフェイス、PowerShellコマンドレット、またはREST APIを使用して登録できます。
+
+
+* 手順 *
+
+. 左側のナビゲーションペインで、 * 設定 * をクリックします。
+. 設定ページで、 * グローバル設定 * をクリックします。
+. [ グローバル設定 ] ページで、 [* ドメイン設定 * ] をクリックします。
+. をクリックして新しいドメインを登録します。
+. [ 新しいドメインの登録 ] ページで、 *LDAP* または *LDAPS * のいずれかを選択します。
 +
-.. d13bc78a8fd8227474b625ef1688e14b
-+
-|===
-| 21f831502a413a739e20cbf9f2eefe54 | 5e2ad6fd9deb412d871137094ee43ef0 
-
-
- a| 
-57ea1a814b12bff97d06e62d6cb435ab
- a| 
-b5801016efbfdae42194f5de7390633e
-
-
-
- a| 
-1a20645a3dbb9fd77556631cf5f0aa5f
- a| 
-303ac9e434672d8e2134def8a5afb652
-
-
-
- a| 
-86d02fb78a59479a1546fff1471f674c
- a| 
-305bc77c5f1449ccc8d075c59674aa7b
-
-d8348d0bfeb3374f54049d8825a97310
-
-|===
-.. 461a387c687552d5622d938d7ee4902f
+.. 「 * ldap * 」を選択した場合は、 LDAP の信頼されていないドメインを登録するために必要な情報を指定します。
 +
 |===
-| 21f831502a413a739e20cbf9f2eefe54 | 5e2ad6fd9deb412d871137094ee43ef0 
+| フィールド | 操作 
 
 
  a| 
-57ea1a814b12bff97d06e62d6cb435ab
+ドメイン名
  a| 
-b5801016efbfdae42194f5de7390633e
-
-
-
- a| 
-1a20645a3dbb9fd77556631cf5f0aa5f
- a| 
-2851319952876066d8fdf0d2240f69cf
+ドメインのNetBIOS名を指定します。
 
 
 
  a| 
-f715a2ef0611ea5de427814c843a9ab0
+ドメインFQDN
  a| 
-dbd15fc926d88400581480c213191cb7
+FQDN を指定し、 * resolve * をクリックします。
 
 
 
  a| 
-86d02fb78a59479a1546fff1471f674c
+ドメインコントローラのIPアドレス
  a| 
-71e6f64a457aae198ec095aa115ff2d0
+ドメイン FQDN を SnapCenter サーバから解決できない場合は、ドメインコントローラの IP アドレスを 1 つ以上指定します。
+
+詳細については、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_does_not_allow_to_add_Domain_Controller_IP_for_untrusted_domain_from_GUI["GUI から信頼できないドメインのドメインコントローラ IP を追加します"^]。
+
+|===
+.. 「 * LDAPS * 」を選択した場合は、 LDAPS の信頼されていないドメインの登録に必要な情報を指定します。
++
+|===
+| フィールド | 操作 
+
+
+ a| 
+ドメイン名
+ a| 
+ドメインのNetBIOS名を指定します。
+
+
+
+ a| 
+ドメインFQDN
+ a| 
+FQDNを指定します。
+
+
+
+ a| 
+トメインコントロオラメイ
+ a| 
+1 つまたは複数のドメインコントローラ名を指定し、 * Resolve.* をクリックします。
+
+
+
+ a| 
+ドメインコントローラのIPアドレス
+ a| 
+ドメインコントローラ名をSnapCenterサーバから解決できない場合は、DNSの解決を修正する必要があります。
 
 |===
 
 
-. a72cc47fad7d1846d19b085d2e77e5ba
+. [OK]*をクリックします。
 

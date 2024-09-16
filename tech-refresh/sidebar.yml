@@ -1,10 +1,10 @@
 ---
 section: tech-refresh
-title: 1121f6eb8ee08b3fbbc4d05a5ee6ca76
+title: Tech Refresh
 entries:
-- title: 9c52ed84ef99dc638e8657ea109fe6b3
+- title: SnapCenterサーバホストの機器更改
   url: "/tech-refresh/task_tech_refresh_server_host.html"
-- title: 238e5683fd9ecfd1b7cf79faea48b55c
+- title: SnapCenterプラグインホストの機器更改
   url: "/tech-refresh/task_tech_refresh_plugin_host.html"
-- title: f0f16a2a8eb8202410bb111e85eeb081
+- title: ストレージシステムの機器更改
   url: "/tech-refresh/task_tech_refresh_storage_system.html"

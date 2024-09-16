@@ -2,22 +2,22 @@
 permalink: protect-db2/what-you-can-do-using-the-snapcenter-plug-in-for-ibm-db2.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for IBM Db2 
-summary: cd30d3b1f2e4929e0c3acd3e0d3a1dd2 
+summary: Plug-in for IBM DB2をインストールした環境では、SnapCenterを使用してIBM DB2とそのリソースをバックアップ、リストア、クローニングできます。これらの処理をサポートするタスクを実行することもできます。 
 ---
-= 5ff676b44b8e1689869b0d9ec82d80ca
+= SnapCenter Plug-in for IBM DB2の機能
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-6a35ea12fc56a0b481135a2c9b6acde2
+Plug-in for IBM DB2 Databaseをインストールした環境では、SnapCenterを使用して、IBM DB2データベースとそのリソースをバックアップ、リストア、およびクローニングできます。これらの処理をサポートするタスクを実行することもできます。
 
-* 753bcb78018d8547668b0dda3334e5a2
-* a96099f01951c42b20b0f220f82cddeb
-* f3d82f8a8e916f06796aa4ac952e9208
-* 5575806b0477c07d0be57dd6ef045e8a
-* 44c8eaf80f0322d31922b637d3f206f4
-* 4f749cf56361e248661706aa3c29ab1c
-* 04a26f096e312ade5bd651748180efd4
+* データベースを追加します。
+* バックアップを作成します。
+* バックアップからリストアします。
+* バックアップをクローニングします。
+* バックアップ処理のスケジュールを設定します。
+* バックアップ、リストア、クローニングの各処理を監視する。
+* バックアップ、リストア、クローニングの各処理のレポートを表示します。
 

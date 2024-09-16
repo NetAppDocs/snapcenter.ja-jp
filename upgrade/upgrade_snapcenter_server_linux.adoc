@@ -2,51 +2,51 @@
 permalink: upgrade/upgrade_snapcenter_server_linux.html 
 sidebar: sidebar 
 keywords: upgrade, upgrade snapcenter server, linux 
-summary: cf044e013213ce911e1c405431776fd2 
+summary: SnapCenterサーバのインストーラファイルを使用して、SnapCenterサーバをアップグレードできます。 
 ---
-= f34cbfe2adfe04f9d83a717751b7eb49
+= LinuxホストでのSnapCenterサーバのアップグレード
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-cf044e013213ce911e1c405431776fd2
+SnapCenterサーバのインストーラファイルを使用して、SnapCenterサーバをアップグレードできます。
 
-4839d2f25cc35b249d5db15efa1afd75
+* 手順 *
 
-. 6900156655d97de161f864f12caf71cd
+. いずれかの操作を実行して、SnapCenterサーバをアップグレードします。
 +
 |===
-| 0773a07fce321af691e449b79e58672d | 5e2ad6fd9deb412d871137094ee43ef0 
+| 実行する処理 | 操作 
 
 
  a| 
-85ff247f015175f43b8b8f6245ea1e79
+非対話型アップグレード
  a| 
-977af3a258921f3ca0470b847443c4a4
+`sudo ./snapcenter-linux-server-(el8/el9/sles15).bin -i silent -DUPGRADE=<value> -DINSTALL_LOG_NAME=<filename>`
 
-d626ff297b23e352e8ce3b282a0caf6c
+例：sudo ./ snapcenter_linux_server.bin -i silent -DUPGRADE=1 -DINSTALL_LOG_NAME=InstallerLog.log
 
-806e382ab1e59fc4784c1ff19f277644
+ログは_/var/opt/snapcenter/logs _に保存されます。
 
-70e71505e49ff069638f953899c6e02a
+アップグレードのために渡すパラメータ：
 
-** ea62cc4b7d9cd7944081adc0c2c67058
-** db77e62407d5f926da01c64cee263bc6
+** DINSTALL_LOG_NAME：インストールログを格納するログファイルの名前。
+** DUPGRADE：デフォルト値は0です。SnapCenterサーバをアップグレードするには、このパラメータと0以外の任意の整数を指定します。
 
 
 
 
  a| 
-b4aa109cb04742bdf2e8c4bf3b9539c0
+対話型インストール
  a| 
-75e3ac199e3514f0faced406ce37e35e
+`./snapcenter-linux-server-(el8/el9/sles15).bin`
 
-39c80f79d5024dfd3e2edbc67a0ee950
+アップグレードの確認を求められます。SnapCenterサーバのアップグレードを確認するには、0以外の値を入力してください。
 
 |===
 
 
 
-NOTE: d4e9c7592fe4ab5b42d9052ea3bc865c
+NOTE: SnapCenter GUIにアクセスするには、SnapCenterからログアウトしてからログインするか、ブラウザを閉じてから新しいブラウザを開いてください。

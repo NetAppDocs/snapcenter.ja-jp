@@ -1,152 +1,152 @@
 ---
 section: protect-postgresql
-title: a56d94cb0a6f5997dd6529b6e8b953c9
+title: PostgreSQLの保護
 entries:
-- title: 3245d8514a844d08673af1fb25bec2f4
+- title: PostgreSQL向けSnapCenterプラグイン
   entries:
-  - title: e9b5f45523130bbab525502f88750267
+  - title: SnapCenter Plug-in for PostgreSQLの概要
     url: "/protect-postgresql/snapcenter-plug-in-for-postgresql-overview.html"
-  - title: f3cc3df3db0f95e2e34e79c2ddef42a8
+  - title: SnapCenter Plug-in for PostgreSQLの使用方法
     url: "/protect-postgresql/what-you-can-do-using-the-snapcenter-plug-in-for-postgresql.html"
-  - title: c988f5ab14bd3d7fcb922a45fca0877c
+  - title: SnapCenter Plug-in for PostgreSQLの機能
     url: "/protect-postgresql/snapcenter-plug-in-for-postgresql-features.html"
-  - title: 1cba333f7c70ea15dd4dc4f2c3d76e77
+  - title: SnapCenter Plug-in for PostgreSQLでサポートされるストレージタイプ
     url: "/protect-postgresql/storage-types-supported-by-snapcenter-plug-in-for-postgresql.html"
-  - title: fa82b0b99da0e46e629baf5081d8fee2
+  - title: 最小ONTAP Privilegesが必要
     url: "/protect-postgresql/minimum-privileges-required-for-postgresql.html"
-  - title: e1470cbc380c0e4285ea434aa1f30381
+  - title: SnapMirrorレプリケーションとSnapVaultレプリケーションのためのストレージシステムの準備
     url: "/protect-postgresql/prepare-storage-systems-for-snapmirror-and-snapvault-replication-for-plugin-for-postgresql.html"
-  - title: 4d352cf95dedf0c29ba120a27707d3a4
+  - title: PostgreSQLのバックアップ戦略
     entries:
-    - title: ea16b7593da88eef233eda3e66dbe489
+    - title: PostgreSQLのバックアップ戦略を定義
       url: "/protect-postgresql/define-a-backup-strategy-for-postgresql.html"
-    - title: d63d0f9078f63941d9f67771c5293aac
+    - title: Linuxホスト上のリソースの自動検出
       url: "/protect-postgresql/auto-discovery-of-resources-on-linux-host.html"
-    - title: 2a681580cba5d0bac1fe8b6665a6a47e
+    - title: サポートされるバックアップのタイプ
       url: "/protect-postgresql/type-of-backups-supported.html"
-    - title: 5bb4b85b6a635ab689dbdc73c00df220
+    - title: SnapCenter Plug-in for PostgreSQLでの整合グループSnapshotコピーの使用方法
       url: "/protect-postgresql/how-snapcenter-plug-in-for-postgresql-uses-consistency-group-snapshot-copies.html"
-    - title: 62fded2795270fcd11011954ceeb813b
+    - title: SnapCenterによる不要なログバックアップの削除の管理方法
       url: "/protect-postgresql/housekeeping-of-log-backups.html"
-    - title: d759d9f4be3593ad37a0a123841f1d0e
+    - title: PostgreSQLのバックアップスケジュールを決定する際の考慮事項
       url: "/protect-postgresql/considerations-for-determining-backup-schedules-for-postgresql.html"
-    - title: 1c555aee1872c4eaa1432b519e57351f
+    - title: PostgreSQLに必要なバックアップジョブの数
       url: "/protect-postgresql/number-of-backup-jobs-needed-for-postgresql.html"
-    - title: b45046fe84c0ce347f0d9ea08f2991c3
+    - title: バックアップの命名規則
       url: "/protect-postgresql/backup-naming-conventions-for-plugin-for-postgresql.html"
-  - title: df7b91549b168d35e9d4baa5e89dcf49
+  - title: PostgreSQLのリストアおよびリカバリ戦略
     entries:
-    - title: e82a2bff93a0cfe272d3ead3e0475b2f
+    - title: PostgreSQLリソースのリストアおよびリカバリ戦略の定義
       url: "/protect-postgresql/define-a-restore-and-recovery-strategy-for-postgresql-resources.html"
-    - title: 85ede8154bfd8442df06fd2ff9454758
+    - title: 手動で追加したPostgreSQLリソースでサポートされるリストア戦略のタイプ
       url: "/protect-postgresql/types-of-restore-strategies-supported-for-manually-added-postgresql.html"
-    - title: a4b372577b2f55df9a5c0ec2ce4f7de9
+    - title: 自動検出されたPostgreSQLでサポートされるリストア戦略のタイプ
       url: "/protect-postgresql/types-of-restore-strategies-supported-for-auto-discovered-postgresql.html"
-    - title: 524739e7fb88e0bc47e353a9fdeb5623
+    - title: 自動検出されたPostgreSQLのリストア処理のタイプ
       url: "/protect-postgresql/types-of-restore-performed-for-auto-discovered-postgresql.html"
-    - title: 44a2294283eb6b7379272296faf10f4e
+    - title: PostgreSQLでサポートされるリカバリ操作のタイプ
       url: "/protect-postgresql/types_of_recovery_operations_supported_for_postgresql.html"
-- title: 770cc475b61cfe018ce46956380bd829
+- title: SnapCenter Plug-in for PostgreSQLのインストールの準備
   entries:
-  - title: 604911737a529fb17dd21cbb5a939542
+  - title: SnapCenter Plug-in for PostgreSQLのインストールワークフロー
     url: "/protect-postgresql/install-snapcenter-plug-in-for-postgresql.html"
-  - title: cb3fd7d3ad0dcbd2d04c73e2ae125379
+  - title: ホストを追加してSnapCenter Plug-in for PostgreSQLをインストールするための前提条件
     url: "/protect-postgresql/prerequisites-to-adding-hosts-and-installing-snapcenter-plug-in-for-postgresql.html"
-  - title: 05fc12ecf449ac264abfd66ddab37332
+  - title: SnapCenter Plug-ins Package for Windowsをインストールするホストの要件
     url: "/protect-postgresql/host-requirements-to-install-snapcenter-plug-in-package-for-windows-postgresql.html"
-  - title: ac33edef4526164e3c7c9a4df9986310
+  - title: SnapCenter Plug-ins Package for Linuxをインストールするホストの要件
     url: "/protect-postgresql/host-requirements-to-install-snapcenter-plug-in-package-for-linux.html"
-  - title: e98661df3aff27229a7058376533924a
+  - title: SnapCenter Plug-in for PostgreSQLのクレデンシャルを設定する
     url: "/protect-postgresql/set-up-credentials-for-snapcenter-plug-in-for-postgresql.html"
-  - title: 4f96a9b27e2a438e2024bd3f65ccc8ee
+  - title: Windows Server 2016以降でのgMSAの設定
     url: "/protect-postgresql/configure-gMSA-on-windows-server-2012-or-later.html"
-  - title: a60af869a07d535dff66727f74a69b19
+  - title: SnapCenter Plug-in for PostgreSQLのインストール
     entries:
-    - title: d959bbdfecd7dd6a3f75f5a871cbbe02
+    - title: ホストを追加してリモートホストにプラグインパッケージをインストールする
       url: "/protect-postgresql/add-hosts-and-install-plug-in-packages-on-remote-hosts-postgresql.html"
-    - title: 85e03b5aac12ea0d7a83ca6e7fa64654
+    - title: コマンドレットを使用した複数のリモートホストへのSnapCenter Plug-in Package for Linux / Windowsのインストール
       url: "/protect-postgresql/install-snapcenter-plug-in-packages-for-linux-or-windows-on-multiple-remote-hosts-using-cmdlets-postgresql.html"
-    - title: d515f880823b2f575d206b4b280b091b
+    - title: コマンドラインインターフェイスを使用してSnapCenter Plug-in for PostgreSQLをLinuxホストにインストールする
       url: "/protect-postgresql/install-the-snapcenter-plug-in-for-postgresql-on-linux-hosts-using-the-command-line-interface.html"
-    - title: 8b8199b2cc69508101df27784ccae8d5
+    - title: SnapCenterプラグインパッケージのインストールステータスの監視
       url: "/protect-postgresql/monitor-the-status-of-installing-plugin-for-postgresql.html"
-  - title: e94a41320f7b470ab4c94c28575be94e
+  - title: CA証明書の設定
     entries:
-    - title: 5c4de78a2b621074bf68ab1c644af297
+    - title: CA証明書CSRファイルの生成
       url: "/protect-postgresql/generate-CA-certificate-CSR-file.html"
-    - title: 463f3aea4c7a61c6bfaa026c1c1c490c
+    - title: CA証明書のインポート
       url: "/protect-postgresql/import-CA-certificates.html"
-    - title: 9772bdc36f54d8bb6dc779a222af547c
+    - title: CA証明書サムプリントの取得
       url: "/protect-postgresql/get-the-CA-certificate-thumbprint.html"
-    - title: 1067e8b574748bfd5d0147a621c7ca24
+    - title: WindowsホストプラグインサービスでのCA証明書の設定
       url: "/protect-postgresql/configure-CA-certificate-with-Windows-host-plug-in-services.html"
-    - title: 15ae17a7cd3cc273763752dd6144c354
+    - title: Linuxホスト上のSnapCenter PostgreSQL Plug-inサービス用のCA証明書の設定
       url: "/protect-postgresql/configure-CA-certificate-for-postgresql-on-Linux-host.html"
-    - title: b941867d3a2b3b3bc2822a409260dcd9
+    - title: Windowsホスト上のSnapCenter PostgreSQL Plug-inサービス用のCA証明書の設定
       url: "/protect-postgresql/configure-CA-certificate-for-postgresql-on-windows-host.html"
-    - title: 0b65a155991bcbd016cf199f401ea183
+    - title: プラグインに対してCA証明書を有効にする
       url: "/protect-postgresql/enable-ca-certificates-for-plug-ins.html"
-- title: 391acd305e11894b8f29370b098d9f25
+- title: データ保護の準備
   entries:
-  - title: 164f9c25e9b1a3fe112377353788d124
+  - title: SnapCenter Plug-in for PostgreSQLを使用するための前提条件
     url: "/protect-postgresql/prerequisites-for-using-snapcenter-plug-in-for-postgresql.html"
-  - title: cad49686499ea2272370a990b8db28ec
+  - title: PostgreSQLを保護するためのリソース、リソースグループ、ポリシーの使用方法
     url: "/protect-postgresql/how-resources-resource-groups-and-policies-are-used-for-protecting-postgresql.html"
-- title: 530895ccaf7ffc619f25f8f9d8ec3597
+- title: PostgreSQLリソースのバックアップ
   entries:
-  - title: 0e1b3005c7d7fef8012117ae579df248
+  - title: バックアップのワークフロー
     url: "/protect-postgresql/back-up-postgresql-resources.html"
-  - title: a307ddaec8ef5ce7fda627549ce43ee6
+  - title: クラスタの自動検出
     url: "/protect-postgresql/discover-the-clusters-automatically.html"
-  - title: b39d1e4f73b157bb2f5b3a972e89eeb6
+  - title: プラグインホストに手動でリソースを追加する
     url: "/protect-postgresql/add-resources-manually-to-the-plug-in-host.html"
-  - title: 7d85d55733eeed55809119c5d5af9873
+  - title: PostgreSQLのバックアップポリシーの作成
     url: "/protect-postgresql/create-backup-policies-for-postgresql.html"
-  - title: 7f9a1e0f8fc64e3f207d5cd83dd8e67f
+  - title: リソースグループを作成してポリシーを適用
     url: "/protect-postgresql/create-resource-groups-and-attach-policies.html"
-  - title: 7ce6b56c330cd1b19248ba4cdd2eee7b
+  - title: PostgreSQLのバックアップ
     url: "/protect-postgresql/back-up-postgresql.html"
-  - title: dbc89dfae1c6c8ad4eb43878b9171ca6
+  - title: リソースグループのバックアップ
     url: "/protect-postgresql/back-up-resource-groups-postgresql.html"
-  - title: bc90c2f229362047d182b37af0ef27f3
+  - title: PostgreSQL用のPowerShellコマンドレットを使用して、ストレージシステム接続とクレデンシャルを作成する
     url: "/protect-postgresql/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-postgresql.html"
-  - title: b1cbcfa72bf25e7c520985ac50c60f65
+  - title: PowerShellコマンドレットを使用したクラスタのバックアップ
     url: "/protect-postgresql/back-up-clusters-using-powershell-cmdlets-postgresql.html"
-  - title: 419e354d2124d18b011fd9f9fecbed3d
+  - title: バックアップ処理の監視
     entries:
-    - title: 6119871227cfd0ac53fa00369e5ea153
+    - title: SnapCenterの[Jobs]ページでのバックアップ処理の監視
       url: "/protect-postgresql/monitor-postgresql-backup-operations.html"
-    - title: de446367e805aef49330ce87fc36fc93
+    - title: "[Activity]ペインでの処理の監視"
       url: "/protect-postgresql/monitor-dataprotection-operations-on-postgresql-in-the-activity-pane.html"
-  - title: f2098dd68244eba28833e305c4c720a3
+  - title: バックアップ処理をキャンセルする
     url: "/protect-postgresql/cancel-backup-operations-for-postgresql.html"
-  - title: 146ebe956310ab6aebfd83b175d2bae4
+  - title: "[Topology]ページでのPostgreSQLクラスタのバックアップとクローンの表示"
     url: "/protect-postgresql/view-postgresql-cluster-backups-and-clones-in-the-topology-page.html"
-- title: d9b22e5cf88b9d4e6e8fe02a7489ea16
+- title: PostgreSQLのリストア
   entries:
-  - title: e30c3d908a4ed515e16791b672cc0709
+  - title: リストアのワークフロー
     url: "/protect-postgresql/restore-postgresql.html"
-  - title: 1dd409d7b835d13842d9f347c93a6de3
+  - title: 手動で追加したリソースバックアップのリストアとリカバリ
     url: "/protect-postgresql/restore-and-recover-a-manually-added-resource-backup.html"
-  - title: 6944667c36417d1b323e3cfe49f7249b
+  - title: 自動検出されたクラスタバックアップのリストアとリカバリ
     url: "/protect-postgresql/restore-and-recover-an-auto-discovered-cluster-backup.html"
-  - title: 57318c547ffe570761f4a3f4b7899d67
+  - title: PowerShellコマンドレットを使用したPostgreSQLのリストア
     url: "/protect-postgresql/restore-postgresql-using-powershell-cmdlets.html"
-  - title: 3f90ba06baa30f2e66df25302c79cd63
+  - title: PowerShellコマンドレットを使用したリソースのリストア
     url: "/protect-postgresql/restore-and-recover-resources-using-powershell-cmdlets-postgresql.html"
-  - title: 5eaf8dd6f947b26a0ad9f982dce18311
+  - title: リストア処理の監視
     url: "/protect-postgresql/monitor-postgresql-restore-operations.html"
-- title: 480aaec5aa69b781016a62284565640a
+- title: PostgreSQLリソースバックアップのクローニング
   entries:
-  - title: 7f9567749606082611d69fd511d51593
+  - title: クローニングのワークフロー
     url: "/protect-postgresql/clone-postgresql-resource-backups.html"
-  - title: 680c5ccf46f4a728694c590785dc9cda
+  - title: PostgreSQLクラスタバックアップのクローニング
     url: "/protect-postgresql/clone-postgresql-backup.html"
-  - title: c5f5244e6930e3be5fb9358a7fb198ec
+  - title: PowerShellコマンドレットを使用したPostgreSQLクラスタバックアップのクローニング
     url: "/protect-postgresql/clone-postgresql-backups-using-powershell-cmdlets.html"
-  - title: 5cb6a75832518fd27c8d399ca2772808
+  - title: SnapCenterでのクローニング処理の監視
     url: "/protect-postgresql/monitor-postgresql-clone-operations.html"
-  - title: d91a0b52cfc5d0c3e4b59e8544b3c61d
+  - title: クローンをスプリットする
     url: "/protect-postgresql/split-a-clone-for-postgresql.html"
-  - title: 41cd24c41d882275419757cd70711798
+  - title: SnapCenterのアップグレード後にPostgreSQLクラスタクローンを削除または分割する
     url: "/protect-postgresql/delete-or-split-postgresql-clones-after-upgrading-snapcenter.html"

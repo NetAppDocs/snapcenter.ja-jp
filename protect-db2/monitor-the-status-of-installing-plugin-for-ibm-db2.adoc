@@ -2,39 +2,39 @@
 permalink: protect-db2/monitor-the-status-of-installing-plugin-for-ibm-db2.html 
 sidebar: sidebar 
 keywords: monitor, install, snapCenter plug-in for IBM Db2 
-summary: d61e736bc78dc6b6bef444a82078d1f7 
+summary: 'SnapCenterプラグインパッケージのインストールの進捗状況は、[Jobs]ページで監視できます。インストールの進捗状況をチェックして、インストールが完了するタイミングや問題が発生していないかどうかを確認できます。' 
 ---
-= 58ce593f975d234ad15712c130e3f8ee
+= Plug-in for IBM DB2のインストールステータスの監視
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-d61e736bc78dc6b6bef444a82078d1f7
+SnapCenterプラグインパッケージのインストールの進捗状況は、[Jobs]ページで監視できます。インストールの進捗状況をチェックして、インストールが完了するタイミングや問題が発生していないかどうかを確認できます。
 
-.bbe48fb854ea022537208eeeff822f91
-85d5aeaf07c5de74b3bb67fa1aa2989a
+.タスクの内容
+以下のアイコンがジョブページに表示され、操作の状態を示します。
 
-* cad8bf0bd55afaa12be11cc29f347052
-* 3a62ae015b4ba6f0dc48c424c0a0fe86
-* 4066ea01819c2bfdcb0dbbc680a26a0a
-* 54cc5efef9b7edd3fd699fc1e5a0ff50
-* d208aa08a03da9a8a8e5bd96ad0fedae
+* image:../media/progress_icon.gif["実行中のアイコン"] 実行中
+* image:../media/success_icon.gif["完了アイコン"] 完了しまし
+* image:../media/failed_icon.gif["失敗したアイコン"] 失敗
+* image:../media/warning_icon.gif["警告アイコンが表示されています"] 完了（警告あり）または警告のため開始できませんでした
+* image:../media/verification_job_in_queue.gif["検証ジョブをキューに格納"] キューに登録済み
 
 
-.f3a29486bed19a90f2da6d007818b427
-. b40a6c0b08ac99c86eb676e2689c6996
-. 7f3e84692f24d61327601751bb201dc8
-. 61d2a317fbe90dabcd1359e8623a031a
+.手順
+. 左側のナビゲーションペインで、 *Monitor* をクリックします。
+. [* Monitor*] ページで、 [* Jobs] をクリックします。
+. [ジョブ]ページで、プラグインのインストール処理のみが表示されるようにリストをフィルタリングするには、次の手順を実行します。
 +
-.. 8e6dd3fc1948fff834e92e1bc58be40a
-.. 108130668c07a2242712d2ed44b07d84
-.. 8256a7aa0926979fc59c75e9490c7f04
-.. fe2df42a6411c7acd38e945324686a20
-.. 400fae8e788b3721b9ac25fe01f04f50
+.. [* フィルタ * （ Filter * ） ] をクリック
+.. オプション：開始日と終了日を指定します。
+.. タイプドロップダウンメニューから、 * プラグインインストール * を選択します。
+.. [Status]ドロップダウンメニューから、インストールステータスを選択します。
+.. [ 適用（ Apply ） ] をクリックします。
 
 
-. 5b946f392253bfdf03165c0157bb4a9e
-. b69ca9a37b35f7d7f9d83f9069243f8e
+. インストールジョブを選択し、 ［ * 詳細 * ］ をクリックしてジョブの詳細を表示します。
+. ［ * ジョブの詳細 * ］ ページで、 ［ * ログの表示 * ］ をクリックします。
 

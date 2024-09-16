@@ -2,46 +2,46 @@
 permalink: protect-mysql/discover-the-databases-automatically.html 
 sidebar: sidebar 
 keywords: credentials 
-summary: 4d2c86700d26e403f1ebf28f4831a677 
+summary: リソースとは、SnapCenterで管理されているLinuxホスト上のMySQLデータベースです。使用可能なMySQLデータベースを検出したあとに、これらのリソースをリソースグループに追加してデータ保護処理を実行できます。 
 ---
-= 7ae0ad473e0b444f584e63e025e0d4e0
+= データベースの自動検出
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-5d63c73af88f44a323bb6f3fca1580c9
+リソースとは、SnapCenterで管理されているLinuxホスト上のMySQLデータベースです。使用可能なMySQLデータベースを検出したあとに、リソースをリソースグループに追加してデータ保護処理を実行できます。
 
-.135b308ed83c53f1516b7c754566d1c4
-* c39495ad9bcb958b9080a36f441abbbe
-* 5960f7331fcbdec5c21642b1d51cc972
-
-
-.bbe48fb854ea022537208eeeff822f91
-* 2fc619a3874b3d7ee66dc2b056c19d58
-* 1c38e2d02d815dacbf8f55fddf8a55ef
+.開始する前に
+* SnapCenterサーバのインストール、ホストの追加、ストレージシステム接続のセットアップなどのタスクを完了しておく必要があります。
+* SnapCenter Plug-in for MySQLでは、RDM / VMDK仮想環境にあるリソースの自動検出はサポートされていません。データベースを手動で追加する際に、仮想環境のストレージの情報を指定する必要があります。
 
 
-a9d0e12f10920c999cb78960286bd82a
+.タスクの内容
+* プラグインをインストールすると、そのLinuxホスト上のすべてのデータベースが自動的に検出されて[リソース]ページに表示されます。
+* 自動検出されるのはデータベースだけです。
 
-.f3a29486bed19a90f2da6d007818b427
-. d6e5affbef5f3cc4e984ce8bcf594a94
-. 3e025b4a685d145a938552cff1a33612
-. 539da50c1cfbe2a04bb6b229f1dd0ee9
+
+自動検出されたリソースを変更または削除することはできません。
+
+.手順
+. 左側のナビゲーションペインで、*[リソース]*をクリックし、リストからPlug-in for MySQLを選択します。
+. [Resources]ページで、[View]リストからリソースタイプを選択します。
+. （オプション）*をクリックしimage:../media/filter_icon.png["フィルタアイコン"]、ホスト名を選択します。
 +
-dc56c1ed4d6e6f9e0b65bd544aa90f17
+次に、**をクリックしてフィルタペインを閉じることができますimage:../media/filter_icon.png["フィルタアイコン"]。
 
-. 0f034106893faef4643a4f2e45058c52
+. [* リソースの更新 * ] をクリックして、ホストで使用可能なリソースを検出します。
 +
-eb037ec78f327455a8e36a07871d70c6
+リソースは、リソースタイプ、ホスト名、関連するリソースグループ、バックアップタイプ、ポリシー、全体的なステータスなどの情報とともに表示されます。
 
 +
-** d960a78735f8828146abd7c7f897adb9
-** bcf06a966b74c2d00f9c785c9e6ac8a9
+** データベースがNetAppストレージにあり、保護されていない場合は、[全体のステータス]列に「保護されていません」と表示されます。
+** データベースがNetAppストレージシステム上にあり保護されていて、実行されたバックアップ処理がない場合は、[全体のステータス]列に[バックアップが実行されていません]と表示されます。それ以外の場合は、前回のバックアップステータスに基づいて、「 Backup failed 」または「 Backup succeeded 」に変わります。
 
 
 
 
 
-IMPORTANT: f09ef27e0279c131a669a6a13b1cbb6a
+IMPORTANT: SnapCenterの外部でインスタンスの名前を変更した場合は、リソースを更新する必要があります。

@@ -1,64 +1,64 @@
 ---
 section: protect-azure
-title: 3559da2fac74b3e69a2cd678efee3582
+title: Azure NetApp Filesで実行されているアプリケーションを保護
 entries:
-- title: dd5c6b13be74557c3408d452b60be7a6
+- title: SnapCenterのインストールとクレデンシャルの作成
   entries:
-  - title: cefcdf7a4638575f474bc5a3bda6c998
+  - title: Azure仮想マシンへのSnapCenterのインストール
     url: "/protect-azure/install-snapcenter-azure-virtual-machine.html"
-  - title: 1ed01bab203e8745a0dcfe58f019c1d9
+  - title: SnapCenterでAzureクレデンシャルを作成する
     url: "/protect-azure/create-azure-credential.html"
-  - title: 118cba115d0fa759158cb2faa450d5de
+  - title: Azureストレージアカウントの設定
     url: "/protect-azure/configure-azure-storage-account.html"
-  - title: fc2036df5c2e9ad58052254d635ada38
+  - title: クレデンシャルを作成してプラグインホストを追加
     url: "/protect-azure/create-credential-add-plugin-host.html"
-- title: b45eb079efd4b3748b1efc669c02c01c
+- title: SAP HANAデータベースを保護
   entries:
-  - title: ca326a551325da6560358f1a719a2589
+  - title: ホストを追加してSnapCenter Plug-in for SAP HANA Databaseをインストールする
     url: "/protect-azure/add-hosts-install-plugin-for-sap-hana.html"
-  - title: 65072a18905d082d8c0ec964ee899a87
+  - title: SAP HANAデータベースの追加
     url: "/protect-azure/add-sap-hana-database.html"
-  - title: 2dad511118029c962a70a1aac4b16b52
+  - title: SAP HANAデータベースのバックアップポリシーの作成
     url: "/protect-azure/create-backup-policies-sap-hana.html"
-  - title: a762c8a08fd8dd6ac2427dad067d141f
+  - title: リソースグループを作成してSAP HANAバックアップポリシーを適用
     url: "/protect-azure/create-resource-groups-attach-sap-hana-backup-policies.html"
-  - title: 10ee6df71b74c57a6b9f1595f3efce16
+  - title: Azure NetApp Filesで実行されているSAP HANAデータベースのバックアップ
     url: "/protect-azure/backup-sap-hana-databases.html"
-  - title: ac90f60a6a5dd000206a2912f740697f
+  - title: SAP HANAリソースグループのバックアップ
     url: "/protect-azure/backup-sap-hana-resource-groups.html"
-  - title: 974344da42d421b4dd34c3a98dedb9c1
+  - title: SAP HANAデータベースのリストアとリカバリ
     url: "/protect-azure/restore-recover-sap-hana-backups.html"
-  - title: 83a5e957cdd4905f7e78a688fa59e4a6
+  - title: SAP HANAデータベースのバックアップのクローニング
     url: "/protect-azure/clone-sap-hana-database-backups.html"
-- title: 7c9d94dde393ed697967d78a92995d60
+- title: Microsoft SQL Serverデータベースの保護
   entries:
-  - title: a73fd7b4976dfcc1e3546be7ca66ef9a
+  - title: ホストを追加してSnapCenter Plug-in for SQL Server Databaseをインストールする
     url: "/protect-azure/add-hosts-install-plugin-for-sql.html"
-  - title: bd399fbf6546e1ea1b462c96e03932f3
+  - title: SQL Serverデータベースのバックアップポリシーの作成
     url: "/protect-azure/create-backup-policies-sql.html"
-  - title: b75f291f313008e72d9ff0963164ee31
+  - title: リソースグループの作成とSQLバックアップポリシーの適用
     url: "/protect-azure/create-resource-groups-attach-sql-backup-policies.html"
-  - title: cffecc178cc1b99a91effece6bd4417b
+  - title: Azure NetApp Filesで実行されているSQL Serverデータベースのバックアップ
     url: "/protect-azure/backup-sql-server-databases.html"
-  - title: 2414432c60e82c4bed04be0e4dafda65
+  - title: SQL Serverリソースグループのバックアップ
     url: "/protect-azure/backup-sql-resource-groups.html"
-  - title: '06297b8a736154148ec90e3788831eaa'
+  - title: SQL Serverデータベースのリストアとリカバリ
     url: "/protect-azure/restore-recover-sql-backups.html"
-  - title: 1d085da91833ced7df79bd36f6ed095f
+  - title: SQL Serverデータベースバックアップのクローニング
     url: "/protect-azure/clone-sql-database-backups.html"
-- title: 54a98d3cca3d552c2562869bfcebf735
+- title: Oracleデータベースの保護
   entries:
-  - title: 5a19eafc64d4b27754e1ea4fcdfa49f1
+  - title: ホストを追加してSnapCenter Plug-in for Oracle Databaseをインストールする
     url: "/protect-azure/add-hosts-install-plugin-for-oracle.html"
-  - title: a3a63bd1ddab3e696228b7b61878c09d
+  - title: Oracleデータベースのバックアップポリシーの作成
     url: "/protect-azure/create-backup-policies-oracle.html"
-  - title: f89c4239b02a9740bafee733a8c2165e
+  - title: リソースグループを作成してOracleバックアップポリシーを適用
     url: "/protect-azure/create-resource-groups-attach-oracle-backup-policies.html"
-  - title: f3d79571b40021bb0ad32b78398ef057
+  - title: Azure NetApp Filesで実行されているOracleデータベースをバックアップする
     url: "/protect-azure/backup-oracle-databases.html"
-  - title: ad7e2b46dbd658b836afa67739728364
+  - title: Oracleリソースグループのバックアップ
     url: "/protect-azure/backup-oracle-resource-groups.html"
-  - title: ac6cc08c9a772eebf831ce24ac22f4ea
+  - title: Oracleデータベースのリストアとリカバリ
     url: "/protect-azure/restore-recover-oracle-backups.html"
-  - title: e42122c0e464caa33250257fa8321c7b
+  - title: Oracleデータベースバックアップのクローニング
     url: "/protect-azure/clone-oracle-database-backups.html"

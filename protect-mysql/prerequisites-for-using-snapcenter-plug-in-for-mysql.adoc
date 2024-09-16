@@ -2,23 +2,23 @@
 permalink: protect-mysql/prerequisites-for-using-snapcenter-plug-in-for-mysql.html 
 sidebar: sidebar 
 keywords: Credentials,SnapCenter Plug-in for mysql 
-summary: f5ef228028299810075ddeda355364b5 
+summary: SnapCenter Plug-in for MySQLを使用する前に、SnapCenter管理者がSnapCenterサーバをインストールして設定し、前提条件となるタスクを実行する必要があります。 
 ---
-= bcba27ed7b96126699c23b4eaa441449
+= SnapCenter Plug-in for MySQLを使用するための前提条件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-f5ef228028299810075ddeda355364b5
+SnapCenter Plug-in for MySQLを使用する前に、SnapCenter管理者がSnapCenterサーバをインストールして設定し、前提条件となるタスクを実行する必要があります。
 
-* d3bd1679f97e986f5eabfb3cb076e96b
-* a5d8946536d3ffa699ada66ee92654d6
-* 521e4c748d90979b116ba375769e0ef9
-* 80718846c9ca830ee95177bb30f81b82
+* SnapCenterサーバをインストールして設定します。
+* SnapCenterサーバにログインします。
+* 必要に応じて、ストレージシステム接続を追加し、クレデンシャルを作成してSnapCenter環境を設定します。
+* LinuxホストまたはWindowsホストにJava 11をインストールします。
 +
-c783d48d811b4aab13eb61840dc3ee7c
+Javaのパスは、ホストマシンの環境パス変数で設定する必要があります。
 
-* 94a5e03dcafcb993f53258c83811415f
+* バックアップレプリケーションが必要な場合は、SnapMirrorとSnapVaultをセットアップします。
 

@@ -2,23 +2,23 @@
 permalink: protect-sce/concept_snapcenter_plug_in_for_exchange_server_overview.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for Exchange Server 
-summary: 309792b343a6affaca1b564ebe6d92a5 
+summary: SnapCenter Plug-in for Microsoft Exchange Server は、 Exchange データベースに対応したデータ保護管理を提供する、 NetAppSnapCenter ソフトウェアのホスト側コンポーネントです。Plug-in for Exchangeを使用すると、SnapCenter環境でのExchangeデータベースのバックアップとリストアが自動化されます。 
 ---
-= c41e777bd921bd5fc9079273c0ed35db
+= SnapCenter Plug-in for Microsoft Exchange Serverの概要
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-e126a0dff251b10008436e2bf2a5dd06
+SnapCenter Plug-in for Microsoft Exchange Serverは、Exchangeデータベースに対応したデータ保護管理を可能にする、NetApp SnapCenterソフトウェアのホスト側コンポーネントです。Plug-in for Exchangeを使用すると、SnapCenter環境でのExchangeデータベースのバックアップとリストアが自動化されます。
 
-94bf62b5661b3bf71e7b277fd3572bb1
+Plug-in for Exchangeがインストールされている場合は、SnapCenterとNetApp SnapMirrorテクノロジを使用して別のボリュームにバックアップセットのミラーコピーを作成したり、NetApp SnapVaultテクノロジを使用して標準への準拠やアーカイブを目的としたディスクツーディスクのバックアップレプリケーションを実行したりできます。
 
-245360450ea9845b00af24cc4009b53f
+Exchangeデータベース全体ではなく、Eメールまたはメールボックス全体をリストアおよびリカバリする場合は、Single Mailbox Recovery（SMBR）ソフトウェアを使用できます。NetApp®Single Mailbox Recoveryは、2023年5月12日に販売終了（EOA）になりました。NetAppは、2020年6月24日に導入されたマーケティング用パーツ番号を通じて、メールボックスの容量、メンテナンス、サポートを購入したお客様をサポート対象期間中も引き続きサポートします。
 
-01a1924558b81160b570c09fe8a4203c
+NetApp Single Mailbox Recoveryは、Ontrackが提供するパートナー製品です。Ontrack PowerControlsには、NetApp Single Mailbox Recoveryと同様の機能が用意されています。お客様は、新しいOntrack PowerControlsソフトウェアライセンスとOntrack PowerControlsメンテナンスおよびサポート更新をOntrackから（licensingteam@ontrack.com経由で）購入して、メールボックスをきめ細かくリカバリできます。
 
-d270aa7f2f8dcaf845138cb69dc00058
+Plug-in for ExchangeはSnapMirror Active Sync（当初はSnapMirror Business Continuity [SM-BC]としてリリース）をサポートしています。これにより、サイト全体に障害が発生してもビジネスサービスの運用を継続でき、アプリケーションがセカンダリコピーを使用して透過的にフェイルオーバーできるようになります。SnapMirror Active Syncでフェイルオーバーをトリガーするために、手動操作や追加のスクリプト作成は必要ありません。
 
-baa550177b24db4ee6c89f4004f1491f
+SnapMirror Active Syncの非対称モード、フェイルオーバーモード、または二重モード以外のモードがサポートされます。これは、最適パスがプライマリ側のLUNの所有者ノードからのみ作成されるソリューションを意味します。セカンダリクラスタパス上のI/Oは、プライマリクラスタにプロキシ経由で処理されます。同期レプリケーションは、プライマリからセカンダリへの単方向です。

@@ -2,38 +2,38 @@
 permalink: protect-nsp/back_up_resources_using_powershell_cmdlets.html 
 sidebar: sidebar 
 keywords: backup resources 
-summary: 517a125fd46ee1a60309a280447487c0 
+summary: リソースをバックアップするときは、 SnapCenter サーバとの接続を確立してから、リソースの追加、ポリシーの追加、バックアップリソースグループの作成を行って、バックアップを実行します。 
 ---
-= d2a5f76428abadccd7b24ea08a0eee1e
+= PowerShellコマンドレットを使用したリソースのバックアップ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-517a125fd46ee1a60309a280447487c0
+リソースをバックアップするときは、 SnapCenter サーバとの接続を確立してから、リソースの追加、ポリシーの追加、バックアップリソースグループの作成を行って、バックアップを実行します。
 
-.135b308ed83c53f1516b7c754566d1c4
-* c90de0347e94ade70c96034e2ffca3ba
-* 38d7f66964588305ed5bee44db007183
+.開始する前に
+* PowerShellコマンドレットを実行できるようにPowerShell環境を準備しておく必要があります。
+* ストレージシステム接続を追加し、クレデンシャルを作成しておく必要があります。
 
 
-.bbe48fb854ea022537208eeeff822f91
-74db7181476f94f0e2927d8c8d98cb97
+.タスクの内容
+コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
 
-.f3a29486bed19a90f2da6d007818b427
-. 623aa9b9d36889377a728b1284e5485e
+.手順
+. Open-SmConnectionコマンドレットを使用して、指定したユーザのSnapCenterサーバとの接続セッションを開始します。
 +
 [listing]
 ----
 Open-smconnection  -SMSbaseurl  https:\\snapctr.demo.netapp.com:8146\
 ----
 +
-d5b8eb2056e11e71857a777fd502266b
+ユーザ名とパスワードのプロンプトが表示されます。
 
-. 78bce70d2497c3d80a1f0dabc6500d76
+. Add-SmResourcesコマンドレットを使用して、リソースを追加します。
 +
-d278818a36e5f43a96b7082ec24a25e0
+リソースを追加する例を次に示します。
 
 +
 [listing]
@@ -41,18 +41,18 @@ d278818a36e5f43a96b7082ec24a25e0
 Add-SmResource -HostName '10.232.206.248' -PluginCode 'DB2' -ResourceName NONREC1 -ResourceType Database -StorageFootPrint ( @
 {"VolumeName"="DB2_NONREC1DB";"LunName"="DB2_NONREC1DB";"Vserver"="vserver_scauto_secondary"}) -Instance db2inst1
 ----
-. 658e1796a21da94df433ae106024123b
+. Add-SmPolicyコマンドレットを使用して、バックアップポリシーを作成します。
 +
-d51b1b50a87024de88cbdf1b6d828c21
+新しいバックアップポリシーを作成する例を次に示します。
 
 +
 [listing]
 ----
 Add-SMPolicy -PolicyName 'db2VolumePolicy' -PolicyType 'Backup' -PluginPolicyType DB2  -description 'VolumePolicy'
 ----
-. 1843dfbf689ff272ac87ddb041c12ae9
+. Add-SmResourceGroupコマンドレットを使用して、SnapCenterに新しいリソースグループを追加します。
 +
-25ed9c6e16af89ac645d6b0eddc3a334
+この例では、ポリシーとリソースを指定して新しいリソースグループを作成しています。
 
 +
 [listing]
@@ -60,15 +60,15 @@ Add-SMPolicy -PolicyName 'db2VolumePolicy' -PolicyType 'Backup' -PluginPolicyTyp
 Add-SmResourceGroup -ResourceGroupName 'Verify_ManualBackup_DatabaseLevel_MultipleVolume_unix' -Resources @(@
 {"Host"="10.232.206.248";"Uid"="db2inst2\NONREC"},@{"Host"="10.232.206.248";"Uid"="db2inst1\NONREC"}) -Policies db2ManualPolicy
 ----
-. f795ace46eb28839cb57d42561de6edc
+. New-SmBackupコマンドレットを使用して、新しいバックアップジョブを開始します。
 +
 [listing]
 ----
 New-SMBackup -DatasetName Verify_ManualBackup_DatabaseLevel_MultipleVolume_unix -Policy db2ManualPolicy
 ----
-. 12c1d190435624b74e3183fda4ca5a14
+. Get-SmBackupReportコマンドレットを使用して、バックアップジョブのステータスを表示します。
 +
-bb624c9832608f83e8cfb32c0a769474
+次に、指定した日付に実行されたすべてのジョブのジョブ概要レポートを表示する例を示します。
 
 +
 [listing]

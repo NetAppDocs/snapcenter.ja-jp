@@ -2,49 +2,49 @@
 permalink: protect-scsql/task_cancel_sql_resources_restore_operations.html 
 sidebar: sidebar 
 keywords: cancel, restore 
-summary: 588f36766e9f6a960b4f3c2a83a4a69b 
+summary: キューに登録されているリストアジョブはキャンセルできます。 
 ---
-= 46c4f3c110b291802e897ca96a3234db
+= SQLリソースのリストア処理をキャンセルします。
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-588f36766e9f6a960b4f3c2a83a4a69b
+キューに登録されているリストアジョブはキャンセルできます。
 
-291fce3784ace5b5b71f5f0d1a3acecd
+リストア処理をキャンセルするには、SnapCenter管理者またはジョブ所有者としてログインする必要があります。
 
-.bbe48fb854ea022537208eeeff822f91
-* d54432dcfb60b8b22d76998e3ae88f6c
-* 60ac79a5e469c949334144bab0aa8ab3
-* 094532b5d63a35db46b0b307b24fe01e
-* f319250163ff24dbbbd6e1e43498fcfe
-* 0a0d2a6c3f4b6cd698fb18dba219d5d1
+.タスクの内容
+* キューに登録されたリストア処理は、 *Monitor* ページまたは *Activity* ペインからキャンセルできます。
+* 実行中のリストア処理はキャンセルできません。
+* キューに格納されているリストア処理は、SnapCenter GUI、PowerShellコマンドレット、またはCLIコマンドを使用してキャンセルできます。
+* キャンセルできないリストア処理の場合、 [ ジョブのキャンセル ] ボタンは使用できません。
+* ロールの作成中に [ ユーザー \ グループ ] ページで [ このロールのすべてのメンバーが他のメンバーオブジェクトを表示して操作できる ] を選択した場合は、そのロールを使用している間に、他のメンバーのキューに登録されているリストア操作をキャンセルできます。
 
 
-.48c7c41b72e1d678923ce3571aa65b2d
-315359e3c6323d4eda359054319c0815
+.ステップ
+次のいずれかを実行します。
 
 |===
-| 8b9799c93c16edd687abfdb1ffc25984 | 004bf6c9a40003140292e97330236c53 
+| アクセス元 | アクション 
 
 
  a| 
-369ad486c2aee2b68fd1c6521628d2a5
+監視ページ
  a| 
-. f07d683ff584804916c5fb4327c3415a
-. 8884d35f96afbdd086b8c2ab66a004f1
+. 左側のナビゲーションペインで、 * Monitor * > * Jobs * をクリックします。
+. ジョブを選択し、 * ジョブのキャンセル * をクリックします。
 
 
 
 
  a| 
-0e8f9ce78b94dad391f7bf1190e4c848
+[Activity]ペイン
  a| 
-. 9fa4e15a7c52779b0b728e143fd56a21
-. 5605734dc1e0ba578df46e1ad0adc35e
-. 87d17d6ca32a6bc54b23a511eb3a0f58
+. リストア処理を開始したら、[Activity]ペインをクリックして、 image:../media/activity_pane_icon.gif[""] 最新の5つの処理を表示します。
+. 処理を選択します。
+. ［ ジョブの詳細 ］ ページで、 ［ * ジョブのキャンセル * ］ をクリックします。
 
 
 |===

@@ -2,46 +2,46 @@
 permalink: protect-nsp/what_you_can_do_with_the_netapp_supported_plugins.html 
 sidebar: sidebar 
 keywords: NetApp supported plug-ins 
-summary: d8ba70b334989d2002d48ab5721908ea 
+summary: NetAppでサポートされているプラグインをデータ保護処理に使用できます。 
 ---
-= 58a0d06df2214b110774fbcd2f7e7b41
+= NetAppでサポートされるプラグインとストレージプラグインの機能
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-62c7b5d64f39e4e815d9a33b635765c3
+NetAppでサポートされているプラグインをデータ保護処理に使用できます。
 
-639362ed59cd972e832132a5bd6eeb39
+* NetApp対応プラグイン*
 
-* 2a8b774eacb7c4f93ebf4a6d8fdfb79e
-* a96099f01951c42b20b0f220f82cddeb
-* f3d82f8a8e916f06796aa4ac952e9208
-* 5575806b0477c07d0be57dd6ef045e8a
-* 44c8eaf80f0322d31922b637d3f206f4
-* 4f749cf56361e248661706aa3c29ab1c
-* 04a26f096e312ade5bd651748180efd4
+* データベース、インスタンス、ドキュメント、表領域などのリソースを追加します。
+* バックアップを作成します。
+* バックアップからリストアします。
+* バックアップをクローニングします。
+* バックアップ処理のスケジュールを設定します。
+* バックアップ、リストア、クローニングの各処理を監視する。
+* バックアップ、リストア、クローニングの各処理のレポートを表示します。
 
 
-08762ef2fe73d944789541451485f737
+* ストレージプラグイン *
 
-22f14629dccbccb3ea736a953a3743c7
+ストレージプラグインはデータ保護処理に使用できます。
 
-* 433b97b9fd0c63b0de421dea32bde9c2
-* c2230088d27abaa2d470e15431fe93b5
+* ONTAPクラスタ間でストレージボリュームの整合グループSnapshotを作成します。
+* 組み込みのプレ/ポストスクリプトフレームワークを使用してカスタムアプリケーションをバックアップ
 +
-b7ef57ec0d80db01d4596e446c5f7c1f
+ONTAPボリューム、LUN、またはqtreeをバックアップできます。
 
-* b24c71863603f1e22b9646ccb63beac7
+* SnapCenterポリシーを使用して、既存のレプリケーション関係（SnapVault / SnapMirror /ユニファイドレプリケーション）を利用して、プライマリで作成されたSnapshotをONTAPセカンダリに更新します。
 +
-36fecb1daf18c8eeaacbcc8cdc70f4a6
+ONTAPのプライマリとセカンダリには、ONTAP FAS、AFF、All SAN Array（ASA）、Select、Cloud ONTAPがあります。
 
-* 0930cbd774389ffda4b953dfada42944
+* ONTAPボリューム、LUN、またはファイル全体をリカバリ
 +
-01416c60ab0c357d59811f108a67d5bd
+ブラウズ機能またはインデックス機能が製品に組み込まれていないため、それぞれのファイルパスを手動で指定する必要があります。
 
 +
-17f0138477115892c87d600e535c1ed0
+qtreeまたはディレクトリのリストアはサポートされていませんが、バックアップ範囲がqtreeレベルで定義されている場合にのみ、qtreeのクローニングとエクスポートを実行できます。
 
 

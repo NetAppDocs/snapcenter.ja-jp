@@ -2,181 +2,182 @@
 permalink: install/configure_mfa_using_powershell_sccli_restapi.html 
 sidebar: sidebar 
 keywords: mfa, authentication, multifactor authentication 
-summary: b31ad42cda3bd1bc7787fd71d2a175bf 
+summary: REST API、PowerShell、およびSCCLIインターフェイスを使用してMFAを設定できます。 
 ---
-= 0699cec0b36b38a01a2c7453df793209
+= PowerShell、SCCLI、REST APIを使用してSnapCenterサーバでMFAを設定します
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-c8fc2d751bc403a1f589d18155e0a550
+SnapCenter Serverでは、PowerShell、SCCLI、およびREST APIを使用してMFAを設定できます。
 
 
 
-== cb3e4d60610a204d94495a98c6ffac79
+== SnapCenter MFA CLI認証
 
-7edc1c8e2fdc93487750d1362b410b6c
+PowerShellとSCCLIでは、既存のコマンドレット（Open-SmConnection）を「AccessToken」というもう1つのフィールドで拡張し、ベアラートークンを使用してユーザを認証します。
 
-1d9604a44c9689bb1bcf34e2ce47c37b
+`Open-SmConnection -Credential <PSCredential> [-SMSbaseUrl <String>] [-Port <String>] [-RoleName <String>] [ -AccessToken <string>]`
 
-023966dffc4c30c1f952b6637d58f857
-
-
-
-== 6c62d38fcd95d5bf89665ae6b17139b8
-
-67eceb5481c462d5924546f299b0a1c1
+上記のコマンドレットを実行すると、それぞれのユーザがSnapCenterコマンドレットを実行できるようにセッションが作成されます。
 
 
 
-== 55798c01a43f2906324acf8c55ac7c10
+== SnapCenter MFA REST API認証
 
-610e0c006ec739e832da1290f901d415
-
-78166ce4ccceeedfbf6aeb8682851072
-
-* 1ec4b028e69b0809aad6ae07d23f81a8
-* 085753aa54b53249d94c1b70253908ea
+REST <access token>クライアント(Postmanやswaggerなど)でBearerトークンを_Authorization = Bearer _の形式で使用し、ヘッダーにユーザRoleNameを指定すると、SnapCenterからの応答が成功します。
 
 
-4839d2f25cc35b249d5db15efa1afd75
 
-30402026ecb92d997eb633513cf165c7
+== MFA REST APIワークフロー
 
-. b4caeeef0442908fa1e6bc7dc8e948d3
+MFAがAD FSで設定されている場合、REST APIを使用してSnapCenterアプリケーションにアクセスするには、アクセス（Bearer）トークンを使用して認証する必要があります。
+
+* このタスクについて *
+
+* Postman、Swagger UI、FireCampなど、任意のRESTクライアントを使用できます。
+* アクセストークンを取得し、それを使用して以降の要求（SnapCenter REST API）を認証し、あらゆる処理を実行します。
+
+
+* 手順 *
+
+* AD FS MFAを介して認証する場合*
+
+. AD FSエンドポイントを呼び出してアクセストークンを取得するようにRESTクライアントを設定します。
 +
-8b7413f8fc2ebb7eb068106e7dba6c41
-
-+
-84ad1465ceaf30e69cd9ad61924379dc
-
-. 677cc1d6cbf8c114fd23938f25b7bdd6
-. 52352d978b8e538f26067965a59f6fc7
-. ea89b06186ff53b6b9cb9238b1001fc1
-+
-** 83d0c0b26a7eb1649c6119a685864eae
-** 798212b7335c7a4d26f0138f9079a95e
-** a316b5fd0e81148fffa951463fd77df0
-
-
-. 0ddda96c3272042acb4be0a7963229ec
-+
-2aaa5e58823e537a854f3793f31b7148
-
-. f7c6df20834ef72448c5f49671a77c96
-. db90bb350026eba7289048cec0d22858
-+
-5d371ebca081571ee838c91f2b3b8eda
-
-. 2c62b617ee38c02d7111543084b0b09e
-+
-9f94ebee44e4c5f90ddbb7381fb57111
-
-
-
-
-
-== bbd93b6370e78df975451775d22d34ed
-
-e0c356209d0172c9793fc3d3ed347a32
-
-4839d2f25cc35b249d5db15efa1afd75
-
-. fcd1c1c483a974a0432e89881b9c1008
-. ef86f63b7951661a91c550234bac80c5
-. 66804bc5856f84fff5c4c9e9b39f7b6d
-
-
-989b27ad86f053d3822c0f7bbcab5684
-
-4839d2f25cc35b249d5db15efa1afd75
-
-. 67a453e2bf25e9b2939d5a76773bd4e1
-+
-29661a5be1500e885abc9f1385dcab2f
+ボタンを押してアプリケーションのアクセストークンを取得すると、AD FS SSOページにリダイレクトされ、ADクレデンシャルを入力してMFAで認証する必要があります。1.[AD FS SSO]ページで、[Username]テキストボックスにユーザ名または電子メールを入力します。
 
 +
-aff22f1d675aba740b0eea5cc900f4f1
++ユーザ名は、user@domainまたはdomain\userの形式で指定する必要があります。
+
+. [パスワード]テキストボックスにパスワードを入力します。
+. *ログイン*をクリックします。
+. [サインインオプション]*セクションで、認証オプションを選択し、（設定に応じて）認証します。
++
+** プッシュ：電話機に送信されるプッシュ通知を承認します。
+** QRコード: AUTH Pointモバイルアプリを使用してQRコードをスキャンし、アプリに表示される認証コードを入力します
+** ワンタイムパスワード:トークンのワンタイムパスワードを入力します。
+
+
+. 認証が成功すると、Access、ID、およびRefresh Tokenを含むポップアップが開きます。
++
+アクセストークンをコピーし、SnapCenter REST APIで使用して操作を実行します。
+
+. REST APIでは、ヘッダーセクションでアクセストークンとロール名を渡す必要があります。
+. SnapCenterは、AD FSからこのアクセストークンを検証します。
++
+有効なトークンである場合、SnapCenterはそれをデコードし、ユーザー名を取得します。
+
+. SnapCenterは、ユーザ名とロール名を使用して、API実行のためにユーザを認証します。
++
+認証に成功した場合、SnapCenterは結果を返します。成功しなかった場合は、エラーメッセージが表示されます。
+
+
+
+
+
+== REST API、CLI、GUIのSnapCenter MFA機能を有効または無効にします
+
+* GUI *
+
+* 手順 *
+
+. SnapCenter管理者としてSnapCenterサーバにログインします。
+. [設定]*>*[グローバル設定]*>*[MultiFactorAuthentication（MFA）設定]*をクリックします
+. インターフェイス（GUI/RST API/CLI）を選択してMFAログインを有効または無効にします。
+
+
+* PowerShellインターフェイス*
+
+* 手順 *
+
+. PowerShellまたはCLIコマンドを実行して、GUI、REST API、PowerShell、SCCLIのMFAを有効にします。
++
+`Set-SmMultiFactorAuthentication -IsGuiMFAEnabled -IsRestApiMFAEnabled`
+`-IsCliMFAEnabled -Path`
 
 +
-34d51518bd337510d5a57880f46f8745
+pathパラメータは、AD FS MFAメタデータXMLファイルの場所を指定します。
 
-. e84faa3dab6fec9caed1af21fab38e42
-
-
-0b97fd01ab8976f9b7367861bbc67f96
-
-4839d2f25cc35b249d5db15efa1afd75
-
-. 40ee035a048bf31e962cca88cbda2585
-. d50f29f5527b7374e9015b618aeb7dff
-
-
-6ad47f25209d248f2819960d8d230e1f
-
-. 6e0cd09ffb36f6906f7262ee34696fee
 +
-|===
+指定したAD FSメタデータファイルパスを使用して設定されたSnapCenter GUI、REST API、PowerShell、およびSCCLIのMFAを有効にします。
+
+. コマンドレットを使用して、MFAの設定ステータスと設定を確認します `Get-SmMultiFactorAuthentication` 。
 
 
-| 83f499a540b1323009c200d6f8cc9396 | 689202409e48743b914713f96d93947c 
+* SCCLIインターフェイス*
+
+* 手順 *
+
+. `# sccli Set-SmMultiFactorAuthentication -IsGuiMFAEnabled true -IsRESTAPIMFAEnabled true -IsCliMFAEnabled true  -Path "C:\ADFS_metadata\abc.xml"`
+. `# sccli Get-SmMultiFactorAuthentication`
 
 
- a| 
-6465e52eccd6901d06660c8d9f4cbcf4
- a| 
-0bf53544f7d41d17d800289b552512b6
+* REST API *
 
-
-
- a| 
-3ded167f4ad4afb85c6ace5862e27ba0
- a| 
-03d947a2158373c3b9d74325850cb8b9
-
-
-
- a| 
-ef1845aa2c5377425ac03316124d29ba
- a| 
-40512f67baf3b1ed3eee621bc87adc5c
-
-
-
- a| 
-b6bb6515f92dd63588798a290288f8e7
- a| 
-5babbc456e7d500f0f3a5f71a48a5391
-
-|===
-. a13c4b270e124c298207b35e4319dd32
+. GUI、REST API、PowerShell、SCCLIでMFAを有効にするには、次のPOST APIを実行します。
 +
 |===
 
 
-| 83f499a540b1323009c200d6f8cc9396 | 689202409e48743b914713f96d93947c 
+| パラメータ | 値 
 
 
  a| 
-6465e52eccd6901d06660c8d9f4cbcf4
+要求されたURL
  a| 
-0bf53544f7d41d17d800289b552512b6
-
-
-
- a| 
-3ded167f4ad4afb85c6ace5862e27ba0
- a| 
-c55582518cba2c464f29f5bae1c68def
+/api/4.9/settings/multifactorauthentication
 
 
 
  a| 
-b6bb6515f92dd63588798a290288f8e7
+HTTPメソッド
  a| 
-5babbc456e7d500f0f3a5f71a48a5391
+投稿
+
+
+
+ a| 
+リクエストボディ
+ a| 
+｛"IsGuiMFAEnabled"：false、"IsRestApiMFAEnabled"：true、"IsCliMFAEnabled"：false、"ADFSConfigFilePath"："C:\\ADFS_METADATA\\abc.xml"｝
+
+
+
+ a| 
+応答本文
+ a| 
+｛"MFAConfiguration"：｛"IsGuiMFAEnabled "：false、"ADFSConfigFilePath"："C：\\ADFS_METADATA\\abc.xml"、"SCConfigFilePath"：null、"IsRestApiMFAEnabled"：true、"IsCliMFAEnabled"：false、 "ADFSHostName"：" win-adfs-sc49.winscedom2.com｝
+
+|===
+. 以下のAPIを使用してMFA構成のステータスと設定を確認します。
++
+|===
+
+
+| パラメータ | 値 
+
+
+ a| 
+要求されたURL
+ a| 
+/api/4.9/settings/multifactorauthentication
+
+
+
+ a| 
+HTTPメソッド
+ a| 
+取得
+
+
+
+ a| 
+応答本文
+ a| 
+｛"MFAConfiguration"：｛"IsGuiMFAEnabled "：false、"ADFSConfigFilePath"："C：\\ADFS_METADATA\\abc.xml"、"SCConfigFilePath"：null、"IsRestApiMFAEnabled"：true、"IsCliMFAEnabled"：false、 "ADFSHostName"：" win-adfs-sc49.winscedom2.com｝
 
 |===
 

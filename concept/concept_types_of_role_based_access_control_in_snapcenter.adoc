@@ -2,77 +2,77 @@
 permalink: concept/concept_types_of_role_based_access_control_in_snapcenter.html 
 sidebar: sidebar 
 keywords: RBAC, roles, permissions, application-level RBAC, ONTAP permissions 
-summary: c89d1d1a076ae6db4420d478e9a43bd1 
+summary: SnapCenter のロールベースアクセス制御（ RBAC ）と ONTAP 権限を使用して、 SnapCenter 管理者はロールの作成とアクセス権限の設定を行うことができます。この一元管理されたアクセスにより、アプリケーション管理者は委任された環境で安全に作業を行うことができます。 
 ---
-= 00d2bcee9fb3434640337cf4287d3a2b
+= RBACノシユルイ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-a6434cb33fd5968114b46f8371c99b97
+SnapCenterのロールベースアクセス制御（RBAC）とONTAP権限を使用すると、SnapCenter管理者は、SnapCenterリソースの制御を別のユーザまたはユーザグループに委譲できます。この一元管理されたアクセスにより、アプリケーション管理者は委任された環境で安全に作業を行うことができます。
 
-273c5bbad09e27d34881f682e9e0d46c
-
-
-NOTE: e8a9ea3436295dbce3f5e848ea8c441a
-
-8b4e9abf70f654cf29a1dd56b5572032
-
-* 5e8182c0fb39e16fe0a96577565e2e28
-* 96046ed03ab8386b9f9c70e18da61586
-* 9624ca855be2906ad6628109f1d9e3d0
-* 67c73d0c05c627af68622cc01164ae15
+ロールの作成と変更、ユーザへのリソースアクセスの追加はいつでも実行できますが、 SnapCenter を初めて設定するときは、少なくとも Active Directory ユーザまたはグループをロールに追加してから、そのユーザまたはグループにリソースアクセスを追加する必要があります。
 
 
+NOTE: SnapCenterを使用してユーザアカウントまたはグループアカウントを作成することはできません。オペレーティングシステムまたはデータベースのActive Directoryにユーザアカウントまたはグループアカウントを作成する必要があります。
 
+SnapCenter では、次のタイプのロールベースアクセス制御を使用します。
 
-== 5e8182c0fb39e16fe0a96577565e2e28
+* SnapCenter RBAC
+* SnapCenter プラグインの RBAC （一部のプラグイン）
+* アプリケーションレベルのRBAC
+* ONTAPケンケン
 
 
 
-=== cc3fc292512275828d3e52e16ae33c1e
 
-f70a88215685ec1ff4dbf90e7c369fe6
-
-b93d54dc630dde54201a9afda5c1eff3
-
-3613841bf46fd8a2faa877ef15b130cd
-
-57dc1aab3659c78a4e7752db4d4e652d
-
-
-NOTE: 13101775b1dc653fb8e14885572bf910
+== SnapCenter RBAC
 
 
 
-=== c75f7811d70d17dbcd88e9d03752cbed
+=== ロールと権限
 
-f99af3f9d6fe830ae8bd2fc15f75f35f
+SnapCenterには、権限が割り当てられた事前定義されたロールが付属していますこれらのロールには、ユーザまたはユーザグループを割り当てることができます。また、新しいロールを作成して権限とユーザを管理することもできます。
 
+* ユーザーまたはグループへのアクセス権の割り当て *
 
+ユーザまたはグループに権限を割り当てて、ホスト、ストレージ接続、リソースグループなどのSnapCenterオブジェクトにアクセスすることができます。SnapCenterAdminロールの権限を変更することはできません。
 
-== 9624ca855be2906ad6628109f1d9e3d0
-
-4621c32301e9db3796cade120966e4ac
-
-6fe96fe83e4fe586b0886b2e5017d10d
-
-1247a4f73aec617351c15da7677f2470
+RBACの権限は、同じフォレスト内のユーザとグループ、および異なるフォレストに属するユーザに割り当てることができます。フォレスト間でネストされたグループに属するユーザにRBAC権限を割り当てることはできません。
 
 
-
-== 880474ac5a13e7ace0b497d868bfcec8
-
-f801aae5c222a63a7b4293067447308c
-
-924b38ecfddee0161d42ebb991f8e8a3
+NOTE: カスタムロールを作成する場合は、SnapCenter Adminロールのすべての権限が含まれている必要があります。Host addやHost removeなど、一部の権限のみをコピーした場合は、それらの処理を実行できません。
 
 
 
-== 67c73d0c05c627af68622cc01164ae15
+=== 認証
 
-fee7e83316f093eca52deec4c8b672ce
+ユーザは、グラフィカルユーザインターフェイス（GUI）またはPowerShellコマンドレットを使用して、ログイン時に認証を指定する必要があります。ユーザが複数のロールのメンバーである場合は、ログインクレデンシャルを入力すると、使用するロールを指定するように求められます。また、APIを実行するための認証も必要です。
 
-d54c750ad03a5ff346e128b4426ba522
+
+
+== アプリケーションレベルのRBAC
+
+SnapCenterは、クレデンシャルを使用して、許可されたSnapCenterユーザがアプリケーションレベルの権限も持っていることを確認します。
+
+たとえば、SQL Server環境でSnapshot処理やデータ保護処理を実行する場合は、WindowsまたはSQLの適切なクレデンシャルを使用してクレデンシャルを設定する必要があります。SnapCenter サーバは、どちらの方法で設定されたクレデンシャルも認証します。Windowsファイルシステム環境でONTAPストレージ上でSnapshot処理とデータ保護処理を実行する場合は、SnapCenterのadminロールにWindowsホストに対するadmin権限が必要です。
+
+同様に、Oracleデータベースに対してデータ保護処理を実行する場合に、データベースホストでオペレーティングシステム（OS）認証が無効になっている場合は、OracleデータベースまたはOracle ASMのクレデンシャルを使用してクレデンシャルを設定する必要があります。SnapCenterサーバは、操作に応じて、次のいずれかの方法を使用して設定されたクレデンシャルを認証します。
+
+
+
+== SnapCenter Plug-in for VMware vSphere の RBAC をサポートしています
+
+VMと整合性のあるデータ保護にSnapCenter VMwareプラグインを使用している場合は、vCenter ServerでRBACをさらに強化できます。SnapCenter VMwareプラグインは、vCenter Server RBACとData ONTAP RBACの両方をサポートしています。
+
+詳しくは、を参照してください。 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_role_based_access_control.html["SnapCenter Plug-in for VMware vSphere の RBAC をサポートしています"^]
+
+
+
+== ONTAPケンケン
+
+ストレージシステムへのアクセスに必要な権限を持つvsadminアカウントを作成する必要があります。
+
+アカウントの作成と権限の割り当てについては、を参照してください。 link:../install/task_create_an_ontap_cluster_role_with_minimum_privileges.html["最小限の権限で ONTAP クラスタロールを作成します"^]

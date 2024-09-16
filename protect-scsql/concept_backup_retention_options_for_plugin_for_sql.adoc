@@ -2,22 +2,22 @@
 permalink: protect-scsql/concept_backup_retention_options_for_plugin_for_sql.html 
 sidebar: sidebar 
 keywords: Backup retention options 
-summary: d3dfd126d51606374ca0e5d535385202 
+summary: バックアップコピーを保持する日数を選択することも、保持するバックアップコピーの数（ONTAPの最大コピー数255）を指定することもできます。たとえば、組織で、10日分のバックアップコピーや130個のバックアップコピーを保持する必要があるとします。 
 ---
-= 8ab00376f11ae4d62cc80dab05f617ea
+= Plug-in for SQL Serverノハツクアツフホシオフシヨン
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-d3dfd126d51606374ca0e5d535385202
+バックアップコピーを保持する日数を選択することも、保持するバックアップコピーの数（ONTAPの最大コピー数255）を指定することもできます。たとえば、組織で、10日分のバックアップコピーや130個のバックアップコピーを保持する必要があるとします。
 
-ce1dddcbbabdabc580512cfb18c331c9
+ポリシーの作成時に、バックアップタイプとスケジュールタイプの保持オプションを指定できます。
 
-0f51775b134a404749b8b65238771c2d
+SnapMirrorレプリケーションを設定すると、デスティネーションボリュームに保持ポリシーがミラーリングされます。
 
-3a163d65992b24ed0bae3de1025ef326
+SnapCenter は、保持されているバックアップの保持ラベルがスケジュールタイプと一致する場合には、バックアップを削除します。リソースまたはリソースグループのスケジュールタイプを変更した場合、古いスケジュールタイプラベルのバックアップがシステムに残ることがあります。
 
 
-NOTE: 1f8790fb0fa89fe5d30c0273b6299e25
+NOTE: バックアップコピーを長期にわたって保持する場合は、SnapVaultバックアップを使用する必要があります。

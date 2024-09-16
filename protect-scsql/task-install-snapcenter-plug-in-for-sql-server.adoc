@@ -2,51 +2,51 @@
 permalink: protect-scsql/task-install-snapcenter-plug-in-for-sql-server.html 
 sidebar: sidebar 
 keywords: credentials 
-summary: e7080d37366699598c6a93289cf833a8 
+summary: SnapCenter Plug-in for Microsoft SQL Serverをインストールする手順について説明します。 
 ---
-= a637f97603ba27f9233ebf52eb975336
+= SnapCenter Plug-in for Microsoft SQL Serverのインストール
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-665256d7cf5062280fa2126edee4e9ed
+SnapCenter Plug-in for Microsoft SQL Serverのインストール手順をまとめたものです。
 
 
 
-== 13c41a91e51556266f1446c3f3118575
+== 手順1：Run AsクレデンシャルをセットアップしてPlug-in for Microsoft SQL Serverをインストールする
 
-. edb3f96af88f92a47b3be973152729fe
-. 61f012eff86118543feffb3e0c63fba5
+. 左側のペインで、 * Settings > Credentials > New * をクリックします。
+. クレデンシャルを入力します。
 +
-47459be4bca5ade3cc059a063f2917cd
+組み込みのドメイン管理者ユーザ名の形式には、 _NetBIOS_<username>_ または _<username>@<domain>_ または _<DomainFQDN>\<username>_ を使用します。
 
 +
-283cf02b37e194a97bc09e5143839de4
+組み込みのローカル管理者ユーザ名の形式には、 _<username>_ を使用します。
 
 
 
 
 
-== 50e45622cbe6ba6b72a9cba939e77623
+== 手順2：ホストを追加してPlug-in for Microsoft SQL Serverをインストールする
 
-. 585cc1564f4cb6953e8c9f28c1437b7a
-. 391f0cfb81e64e89ce06d9fb74afdee6
+. SnapCenter GUI の左ペインで、 *Hosts > Managed Hosts > Add* の順にクリックします。
+. ウィザードの[Hosts]ページで、次の手順を実行します。
 +
-.. 7200cb512c65b6adfa2cab18de8e420d
-.. f8b8dda743e9c21b3090c210ba7bcccb
-.. 5ddd08abdb13ac2a88aeaf83ceb4601a
+.. Host Type：Windowsホストタイプを選択します。
+.. ホスト名：SQLホストを使用するか、専用のWindowsホストのFQDNを指定します。
+.. Credentials：作成したホストの有効なクレデンシャル名を選択するか、新しいクレデンシャルを作成します。
 
 
-. 4d63758b95c6d0c2ba2de8cf3a7fd468
-. 07dc47ec108fc5c1091c1070b5576d30
+. インストールするプラグインの選択セクションで、 * Microsoft SQL Server * を選択します。
+. [ その他のオプション ] をクリックして、次の詳細を指定します。
 +
-.. de89dc05a0fcefa6418af22a996ddce7
-.. 4e1e18a050e419f3f3ea98cb64006151
-.. b8cd91b1f45642b914e070ba649ce2e9
-.. 005967742046b2c05fd77c1710d06376
+.. ポート：デフォルトのポート番号をそのまま使用するか、ポート番号を指定します。
+.. インストールパス：デフォルトのパスは、 _C ： \Program Files\NetApp\SnapManager _ です。必要に応じてパスをカスタマイズできます。
+.. クラスタ内のすべてのホストを追加：WSFCでSQLを使用している場合は、このチェックボックスをオンにします。
+.. インストール前チェックをスキップ：プラグインを手動でインストール済みの場合、またはプラグインをインストールするための要件をホストが満たしているかどうかを検証しない場合は、このチェックボックスをオンにします。
 
 
-. 4b5d2dd70af718ebe67bfea5b43d8667
+. [Submit （送信） ] をクリックします。
 

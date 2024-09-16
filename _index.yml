@@ -1,88 +1,88 @@
 ---
 indexpage:
-  lead: 63b45868a97cd4f6537bc02753bee993
+  lead: SnapCenterソフトウェアは、シンプルで拡張性に優れた一元管理型プラットフォームです。ハイブリッドクラウドのどこにいても、ONTAPシステムで実行されているアプリケーション、データベース、ホストファイルシステム、VMに対して、アプリケーションと整合性のあるデータ保護を提供します。このドキュメントライブラリには、バージョン6.0の情報が含まれています。
   tiles:
-  - title: be11c74c1dd7f307bb80183a90dc2067
+  - title: はじめに
     links:
-    - title: 7d0ee6fed10d3d4e5c9ee496729ab519
+    - title: リリースノート
       url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3323468
-    - title: 4b09ab22f471832d6728b6e5b9a09aa8
+    - title: SnapCenterの詳細
       url: "/concept/concept_snapcenter_overview.html"
-    - title: f13fe3401f6969cdc9233f418f92df1f
+    - title: SQL Serverデータベースを保護するためのクイックリファレンス
       url: "/protect-scsql/quick_start_to_install_snapcenter_plug-in_for_sql_server.html"
-    - title: c70f316066c903485b01199c3d46cf0e
+    - title: SnapCenter ServerとSnapCenterプラグインのアップグレード
       url: "/upgrade/upgrade_workflow.html"
-  - title: 354c84f19db927b615f7e75880c69840
+  - title: SnapCenterサーバのインストール
     links:
-    - title: '085f5df3ea322139c5a71aed9fd908cd'
+    - title: 必要なライセンス
       url: "/install/concept_snapcenter_licenses.html"
-    - title: 2be699659df3451ee9edbd78cb507a23
+    - title: ポートの設定
       url: "/install/reference_connection_and_port_requirements.html"
-    - title: 377990998ce406bfbee44e98450fd025
+    - title: 登録してSnapCenterソフトウェアにアクセス
       url: "/install/register_enable_software_access.html"
-    - title: 74d2914d1d5af620488c6d1b4ffeb64b
+    - title: WindowsホストへのSnapCenterサーバのインストール
       url: "/install/task_install_the_snapcenter_server_using_the_install_wizard.html"
-    - title: a5133039db74945642b3f4bbb769135d
+    - title: LinuxホストへのSnapCenterサーバのインストール
       url: "/install/install_snapcenter_server_linux.html"
-    - title: 134a140044941809d4caf4bac0b38860
+    - title: F5を使用してハイアベイラビリティを設定する
       url: "/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html"
-    - title: 044aa1b4f857dd75e47b8ffafe8440c0
+    - title: SnapCenterサーバのディザスタリカバリ
       url: "/tech-refresh/task_tech_refresh_server_host.html"
-  - title: 7c9d94dde393ed697967d78a92995d60
+  - title: Microsoft SQL Serverデータベースの保護
     links:
-    - title: 1667afeb46f8ebe931310ebf898d3035
+    - title: SnapCenter Plug-in for Microsoft SQL Serverデータベースのインストール
       url: "/protect-scsql/task_add_hosts_and_install_snapcenter_plug_ins_package_for_windows.html"
-    - title: d6f047ec290f922c255788a6f1fa067a
+    - title: SQL Serverデータベースをバックアップするポリシーの作成
       url: "/protect-scsql/task_create_backup_policies_for_sql_server_databases.html"
-    - title: 54bab37592758bedbe84c23554e20c3a
+    - title: SQL Serverデータベースのバックアップ
       url: "/protect-scsql/task_back_up_sql_resources.html"
-    - title: dc894d281805d8d1c222c04f94404928
+    - title: SnapCenter Plug-in for SQL Serverのディザスタリカバリ
       url: "/protect-scsql/task_disaster_recovery_scsql.html"
-  - title: b45eb079efd4b3748b1efc669c02c01c
+  - title: SAP HANAデータベースを保護
     links:
-    - title: ecbde4f5ef166bdedbf1d5fa8e75708e
+    - title: SnapCenter Plug-in for SAP HANA Databaseのインストール
       url: "/protect-hana/task_add_hosts_and_install_plug_in_packages_on_remote_hosts_sap_hana.html"
-    - title: f65529b9218a6f6ff3111f2cd37df8ac
+    - title: SAP HANAデータベースをバックアップするポリシーを作成
       url: "/protect-hana/task_create_backup_policies_for_sap_hana_databases.html"
-    - title: 7394e84832837e7d0dc503d85eb3f36c
+    - title: SAP HANAデータベースのバックアップ
       url: "/protect-hana/task_back_up_sap_hana_databases.html"
-  - title: 54a98d3cca3d552c2562869bfcebf735
+  - title: Oracleデータベースの保護
     links:
-    - title: d6b9b6e8bb8de7b78f01bde37923ad06
+    - title: SnapCenter Plug-in for Oracle Databaseのインストール
       url: "/protect-sco/task_add_hosts_and_installing_the_snapcenter_plug_ins_package_for_linux_or_aix.html"
-    - title: 501ba60aa494a0bae93d0f6bf28c33d6
+    - title: Oracleデータベースをバックアップするポリシーを作成する
       url: "/protect-sco/task_create_backup_policies_for_oracle_database.html"
-    - title: 1aac38ab9167eb6ae3a199d0a8bc7915
+    - title: Oracleデータベースのバックアップ
       url: "/protect-sco/task_back_up_oracle_resources.html"
-  - title: 8d98e1e37d7a0757bbdfdf54bf8aa618
+  - title: VMware上のデータベースの保護
     links:
-    - title: 235a656535515ab3518937c09836e60d
+    - title: SnapCenter Plug-in for VMware vSphereの詳細
       url: https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/index.html
-    - title: 04e7bb0411c1c8f56ca4fc8000c62ad8
+    - title: SnapCenter Plug-in for VMware vSphereの導入
       url: https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere.html
-  - title: 3559da2fac74b3e69a2cd678efee3582
+  - title: Azure NetApp Filesで実行されているアプリケーションを保護
     links:
-    - title: cefcdf7a4638575f474bc5a3bda6c998
+    - title: Azure仮想マシンへのSnapCenterのインストール
       url: "/protect-azure/install-snapcenter-azure-virtual-machine.html"
-    - title: 10ee6df71b74c57a6b9f1595f3efce16
+    - title: Azure NetApp Filesで実行されているSAP HANAデータベースのバックアップ
       url: "/protect-azure/backup-sap-hana-databases.html"
-    - title: cffecc178cc1b99a91effece6bd4417b
+    - title: Azure NetApp Filesで実行されているSQL Serverデータベースのバックアップ
       url: "/protect-azure/backup-sql-server-databases.html"
-    - title: f3d79571b40021bb0ad32b78398ef057
+    - title: Azure NetApp Filesで実行されているOracleデータベースをバックアップする
       url: "/protect-azure/backup-oracle-databases.html"
-  - title: 813011e2103649bb71f124adedcc10ea
+  - title: ブログとコミュニティ
     links:
-    - title: e9b322021f8597d3f9236f7d98977637
+    - title: NetAppブログ- SnapCenter
       url: https://blog.netapp.com/tag/snapcenter/
-    - title: 58e8103ac0c834ff3f8387f88cbd4c9a
+    - title: NetAppコミュニティ- SnapCenter
       url: https://community.netapp.com/t5/forums/filteredbylabelpage/board-id/backup-and-restore-discussions/label-name/snapcenter
-  - title: dfcc398099d6a64026e51ab282e16253
+  - title: その他のリソース
     links:
-    - title: 0346326f6434b805abd604ddc350d8ed
+    - title: コマンドレットリファレンスガイド
       url: https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html
-    - title: 832ab315e74cc6d95c21009b0c52cb2b
+    - title: コマンドリファレンスガイド
       url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3323470
-    - title: cd04e5d32cbb18b14141238ca9a7ea20
+    - title: 以前のバージョンのSnapCenterのドキュメント
       url: https://www.netapp.com/data-protection/backup-recovery/snapcenter-backup-management/documentation/#ProseArticleLinkList13
-    - title: 66bdd10c104f52b4f8519b652bc8e084
+    - title: NetAppナレッジベース- SnapCenter
       url: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter

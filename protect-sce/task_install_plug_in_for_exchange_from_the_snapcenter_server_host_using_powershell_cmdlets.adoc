@@ -2,36 +2,36 @@
 permalink: protect-sce/task_install_plug_in_for_exchange_from_the_snapcenter_server_host_using_powershell_cmdlets.html 
 sidebar: sidebar 
 keywords: SnapCenter plug-in for Exchange Server 
-summary: 67c3f991329dbf87b92b91bc86701664 
+summary: Plug-in for Exchange は SnapCenter の GUI からインストールする必要があります。GUIを使用しない場合は、SnapCenterサーバホストまたはリモートホストでPowerShellコマンドレットを使用できます。 
 ---
-= fad8eb99976e19badbb476ac4f9a159a
+= PowerShellコマンドレットを使用したSnapCenter ServerホストからのPlug-in for Exchangeのインストール
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-67c3f991329dbf87b92b91bc86701664
+Plug-in for Exchange は SnapCenter の GUI からインストールする必要があります。GUIを使用しない場合は、SnapCenterサーバホストまたはリモートホストでPowerShellコマンドレットを使用できます。
 
-.135b308ed83c53f1516b7c754566d1c4
-* e566e5958c391f075ae56a13178992cc
-* a90abc1f12c784cfc9fd59add31aa430
-* 402d3d7f25c3527e3fe581b1aac6e1df
-* 8d4f6e58ab02e30effded1030e37ccce
-* 3b0ca85464cbe7c33b67d6ebd410fde2
+.開始する前に
+* SnapCenter サーバがインストールおよび設定されている必要があります。
+* ホストのローカル管理者、または管理者権限を持つユーザである必要があります。
+* この処理は、SnapCenter Adminなど、プラグインのインストールとアンインストールの権限のあるロールが割り当てられているユーザが実行する必要があります。
+* Plug-in for Exchange をインストールする前に、サポートされている構成のインストール要件と種類を確認しておく必要があります。
+* Plug-in for Exchange をインストールするホストには Windows ホストを使用する必要があります。
 
 
-.f3a29486bed19a90f2da6d007818b427
-. 6bc166d97ec030b1433b97435bed0c57
-. 6de4f9a43030487d997abc9193b86bc9
+.手順
+. SnapCenter サーバホストで、 _Open-SmConnection_cmdlet を使用してセッションを確立し、クレデンシャルを入力します。
+. Plug-in for Exchange をインストールするホストを追加するには、 _Add-SmHost_cmdlet と必要なパラメータを使用します。
 +
-74db7181476f94f0e2927d8c8d98cb97
+コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
 
 +
-46d19c77ea243f8418add711d447fe6c
+ホストはスタンドアロンホストでもDAGでもかまいません。DAG を指定する場合は、 -IsDAG_parameter が必要です。
 
-. 22a2075c03f5ded233e65d35fd11ae8f
+. 必要なパラメータを指定して、 _Install-SmHostPackage_cmdlet を使用し、 Plug-in for Exchange をインストールします。
 +
-7f6f1b702f3b78f61ed6261e3b8c8544
+このコマンドは、指定したホストに Plug-in for Exchange をインストールし、 SnapCenter にプラグインを登録します。
 
 

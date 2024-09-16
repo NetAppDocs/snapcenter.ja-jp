@@ -2,128 +2,128 @@
 permalink: protect-sco/task_create_resource_groups_and_attach_policies_for_oracle_databases.html 
 sidebar: sidebar 
 keywords: run as 
-summary: a725ff47fefe45fbde2b714b9bee12db 
+summary: リソースグループはコンテナであり、バックアップして保護するリソースを追加します。リソースグループを使用すると、特定のアプリケーションに関連付けられているすべてのデータを同時にバックアップできます。 
 ---
-= a79101df6f2655709b2aa6b2ec32c488
+= Oracleデータベース用のリソースグループの作成とポリシーの適用
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-a725ff47fefe45fbde2b714b9bee12db
+リソースグループはコンテナであり、バックアップして保護するリソースを追加します。リソースグループを使用すると、特定のアプリケーションに関連付けられているすべてのデータを同時にバックアップできます。
 
-.bbe48fb854ea022537208eeeff822f91
-* 75d10fc733cbe6199ca2e7cebf31fe9c
+.タスクの内容
+* Oracle DBVERIFYユーティリティを使用してバックアップを検証するには、ASMディスクグループ内のファイルを含むデータベースが「mount」または「open」状態である必要があります。
 +
-471e47d90bffd9838cf1d00548360b40
-
-+
-9c124c0fc8c6cc2725dad57b45c85eb0
+リソースグループに1つ以上のポリシーを適用して、実行するデータ保護ジョブのタイプを定義します。
 
 +
-image::../media/sco_resourcegroup_policy.gif[c3bc5ff261b700cf2f6140bad7454c1c]
-
-* fc2e7a6d3781a1a4d36b65845b17034f
-* fd594de368b3252349d87dec73c122c9
-* a80de19c7ac4a47cce6bab9b73dda51b
-
-
-.f3a29486bed19a90f2da6d007818b427
-. 4c4d4c133d15d97bf3bef74ffeeeb66a
-. 8bd989fb65665020d24c4db21e1da81d
-. 2577791612c938dc7bd356c695b38b81
-+
-.. 8acf498a277189bb79aa36e916139901
-+
-
-NOTE: 1d04752f728a1a0076882979b222e962
-
-.. 47389d06ffe3699c36bdd3b61cbdf438
-+
-dc5b15d16c6cbd04c1864901ca5f2732
-
-.. ad8d3fc8faebdc68585dd1240b9fc90c
-+
-65086066849df85532ada3ce3b32fabb
-
-.. 491a86dab4dbb4636159b9c8d91d9c09
-+
-
-NOTE: 94f7477aadb008f98c9f4c8eb0909d8a
-
-
-
-. b311986e61e20df74cfba5511a5bdf33
-+
-
-NOTE: dea54623aa643ec856baf8abb4233177
-
-. 5dcd20433605552bfe1ee3f21d0564ef
-+
-
-NOTE: 16a4d8b6ed11330e0e6e2c8f2b58a1b0
-
-. 53899dcc4360d3b8622ce5dc08a12950
-+
-.. 70c30c71587e2d0c71b7f9e97a8aad7d
-+
-
-NOTE: ff3276d4a1ffa99a43f3ee9d1c3033ae
+次の図は、データベースのリソース、リソースグループ、およびポリシーの関係を示しています。
 
 +
-db9cc4a2ed12e21bb79e9346714c68b9
+image::../media/sco_resourcegroup_policy.gif[SCO リソースグループポリシー]
 
-.. 21a93b161e735360df0b1231bd93b5fa
-.. b04a2aa13bc9b5c2000bf98771ae837a
+* SnapLockが有効なポリシーの場合、ONTAP 9.12.1以前のバージョンでは、Snapshotロック期間を指定すると、リストアの一環として改ざん防止Snapshotから作成されたクローンにSnapLockの有効期限が継承されます。SnapLockの有効期限が過ぎた時点で、ストレージ管理者がクローンを手動でクリーンアップする必要があります。
+* SnapMirrorアクティブ同期が設定されていない新しいデータベースを、SnapMirrorアクティブ同期が設定されたリソースを含む既存のリソースグループに追加することはできません。
+* SnapMirror Active Syncのフェイルオーバーモードでは、既存のリソースグループに新しいデータベースを追加することはできません。リソースグループにリソースを追加できるのは、通常の状態またはフェイルバック状態のみです。
+
+
+.手順
+. 左側のナビゲーションペインで、*[リソース]*を選択し、リストから適切なプラグインを選択します。
+. [ リソース ] ページで、 [ * 新しいリソースグループ * ] をクリックします。
+. [ 名前 ] ページで、次の操作を実行します。
 +
-d89a925c7347eda26320229d83214fd3
+.. [Name]フィールドにリソースグループの名前を入力します。
++
+
+NOTE: リソースグループ名は250文字以内にする必要があります。
+
+.. 後でリソースグループを検索できるように、[Tag]フィールドに1つ以上のラベルを入力します。
++
+たとえば、HRをタグとして複数のリソースグループに追加した場合、後でHRタグに関連付けられているすべてのリソースグループを検索できます。
+
+.. このチェックボックスをオンにして、Snapshot名に使用するカスタムの名前形式を入力します。
++
+たとえば、customText_resource group_policy_hostnameやresource group_hostnameなどです。デフォルトでは、Snapshot名にタイムスタンプが追加されます。
+
+.. バックアップしないアーカイブログファイルのデスティネーションを指定します。
++
+
+NOTE: 必要に応じて、プレフィックスも含めて、Oracleで設定されたものとまったく同じデスティネーションを使用する必要があります。
+
+
+
+. Resources ページで、 * Host * ドロップダウン・リストから Oracle データベース・ホスト名を選択します。
++
+
+NOTE: リソースが Available Resources セクションに表示されるのは、リソースが正常に検出された場合のみです。最近追加したリソースは、リソースリストを更新するまで使用可能なリソースのリストに表示されません。
+
+. [Available Resources]セクションからリソースを選択し、[Selected Resources]セクションに移動します。
++
+
+NOTE: 1つのリソースグループ内のLinuxホストとAIXホストの両方からデータベースを追加できます。
+
+. [Policies] ページで、次の手順を実行します。
++
+.. ドロップダウンリストから1つ以上のポリシーを選択します。
++
+
+NOTE: をクリックしてポリシーを作成することもできます。
 
 +
-bf5bc6c2ed0f05ce21c3e597309a4f6b
+[ 選択したポリシーのスケジュールを設定 ] セクションに、選択したポリシーが一覧表示されます。
+
+.. スケジュールを設定するポリシーの[Configure Schedules]列で、image:../media/add_policy_from_resourcegroup.gif["シンボルを追加します"]をクリックします。
+.. [Add schedules for policy_name] ウィンドウで、スケジュールを設定し、 [*OK*] をクリックします。
++
+ここで、 _policy_name_は 選択したポリシーの名前です。
+
++
+設定されたスケジュールは、 [ 適用されたスケジュール ] 列に一覧表示されます。
 
 
 
 +
-eecd36c568b40385bb729410ba711a64
+サードパーティのバックアップスケジュールがSnapCenterバックアップスケジュールと重複している場合はサポートされません。
 
-. a263a024ecfc193325fde48303936fd7
+. [Verification]ページで、次の手順を実行します。
 +
-.. aa60fb0ff9f13cd254813c318d11d1bf
-.. 4fbbc0d543d28393f6ded666ac8879d5
-.. defd6c77f4ca043c4de9b65e954e7937
+.. Load locators * （ロケータのロード）をクリックして、 SnapMirror または SnapVault ボリュームをロードし、セカンダリ・ストレージ上で検証を実行します。
+.. [Configure Schedules]列内をクリックし image:../media/add_policy_from_resourcegroup.gif["シンボルを追加します"] て、ポリシーのすべてのスケジュールタイプに対して検証スケジュールを設定します。
+.. [Add Verification Schedules policy_name]ダイアログボックスで、次の操作を実行します。
 +
 |===
-| 5d920b501536441ea32ecc24679c72a2 | 5e2ad6fd9deb412d871137094ee43ef0 
+| 状況 | 操作 
 
 
  a| 
-5ddfe5d3f436393022d0a111c1f2b429
+バックアップ後に検証を実行
  a| 
-5fc49d26bbb3bab9fc2e2c6fc0490216
+[Run verification after backup] を選択します。
 
 
 
  a| 
-6da3a2d5b37f6128e6fcbc17b5e45ac3
+検証のスケジュールを設定
  a| 
-5b6546a020e7d5a17b75b6f6e6be79a3
+[Run scheduled verification] を選択し、ドロップダウン・リストからスケジュール・タイプを選択します。
 
 |===
-.. 8dc3eb18807f6424ec895a845ced71bb
-.. a72cc47fad7d1846d19b085d2e77e5ba
+.. セカンダリ・ストレージ・システムのバックアップを検証するには、セカンダリ・サイトで * Verify on secondary location * を選択します。
+.. [OK]*をクリックします。
 +
-158960e40cea9822bb4339b4f8995696
+設定した検証スケジュールは、 Applied Schedules 列にリスト表示されます。
 
 
 
-. 30b65b6968f11ce5399cacf995839f65
+. [ 通知 ] ページの [ 電子メールの設定 *] ドロップダウンリストから、電子メールを送信するシナリオを選択します。
 +
-0771f0b55ed8545cb9de7dcadfc93b74
+また、送信者と受信者のEメールアドレス、およびEメールの件名を指定する必要があります。リソースグループで実行された操作のレポートを添付する場合は、 [ ジョブレポートの添付（ Attach Job Report ） ] を選択します。
 
 +
 
-NOTE: 4dcb8f86b6b59353b86d64a1b6090e41
+NOTE: Eメール通知を使用する場合は、GUIまたはPowerShellコマンドSet-SmSmSmtpServerを使用して、SMTPサーバの詳細を指定しておく必要があります。
 
-. fed1c121dc4f5a5484e5623e297385fb
+. 概要を確認し、 [ 完了 ] をクリックします。
 

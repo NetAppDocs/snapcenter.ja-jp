@@ -2,166 +2,166 @@
 permalink: protect-scsql/task_clone_from_a_sql_server_database_backup.html 
 sidebar: sidebar 
 keywords: clone 
-summary: f74dbba68e937810c60f2ff30516a3c7 
+summary: SnapCenter を使用して、 SQL Server データベースバックアップをクローニングすることができます。古いバージョンのデータにアクセスしたりリストアしたりする場合は、データベースバックアップをオンデマンドでクローニングできます。 
 ---
-= 3eee6ccd820abf187846b44912303266
+= SQL Serverデータベースバックアップからのクローニング
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-f74dbba68e937810c60f2ff30516a3c7
+SnapCenter を使用して、 SQL Server データベースバックアップをクローニングすることができます。古いバージョンのデータにアクセスしたりリストアしたりする場合は、データベースバックアップをオンデマンドでクローニングできます。
 
-.135b308ed83c53f1516b7c754566d1c4
-* 8d7e861fc562f8034dc5e3fbf095339d
-* 67439f725dc620e0ac6c48dbe18d5986
-* 0a1d139bac9d642bf55c0a658bdf92f6
-* 9197b9c8161503bb3182537ae54e9805
-* fabf637440019959d8ef2c0d09ef5988
+.開始する前に
+* データ保護の準備として、ホストの追加、リソースの特定、ストレージシステム接続の作成などのタスクを実行しておく必要があります。
+* データベースまたはリソースグループをバックアップしておく必要があります。
+* ログバックアップを使用して代替ホストにクローニングする際にセカンダリロケータを検出するには、データLUNとログLUNの保護タイプ（mirror、vault、mirror-vaultなど）を同じにする必要があります。
+* SnapCenterクローン処理中にマウントされたクローンドライブが見つからない場合は、SnapCenterサーバのCloneRetryTimeoutパラメータを300に変更する必要があります。
+* ボリュームをホストするアグリゲートがStorage Virtual Machine（SVM）の割り当て済みアグリゲートリストに含まれている必要があります。
 
 
-.bbe48fb854ea022537208eeeff822f91
-* f0cdf1212bc63994c997b91206149d5b
-* a96979f31ba03e69d509622399b4fa6d
-* abef260cca88daddcff288732257933c
-* 0133033c8ae6fd34d2733e8f6c0328a6
-* 780fc7bdbc05c3ae8dcfc1e6ea26a283
+.タスクの内容
+* スタンドアロンデータベースインスタンスにクローニングする場合は、マウントポイントパスが存在し、専用ディスクであることを確認してください。
+* フェイルオーバークラスタインスタンス（FCI）にクローニングする場合は、マウントポイントが存在し、共有ディスクであること、およびパスとFCIが同じSQLリソースグループに属していることを確認してください。
+* 各ホストに接続されているvFCイニシエータまたはFCイニシエータが1つだけであることを確認します。これは、SnapCenterでサポートされるイニシエータはホストごとに1つだけであるためです。
+* ソースデータベースまたはターゲットインスタンスがクラスタ共有ボリューム（CSV）上にある場合、クローニングされたデータベースはCSV上に配置されます。
+* scripts_pathは、プラグインホストのSMCoreServiceHost.exe.ConfigファイルにあるPredefinedWindowsScriptsDirectoryキーを使用して定義します。
 +
-487a34d280250073f86b353bd430b05b
-
-+
-cb0f6b6fa4cffa93ac67dd15850cae3d
+必要に応じて、このパスを変更してSMcoreサービスを再起動できます。セキュリティを確保するために、デフォルトのパスを使用することを推奨します。
 
 +
-cf2ded6f4d7ccf880ce7a042e4726b3e
+キーの値は、api/4.7/configsettingsを介してスワッガーから表示できます
+
++
+GET APIを使用すると、キーの値を表示できます。Set APIはサポートされていません。
 
 
 
 
-NOTE: 01f9740b415439cd9c4079c0ab416c50
+NOTE: 仮想環境（VMDK / RDM）の場合は、マウントポイントが専用ディスクであることを確認します。
 
-* f2c85d871e7c5ae1520349e8a3869fea
+* ONTAP 9.12.1以前のバージョンでは、リストアの一環としてSnapLockヴォールトSnapshotから作成されたクローンにSnapLockヴォールトの有効期限が継承されます。SnapLockの有効期限が過ぎた時点で、ストレージ管理者がクローンを手動でクリーンアップする必要があります。
 
 
-.f3a29486bed19a90f2da6d007818b427
-. 2e762fd0e60aafdb91d875990b24b8b6
-. 90bd362d47c27a1c1824b4146fe8499c
+.手順
+. 左側のナビゲーションペインで、*[リソース]*を選択し、リストから* SnapCenter Plug-in for SQL Server *を選択します。
+. [ リソース ] ページで、 [ * 表示 ] リストから [ * データベース * ] または [ * リソースグループ * ] を選択します。
 +
 
-NOTE: 4632a6c67f803e17d68ebb34598a6785
+NOTE: インスタンスのバックアップのクローニングはサポートされていません。
 
-. 42bc133dbae7dbb6cec9ed93a48aaa65
-. ed43d12f020a2ac9ec05bbbd7c15c12b
-. eef23094c2eec5203f366204abff92cc
-. 7512cfe200e4fec543b47a5d62fc6149
-+
-|===
-| 21f831502a413a739e20cbf9f2eefe54 | 5e2ad6fd9deb412d871137094ee43ef0 
-
-
- a| 
-663e29ac880070fb899c85ec16f8743b
- a| 
-530587cce0e3987bdf3bb0fa8eb1fafb
-
-
-
- a| 
-172ad591d7bca3f8b16f72da9e187238
- a| 
-ac2c35e8a2e69fb56e582c6ffe7704d3
-
-ac2d05702ddec9ebed8b673fa20113b6
-
-
-
- a| 
-267991715cb8365a8e30125616709e93
- a| 
-8fecc43b9f3243591379afb1035d2766
-
-8a24b6c614b9528d4d7a7d535ff094a4
-
-
-
- a| 
-f796c2ac24f21dca755b63a0d8271808
- a| 
-1746b60b3a3856170d0292307b2e02c7
-
-64c3c02aa6809d02911c724819bdca37
-
-|===
-. ce65625de67b9025c5e67557d499c6cf
+. データベースまたはリソースグループを選択します。
+. [ * コピーの管理 * ] 表示ページで、プライマリまたはセカンダリ（ミラーまたはバックアップ）ストレージシステムからバックアップを選択します。
+. バックアップを選択し、**を選択しますimage:../media/clone_icon.gif["クローンアイコン"]。
+. [クローンオプション]*ページで、次の操作を実行します。
 +
 |===
-| 21f831502a413a739e20cbf9f2eefe54 | 5e2ad6fd9deb412d871137094ee43ef0 
+| フィールド | 操作 
 
 
  a| 
-6adf97f83acf6453d4a6a4b1070f3754
+クローンサーバ
  a| 
-7c4a844d039e874f5a5d3c6319fa9633
-
-
-
- a| 
-3a713b6a48cc037c8d09503563c3e079
- a| 
-1d38373eecaeeac0c2c69194a4c08b5f
+クローンを作成するホストを選択します。
 
 
 
  a| 
-fc137183671cbfae3870d3ab3d14ca4a
+クローンインスタンス
  a| 
-47a39e3dec41c4e6f868ceda0ae37ee9
+データベースバックアップをクローニングするクローンインスタンスを選択します。
+
+指定したクローンサーバ上のSQLインスタンスを指定する必要があります。
 
 
 
  a| 
-518c475bec2036348a144fe3856eb7cc
+クローンサフィックス
  a| 
-21c614f77a0f65336c4db1c8bc7fde75
+クローンファイル名に付加される、データベースがクローンであることを示すサフィックスを入力します。
 
-418da21041a76d47214208138e1523e2
+たとえば、 _db1_clone_.元のデータベースと同じ場所にクローニングする場合、クローニングされたデータベースを元のデータベースと区別するためにサフィックスを指定する必要があります。そうしないと、処理は失敗します。
+
+
+
+ a| 
+Auto assign mount pointまたはAuto assign volume mount point under path
+ a| 
+マウントポイントを自動的に割り当てるか、パスを使用してボリュームマウントポイントを自動的に割り当てるかを選択します。
+
+Auto assign volume mount point under path ：特定のディレクトリのパスを指定できます。マウントポイントは、そのディレクトリ内に作成されます。このオプションを選択する前に、ディレクトリが空であることを確認する必要があります。ディレクトリにデータベースが格納されている場合、そのデータベースはマウント処理後に無効な状態になります。
 
 |===
-. 0f3c122791256078177582e458c97afc
+. Logs ページで、次のいずれかのオプションを選択します。
 +
-a6b1b92e7a6b44cfb15470a802c2480a
+|===
+| フィールド | 操作 
+
+
+ a| 
+なし
+ a| 
+ログなしでフルバックアップのみをクローニングする場合は、このオプションを選択します。
+
+
+
+ a| 
+すべてのログバックアップ
+ a| 
+フルバックアップ後の日付のログバックアップをすべてクローニングする場合は、このオプションを選択します。
+
+
+
+ a| 
+次のログバックアップまで：
+ a| 
+選択した日付のバックアップログまでに作成されたバックアップログに基づいてデータベースをクローニングする場合は、このオプションを選択します。
+
+
+
+ a| 
+次の日付まで
+ a| 
+クローンデータベースにトランザクションログを適用するまでの日時を指定します。
+
+このポイントインタイムクローンは、指定した日時以降に記録されたトランザクションログエントリのクローニングを停止します。
+
+|===
+. [Script *]ページで、クローニング処理の前後に実行するプリスクリプトまたはポストスクリプトのスクリプトタイムアウト、パス、および引数を入力します。
++
+たとえば、SNMPトラップの更新、アラートの自動化、ログの送信などを行うスクリプトを実行できます。
 
 +
 
-NOTE: 13e879c5832931b24329a65364023ff4
+NOTE: プリスクリプトまたはポストスクリプトのパスにドライブまたは共有を含めることはできません。パスはscripts_pathからの相対パスである必要があります。
 
 +
-cd580f0c35d4c37236f3153c15452b6f
+デフォルトのスクリプトタイムアウトは60秒です。
 
-. b723e46bf782113e1476771841c2a253
+. [*Notification] ページの [*Email preference*] ドロップダウンリストから、電子メールを送信するシナリオを選択します。
 +
-914e3ed381a18db751f3d27cad180ad7
-
-+
-
-NOTE: 4dcb8f86b6b59353b86d64a1b6090e41
+また、送信者と受信者のEメールアドレス、およびEメールの件名を指定する必要があります。実行したクローン処理のレポートを添付する場合は、 * ジョブレポートの添付 * を選択します。
 
 +
-4b70ba28cecacc0b972de64bf00eafac
 
-. 7444cb400c788a3d3aad71fb264fbbee
-. 4a3f04f42ebeabccfad7128de3983c4a
+NOTE: Eメール通知を使用する場合は、GUIまたはPowerShellコマンドSet-SmSmSmtpServerを使用して、SMTPサーバの詳細を指定しておく必要があります。
+
++
+EMSの場合は、 https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_ems_data_collection.html["EMSデータ収集の管理"]
+
+. 概要を確認し、*[終了]*を選択します。
+. 処理の進捗状況を監視するために、*[監視]*>*[ジョブ]*を選択します。
 
 
-.bd965e38a0c9cf27aa1bde099308e23f
-b8ceb1eaf0d60af03679989562024d6b
+.終了後
+クローンの作成後は、名前を変更しないでください。
 
-.30f60d67f457bb040dffde52197a54da
-38c78702a48e457f5ef291281168432e
+.関連情報
+link:reference_back_up_sql_server_database_or_instance_or_availability_group.html["SQL Serverデータベース、インスタンス、可用性グループをバックアップする"]
 
-f9db2c2c51ac713541e90ff79219156d
+link:task_clone_backups_using_powershell_cmdlets_for_sql.html["PowerShellコマンドレットを使用したバックアップのクローニング"]
 
-f7e7f0dd9d36aec3d609775de2dbbd0b
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Clone_operation_might_fail_or_take_longer_time_to_complete_with_default_TCP_TIMEOUT_value["デフォルトのTCP_TIMEOUT値を使用すると、クローニング処理が失敗したり完了までに時間がかかることがある"]
 
-2df5362c7aa8c12a0dd2f1b211cdf61d
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/The_failover_cluster_instance_database_clone_fails["フェイルオーバークラスタインスタンスのデータベースクローンが失敗する"]

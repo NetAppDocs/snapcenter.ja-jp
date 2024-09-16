@@ -2,51 +2,51 @@
 permalink: protect-azure/clone-sap-hana-database-backups.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for SAP HANA Database, clone, database, backups 
-summary: 1a8b5d536181d67e04a2989ce55f1471 
+summary: SnapCenter を使用してバックアップをクローニングすることができます。 
 ---
-= 83a5e957cdd4905f7e78a688fa59e4a6
+= SAP HANAデータベースのバックアップのクローニング
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-1a8b5d536181d67e04a2989ce55f1471
+SnapCenter を使用してバックアップをクローニングすることができます。
 
-.f3a29486bed19a90f2da6d007818b427
-. 530a5fa7e8fbaa4c796dbd46c93a55dd
-. 1bf25096670c9621cda8c9d3e8bee4ad
-. cdf19c0501e1633fc4a63c1138fda0a6
-. 58b7e36fa95125edcb8d66ea2e67582f
-. 0054963881af69d880f61446f2c0c3f4
-. 4da4dfc97db1c4c71939b200e576ecc4
+.手順
+. 左側のナビゲーションペインで、 * リソース * をクリックし、リストから適切なプラグインを選択します。
+. [ リソース ] ページで、リソースタイプに基づいて、 *View*] ドロップダウンリストからリソースをフィルタリングします。
+. リソースまたはリソースグループを選択します。
+. [Manage Copies]ビューで、プライマリストレージシステムから*[Backups]*を選択します。
+. 表からデータバックアップを選択し、をクリックします image:../media/clone_icon.gif["クローンアイコン"]。
+. Location ページで、次のアクションを実行します。
 +
-.. 3e37c81f26466e5aef19ea7d64f141ae
+.. クローンHANAシステムを管理するためのSAP HANAプラグインがインストールされているホストを選択します。
 +
-e3455d720fcc40e26f0d36ee7581259f
+一元化されたプラグインホストでもHANAシステムホストでもかまいません。
 
-.. 5c197ff6b8d148a9f919430a485adff2
-.. 31cb4e3045f056a767cb72bc8438d115
-.. 11dae6129ac88bf8ce4b74a3f04b2931
+.. 既存のバックアップからクローニングするSAP HANA SIDを入力します。
+.. クローンボリュームをエクスポートするホスト名またはIPアドレスを入力します。
+.. SAP HANAデータベースANFボリュームが手動のQoS容量プールに設定されている場合は、クローンボリュームのQoSを指定します。
 +
-3cf00704aaf3ff788104ae85f809de64
+クローンボリュームにQoSが指定されていない場合は、ソースボリュームのQoSが使用されます。自動QoS容量プールを使用している場合、指定したQoS値は無視されます。
 
 
 
-. ece79c0a7a1f1af0f056c2757943a57b
+. [Scripts]ページで、次の手順を実行します。
 +
-.. 5d786448af7775a55478237de43bc63f
-.. 7771886b7e2cd056f9cc9817d8f1b5aa
+.. クローニング処理の前後に実行するプリコマンドやポストコマンドを入力します。
+.. mountコマンドを入力して、ファイルシステムをホストにマウントします。
 +
-db72f6a27d253d274b29062a99ea2856
+ソースHANAシステムが自動検出され、クローンターゲットホストプラグインがSAP HANAホストにインストールされている場合、SnapCenterはクローンターゲットホスト上の既存のHANAデータボリュームを自動的にアンマウントし、新しくクローニングされたHANAデータボリュームをマウントします。
 
 
 
-. 30b65b6968f11ce5399cacf995839f65
-. fed1c121dc4f5a5484e5623e297385fb
-. 8b9460bf38a68108bcdd278a386b3156
+. [ 通知 ] ページの [ 電子メールの設定 *] ドロップダウンリストから、電子メールを送信するシナリオを選択します。
+. 概要を確認し、 [ 完了 ] をクリックします。
+. 操作の進行状況を監視するには、 * Monitor * > * Jobs * をクリックします。
 +
 
-NOTE: fd67ba398eb305129b3dffed5a367994
+NOTE: ANFクローンはすでに選択したSnapshotから作成された独立したボリュームであるため、ANFクローンではクローンスプリットは無効になります。
 
 

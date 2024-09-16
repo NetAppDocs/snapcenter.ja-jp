@@ -2,151 +2,151 @@
 permalink: protect-mysql/back-up-mysql.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for MySQL 
-summary: 1c9948efe4bec2e09636b9c816bd9d20 
+summary: どのリソースグループにも含まれていないリソースは、のページからバックアップすることができます。 
 ---
-= e6770a787cde99b145a6de020f6a9d3e
+= MySQLのバックアップ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-1c9948efe4bec2e09636b9c816bd9d20
+どのリソースグループにも含まれていないリソースは、のページからバックアップすることができます。
 
-.135b308ed83c53f1516b7c754566d1c4
-* bb9d7068e92869688b6abcc02fa7e603
-* 08c86005ddd32599a5beea4c7b9ff4ad
-* b98ec889f59de061a4caf0f10c44b599
-* 734b47c3d3034ecc47486b3b7c947423
+.開始する前に
+* バックアップポリシーを作成しておく必要があります。
+* セカンダリストレージとの SnapMirror 関係があるリソースをバックアップする場合、ストレージユーザに割り当てられた ONTAP ロールには「「 'SnapMirro all' 」権限を含める必要があります。ただし、「 vsadmin 」ロールを使用している場合、「 'SnapMirro all 」権限は必要ありません。
+* Snapshotコピーベースのバックアップ処理の場合は、すべてのテナントデータベースが有効でアクティブであることを確認してください。
+* 休止、Snapshot、および休止解除の処理を実行するプリコマンドとポストコマンドの場合は、該当するコマンドがプラグインホストのコマンドリストで次のパスから使用できるかどうかを確認する必要があります。
 +
-19650f12fd9f269a497d4edc60754137
-
-+
-e7b4efc5dd5b16a36c26e91652b78194
-
-
-
-
-NOTE: 2dd7c4421097b3d796ff9bf355ebaa6e
-
-.f3a29486bed19a90f2da6d007818b427
-. 0b5045b3b137ebb25cf08b5081075426
-. a2286f0c6fbfecb0501c43aa965242b6
-+
-9eb8278143c5b25686cc1b6c525a9b8d
-
-. 45b6721b8137bd82de1f2497a525d57a
-. 9322b02cbab1e9e30696c6f18aa5b45e
-+
-3df4bf361c2bfb2dfa84fc1cffa5779e
-
-. 007bb45dbc12aff746ee53defa1f784f
-+
-** 0666d07a296860de6e0a6f6e4fd0425e
-+
-75acd63fc160c8f401a6e89437895634
+Windowsの場合：_ C：\Program Files\NetApp\SnapCenter \Snapcenter Plug-in Creator\etc\allowed_commands _list .txt_
 
 +
-|===
-| 21f831502a413a739e20cbf9f2eefe54 | 5e2ad6fd9deb412d871137094ee43ef0 
-
-
- a| 
-50ce6bc02d574c2cab1fc82a19854cf8
- a| 
-1ddf419f4244e28efab4ce0d4d2a7429
+Linuxの場合：_/var/opt/snapcenter/scc/allowed _commands _list.txt_
 
 
 
- a| 
-33d8fc89984b399b5f14da8a76d58c5a
- a| 
-27a16d7d61f6682ceaf4d8022ffa250f
 
-|===
-** 6fa0e3128174a7e08f019a67d401084d
+NOTE: コマンドがコマンドリストに存在しない場合、処理は失敗します。
+
+.手順
+. 左側のナビゲーションペインで、*[リソース]*を選択し、リストから適切なプラグインを選択します。
+. リソースページで、リソースタイプに基づいて *View*] ドロップダウンリストからリソースをフィルタリングします。
 +
-419f55f97321a95d51e21f7ca2e9b02d
+*を選択しimage:../media/filter_icon.png[""]、ホスト名とリソースタイプを選択してリソースをフィルタリングします。その後、を選択してフィルタペインを閉じることができます image:../media/filter_icon.png[""] 。
 
-** 0644babb03e5024dbc898ead17e21f90
-** ea57a48a86501646953b0992c55066ad
+. バックアップするリソースを選択します。
+. [Resource]ページで、*[Use custom name format for Snapshot copy]*を選択し、Snapshot名に使用するカスタムの名前形式を入力します。
++
+たとえば、 _customText_policy_hostname_or_resource_hostname_hostname_1 です。デフォルトでは、Snapshot名にタイムスタンプが追加されます。
+
+. [ アプリケーションの設定 ] ページで、次の操作を行います。
++
+** [Backups]*矢印を選択して、追加のバックアップオプションを設定します。
++
+必要に応じて整合グループのバックアップを有効にし、次のタスクを実行します。
+
 +
 |===
-| 70ea5c730ba565a725b5e6a5ce34b32d | c1325f6903ebb5ebb2bb519a73ddb1b0 
+| フィールド | 操作 
 
 
  a| 
-5b0cda43c7e63de2868d2bf0d3b62f53
+「整合グループSnapshot」処理が完了するまで待機する時間がある
  a| 
-6d9c2c737b6e3a27597d11ff3b1d8a05
-
-
-
- a| 
-d00226243bd3282875e3647e34ef9ac2
- a| 
-1accc18e0f25decba79f224ccd167283
+Snapshot処理が完了するまでの待機時間を指定するには、* Urgent *、* Medium *、または* Relaxed *を選択します。Urgent = 5秒、Medium = 7秒、Relaxed = 20秒。
 
 
 
  a| 
-d03489d8edb47ae534fd09e8de3121c2
+WAFL同期を無効にする
  a| 
-60c069fc0d03d8cbfeabe67ca031a729
+WAFL整合ポイントを強制しない場合は、このオプションを選択します。
+
+|===
+** [Scripts]*の矢印を選択して、休止、Snapshot、および休止解除の処理のプリコマンドとポストコマンドを実行します。
++
+バックアップ処理を終了する前にPREコマンドを実行することもできます。プリスクリプトとポストスクリプトは SnapCenter サーバで実行されます。
+
+** [**Custom Configurations**]矢印を選択し、このリソースを使用するすべてのジョブに必要なカスタム値のペアを入力します。
+** Snapshotコピーツール*の矢印を選択して、Snapshotを作成するツールを選択します。
++
+|===
+| 状況 | 作業 
+
+
+ a| 
+SnapCenter：ストレージレベルのSnapshotを作成
+ a| 
+ファイルシステムの整合性なしで SnapCenter * を選択します。
+
+
+
+ a| 
+SnapCenterでPlug-in for Windowsを使用してファイルシステムを整合性のある状態にしてからSnapshotを作成する
+ a| 
+ファイルシステムの整合性を維持した状態で SnapCenter を選択します。
+
+
+
+ a| 
+Snapshotを作成するコマンドを入力するには
+ a| 
+[その他]*を選択し、コマンドを入力してSnapshotを作成します。
 
 |===
 +
-129db5e4908943c18847d24dd577782f
+image:../media/application_settings.gif[""]
 
 
 
-. 53899dcc4360d3b8622ce5dc08a12950
+. [Policies] ページで、次の手順を実行します。
 +
-.. 70c30c71587e2d0c71b7f9e97a8aad7d
+.. ドロップダウンリストから1つ以上のポリシーを選択します。
 +
 
-NOTE: e27c3f444b9f74c83a643ba11ed3a83e
-
-+
-db9cc4a2ed12e21bb79e9346714c68b9
-
-.. c59876ddcf6af9e6a82eee54645805c2
-.. 100eb4bb64628d6bc8890851c8173103
-+
-90334c9b6a705f8c6dafb182257f149b
+NOTE: **をクリックしてポリシーを作成することもできますimage:../media/add_policy_from_resourcegroup.gif[""]。
 
 +
-bf5bc6c2ed0f05ce21c3e597309a4f6b
+[ 選択したポリシーのスケジュールを設定 ] セクションに、選択したポリシーが一覧表示されます。
 
-
-
-. 30b65b6968f11ce5399cacf995839f65
+.. スケジュールを設定するポリシーの[スケジュールの設定]列で**を選択しますimage:../media/add_policy_from_resourcegroup.gif[""]。
+.. [Add schedules for policy_policy_name_]ダイアログボックスで、スケジュールを設定し、*[OK]*を選択します。
 +
-902d6ec48bd5e4115dbca7fd7cfb67a8
+_policy_name_は 、選択したポリシーの名前です。
 
-. 7444cb400c788a3d3aad71fb264fbbee
 +
-e37834b366fe18c5fb046fc886e65b1f
-
-. 5477ea177e290e8ac1c03a7ee8f2a92b
-. 4a1c51520bfb3d170a967d4c218b52bf
-+
-.. 7dfb69fb5ea21273d78d12733b1b3b4f
-+
-b1b9720160580fd5949d50bf10097dc5
-
-.. fec2251f36365f1f041be06f3809bae9
+設定されたスケジュールは、 [ 適用されたスケジュール ] 列に一覧表示されます。
 
 
-. 8b9460bf38a68108bcdd278a386b3156
-+
-** 71a692c1ca2878f83f4cd08d817a4dd9
-+
-ac86fe103cf04f08650a1f1b7245227f
 
-** 2a1878497d482cf8e9e56639ad6cb01e
+. [ 通知 ] ページの [ 電子メールの設定 *] ドロップダウンリストから、電子メールを送信するシナリオを選択します。
 +
-5ee3d457acf0b72806d19545a995012b
+また、送信者と受信者のEメールアドレス、およびEメールの件名を指定する必要があります。SMTP は、 * Settings * > * Global Settings * でも設定する必要があります。
+
+. 概要を確認し、*[終了]*を選択します。
++
+リソーストポロジページが表示されます。
+
+. [今すぐバックアップ]*を選択します。
+. Backup （バックアップ）ページで、次の手順を実行します。
++
+.. リソースに複数のポリシーを適用した場合は、 [* Policy] ドロップダウン・リストから、バックアップに使用するポリシーを選択します。
++
+オンデマンドバックアップ用に選択したポリシーにバックアップスケジュールが関連付けられている場合、オンデマンドバックアップは、スケジュールタイプに指定した保持設定に基づいて保持されます。
+
+.. 「 * Backup * 」を選択します。
+
+
+. 操作の進行状況を監視するには、 * Monitor * > * Jobs * をクリックします。
++
+** MetroCluster構成では、フェイルオーバー後にSnapCenterで保護関係を検出できないことがあります。
++
+詳細については、次を参照してください。 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["MetroClusterのフェイルオーバー後にSnapMirror関係またはSnapVault関係を検出できない"^]
+
+** VMDK上のアプリケーションデータをバックアップする場合に、SnapCenter Plug-in for VMware vSphereのJavaヒープサイズが十分でないと、バックアップが失敗することがあります。
++
+Java のヒープサイズを増やすには、スクリプトファイル /opt/NetApp/init_scripts/scvservice_. を探します。このスクリプトでは、 _DO_START METHOD_Command によって、 SnapCenter VMware プラグインサービスが開始されます。このコマンドを次のように更新します。 _java -jar -Xmx8192M -Xms4096M_
 
 
 

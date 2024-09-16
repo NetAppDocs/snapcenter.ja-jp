@@ -2,65 +2,65 @@
 permalink: upgrade/upgrade_workflow.html 
 sidebar: sidebar 
 keywords: upgrade, snapcenter server, plug-ins, workflow, upgrade path 
-summary: adebd9b53fa49781be98cf46c0afc646 
+summary: SnapCenter サーバおよびプラグインをアップグレードする方法、およびサポートされるアップグレードパスについて説明します 
 ---
-= 5b416e1633d16aad217a2e0fc2d097f8
+= アップグレードワークフロー
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-994e8a3ae2b587ba4467292fb5e6ba75
+SnapCenterの各リリースには、更新されたSnapCenterサーバとプラグインパッケージが含まれています。プラグインパッケージの更新は、 SnapCenter インストーラで配布されます。利用可能なアップデートをチェックするように SnapCenter を設定できます。
 
-1942fea7712357c67be30cfd20652b93
+このワークフローは、SnapCenterサーバとプラグインパッケージのアップグレードに必要なさまざまなタスクを示しています。
 
-image::../media/upgrade_workflow.png[f640c846348fd61e77b392f8bb721f0c]
+image::../media/upgrade_workflow.png[アップグレードワークフロー]
 
 
 
-== eccc8325175b53fdef9a1846222d4161
+== サポートされるアップグレードパス
 
 |===
-| 521d29d37f5561d4922ece42dc92cb07 | 7676f59833cee6720de923cfeef21ede | 8d0f374d6bbbe36aead49222bc8c909f 
+| SnapCenterサーバのバージョン | SnapCenterサーバを直接アップグレードできる環境 | サポートされるプラグインのバージョン 
 
 
-.2+| 4fb437564892944d73f87c822342e2bb | 622fbbcf746903b903f2af5462c8550a  a| 
-* 4fb437564892944d73f87c822342e2bb
-* 622fbbcf746903b903f2af5462c8550a
-
-
-
-
-| 336669dbe720233ed5577ddf81b653d3  a| 
-* 336669dbe720233ed5577ddf81b653d3
+.2+| 4.8 | 4.9  a| 
+* 4.8
+* 4.9
 
 
 
 
-.2+| 622fbbcf746903b903f2af5462c8550a | 336669dbe720233ed5577ddf81b653d3  a| 
-* 622fbbcf746903b903f2af5462c8550a
-* 336669dbe720233ed5577ddf81b653d3
+| 5.0  a| 
+* 5.0
 
 
 
 
-| 9f41f9f1c434718ae6e50ffba61152d0  a| 
-* 9f41f9f1c434718ae6e50ffba61152d0
+.2+| 4.9 | 5.0  a| 
+* 4.9
+* 5.0
 
 
 
 
-| 336669dbe720233ed5577ddf81b653d3  a| 
-9f41f9f1c434718ae6e50ffba61152d0
+| 6.0  a| 
+* 6.0
+
+
+
+
+| 5.0  a| 
+6.0
  a| 
-* 336669dbe720233ed5577ddf81b653d3
-* 9f41f9f1c434718ae6e50ffba61152d0
+* 5.0
+* 6.0
 
 
 |===
 
-IMPORTANT: a5eada95df60272c39a649f0fdec6312
+IMPORTANT: たとえば、SnapCenterバージョン4.8を使用していて、6.0にアップグレードする場合は、まず4.9にアップグレードしてから、6.0へのローリングアップグレードを実行する必要があります。
 
 
-NOTE: 25878f69131b31b18aeda7ba36139c1b
+NOTE: SnapCenter Plug-in for VMware vSphereのアップグレードについては、を参照してください https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_upgrade.html["SnapCenter Plug-in for VMware vSphere をアップグレードします"^]。

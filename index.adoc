@@ -5,7 +5,7 @@ permalink: index.html
 keywords: snapcenter server, plug-in, data protection, applications, databases, host file systems, VmWare, backup, restore, clone 
 lead: SnapCenter Software is a simple, centralized, scalable platform that provides application consistent data protection for applications, databases, host file systems, and VMs running on ONTAP systems anywhere in the Hybrid Cloud. This documentation library includes information for version 6.0. 
 ---
-= 7608e75619cff3eeb4e8bce40481b456
+= SnapCenterソフトウェアのドキュメント
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

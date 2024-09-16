@@ -2,161 +2,161 @@
 permalink: protect-postgresql/add-hosts-and-install-plug-in-packages-on-remote-hosts-postgresql.html 
 sidebar: sidebar 
 keywords: credentials 
-summary: 87b00f6abbcc1fdcc6961914d25afd74 
+summary: 'SnapCenterの[ホストを追加]ページを使用してホストを追加し、プラグインパッケージをインストールする必要があります。プラグインはリモートホストに自動的にインストールされます。ホストの追加とプラグインパッケージのインストールは、ホストごとまたはクラスタごとに実行できます。' 
 ---
-= d959bbdfecd7dd6a3f75f5a871cbbe02
+= ホストを追加してリモートホストにプラグインパッケージをインストールする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-39f00f315ba2b01f87394dd07135b92c
+SnapCenterの[ホストを追加]ページを使用してホストを追加し、プラグインパッケージをインストールする必要があります。プラグインはリモートホストに自動的にインストールされます。ホストを追加して、個 々 のホスト用のプラグインパッケージをインストールできます。
 
-.135b308ed83c53f1516b7c754566d1c4
-* 5ae66aec97f2faf97a351f36d528053c
+.開始する前に
+* SnapCenter ServerホストのオペレーティングシステムがWindows 2019で、プラグインホストのオペレーティングシステムがWindows 2022の場合は、次の手順を実行する必要があります。
 +
-** 49e0aad8716e0dbb7231841900443133
-** c174e6f1e3fc4dbc9bbc743e12554a33
+** Windows Server 2019（OSビルド17763.5936）以降にアップグレードする
+** Windows Server 2022（OSビルド20348.2402）以降にアップグレードする
 
 
-* 8f05fee715847e93ae80e8cf617cceb9
-* 0653ebf18e2e782a5156c7cfd676052f
-* adce1db3350f0ed81a76733f84d8d683
-* 13a108b3e21c73af6a906884ed35dc60
-* 495a029c5d7c250f801f4d0c65513c50
+* SnapCenter Admin ロールなど、プラグインのインストールとアンインストールの権限のあるロールが割り当てられているユーザが必要です。
+* Windowsホストにプラグインをインストールするときに、組み込みでないクレデンシャルを指定する場合や、ユーザがローカルワークグループに属している場合は、ホストのUACを無効にする必要があります。
+* メッセージキューサービスが実行されていることを確認する必要があります。
+* ホストの管理については、管理に関するドキュメントを参照してください。
+* グループ管理サービスアカウント（gMSA）を使用する場合は、管理Privilegesを使用してgMSAを設定する必要があります。
 +
-3d160b83dd51c12b0faa7407c83fe0c5
+link:../protect-postgresql/task_configure_gMSA_on_windows_server_2012_or_later.html["Windows Server 2016以降でPostgreSQL用にグループ管理サービスアカウントを設定する"^]
 
 
 
-.bbe48fb854ea022537208eeeff822f91
-* 302ca62990c674aa6f608e6444c00482
+.タスクの内容
+* SnapCenterサーバをプラグインホストとして別のSnapCenterサーバに追加することはできません。
 
 
-.f3a29486bed19a90f2da6d007818b427
-. e3496f6d2696003cd08139c96386cc45
-. 92167459928f7cb7035350c0b52437da
-. 7dee7e783d13b6d5d415926ce0bfc306
-. 980b59d7d9d445544dc02109e7629575
-+
-|===
-| 21f831502a413a739e20cbf9f2eefe54 | 5e2ad6fd9deb412d871137094ee43ef0 
-
-
- a| 
-c2ece9a18147c056e75e4008644a9526
- a| 
-1e63f07331ff39ecf1eca8a0ea98b7f6
-
-** aea23489ce3aa9b6406ebb28e0cda430
-** edc9f0a5a5d57797bf68e37364743831
-+
-
-NOTE: e85fd1efe28ded34e4f29fbd336c7bbd
-
-
-
-
-
- a| 
-dae4a538d4ca7b6c0789932062fe718d
- a| 
-967d70688a2c10907f06f49fb1edf05a
-
-
-
- a| 
-2daf1cb573c2c61422faf64610cf9402
- a| 
-6ccccda80a2e51e22eda9ce7f0dd7e10
-
-1b8c590183c60edb79773aff22b2cc3c
-
-
-NOTE: 7d9e230d8206a8a438661f184f270f56
-
-|===
-. 6b692819d998ae388c39a67efd81ebbd
-+
-e3df741a94b6d36005faa0f2075e2f23
-
-. 7c69d0be774577dea935bd27ecfffc7e
+.手順
+. 左側のナビゲーションペインで、 * Hosts * （ホスト）をクリックします。
+. 上部で [Managed Hosts] タブが選択されていることを確認します。
+. [追加]*をクリックします。
+. [Hosts]ページで、次の操作を実行します。
 +
 |===
-| 21f831502a413a739e20cbf9f2eefe54 | 5e2ad6fd9deb412d871137094ee43ef0 
+| フィールド | 操作 
 
 
  a| 
-60aaf44d4b562252c04db7f98497e9aa
+ホストタイプ
  a| 
-33152c09cb2f63e662eead2d52c304c9
+ホストのタイプを選択します。
 
+** ウィンドウ
+** Linux
++
 
-NOTE: 192d7b7334c048367e247723d8fc8ecb
+NOTE: Plug-in for PostgreSQLはPostgreSQLクライアントホストにインストールされます。このホストは、WindowsシステムとLinuxシステムのどちらにも配置できます。
 
-
-
- a| 
-5dc1b0641298a4446796a3eaf96c13d9
- a| 
-3a6315805c1eb9c03412ba339869461c
-
-** c0b1cb0d4bb2ca9cb782060b0f095336
-** dd1490a580fda9b4c62d4ec3a25e42b9
 
 
 
 
  a| 
-8c52a2170baa38b939bd1890216f50b0
+ホスト名
  a| 
-66fbc10672da3dc1e4451a1850b5e5b1
-
-
-
- a| 
-3c8b950c84a4de35d80a465ed87f5fc3
- a| 
-61535828b990800003803158506b1840
+通信ホスト名を入力します。ホストの完全修飾ドメイン名（FQDN）またはIPアドレスを入力します。SnapCenter は、 DNS の適切な設定によって異なります。そのため、FQDNを入力することを推奨します。
 
 
 
  a| 
-193c67ad9a593e499fcbd4795d42fe04
+クレデンシャル
  a| 
-8fcead60ab027b22fe363a8f3f8135b4
+作成したクレデンシャルの名前を選択するか、新しいクレデンシャルを作成します。このクレデンシャルには、リモートホストに対する管理者権限が必要です。詳細については、クレデンシャルの作成に関する情報を参照してください。
+
+指定したクレデンシャルの名前にカーソルを合わせると、クレデンシャルの詳細を確認できます。
 
 
-NOTE: ec5329c8e55159fbb40b18d6e5ab2599
-
-
-NOTE: 3258f498fadd468c49c745cd6710c797
+NOTE: クレデンシャルの認証モードは、ホスト追加ウィザードで指定するホストタイプによって決まります。
 
 |===
-. 4b5d2dd70af718ebe67bfea5b43d8667
+. [Select Plug-ins to Install]セクションで、インストールするプラグインを選択します。
 +
-5c9389801796e9b613960f31e52e2c95
+REST APIを使用してPlug-in for PostgreSQLをインストールする場合は、バージョンを3.0に渡す必要があります。例：postgresql:3.0
+
+. （オプション） * その他のオプション * をクリックします。
++
+|===
+| フィールド | 操作 
+
+
+ a| 
+ポート
+ a| 
+デフォルトのポート番号をそのまま使用するか、ポート番号を指定します。デフォルトのポート番号は8145です。SnapCenter サーバがカスタムポートにインストールされている場合は、そのポート番号がデフォルトポートとして表示されます。
+
+
+NOTE: プラグインを手動でインストールし、カスタムポートを指定した場合は、同じポートを指定する必要があります。そうしないと、処理は失敗します。
+
+
+
+ a| 
+インストールパス
+ a| 
+Plug-in for PostgreSQLはPostgreSQLクライアントホストにインストールされます。このホストは、WindowsシステムとLinuxシステムのどちらにも配置できます。
+
+** Windows 用 SnapCenter Plug-ins パッケージのデフォルトパスは C ： \Program Files\NetApp\SnapManager です。必要に応じて、パスをカスタマイズできます。
+** Linux 用 SnapCenter Plug-ins パッケージのデフォルトパスは /opt/NetApp/SnapCenter です。必要に応じて、パスをカスタマイズできます。
+
+
+
+
+ a| 
+インストール前チェックをスキップ
+ a| 
+プラグインを手動でインストール済みで、プラグインをインストールするための要件をホストが満たしているかどうかを検証しない場合は、このチェックボックスを選択します。
+
+
+
+ a| 
+クラスタ内のすべてのホストを追加
+ a| 
+すべてのクラスタノードを追加するには、このチェックボックスをオンにします。
+
+
+
+ a| 
+グループ管理サービスアカウント（gMSA）を使用してプラグインサービスを実行
+ a| 
+Windowsホストで、グループ管理サービスアカウント（gMSA）を使用してプラグインサービスを実行する場合は、このチェックボックスをオンにします。
+
+
+NOTE: gMSA名をdomainName\accountName$の形式で指定してください。
+
+
+NOTE: gMSAは、SnapCenter Plug-in for Windowsサービスのログオンサービスアカウントとしてのみ使用されます。
+
+|===
+. [Submit （送信） ] をクリックします。
++
+[Skip prechecks]チェック ボックスを選択していない場合、プラグインをインストールするための要件をホストが満たしているかどうかを検証するためにホストが検証されます。ディスク スペース、RAM、PowerShellのバージョン、.NETのバージョン、場所（Windowsプラグインの場合）、Javaのバージョン（Linuxプラグインの場合）が最小要件に照らして検証されます。最小要件を満たしていない場合は、該当するエラーまたは警告メッセージが表示されます。
 
 +
-c181770b13b5991ed973b65ad0a64c1f
+エラーがディスクスペースまたはRAMに関連している場合は、C：\Program Files\NetApp\SnapCenter WebAppにあるweb.configファイルを更新してデフォルト値を変更できます。エラーが他のパラメータに関連している場合は、問題を修正する必要があります。
 
 +
 
-NOTE: dd81c680ca1fd86d935da9ccaf370cee
+NOTE: HAセットアップでweb.configファイルを更新する場合は、両方のノードでファイルを更新する必要があります。
 
-. c72e421659f98c50e18a18d8f905b1d6
+. ホストタイプが Linux の場合は、フィンガープリントを確認し、 * Confirm and Submit * をクリックします。
 +
-6d4d60f2bdbce47317df88ef283c8b22
+クラスタセットアップでは、クラスタ内の各ノードのフィンガープリントを検証する必要があります。
 
 +
 
-NOTE: ffeedd84ccabb2d989da666544b98228
+NOTE: 同じホストを以前に SnapCenter に追加し、フィンガープリントを確認した場合でも、フィンガープリントの検証は必須です。
 
-. d85bbbe120029d5b6ffbe773f5192a80
+. インストールの進行状況を監視します。
 +
-** 4e0828538fa1ed5979344d9f223c49a7
-** 8f64b14428ff85ce38a5661ae8ca1ec0
+** Windowsプラグインの場合、インストールログとアップグレードログは_C：\Windows\SnapCenter <JOBID>にあります。
+** Linuxプラグインの場合、インストールログは_/var/opt/snapcenter/logs/SnapCenter _Linux_Host_Plug-in_Install_Install_Linux.log_<JOBID>にあり、アップグレードログは_/var/opt/snapcenter/logs/SnapCenter <JOBID>.log_にあります。
 
 
 

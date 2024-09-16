@@ -1,14 +1,14 @@
 ---
 section: upgrade
-title: fdcd3d6f45be97e0e24b4e793a81fac0
+title: SnapCenterサーバとプラグインのアップグレード
 entries:
-- title: 243fa8b3087ff5e0b8de4d51c71aa24c
+- title: 利用可能なアップデートを確認するためのSnapCenterの設定
   url: "/upgrade/task_configure_snapcenter_to_check_for_available_updates.html"
-- title: 8693aef17f2d371968a29ad0e0dff726
+- title: アップグレードワークフロー
   url: "/upgrade/upgrade_workflow.html"
-- title: 1036bf628e6855555becd37c50bc5618
+- title: WindowsホストでのSnapCenterサーバのアップグレード
   url: "/upgrade/task_upgrade_snapcenter.html"
-- title: f34cbfe2adfe04f9d83a717751b7eb49
+- title: LinuxホストでのSnapCenterサーバのアップグレード
   url: "/upgrade/upgrade_snapcenter_server_linux.html"
-- title: 3ddc921ba3599c9da9d32f036cfcb5ca
+- title: プラグインパッケージのアップグレード
   url: "/upgrade/task_upgrade_your_plug_in_packages.html"

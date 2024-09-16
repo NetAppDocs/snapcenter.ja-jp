@@ -2,45 +2,45 @@
 permalink: protect-sco/task_determine_whether_oracle_databases_are_available_for_backup.html 
 sidebar: sidebar 
 keywords: credentials,SnapCenter Plug-in for Oracle Databases, non-database entries, oratab 
-summary: 8d70bdd589ad1d5053591608060dd666 
+summary: リソースとは、SnapCenterで管理されるホスト上のOracleデータベースです。使用可能なデータベースを検出したあとに、これらのデータベースをリソースグループに追加してデータ保護処理を実行できます。 
 ---
-= bcbd15ff750a5bdd0a69b69272c96224
+= バックアップに使用できるOracleデータベースを検出します
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-8d70bdd589ad1d5053591608060dd666
+リソースとは、SnapCenterで管理されるホスト上のOracleデータベースです。使用可能なデータベースを検出したあとに、これらのデータベースをリソースグループに追加してデータ保護処理を実行できます。
 
-.135b308ed83c53f1516b7c754566d1c4
-* 04e793c2d8facdc933edd3335c890a34
-* 14391af03493ba1cebd9404bb5bda74c
+.開始する前に
+* SnapCenterサーバのインストール、ホストの追加、ストレージシステム接続の作成、クレデンシャルの追加などのタスクを完了しておく必要があります。
+* データベースが仮想マシンディスク（VMDK）またはrawデバイスマッピング（RDM）にある場合は、SnapCenter Plug-in for VMware vSphereを導入してSnapCenterに登録する必要があります。
 +
-2ab45cdd9c7a68b490dde7ff87978512
+詳細については、を参照してください https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere.html["SnapCenter Plug-in for VMware vSphereの導入"^]。
 
-* a10be0987063f62f7e76f8dcaf88d576
-* a0523b67f5e7ebb6d9039e87c5964d97
-
-
+* データベースが VMDK ファイルシステムにある場合は、 vCenter にログインして * VM オプション * > * Advanced * > * Edit configuration * に移動し、 VM の DISK.enableUUID_true の値を設定しておく必要があります。
+* SnapCenterが実行するプロセスを確認して、さまざまなタイプとバージョンのOracleデータベースを検出しておく必要があります。
 
 
-== 43a1b5ca6be8bdd76245bbef93eb42c3
 
-8bd0906e1408858d04adcc36035359ac
 
-.f3a29486bed19a90f2da6d007818b427
-. a91c1695dbc901f96299c334e515e6b0
+== 手順1：SnapCenter でデータベース以外のエントリが検出されないようにする
+
+oratabファイルに追加されたデータベース以外のエントリがSnapCenterで検出されないようにすることができます。
+
+.手順
+. Oracle用プラグインをインストールしたあと、rootユーザはディレクトリ_/var/opt/snapcenter/sco/etc/に*SC_oratab .config *ファイルを作成する必要があります。
 +
-e52e8b1290260b6f01eec0c767b91bb9
+Oracleバイナリの所有者とグループに書き込み権限を付与して、将来ファイルを維持できるようにします。
 
-. d83c94491da2aec5a770e18fcee181be
+. データベース管理者は、* SC_oratab .config *ファイルに非データベース・エントリを追加する必要があります。
 +
-0e00b9a22286c3518647d7cb30339c75
+/etc/oratabファイル内の非データベース・エントリに定義されている形式を同じにするか、またはユーザが非データベース・エンティティ・ストリングだけを追加できるようにすることを推奨します。
 
 +
 
-NOTE: 228af5eac949d9bf66c4fc0f25e68afe
+NOTE: 文字列では大文字と小文字が区別されます。先頭に#が付いているテキストはコメントとして扱われます。データベース以外の名前の後ろにコメントを追加できます。
 
 +
 ....
@@ -55,51 +55,51 @@ NEWSPT
 DBAGNT:/ora01/app/oracle/product/agent:N
 -----------------------------------------------
 ....
-. 4b82a3a1d094f81718a1335ebea78ebd
+. リソースを検出します。
 +
-220e4e8875d5bfeb100296afce222233
+データベース以外のエントリがリソースページにリストされません。* SC_oratab .config *に追加されているエントリはありません。
 
 
 
 
-IMPORTANT: 7029c5bea579ddb5d0fdbec271a7133d
+IMPORTANT: SnapCenterプラグインをアップグレードする前に、sc_oratab.configファイルのバックアップを作成することを常に推奨します。
 
 
 
-== 6ff7029ca2037b63aa334483b3f6dbd1
+== ステップ2：リソースを検出する
 
-ea206b55c8e872afeab89e937623ab63
+プラグインをインストールすると、そのホスト上のすべてのデータベースが自動的に検出されて[リソース]ページに表示されます。
 
-6987bf979aa46f2f012544689e530ba8
+データベースが検出されるためには、データベースが少なくともマウント済み状態であることが必要です。Oracle Real Application Clusters（RAC）環境でデータベースインスタンスが検出されるためには、検出が実行されるホスト内のRACデータベースインスタンスが少なくともマウント済み状態である必要があります。正常に検出されたデータベースのみをリソースグループに追加できます。
 
-719fa5cf3cf0a0fd65399dc0b9ba9597
+ホスト上のOracleデータベースを削除した場合、SnapCenterサーバは認識せず、削除されたデータベースのリストを表示します。SnapCenterリソースリストを更新するには、リソースを手動で更新する必要があります。
 
-.f3a29486bed19a90f2da6d007818b427
-. 530a5fa7e8fbaa4c796dbd46c93a55dd
-. d5637dc8626943be066538cf923050b5
+.手順
+. 左側のナビゲーションペインで、 * リソース * をクリックし、リストから適切なプラグインを選択します。
+. [ リソース ] ページで、 [ * 表示 ] リストから [ * データベース * ] を選択します。
 +
-27141c09e4c3729538eed268f4984f0a
+をクリックし、ホスト名とデータベース タイプを選択してリソースをフィルタします。その後、アイコンをクリックしてフィルタペインを閉じることができます image:../media/filter_icon.png[""] 。
 
-. a52716605edda155f499cf4c4572c6d5
+. [ リソースの更新 ] をクリックします。
 +
-ffe07db18130be1419f3e22efa2b9af9
+RAC One Nodeのシナリオでは、データベースが現在ホストされているノードでRACデータベースとして検出されます。
 
 
 
-03ca1a8893eafac750fe33e2998cfff3
+* 結果 *
 
-8cc1dfb0736def133fbfcac21e33e8c2
+データベースは、データベースタイプ、ホストまたはクラスタ名、関連するリソースグループとポリシー、ステータスなどの情報とともに表示されます。
 
 
-IMPORTANT: 82f28b0f3a541b232ddcbe7c091f64e7
+IMPORTANT: SnapCenter以外でデータベースの名前が変更された場合は、リソースを更新する必要があります。
 
-* 488808c65c8210343fe174817606fae0
+* データベースがネットアップ以外のストレージシステムにある場合は、ユーザインターフェイスの[Overall Status]列に「Not available for backup」というメッセージが表示されます。
 +
-0dcfd6526c92aebb8ffad917bb402fe4
+ネットアップ以外のストレージシステムにあるデータベースに対しては、データ保護処理を実行できません。
 
-* c35e2fd793dc0d11efe1b1acc5987013
-* ce438204568fcaa814a04d849f2721e2
+* データベースがNetAppストレージシステム上にあり、保護されていない場合は、ユーザインターフェイスの[Overall Status]列に「Not protected」というメッセージが表示されます。
+* データベースがNetAppストレージシステム上にあり、保護されている場合は、ユーザインターフェイスの[Overall Status]列に「Available for backup」というメッセージが表示されます。
 
 
 
-NOTE: cf686ffff8ea29364c4dec5580ebd633
+NOTE: Oracleデータベース認証を有効にしている場合は、リソースビューに赤い南京錠アイコンが表示されます。データベースを保護できるようにデータベースのクレデンシャルを設定するか、データベースをリソースグループに追加してデータ保護処理を実行する必要があります。

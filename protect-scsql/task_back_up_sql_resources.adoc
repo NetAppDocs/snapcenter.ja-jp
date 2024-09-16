@@ -2,159 +2,159 @@
 permalink: protect-scsql/task_back_up_sql_resources.html 
 sidebar: sidebar 
 keywords: backup 
-summary: 1c9948efe4bec2e09636b9c816bd9d20 
+summary: どのリソースグループにも含まれていないリソースは、のページからバックアップすることができます。 
 ---
-= b8c6dc70b911a07b5993d7a98b8d3e37
+= SQLリソースのバックアップ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-1c9948efe4bec2e09636b9c816bd9d20
+どのリソースグループにも含まれていないリソースは、のページからバックアップすることができます。
 
-.bbe48fb854ea022537208eeeff822f91
-* ff2b6649ea6c62fd43ebb0904af1857f
-* f4e7f1b508b5c92ba9ac8b2340778652
-* 7e5b014608ba541b2934ae4690bc2f90
-* e18e6820375c9f19dfba3b76783a5e83
+.タスクの内容
+* Windowsクレデンシャル認証の場合、プラグインのインストール前にクレデンシャルを設定する必要があります。
+* SQL Serverインスタンス認証の場合、プラグインのインストール後にクレデンシャルを追加する必要があります。
+* gMSA 認証の場合 'gMSA を有効にして使用するには '*Add Host* ページまたは *Modify Host* ページで SnapCenter にホストを登録するときに gMSA を設定する必要があります
+* gMSAを使用してホストを追加し、gMSAにログインおよびシステム管理者権限があれば、gMSAからSQLインスタンスへの接続が許可されます。
 +
-** e1a8deb7d5ba7e24cd1736d6671d51f4
-** 6762354f31d2a162dccb20b2a7b055d4
-** 23f59ccf6dc6d5646798540b0e94b7d5
+** SnapCenterは、SQLインスタンスの認証が設定されているかどうかを検証します。認証が設定されている場合、このクレデンシャルを使用してSQLインスタンスにアクセスします。
+** 認証が設定されていない場合は、gMSAを使用してSQLプラグインが現在動作しているかどうかを確認します。プラグインが動作している場合は、SQLインスタンスへの接続の確立に使用されます。
+** SQLインスタンスの両方の認証が設定されておらず、プラグインが動作していない場合、SQLインスタンスはWindowsクレデンシャル認証を介してアクセスされます。
 
 
 
 
-.f3a29486bed19a90f2da6d007818b427
-. 0b5045b3b137ebb25cf08b5081075426
-. 1e898ea74f227f6f8576a3c8a19476db
+.手順
+. 左側のナビゲーションペインで、*[リソース]*を選択し、リストから適切なプラグインを選択します。
+. リソースページで、 * 表示 * ドロップダウン・リストから * データベース * 、 * インスタンス * 、または * 可用性グループ * を選択します。
 +
-.. 6b3f89d4de284eef9726110270f3aca6
+.. バックアップするデータベース、インスタンス、または可用性グループを選択します。
 +
-8aacc4f53fdad965d551d7ddc2e431d1
-
-+
-9d82e2623af61fdfe7b6c68017db0226
-
-
-
-. ad040426d6a404a4c17cacc91a28049d
-+
-99eb5243897677d4ecbe85a62d686e8c
-
-. fb87909a252e4e2dc396bcfb921e0428
-+
-.. 075e5d48960664645c5727a530a7c640
-+
-51967c03859d379ed44f57ea268dd825
+インスタンスのバックアップを作成する場合、そのインスタンスの前回のバックアップステータスやタイムスタンプに関する情報はリソースページに表示されません。
 
 +
-204b899f0e95e32b80ec8ea79f53c1ec
+トポロジビューでは、バックアップステータス、タイムスタンプ、バックアップがインスタンスのものかデータベースのものかを区別できません。
 
-.. c59876ddcf6af9e6a82eee54645805c2
-.. 8eca00bd5e799ca761dc094888307893
+
+
+. [リソース]ページで、[Snapshotコピーのカスタム名形式]*チェックボックスを選択し、Snapshot名に使用するカスタムの名前形式を入力します。
 +
-08fe75bd987fb2dedbe7641f478927f0
+たとえば、customText_policy_hostnameやresource_hostnameなどです。デフォルトでは、Snapshot名にタイムスタンプが追加されます。
 
+. [Policies] ページで、次のタスクを実行します。
 +
-7c221f1777123603eacf6f596630737a
-
-.. af797b4b95d0c81734522a69680e6163
-
-
-. 8aad6e1ddba0855250f3f027cd30ba41
+.. [Policies] セクションで、ドロップダウンリストから 1 つ以上のポリシーを選択します。
 +
-.. a5d937e33b78689c34405fbe81f90f13
-+
-b3391d8fe49978b6cd1149c12195eefc
+ポリシーを作成するには、**を選択しimage:../media/add_policy_from_resourcegroup.gif[""]てポリシーウィザードを開始します。
 
 +
+[ 選択したポリシーのスケジュールを設定する *] セクションに、選択したポリシーが一覧表示されます。
 
-NOTE: 714c955a93d0173dfa1f64ba57283a64
+.. スケジュールを設定するポリシーの[スケジュールの設定]列で**を選択しますimage:../media/add_policy_from_resourcegroup.gif[""]。
+.. [ポリシーのスケジュールを追加]* `policy_name` ダイアログボックスで、スケジュールを設定し、*[OK]*を選択します。
++
+ `policy_name`選択したポリシーの名前が表示されます。
 
-.. 165a706b2aac1c99b9bead7d6d155859
-.. 28d224f5fce20ca21cc66cf83832a2b1
-.. 73d5c45d8fe4cd81e69573ed4a382644
++
+設定されたスケジュールは、 [* Applied Schedules] 列に表示されます。
+
+.. Microsoft SQL Server スケジューラを使用する * を選択し、スケジューリング・ポリシーに関連付けられているスケジューラ・インスタンス * ドロップダウンリストからスケジューラ・インスタンスを選択します。
+
+
+. [Verification] ページで、次の手順を実行します。
++
+.. [* Verification server*] ドロップダウン・リストから検証サーバを選択します。
++
+検証サーバ（ローカルホストまたはリモートホスト）は複数選択できます。
+
++
+
+NOTE: 検証サーバのバージョンは、プライマリデータベースをホストしているSQL Serverのエディションのバージョン以上である必要があります。
+
+.. セカンダリ・ストレージ・システム上のバックアップを検証するには ' セカンダリ・ロケータをロードを選択します
+.. 検証スケジュールを設定するポリシーを選択し、**を選択しますimage:../media/add_policy_from_resourcegroup.gif[""]。
+.. Add Verification Schedules_policy_name_dialog box で、次の処理を実行します。
 +
 |===
-| 5d920b501536441ea32ecc24679c72a2 | 5e2ad6fd9deb412d871137094ee43ef0 
+| 状況 | 操作 
 
 
  a| 
-5ddfe5d3f436393022d0a111c1f2b429
+バックアップ後に検証を実行
  a| 
-770dea1a7ffca4cdfedbdad1adb3687d
+[ バックアップ後に検証を実行 ] を選択します。
 
 
 
  a| 
-6da3a2d5b37f6128e6fcbc17b5e45ac3
+検証のスケジュールを設定
  a| 
-55fe9b117fac71b33a8f95f9010bde5a
+[ スケジュールされた検証を実行する ] を選択します。
 
 |===
 +
 
-NOTE: 3c68b24e5b4018140925233153bb6538
+NOTE: 検証サーバでストレージ接続が確立されていないと、検証処理は失敗して「 Failed to mount disk 」というエラーメッセージが表示されます。
 
-.. 3d1c64d2c8b1e4058225a78c3ef09fa6
+.. 「* OK *」を選択します。
 +
-bf5bc6c2ed0f05ce21c3e597309a4f6b
+設定されたスケジュールは、 [ 適用されたスケジュール ] 列に一覧表示されます。
 
 
 
-. 30b65b6968f11ce5399cacf995839f65
+. [ 通知 ] ページの [ 電子メールの設定 *] ドロップダウンリストから、電子メールを送信するシナリオを選択します。
 +
-0771f0b55ed8545cb9de7dcadfc93b74
+また、送信者と受信者のEメールアドレス、およびEメールの件名を指定する必要があります。リソースグループで実行された操作のレポートを添付する場合は、 [ ジョブレポートの添付（ Attach Job Report ） ] を選択します。
 
-+
-
-NOTE: a8dbb0fccc5eb9f9f7c126b838a36afc
-
-. 7444cb400c788a3d3aad71fb264fbbee
-+
-6e20353bd5ea6118ce22e0b4e81aef53
-
-. 5477ea177e290e8ac1c03a7ee8f2a92b
-. 4a1c51520bfb3d170a967d4c218b52bf
-+
-.. 6b4dbd62846fc1dc78b9f63f11af9c78
-+
-b1b9720160580fd5949d50bf10097dc5
-
-.. 0f0ea16fe5c3ccaa1f1c239674409d15
-.. fec2251f36365f1f041be06f3809bae9
 +
 
-NOTE: 5891deda92209d1d45144775b7d5c20d
+NOTE: Eメール通知を使用する場合は、GUIまたはPowerShellコマンドSet-SmSmSmtpServerを使用して、SMTPサーバの詳細を指定しておく必要があります。
+
+. 概要を確認し、*[終了]*を選択します。
++
+データベーストポロジページが表示されます。
+
+. [今すぐバックアップ]*を選択します。
+. Backup （バックアップ）ページで、次の手順を実行します。
++
+.. リソースに複数のポリシーを適用している場合は、「 * Policy * 」ドロップダウン・リストから、バックアップに使用するポリシーを選択します。
++
+オンデマンドバックアップ用に選択したポリシーにバックアップスケジュールが関連付けられている場合、オンデマンドバックアップは、スケジュールタイプに指定した保持設定に基づいて保持されます。
+
+.. 「 * Verify after backup * 」を選択して、バックアップを検証します。
+.. 「 * Backup * 」を選択します。
++
+
+NOTE: WindowsスケジューラまたはSQL Serverエージェントで作成されたバックアップジョブの名前は変更しないでください。
 
 +
-b1b9720160580fd5949d50bf10097dc5
+オンデマンドバックアップ用に選択したポリシーにバックアップスケジュールが関連付けられている場合、オンデマンドバックアップは、スケジュールタイプに指定した保持設定に基づいて保持されます。
 
 +
-1ca9ef3a64115b9b5155a63404740914
+暗黙的なリソースグループが作成されます。これを表示するには、[User Access]ページでそれぞれのユーザまたはグループを選択します。暗黙的なリソースグループタイプは「リソース」です。
 
 
 
-. 4a3f04f42ebeabccfad7128de3983c4a
+. 処理の進捗状況を監視するために、*[監視]*>*[ジョブ]*を選択します。
 
 
-.bd965e38a0c9cf27aa1bde099308e23f
-* 71a692c1ca2878f83f4cd08d817a4dd9
+.終了後
+* MetroCluster構成では、フェイルオーバー後にSnapCenterで保護関係を検出できないことがあります。
 +
-656764dc4fc9063500ad9c4607e32b3b
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["MetroClusterのフェイルオーバー後にSnapMirror関係またはSnapVault関係を検出できない"]
 
-* f6e291f8da5e2bfb20622fac181e8aca
+* VMDK上のアプリケーションデータをバックアップする場合に、SnapCenter Plug-in for VMware vSphereのJavaヒープサイズが十分でないと、バックアップが失敗することがあります。Javaヒープサイズを増やすには、スクリプトファイル/opt/netapp/init_scripts/scvserviceを探します。このスクリプトでは、コマンドによって `do_start method` SnapCenter VMwareプラグインサービスが開始されます。このコマンドを次のように更新し `Java -jar -Xmx8192M -Xms4096M`ます。
 
 
-.30f60d67f457bb040dffde52197a54da
-50e1edb21a598f492619b01f99e77a4f
+.関連情報
+link:task_create_backup_policies_for_sql_server_databases.html["SQL Serverデータベースのバックアップポリシーの作成"]
 
-51fb25555c87830dd2151ad5f3b7a845
+link:task_back_up_resources_using_powershell_cmdlets_for_sql.html["PowerShellコマンドレットを使用したリソースのバックアップ"]
 
-0cd607c6c3ab41f1a5532b188171495c
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Clone_operation_might_fail_or_take_longer_time_to_complete_with_default_TCP_TIMEOUT_value["TCP_TIMEOUTでの遅延が原因で、MySQL接続エラーが発生してバックアップ処理が失敗する"]
 
-ee70f525f7b0b70b3e7de9d8f872cbe4
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Backup_fails_with_Windows_scheduler_error["Windowsスケジューラエラーでバックアップが失敗する"]
 
-393997bd3b722d52ae03ce598aa5cfec
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Quiesce_or_grouping_resources_operations_fail["リソースの休止処理またはグループ化処理が失敗する"]

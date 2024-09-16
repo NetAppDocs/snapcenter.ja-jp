@@ -2,54 +2,54 @@
 permalink: protect-scsql/reference_storage_layout_recommendations_for_snapcenter_plug_in_for_microsoft_sql_server.html 
 sidebar: sidebar 
 keywords: Storage layout 
-summary: 51a684702bc20b80caa9931dcd42a10a 
+summary: ストレージレイアウトが適切に設計されているため、SnapCenterサーバでデータベースをバックアップしてリカバリ目標を達成できます。ストレージレイアウトを定義する際には、データベースのサイズ、データベースの変更率、バックアップの実行頻度など、いくつかの要素を考慮する必要があります。 
 ---
-= 8bba878f4ef8e9851514b1602ffa3558
+= SnapCenter Plug-in for Microsoft SQL Server のストレージレイアウトに関する推奨事項
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-51a684702bc20b80caa9931dcd42a10a
+ストレージレイアウトが適切に設計されているため、SnapCenterサーバでデータベースをバックアップしてリカバリ目標を達成できます。ストレージレイアウトを定義する際には、データベースのサイズ、データベースの変更率、バックアップの実行頻度など、いくつかの要素を考慮する必要があります。
 
-534eca272452e7a4755aac48e60475e6
+以降のセクションでは、 SnapCenter Plug-in for Microsoft SQL Server がインストールされている環境での、 LUN と仮想マシンディスク（ VMDK ）のストレージレイアウトに関する推奨事項と制限について説明します。
 
-5970c71ffec04ba2b4bd7d224b426317
-
-
-
-== e774da4149d5c9e64a39ca429dc65142
-
-dfcd8a1ed291d3c9e3c360accb3b665f
-
-* 1db2023c0d8598f4c1709949a52d99a3
-* 47a235a5528bec636da21df658ddec17
-* 2e72ec77bfcc0c6639076449eb3d60a7
-* e06ceaec3a44798c35c988989112d1de
-* 31a8d85b6a44cffc2c7dfc6387696f31
-
-
-1f59dd7d8ae37b4eae492c646a545da7
-
-5d735d78e3400b248601d4a741bf2e63
+この場合、LUNには、VMware RDMディスクと、ゲストにマッピングされたiSCSI直接接続LUNを含めることができます。
 
 
 
-== ab35c93087c633d8281b0c4b384cf07a
+== LUNとVMDKの要件
 
-bf74cb13cff6b681c3841651b1565833
+次のデータベースのパフォーマンスと管理を最適化するために、必要に応じて専用のLUNまたはVMDKを使用できます。
 
-image::../media/smsql_storage_layout_mult_vols_snapcenter.gif[f9138b5eba0e8b805f1a6a1c0d26b823]
+* マスターおよびモデルシステムデータベース
+* tempdb
+* ユーザデータベースファイル（.mdfおよび.ndf）
+* ユーザデータベースのトランザクションログファイル（.ldf）
+* ログディレクトリ
 
-6ebb1d8204a3f5ccb6a30b7a2db11a9b
 
-image::../media/smsql_storage_layout_mult_dbs_luns_snapcenter.gif[25c85874ae20ab3be8a403d9c5220b75]
+大規模なデータベースをリストアする場合は、専用のLUNまたはVMDKを使用することを推奨します。LUNまたはVMDK全体のリストアにかかる時間は、LUNまたはVMDKに格納されている個 々 のファイルのリストアにかかる時間よりも短くなります。
 
-cf7e2c2ef62f545e253e0bcac01fbd88
+ログディレクトリについては、データファイルまたはログファイルのディスクに十分な空きスペースを確保するために、独立したLUNまたはVMDKを作成する必要があります。
 
-image::../media/smsql_storage_layout_large_dbs_vmdk.gif[4c0269090807255fcd5e5ba99e9ba6b5]
 
-acc34d774648197faa78322b05b1a828
 
-image::../media/smsql_storage_layout_med_small_dbs_vmdk.gif[649f15576faed4804f780600790fe1a2]
+== LUNおよびVMDKのサンプルレイアウト
+
+次の図は、LUN上の大規模データベースのストレージレイアウトを設定する方法を示しています。
+
+image::../media/smsql_storage_layout_mult_vols_snapcenter.gif[複数の LUN]
+
+次の図は、LUN上の中規模または小規模データベースのストレージレイアウトを設定する方法を示しています。
+
+image::../media/smsql_storage_layout_mult_dbs_luns_snapcenter.gif[各 LUN に複数のデータベースがある場合]
+
+次の図は、VMDK上の大規模データベースのストレージレイアウトを設定する方法を示しています。
+
+image::../media/smsql_storage_layout_large_dbs_vmdk.gif[VMDK 上の大規模データベースのストレージレイアウト]
+
+次の図は、VMDK上の中規模または小規模のデータベースのストレージレイアウトを設定する方法を示しています。
+
+image::../media/smsql_storage_layout_med_small_dbs_vmdk.gif[VMDK 上の中規模または小規模のデータベースのストレージレイアウト]

@@ -2,153 +2,153 @@
 permalink: install/task_create_an_ontap_cluster_role_with_minimum_privileges.html 
 sidebar: sidebar 
 keywords: ONTAP cluster role, privileges 
-summary: 3375e2b7dd26ec739f41b8bcc986e140 
+summary: 最小限の権限で ONTAP クラスタロールを作成して、 SnapCenter の admin ロールを使用して ONTAP で処理を実行する必要がないようにする必要があります。 
 ---
-= 822239f41b07c86cff067dac38fab7f4
+= 最小限の権限でONTAPクラスタロールを作成する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-f0f84683ce75bc63984c13f94c8f8c3d
+最小限の権限で ONTAP クラスタロールを作成して、 SnapCenter の admin ロールを使用して ONTAP で処理を実行する必要がないようにする必要があります。複数のONTAP CLIコマンドを実行して、ONTAPクラスタロールを作成し、最小限の権限を割り当てることができます。
 
-4839d2f25cc35b249d5db15efa1afd75
+* 手順 *
 
-. ddddefa125fccecd8bda94d98d237d27
+. ストレージシステムで、ロールを作成してすべての権限を割り当てます。
 +
-5d34ca6ba489992e0959bb7d8068013f
+`security login role create –vserver <cluster_name\>- role <role_name\> -cmddirname <permission\>`
 
 +
 
-NOTE: c121008bc3f1abe5fbc50c2756f1c2b9
+NOTE: このコマンドは権限ごとに繰り返す必要があります。
 
-. 2d6ee3457a72db18d9c7997a6bdf25c4
+. ユーザを作成し、そのユーザにロールを割り当てます。
 +
-3b558f738f420e0cfe944e3e6cd3376a
+`security login create -user <user_name\> -vserver <cluster_name\> -application ontapi -authmethod password -role <role_name\>`
 
-. 50dd0a56e2faa99d354fb627dcb6e89a
+. ユーザのロックを解除します。
 +
-e36c8512e3778b0a83d27f616b9ba1ff
+`security login unlock -user <user_name\> -vserver <cluster_name\>`
 
 
 
 
 
-== d96a08e21a2a6f654ce7bfb34d9c3bf4
+== クラスタロールの作成と権限の割り当て用のONTAP CLIコマンド
 
-166504d6fb19fa3fcbbf622275eef589
+クラスタロールを作成して権限を割り当てるために実行する必要があるONTAP CLIコマンドがいくつかあります。
 
 
-NOTE: 3955db71dd681bf23ceee85c567a0129
+NOTE: SnapCenter 5.0以降では、クラスタ管理者ユーザはREST APIでのみサポートされます。クラスタ管理者以外のユーザを使用してロールを作成する場合は、ZAPIを使用してください。
 
-* 56b5155701c0c0dd57595a6dd3daf917
-* eda6105c4f159883b951dcd044964c6f
-* 4cf7cdb80a69806b961d32bc57f3ac26
-* 7b7a10c598084df58b9da02c47af7a60
-* d8135ce9a2bd17b9c659e4605801a778
-* dde541c94f2b033571de6bfe76fcf3c3
-* e2bb7a9783ce9c6c02e6001911562e16
-* cd2a321672946fd6e39976559e1e72a9
-* 1b42845f691118eb5a3bba0cfe587b6b
-* bb513c5a705eb742be0e75eb7c864f5b
-* 6435842f20dddcddfd00a9e7ec2f3111
-* 3c9458c1094a42df94f932d5e25512d1
-* 8200118795b8d66f1f807eec71028cb4
-* 42ce9cd18976f6863ec783251f2d8521
-* f140ea9c1f309982226639467233b9c0
-* 4b7454eac1957610e053adc631da384d
-* 6e80afbe9243a229326544a6df0c8dce
-* 1f70e4acb59ba954f59173d3bef7133b
-* 4df94b70c4d7aef0ecd152f81ca9a540
-* e0b9daf69f5446b1bb3ebb53253427b3
-* 1e4485deae6a6fe2d519a4fbe53c48ac
-* 44d778fa0d6d34a95d063030ccae1afb
-* 11bc2ead1a61545816e624344f23f139
-* 55041f58aa0c95da91a67c2c2b8828a3
-* b976ebba1da3c0ddbe10f1eb83150d94
-* fbb5b9fce29fac9599ff22c8ad1618bd
-* dda93f2e0ae7e37e9a96826890d44ce0
-* cc9810663f08defa2fc3fb4db0b81b5b
-* 04d4686bd9595dcf8e7dbcb486a35ec2
-* 0e1c73715519d97ce6887df359f9b078
-* bda55a4db3da7ceecc0da18674adcb61
-* 4fa9cd5875ab3ba77be7acffa681c32e
-* 8600122b6dc46489d22a82a44798648c
-* 765a8e041e5317b44f9611533b80e9f5
-* c1da9af46934efe191b635569c8a647d
-* 9a51991e1f433b4cc9830e2c68aaf8b2
-* 7f8e9cf7769696e6f10a6ce7e8cdd581
-* 2ac25784ce91a23d15f2c0dd086e195b
-* c83fbd1412fe34809d8ea25a89cfdc00
-* 141edf7eae1b698eb667cdadbc54120d
-* 2b0f27523f648e21356ed5347cc543e1
-* f8e0b6d327989ea6c240e28d2e57664c
-* 11e637966fe648c56962f5ca2a03873d
-* eb365078d1f7f32487c00233a9d8ae06
-* b255ccd61bcc850770cb349084ceb4d5
-* fa3aa40455dea8ed8cfe131dd485280a
-* 6e48ea27976d6131772400c341a9deb6
-* 457c22757ec75c7e19faf55dddfb85f0
-* f6a0b425dd1a436357db0db7df5a9986
-* 76c317432817bd95b625fd259088c202
-* b5381819130c65198a003be9b2e91318
-* 7d1cc5c179bdb35a18f65b23ed628ab3
-* 8125d610c88faa37aadfe1ed2f3ad56a
-* 6f2b6612ab7bf1fcb9b74ca870f8c6f8
-* 7fe31fc1cbc99839e1b3fa44bec88b27
-* 1b16b25a24aa4b14b9ec16904b762004
-* 01d5fb22cc1b4d098b8fd01cf24ce309
-* f27ebd256ee27078062cfb222948679b
-* 1e6eabcba8d45fc013eb34cb8ca09177
-* 1707991108a48830f373249b8ca8f2f3
-* 42c85301ed42fd405276f656f13da6f9
-* f4366a8c8fe655583176fe88836d8741
-* 47916ecea131de052569cceebeb87b1e
-* f9b6c9608976bafc56db4cd921ae3260
-* dfed61eb5e95a8e322a3080839b7663a
-* 1a4cd26b7cdf375544e5a3f915526eaa
-* a4cd6fd05f369229f5ff3517716e11c0
-* 7baaee5b29e9f98e2de503b20ad69821
-* ab3ef7be09ebb30a12041ede069dcc02
-* c780b21559535dfb195e208568eea463
-* 17cc98d3d84572f338beca75b0c6887a
-* 3bbadaaac59ac2a2fb0f95b8b73fdf8c
-* a680d86da52d7bbb45604e60c4afd634
-* de6eaafb05dbbde5f12fb2a21e99a326
-* 8445317c33072728f166c18ff2f84baf
-* df14d96c6a7bd7f0f6631751931d5746
-* 7ac86c11eccb6340aa050a3e555d8db0
-* 9df5f588230d161b52b8c20cd47eea83
-* cd508097ec400feea377c6655cc4819e
-* 36e91b7d4fcc65841760ef016f9c8ffb
-* 5315c14c33a0386fce80f563f10d78e0
-* 03aeefb809109e8ecd3a38cfd5b46a0a
-* e9a713b199ef8540aa6a81c5d786afa8
-* d5c0067182f0fbf9742d150f66c08285
-* 71d4fa6008943dc1e940b561a28ec5d0
-* 712257cb8c43c470d5578f86d7ded391
-* 44d305a87575d142da52e51295e042dd
-* afd3eed3edbaad972ba62d67f18f3ac7
-* 3f5bfa3b7ef349005342ec7aadf47404
-* 06cb86f468fd9d1c1a1a18c2c732fd3d
-* 248f790c6cb7bb67421f8d0a60a20271
-* 71fc96d862f587d46eb1fecd916c69e3
-* 89d5eb414e4f702cab9e4463bf265917
-* 451120e092f0bbdab236ac5ccdd3bcd9
-* 308d9fe0fc4c4aec91c1b8e3abd331d7
-* 89d5eb414e4f702cab9e4463bf265917
-* 09bede4a4490d781c84587833cad2661
-* 4acc0874e4ada0508e93e166ea464e7e
-* 5c26d9a447e90a1129959ac809047173
-* d5448cebecb0bff66f17ac1f3ae84d4a
-* 1b614a5b1de43cb19d5f24d9189833ab
-* 49a893e4b823e7a150c88820d384be71
-* 43a2f919116eb07e7a18dd66c41ceef1
-* 9e29d26a51271782767627a4909c1f4d
-* 67fed3defef9db7a9446080c3349284b
-* a229876514e113542518cd6020f30e68
-* 6b556c778a011334a41ad4c746997184
-* 59897f08e771d646ccdbe064b379e1f3
-* a4ed44c4f710ccc95d64b935f9ea9d03
+* `security login role create -vserver Cluster_name or cluster_name -role Role_Name -cmddirname "metrocluster show" -access readonly`
+* `security login role create -vserver Cluster_name or cluster_name -role Role_Name -cmddirname "cluster identity modify" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "cluster identity show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "cluster modify" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "cluster peer show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "cluster show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "event generate-autosupport-log" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "job history show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "job show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "job stop" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "lun" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "lun create" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "lun delete" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "lun igroup add" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "lun igroup create" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "lun igroup delete" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "lun igroup modify" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "lun igroup rename" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "lun igroup show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "lun mapping add-reporting-nodes" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "lun mapping create" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "lun mapping delete" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "lun mapping remove-reporting-nodes" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "lun mapping show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "lun modify" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "lun move-in-volume" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "lun offline" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "lun online" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "lun persistent-reservation clear" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "lun resize" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "lun serial" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "lun show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "network interface create" -access readonly`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "network interface delete" -access readonly`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "network interface modify" -access readonly`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "network interface show" -access readonly`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "security login" -access readonly`
+* `security login role create -role Role_Name -cmddirname "snapmirror create" -vserver Cluster_name -access all`
+* `security login role create -role Role_Name -cmddirname "snapmirror list-destinations" -vserver Cluster_name -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "snapmirror policy add-rule" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "snapmirror policy create" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "snapmirror policy delete" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "snapmirror policy modify" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "snapmirror policy modify-rule" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "snapmirror policy remove-rule" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "snapmirror policy show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "snapmirror restore" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "snapmirror show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "snapmirror show-history" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "snapmirror update" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "snapmirror update-ls-set" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "system license add" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "system license clean-up" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "system license delete" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "system license show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "system license status show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "system node modify" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "system node show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "system status show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "version" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "volume clone create" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "volume clone show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "volume clone split start" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "volume clone split stop" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "volume create" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "volume destroy" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "volume file clone create" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "volume file show-disk-usage" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "volume modify" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "volume snapshot modify-snaplock-expiry-time" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "volume offline" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "volume online" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "volume qtree create" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "volume qtree delete" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "volume qtree modify" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "volume qtree show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "volume restrict" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "volume show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "volume snapshot create" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "volume snapshot delete" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "volume snapshot modify" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "volume snapshot promote" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "volume snapshot rename" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "volume snapshot restore" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "volume snapshot restore-file" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "volume snapshot show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "volume snapshot show-delta" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "volume unmount" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "vserver" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "vserver cifs create" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "vserver cifs delete" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "vserver cifs modify" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "vserver cifs share modify" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "vserver cifs share create" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "vserver cifs share delete" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "vserver cifs share modify" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "vserver cifs share show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "vserver cifs show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "vserver create" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "vserver export-policy create" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "vserver export-policy delete" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "vserver export-policy rule create" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "vserver export-policy rule delete" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "vserver export-policy rule modify" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "vserver export-policy rule show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "vserver export-policy show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "vserver iscsi connection show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "vserver modify" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "vserver show" -access all`
 

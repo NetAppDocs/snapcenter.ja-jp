@@ -2,15 +2,15 @@
 permalink: protect-scw/concept_install_snapcenter_plug_in_for_microsoft_windows.html 
 sidebar: sidebar 
 keywords: installing 
-summary: d15d437af5bf71693f503d9b740db0b6 
+summary: データベースファイル以外の Windows ファイルを保護する場合は、 SnapCenter Plug-in for Microsoft Windows をインストールしてセットアップする必要があります。 
 ---
-= 15e336a500bbc8b78c88e27a721b8803
+= SnapCenter Plug-in for Microsoft Windowsのインストールワークフロー
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-d15d437af5bf71693f503d9b740db0b6
+データベースファイル以外の Windows ファイルを保護する場合は、 SnapCenter Plug-in for Microsoft Windows をインストールしてセットアップする必要があります。
 
-image::../media/scw_workflow_for_installing.gif[f49c84e0b5156da6ebd210ed36305e85]
+image::../media/scw_workflow_for_installing.gif[インストールの SCW ワークフロー]

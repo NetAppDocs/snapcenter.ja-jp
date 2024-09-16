@@ -2,206 +2,206 @@
 permalink: admin/concept_what_operations_can_be_performed_from_the_resource_page.html 
 sidebar: sidebar 
 keywords: Resources page 
-summary: 17e8778d8c90c74e73ce69b783ab43c1 
+summary: '[リソース]ページでは、リソースを検出してデータ保護処理を実行できます。実行できる処理は、リソースの管理に使用しているプラグインによって異なります。' 
 ---
-= ab086c14cb132b8320c7cbc2ff98beb8
+= [Resources]ページでサポートされる処理
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-17e8778d8c90c74e73ce69b783ab43c1
+[リソース]ページでは、リソースを検出してデータ保護処理を実行できます。実行できる処理は、リソースの管理に使用しているプラグインによって異なります。
 
-03a22b4793d1f2149f11fd0a56deec92
+[Resources]ページでは、次のタスクを実行できます。
 
 |===
-| 32fbba6dfc90536fe1616258f0747518 | 6dd0426cb2899c2798c6a154f738fb9b | f0f172e01ca389167afa07d94a096798 | 6fda2f87af8e800dc50fc786018c1415 | f97144a19325ae2c28181b14dbfc9c09 | 9a25c2912d576f11de7680d7fd2769c7 | f8bad27d582beaf32e0a7dd92962e679 
+| 実行できるタスク | Microsoft Exchange Server の場合 | Microsoft SQL Server の場合 | （ Microsoft Windows の場合） | for Oracle Database の略 | for SAP HANA Database の略 | Custom Plug-ins の場合 
 
 
  a| 
-e031aa35d36af6ad3a2f25d8d2b55ab0
+リソースをバックアップに使用できるかどうかの確認
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
-
-
-
- a| 
-881fb6b4239768030b702b670cfa09d7
- a| 
-93cba07454f06a4a960172bbd6e2a435
- a| 
-93cba07454f06a4a960172bbd6e2a435
- a| 
-93cba07454f06a4a960172bbd6e2a435
- a| 
-93cba07454f06a4a960172bbd6e2a435
- a| 
-93cba07454f06a4a960172bbd6e2a435
- a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
 
 
 
  a| 
-eab65d0c5e3102595bc672894104a214
+リソースのオンデマンドバックアップの実行
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
 
 
 
  a| 
-71bd934a753044efa111e8e91e321c28
+バックアップからのリストア
  a| 
-bafd7322c6e97d25b6299b5d6fe8920b
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
 
 
 
  a| 
-65d964d49665477bbec39032d9f3ca8a
+バックアップのクローニング
  a| 
-93cba07454f06a4a960172bbd6e2a435
+いいえ
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
 
 
 
  a| 
-6ea5d3d06add60328b6497a58edc5878
+バックアップの管理
  a| 
-bafd7322c6e97d25b6299b5d6fe8920b
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
 
 
 
  a| 
-e7326f303b8abf78625da7d8f22fa0b4
+クローンの管理
  a| 
-93cba07454f06a4a960172bbd6e2a435
+いいえ
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
 
 
 
  a| 
-c59846fbc47037c49e2bcb0c9e68d581
+ポリシーの管理
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
 
 
 
  a| 
-a6a03f085aaa031834153004299da2fc
+ストレージ接続の管理
  a| 
-bafd7322c6e97d25b6299b5d6fe8920b
+はい
  a| 
-bafd7322c6e97d25b6299b5d6fe8920b
+はい
  a| 
-bafd7322c6e97d25b6299b5d6fe8920b
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-bafd7322c6e97d25b6299b5d6fe8920b
+はい
  a| 
-bafd7322c6e97d25b6299b5d6fe8920b
+はい
 
 
 
  a| 
-1da1857cca539dd747c6db31168b879b
+バックアップのマウント
  a| 
-bafd7322c6e97d25b6299b5d6fe8920b
+いいえ
  a| 
-bafd7322c6e97d25b6299b5d6fe8920b
+いいえ
  a| 
-bafd7322c6e97d25b6299b5d6fe8920b
+いいえ
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-bafd7322c6e97d25b6299b5d6fe8920b
+いいえ
  a| 
-bafd7322c6e97d25b6299b5d6fe8920b
+いいえ
 
 
 
  a| 
-6e9783376d951cfd780e9fdb67a0f02c
+バックアップのアンマウント
  a| 
-93cba07454f06a4a960172bbd6e2a435
+いいえ
  a| 
-93cba07454f06a4a960172bbd6e2a435
+いいえ
  a| 
-93cba07454f06a4a960172bbd6e2a435
+いいえ
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+いいえ
  a| 
-93cba07454f06a4a960172bbd6e2a435
+いいえ
+
+
+
+ a| 
+詳細を表示
+ a| 
+はい
+ a| 
+はい
+ a| 
+はい
+ a| 
+はい
+ a| 
+はい
+ a| 
+はい
 
 |===

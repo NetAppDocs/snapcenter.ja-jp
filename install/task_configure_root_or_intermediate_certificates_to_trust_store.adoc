@@ -2,48 +2,54 @@
 permalink: install/task_configure_root_or_intermediate_certificates_to_trust_store.html 
 sidebar: sidebar 
 keywords: enable certificate-based authentication,configure CA signed key pair,configure root, configure intermediate certificates 
-summary: 84319e08c219b24c0aea4c8ffe018f51 
+summary: ルート証明書または中間証明書をspl trust-storeに設定する必要があります。 
 ---
-= e652c695959b284573e47a48717c7976
+= spl trust-storeに対するルート証明書または中間証明書の設定
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-0cfab792315db1ad2f463e132e69b4a6
+ルート証明書または中間証明書をspl trust-storeに設定する必要があります。ルートCA証明書のあとに中間CA証明書を追加する必要があります。
 
-4839d2f25cc35b249d5db15efa1afd75
+* 手順 *
 
-. 905ef8ad10bb90ea340ba32bba988377
-. 27ee396e4bda631c1af9dc588058bf56
-. 4e499dabbe17315495b9e3a0f5b1738c
-. addc6c4da947a2faf3346483c36cc20f
-. 3f0ce0465b4e84bbeacbd63fd686302f
+. SPLキーストアが格納されているフォルダに移動します `/var/opt/snapcenter/spl/etc`。
+. ファイルを探します `keystore.jks`。
+. キーストアに追加された証明書を一覧表示します。
+`$ keytool -list -v -keystore keystore.jks`
+. ルート証明書または中間証明書を追加します。
+`$ keytool -import -trustcacerts -alias <AliasNameForCerticateToBeImported> -file /<CertificatePath> -keystore` `keystore.jks`
+. spl trust-storeにルート証明書または中間証明書を設定したら、サービスを再起動します。
 
 
 
 
-== 8f36fe9b36187452f681cd33f183ef7a
+== SPL trust-storeへのCA署名済みキーペアの設定
 
-461dcbe77c235d4b349951a40a48663d
+SPL trust-storeにCA署名付きキーペアを設定する必要があります。
 
-4839d2f25cc35b249d5db15efa1afd75
+* 手順 *
 
-. b4251f71507d4095c0a9cfff762ad0ca
-. d6b1eec98d8406c6651f4a58367c256d
-. 4e499dabbe17315495b9e3a0f5b1738c
-. 96dc8b7d0a4c6b5bd41944fe5663bf60
-. e6a1638efd12b26203266a3703ea43b9
-. d57e9c478525aa47932eeb7d8b217240
-. 4b80542fc3ef5daca43d02c37fe3b113
+. SPLのキーストアが格納されているフォルダに移動し `/var/opt/snapcenter/spl/etc`ます。
+. ファイルを探します `keystore.jks``。
+. キーストアに追加された証明書を一覧表示します。
+`$ keytool -list -v -keystore keystore.jks`
+. 秘密鍵と公開鍵の両方が設定されたCA証明書を追加します。
+`$ keytool -importkeystore -srckeystore <CertificatePathToImport> -srcstoretype pkcs12 -destkeystore keystore.jks` `-deststoretype JKS`
+. キーストアに追加された証明書を一覧表示します。
+`$ keytool -list -v -keystore keystore.jks`
+. キーストアに追加された新しいCA証明書に対応するエイリアスがキーストアに含まれていることを確認します。
+. CA証明書に追加した秘密鍵のパスワードをキーストアのパスワードに変更します。
 +
-700c0e3cd805b39f38500709f167c71d
+デフォルトのSPLキーストアパスワードは、ファイル内のキーspl_keystore_passの値です `spl.properties` 。
 
 +
-d761fb7307cbc2f607e4758bcd00ec1b
+`$ keytool -keypasswd -alias "<aliasNameOfAddedCertInKeystore>" -keystore keystore.jks``
 
-. 45c7dee3ac562bb759cb41672ab95f30
-. b1cbd0b7f209604aeb80671e8db6bd88
-. a91b13541101e34b5028f566e7db4765
+. CA証明書のエイリアス名が長く、スペースまたは特殊文字（"*"、"、"、"）が含まれている場合は、エイリアス名を単純な名前に変更します。
+`$ keytool -changealias -alias "<OrignalAliasName>" -destalias "<NewAliasName>" -keystore keystore.jks``
+. ファイルにあるキーストアからエイリアス名を設定し `spl.properties` ます。この値をSPL_CERTIFICATE_ALIASキーに対して更新します。
+. SPL trust-storeにCA署名キーペアを設定したら、サービスを再起動します。
 

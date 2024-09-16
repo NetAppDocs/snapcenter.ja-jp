@@ -2,23 +2,23 @@
 permalink: protect-nsp/generate_CA_certificate_CSR_file.html 
 sidebar: sidebar 
 keywords: SnapCenter 
-summary: 2a14698c3a18b1800683bb1310ae1313 
+summary: 証明書署名要求（ CSR ）を生成し、証明書をインポートできます。 
 ---
-= 5c4de78a2b621074bf68ab1c644af297
+= CA証明書CSRファイルの生成
 :allow-uri-read: 
 
 
 [role="lead"]
-6a5ce9ba522162f4bb58d769f8ff4c45
+証明書署名要求（CSR）を生成し、生成されたCSRを使用して認証局（CA）から取得できる証明書をインポートできます。証明書には秘密鍵が関連付けられます。
 
-6c934257c52db9eb3e90db41e5078ec5
+CSRはエンコードされたテキストのブロックであり、署名済みCA証明書を取得するために認定証明書ベンダーに提供されます。
 
 
 NOTE: CA証明書RSAキーの長さは3072ビット以上にする必要があります。
 
-03f77ce2468a9f06b4bf2de1e5669bf4
+CSRを生成する方法については、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_generate_CA_Certificate_CSR_file["CA 証明書 CSR ファイルの生成方法"^]。
 
 
-NOTE: 4341cbae3e3138ef3f3cb61b70f4d502
+NOTE: ドメイン（ * .domain.company.com ）またはシステム（ machine1.domain.company.com ）の CA 証明書を所有している場合、 CA 証明書 CSR ファイルの生成を省略できます。SnapCenterを使用して既存のCA証明書を導入できます。
 
-522e9c38027c6bf45dab7aac3dd9bce1
+クラスタ構成の場合、クラスタ名（仮想クラスタFQDN）、およびそれぞれのホスト名がCA証明書に記載されている必要があります。証明書を更新するには、証明書を取得する前に Subject Alternative Name （ SAN ）フィールドに値を入力します。ワイルドカード証明書（ * .domain.company.com ）の場合、証明書にはドメインのすべてのホスト名が暗黙的に含まれます。

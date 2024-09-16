@@ -2,22 +2,22 @@
 permalink: admin/task_how_to_view_information_on_the_dashboard.html 
 sidebar: sidebar 
 keywords: dashboard 
-summary: 661deaa2ad79f76fbf57f1b17a36c702 
+summary: SnapCenter の左側のナビゲーションペインでは、ダッシュボードの各種タイルや、関連するシステムの詳細を表示できます。ダッシュボードで使用できる表示数は固定であり、変更することはできません。各画面に表示される内容は、ロールベースアクセス制御（ RBAC ）によって異なります。 
 ---
-= 946f52ba41d1b2bfd627afbf56e71b34
+= ダッシュボードに情報を表示する方法
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-b18f22e2cd7840fe2cc2386acb9d3bf8
+SnapCenter の左側のナビゲーションペインでは、ダッシュボードの各種タイルや、関連するシステムの詳細を表示できます。ダッシュボードで使用できる表示数は固定であり、変更することはできません。各画面に表示されるコンテンツは、Role-Based Access Control（RBAC；ロールベースアクセス制御）によって異なります。
 
-4839d2f25cc35b249d5db15efa1afd75
+* 手順 *
 
-. 047f218cde508f517efee65edfd05c5e
-. 018700eef5386a0cf792953b0d656365
+. 左側のナビゲーションペインで、 * ダッシュボード * をクリックします。
+. 各ディスプレイのアクティブな領域をクリックすると、追加情報が表示されます。
 +
-02014e1d58ea0ff61c8657ffa8e76bd7
+たとえば、 * ジョブ * でドーナツグラフをクリックすると、選択の詳細がモニタページに表示されます。[ 保護の概要 ] でドーナツグラフをクリックすると、 [ レポート ] ページに移動します。このページには、選択に関する詳細情報が表示されます。
 
 

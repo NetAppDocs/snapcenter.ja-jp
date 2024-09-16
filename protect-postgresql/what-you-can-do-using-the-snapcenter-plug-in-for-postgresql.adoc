@@ -2,22 +2,22 @@
 permalink: protect-postgresql/what-you-can-do-using-the-snapcenter-plug-in-for-postgresql.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for postgresql 
-summary: 66ce4c46958d772ecc4d13d856297efc 
+summary: Plug-in for PostgreSQLをインストールした環境では、SnapCenterを使用して、PostgreSQLとそのリソースをバックアップ、リストア、およびクローニングできます。これらの処理をサポートするタスクを実行することもできます。 
 ---
-= f3cc3df3db0f95e2e34e79c2ddef42a8
+= SnapCenter Plug-in for PostgreSQLの使用方法
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-c56f45899b6cbff7de3e5b4df688629b
+Plug-in for PostgreSQLクラスタを環境にインストールすると、SnapCenterを使用して、PostgreSQLクラスタとそのリソースをバックアップ、リストア、およびクローニングできます。これらの処理をサポートするタスクを実行することもできます。
 
-* 5dfdbe605cb8bedf050ae9dddc96d230
-* a96099f01951c42b20b0f220f82cddeb
-* f3d82f8a8e916f06796aa4ac952e9208
-* 5575806b0477c07d0be57dd6ef045e8a
-* 44c8eaf80f0322d31922b637d3f206f4
-* 4f749cf56361e248661706aa3c29ab1c
-* 04a26f096e312ade5bd651748180efd4
+* クラスタを追加
+* バックアップを作成します。
+* バックアップからリストアします。
+* バックアップをクローニングします。
+* バックアップ処理のスケジュールを設定します。
+* バックアップ、リストア、クローニングの各処理を監視する。
+* バックアップ、リストア、クローニングの各処理のレポートを表示します。
 

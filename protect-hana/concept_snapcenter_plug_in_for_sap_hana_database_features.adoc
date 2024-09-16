@@ -2,48 +2,48 @@
 permalink: protect-hana/concept_snapcenter_plug_in_for_sap_hana_database_features.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for SAP HANA Database 
-summary: 3bf75bf70c2d427f3de5388460f1ba00 
+summary: SnapCenterは、プラグインアプリケーションおよびストレージシステム上でNetAppテクノロジと統合されます。Plug-in for SAP HANA Database の操作には、 SnapCenter のグラフィカルユーザインターフェイスを使用します。 
 ---
-= d7fdaf85ee16b5bdacd134994a4bb218
+= SnapCenter Plug-in for SAP HANA Databaseの特長
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-3bf75bf70c2d427f3de5388460f1ba00
+SnapCenterは、プラグインアプリケーションおよびストレージシステム上でNetAppテクノロジと統合されます。Plug-in for SAP HANA Database の操作には、 SnapCenter のグラフィカルユーザインターフェイスを使用します。
 
-* b1d3c10985fe921d1cd4f1920df9beb6
+* * 統一されたグラフィカル・ユーザー・インターフェイス *
 +
-6fb6e736abe2121b5ad7a964c6879b29
+SnapCenter のインターフェイスは、すべてのプラグインと環境で標準化され、一貫しています。SnapCenter インターフェイスを使用すると、すべてのプラグインでバックアップ、リストア、クローニングの各処理を一貫した方法で実行できるほか、ダッシュボードビューで概要を把握したり、ロールベースアクセス制御（ RBAC ）を設定したり、ジョブを監視したりすることができます。
 
-* 8cab777e8f4d0f3134b1e688de9e3a14
+* * 中央管理の自動化 *
 +
-c977f209575b6b5d579a260964bb7de1
+バックアップ処理のスケジュールを設定したり、ポリシーベースのバックアップ保持を設定したり、リストア処理を実行したりできます。SnapCenter から E メールアラートを送信するように設定して、環境をプロアクティブに監視することもできます。
 
-* 989a8d53a95cf1413d4fbd7dfdc2f013
+* * 無停止の NetApp Snapshot コピー・テクノロジー *
 +
-2bf2937ec53ec68b5e4f4ecdeab22229
+SnapCenterは、Plug-in for SAP HANA DatabaseでNetAppのSnapshotテクノロジを使用してリソースをバックアップします。
 
 
 
-e7e4cc54822b6895b1ed2f1d8b2ba77b
+Plug-in for SAP HANA Database を使用すると、次のメリットもあります。
 
-* fda7113d1825e99bb5e099dfa43e494e
-* 5750866ea3f2f5172a0cbfaa24301be8
+* バックアップ、リストア、クローニングのワークフローがサポートされます。
+* RBACでサポートされるセキュリティと一元化されたロール委譲
 +
-67e3dbc43236eaec5752f527574fc4fa
+クレデンシャルを設定して、許可されたSnapCenterユーザにアプリケーションレベルの権限を付与することもできます。
 
-* 77f89c57ca9a76d1b05a0a6547343371
+* NetApp FlexCloneテクノロジを使用して、テストまたはデータ抽出に使用するリソースのスペース効率に優れたポイントインタイムコピーを作成できます。
 +
-da7d10a7d1bd2a2e5acc1a7e98e314b4
+クローンを作成するストレージシステムにFlexCloneライセンスが必要です。
 
-* 270b0961f4ad36c55a31c15e64b7ff91
-* b2d4bf2086608858ce65205273756f72
+* バックアップ作成時に、ONTAPの整合グループ（CG）Snapshot機能がサポートされます。
+* 複数のリソースホストで同時に複数のバックアップを実行可能
 +
-2e7557b222d681ee77b3f7d1103d9851
+1回の処理では、1つのホスト内のリソースが同じボリュームを共有する場合にSnapshotが統合されます。
 
-* 32d574f28776ee8b2deb390451f88886
-* 6f52ab5eb8ac5cf70bdcac9134b36a7c
-* 691f9dff16ebd5da65b5dbbe0c978b53
+* 外部コマンドを使用してSnapshotを作成する機能。
+* ファイルベースのバックアップがサポートされます。
+* XFSファイルシステムでのLinux LVMのサポート。
 

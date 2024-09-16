@@ -2,372 +2,372 @@
 permalink: sc-automation/reference_supported_rest_apis.html 
 sidebar: sidebar 
 keywords: REST API categories 
-summary: cc7702d8b061fc4d88f25975ec6ae8c4 
+summary: SnapCenter REST APIで使用できるリソースは、SnapCenter APIドキュメントページに表示されるカテゴリ別に分類されています。 
 ---
-= bf51eb5d79e16ead1ceda527dda582b6
+= SnapCenter ServerとプラグインでサポートされるREST API
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-ba604ae1fca2347dc880080f55bcc2bf
+SnapCenter REST APIで使用できるリソースは、SnapCenter APIドキュメントページに表示されるカテゴリ別に分類されています。各リソースの簡単な説明と基本リソースパスを次に示します。また、必要に応じて使用上のその他の考慮事項も示します。
 
 
 
-== 632c9594449737188c71ee1c8534f893
+== 認証
 
-9ee6893a33efb203b34a11b10f9d01eb
+このAPIを使用して、SnapCenterサーバにログインできます。このAPIは、後続の要求の認証に使用されるユーザ認証トークンを返します。
 
 
 
-== 78cd2c7d5422ffdb6d9545211ca49eeb
+== ドメイン
 
-f274ae38a991dabe63ac23d64b046496
+APIを使用してさまざまな処理を実行できます。
 
-* 6cd7043957b9a6682f685696db2f356e
-* c8edb7276b61d197a95696acbf89ba88
-* 700c639a116811f300243a7732275dec
-* 47c96d5ffb12d46ab3f2ee563cac6b8b
+* SnapCenter内のすべてのドメインを取得する
+* 特定のドメインの詳細を取得する
+* ドメインの登録または登録解除
+* ドメインを変更する
 
 
 
 
-== 12ceff2290bb9039beaa8f36d5dec226
+== ジョブ
 
-f274ae38a991dabe63ac23d64b046496
+APIを使用してさまざまな処理を実行できます。
 
-* b4bdd8878cf246daa97ef4b4a58ae75a
-* f27d84170e540a2588b9ea74e4511641
-* b879dfe9fc0a81a4ab559133178e3d33
+* SnapCenterですべてのジョブを取得する
+* ジョブのステータスの取得
+* ジョブをキャンセルまたは停止する
 
 
 
 
-== f4f70727dc34561dfde1a3c529b6205c
+== 設定
 
-f274ae38a991dabe63ac23d64b046496
+APIを使用してさまざまな処理を実行できます。
 
-* e489898e0269af325a8afbea7ab25fe0
-* 5cb6df9ff6c48f7ae5659c30c212b8e9
-* 0884dfb491b721207498ce7cf032a45e
-* 4f86e5fc8331efa6c37e13f944496095
-* 4c406f12a259d359d9a729d69262f4f6
-* 943f44ed5b8906a3baa52c05f8ec2d08
-* 99f9ec266829c38b78512ad7393f1bca
+* クレデンシャルの登録、変更、削除
+* SnapCenterサーバに登録されているクレデンシャル情報を表示します。
+* 通知の設定
+* Eメール通知を送信するように現在設定されているSMTPサーバに関する情報を取得し、SMTPサーバの名前、受信者の名前、および送信者の名前を表示します。
+* SnapCenterサーバログインの多要素認証（MFA）設定を表示します。
+* SnapCenterサーバログインのMFAを有効または無効にして設定する
+* MFAのセットアップに必要な構成ファイルを作成
 
 
 
 
-== 8124579383e90243e4b06323d2b37f8d
+== ホスト
 
-f274ae38a991dabe63ac23d64b046496
+APIを使用してさまざまな処理を実行できます。
 
-* f15cb835553557b13f622c3e5fd1d2e8
-* cbdfcc78da3ccb29e89eadc8a272d792
-* 2ae81e62147e54625442f8e432514119
-* c4ff68e9c7b2968ca114feecc28a5d6f
-* 340301abdc5a8b3571bdebb1441de325
-* 57ea1e2d0841c183ed96c7e7cff6de7b
-* 8f49cd4301054062d4803e49eca4fef4
-* ef7418910678d868c8ca6692252fb484
-* 28e1b18b9f511c92a8b001002c799860
-* 430a0420d43604e9036c194632a5692b
-* 9edf578fbbc5b513eb789e8a899f595d
-* 7621d4d222df8abd7497e702421488c0
-* 03cdbdae5bdfb225672f62ad7cf27487
-* b48be013ba7799dd2aaefca8a153d200
-* c13fcd12517aac7066c111e7dbdeb497
-* 40beb93e535bd69ce43e5a87418a280f
-* 54b4a898b204b62db351b8e2b1eb27b4
-* d5c298a9e67db4cf5ea779138d77e27c
-* 9eab19d080e0626a5a3f2b424a5c9c8c
-* c6369ce467793732a86566ed08d5af22
-* ad1f662c3f9a653f46bc1473a96b1860
-* f897b927586bd6bd028584aba8e31bfb
+* すべてのSnapCenterホストを照会
+* SnapCenterから1つ以上のホストを削除する
+* 名前によるホストの取得
+* ホスト上のすべてのリソースを取得する
+* リソースIDを使用してリソースを取得する
+* プラグイン設定の詳細を取得する
+* プラグインホストの設定
+* Plug-in for Microsoft SQL Serverホストのすべてのリソースを取得する
+* Plug-in for Oracle Databaseホストのすべてのリソースを取得
+* カスタムアプリケーションホスト用プラグインのすべてのリソースを取得する
+* Plug-in for SAP HANAホストのすべてのリソースを取得する
+* インストールされているプラグインの取得
+* 既存のホストにプラグインをインストールする
+* ホストパッケージのアップグレード
+* 既存のホストからプラグインを削除する
+* ホストにプラグインを追加する
+* ホストの追加または変更
+* Linuxホストのシグネチャの取得
+* Linuxホストのシグネチャの登録
+* ホストをメンテナンスモードまたは本番モードにする
+* ホストでプラグインサービスを開始または再起動する
+* ホストの名前を変更する
 
 
 
 
-== ddcf50c29294d4414f3f7c1bbc892cb5
+== リソース
 
-f274ae38a991dabe63ac23d64b046496
+APIを使用してさまざまな処理を実行できます。
 
-* 1a0d33a6ceb2e17c427b7c566389891d
-* 340301abdc5a8b3571bdebb1441de325
-* ef7418910678d868c8ca6692252fb484
-* 28e1b18b9f511c92a8b001002c799860
-* 430a0420d43604e9036c194632a5692b
-* 9edf578fbbc5b513eb789e8a899f595d
-* bdd6d606b70db547418beb7cef6dd4c3
-* 5e0a2a90af5e0ecd0e6861c5bcb5cd4f
-* acb6b92ea28985b79b15e1f15eb0a3a9
-* d21c51892d4bab99acddd5b3faf511ce
-* 7f2b5be06ffd4214b110d7e0680ee857
-* 4dd5f4f33d1d9331f7f621a6218ae48d
-* eb7eb399076135756ecbac9224df0d6c
-* cb006ad1cf159f1b83b3b8378736280c
-* b34dd3e16c8dfaa9ac7b61ae93525d41
-* 28eb775ee204ea61985e15b268bb59ed
-* 6c9da6f3ecf19ca8d30c9fff6a383aa5
-* eb823505e4c69113fbec4f18b362b2ca
-* 742eb625c3142767d7ac4d6387ecb727
-* 409f39bd91981cd57095fb5229cdf7ac
-* 43fde9b0560b6c89d1e0cc70e9f202e9
-* 272ade203dfd1ba963a109a5a4baafa0
-* 4e8b558d6a7fb66c71ba92accbda6f57
-* d4c6b8eab0d95c64db4fab0b39d86dca
-* 7b55eb37603aaec85de642c9761138e1
-* b2a27804c27c83e05c725b342e1b42b3
-* 1f99ce4c7ce86789f3d81cc35f531f17
-* b867b97647a809df3c6e5231f0bef598
-* cbc56a4c2ad51ccea1242d4d4d348ae1
-* 2b42cb8c0a099907ef8a3de2f16f80a4
-* 726597499ee1c33cc7640464ae0590df
-* 7fdbb0922f598a6fba37467e1f24115f
-* 72ea27883163bd0bdc62807005d464da
-* 05c647545c72357fd0b5dffba1d35289
-* 12fb0bf4998c48ca0abd0f86ab941e5d
-* 50e3acc05ead87df26323df8866a9c79
-* faba3e9d6813ff290d8294f11c7e0d7f
-* a27848c7bc2a58d2a5ae37b589b83a51
-* 2984877599af2db006dbd231ed5df083
-* 74f5acaf06c2a402bca1fe02f0675109
-* 8598a6f810ecb0510b07e02f5bf93ed6
-* 0b4a225eb95e5c6ef133862515719bea
-* 0ebb05c8321e07bd11f5a94340bae1de
-* 1ed22386115912653d77c692978b6b73
-* 0bdbe2178cd7c46236b999ea610362d4
-* 3f82e515545fbbe002b95227e24d7848
-* b34dd3e16c8dfaa9ac7b61ae93525d41
+* すべてのリソースを取得
+* リソースIDを使用してリソースを取得する
+* Plug-in for Microsoft SQL Serverホストのすべてのリソースを取得する
+* Plug-in for Oracle Databaseホストのすべてのリソースを取得
+* カスタムアプリケーションホスト用プラグインのすべてのリソースを取得する
+* Plug-in for SAP HANAホストのすべてのリソースを取得する
+* キーを使用したMicrosoft SQL Serverリソースの取得
+* キーを使用したカスタムリソースの取得
+* カスタムアプリケーションホスト用プラグインのリソースを変更する
+* キーを使用してカスタムアプリケーションホスト用プラグインのリソースを削除する
+* キーを使用したSAP HANAリソースの取得
+* Plug-in for SAP HANAホストのリソースを変更する
+* キーを使用してPlug-in for SAP HANAホストのリソースを削除する
+* キーを使用したOracleリソースの取得
+* Oracleアプリケーションボリュームリソースを作成する
+* Oracleアプリケーションボリュームリソースを変更する
+* キーを使用してOracleアプリケーションボリュームリソースを削除する
+* Oracleリソースのセカンダリの詳細を取得する
+* Plug-in for Microsoft SQL Serverを使用したMicrosoft SQL Serverリソースのバックアップ
+* Plug-in for Oracle Databaseを使用したOracleリソースのバックアップ
+* カスタムアプリケーション用プラグインを使用してカスタムリソースをバックアップする
+* SAP HANAデータベースの設定
+* Oracleデータベースの設定
+* SQLデータベースのバックアップをリストアする
+* Oracleデータベースバックアップのリストア
+* カスタムアプリケーションのバックアップのリストア
+* カスタムプラグインリソースを作成する
+* SAP HANAリソースを作成する
+* カスタムアプリケーション用のプラグインを使用してカスタムリソースを保護
+* Plug-in for Microsoft SQL Serverを使用したMicrosoft SQL Serverリソースの保護
+* 保護されたMicrosoft SQL Serverリソースを変更する
+* Microsoft SQL Serverリソースの保護の解除
+* Plug-in for Oracle Databaseを使用したOracleリソースの保護
+* 保護されているOracleリソースを変更する
+* Oracleリソースの保護の解除
+* カスタムアプリケーション用プラグインを使用したバックアップからのリソースのクローニング
+* Plug-in for Oracle Databaseを使用したバックアップからのOracleアプリケーションボリュームのクローニング
+* Plug-in for Microsoft SQL Serverを使用したバックアップからのMicrosoft SQL Serverリソースのクローニング
+* Microsoft SQL Serverリソースのクローンライフサイクルを作成する
+* Microsoft SQL Serverリソースのクローンライフサイクルを変更する
+* Microsoft SQL Serverリソースのクローンライフサイクルを削除する
+* 既存のMicrosoft SQL ServerデータベースをローカルディスクからNetApp LUNに移動する
+* Oracleデータベースのクローン仕様ファイルの作成
+* Oracleリソースのクローン更新ジョブをオンデマンドで開始する
+* クローン仕様ファイルを使用して、バックアップからOracleリソースを作成する
+* データベースをセカンダリレプリカにリストアし、データベースを可用性グループに結合します。
+* Oracleアプリケーションボリュームリソースを作成する
 
 
 
 
-== 1414cdc093d39dd56d0b0d20049e17fc
+== バックアップ
 
-f274ae38a991dabe63ac23d64b046496
+APIを使用してさまざまな処理を実行できます。
 
-* fc4ba98946aed58195aaffb31b74939a
-* 193db667b6853cbb23de730e368f6054
-* 2feb07b050596808708ba9506cccffec
-* 522e7f392901395898352f1182154962
-* 54b90e42029781477b24de1b21cfae3a
-* 965486093695eabc54e4ae1f22596b80
-* 2bf1541a065965ff76301e89903e438e
-* 7dff870ebe8ca35e70a2f0a296bc31d2
-* b26efdb320271783247fcf230eb862a8
+* バックアップの名前、タイプ、プラグイン、リソース、または日付を指定してバックアップの詳細を取得する
+* すべてのバックアップを取得
+* バックアップの詳細を取得
+* バックアップの名前変更または削除
+* Oracleバックアップのマウント
+* Oracleバックアップのアンマウント
+* Oracleバックアップをカタログ化
+* Oracleバックアップのカタログから削除
+* ポイントインタイムリカバリを実行するためにマウントに必要なすべてのバックアップを取得します。
 
 
 
 
-== 999cc42b236c7aee1157ff02d6f1bcd5
+== クローン
 
-f274ae38a991dabe63ac23d64b046496
+APIを使用してさまざまな処理を実行できます。
 
-* a0031b50aef8bedd7e7bd7e66480b505
-* 8459f225cc1b2cbdf1583c85b1f32064
-* 8c3d6e35723e7972b266b5b0c438bce9
-* f4d8091650f9c519f34b3be8061e1709
-* b610c94f5a160a51bd2239752cc137a3
-* b6e18667a0b55e3c268c3768455a7805
-* 1ed22386115912653d77c692978b6b73
-* 745f9c6f2cb93107f25aa37097b88f0b
+* Oracleデータベースのクローン仕様ファイルの作成、表示、変更、削除
+* Oracleデータベースのクローン階層を表示します。
+* クローンの詳細を取得
+* すべてのクローンを取得
+* クローンの削除
+* IDによるクローンの詳細の取得
+* Oracleリソースのクローン更新ジョブをオンデマンドで開始する
+* クローン仕様ファイルを使用して、バックアップからOracleリソースをクローニングする
 
 
 
 
-== 0ed6cf43eac9e52e09ff101db70aab13
+== クローンスプリット
 
-f274ae38a991dabe63ac23d64b046496
+APIを使用してさまざまな処理を実行できます。
 
-* a6e6abb324f79cf91c78dd54ff18ce66
-* 64b0b16f415c9db80e77ff2c35e82a53
-* 51d4730f0a49ab16a88fbea391b495bb
+* クローンリソースのクローンスプリット処理を見積もります。
+* クローンスプリット処理のステータスの取得
+* クローンスプリット処理の開始または停止
 
 
 
 
-== 14da08d2ea17e978e8b98e0182796723
+== リソースグループ
 
-f274ae38a991dabe63ac23d64b046496
+APIを使用してさまざまな処理を実行できます。
 
-* 88e599d3cafcce385ce06be132da1a72
-* 2183a58cb68c9890674bd1618a059745
-* 4e1d037b18de7a7e0816e1012f933557
-* 4f3e9348a014d50b756de8b8c7231162
-* 98753c90c286b829ce93604710ef23d9
-* 060dbb0a8824db9ea7ac2a906d0256bc
-* 168b93336f03666d3c9b5d7bbc06fb7c
-* 8cb721d92b9dc1e81a000c4cf1e800c7
-* b76f4a135e62f9803ebcae40eb079ea3
-* 45c7df76e8377445c75b768c74002bee
-* eaed56a99e51dcc86d7d26d5fe9657bc
-* 1148f24345516b4dde3cdeebb7cfcc85
+* すべてのリソースグループの詳細を取得する
+* リソースグループを名前で取得
+* カスタムアプリケーション用プラグインのリソースグループを作成する
+* Plug-in for Microsoft SQL Serverのリソースグループを作成する
+* Oracleデータベース用プラグインのリソースグループを作成する
+* カスタムアプリケーション用プラグインのリソースグループを変更する
+* Plug-in for Microsoft SQL Serverのリソースグループを変更する
+* Plug-in for Oracle Databaseのリソースグループを変更する
+* Plug-in for Microsoft SQL Serverのリソースグループのクローンライフサイクルを作成、変更、削除する
+* リソースグループのバックアップ
+* リソースグループをメンテナンスモードまたは本番モードにする
+* リソースグループを削除する
 
 
 
 
-== 9e476387322a5c250893cf9c5c4ce78c
+== ポリシー
 
-f274ae38a991dabe63ac23d64b046496
+APIを使用してさまざまな処理を実行できます。
 
-* 7eacc1e3bd71ffd1432fcc53a4114036
-* 7f755901d60ec8837d5f3607a70c285a
-* 5db964fe501124d07b6efbf69ef26832
-* b334dc581770f5921d751bb5fe0ff007
-* f26315edda53fe80961c4cd0f3260d88
-* 52e31b14c31d712b9cee0d71a8b7e58e
-* 5a618d98fcd97df6826f488da1d4dc04
-* b410be3836ec5cc561d966124bf5a9ca
+* ポリシーの詳細を取得
+* 名前によるポリシーの詳細の取得
+* ポリシーを削除する
+* 既存のポリシーのコピーを作成する
+* カスタムアプリケーション用プラグインのポリシーを作成または変更する
+* Plug-in for Microsoft SQL Serverのポリシーを作成または変更する
+* Plug-in for Oracle Database用のポリシーの作成または変更
+* Plug-in for SAP HANA Databaseのポリシーを作成または変更する
 
 
 
 
-== 8c4aa541ee911e8d80451ef8cc304806
+== ストレージ
 
-f274ae38a991dabe63ac23d64b046496
+APIを使用してさまざまな処理を実行できます。
 
-* 1143bcbfb12745612fa5e7259c295a09
-* e85f60f96106619dc93c94f8fd196bae
-* 16d48f08379bda675db15f5973bc52b9
-* 5b5ff6d18b9fd1cbcaa982bfce913ee4
-* 349d976bbf616d09fd2a555f44bbf5c9
-* c2904c33fdc1ccdb0f4cdc820a89c6bd
-* 1f5ddce00e9f1ec15e0ea39f91bb3ddc
-* a0e13786ff8de6c36eb086c2940b2eb9
+* すべての共有を取得
+* 名前による共有の取得
+* 共有を作成または削除する
+* ストレージの詳細を取得
+* 名前によるストレージの詳細の取得
+* ストレージの作成、変更、削除
+* ストレージクラスタ上のリソースを検出する
+* ストレージクラスタ上のリソースの取得
 
 
 
 
-== 5a95a425f74314a96f13a2f136992178
+== 共有
 
-f274ae38a991dabe63ac23d64b046496
+APIを使用してさまざまな処理を実行できます。
 
-* 2079e4c6d7f7184bce4219eb4ebb7c5c
-* 678eff57a13293e80fcc19fb3b62a672
-* 8cd08caecd4d51b36eac251a90639546
-* e85f60f96106619dc93c94f8fd196bae
+* 共有の詳細を取得する
+* すべての共有の詳細を取得する
+* ストレージ上の共有を作成または削除する
+* 名前による共有の取得
 
 
 
 
-== bb38096ab39160dc20d44f3ea6b44507
+== プラグイン
 
-f274ae38a991dabe63ac23d64b046496
+APIを使用してさまざまな処理を実行できます。
 
-* 0cd3a9666f21167a2545201bc822f356
-* bdd6d606b70db547418beb7cef6dd4c3
-* 9587f6292c260b01edcf105bd92d3f25
-* a34abb01c3939001bf48481dc603b80c
-* 7f2b5be06ffd4214b110d7e0680ee857
-* 5a3f70ac775c3812ce06cfac0d1c37ba
-* 9caabe22c9c1e24e64d0998e655719a5
-* cb006ad1cf159f1b83b3b8378736280c
-* ffa1674a2741f607824fff0fba7b5c54
-* 6c9da6f3ecf19ca8d30c9fff6a383aa5
-* fe3c7bd53de01837f8467d847ba48d96
-* e8fe1a759187bc98651e0ea76c329e86
-* 94369d0083bed9a2ff75a9369347569a
-* 4f4d3d7404cecd1761bed3ece7a658f6
-* c84cfd111294ebb4941b35d52bbe469d
-* 3abd608ccf3fc64710a2c862df427f31
-* 1f99ce4c7ce86789f3d81cc35f531f17
-* b867b97647a809df3c6e5231f0bef598
-* b34dd3e16c8dfaa9ac7b61ae93525d41
-* cbc56a4c2ad51ccea1242d4d4d348ae1
-* 2b42cb8c0a099907ef8a3de2f16f80a4
-* 726597499ee1c33cc7640464ae0590df
-* 7fdbb0922f598a6fba37467e1f24115f
-* 72ea27883163bd0bdc62807005d464da
-* 05c647545c72357fd0b5dffba1d35289
-* 12fb0bf4998c48ca0abd0f86ab941e5d
-* 50e3acc05ead87df26323df8866a9c79
-* faba3e9d6813ff290d8294f11c7e0d7f
-* a27848c7bc2a58d2a5ae37b589b83a51
-* 2984877599af2db006dbd231ed5df083
-* 74f5acaf06c2a402bca1fe02f0675109
-* 8598a6f810ecb0510b07e02f5bf93ed6
-* 0ebb05c8321e07bd11f5a94340bae1de
-* 31176983fab528830808f4e0d5e0a051
-* 745f9c6f2cb93107f25aa37097b88f0b
+* ホストのすべてのプラグインを一覧表示する
+* キーを使用したMicrosoft SQL Serverリソースの取得
+* キーを使用してカスタムリソースを変更する
+* キーを使用してカスタムリソースを削除する
+* キーを使用したSAP HANAリソースの取得
+* キーを使用してSAP HANAリソースを変更する
+* キーを使用してSAP HANAリソースを削除する
+* キーを使用したOracleリソースの取得
+* キーを使用してOracleアプリケーションボリュームリソースを変更する
+* キーを使用してOracleアプリケーションボリュームリソースを削除する
+* Microsoft SQL Server用プラグインとキーを使用してMicrosoft SQL Serverリソースをバックアップする
+* Plug-in for Oracle Databaseとキーを使用してOracleリソースをバックアップする
+* カスタムアプリケーション用のプラグインとキーを使用して、カスタムアプリケーションリソースをバックアップする
+* キーを使用してSAP HANAデータベースを設定
+* キーを使用してOracleデータベースを設定する
+* キーを使用したカスタムアプリケーションのバックアップのリストア
+* カスタムプラグインリソースを作成する
+* SAP HANAリソースを作成する
+* Oracleアプリケーションボリュームリソースを作成する
+* カスタムアプリケーション用のプラグインを使用してカスタムリソースを保護
+* Plug-in for Microsoft SQL Serverを使用したMicrosoft SQL Serverリソースの保護
+* 保護されたMicrosoft SQL Serverリソースを変更する
+* Microsoft SQL Serverリソースの保護の解除
+* Plug-in for Oracle Databaseを使用したOracleリソースの保護
+* 保護されているOracleリソースを変更する
+* Oracleリソースの保護の解除
+* カスタムアプリケーション用プラグインを使用したバックアップからのリソースのクローニング
+* Plug-in for Oracle Databaseを使用したバックアップからのOracleアプリケーションボリュームのクローニング
+* Plug-in for Microsoft SQL Serverを使用したバックアップからのMicrosoft SQL Serverリソースのクローニング
+* Microsoft SQL Serverリソースのクローンライフサイクルを作成する
+* Microsoft SQL Serverリソースのクローンライフサイクルを変更する
+* Microsoft SQL Serverリソースのクローンライフサイクルを削除する
+* Oracleデータベースのクローン仕様ファイルの作成
+* Oracleリソースのクローンライフサイクルをオンデマンドで開始
+* クローン仕様ファイルを使用して、バックアップからOracleリソースをクローニングする
 
 
 
 
-== c91c7b93c28cd18741b71f727ee81ee3
+== レポート
 
-f274ae38a991dabe63ac23d64b046496
+APIを使用してさまざまな処理を実行できます。
 
-* e64aeb7d92479d1c410ff07a62127254
-* 4d4412a45b7b361eb3683ea29280c938
-* 631d151cb4117606f1fbc14b43ad00f8
+* それぞれのプラグインのバックアップ、リストア、クローニング処理のレポートを取得する
+* スケジュールの追加、実行、削除、変更
+* スケジュール済みレポートのデータを取得する
 
 
 
 
-== df583ae7ba964fd4806b55904da81813
+== アラート
 
-f274ae38a991dabe63ac23d64b046496
+APIを使用してさまざまな処理を実行できます。
 
-* 7ec59326aac1e16fc2ff79038af358ec
-* 1c1e738416b1d9e73a8d5ea9565dcac9
-* 1c7d74c9de1c8e6bd892d1caa66de551
+* すべてのアラートを取得
+* IDによるアラートの取得
+* 複数のアラートの削除またはIDによるアラートの削除
 
 
 
 
-== 22fcee71b622b9dcd3d745e835c9e664
+== RBAC
 
-f274ae38a991dabe63ac23d64b046496
+APIを使用してさまざまな処理を実行できます。
 
-* f39468b79ec404172602e55cb8da8b5c
-* 7cdeafec35bbc1fc42e4ebb9fb71c7a1
-* 31b585aa42883518a14cd719cc223fa9
-* a5630e0f86f75d14b125744245c4e217
-* 5c0cb6c4339b19ba460b4f6091d91d76
-* e3f99edb2d840fe355968f5fe3a45643
-* 58a2718d6e23601e903ea8e0b0a03a8c
-* 70407d23256543e8fe943603041c424e
-* 27f4c5b341910fe1362e749113db3938
-* abf8b44e024fc8efe8c8ead5d610c20b
+* ユーザ、グループ、およびロールの詳細を取得する
+* ユーザの追加または削除
+* ロールへのユーザの割り当て
+* ロールからユーザの割り当てを解除
+* ロールの作成、変更、削除
+* ロールへのグループの割り当て
+* ロールからのグループの割り当て解除
+* グループの追加または削除
+* 既存のロールのコピーを作成する
+* ユーザまたはグループへのリソースの割り当てまたは割り当て解除
 
 
 
 
-== 254f642527b45bc260048e30704edb39
+== 構成
 
-f274ae38a991dabe63ac23d64b046496
+APIを使用してさまざまな処理を実行できます。
 
-* cc99151b2e53ada775a5f532ac67a696
-* 4ff67b7891ef3baecd583a525ffcddfd
+* 構成設定の表示
+* 設定の変更
 
 
 
 
-== 92821fc443227caad5fa45657ea0e9f1
+== 証明書の設定
 
-f274ae38a991dabe63ac23d64b046496
+APIを使用してさまざまな処理を実行できます。
 
-* 990a0bde74d6ed2f45dc4fd6f4cca24d
-* 779baaa220d01ad78f2f40f91e1ccc48
+* SnapCenterサーバまたはプラグインホストの証明書ステータスの表示
+* SnapCenterサーバまたはプラグインホストの証明書設定を変更する
 
 
 
 
-== 33fcf2b3ec4686d9cd06051c726d0ba2
+== リポジトリ
 
-f274ae38a991dabe63ac23d64b046496
+APIを使用してさまざまな処理を実行できます。
 
-* b8aaf3d63284e930a273b6b5f9ed926f
-* 2109509bbf1e9c41d0e0d3f8dbf58b9a
-* d88a49618eee776f8ceab0375f7531af
-* 6f1fe448ebeae4418308aff3901358e1
-* c674e3477c7696a2aecd6f87c1be9736
+* リポジトリバックアップの取得
+* リポジトリに関する設定情報を表示する
+* SnapCenterリポジトリの保護とリストア
+* SnapCenterリポジトリの保護を解除する
+* リポジトリの再構築とフェイルオーバー
 
 
 
 
-== 34b6cd75171affba6957e308dcbd92be
+== バージョン
 
-7a39a5111b0101ad3147c54ee235c183
+このAPIを使用してSnapCenterのバージョンを確認できます。

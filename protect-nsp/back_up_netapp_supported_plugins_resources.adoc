@@ -2,19 +2,19 @@
 permalink: protect-nsp/back_up_netapp_supported_plugins_resources.html 
 sidebar: sidebar 
 keywords: backup 
-summary: fab91412eb5d45bdeeca565417bd43bb 
+summary: バックアップのワークフローには、計画、バックアップするリソースの特定、バックアップポリシーの管理、リソースグループの作成とポリシーの適用、バックアップの作成、処理の監視が含まれます。 
 ---
-= 37a077fe53864717026a312c9cfed412
+= NetAppでサポートされているプラグインリソースのバックアップ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-fab91412eb5d45bdeeca565417bd43bb
+バックアップのワークフローには、計画、バックアップするリソースの特定、バックアップポリシーの管理、リソースグループの作成とポリシーの適用、バックアップの作成、処理の監視が含まれます。
 
-b9721a35a6c374ded595576ccbd2f789
+次のワークフローは、バックアップ処理の実行順序を示しています。
 
-image::../media/scc_backup_workflow.png[f395a8aee7b6b7007a1b6a64b54468f1]
+image::../media/scc_backup_workflow.png[バックアップのワークフロー]
 
-f53a0b9ab494a6b7301d6461450af71d
+PowerShellコマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、クローニングの処理を実行することもできます。PowerShellコマンドレットの詳細については、SnapCenterコマンドレットのヘルプを使用するか、 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"]

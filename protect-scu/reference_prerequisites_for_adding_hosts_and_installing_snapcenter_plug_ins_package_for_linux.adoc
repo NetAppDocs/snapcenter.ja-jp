@@ -2,80 +2,80 @@
 permalink: protect-scu/reference_prerequisites_for_adding_hosts_and_installing_snapcenter_plug_ins_package_for_linux.html 
 sidebar: sidebar 
 keywords: prerequisites, iSCSI, host requirement for Linux, sudo privileges, non-root user, credentials, authenticate, domain administrator, local administrator, workgroup, sudo, root user 
-summary: 2e014a97aaa75a1779bc262286731365 
+summary: ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。 
 ---
-= f1f465def756f6b27cd966a38b826a76
+= ホストを追加してPlug-ins Package for Linuxをインストールするための前提条件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-4800367b8851abf8ad87e97df37414a2
+ホストを追加してLinux用のプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。
 
-* 8dd7d2aae8c4a449ae4eb17577d64964
-* 2e1961167c1057a818d6fff279cd9778
+* iSCSIを使用している場合は、iSCSIサービスが実行されている必要があります。
+* rootユーザまたはroot以外のユーザ、またはSSHキーベースの認証にはパスワードベースの認証を使用できます。
 +
-fed1505389358193273003d88a5d4e8b
+SnapCenter Plug-in for Unix File Systemsは、root以外のユーザがインストールできます。ただし、プラグインプロセスをインストールして開始するには、root以外のユーザにsudo権限を設定する必要があります。プラグインのインストール後、プロセスはroot以外の有効なユーザとして実行されます。
 
-* 45d6e373e26981f8611297351f3acd1f
-* 129fdeda5a8637916b3b579b072e4eaa
+* インストールユーザのクレデンシャルを、認証モードをLinuxに設定して作成します。
+* Java 11をLinuxホストにインストールしておく必要があります。
 +
 
-NOTE: 48b525b2b37df887839c2e72d7a4a780
+NOTE: LinuxホストにJava 11の認定エディションのみがインストールされていることを確認します。
 
 +
-def18ece6fc73f693c0b0bc38b5819e3
+Javaのダウンロードについては、次を参照してください。 http://www.java.com/en/download/manual.jsp["すべてのオペレーティングシステム用のJavaダウンロード"^]
 
-* 17049c1cdf73c2b4b41219f99ace3f81
-
-
+* プラグインのインストールには、デフォルトのシェルとして* bash *が必要です。
 
 
-== 8be45a76eb810a7022d2e3f4f9917085
 
-09b368e7a40c6562c6eb5235c4eda0ba
+
+== Linuxホストの要件
+
+SnapCenter Plug-ins Package for Linuxをインストールする前に、ホストが要件を満たしていることを確認する必要があります。
 
 |===
-| 7d74f3b92b19da5e606d737d339a9679 | 5a2ebfb8baa378cfcfcba58bbb1380c2 
+| 項目 | 要件 
 
 
  a| 
-43574ab73a6cbc674506ff003387dcb1
+オペレーティングシステム
  a| 
-* c73bbd3786350b0a8d3577d82afdf489
-* fdcd362ac5f5f9817e70642dd2a48bfd
-* a51e41e4cd7b03dd48ce2e65ed3e1736
+* Red Hat Enterprise Linux
+* Oracle Linux
+* SUSE Linux Enterprise Server（SLES）
 
-
-
-
- a| 
-97d747ad5d4878c60364b9ba961fd5a4
- a| 
-083ad21990802d20fc5fdefdb7255565
 
 
 
  a| 
-94ca5bd1fc6971f402b85442105f093f
+ホスト上のSnapCenterプラグイン用の最小RAM
  a| 
-083ad21990802d20fc5fdefdb7255565
-
-
-NOTE: a5074b94ccbd0ad683e6ad6eb63da188
+2GB
 
 
 
  a| 
-c02f07fcd7047bf35e0bb82decca0939
+ホスト上のSnapCenterプラグインのインストールとログの最小スペース
  a| 
-b7ccd7f577996dd33bde8070db971b93
+2GB
 
 
-NOTE: 48b525b2b37df887839c2e72d7a4a780
+NOTE: 十分なディスクスペースを割り当て、logsフォルダによるストレージ消費量を監視する必要があります。必要なログスペースは、保護対象のエンティティの数とデータ保護処理の頻度によって異なります。十分なディスクスペースがない場合、最近実行した処理のログは作成されません。
 
-bac8e3a852c936b4db89afd35d4d962a
+
+
+ a| 
+必要なソフトウェアパッケージ
+ a| 
+Java 11 Oracle JavaおよびOpenJDK
+
+
+NOTE: LinuxホストにJava 11の認定エディションのみがインストールされていることを確認します。
+
+を最新バージョンにアップグレードした場合は、/var/opt/java/spl/etc/ spl.propertiesにあるJAVA_HOMEオプションが正しいSnapCenterバージョンと正しいパスに設定されていることを確認する必要があります。
 
 |===
-f4c1fea93a54108320484de7aa75a48a
+サポートされるバージョンの最新情報については https://imt.netapp.com/matrix/imt.jsp?components=121073;&solution=1257&isHWU&src=IMT[]、NetApp Interoperability Matrix Tool^]を参照してください。

@@ -2,98 +2,98 @@
 permalink: install/task_add_an_rbac_role_using_security_login_commands.html 
 sidebar: sidebar 
 keywords: RBAC roles, add, ONTAP RBAC role 
-summary: 6c778a52dc5f13a6dd5e629e65cf1082 
+summary: ストレージシステムでclustered ONTAPを実行している場合は、security loginコマンドを使用してONTAP RBACロールを追加できます。 
 ---
-= a69e754efca1b9623b6b0f65a2d8dc73
+= security loginコマンドを使用してONTAP RBACロールを追加する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-6c778a52dc5f13a6dd5e629e65cf1082
+ストレージシステムでclustered ONTAPを実行している場合は、security loginコマンドを使用してONTAP RBACロールを追加できます。
 
-.135b308ed83c53f1516b7c754566d1c4
-* 474d9e4d882e646ea038c1c3f1057d2e
+.開始する前に
+* clustered ONTAPを実行するストレージシステム用にONTAP RBACロールを作成する前に、次の項目について確認しておく必要があります。
 +
-** ebe591ae9d43ae4398d95940e9fd9562
-** 7a0abee5eccc23660191580add8cd728
+** 実行するタスク（複数可）
+** これらのタスクの実行に必要な権限
 
 
-* f8d5d5371173552fd813059761bfc086
+* RBACロールを設定するには、次の操作を実行する必要があります。
 +
-** 1559a0574adcf52bb6e38eec37381b49
+** コマンドおよびコマンドディレクトリ（あるいはその両方）に権限を付与します。
 +
-875c5aedd735db244786063faf6da722
-
-+
-dee6c2623edcbb8e68bfe81ea75668fa
-
-** 1deb5fee27bfdda7d20d4c10f6e8f273
-** 407e9947315902e28583d3951a4332d4
-
-
-
-
-78166ce4ccceeedfbf6aeb8682851072
-
-b0d5e2e1ad5a75d6a2a8f8b07fde4928
-
-8e841d21791a29493ed9fc18a2573067
-
-
-NOTE: 5f1f3816baaf1ae27261430125d83764
-
-cf450319b4b50a20dcf243d6273acbf4
-
-
-NOTE: 74fec6bb431ffa93b327d4933607ec3f
-
-4839d2f25cc35b249d5db15efa1afd75
-
-. eaa07c06fe679751494bfd4b2951b580
-+
-2c7e6d2877f857f126c24c7742e84098
+各コマンド/コマンドディレクトリには、フルアクセスと読み取り専用の2つのアクセスレベルがあります。
 
 +
-** af7e38d09fe8c21a2365c6a2c6e9bafe
-** 50ed35c72bdb642ef657b5fd99ae46f0
-** 3cb37de766f2d582ab6d0abf6e63d382
+フルアクセス権限は必ず最初に割り当てる必要があります。
+
+** ユーザにロールを割り当てます。
+** SnapCenter プラグインがクラスタ全体のクラスタ管理者 IP に接続されているか、またはクラスタ内の SVM に直接接続されているかに応じて、設定は異なります。
+
+
+
+
+* このタスクについて *
+
+これらのロールをストレージシステムで簡単に設定するには、NetAppコミュニティフォーラムに掲載されているRBAC User Creator for Data ONTAPツールを使用します。
+
+このツールは、ONTAP権限の適切な設定を自動的に処理します。たとえば、RBAC User Creator for Data ONTAPツールでは、フルアクセス権限が最初に表示されるように、権限が正しい順序で自動的に追加されます。読み取り専用権限を最初に追加してからフルアクセス権限を追加すると、ONTAPはフルアクセス権限を重複としてマークし、無視します。
+
+
+NOTE: SnapCenter または ONTAP をあとからアップグレードする場合は、 RBAC User Creator for Data ONTAP ツールを再度実行して、以前に作成したユーザロールを更新する必要があります。以前のバージョンの SnapCenter または ONTAP 用に作成したユーザロールは、アップグレード後のバージョンでは正常に機能しません。ツールを再実行すると、アップグレードが自動的に処理されます。ロールを再作成する必要はありません。
+
+ONTAP RBACロールの設定の詳細については、を参照してください http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-adm-auth-rbac/home.html["ONTAP 9管理者認証とRBACパワーガイド"^]。
+
+
+NOTE: SnapCenter のドキュメントではロールに割り当てる要素を「権限」と呼びますが、OnCommand システムマネージャGUIでは、_privilegeではなく、TERM_attribute__が使用されます。ONTAP RBACロールを設定する場合、これらの用語はどちらも同じ意味です。
+
+* 手順 *
+
+. ストレージシステムで、次のコマンドを入力して新しいロールを作成します。
 +
-
-NOTE: b49ce4d00d6ed57c9fbc9e20e08cee2c
-
-+
-f37634ec820656fbecf1b4e4a31565f9
-
-
-
-. 10056fa29f5070106b5da7d2738acd2e
-+
-1af6536f50b7c77854633155c6ae923a
-
-+
-** a53046962f5d32ce0b5006e41f82fd45
-** a517d6d8d9e79c1c62169f147fd7db40
-** cff348cf6c394dec1b8249ec1cee21a7
-
-
-. ef9f3ba5708f08fad54b05e0f792d8fb
-+
-80812a5ac42a9862b7d20ef498a269ce
-
-+
-** f5006dafe431c1f6bb311e39ecda0f88
-** 782729ff7c7df53143e43ef4c7e0b73a
-** 54d1cc3035d8f13d67778eb62d5242b2
-** a517d6d8d9e79c1c62169f147fd7db40
-
-
-. af0a6ea22dad5952ae57a4085df7f018
-+
-07c1ab7f978b1eea65254e331b2a8733
+`security login role create <role_name\> -cmddirname "command" -access all –vserver <svm_name\>`
 
 +
-5c47cbaa537c35e208658ea0c916ea4f
+** svm_nameには、SVMの名前を指定します。空白のままにすると、デフォルトでクラスタ管理者が設定されます。
+** role_nameは、ロールに指定する名前です。
+** commandはONTAP機能です。
++
+
+NOTE: このコマンドは権限ごとに繰り返す必要があります。フルアクセスコマンドは、読み取り専用コマンドの前に指定する必要があります。
+
++
+権限のリストについては、を参照してください link:../install/task_create_an_ontap_cluster_role_with_minimum_privileges.html#ontap-cli-commands-for-creating-roles-and-assigning-permissions["ロールの作成と権限の割り当てに使用するONTAP CLIコマンド"^]。
+
+
+
+. 次のコマンドを入力して、ユーザ名を作成します。
++
+`security login create -username <user_name\> -application ontapi -authmethod <password\> -role <name_of_role_in_step_1\> –vserver <svm_name\> -comment "user_description"`
+
++
+** user_nameは、作成するユーザの名前です。
+** <password> は、パスワードです。パスワードを指定しないと、パスワードの入力を求めるプロンプトが表示されます。
+** svm_nameには、SVMの名前を指定します。
+
+
+. 次のコマンドを入力して、ユーザにロールを割り当てます。
++
+`security login modify username <user_name\> –vserver <svm_name\> -role <role_name\> -application ontapi -application console -authmethod <password\>`
+
++
+** <user_name> は、手順 2 で作成したユーザの名前です。このコマンドでは、ロールに関連付けるユーザを変更できます。
+** <svm_name> は SVM の名前です。
+** <role_name> は、手順 1 で作成したロールの名前です。
+** <password> は、パスワードです。パスワードを指定しないと、パスワードの入力を求めるプロンプトが表示されます。
+
+
+. 次のコマンドを入力して、ユーザが正しく作成されたことを確認します。
++
+`security login show –vserver <svm_name\> -user-or-group-name <user_name\>`
+
++
+user_nameは、手順3で作成したユーザの名前です。
 
 

@@ -2,19 +2,19 @@
 permalink: protect-db2/type-of-backups-supported.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for IBM Db2 
-summary: 571cf05bca5a2c1b66a39de8869e3134 
+summary: Backup typeには、作成するバックアップのタイプを指定します。SnapCenterでは、IBM DB2データベースに対してSnapshotコピーベースのバックアップタイプがサポートされます。 
 ---
-= 2a681580cba5d0bac1fe8b6665a6a47e
+= サポートされるバックアップのタイプ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-571cf05bca5a2c1b66a39de8869e3134
+Backup typeには、作成するバックアップのタイプを指定します。SnapCenterでは、IBM DB2データベースに対してSnapshotコピーベースのバックアップタイプがサポートされます。
 
 
 
-== c6dba23441b7b81118b01afb845de37e
+== Snapshotコピーベースのバックアップ
 
-ecea86165f916243bd9672803822610e
+Snapshotコピーベースのバックアップでは、NetApp Snapshotテクノロジを利用して、IBM DB2データベースが格納されているボリュームのオンラインの読み取り専用コピーを作成します。

@@ -2,34 +2,34 @@
 permalink: protect-hana/reference_types_of_restore_strategies_supported_for_manually_added_sap_hana_resources.html 
 sidebar: sidebar 
 keywords: SnapCenter 
-summary: 78adacb56a62e67ef21d42fcf750bdf7 
+summary: SnapCenterを使用してリストア処理を正常に実行するには、戦略を定義する必要があります。手動で追加したSAP HANAリソースには、2種類のリストア戦略があります。手動で追加したSAP HANAリソースはリカバリできません。 
 ---
-= 3dcdc3d8af6ae8e856c965a755052b7b
+= 手動で追加したSAP HANAリソースでサポートされるリストア戦略のタイプ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-78adacb56a62e67ef21d42fcf750bdf7
+SnapCenterを使用してリストア処理を正常に実行するには、戦略を定義する必要があります。手動で追加したSAP HANAリソースには、2種類のリストア戦略があります。手動で追加したSAP HANAリソースはリカバリできません。
 
 
-NOTE: b2c839d508a1f14217733594cbcf3e67
-
-
-
-== d26e732ff4468b921ec70bf797290866
-
-* 6dac61f5c61b1654fa020acda2c2434d
+NOTE: 手動で追加したSAP HANAリソースはリカバリできません。
 
 
 
-NOTE: 660ee777f341ef8a02048c649ceb5033
+== リソース全体のリストア
+
+* リソースのすべてのボリューム、qtree、およびLUNをリストア
 
 
 
-== 59d998f4e2735501ffcf1038b97c19b1
+NOTE: リソースにボリュームまたはqtreeが含まれている場合、そのボリュームまたはqtreeでリストア対象として選択されたSnapshotのあとに作成されたSnapshotは削除され、リカバリすることはできません。また、同じボリュームまたはqtreeで他のリソースがホストされている場合、そのリソースも削除されます。
 
-* ef6b493c36772b4cff5ddca5d370121f
-* 504e78ba630989f50409682ae7d17167
+
+
+== ファイルレベルのリストア
+
+* ボリューム、qtree、またはディレクトリからファイルをリストア
+* 選択したLUNのみをリストア
 

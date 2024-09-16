@@ -2,105 +2,105 @@
 permalink: protect-hana/concept_minimum_privileges_required_for_sap_hana_and_exchange_plug_in.html 
 sidebar: sidebar 
 keywords: Minimum ONTAP privileges 
-summary: 04a9cf8066f01cc2ca9e6a6e6b25a340 
+summary: 必要な最小 ONTAP 権限は、データ保護に使用する SnapCenter プラグインによって異なります。 
 ---
-= 45cfde3246d77aae99351b410b97c7c0
+= SAP HANAプラグインに必要な最小ONTAP権限
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-04a9cf8066f01cc2ca9e6a6e6b25a340
+必要な最小 ONTAP 権限は、データ保護に使用する SnapCenter プラグインによって異なります。
 
-* f787fb91924061fe015dd390115ff7b0
+* フルアクセスコマンド： ONTAP 8.3.0 以降で必要な最小権限
 +
-** f29e68a537349e874e09abd00f21d020
-** e3890e588ffa00d05486b60aaec37e39
-** 5b4f487acd2a1e48d6c43939945c2783
-** 03628ea331120176369891df319619e8
-** 7c192459e62b85875b59970db3d2b9ee
-** 7c192459e62b85875b59970db3d2b9ee
-** 7c192459e62b85875b59970db3d2b9ee
-** 8a23874ab60f8231362a504593af5de9
-** 603f9f53a0ca416176bba0c9a8b0c236
-** df8b8ab4b4ce13654aa4b5c85be90790
-** 5ca38cab4d6e3d4c6357b791c5552feb
-** 91d7a47b5d8063b1fe78448b35871dc7
-** 91d7a47b5d8063b1fe78448b35871dc7
-** 43ebf62b25b206e36b1e395e88e8cd90
-** 02d0bbdc14988c85bbd7994723f4dd7f
-** ea8d49f93749ae57e0c20950605c6607
-** c0fee237cc091048ebb50bdf74f00864
-** 886fd385b633a0746a8a08f8f00c67cd
-** dd5482134b2daeb15de3547342b7d19d
-** 983bf78a32e894bff0deef1d2ccfbd20
-** 787f67886dcefe1e2ad298992552116f
-** 9ee9d892c3d6281172128c2c19084c7c
-** 23225408559d8aff3667f7cc3ca34adc
-** aaae335cd7ace18e54020e4c300f39cf
-** a07e39ecc49b8d40e238a32a971e85af
-** e860cb401262624b3b23806a38e8d86a
-** b8fdaa53ba08988f3b422c1226f85a2a
-** 0029d3abd55b9ef7d0f43d20838735b2
-** b396aec83943ea0bdfdb2561482d2f95
-** 9fad1b3d72c69e68afa8979547b9d4b6
-** df3a39db5d8c8c52cbc0d92c0e43a385
-** 5b18e7c216c868ae1b7c4df44ba6df58
-** 8511c2f3ef6c5e8c42a150c01bd8495c
-** 46769822c268b41b1f8d103ee25e226b
-** c234bbad98a0b763d726af5d2614cbc2
-** fcbae829436e47cab8c9c6efdb48e577
-** c90a9202521a6f23d2afc0493b4f4152
-** 2af72f100c356273d46284f6fd1dfc08
-** 92018f0c387904208ed1f507a94c850a
-** ad8ec5e1c4a8fdbf50bc35c21bffa8d8
-** 6c3fb02d67d95f68984f6e4158facdff
-** cba3dd59b09f85f1a26664ff5907cb02
-** 4784dd0ffa42c3d1b43b0afd079dfc17
-** cb5853cba4067302355ea8e4bedb6c49
-** 02161d0606e0b6432ae030f45dbd0736
-** fbf431811c6e821faf546f94e12220f7
-** 31952b1196ef7f5f227825294e97578d
-** fcc46ad208d53e4021ecddc4ee333dc3
-** 9f9fc58b577820fbcd41ff15739ed6f0
-** 5cf13edacf5e5dfe2170901d007c2762
-** 3305783c0546b34deaf7e96e9ac5804e
-** 249b078dbcffae0b9030cf5b5b1d023c
-** b77c422aafa0bfd3d18a814c8e57a72e
-** 63720a75a64fb857ccadc1c084467512
-** 0c5606ed319753bb2d86a485f23c8f6d
-** ceb6830d4a1748af1adc615d6239b127
-** 1cf71c15916b07b46dc8360baf4bd9d5
-** 0fea0a98f6a84ce62354d923191b84ef
-** 6b139c8a52407032a30a5d0cbb7c1438
-** 3c6190d02fcf0a29652bac687833b413
-** 8f381ba1024744332b561ba609495012
-** afd1e3c4851be12067ce118f6553f040
-** 39623b39cba259ee4a2244b8252543f0
-** ff05081e94632f33dddf04c612be563c
-** 5961ba1c300272bc05709b472f339189
-** 293a1aaca0a542f4f1b1dc1a3ad95728
-** 24b1b9bee66db477f2c43dbeb8bcd257
-** 5441331deff17321e6839fcd96770ec8
-** 020a69ab591c55a5f55f82345229484b
-** fafd8ff6ac4a59e73c5d4e3b47d545ee
-** 014fbdab8ed751e10ca8b7fd551fd0d5
-** 7d47f98e53b93d7fb8a050185d494363
-** e76fb48f9b339704f620578378a762cb
-** 729c5e15acc8b31618fe3265de1c624b
-** fae9135e124d7e3e5d1fae583e176cb8
-** 81fdc65419165207d0f3b0ece7db1d35
-** 1da914296fd8fb1dd3452debe48ee483
-** 5a533c7bcb2424b4226650432977866b
-** 448da724515e17f1a0d8b304eb2f526c
+** event generate-autosupport-log
+** ジョブ履歴の表示
+** ジョブの停止
+** LUN
+** LUNの作成
+** LUNの作成
+** LUNの作成
+** lun delete
+** LUN igroupの追加
+** lun igroup create
+** lun igroup delete
+** LUN igroupの名前変更
+** LUN igroupの名前変更
+** lun igroup show
+** LUNマッピングの追加-レポートノード
+** LUNマッピングの作成
+** LUNマッピングの削除
+** lun mapping remove-reporting-nodes
+** lun mapping show
+** LUN変更
+** ボリューム内でのLUNの移動
+** LUNオフライン
+** LUNオンライン
+** LUN永続的予約のクリア
+** LUNのサイズ変更
+** LUNシリアル
+** lun show
+** SnapMirrorポリシーadd-rule
+** snapmirror policy modify-rule
+** snapmirror policy remove-rule
+** snapmirror policy show
+** SnapMirrorリストア
+** snapmirror show
+** snapmirror show-history
+** SnapMirrorの更新
+** snapmirror update-ls-set
+** snapmirror list-destinations
+** バージョン
+** ボリュームのクローン作成
+** volume clone show
+** ボリュームクローンスプリットの開始
+** ボリュームクローンスプリットの停止
+** ボリュームの作成
+** ボリュームの削除
+** volume file clone create
+** volume file show-disk-usage
+** ボリュームはオフライン
+** ボリュームはオンライン
+** ボリュームの変更
+** ボリュームqtreeの作成
+** volume qtree delete
+** volume qtree modify
+** volume qtree show
+** ボリュームの制限
+** volume show
+** ボリュームSnapshotの作成
+** ボリュームSnapshotの削除
+** ボリュームSnapshotの変更
+** volume snapshot modify -snaplock-expiry-time
+** ボリュームSnapshotの名前変更
+** ボリュームSnapshotリストア
+** ボリュームSnapshotリストア-ファイル
+** volume snapshot show
+** ボリュームのアンマウント
+** SVM CIFS
+** vserver cifs share create
+** vserver cifs share delete
+** vserver cifs shadowcopy show
+** vserver cifs share show
+** vserver cifs show
+** SVM export-policy
+** vserver export-policy create
+** vserver export-policy delete
+** vserver export-policy rule create
+** vserver export-policy rule show
+** vserver export-policy show
+** SVM iSCSI
+** vserver iscsi connection show
+** vserver show
 
 
-* 3c7a1d3e0ce94aeb0c7ab231e365f15e
+* 読み取り専用コマンド： ONTAP 8.3.0 以降で必要な最小権限
 +
-** 168d50085a3c4e712aaa28cf90e2f228
-** 16fdd92def5a71313d6535c74ef67b81
-** 5999e4ab912c7c1d8aa6fd2225491ef2
+** ネットワークインターフェイス
+** network interface show
+** SVM
 
 
 

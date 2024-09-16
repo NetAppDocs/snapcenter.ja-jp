@@ -2,37 +2,37 @@
 permalink: protect-azure/create-backup-policies-sap-hana.html 
 sidebar: sidebar 
 keywords: create policies, SAP HANA, backup policies 
-summary: 9166c380efba6c6a0d61dc08bcc135ee 
+summary: バックアップするリソースまたはリソースグループのバックアップポリシーを作成します。 
 ---
-= 2dad511118029c962a70a1aac4b16b52
+= SAP HANAデータベースのバックアップポリシーの作成
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-2fd8d5ede56ca6e33060f1eb3dd0734b
+SnapCenter を使用して SAP HANA データベースのリソースをバックアップする前に、バックアップ対象のリソースまたはリソースグループのバックアップポリシーを作成する必要があります。
 
-.f3a29486bed19a90f2da6d007818b427
-. c09e638cb8ee35698e3172550b12d8fa
-. 1f02ceac906eeeae0a190f295fe12381
-. a5bb4561024cbac1f26c361cff68730e
-. 3c6544f27197f56a0b07b5ed264760dc
-. c741f40a4fb7e6bd9a457120a09a6498
+.手順
+. 左側のナビゲーションペインで、 * 設定 * をクリックします。
+. [ 設定 ] ページで、 [ * ポリシー * ] をクリックします。
+. [ 新規作成（ New ） ] をクリックする。
+. [ 名前 ] ページで、ポリシー名と概要を入力します。
+. 設定ページで、次の手順を実行します。
 +
-.. d9c103e9b28e2bebca1491609f830d9e
+.. バックアップタイプを選択します。
 +
-... e479da34c5ed7685fcd981da443e348b
-... 4954c41a9a08ab45a310519b5fd1e579
+... データベースの整合性チェックを実行する場合は、*[ファイルベースのバックアップ]*を選択します。
+... Snapshotテクノロジを使用してバックアップを作成する場合は、* Snapshotベース*を選択します。
 
 
-.. e392de06f36aab499d20ac2874bd6a7a
+.. スケジュールタイプを指定します。
 
 
-. ed5262a9aab3035c8548c5f3793c76f6
+. [Retention]ページで、選択したバックアップタイプとスケジュールタイプの保持設定を指定します。
 +
 
-NOTE: 8164c29499ad21176441bff9c0dfb5a6
+NOTE: セカンダリストレージへのレプリケーションはサポートされていません。
 
-. 3518a771040ff2bbfb74570c920f9e5a
+. 概要を確認し、 [ 完了 ] をクリックします。
 

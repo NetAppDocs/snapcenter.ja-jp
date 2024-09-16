@@ -2,59 +2,59 @@
 permalink: protect-sco/concept_prepare_for_protecting_oracle_databases.html 
 sidebar: sidebar 
 keywords: oracle, preparation for protection, prerequisites 
-summary: e53689fd856f2378aafc71172bca9677 
+summary: バックアップ、クローニング、リストアなどのデータ保護処理を実行する場合は、事前に戦略を定義し、環境をセットアップする必要があります。また、 SnapVault サーバで SnapMirror テクノロジと SnapCenter テクノロジを使用するように設定することもできます。 
 ---
-= 1a75da53ef9c5f63988ec413368e5d2a
+= Oracleデータベースを保護する準備
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-e53689fd856f2378aafc71172bca9677
+バックアップ、クローニング、リストアなどのデータ保護処理を実行する場合は、事前に戦略を定義し、環境をセットアップする必要があります。また、 SnapVault サーバで SnapMirror テクノロジと SnapCenter テクノロジを使用するように設定することもできます。
 
-712a25807ffdbe76d2f9cea167d6577a
+SnapVaultテクノロジとSnapMirrorテクノロジを利用するには、ストレージデバイスのソースボリュームとデスティネーションボリューム間のデータ保護関係を設定して初期化する必要があります。これらのタスクは、NetAppSystem Managerを使用するか、ストレージコンソールのコマンドラインを使用して実行できます。
 
-ae0f944bcc51a4502ae5c87152c9cb2c
+Plug-in for Oracle Databaseを使用する前に、SnapCenter管理者がSnapCenterサーバをインストールして設定し、前提条件となるタスクを実行する必要があります。
 
-* 50e49495aa19588e0ec1182f0508cb49
-* 0d02a808dabcaf9d4f55c74b15a2b718
+* SnapCenterサーバをインストールして設定します。 link:../install/task_install_the_snapcenter_server_using_the_install_wizard.html["詳細"^]
+* ストレージシステム接続を追加してSnapCenter環境を設定します。 link:../install/task_add_storage_systems.html["詳細"^]
 +
 
-NOTE: 8f58dc196f78d39b0f218530d41b7b21
+NOTE: SnapCenter では、異なるクラスタにある同じ名前の SVM は複数サポートされません。SVMの登録またはクラスタの登録を使用してSnapCenterに登録されるSVMは、それぞれ一意である必要があります。
 
-* c6055785b167d1305aed46955c971ab0
-* b62a5484254d87b92d2c43f0a8e4f8ff
-* 8c024597770d8167f96572deb5ca2951
-* 8c47ad717b7a2a0466e1a1afca604685
+* インストールユーザのクレデンシャルを、認証モードをLinuxまたはAIXに設定して作成します。 link:../protect-sco/reference_prerequisites_for_adding_hosts_and_installing_snapcenter_plug_ins_package_for_linux_or_aix.html#set-up-credentials["詳細"^]
+* ホストを追加し、プラグインをインストールし、リソースを検出します。
+* VMware RDM LUNまたはVMDKにあるOracleデータベースをSnapCenterサーバを使用して保護する場合は、SnapCenter Plug-in for VMware vSphereを導入してSnapCenterに登録する必要があります。
+* LinuxホストまたはAIXホストにJavaをインストールします。
 +
-96a691c75f4e8548b130dd4af0ea4e53
+詳細については、またはを参照してください link:../protect-sco/reference_prerequisites_for_adding_hosts_and_installing_snapcenter_plug_ins_package_for_linux_or_aix.html#linux-host-requirements["Linux ホストの要件"^] link:../protect-sco/reference_prerequisites_for_adding_hosts_and_installing_snapcenter_plug_ins_package_for_linux_or_aix.html#aix-host-requirements["AIXホストの要件"^] 。
 
-* e3bcbd4b72b9abcfba6dd89fa833c9d7
-* 2f66d67da390e5c77db3fc5e681393ab
-* 48b0f0fb43e0a3e1a7bac0922b6b61c9
+* アプリケーションファイアウォールのタイムアウト値は3時間以上に設定する必要があります。
+* NFS環境でOracleデータベースを使用している場合は、マウント、クローニング、検証、およびリストアの処理を実行できるように、プライマリストレージまたはセカンダリストレージ用に少なくとも1つのNFSデータLIFを設定しておく必要があります。
+* データパス（LIF）が複数ある場合やdNFS構成を使用している場合は、データベースホストでSnapCenter CLIを使用して次の作業を実行できます。
 +
-** d3af75b5ec004883495ea045fb886b21
-** 904e44e9990e7591adda05fc061919d3
+** デフォルトでは、データベースホストのすべての IP アドレスが、クローンボリュームの Storage Virtual Machine （ SVM ）の NFS ストレージエクスポートポリシーに追加されます。特定のIPアドレスを使用する場合、またはIPアドレスのサブセットに制限する場合は、Set-PreferredHostIPsInStorageExportPolicy CLIを実行します。
+** SVM に複数のデータパス（ LIF ）がある場合は、 NFS クローンボリュームをマウントするための適切なデータパス（ LIF ）が SnapCenter によって選択されます。ただし、特定のデータパス（LIF）を指定する場合は、Set-SvmPreferredDataPath CLIを実行する必要があります。詳細については、コマンドリファレンスガイドを参照してください。
 
 
-* 0d38af714784f793aaf023f367e4c39b
+* SAN環境でOracleデータベースを使用している場合は、SAN環境が次のガイドに記載されている推奨事項に従って設定されていることを確認してください。
 +
-** e705af1c7f38eac38e2f493fc039f70e
-** 4261289fb5bad467a2ad973679d86c14
-** 9e202af09678a2aeb1c20235b8ed2aad
+** https://library.netapp.com/ecm/ecm_download_file/ECMLP2547957["Linux Unified Host Utilities の推奨されるホスト設定"^]
+** https://library.netapp.com/ecm/ecm_download_file/ECMLP2547958["Using Linux Hosts with ONTAP storage"^]
+** https://library.netapp.com/ecm/ecm_download_file/ECMP1119218["AIX Host Utilitiesの影響を受けるホスト設定"^]
 
 
-* ba09c94fed381b580a726fc94531b160
-* 8770246977269a639c8c2818412dc3ac
-* 4c893189fecc8b6e5c41ae931ffd7f89
+* Oracle LinuxまたはRHELオペレーティングシステムのLVMにOracleデータベースがある場合は、最新バージョンの論理ボリューム管理（LVM）をインストールします。
+* SnapManager for Oracleを使用していて、SnapCenter Plug-in for Oracle Databaseに移行する場合は、sccliコマンドsc-migrateを使用して、SnapCenterのポリシーとリソースグループにプロファイルを移行できます。
+* バックアップレプリケーションが必要な場合は、ONTAPでSnapMirrorとSnapVaultを設定する
 
 
-85834f13e19382d29e1c80a3119a3d30
+SnapCenter 4.1.1 ユーザの場合、 SnapCenter Plug-in for VMware vSphere 4.1.1 のドキュメントには、仮想化されたデータベースとファイルシステムの保護に関する情報が記載されています。NetAppデータブローカー1.0および1.0.1のドキュメントには、SnapCenter 4.2.xのユーザ向けに、LinuxベースのNetAppデータブローカー仮想アプライアンス（オープン仮想アプライアンス形式）が提供するSnapCenter Plug-in for VMware vSphereを使用した仮想データベースおよびファイルシステムの保護に関する情報が記載されています。SnapCenter 4.3.xのユーザ向けに、SnapCenter Plug-in for VMware vSphere 4.3のドキュメントには、LinuxベースのSnapCenter Plug-in for VMware vSphere仮想アプライアンス（オープン仮想アプライアンス形式）を使用した仮想データベースとファイルシステムの保護に関する情報が記載されています。
 
-fad3dbbe9841f42de249b688f1d47a80
+* 詳細はこちら *
 
-* ea7066cba2f5864f04733d3067090883
-* 50295902d444d01e41805e9bc1b0598e
-* 637e979b90ef1f6ab2dd922a7436fbec
+* https://imt.netapp.com/matrix/imt.jsp?components=121071;&solution=1259&isHWU&src=IMT["Interoperability Matrix Tool"^]
+* https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/index.html["SnapCenter Plug-in for VMware vSphereのドキュメント"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Data_protection_operation_fails_in_a_non-multipath_environment_in_RHEL_7_and_later["RHEL 7以降の非マルチパス環境でデータ保護処理が失敗する"^]
 

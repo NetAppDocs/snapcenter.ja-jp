@@ -2,64 +2,64 @@
 permalink: protect-azure/install-snapcenter-azure-virtual-machine.html 
 sidebar: sidebar 
 keywords: snapcenter server, azure virtual machine, install 
-summary: b19cf02c2424a0928eeec4a9d7a2f2f8 
+summary: Azure仮想マシンにSnapCenterをダウンロードしてインストールします。 
 ---
-= cefcdf7a4638575f474bc5a3bda6c998
+= Azure仮想マシンへのSnapCenterのインストール
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-4370482304eb1ca0418f2cd3fd63eb67
+NetApp Support SiteからSnapCenterソフトウェアをダウンロードし、Azure仮想マシンにインストールできます。
 
-.135b308ed83c53f1516b7c754566d1c4
-* ce65cbdd1461bceb86d66ab0fad635e1
-* 293e30fcf3b105ef9fbfa18277b1833a
+.開始する前に
+* Azure Windows仮想マシンがSnapCenterサーバのインストール要件を満たしていることを確認します。詳細については、を参照してください link:../install/reference_domain_and_workgroup_requirements.html["SnapCenterサーバのインストールの準備"]。
+* Azure NetApp Filesを初めてお使いで、既存のNetAppアカウントをお持ちでない場合は、SnapCenterソフトウェアにアクセスできるように登録済みであることを確認してください。
 
 
-.f3a29486bed19a90f2da6d007818b427
-. 70c594713d865f6147d93e740c40169b
-. 265989a97ac4dd0184cbdfc5c65453d5
+.手順
+. からSnapCenterサーバインストールパッケージをダウンロードし https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["NetAppサポートサイト"]ます。
+. ダウンロードした.exeファイルをダブルクリックして、SnapCenterサーバのインストールを開始します。
 +
-ba1d33ffe1922d93bdd900b985993172
+インストールを開始すると、すべての事前チェックが実行され、最小要件を満たしていない場合は、該当するエラーまたは警告メッセージが表示されます。警告メッセージは無視してインストールを続行できますが、エラーは修正する必要があります。
 
-. ab691c5a64104aec1f94c41a8e516324
+. SnapCenterサーバのインストールに必要な値があらかじめ入力されていることを確認し、必要に応じて変更します。
 +
-7b5a4e2264ffc57e8ea3a6d11bf48d98
-
-+
-
-NOTE: 944ed313a3d76953a4897da7159e4286
-
-. 73fc97baa9d12b2441a7cf6ee8b57363
-+
-a8ba59cefefd06f7932de8d4f14fea85
+MySQL Serverリポジトリデータベースのパスワードを指定する必要はありません。SnapCenterサーバのインストール中に、パスワードが自動的に生成されます。
 
 +
 
-NOTE: 541eb9f7e4046db89bc6e649fea3e51d
+NOTE: リポジトリデータベースのカスタムパスでは、特殊文字「%」はサポートされていません。パスに「%」を含めると、インストールは失敗します。
+
+. [ 今すぐインストール ] をクリックします。
++
+無効な値を指定した場合は、該当するエラーメッセージが表示されます。値を再入力してから、インストールを開始してください。
 
 +
-0a72b5ed9e647b1bccffb29f78092df4
+
+NOTE: [Cancel] * ボタンをクリックすると、実行中のステップが完了し、ロールバック操作が開始されます。SnapCenter サーバがホストから完全に削除されます。
+
++
+ただし、「 SnapCenter サーバサイトの再起動」または「 SnapCenter サーバの起動を待機中」の処理が実行されているときに「 * キャンセル」をクリックすると、処理はキャンセルされずにインストールが続行されます。
 
 
 
 
 
-== 509996c9084eee8ec4042ea11d0d40b5
+== 製品を登録してサポートを有効にする
 
-adabd411a7c66f552fe4729256f79893
+NetAppを初めてご利用になり、NetAppアカウントをお持ちでない場合は、製品を登録してサポートを有効にする必要があります。
 
-.f3a29486bed19a90f2da6d007818b427
-. da4d818a1335c4c0c623753733182b1a
-. f176ac456003ae547c90edbc5d81ec1e
-. f3c0990bb1a2ae775ec30feffbc58be0
-. a3381c7414a338cceaa125118a74b420
-. 3847ac30d33734cc62ecd81b181d93f2
-. 9289a81163d5e2905fefe2835a6ab045
-. e229f2a31adf5bd88e8925c96feb81d2
-. cf46417d06a0356fc053eba2626759a2
-. 98d7dda5167a79acadd993f0ad819512
-. 4b5d2dd70af718ebe67bfea5b43d8667
+.手順
+. SnapCenterのインストール後、*[ヘルプ]>[バージョン情報]*に移動します。
+. [_About SnapCenter _]ダイアログボックスで、971で始まる20桁のSnapCenterインスタンスをメモします。
+. をクリックします https://register.netapp.com[]
+. [* I am not a registered NetApp Customer* ] をクリックします。
+. 自分自身を登録するには、詳細を指定してください。
+. NetApp Reference SNフィールドは空白のままにします。
+. [Product Line]ドロップダウンから[* SnapCenter *]を選択します。
+. 課金プロバイダを選択します。
+. 20桁のSnapCenterインスタンスIDを入力します。
+. [Submit （送信） ] をクリックします。
 

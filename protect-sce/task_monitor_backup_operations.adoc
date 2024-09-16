@@ -2,63 +2,63 @@
 permalink: protect-sce/task_monitor_backup_operations.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for Exchange Server 
-summary: 2794927004b00b8d766ca3deca4c7096 
+summary: '[SnapCenterJobs]ページを使用して、さまざまなバックアップ処理の進捗状況を監視できます。進捗状況を確認して、いつ完了したか、問題が発生していないかを確認できます。' 
 ---
-= 419e354d2124d18b011fd9f9fecbed3d
+= バックアップ処理の監視
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-2794927004b00b8d766ca3deca4c7096
+[SnapCenterJobs]ページを使用して、さまざまなバックアップ処理の進捗状況を監視できます。進捗状況を確認して、いつ完了したか、問題が発生していないかを確認できます。
 
-.bbe48fb854ea022537208eeeff822f91
-7944a2318d6a58176074a0d99b34c73d
+.タスクの内容
+[Jobs]ページには次のアイコンが表示され、処理の状態が示されます。
 
-* cad8bf0bd55afaa12be11cc29f347052
-* 3a62ae015b4ba6f0dc48c424c0a0fe86
-* 4066ea01819c2bfdcb0dbbc680a26a0a
-* 54cc5efef9b7edd3fd699fc1e5a0ff50
-* d208aa08a03da9a8a8e5bd96ad0fedae
-* 596771a00ab2893deb5c8fa7fe5873f5
+* image:../media/progress_icon.gif["実行中のアイコン"] 実行中
+* image:../media/success_icon.gif["完了アイコン"] 完了しまし
+* image:../media/failed_icon.gif["失敗したアイコン"] 失敗
+* image:../media/warning_icon.gif["警告アイコンが表示されています"] 完了（警告あり）または警告のため開始できませんでした
+* image:../media/verification_job_in_queue.gif["検証ジョブをキューに格納"] キューに登録済み
+* image:../media/cancel_icon.gif["キャンセルアイコン"] キャンセル済み
 
 
-.f3a29486bed19a90f2da6d007818b427
-. b40a6c0b08ac99c86eb676e2689c6996
-. c0a63413cafa6a465f587d5835701c87
-. 3160f4991d365988a865df5567f2147f
+.手順
+. 左側のナビゲーションペインで、 *Monitor* をクリックします。
+. [ モニター ] ページで、 [ * ジョブ * ] をクリックします。
+. Jobs （ジョブ）ページで、次の手順を実行します。
 +
-.. 7b467581fdc2f1a9bc98397eaf9411b4
-.. 7407325f29b504f9c8b87ec8da503815
-.. e10f73b33c1a0725b8812f08089e7788
-.. 1f8a6ebe3d4d002c37961084ee957772
-.. 30816945c60dc2c3f5e65b0a88f9bc19
+.. をクリックして、リストの内容をバックアップ処理だけに絞り込みます。
+.. 開始日と終了日を指定します。
+.. [* タイプ *] ドロップダウン・リストから、 [*Backup*] を選択します。
+.. [*Status*]( ステータス *) ドロップダウンから、バックアップステータスを選択します。
+.. [ 適用（ Apply ） ] をクリックして、正常に完了した操作を表示する。
 
 
-. 5f31a909a716e6e46492a1095c0444d8
+. バックアップジョブを選択し、 ［ * 詳細 * ］ をクリックしてジョブの詳細を表示します。
 +
 
-NOTE: f4d8f263741562ac4c8e18153f44e752
+NOTE: バックアップジョブのステータスは表示されますがimage:../media/success_icon.gif["完了アイコン"]、ジョブの詳細をクリックすると、バックアップ処理の子タスクの一部が進行中であるか、警告サインが表示されていることがあります。
 
-. 1c41074e44dc2e55551dfb68d2bc354d
+. ［ ジョブの詳細 ］ ページで、 ［ * ログの表示 * ］ をクリックします。
 +
-2063f930237a8cb9c2f18d14af2c0772
+*View logs* ボタンをクリックすると、選択した操作の詳細なログが表示されます。
 
 
 
 
 
-== de446367e805aef49330ce87fc36fc93
+== [Activity]ペインでの処理の監視
 
-508d1ec07ef963e40e719409d5aa0885
+[ アクティビティ（ Activity ） ] パネルには、最近実行された 5 つの操作が表示されまた、操作が開始された日時と操作のステータスも表示されます。
 
-920deed37c528e013939d546655305ff
+[Activity （アクティビティ） ] ペインには、バックアップ、リストア、クローン、およびスケジュールされたバックアップ処理に関する情報が表示されます。
 
-.f3a29486bed19a90f2da6d007818b427
-. 530a5fa7e8fbaa4c796dbd46c93a55dd
-. 9db06cff1e8eb604a482b82e3fc0ca83
+.手順
+. 左側のナビゲーションペインで、 * リソース * をクリックし、リストから適切なプラグインを選択します。
+. [Activity]ペインでをクリックすると、 image:../media/activity_pane_icon.gif[""] 最新の5つの処理が表示されます。
 +
-c5b4990f8ae878fb8402d7252a8784c6
+いずれかの処理をクリックすると、*[ジョブの詳細]*ページに処理の詳細が表示されます。
 
 

@@ -2,13 +2,13 @@
 permalink: protect-scsql/task_define_a_restoration_strategy_for_sql_server.html 
 sidebar: sidebar 
 keywords: restoration strategy 
-summary: 0441f921ecb29005b4b309df792042a3 
+summary: SQL Serverのリストア戦略を定義しておくと、データベースを正常にリストアできます。 
 ---
-= 24fc557949539a292d3c18f3c9454f62
+= SQL Serverのリストア戦略を定義する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-0441f921ecb29005b4b309df792042a3
+SQL Serverのリストア戦略を定義しておくと、データベースを正常にリストアできます。

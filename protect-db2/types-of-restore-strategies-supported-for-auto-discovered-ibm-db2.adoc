@@ -2,15 +2,15 @@
 permalink: protect-db2/types-of-restore-strategies-supported-for-auto-discovered-ibm-db2.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for IBM Db2 
-summary: 485709498e9298c1dc8696e1672f90bb 
+summary: SnapCenterを使用してリストア処理を正常に実行するには、戦略を定義する必要があります。自動的に検出されたIBM DB2データベースには、2種類のリストア戦略があります。 
 ---
-= 0f343661382b39b0eea300c0cd45e814
+= 自動検出されたIBM DB2でサポートされるリストア戦略のタイプ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-a8345b1a40964c32f0a59b7b9525b4df
+SnapCenterを使用してリストア処理を正常に実行するには、戦略を定義する必要があります。
 
-7886008a23afc6cd539e8135acf40b1f
+完全リソースリストアは、自動的に検出されたIBM DB2データベースに対してサポートされるリストア戦略です。これにより、リソースのすべてのボリューム、qtree、およびLUNがリストアされます。

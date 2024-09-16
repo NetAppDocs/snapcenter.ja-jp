@@ -2,29 +2,29 @@
 permalink: protect-scsql/reference_clone_sql_server_database_resources.html 
 sidebar: sidebar 
 keywords: Clone workflow 
-summary: 463e628d0fee92af59d880953c74bf11 
+summary: バックアップからデータベースリソースをクローニングする前に、 SnapCenter Server でいくつかのタスクを実行する必要があります。データベースのクローニングは、本番環境のデータベースまたはそのバックアップセットのポイントインタイムコピーを作成するプロセスです。データベースをクローニングして、アプリケーション開発サイクル中に実装が必要な機能を現在のデータベース構造とコンテンツを使用してテストしたり、データウェアハウスへのデータの取り込み時にデータの抽出と操作のツールを使用したり、誤って削除または変更されたデータをリカバリしたりできます。 
 ---
-= 7f9567749606082611d69fd511d51593
+= クローニングのワークフロー
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-463e628d0fee92af59d880953c74bf11
+バックアップからデータベースリソースをクローニングする前に、 SnapCenter Server でいくつかのタスクを実行する必要があります。データベースのクローニングは、本番環境のデータベースまたはそのバックアップセットのポイントインタイムコピーを作成するプロセスです。データベースをクローニングして、アプリケーション開発サイクル中に実装が必要な機能を現在のデータベース構造とコンテンツを使用してテストしたり、データウェアハウスへのデータの取り込み時にデータの抽出と操作のツールを使用したり、誤って削除または変更されたデータをリカバリしたりできます。
 
-b7d4e9465660c3654b7e3da747496c5c
+データベースのクローニング処理では、ジョブIDに基づいてレポートが生成されます。
 
-999e40363ae36d8696166b52a3c23152
+次のワークフローは、クローニング処理の実行順序を示しています。
 
-image::../media/scsql_clone_workflow.png[70124670f70878681ab7bb78e2860796]
+image::../media/scsql_clone_workflow.png[クローニングのワークフロー図]
 
-8d815f55ddec2cbd3a8fb998077c1279
+PowerShellコマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、リカバリ、検証、クローニングの各処理を実行することもできます。PowerShellコマンドレットの詳細については、SnapCenterコマンドレットのヘルプを使用するか、 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"]
 
-fad3dbbe9841f42de249b688f1d47a80
+* 詳細はこちら *
 
-a121a292ca8a39c5591cdcc69d0f0ff8
+link:task_clone_from_a_sql_server_database_backup.html["SQL Serverデータベースバックアップからのクローニング"]
 
-b5fb765366530fd4f75c7c5c651544bd
+link:task_perform_clone_lifecycle_management.html["クローンライフサイクルの実行"]
 
-5f2b3d8994098e5cded686a40b8bb7c9
+link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Clone_operation_might_fail_or_take_longer_time_to_complete_with_default_TCP_TIMEOUT_value["デフォルトのTCP_TIMEOUT値を使用すると、クローニング処理が失敗したり完了までに時間がかかることがある"]

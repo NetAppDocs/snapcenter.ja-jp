@@ -2,823 +2,823 @@
 permalink: concept/reference_pre_defined_snapcenter_roles_and_permissions.html 
 sidebar: sidebar 
 keywords: RBAC, role, permission, pre-defined role 
-summary: 096047cf506c2b6d8aa479fb6c367de8 
+summary: SnapCenter には、事前定義されたロールが用意されており、それぞれ一連の権限がすでに有効になっています。ロールベースアクセス制御（ RBAC ）をセットアップして管理するときは、これらの事前定義されたロールを使用するか、新しいロールを作成できます。 
 ---
-= a607c43df1ec34570cfd92c7f8f85068
+= 事前定義された SnapCenter ロールと権限
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-3777cceb702f246ac78189bafd5dcb33
+SnapCenter には、事前定義されたロールが用意されており、それぞれ一連の権限がすでに有効になっています。ロールベースアクセス制御（RBAC）を設定および管理する場合は、事前定義されたロールを使用するか、新しいロールを作成できます。
 
-4fcfb9c7bdec59f8996c8446e7cbf70d
+SnapCenter には、次の事前定義されたロールが含まれています。
 
-* 907655eeb50553e9ffc10c9adb75bc3c
-* c3ab820456c9495a13e6c8d3bf203adb
-* 9cbf4a13bbbfd716d85a344992a28d5c
-* c79885b0ddab0b04ef9ffcd2a2adc001
-
-
-c6e575969465b9ba25194550f4409a37
-
-a1a7f8fc168b0e00b72aa67994aca50a
+* SnapCenter 管理者ロール
+* App Backup and Clone Adminロール
+* Backup and Clone Viewerロール
+* Infrastructure Adminロール
 
 
+ロールにユーザを追加するときは、Storage Connection権限を割り当ててStorage Virtual Machine（SVM）の通信を有効にするか、SVMをユーザに割り当ててSVMを使用する権限を有効にする必要があります。Storage Connection 権限を割り当てられたユーザは SVM 接続を作成できます。
 
-== 907655eeb50553e9ffc10c9adb75bc3c
-
-9c841e2716f76afb092d7a07c5b70179
+たとえば、 SnapCenter Admin ロールのユーザは、 SVM 接続を作成し、 App Backup and Clone Admin ロールのユーザに割り当てることができます。 App Backup and Clone Admin ロールには、デフォルトでは SVM 接続を作成または編集する権限は付与されていません。SVM 接続がないと、ユーザはバックアップ、クローニング、リストアの処理を実行できません。
 
 
 
-== c3ab820456c9495a13e6c8d3bf203adb
+== SnapCenter 管理者ロール
 
-a874cfab5c47d6543b2c7212ad2c31f5
+SnapCenter Admin ロールでは、すべての権限が有効になっています。このロールの権限は変更できません。ロールにユーザやグループを追加したり、削除したりできます。
+
+
+
+== App Backup and Clone Adminロール
+
+App Backup and Clone Adminロールには、アプリケーションのバックアップとクローン関連のタスクに対して管理操作を実行するために必要な権限があります。このロールには、ホスト管理、プロビジョニング、ストレージ接続管理、またはリモートインストールに関する権限はありません。
 
 |===
-| d08ccf52b4cdd08e41cfb99ec42e0b29 | 00d23a76e43b46dae9ec7aa9dcbebb32 | 686e697538050e4664636337cc3b834f | 7a1a5f3e79fdc91edf2f5ead9d66abb4 | 06933067aafd48425d67bcb01bba5cb6 | f2a6c498fb90ee345d997f888fce3b18 
+| 権限 | 有効 | 作成 | 読み取り | 更新 | 削除 
 
 
  a| 
-dd23acac46f17cbfd4d5541f8ee3c7a1
+リソースグループ
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
 
 
 
  a| 
-51359e8b51c63b87d50cb1bab73380e2
+ポリシー
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
 
 
 
  a| 
-3500ba09d0538297440ca620c9dd46bf
+バックアップ
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
 
 
 
  a| 
-c2ca16d048ec66e04bca283eab048ec2
+ホスト
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
 
 
 
  a| 
-1a207e1c839db0b921558b34cc67a80d
+ストレージ接続
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-bafd7322c6e97d25b6299b5d6fe8920b
+いいえ
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-bafd7322c6e97d25b6299b5d6fe8920b
+いいえ
  a| 
-bafd7322c6e97d25b6299b5d6fe8920b
+いいえ
 
 
 
  a| 
-ff24590464659ee8cdec688128c35f89
+クローン
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
 
 
 
  a| 
-a7e4aefd145e88330419ba2d59698616
+プロビジョニング
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-bafd7322c6e97d25b6299b5d6fe8920b
+いいえ
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-bafd7322c6e97d25b6299b5d6fe8920b
+いいえ
  a| 
-bafd7322c6e97d25b6299b5d6fe8920b
+いいえ
 
 
 
  a| 
-2938c7f7e560ed972f8a4f68e80ff834
+ダッシュボード
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
 
 
 
  a| 
-c91c7b93c28cd18741b71f727ee81ee3
+レポート
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
 
 
 
  a| 
-2bd339d85ee3b33e513359ce781b60cc
+リストア
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
 
 
 
  a| 
-be8545ae7ab0276e15898aae7acfbd7a
+リソース
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
 
 
 
  a| 
-77aefde2c7e6cb64369de663c3331b01
+プラグインのインストール/アンインストール
  a| 
-bafd7322c6e97d25b6299b5d6fe8920b
+いいえ
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
 
 
 
  a| 
-19f59b74448f6a27519db281a44e4b12
+移行
  a| 
-bafd7322c6e97d25b6299b5d6fe8920b
+いいえ
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
 
 
 
  a| 
-eace16d66cdd93ad876c620db7456077
+マウントする
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
 
 
 
  a| 
-1281764038ea27ade56d7d2b8be22798
+アンマウント
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
 
 
 
  a| 
-0d73a80a294d9fcca263cef71862af94
+フルボリュームリストア
  a| 
-bafd7322c6e97d25b6299b5d6fe8920b
+いいえ
  a| 
-bafd7322c6e97d25b6299b5d6fe8920b
+いいえ
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
 
 
 
  a| 
-c3c73b7f9d382d2231b0aa3e8a26db67
+ジョブモニタ
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
-
-|===
-
-
-== 9cbf4a13bbbfd716d85a344992a28d5c
-
-df44602e169cb1f9dbb6288c7e86985e
-
-|===
-| d08ccf52b4cdd08e41cfb99ec42e0b29 | 00d23a76e43b46dae9ec7aa9dcbebb32 | 686e697538050e4664636337cc3b834f | 7a1a5f3e79fdc91edf2f5ead9d66abb4 | 06933067aafd48425d67bcb01bba5cb6 | f2a6c498fb90ee345d997f888fce3b18 
-
-
- a| 
-dd23acac46f17cbfd4d5541f8ee3c7a1
- a| 
-e681a3b45989b468533c4b90ee960bf9
- a| 
-bafd7322c6e97d25b6299b5d6fe8920b
- a| 
-93cba07454f06a4a960172bbd6e2a435
- a| 
-bafd7322c6e97d25b6299b5d6fe8920b
- a| 
-bafd7322c6e97d25b6299b5d6fe8920b
-
-
-
- a| 
-51359e8b51c63b87d50cb1bab73380e2
- a| 
-e681a3b45989b468533c4b90ee960bf9
- a| 
-bafd7322c6e97d25b6299b5d6fe8920b
- a| 
-93cba07454f06a4a960172bbd6e2a435
- a| 
-bafd7322c6e97d25b6299b5d6fe8920b
- a| 
-bafd7322c6e97d25b6299b5d6fe8920b
-
-
-
- a| 
-3500ba09d0538297440ca620c9dd46bf
- a| 
-e681a3b45989b468533c4b90ee960bf9
- a| 
-bafd7322c6e97d25b6299b5d6fe8920b
- a| 
-93cba07454f06a4a960172bbd6e2a435
- a| 
-bafd7322c6e97d25b6299b5d6fe8920b
- a| 
-bafd7322c6e97d25b6299b5d6fe8920b
-
-
-
- a| 
-c2ca16d048ec66e04bca283eab048ec2
- a| 
-e681a3b45989b468533c4b90ee960bf9
- a| 
-bafd7322c6e97d25b6299b5d6fe8920b
- a| 
-93cba07454f06a4a960172bbd6e2a435
- a| 
-bafd7322c6e97d25b6299b5d6fe8920b
- a| 
-bafd7322c6e97d25b6299b5d6fe8920b
-
-
-
- a| 
-1a207e1c839db0b921558b34cc67a80d
- a| 
-e681a3b45989b468533c4b90ee960bf9
- a| 
-bafd7322c6e97d25b6299b5d6fe8920b
- a| 
-93cba07454f06a4a960172bbd6e2a435
- a| 
-bafd7322c6e97d25b6299b5d6fe8920b
- a| 
-bafd7322c6e97d25b6299b5d6fe8920b
-
-
-
- a| 
-ff24590464659ee8cdec688128c35f89
- a| 
-e681a3b45989b468533c4b90ee960bf9
- a| 
-bafd7322c6e97d25b6299b5d6fe8920b
- a| 
-93cba07454f06a4a960172bbd6e2a435
- a| 
-bafd7322c6e97d25b6299b5d6fe8920b
- a| 
-bafd7322c6e97d25b6299b5d6fe8920b
-
-
-
- a| 
-a7e4aefd145e88330419ba2d59698616
- a| 
-e681a3b45989b468533c4b90ee960bf9
- a| 
-bafd7322c6e97d25b6299b5d6fe8920b
- a| 
-93cba07454f06a4a960172bbd6e2a435
- a| 
-bafd7322c6e97d25b6299b5d6fe8920b
- a| 
-bafd7322c6e97d25b6299b5d6fe8920b
-
-
-
- a| 
-2938c7f7e560ed972f8a4f68e80ff834
- a| 
-93cba07454f06a4a960172bbd6e2a435
- a| 
-e681a3b45989b468533c4b90ee960bf9
- a| 
-e681a3b45989b468533c4b90ee960bf9
- a| 
-e681a3b45989b468533c4b90ee960bf9
- a| 
-e681a3b45989b468533c4b90ee960bf9
-
-
-
- a| 
-c91c7b93c28cd18741b71f727ee81ee3
- a| 
-93cba07454f06a4a960172bbd6e2a435
- a| 
-e681a3b45989b468533c4b90ee960bf9
- a| 
-e681a3b45989b468533c4b90ee960bf9
- a| 
-e681a3b45989b468533c4b90ee960bf9
- a| 
-e681a3b45989b468533c4b90ee960bf9
-
-
-
- a| 
-2bd339d85ee3b33e513359ce781b60cc
- a| 
-bafd7322c6e97d25b6299b5d6fe8920b
- a| 
-bafd7322c6e97d25b6299b5d6fe8920b
- a| 
-e681a3b45989b468533c4b90ee960bf9
- a| 
-e681a3b45989b468533c4b90ee960bf9
- a| 
-e681a3b45989b468533c4b90ee960bf9
-
-
-
- a| 
-be8545ae7ab0276e15898aae7acfbd7a
- a| 
-bafd7322c6e97d25b6299b5d6fe8920b
- a| 
-bafd7322c6e97d25b6299b5d6fe8920b
- a| 
-93cba07454f06a4a960172bbd6e2a435
- a| 
-93cba07454f06a4a960172bbd6e2a435
- a| 
-bafd7322c6e97d25b6299b5d6fe8920b
-
-
-
- a| 
-77aefde2c7e6cb64369de663c3331b01
- a| 
-bafd7322c6e97d25b6299b5d6fe8920b
- a| 
-e681a3b45989b468533c4b90ee960bf9
- a| 
-e681a3b45989b468533c4b90ee960bf9
- a| 
-e681a3b45989b468533c4b90ee960bf9
- a| 
-e681a3b45989b468533c4b90ee960bf9
-
-
-
- a| 
-19f59b74448f6a27519db281a44e4b12
- a| 
-bafd7322c6e97d25b6299b5d6fe8920b
- a| 
-e681a3b45989b468533c4b90ee960bf9
- a| 
-e681a3b45989b468533c4b90ee960bf9
- a| 
-e681a3b45989b468533c4b90ee960bf9
- a| 
-e681a3b45989b468533c4b90ee960bf9
-
-
-
- a| 
-eace16d66cdd93ad876c620db7456077
- a| 
-93cba07454f06a4a960172bbd6e2a435
- a| 
-e681a3b45989b468533c4b90ee960bf9
- a| 
-e681a3b45989b468533c4b90ee960bf9
- a| 
-e681a3b45989b468533c4b90ee960bf9
- a| 
-e681a3b45989b468533c4b90ee960bf9
-
-
-
- a| 
-1281764038ea27ade56d7d2b8be22798
- a| 
-93cba07454f06a4a960172bbd6e2a435
- a| 
-e681a3b45989b468533c4b90ee960bf9
- a| 
-e681a3b45989b468533c4b90ee960bf9
- a| 
-e681a3b45989b468533c4b90ee960bf9
- a| 
-e681a3b45989b468533c4b90ee960bf9
-
-
-
- a| 
-0d73a80a294d9fcca263cef71862af94
- a| 
-bafd7322c6e97d25b6299b5d6fe8920b
- a| 
-e681a3b45989b468533c4b90ee960bf9
- a| 
-e681a3b45989b468533c4b90ee960bf9
- a| 
-e681a3b45989b468533c4b90ee960bf9
- a| 
-e681a3b45989b468533c4b90ee960bf9
-
-
-
- a| 
-c3c73b7f9d382d2231b0aa3e8a26db67
- a| 
-93cba07454f06a4a960172bbd6e2a435
- a| 
-e681a3b45989b468533c4b90ee960bf9
- a| 
-e681a3b45989b468533c4b90ee960bf9
- a| 
-e681a3b45989b468533c4b90ee960bf9
- a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
 
 |===
 
 
-== c79885b0ddab0b04ef9ffcd2a2adc001
+== Backup and Clone Viewerロール
 
-969d7fda8acd2ab121789be3a975bbb4
+Backup and Clone Viewerロールには、すべての権限が読み取り専用で表示されます。また、検出、レポート、およびダッシュボードへのアクセスに必要な権限も有効になっています。
 
 |===
-| d08ccf52b4cdd08e41cfb99ec42e0b29 | 00d23a76e43b46dae9ec7aa9dcbebb32 | 686e697538050e4664636337cc3b834f | 7a1a5f3e79fdc91edf2f5ead9d66abb4 | 06933067aafd48425d67bcb01bba5cb6 | f2a6c498fb90ee345d997f888fce3b18 
+| 権限 | 有効 | 作成 | 読み取り | 更新 | 削除 
 
 
  a| 
-dd23acac46f17cbfd4d5541f8ee3c7a1
+リソースグループ
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-93cba07454f06a4a960172bbd6e2a435
+いいえ
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+いいえ
  a| 
-93cba07454f06a4a960172bbd6e2a435
-
-
-
- a| 
-51359e8b51c63b87d50cb1bab73380e2
- a| 
-e681a3b45989b468533c4b90ee960bf9
- a| 
-bafd7322c6e97d25b6299b5d6fe8920b
- a| 
-93cba07454f06a4a960172bbd6e2a435
- a| 
-93cba07454f06a4a960172bbd6e2a435
- a| 
-93cba07454f06a4a960172bbd6e2a435
+いいえ
 
 
 
  a| 
-3500ba09d0538297440ca620c9dd46bf
+ポリシー
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-93cba07454f06a4a960172bbd6e2a435
+いいえ
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+いいえ
  a| 
-93cba07454f06a4a960172bbd6e2a435
+いいえ
 
 
 
  a| 
-c2ca16d048ec66e04bca283eab048ec2
+バックアップ
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-93cba07454f06a4a960172bbd6e2a435
+いいえ
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+いいえ
  a| 
-93cba07454f06a4a960172bbd6e2a435
+いいえ
 
 
 
  a| 
-1a207e1c839db0b921558b34cc67a80d
+ホスト
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-93cba07454f06a4a960172bbd6e2a435
+いいえ
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+いいえ
  a| 
-93cba07454f06a4a960172bbd6e2a435
+いいえ
 
 
 
  a| 
-ff24590464659ee8cdec688128c35f89
+ストレージ接続
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-bafd7322c6e97d25b6299b5d6fe8920b
+いいえ
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-bafd7322c6e97d25b6299b5d6fe8920b
+いいえ
  a| 
-bafd7322c6e97d25b6299b5d6fe8920b
+いいえ
 
 
 
  a| 
-a7e4aefd145e88330419ba2d59698616
+クローン
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-93cba07454f06a4a960172bbd6e2a435
+いいえ
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-93cba07454f06a4a960172bbd6e2a435
+いいえ
  a| 
-93cba07454f06a4a960172bbd6e2a435
+いいえ
 
 
 
  a| 
-2938c7f7e560ed972f8a4f68e80ff834
+プロビジョニング
  a| 
-93cba07454f06a4a960172bbd6e2a435
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+いいえ
  a| 
-e681a3b45989b468533c4b90ee960bf9
+はい
  a| 
-e681a3b45989b468533c4b90ee960bf9
+いいえ
  a| 
-e681a3b45989b468533c4b90ee960bf9
+いいえ
 
 
 
  a| 
-c91c7b93c28cd18741b71f727ee81ee3
+ダッシュボード
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
 
 
 
  a| 
-2bd339d85ee3b33e513359ce781b60cc
+レポート
  a| 
-93cba07454f06a4a960172bbd6e2a435
+はい
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
 
 
 
  a| 
-be8545ae7ab0276e15898aae7acfbd7a
+リストア
  a| 
-93cba07454f06a4a960172bbd6e2a435
+いいえ
  a| 
-93cba07454f06a4a960172bbd6e2a435
+いいえ
  a| 
-93cba07454f06a4a960172bbd6e2a435
+該当なし
  a| 
-93cba07454f06a4a960172bbd6e2a435
+該当なし
  a| 
-93cba07454f06a4a960172bbd6e2a435
+該当なし
 
 
 
  a| 
-77aefde2c7e6cb64369de663c3331b01
+リソース
  a| 
-93cba07454f06a4a960172bbd6e2a435
+いいえ
  a| 
-e681a3b45989b468533c4b90ee960bf9
+いいえ
  a| 
-e681a3b45989b468533c4b90ee960bf9
+はい
  a| 
-e681a3b45989b468533c4b90ee960bf9
+はい
  a| 
-e681a3b45989b468533c4b90ee960bf9
+いいえ
 
 
 
  a| 
-19f59b74448f6a27519db281a44e4b12
+プラグインのインストール/アンインストール
  a| 
-bafd7322c6e97d25b6299b5d6fe8920b
+いいえ
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
 
 
 
  a| 
-eace16d66cdd93ad876c620db7456077
+移行
  a| 
-bafd7322c6e97d25b6299b5d6fe8920b
+いいえ
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
 
 
 
  a| 
-1281764038ea27ade56d7d2b8be22798
+マウントする
  a| 
-bafd7322c6e97d25b6299b5d6fe8920b
+はい
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
 
 
 
  a| 
-0d73a80a294d9fcca263cef71862af94
+アンマウント
  a| 
-bafd7322c6e97d25b6299b5d6fe8920b
+はい
  a| 
-bafd7322c6e97d25b6299b5d6fe8920b
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
 
 
 
  a| 
-c3c73b7f9d382d2231b0aa3e8a26db67
+フルボリュームリストア
  a| 
-93cba07454f06a4a960172bbd6e2a435
+いいえ
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
  a| 
-e681a3b45989b468533c4b90ee960bf9
+該当なし
+
+
+
+ a| 
+ジョブモニタ
+ a| 
+はい
+ a| 
+該当なし
+ a| 
+該当なし
+ a| 
+該当なし
+ a| 
+該当なし
+
+|===
+
+
+== Infrastructure Adminロール
+
+Infrastructure Adminロールでは、ホスト管理、ストレージ管理、プロビジョニング、リソースグループ、リモートインストールレポート、 をクリックし、ダッシュボードにアクセスします。
+
+|===
+| 権限 | 有効 | 作成 | 読み取り | 更新 | 削除 
+
+
+ a| 
+リソースグループ
+ a| 
+該当なし
+ a| 
+はい
+ a| 
+はい
+ a| 
+はい
+ a| 
+はい
+
+
+
+ a| 
+ポリシー
+ a| 
+該当なし
+ a| 
+いいえ
+ a| 
+はい
+ a| 
+はい
+ a| 
+はい
+
+
+
+ a| 
+バックアップ
+ a| 
+該当なし
+ a| 
+はい
+ a| 
+はい
+ a| 
+はい
+ a| 
+はい
+
+
+
+ a| 
+ホスト
+ a| 
+該当なし
+ a| 
+はい
+ a| 
+はい
+ a| 
+はい
+ a| 
+はい
+
+
+
+ a| 
+ストレージ接続
+ a| 
+該当なし
+ a| 
+はい
+ a| 
+はい
+ a| 
+はい
+ a| 
+はい
+
+
+
+ a| 
+クローン
+ a| 
+該当なし
+ a| 
+いいえ
+ a| 
+はい
+ a| 
+いいえ
+ a| 
+いいえ
+
+
+
+ a| 
+プロビジョニング
+ a| 
+該当なし
+ a| 
+はい
+ a| 
+はい
+ a| 
+はい
+ a| 
+はい
+
+
+
+ a| 
+ダッシュボード
+ a| 
+はい
+ a| 
+該当なし
+ a| 
+該当なし
+ a| 
+該当なし
+ a| 
+該当なし
+
+
+
+ a| 
+レポート
+ a| 
+はい
+ a| 
+該当なし
+ a| 
+該当なし
+ a| 
+該当なし
+ a| 
+該当なし
+
+
+
+ a| 
+リストア
+ a| 
+はい
+ a| 
+該当なし
+ a| 
+該当なし
+ a| 
+該当なし
+ a| 
+該当なし
+
+
+
+ a| 
+リソース
+ a| 
+はい
+ a| 
+はい
+ a| 
+はい
+ a| 
+はい
+ a| 
+はい
+
+
+
+ a| 
+プラグインのインストール/アンインストール
+ a| 
+はい
+ a| 
+該当なし
+ a| 
+該当なし
+ a| 
+該当なし
+ a| 
+該当なし
+
+
+
+ a| 
+移行
+ a| 
+いいえ
+ a| 
+該当なし
+ a| 
+該当なし
+ a| 
+該当なし
+ a| 
+該当なし
+
+
+
+ a| 
+マウントする
+ a| 
+いいえ
+ a| 
+該当なし
+ a| 
+該当なし
+ a| 
+該当なし
+ a| 
+該当なし
+
+
+
+ a| 
+アンマウント
+ a| 
+いいえ
+ a| 
+該当なし
+ a| 
+該当なし
+ a| 
+該当なし
+ a| 
+該当なし
+
+
+
+ a| 
+フルボリュームリストア
+ a| 
+いいえ
+ a| 
+いいえ
+ a| 
+該当なし
+ a| 
+該当なし
+ a| 
+該当なし
+
+
+
+ a| 
+ジョブモニタ
+ a| 
+はい
+ a| 
+該当なし
+ a| 
+該当なし
+ a| 
+該当なし
+ a| 
+該当なし
 
 |===

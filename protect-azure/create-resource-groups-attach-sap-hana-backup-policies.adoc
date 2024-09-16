@@ -2,57 +2,57 @@
 permalink: protect-azure/create-resource-groups-attach-sap-hana-backup-policies.html 
 sidebar: sidebar 
 keywords: resource groups, attach policies, snapcenter, SAP HANA, backup polices, schedule 
-summary: aa5531c2ecb8be9440f8c1f83b8e7d4f 
+summary: リソースグループはコンテナであり、バックアップおよび保護するリソースを追加する必要があります。 
 ---
-= a762c8a08fd8dd6ac2427dad067d141f
+= リソースグループを作成してSAP HANAバックアップポリシーを適用
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-aa5531c2ecb8be9440f8c1f83b8e7d4f
+リソースグループはコンテナであり、バックアップおよび保護するリソースを追加する必要があります。
 
-257763ed8a159d456a92e8b44d26aa9e
+リソースグループを使用すると、特定のアプリケーションに関連付けられているすべてのデータを同時にバックアップできます。リソースグループはすべてのデータ保護ジョブに必要です。また、リソースグループに1つ以上のポリシーを適用して、実行するデータ保護ジョブのタイプを定義する必要があります。
 
-.f3a29486bed19a90f2da6d007818b427
-. 530a5fa7e8fbaa4c796dbd46c93a55dd
-. 8bd989fb65665020d24c4db21e1da81d
-. 2577791612c938dc7bd356c695b38b81
+.手順
+. 左側のナビゲーションペインで、 * リソース * をクリックし、リストから適切なプラグインを選択します。
+. [ リソース ] ページで、 [ * 新しいリソースグループ * ] をクリックします。
+. [ 名前 ] ページで、次の操作を実行します。
 +
 |===
-| 21f831502a413a739e20cbf9f2eefe54 | 5e2ad6fd9deb412d871137094ee43ef0 
+| フィールド | 操作 
 
 
  a| 
-49ee3087348e8d44e1feda1917443987
+名前
  a| 
-fa4d1c967d467deb12174bc6b1b3355b
-
-
-
- a| 
-189f63f277cd73395561651753563065
- a| 
-7651838ffd9b279a9ff6c4c63159427e
+リソースグループの名前を入力します。
 
 
 
  a| 
-52a580de823d89b3d7b0e19883cf0a1b
+タグ
  a| 
-ad8d3fc8faebdc68585dd1240b9fc90c
+リソースグループをあとで検索する際に役立つラベルを1つ以上入力します。
+
+
+
+ a| 
+Snapshotコピーにカスタムの名前形式を使用する
+ a| 
+このチェックボックスをオンにして、Snapshot名に使用するカスタムの名前形式を入力します。
 
 |===
-. 0e37d8b83258c6a647c282f496b46f7b
-. c7e757b993a892f1adbc4d9d429ada9a
-. 53899dcc4360d3b8622ce5dc08a12950
+. Resources ページで、 * Host * ドロップダウン・リストからホスト名を選択し、 * Resource Type * ドロップダウン・リストからリソース・タイプを選択します。
+. [ 使用可能なリソース（ Available Resources ） ] セクションからリソースを選択し、右矢印をクリックして [ 選択したリソース（ * Selected Resources ） ] セクションに移動します。
+. [Policies] ページで、次の手順を実行します。
 +
-.. 70c30c71587e2d0c71b7f9e97a8aad7d
-.. eb40bd4c68324257632328b6d08fa139
-.. a4412452c9cff96f8d11e97e688ba35e
+.. ドロップダウンリストから1つ以上のポリシーを選択します。
+.. [スケジュールの設定]列で、設定するポリシーの**をクリックしますimage:../media/add_policy_from_resourcegroup.gif[""]。
+.. [Add schedules for policy_name_] ダイアログボックスで、スケジュールを設定し、 [OK] をクリックします。
 
 
-. 30b65b6968f11ce5399cacf995839f65
-. fed1c121dc4f5a5484e5623e297385fb
+. [ 通知 ] ページの [ 電子メールの設定 *] ドロップダウンリストから、電子メールを送信するシナリオを選択します。
+. 概要を確認し、 [ 完了 ] をクリックします。
 

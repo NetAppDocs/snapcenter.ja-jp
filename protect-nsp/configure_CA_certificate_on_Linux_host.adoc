@@ -2,115 +2,115 @@
 permalink: protect-nsp/configure_CA_certificate_on_Linux_host.html 
 sidebar: sidebar 
 keywords: SnapCenter 
-summary: 8db0e044540288a3817813e7759bc11a 
+summary: LinuxホストでのNetAppでサポートされるプラグインサービスのCA証明書の設定 
 ---
-= 8db0e044540288a3817813e7759bc11a
+= LinuxホストでのNetAppでサポートされるプラグインサービスのCA証明書の設定
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-e585ba53f75038fd8dca93c08078885c
+カスタムプラグインキーストアとその証明書のパスワードの管理、 CA 証明書の設定、カスタムプラグインの信頼ストアへのルート証明書または中間証明書の設定、 SnapCenter Custom Plug-ins の信頼ストアを使用したカスタムプラグインの信頼ストアへの CA 署名キーペアの設定、インストールされたデジタル証明書のアクティブ化が必要です。
 
-cf47054fd8ae4e335b6638a86a798a1a
+カスタムプラグインでは、ファイル「 keystore.JKS 」を使用します。このファイルは、信頼ストアおよびキーストアとして _/opt/NetApp/snapcenter / scc /etc/both にあります。
 
 
 
-== 9da463b2b61e23d3fe7ab13642c5e3aa
+== カスタムプラグインキーストアのパスワードと使用中のCA署名キーペアのエイリアスを管理します。
 
-.f3a29486bed19a90f2da6d007818b427
-. b741c1960e79b37abf87bc732960670f
+.手順
+. カスタムプラグインキーストアのデフォルトパスワードは、カスタムプラグインエージェントのプロパティファイルから取得できます。
 +
-98da4d648a6b6a09c02dc4412d8c0e0f
+キー'keystore_pass'に対応する値です。
 
-. e32ebbb17be02a7eaf806904e218c1c1
+. キーストアのパスワードを変更します。
 +
  keytool -storepasswd -keystore keystore.jks
-. 9c53ace0e3dbdc38d844dcf02f4304ba
+. キーストア内の秘密鍵エントリのすべてのエイリアスのパスワードを、キーストアと同じパスワードに変更します。
 +
  keytool -keypasswd -alias "alias_name_in_cert" -keystore keystore.jks
 +
-d4cf07e2f6f2f8f14d91659efdc82d0f
+_agent.properties_ ファイル内のキー keystore.pass に対しても同じキーを更新します。
 
-. e1114844301394bfab9164689b3f9f77
-
-
-
-NOTE: 1746a736dc1a04cee7ebe7c17449348d
+. パスワードを変更したら、サービスを再起動します。
 
 
 
-== 256bd726c5c8cab1c5ea0f9e796f5965
+NOTE: カスタムプラグインキーストアのパスワードと、秘密鍵に関連付けられているすべてのエイリアスパスワードを同じにする必要があります。
 
-155033ac3710d50f11dcf73b23618ff9
 
-.f3a29486bed19a90f2da6d007818b427
-. e7d98cce277602959c429147cc1b190e
-. 7d315e2f30c60f7b0d5a4fe26f119ab2
-. 706343adbd839cf9e73fb5f15c1cb3b9
+
+== カスタムプラグインの信頼ストアへのルート証明書または中間証明書の設定
+
+ルート証明書または中間証明書は、カスタムプラグインの信頼ストアに秘密鍵なしで設定する必要があります。
+
+.手順
+. カスタムプラグインキーストアを含むフォルダ（ /opt/NetApp/snapcenter / scc など）に移動します
+. 「keystore.jks」ファイルを探します。
+. キーストアに追加された証明書を一覧表示します。
 +
-4713a041a2807fdb6a09974cfc241836
+`keytool -list -v -keystore keystore.jks`
 
-. e792c32ecac1acaff7821d45e1e214d7
+. ルート証明書または中間証明書を追加します。
 +
  keytool -import -trustcacerts -alias myRootCA -file /root/USERTrustRSA_Root.cer -keystore keystore.jks
-. 9712b66959e53dd56caee0b446a4b341
+. カスタムプラグインの信頼ストアにルート証明書または中間証明書を設定したら、サービスを再起動します。
 
 
 
-NOTE: 1df512af62f1258662a90107366384d7
+NOTE: ルートCA証明書のあとに中間CA証明書を追加する必要があります。
 
 
 
-== fa022a8acd4a44b539e8d7e8455ffe19
+== カスタムプラグインの信頼ストアへのCA署名キーペアの設定
 
-9d74dd7b3f156596731e7aa28b4bb608
+カスタムプラグインの信頼ストアにCA署名キーペアを設定する必要があります。
 
-.f3a29486bed19a90f2da6d007818b427
-. 8b671385ba9f578c2d4665cf8a08dacb
-. 7d315e2f30c60f7b0d5a4fe26f119ab2
-. 706343adbd839cf9e73fb5f15c1cb3b9
+.手順
+. カスタムプラグインキーストア/opt/NetApp/snapcenter/scc/etcが格納されているフォルダに移動します。
+. 「keystore.jks」ファイルを探します。
+. キーストアに追加された証明書を一覧表示します。
 +
-4713a041a2807fdb6a09974cfc241836
+`keytool -list -v -keystore keystore.jks`
 
-. bf9029c481f886c6ac95d1935371b6f0
+. 秘密鍵と公開鍵の両方が設定されたCA証明書を追加します。
 +
-3cd11cc425dd94ba261d4cd011a9f11e
+`keytool -importkeystore -srckeystore /root/snapcenter.ssl.test.netapp.com.pfx -srcstoretype pkcs12 -destkeystore keystore.jks -deststoretype JKS`
 
-. ea64c68df49294aed2c5b2fcf603e243
+. キーストアに追加された証明書を一覧表示します。
 +
-4713a041a2807fdb6a09974cfc241836
+`keytool -list -v -keystore keystore.jks`
 
-. d57e9c478525aa47932eeb7d8b217240
-. 4b80542fc3ef5daca43d02c37fe3b113
+. キーストアに追加された新しいCA証明書に対応するエイリアスがキーストアに含まれていることを確認します。
+. CA証明書に追加した秘密鍵のパスワードをキーストアのパスワードに変更します。
 +
-da4bc7b82286be276a29a9685b0b51a1
+デフォルトのカスタムプラグインキーストアパスワードは、agent.propertiesファイルのキーkeystore_passの値です。
 
 +
  keytool -keypasswd -alias "alias_name_in_CA_cert" -keystore keystore.jks
-. 97814763a021bc6959932c2ea2dbfb8b
+. CA 証明書のエイリアス名が長く、スペースまたは特殊文字（「 * 」、「」）が含まれている場合は、エイリアス名を単純な名前に変更します。
 +
  keytool -changealias -alias "long_alias_name" -destalias "simple_alias" -keystore keystore.jks
-. 35f7e8cf7bad794e99c08792680394bd
+. agent.propertiesファイルのCA証明書からエイリアス名を設定します。
 +
-56362f2790b041340e92aa3c79fb1cf8
+この値をSCC_CERTIFICATE_ALIASキーに対して更新します。
 
-. c3600e2dd0c2139061208ea301e0862e
-
-
+. カスタムプラグインの信頼ストアにCA署名キーペアを設定したら、サービスを再起動します。
 
 
-== a6d1b1f70aba7a076e87d9ee31c17824
-
-.bbe48fb854ea022537208eeeff822f91
-* 64b09f6e0509cd50f9f53e4d3b8816dc
-* 26e84c8fe3deb08970e1f17fbc4649f5
 
 
-.f3a29486bed19a90f2da6d007818b427
-. 4f1ac502e9d4dc79e3c307cd196d50fb
+== SnapCenterカスタムプラグインの証明書失効リスト（CRL）を設定する
+
+.タスクの内容
+* SnapCenterカスタムプラグインは、事前に設定されたディレクトリでCRLファイルを検索します。
+* SnapCenterカスタムプラグインのCRLファイルのデフォルトディレクトリは「opt/netapp/snapcenter/scc/etc/crl」です。
+
+
+.手順
+. crl_pathキーに対して、agent.propertiesファイルのデフォルトディレクトリを変更および更新できます。
 +
-1b782c06b199c89589ed8bcf1a6ca9ab
+このディレクトリには、複数のCRLファイルを配置できます。受信証明書は、各CRLに対して検証されます。
 
 

@@ -2,212 +2,216 @@
 permalink: protect-sce/task_add_hosts_and_install_plug_in_for_exchange.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for Microsoft Exchange Server, NET TCP 
-summary: 442b64d998d026e5e41a7f2456755c85 
+summary: SnapCenterAdd Host ページを使用して、 Windows ホストを追加できます。指定したホストに Plug-in for Exchange が自動的にインストールされます。プラグインのインストールには、この方法を推奨します。ホストの追加とプラグインのインストールは、ホストごとまたはクラスタごとに実行できます。 
 ---
-= 43e4843cc378c4665771060dbab161eb
+= ホストを追加してPlug-in for Exchangeをインストールする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-9e2a1394549af2f704da56dffdafcdf3
+SnapCenterの[ホストの追加]ページを使用して、Windowsホストを追加できます。Plug-in for Exchangeは指定したホストに自動的にインストールされます。プラグインのインストールには、この方法を推奨します。ホストの追加とプラグインのインストールは、ホストごとまたはクラスタごとに実行できます。
 
-.135b308ed83c53f1516b7c754566d1c4
-* 5ae66aec97f2faf97a351f36d528053c
+.開始する前に
+* SnapCenter ServerホストのオペレーティングシステムがWindows 2019で、プラグインホストのオペレーティングシステムがWindows 2022の場合は、次の手順を実行する必要があります。
 +
-** 49e0aad8716e0dbb7231841900443133
-** c174e6f1e3fc4dbc9bbc743e12554a33
+** Windows Server 2019（OSビルド17763.5936）以降にアップグレードする
+** Windows Server 2022（OSビルド20348.2402）以降にアップグレードする
 
 
-* 45e52ea61331adeddb8fcba96510d245
-* 0653ebf18e2e782a5156c7cfd676052f
-* f43b8555947d4751531f2048f4ceb68f
-* ca0f3f0a13eb2773e41e53eed7653efc
+* この処理は、SnapCenter Adminなど、プラグインのインストールとアンインストールの権限のあるロールが割り当てられているユーザが実行する必要があります。
+* Windowsホストにプラグインをインストールするときに、組み込みでないクレデンシャルを指定する場合や、ユーザがローカルワークグループに属している場合は、ホストのUACを無効にする必要があります。
+* メッセージキューサービスが実行されている必要があります。
+* グループ管理サービスアカウント（gMSA）を使用する場合は、管理者権限でgMSAを設定する必要があります。詳細については、を参照してください link:task_configure_gMSA_on_windows_server_2012_or_later.html["Microsoft Exchange Server 2016 以降でグループマネージドサービスアカウントを設定します"^]。
 
 
-.bbe48fb854ea022537208eeeff822f91
-* 302ca62990c674aa6f608e6444c00482
-* f2e203e95de8a92902a61dcabea6f456
-* adc8d83761c6331a65ee343d3de2a603
-* 5b75eba7d9db0318ac1f23b295c25952
+.タスクの内容
+* SnapCenterサーバをプラグインホストとして別のSnapCenterサーバに追加することはできません。
+* ホストの追加とプラグインパッケージのインストールは、ホストごとまたはクラスタごとに実行できます。
+* ExchangeノードがDAGの一部である場合、SnapCenterサーバにノードを1つだけ追加することはできません。
+* クラスタ（ Exchange DAG ）にプラグインをインストールする場合は、ネットアップ LUN 上にデータベースがないノードがある場合でも、クラスタのすべてのノードにインストールされます。
 
 
-dd786dfb050710e6332db19b625147c8
+SnapCenter 4.6以降では、SCEはマルチテナンシーをサポートしており、次の方法でホストを追加できます。
 
 |===
-| 491321bbc588ef6bf8de927c397372c4 | 4247b9f663a0312ef986a547512d2507 | 86ea018276b6d024e9f4e03e4ea68827 
+| ホスト追加処理 | 4.5以前 | 4.6以降 
 
 
-| aaa1cc19141cbaab2bc910b26c8a10d7 | aa7f77e663b832d5b0e544c5511e680c | eaa4dc5078017a5c5bebf383ab6f5124 
+| IPを使用しないDAGをクロスドメインまたは別のドメインに追加する | サポート対象外 | サポート対象 
 
 
-| 1db3cc6790f10ee040a33f9af826891f | eaa4dc5078017a5c5bebf383ab6f5124 | eaa4dc5078017a5c5bebf383ab6f5124 
+| 同じドメインまたはクロスドメインに存在する一意の名前を持つ複数のIP DAGを追加する | サポート対象 | サポート対象 
 
 
-| bef83f47bd3dbb821bc21e9d3d06c897 | aa7f77e663b832d5b0e544c5511e680c | eaa4dc5078017a5c5bebf383ab6f5124 
+| クロスドメインに同じホスト名またはDB名を持つIPまたはIPを使用しないDAGを複数追加する | サポート対象外 | サポート対象 
 
 
-| 82847825f19adec593b1f6b30a85859b | aa7f77e663b832d5b0e544c5511e680c | eaa4dc5078017a5c5bebf383ab6f5124 
+| 同じ名前でクロスドメインのIP/IPを使用しないDAGを複数追加する | サポート対象外 | サポート対象 
 
 
-| 69fbfe29bf76f1355ef13c873a0c253d | aa7f77e663b832d5b0e544c5511e680c | eaa4dc5078017a5c5bebf383ab6f5124 
+| 同じ名前でクロスドメインの複数のスタンドアロンホストを追加する | サポート対象外 | サポート対象 
 |===
-c20a8a11a419d74017da773b8a54f9ff
+Plug-in for ExchangeはSnapCenter Plug-ins Package for Windowsに依存し、同じバージョンである必要があります。Plug-in for Exchangeのインストール時には、SnapCenter Plug-ins Package for Windowsがデフォルトで選択され、VSSハードウェアプロバイダとともにインストールされます。
 
-71544fe094cc6a3179097e9242095914
+SnapManager for Microsoft Exchange ServerおよびSnapDrive for Windowsがすでにインストールされている場合は、 また、Plug-in for Exchangeを同じExchangeサーバにインストールする場合は、SnapDrive for Windowsで使用するVSSハードウェアプロバイダの登録を解除する必要があります。これは、Plug-in for ExchangeおよびSnapCenter Plug-ins Package for WindowsとともにインストールされたVSSハードウェアプロバイダとの互換性がないためです。詳細については、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_manually_register_the_Data_ONTAP_VSS_Hardware_Provider["Data ONTAP VSS ハードウェアプロバイダを手動で登録する方法"]。
 
-.f3a29486bed19a90f2da6d007818b427
-. e3496f6d2696003cd08139c96386cc45
-. 262d319024a0918be769dfc76e9786c3
-. 7dee7e783d13b6d5d415926ce0bfc306
-. e0902178b3a4911c34f934ab886ffefa
-+
-|===
-| 21f831502a413a739e20cbf9f2eefe54 | 5e2ad6fd9deb412d871137094ee43ef0 
-
-
- a| 
-c2ece9a18147c056e75e4008644a9526
- a| 
-a2019a474e94462a57623d70d38bc98e
-
-2468a2954805cef3720f8bb3dce33315
-
-ae76e5480413a8941c0de62a028a9445
-
-
-
- a| 
-dae4a538d4ca7b6c0789932062fe718d
- a| 
-72a13f30a6788edd22e63a276048ccc0
-
-5fcdfa70c27641da2a37dfbd1c9eea7d
-
-60e9f8539f4bde533e5a96397e15d566
-
-8bfb44cd1688c0e149cc1bbc2d43f842
-
-47a1fff300d63c3157975fc2e2cfa864
-
-** 54f3045d4ebbbd4bbe0a0648d758b68f
-** 115a9258497640a60fa93ae7b4305bc3
-+
-6b62464c9314059f890d8144b26c6aab
-
-+
-*** 8104756aec712588b9858c75814df124
-*** d7f5484c6bf4bd45bef3a97e8b340efd
-*** c7bb72483a8d3716e6c1cc193f78bc8d
-
-
-
-
-
-NOTE: b1533ca0ff9ae6582eff6a4508ddece4
-
-
-
- a| 
-2daf1cb573c2c61422faf64610cf9402
- a| 
-2ea4d8f1382cd3e5f7ea944f487682bd
-
-1b68d93087eab33da5f5cd84be89db7d
-
-d7aaccf1cb188ee706ca8017bdca7afb
-
-
-NOTE: ae83594627aeb4e18f4cec18969527a2
-
-|===
-. 6b692819d998ae388c39a67efd81ebbd
-+
-370afcaaadc2a23407c58042756d4ac9
-
-. 7c69d0be774577dea935bd27ecfffc7e
+.手順
+. 左側のナビゲーションペインで、 * Hosts * （ホスト）をクリックします。
+. 上部で [Managed Hosts] が選択されていることを確認します。
+. [追加]*をクリックします。
+. [Hosts]ページで、次の手順を実行します。
 +
 |===
-| 21f831502a413a739e20cbf9f2eefe54 | 5e2ad6fd9deb412d871137094ee43ef0 
+| フィールド | 操作 
 
 
  a| 
-60aaf44d4b562252c04db7f98497e9aa
+ホストタイプ
  a| 
-89a7299757b60000d5637c7fe6acdfe3
+ホストタイプとして * windows * を選択します。
 
-4960663d88bb5e09eca4e1af717a14d8
+SnapCenter サーバによってホストが追加され、 Plug-in for Windows と Plug-in for Exchange がまだインストールされていない場合はホストにインストールされます。
 
-
-NOTE: 715f053db5d8f4a2009a86dc1edc360a
-
-
-
- a| 
-5dc1b0641298a4446796a3eaf96c13d9
- a| 
-7cc0ce70b1c90348f9665d5cf3adbf43
-
-bddd8e60322d417d44d66598e9349f2b
+Plug-in for Windows および Plug-in for Exchange のバージョンが同じである必要があります。以前に別のバージョンの Plug-in for Windows がインストールされていた場合、 SnapCenter のインストール時にこのバージョンが更新されます。
 
 
 
  a| 
-89645c7782a58b0f016d8087c8e94f13
+ホスト名
  a| 
-6ec5d1850eb318361d6e208b238baa06
+ホストの完全修飾ドメイン名（FQDN）またはIPアドレスを入力します。
+
+SnapCenter は、 DNS の適切な設定によって異なります。そのため、Fully Qualified Domain Name（FQDN；完全修飾ドメイン名）を入力することを推奨します。
+
+信頼されていないドメインホストのIPアドレスは、そのIPアドレスがFQDNに解決される場合にのみサポートされます。
+
+SnapCenter を使用してホストを追加する際、ホストがサブドメインの一部である場合は、 FQDN を指定する必要があります。
+
+次のいずれかのIPアドレスまたはFQDNを入力できます。
+
+** スタンドアロンホスト
+** Exchange DAG
++
+Exchange DAGの場合は、次の操作を実行できます。
+
++
+*** DAG名、DAG IPアドレス、ノード名、またはノードIPアドレスを指定してDAGを追加します。
+*** いずれかのDAGクラスタノードのIPアドレスまたはFQDNを指定して、IPのないDAGクラスタを追加します。
+*** 同じドメインまたは別のドメインに存在するIPのないDAGを追加します。IP/IPを含まないDAGは、同じ名前でドメインが異なる複数追加することもできます。
+
+
+
+
+
+NOTE: スタンドアロンホストまたはExchange DAG（ドメイン間または同じドメイン）の場合は、ホストまたはDAGのFQDNまたはIPアドレスを指定することを推奨します。
 
 
 
  a| 
-8c52a2170baa38b939bd1890216f50b0
+クレデンシャル
  a| 
-66fbc10672da3dc1e4451a1850b5e5b1
+作成したクレデンシャルの名前を選択するか、新しいクレデンシャルを作成します。
+
+このクレデンシャルには、リモートホストに対する管理者権限が必要です。詳細については、クレデンシャルの作成に関する情報を参照してください。
+
+指定したクレデンシャルの名前にカーソルを合わせると、クレデンシャルの詳細を確認できます。
 
 
-
- a| 
-193c67ad9a593e499fcbd4795d42fe04
- a| 
-8726526590ca684b1f852927da592b2b
-
-3855235b9d39f566dd99d988273951b6
-
-
-NOTE: 3258f498fadd468c49c745cd6710c797
+NOTE: 資格情報認証モードは、ホストの追加ウィザードで指定したホストタイプによって決まります。
 
 |===
-. 4b5d2dd70af718ebe67bfea5b43d8667
+. [Select Plug-ins to Install]セクションで、インストールするプラグインを選択します。
 +
-a41de271d90d6b557c8bef026c957295
+Plug-in for Exchange を選択すると、 SnapCenter Plug-in for Microsoft SQL Server の選択が自動的に解除されます。Microsoftでは、Exchangeに必要なメモリ使用量やその他のリソース使用量を考慮して、SQL ServerとExchangeサーバを同じシステムにインストールしないことを推奨しています。
+
+. （オプション） * その他のオプション * をクリックします。
++
+|===
+| フィールド | 操作 
+
+
+ a| 
+ポート
+ a| 
+デフォルトのポート番号をそのまま使用するか、ポート番号を指定します。
+
+デフォルトのポート番号は8145です。SnapCenter サーバがカスタムポートにインストールされている場合は、そのポート番号がデフォルトポートとして表示されます。
+
+
+NOTE: プラグインを手動でインストールし、カスタムポートを指定した場合は、同じポートを指定する必要があります。そうしないと、処理は失敗します。
+
+
+
+ a| 
+インストールパス
+ a| 
+デフォルトのパスはです `C:\Program Files\NetApp\SnapCenter`。
+
+必要に応じてパスをカスタマイズできます。
+
+
+
+ a| 
+DAG内のすべてのホストを追加
+ a| 
+DAGを追加する場合は、このチェックボックスをオンにします。
+
+
+
+ a| 
+インストール前チェックをスキップ
+ a| 
+プラグインを手動でインストール済みで、プラグインをインストールするための要件をホストが満たしているかどうかを検証しない場合は、このチェックボックスを選択します。
+
+
+
+ a| 
+グループ管理サービスアカウント（gMSA）を使用してプラグインサービスを実行
+ a| 
+グループ管理サービスアカウント（gMSA）を使用してプラグインサービスを実行する場合は、このチェックボックスを選択します。
+
+gMSA 名を _domainName\accountName$_ の形式で指定します。
+
+
+NOTE: gMSAは、SnapCenter Plug-in for Windowsサービスのログオンサービスアカウントとしてのみ使用されます。
+
+|===
+. [Submit （送信） ] をクリックします。
++
+[Skip prechecks]チェック ボックスをオフにしていると、ホストがプラグインをインストールするための要件を満たしているかどうかを確認するための検証が行われます。最小要件を満たしていない場合は、該当するエラーまたは警告メッセージが表示されます。
 
 +
-29fe637bbb7672fbfc5c4cdb45aa775b
+エラーがディスクスペースまたはRAMに関連している場合は、WebAppにあるweb.configファイルを更新してデフォルト値を変更できます `C:\Program Files\NetApp\SnapCenter` 。エラーが他のパラメータに関連している場合は、問題を修正する必要があります。
 
 +
 
-NOTE: dd81c680ca1fd86d935da9ccaf370cee
+NOTE: HAセットアップでweb.configファイルを更新する場合は、両方のノードでファイルを更新する必要があります。
 
-. d85bbbe120029d5b6ffbe773f5192a80
-
-
+. インストールの進行状況を監視します。
 
 
-== 07492e58b99a2cf81ee9cb32a45e024c
 
-3f866c89ac4855c08a4d58b4ece63e5e
 
-.f3a29486bed19a90f2da6d007818b427
-. 12c1c03d29151d5afed6f80f662b1cb0
-. c0ba2afc45faffe04a64044a53b73712
-. 5bb26a1c08e26f6891538c3a48bd5c35
+== ネットTCP通信用のカスタムポートの設定
+
+SnapCenter 6.0リリース以降、SnapCenter Plug-in for Windowsでは、デフォルトでポート909がネットTCP通信に使用されます。ポート909が使用中の場合は、ネットTCP通信用に別のポートを設定できます。
+
+.手順
+. _C：\Program Files\NetApp\SnapCenter\SnapCenter Plug-in for Microsoft Windows\vssproviders\navssprv.exe.config_にある_NetTCPPort_keyの値を必要なポート番号に変更します。
+`<add key="NetTCPPort" value="new_port_number" />`
+. C：\Program Files\NetApp\SnapCenter\SnapCenter Plug-in for Microsoft Windows\SnapDriveService.dll.config_にある_NetTCPPort_keyの値を必要なポート番号に変更します。
+`<add key="NetTCPPort" value="new_port_number" />`
+. 次のコマンドを実行して、Data ONTAP VSSハードウェアプロバイダサービスの登録を解除します。
+`"C:\Program Files\NetApp\SnapCenter\SnapCenter Plug-in for Microsoft Windows\navssprv.exe" -r service -u`
 +
-279ce9556244150165a39c061130d897
+サービスが_services.msc_のサービスのリストに表示されていないことを確認します。
 
-. ac744025800d806f2355f186354e28ba
+. 次のコマンドを実行して、_ Data ONTAP VSS Hardware Provider_serviceを登録します。
+`"C:\Program Files\NetApp\SnapCenter\SnapCenter Plug-in for Microsoft Windows\vssproviders\navssprv.exe" -r service -a ".\LocalSystem"``
 +
-62708f69b87c51f8131ba0d00973ed84
+サービスが_services.msc_のサービスのリストに表示されていることを確認します。
 
-. c852813f521e628574b6a1d3e6f7e0fa
+. _Plug-in for windows_serviceを再起動します。
 

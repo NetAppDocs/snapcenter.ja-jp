@@ -2,42 +2,42 @@
 permalink: install/task_configure_CA_client_certificate_for_LDAPS.html 
 sidebar: sidebar 
 keywords: CA client certificate, LDAPS 
-summary: 4132caaeec30f6b487cec84f7d869518 
+summary: Windows Active Directory LDAPSにCA証明書が設定されている場合は、SnapCenterサーバでLDAPSのCAクライアント証明書を設定する必要があります。 
 ---
-= 00e951b7db736ab04c403ede9ffcf398
+= LDAPS用のCAクライアント証明書の設定
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-4132caaeec30f6b487cec84f7d869518
+Windows Active Directory LDAPSにCA証明書が設定されている場合は、SnapCenterサーバでLDAPSのCAクライアント証明書を設定する必要があります。
 
-4839d2f25cc35b249d5db15efa1afd75
+* 手順 *
 
-. b86fdb531ae29f629485f72c257ce9f0
-. a49966f708056a4c549673b5bec3414c
-. c6c1feaee0176e99111e0aef49c594be
-. accc52b05ff00dfcf027649214e40a24
-. 237137d809be4e190c42d063e80272ab
-. fbfdc821247ce02333095312b300d2f1
+. Microsoft 管理コンソール (MMC) に移動し、 [ * ファイル * ] 、 [ スナップインの追加と削除 ] の順にクリックします。
+. [ スナップインの追加と削除 ] ウィンドウで、 [*Certificates*] を選択し、 [*Add*] をクリックします。
+. [ 証明書 ] スナップインウィンドウで、 [*Computer account*] オプションを選択し、 [ 完了 *] をクリックします。
+. [ * コンソールルート *>* 証明書–ローカルコンピュータ *>* 信頼されたルート証明機関 *>* 証明書 *] をクリックします。
+. [ 信頼されたルート証明機関 ] フォルダを右クリックし、 [ すべてのタスク *>*Import* ] を選択してインポートウィザードを開始します。
+. 次の手順でウィザードを完了します。
 +
 |===
-| ca617f785f7156a6f104acabd5354e73 | af51caa4cf3947fff83e6451cb09644a 
+| ウィザードウィンドウ | 操作 
 
 
  a| 
-c9f3f49f993cbb32ca86319abe11e4c0
+ウィザードの2ページ目
  a| 
-0ee122a05d856cc276dc5ced92d00f89
+[ * 参照 ] をクリックし、 _Root Certificate_ を選択して、 [ * 次へ * ] をクリックします。
 
 
 
  a| 
-262ae19666f55b8c3fbe02b43c8f93b8
+証明書のインポートウィザードの完了
  a| 
-addd3f74b675e28bf71a9fb679c0fac1
+概要を確認し、 [ 完了 ] をクリックしてインポートを開始します。
 
 |===
-. 1c867d11dfed4e2774f6c5f4ef6fa505
+. 中間証明書について、手順 5 と 6 を繰り返します。
 

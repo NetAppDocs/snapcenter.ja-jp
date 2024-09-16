@@ -2,25 +2,25 @@
 permalink: protect-sco/reference_requirements_for_backing_up_an_oracle_database.html 
 sidebar: sidebar 
 keywords: requirements, prerequisites 
-summary: eded1b44110b92f9241411e35d136afb 
+summary: Oracleデータベースをバックアップする前に、前提条件が満たされていることを確認する必要があります。 
 ---
-= 9360f4c3e5a30ff18eeda4aaa14df772
+= Oracleデータベースのバックアップ要件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-eded1b44110b92f9241411e35d136afb
+Oracleデータベースをバックアップする前に、前提条件が満たされていることを確認する必要があります。
 
-* 92ae04a417b2b1bf95cb914953f21cce
-* 08c86005ddd32599a5beea4c7b9ff4ad
-* 33972549155ac82b18e2baebabf76d48
-* 6ad0c4eabf145f10088d2d96c2e233bf
-* 55abc85a57dc4521b07b9255c349e483
-* 3d963ba9da839641b29329d2008be606
-* 0ac22ed74dd628cec8a2c5e2f64bf612
+* ポリシーを適用してリソースグループを作成しておく必要があります。
+* セカンダリストレージとの SnapMirror 関係があるリソースをバックアップする場合、ストレージユーザに割り当てられた ONTAP ロールには「「 'SnapMirro all' 」権限を含める必要があります。ただし、「 vsadmin 」ロールを使用している場合、「 'SnapMirro all 」権限は必要ありません。
+* バックアップ処理で使用されるアグリゲートを、データベースで使用されるStorage Virtual Machine（SVM）に割り当てておく必要があります。
+* データベースでセカンダリ保護が有効になっている場合は、そのデータベースに属するすべてのデータボリュームとアーカイブログボリュームが保護されていることを確認しておく必要があります。
+* ASM ディスク・グループ上にファイルがあるデータベースが 'Oracle DBVERIFY ユーティリティを使用してバックアップを検証するには ' マウント状態またはオープン状態であることを確認しておく必要があります
+* ボリュームマウントポイントの長さが240文字を超えないことを確認しておく必要があります。
+* バックアップするデータベースが大容量（TB単位）の場合は、SnapCenter サーバホストでRESTTimeoutの値を86400000msに増やして、C：\Program Files\NetApp\SMCore \SMCoreServiceHost.exe.config_fileに設定してください。
 +
-7d61484685130c3cdd5533d35c2e1a49
+値を変更する場合は実行中のジョブがないことを確認し、値を大きくしたあとにSnapCenter SMCoreサービスを再起動してください。
 
 

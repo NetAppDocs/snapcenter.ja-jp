@@ -2,36 +2,36 @@
 permalink: protect-scsql/task_back_up_resources_using_powershell_cmdlets_for_sql.html 
 sidebar: sidebar 
 keywords: backup 
-summary: d2323db6aa3f6333b1375db7f025bd4e 
+summary: PowerShellコマンドレットを使用して、SQL ServerデータベースまたはWindowsファイルシステムをバックアップできます。具体的には、SQL ServerデータベースまたはWindowsファイルシステムのバックアップには、SnapCenterサーバとの接続の確立、SQL ServerデータベースインスタンスまたはWindowsファイルシステムの検出、ポリシーの追加、バックアップリソースグループの作成、バックアップと検証が含まれます。 
 ---
-= d2a5f76428abadccd7b24ea08a0eee1e
+= PowerShellコマンドレットを使用したリソースのバックアップ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-d2323db6aa3f6333b1375db7f025bd4e
+PowerShellコマンドレットを使用して、SQL ServerデータベースまたはWindowsファイルシステムをバックアップできます。具体的には、SQL ServerデータベースまたはWindowsファイルシステムのバックアップには、SnapCenterサーバとの接続の確立、SQL ServerデータベースインスタンスまたはWindowsファイルシステムの検出、ポリシーの追加、バックアップリソースグループの作成、バックアップと検証が含まれます。
 
-.135b308ed83c53f1516b7c754566d1c4
-* c90de0347e94ade70c96034e2ffca3ba
-* 38d7f66964588305ed5bee44db007183
-* 7d88eb773274afe1c014d0593b26bb0a
+.開始する前に
+* PowerShellコマンドレットを実行できるようにPowerShell環境を準備しておく必要があります。
+* ストレージシステム接続を追加し、クレデンシャルを作成しておく必要があります。
+* ホストを追加し、リソースを検出しておく必要があります。
 
 
-.f3a29486bed19a90f2da6d007818b427
-. 623aa9b9d36889377a728b1284e5485e
+.手順
+. Open-SmConnectionコマンドレットを使用して、指定したユーザのSnapCenterサーバとの接続セッションを開始します。
 +
 [listing]
 ----
 Open-smconnection  -SMSbaseurl  https://snapctr.demo.netapp.com:8146
 ----
 +
-d5b8eb2056e11e71857a777fd502266b
+ユーザ名とパスワードのプロンプトが表示されます。
 
-. 658e1796a21da94df433ae106024123b
+. Add-SmPolicyコマンドレットを使用して、バックアップポリシーを作成します。
 +
-3e78fcd28fc74d7aa4a8ac3b657caa4e
+この例では、SQLバックアップタイプがFULLBACKUPの新しいバックアップポリシーを作成しています。
 
 +
 [listing]
@@ -41,7 +41,7 @@ PS C:\> Add-SmPolicy -PolicyName TESTPolicy
 -SqlBackupType FullBackup -Verbose
 ----
 +
-2b3a9b6966873d8dbae9c68619afd0cb
+この例では、WindowsファイルシステムのバックアップタイプがCrashConsistentの新しいバックアップポリシーを作成しています。
 
 +
 [listing]
@@ -50,9 +50,9 @@ PS C:\> Add-SmPolicy -PolicyName FileSystemBackupPolicy
 -PluginPolicyType SCW -PolicyType Backup
 -ScwBackupType CrashConsistent -Verbose
 ----
-. 0bc451b53e906ee74f8e7c875d53e50a
+. Get-SmResourcesコマンドレットを使用して、ホストリソースを検出します。
 +
-5ba802b3c66fae06c796891fa4f06e1a
+この例では、指定したホストでMicrosoft SQLプラグインのリソースを検出しています。
 
 +
 [listing]
@@ -61,7 +61,7 @@ C:\PS>PS C:\> Get-SmResources -HostName vise-f6.sddev.mycompany.com
 -PluginCode SCSQL
 ----
 +
-dcf043993740340ced8ee142b5224a9a
+この例では、指定したホスト上のWindowsファイルシステムのリソースを検出しています。
 
 +
 [listing]
@@ -69,9 +69,9 @@ dcf043993740340ced8ee142b5224a9a
 C:\PS>PS C:\> Get-SmResources -HostName vise2-f6.sddev.mycompany.com
 -PluginCode SCW
 ----
-. 1843dfbf689ff272ac87ddb041c12ae9
+. Add-SmResourceGroupコマンドレットを使用して、SnapCenterに新しいリソースグループを追加します。
 +
-faebaf11e8d463fccca6b94e93caa06a
+この例では、ポリシーとリソースを指定して新しいSQLデータベースバックアップリソースグループを作成しています。
 
 +
 [listing]
@@ -82,7 +82,7 @@ PS C:\> Add-SmResourceGroup -ResourceGroupName AccountingResource
 -Policies "BackupPolicy"
 ----
 +
-2c6db999e230d93471c4054fb8bf05a7
+この例では、ポリシーとリソースを指定して新しいWindowsファイルシステムバックアップリソースグループを作成します。
 
 +
 [listing]
@@ -92,15 +92,15 @@ PS C:\> Add-SmResourceGroup -ResourceGroupName EngineeringResource
 "Type"="Windows Filesystem";"Names"="E:\"}
 -Policies "EngineeringBackupPolicy"
 ----
-. f795ace46eb28839cb57d42561de6edc
+. New-SmBackupコマンドレットを使用して、新しいバックアップジョブを開始します。
 +
 [listing]
 ----
 PS C:> New-SmBackup -ResourceGroupName PayrollDataset -Policy FinancePolicy
 ----
-. 12c1d190435624b74e3183fda4ca5a14
+. Get-SmBackupReportコマンドレットを使用して、バックアップジョブのステータスを表示します。
 +
-bb624c9832608f83e8cfb32c0a769474
+次に、指定した日付に実行されたすべてのジョブのジョブ概要レポートを表示する例を示します。
 
 +
 [listing]
@@ -109,4 +109,4 @@ PS C:\> Get-SmJobSummaryReport -Date '1/27/2016'
 ----
 
 
-74db7181476f94f0e2927d8c8d98cb97
+コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。

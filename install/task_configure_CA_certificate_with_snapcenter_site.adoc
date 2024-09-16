@@ -2,36 +2,36 @@
 permalink: install/task_configure_CA_certificate_with_snapcenter_site.html 
 sidebar: sidebar 
 keywords: SnapCenter, configure, CA certificate 
-summary: 1f3bf25ce45d8abdb85a8f0f02060b31 
+summary: WindowsホストのSnapCenterサイトでCA証明書を設定する必要があります。 
 ---
-= 5205f040dade47615e253c8910e0a023
+= SnapCenterサイトでCA証明書を設定
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-1f3bf25ce45d8abdb85a8f0f02060b31
+WindowsホストのSnapCenterサイトでCA証明書を設定する必要があります。
 
-4839d2f25cc35b249d5db15efa1afd75
+* 手順 *
 
-. 016d07d9df92cf7d931e9cb5c6b411cc
-. 904044ac147d0ec500934b3bec1d8a95
-. 66c0361c07c5cd83282ed33d0a756488
-. 31582c5ec621af33e92930b0f3164ec4
-. bc188cdfa6f25dddd50459f6413d8e15
-. d68cbad59509fdb10cb44d2549333911
-. 4a1938d0e423380a1497b6177cf5dc1c
-. e68b0df186c4c37e5d160fed04d6cc32
-. a72cc47fad7d1846d19b085d2e77e5ba
+. SnapCenter がインストールされている Windows サーバーで IIS マネージャーを開きます。
+. 左側のナビゲーションペインで、 * 接続 * をクリックします。
+. サーバー名と * Sites * を展開します。
+. SSL証明書をインストールするSnapCenter Webサイトを選択します。
+. [* アクション * （ Actions * ） ] > [* サイトの編集 * （ * Edit Site * ） ] に移動し、 [ * バインド * （ Bind
+. バインディングページで、「 https * のバインディング」を選択します。
+. [ 編集（ Edit ） ] をクリックします。
+. [SSL証明書]ドロップダウンリストから、最近インポートしたSSL証明書を選択します。
+. [OK]*をクリックします。
 +
 
-NOTE: 2b25ac6031c877c32b1e1b8ce4950fd2
+NOTE: SnapCenterスケジューラサイト（デフォルトポート：8154、HTTPS）には自己署名証明書が設定されています。このポートはSnapCenterサーバホスト内で通信しており、CA証明書を使用してを設定する必要はありません。ただし、CA証明書の使用が必要な環境の場合は、SnapCenterスケジューラサイトを使用して手順5から9を繰り返します。
 
 
 
 
-NOTE: e7a171b81194b9ce74b91f45c49e46c5
+NOTE: 最近導入したCA証明書がドロップダウンメニューに表示されない場合は、CA証明書が秘密鍵に関連付けられているかどうかを確認します。
 
 
-IMPORTANT: a871272a246bcd1f81af54f623825883
+IMPORTANT: 証明書が次のパスを使用して追加されていることを確認します。 * コンソールルート > 証明書–ローカルコンピュータ > 信頼されたルート証明機関 > 証明書 * 。

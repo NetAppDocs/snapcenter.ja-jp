@@ -2,29 +2,29 @@
 permalink: protect-scsql/task_restore_and_recover_resources_using_powershell_cmdlets_for_sql.html 
 sidebar: sidebar 
 keywords: restore resources 
-summary: 7cbb56e18d0486bb234f9b23309d948c 
+summary: リソースのバックアップをリストアするときは、 SnapCenter サーバとの接続セッションを開始し、バックアップをリストしてバックアップ情報を取得し、バックアップをリストアします。 
 ---
-= 3f90ba06baa30f2e66df25302c79cd63
+= PowerShellコマンドレットを使用したリソースのリストア
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-7cbb56e18d0486bb234f9b23309d948c
+リソースのバックアップをリストアするときは、 SnapCenter サーバとの接続セッションを開始し、バックアップをリストしてバックアップ情報を取得し、バックアップをリストアします。
 
-c90de0347e94ade70c96034e2ffca3ba
+PowerShellコマンドレットを実行できるようにPowerShell環境を準備しておく必要があります。
 
-.f3a29486bed19a90f2da6d007818b427
-. 623aa9b9d36889377a728b1284e5485e
+.手順
+. Open-SmConnectionコマンドレットを使用して、指定したユーザのSnapCenterサーバとの接続セッションを開始します。
 +
 [listing]
 ----
 PS C:\> Open-Smconnection
 ----
-. e2bd14bf4c88f10bd2230039f5ac5538
+. Get-SmBackupおよびGet-SmBackupReportコマンドレットを使用して、リストアする1つ以上のバックアップに関する情報を取得します。
 +
-ca85b74e61d8e4c683f3c66af932ac63
+次に、使用可能なすべてのバックアップに関する情報を表示する例を示します。
 
 +
 [listing]
@@ -37,7 +37,7 @@ BackupId                      BackupName                    BackupTime          
   2               Payroll Dataset_vise-f6_08... 8/4/2015    11:23:17 AM
 ----
 +
-d1024e540ddbde0c895907728f551025
+この例では、2015年1月29日から2015年2月3日までのバックアップに関する詳細情報を表示しています。
 
 +
 [listing]
@@ -72,7 +72,7 @@ PS C:\> Get-SmBackupReport -FromDateTime "1/29/2015" -ToDateTime "2/3/2015"
    BackupName           : Clone_SCSPR0019366001_02-02-2015_13.02.45
    VerificationStatus   : NotVerified
 ----
-. 4544315cf8cf4a9ef7dd5ae463d9557d
+. Restore-SmBackupコマンドレットを使用して、バックアップからデータをリストアします。
 +
 [listing]
 ----
@@ -104,4 +104,4 @@ PluginName          :
 ----
 
 
-74db7181476f94f0e2927d8c8d98cb97
+コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。

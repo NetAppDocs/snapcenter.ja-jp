@@ -2,17 +2,17 @@
 permalink: protect-nsp/install_netapp_supported_plugins.html 
 sidebar: sidebar 
 keywords: install workflow, NetApp supported plug-in 
-summary: 041c2bc239865621fefddc8c25a37009 
+summary: NetAppでサポートされるプラグインリソースを保護する場合は、SnapCenter NetAppでサポートされるプラグインをインストールしてセットアップする必要があります。 
 ---
-= 51810f5f2de2f019cb898ee5bb825600
+= SnapCenter NetAppでサポートされるプラグインのインストールワークフロー
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-041c2bc239865621fefddc8c25a37009
+NetAppでサポートされるプラグインリソースを保護する場合は、SnapCenter NetAppでサポートされるプラグインをインストールしてセットアップする必要があります。
 
-image::../media/scc_install_configure_workflow.png[d2b3fcd21580309bc53248671abf5edb]
+image::../media/scc_install_configure_workflow.png[SnapCenter NetAppでサポートされるプラグインのワークフロー]
 
-935a5e63802feb7c41be8f11c154dcc4
+link:develop_a_plug_in_for_your_application.html["アプリケーション用のプラグインを開発"]

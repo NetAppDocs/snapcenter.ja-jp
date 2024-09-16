@@ -2,19 +2,19 @@
 permalink: protect-hana/task_define_a_restore_and_recovery_strategy_for_sap_hana_resources.html 
 sidebar: sidebar 
 keywords: restore and recovery strategy, SAP HANA resources, snapcenter 
-summary: afd7453bfb7b2ee3805b612dd9889484 
+summary: データベースのリストアとリカバリを行う前に戦略を定義しておくと、リストア処理とリカバリ処理を正常に実行できるようになります。 
 ---
-= f053b1c99159302e4282006cc7c9d970
+= SAP HANAリソースのリストアとリカバリの戦略を定義
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-afd7453bfb7b2ee3805b612dd9889484
+データベースのリストアとリカバリを行う前に戦略を定義しておくと、リストア処理とリカバリ処理を正常に実行できるようになります。
 
-.f3a29486bed19a90f2da6d007818b427
-. c6534fab43cf3777e5130a53358227ce
-. e79a57d32a42fedd53b752c66c58f31a
-. 800d9ecff276a543c6a41dcc0239d94b
+.手順
+. 手動で追加したSAP HANAリソースに対してサポートされるリストア戦略を確認する
+. 自動検出されたSAP HANAデータベースに対してサポートされるリストア戦略を確認する
+. 実行するリカバリ処理のタイプを決定します。
 

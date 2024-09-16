@@ -2,50 +2,50 @@
 permalink: protect-sco/task_back_up_oracle_databases_using_unix_commands.html 
 sidebar: sidebar 
 keywords: backup, cli, commands 
-summary: 454e699fa041f9821976d47dd2a40f29 
+summary: バックアップのワークフローには、計画、バックアップするリソースの特定、バックアップポリシーの作成、リソースグループの作成とポリシーの適用、バックアップの作成、処理の監視が含まれます。 
 ---
-= 53e22ac130cec9f2bd2e54b1627191a8
+= UNIXコマンドを使用したOracleデータベースのバックアップ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-454e699fa041f9821976d47dd2a40f29
+バックアップのワークフローには、計画、バックアップするリソースの特定、バックアップポリシーの作成、リソースグループの作成とポリシーの適用、バックアップの作成、処理の監視が含まれます。
 
-d428ebb7ac02e1484781b38a799a4f99
+* 必要なもの *
 
-* e9d8403548e7864e8c8cd3cc46b790f0
-* 4380f01666d6e9f463bfc13a21d48469
+* ストレージシステム接続を追加し、 SmStorageConnection_or_Add-SmCredential_ のコマンドを使用してクレデンシャルを作成しておく必要があります。
+* Command_Open-SmConnection_ を使用して SnapCenter サーバとの接続セッションを確立しておく必要があります。
 +
-6ad2ce3e86cc5cb973fc58ac689e7da9
+SnapCenterアカウントのログインセッションは1つだけで、トークンはユーザのホームディレクトリに格納されます。
 
 +
 
-NOTE: e116415b72f3d645af9ae9ed88b2ca8e
+NOTE: 接続セッションは24時間のみ有効です。ただし、TokenNeverExpiresオプションを使用してトークンを作成すると、期限切れにならず、セッションが常に有効になるトークンを作成できます。
 
 
 
-78166ce4ccceeedfbf6aeb8682851072
+* このタスクについて *
 
-7e914e26f4d0379973fb7bcf833e2e78
+次のコマンドを実行して、SnapCenterサーバとの接続の確立、Oracleデータベースインスタンスの検出、ポリシーとリソースグループの追加、バックアップと検証を行います。
 
-bc3f01c8b7967405e08d06ae461bdcd7
+コマンドで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP3323470["SnapCenter ソフトウェアコマンドリファレンスガイド"^]。
 
-4839d2f25cc35b249d5db15efa1afd75
+* 手順 *
 
-. 0f7d3f55b83a8ace70fddcd69afec394
-. 5f5aa2c43f2c9d5fc9897a8474705e9e
-. cc13eead3ad12f772f02d5464a4dcd46
-. 61d49f6df8744abe0a45eaddb3e63644
-. 2e8d22f298d562c76774f68a35c5c462
+. 指定されたユーザ用に SnapCenter サーバとの接続セッションを開始します： _Open-SmConnection_
+. ホストリソースの検出処理を実行します： _Get-SmResources_
+. Real Application Cluster （ RAC ）データベースのバックアップ処理に使用する Oracle データベースのクレデンシャルと優先ノードを設定します： _Configure - SmOracleDatabase_
+. バックアップポリシーを作成します。 _Add-SmPolicy_
+. セカンダリ（ SnapVault または SnapMirror ）ストレージの場所に関する情報を取得します： _get -SmSecondaryDetails_
 +
-bdadc4a4749b0510ac91d4a8b9f31a88
+このコマンドは、指定したリソースのプライマリストレージからセカンダリストレージへのマッピングの詳細を取得します。このマッピングの詳細を使用して、バックアップリソースグループを作成する際にセカンダリの検証を設定できます。
 
-. 1498a5970998407ee959884560cad308
-. 83787448e06cc02a158c3ae8cd86bfef
+. リソースグループを SnapCenter に追加します： _Add-SmResourceGroup_
+. バックアップを作成する： _New-SmBackup_
 +
-a47df408ed43e2408db4d0dcacdc483a
+WaitForCompletionオプションを使用してジョブをポーリングできます。このオプションを指定すると、バックアップジョブが完了するまで、コマンドはサーバをポーリングし続けます。
 
-. ecc2d042ed750fbf1eac63637f9b3077
+. SnapCenter からログを取得します： _Get-SmLogs_
 

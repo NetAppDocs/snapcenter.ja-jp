@@ -2,133 +2,133 @@
 permalink: install/create-svm-roles-minimum-privileges.html 
 sidebar: sidebar 
 keywords: svm role, privileges 
-summary: b822295e51d5429c426ab9c2787523da 
+summary: ONTAP の SVM を SnapCenter で使用するように設定し、 vsadmin ロールを使用したくない場合、 SVM ロールを作成する必要があります。 
 ---
-= 56e14ee5960cfe37cfc3964b6597babb
+= 最小限の権限でSVMロールを作成する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-5394acdbb7aa09ee20a7bb0640ea03bf
+ONTAP で新しい SVM ユーザのロールを作成する場合、実行する必要がある ONTAP CLI コマンドがいくつかあります。ONTAP 内の SVM を SnapCenter で使用するように設定し、 vsadmin ロールを使用したくない場合、このロールが必要です。
 
-4839d2f25cc35b249d5db15efa1afd75
+* 手順 *
 
-. ddddefa125fccecd8bda94d98d237d27
+. ストレージシステムで、ロールを作成してすべての権限を割り当てます。
 +
-607d52fb81ce0d68187ad68e278b2038
+`security login role create –vserver <svm_name\>- role <SVM_Role_Name\> -cmddirname <permission\>`
 
 +
 
-NOTE: c121008bc3f1abe5fbc50c2756f1c2b9
+NOTE: このコマンドは権限ごとに繰り返す必要があります。
 
-. 2d6ee3457a72db18d9c7997a6bdf25c4
+. ユーザを作成し、そのユーザにロールを割り当てます。
 +
-e14e1b926c9b2eaf942d0bc044d407f4
+`security login create -user <user_name\> -vserver <svm_name\> -application ontapi -authmethod password -role <SVM_Role_Name\>`
 
-. 50dd0a56e2faa99d354fb627dcb6e89a
+. ユーザのロックを解除します。
 +
-87438cb05e7f3a99d7cb0f708d03820f
+`security login unlock -user <user_name\> -vserver <svm_name\>`
 
 
 
 
 
-== 5828bd4572658b3ec60c10c123756d37
+== SVMロールの作成と権限の割り当て用のONTAP CLIコマンド
 
-926b7acb0dd0dddac1e9ab03e87150b7
+ONTAPのロールを作成して権限を割り当てるには、いくつかのCLIコマンドを実行する必要があります。
 
 
-NOTE: 26d0f7d5ea2b87e82f98d6e622ecf6a0
+NOTE: 5.0以降では、SVM管理者ユーザはREST APIでのみサポートされます。SVM管理者以外を使用してロールを作成する場合は、ZAPIを使用してください。
 
-* 0cf3e7b313a6954f7aed921dae42be39
-* 72cadc86fec7539ff25b27cc5baed79b
-* 35191da723a7990e2ec356b702112b64
-* 1841fa6224c38bf0b0e19818273da3aa
-* 950cb25af5f80592c9b230d80411689a
-* 54e321a9e203600e142532be5ad7c700
-* 77d14dd229f22e75b140b12306c243d3
-* e1591576a5800f25342f1c086407ae01
-* fb12f3dd2e8853d45d6a0ea4b329075d
-* e53caa86cc62fc0262780e6a3a91891f
-* c722177ec75912e93d2f92a373f8cbee
-* d86a9f51c3fc7522bd8adde0ec1c5197
-* 9b164f1f7736600715be680a2838a2a8
-* 72d871fffa8a9997809196f91f71162a
-* a9da71cc1d3b73e669689da7c0d74191
-* 55ee80641b5e4a7129b766c5f1947cb9
-* 0452c90c862e8bea83d415d798fe7a17
-* e236a547a0832ed88896e7bd4979e95d
-* edcd0c1d3a6c50e57c4c4ce6b575a1b2
-* ab817b58789bc8d8a949e564646b573e
-* d0624a76d29ac8c4c004528a4f1adb07
-* 580f5a9628d3dadc6f33a9cc329e7c30
-* cc726ab19c5f6ebad14747bfb9ca2b1d
-* a358cbd4a618edf90cae23f19bebb285
-* ffd0adba3d8a766871862b8166efb08a
-* 6afbab2a305c532b10701b75eef00e06
-* c7a78c9e0680e33782bcb69c308c2726
-* 581ff44a24f5961a469602e478f31324
-* 6252c3ab8ec38aa610d862bd24476214
-* aa8a48dbc61b0a5d577ab8dedad6021c
-* a9b4caf91cde1275944a164442502065
-* af00217dfbaf0ac00b8acacea1925b32
-* fe46b74f13369d6c44d60eb009d09999
-* 88c3c4a361a77d5fcb60740ebbbf5cb6
-* 19953e83739ad51ca7dac1f823c087f6
-* fbbad2769d29974d8fcb049adbc53deb
-* 17dcc82039b4a77cd7c23ba801207bd1
-* 837d2dba4c195ceca824ce45a0acfe07
-* 2080dab3c671ab071b904311683d6cb4
-* e9648215a3769feee22a41bf65b91ee7
-* 04d7eef0434438f6c00a815fd04572ab
-* e963f7a86dc582d8d9d5943cef628524
-* bcb36311cdabf5e104c29a2455a2b2fb
-* 3e7ef57b8ab69baf16a18ea93b3676d5
-* 2fb39c82698a785daa43f03a404c2de4
-* cb5100c9a1972089037a2b839829a571
-* 9ae5a705149eb6309787392299485b28
-* 7046b9b0ca926400aabde41868be9e91
-* 8514d8de13a32128695aa1c7aaefd6c4
-* d1cb0d4730d56bd837f23d77effbf4ea
-* fca38464c2fe372be5ed94f32c3df28e
-* ee086838f193bf88a02c37c67208165a
-* 4ba9f91cc6a8d2e5264c01d345c95146
-* d0357222ef21ed740c39a504d7e72eee
-* b85c77d1aef3e63c9fa15283feccd652
-* a4bedde203588ee63f49aff6e5e585f0
-* 372adc193181e0ca706a771495e50234
-* 0c75d81528f220c17258d11ae716c094
-* bfd0636af10180d6df3fc34f36931fbc
-* 17cba5e46a625f105f6d847a1307be4e
-* 4cd7158fe45c638e224f969fcec016d5
-* 168a8a535b756df33851b602a9591a84
-* e51eb8aad82ff131453a8fa1b1165400
-* 4a669edbfaf6ae7eedbb967c276d36ad
-* 47b7078633ea8280dad3f20d7a492e9a
-* 158c9a291de59c8bfc45a17a6f097560
-* 139070ad937f056a58254f79edf225a9
-* b3180e322deb797aeb7ca696e1bf4114
-* c2c2354ac74c20c7387d70aa883c0529
-* 3cdfaff1528e474040e3b89b41b06add
-* b05817f4014440d7bfff2409db27e664
-* d80b7e944064bf3bd382ae2be696ab9e
-* 1c1ebdb4d2cea4a9f1b480ef6387ebbd
-* f8ab61d03ef9c157f83d8967c5325f72
-* 32b2dd2ad5bcd04617f8049be39f3a4e
-* 070716b587ce6b006f4906a8222fc505
-* 2bad882b7fb5945b0373cf8c526cb4ac
-* 158e3fb1c7bf72fb1db969f281a7a097
-* feaabdb27ceb59ed1833eb15e3e0eac4
-* f9dae72f1da317cf8f970d52bfcce101
-* 83cac8f92c741b2873a70c03c812673c
-* 0e9ebe0001bcd9e8675b093ef6500b14
-* 89501be62f475ae6fcc94bf3a75cd7b2
-* cfd552db61588e9f2e8784c0711a606e
-* ee3ce6c2c85d7bb8f82d8426be1596fc
-* 5245ac60487b6dc5c36f68ead7ed1224
-* 27bc96521193bbb8a03ce3d01d4c9028
-* 50ffffa874bca16182ecad645561aa06
-* 26afe1ef03898c7f2b0d6e411ade0d2c
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "snapmirror list-destinations" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "event generate-autosupport-log" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "job history show" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "job show" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "job stop" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "lun" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "lun create" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "lun delete" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "lun igroup add" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "lun igroup create" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "lun igroup delete" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "lun igroup rename" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "lun igroup show" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "lun mapping add-reporting-nodes" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "lun mapping create" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "lun mapping delete" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "lun mapping remove-reporting-nodes" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "lun mapping show" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "lun modify" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "lun move-in-volume" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "lun offline" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "lun online" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "lun resize" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "lun serial" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "lun show" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "network interface" -access readonly`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "snapmirror policy add-rule" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "snapmirror policy modify-rule" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "snapmirror policy remove-rule" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "snapmirror policy show" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "snapmirror restore" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "snapmirror show" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "snapmirror show-history" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "snapmirror update" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "snapmirror update-ls-set" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "version" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "volume clone create" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "volume clone show" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "volume clone split start" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "volume clone split stop" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "volume create" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "volume destroy" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "volume file clone create" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "volume file show-disk-usage" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "volume modify" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "volume offline" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "volume online" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "volume qtree create" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "volume qtree delete" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "volume qtree modify" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "volume qtree show" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "volume restrict" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "volume show" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "volume snapshot create" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "volume snapshot delete" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "volume snapshot modify" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "volume snapshot modify-snaplock-expiry-time" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "volume snapshot rename" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "volume snapshot restore" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "volume snapshot restore-file" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "volume snapshot show" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "volume snapshot show-delta" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "volume unmount" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "vserver cifs share create" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "vserver cifs share delete" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "vserver cifs share show" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "vserver cifs show" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "vserver export-policy create" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "vserver export-policy delete" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "vserver export-policy rule create" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "vserver export-policy rule show" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "vserver export-policy show" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "vserver iscsi connection show" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "vserver" -access readonly`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "vserver export-policy" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "vserver iscsi" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "volume clone split status" -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "volume managed-feature" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "nvme subsystem map" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "nvme subsystem create" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "nvme subsystem delete" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "nvme subsystem modify" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "nvme subsystem host" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "nvme subsystem controller" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "nvme subsystem show" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "nvme namespace create" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "nvme namespace delete" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "nvme namespace modify" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "nvme namespace show" -access all`
 

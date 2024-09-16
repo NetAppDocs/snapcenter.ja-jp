@@ -2,115 +2,115 @@
 permalink: protect-sce/task_back_up_exchange_databases.html 
 sidebar: sidebar 
 keywords: SnapCenter plug-in for Exchange Server 
-summary: 145f4e41c29b520e1d8d5a4e3691ae25 
+summary: 'いずれのリソースグループにも含まれていないデータベースは、[Resources]ページからバックアップできます。' 
 ---
-= 3b149cd899fbd2201eebaa6d8ac21929
+= Exchangeデータベースのバックアップ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-145f4e41c29b520e1d8d5a4e3691ae25
+いずれのリソースグループにも含まれていないデータベースは、[Resources]ページからバックアップできます。
 
-.135b308ed83c53f1516b7c754566d1c4
-* bb9d7068e92869688b6abcc02fa7e603
-* da6f15c5790afdf8cafcbd8f903edb93
-* 358ce2f170149e58f98326b8a6ed5d3c
-* 64ac2dd533361c3963118cc11fb7cac1
+.開始する前に
+* バックアップポリシーを作成しておく必要があります。
+* バックアップ処理で使用されるアグリゲートを、データベースで使用されるSVMに割り当てておく必要があります。
+* セカンダリストレージとの SnapMirror 関係があるリソースをバックアップする場合、ストレージユーザに割り当てられるロールには「 'SnapMirro all' 」権限を含める必要があります。ただし、「 vsadmin 」ロールを使用している場合、「 'SnapMirro all 」権限は必要ありません。
+* ネットアップストレージとネットアップ以外のストレージ上にアクティブ / パッシブデータベースコピーのあるデータベースまたはデータベース可用性グループのバックアップを実行する場合は、 また、ポリシーのバックアップ・ジョブ作成時間 * オプションで、サーバ上のバックアップ・アクティブ・コピー * またはバックアップ・コピーを選択した場合、バックアップ・ジョブは警告状態になります。NetAppストレージ上のアクティブ/パッシブデータベースコピーのバックアップは成功し、ネットアップ以外のストレージ上のアクティブ/パッシブデータベースコピーのバックアップは失敗します。
 +
 |===
 
 
-| 860213bd7e47ab530bb0265db0d4d02a 
+| * ベストプラクティス： * アクティブデータベースとパッシブデータベースのバックアップは同時に実行しないでください。競合状態が発生し、いずれかのバックアップが失敗する可能性があります。 
 |===
 
 
-.f3a29486bed19a90f2da6d007818b427
-. 1aa4e724dd9a6c283aa6653b764530f0
-. 56211ba6636186607e13945dac559a10
+.手順
+. 左側のナビゲーションペインで、 [* リソース ] をクリックし、リストから [Microsoft Exchange Server プラグイン *] を選択します。
+. リソースページで、 * 表示 * リストから * データベース * または * データベース可用性グループ * のいずれかを選択します。
 +
-6da272f1d69c440674470ba19591ba05
-
-+
-
-NOTE: 0ad1c36a6c3e0a80135136739263c1d7
-
-+
-8ec049c5812d131f3e960eb36acfe281
-
-+
-** bb40ccbb928b274cb38a895aef70f856
-+
-... 8373034f279dfd1570ec179c090b858c
-... c5f4c29439aa6c78216cfa3f9865548c
-
-
-** 54449f6b5c8531f99928e88f563830f0
-
-
-. eb71c7e77b1cb5486117cdac9d378fb6
-+
-3df4bf361c2bfb2dfa84fc1cffa5779e
-
-. 53899dcc4360d3b8622ce5dc08a12950
-+
-.. 70c30c71587e2d0c71b7f9e97a8aad7d
-+
-
-NOTE: e27c3f444b9f74c83a643ba11ed3a83e
+[Resources]ページの image:../media/not_supported_icon.png[""] アイコンは、データベースがネットアップ以外のストレージにあることを示します。
 
 +
 
-NOTE: 2ebdd237cad2d1f8e79c0e03ecacf3e4
+NOTE: DAGで、アクティブなデータベースコピーがネットアップ以外のストレージにあり、少なくとも1つのパッシブデータベースコピーがNetAppストレージにある場合は、データベースを保護できます。
+
++
+*をクリックしimage:../media/filter_icon.png[""]、ホスト名とデータベースタイプを選択してリソースをフィルタリングします。次に、**をクリックしてフィルタペインを閉じることができますimage:../media/filter_icon.png[""]。
+
++
+** データベースをバックアップする場合は、データベース名をクリックします。
++
+... Topology ビューが表示されたら、 *Protect* をクリックします。
+... [Database - Protect Resource]ウィザードが表示されたら、手順3に進みます。
+
+
+** データベース可用性グループをバックアップする場合は、データベース可用性グループの名前をクリックします。
+
+
+. カスタムのSnapshot名を指定する場合は、[リソース]ページで*[Snapshotコピーにカスタムの名前形式を使用する]*チェックボックスを選択し、Snapshot名に使用するカスタムの名前形式を入力します。
++
+たとえば、 _customText_policy_hostname_or_resource_hostname_hostname_1 です。デフォルトでは、Snapshot名にタイムスタンプが追加されます。
+
+. [Policies] ページで、次の手順を実行します。
++
+.. ドロップダウンリストから1つ以上のポリシーを選択します。
++
+
+NOTE: **をクリックしてポリシーを作成することもできますimage:../media/add_policy_from_resourcegroup.gif[""]。
+
++
+
+NOTE: バックアップ・ジョブ作成時に選択するサーバ上の * バックアップ・コピーがポリシーに含まれている場合は、サーバ選択オプションが表示され、 1 つ以上のサーバを選択できます。サーバ選択オプションでは、選択したデータベースがNetAppストレージ上にあるサーバのみが表示されます。
 
 
 
 +
-db9cc4a2ed12e21bb79e9346714c68b9
+[ 選択したポリシーのスケジュールを設定 ] セクションに、選択したポリシーが一覧表示されます。
 
 +
-.. d9efe8cd3b84ef411469a4acc1e9bb8a
-.. b04a2aa13bc9b5c2000bf98771ae837a
+.. スケジュールを設定するポリシーの[スケジュールの設定]列で**をクリックしますimage:../media/add_policy_from_resourcegroup.gif[""]。
+.. [Add schedules for policy_name] ウィンドウで、スケジュールを設定し、 [*OK*] をクリックします。
 +
-d89a925c7347eda26320229d83214fd3
-
-+
-bf5bc6c2ed0f05ce21c3e597309a4f6b
-
-
-
-. 30b65b6968f11ce5399cacf995839f65
-+
-0f9a723c6f5eb511c1b09b3ba75314b7
+ここで、 _policy_name_は 選択したポリシーの名前です。
 
 +
+設定されたスケジュールは、 [ 適用されたスケジュール ] 列に一覧表示されます。
 
-NOTE: 4dcb8f86b6b59353b86d64a1b6090e41
 
-. fed1c121dc4f5a5484e5623e297385fb
+
+. [ 通知 ] ページの [ 電子メールの設定 *] ドロップダウンリストから、電子メールを送信するシナリオを選択します。
 +
-6e20353bd5ea6118ce22e0b4e81aef53
+また、送信者と受信者のEメールアドレス、およびEメールの件名を指定する必要があります。リソース上で実行されたバックアップ処理のレポートを添付する場合は、 [ ジョブレポートの添付（ Attach Job Report ） ] を選択します。
 
-. 2473f0a75a438700af9cf3aca0761dd5
-. 4a1c51520bfb3d170a967d4c218b52bf
 +
-.. 6b4dbd62846fc1dc78b9f63f11af9c78
-+
-b1b9720160580fd5949d50bf10097dc5
 
-.. 96dd2bdaca6a007b13c9f42158b860a6
+NOTE: Eメール通知を使用する場合は、GUIまたはPowerShellコマンドSet-SmSmSmtpServerを使用して、SMTPサーバの詳細を指定しておく必要があります。
+
+. 概要を確認し、 [ 完了 ] をクリックします。
++
+データベーストポロジページが表示されます。
+
+. [ 今すぐバックアップ ] をクリックします。
+. Backup （バックアップ）ページで、次の手順を実行します。
++
+.. リソースに複数のポリシーを適用している場合は、「 * Policy * 」ドロップダウン・リストから、バックアップに使用するポリシーを選択します。
++
+オンデマンドバックアップ用に選択したポリシーにバックアップスケジュールが関連付けられている場合、オンデマンドバックアップは、スケジュールタイプに指定した保持設定に基づいて保持されます。
+
+.. [ バックアップ ] をクリックします。
 
 
-. bb43b313441613889840a70c3dde17eb
+. ページ下部の[Activity]ペインでジョブをダブルクリックして[Job Details]ページを表示し、バックアップの進捗状況を監視します。
 +
-** 71a692c1ca2878f83f4cd08d817a4dd9
+** MetroCluster構成では、フェイルオーバー後にSnapCenterで保護関係を検出できないことがあります。
 +
-ac86fe103cf04f08650a1f1b7245227f
+詳細については、次を参照してください。 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["MetroClusterのフェイルオーバー後にSnapMirror関係またはSnapVault関係を検出できない"^]
 
-** 2a1878497d482cf8e9e56639ad6cb01e
+** VMDK上のアプリケーションデータをバックアップする場合に、SnapCenter Plug-in for VMware vSphereのJavaヒープサイズが十分でないと、バックアップが失敗することがあります。
 +
-5ee3d457acf0b72806d19545a995012b
+Java のヒープサイズを増やすには、スクリプトファイル /opt/NetApp/init_scripts/scvservice_. を探します。このスクリプトでは、 _DO_START METHOD_Command によって、 SnapCenter VMware プラグインサービスが開始されます。このコマンドを次のように更新します。 _java -jar -Xmx8192M -Xms4096M_
 
 
 

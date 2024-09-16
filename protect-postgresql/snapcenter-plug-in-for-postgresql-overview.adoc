@@ -2,21 +2,21 @@
 permalink: protect-postgresql/snapcenter-plug-in-for-postgresql-overview.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for PostgreSQL 
-summary: ad11e1a0e717aa268eb8cb996bcb89a2 
+summary: SnapCenter Plug-in for PostgreSQLは、PostgreSQLクラスタに対するアプリケーション対応のデータ保護管理を可能にする、NetApp SnapCenterソフトウェアのホスト側コンポーネントです。Plug-in for PostgreSQLクラスタは、SnapCenter環境でのPostgreSQLクラスタのバックアップ、リストア、クローニングを自動化します。 
 ---
-= e9b5f45523130bbab525502f88750267
+= SnapCenter Plug-in for PostgreSQLの概要
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-a0d1ba1ee48baae36200c637c444bd8c
+SnapCenter Plug-in for PostgreSQLクラスタは、PostgreSQLクラスタに対するアプリケーション対応のデータ保護管理を可能にする、NetApp SnapCenterソフトウェアのホスト側コンポーネントです。Plug-in for PostgreSQLクラスタは、SnapCenter環境でのPostgreSQLクラスタのバックアップ、リストア、クローニングを自動化します。
 
-47e301af109d23c9b20892702b2eddc0
+SnapCenterは、単一クラスタとマルチクラスタのPostgreSQLセットアップをサポートしています。Plug-in for PostgreSQL Clustersは、Linux環境とWindows環境の両方で使用できます。Windows環境では、PostgreSQLは手動リソースとしてサポートされます。
 
-d282949816f697671e993d1b10a474c2
+Plug-in for PostgreSQLクラスタがインストールされている場合は、SnapCenterとNetApp SnapMirrorテクノロジを使用して、バックアップセットのミラーコピーを別のボリュームに作成できます。また、本プラグインをNetApp SnapVaultテクノロジとともに使用して、標準への準拠を目的としたディスクツーディスクのバックアップ・レプリケーションを実行することもできます。
 
-b20aea01f23f757a9c93203b59f929f7
+SnapCenter Plug-in for PostgreSQLは、ONTAPおよびAzure NetAppのファイルストレージレイアウトでNFSとSANをサポートします。
 
-72f4f1f1ebc26a28eb085ea04d34b5db
+VMDKまたは仮想ストレージレイアウトがサポートされます。

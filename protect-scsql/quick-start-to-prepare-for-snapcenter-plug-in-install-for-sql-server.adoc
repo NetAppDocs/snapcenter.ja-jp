@@ -2,196 +2,196 @@
 permalink: protect-scsql/quick-start-to-prepare-for-snapcenter-plug-in-install-for-sql-server.html 
 sidebar: sidebar 
 keywords: credentials 
-summary: 96ccca164f6b65c860546bba66a6485a 
+summary: SnapCenter ServerおよびSnapCenter Plug-in for Microsoft SQL Serverのインストールの準備手順について説明します。 
 ---
-= bb7367ec62fb74511977df150181bc7f
+= SnapCenter サーバとプラグインのインストールを準備します
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-63408836354c40518fc610de2ff61aef
+SnapCenter ServerおよびSnapCenter Plug-in for Microsoft SQL Serverをインストールするための準備手順をまとめたものです。
 
 
 
-== 0322b41f8bf313240d64c3e6923b4ee4
+== ドメインとワークグループの要件
 
-c85265a6c5841b0f019403a50b63c44d
+SnapCenterサーバは、ドメインまたはワークグループ内のシステムにインストールできます。
 
-43727cf7c1f0b9055bad0d2c9c2e19ea
+Active Directoryドメインを使用している場合は、ローカル管理者の権限を持つドメインユーザを使用する必要があります。ドメインユーザは、Windowsホストのローカルの管理者グループのメンバーである必要があります。
 
-2632504d1b7b1f77434679b6906040dd
-
-
-
-== 7527dcedb498a9e111f7eb26b4f075a6
-
-d5c59f9587c1784732bff8ebcc03f9fb
-
-[cols="1,3"]
-|===
-| 794df3791a8c800841516007427a2aa3 | b428bd66304bced88a8f85c2e42e2a8d 
-
-
- a| 
-932a86c21601cea5fd4dd8e8496f1347
- a| 
-d170a0ae7cce61c29600d85d29b948ca
-
-e561227291ef5b9583ca35f38b3d1d62
+ワークグループを使用している場合は、ローカル管理者の権限を持つローカルアカウントを使用してください。
 
 
 
- a| 
-06bfcdba3ea733216950ad2dd53126d5
- a| 
-253b40ae359ba25b56231803430c4873
+== ライセンス要件
 
-2f41a86e87d9df44dc6d43f0b52bd052
-
-
-
- a| 
-faf896433eeb20fca1eb114937251b50
- a| 
-9d09cebdc5095408e7e5f8bc09c08c42
-
-
-
- a| 
-a036788a7ed73379ca117ad8b6a48afa
- a| 
-5be74f1e9c3cdce99e50c0e439ec19b3
-
-
-NOTE: 7dbd4083dc9a93160940c1e53d03999f
-
-|===
-
-
-== 7a98b5f499da77fa6e09b98a638328d7
-
-266df807c209259b6527f0402eec5ecc
+インストールするライセンスのタイプは環境によって異なります。
 
 [cols="1,3"]
 |===
-| 8124579383e90243e4b06323d2b37f8d | a55b17d8324fe50e023be8010d4b5474 
+| ライセンス | 必要な場合 
 
 
  a| 
-a0315547f70da02dc3ae867b333d7a34
+SnapCenter Standard（コントローラベース）
  a| 
-0d9aba31602daa8aa7c78b179f23a57a
+FASマタハAFFストレエシコントロオラニヒツヨウ
 
-
-
- a| 
-2b55387dd066c5bac646ac61543d152d
- a| 
-* 0e6a971ec5306b612f39cb5f57db7161
-* a4dde000123474f5f78b64627780eba4
-
+SnapCenter Standardライセンスはコントローラベースのライセンスで、Premium Bundleに含まれています。SnapManager Suiteライセンスをお持ちの場合は、SnapCenter Standardライセンスの使用権も取得できます。FASまたはAFFストレージにSnapCenterの試用版をインストールする場合は、営業担当者にお問い合わせください。
 
 
 
  a| 
-e53619c1fe611a51eeeb8d148ba6e532
+SnapMirrorまたはSnapVault
  a| 
-* cd8d1469016f031f922bb333a970cfd3
-* 2ee9a06a2f3e6e2ca52cee448cb93f0d
+ONTAP
 
-
-
-
- a| 
-98e13d99df22e8a0a2bae6e969834be4
- a| 
-21dce67a57cd833547ff3fd4e9e03823
-
-* 068a44bd0181cde83ae2d162ab70836c
-* d167c06085657bbc05a48ca527f73219
-* 96e96c23ced7f362fb4cc50d9e3d4bfa
-
+SnapCenterでレプリケーションが有効になっている場合は、SnapMirrorまたはSnapVaultのいずれかのライセンスが必要です。
 
 
 
  a| 
-8aba88ca961faed346aac654b3d29bdb
+追加ライセンス（オプション）
  a| 
-20a50fb41923e75d6b62c157ac6f1a69
-
-* f9e40bd22b133e93e9c9d3b4c3adef6e
-* 77e6d1d743590f1944df090df04f64fb
-* 4c6ec01f6ae03e08c146fe6865423a4b
-
+を参照して link:../install/concept_snapcenter_licenses.html["SnapCenterライセンス"^]
 
 
 
  a| 
-e30a7ddbf46e9a12a9d9cfebd31fe25a
+SnapCenter Standardライセンス（オプション）
  a| 
-f4c498441e8fe15aea27e35f1b2876a6
+セカンダリデスティネーション
+
+
+NOTE: セカンダリデスティネーションにSnapCenter Standardライセンスを追加することを推奨しますが、必須ではありません。セカンダリデスティネーションでSnapCenter Standardライセンスが有効になっていない場合、フェイルオーバー処理の実行後にSnapCenterを使用してセカンダリデスティネーションでリソースをバックアップすることはできません。ただし、クローニング処理と検証処理を実行するには、セカンダリデスティネーションに FlexClone ライセンスが必要です。
+
+|===
+
+
+== ホストおよびポートの要件
+
+ONTAPおよびアプリケーションプラグインの最小要件については https://imt.netapp.com/matrix/imt.jsp?components=121030;&solution=1259&isHWU&src=IMT[]、[Interoperability Matrix Tool^]を参照してください。
+
+[cols="1,3"]
+|===
+| ホスト | 最小要件 
+
+
+ a| 
+オペレーティングシステム（64ビット）
+ a| 
+を参照し https://imt.netapp.com/matrix/imt.jsp?components=121030;&solution=1259&isHWU&src=IMT["Interoperability Matrix Tool"^]
+
+
+
+ a| 
+CPU
+ a| 
+* サーバホスト：4コア
+* プラグインホスト：4コア
+
+
+
+
+ a| 
+RAM
+ a| 
+* サーバホスト：8 GB
+* プラグインホスト：4GB
+
+
+
+
+ a| 
+ハードドライブの空き容量
+ a| 
+サーバホスト：
+
+* SnapCenterサーバソフトウェアおよびログ用に7 GB
+* SnapCenterリポジトリ用に8GB
+* 各プラグインホスト：2GB（プラグインのインストールとログ用）。プラグインが専用ホストにインストールされている場合にのみ必要です。
+
+
+
+
+ a| 
+サードパーティライブラリ
+ a| 
+SnapCenter Serverホストおよびプラグインホストに必要：
+
+* Microsoft .NET Framework 4.7.2以降
+* ASP。 Net Core Hosting Bundle（8.0.5以降）
+* PowerShell 7.4.2以降
+
+
+
+
+ a| 
+ブラウザ
+ a| 
+Chrome、Internet Explorer、Microsoft Edge
 
 |===
 [cols="1,3"]
 |===
-| 182aeb116dd563a6020ec9b2d5b6595e | 4d4690457f78e9e5cbfbcd0e36fbeff0 
+| ポートタイプ | デフォルトポート 
 
 
  a| 
-ed00b70cc595a411eff2cc42510a291f
+SnapCenterポート
  a| 
-b213e31ffc319fa7b61f00a8dfad6e75
-
-
-
- a| 
-18622e175ff22b2375f9cbc2314b3285
- a| 
-c69cfd47967e253717494d2c7047647d
+8146（HTTPS）、URL _\https://server:8146_のように双方向、カスタマイズ可能
 
 
 
  a| 
-7d9d926d5125803fd97000a20abb897d
+SnapCenter SMCore通信ポート
  a| 
-ced7e40a06bd114bdd410398e025c7bd
-
-
-
- a| 
-4abc501abe98e95144eba2c4d17174ad
- a| 
-0d1c7f3b029cde2163a99c08de7fc3c3
-
-9ce593479d7ce75e23fe1f85463ed78d
-
-507c0c7f0b8b0e908ce3263a2104c06c
+8145（HTTPS）、双方向、カスタマイズ可能
 
 
 
  a| 
-5ae5c2db7baad917cb8389420693266d
+リポジトリデータベース
  a| 
-c69cfd47967e253717494d2c7047647d
+3306（HTTPS）、双方向
 
 
 
  a| 
-48552dce4d9810446c70f66f21f08120
+Windowsプラグインホスト
  a| 
-de80df6466db891ed7d7a31d71335ae1
+135、445（TCP）
 
-228eb7fa9d28577ec427d7baedfa7ded
+ポート135と445に加えて、Microsoftが指定したダイナミックポート範囲もオープンにする必要があります。リモートインストール操作では、このポート範囲を動的に検索するWindows Management Instrumentation（WMI）サービスを使用します。
+
+サポートされるダイナミックポート範囲については、を参照してください https://docs.microsoft.com/en-US/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements["Windows のサービス概要とネットワークポート要件"^]。
+
+
+
+ a| 
+Windows向けSnapCenterプラグイン
+ a| 
+8145（HTTPS）、双方向、カスタマイズ可能
+
+
+
+ a| 
+ONTAPクラスタまたはSVMの通信ポート
+ a| 
+443 （ HTTPS ）、双方向、 80 （ HTTP ）、双方向
+
+このポートは、SnapCenterサーバホスト、プラグインホスト、およびSVMまたはONTAPクラスタ間の通信に使用されます。
 
 |===
 
 
-== bc6cdf099cec9fa3dce7fb43c644e659
+== SnapCenter Plug-in for Microsoft SQL Serverの要件
 
-4bd535cc745449316aa463a5f52133d6
+ローカル管理者権限があり、リモートホストに対するローカルログイン権限があるユーザが必要です。クラスタノードを管理する場合は、クラスタ内のすべてのノードに対する管理者権限を持つユーザが必要です。
 
-cf94e6be5912bb698bcc03d64c605bc4
+SQL Serverに対するsysadmin権限を持つユーザが必要です。このプラグインはMicrosoft VDI Frameworkを使用しますが、これにはsysadminアクセスが必要です。
 
-b06af5128852d56366a94b0a3584c1a6
+SnapManager for Microsoft SQL Serverを使用していて、SnapManager for Microsoft SQL ServerからSnapCenterにデータをインポートする場合は、を参照してください。 link:../protect-scsql/concept_import_archived_backups_from_snapmanager_for_sql_to_snapcenter.html["アーカイブバックアップをインポートする"^]

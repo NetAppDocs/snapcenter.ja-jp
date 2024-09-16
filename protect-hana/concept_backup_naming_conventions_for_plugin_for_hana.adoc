@@ -2,32 +2,32 @@
 permalink: protect-hana/concept_backup_naming_conventions_for_plugin_for_hana.html 
 sidebar: sidebar 
 keywords: Backup naming conventions 
-summary: 994822d5c1500de0f9f8d5222f1d1a08 
+summary: Snapshotのデフォルトの命名規則を使用することも、カスタマイズした命名規則を使用することもできます。デフォルトのバックアップ命名規則では、Snapshot名にタイムスタンプが追加されるため、コピーがいつ作成されたかを確認できます。 
 ---
-= 1762d13aea1b5d74a284ce4d4d490287
+= Plug-in for SAP HANAテタヘスノハツクアツフノメイメイキソク
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-994822d5c1500de0f9f8d5222f1d1a08
+Snapshotのデフォルトの命名規則を使用することも、カスタマイズした命名規則を使用することもできます。デフォルトのバックアップ命名規則では、Snapshot名にタイムスタンプが追加されるため、コピーがいつ作成されたかを確認できます。
 
-1d220412a989e3409a81972981a34269
+Snapshotでは、次のデフォルトの命名規則が使用されます。
 
-99bb793d8518c3738d75ad0f87e31dcf
+`resourcegroupname_hostname_timestamp`
 
-d5cc6c862c6a1f4384bd43917710a763
+バックアップリソースグループには、次の例のように論理的な名前を付ける必要があります。
 
 [listing]
 ----
 dts1_mach1x88_03-12-2015_23.17.26
 ----
-bdd8b7afde2c57bb177f08a155eb0f00
+この例では、各構文要素に次の意味があります。
 
-* 0a582eb0bda617d73885518760675220
-* cbcca0e2763af2ef4379ffa9a0fee87d
-* 1cd8edb6081ac8a62963443b4802377c
+* _dts1_は リソースグループ名です。
+* _mach1x88_ はホスト名です。
+* _03-12-2015_23.17.26_ は日付とタイムスタンプです。
 
 
-5aacd591ac321cf50f17ba6d6b99482c
+または、*[Use custom name format for Snapshot copy]*を選択して、リソースまたはリソースグループを保護しながらSnapshot名の形式を指定することもできます。たとえば、customText_resourcegroup_policy_hostnameやresourcegroup_hostnameなどです。デフォルトでは、タイムスタンプのサフィックスがSnapshot名に追加されます。

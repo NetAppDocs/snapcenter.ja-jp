@@ -2,57 +2,57 @@
 permalink: protect-scsql/reference_host_requirements_to_install_snapcenter_plug_in_package_for_windows_sql.html 
 sidebar: sidebar 
 keywords: SAP HANA,Custom plug-ins 
-summary: fdace28a15a0c32d01477d6a6f02b764 
+summary: SnapCenter Plug-ins Package for Windowsをインストールする前に、基本的なホストシステムのスペース要件とサイジング要件を理解しておく必要があります。 
 ---
-= 05fc12ecf449ac264abfd66ddab37332
+= SnapCenter Plug-ins Package for Windowsをインストールするホストの要件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-fdace28a15a0c32d01477d6a6f02b764
+SnapCenter Plug-ins Package for Windowsをインストールする前に、基本的なホストシステムのスペース要件とサイジング要件を理解しておく必要があります。
 
 |===
-| 7d74f3b92b19da5e606d737d339a9679 | 5a2ebfb8baa378cfcfcba58bbb1380c2 
+| 項目 | 要件 
 
 
  a| 
-aab338915e32b60e92c8de3a23aa5c5d
+オペレーティングシステム
  a| 
-bb79f96acbff544ded541446c9c7c894
+Microsoft Windows
 
-3fd57bbce38ee807b2553fd56f562c3a
-
-
-
- a| 
-97d747ad5d4878c60364b9ba961fd5a4
- a| 
-0d642755e7f12f7563e3db33bd0c39cb
+サポートされているバージョンの最新情報については、を参照して https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool"^]ください。
 
 
 
  a| 
-94ca5bd1fc6971f402b85442105f093f
+ホスト上のSnapCenterプラグイン用の最小RAM
  a| 
-074c2f1dacf9047766e7f8d5dce71060
-
-
-NOTE: a5074b94ccbd0ad683e6ad6eb63da188
+1GB
 
 
 
  a| 
-c02f07fcd7047bf35e0bb82decca0939
+ホスト上のSnapCenterプラグインのインストールとログの最小スペース
  a| 
-* ce67e9a5c3006b689a5f150a9c30d732
-* 4a58751c57809081912e30803a16d52e
-* b7ccd7f577996dd33bde8070db971b93
+5GB
 
 
-3fd57bbce38ee807b2553fd56f562c3a
+NOTE: 十分なディスクスペースを割り当て、logsフォルダによるストレージ消費量を監視する必要があります。必要なログスペースは、保護対象のエンティティの数とデータ保護処理の頻度によって異なります。十分なディスクスペースがない場合、最近実行した処理のログは作成されません。
 
-bb92d00cc055d1fa0c3023946870bfd5
+
+
+ a| 
+必要なソフトウェアパッケージ
+ a| 
+* です。 ネットコア8.0.5
+* PowerShell Core 7.4.2
+* Java 11 Oracle JavaおよびOpenJDK
+
+
+サポートされているバージョンの最新情報については、を参照して https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool"^]ください。
+
+用。 NET固有のトラブルシューティング情報。を参照してください。 https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_upgrade_or_install_fails_with_This_KB_is_not_related_to_the_OS["インターネットに接続されていない従来型システムでは、SnapCenter のアップグレードまたはインストールが失敗します。"]
 
 |===

@@ -2,15 +2,15 @@
 permalink: protect-postgresql/install-snapcenter-plug-in-for-postgresql.html 
 sidebar: sidebar 
 keywords: installing 
-summary: 4fefea074625fc1da66c302c13e5a196 
+summary: PostgreSQLを保護する場合は、SnapCenter Plug-in for PostgreSQLをインストールしてセットアップする必要があります。 
 ---
-= 604911737a529fb17dd21cbb5a939542
+= SnapCenter Plug-in for PostgreSQLのインストールワークフロー
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-a5dab4a1761a892b6445840a5496842e
+PostgreSQLクラスタを保護する場合は、SnapCenter Plug-in for PostgreSQLをインストールしてセットアップする必要があります。
 
-image::../media/sap_hana_install_configure_workflow.gif[5157096b4994925e784b5ccc913a425c]
+image::../media/sap_hana_install_configure_workflow.gif[ワークフローのインストールと設定]

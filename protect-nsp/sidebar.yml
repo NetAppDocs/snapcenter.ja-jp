@@ -1,130 +1,130 @@
 ---
 section: protect-nsp
-title: b0aa9b023351939602d9d1e28823f0e3
+title: NetAppでサポートされているプラグインの保護
 entries:
-- title: dc6c127ff30349bd45fabfff40610778
+- title: NetAppでサポートされるプラグイン
   entries:
-  - title: 6f340d12d1d89a06a86c347f946aadae
+  - title: NetAppでサポートされるプラグインの概要
     url: "/protect-nsp/netapp_supported_plugins_overview.html"
-  - title: 6dd51ac619565848e980114f49a98a9e
+  - title: NetAppでサポートされるプラグインの機能
     url: "/protect-nsp/what_you_can_do_with_the_netapp_supported_plugins.html"
-  - title: b0e07179f36c91a15e47f4d7a80a4360
+  - title: NetAppでサポートされるプラグイン機能
     url: "/protect-nsp/netapp_supported_plugins_features.html"
-  - title: 6a973a6f6311a0b4d17853a6d33d828f
+  - title: NetAppでサポートされるプラグインでサポートされるストレージタイプ
     url: "/protect-nsp/storage_types_supported_by_netapp_supported_plugins.html"
-  - title: 16953b9219b46e175f20aa9ba8bfba29
+  - title: NetAppでサポートされるプラグインに必要な最小ONTAP権限
     url: "/protect-nsp/minimum_ontap_privileges_required_for_netapp_supported_plugins.html"
-  - title: e1470cbc380c0e4285ea434aa1f30381
+  - title: SnapMirrorレプリケーションとSnapVaultレプリケーションのためのストレージシステムの準備
     url: "/protect-nsp/prepare_storage_systems_for_snapmirror_and_snapvault_replication_for_netapp_supported_plugins.html"
-  - title: 24940fc9df90a646aba3659646256b87
+  - title: バックアップ戦略を定義する
     url: "/protect-nsp/define_a_backup_strategy.html"
-  - title: 2d9eb22f67056d86366a15efb099883a
+  - title: NetAppでサポートされるプラグインのバックアップ戦略
     entries:
-    - title: d8af169199bfc163fc18d9c1ac586c27
+    - title: NetAppでサポートされているプラグインリソースのバックアップスケジュール
       url: "/protect-nsp/backup_schedules_of_netapp_supported_plugins_resources.html"
-    - title: fee335c3c26419e1b2971157844984a7
+    - title: 必要なバックアップジョブの数
       url: "/protect-nsp/number_of_backup_jobs_needed.html"
-  - title: bda453cd5a6724b496252c260674fa69
+  - title: 手動で追加したNetAppでサポートされるプラグインリソースのリストア戦略のタイプ
     url: "/protect-nsp/types_of_restore_strategies_supported_for_manually_added_netapp_supported_plugins_resources.html"
-- title: 07af457ed5409f58b0d5ca2b41b5ec39
+- title: アプリケーション用のプラグインを開発
   entries:
-  - title: 3b878279a04dc47d60932cb294d96259
+  - title: 概要
     url: "/protect-nsp/develop_a_plug_in_for_your_application.html"
-  - title: 3f272cbd9f3d98a46dc5be01d6d1c28f
+  - title: Perlベースの開発
     url: "/protect-nsp/perl.html"
-  - title: eada736bfcfe3be151f853e6f08f6d26
+  - title: ネイティブ形式
     url: "/protect-nsp/native.html"
-  - title: 731641b378060335e231f40a61efb08e
+  - title: Javaスタイル
     url: "/protect-nsp/java.html"
-  - title: f68d31617b8573d721bea1d57f377612
+  - title: SnapCenterのカスタムプラグイン
     url: "/protect-nsp/custom_plugins_in_snapcenter.html"
-- title: 792464ae681ba52772c64594e159d7f2
+- title: NetApp対応プラグインのインストール準備
   entries:
-  - title: e65dc40ee96b13cf83d05151b71aaa6f
+  - title: NetAppでサポートされるプラグインのインストールワークフロー
     url: "/protect-nsp/install_netapp_supported_plugins.html"
-  - title: db39871b690a95f007f3b71acd6533d2
+  - title: ホストを追加してNetAppでサポートされるプラグインをインストールするための前提条件
     url: "/protect-nsp/prerequisites_to_adding_hosts_and_installing_netapp_supported_plugins.html"
-  - title: 05fc12ecf449ac264abfd66ddab37332
+  - title: SnapCenter Plug-ins Package for Windowsをインストールするホストの要件
     url: "/protect-nsp/host_requirements_to_install_snapcenter_plug_in_package_for_windows.html"
-  - title: ac33edef4526164e3c7c9a4df9986310
+  - title: SnapCenter Plug-ins Package for Linuxをインストールするホストの要件
     url: "/protect-nsp/host_requirements_for_installing_the_snapcenter_plug_in_package_for_linux.html"
-  - title: 22b33349c8b487c3bb8f913a8a5cdd06
+  - title: NetAppでサポートされるプラグインのクレデンシャルの設定
     url: "/protect-nsp/set_up_credentials_for_netapp_supported_plugins.html"
-  - title: 4f96a9b27e2a438e2024bd3f65ccc8ee
+  - title: Windows Server 2016以降でのgMSAの設定
     url: "/protect-nsp/configure_gMSA_on_windows_server_2012_or_later.html"
-  - title: 19bd9625214c87b1c38eac929848e1ba
+  - title: NetApp対応プラグインのインストール
     entries:
-    - title: d959bbdfecd7dd6a3f75f5a871cbbe02
+    - title: ホストを追加してリモートホストにプラグインパッケージをインストールする
       url: "/protect-nsp/add_hosts_and_install_plug_in_packages_on_remote_hosts.html"
-    - title: 85e03b5aac12ea0d7a83ca6e7fa64654
+    - title: コマンドレットを使用した複数のリモートホストへのSnapCenter Plug-in Package for Linux / Windowsのインストール
       url: "/protect-nsp/install_snapcenter_plug_in_packages_for_linux_or_windows_on_multiple_remote_hosts_using_cmdlets.html"
-    - title: d2c5b20234fc44c2f17c36b2966fd013
+    - title: コマンドラインインターフェイスを使用して、NetAppでサポートされているプラグインをLinuxホストにインストールする
       url: "/protect-nsp/install_the_netapp_supported_plugins_on_linux_hosts_using_the_command_line_interface.html"
-    - title: 8b8199b2cc69508101df27784ccae8d5
+    - title: SnapCenterプラグインパッケージのインストールステータスの監視
       url: "/protect-nsp/monitor_the_status_of_installing_plugin.html"
-  - title: e94a41320f7b470ab4c94c28575be94e
+  - title: CA証明書の設定
     entries:
-    - title: 5c4de78a2b621074bf68ab1c644af297
+    - title: CA証明書CSRファイルの生成
       url: "/protect-nsp/generate_CA_certificate_CSR_file.html"
-    - title: 463f3aea4c7a61c6bfaa026c1c1c490c
+    - title: CA証明書のインポート
       url: "/protect-nsp/import_CA_certificates.html"
-    - title: 9772bdc36f54d8bb6dc779a222af547c
+    - title: CA証明書サムプリントの取得
       url: "/protect-nsp/get_the_CA_certificate_thumbprint.html"
-    - title: 1067e8b574748bfd5d0147a621c7ca24
+    - title: WindowsホストプラグインサービスでのCA証明書の設定
       url: "/protect-nsp/configure_CA_certificate_with_Windows_host_plug-in_services.html"
-    - title: a761057277bd72c46a263ca5ddd62742
+    - title: Linuxホスト上のSnapCenterカスタムプラグインサービス用のCA証明書の設定
       url: "/protect-nsp/configure_CA_certificate_on_Linux_host.html"
-    - title: 56e9f299379f1f27ee946b3cc5197ca7
+    - title: Windowsホスト上のSnapCenterカスタムプラグインサービス用のCA証明書の設定
       url: "/protect-nsp/configure_CA_certificate_on_windows_host.html"
-    - title: 0b65a155991bcbd016cf199f401ea183
+    - title: プラグインに対してCA証明書を有効にする
       url: "/protect-nsp/enable_ca_certificates_for_plug-ins.html"
-- title: 391acd305e11894b8f29370b098d9f25
+- title: データ保護の準備
   entries:
-  - title: 6f9abdf4e6349ffead799b7fe0fb5848
+  - title: NetAppでサポートされるプラグインを使用するための前提条件
     url: "/protect-nsp/prerequisites_for_using_netapp_supported_plugins.html"
-  - title: 46c6f9f7931664ed1c7bbb11c08e4a62
+  - title: NetAppでサポートされるプラグインリソースの保護におけるリソース、リソースグループ、ポリシーの使用方法
     url: "/protect-nsp/how_resources_resource_groups_policies_used_for_protecting_netapp_supported_plugins_resources.html"
-- title: 37a077fe53864717026a312c9cfed412
+- title: NetAppでサポートされているプラグインリソースのバックアップ
   entries:
-  - title: 0e1b3005c7d7fef8012117ae579df248
+  - title: バックアップのワークフロー
     url: "/protect-nsp/back_up_netapp_supported_plugins_resources.html"
-  - title: fdadbc4689c75884565947c7d9c98734
+  - title: NetAppがサポートするプラグインにリソースを追加する
     url: "/protect-nsp/add_resources_to_netapp_supported_plugins.html"
-  - title: 30801714b066d2f617acadd977561420
+  - title: NetAppでサポートされるプラグインリソースのポリシーの作成
     url: "/protect-nsp/create_policies_for_netapp_supported_plugins_resources.html"
-  - title: 7f9a1e0f8fc64e3f207d5cd83dd8e67f
+  - title: リソースグループを作成してポリシーを適用
     url: "/protect-nsp/create_resource_groups_and_attach_policies.html"
-  - title: 6ce5278b296a0a5a39af4a4d0cbd927c
+  - title: NetAppでサポートされているプラグインリソースを個別にバックアップする
     url: "/protect-nsp/back_up_individual_netapp_supported_plugins_resources.html"
-  - title: 58ec0509621b150bb63b0fd69f20665f
+  - title: NetAppでサポートされているプラグインリソースのリソースグループのバックアップ
     url: "/protect-nsp/back_up_resource_groups_of_netapp_supported_plugins_resources.html"
-  - title: 7dae2f9bbc61653b98d6b0f906ccb0dc
+  - title: PowerShellコマンドレットを使用してストレージシステム接続とクレデンシャルを作成する
     url: "/protect-nsp/create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets.html"
-  - title: d2a5f76428abadccd7b24ea08a0eee1e
+  - title: PowerShellコマンドレットを使用したリソースのバックアップ
     url: "/protect-nsp/back_up_resources_using_powershell_cmdlets.html"
-  - title: 419e354d2124d18b011fd9f9fecbed3d
+  - title: バックアップ処理の監視
     url: "/protect-nsp/monitor_resources_backup_operations.html"
-  - title: f2098dd68244eba28833e305c4c720a3
+  - title: バックアップ処理をキャンセルする
     url: "/protect-nsp/cancel_backup_operations.html"
-  - title: 50787980c9356103ab7c58a3f9f7570f
+  - title: NetAppでサポートされているプラグインリソースに関連するバックアップとクローンを[Topology]ページで表示する
     url: "/protect-nsp/view_netapp_supported_plugins_resource_backups_and_clones_in_the_topology_page.html"
-- title: 9998189903920d98908841c22366cdc7
+- title: NetAppでサポートされているプラグインリソースのリストア
   entries:
-  - title: e30c3d908a4ed515e16791b672cc0709
+  - title: リストアのワークフロー
     url: "/protect-nsp/restore_netapp_supported_plugins_resources.html"
-  - title: d697fbdd5eef7a80e3797fe363484b61
+  - title: リソースのバックアップのリストア
     url: "/protect-nsp/restore_a_resource_backup.html"
-  - title: 3f90ba06baa30f2e66df25302c79cd63
+  - title: PowerShellコマンドレットを使用したリソースのリストア
     url: "/protect-nsp/restore_and_recover_resources_using_powershell_cmdlets.html"
-  - title: 5eaf8dd6f947b26a0ad9f982dce18311
+  - title: リストア処理の監視
     url: "/protect-nsp/monitor_resources_restore_operations.html"
-- title: 16ee2093a7a4ef5d61a3e32fb3cdb6aa
+- title: Clone NetAppでサポートされるプラグインリソースのバックアップ
   entries:
-  - title: 7f9567749606082611d69fd511d51593
+  - title: クローニングのワークフロー
     url: "/protect-nsp/clone_netapp_supported_plugins_resource_backups.html"
-  - title: 569002e953b26f14a2da67d9ad9dcc73
+  - title: バックアップからのクローニング
     url: "/protect-nsp/clone_from_a_backup.html"
-  - title: 8c922e6a0134954b667b072d00b58ce3
+  - title: PowerShellコマンドレットを使用したバックアップのクローニング
     url: "/protect-nsp/clone_backups_using_powershell_cmdlets.html"
-  - title: 5cb6a75832518fd27c8d399ca2772808
+  - title: SnapCenterでのクローニング処理の監視
     url: "/protect-nsp/monitor_resource_clone_operations.html"

@@ -2,15 +2,15 @@
 permalink: protect-hana/task_install_snapcenter_plug_in_for_sap_hana_database.html 
 sidebar: sidebar 
 keywords: installing 
-summary: d03608911fb0f378ca59b86a32adfb17 
+summary: SAP HANA データベースを保護する場合は、 SnapCenter Plug-in for SAP HANA Database をインストールしてセットアップする必要があります。 
 ---
-= 1360b9c3f96e4bcb224d198ae827046e
+= SnapCenter Plug-in for SAP HANA Databaseのインストールワークフロー
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-d03608911fb0f378ca59b86a32adfb17
+SAP HANA データベースを保護する場合は、 SnapCenter Plug-in for SAP HANA Database をインストールしてセットアップする必要があります。
 
-image::../media/sap_hana_install_configure_workflow.gif[8eb6eae2f08f541d02277c6746c4fa05]
+image::../media/sap_hana_install_configure_workflow.gif[SAP HANA のインストール設定ワークフロー]

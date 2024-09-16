@@ -2,38 +2,38 @@
 permalink: protect-azure/add-hosts-install-plugin-for-sql.html 
 sidebar: sidebar 
 keywords: add host, install, install plug-in, SQL 
-summary: 4b94425e098b41d12bc8e290ef43106f 
+summary: ホストを追加してプラグインパッケージをインストールしてください。 
 ---
-= a73fd7b4976dfcc1e3546be7ca66ef9a
+= ホストを追加してSnapCenter Plug-in for SQL Server Databaseをインストールする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-eac029c95aaaeafaf99dc2f35db06dd6
+SnapCenterは、Azure NetApp Files上のSMB共有上のSQLインスタンスのデータ保護をサポートしています。スタンドアロン構成と可用性グループ（AG）構成がサポートされます。
 
-d1172cfcd7a47a2529d53edd244acfc5
+SnapCenterの[ホストを追加]ページを使用してホストを追加し、プラグインパッケージをインストールする必要があります。プラグインはリモートホストに自動的にインストールされます。
 
-.135b308ed83c53f1516b7c754566d1c4
-* 8f05fee715847e93ae80e8cf617cceb9
-* 0653ebf18e2e782a5156c7cfd676052f
+.開始する前に
+* SnapCenter Admin ロールなど、プラグインのインストールとアンインストールの権限のあるロールが割り当てられているユーザが必要です。
+* Windowsホストにプラグインをインストールするときに、組み込みでないクレデンシャルを指定する場合や、ユーザがローカルワークグループに属している場合は、ホストのUACを無効にする必要があります。
 
 
-.f3a29486bed19a90f2da6d007818b427
-. 6e495826070e65e2f969743716fcc30b
-. 92167459928f7cb7035350c0b52437da
-. fa12509cfb8e8ccded16e2a254e988c4
-. c259ed629dc67d1a7600c880484eb692
+.手順
+. 左側のナビゲーションペインで、 *Hosts* を選択します。
+. 上部で [Managed Hosts] タブが選択されていることを確認します。
+. 「 * 追加」を選択します。
+. [Hosts]ページで、次の手順を実行します。
 +
-.. 70d62db3cdc3b09c944b95bb46579a2d
-.. aee77bbd57baf3f9ef22c7fc4d9bdef8
-.. 2e22c5b13053f3515b22c9c1ede2d7a8
+.. [Host Type]フィールドで、ホストタイプを選択します。
+.. [Host name]フィールドに、ホストの完全修飾ドメイン名（FQDN）またはIPアドレスを入力します。
+.. [Credentials]フィールドに、作成したクレデンシャルを入力します。
 
 
-. 6713a944106a8fc2013452c33156ae8d
-. cc01060000f3f813df5ac7a397f6c747
-. b623e6ded9a852f4e7cd9765578d0c08
-. 016ddebcc4c9bce19a86657e974ffb35
-. 9c03188338f33fbc98c0bedf6a655e99
+. [ インストールするプラグインを選択してください * ] セクションで、インストールするプラグインを選択します。
+. （オプション）*[その他のオプション]*をクリックし、詳細を指定します。
+. [ 送信 ] を選択します。
+. [ログディレクトリの設定]*を選択し、[ホストログディレクトリの設定]ページでホストログディレクトリのSMBパスを入力し、*[保存]*をクリックします。
+. [送信]*をクリックし、インストールの進行状況を監視します。
 

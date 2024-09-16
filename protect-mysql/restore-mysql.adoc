@@ -2,21 +2,21 @@
 permalink: protect-mysql/restore-mysql.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for MySQL 
-summary: dd5f630f41cdfc02249f05e881feeef5 
+summary: リストアとリカバリのワークフローには、計画、リストア処理の実行、および処理の監視が含まれます。 
 ---
-= e30c3d908a4ed515e16791b672cc0709
+= リストアのワークフロー
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-dd5f630f41cdfc02249f05e881feeef5
+リストアとリカバリのワークフローには、計画、リストア処理の実行、および処理の監視が含まれます。
 
-f221802dd348fa7fec376c674a7bceda
+次のワークフローは、リストア処理の実行順序を示しています。
 
-image::../media/restore_workflow.gif[e30c3d908a4ed515e16791b672cc0709]
+image::../media/restore_workflow.gif[リストアのワークフロー]
 
-515099a9db2d69620b1bbc080fe5200a
+PowerShellコマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、クローニングの処理を実行することもできます。PowerShellコマンドレットの詳細については、SnapCenterのコマンドレットのヘルプを使用するか、コマンドレットのリファレンス情報を参照してください。
 
-6bd0747e41f5cc71876f961107d5cde4
+https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]です。

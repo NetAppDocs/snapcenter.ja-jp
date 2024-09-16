@@ -2,195 +2,195 @@
 permalink: protect-nsp/create_resource_groups_and_attach_policies.html 
 sidebar: sidebar 
 keywords: resource groups, attach policies, snapcenter 
-summary: aa5531c2ecb8be9440f8c1f83b8e7d4f 
+summary: リソースグループはコンテナであり、バックアップおよび保護するリソースを追加する必要があります。 
 ---
-= 7f9a1e0f8fc64e3f207d5cd83dd8e67f
+= リソースグループを作成してポリシーを適用
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
-e1d3704586d47446c7a9812c933e6d8e
+リソースグループはコンテナであり、バックアップおよび保護するリソースを追加する必要があります。特定のアプリケーションに関連するすべてのデータを同時にバックアップできます。また、リソースグループに1つ以上のポリシーを適用して、実行するデータ保護ジョブのタイプを定義する必要があります。
 
-.f3a29486bed19a90f2da6d007818b427
-. 0b5045b3b137ebb25cf08b5081075426
-. b68b243f9420806e3cfb840322caf2eb
-. 2577791612c938dc7bd356c695b38b81
+.手順
+. 左側のナビゲーションペインで、*[リソース]*を選択し、リストから適切なプラグインを選択します。
+. [Resources]ページで、[New Resource Group]を選択します。
+. [ 名前 ] ページで、次の操作を実行します。
 +
 |===
-| 21f831502a413a739e20cbf9f2eefe54 | 5e2ad6fd9deb412d871137094ee43ef0 
+| フィールド | 操作 
 
 
  a| 
-49ee3087348e8d44e1feda1917443987
+名前
  a| 
-fa4d1c967d467deb12174bc6b1b3355b
+リソースグループの名前を入力します。
 
-2ace8412659382e8d9b1bc3d644b1428
-
-
-
- a| 
-189f63f277cd73395561651753563065
- a| 
-7651838ffd9b279a9ff6c4c63159427e
-
-8b6f1fa932c2bed4baaccef3ddcf4695
+注：リソースグループ名は250文字以内にする必要があります。
 
 
 
  a| 
-52a580de823d89b3d7b0e19883cf0a1b
+タグ
  a| 
-ad8d3fc8faebdc68585dd1240b9fc90c
+リソースグループをあとで検索する際に役立つラベルを1つ以上入力します。
 
-f73a752fef5027614ec32183c0ee993b
+たとえば、複数のリソースグループにHRをタグとして追加した場合、そのHRタグに関連付けられているすべてのリソースグループを後から検索できます。
+
+
+
+ a| 
+Snapshotコピーにカスタムの名前形式を使用する
+ a| 
+このチェックボックスをオンにして、Snapshot名に使用するカスタムの名前形式を入力します。
+
+たとえば、 _customText_resource group_policy_hostname や resource group_hostname_hostname などです。デフォルトでは、Snapshot名にタイムスタンプが追加されます。
 
 |===
-. 80b9fb843a72da0cf0206625d0d30b8a
+. オプション：[リソース]ページで、*[ホスト]*ドロップダウンリストからホスト名を選択し、*[リソースタイプ]*ドロップダウンリストからリソースタイプを選択します。
 +
-667a5a1d21c8b2c591be7bfcf5d1b5ae
+これは、画面上の情報をフィルタリングするのに役立ちます。
 
-. 4cf0a65bb5f9d16da67277436248fba9
-. 780a0c83cea1287e3268125158ca86c9
+. [Available Resources]セクションからリソースを選択し、右矢印を選択して[Selected Resources]セクションに移動します。
+. オプション：[アプリケーションの設定]ページで、次の手順を実行します。
 +
-.. 7bc2103c2a80cd91e9a026c0f2b3f943
+.. [Backups]の矢印を選択して、追加のバックアップオプションを設定します。
 +
-8cc859910effe8112e2912d3644f0bc8
+整合グループのバックアップを有効にし、次のタスクを実行します。
 
-+
-|===
-| 21f831502a413a739e20cbf9f2eefe54 | 5e2ad6fd9deb412d871137094ee43ef0 
-
-
- a| 
-a99f0aeaf38081c20a7370fb0f80e5fb
- a| 
-168d37e62ff50182379a645020cf7152
-
-01509b1df2505486f61f51b88bcefee0
-
-
-
- a| 
-33d8fc89984b399b5f14da8a76d58c5a
- a| 
-27a16d7d61f6682ceaf4d8022ffa250f
-
-|===
-+
-072de5e2138004f9a67883cb0ff2aaa6
-
-.. b9b6466d5860f878a4a60dda95135881
-.. 3328b0dbde4c99683e19eca586842ffb
 +
 |===
-| 83f499a540b1323009c200d6f8cc9396 | 51ac4bf63a0c6a9cefa7ba69b4154ef1 | b5a7adde1af5c87d7fd797b6245c2a39 
+| フィールド | 操作 
 
 
  a| 
-96611acf5bf8bf22163153db770f7f60
+整合グループSnapshot処理が完了するまで待機する時間がある
  a| 
-eae66b4b74b6b82ce35a83d2757f6d46
- a| 
-3beb0a9c61be39e8320fe0059a03c74a
+Snapshot処理が完了するまでの待機時間として、[Urgent]、[Medium]、または[Relaxed]のいずれかを選択します。
 
-
-
- a| 
-0012a5e5e44a9bf77fffdc82e8b485cd
- a| 
-21f2f76c313df826d6e15803c794ee11
- a| 
-f9a3d22b59a77b60dbcb55d85980c6b2
-
-5b2e2b1698a6c97aa74c6004da5764aa
+Urgent = 5秒、Medium = 7秒、Relaxed = 20秒。
 
 
 
  a| 
-ca61f49f8a1ddf1436c12e887a7ec873
+WAFL同期を無効にする
  a| 
-fe4659f87548cdd7d53260fde1b16ee1
- a| 
-943ebcfd61d6c5f62d04562d9fcffb48
-
-
-
- a| 
-f6bc9856073a0a573ec0258970ad6835
- a| 
-4300d91cbf4617dabe5d006ae239e224
- a| 
-58bc6a573c5f727b35fdf5a7213909d7
-
-e575223336a993461478cfe8350f21d9
-
-
-
- a| 
-39044c9904e8af5b92ac884123a563e6
- a| 
-eae66b4b74b6b82ce35a83d2757f6d46
- a| 
-f5c64a8a00482e0316a9a53b3ee3affc
-
-88ff0775a15d5ae4d05b9ecdeb6b5a48
+WAFL整合ポイントを強制しない場合は、このオプションを選択します。
 
 |===
-.. ea57a48a86501646953b0992c55066ad
++
+image:../media/application_settings.gif["整合グループのバックアップオプション（urgent、medium、relaxed）のスクリーンショット。"]
+
+.. [Scripts]の矢印を選択し、休止、Snapshot、および休止解除の処理を実行するプリコマンドとポストコマンドを入力します。障害発生時に終了する前に実行するPREコマンドを入力することもできます。
+.. [Custom Configurations]の矢印を選択し、このリソースを使用するすべてのデータ保護処理に必要なカスタムのキーと値のペアを入力します。
 +
 |===
-| 70ea5c730ba565a725b5e6a5ce34b32d | c1325f6903ebb5ebb2bb519a73ddb1b0 
+| パラメータ | 設定 | 説明 
 
 
  a| 
-b74a1dd6c2da66e7e33c0f14344382d7
+archive_log_enable
  a| 
-1accc18e0f25decba79f224ccd167283
-
-62559cf2803ff56106a84e128591c337
-
-
-
+（Y/N）
  a| 
-45e5304bd8ba98d8e58920d13f8503a9
- a| 
-6d9c2c737b6e3a27597d11ff3b1d8a05
+アーカイブログ管理でアーカイブログを削除できます。
 
 
 
  a| 
-a19bb018830c78e2d5637fcf602ec4d4
+アーカイブログの保持
  a| 
-94687babf968f2e9f2633c4704893c9e
+日数
+ a| 
+アーカイブログを保持する日数を指定します。
+
+この設定は NTAP_SNAPSHOT_RETENTIONS 以上である必要があります。
+
+
+
+ a| 
+ARCHIVE_LOG_DIR
+ a| 
+change_info_directory/logs
+ a| 
+アーカイブログが格納されているディレクトリのパスを指定します。
+
+
+
+ a| 
+ARCHIVE_LOG_EXT
+ a| 
+ファイル拡張子
+ a| 
+アーカイブログファイルの拡張子の長さを指定します。
+
+たとえば、アーカイブログが LOG_BACKUP _0_0_0_0.161518551942 9 で、ファイル拡張子の値が 5 の場合は、ログの拡張子に 5 桁が保持されます。これは 16151 です。
+
+
+
+ a| 
+archive_log_recursive_SE arch
+ a| 
+（Y/N）
+ a| 
+サブディレクトリ内のアーカイブログを管理できます。
+
+アーカイブログがサブディレクトリにある場合は、このパラメータを使用してください。
+
+|===
+.. Snapshotコピーツール*の矢印を選択して、Snapshotを作成するツールを選択します。
++
+|===
+| 状況 | 作業 
+
+
+ a| 
+SnapCenterを使用してPlug-in for Windowsを使用し、ファイルシステムを整合性のある状態にしてからSnapshotを作成します。Linuxリソースの場合、このオプションは適用されません。
+ a| 
+ファイルシステムの整合性を維持した状態で SnapCenter を選択します。
+
+このオプションは、SnapCenter Plug-in for SAP HANA Databaseには適用されません。
+
+
+
+ a| 
+SnapCenter：ストレージレベルのSnapshotを作成
+ a| 
+ファイルシステムの整合性なしで SnapCenter * を選択します。
+
+
+
+ a| 
+Snapshotを作成するためにホストで実行するコマンドを入力します。
+ a| 
+[その他]*を選択し、ホストで実行するSnapshotを作成するコマンドを入力します。
 
 |===
 
 
-. 53899dcc4360d3b8622ce5dc08a12950
+. [Policies] ページで、次の手順を実行します。
 +
-.. 70c30c71587e2d0c71b7f9e97a8aad7d
+.. ドロップダウンリストから1つ以上のポリシーを選択します。
 +
 
-NOTE: f79b4ba47e778727c1290b36487ea0bc
-
-+
-bfd0e05a188a0885b5397fae78f649b8
-
-.. b11a42908bee80055dfed2bb0e9a583a
-.. 729d9de2082bbc8f839869a30daadc5d
-+
-f389a38ece1c258dbc71da8826870236
+NOTE: **を選択してポリシーを作成することもできますimage:../media/add_policy_from_resourcegroup.gif["プラスアイコン"]。
 
 +
-6041b17ee877813c3440ee714e48b911
+ポリシーは、 [ 選択したポリシーのスケジュールの設定 *] セクションに一覧表示されます。
 
-
-
-. d40040f6fe85caa89878dd7a41e7b55b
+.. [スケジュールの設定]*列で、設定するポリシーの**を選択しますimage:../media/add_policy_from_resourcegroup.gif["プラスアイコン"]。
+.. [Add schedules for policy_policy_name_]ダイアログボックスで、スケジュールを設定して[OK]を選択します。
 +
-572a352f5f18989eb8c33a0e36d194c3
+policy_nameは、選択したポリシーの名前です。
 
-. 7444cb400c788a3d3aad71fb264fbbee
++
+設定されたスケジュールは、 [ 適用されたスケジュール ] 列に一覧表示されます。サードパーティのバックアップスケジュールがSnapCenterバックアップスケジュールと重複している場合はサポートされません。
+
+
+
+. [Notification]*ページの[Email preference]*ドロップダウンリストから、Eメールを送信するシナリオを選択します。
++
+また、送信者と受信者のEメールアドレス、およびEメールの件名を指定する必要があります。SMTP サーバーは、 * Settings * > * Global Settings * で設定する必要があります。
+
+. 概要を確認し、*[終了]*を選択します。
 

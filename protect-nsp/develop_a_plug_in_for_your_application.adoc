@@ -2,195 +2,195 @@
 permalink: protect-nsp/develop_a_plug_in_for_your_application.html 
 sidebar: sidebar 
 keywords: overview snapcenter 
-summary: 8c1af9a95c5ff9086ee5697a78397ae5 
+summary: SnapCenterサーバを使用すると、アプリケーションをSnapCenterのプラグインとして導入および管理できます。 
 ---
-= 3b878279a04dc47d60932cb294d96259
+= 概要
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-72631a8144cabf57a431e307c720be4b
+SnapCenterサーバを使用すると、アプリケーションをSnapCenterのプラグインとして導入および管理できます。データ保護機能と管理機能を備えた SnapCenter サーバに、お好みのアプリケーションを接続できます。
 
-3e4caa3106c658c78cb8f07a8040c65b
+SnapCenterでは、さまざまなプログラミング言語を使用してカスタムプラグインを開発できます。Perl 、 Java 、バッチ、またはその他のスクリプト言語を使用してカスタムプラグインを開発できます。
 
-9849d87f4a93f5d4014f828811411be7
+SnapCenterでカスタムプラグインを使用するには、次のタスクを実行する必要があります。
 
-* b8b5e387feaa3019653b29082e61092a
-* fb254bad9756ac882a9a0ba12cc7f1a3
-* 79b97ed047d15d26a3a56e559a6ee5c1
-* eb433b0d697c578418f0cd3d4afc4c2b
-
-
-
-
-== e496e0539b9dd2e96430fc87371ed61a
-
-8f666ea75217f50d6b8e5b63ca8751e2
-
-* ae72a628ad181d8f535ebd38c3104e8a
-* 25fa01d9ae5853b4c852556532e7eb4b
-* 3630b6a87abf72b5c44dff83a2dea610
-* 78e3ac100920c9872e08c76930a7e91d
+* このガイドの手順に従って、アプリケーション用のプラグインを作成します。
+* 記述ファイルの作成
+* カスタムプラグインをエクスポートしてSnapCenterホストにインストールする
+* プラグインのzipファイルをSnapCenterサーバにアップロードする
 
 
 
 
-=== bfe440282107a24a7f07fb7cde8d910e
+== すべてのAPI呼び出しでの汎用プラグインの処理
 
-35db931c36efc6fd97acd3861031f51b
+API呼び出しごとに、次の情報を使用します。
 
-|===
-| 83f499a540b1323009c200d6f8cc9396 | 261addf78c7b2c961032b3dd08ba0b1f 
-
-
- a| 
-e58a1b00942e66d8b4abc960da7877ab
- a| 
-c34381ed69c7f02b4dfb02bf8b48cbd2
+* プラグインパラメータ
+* 終了コード
+* エラーメッセージをログに記録
+* データの整合性
 
 
 
- a| 
-85132af6b5f14319cb4c91ec6ddffe43
- a| 
-33d565acf954a6f64930fc8a33b8887e
 
-5bcb0da9a36a1c572d065a30f8bf053e
+=== プラグインパラメータを使用
 
-
-
- a| 
-73ac956100d167ecf25451e02d702abf
- a| 
-d98b83ea9db8d1b781f919f903e371d2
-
-
-
- a| 
-bf0c17384b9ca428972bdedc4d300472
- a| 
-58ddfd237075f98aaf9a2d3ce090ba23
-
-
-
- a| 
-a6c02d2ac0e23234c7d73d00796cf9ca
- a| 
-571d40fbca77d57e458825ee9fec7d81
-
-
-
- a| 
-ac12b35e15b7bf0fe21aedd97341ea12
- a| 
-571d40fbca77d57e458825ee9fec7d81
-
-
-
- a| 
-69fb88b801201290c49c951f3495b0fc
- a| 
-78b0bbec6424e6db00f54a699cf409f7
+API呼び出しごとに一連のパラメータがプラグインに渡されます。次の表に、各パラメータの具体的な情報を示します。
 
 |===
-
-
-=== 9a3e4e66558b9e88155f13dabd069d1b
-
-47133f388993d841298613bc6cb0c588
-
-027d514221d3a080cc31a97eca829e35
-
-|===
-| 4e1209f3613deab3181eef2bb07b5abf | 261addf78c7b2c961032b3dd08ba0b1f 
+| パラメータ | 目的 
 
 
  a| 
-cfcd208495d565ef66e7dff9f98764da
+アクション
  a| 
-3cdc0e6cbe36c89d83cc097e8eb9ae0e
+ワークフロー名を指定します。たとえば、 discover 、 backup 、 fileOrVolRestore 、または cloneVolAndLun などです
 
 
 
  a| 
-ac627ab1ccbdb62ec96e702f07f6425b
+リソース
  a| 
-531ad89069f8f8f15f4fbe6b5106144d
+保護するリソースを一覧表示します。リソースはUIDとタイプで識別されます。リストは次の形式でプラグインに表示されます。
 
-
-
- a| 
-f899139df5e1059396431415e770c6dd
- a| 
-a02c5c002d95db500c8de596769f3b32
+「 <UID> 、 <type>; <UID> 、 <type> 」のように入力します。例：「 Instance1 、 Instance ； Instance2\\DB1 、 Database 」
 
 
 
  a| 
-38b3eff8baf56627478ec76a704e9b52
+app_name
  a| 
-5fd968dddc0f547ae55ad643501730f9
+使用しているプラグインを指定します。たとえば、DB2、MySQLなどです。SnapCenterサーバには、リストされているアプリケーションのサポートが組み込まれています。このパラメータでは大文字と小文字が区別されます。
 
 
 
  a| 
-795f3202b17cb6bc3d4b771d8c6c9eaf
+APP_IGNORE_ERROR
  a| 
-cf6768b0593033ad3660ef5d8ec95ab1
+（YまたはN）これにより、アプリケーションエラーが発生したときにSnapCenterが終了するか、終了しません。これは、複数のデータベースをバックアップする場合に、単一障害でバックアップ処理を停止しないようにする場合に便利です。
+
+
+
+ a| 
+<resource_name> ____APP_INSTANY_USERNAME
+ a| 
+リソースに対してSnapCenterクレデンシャルが設定されている。
+
+
+
+ a| 
+<resource_name> _APP_INSTANY_PASSWORD
+ a| 
+リソースに対してSnapCenterクレデンシャルが設定されている。
+
+
+
+ a| 
+<resource_name> _<custom_param> です
+ a| 
+すべてのリソースレベルのカスタムキー値は、先頭に「 <resource_name>_ 」を付けたプラグインで使用できます。たとえば、カスタムキーが「 MySQLDB 」という名前のリソースの「 MASTER_SLAVE 」である場合、このキーは MySQLDB_MASTER_SLAVE として使用できます
 
 |===
 
 
-=== 3630b6a87abf72b5c44dff83a2dea610
+=== 終了コードを使用する
 
-6c09649d97d8d1b80bdcd8b29909efa0
+プラグインは、終了コードを使用して処理のステータスをホストに返します。各コードには特定の意味があり、プラグインは正しい終了コードを使用して同じことを示します。
 
-b6586b3851e09c9af6725f25ffaefa5f
-
-|===
-| 83f499a540b1323009c200d6f8cc9396 | 261addf78c7b2c961032b3dd08ba0b1f 
-
-
- a| 
-551b723eafd6a31d444fcb2f5920fbd3
- a| 
-6905d11030694877d5bd1b6fc5418232
-
-
-
- a| 
-32bd8a1db2275458673903bdb84cb277
- a| 
-9b3ec49fce0de74c3bf44404f9ff5fed
-
-
-
- a| 
-bb1ca97ec761fc37101737ba0aa2e7c5
- a| 
-c5bbc13af6039ac4cf215911e482b5d4
-
-
-
- a| 
-dc30ec20708ef7b0f641ef78b7880a15
- a| 
-d42e0a7293390bdb767f2ef26688c1dd
-
-
-
- a| 
-2d3e4144aa384b18849ab9a8abad74d6
- a| 
-55c8a5aea70abd0da5bad464b4622442
+次の表に、エラーコードとその意味を示します。
 
 |===
+| 終了コード | 目的 
 
 
-=== 1b767ffb7a06925c6ffafd5f616d41d9
+ a| 
+0
+ a| 
+処理に成功しました。
 
-e7ad26b22ddd01feb4792581738bc23a
 
-4cf477198b533ad0884bbb1836790433
+
+ a| 
+99
+ a| 
+要求された操作はサポートされていないか、
+
+
+
+ a| 
+100
+ a| 
+処理に失敗しました。休止解除をスキップして終了します。デフォルトでは休止解除が選択されます。
+
+
+
+ a| 
+101
+ a| 
+処理に失敗しました。バックアップ処理を続行してください。
+
+
+
+ a| 
+その他
+ a| 
+処理に失敗しました。休止解除を実行して終了します。
+
+|===
+
+
+=== エラーメッセージをログに記録
+
+エラー・メッセージは、プラグインからSnapCenterサーバに渡されます。メッセージには、メッセージ、ログレベル、およびタイムスタンプが含まれます。
+
+次の表に、レベルとその目的を示します。
+
+|===
+| パラメータ | 目的 
+
+
+ a| 
+情報
+ a| 
+情報メッセージ
+
+
+
+ a| 
+警告
+ a| 
+警告メッセージ
+
+
+
+ a| 
+エラー
+ a| 
+エラーメッセージ
+
+
+
+ a| 
+デバッグ
+ a| 
+デバッグメッセージ
+
+
+
+ a| 
+トレース
+ a| 
+トレースメッセージ
+
+|===
+
+
+=== データの整合性を維持
+
+カスタムプラグインでは、同じワークフローを実行してもデータが保持されます。たとえば、プラグインは休止の終了時にデータを格納でき、休止解除処理に使用できます。
+
+保持するデータは、プラグインによって結果オブジェクトの一部として設定されます。 特定の形式に従っており、プラグイン開発の各スタイルで詳細に説明されています。

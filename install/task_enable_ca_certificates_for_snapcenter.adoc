@@ -2,40 +2,40 @@
 permalink: install/task_enable_ca_certificates_for_snapcenter.html 
 sidebar: sidebar 
 keywords: SnapCenter, enable CA, certificate 
-summary: 64bb1889b18f67515f842e9731742a31 
+summary: CA証明書を設定し、SnapCenterサーバに対してCA証明書の検証を有効にする必要があります。 
 ---
-= 059fe1123e48629ed1d6514462f294b2
+= SnapCenterのCA証明書を有効にする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-64bb1889b18f67515f842e9731742a31
+CA証明書を設定し、SnapCenterサーバに対してCA証明書の検証を有効にする必要があります。
 
-.135b308ed83c53f1516b7c754566d1c4
-* 07d333070d0435446600383ad0be9b41
-* 1962fbbcfa72e74639e8c071188af514
-
-
-642d53c4397a8183a95764b5cea282e1
-
-4839d2f25cc35b249d5db15efa1afd75
-
-. 1240073aadeb78a3e72b1cedfb5cec2f
-. 375a181d7ebb0615169d54c45e53d2bc
-. 400fae8e788b3721b9ac25fe01f04f50
+.開始する前に
+* CA証明書を有効または無効にするには、Set-SmCertificateSettingsコマンドレットを使用します。
+* SnapCenterサーバの証明書のステータスは、Get-SmCertificateSettingsコマンドレットを使用して表示できます。
 
 
-a2635d75789f249837881cc5136979e1
+コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照して https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]ください。
 
-b4d0227107743ec31d2715eb9e3909db
+* 手順 *
 
-* a6e94fec2cfcadd0e75ac025786feb7f
-* 7e3928e5fbab66336d372237e4cbdf9e
-* 8258ae56901671cb007addfc10304189
-* 68a38243967848fa994f49b48322e472
-
+. 設定ページで、 * 設定 * > * グローバル設定 * > * CA 証明書設定 * と進みます。
+. [ 証明書の検証を有効にする ] を選択します。
+. [ 適用（ Apply ） ] をクリックします。
 
 
-NOTE: 1212c8451f1eb514e22c729091069eea
+* 終了後 *
+
+[管理対象ホスト]タブのホストには南京錠が表示され、南京錠の色はSnapCenterサーバとプラグインホスト間の接続のステータスを示します。
+
+* *image:../media/enable_ca_issues_icon.png[""]*は、有効になっているかプラグインホストに割り当てられているCA証明書がないことを示します。
+* **image:../media/enable_ca_good_icon.png[""]は、CA証明書が正常に検証されたことを示します。
+* **image:../media/enable_ca_failed_icon.png[""]は、CA証明書を検証できなかったことを示します。
+* **image:../media/enable_ca_undefined_icon.png[""]は、接続情報を取得できなかったことを示します。
+
+
+
+NOTE: ステータスが黄色または緑の場合は、データ保護処理が正常に完了しています。

@@ -2,45 +2,45 @@
 permalink: protect-nsp/configure_gMSA_on_windows_server_2012_or_later.html 
 sidebar: sidebar 
 keywords: gMSA 
-summary: 257f5cefc00605ee767b1d8dcdf64b40 
+summary: Windows Server 2016 以降では、管理ドメインアカウントからサービスアカウントパスワードの自動管理を提供するグループ Managed Service Account \ （ gMSA \ ）を作成できます。 
 ---
-= 4f96a9b27e2a438e2024bd3f65ccc8ee
+= Windows Server 2016以降でのgMSAの設定
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-7359d18faa5cf73508a61a7a55fa8078
+Windows Server 2016以降では、管理対象ドメインアカウントからサービスアカウントのパスワードを自動管理するグループ管理サービスアカウント（gMSA）を作成できます。
 
-.135b308ed83c53f1516b7c754566d1c4
-* f9c537b0510058ab13ecb3f2c5dba296
-* 7f8a12ff662f4ebfae4a4fae37911f70
+.開始する前に
+* Windows Server 2016以降のドメインコントローラが必要です。
+* ドメインのメンバーであるWindows Server 2016以降のホストが必要です。
 
 
-.f3a29486bed19a90f2da6d007818b427
-. 5bfdbe319f93f982db7e2e53d844bd74
-. 35c239ad892c492785a568f43643a49b
-. 4e2c07bd931da6c7ec41ee4923c33de0
+.手順
+. KDSルートキーを作成して、gMSA内のオブジェクトごとに一意のパスワードを生成します。
+. ドメインごとに、 Windows ドメインコントローラから次のコマンドを実行します。 Add-KDSRootKey -EffectiveImmedient
+. gMSAを作成して設定します。
 +
-.. 7cbf140d17e0f4c0fe27276252add63e
+.. 次の形式でユーザグループアカウントを作成します。
 +
  domainName\accountName$
-.. e9311390b1566f1587fec0689b110903
-.. f22d222d43494a76b9ced73084b174f7
+.. コンピュータオブジェクトをグループに追加します。
+.. 作成したユーザグループを使用してgMSAを作成します。
 +
-cabbc139b7f74771c47e3eb24d94c92b
+例えば、
 
 +
  New-ADServiceAccount -name <ServiceAccountName> -DNSHostName <fqdn> -PrincipalsAllowedToRetrieveManagedPassword <group> -ServicePrincipalNames <SPN1,SPN2,…>
-.. 7a0c5e7b067455211dfe58681117ebbe
+.. コマンドを実行し `Get-ADServiceAccount` てサービスアカウントを確認します。
 
 
-. 8ea4ea4d87a50cf0025ec002a1656c18
+. ホストでgMSAを設定します。
 +
-.. 1cc75855919f0c865736ab6427df5eec
+.. gMSAアカウントを使用するホストで、Windows PowerShell用Active Directoryモジュールを有効にします。
 +
-8b6253a6efcb1c3a584dda773312091c
+これを行うには、PowerShellから次のコマンドを実行します。
 
 +
 [listing]
@@ -60,14 +60,14 @@ True    No             Success        {Active Directory Domain Services, Active 
 WARNING: Windows automatic updating is not enabled. To ensure that your newly-installed role or feature is
 automatically updated, turn on Windows Update.
 ----
-.. 9ccdd32e79e494d2805c0cf1d94746fc
-.. 58988d3f4a34a377b0065065fbb062d5
-.. 41651aa85ffdd3c13e57f9678e2a3089
+.. ホストを再起動します。
+.. PowerShellコマンドプロンプトで次のコマンドを実行して、ホストにgMSAをインストールします。 `Install-AdServiceAccount <gMSA>`
+.. 次のコマンドを実行して、gMSAアカウントを確認します。 `Test-AdServiceAccount <gMSA>`
 
 
-. 38eff60c617d59841caa9f6a6e93b364
-. 6dfcf1d4874b50f1073bfefad3fae93e
+. ホスト上の設定済みgMSAに管理者権限を割り当てます。
+. SnapCenterサーバで設定済みのgMSAアカウントを指定してWindowsホストを追加します。
 +
-2f8d1f63911fd49f676f326668951a40
+選択したプラグインがSnapCenterサーバにインストールされ、指定したgMSAがプラグインのインストール時にサービスのログオンアカウントとして使用されます。
 
 

@@ -2,40 +2,40 @@
 permalink: uninstall/task_uninstalling_the_snapcenter_server.html 
 sidebar: sidebar 
 keywords: uninstall, snapcenter server, windows 
-summary: 0566280e58bbc9fbd69c45d4593b4ff6 
+summary: 'SnapCenterサーバを使用してデータ保護ジョブを管理する必要がなくなった場合は、SnapCenterサーバホストの[プログラムと機能]コントロールパネルを使用してSnapCenterサーバをアンインストールできます。SnapCenter サーバをアンインストールすると、そのコンポーネントがすべて削除されます。' 
 ---
-= 47c13313a36775d5496488ab9bc51657
+= WindowsホストでのSnapCenterサーバのアンインストール
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-0566280e58bbc9fbd69c45d4593b4ff6
+SnapCenterサーバを使用してデータ保護ジョブを管理する必要がなくなった場合は、SnapCenterサーバホストの[プログラムと機能]コントロールパネルを使用してSnapCenterサーバをアンインストールできます。SnapCenter サーバをアンインストールすると、そのコンポーネントがすべて削除されます。
 
-.135b308ed83c53f1516b7c754566d1c4
-* 9ee048f2a27834bb5dfab99de808bb9e
-* 28dbe278ce683018a992a929fb9adca2
+.開始する前に
+* SnapCenterサーバがインストールされているドライブに2GB以上の空き容量があることを確認します。
+* SnapCenterサーバがインストールされているドメインが削除されていないことを確認します。
 +
-cfa55efbc565a01d2f4a4d3ca9b84ca7
+SnapCenterサーバがインストールされているドメインを削除してからアンインストールしようとすると、処理は失敗します。
 
-* a91741bcb6c91f369f39e162ae7650b3
+* リポジトリデータベースがクリーンアップおよびアンインストールされるため、リポジトリデータベースをバックアップしておく必要があります。
 
 
-.f3a29486bed19a90f2da6d007818b427
-. 16f7b2103451f7249465e272f86e6c3b
-. 6c124c907c6e1d709322749d0156ac24
-. 38c0a647a3fbdb9c513dbd4e078a3ca1
+.手順
+. SnapCenterサーバーホストで、[コントロールパネル]に移動します。
+. 「 * カテゴリ * 」ビューにいることを確認します。
+. [ プログラム ] の下にある [ プログラムのアンインストール ] をクリックします。
 +
-aca9de216adcaa4104fb89d81cbf1cfe
+[プログラムと機能]ウィンドウが開きます。
 
-. 305762fceacdbc1253603e9602ccbe67
+. NetApp SnapCenter Server を選択し、 * Uninstall * をクリックします。
 +
-d773da89c5423af9bec78b0bb4c4061b
+SnapCenter 4.2 では、 SnapCenter サーバをアンインストールすると、 MySQL Server リポジトリデータベースを含むすべてのコンポーネントがアンインストールされます。
 
 +
-** 5fad112b575da7ba3fa473db147c4847
-** 30c11625a62955aea40b6d4f4f73071d
+** NLB クラスタから NLB ノードを削除した場合、 SnapCenter サーバホストを再起動する必要があります。ホストを再起動しないと、 SnapCenter サーバを再インストールしようとしたときにエラーが発生することがあります。
+** 手動でアンインストールする必要があります。 アンインストール中に削除されないNet Framework。
 
 
 

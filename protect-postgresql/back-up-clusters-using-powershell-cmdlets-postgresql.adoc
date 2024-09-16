@@ -2,46 +2,46 @@
 permalink: protect-postgresql/back-up-clusters-using-powershell-cmdlets-postgresql.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for PostgreSQL 
-summary: 0d78e7f1a288dafc16b38b2db161bd37 
+summary: クラスタをバックアップするときは、SnapCenterサーバとの接続を確立し、リソースの追加、ポリシーの追加、バックアップリソースグループの作成を行い、バックアップを実行します。 
 ---
-= b1cbcfa72bf25e7c520985ac50c60f65
+= PowerShellコマンドレットを使用したクラスタのバックアップ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-0d78e7f1a288dafc16b38b2db161bd37
+クラスタをバックアップするときは、SnapCenterサーバとの接続を確立し、リソースの追加、ポリシーの追加、バックアップリソースグループの作成を行い、バックアップを実行します。
 
-.135b308ed83c53f1516b7c754566d1c4
-* c90de0347e94ade70c96034e2ffca3ba
-* 38d7f66964588305ed5bee44db007183
+.開始する前に
+* PowerShellコマンドレットを実行できるようにPowerShell環境を準備しておく必要があります。
+* ストレージシステム接続を追加し、クレデンシャルを作成しておく必要があります。
 
 
-.f3a29486bed19a90f2da6d007818b427
-. 623aa9b9d36889377a728b1284e5485e
+.手順
+. Open-SmConnectionコマンドレットを使用して、指定したユーザのSnapCenterサーバとの接続セッションを開始します。
 +
 [listing]
 ----
 PS C:\> Open-SmConnection
 ----
 +
-d5b8eb2056e11e71857a777fd502266b
+ユーザ名とパスワードのプロンプトが表示されます。
 
-. 13e3d53f499f52435f24ba71dd8286bb
+. Add-SmResourcesコマンドレットを使用して、手動でリソースを追加します。
 +
-82cdab2339b9d151736b53885e0ce102
+次に、PostgreSQLインスタンスを追加する例を示します。
 
 +
 [listing]
 ----
 PS C:\> Add-SmResource -HostName 10.32.212.13 -PluginCode PostgreSQL -ResourceType Instance -ResourceName postgresqlinst1 -StorageFootPrint (@{"VolumeName"="winpostgresql01_data01";"LUNName"="winpostgresql01_data01";"StorageSystem"="scsnfssvm"}) -MountPoints "D:\"
 ----
-. 658e1796a21da94df433ae106024123b
-. 6ea9dd6bb7c89e40646659c3c29e9794
-. f795ace46eb28839cb57d42561de6edc
+. Add-SmPolicyコマンドレットを使用して、バックアップポリシーを作成します。
+. リソースを保護するか、Add-SmResourceGroupコマンドレットを使用してSnapCenterに新しいリソースグループを追加します。
+. New-SmBackupコマンドレットを使用して、新しいバックアップジョブを開始します。
 +
-4e6516c422bb1e1315fcaf339b835c46
+この例は、リソースグループをバックアップする方法を示しています。
 
 +
 [listing]
@@ -49,20 +49,20 @@ PS C:\> Add-SmResource -HostName 10.32.212.13 -PluginCode PostgreSQL -ResourceTy
 C:\PS> New-SMBackup -ResourceGroupName 'ResourceGroup_wback-up-clusters-using-powershell-cmdlets-postgresql.adocith_Resources'  -Policy postgresql_policy1
 ----
 +
-5a6ce02637efa9d97108a73b95eff990
+この例では、保護されたリソースをバックアップしています。
 
 +
 [listing]
 ----
 C:\PS> New-SMBackup -Resources @{"Host"="10.232.204.42";"Uid"="MDC\SID";"PluginName"="postgresql"} -Policy postgresql_policy2
 ----
-. 6ba5594c01f0e8734610d7df124641ef
+. Get-smJobSummaryReportコマンドレットを使用して、ジョブのステータス（実行中、完了、失敗）を監視します。
 +
 [listing]
 ----
 PS C:\> Get-smJobSummaryReport -JobID 123
 ----
-. dcda47f958f8a194233c8913b74e1781
+. Get-SmBackupReportコマンドレットを使用して、リストアやクローニングの処理を実行するバックアップID、バックアップ名などのバックアップジョブの詳細を監視します。
 +
 [listing]
 ----
@@ -94,4 +94,4 @@ ReportDataCreatedDateTime :
 ----
 
 
-74db7181476f94f0e2927d8c8d98cb97
+コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。

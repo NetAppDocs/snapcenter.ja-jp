@@ -2,34 +2,34 @@
 permalink: protect-azure/create-backup-policies-oracle.html 
 sidebar: sidebar 
 keywords: create policies, Oracle, backup policies 
-summary: 9166c380efba6c6a0d61dc08bcc135ee 
+summary: バックアップするリソースまたはリソースグループのバックアップポリシーを作成します。 
 ---
-= a3a63bd1ddab3e696228b7b61878c09d
+= Oracleデータベースのバックアップポリシーの作成
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-73f45971c435fbf9828b3c34fe76a670
+SnapCenter を使用して Oracle データベースリソースをバックアップする前に、バックアップ対象のリソースまたはリソースグループのバックアップポリシーを作成する必要があります。
 
-.f3a29486bed19a90f2da6d007818b427
-. c09e638cb8ee35698e3172550b12d8fa
-. 1f02ceac906eeeae0a190f295fe12381
-. 32005b30ff172564875bf82c9538168f
-. a5bb4561024cbac1f26c361cff68730e
-. 3c6544f27197f56a0b07b5ed264760dc
-. 49868beda0a485f260d92cbafbd9e394
+.手順
+. 左側のナビゲーションペインで、 * 設定 * をクリックします。
+. [ 設定 ] ページで、 [ * ポリシー * ] をクリックします。
+. ドロップダウンリストから[Oracle Database]を選択します。
+. [ 新規作成（ New ） ] をクリックする。
+. [ 名前 ] ページで、ポリシー名と概要を入力します。
+. [Backup Type] ページで、次の手順を実行します。
 +
-.. 079151e2a65ec7ff3445310b706078c0
-.. e1f4feb4c45f5316b8eb2a7570b14cec
-.. 8b8c2f1f1f946cab105eddd8de3b0774
-.. 0f89e00e852da1ba5114492b2441c803
-.. 35968ec44acc7cc8a13556f173c47cc3
+.. バックアップタイプとして、オンラインバックアップまたはオフラインバックアップを選択します。
+.. スケジュール頻度を指定します。
+.. Oracle Recovery Manager （ RMAN ）を使用してバックアップをカタログ化する場合は、 [* Catalog backup with Oracle Recovery Manager （ RMAN ） * ] を選択します。
+.. バックアップ後にアーカイブ・ログのプルーニングを行う場合は、バックアップ後にアーカイブ・ログをプルーニング * を選択します。
+.. アーカイブログの削除設定を指定します。
 
 
-. 8bf586bfc11638f24bb033f322fb6ce1
-. 92690dd16a9c4d48908bc7f3eaf042ac
-. 7db2a3f013bbf7ae548baa053e8f7584
-. 3518a771040ff2bbfb74570c920f9e5a
+. [Retention]ページで、保持設定を指定します。
+. スクリプトページで、バックアップ処理の前後に実行するプリスクリプトまたはポストスクリプトのパスと引数を入力します。
+. [Verification]ページで、検証処理を実行するバックアップスケジュールを選択し、検証処理の前後に実行するプリスクリプトまたはポストスクリプトのパスと引数を入力します。
+. 概要を確認し、 [ 完了 ] をクリックします。
 

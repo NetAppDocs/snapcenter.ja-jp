@@ -2,15 +2,15 @@
 permalink: protect-sco/install-snapcenter-plug-in-for-oracle-workflow.html 
 sidebar: sidebar 
 keywords: installing 
-summary: 1ef6e64eb14d3b262db62b7d313ebbbe 
+summary: Oracle データベースを保護する場合は、 SnapCenter Plug-in for Oracle Database をインストールしてセットアップする必要があります。 
 ---
-= 1cd8b2345e3fc8629233e588fdab2761
+= SnapCenter Plug-in for Oracle Databaseのインストールワークフロー
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-1ef6e64eb14d3b262db62b7d313ebbbe
+Oracle データベースを保護する場合は、 SnapCenter Plug-in for Oracle Database をインストールしてセットアップする必要があります。
 
-image::../media/sco_install_configure_workflow.png[a19d33029ae6794cb5370530a85b7fe4]
+image::../media/sco_install_configure_workflow.png[SCO インストール設定ワークフロー]

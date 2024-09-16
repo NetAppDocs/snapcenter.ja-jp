@@ -2,46 +2,46 @@
 permalink: protect-postgresql/discover-the-clusters-automatically.html 
 sidebar: sidebar 
 keywords: credentials 
-summary: be0333a5327898998d299a16c30c5d2f 
+summary: リソースとは、SnapCenterで管理されるLinuxホスト上のPostgreSQLクラスタです。これらのリソースをリソースグループに追加して、使用可能なPostgreSQLクラスタを検出したあとにデータ保護処理を実行できます。 
 ---
-= a307ddaec8ef5ce7fda627549ce43ee6
+= クラスタの自動検出
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-567bae5ee285d6f2c2938ee9db26580a
+リソースとは、SnapCenterで管理されるLinuxホスト上のPostgreSQLクラスタです。使用可能なPostgreSQLクラスタを検出したら、リソースをリソースグループに追加してデータ保護処理を実行できます。
 
-.135b308ed83c53f1516b7c754566d1c4
-* c39495ad9bcb958b9080a36f441abbbe
-* 7a2a64b9e34b83829db54174768bdcfb
-
-
-.bbe48fb854ea022537208eeeff822f91
-* 1e87064c6fc048d30353f7cf823b5d0f
-* 65f657878fd634de133b2215d1251ccb
+.開始する前に
+* SnapCenterサーバのインストール、ホストの追加、ストレージシステム接続のセットアップなどのタスクを完了しておく必要があります。
+* SnapCenter Plug-in for PostgreSQLでは、RDM / VMDK仮想環境にあるリソースの自動検出はサポートされていません。
 
 
-a9d0e12f10920c999cb78960286bd82a
+.タスクの内容
+* プラグインをインストールすると、そのLinuxホスト上のすべてのクラスタが自動的に検出されて[リソース]ページに表示されます。
+* 自動検出されるのはクラスタのみです。
 
-.f3a29486bed19a90f2da6d007818b427
-. 218817147c54a1d8c207c78ad561bb47
-. 3e025b4a685d145a938552cff1a33612
-. 539da50c1cfbe2a04bb6b229f1dd0ee9
+
+自動検出されたリソースを変更または削除することはできません。
+
+.手順
+. 左側のナビゲーションペインで*[リソース]*をクリックし、リストからPlug-in for PostgreSQLを選択します。
+. [Resources]ページで、[View]リストからリソースタイプを選択します。
+. （オプション）*をクリックしimage:../media/filter_icon.png["フィルタアイコン"]、ホスト名を選択します。
 +
-dc56c1ed4d6e6f9e0b65bd544aa90f17
+次に、**をクリックしてフィルタペインを閉じることができますimage:../media/filter_icon.png["フィルタアイコン"]。
 
-. 0f034106893faef4643a4f2e45058c52
+. [* リソースの更新 * ] をクリックして、ホストで使用可能なリソースを検出します。
 +
-eb037ec78f327455a8e36a07871d70c6
+リソースは、リソースタイプ、ホスト名、関連するリソースグループ、バックアップタイプ、ポリシー、全体的なステータスなどの情報とともに表示されます。
 
 +
-** e736fa129907bb2140589421b89d11a0
-** 6616c30b44c4117b292e10b587f9c59d
+** クラスタがNetAppストレージに配置されていて保護されていない場合は、[全体のステータス]列に「保護されていません」と表示されます。
+** クラスタがNetAppストレージシステム上にあり保護されている場合、バックアップ処理が実行されていないと、[全体のステータス]列に[バックアップが実行されていません]と表示されます。それ以外の場合は、前回のバックアップステータスに基づいて、「 Backup failed 」または「 Backup succeeded 」に変わります。
 
 
 
 
 
-IMPORTANT: 751aae135017ba7ff53fef9594dabf3a
+IMPORTANT: SnapCenterの外部でクラスタの名前を変更した場合は、リソースを更新する必要があります。

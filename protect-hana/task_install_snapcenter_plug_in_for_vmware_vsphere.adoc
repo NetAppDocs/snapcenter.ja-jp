@@ -2,29 +2,29 @@
 permalink: protect-hana/task_install_snapcenter_plug_in_for_vmware_vsphere.html 
 sidebar: sidebar 
 keywords: install, VMware vSphere 
-summary: b82e91ec04ff8005a130fb3f67788852 
+summary: データベースが仮想マシン（ VM ）に格納されている場合や VM とデータストアを保護する場合は、 SnapCenter Plug-in for VMware vSphere 仮想アプライアンスを導入する必要があります。 
 ---
-= 6f01b59c00a65f99d3b7a7226c0e4472
+= SnapCenter Plug-in for VMware vSphereのインストール
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-6c71ac31f3c78acd8afe8d52906675dc
+データベースまたはファイルシステムが仮想マシン（VM）に格納されている場合や、VMとデータストアを保護する場合は、SnapCenter Plug-in for VMware vSphere仮想アプライアンスを導入する必要があります。
 
-95d04783b89b5d5f8a4c905e6a139950
-
-
-
-== 0a43bd1f35095f6ca081444f65372381
-
-77e6d176ef9b9d439f75a9636390005d
+展開の詳細については、を参照してください https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_get_started_overview.html["導入の概要"^]。
 
 
 
-== 3228309100966454e78a162d4ba9bd75
+== CA証明書の導入
 
-456dce50d13fcf7c2c4881e39c114254
+SnapCenter Plug-in for VMware vSphereでCA証明書を設定する方法については、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_create_and_or_import_an_SSL_certificate_to_SnapCenter_Plug-in_for_VMware_vSphere_(SCV)["SSL 証明書を作成またはインポートします"^]。
 
-1b782c06b199c89589ed8bcf1a6ca9ab
+
+
+== CRLファイルの設定
+
+SnapCenter Plug-in for VMware vSphereは、事前に設定されたディレクトリでCRLファイルを検索します。VMware vSphere 用 SnapCenter プラグインの CRL ファイルのデフォルトディレクトリは、 _/opt/NetApp/config/crl_です 。
+
+このディレクトリには、複数のCRLファイルを配置できます。受信証明書は、各CRLに対して検証されます。

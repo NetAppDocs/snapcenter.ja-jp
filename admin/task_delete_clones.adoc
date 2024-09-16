@@ -2,49 +2,49 @@
 permalink: admin/task_delete_clones.html 
 sidebar: sidebar 
 keywords: Delete clones 
-summary: cae5753c9dd53a8b962d7a3909a155d7 
+summary: 不要になったクローンは削除できます。 
 ---
-= d99b44bc53929e5f28f34c661930817f
+= クローンの削除
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-cae5753c9dd53a8b962d7a3909a155d7
+不要になったクローンは削除できます。
 
-78166ce4ccceeedfbf6aeb8682851072
+* このタスクについて *
 
-0fa99d987ed2dbec1d74293ddc47d819
+他のクローンのソースと同様に機能するクローンは削除できません。
 
-00fba0188f03fd7bf1be97bff444857a
+たとえば、本番環境のデータベースがdb1の場合、データベースclone1がdb1のバックアップからクローニングされ、以降clone1が保護されます。データベースClone2をClone1のバックアップからクローニングします。Clone1を削除する場合は、まずClone2を削除してからClone1を削除する必要があります。
 
-4839d2f25cc35b249d5db15efa1afd75
+* 手順 *
 
-. 530a5fa7e8fbaa4c796dbd46c93a55dd
-. 8c411f19384fd18609b701e849181586
-. 3f295f5098166bae5cf6c4e7ed277958
+. 左側のナビゲーションペインで、 * リソース * をクリックし、リストから適切なプラグインを選択します。
+. [ リソース ] ページで、 [ * 表示 * ] ドロップダウンリストからリソースまたはリソースグループを選択します。
+. リストからリソースまたはリソースグループを選択します。
 +
-a64016381e6438b14094f8f349371c74
+リソースまたはリソースグループのトポロジページが表示されます。
 
-. 09927e90b474cc9f796b7d9acc2e1efb
-. d718de0b5487a29072ea2bbe613540c0
+. [ コピーの管理 ] ビューで ' プライマリまたはセカンダリ（ミラーまたはレプリケートされた）ストレージ・システムから [ クローン *] を選択します
+. クローンを選択し、image:../media/delete_icon.gif[""]をクリックします。
 +
-69f37a47c45070ea3bfe0bbb2f6a87ae
+SAP HANAデータベースのクローンを削除する場合は、[Delete Clone]ページで次の操作を実行します。
 
 +
-.. 176ce7b60b4395d5aad1c012ee334b24
-.. c6f0c699832cc7d7011d7d15f50b434c
+.. 「 * Pre-clone delete * 」フィールドに、クローンを削除する前に実行するコマンドを入力します。
+.. Unmount * フィールドで、クローンを削除する前にクローンをアンマウントするコマンドを入力します。
 
 
-. a72cc47fad7d1846d19b085d2e77e5ba
+. [OK]*をクリックします。
 
 
-a2635d75789f249837881cc5136979e1
+* 終了後 *
 
-624aa4628c7efc536a22463b3c04e7bf
+ファイルシステムが削除されないことがあります。次のコマンドを実行して、clone_delete_delayパラメータの値を増やす必要があります。``./sccli Set-SmConfigSettings``
 
 
-NOTE: 5a2f2b525efb0333ccf2d94e71dd9708
+NOTE: clone_delete_delayパラメータには、アプリケーションクローンの削除が完了してからファイルシステムの削除を開始するまでの待機時間を秒数で指定します。
 
-51458de5e4f348eca31269218b799aa0
+パラメータの値を変更したら、SnapCenter Plug-in Loader（SPL）サービスを再起動します。

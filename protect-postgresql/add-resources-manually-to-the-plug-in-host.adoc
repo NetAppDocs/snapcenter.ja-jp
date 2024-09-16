@@ -2,94 +2,94 @@
 permalink: protect-postgresql/add-resources-manually-to-the-plug-in-host.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for Postgresql 
-summary: eaa30bcaaf47c367d2989123f2e100c0 
+summary: 一部のPostgreSQLインスタンスでは自動検出がサポートされていません。これらのリソースは手動で追加する必要があります。 
 ---
-= b39d1e4f73b157bb2f5b3a972e89eeb6
+= プラグインホストに手動でリソースを追加する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-d61c7fc9ce061d7b445840988e277a7d
+自動検出はWindowsホストではサポートされていません。PostgreSQLクラスタリソースを手動で追加する必要があります。
 
-.135b308ed83c53f1516b7c754566d1c4
-* 66fe54fa4e213e520e33fab0de4829f3
-
-
-.bbe48fb854ea022537208eeeff822f91
-660496d454f8c62fac1e483a48bb073a
-
-* 238f9ee47b0694879bca4ad15ab7cfe7
+.開始する前に
+* SnapCenterサーバのインストール、ホストの追加、ストレージシステム接続のセットアップなどのタスクを完了しておく必要があります。
 
 
-.f3a29486bed19a90f2da6d007818b427
-. ac749318f82a2557d2ab5968491a34ef
-. e306059391b13866d4f2c4d8316f46fe
-. 14fdd328e53552c727d0f36c3d306b64
+.タスクの内容
+自動検出は、次の構成ではサポートされません。
+
+* RDMとVMDKのレイアウト
+
+
+.手順
+. 左側のナビゲーションペインで、ドロップダウンリストからSnapCenter Plug-in for PostgreSQLを選択し、*[リソース]*をクリックします。
+. [Resources]ページで、*[Add PostgreSQL resources]*をクリックします。
+. [Provide Resource Details]ページで、次の操作を実行します。
 +
 |===
-| 21f831502a413a739e20cbf9f2eefe54 | 5e2ad6fd9deb412d871137094ee43ef0 
+| フィールド | 操作 
 
 
  a| 
-49ee3087348e8d44e1feda1917443987
+名前
  a| 
-0989eed0926dd1577e8052dd320d24ce
-
-
-
- a| 
-1c07f24dbaeb847f4662960d2691d528
- a| 
-ce7a42c0c120b0e761b1d9b2851def5b
+クラスタ名を指定します。
 
 
 
  a| 
-a1fa27779242b4902f7ae3bdd5c6d508
+ホスト名
  a| 
-f6d0a905f13d91476378db1881b4d770
-
-
-
- a| 
-d9a17c1c9e8ef6866e4dbeef41c741b2
- a| 
-943ad175902d532da12a59961f0f470a
+ホスト名を入力します。
 
 
 
  a| 
-2daf1cb573c2c61422faf64610cf9402
+タイプ
  a| 
-5efe9e6fa4156b39ced69425eba7fb49
+クラスタを選択します。
 
-deec2d29ae112d513d1bbd8cb6f3a23c
+
+
+ a| 
+インスタンス
+ a| 
+クラスタの親であるインスタンスの名前を指定します。
+
+
+
+ a| 
+クレデンシャル
+ a| 
+クレデンシャルを選択するか、クレデンシャルの情報を追加します。
+
+これはオプションです。
 
 |===
-. 4e4f9229f5def86d57e9acaf8014a093
+. [ストレージフットプリントの入力]ページで、ストレージタイプを選択して1つ以上のボリューム、LUN、およびqtreeを選択し、*[保存]*をクリックします。
 +
-266587454e01a92f0bfd85f3e920b6e9
+オプション：*アイコンをクリックすると、他のストレージシステムからボリューム、LUN、およびqtreeを追加できますimage:../media/add_policy_from_resourcegroup.gif[""]。
 
-. 0b49ddb11fd92dd1d61ad034aa92b341
-. fed1c121dc4f5a5484e5623e297385fb
+. オプション：[Resource Settings]ページで、Windowsホスト上のリソースにPostgreSQLプラグインのカスタムのキーと値のペアを入力します。
+. 概要を確認し、 [ 完了 ] をクリックします。
 +
-4acb2651bb9977db827b560a07601f4b
+クラスタは、ホスト名、関連付けられているリソースグループとポリシー、全体的なステータスなどの情報とともに表示されます。
 
 
 
-3f1fe53287c04e073da002e39b799896
+リソースへのアクセスをユーザに許可する場合は、ユーザにリソースを割り当てる必要があります。これにより、ユーザは自分に割り当てられているアセットに対して権限のある操作を実行できます。
 
-65029b82973fe89d2af9288d26c3e30b
+link:https://docs.netapp.com/us-en/snapcenter/install/task_add_a_user_or_group_and_assign_role_and_assets.html["ユーザまたはグループを追加してロールとアセットを割り当てる"]
 
-.bd965e38a0c9cf27aa1bde099308e23f
-* 834cb542f5c5d61ee2449dec48ac608a
-* e7956a3b3c050abefea9fe227637b683
-* 02fcd389854b63403c8bb2aed418a8a4
+.終了後
+* クラスタを追加したら、PostgreSQLクラスタの詳細を変更できます。
+* SnapCenter 5.0から移行されたリソース（表領域とクラスタ）は、SnapCenter 6.0ではPostgreSQLクラスタタイプとしてタグ付けされます。
+* SnapCenter 5.0以前から移行された手動で追加したリソースを変更する場合は、カスタムキーと値のペアの*[リソースの設定]*ページで次の手順を実行します。
 +
-** 0585f569d836f95683a51dd7dfd5c694
-** 8c6a5ec4378c1fb0539384c188e10773
+** 「* Name *」フィールドに「port」という用語を指定します。
+** 「* value *」フィールドにポート番号を指定します。
 
 
 

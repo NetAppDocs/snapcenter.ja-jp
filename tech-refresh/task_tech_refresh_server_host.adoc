@@ -2,155 +2,155 @@
 permalink: tech-refresh/task_tech_refresh_server_host.html 
 sidebar: sidebar 
 keywords: tech refresh, SnapCenter Server, cmdlet, APIs, F5, rollback, decommission, disaster recovery, standalone 
-summary: da44a82b2eca4a427c9d0ddf42742802 
+summary: 新しいホストに同じバージョンのSnapCenterサーバをインストールしてから、APIを実行するか、コマンドレットを実行して古いサーバからSnapCenterをバックアップし、新しいサーバにリストアします。 
 ---
-= 9c52ed84ef99dc638e8657ea109fe6b3
+= SnapCenterサーバホストの機器更改
 :allow-uri-read: 
 
 
 [role="lead"]
-1fb1193170b56fa298c04a30fd827101
+SnapCenterサーバホストの更新が必要な場合は、同じバージョンのSnapCenterサーバを新しいホストにインストールし、APIを実行して古いサーバからSnapCenterをバックアップし、新しいサーバにリストアできます。
 
-.f3a29486bed19a90f2da6d007818b427
-. 0576d7a60d5697ba94d183ad49cabf4e
+.手順
+. 新しいホストを導入し、次のタスクを実行します。
 +
-.. 2ad096aeb0da609f06831f7e1f156155
-.. e8b7109ae6fa9034f6e093d897aa80d1
-.. 2ef948491bb37a9da368eb98dbf46d25
+.. 同じバージョンのSnapCenterサーバをインストールします。
+.. （任意）CA証明書を設定し、双方向SSLをイネーブルにします。詳細については、およびを参照して https://docs.netapp.com/us-en/snapcenter/install/reference_generate_CA_certificate_CSR_file.html["CA証明書の設定"] https://docs.netapp.com/us-en/snapcenter/install/task_configure_two_way_ssl.html["双方向SSLの設定と有効化"]ください。
+.. （任意）多要素認証を設定します。詳細については、を参照してください https://docs.netapp.com/us-en/snapcenter/install/enable_multifactor_authentication.html["多要素認証を有効にします"]。
 
 
-. 73fcd074a38b94057f4ed6c44ccc4a72
-. 875d7a3460c60f3568be1f2abe89a635
-+
-
-NOTE: 932aed11c7ac09d2c9b5fe47c68cf667
-
+. SnapCenter管理者ユーザとしてログインします。
+. API：またはコマンドレット：_New-SmServerBackup_を使用して、古いホストにSnapCenterサーバのバックアップを作成します `/<snapcenter_version>/server/backup` 。
 +
 
-IMPORTANT: cd2afb5401e9315a58e0aa4a9bb6e12d
-
-. a6c47e59c26648cb0d8ab865312f19cf
-. 717c72270ce876f743856a621389e967
-+
-b5bccab3d839dec6954d2ee98465f797
+NOTE: バックアップを作成する前に、スケジュールされたすべてのジョブを一時停止し、実行中のジョブがないことを確認します。
 
 +
 
-NOTE: 75893b63c45ff1f656ee2dcb708ba603
+IMPORTANT: 新しいドメインで実行されているSnapCenterサーバでバックアップをリストアする場合は、バックアップを作成する前に、古いSnapCenterホストに新しいドメインユーザを追加し、SnapCenter adminロールを割り当てる必要があります。
+
+. 古いホストから新しいホストにバックアップをコピーします。
+. API：またはコマンドレット：_Restore -SmServerBackup_を使用して、新しいホストにSnapCenterサーバのバックアップをリストアします `/<snapcenter_version>/server/restore` 。
++
+リストアでは、デフォルトですべてのホストの新しいSnapCenterサーバURLが更新されます。更新をスキップする場合は、_- SkipSMSURLInHosts_attributeを使用し、API：またはコマンドレット：_Set -SmServerConfig_を使用してサーバURLを個別に更新します。 `/<snapcenter_version>/server/configureurl`
 
 +
 
-NOTE: 8142c17d2e259174dc68c6970743b3e0
-
-+
-d3050839b85b878b37ec26575a2393e6
+NOTE: プラグインホストがサーバのホスト名を解決できない場合は、各プラグインホストにログインし、新しいIPの_etc/host_entryを<New IP> SC_Server_Name形式で追加します。
 
 +
 
-NOTE: 3cb008d45317bdc58a3f417a317573e6
+NOTE: server_etc/host_entriesはリストアされません。古いサーバから手動でリストアできます。
 
-. cce21874db99bf2ff8009d7bba6a563e
-. 5a040d5194ec2af1001bd5d0cb6b80e1
-
-
-
-
-== 9399a783da7a09f3a58595bfdcce7cb9
-
-d4bd088e50b59b47b581ecebb8f0d093
-
-4c522a0a960905af1b1898134f7907a9
-
-
-NOTE: cb9240a42017d8a2bfb2ccb6b34e9748
-
-
-
-== 28f25f96241cdf504bcd5de90ca513f0
-
-4cfacc6c9a788b0680d720aad04b68de
-
-
-
-== fa4325aa558a34f832e4e3caa0a88a3d
-
-b62e8825f8eb26f88145e7459278b951
-
-
-
-== 645a84975202e30700b572b49a5ee29d
-
-
-
-=== e840a7811f820d020b557a3452d192cd
-
-ead4a4a1f10513b6585301aa586f6555
-
-.135b308ed83c53f1516b7c754566d1c4
-3652ad6e60746a83a1ccdd7c49e1114d
-
-.f3a29486bed19a90f2da6d007818b427
-. 0576d7a60d5697ba94d183ad49cabf4e
 +
-.. 2ad096aeb0da609f06831f7e1f156155
-.. c7f7045ef4e37ae48744f3acccc57437
-
-
-. f3c8f6ef0e856eaaec4b17272aa0fefa
-. 73fcd074a38b94057f4ed6c44ccc4a72
-. 717c72270ce876f743856a621389e967
-+
-7927668963a4b91c5f671a07cc05f694
+新しいドメインで実行されているSnpCenterサーバにバックアップがリストアされ、古いドメインユーザを引き続き使用する場合は、古いドメインを新しいSnapCenterサーバに登録する必要があります。
 
 +
 
-NOTE: 75893b63c45ff1f656ee2dcb708ba603
+NOTE: 古いSnapCenterホストでweb.configファイルを手動で更新した場合、更新は新しいホストにコピーされません。新しいホストのweb.configファイルでも、同じ変更を手動で行う必要があります。
+
+. SnapCenterサーバのURLの更新をスキップした場合、またはリストアプロセス中にいずれかのホストが停止していた場合は、API：またはコマンドレット：_Set -SmServerConfig_を使用して、SnapCenterで管理されているすべてのホストまたは指定したホストで新しいサーバ名を更新し `/<snapcenter_version>/server/configureurl` ます。
+. 新しいSnapCenterサーバから、すべてのホストでスケジュール済みジョブをアクティブ化します。
+
+
+
+
+== F5クラスタ内のノードの機器更改（Tech Refresh）
+
+F5クラスタ内のノードを削除して新しいノードを追加すると、機器更改（Tech Refresh）を実行できます。更新が必要なノードがアクティブな場合は、クラスタの別のノードをアクティブにしてからノードを削除します。
+
+F5クラスタにノードを追加する方法については、を参照してください https://docs.netapp.com/us-en/snapcenter/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html["F5を使用した高可用性のためのSnapCenterサーバの設定"]。
+
+
+NOTE: F5クラスタのURLが変更された場合は、API：またはコマンドレット：_Set-SmServerConfig_を使用して、すべてのホストでURLを更新できます `/<snapcenter_version>/server/configureurl` 。
+
+
+
+== 古いSnapCenterサーバホストの運用停止
+
+新しいSnapCenterサーバが稼働中であり、すべてのプラグインホストが新しいSnapCenterサーバホストと通信できることを確認したら、古いSnapCenterサーバホストを削除できます。
+
+
+
+== 古いSnapCenterサーバホストへのロールバック
+
+問題が発生した場合は、API：またはコマンドレット：_Set-SmServerConfig_を使用して、すべてのホストのSnapCenterサーバURLを更新することで、古いSnapCenterサーバホストを元に戻すことができます `/<snapcenter_version>/server/configureurl` 。
+
+
+
+== ディザスタリカバリ
+
+
+
+=== スタンドアロンSnapCenterホストのディザスタリカバリ
+
+サーバのバックアップを新しいホストにリストアすることで、ディザスタリカバリを実行できます。
+
+.開始する前に
+古いSnapCenterサーバのバックアップがあることを確認します。
+
+.手順
+. 新しいホストを導入し、次のタスクを実行します。
++
+.. 同じバージョンのSnapCenterサーバをインストールします。
+.. CA証明書を設定し、双方向SSLを有効にします。詳細については、およびを参照して https://docs.netapp.com/us-en/snapcenter/install/reference_generate_CA_certificate_CSR_file.html["CA証明書の設定"] https://docs.netapp.com/us-en/snapcenter/install/task_configure_two_way_ssl.html["双方向SSLの設定と有効化"]ください。
+
+
+. SnapCenterサーバの古いバックアップを新しいホストにコピーします。
+. SnapCenter管理者ユーザとしてログインします。
+. API：またはコマンドレット：_Restore -SmServerBackup_を使用して、新しいホストにSnapCenterサーバのバックアップをリストアします `/<snapcenter_version>/server/restore` 。
++
+リストアでは、デフォルトですべてのホストの新しいSnapCenterサーバURLが更新されます。更新をスキップする場合は、_- SkipSMSURLInHosts_attributeを使用し、API：またはコマンドレット：_Set-SmServerConfig_を使用してサーバURLを個別に更新します `/<snapcenter_version>/server/configureurl` 。
 
 +
 
-NOTE: 8142c17d2e259174dc68c6970743b3e0
-
-. 23d1c4d4d0b1c7dc3a95606b2c934617
-
-
-
-
-=== 206c780d8f39c3cbe7871518b8955c87
-
-99b619aa61c4a7bc51249d3daa98a9b6
-
-.135b308ed83c53f1516b7c754566d1c4
-3652ad6e60746a83a1ccdd7c49e1114d
-
-.f3a29486bed19a90f2da6d007818b427
-. 0576d7a60d5697ba94d183ad49cabf4e
-+
-.. 2ad096aeb0da609f06831f7e1f156155
-.. c7f7045ef4e37ae48744f3acccc57437
-
-
-. f3c8f6ef0e856eaaec4b17272aa0fefa
-. 73fcd074a38b94057f4ed6c44ccc4a72
-. 717c72270ce876f743856a621389e967
-+
-7927668963a4b91c5f671a07cc05f694
+NOTE: プラグインホストがサーバのホスト名を解決できない場合は、各プラグインホストにログインし、新しいIPの_etc/host_entryを<New IP> SC_Server_Name形式で追加します。
 
 +
 
-NOTE: 75893b63c45ff1f656ee2dcb708ba603
+NOTE: server_etc/host_entriesはリストアされません。古いサーバから手動でリストアできます。
+
+. URLの更新をスキップした場合、またはリストアプロセス中にいずれかのホストが停止した場合は、API：またはコマンドレット：_Set -SmServerConfig_を使用して、SnapCenterで管理されるすべてのホストまたは指定したホストで新しいサーバ名を更新します `/<snapcenter_version>/server/configureurl` 。
+
+
+
+
+=== SnapCenter F5クラスタのディザスタリカバリ
+
+ディザスタリカバリを実行するには、サーバのバックアップを新しいホストにリストアし、スタンドアロンホストをクラスタに変換します。
+
+.開始する前に
+古いSnapCenterサーバのバックアップがあることを確認します。
+
+.手順
+. 新しいホストを導入し、次のタスクを実行します。
++
+.. 同じバージョンのSnapCenterサーバをインストールします。
+.. CA証明書を設定し、双方向SSLを有効にします。詳細については、およびを参照して https://docs.netapp.com/us-en/snapcenter/install/reference_generate_CA_certificate_CSR_file.html["CA証明書の設定"] https://docs.netapp.com/us-en/snapcenter/install/task_configure_two_way_ssl.html["双方向SSLの設定と有効化"]ください。
+
+
+. SnapCenterサーバの古いバックアップを新しいホストにコピーします。
+. SnapCenter管理者ユーザとしてログインします。
+. API：またはコマンドレット：_Restore -SmServerBackup_を使用して、新しいホストにSnapCenterサーバのバックアップをリストアします `/<snapcenter_version>/server/restore` 。
++
+リストアでは、デフォルトですべてのホストの新しいSnapCenterサーバURLが更新されます。更新をスキップする場合は、_- SkipSMSURLInHosts_attributeを使用し、API：またはコマンドレット：_Set-SmServerConfig_を使用してサーバURLを個別に更新します `/<snapcenter_version>/server/configureurl` 。
 
 +
 
-NOTE: 8142c17d2e259174dc68c6970743b3e0
+NOTE: プラグインホストがサーバのホスト名を解決できない場合は、各プラグインホストにログインし、新しいIPの_etc/host_entryを<New IP> SC_Server_Name形式で追加します。
 
-. 23d1c4d4d0b1c7dc3a95606b2c934617
-. 1437d535957fc4f2f5ede150a9b16e03
 +
-2e3c2d942717c0a18893e112499217cd
+
+NOTE: server_etc/host_entriesはリストアされません。古いサーバから手動でリストアできます。
+
+. URLの更新をスキップした場合、またはリストアプロセス中にいずれかのホストが停止した場合は、API：またはコマンドレット：_Set -SmServerConfig_を使用して、SnapCenterで管理されるすべてのホストまたは指定したホストで新しいサーバ名を更新します `/<snapcenter_version>/server/configureurl` 。
+. スタンドアロンホストをF5クラスタに変換します。
++
+F5の設定方法については、を参照してください https://docs.netapp.com/us-en/snapcenter/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html["F5を使用した高可用性のためのSnapCenterサーバの設定"]。
 
 
 
-.30f60d67f457bb040dffde52197a54da
-6c87c5c4c5fb9f72d41cca9a899c1c55
+.関連情報
+APIの詳細については、Swaggerページにアクセスする必要があります。 を参照して link:https://docs.netapp.com/us-en/snapcenter/sc-automation/task_how%20to_access_rest_apis_using_the_swagger_api_web_page.html["swagger API Web ページを使用して REST API にアクセスする方法"]
 
-aff86e576d5506698bb4e7f32cd2b64c
+コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。

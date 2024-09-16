@@ -2,34 +2,34 @@
 permalink: protect-sco/reference_requirements_for_restoring_an_oracle_database.html 
 sidebar: sidebar 
 keywords:  
-summary: 241427aa082547643032d9ac47ab0dda 
+summary: Oracleデータベースをリストアする前に、前提条件が満たされていることを確認する必要があります。 
 ---
-= e4efd46999918866976643fdf1c3041d
+= Oracleデータベースをリストアする際の要件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-241427aa082547643032d9ac47ab0dda
+Oracleデータベースをリストアする前に、前提条件が満たされていることを確認する必要があります。
 
-* 58f28c7080a3b5a4d907dfdece1ece75
-* adeb26b62f8ee06b6b6bae7b4ceacf27
-* 61b9803a1cd8f34e415ade3146621c10
-* 1db970b2a6105a2ea2fd5097ac660cbe
-* ba4dc32189ac55cef59ce8019633507c
-* 08a3e29888daae3d9792c6f0c0d17877
-* d7e51af744d95d4db76b12640c3076d9
-* 0aa1fb8d5fabc3bbed7c0d5c1bacd011
+* リストアとリカバリの戦略を定義しておく必要があります。
+* Snapshotをミラーまたはバックアップにレプリケートする場合は、ソースボリュームとデスティネーションボリュームの両方のStorage Virtual Machine（SVM）をSnapCenter管理者がユーザに割り当てておく必要があります。
+* バックアップの一環としてアーカイブログを削除する場合は、必要なアーカイブログのバックアップを手動でマウントしておく必要があります。
+* 仮想マシンディスク（VMDK）上にあるOracleデータベースをリストアする場合は、クローニングされたVMDKを割り当てるために必要な数の空きスロットがゲストマシンにあることを確認する必要があります。
+* データベースでセカンダリ保護が有効になっている場合は、そのデータベースに属するすべてのデータボリュームとアーカイブログボリュームが保護されていることを確認する必要があります。
+* 制御ファイルまたはフルデータベースのリストアを実行するには、RAC One Nodeデータベースが「nomount」状態であることを確認する必要があります。
+* NFS 環境に ASM データベースインスタンスがある場合は、 ASM ディスクパス /var/opt/snapcenter /cu/clones/*/*_ を asm_diskstring パラメータで定義された既存のパスに追加して、リカバリ操作の一環として ASM ログバックアップを正常にマウントする必要があります。
+* ASM_diskstring パラメータで、 ASMFD または configure _ORCL ： * _ を使用する場合は、 _ AFD ： * _ を設定します。
 +
 
-NOTE: 9bb3c573f98facf0ff2168ab341885e1
+NOTE: asm_diskstringパラメータの編集方法については、を参照してください。 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Disk_paths_are_not_added_to_the_asm_diskstring_database_parameter["asm_diskstring にディスクパスを追加する方法"^]
 
-* 0affc6c8300b9506786c119d688129f4
-* f46de214979dbd9fce14e7e11a9e145e
-* 1949d35fd9c7e790f2002ddcc050ce6f
+* OS 認証を無効にし、 Oracle データベースの Oracle データベース認証を有効にしている場合は、 _$ORACLE_HOME/network/admin_for ASM データベースで使用可能な * listener.ora * ファイルに静的リスナーを設定し、そのデータベースのデータファイルと制御ファイルをリストアする必要があります。
+* データベースサイズがテラバイト（TB）単位の場合は、Set-SmConfigSettingsコマンドを実行してSCORestoreTimeoutパラメータの値を増やす必要があります。
+* vCenterに必要なすべてのライセンスがインストールされ、最新の状態になっていることを確認してください。
 +
-2f4645d84e0f39b3a38649b1813fc33d
+ライセンスがインストールされていないか最新の状態でない場合は、警告メッセージが表示されます。この警告を無視して続行すると、RDMからのリストアは失敗します。
 
-* 24642a08e354f43168ca4f1178850f84
+* iSCSIプロトコルとFCプロトコルが混在するigroupを使用して、LUNがAIXホストにマッピングされていないことを確認してください。詳細については、を参照してください https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_Plug-in_for_Oracle_operations_fail_with_error_Unable_to_discover_the_device_for_LUN_LUN_PATH["LUNのデバイスを検出できませんというエラーが表示されて処理に失敗します"^]。
 

@@ -2,159 +2,161 @@
 permalink: install/install_snapcenter_server_linux.html 
 sidebar: sidebar 
 keywords: install, snapcenter software, install, linux host 
-summary: 6e3da1e6c4de3ddc55b5442f3d8fbf10 
+summary: SnapCenterサーバはLinuxホストにインストールできます。 
 ---
-= a5133039db74945642b3f4bbb769135d
+= LinuxホストへのSnapCenterサーバのインストール
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-01030a4579e57d7bfe53d02858238c30
+SnapCenterサーバインストーラの実行可能ファイルを実行して、SnapCenterサーバをインストールできます。
 
-.135b308ed83c53f1516b7c754566d1c4
-* 1f4157da0a0359b1f842a4aae6fa96a5
-* 5bcb882208d6e07ea8213e81cf4b9764
-* 88b3a7593bcb66acf6284dcfccd4c654
-* 55734747b259db0a2bf903942f43ce49
-* 82d08e9caed49d8de558b33b77f3f481
-* d9b30a4db48aad1f67655110e0dd4c30
+.開始する前に
+* SnapCenterをインストールするための十分な権限がないroot以外のユーザを使用してSnapCenterサーバをインストールする場合は、NetAppサポートサイトからsudoersチェックサムファイルを入手してください。Linuxのバージョンに基づいて適切なチェックサムファイルを使用する必要があります。
+* のインストール中。 NETランタイム。インストール時に_libicu_libraryの依存関係の解決に失敗した場合は、次のコマンドを実行してinstall_libicu_を実行します。 `yum install -y libicu`
+* _perl_が使用できないためにSnapCenterサーバのインストールが失敗した場合は、次のコマンドを実行してinstall_perl_をインストールします。 `yum install -y perl`
+* SUSE Linuxでsudoパッケージを使用できない場合は、認証エラーを回避するためにsudoパッケージをインストールします。
+* SUSE Linuxの場合は、インストールの失敗を回避するためにホスト名を設定します。
+* コマンドを実行して、セキュアなLinuxのステータスを確認します `sestatus`。SELinux status_が「enabled」で、_current mode_が「enforcing」の場合は、次の手順を実行します。
 +
-** 35771c587be30b2218f7f73f2cf349f1
+** 次のコマンドを実行します。 `sudo semanage port -a -t http_port_t -p tcp <WEBAPP_EXTERNAL_PORT_>`
 +
-0c8ef8c03f148d63bbbe698bf8ee1859
+_webapp_external_port_のデフォルト値は8146です。
 
-** 8af819c41d02f1fc5e8d3c2c766a5527
+** ファイアウォールがポートをブロックしている場合は、 `sudo firewall-cmd --add-port <WEBAPP_EXTERNAL_PORT_>/tcp`
 +
-0c8ef8c03f148d63bbbe698bf8ee1859
+_webapp_external_port_のデフォルト値は8146です。
 
-** 583b6ddfc99ff60d5a15f4ee2fd64f90
+** 読み取りおよび書き込み権限があるディレクトリから、次のコマンドを実行します。
 +
-*** 590a0d3fa02bd9e97092264cf89492e8
+*** `sudo ausearch -c 'nginx' --raw | audit2allow -M my-nginx`
 +
-86ba4c309696b3dfb865240342351b32
+コマンドから「Nothing to do」が返された場合は、SnapCenterサーバのインストール後にコマンドを再実行します。
 
-*** 19ba227d8b087dbf963f0940f6bf7ea5
+*** コマンドがcreates_my-nginx.pp_を作成する場合は、コマンドを実行してポリシーパッケージをアクティブにします。 `sudo semodule -i my-nginx.pp`
 
 
-** 6f2d5862adcb19642f0db270c370f692
+** MySQL PIDディレクトリに使用されるパスは_/ var/opt/mysqld_です。次のコマンドを実行して、MySQLインストールの権限を設定します。
 +
-*** c3443dcbf590279e08ca07242a001585
-*** 6c67983a3d6f4e4d003e7958be31bc11
-*** 156f372550a8429e41f2e3a47399480e
+*** `mkdir /var/opt/mysqld`
+*** `sudo semanage fcontext -a -t mysqld_var_run_t "/var/opt/mysqld(/.*)?"`
+*** `sudo restorecon -Rv /var/opt/mysqld`
 
 
-** fe380c7acc1443eccab8c749e2a75023
+** MySQLのデータディレクトリのパスは、_/ INSTALL_DIR /NetApp/snapcenter/SnapManagerWeb/Repository/mysql/_です。次のコマンドを実行して、MySQLのデータディレクトリの権限を設定します。
 +
-*** dc92edc5302f5d09eb1b992bec1cdead
-*** 22802ad40cb1728eda70151891c3c786
-*** aafb8e61dbb5f4f06b39ee958115deab
+*** `mkdir -p /INSTALL_DIR/NetApp/snapcenter/SnapManagerWeb/Repository/MySQL`
+*** `sudo semanage fcontext -a -t mysqld_db_t "/INSTALL_DIR/NetApp/snapcenter/SnapManagerWeb/Repository/MySQL(/.*)?"`
+*** `sudo restorecon -Rv /INSTALL_DIR/NetApp/snapcenter/SnapManagerWeb/Repository/MySQL`
 
 
 
 
 
 
-.bbe48fb854ea022537208eeeff822f91
-* acf12f43f062c1eb22ce9f5fb452809c
-* 3d0fc2fecebffa202ad6131af922fb8c
+.タスクの内容
+* SnapCenterサーバをLinuxホストにインストールすると、MySQL、RabbitMQ、Errlangなどのサードパーティサービスがインストールされます。アンインストールしないでください。
+* LinuxホストにインストールされているSnapCenterサーバは、次の機能をサポートしていません。
 +
-** 05807e454c19f244770adae059b3c330
-** cce76c1c114e69fd9b5ed7b130742034
-** c9ed98c404c82ee8ecf8a171518a36fa
-** 4c0f8be1f20e9a12d647fcf4747ff75d
+** 高可用性
+** Windowsプラグイン
+** Active Directory（Credを使用するrootユーザとroot以外のユーザの両方で、ローカルユーザのみをサポート）
+** SnapCenterへのログインに使用するキーベースの認証
 
 
 
 
-.f3a29486bed19a90f2da6d007818b427
-. 31dd4b591aca2f22cb59426bcfcddc03
+.手順
+. 次のファイルをから_/ホームディレクトリ_にダウンロードし https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["NetAppサポートサイト"^] ます。
 +
-** 60918c5104a17adbf43c2f8dce1b6f09
-** 69ecdf250a8c1675728aa58af822955c
-** a74351eb31be54cf2f936bc5ba876fa3
+** SnapCenterサーバインストールパッケージ-* snapcenter-linux-server-(el8/el9/sles15).bin*
+** 公開キーファイル-* snapcenter_public_key.pub *
+** それぞれのシグネチャファイル-* snapcenter-linux-server-(el8/el9/sles15).bin.sig*
 
 
-. b824fb47ab75737927b37e6bf08ee64e
-. 242322a077eca31a63ba76a2c54f674c
-. dc9575b21c52437335076c6c95b3ff66
-. 34c449a867d1944feb0c92e0026b3730
+. 署名ファイルを検証します。
+`$openssl dgst -sha256 -verify snapcenter_public_key.pub -signature <path to signature file> <path to bin file>`
+. root以外のユーザをインストールする場合は、.binインストーラとともに* snapcenter_server_checksum_（el8/el9/sles15）.txt *で指定したvisudoコンテンツを追加します。
+. .binインストーラの実行権限を割り当てます。
+`chmod +x snapcenter-linux-server-(el8/el9/sles15).bin`
+. いずれかの操作を実行して、SnapCenterサーバをインストールします。
 +
 |===
-| 0773a07fce321af691e449b79e58672d | 5e2ad6fd9deb412d871137094ee43ef0 
+| 実行する処理 | 操作 
 
 
  a| 
-b4aa109cb04742bdf2e8c4bf3b9539c0
+対話型インストール
  a| 
-75e3ac199e3514f0faced406ce37e35e
+`./snapcenter-linux-server-(el8/el9/sles15).bin`
 
-94c7e3265412da66d4057d6e9a50b11b
+次の詳細を入力するように求められます。
 
-** 8239ffd58c6d89d599450de14f2b0c94
-** d2a8425b0e8629f49d15283c1ff4bd5a
-** a6936886d719fd9bfbc112c4aa185947
+** Linuxホスト外のSnapCenterサーバにアクセスするために使用されるwebapp外部ポート。デフォルト値は8146です。
+** SnapCenterサーバをインストールするSnapCenterサーバユーザ。
+** パッケージがインストールされるインストールディレクトリ。
 
 
 
 
  a| 
-5b696f3956433f0e39384f9371a80737
+非対話型インストール
  a| 
-7f8aaa8ad33f8fdb41f09a62e572f9b0
+`sudo ./snapcenter-linux-server-(el8/el9/sles15).bin -i silent -DWEBAPP_EXTERNAL_PORT=<port> -DWEBAPP_INTERNAL_PORT=<port> -DSMCORE_PORT=<port> -DSCHEDULER_PORT=<port>  -DSNAPCENTER_SERVER_USER=<user> -DUSER_INSTALL_DIR=<dir> -DINSTALL_LOG_NAME=<filename>`
 
-564821c1234e6cc7e1c66502f8c59b07
+例：sudo ./ snapcenter_linux_server.bin -i silent -dwebapp_external_port=8146 -DSNAPCENTER_SERVER_USER=root -Duser_install_DIR=/opt-DINSTALL_LOG_NAME=InstallerLog.log
 
-806e382ab1e59fc4784c1ff19f277644
+ログは_/var/opt/snapcenter/logs _に保存されます。
 
-dfb7ef17cedb5ceab27545b9cc2d67a5
+SnapCenterサーバをインストールするために渡されるパラメータ：
 
-** 575b2f0f44773dcca51f55dcbb15c653
-** 5879597a51ef2bfc0be419545895317f
-** be891ec1614eb3635d38e619ffe78149
-** bf9cdab0f5d495f7bc037032159f8f4c
-** cada24aa42579737c5c4a07cfb473d75
-** f1754b87331d1fcc6ee552f82d86b4a7
-** 58dd83232812b25080f803f605384638
-** 38bb5983739bb6a2f697a66a1ca57ada
-** db77e62407d5f926da01c64cee263bc6
+** DWEBAPP_EXTERNAL_PORT：Linuxホスト外のSnapCenterサーバにアクセスするために使用されるwebapp外部ポート。デフォルト値は8146です。
+** DWEBAPP_INTERNAL_PORT：Linuxホスト内のSnapCenterサーバへのアクセスに使用されるwebapp内部ポート。デフォルト値は8147です。
+** DSMCORE_PORT：smcoreサービスが実行されているSMCoreポート。デフォルト値は8145です。
+** DSCHEDULER_PORT：スケジューラサービスが実行されているスケジューラポート。デフォルト値は8154です。
+** DSNAPCENTER_SERVER_USER：SnapCenterサーバをインストールするSnapCenterサーバユーザ。DSNAPCENTER_SERVER_USER_の場合、デフォルトはインストーラを実行しているユーザです。
+** DUSER_INSTALL_DIR:パッケージがインストールされるインストールディレクトリ。_DUSER_INSTALL_DIR_の場合、デフォルトのインストールディレクトリは_/ opt_です。
+** DINSTALL_LOG_NAME：インストールログを格納するログファイルの名前。これはオプションパラメータで、指定するとログはコンソールに表示されません。 このパラメータを指定しない場合、ログはコンソールに表示され、デフォルトのログファイルにも格納されます。
+** DSELINUX：_SELinux STATUS_が「Enabled」、_CURRENT MODE_が「Enforcing」で、「Before You Begin」セクションで説明したコマンドを実行した場合は、このパラメータを指定して値を1に割り当てる必要があります。デフォルト値は0です。
+** DUPGRADE：デフォルト値は0です。SnapCenterサーバをアップグレードするには、このパラメータと0以外の任意の整数を指定します。
 
 
 |===
 
 
-.58eaebf972358f1cf03d386a4ade1a0f
-* eafc328b587e3beef3dbe108a3dedcf8
+.次の手順
+* _SELinux status_が「enabled」で、_current mode_が「enforcing」の場合、* nginx *サービスは起動しません。次のコマンドを実行する必要があります。
 +
-.. 9c7abc376e895129105e281972c9f24c
-.. 4e07c38c016a099592ed905ac7e037f7
-.. dbc1e96eaa4b3649ea27aa8dc172aef0
+.. ホームディレクトリに移動します。
+.. コマンドを実行します `journalctl -x|grep nginx`。
+.. webapp内部ポート（8147）がリッスンできない場合は、次のコマンドを実行します。
 +
-*** d8febff31d9105c404a858b1d61e0262
-*** f1c7a9d24546d515c477f616b931f8fe
+*** `ausearch -c 'nginx' --raw | audit2allow -M my-nginx`
+*** `semodule -i my-nginx.pp`
 
 
-.. 2149f8134a40f7d9ff3537a9547421bb
-
-
-
+.. 実行 `setsebool -P httpd_can_network_connect on`
 
 
 
-== 509996c9084eee8ec4042ea11d0d40b5
 
-adabd411a7c66f552fe4729256f79893
 
-.f3a29486bed19a90f2da6d007818b427
-. da4d818a1335c4c0c623753733182b1a
-. f176ac456003ae547c90edbc5d81ec1e
-. f3c0990bb1a2ae775ec30feffbc58be0
-. a3381c7414a338cceaa125118a74b420
-. 3847ac30d33734cc62ecd81b181d93f2
-. 9289a81163d5e2905fefe2835a6ab045
-. e229f2a31adf5bd88e8925c96feb81d2
-. cf46417d06a0356fc053eba2626759a2
-. 98d7dda5167a79acadd993f0ad819512
-. 4b5d2dd70af718ebe67bfea5b43d8667
+
+== 製品を登録してサポートを有効にする
+
+NetAppを初めてご利用になり、NetAppアカウントをお持ちでない場合は、製品を登録してサポートを有効にする必要があります。
+
+.手順
+. SnapCenterのインストール後、*[ヘルプ]>[バージョン情報]*に移動します。
+. [_About SnapCenter _]ダイアログボックスで、971で始まる20桁のSnapCenterインスタンスをメモします。
+. をクリックします https://register.netapp.com[]
+. [* I am not a registered NetApp Customer* ] をクリックします。
+. 自分自身を登録するには、詳細を指定してください。
+. NetApp Reference SNフィールドは空白のままにします。
+. [Product Line]ドロップダウンから[* SnapCenter *]を選択します。
+. 課金プロバイダを選択します。
+. 20桁のSnapCenterインスタンスIDを入力します。
+. [Submit （送信） ] をクリックします。
 

@@ -2,108 +2,108 @@
 permalink: install/concept_configure_lun_storage.html 
 sidebar: sidebar 
 keywords: LUN storage, iSCSI, 
-summary: 248724fdb43c06d73682eae495a17c67 
+summary: SnapCenter を使用して、 FC 接続 LUN または iSCSI 接続 LUN を設定できます。SnapCenter を使用して、既存の LUN を Windows ホストに接続することもできます。 
 ---
-= 30837f98cbd95f5a4cd8f19178a695e8
+= LUNストレージの設定
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-248724fdb43c06d73682eae495a17c67
+SnapCenter を使用して、 FC 接続 LUN または iSCSI 接続 LUN を設定できます。SnapCenter を使用して、既存の LUN を Windows ホストに接続することもできます。
 
-e44dc355289fca4137269dc7b5607927
-
-
-
-== ad5caf46af1da5ea3bb28f96c57941f2
-
-5702420822d09ff123dca89121a7edb1
-
-17e2d63e3b45ecbfe13bcc32fec929d0
-
-* 1c325ecd5d9cfdb5a264aad6cdcec830
-* 95e0df37e3ea53dd74743538bd5b24a5
+LUNは、SAN構成におけるストレージの基本単位です。Windowsホストは、システム上のLUNを仮想ディスクとして認識します。詳細については、を参照してください http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanconf/home.html["ONTAP 9 SAN構成ガイド"^]。
 
 
-78166ce4ccceeedfbf6aeb8682851072
 
-33a39c6dfd4ba763e8fc326e9d082523
+== iSCSIセッションを確立する
 
-84f31d1d08722ad2b7e583287c32e27e
+iSCSIを使用してLUNに接続する場合は、LUNを作成して通信を有効にする前にiSCSIセッションを確立する必要があります。
 
-7f140eb5c67ede7bb4eec22df86a6184
+* 始める前に *
 
-a4a23956b617d461ed5d2f2f97b9403b
+* ストレージシステムノードをiSCSIターゲットとして定義しておく必要があります。
+* ストレージシステムでiSCSIサービスを開始しておく必要があります。 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanag/home.html["詳細"^]
 
-4839d2f25cc35b249d5db15efa1afd75
 
-. e3496f6d2696003cd08139c96386cc45
-. 9c7f09605b7f6155722c1a59d2c2430b
-. 2812d31d19fc9613ff39e7197b3339ce
-. e0655383c29286c65b6bbcf543174888
-. f3bc0021ed7a37f0a4a97bb94d043ae2
+* このタスクについて *
+
+iSCSIセッションは、同じバージョンのIP間（IPv6とIPv6、またはIPv4とIPv4）でのみ確立できます。
+
+リンクローカルIPv6アドレスは、iSCSIセッションの管理や、ホストとターゲットの両方が同じサブネット内にある場合にのみ使用できます。
+
+iSCSIイニシエータの名前を変更すると、iSCSIターゲットへのアクセスに影響します。名前を変更した場合、新しい名前が認識されるように、イニシエータがアクセスするターゲットの再設定が必要になることがあります。iSCSIイニシエータの名前を変更した場合は、ホストを再起動する必要があります。
+
+ホストに複数の iSCSI インターフェイスがある場合、最初のインターフェイスで IP アドレスを使用して SnapCenter への iSCSI セッションを確立したあとで、別の IP アドレスを使用して別のインターフェイスから iSCSI セッションを確立することはできません。
+
+* 手順 *
+
+. 左側のナビゲーションペインで、 * Hosts * （ホスト）をクリックします。
+. Hosts （ホスト）ページで、 * iSCSI Session （ iSCSI セッション） * をクリックします。
+. Storage Virtual Machine * ドロップダウンリストから、 iSCSI ターゲットの Storage Virtual Machine （ SVM ）を選択します。
+. [*Host*] ドロップダウン・リストから ' セッションのホストを選択します
+. [ セッションの確立 ] をクリックします。
 +
-b49abd7675360eecf41ac5ff6c67502f
+セッションの確立ウィザードが表示されます。
 
-. 97b33abb048f3d6c2a51fda5f670ea0c
+. Establish Session ウィザードで ' ターゲットを指定します
 +
 |===
-| f9878439df1fe9ad3ff8ed218f2f1d0d | 79bd216cbc0f386a597365eaa04f09ac 
+| フィールド | 入力するコマンド 
 
 
  a| 
-664b23aa493ea61efe98b9f3b3bb1d30
+ターゲットノード名
  a| 
-dab3c13d73ad772a8f52da2cbc6f32e2
+iSCSIターゲットのノード名
 
-fa1465029979d26f57421f282abce313
-
-
-
- a| 
-3ce920622f61c0c816e4fb7276271a8f
- a| 
-cb044a97de7c298374f925cfe295dcd5
+既存のターゲットノード名がある場合は、その名前が読み取り専用形式で表示されます。
 
 
 
  a| 
-ba5794d7896ff68195ac943fb646a8ac
+ターゲットポータルアドレス
  a| 
-2c32b126ab177350d07fc5cf27ff998e
+ターゲットネットワークポータルのIPアドレス
 
 
 
  a| 
-8b4ee6917d3d240fad53840664eeff3c
+ターゲットポータルポート
  a| 
-2bc681151f551058b8fc76b7f5db5654
+ターゲットネットワークポータルのTCPポート
+
+
+
+ a| 
+イニシエータポータルアドレス
+ a| 
+イニシエータネットワークポータルのIPアドレス
 
 |===
-. e56e6eb9f96878a5d909655ad543a59d
+. 入力が完了したら、 * 接続 * をクリックします。
 +
-8103ea1f974b6fe78b3263b7a1107692
+SnapCenter が iSCSI セッションを確立します。
 
-. d92abf366bd9060c59bb86c051a977d0
-
-
+. この手順を繰り返して、ターゲットごとにセッションを確立します。
 
 
-== 4abe930f7ed4aa8557d64ff364aa1be7
 
-cbb23b8d6f2ddac05adf3b8df4d48c63
 
-4839d2f25cc35b249d5db15efa1afd75
+== iSCSIセッションの切断
 
-. e3496f6d2696003cd08139c96386cc45
-. 9c7f09605b7f6155722c1a59d2c2430b
-. 2812d31d19fc9613ff39e7197b3339ce
-. e0655383c29286c65b6bbcf543174888
-. 8604cb873c825c8a47d73b5809f9ece3
-. 404198fd96b17670e542d194555e13b5
+複数のセッションを使用しているターゲットからiSCSIセッションの切断が必要になる場合があります。
+
+* 手順 *
+
+. 左側のナビゲーションペインで、 * Hosts * （ホスト）をクリックします。
+. Hosts （ホスト）ページで、 * iSCSI Session （ iSCSI セッション） * をクリックします。
+. Storage Virtual Machine * ドロップダウンリストから、 iSCSI ターゲットの Storage Virtual Machine （ SVM ）を選択します。
+. [*Host*] ドロップダウン・リストから ' セッションのホストを選択します
+. iSCSI セッションのリストから、切断するセッションを選択し、 * セッションの切断 * をクリックします。
+. [ セッションの切断 ] ダイアログボックスで、 [OK] をクリックします。
 +
-690d3c16f8977d088a13175ac12ac454
+SnapCenter によって iSCSI セッションが切断されます。
 
 

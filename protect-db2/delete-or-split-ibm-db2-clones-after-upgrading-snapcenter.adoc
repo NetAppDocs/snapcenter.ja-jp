@@ -2,29 +2,29 @@
 permalink: protect-db2/delete-or-split-ibm-db2-clones-after-upgrading-snapcenter.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for IBM Db2 Database 
-summary: 5c99d6884310f08896d7d62db7e21f33 
+summary: 'SnapCenter 4.3にアップグレードすると、クローンは表示されなくなります。クローンを作成したリソースの[Topology]ページで、クローンを削除したり、クローンをスプリットしたりできます。' 
 ---
-= 7b1286f8d19b14a2545adb95addc4fd5
+= SnapCenterのアップグレード後にIBM DB2データベースクローンを削除またはスプリットする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-5c99d6884310f08896d7d62db7e21f33
+SnapCenter 4.3にアップグレードすると、クローンは表示されなくなります。クローンを作成したリソースの[Topology]ページで、クローンを削除したり、クローンをスプリットしたりできます。
 
-.bbe48fb854ea022537208eeeff822f91
-ffcc2464d1648bd84da782c40ee03a5b
+.タスクの内容
+非表示のクローンのストレージフットプリントを特定するには、次のコマンドを実行します。 `Get-SmClone -ListStorageFootprint`
 
-.f3a29486bed19a90f2da6d007818b427
-. e15be16f18110aa6552081897dc73df4
-. 5e3250069d03b2e8ebc3f52f29980a1b
-. 660aad66a7be47efbd614fddb4ff93b8
-. 2a251da54f18e5dbcf2e7040051b6002
+.手順
+. remove-smbackupコマンドレットを使用して、クローニングされたリソースのバックアップを削除します。
+. remove-smresourcegroupコマンドレットを使用して、クローニングされたリソースのリソースグループを削除します。
+. remove-smprotectresourceコマンドレットを使用して、クローニングされたリソースの保護を解除します。
+. [リソース]ページから親リソースを選択します。
 +
-e984402842ada9bf4703b2df6ce206b3
+リソーストポロジページが表示されます。
 
-. 9fbd721fcf9b4830fd6828081be6f142
-. 90021265060d6610a36239d59c25b4e1
-. a72cc47fad7d1846d19b085d2e77e5ba
+. [Manage Copies]ビューで、プライマリまたはセカンダリ（ミラーリングまたはレプリケートされた）ストレージシステムからクローンを選択します。
+. クローンを選択し、をクリックしてクローンを削除するか、をクリックし image:../media/delete_icon.gif[""] image:../media/split_cone.gif[""] てクローンをスプリットします。
+. [OK]*をクリックします。
 

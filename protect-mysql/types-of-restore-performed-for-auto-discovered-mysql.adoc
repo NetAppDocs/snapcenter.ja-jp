@@ -2,29 +2,29 @@
 permalink: protect-mysql/types-of-restore-performed-for-auto-discovered-mysql.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for mysql 
-summary: 3c59e4c3c47881e0ac6d8dc552ae7982 
+summary: SnapCenterでは、自動的に検出されたSnapRestoreデータベースに対して、ボリュームベースのMySQL \（VBSR\）、単一ファイルSnapRestore、および接続とコピーのリストアタイプがサポートされます。 
 ---
-= ada7dc28b5c70bef4ecf0c92798d1e43
+= 自動検出されたMySQLのリストア処理のタイプ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-f3618459f99706822a34e8d3bb0c9b62
+SnapCenter Plug-in for MySQLでは、自動的に検出されたMySQLデータベースに対して、Single File SnapRestoreおよびConnect and Copyリストアタイプがサポートされます。
 
 
 
-== b84bb31b9e5d09baf5905b34fa16035f
+== NFS環境でSingle File SnapRestoreを実行するシナリオは、次のとおりです。
 
-* eae5ed0cbf5698a140c9fd9f085c45e1
-* 8a40b0d9d049d6cfff611f823df8c79d
-
-
+* [Complete Resource]オプションのみが選択されている場合
+* バックアップを SnapMirror または SnapVault セカンダリの場所から選択し、 * Complete Resource * オプションが選択されている場合
 
 
-== d93ff0f7aebe8aeef2555625334e6c0c
 
-* eae5ed0cbf5698a140c9fd9f085c45e1
-* 942e528bc97cc5b31f14fe2c8b3b5c89
+
+== 単一ファイル SnapRestore は、次のような状況で SAN 環境で実行されます。
+
+* [Complete Resource]オプションのみが選択されている場合
+* SnapMirror または SnapVault セカンダリストレージからバックアップを選択し、 * Complete Resource * オプションを選択した場合
 

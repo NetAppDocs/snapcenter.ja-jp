@@ -2,166 +2,166 @@
 permalink: install/enable_multifactor_authentication.html 
 sidebar: sidebar 
 keywords: mfa, authentication, multifactor authentication 
-summary: c30d59401403b986989fc4a149ff2aea 
+summary: SnapCenter では、データのセキュリティを確保するために厳格なセキュリティおよび認証機能を採用しています。 
 ---
-= d4dbc002513d2615e9e9009874835b86
+= 多要素認証（MFA）を管理します。
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-440355fc57f515aab537d229da6473e3
+Active Directoryフェデレーションサービス（AD FS）サーバとSnapCenterサーバで多要素認証（MFA）機能を管理できます。
 
 
 
-== 8e5ca8947d2ccd889e10c25276502da0
+== 多要素認証（MFA）を有効にする
 
-c8010626798701f4dd6505ffd8c7bab3
+SnapCenterサーバのMFA機能は、PowerShellコマンドを使用して有効にできます。
 
-.bbe48fb854ea022537208eeeff822f91
-* c746671a4c0cb7e7a37abe538fe2107e
-* faaee7754934b76546cff673048e1da8
+.タスクの内容
+* 同じAD FSで他のアプリケーションが設定されている場合、SnapCenterはSSOベースのログインをサポートします。一部のAD FS構成では、AD FSセッションの持続性に応じて、セキュリティ上の理由からSnapCenterでユーザ認証が必要になる場合があります。
+* コマンドレットで使用できるパラメータとその説明は、を実行して確認できます `Get-Help command_name`。または、を参照することもできます https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
 
 
-.135b308ed83c53f1516b7c754566d1c4
-* b2f9ddbfbf0bb6739ee75e8c2a6ac138
-* 4ceb1d36799251586ba061a0c2b9a7a8
-* cb7f79bbeb52e82fa7926e0724dba11e
-* 0ee03cd1523961dfa875fac5c6817350
+.開始する前に
+* Windows Active Directoryフェデレーションサービス（AD FS）がそれぞれのドメインで稼働している必要があります。
+* Azure MFA、Cisco Duoなど、AD FSがサポートする多要素認証サービスが必要です。
+* SnapCenterサーバとAD FSサーバのタイムスタンプは、タイムゾーンに関係なく同じにする必要があります。
+* SnapCenterサーバ用に許可されたCA証明書を取得して設定します。
 +
-4090d0adfa0a73ca248f3a29df56f147
-
-+
-** 090c9bbbd344aa7f6441901f2b8792f8
-** 3e3aa2cc7dad01d563ee8f2059cd8120
-** 6c09b2d713717656ff82620da0253eb5
-+
-760bd9baa4b7633c0843cb714f00a44e
-
-
-
-
-
-.f3a29486bed19a90f2da6d007818b427
-. 0470044badbfb7d0d8a4ec5bab24ebb3
-. 30c7dffa036eadcc0342139cec28fa70
-. cc53a56f022408c7c918dae3f5120646
-. 9ecfd57c67ca8b2d27e87284ca6755c3
-. 696ac2aea44e94108d138faca1e6061a
-+
-c82bb0422af1b29a8b9694bbfe3ebe9e
-
-. 56fcee91de3134d2db0d32a05335e432
-. 65b2ac31e28fbe23df3871ad716e40c2
-. 13cb11c142fa4483919ae32dd2a04113
-. 9e93c22d2a1e4426ec1fd94bd4ac31b3
-+
-.. 9bcb5adfefb899867ed5b11f042b98db
-.. a49966f708056a4c549673b5bec3414c
-.. c6c1feaee0176e99111e0aef49c594be
-.. cf424f2e43207d2c78b3d27a5dc0fda2
-.. b245a32518063d47ab60cd9ae65b7937
-.. 39b5fcc1b0398cd4cdbf088d9851aa36
-+
-... 7dee7e783d13b6d5d415926ce0bfc306
-... 67fadfdbaf1af58c1560a82586252863
-... 198e6981b37af309244a71441c5344c9
-... 80f7b3672de7c3d1051cd5ee2c883f05
-+
-576824a9a44254550a67ab8aab39ac32
-
-
-
-
-
-. f66df63be5b59de9c83fe5b9af91718b
-+
-.. 90fa18d048bbd4d789b594ebceeb2490
-.. 0179eedc054410462409658b0bad268c
-.. b6312d7d51f31ed2e0c8dc5372435335
-.. 35adcaf3c3f08c3b4becd894c0fafea3
-.. ba119cc36777aa5836242da63619667d
-.. 1859e92122e266181cafb9c13d7400a0
-+
-0c43eee88d95f645135455225ef45492
-
-
-
-. 72636fa45db48574ba9c546fdd1db0a8
-+
-.. fcfb637a4b496a9a140b628cdb573932
-.. 082c51e92370324bc62e7c80c44d8941
-.. 55257e6ccdd63f9f4ab886869cbbf5cf
-.. 894da100f84831f7c70c6bfa7616298a
-.. 7fdc58355431a6a3d9515f7519f55a21
-.. 1859e92122e266181cafb9c13d7400a0
-
-
-. adfd9f210cddba9223539ba1793c20cb
-+
-6e98d99dca8f4518c9e7567d19ce708c
+CA証明書は、次の理由で必須です。
 
 +
-a339a650564d067ea1ade511a61340e3
-
-. 06a6a46ff24f4c0f682d4804aaf90175
+** 自己署名証明書はノードレベルで一意であるため、ADFS-F5通信が切断されないようにします。
+** スタンドアロン構成またはハイアベイラビリティ構成でのアップグレード、修復、またはディザスタリカバリ（DR）中に自己署名証明書が再作成されないようにすることで、MFAの再設定を回避します。
+** IP-FQDNの解決を保証します。
 +
-.. c3613ef2b11238bd320ee942d11e6fe4
-.. 35602ea96136092b8b885fe1ef749873
-
-
-. e5111e1a8d09cf3b9cc87da0144221fb
-
-
-907fe6bfcd498fe3e561f7fb3ee67c89
-
-9e4f9470d66f1730ad7525f9043126be
+CA証明書の詳細については、を参照してください link:../install/reference_generate_CA_certificate_CSR_file.html["CA証明書CSRファイルの生成"^]。
 
 
 
-== aeb89440d41f10fd9cc43ab75d800138
 
-19b3ff63dd3f3b6c1e3e48e8b3be6141
 
-.f3a29486bed19a90f2da6d007818b427
-. 6ef1300bebff7801c85a1789a6c0790a
-. 2a18eff05051b9c720a786193ade4742
-. 0129ab4e23da78e3b3d44732592d15ea
+.手順
+. Active Directoryフェデレーションサービス（AD FS）ホストに接続します。
+. FQDN >/FederationMetadata/2007-06/FederationMetadata.xmlからAD FSフェデレーションメタデータファイルをダウンロードし "https://<host[] ます。
+. ダウンロードしたファイルをSnapCenterサーバにコピーして、MFA機能を有効にします。
+. PowerShellを使用して、SnapCenter管理者ユーザとしてSnapCenterサーバにログインします。
+. PowerShellセッションを使用して、_New-SmMultifactorAuthenticationMetadata-path_cmdletを使用して、SnapCenter MFAメタデータファイルを生成します。
 +
-f668cd2acef670f8b213c6c785ddf8d6
+pathパラメータには、SnapCenterサーバホストにMFAメタデータファイルを保存するパスを指定します。
 
-. e5111e1a8d09cf3b9cc87da0144221fb
-
-
-
-
-== 97088f26ec75cb4d55c4fe5eeb3b62b4
-
-ac82039d46e3be923c813d3d4c5456e4
-
-.f3a29486bed19a90f2da6d007818b427
-. f66df63be5b59de9c83fe5b9af91718b
+. 生成されたファイルをAD FSホストにコピーして、SnapCenterをクライアントエンティティとして設定します。
+. コマンドレットを使用して、SnapCenterサーバのMFAを有効にします `Set-SmMultiFactorAuthentication` 。
+. （オプション）コマンドレットを使用して、MFAの設定ステータスと設定を確認します `Get-SmMultiFactorAuthentication` 。
+. Microsoft管理コンソール（MMC）に移動し、次の手順を実行します。
 +
-.. 56ec825045a003fc115765658ea8b639
-.. 83e84b83a6a686044df5e13021693e95
+.. [*ファイル*>*スナップインの追加と削除*]をクリックします。
+.. [ スナップインの追加と削除 ] ウィンドウで、 [*Certificates*] を選択し、 [*Add*] をクリックします。
+.. [ 証明書 ] スナップインウィンドウで、 [*Computer account*] オプションを選択し、 [ 完了 *] をクリックします。
+.. ［*コンソールルート*］>［*証明書–ローカルコンピューター*］>［*個人*］>［*証明書*］の順にクリックします。
+.. SnapCenter にバインドされているCA証明書を右クリックし、*すべてのタスク*>*秘密鍵の管理*を選択します。
+.. Permissionsウィザードで、次の手順を実行します。
 +
-d929cc2f30ed7ebb91266d0b79b5f2cf
-
-.. 18231d11def74e66e747d2eb30fc1c50
+... [追加]*をクリックします。
+... [場所]*をクリックし、該当するホスト（階層の最上位）を選択します。
+... 「*場所*」ポップアップウィンドウで「* OK」をクリックします。
+... [オブジェクト名]フィールドに「IIS_IUSRS」と入力し、[名前の確認]をクリックして、[OK]をクリックします。
 +
-0f5b112cebb37022dbfe2c80e388d605
-
-
-
-. e5111e1a8d09cf3b9cc87da0144221fb
+チェックが正常に終了したら、* OK *をクリックします。
 
 
 
 
-== a606674f3f6a9cee6f0ddf2eef03b07b
 
-.f3a29486bed19a90f2da6d007818b427
-. b3844eddf099b8f80b95a7c68ca22ae5
-. e5111e1a8d09cf3b9cc87da0144221fb
+. AD FSホストでAD FS管理ウィザードを開き、次の手順を実行します。
++
+.. [*証明書利用者信頼*（Rel証明 書利用者信頼）]>[*証明書利用者信頼の追加*（Add Rel証明 書利用者信頼）]>[*開始*
+.. 2番目のオプションを選択してSnapCenter MFAメタデータファイルを参照し、*次へ*をクリックします。
+.. 表示名を指定し、*次へ*をクリックします。
+.. 必要に応じてアクセス制御ポリシーを選択し、*[Next]*をクリックします。
+.. 次のタブでデフォルトに設定を選択します。
+.. [ 完了 ] をクリックします。
++
+SnapCenterが、指定した表示名の証明書利用者として反映されるようになりました。
+
+
+
+. 名前を選択し、次の手順を実行します。
++
+.. ［*クレーム発行ポリシーの編集*］をクリックします。
+.. [*ルールの追加*]をクリックし、[*次へ*]をクリックします。
+.. クレームルールの名前を指定します。
+.. 属性ストアとして「* Active Directory *」を選択します。
+.. 属性として「* User-Principal-Name *」を選択し、発信クレームタイプとして「* Name-ID *」を選択します。
+.. [ 完了 ] をクリックします。
+
+
+. ADFSサーバで次のPowerShellコマンドを実行します。
++
+`Set-AdfsRelyingPartyTrust -TargetName ‘<Display name of relying party >’ -SigningCertificateRevocationCheck None`
+
++
+`Set-AdfsRelyingPartyTrust -TargetName ‘<Display name of relying party >’ -EncryptionCertificateRevocationCheck None`
+
+. メタデータがインポートされたことを確認するには、次の手順を実行します。
++
+.. 証明書利用者信頼を右クリックし、* Properties *を選択します。
+.. [Endpoints]、[Identifiers]、および[Signature]フィールドに値が入力されていることを確認します。
+
+
+. すべてのブラウザタブを閉じ、ブラウザを再度開いて既存またはアクティブなセッションCookieをクリアし、再度ログインします。
+
+
+SnapCenter MFA機能は、REST APIを使用して有効にすることもできます。
+
+トラブルシューティング情報については、を参照してください https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_MFA_login_error_The_SAML_message_response_1_doesnt_match_the_expected_response_2["複数のタブで同時にログインを試行すると、MFAエラーが表示されます"]。
+
+
+
+== AD FS MFAメタデータの更新
+
+アップグレード、CA証明書の更新、DRなど、AD FSサーバで変更があった場合は、SnapCenterでAD FS MFAメタデータを更新する必要があります。
+
+.手順
+. FQDN >/FederationMetadata/2007-06/FederationMetadata.xmlからAD FSフェデレーションメタデータファイルをダウンロードし "https://<host[] ます。"
+. ダウンロードしたファイルをSnapCenterサーバにコピーして、MFA設定を更新します。
+. 次のコマンドレットを実行して、SnapCenterでAD FSメタデータを更新します。
++
+`Set-SmMultiFactorAuthentication -Path <location of ADFS MFA metadata xml file>`
+
+. すべてのブラウザタブを閉じ、ブラウザを再度開いて既存またはアクティブなセッションCookieをクリアし、再度ログインします。
+
+
+
+
+== SnapCenter MFAメタデータの更新
+
+ADFSサーバで修復、CA証明書の更新、DRなどの変更があった場合は、AD FSでSnapCenter MFAメタデータを更新する必要があります。
+
+.手順
+. AD FSホストでAD FS管理ウィザードを開き、次の手順を実行します。
++
+.. [*証明書利用者信頼*]をクリックします。
+.. SnapCenter 用に作成された証明書利用者信頼を右クリックし、*削除*をクリックします。
++
+証明書利用者信頼のユーザ定義名が表示されます。
+
+.. 多要素認証（MFA）を有効にします。
++
+を参照して link:../install/enable_multifactor_authentication.html["多要素認証を有効にします"]
+
+
+
+. すべてのブラウザタブを閉じ、ブラウザを再度開いて既存またはアクティブなセッションCookieをクリアし、再度ログインします。
+
+
+
+
+== 多要素認証（MFA）を無効にする
+
+.手順
+. MFAを無効にし、コマンドレットを使用してMFAを有効にしたときに作成された構成ファイルをクリーンアップします `Set-SmMultiFactorAuthentication` 。
+. すべてのブラウザタブを閉じ、ブラウザを再度開いて既存またはアクティブなセッションCookieをクリアし、再度ログインします。
 

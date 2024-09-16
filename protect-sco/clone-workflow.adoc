@@ -2,24 +2,24 @@
 permalink: protect-sco/clone-workflow.html 
 sidebar: sidebar 
 keywords: clone operation, clone, workflow 
-summary: e174be7156154463517dfe3b864d0329 
+summary: クローニングワークフローには、計画、クローニング処理の実行、および処理の監視が含まれます。 
 ---
-= 7f9567749606082611d69fd511d51593
+= クローニングのワークフロー
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-e174be7156154463517dfe3b864d0329
+クローニングワークフローには、計画、クローニング処理の実行、および処理の監視が含まれます。
 
-91af1a160d0e82dc6915ed84b13cb026
+データベースをクローニングする理由には次のものがあります。
 
-* f8a5dd17eb83c4a9ebaa27ffca48db2a
-* 13cbbb0028f34d717a11d65823bd8d4e
-* 8ba43f81e3062260324e4cf645922897
+* アプリケーション開発のライフサイクルで、実装が必要な機能を、現在のデータベースの構造およびコンテンツを使用してテストするため。
+* データ抽出および操作ツールを使用してデータウェアハウスにデータを入力する。
+* 誤って削除または変更されたデータをリカバリするため。
 
 
-b37c1f7095772e66402cd084c5dc13a3
+次のワークフローは、クローニング処理の実行順序を示しています。
 
-image::../media/sco_scc_wfs_clone_workflow.png[cdde52ff579630533ab0ae02ddc35514]
+image::../media/sco_scc_wfs_clone_workflow.png[クローニングワークフロー]

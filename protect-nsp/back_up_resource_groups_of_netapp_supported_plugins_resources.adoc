@@ -2,45 +2,45 @@
 permalink: protect-nsp/back_up_resource_groups_of_netapp_supported_plugins_resources.html 
 sidebar: sidebar 
 keywords: backup, NetApp supported plug-ins 
-summary: bf48a7e0eb56785cdc1ed4c661d3583f 
+summary: 'リソースグループは、[Resources]ページからオンデマンドでバックアップできます。リソースグループにポリシーが適用され、スケジュールが設定されている場合は、スケジュールに従って自動的にバックアップが実行されます。' 
 ---
-= 58ec0509621b150bb63b0fd69f20665f
+= NetAppでサポートされているプラグインリソースのリソースグループのバックアップ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-bf48a7e0eb56785cdc1ed4c661d3583f
+リソースグループは、[Resources]ページからオンデマンドでバックアップできます。リソースグループにポリシーが適用され、スケジュールが設定されている場合は、スケジュールに従って自動的にバックアップが実行されます。
 
-.135b308ed83c53f1516b7c754566d1c4
-* 92ae04a417b2b1bf95cb914953f21cce
-* 0dd1baa389f6493ff89ba4f1d23f127b
+.開始する前に
+* ポリシーを適用してリソースグループを作成しておく必要があります。
+* セカンダリストレージとの SnapMirror 関係があるリソースをバックアップする場合、ストレージユーザに割り当てられた ONTAP ロールには「「 'napmirror all' 」権限を含める必要があります。ただし、「 vsadmin 」ロールを使用している場合、「 'SnapMirro all 」権限は必要ありません。
 
 
-.f3a29486bed19a90f2da6d007818b427
-. 530a5fa7e8fbaa4c796dbd46c93a55dd
-. 5188766c2c9e07184bb642e31a6d1193
+.手順
+. 左側のナビゲーションペインで、 * リソース * をクリックし、リストから適切なプラグインを選択します。
+. [ リソース ] ページで、 [ * 表示 ] リストから [ * リソースグループ * ] を選択します。
 +
-30a67a946d29a3e673f6bc6ed240d621
+リソース グループを検索することができます。そのためには、検索ボックスにリソース グループ名を入力するか、image:../media/filter_icon.png["フィルタアイコン"]をクリックし、タグを選択します。そのあとにimage:../media/filter_icon.png["フィルタアイコン"]をクリックすると、フィルタ ペインが閉じます。
 
-. 6c22568aa6116c11fda42febcf7b796a
-. 4a1c51520bfb3d170a967d4c218b52bf
+. [ リソースグループ ] ページで、バックアップするリソースグループを選択し、 [ 今すぐバックアップ * ] をクリックします。
+. Backup （バックアップ）ページで、次の手順を実行します。
 +
-.. 44119ab6cb16491e354c029de67b6782
+.. 複数のポリシーをリソースグループに関連付けている場合は、「 * Policy * 」ドロップダウンリストから、バックアップに使用するポリシーを選択します。
 +
-b1b9720160580fd5949d50bf10097dc5
+オンデマンドバックアップ用に選択したポリシーにバックアップスケジュールが関連付けられている場合、オンデマンドバックアップは、スケジュールタイプに指定した保持設定に基づいて保持されます。
 
-.. 96dd2bdaca6a007b13c9f42158b860a6
+.. [ バックアップ ] をクリックします。
 
 
-. 8b9460bf38a68108bcdd278a386b3156
+. 操作の進行状況を監視するには、 * Monitor * > * Jobs * をクリックします。
 +
-** 71a692c1ca2878f83f4cd08d817a4dd9
+** MetroCluster構成では、フェイルオーバー後にSnapCenterで保護関係を検出できないことがあります。
 +
-656764dc4fc9063500ad9c4607e32b3b
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["MetroClusterのフェイルオーバー後にSnapMirror関係またはSnapVault関係を検出できない"]
 
-** f6e291f8da5e2bfb20622fac181e8aca
+** VMDK上のアプリケーションデータをバックアップする場合に、SnapCenter Plug-in for VMware vSphereのJavaヒープサイズが十分でないと、バックアップが失敗することがあります。Javaヒープサイズを増やすには、スクリプトファイル/opt/netapp/init_scripts/scvserviceを探します。このスクリプトでは、コマンドによって `do_start method` SnapCenter VMwareプラグインサービスが開始されます。このコマンドを次のように更新し `Java -jar -Xmx8192M -Xms4096M`ます。
 
 
 

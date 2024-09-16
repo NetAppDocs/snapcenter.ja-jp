@@ -2,70 +2,70 @@
 permalink: protect-sco/catalog-backups.html 
 sidebar: sidebar 
 keywords: oracle databases discover 
-summary: d9372adbc1bed6681e74cd02004081f0 
+summary: SnapCenter によるOracleデータベースの検出方法 
 ---
-= 538f484c4213ead46996ca2a7b117345
+= Oracle Recovery Managerを使用してバックアップをカタログ化する方法
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-f3c021a5eae937a13601d397b792c2d2
+Oracle Recovery Manager（RMAN）を使用してOracleデータベースのバックアップをカタログ化し、Oracle RMANリポジトリにバックアップ情報を格納できます。
 
-547555ab26594767a073cf67b6bdfc3f
+カタログ化されたバックアップは、あとでブロックレベルのリストア処理や表領域のポイントインタイムリカバリ処理に使用できます。カタログ化されたバックアップが不要となった場合は、カタログ情報を削除できます。
 
-188d383930d2a3b0b5abbd74f2cd5299
+カタログ化するためには、データベースの状態が少なくともマウント済み状態であることが必要です。カタログ化を実行できるのは、データバックアップ、アーカイブログバックアップ、およびフルバックアップです。複数のデータベースを含むリソースグループのバックアップに対してカタログ化が有効になっている場合は、データベースごとにカタログ化が実行されます。Oracle RACデータベースの場合、データベースが少なくともマウント済み状態である優先ノードでカタログ化が実行されます。
 
-c9aaa3e2b76409b32690a78fab859380
-
-
-
-== 084690c33c7b29b1780ab8f409fb8650
-
-600f045f5d954e78ff5c2da441689d62
+RACデータベースのバックアップをカタログ化する場合は、そのデータベースに対して他のジョブが実行されていないことを確認します。別のジョブが実行されている場合は、カタログ化処理がキューに登録されずに失敗します。
 
 
 
-== c5c4e8f374f512a056ca1205e002a1fd
+== 外部カタログデータベース
 
-f49c2881ffbdaf870ec7ed9ea88f4343
-
-b0d14c022e51c262621e79e943a3b6d0
+デフォルトでは、ターゲットデータベースの制御ファイルがカタログ化に使用されます。外部カタログデータベースを追加する場合は、SnapCenterグラフィカルユーザインターフェイス（GUI）のデータベース設定ウィザードを使用して、外部カタログのクレデンシャルと透過ネットワーク印刷材（TNS）名を指定して構成できます。CLIから外部カタログデータベースを設定するには、-OracleRmanCatalogCredentialNameオプションと-OracleRmanCatalogTnsNameオプションを指定してConfigure-SmOracleDatabaseコマンドを実行します。
 
 
 
-== 5e5ff61214eb4873285663f81049ec20
+== RMANコマンド
 
-ca3faf8cc2895635be2b3deb4a5d89cb
+SnapCenter GUIでOracleバックアップポリシーを作成するときにカタログ化オプションを有効にした場合は、バックアップ処理の一環としてOracle RMANを使用してバックアップがカタログ化されます。コマンドを実行して、バックアップのカタログ化を遅らせて実行することもできます `Catalog-SmBackupWithOracleRMAN` 。
 
-0b8287c761a5e7c1631298056ac30f05
-
-
-
-== 059297ebf3935d6b4bcb000628a9d653
-
-8e03216fb8576194a8567507d59c56b7
-
-7944aae88fbc469a9edfc7d9ae22e633
-
-82a1cabfef0d0e6eee8042b9175e689f
+バックアップをカタログ化したら、コマンドを実行して、カタログ化されたバックアップの情報（カタログ化されたデータファイルのタグ、制御ファイルのカタログパス、カタログ化されたアーカイブログの場所など）を取得できます `Get-SmBackupDetails` 。
 
 
 
-== 14fbb4ba3858c107f2599916d3b51cbb
+== 命名形式
 
-d04964471206dcd790a7dadb6ad6ac54
+SnapCenter 3.0以降では、ASMディスクグループ名が16文字以上の場合、バックアップに使用される命名形式はSC_HASHCODEofDISKGROUP_DBSID_BACKUPIDです。ただし、ディスクグループ名が16文字未満の場合、バックアップに使用される命名形式はDISKGROUPNAME_DBSID_BACKUPIDです。これは、SnapCenter 2.0で使用されている形式と同じです。
+
+HASHCODEofDISKGROUPは、ASMディスクグループごとに一意の、自動的に生成される番号（2～10桁）です。
 
 
-NOTE: 5483e3c7d026ea95109fb401e0876400
 
-2e524f9c3f6fa9b965648af6cb7b5457
+== クロスチェック処理
 
-8d966b8b205c32c6438a2938fdfb039e
+クロスチェックを実行すると、リポジトリレコードが物理ステータスと一致しないバックアップに関するRMANリポジトリ情報を更新できます。たとえば、ユーザがオペレーティングシステムコマンドを使用してディスクからアーカイブログを削除しても、実際にはディスクにログがない場合でも、制御ファイルにはディスクにログがあることが示されます。
 
-7a5e7be0933e3148df8c1083de81b020
+クロスチェック処理では、制御ファイルの情報を更新できます。クロスチェックをイネーブルにするには、Set-SmConfigSettingsコマンドを実行し、ENABLE_CROSSCHECKパラメータにtrueを割り当てます。デフォルト値は FALSE です。
 
-b2db2a6d191f5b90f084ac27e053d277
+`sccli Set-SmConfigSettings-ConfigSettingsTypePlugin-PluginCodeSCO-ConfigSettings "KEY=ENABLE_CROSSCHECK, VALUE=TRUE"`
 
-33b308bb22974faaabb712d6ca8f8cc4
+
+
+== カタログ情報を削除します
+
+カタログ情報を削除するには、Uncatalog-SmBackupWithOracleRMANコマンドを実行します。SnapCenter GUI ではカタログ情報を削除できません。ただし、バックアップを削除するとき、またはカタログ化されたバックアップに関連付けられている保持期間とリソースグループを削除するときに、カタログ化されたバックアップの情報が削除されます。
+
+
+NOTE: SnapCenter ホストを強制的に削除する場合は、そのホストに関連するカタログ化されたバックアップの情報が削除されません。ホストを強制的に削除する場合は、事前にそのホストに関連するすべてのカタログ化されたバックアップの情報を削除しておく必要があります。
+
+処理時間がORACLE_PLUGIN_RMAN_CATALOG_TIMEOUTパラメータに指定されたタイムアウト値を超えたためにカタログ化とカタログ化解除が失敗した場合は、次のコマンドを実行してパラメータの値を変更する必要があります。
+
+`/opt/Netapp/snapcenter/spl/bin/sccli Set-SmConfigSettings-ConfigSettingsType Plugin -PluginCode SCO-ConfigSettings "KEY=ORACLE_PLUGIN_RMAN_CATALOG_TIMEOUT,VALUE=user_defined_value"`
+
+パラメータの値を変更したら、次のコマンドを実行してSnapCenter Plug-in Loader（SPL）サービスを再起動します。
+
+`/opt/NetApp/snapcenter/spl/bin/spl restart`
+
+コマンドで使用できるパラメータとその説明については、Get-Help Command_nameを実行して確認できます。または、を参照して https://library.netapp.com/ecm/ecm_download_file/ECMLP3323470["SnapCenter ソフトウェアコマンドリファレンスガイド"^]ください。

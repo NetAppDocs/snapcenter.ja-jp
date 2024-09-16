@@ -1,40 +1,40 @@
 ---
 section: admin
-title: b3121ceac9c3b1c097a1f53db3eff2a7
+title: SnapCenterサーバとプラグインの管理
 entries:
-- title: fea84990764109b117844dae6e7232a7
+- title: ダッシュボードを表示
   entries:
-  - title: 1842816347041f3868bc9706c9a9e69b
+  - title: ダッシュボードの概要
     url: "/admin/concept_overview_of_dashboard.html"
-  - title: 946f52ba41d1b2bfd627afbf56e71b34
+  - title: ダッシュボードに情報を表示する方法
     url: "/admin/task_how_to_view_information_on_the_dashboard.html"
-  - title: 0b421aef4e2a6824e12019d1a2729de5
+  - title: ダッシュボードからジョブのステータスレポートを要求する
     url: "/admin/task_request_status_reports_of_the_jobs_from_the_dashboard.html"
-  - title: ca8d4718959530d7081a06567ef1affb
+  - title: ダッシュボードから保護ステータスのレポートを要求する
     url: "/admin/task_request_reports_of_the_protection_status_from_the_dashboard.html"
-- title: 829270664cf71125df26b9b98866a401
+- title: RBACの管理
   url: "/admin/task_manage_rbac.html"
-- title: 51929aa5ac08be2aca8dda46b9a095b1
+- title: ホストの管理
   url: "/admin/concept_manage_hosts.html"
-- title: ab086c14cb132b8320c7cbc2ff98beb8
+- title: "[Resources]ページでサポートされる処理"
   url: "/admin/concept_what_operations_can_be_performed_from_the_resource_page.html"
-- title: e7326f303b8abf78625da7d8f22fa0b4
+- title: ポリシーの管理
   url: "/admin/concept_manage_policies.html"
-- title: ec972bce7640d5d440d3549702031815
+- title: リソースグループの管理
   url: "/admin/task_manage_resource_groups.html"
-- title: 65d964d49665477bbec39032d9f3ca8a
+- title: バックアップの管理
   url: "/admin/concept_manage_backups.html"
-- title: d99b44bc53929e5f28f34c661930817f
+- title: クローンの削除
   url: "/admin/task_delete_clones.html"
-- title: f63bb2ed2f077a58e42dc5713a5d5843
+- title: ジョブ、スケジュール、イベント、ログの監視
   url: "/admin/concept_monitor_jobs_schedules_events_and_logs.html"
-- title: 41da5980aacd018c69ecb95b6d1885ac
+- title: SnapCenterのレポート機能の概要
   url: "/admin/concept_overview_of_snapcenter_reports.html"
-- title: 7d0bb889cb0b99adea9fd13298f9dc65
+- title: SnapCenterサーバリポジトリの管理
   url: "/admin/concept_manage_the_snapcenter_server_repository.html"
-- title: d9da99afcff86f0b4a156a1f2b5c56d1
+- title: 信頼されないドメインのリソースを管理します。
   url: "/admin/concept_manage_resources_of_untrusted_domains.html"
-- title: eb47178020d0a5d2852ff2a43d2991e3
+- title: ストレージシステムの管理
   url: "/admin/concept_manage_the_storage_system.html"
-- title: 4b77029241e362a83eda111b72aa5feb
+- title: EMSデータ収集の管理
   url: "/admin/concept_manage_ems_data_collection.html"

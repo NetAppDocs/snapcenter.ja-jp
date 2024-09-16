@@ -1,22 +1,22 @@
 ---
 section: sc-automation
-title: 01c23a6022de21870627c656bac73ece
+title: REST APIによる自動化
 entries:
-- title: 0c889d77d71512ceb7241bd0f6d6ca23
+- title: REST APIの概要
   url: "/sc-automation/overview_rest_apis.html"
-- title: e67a1ed26b195c308962ec17e8c90dfe
+- title: SnapCenter REST APIに標準でアクセスする方法
   url: "/sc-automation/concept_how_to_access_snapcenter_rest_api_natively.html"
-- title: 8ed6428212b41847f33c5db651c2aa70
+- title: 基盤となるREST Webサービス
   url: "/sc-automation/concept_rest_web_services_foundation.html"
-- title: f9423483f907b342ce1d6b2a5646580f
+- title: 基本的な動作特性
   url: "/sc-automation/concept_basic_operational_characteristics.html"
-- title: ee083ff11ffc430b7230624e8985e88c
+- title: API要求を制御する入力変数
   url: "/sc-automation/concept_input_variables_controlling_an_api_request.html"
-- title: 976d8d5ed712e4649d1d7ad11f37cbdc
+- title: API応答の解釈
   url: "/sc-automation/concept_interpreting_an_api_response.html"
-- title: bf51eb5d79e16ead1ceda527dda582b6
+- title: SnapCenter ServerとプラグインでサポートされるREST API
   url: "/sc-automation/reference_supported_rest_apis.html"
-- title: 865a15a9d836433668edb6c096ce72ac
+- title: Swagger API Webページを使用してREST APIにアクセスする方法
   url: "/sc-automation/task_how to_access_rest_apis_using_the_swagger_api_web_page.html"
-- title: 6f800f16fa2f6cc79e50877afd6a63ea
+- title: REST APIの使用を開始する
   url: "/sc-automation/task_get_started_with_the_rest_api.html"

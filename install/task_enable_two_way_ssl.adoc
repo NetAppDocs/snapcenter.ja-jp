@@ -2,69 +2,71 @@
 permalink: install/task_enable_two_way_ssl.html 
 sidebar: sidebar 
 keywords: security,disable two-way SSL,enable two-way SSL, windows host 
-summary: ea57705c00c3f1344bb41c72a946f63e 
+summary: PowerShellコマンドを使用して、Windowsホスト上のSnapCenterサーバとプラグインの間の相互通信を保護するために、双方向SSL通信を有効にすることができます。 
 ---
-= fb1f4d52b01df105765d83ddca95f1be
+= Windowsホストで双方向SSL通信を有効にする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-ea57705c00c3f1344bb41c72a946f63e
+PowerShellコマンドを使用して、Windowsホスト上のSnapCenterサーバとプラグインの間の相互通信を保護するために、双方向SSL通信を有効にすることができます。
 
-17e2d63e3b45ecbfe13bcc32fec929d0
+* 始める前に *
 
-e087a1e7d63b58aa401ef5206b4045df
+すべてのプラグインとSMCoreエージェントのコマンドを最初に実行し、次にサーバのコマンドを実行します。
 
-4839d2f25cc35b249d5db15efa1afd75
+* 手順 *
 
-. 2658e2d3875fa3587a2eef6c24310953
+. 双方向SSL通信を有効にするには、プラグイン、サーバー、および双方向SSL通信が必要な各エージェントに対して、SnapCenterサーバーで次のコマンドを実行します。
 +
-6f1f834a8acf28858818fa0fd54b35a6
-
-+
-754765745d416ab50bfdd8ffdf886427
+`> Set-SmConfigSettings -Agent -configSettings @{"EnableTwoWaySSL"="true"} -HostName <Plugin_HostName>`
 
 +
-b7cbce0775ee05b5664db4795fa4f37d
-
-. 78ed6c04942aa45356cf982f1588da37
-. f0bcea4f3a2bdac9d1c7f6881b8c07a8
-+
-f2bd7da53d1a6515e52a739da4329afd
-
-
-
-
-
-== 6d5d3fb7ac098fbdd1cfb8dd29674b84
-
-b317f6b7cf8e9cf3d99664032fea50ea
-
-78166ce4ccceeedfbf6aeb8682851072
-
-* e087a1e7d63b58aa401ef5206b4045df
-* 82af86af05970c039df6936d16c3de24
-* ab9d69b140b979d1163a8258231bf681
-* 5f46aeecc86380dbcfb9ea81a41ed89b
-
-
-4839d2f25cc35b249d5db15efa1afd75
-
-. 8067bb3f892da888a20f7c51b6b320fe
-+
-106698fceaabfa22dd610a165379d87d
+`> Set-SmConfigSettings -Agent -configSettings @{"EnableTwoWaySSL"="true"} -HostName localhost`
 
 +
-7f3467967f060a8b06e188bb59a79254
+`> Set-SmConfigSettings -Server -configSettings @{"EnableTwoWaySSL"="true"}`
+
+. 次のコマンドを使用して、IIS SnapCenterアプリケーションプールのリサイクル操作を実行します。
+`> Restart-WebAppPool -Name "SnapCenter"`
+. Windowsプラグインの場合は、次のPowerShellコマンドを実行してSMCoreサービスを再起動します。
++
+`> Restart-Service -Name SnapManagerCoreService`
+
+
+
+
+
+== 双方向SSL通信を無効にします
+
+PowerShellコマンドを使用して、双方向SSL通信を無効にすることができます。
+
+* このタスクについて *
+
+* すべてのプラグインとSMCoreエージェントのコマンドを最初に実行し、次にサーバのコマンドを実行します。
+* 双方向SSL通信を無効にしても、CA証明書とその設定は削除されません。
+* SnapCenterサーバに新しいホストを追加するには、すべてのプラグインホストで双方向SSLを無効にする必要があります。
+* NLBとF5はサポートされません。
+
+
+* 手順 *
+
+. 双方向SSL通信を無効にするには、すべてのプラグインホストとSnapCenterホストに対してSnapCenterサーバで次のコマンドを実行します。
++
+`> Set-SmConfigSettings -Agent -configSettings @{"EnableTwoWaySSL"="false"} -HostName <Agent_HostName>`
 
 +
-2562d957f23a407afadd9f495ac65558
+`> Set-SmConfigSettings -Agent -configSettings @{"EnableTwoWaySSL"="false"} -HostName localhost`
 
-. 78ed6c04942aa45356cf982f1588da37
-. f0bcea4f3a2bdac9d1c7f6881b8c07a8
 +
-f2bd7da53d1a6515e52a739da4329afd
+`> Set-SmConfigSettings -Server -configSettings @{"EnableTwoWaySSL"="false"}`
+
+. 次のコマンドを使用して、IIS SnapCenterアプリケーションプールのリサイクル操作を実行します。
+`> Restart-WebAppPool -Name "SnapCenter"`
+. Windowsプラグインの場合は、次のPowerShellコマンドを実行してSMCoreサービスを再起動します。
++
+`> Restart-Service -Name SnapManagerCoreService`
 
 

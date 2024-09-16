@@ -2,77 +2,77 @@
 permalink: install/concept_snapcenter_standard_controller_based_licenses.html 
 sidebar: sidebar 
 keywords: 'controller-based licenses, standard license, SnapManager Suite license, FAS, AFF, All SAN Array (ASA), retrieve controller serial number, controller serial number, controller-based license serial number, add controller-based license, remove trial license' 
-summary: 28f9c2d1c67ea659588c7bfc2680e96d 
+summary: FAS、AFF、またはASAストレージコントローラを使用している場合は、SnapCenter Standardコントローラベースライセンスが必要です。 
 ---
-= f011a01ebc3350e546311efaf71140bc
+= SnapCenter Standardコントローラベースライセンスを追加
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-e6c51d0ec467f9742ef4d9ed2bfd5390
+FAS、AFF、またはオールSANアレイ（ASA）ストレージコントローラを使用している場合は、コントローラベースのSnapCenterライセンスが必要です。
 
-b1c23ca4e9e67a158bfb24299743d88f
+コントローラベースライセンスには次のような特徴があります。
 
-* 5300768d44eab29e62cfac966d22baea
-* c55c867b9e6458f61ad9c49c7535bfab
-* 6b22646455acfe9efc53d4f10b58a5fe
+* Premium Bundle または Flash Bundle （ベースパックには含まれません）の購入に SnapCenter Standard のライセンスが含まれます。
+* 無制限のストレージ使用量
+* ONTAP System Managerまたはストレージクラスタのコマンドラインを使用して、FAS、AFF、またはASAのストレージコントローラに直接追加して有効にします
 +
 
-NOTE: c0919ecf5802c65bf773794b7af70540
+NOTE: SnapCenter コントローラベースのライセンスについては、 SnapCenter GUI にライセンス情報を入力しません。
 
-* 17449a90a0d7161db56cba83fa4f2728
-
-
-eb55a5732c8239cbf4f476df49cc20a3
+* コントローラのシリアル番号にロックされています
 
 
-
-== 19a8e13fe92c770e7ed404e67e6bec99
-
-4675b365d16842b130752bb3fa27614d
+必要なライセンスの詳細については、を参照してください link:../install/concept_snapcenter_licenses.html["SnapCenterライセンス"^]。
 
 
-NOTE: 6aa5717c99b34de9980debfbe3c6fa76
 
-.f3a29486bed19a90f2da6d007818b427
-. cc9c449ada243c7f7945df60c3bb511a
-. 05f4bbedc7296e63af5610bfc33574b5
+== 手順1：SnapManager Suiteライセンスがインストールされているかどうかを確認します
+
+SnapCenter GUIを使用して、SnapManager SuiteライセンスがFAS、AFF、またはASAプライマリストレージシステムにインストールされているかどうかを確認し、SnapManager Suiteライセンスが必要なストレージシステムを特定できます。SnapManager Suiteライセンスは、プライマリストレージシステム上のFAS、AFF、ASA SVMまたはクラスタにのみ適用されます。
+
+
+NOTE: コントローラにSnapManager Suiteライセンスがすでにある場合は、SnapCenter Standardコントローラベースライセンスが自動的に提供されます。SnapManagerSuite ライセンスと SnapCenter 標準のコントローラベースのライセンスは同じ意味で使用されますが、同じライセンスを指します。
+
+.手順
+. 左側のナビゲーションペインで、*[ストレージシステム]*を選択します。
+. ストレージシステムページの * タイプドロップダウンから、追加したすべての SVM またはクラスタを表示するかどうかを選択します。
 +
-** 9ba45610f0250c3f3d93d968194d341c
-** 91fd94b5750743b0b4db66d235c0cab9
+** 追加されたすべての SVM を表示するには、 * ONTAP SVM * を選択します。
+** 追加されたすべてのクラスタを表示するには、 * ONTAP クラスタ * を選択します。
 +
-d232915b5e459729c2ebb05cce4351c3
+クラスタ名を選択すると、そのクラスタに含まれるすべてのSVMが[Storage Virtual Machine]セクションに表示されます。
 
 
 
-. 98670eb8cc95dd053ed921df2975cefe
+. ストレージ接続リストで、コントローラライセンス列を探します。
 +
-56ea331cb0dea9dc3bddc3e0e2f3ef88
+[Controller License]列には、次のステータスが表示されます。
 
 +
-** bf8a4dfe438069855e34bbd2f8ec59d7
-** 982c80480700680b3b8dc4d7d03053af
-** eba5bfa2c0dc8d9f24998cf70fa891a6
+** image:../media/controller_licensed_icon.gif["チェックアイコン"] FAS、AFF、またはASAプライマリストレージシステムにSnapManager Suiteライセンスがインストールされていることを示します。
+** image:../media/controller_not_licensed_icon.gif["キャンセルアイコン"] FAS、AFF、またはASAプライマリストレージシステムにSnapManager Suiteライセンスがインストールされていないことを示します。
+** [Not Applicable]は、Amazon FSx for NetApp ONTAP、Cloud Volumes ONTAP、ONTAP Select、またはセカンダリストレージプラットフォーム上にストレージコントローラがあるため、SnapManager Suiteライセンスが適用されないことを示します。
 
 
 
 
 
 
-== 778623bf565f3d8f537019c7e81b0948
+== 手順2：コントローラにインストールされているライセンスを特定します
 
-3585befdeb665365a6ab248a97882128
+ONTAPコマンドラインを使用して、コントローラにインストールされているすべてのライセンスを表示できます。FAS、AFF、またはASAシステムのクラスタ管理者である必要があります。
 
 
-NOTE: e7590fb47d0f1f083a0a8a323aa643a0
+NOTE: コントローラでは、SnapCenter StandardコントローラベースライセンスがSnapManagerSuiteライセンスとして表示されます。
 
-.f3a29486bed19a90f2da6d007818b427
-. 062174c6682cfbf4f3b6b5c1d6707824
-. 9865599458fea2a88fc4f94d29ab5c4e
+.手順
+. ONTAPコマンドラインを使用してNetAppコントローラにログインします。
+. license showコマンドを入力し、出力を表示して、SnapManager Suiteライセンスがインストールされているかどうかを確認します。
 +
-.587b796170a9abac4701cd8aa1bb38cb
+.出力例
 [%collapsible]
 ====
 [listing]
@@ -102,21 +102,21 @@ SnapManagerSuite  license  SnapManagerSuite License -
 ----
 ====
 +
-5b12cbd18ef5bbd432e4411b45e422ad
+この例では、 SnapManagerSuite ライセンスをインストールするため、 SnapCenter の追加ライセンスは必要ありません。
 
 
 
 
 
-== 09bfdac33144afac4f96f313740dc959
+== 手順3：コントローラのシリアル番号を取得します
 
-aad4d9def4b52672ae7f25a26b4f8fde
+コントローラベースライセンスのシリアル番号を取得するには、コントローラのシリアル番号が必要です。ONTAPコマンドラインを使用してコントローラのシリアル番号を取得できます。FAS、AFF、またはASAシステムのクラスタ管理者である必要があります。
 
-.f3a29486bed19a90f2da6d007818b427
-. ed996e97427b9382e039c0a5dde5d493
-. 1220394f5402b4332338e11150062d91
+.手順
+. ONTAPコマンドラインを使用してコントローラにログインします。
+. system show -instanceコマンドを入力し、出力を確認してコントローラのシリアル番号を特定します。
 +
-.587b796170a9abac4701cd8aa1bb38cb
+.出力例
 [%collapsible]
 ====
 [listing]
@@ -155,92 +155,92 @@ All-Flash Optimized: false
 2 entries were displayed.
 ----
 ====
-. 065b83de49a875bb4bd71dbe16fad428
+. シリアル番号を記録します。
 
 
 
 
-== 4fb6996a4b0fc33cbed31ac896875422
+== 手順4：コントローラベースライセンスのシリアル番号を取得します
 
-da68fe81ae35bfda8d512b213d4ea64f
+FAS または AFF ストレージを使用している場合、NetApp Support Siteから SnapCenter コントローラベースのライセンスを取得してから、 ONTAP コマンドラインを使用してインストールできます。
 
-.135b308ed83c53f1516b7c754566d1c4
-* 26e6565b87611c0e2e61e424bbf253a8
+.開始する前に
+* NetAppサポートサイトの有効なログインクレデンシャルが必要です。
 +
-315713e21026e04eaaa2b9a3821e4c3d
+有効なクレデンシャルを入力しないと、検索のための情報は返されません。
 
-* 253fa4a7008b4934e4b20001065ef254
+* コントローラのシリアル番号が必要です。
 
 
-.f3a29486bed19a90f2da6d007818b427
-. 9340114ddf8bf8ff75303afd847a3076
-. 55b506dcddf68638833e19d289e73897
-. 681132950ecc3ff0338e2bc9f5253c4e
+.手順
+. にログインし http://mysupport.netapp.com/["NetAppサポートサイト"^]ます。
+. [ システム ] 、 [ * ソフトウェアライセンス ] の順に移動します。
+. [Selection Criteria]領域で、[Serial Number（located on back of unit）]が選択されていることを確認し、コントローラのシリアル番号を入力して*[Go！]*を選択します。
 +
-image::../media/nss_controller_license_select.gif[6c0673b42ebb5475d507b9bee432a6e1]
-
-+
-b5ddaee766816307a016e7736f50313d
-
-. 5da6f07d19afc1937b1b5b064152d98e
-
-
-
-
-== e54115ab5aedb070ef9c763b003e67f1
-
-c15b837a96c2882e6964418dadf776c1
-
-.135b308ed83c53f1516b7c754566d1c4
-* a2e17d154f1b1314694615de5b51003c
-* 9a935baf19dae6c50cae12b831745abd
-
-
-.bbe48fb854ea022537208eeeff822f91
-37ee5b6fcdef2d12a533711b6917c5d7
-
-77284acb8b512806e32e2236346e084c
-
-.f3a29486bed19a90f2da6d007818b427
-. 62749f76fbc0b3c54c0e9340e012798d
-. 62162d6c154980e72f9774396cd832cc
-+
-a9109f87be4f882e4af7256b03cf8603
+image::../media/nss_controller_license_select.gif[選択条件とシリアル番号の入力のスクリーンショット。]
 
 +
-f19a479c9a38f158a358148b2b6e17cc
+指定したコントローラのライセンスのリストが表示されます。
 
-. a138b0f06f247274d2e4ba8de6e7bf8d
+. SnapCenter Standard または SnapManagerSuite ライセンスを探して記録します。
+
+
+
+
+== 手順5：コントローラベースのライセンスを追加する
+
+FAS、AFF、またはASAシステムを使用していて、SnapCenter StandardまたはSnapManager Suiteのライセンスがある場合は、ONTAPコマンドラインを使用してSnapCenterコントローラベースライセンスを追加できます。
+
+.開始する前に
+* FAS、AFF、またはASAシステムのクラスタ管理者である必要があります。
+* SnapCenter StandardまたはSnapManager Suiteのライセンスが必要です。
+
+
+.タスクの内容
+FAS、AFF、またはASAストレージにSnapCenterの試用版をインストールする場合は、Premium Bundleの評価版ライセンスを取得してコントローラにインストールできます。
+
+SnapCenter を試用版としてインストールする場合は、営業担当者にお問い合わせいただき、 Premium Bundle 評価ライセンスを取得してコントローラにインストールしてください。
+
+.手順
+. ONTAP コマンドラインを使用してネットアップクラスタにログインします。
+. SnapManager Suiteライセンスキーを追加します。
 +
-8822a9cc146d06e4ec77936054fb11ca
+`system license add -license-code license_key`
 
-
-
-
-
-== 392e651b70e91641288713738f526ce0
-
-f01f22cfc141e64ad20b64a9b3f2ac85
-
-
-NOTE: b69cd8afc7ba47f5300e7eb1864b6e2f
-
-.f3a29486bed19a90f2da6d007818b427
-. 68dae2573ac7874d6dd234af4fa4c752
 +
-.. aa5c2438bb48bc6f9fc91294d9f5f2c1
-.. 677b5668995b5d565b03294fb7b16727
+このコマンドは、admin権限レベルで使用できます。
+
+. SnapManager Suiteライセンスがインストールされていることを確認します。
 +
-de07b96d6e0726ed58c0b7506fed6a37
+`license show`
 
 
 
-. bdc5e2c886d9f1d7c2db87ea0140c771
+
+
+== ステップ6:試用版ライセンスを削除します
+
+コントローラベースの SnapCenter 標準ライセンスを使用していて、容量ベースの試用版ライセンス ( シリアル番号は「 50 」で終わる ) を削除する必要がある場合は、 MySQL コマンドを使用して、試用版ライセンスを手動で削除する必要があります。試用版ライセンスは、SnapCenter GUIでは削除できません。
+
+
+NOTE: トライアルライセンスを手動で削除する必要があるのは、 SnapCenter の標準コントローラベースのライセンスを使用している場合のみです。
+
+.手順
+. SnapCenterサーバで、PowerShellウィンドウを開いてMySQLパスワードをリセットします。
 +
-4c6cef07724f31f81802bd1558b3066b
-
-. 730761cf69bd21652f5f5b9dc5170f63
+.. SnapCenterAdminアカウントのSnapCenterサーバとの接続セッションを開始するには、Open-SmConnectionコマンドレットを実行します。
+.. Set-SmRepositoryPasswordを実行してMySQLパスワードをリセットします。
 +
-11ed0a0d13245c242749913d8aee1584
+コマンドレットの詳細については、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+
+
+
+. コマンドプロンプトを開き、mysql -u root -pを実行してMySQLにログインします。
++
+パスワードの入力を求められます。パスワードのリセット時に指定したクレデンシャルを入力します。
+
+. データベースから試用版ライセンスを削除します。
++
+`use nsm;``DELETE FROM nsm_License WHERE nsm_License_Serial_Number='510000050';`
 
 

@@ -2,50 +2,50 @@
 permalink: protect-hana/concept_auto_discovery_of_resources_on_linux_host.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for SAP HANA Database 
-summary: 395cb45f84a87f78c742de279b13d230 
+summary: 'リソースとは、SnapCenterで管理されているLinuxホスト上のSAP HANAデータベースとデータボリューム以外のボリュームです。SnapCenter Plug-in for SAP HANA Databaseプラグインをインストールすると、そのLinuxホスト上のSAP HANAデータベースが自動的に検出されて[リソース]ページに表示されます。' 
 ---
-= d63d0f9078f63941d9f67771c5293aac
+= Linuxホスト上のリソースの自動検出
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-395cb45f84a87f78c742de279b13d230
+リソースとは、SnapCenterで管理されているLinuxホスト上のSAP HANAデータベースとデータボリューム以外のボリュームです。SnapCenter Plug-in for SAP HANA Databaseプラグインをインストールすると、そのLinuxホスト上のSAP HANAデータベースが自動的に検出されて[リソース]ページに表示されます。
 
-916fc195781ef467aa61050483fa1044
+自動検出は、次のSAP HANAリソースでサポートされています。
 
-* 1fd4f4fbe0be539c9586a7b058126eda
+* 単一のコンテナ
 +
-cbf20f0dd043272e4fd576fb24c14a22
-
-+
-c81c1b0b29deac38b91cb9b87e76db50
-
-* e7e4a9d1ce06620c6182dc270ca2ce3f
-+
-43fb8b5d561749f608822ed0f8ff166e
+プラグインのインストールまたはアップグレード後、一元化されたホストプラグインにある単一コンテナリソースは、手動で追加したリソースとして続行されます。
 
 +
-6626fe15de034730e066a71b2308dbef
+プラグインをインストールまたはアップグレードすると、SnapCenterに直接登録されているSAP HANA LinuxホストでのみSAP HANAデータベースが自動的に検出されます。
+
+* マルチテナントデータベースコンテナ（MDC）
++
+プラグインのインストールまたはアップグレード後、一元化されたホストプラグインにあるMDCリソースは、手動で追加したリソースとして続行されます。
 
 +
-e3e068bf97e81aa3c82b3a1ef5c543ee
+SnapCenter 4.3にアップグレードしたあとも、一元化されたホストプラグインにMDCリソースを手動で追加する必要があります。
 
 +
-966e9d5b532b7c6f319bcc286d848db9
+SnapCenterに直接登録されているSAP HANA Linuxホストの場合、プラグインをインストールまたはアップグレードすると、ホスト上のリソースの自動検出がトリガーされます。プラグインをアップグレードすると、プラグインホストに配置されていたすべてのMDCリソースについて、別のGUID形式で別のMDCリソースが自動的に検出されてSnapCenterに登録されます。新しいリソースはロック状態になります。
+
++
+たとえば、SnapCenter 4.2では、E90MDCリソースがプラグインホストにあり、手動で登録されている場合、SnapCenter 4.3へのアップグレード後に、別のGUIDを持つ別のE90MDCリソースが検出されてSnapCenterに登録されます。
 
 
 
-660496d454f8c62fac1e483a48bb073a
+自動検出は、次の構成ではサポートされません。
 
-* 238f9ee47b0694879bca4ad15ab7cfe7
+* RDMとVMDKのレイアウト
 +
 
-NOTE: 38c9efd9b38a52c1465875bfa38c1838
+NOTE: 上記のリソースが検出された場合、それらのリソースではデータ保護処理がサポートされません。
 
-* 4b74597e82292ec27dea29bbd7683901
-* a4876889c88ac7bc0f1ec9259fe39e51
-* 9ea78ced3285e07c1b4382084f2c8082
-* ca008dbe9fac2013096d5e5cf923c44e
+* HANAマルチホスト構成
+* 同じホスト上の複数のインスタンス
+* マルチティアスケールアウトHANAシステムレプリケーション
+* システムレプリケーションモードでのカスケードレプリケーション環境
 

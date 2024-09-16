@@ -2,34 +2,34 @@
 permalink: protect-scsql/reference_prerequisites_to_adding_hosts_and_installing_snapcenter_plug_in_for_microsoft_sql_server.html 
 sidebar: sidebar 
 keywords: credentials 
-summary: 2e014a97aaa75a1779bc262286731365 
+summary: ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。 
 ---
-= f9ba38b961aca7823da15b938828b64f
+= ホストを追加してSnapCenter Plug-in for Microsoft SQL Serverをインストールするための前提条件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-2e014a97aaa75a1779bc262286731365
+ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。
 
-* 8dd7d2aae8c4a449ae4eb17577d64964
-* 061b9167e88f686d39fa02000809052c
-* dbef26874057ae0be535fee20766f8cb
-* 953acf14bebe77c11e648186f3957214
+* iSCSIを使用している場合は、iSCSIサービスが実行されている必要があります。
+* リモートホストに対するローカルログイン権限を持つローカル管理者権限を持つユーザが必要です。
+* SnapCenter でクラスタノードを管理する場合は、クラスタ内のすべてのノードに対する管理者権限を持つユーザが必要です。
+* SQL Serverに対するsysadmin権限を持つユーザが必要です。
 +
-d165009fc919b7c43f63036983c47ae0
+SnapCenter Plug-in for Microsoft SQL Server は Microsoft VDI Framework を使用しますが、これには sysadmin アクセスが必要です。
 
 +
-c081ea6f4c7f13224651487050d87831
+http://support.microsoft.com/kb/2926557/["Microsoft のサポート記事 2926557 ：「 SQL Server VDI backup and restore operations require Sysadmin privileges"]
 
-* 6f4630c11483dcb4143ae30dadd50487
-* 9c9a08a242e9f6311be9fa5bd945d582
+* Windowsホストにプラグインをインストールするときに、組み込みでないクレデンシャルを指定した場合やユーザがローカルワークグループに属している場合は、ホストのUACを無効にする必要があります。
+* SnapManager for Microsoft SQL Server がインストールされている場合は、サービスとスケジュールを停止または無効にしておく必要があります。
 +
-1931c747684bb6010ac638ae2be606b3
+バックアップジョブまたはクローンジョブを SnapCenter にインポートする予定の場合は、 SnapManager for Microsoft SQL Server をアンインストールしないでください。
 
-* 024ecfe0da835b1f362b5e64ec1408ab
+* ホストをサーバから完全修飾ドメイン名（FQDN）に解決できる必要があります。
 +
-be512bf47896cfa164b6d043714d4c71
+hosts ファイルが解決可能になるように変更され、短縮名と FQDN の両方が hosts ファイルに指定されている場合は、 SnapCenter hosts ファイルに <IP_address> <host_fqdn><host_name> の形式でエントリを作成します
 
 

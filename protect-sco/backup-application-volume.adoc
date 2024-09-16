@@ -2,95 +2,95 @@
 permalink: protect-sco/backup-application-volume.html 
 sidebar: sidebar 
 keywords: application volume, back up 
-summary: 61112f6f5b442a356210cf4cc80ab89d 
+summary: アプリケーションボリュームがどのリソースグループにも属していない場合は、リソースページからアプリケーションボリュームをバックアップできます。 
 ---
-= d8c3b27e33a2869282039b9ff6a23fc5
+= アプリケーションボリュームのバックアップ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-eba902edb76de30c0b6c9d32f53d05ed
+アプリケーションボリュームがいずれのリソースグループにも属していない場合は、[Resources]ページからアプリケーションボリュームをバックアップできます。
 
-78166ce4ccceeedfbf6aeb8682851072
+* このタスクについて *
 
-aa937e10b9927770901c4ad133aa81f7
+デフォルトでは、整合グループ（CG）バックアップが作成されます。ボリュームベースのバックアップを作成する場合は、 _web.config ファイルで *EnableOracleNdvVolumeBasedBackup* の値を true に設定する必要があります。
 
-4839d2f25cc35b249d5db15efa1afd75
+* 手順 *
 
-. 19d66c8e9b37ee539bf11e5dc7a3d626
-. 5fdfa1dd7a57ddc13008214530f96a84
-. b9d10a11f62e11b503698c7bbbb76969
+. 左側のナビゲーションペインで、 * リソース * をクリックし、リストから Oracle データベースプラグインを選択します。
+. [ リソース ] ページで、 [ * 表示 ] リストから [ * アプリケーションボリューム * ] を選択します。
+. *をクリックしimage:../media/filter_icon.png[""]、ホスト名とデータベースタイプを選択してリソースをフィルタリングします。
 +
-c09c3cc5c352ec79b573a0262d4a9909
+次に、**をクリックしてフィルタペインを閉じることができますimage:../media/filter_icon.png[""]。
 
-. c6cc754896fef7ff6303bf792f45397f
+. バックアップするアプリケーションボリュームを選択します。
 +
-fb532da51d82ae5118e8f3d5cb3bbd50
+[Application volume - Protect]ページが表示されます。
 
-. 8d2ba99665e114b5e2a9d74a31cdf554
+. リソースページで、次の操作を実行します。
 +
 |===
-| 21f831502a413a739e20cbf9f2eefe54 | 5e2ad6fd9deb412d871137094ee43ef0 
+| フィールド | 操作 
 
 
  a| 
-52a580de823d89b3d7b0e19883cf0a1b
+Snapshotコピーにカスタムの名前形式を使用する
  a| 
-9e1730c2573e54b5d90f6eb3254bfc8e
+このチェックボックスをオンにして、Snapshot名に使用するカスタムの名前形式を入力します。
 
-99b1f696253ffa3a8fb97bceb5991c38
+たとえば、customText__policy_hostnameやresource_hostnameなどです。デフォルトでは、Snapshot名にタイムスタンプが追加されます。
 
 
 
  a| 
-056af176267461e7d6a2a9e357208bd7
+アーカイブログデスティネーションをバックアップから除外
  a| 
-491a86dab4dbb4636159b9c8d91d9c09
+バックアップしないアーカイブログファイルのデスティネーションを指定します。
 
 |===
-. 53899dcc4360d3b8622ce5dc08a12950
+. [Policies] ページで、次の手順を実行します。
 +
-.. 70c30c71587e2d0c71b7f9e97a8aad7d
-+
-
-NOTE: e27c3f444b9f74c83a643ba11ed3a83e
-
-
-
-+
-db9cc4a2ed12e21bb79e9346714c68b9
-
-+
-.. 99b0a37a3e506683141bfd2275a4beb2
-.. b04a2aa13bc9b5c2000bf98771ae837a
-+
-b34b9f5decf78eb62a8145da0940d7d1
-
-+
-bf5bc6c2ed0f05ce21c3e597309a4f6b
-
-
-
-. 30b65b6968f11ce5399cacf995839f65
-+
-f1959398bc1be9959fe83a99b07fd5d3
-
+.. ドロップダウンリストから1つ以上のポリシーを選択します。
 +
 
-NOTE: 4dcb8f86b6b59353b86d64a1b6090e41
+NOTE: **をクリックしてポリシーを作成することもできますimage:../media/add_policy_from_resourcegroup.gif[""]。
 
-. fed1c121dc4f5a5484e5623e297385fb
+
+
 +
-e20055e9e346b7f7cc8d7daf8a91a17d
+[ 選択したポリシーのスケジュールを設定 ] セクションに、選択したポリシーが一覧表示されます。
 
-. 2473f0a75a438700af9cf3aca0761dd5
-. 4a1c51520bfb3d170a967d4c218b52bf
 +
-.. 6b4dbd62846fc1dc78b9f63f11af9c78
-.. 96dd2bdaca6a007b13c9f42158b860a6
+.. スケジュールを設定するポリシーの[Configure Schedules]列で、image:../media/add_policy_from_resourcegroup.gif[""]をクリックします。
+.. [Add schedules for policy_name] ウィンドウで、スケジュールを設定し、 [*OK*] をクリックします。
++
+_policy_name_は 、選択したポリシーの名前です。
+
++
+設定されたスケジュールは、 [ 適用されたスケジュール ] 列に一覧表示されます。
 
 
-. 8b9460bf38a68108bcdd278a386b3156
+
+. [ 通知 ] ページの [ 電子メールの設定 *] ドロップダウンリストから、電子メールを送信するシナリオを選択します。
++
+また、送信者と受信者のEメールアドレス、およびEメールの件名を指定する必要があります。リソース上で実行されたバックアップ処理のレポートを添付する場合は、 [ ジョブレポートの添付 ] を選択します。
+
++
+
+NOTE: Eメール通知を使用する場合は、GUIまたはPowerShellコマンドSet-SmSmSmtpServerを使用して、SMTPサーバの詳細を指定しておく必要があります。
+
+. 概要を確認し、 [ 完了 ] をクリックします。
++
+アプリケーションボリュームのトポロジページが表示されます。
+
+. [ 今すぐバックアップ ] をクリックします。
+. Backup （バックアップ）ページで、次の手順を実行します。
++
+.. リソースに複数のポリシーを適用している場合は、「 * Policy * 」ドロップダウン・リストから、バックアップに使用するポリシーを選択します。
+.. [ バックアップ ] をクリックします。
+
+
+. 操作の進行状況を監視するには、 * Monitor * > * Jobs * をクリックします。
 

@@ -2,99 +2,99 @@
 permalink: protect-sco/predefined-environment-variables-prescript-postscript-clone.html 
 sidebar: sidebar 
 keywords: environment variable, predefined, prescript, postscript, clone 
-summary: 6faa8eb5ad385d7b9d987de9ed13bb96 
+summary: SnapCenterでは、データベースのクローニング時にプリスクリプトとポストスクリプトを実行する際に、定義済みの環境変数を使用できます。 
 ---
-= 23623438990ee2646061fa46ca8d9c90
+= クローン固有のプリスクリプトとポストスクリプト用に事前定義された環境変数
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-6faa8eb5ad385d7b9d987de9ed13bb96
+SnapCenterでは、データベースのクローニング時にプリスクリプトとポストスクリプトを実行する際に、定義済みの環境変数を使用できます。
 
-36c03e148801ad7963d0bd10e6e81e5b
+* データベースを複製するためにサポートされている定義済み環境変数 *
 
-* 9f281cdf9f60d9fa57b5d20ea37eb7c0
+* * SC_ORIGIY_SID * はソース・データベースの SID を指定します
 +
-b801630f16ed34a440123ce65d674c85
-
-+
-9e9698d89cb2b33025fdf95c9975f01c
-
-* 387d462aa0ec11427b1e9b118c623af1
-+
-b801630f16ed34a440123ce65d674c85
+このパラメータはアプリケーションボリュームに対して設定されます。
 
 +
-dd88babceb43f2874baae1cbed0deb43
+例：NFSB32
 
-* acf2ee6c0c199c013640e41338b44b62
+* * SC_original_host * にはソース・ホストの名前を指定します
 +
-0934ba5083d807562cd050ae98785059
-
-* 0dfb0e916fd02108fb6b72368ee07adc
-+
-b801630f16ed34a440123ce65d674c85
+このパラメータはアプリケーションボリュームに対して設定されます。
 
 +
-fd05d7f6bfc90e815087880e8e915b43
+例：asmrac1.gdl.englab.netapp.com
+
+* * SC_ORACLE_HOME * は ' ターゲット・データベースの Oracle ホーム・ディレクトリのパスを指定します
++
+例： /ora01/app/oracle/product/18.1.0/db_1
+
+* * SC_backup_name * 」はバックアップ名です。
++
+このパラメータはアプリケーションボリュームに対して設定されます。
 
 +
-** 8b14d496cecfcf33b59c20a5826dbedf
-** 3b24d5bb586d9be7b6c6b773d1a23663
-
-
-* 10440ffeb5573773db05b7df8453c8e9
-+
-6b7752a1808523c459294fb123b6a084
-
-* 67759c5fb9504035a3bc229049352870
-+
-99cbc749af70d4180a575957f73d5d4b
-
-* cf82da52e15173e5df0b2a1eb019faa2
-+
-f146eee03e55472c172731e098bd360f
-
-* df2664af01db300bb747118b9a3de9d1
-+
-be7d99f39710ed24a1341d5de1a99082
+例：
 
 +
-b801630f16ed34a440123ce65d674c85
+** データベースが ARCHIVELOG モードで実行されていない場合： DATA@RG2_scspr2417819002_07-20-2021_12.16.48.9267 _0 | LOG@RG2_scspr2417819002_07-20-2021_12.16.48.9267 _1
+** データベースが ARCHIVELOG モードで実行されている場合： DATA@RG2_scspr2417819002_07-20-2021_12.16.48.9267 _0 | log ： RG2_scspr2417819002_07-020-20-220_1120-216.48.7_1 、 RG2_scspr2417819002_07-021 - 202_112.16.48.9267_1 、 RG2_scspr2417819002_0.267_2.162.16_2.168.267_2.162.168.267_12.16_2.16_2.168.2.168.267_1
+
+
+* * sc_av_name * は、アプリケーション・ボリュームの名前を指定します。
++
+例： AV1|AV2
+
+* * SC_ORIGIY_OS_USER * はソース・データベースのオペレーティング・システムの所有者を指定します
++
+例：Oracle
+
+* * SC_ORIGIY_OS_GROUP * はソース・データベースのオペレーティング・システム・グループを指定します
++
+例：oinstall
+
+* * SC_TARY_SID * 」はクローン・データベースの SID を指定します。
++
+PDBクローンワークフローの場合、このパラメータの値は事前定義されません。
 
 +
-aab5d88c50b34aed52a8aa896848ad1e
-
-* 5b72a0fa50db14ab7eaddfb5de1f1487
-+
-b801630f16ed34a440123ce65d674c85
+このパラメータはアプリケーションボリュームに対して設定されます。
 
 +
-dd88babceb43f2874baae1cbed0deb43
+例：clonedb
 
-* 40983d541b788238169c045613d8b736
+* * SC_TARGET_HOST* は、データベースをクローニングするホストの名前を指定します。
 +
-be7d99f39710ed24a1341d5de1a99082
-
-+
-99cbc749af70d4180a575957f73d5d4b
-
-* f63b50e4bb45f913fb36436dc1e9f995
-+
-be7d99f39710ed24a1341d5de1a99082
+このパラメータはアプリケーションボリュームに対して設定されます。
 
 +
-f146eee03e55472c172731e098bd360f
+例：asmrac1.gdl.englab.netapp.com
 
-* 564121c17c06faf1e6d23527c8c33499
+* * SC_TARGET_OS_USER * は、クローンデータベースのオペレーティング・システムの所有者を指定します。
 +
-be7d99f39710ed24a1341d5de1a99082
+PDBクローンワークフローの場合、このパラメータの値は事前定義されません。
 
 +
-24e6c96c97509916fa8545179f8452cc
+例：Oracle
+
+* * SC_TARGET_OS_GROUP * は、クローンデータベースのオペレーティング・システム・グループを指定します。
++
+PDBクローンワークフローの場合、このパラメータの値は事前定義されません。
+
++
+例：oinstall
+
+* * SC_TARGET_DB_PORT * は、クローンデータベースのデータベースポートを指定します。
++
+PDBクローンワークフローの場合、このパラメータの値は事前定義されません。
+
++
+例：1521
 
 
 
-69a310882c8ceb64e53c0003fde5c8ec
+区切り文字の詳細については、を参照してください link:../protect-sco/predefined-environment-variables-prescript-postscript-backup.html#supported-delimiters["サポートされるデリミタ"^]。

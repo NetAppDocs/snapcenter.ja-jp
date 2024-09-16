@@ -2,26 +2,26 @@
 permalink: protect-db2/types-of-restore-strategies-supported-for-manually-added-ibm-db2.html 
 sidebar: sidebar 
 keywords: SnapCenter 
-summary: bae37dc477dd8028b1c791299e5b18e8 
+summary: SnapCenterを使用してリストア処理を正常に実行するには、戦略を定義する必要があります。手動で追加したIBM DB2リソースには、2種類のリストア戦略があります。手動で追加したIBM DB2リソースはリカバリできません。 
 ---
-= 8ad32eceb919006b59f8320cfe91527f
+= 手動で追加したIBM DB2リソースでサポートされるリストア戦略のタイプ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-651cacd69996377d563ac6cff694d992
+SnapCenterを使用してリストア処理を正常に実行するには、戦略を定義する必要があります。手動で追加したIBM DB2リソースには、2種類のリストア戦略があります。
 
 
-NOTE: fdd61b5f35294047c902797e5819e79f
-
-
-
-== d26e732ff4468b921ec70bf797290866
-
-* 6dac61f5c61b1654fa020acda2c2434d
+NOTE: 手動で追加したIBM DB2リソースはリカバリできません。
 
 
 
-NOTE: cbe1abefab47c8841932e728ba31dde2
+== リソース全体のリストア
+
+* リソースのすべてのボリューム、qtree、およびLUNをリストア
+
+
+
+NOTE: リソースにボリュームまたはqtreeが含まれている場合、そのボリュームまたはqtreeでリストア対象として選択されたSnapshotのあとに作成されたSnapshotは削除され、リカバリできません。また、同じボリュームまたはqtreeで他のリソースがホストされている場合、そのリソースも削除されます。

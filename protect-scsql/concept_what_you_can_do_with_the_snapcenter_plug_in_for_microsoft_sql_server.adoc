@@ -2,41 +2,41 @@
 permalink: protect-scsql/concept_what_you_can_do_with_the_snapcenter_plug_in_for_microsoft_sql_server.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for Microsoft SQL Server 
-summary: 1f30844854c96f58460be92dc3cf6cca 
+summary: SnapCenter Plug-in for Microsoft SQL Serverをインストールした環境では、SnapCenterを使用してSQL Serverデータベースをバックアップ、リストア、およびクローニングすることができます。 
 ---
-= e711517a23398b98d1b1f9a1ef29f16c
+= SnapCenter Plug-in for Microsoft SQL Server の機能
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-1f30844854c96f58460be92dc3cf6cca
+SnapCenter Plug-in for Microsoft SQL Serverをインストールした環境では、SnapCenterを使用してSQL Serverデータベースをバックアップ、リストア、およびクローニングすることができます。
 
-05a560bb0a1f342b789943bb729c17d8
+SQL Serverデータベースとデータベースリソースのバックアップ処理、リストア処理、およびクローニング処理をサポートする次のタスクを実行できます。
 
-* 9d0799e658f43dae98c64e546b8d2015
+* SQL Serverデータベースおよび関連するトランザクションログをバックアップする
 +
-1977a336bc4b17cf6588f74d2bd38d5c
+masterおよびmsdbシステムデータベースのログバックアップは作成できません。ただし、モデルシステムデータベースのログバックアップは作成できます。
 
-* e83624508063a09ee03ffc0a6805fb32
+* データベースリソースのリストア
 +
-** 17ff0af55be65ec18f5a31904af7a234
-** 449086c34644b0f43806ce1791a3f0e0
-** dc5a9b81d1013e495ba6cf76df279929
+** マスターシステムデータベース、msdbシステムデータベース、およびモデルシステムデータベースをリストアできます。
+** 複数のデータベース、インスタンス、および可用性グループをリストアすることはできません。
+** システムデータベースを別のパスにリストアすることはできません。
 
 
-* ccc9f0179963e81770f9334b155c85ef
+* 本番環境のデータベースのポイントインタイムクローンを作成
 +
-b5a9247c30efc3cff3329cccbe4ff8d9
+tempdbシステムデータベースでは、バックアップ、リストア、クローニング、およびクローンライフサイクルの処理を実行できません。
 
-* 260ca7a36b4d58a4cc9740bfdf27ba01
+* バックアップ処理をただちに検証するか、あとで検証する
 +
-c48d82f0b1e5949ce3d34dc8ac74b4b5
+SQL Serverシステムデータベースの検証はサポートされていません。SnapCenterは、検証処理を実行するためにデータベースのクローニングを行います。SnapCenterではSQL Serverシステムデータベースをクローニングできないため、これらのデータベースの検証はサポートされていません。
 
-* c27ceb4a4892c429a975a62841762540
-* aa71cd3a5a90a32aafb3072b19a68b09
+* バックアップ処理とクローニング処理のスケジュールを設定する
+* バックアップ処理、リストア処理、クローニング処理を監視する
 
 
 
-NOTE: c343d8ab7af87f16e58b8e8040d7813a
+NOTE: Plug-in for SQL Server では、 SMB 共有の SQL Server データベースのバックアップとリカバリはサポートされません。

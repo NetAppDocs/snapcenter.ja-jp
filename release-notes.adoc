@@ -2,15 +2,15 @@
 permalink: release-notes.html 
 sidebar: sidebar 
 keywords: release notes, snapcenter 
-summary: 4507e0d1a42287b926181e4cb9fda1cf 
+summary: このリリースの SnapCenter サーバおよび SnapCenter プラグインパッケージに関する重要な情報を提供します。これには、解決済みの問題、既知の問題、注意事項、および制限事項が含まれます。 
 ---
-= 7d0ee6fed10d3d4e5c9ee496729ab519
+= リリースノート
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-4507e0d1a42287b926181e4cb9fda1cf
+このリリースの SnapCenter サーバおよび SnapCenter プラグインパッケージに関する重要な情報を提供します。これには、解決済みの問題、既知の問題、注意事項、および制限事項が含まれます。
 
-ea00e30d27bc1aaf986be0c966259b45
+詳細については、を参照して https://library.netapp.com/ecm/ecm_download_file/ECMLP3323468["SnapCenterソフトウェア6.0リリースノート"^]ください。

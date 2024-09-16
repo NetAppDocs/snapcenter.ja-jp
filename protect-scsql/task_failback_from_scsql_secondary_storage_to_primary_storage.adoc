@@ -2,40 +2,40 @@
 permalink: protect-scsql/task_failback_from_scsql_secondary_storage_to_primary_storage.html 
 sidebar: sidebar 
 keywords: failback, snapcenter 
-summary: a8827ae14ad272b19b5554bf29b0dd50 
+summary: SnapCenter Plug-in for SQL Serverプライマリストレージがオンラインに戻ったら、プライマリストレージにフェイルバックする必要があります。 
 ---
-= c259d7aac6b257b97bf45bb54cdbfb28
+= SnapCenter Plug-in for SQL Serverセカンダリストレージからプライマリストレージへのフェイルバック
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-a8827ae14ad272b19b5554bf29b0dd50
+SnapCenter Plug-in for SQL Serverプライマリストレージがオンラインに戻ったら、プライマリストレージにフェイルバックする必要があります。
 
-.135b308ed83c53f1516b7c754566d1c4
-* 7ffc5c3595639b4cfa7e25819a476178
-* 9f40ce1072a51b415774def35725f89b
-* 6a0b91ad1442c81abd43a4892141f895
+.開始する前に
+* Managed Hosts ページから SnapCenter Plug-in for SQL Server を * Maintenance * モードにします。
+* セカンダリストレージをホストから切断し、プライマリストレージから接続します。
+* プライマリストレージにフェイルバックするには、逆再同期処理を実行して、関係の方向がフェイルオーバー前と同じであることを確認します。
 +
-e1a90fcb56ae2b5738e1b6621b9678d8
+逆再同期処理の実行後もプライマリストレージとセカンダリストレージのロールを保持するには、逆再同期処理をもう一度実行します。
 
 +
-870e9cc587dc575721cbd0ac781f1114
+詳細については、 link:https://docs.netapp.com/us-en/ontap-sm-classic/online-help-96-97/task_reverse_resynchronizing_snapmirror_relationships.html["ミラー関係を逆再同期しています"]
 
-* 106152eddfd0777601f34fbcb5a4530f
-* 6e965c5316b4dc760e2b4d3fcb1b1266
-
-
-
-NOTE: 0352418be0d30e5f0f0b3f664c74e1aa
-
-.f3a29486bed19a90f2da6d007818b427
-. 7dfa5abc2b998d3aad88a3f5fe324a1f
-. a45003880459e1db076218b1c15ceb39
-. 400fae8e788b3721b9ac25fe01f04f50
-. 7e7dac5c0403377139032fc9b9d33aef
+* MSSQLサーバーサービスを再起動します。
+* SQLリソースがオンラインに戻っていることを確認します。
 
 
-.bd965e38a0c9cf27aa1bde099308e23f
-5781848b1bb331dfcd7f6752d3ffd373
+
+NOTE: プラグインのフェイルオーバーまたはフェイルバック中、プラグインの全体的なステータスはすぐには更新されません。ホストおよびプラグインの全体的なステータスは、次回のホスト更新処理で更新されます。
+
+.手順
+. 設定ページで、 * 設定 * > * グローバル設定 * > * ディザスタ・リカバリ * と進みます。
+. [Enable Disaster Recovery] を選択解除します。
+. [ 適用（ Apply ） ] をクリックします。
+. DR ジョブが有効になっているかどうかを確認するには、 * Monitor * > * Jobs * をクリックします。
+
+
+.終了後
+フェイルオーバー中に作成されたSnapCenter Plug-in for SQL Serverのバックアップは、UIまたは次のコマンドレットを使用して削除できます。 `Remove-SmDRFailoverBackups`

@@ -2,25 +2,25 @@
 permalink: protect-azure/configure-azure-storage-account.html 
 sidebar: sidebar 
 keywords: snapcenter, azure, azure storage account, subscription ID, azure credential, azure netapp account 
-summary: aa9472a7b9cb1fc29c7cbe53b4716e81 
+summary: SnapCenterでAzureストレージアカウントを設定します。 
 ---
-= 118cba115d0fa759158cb2faa450d5de
+= Azureストレージアカウントの設定
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-fadf22d2749d2c990d51a1177ed75a3c
+SnapCenterでAzureストレージアカウントを設定する必要があります。
 
-f2a9b03c9542d4be6aef4bdb2f408f9e
+Azureストレージアカウントには、サブスクリプションID、Azureクレデンシャル、およびAzure NetAppアカウントの詳細が含まれます。
 
 
-NOTE: a2706d1c365c79f6f2378228b67eb95a
+NOTE: Azure NetApp Filesには標準ライセンスと容量ベースライセンスは必要ありません。
 
-.f3a29486bed19a90f2da6d007818b427
-. febaac7ceadda0aca80556bfc7f22a33
-. 8f8706f3da7c34c2111a8e25ce94e098
-. b67933dc97bd3a16f77741efb04c9c6a
-. 4b5d2dd70af718ebe67bfea5b43d8667
+.手順
+. 左側のナビゲーションペインで、 * ストレージシステム * をクリックします。
+. [ストレージシステム]ページで、*[ Azure NetApp Files ]*を選択し、*[新規]*をクリックします。
+. クレデンシャル、サブスクリプションID、およびNetAppアカウントをそれぞれのドロップダウンリストから選択します。
+. [Submit （送信） ] をクリックします。
 

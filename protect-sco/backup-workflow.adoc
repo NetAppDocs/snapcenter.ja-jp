@@ -2,25 +2,25 @@
 permalink: protect-sco/backup-workflow.html 
 sidebar: sidebar 
 keywords: backup, workflow 
-summary: 160c0afc78008acd5e27a47466223006 
+summary: リソース（データベース）またはリソースグループのバックアップを作成できます。 
 ---
-= 40a2df546d9e9d7c560fe96c630c6c74
+= バックアップ手順 の概要
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-e5325159577ee33e354dc9b247eb5a41
+リソース（データベース）またはリソースグループのバックアップを作成できます。バックアップ手順 には、計画、バックアップするリソースの特定、バックアップポリシーの作成、リソースグループの作成とポリシーの適用、バックアップの作成、処理の監視が含まれます。
 
-b9721a35a6c374ded595576ccbd2f789
+次のワークフローは、バックアップ処理の実行順序を示しています。
 
-image::../media/sco_backup_workflow.png[fb21695f6b72866357b3e3381a3dd8d4]
+image::../media/sco_backup_workflow.png[Oracle でのバックアップワークフロー]
 
-82c192c42c691360a69594ce2e29350e
+Oracleデータベースのバックアップを作成する際に、データベースで複数の処理が実行されないように、Oracleデータベースホスト上の_/var/opt/snapcenter/sco/lockディレクトリに処理ロックファイル（_.SM_lock_dbsid_）が作成されます。処理ロックファイルは、データベースのバックアップが完了すると自動的に削除されます。
 
-380f9875e9dac40e8c0bc082d654be88
+ただし、前のバックアップが完了して警告が表示された場合は、処理ロックファイルが削除されず、次のバックアップ処理が待機キューに登録される可能性があります。*.SM_LOCK_dbsid * ファイルが削除されていない場合、このファイルは最終的にはキャンセルされる可能性があります。このような場合は、次の手順を実行して処理ロックファイルを手動で削除する必要があります。
 
-. 8e42557ecacac1b49fb43986a24acae3
-. 3ab07b443e5100312a8428cab6f6a083
+. コマンドプロンプトで、_/var/opt/snapcenter/sco/lockに移動します。
+. 処理ロックを削除します。``rm -rf .sm_lock_dbsid.``
 

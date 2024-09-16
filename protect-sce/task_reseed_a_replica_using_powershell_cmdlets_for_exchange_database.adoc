@@ -2,29 +2,29 @@
 permalink: protect-sce/task_reseed_a_replica_using_powershell_cmdlets_for_exchange_database.html 
 sidebar: sidebar 
 keywords: SnapCenter plug-in for Exchange Server 
-summary: dbb2f85d414fd9fb3f4adf345f19a99c 
+summary: PowerShellコマンドレットを使用すると、同じホスト上の最新のコピーまたは代替ホストからの最新のコピーを使用して、正常でないレプリカをリストアできます。 
 ---
-= b472988863abcfb897af4f291e7a410f
+= ExchangeデータベースヨウノPowerShellコマントレツトヲシヨウシタレプリカノサイシード
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-dbb2f85d414fd9fb3f4adf345f19a99c
+PowerShellコマンドレットを使用すると、同じホスト上の最新のコピーまたは代替ホストからの最新のコピーを使用して、正常でないレプリカをリストアできます。
 
-74db7181476f94f0e2927d8c8d98cb97
+コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
 
-.f3a29486bed19a90f2da6d007818b427
-. e8b2bea378ae2d61944327f562235bbe
+.手順
+. コマンドレットを使用して、指定したユーザでSnapCenterサーバとの接続セッションを開始します `Open-SmConnection` 。
 +
 [listing]
 ----
 Open-smconnection  -SMSbaseurl  https:\\snapctr.demo.netapp.com:8146/
 ----
-. f57730a0247c69cadad062111d092b1e
+. コマンドレットを使用して、データベースを再シードし `reseed-SmDagReplicaCopy` ます。
 +
-8b3222a3884b8f2f5739a53f549e8da0
+この例では、ホスト「mva-rx200.netapp.com"」上のexecdbというデータベースの失敗したコピーを、そのホスト上の最新のバックアップを使用して再シードします。
 
 +
 [listing]
@@ -32,7 +32,7 @@ Open-smconnection  -SMSbaseurl  https:\\snapctr.demo.netapp.com:8146/
 reseed-SmDagReplicaCopy -ReplicaHost "mva-rx200.netapp.com" -Database execdb
 ----
 +
-cc5bc1d26171e5ce9676fcd50c26b3b4
+この例では、代替ホスト「mva-rx201.netapp.com."」上のデータベース（production/copy）の最新のバックアップを使用して、execdbという名前のデータベースの失敗したコピーを再シードします。
 
 +
 [listing]

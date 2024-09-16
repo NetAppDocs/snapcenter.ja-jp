@@ -2,15 +2,15 @@
 permalink: protect-scsql/concept_snapcenter_plug_in_for_microsoft_sql_server_overview.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for Microsoft SQL Server 
-summary: d89db36e40cda4db9332408e3db1bcae 
+summary: SnapCenter Plug-in for Microsoft SQL Server は、 Microsoft SQL Server データベースに対応したデータ保護管理を提供する、 NetApp SnapCenter ソフトウェアのホスト側コンポーネントです。Plug-in for SQL Server を使用することで、 SnapCenter 環境での SQL Server データベースのバックアップ、検証、リストア、およびクローニングの処理を自動化できます。 
 ---
-= 684a61c61cc522de778dd73d69a56db5
+= SnapCenter Plug-in for Microsoft SQL Server の概要
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-c5014d22a313068a158c26e54205b1bd
+SnapCenter Plug-in for Microsoft SQL Server は、 Microsoft SQL Server データベースに対応したデータ保護管理を提供する、 NetApp SnapCenter ソフトウェアのホスト側コンポーネントです。Plug-in for SQL Serverを使用すると、SnapCenter環境でのSQL Serverデータベースのバックアップ、検証、リストア、およびクローニングの処理を自動化できます。
 
-fd7c25f250fa06be60d09323c5f66c05
+Plug-in for SQL Server をインストールすると、 SnapCenter で NetApp SnapMirror テクノロジを使用して別のボリュームにバックアップセットのミラーコピーを作成できるほか、 NetApp SnapVault テクノロジを使用して標準への準拠やアーカイブを目的としたディスクツーディスクのバックアップレプリケーションを実行できます。

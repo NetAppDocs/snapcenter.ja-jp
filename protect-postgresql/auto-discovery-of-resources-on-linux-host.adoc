@@ -2,13 +2,13 @@
 permalink: protect-postgresql/auto-discovery-of-resources-on-linux-host.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for PostgreSQL 
-summary: 8df8e33d8de2d6167669d469ccf7bacd 
+summary: 'リソースとは、SnapCenterによって管理されるLinuxホスト上のPostgreSQLクラスタとインスタンスです。SnapCenter Plug-in for PostgreSQLプラグインをインストールすると、そのLinuxホスト上のPostgreSQLクラスタが自動的に検出され、[Resources]ページに表示されます。' 
 ---
-= d63d0f9078f63941d9f67771c5293aac
+= Linuxホスト上のリソースの自動検出
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-b7010b9dd54942efc350213b545f8fcc
+リソースとは、SnapCenterによって管理されるLinuxホスト上のPostgreSQLクラスタとインスタンスです。SnapCenter Plug-in for PostgreSQLプラグインをインストールすると、そのLinuxホスト上のすべてのインスタンスのPostgreSQLクラスタが自動的に検出され、[Resources]ページに表示されます。

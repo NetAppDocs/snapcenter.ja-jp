@@ -2,42 +2,42 @@
 permalink: install/task_reclaim_space_on_the_storage_system.html 
 sidebar: sidebar 
 keywords: space 
-summary: 7bd52ce3f472e3b8055db63e686c8c75 
+summary: ファイルが削除または変更されると、NTFSはLUN上の使用可能なスペースを追跡しますが、新しい情報はストレージシステムには報告しません。新しく解放されたブロックがストレージで使用可能とマークされるようにするには、Plug-in for Windowsホストでスペース再生PowerShellコマンドレットを実行します。 
 ---
-= d42a857617c39acde55da72ff994c884
+= ストレージシステム上のスペースの再生
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-7bd52ce3f472e3b8055db63e686c8c75
+ファイルが削除または変更されると、NTFSはLUN上の使用可能なスペースを追跡しますが、新しい情報はストレージシステムには報告しません。新しく解放されたブロックがストレージで使用可能とマークされるようにするには、Plug-in for Windowsホストでスペース再生PowerShellコマンドレットを実行します。
 
-6ef3bcfd7b9d6c8aa9e4be74b7439bd4
+コマンドレットをリモートのプラグインホストで実行する場合は、SnapCenterOpen-SMConnectionコマンドレットを実行してSnapCenterサーバへの接続を確立しておく必要があります。
 
-.135b308ed83c53f1516b7c754566d1c4
-* e4bb8b7a61476c038ab0e11b82c9900f
-* 4896f95e03a5144a31d99584519b9a80
-* 41d11095d20bcb2569c01cede3d27ad9
+.開始する前に
+* リストア処理を実行する前に、スペース再生プロセスが完了していることを確認する必要があります。
+* Windows Serverフェイルオーバークラスタ内のホストでLUNを共有している場合は、クラスタグループを所有するホストでスペース再生を実行する必要があります。
+* ストレージのパフォーマンスを最適化するには、できるだけ頻繁にスペース再生を実行します。
 +
-48d3950932b1aa27d86fab82167b0592
+NTFSファイルシステム全体がスキャンされていることを確認する必要があります。
 
 
 
-78166ce4ccceeedfbf6aeb8682851072
+* このタスクについて *
 
-* 539bbff3b8b95f86b4b4c596f50c1b51
-* e38a579a5d02666aa98c20b3c9711396
-* 8458d2f0e3605da904e89253ad0e0498
+* スペース再生には時間がかかり、CPUを大量に消費するため、通常はストレージシステムとWindowsホストの使用率が低いときに処理を実行することを推奨します。
+* スペース再生では、使用可能なほぼすべてのスペースが再生されますが、100%ではありません。
+* スペース再生の実行中にディスクのデフラグは実行しないでください。
 +
-e2cd133e368a6b0088a9a6e02a654b70
+再利用プロセスに時間がかかることがあります。
 
 
 
-e634bbfa951fb769598deb5b24346cbc
+* ステップ *
 
-b1248286cc57ec4339e275506465447f
+アプリケーションサーバのPowerShellコマンドプロンプトで、次のコマンドを入力します。
 
-58fcb30243362404aa49a696ba9ecb8f
+`Invoke-SdHostVolumeSpaceReclaim -Path drive_path`
 
-4bd794aa3bb945bb77d57623586a610c
+drive_pathは、LUNにマッピングされたドライブパスです。

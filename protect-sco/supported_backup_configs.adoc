@@ -2,46 +2,46 @@
 permalink: protect-sco/supported_backup_configs.html 
 sidebar: sidebar 
 keywords: backup type, preferred nodes, catalog backups, schedules, backup name format, retention, verification 
-summary: c099310b5ff326a16534f7447f14aa9a 
+summary: SnapCenter では、各種の Oracle データベース構成のバックアップがサポートされます。 
 ---
-= 837133a617997f77e41ae32488daeff9
+= バックアップでサポートされるOracleデータベース構成
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-c099310b5ff326a16534f7447f14aa9a
+SnapCenter では、各種の Oracle データベース構成のバックアップがサポートされます。
 
-* 2dc037b125d6e3bfb2032aa6bffa8e5f
-* 5c87e825763ec1e41a459f6baa4b2a44
-* ef62616fdeae7086cfaa9dcca33374a0
-* effc9d3d4664506a55e9c32fb5fc0604
-* 8751f7fac05d7fa72f4ddaaa43371b3f
+* Oracleスタンドアロン
+* Oracle Real Application Clusters（RAC）
+* Oracleスタンドアロンレガシー
+* Oracleスタンドアロンコンテナデータベース（CDB）
+* Oracle Data Guardスタンバイ
 +
-f19d57bcd8d709150967f0765ad8f83e
+オフラインマウントバックアップは、Data Guardスタンバイデータベースのみ作成できます。オフラインシャットダウンバックアップ、アーカイブログのみのバックアップ、およびフルバックアップはサポートされていません。
 
-* 6a4fa86f635c3bf637dc3ba8b0903f58
+* Oracle Active Data Guardスタンバイ
 +
-63f9e3e83223f2911b78e1133fee7f18
+オンラインバックアップは、Active Data Guardスタンバイデータベースのみ作成できます。アーカイブログのみのバックアップとフルバックアップはサポートされません。
 
 +
-b29ccefe1ca0008e4ebc0e4b740c73ac
+Data GuardスタンバイデータベースまたはActive Data Guardスタンバイデータベースのバックアップを作成する前に、Managed Recovery Process（MRP；管理リカバリプロセス）が停止し、バックアップが作成されるとMRPが開始されます。
 
-* 8a1a731fed39339d6fac7204b3098ff5
+* Automatic Storage Management（ASM；自動ストレージ管理）
 +
-** 86850d3b039f1b2efe23869b59bfc9a2
+** 仮想マシンディスク（ VMDK ）上の ASM スタンドアロンおよび ASM RAC
 +
-7a72ea656473ba08d5337fc2b51891f7
+Oracleデータベースでサポートされているすべてのリストア方式の中で、VMDK上で実行できるのはASM RACデータベースの接続およびコピーリストアだけです。
 
-** 47360f25b760514cfd5222ea8efb3fca
-** 750b10574c7c5ac05afa7817be89a63e
+** ASMスタンドアロンおよびASM RAC on Raw Device Mapping（RDM）+ ASMLibの有無にかかわらず、ASM上のOracleデータベースに対してバックアップ、リストア、およびクローニングの操作を実行できます。
+** Oracle ASMフィルタドライバ（ASMFD）
 +
-da02aa1448f6bd34e97b4d20a7b5bdcf
+PDB移行およびPDBクローニング処理はサポートされていません。
 
-** 0483f292b9712b967df26187e876eb45
-
-
+** Oracle Flex ASM
 
 
-54634901ea136d581a907da437231faa
+
+
+サポートされているOracleのバージョンの最新情報については、を参照して https://imt.netapp.com/matrix/imt.jsp?components=121071;&solution=1259&isHWU&src=IMT["NetApp Interoperability Matrix Tool"^]ください。

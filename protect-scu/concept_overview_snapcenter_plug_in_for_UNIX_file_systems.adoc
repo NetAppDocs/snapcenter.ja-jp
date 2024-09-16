@@ -2,96 +2,96 @@
 permalink: protect-scu/concept_overview_snapcenter_plug_in_for_UNIX_file_systems.html 
 sidebar: sidebar 
 keywords: overview, unix file system, plug-in for unix file system, backup, restore, clone 
-summary: 3c43cac8b613c8c22e6a92a5905441bd 
+summary: Plug-in for Unix file systemsは、TOF UNIXファイルシステムのバックアップ、リストア、およびクローニングをサポートしています。 
 ---
-= 42477b5e0093c02f483d444f00097e03
+= UNIXファイルシステム用SnapCenterプラグインの機能
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-edced10c2e83d5d24cd37ba0ae78885f
+Plug-in for UNIXファイルシステムをインストールした環境では、SnapCenterを使用してUNIXファイルシステムをバックアップ、リストア、およびクローニングできます。これらの処理をサポートするタスクを実行することもできます。
 
-* a9cb19189dd216e2f0f26d24f56159b3
-* eef1f01baa0cefb3f1e750871fe5d85e
-* 52814ee134d96d7aaaebbf2b06a349e5
-* 2b2d059ed21487051f750fd10c2e74b8
-* d1359b74848d2219dab91038da7ebea8
-* 95916fa1aeaccaca841a441bf77df5cf
-
-
-
-
-== 1f0b82560627b660c6c6958a1df834b8
-
-|===
-| 7d74f3b92b19da5e606d737d339a9679 | a470b9079d65fd390c8d7493dec5f4e9 
-
-
- a| 
-551388036a08752c7fb78efbb27a659a
- a| 
-* e042e676706d93b3b14ce12e4d00a002
-* 1dc9cdc62ef851146b399c9c92527991
-+
-e8a80f51a380399cc4fb8a1eed4a7c79
+* リソースの検出
+* UNIXファイルシステムのバックアップ
+* バックアップ処理のスケジュール設定
+* ファイルシステムのバックアップのリストア
+* ファイルシステムのバックアップのクローニング
+* バックアップ、リストア、クローニングの各処理を監視する
 
 
 
 
-
- a| 
-43574ab73a6cbc674506ff003387dcb1
- a| 
-* c73bbd3786350b0a8d3577d82afdf489
-* fdcd362ac5f5f9817e70642dd2a48bfd
-* a51e41e4cd7b03dd48ce2e65ed3e1736
-
-
-
-
- a| 
-3b18b13f059019d19211f8a9f36f7e4e
- a| 
-* 85e9e72057a18b950343000578489311
-+
-** 62e43ca8ba3e41b750c7e0f94302192c
-** efd965c2a2ac32d844e3f6bfb153db4d
-
-
-* fc0c30da47ae95c2b524f22c14dda9a9
-
-
-
-
- a| 
-9985b4390c40137573e6da05caf85874
- a| 
-* 6b8f0029ce30f9b4d5fe0def33875511
-* 14eae6ee278098bfad4f8a10fd6c1195
-* e4e1c13bb0b14f6cb7608cbecea948ef
-* 1d1a594959ec615f56516f5d0f5e8ddb
-
-
-
-
- a| 
-ac58734406d71430b36fdaf1f991bd19
- a| 
-a6105c0a611b41b08f1209506350279e
+== サポートされる構成
 
 |===
+| 項目 | サポートされる構成 
 
 
-== e646e16bee8b32e6ea29e30d01970a6c
-
-* dfb076854bc7b13a11f800b95ba9c4f9
-* 5276b926cad51a43e317584432fca7b0
+ a| 
+環境
+ a| 
+* 物理サーバ
+* 仮想サーバ
 +
-8b833891142b8092e809edef6c3ca592
+NFSとSANの両方にVVOLデータストアを配置します。 VVOLデータストアは、ONTAP Tools for VMware vSphereでのみプロビジョニングできます。
 
-* d49d985bf239ce1277c7fa6f661fce12
-* 6d49cdfcebad5c44683d452be73d9991
-* 596de2f49aa37248a5a4bf972dd530bb
+
+
+
+
+ a| 
+オペレーティングシステム
+ a| 
+* Red Hat Enterprise Linux
+* Oracle Linux
+* SUSE Linux Enterprise Server（SLES）
+
+
+
+
+ a| 
+ファイルシステム
+ a| 
+* SAN ：
++
+** LVMベースと非LVMベースの両方のファイルシステム
+** VMDK ext3、ext4、xfs経由のLVM
+
+
+* NFS：NFS v3、NFS v4.x
+
+
+
+
+ a| 
+プロトコル
+ a| 
+* FC
+* FCoE
+* iSCSI
+* NFS
+
+
+
+
+ a| 
+マルチパス
+ a| 
+はい
+
+|===
+
+
+== 制限事項
+
+* ボリュームグループでのRDMと仮想ディスクの混在はサポートされていません。
+* ファイルレベルのリストアはサポートされていません。
++
+ただし、バックアップをクローニングし、ファイルを手動でコピーすることで、ファイルレベルのリストアを手動で実行できます。
+
+* NFSデータストアとVMFSデータストアの両方からの複数のVMDKにまたがるファイルシステムの混在はサポートされていません。
+* NVMeはサポートされません。
+* プロビジョニングはサポートされていません。
 

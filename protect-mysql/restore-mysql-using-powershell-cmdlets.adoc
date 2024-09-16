@@ -2,30 +2,30 @@
 permalink: protect-mysql/restore-mysql-using-powershell-cmdlets.html 
 sidebar: sidebar 
 keywords: restore, mysql, snapcenter 
-summary: cd590f35a0b386a7dbd4ed93e94a2563 
+summary: MySQLバックアップをリストアするには、SnapCenterサーバとの接続セッションを開始し、バックアップをリストしてバックアップ情報を取得し、バックアップをリストアします。 
 ---
-= 68a34ea2d1e4c6a908fbd0f2e0dfd502
+= PowerShellコマンドレットを使用したMySQLデータベースのリストア
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-cd590f35a0b386a7dbd4ed93e94a2563
+MySQLバックアップをリストアするには、SnapCenterサーバとの接続セッションを開始し、バックアップをリストしてバックアップ情報を取得し、バックアップをリストアします。
 
-.135b308ed83c53f1516b7c754566d1c4
-c90de0347e94ade70c96034e2ffca3ba
+.開始する前に
+PowerShellコマンドレットを実行できるようにPowerShell環境を準備しておく必要があります。
 
-.f3a29486bed19a90f2da6d007818b427
-. 623aa9b9d36889377a728b1284e5485e
+.手順
+. Open-SmConnectionコマンドレットを使用して、指定したユーザのSnapCenterサーバとの接続セッションを開始します。
 +
 [listing]
 ----
 PS C:\> Open-SmConnection  -SMSbaseurl  https:\\snapctr.demo.netapp.com:8146/
 ----
-. 0be208f27c2aea320f1d6d221e131551
+. Get-SmBackupコマンドレットおよびGet-SmBackupReportコマンドレットを使用して、リストアするバックアップを特定します。
 +
-2004c840a5bc74f37ca5c26f2dfd5e0e
+この例では、リストアに使用できるバックアップが2つあります。
 
 +
 [listing]
@@ -38,7 +38,7 @@ PS C:\> Open-SmConnection  -SMSbaseurl  https:\\snapctr.demo.netapp.com:8146/
          2          Payroll Dataset_vise-f6_08... 8/4/2015 11:23:17 AM
 ----
 +
-d1024e540ddbde0c895907728f551025
+この例では、2015年1月29日から2015年2月3日までのバックアップに関する詳細情報を表示しています。
 
 +
 [listing]
@@ -73,14 +73,14 @@ SmBackupId           : 113
    BackupName           : Clone_SCSPR0019366001_02-02-2015_13.02.45
    VerificationStatus   : NotVerified
 ----
-. 9cb2e8b30975ae43fe6a8ea67898a952
+. HANA Studioでリカバリプロセスを開始します。
 +
-a53d0252472f1610734654e51124858b
+データベースがシャットダウンされます。
 
-. 4544315cf8cf4a9ef7dd5ae463d9557d
+. Restore-SmBackupコマンドレットを使用して、バックアップからデータをリストアします。
 +
 
-NOTE: 5e9e173d2acff941dc42dd384b711936
+NOTE: AppObjectIdは「Host\Plugin\UID」です。UID =<instance_name>は手動で検出されたインスタンスリソース用、UID =<instance_name>\<databse_name>はMySQLデータベースリソース用です。リソースIDはGet-SmResourcesコマンドレットで取得できます。
 
 +
 [listing]
@@ -88,7 +88,7 @@ NOTE: 5e9e173d2acff941dc42dd384b711936
 PS C:\> Get-SmResources  -HostName cn24.sccore.test.com  -PluginCode MySQL
 ----
 +
-2aa8b416a2f876e9cf8c5050ccf69e30
+この例は、プライマリストレージからデータベースをリストアする方法を示しています。
 
 +
 [listing]
@@ -96,7 +96,7 @@ PS C:\> Get-SmResources  -HostName cn24.sccore.test.com  -PluginCode MySQL
 PS C:\> Restore-SmBackup -PluginCode MySQL -AppObjectId cn24.sccore.test.com\MySQL\MySQLinst1\DB01 -BackupId 3
 ----
 +
-08fb7677c629e186e2ce0a37ba408715
+この例は、セカンダリストレージからデータベースをリストアする方法を示しています。
 
 +
 [listing]
@@ -104,6 +104,6 @@ PS C:\> Restore-SmBackup -PluginCode MySQL -AppObjectId cn24.sccore.test.com\MyS
 PS C:\> Restore-SmBackup -PluginCode 'MySQL' -AppObjectId cn24.sccore.test.com\MySQL\MySQLinst1\DB01 -BackupId 399 -Confirm:$false  -Archive @( @{"Primary"="<Primary Vserver>:<PrimaryVolume>";"Secondary"="<Secondary Vserver>:<SecondaryVolume>"})
 ----
 +
-74db7181476f94f0e2927d8c8d98cb97
+コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
 
 

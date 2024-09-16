@@ -2,47 +2,47 @@
 permalink: protect-scsql/concept_requirements_for_restoring_a_database.html 
 sidebar: sidebar 
 keywords: Requirements 
-summary: 2fd9111fd14738ba180065d2a1781ed9 
+summary: SnapCenter Plug-in for Microsoft SQL Server のバックアップから SQL Server データベースをリストアする前に、以下の要件を満たしていることを確認する必要があります。 
 ---
-= 818095849ac39056a1077a0f3a155684
+= データベースをリストアする際の要件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-2fd9111fd14738ba180065d2a1781ed9
+SnapCenter Plug-in for Microsoft SQL Server のバックアップから SQL Server データベースをリストアする前に、以下の要件を満たしていることを確認する必要があります。
 
-* 20b078430559b42b4240a3017f788a65
+* データベースをリストアするには、ターゲットSQL Serverインスタンスがオンラインで実行されている必要があります。
 +
-b094182973618384d34ac408ccdbc260
+これは、ユーザデータベースのリストア処理とシステムデータベースのリストア処理の両方に該当します。
 
-* 5afa882e6a333b1496afa5fc5891607c
-* b4f1a9d0380d9a08988b6963b049898a
-* 4ce23d0c0ae4ca620e8cbe0ec1fb9ae9
+* リモートアドミニストレーションサーバまたはリモート検証サーバでスケジュール設定しているジョブも含め、リストアする SQL Server データに対して実行されるスケジュール設定されている SnapCenter 処理を無効にする必要があります。
+* システムデータベースが機能していない場合は、まずSQL Serverユーティリティを使用してシステムデータベースを再構築する必要があります。
+* プラグインをインストールする場合は、可用性グループ（AG）のバックアップをリストアする権限を他のロールに付与してください。
 +
-9de6eb051d7d5901e06a3ea818c92b79
+次のいずれかの条件が満たされると、AGのリストアが失敗します。
 
 +
-** 2a119758ae086d8d32eaa4646e0ef9da
-** 7a86c31942118e0dffd4bc26f32d17d3
+** RBACユーザがプラグインをインストールし、管理者がAGバックアップをリストアしようとした場合
+** 管理者がプラグインをインストールし、RBACユーザがAGバックアップをリストアしようとした場合
 
 
-* b9bcad05f774685d204d175d4a71a9a0
-* f2ed827e29c57bcbd9e8bc612f8307f2
+* カスタムログディレクトリのバックアップを別のホストにリストアする場合は、SnapCenterサーバとプラグインホストに同じバージョンのSnapCenterがインストールされている必要があります。
+* Microsoft修正プログラムKB2887595をインストールしておく必要があります。KB2887595の詳細については、Microsoftサポートサイトを参照してください。
 +
-145ee2da76e280f3ab74f8e48a4f6229
+https://support.microsoft.com/kb/2887595["Microsoft のサポート記事 2887595 ：「 Windows RT 8.1 、 Windows 8.1 、 and Windows Server 2012 R2 update rollup ： November 2013"]
 
-* 3a398ade5cc2db068632e3780c5f9812
-* 1dc16d578df13bb68e843ba44a6ec58e
+* リソースグループまたはデータベースをバックアップしておく必要があります。
+* Snapshotをミラーまたはバックアップにレプリケートする場合は、SnapCenter管理者がユーザにソースボリュームとデスティネーションボリュームの両方に対してStorage Virtual Machine（SVM）を割り当てておく必要があります。
 +
-14310a3e36aca9ee4f8ae01ecce176f6
+管理者によるユーザへのリソースの割り当て方法については、 SnapCenter のインストール情報を参照してください。
 
-* 9ab48724fd891b73fc67de8664319345
-* 10344402be0db5fed4bdb763360d91a4
+* データベースをリストアする前に、すべてのバックアップジョブとクローンジョブを停止する必要があります。
+* データベースサイズがテラバイト（TB）単位の場合、リストア処理がタイムアウトすることがあります。
 +
-b4681b9eaef5652378ef9426e99a8f63
+次のコマンドを実行して、 SnapCenter サーバの RESTTimeout パラメータの値を 20000000ms に増やす必要があります。 Set-SmConfigSettings -Agent -configSettings @ ｛ "RESTTimeout" = "20000000" ｝ 。データベースのサイズに応じてタイムアウト値を変更でき、設定可能な最大値は86400000ミリ秒です。
 
 
 
-67758aec18021f6235b6a5ed9330f493
+データベースをオンラインにしたままリストアする場合は、リストアページでオンラインリストアオプションを有効にする必要があります。

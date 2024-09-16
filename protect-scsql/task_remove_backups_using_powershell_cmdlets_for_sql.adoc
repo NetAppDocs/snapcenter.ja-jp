@@ -2,31 +2,31 @@
 permalink: protect-scsql/task_remove_backups_using_powershell_cmdlets_for_sql.html 
 sidebar: sidebar 
 keywords: backups 
-summary: 5a4e7986bae0a2c894ba99a3277fcf98 
+summary: Remove-SmBackupコマンドレットを使用すると、他のデータ保護処理で不要になったバックアップを削除できます。 
 ---
-= c7abd5797dbf501112fdb42c49a4df92
+= PowerShellコマンドレットを使用したバックアップの削除
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-5a4e7986bae0a2c894ba99a3277fcf98
+Remove-SmBackupコマンドレットを使用すると、他のデータ保護処理で不要になったバックアップを削除できます。
 
-c90de0347e94ade70c96034e2ffca3ba
+PowerShellコマンドレットを実行できるようにPowerShell環境を準備しておく必要があります。
 
-74db7181476f94f0e2927d8c8d98cb97
+コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
 
-.f3a29486bed19a90f2da6d007818b427
-. 623aa9b9d36889377a728b1284e5485e
+.手順
+. Open-SmConnectionコマンドレットを使用して、指定したユーザのSnapCenterサーバとの接続セッションを開始します。
 +
 [listing]
 ----
 PS C:\> Open-SmConnection
 ----
-. a9961b834480ea5a82aff5c0e9cf0da8
+. Remove-SmBackupコマンドレットを使用して、1つ以上のバックアップを削除します。
 +
-ea2acdbc1a4fb35cdfb9da7003b18901
+この例では、バックアップIDを使用してバックアップを2つ削除しています。
 
 +
 [listing]

@@ -2,132 +2,132 @@
 permalink: protect-nsp/back_up_individual_netapp_supported_plugins_resources.html 
 sidebar: sidebar 
 keywords: backup, NetApp supported plug-ins 
-summary: c4e433903376436b2e77e2cfdc6f5913 
+summary: 'どのリソースグループにも含まれていない個 々 のNetAppサポートプラグインリソースは、[Resources]ページからバックアップできます。リソースはオンデマンドでバックアップできます。また、リソースにポリシーが適用され、スケジュールが設定されている場合は、スケジュールに従って自動的にバックアップが実行されます。' 
 ---
-= 6ce5278b296a0a5a39af4a4d0cbd927c
+= NetAppでサポートされているプラグインリソースを個別にバックアップする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-c4e433903376436b2e77e2cfdc6f5913
+どのリソースグループにも含まれていない個 々 のNetAppサポートプラグインリソースは、[Resources]ページからバックアップできます。リソースはオンデマンドでバックアップできます。また、リソースにポリシーが適用され、スケジュールが設定されている場合は、スケジュールに従って自動的にバックアップが実行されます。
 
-.135b308ed83c53f1516b7c754566d1c4
-* bb9d7068e92869688b6abcc02fa7e603
-* 08c86005ddd32599a5beea4c7b9ff4ad
+.開始する前に
+* バックアップポリシーを作成しておく必要があります。
+* セカンダリストレージとの SnapMirror 関係があるリソースをバックアップする場合、ストレージユーザに割り当てられた ONTAP ロールには「「 'SnapMirro all' 」権限を含める必要があります。ただし、「 vsadmin 」ロールを使用している場合、「 'SnapMirro all 」権限は必要ありません。
 
 
-.f3a29486bed19a90f2da6d007818b427
-. 530a5fa7e8fbaa4c796dbd46c93a55dd
-. 1bf25096670c9621cda8c9d3e8bee4ad
+.手順
+. 左側のナビゲーションペインで、 * リソース * をクリックし、リストから適切なプラグインを選択します。
+. [ リソース ] ページで、リソースタイプに基づいて、 *View*] ドロップダウンリストからリソースをフィルタリングします。
 +
-2b88427244b62aacd4debde72476dcb0
+をクリックし image:../media/filter_icon.png[""]、ホスト名とリソースタイプを選択してリソースをフィルタリングします。そのあとにimage:../media/filter_icon.png["フィルタアイコン"]をクリックすると、フィルタ ペインが閉じます。
 
-. 085ab917326888bb9fd0378b5efb84b9
-. aeae183dfc696fe75906213d043a525b
+. バックアップするリソースをクリックします。
+. カスタムの名前を使用する場合は、[Resource]ページで*[Use custom name format for Snapshot copy]*チェックボックスを選択し、Snapshot名のカスタムの名前形式を入力します。
 +
-3df4bf361c2bfb2dfa84fc1cffa5779e
+たとえば、 _customText_policy_hostname_or_resource_hostname_hostname_1 です。デフォルトでは、Snapshot名にタイムスタンプが追加されます。
 
-. 007bb45dbc12aff746ee53defa1f784f
+. [ アプリケーションの設定 ] ページで、次の操作を行います。
 +
-.. 23ce0178ca7588539a792fb41d10d6d6
+.. [*Backups] の矢印をクリックして、追加のバックアップ・オプションを設定します。
 +
-75acd63fc160c8f401a6e89437895634
+必要に応じて整合グループのバックアップを有効にし、次のタスクを実行します。
 
-+
-|===
-| 21f831502a413a739e20cbf9f2eefe54 | 5e2ad6fd9deb412d871137094ee43ef0 
-
-
- a| 
-a99f0aeaf38081c20a7370fb0f80e5fb
- a| 
-168d37e62ff50182379a645020cf7152
-
-01509b1df2505486f61f51b88bcefee0
-
-
-
- a| 
-33d8fc89984b399b5f14da8a76d58c5a
- a| 
-27a16d7d61f6682ceaf4d8022ffa250f
-
-|===
-+
-bed9b64da70ed7a9d6e9838df1b96480
-
-.. 54c33b2bcea395f4a04e336452fdf01b
-+
-a5094e6952e443df9b800d4f5e45d91d
-
-.. b6b1826c899350995a39684ee19f8c7d
-.. c9127adbadee36ca206638ad1cccd8ad
 +
 |===
-| 70ea5c730ba565a725b5e6a5ce34b32d | c1325f6903ebb5ebb2bb519a73ddb1b0 
+| フィールド | 操作 
 
 
  a| 
-7abbc88f0fd37782c0173c64624bd002
+整合グループSnapshot処理が完了するまで待機する時間がある
  a| 
-6d9c2c737b6e3a27597d11ff3b1d8a05
+Snapshot処理が完了するまでの待機時間として、[Urgent]、[Medium]、または[Relaxed]のいずれかを選択します。
 
-
-
- a| 
-4cdad3fc327406a192cf8fddec7132e3
- a| 
-1accc18e0f25decba79f224ccd167283
+Urgent = 5秒、Medium = 7秒、Relaxed = 20秒。
 
 
 
  a| 
-d03489d8edb47ae534fd09e8de3121c2
+WAFL同期を無効にする
  a| 
-60c069fc0d03d8cbfeabe67ca031a729
+WAFL整合ポイントを強制しない場合は、このオプションを選択します。
+
+|===
++
+image:../media/application_settings.gif["[アプリケーション設定]ページ"]
+
+.. [Scripts]*の矢印をクリックして、休止、Snapshot、および休止解除の処理のプリコマンドとポストコマンドを実行します。バックアップ処理を終了する前にPREコマンドを実行することもできます。
++
+プリスクリプトとポストスクリプトは SnapCenter サーバで実行されます。
+
+.. 「カスタム構成」の矢印をクリックし、このリソースを使用するすべてのジョブに必要なカスタム値のペアを入力します。
+.. Snapshotコピーツール*の矢印をクリックして、Snapshotを作成するツールを選択します。
++
+|===
+| 状況 | 作業 
+
+
+ a| 
+SnapCenterでストレージレベルのSnapshotを作成
+ a| 
+ファイルシステムの整合性なしで SnapCenter * を選択します。
+
+
+
+ a| 
+SnapCenterでPlug-in for Windowsを使用してファイルシステムを整合性のある状態にしてからSnapshotを作成
+ a| 
+ファイルシステムの整合性を維持した状態で SnapCenter を選択します。
+
+
+
+ a| 
+Snapshotを作成するコマンドを入力するには
+ a| 
+[その他]*を選択し、コマンドを入力してSnapshotを作成します。
 
 |===
 
 
-. 53899dcc4360d3b8622ce5dc08a12950
+. [Policies] ページで、次の手順を実行します。
 +
-.. 70c30c71587e2d0c71b7f9e97a8aad7d
+.. ドロップダウンリストから1つ以上のポリシーを選択します。
 +
 
-NOTE: 901da624a5b9547471d5b2ebcff75a6c
-
-+
-db9cc4a2ed12e21bb79e9346714c68b9
-
-.. cf9800ba5a90d33a4476b420a3aab833
-.. a4412452c9cff96f8d11e97e688ba35e
-+
-d89a925c7347eda26320229d83214fd3
+NOTE: をクリックしてポリシーを作成することもできます。
 
 +
-bf5bc6c2ed0f05ce21c3e597309a4f6b
+[ 選択したポリシーのスケジュールを設定 ] セクションに、選択したポリシーが一覧表示されます。
 
-
-
-. 30b65b6968f11ce5399cacf995839f65
+.. スケジュールを設定するポリシーの[Configure Schedules]列で、image:../media/add_policy_from_resourcegroup.gif["追加アイコン"]をクリックします。
+.. [Add schedules for policy_name_] ダイアログボックスで、スケジュールを設定し、 [OK] をクリックします。
 +
-902d6ec48bd5e4115dbca7fd7cfb67a8
+ここで、 _policy_name_は 選択したポリシーの名前です。
 
-. fed1c121dc4f5a5484e5623e297385fb
 +
-e37834b366fe18c5fb046fc886e65b1f
+設定されたスケジュールは、 [ 適用されたスケジュール ] 列に一覧表示されます。
 
-. 2473f0a75a438700af9cf3aca0761dd5
-. 4a1c51520bfb3d170a967d4c218b52bf
+
+
+. [ 通知 ] ページの [ 電子メールの設定 *] ドロップダウンリストから、電子メールを送信するシナリオを選択します。
 +
-.. 6b4dbd62846fc1dc78b9f63f11af9c78
+また、送信者と受信者のEメールアドレス、およびEメールの件名を指定する必要があります。SMTP は、 * Settings * > * Global Settings * でも設定する必要があります。
+
+. 概要を確認し、 [ 完了 ] をクリックします。
 +
-b1b9720160580fd5949d50bf10097dc5
+リソーストポロジページが表示されます。
 
-.. 96dd2bdaca6a007b13c9f42158b860a6
+. [ 今すぐバックアップ ] をクリックします。
+. Backup （バックアップ）ページで、次の手順を実行します。
++
+.. リソースに複数のポリシーを適用している場合は、「 * Policy * 」ドロップダウン・リストから、バックアップに使用するポリシーを選択します。
++
+オンデマンドバックアップ用に選択したポリシーにバックアップスケジュールが関連付けられている場合、オンデマンドバックアップは、スケジュールタイプに指定した保持設定に基づいて保持されます。
+
+.. [ バックアップ ] をクリックします。
 
 
-. 8b9460bf38a68108bcdd278a386b3156
+. 操作の進行状況を監視するには、 * Monitor * > * Jobs * をクリックします。
 

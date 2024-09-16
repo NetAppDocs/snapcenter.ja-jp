@@ -2,44 +2,44 @@
 permalink: install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html 
 sidebar: sidebar 
 keywords: F5,load balancer 
-summary: f3e55235a887110695a7da65f9622e44 
+summary: SnapCenter でハイアベイラビリティ（ HA\ ）をサポートするには、 F5 ロードバランサをインストールします。F5 によって、 SnapCenter サーバは、同じ場所にある最大 2 台のホストでアクティブ / パッシブ構成をサポートできます。SnapCenterでF5ロードバランサを使用するには、SnapCenterサーバを設定し、F5ロードバランサを設定する必要があります。 
 ---
-= 5077e1bfbb44c5e6a1f4e30f0abe56cb
+= F5を使用した高可用性のためのSnapCenterサーバの設定
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-33976d696e787a6e165a9567be1b6d4e
+SnapCenter でハイアベイラビリティ（ HA ）をサポートするには、 F5 ロードバランサをインストールします。F5 によって、 SnapCenter サーバは、同じ場所にある最大 2 台のホストでアクティブ / パッシブ構成をサポートできます。SnapCenterでF5ロードバランサを使用するには、SnapCenterサーバを設定し、F5ロードバランサを設定する必要があります。
 
 
-NOTE: 1dc4cb439c92e9e74deaa08a6206fd89
+NOTE: SnapCenterは、AWS Elastic Load Balancing（ELB）とAzureのロードバランシングもサポートしています。
 
 
-IMPORTANT: bebee85eba69e0936be881fa2ca1f602
+IMPORTANT: 以前にネットワークロードバランシング（NLB）を使用していたSnapCenter 4.2.xからアップグレードした場合は、引き続きその構成を使用するか、F5に切り替えることができます。
 
-a37d7f9a842acb74f6d4d0ac3a929778
+ワークフロー図は、F5ロードバランサを使用してSnapCenterサーバーを高可用性に設定する手順を示しています。詳細については、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_SnapCenter_Servers_for_high_availability_using_F5_Load_Balancer["F5 ロードバランサを使用して SnapCenter サーバのハイアベイラビリティを設定する方法"^]。
 
-image::../media/sc-F5-configure-workflow.png[4c18603dba89b319f6382b3916e52cba]
+image::../media/sc-F5-configure-workflow.png[SC F5 設定ワークフロー]
 
-2f3c3d1de69d09261803424d64636033
+次のコマンドレットを使用してF5クラスタを追加および削除するには、（SnapCenterAdminロールが割り当てられていることに加えて）SnapCenter Serverのローカル管理者グループのメンバーである必要があります。
 
-* d9ea666bfbe8444fa88062f4874d0b22
-* b8313647a63a15fb0ab7d46b778ba618
-* cd8ca61b82992f73c74f955bf0f47f20
+* Add-SmServerCluster
+* アドSmServer
+* 削除- SmServerCluster
 +
-e9782ad9d0230912b51a2e508d0dd653
+詳細については、を参照してください https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
 
 
 
 
 
-== e79efa970901c1191fca1b278b2ff2d9
+== F5のその他の設定情報
 
-* ed9ff4b1a617150f86eae1035449f732
-* d04228e20798411b28cae6cb653df92c
-* 9095768bd723dca6aad8c82ad7df94fb
-* 5cfcff9080dfd6a0b46f31dd889d7691
-* 423dd9f09f9c39167ffc1c8d5030b8c6
+* SnapCenter をインストールしてハイアベイラビリティ用に設定したら、 F5 クラスタ IP を指すように SnapCenter デスクトップのショートカットを編集します。
+* SnapCenterサーバ間でフェールオーバーが発生し、既存のSnapCenterセッションも存在する場合は、ブラウザを閉じてSnapCenterに再度ログオンする必要があります。
+* ロードバランサのセットアップ（NLBまたはF5）では、NLBまたはF5ノードによって部分的に解決されたノードを追加し、SnapCenterノードがこのノードにアクセスできない場合は、SnapCenterホストページでホストの停止状態と実行状態が頻繁に切り替わります。この問題を解決するには、両方のSnapCenterノードがNLBノードまたはF5ノードのホストを解決できることを確認する必要があります。
+* MFA設定用のSnapCenterコマンドをすべてのノードで実行する必要があります。証明書利用者の設定は、F5クラスタの詳細を使用してActive Directoryフェデレーションサービス（AD FS）サーバで行う必要があります。MFAを有効にすると、ノードレベルのSnapCenter UIアクセスがブロックされます。
+* フェイルオーバー中は、2つ目のノードに監査ログの設定が反映されません。そのため、監査ログの設定は、F5パッシブノードがアクティブになったときに手動で繰り返す必要があります。
 

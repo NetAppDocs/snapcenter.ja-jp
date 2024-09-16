@@ -2,89 +2,89 @@
 permalink: protect-sco/reference_storage_types_supported_by_snapcenter_plug_in_for_oracle_database.html 
 sidebar: sidebar 
 keywords: storage types, iSCSI, NFS, RDM, VMDK, NFS, LVM, ASM, SAN filesystem 
-summary: 7c6f16336592abc4754b54fc401cdfcb 
+summary: SnapCenter は、物理マシンと仮想マシンの両方でさまざまなストレージタイプをサポートしています。SnapCenter Plug-ins Package for LinuxまたはSnapCenter Plug-ins Package for AIXをインストールする前に、ストレージタイプがサポートされていることを確認する必要があります。 
 ---
-= 29b88b5fad7a2e8cb0dd25b5acee4028
+= Plug-in for Oracle Databaseでサポートされるストレージタイプ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-7c6f16336592abc4754b54fc401cdfcb
+SnapCenter は、物理マシンと仮想マシンの両方でさまざまなストレージタイプをサポートしています。SnapCenter Plug-ins Package for LinuxまたはSnapCenter Plug-ins Package for AIXをインストールする前に、ストレージタイプがサポートされていることを確認する必要があります。
 
-7c4ced940e43257706e858ec620a5694
-
-
-
-== c99406925608b95afee1b44a09a0a366
-
-1857c63aa94eb5c973b42cb622d32509
-
-|===
-| 47c954121886a5e5aaca7eece461b56f | f0cb6783b152b19ceab16227ca3976a2 
-
-
- a| 
-e042e676706d93b3b14ce12e4d00a002
- a| 
-* 3a14bc2a9e80eb39a44cd07a0d40b62b
-* f83bf140a9f6b8a345e508ecdc999c4b
-* df750015db6d85e88db15a90ebbf9147
-* 3ab5865f7b3fcc5851ae24144b15f370
-* ad18d9aa7c4c9bdbf86e39bd6dd5b727
+SnapCenter では、 Linux および AIX のストレージプロビジョニングはサポートされていません。
 
 
 
+== Linuxでサポートされるストレージタイプ
 
- a| 
-f7eea647714641318ee86fedbbed4691
- a| 
-* 2d9498b8e7a706c04828e3a27d452cf3
-+
-e0c7a63acdb6963a9d6b2419d93f5f5a
-
-* 681eb44a9cbd6da8f7c3f918a64f2c6c
-* bb2676e02f9905c86303b7f1988d2898
-* 13d64591a6e2c6389e1896047405d742
-+
-
-NOTE: ae1d120b56beba9c6f5a7802f3e3d61d
-
-* a58b8b421b0a6170e7380151af742f28
-* 9b722cfab4d80b751e95d2565746573a
-+
-e3ad757f2539d14ca2692f3fabff82fc
-
-
+次の表に、Linuxでサポートされるストレージタイプを示します。
 
 |===
-
-
-== cbb0646c609fcc3aa70c6c5ae0bdf3fc
-
-fc4ec73696f0d9225f59c6260ebb1a65
-
-|===
-| 47c954121886a5e5aaca7eece461b56f | f0cb6783b152b19ceab16227ca3976a2 
+| マシン | ストレージタイプ 
 
 
  a| 
-e042e676706d93b3b14ce12e4d00a002
+物理サーバ
  a| 
-* 80b97edba16f76c3a7c416c0858545f5
-+
-b0b7cdbbd7e0a5322a84ce329ed839fc
+* FCセツソクLUN
+* iSCSIセツソクLUN
+* NFS接続ボリューム
+* NVMe-FC
+* nvme-tcpが表示されます
 
+
+
+
+ a| 
+VMware ESXi
+ a| 
+* FCまたはiSCSI ESXi HBAで接続されたRDM LUN Host Bus Adapter（HBA；ホストバスアダプタ）のスキャンは、SnapCenterがホストに存在するすべてのホストバスアダプタをスキャンするため、完了までに時間がかかることがあります。
++
+/opt/NetApp/SnapCenter /spl/plugins/SCU/scucore /modules/SCU/ConfigU/Config_に ある * LinuxConfig.pm * ファイルを編集して、 * scsi_hosts _optimized_rescan * パラメーターの値を 1 に設定し、 ha_driver_names にリストされている HBA のみを再スキャンすることができます。
+
+* iSCSIイニシエータによってゲストシステムに直接接続されたiSCSI LUN
+* NFSデータストア上のVMDK
+* NVMe-TCP経由で作成されたVMFS上のVMDK
 +
 
-NOTE: db92e82cf9323a4bf5e79b2df0216f85
+NOTE: RACは、共有VMDKをサポートするESX 8.0U2でサポートされます。
 
-* e2b3d28069205cc6f75b17751511da77
+* ゲストシステムに直接接続されたNFSボリューム
+* NFSとSANの両方にVVOLデータストアを配置
 +
-41732556fe47d0ec2b02e18e88410f6b
+VVOLデータストアは、ONTAP Tools for VMware vSphereでのみプロビジョニングできます。
 
 
 
 |===
-b394be29329a30bfde3ff6670085b4f8
+
+
+== AIXでサポートされるストレージタイプ
+
+次の表に、AIXでサポートされるストレージタイプを示します。
+
+|===
+| マシン | ストレージタイプ 
+
+
+ a| 
+物理サーバ
+ a| 
+* FC接続LUNとiSCSI接続LUN。
++
+SAN環境では、ASM、LVM、およびSANファイルシステムがサポートされます。
+
++
+
+NOTE: AIXおよびファイルシステムでのNFSはサポートされていません。
+
+* 拡張ジャーナリング・ファイル・システム（JFS2）
++
+SANファイルシステムおよびLVMレイアウトでのインラインロギングをサポートします。
+
+
+
+|===
+サポートされるバージョンの最新情報については、を参照 https://imt.netapp.com/matrix/imt.jsp?components=121071;&solution=1259&isHWU&src=IMT["NetApp Interoperability Matrix Tool"] してください。

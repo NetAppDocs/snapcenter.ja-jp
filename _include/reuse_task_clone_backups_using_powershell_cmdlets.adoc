@@ -1,21 +1,21 @@
-= d41d8cd98f00b204e9800998ecf8427e
+= 
 :allow-uri-read: 
 
 
-e174be7156154463517dfe3b864d0329
+クローニングワークフローには、計画、クローニング処理の実行、および処理の監視が含まれます。
 
-c90de0347e94ade70c96034e2ffca3ba
+PowerShellコマンドレットを実行できるようにPowerShell環境を準備しておく必要があります。
 
-.f3a29486bed19a90f2da6d007818b427
-. 623aa9b9d36889377a728b1284e5485e
+.手順
+. Open-SmConnectionコマンドレットを使用して、指定したユーザのSnapCenterサーバとの接続セッションを開始します。
 +
 [listing]
 ----
 Open-SmConnection  -SMSbaseurl  https://snapctr.demo.netapp.com:8146
 ----
-. ed17afe6e5fff2cf01e6fe9f629ac479
+. Get-SmBackupコマンドレットまたはGet-SmResourceGroupコマンドレットを使用して、クローニングできるバックアップの一覧を表示します。
 +
-ca85b74e61d8e4c683f3c66af932ac63
+次に、使用可能なすべてのバックアップに関する情報を表示する例を示します。
 
 +
 [listing]
@@ -31,7 +31,7 @@ BackupId   BackupName                     BackupTime   BackupType
                                           11:23:17 AM
 ----
 +
-4cbe9940aece98da11763aadaf1325fa
+この例では、指定したリソースグループとそのリソース、および関連ポリシーに関する情報を表示しています。
 
 +
 [listing]
@@ -130,9 +130,9 @@ Deleted : False
 Auth : SMCoreContracts.SmAuth
 IsClone : False
 ----
-. 22673f0cb1f09ce4187d6cb8ec5e695b
+. New-SmCloneコマンドレットを使用して、既存のバックアップからクローニング処理を開始します。
 +
-659df023c0fb00fee12f813c06a492ec
+この例では、指定したバックアップからすべてのログを含めてクローンを作成しています。
 
 +
 [listing]
@@ -148,7 +148,7 @@ PS C:\> New-SmClone
 PS C:> New-SmBackup -ResourceGroupName PayrollDataset -Policy FinancePolicy
 ----
 +
-3f6d09cc9873ed364060e363eb690882
+この例では、指定したMicrosoft SQL Serverインスタンスのクローンを作成しています。
 
 +
 [listing]
@@ -160,9 +160,9 @@ PS C:\> New-SmClone
 -AppPluginCode SMSQL -CloneToInstance "ny-vm-sc-sql"
 -Suffix _CLPOSH -AssignMountPointUnderPath "C:\SCMounts"
 ----
-. 8bba4e71f54b16435c964d34ad49c363
+. Get-SmCloneReportコマンドレットを使用して、クローンジョブのステータスを表示します。
 +
-4351322fd6537f248b9b6c0f176648c0
+この例では、指定したジョブIDのクローンレポートを表示しています。
 
 +
 [listing]
@@ -190,4 +190,4 @@ ClonedResources : {Don_DRAPER, Betty_DRAPER, Bobby_DRAPER,
 ----
 
 
-74db7181476f94f0e2927d8c8d98cb97
+コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。

@@ -2,49 +2,49 @@
 permalink: protect-scsql/reference_back_up_sql_server_database_or_instance_or_availability_group.html 
 sidebar: sidebar 
 keywords: Backup workflow 
-summary: d050ee33bc723342413319851e1c3dd2 
+summary: SnapCenter Plug-in for Microsoft SQL Server をインストールした環境では、 SnapCenter を使用して SQL Server リソースをバックアップすることができます。 
 ---
-= f395a8aee7b6b7007a1b6a64b54468f1
+= バックアップのワークフロー
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-d050ee33bc723342413319851e1c3dd2
+SnapCenter Plug-in for Microsoft SQL Server をインストールした環境では、 SnapCenter を使用して SQL Server リソースをバックアップすることができます。
 
-a2bc7758f1d4b865eb9ffb18573c3d1d
+スケジュールを設定して、複数のサーバで同時に複数のバックアップを実行することができます。
 
-2e4ff567e848a0262685f994307e15fe
+同じリソースに対してバックアップ処理とリストア処理を同時に実行することはできません。
 
-a1a0f86f12eb6f7b0a51545fae87d6ed
+次のワークフローは、バックアップ処理の実行順序を示しています。
 
-image::../media/scsql_backup_workflow.png[a9a36931adb350bdf3480cb9845a8fc8]
-
-
-NOTE: 780c1b490607a3963a4db9b069dbf1e2
-
-8d815f55ddec2cbd3a8fb998077c1279
+image::../media/scsql_backup_workflow.png[SCSQL バックアップワークフロー]
 
 
+NOTE: ネットアップ以外のLUN、破損したデータベース、またはリストア中のデータベースを選択した場合、[Resources]ページの[Backup Now]、[Restore]、[Manage Backups]、および[Clone]オプションは無効になります。
 
-== 70a3b8963fff53a1f81a125297906687
-
-0855d4a7efcc5d7db4786a318d5517e6
-
-05e0444569b01c1a835c376c06e5d120
-
-2b0e03a4cda838c9297e1f7e7ff4a27f
+PowerShellコマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、リカバリ、検証、クローニングの各処理を実行することもできます。PowerShellコマンドレットの詳細については、SnapCenterコマンドレットのヘルプを使用するか、 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"]
 
 
-NOTE: 72dafb1a5239fa5a8bc929bf6951f900
 
-9bdd40947ff9b3833cc4fa3ca7493f5f
+== SnapCenter でのデータベースのバックアップ方法
 
-00446608fea557ce7f8e6f3b5b02c95a
+SnapCenterでは、Snapshotテクノロジを使用して、LUNまたはVMDK上にあるSQL Serverデータベースをバックアップします。SnapCenterは、データベースのSnapshotを作成することによってバックアップを作成します。
 
-fad3dbbe9841f42de249b688f1d47a80
+[Resources]ページでフルデータベースバックアップの対象となるデータベースを選択すると、同じストレージボリューム上の他のすべてのデータベースがSnapCenterによって自動的に選択されます。LUNまたはVMDKにデータベースが1つだけ格納されている場合は、データベースを個別に選択解除したり、再度選択したりできます。LUNまたはVMDKに複数のデータベースが格納されている場合は、それらのデータベースをグループとして選択解除したり、再度選択したりする必要があります。
 
-51fb25555c87830dd2151ad5f3b7a845
+1つのボリューム上のすべてのデータベースは、Snapshotを使用して同時にバックアップされます。同時バックアップデータベースの最大数が35で、ストレージボリュームに格納されているデータベースが35を超える場合は、データベース数を35で割った数のSnapshotが作成されます。
 
-832cb1b396b5451b24475f6f96d26d25
+
+NOTE: バックアップポリシーでは、Snapshotごとの最大データベース数を設定できます。
+
+SnapCenterがSnapshotを作成すると、ストレージ・システム・ボリューム全体がSnapshotにキャプチャされます。ただし、バックアップは、バックアップが作成されたSQLホストサーバに対してのみ有効です。
+
+他のSQLホストサーバのデータが同じボリューム上にある場合、このデータをSnapshotからリストアすることはできません。
+
+* 詳細はこちら *
+
+link:task_back_up_resources_using_powershell_cmdlets_for_sql.html["PowerShellコマンドレットを使用したリソースのバックアップ"]
+
+link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Quiesce_or_grouping_resources_operations_fail["リソースの休止処理またはグループ化処理が失敗する"]

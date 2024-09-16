@@ -2,28 +2,28 @@
 permalink: upgrade/task_configure_snapcenter_to_check_for_available_updates.html 
 sidebar: sidebar 
 keywords: configure, snapcenter server, updates, software updates 
-summary: a7e402a09cf33c2060ecbdb749dd7977 
+summary: SnapCenterは、NetAppサポートサイトと定期的に通信し、利用可能なソフトウェア更新についてユーザに通知します。スケジュールを作成して、利用可能な更新に関する情報を受信する間隔を指定することもできます。 
 ---
-= 243fa8b3087ff5e0b8de4d51c71aa24c
+= 利用可能なアップデートを確認するためのSnapCenterの設定
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-a7e402a09cf33c2060ecbdb749dd7977
+SnapCenterは、NetAppサポートサイトと定期的に通信し、利用可能なソフトウェア更新についてユーザに通知します。スケジュールを作成して、利用可能な更新に関する情報を受信する間隔を指定することもできます。
 
-.f3a29486bed19a90f2da6d007818b427
-. c09e638cb8ee35698e3172550b12d8fa
-. 86d9a4e53238020341a7cca7bbe68ff8
+.手順
+. 左側のナビゲーションペインで、 * 設定 * をクリックします。
+. [設定]ページで、*[ソフトウェア]*をクリックします。
 +
-677b4f66c084ede8f48394ab8ce8969c
+[Available Software]ページには、使用可能なプラグインパッケージ、使用可能なバージョン、およびインストールステータスが表示されます。
 
-. 79f9ba8457e2aeaced209e98800790ef
-. 55f0dab8010fdb26ffb7d3d63275f2bd
+. [ * アップデートの確認 * ] をクリックして、新しいバージョンのプラグインパッケージが利用可能かどうかを確認します。
+. [ スケジュール更新 ] をクリックして、利用可能な更新に関する情報を受け取る間隔を指定するスケジュールを作成します。
 +
-.. e218113d9d20db943c1804f6d106df38
-.. 644de64c921a575ddfcd3087ae6d3de1
+.. [ 更新の確認 *] で間隔を選択します。
+.. SnapCenter サーバ管理ウィンドウの資格情報を選択し、 * OK * をクリックします。
 
 
 

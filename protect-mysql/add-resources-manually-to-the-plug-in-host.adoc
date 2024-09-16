@@ -2,79 +2,79 @@
 permalink: protect-mysql/add-resources-manually-to-the-plug-in-host.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for MySQL 
-summary: 9652186220dec8513691d8ce10d2f1f8 
+summary: 一部のMySQLインスタンスでは自動検出がサポートされていません。これらのリソースは手動で追加する必要があります。 
 ---
-= b39d1e4f73b157bb2f5b3a972e89eeb6
+= プラグインホストに手動でリソースを追加する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-c3b36b0703d28d9032d65f5d53b34f85
+自動検出はWindowsホストではサポートされていません。MySQLインスタンスとデータベースリソースを手動で追加する必要があります。
 
-.135b308ed83c53f1516b7c754566d1c4
-* 66fe54fa4e213e520e33fab0de4829f3
+.開始する前に
+* SnapCenterサーバのインストール、ホストの追加、ストレージシステム接続のセットアップなどのタスクを完了しておく必要があります。
 
 
-.f3a29486bed19a90f2da6d007818b427
-. 99cc16b0f0c8220a5c3e4b886e57a42c
-. 2df78e776fb51f2ab5050e4dbe3f791f
-. 14fdd328e53552c727d0f36c3d306b64
+.手順
+. 左側のナビゲーションペインで、ドロップダウンリストからSnapCenter Plug-in for MySQLを選択し、*[リソース]*をクリックします。
+. [リソース]ページで、*[MySQLリソースの追加]*をクリックします。
+. [Provide Resource Details]ページで、次の操作を実行します。
 +
 |===
-| 21f831502a413a739e20cbf9f2eefe54 | 5e2ad6fd9deb412d871137094ee43ef0 
+| フィールド | 操作 
 
 
  a| 
-49ee3087348e8d44e1feda1917443987
+名前
  a| 
-75795411fa0821e8da73e95200ff81ad
-
-
-
- a| 
-1c07f24dbaeb847f4662960d2691d528
- a| 
-ce7a42c0c120b0e761b1d9b2851def5b
+データベース名を指定します。
 
 
 
  a| 
-a1fa27779242b4902f7ae3bdd5c6d508
+ホスト名
  a| 
-3c615347448405000fed83d4f36c6d07
-
-
-
- a| 
-d9a17c1c9e8ef6866e4dbeef41c741b2
- a| 
-1727ed989c7f4287136d81d78aeb960e
+ホスト名を入力します。
 
 
 
  a| 
-2daf1cb573c2c61422faf64610cf9402
+タイプ
  a| 
-5efe9e6fa4156b39ced69425eba7fb49
+インスタンスを選択します。
 
-deec2d29ae112d513d1bbd8cb6f3a23c
+
+
+ a| 
+インスタンス
+ a| 
+該当なし。
+
+
+
+ a| 
+クレデンシャル
+ a| 
+クレデンシャルを選択するか、クレデンシャルの情報を追加します。
+
+これはオプションです。
 
 |===
-. 4e4f9229f5def86d57e9acaf8014a093
+. [ストレージフットプリントの入力]ページで、ストレージタイプを選択して1つ以上のボリューム、LUN、およびqtreeを選択し、*[保存]*をクリックします。
 +
-266587454e01a92f0bfd85f3e920b6e9
+オプション：*アイコンをクリックすると、他のストレージシステムからボリューム、LUN、およびqtreeを追加できますimage:../media/add_policy_from_resourcegroup.gif[""]。
 
-. 65bdc00e8821b43a07eed913ec9734d2
-. fed1c121dc4f5a5484e5623e297385fb
+. オプション：[Resource Settings]ページで、MySQLプラグインのカスタムのキーと値のペアを入力します。
+. 概要を確認し、 [ 完了 ] をクリックします。
 +
-da0726c01021262f418bf88a38a3c39d
+データベースは、ホスト名、関連するリソースグループとポリシー、全体的なステータスなどの情報とともに表示されます。
 
 
 
-3f1fe53287c04e073da002e39b799896
+リソースへのアクセスをユーザに許可する場合は、ユーザにリソースを割り当てる必要があります。これにより、ユーザは自分に割り当てられているアセットに対して権限のある操作を実行できます。
 
-65029b82973fe89d2af9288d26c3e30b
+link:https://docs.netapp.com/us-en/snapcenter/install/task_add_a_user_or_group_and_assign_role_and_assets.html["ユーザまたはグループを追加してロールとアセットを割り当てる"]
 
-21cbe43439ca564a7b6ec5a7eae2843b
+データベースを追加したら、MySQLデータベースの詳細を変更できます。

@@ -2,47 +2,47 @@
 permalink: protect-postgresql/snapcenter-plug-in-for-postgresql-features.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for postgresql 
-summary: 4a22036d291fcb70270b7a277bb6609d 
+summary: SnapCenter は、プラグインアプリケーションと統合されるほか、ストレージシステム上でネットアップのテクノロジと統合されます。Plug-in for PostgreSQLクラスタを操作するには、SnapCenterグラフィカルユーザインターフェイスを使用します。 
 ---
-= c988f5ab14bd3d7fcb922a45fca0877c
+= SnapCenter Plug-in for PostgreSQLの機能
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-78aa619abd0567f9e6c344e67f761268
+SnapCenter は、プラグインアプリケーションと統合されるほか、ストレージシステム上でネットアップのテクノロジと統合されます。Plug-in for PostgreSQL Clusterを操作するには、SnapCenterグラフィカルユーザーインターフェイスを使用します。
 
-* b1d3c10985fe921d1cd4f1920df9beb6
+* * 統一されたグラフィカル・ユーザー・インターフェイス *
 +
-6fb6e736abe2121b5ad7a964c6879b29
+SnapCenter のインターフェイスは、すべてのプラグインと環境で標準化され、一貫しています。SnapCenter インターフェイスを使用すると、すべてのプラグインでバックアップ、リストア、クローニングの各処理を一貫した方法で実行できるほか、ダッシュボードビューで概要を把握したり、ロールベースアクセス制御（ RBAC ）を設定したり、ジョブを監視したりすることができます。
 
-* 8cab777e8f4d0f3134b1e688de9e3a14
+* * 中央管理の自動化 *
 +
-c977f209575b6b5d579a260964bb7de1
+バックアップ処理のスケジュールを設定したり、ポリシーベースのバックアップ保持を設定したり、リストア処理を実行したりできます。SnapCenter から E メールアラートを送信するように設定して、環境をプロアクティブに監視することもできます。
 
-* 039e04c42b2f000cca3aa4851d886236
+* *無停止のNetApp Snapshotコピーテクノロジ*
 +
-70bf171c788a40c927c0749b1d49536d
+SnapCenterでは、Plug-in for PostgreSQLクラスタでNetAppのSnapshotテクノロジを使用してリソースがバックアップされます。
 
 
 
-4e26eb8d6874a2a553754f9b49fba9af
+Plug-in for PostgreSQLを使用すると、次のようなメリットもあります。
 
-* fda7113d1825e99bb5e099dfa43e494e
-* 5750866ea3f2f5172a0cbfaa24301be8
+* バックアップ、リストア、クローニングのワークフローがサポートされます。
+* RBACでサポートされるセキュリティと一元化されたロール委譲
 +
-67e3dbc43236eaec5752f527574fc4fa
+クレデンシャルを設定して、許可されたSnapCenterユーザにアプリケーションレベルの権限を付与することもできます。
 
-* 77f89c57ca9a76d1b05a0a6547343371
+* NetApp FlexCloneテクノロジを使用して、テストまたはデータ抽出に使用するリソースのスペース効率に優れたポイントインタイムコピーを作成できます。
 +
-da7d10a7d1bd2a2e5acc1a7e98e314b4
+クローンを作成するストレージシステムにFlexCloneライセンスが必要です。
 
-* 11e5bf8d0753781dd4434da568b8da29
-* b2d4bf2086608858ce65205273756f72
+* バックアップ作成時にONTAPの整合グループ（CG）Snapshot機能がサポートされるようになりました。
+* 複数のリソースホストで同時に複数のバックアップを実行可能
 +
-fc61ab2f2e2f4b5cf0127ffb1dc0796a
+1回の操作で、1つのホスト内のリソースが同じボリュームを共有すると、スナップショットが統合されます。
 
-* b2fa02d62a134098aefe75ad2acf0793
-* 691f9dff16ebd5da65b5dbbe0c978b53
+* 外部コマンドを使用してスナップショットを作成する機能。
+* XFSファイルシステムでのLinux LVMのサポート。
 

@@ -2,34 +2,34 @@
 permalink: protect-nsp/types_of_restore_strategies_supported_for_manually_added_netapp_supported_plugins_resources.html 
 sidebar: sidebar 
 keywords: SnapCenter 
-summary: 0f89c87c095397d879b392b30b6b6487 
+summary: SnapCenterを使用してリストア処理を正常に実行するには、戦略を定義する必要があります。手動で追加したNetAppでサポートされるプラグインリソースには、2種類のリストア戦略があります。手動で追加したNetApp対応プラグインリソースはリカバリできません。 
 ---
-= 15c91e6ce43d812c9c6d94c890999e54
+= 手動で追加したNetAppでサポートされるプラグインリソースでサポートされるリストア戦略のタイプ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-b573be6808204e41ee52ac81bdfab0ff
+SnapCenterを使用してリストア処理を正常に実行するには、戦略を定義する必要があります。手動で追加したNetAppでサポートされるプラグインリソースには、2種類のリストア戦略があります。
 
 
-NOTE: a0aca7ac2b59ce8155344a6f8d8606d1
-
-
-
-== d26e732ff4468b921ec70bf797290866
-
-* 6dac61f5c61b1654fa020acda2c2434d
+NOTE: 手動で追加したNetApp対応プラグインリソースはリカバリできません。
 
 
 
-NOTE: e337fc3b0c344eaa85525958668d8591
+== リソース全体のリストア
+
+* リソースのすべてのボリューム、qtree、およびLUNをリストア
 
 
 
-== 59d998f4e2735501ffcf1038b97c19b1
+NOTE: リソースにボリュームまたはqtreeが含まれている場合、そのボリュームまたはqtreeでリストア対象として選択されたSnapshotのあとに作成されたSnapshotは削除され、リカバリすることはできません。また、同じボリュームまたはqtreeで他のリソースがホストされている場合、そのリソースも削除されます。
 
-* ef6b493c36772b4cff5ddca5d370121f
-* 504e78ba630989f50409682ae7d17167
+
+
+== ファイルレベルのリストア
+
+* ボリューム、qtree、またはディレクトリからファイルをリストア
+* 選択したLUNのみをリストア
 

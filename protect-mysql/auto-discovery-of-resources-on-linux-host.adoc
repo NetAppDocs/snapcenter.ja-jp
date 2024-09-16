@@ -2,13 +2,13 @@
 permalink: protect-mysql/auto-discovery-of-resources-on-linux-host.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for MySQL 
-summary: d09944dee50ce87107967c7dfa847be9 
+summary: 'リソースとは、SnapCenterで管理されるLinuxホスト上のMySQLインスタンスです。SnapCenter Plug-in for MySQLプラグインをインストールすると、そのLinuxホスト上のMySQLデータベースが自動的に検出されて[リソース]ページに表示されます。' 
 ---
-= d63d0f9078f63941d9f67771c5293aac
+= Linuxホスト上のリソースの自動検出
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-1b6b68078cfd4c1be66517062b4db68c
+リソースとは、SnapCenterで管理されるLinuxホスト上のMySQLインスタンスです。SnapCenter Plug-in for MySQLプラグインをインストールすると、そのLinuxホスト上のMySQLインスタンスが自動的に検出されて[Resources]ページに表示されます。

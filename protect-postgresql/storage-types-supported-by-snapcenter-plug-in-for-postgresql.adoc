@@ -2,38 +2,38 @@
 permalink: protect-postgresql/storage-types-supported-by-snapcenter-plug-in-for-postgresql.html 
 sidebar: sidebar 
 keywords: storage types, 
-summary: 9793a4d22f58efc3e1fb9b24f0bd822c 
+summary: SnapCenter は、物理マシンと仮想マシン（ VM ）の両方でさまざまなストレージタイプをサポートしています。SnapCenter Plug-in for PostgreSQLをインストールする前に、ストレージタイプがサポートされていることを確認する必要があります。 
 ---
-= 1cba333f7c70ea15dd4dc4f2c3d76e77
+= SnapCenter Plug-in for PostgreSQLでサポートされるストレージタイプ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-9793a4d22f58efc3e1fb9b24f0bd822c
+SnapCenter は、物理マシンと仮想マシン（ VM ）の両方でさまざまなストレージタイプをサポートしています。SnapCenter Plug-in for PostgreSQLをインストールする前に、ストレージタイプがサポートされていることを確認する必要があります。
 
 |===
-| 47c954121886a5e5aaca7eece461b56f | f0cb6783b152b19ceab16227ca3976a2 
+| マシン | ストレージタイプ 
 
 
  a| 
-faa63149f52ece978423f5b04c274cf6
+物理サーバと仮想サーバ
  a| 
-3a14bc2a9e80eb39a44cd07a0d40b62b
-
-
-
- a| 
-e042e676706d93b3b14ce12e4d00a002
- a| 
-f83bf140a9f6b8a345e508ecdc999c4b
+FCセツソクLUN
 
 
 
  a| 
-faa63149f52ece978423f5b04c274cf6
+物理サーバ
  a| 
-df750015db6d85e88db15a90ebbf9147
+iSCSIセツソクLUN
+
+
+
+ a| 
+物理サーバと仮想サーバ
+ a| 
+NFS接続ボリューム
 
 |===

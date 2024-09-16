@@ -2,116 +2,116 @@
 permalink: protect-postgresql/prerequisites-to-adding-hosts-and-installing-snapcenter-plug-in-for-postgresql.html 
 sidebar: sidebar 
 keywords: credentials 
-summary: a0aa72ee83e695d1dcf2f13647829192 
+summary: ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。SnapCenter Plug-in for PostgreSQLは、WindowsとLinuxの両方の環境で使用できます。 
 ---
-= 8b8cd5e26c973933f12ef29fc2a0361b
+= ホストを追加してSnapCenter Plug-in for PostgreSQLをインストールするための前提条件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-a0aa72ee83e695d1dcf2f13647829192
+ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。SnapCenter Plug-in for PostgreSQLは、WindowsとLinuxの両方の環境で使用できます。
 
-* 8b78d81fcf70311e0778d7ca1a1da748
+* Java 11をホストにインストールしておく必要があります。
 +
 
-NOTE: 3a6eb59ee064b09b020c1a87c5de4988
+NOTE: IBM Javaはサポートされていません。
 
-* 384f3c3f698d8cadef7266030334729e
-* f5e022b22cc281ffd34efb547dfb52e4
-* d0725d5e9fedb086b14b96f5f507a23a
-
-
+* Windowsの場合、Plug-in CreatorサービスはWindowsユーザ「LocalSystem」を使用して実行する必要があります。これは、Plug-in for PostgreSQLがドメイン管理者としてインストールされている場合のデフォルトの動作です。
+* Windowsホストにプラグインをインストールするときに、組み込みでないクレデンシャルを指定した場合やユーザがローカルワークグループに属している場合は、ホストのUACを無効にする必要があります。SnapCenter Plug-in for Microsoft Windowsは、WindowsホストにPostgreSQLプラグインとともにデフォルトで導入されます。
+* SnapCenter ServerがPlug-in for PostgreSQLホストの8145ポートまたはカスタムポートにアクセスできる必要があります。
 
 
-== bd5ca81744f222d9b9a956e81e4db9d4
 
-* 361ef555cc4b1de8cd252d68a14901af
-* 061fb074ef284204b308f4d60c2e7269
-* 92f854eabda8c2aa761e01fba1c6ffd4
-* 74b8e77de0b5018c5ab2ca7eb523ff31
+
+== Windowsホスト
+
+* ローカル管理者Privilegesを持つドメインユーザと、リモートホストに対するローカルログイン権限が必要です。
+* Plug-in for PostgreSQLをWindowsホストにインストールすると、SnapCenter Plug-in for Microsoft Windowsが自動的にインストールされます。
+* rootユーザまたはroot以外のユーザに対してパスワードベースのSSH接続を有効にしておく必要があります。
+* Java 11をWindowsホストにインストールしておく必要があります。
 +
-9226092112d9484949841b47e3b0500e
-
-+
-26c29286acbcac90c9ca148d0edc6829
-
-
-
-
-
-== cfe19b0ae08454358fbe515d88fd6095
-
-* 92f854eabda8c2aa761e01fba1c6ffd4
-* 129fdeda5a8637916b3b579b072e4eaa
-+
-9226092112d9484949841b47e3b0500e
+http://www.java.com/en/download/manual.jsp["すべてのオペレーティングシステム用のJavaダウンロード"]
 
 +
-26c29286acbcac90c9ca148d0edc6829
-
-* a0a29148cf29ca1fc5484552a312bc09
-* 17049c1cdf73c2b4b41219f99ace3f81
+https://imt.netapp.com/matrix/imt.jsp?components=121069;&solution=1259&isHWU&src=IMT["NetApp Interoperability Matrix Tool"]
 
 
 
 
-== c1c3f7f413cbbea9483f5bb44d108a05
 
-89a5c3a497daa859750092e915be305c
+== Linuxホスト
 
-8221da4b4cfcb6691477b3301eea5a65
-
-.bd5ca81744f222d9b9a956e81e4db9d4
-90691a25fee5015199c658915d54937f
-
-6fc4095a95637298f76900a520be49a6
-
-.cfe19b0ae08454358fbe515d88fd6095
-774e75f6a92e8ce03eae50224bd05ba6
-
-fad6f40b574d1f4a18fc151b6c0f4e20
-
-41e74f60c5f3f06b8573c9cea4d7bab4
-
-b5ae206d8cc918377a24fe4f421f1df6
-
-ec2ddb7f6d7bd8ee6c1859f58f04e543
-
-2f71d67b0d47e188626ac45f66b1bdb9
-
-bb9358c22dd46f6320560b712e3f01b1
-
-ee9daf1566bf315f7653952b044f6dad
-
-caac2bb3479b413da9fbcd502a30e7b6
-
-fa85be9f75b57a1177464bcfbf682501
-
-58b5d0a2d25a0f5bc44c92a94090d1ea
-
-fa85be9f75b57a1177464bcfbf682501
-
-
-NOTE: 0d97f66d4b1a95477e15aa1423a18629
-
-
-
-== b8be58329edfa59d774ce8216f3afcfe
-
-f9c6e2752992927f2c51ce2a85236ca9
-
-d428ebb7ac02e1484781b38a799a4f99
-
-* e3f6dee76e478bb44341e47d36be0f01
-* a2e3df47ed947a4f17566f6f4c728ec8
-* 9fc7e0af2d8808b59624854d31dab1bb
+* rootユーザまたはroot以外のユーザに対してパスワードベースのSSH接続を有効にしておく必要があります。
+* Java 11をLinuxホストにインストールしておく必要があります。
 +
-a522c9aaeab8d877d6b5ee133ac06025
+http://www.java.com/en/download/manual.jsp["すべてのオペレーティングシステム用のJavaダウンロード"]
 
 +
-81eeab9506186e2dca8faefa78d54067
+https://imt.netapp.com/matrix/imt.jsp?components=121069;&solution=1259&isHWU&src=IMT["NetApp Interoperability Matrix Tool"]
+
+* Linuxホストで実行されているPostgreSQLクラスタの場合は、Plug-in for PostgreSQLのインストール時にSnapCenter Plug-in for UNIXが自動的にインストールされます。
+* プラグインのインストールには、デフォルトのシェルとして* bash *が必要です。
+
+
+
+
+== 補助コマンド
+
+SnapCenter Plug-in for PostgreSQLで補助コマンドを実行するには、ファイルにコマンドを含める必要があります `allowed_commands.config` 。
+
+`allowed_commands.config` ファイルはSnapCenter Plug-in for PostgreSQLディレクトリの「etc」サブディレクトリにあります。
+
+.Windowsホスト
+デフォルト： `C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands.config`
+
+カスタムパス： `<Custom_Directory>\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands.config`
+
+.Linuxホスト
+デフォルト： `/opt/NetApp/snapcenter/scc/etc/allowed_commands.config`
+
+カスタムパス： `<Custom_Directory>allowed_commands.config`
+
+プラグインホストで追加のコマンドを許可するには、エディタでファイルを開きます `allowed_commands.config` 。各コマンドを別 々 の行に入力します。大文字と小文字は区別されません。例えば、
+
+コマンド:mount
+
+コマンド：umount
+
+完全修飾パス名を指定してください。パス名にスペースが含まれている場合は、パス名を引用符（"）で囲みます。例えば、
+
+コマンド："C：\Program Files\NetApp\SnapCreator commands\sdcli.exe"
+
+コマンド：myscript.bat
+
+ファイルが存在しない場合は `allowed_commands.config` 、コマンドまたはスクリプトの実行がブロックされ、次のエラーでワークフローが失敗します。
+
+"[/mnt/mount-a]の実行は許可されていません。プラグインホストのファイル%sにコマンドを追加して許可します。"
+
+コマンドまたはスクリプトがに存在しないと、 `allowed_commands.config`コマンドまたはスクリプトの実行がブロックされ、次のエラーでワークフローが失敗します。
+
+"[/mnt/mount-a]の実行は許可されていません。プラグインホストのファイル%sにコマンドを追加して許可します。"
+
+
+NOTE: ワイルドカードエントリ（*）を使用してすべてのコマンドを許可しないでください。
+
+
+
+== Linuxホストのroot以外のユーザに対するsudo Privilegesの設定
+
+SnapCenter 2.0以降のリリースでは、root以外のユーザがSnapCenter Plug-ins Package for Linuxをインストールしてプラグインプロセスを開始できます。プラグインプロセスをroot以外の有効なユーザとして実行します。複数のパスにアクセスできるようにroot以外のユーザにsudo Privilegesを設定する必要があります。
+
+* 必要なもの *
+
+* sudoバージョン1.8.7以降
+* root以外のユーザについては、root以外のユーザの名前とユーザのグループが同じであることを確認してください。
+* /etc/ssh/sshd_config_file を編集して、メッセージ認証コードアルゴリズム MACs HMAC-sha2-256 および MACs HMAC-sha2-512 を設定します。
++
+構成ファイルの更新後にsshdサービスを再起動します。
+
++
+例：
 
 +
 [listing]
@@ -130,19 +130,19 @@ MACs hmac-sha2-256
 ----
 
 
-78166ce4ccceeedfbf6aeb8682851072
+* このタスクについて *
 
-a7016f1c2daee7897ce7d4eca17cda75
+次のパスにアクセスできるようにroot以外のユーザにsudo権限を設定する必要があります。
 
-* 8e2de751f9a0d6e07b10791d5aec1925
-* 9bdf1f7010d0194ec04db4d5e52f9b98
-* 662f0ac9bbed9d4111fe177372a0dc72
+* /home/_linux_user_//.sc_netapp / snapcenter_linux_host_plugin.bin
+* /custom_location /NetApp/snapcenter/spl/installation/plugins/uninstall
+* /custom_location /NetApp/snapcenter/spl/bin/spl
 
 
-4839d2f25cc35b249d5db15efa1afd75
+* 手順 *
 
-. 4e665afb5c15dd75650eeba423b153f0
-. 45eaa72ccd2ef9b50e78fc8cce523fc1
+. SnapCenter Plug-ins Package for LinuxをインストールするLinuxホストにログインします。
+. visudo Linuxユーティリティを使用して、/etc/sudoersファイルに次の行を追加します。
 +
 [listing, subs="+quotes"]
 ----
@@ -157,19 +157,19 @@ Defaults: _LINUX_USER_ !requiretty
 ----
 +
 
-NOTE: 8ccb5ba037aab4670372942b6305b04b
+NOTE: RACセットアップを実行している場合は、他の許可されているコマンドとともに、/etc/sudoersファイルに次のように追加します。'/RAC/bin/olsnodes'<crs_home>
 
 
 
-be02fb47e5ce9564292c10ef20e0af69
+_crs_home_fileの値は、/etc/oracle/olr.loc_fileから取得できます。
 
-656c356e64e4c0be274c5c901e543686
+_linux_user_は、作成したroot以外のユーザの名前です。
 
-31245bdedaeb267e7e5c6f53cf9e708d
+_checksum_value_は、次の場所にある* sc_unix_plugins_checksum.txt *ファイルから取得できます。
 
-* d08ecc47ff5fa041f6e7d4e346ccc284
-* fdd8302a17106d7ed409290aad614ac8
+* _C：\ProgramData\NetApp\SnapCenter\Package Repository\sc_unix_plugins_checksum.txt（SnapCenter ServerがWindowsホストにインストールされている場合）。
+* _/opt/NetApp/snapcenter/SnapManagerWeb/Repository/sc _ unix_plugins_checksum.txt _ LinuxホストにSnapCenterサーバがインストールされている場合。
 
 
 
-IMPORTANT: 74781435cbc6fb9ba200eaf23bcdeaf1
+IMPORTANT: この例は、独自のデータを作成するための参照としてのみ使用してください。

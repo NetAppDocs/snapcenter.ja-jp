@@ -2,72 +2,72 @@
 permalink: install/configure_ca_certificate_linux_host.html 
 sidebar: sidebar 
 keywords: SnapCenter, configure, CA certificate, linux, linux host 
-summary: 24d3d7a47c8a6bc8f8121257c5b3734e 
+summary: LinuxホストのSnapCenterサーバでCA証明書を設定する必要があります。 
 ---
-= a4edcfdfc889aead495fa92bc734d112
+= LinuxホストのCA証明書の設定
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-18ae08106eef2261e3ddf3194dc3429d
+LinuxにSnapCenterサーバをインストールすると、インストーラによって自己署名証明書が作成されます。CA証明書を使用する場合は、nginxリバースプロキシ、監査ログ、およびSnapCenterサービスの証明書を設定する必要があります。
 
 
 
-== bdb64fa4c7cfc41de86c180fed3a74a3
+== nginx証明書の設定
 
-.f3a29486bed19a90f2da6d007818b427
-. bf5dd606dc54b8a102d4848f6293df53
-. 5b0c642dda05deb86e7125990e1b3d31
-. 8e98bb9ccf07c46011b533f7e22f7c15
-. 04476fe0a40553ef3cc868618b9159e6
-. 80463d4c82633cb0e9862874feb912f9
-. 9b9c2c1319cff77980b213e520380152
-
-
+.手順
+. /etc/nginx/conf.d_に移動します。 `cd /etc/nginx/conf.d`
+. viまたは任意のテキストエディタを使用して* snapcenter.conf *を開きます。
+. 構成ファイルのserverセクションに移動します。
+. _SSL_CERTIFICATE_AND_SSL_CERTIFICATE_KEY_のパスをCA証明書を指すように変更します。
+. ファイルを保存して閉じます。
+. nginxを再ロード： `$nginx -s reload`
 
 
-== 844223a840246fb5a86e3117904af36c
 
-.f3a29486bed19a90f2da6d007818b427
-. a80757e3bd3b148f1a245bf381bf5d3c
+
+== 監査ログ証明書の設定
+
+.手順
+. viまたは任意のテキストエディタを使用して_install_DIR /NetApp/snapcenter/SnapManagerWeb/SnapManagerWeb.UI.dll.config_を開きます。
 +
-0a08ddac3ed2aae1ebd462b2134bce06
+_INSTALL_DIR_IS_のデフォルト値は_/ opt_です。
 
-. fa9ee7f4ef8bb2ab6cefea40930760f8
+. AUDILOG_CERTIFICATE_PATH *キーと* AUDILOG_CERTIFICATE_PASSWORD *キーを編集して、それぞれCA証明書のパスとパスワードを含めます。
 +
-d5fd9ad0c29ecbaec9f0a9d6615b47f6
+監査ログ証明書では、_.pfx_formatのみがサポートされます。
 
-. 80463d4c82633cb0e9862874feb912f9
-. 00ee24396aca54b4f6c836a787b63361
-
-
+. ファイルを保存して閉じます。
+. snapmanagerweb *サービスを再起動します。 `$ systemctl restart snapmanagerweb`
 
 
-== f3715a4e5728396f7be1bdbaaca98851
 
-.f3a29486bed19a90f2da6d007818b427
-. 5378454eddc5733c8a37aa2d0f538173
+
+== SnapCenterサービス証明書の設定
+
+.手順
+. viまたは任意のテキストエディタを使用して、次の設定ファイルを開きます。
 +
-** 2d1487edff39ef32df796c3f332e5af4
-** ec6c7d95279ecbfc15ae033c6b6ce173
-** 53af01d18c1d8e8c1bf8178140cfbc85
+** _INSTALL_DIR /NetApp/snapcenter/SnapManagerWeb/SnapManagerWeb.UI.dll.config_
+** _INSTALL_DIR /NetApp/snapcenter/SMCore/SMCoreServiceHost.dll.config_
+** _install_DIR /NetApp/snapcenter/Scheduler/Scheduler.api.dll.config_
 +
-0a08ddac3ed2aae1ebd462b2134bce06
+_INSTALL_DIR_IS_のデフォルト値は_/ opt_です。
 
 
 
-. 9797d0b330551d54a3004ee8339ea2ba
+. SERVICE_CERTIFICATE_PATH *キーと* SERVICE_CERTIFICATE_PASSWORD *キーを編集して、CA証明書のパスとパスワードをそれぞれ追加します。
 +
-0f278f6bc55db5d981f2fbc237afe8d3
+SnapCenterサービス証明書では、_.pfx_formatのみがサポートされます。
 
-. a3e66f24b77a616cc07a99fbe97c88e2
-. 66ff4f7d59911f532e5382ba09adb157
+. ファイルを保存して閉じます。
+. すべてのサービスを再起動します。
 +
-** dd5be82d05db99d06412d2c63b8fe671
-** 73d9a48d696ed13a6165a30e6c097986
-** c17804856167f5e87b3274e8a5f9ccc1
+** `$ systemctl restart snapmanagerweb`
+** `$ systemctl restart smcore`
+** `$ systemctl restart scheduler`
 
 
 

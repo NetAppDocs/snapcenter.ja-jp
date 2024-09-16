@@ -2,66 +2,66 @@
 permalink: protect-scu/task_split_a_clone.html 
 sidebar: sidebar 
 keywords: split clone, snapcenter 
-summary: 3c55465d16a74f707765b8add86a7107 
+summary: SnapCenterを使用して、クローンリソースを親リソースからスプリットできます。スプリットされたクローンは親リソースから独立します。 
 ---
-= d91a0b52cfc5d0c3e4b59e8544b3c61d
+= クローンをスプリットする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-3c55465d16a74f707765b8add86a7107
+SnapCenterを使用して、クローンリソースを親リソースからスプリットできます。スプリットされたクローンは親リソースから独立します。
 
-.bbe48fb854ea022537208eeeff822f91
-* 000f49bb1c3df1b66ed120073f1b1e30
+.タスクの内容
+* 中間クローンではクローンスプリット処理を実行できません。
 +
-304b6f952e78a0af59d877c27db1deae
+たとえば、データベースバックアップからClone1を作成したあとに、Clone1のバックアップを作成し、そのバックアップ（Clone2）をクローニングできます。Clone2を作成すると、Clone1は中間クローンになり、Clone1でクローンスプリット処理を実行することはできません。ただし、クローン2に対してはクローンスプリット処理を実行できます。
 
 +
-1a257e7266ca12bbea3d47c6bdea1b66
+Clone1は中間クローンではなくなるため、Clone2をスプリットしたら、Clone1でクローンスプリット処理を実行できます。
 
-* 6e771b811b20a7b054314e097e0d93aa
-* c2ba780614c613756fa4439bc5df6c19
-* 36a1ea715fb14810ed7b65454d89a74d
+* クローンをスプリットすると、そのクローンのバックアップコピーとクローンジョブが削除されます。
+* クローンスプリット処理の制限事項については、を参照してください http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["ONTAP 9 論理ストレージ管理ガイド"^]。
+* ストレージシステム上のボリュームまたはアグリゲートがオンラインであることを確認します。
 
 
-.f3a29486bed19a90f2da6d007818b427
-. 530a5fa7e8fbaa4c796dbd46c93a55dd
-. e55db253bb52984bdf3db79b9f583b21
+.手順
+. 左側のナビゲーションペインで、 * リソース * をクリックし、リストから適切なプラグインを選択します。
+. [* リソース * （ * Resources * ） ] ページで、 [ 表示（ View ） ] リストから適切なオプションを選択する。
 +
 |===
-| 054b4f3ea543c990f6b125f41af6ebf7 | b5a7adde1af5c87d7fd797b6245c2a39 
+| オプション | 説明 
 
 
  a| 
-8edd4fe327b1637885140852a58cc272
+データベースアプリケーション
  a| 
-fbf4f3bf8a7c49583abb77b38aef59db
+[ 表示 ] リストから [*Database] を選択します。
 
 
 
  a| 
-f6886255755dd305e56a1cf9fcf3c5ee
+ファイルシステムの場合
  a| 
-efcc8219675b74be2ea4ec68fc2b81f2
+[ 表示 ] リストから [* パス *] を選択します。
 
 |===
-. c0a1b33f51c24ec7a0237c45c3a450f8
+. リストから適切なリソースを選択します。
 +
-e984402842ada9bf4703b2df6ce206b3
+リソーストポロジページが表示されます。
 
-. 29f4a82ad48601f6358f85c39f7e717c
-. f5cfd65b6cd03934d8269e3f878035d8
-. 8b9460bf38a68108bcdd278a386b3156
+. [コピーの管理]*ビューで、クローンリソース（データベースやLUNなど）を選択し、**をクリックしますimage:../media/split_cone.gif["スプリットクローンアイコン"]。
+. スプリットするクローンの推定サイズとアグリゲートで使用可能なスペースを確認し、 * Start * をクリックします。
+. 操作の進行状況を監視するには、 * Monitor * > * Jobs * をクリックします。
 +
-ff09e99880e5a1ea7500cf09b4e8de2a
-
-+
-a1f1e133a5541124ced1ecc394830a0e
+SMCoreサービスが再起動すると、クローンスプリット処理が応答を停止します。Stop-SmJobコマンドレットを実行してクローンスプリット処理を停止してから、クローンスプリット処理を再試行してください。
 
 +
-506c2c0c7f5b70af3df68c45c46f45a7
+クローンがスプリットされているかどうかを確認するためにポーリング時間を長くしたり、ポーリング時間を短縮したりする場合は、 _SMCoreServiceHost.exe.config_file の _CloneSplitStatusCheckPollTime_Parameter の値を変更して、 SMCore がクローンスプリット処理のステータスをポーリングする間隔を設定できます。値はミリ秒単位で、デフォルト値は5分です。
+
++
+例：
 
 +
 [listing]
@@ -69,9 +69,9 @@ a1f1e133a5541124ced1ecc394830a0e
 <add key="CloneSplitStatusCheckPollTime" value="300000" />
 ----
 +
-949ad980c1552a4a514f54656c5e4e1e
+バックアップ、リストア、または別のクローンスプリットが実行中の場合、クローンスプリットの開始処理は失敗します。クローンスプリット処理を再開するのは、実行中の処理が完了してからにしてください。
 
 
 
-.30f60d67f457bb040dffde52197a54da
-c4d1b109542fdbc8eef8e3b4cac85e00
+.関連情報
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_clone_or_verfication_fails_with_aggregate_does_not_exist["アグリゲートが存在しないためにSnapCenterのクローニングまたは検証が失敗する"]

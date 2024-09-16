@@ -2,30 +2,30 @@
 permalink: protect-nsp/configure_CA_certificate_with_Windows_host_plug-in_services.html 
 sidebar: sidebar 
 keywords: SnapCenter 
-summary: 1f8ca173b65dfa4ec89689efd778bdb1 
+summary: Windows ホストプラグインサービスで CA 証明書を設定します 
 ---
-= 1067e8b574748bfd5d0147a621c7ca24
+= WindowsホストプラグインサービスでのCA証明書の設定
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-d4d451fe9bcfe7f834b0f3648f4a43d2
+インストールされているデジタル証明書をアクティブ化するには、Windowsホストプラグインサービスを使用してCA証明書を設定する必要があります。
 
-0038a64c6c7736efde380d3c84157a59
+SnapCenterサーバおよびCA証明書がすでに導入されているすべてのプラグインホストで、次の手順を実行します。
 
-.f3a29486bed19a90f2da6d007818b427
-. 365baef9f1edf6ea17574e122b03eb49
+.手順
+. 次のコマンドを実行して、SMCoreのデフォルトポート8145を使用して既存の証明書バインディングを削除します。
 +
-3109a55b6060cd504e355fdd531a0e16
+`> netsh http delete sslcert ipport=0.0.0.0:_<SMCore Port>`
 
 +
-506c2c0c7f5b70af3df68c45c46f45a7
+例：
 
 +
  > netsh http delete sslcert ipport=0.0.0.0:8145
-. cfeefc3191032a82f3264d4300d89c85
+. 次のコマンドを実行して、新しくインストールした証明書をWindowsホストのプラグインサービスとバインドします。
 +
 ....
 > $cert = “_<certificate thumbprint>_”
@@ -33,7 +33,7 @@ d4d451fe9bcfe7f834b0f3648f4a43d2
 > netsh http add sslcert ipport=0.0.0.0: _<SMCore Port>_ certhash=$cert appid="$guid"
 ....
 +
-506c2c0c7f5b70af3df68c45c46f45a7
+例：
 
 +
 ....

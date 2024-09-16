@@ -2,20 +2,20 @@
 permalink: protect-nsp/restore_netapp_supported_plugins_resources.html 
 sidebar: sidebar 
 keywords:  
-summary: dd5f630f41cdfc02249f05e881feeef5 
+summary: リストアとリカバリのワークフローには、計画、リストア処理の実行、および処理の監視が含まれます。 
 ---
-= 67d899b4318f9296298e7c4bb8999573
+= NetAppでサポートされているプラグインリソースのリストア
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-dd5f630f41cdfc02249f05e881feeef5
+リストアとリカバリのワークフローには、計画、リストア処理の実行、および処理の監視が含まれます。
 
-.bbe48fb854ea022537208eeeff822f91
-f221802dd348fa7fec376c674a7bceda
+.タスクの内容
+次のワークフローは、リストア処理の実行順序を示しています。
 
-image::../media/restore_workflow.gif[e30c3d908a4ed515e16791b672cc0709]
+image::../media/restore_workflow.gif[リストアのワークフロー]
 
-f62ecec13f26504ecae9b49f3ed6b228
+PowerShellコマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、クローニングの処理を実行することもできます。PowerShellコマンドレットの詳細については、SnapCenterコマンドレットのヘルプを使用するか、を参照してください https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"]。
