@@ -140,8 +140,6 @@ entries:
       url: "/protect-scsql/task_monitor_dataprotection_operations_on_sql_resources_in_the_activity_pane.html"
   - title: PowerShellコマンドレットを使用してストレージシステム接続とクレデンシャルを作成する
     url: "/protect-scsql/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_sql.html"
-  - title: PowerShellコマンドレットを使用したリソースのバックアップ
-    url: "/protect-scsql/task_back_up_resources_using_powershell_cmdlets_for_sql.html"
   - title: SnapCenter Plug-in for Microsoft SQL Serverのバックアップ処理をキャンセルする
     url: "/protect-scsql/task_cancel_the_snapcenter_plug_in_for_sql_server_operations.html"
   - title: "[Topology]ページでのSQL Serverのバックアップとクローンの表示"
@@ -160,10 +158,10 @@ entries:
     url: "/protect-scsql/task_restore_sql_server_database_backups.html"
   - title: セカンダリストレージからSQL Serverデータベースをリストアする
     url: "/protect-scsql/task_restore_a_sql_server_database_from_secondary_storage.html"
+  - title: PowerShellコマンドレットを使用したリソースのリストア
+    url: "/protect-scsql/task_restore_and_recover_resources_using_powershell_cmdlets_for_sql.html"
   - title: 可用性グループデータベースの再シード
     url: "/protect-scsql/task_reseed_availability_group_databases.html"
-  - title: PowerShellコマンドレットを使用したリソースのリストアとリカバリ
-    url: "/protect-scsql/task_restore_and_recover_resources_using_powershell_cmdlets_for_sql.html"
   - title: リストア処理の監視
     url: "/protect-scsql/task_monitor_sql_resources_restore_operations.html"
   - title: リストア処理をキャンセルする
@@ -174,8 +172,6 @@ entries:
     url: "/protect-scsql/reference_clone_sql_server_database_resources.html"
   - title: SQL Serverデータベースバックアップからのクローニング
     url: "/protect-scsql/task_clone_from_a_sql_server_database_backup.html"
-  - title: PowerShellコマンドレットを使用したバックアップのクローニング
-    url: "/protect-scsql/task_clone_backups_using_powershell_cmdlets_for_sql.html"
   - title: クローンライフサイクルの実行
     url: "/protect-scsql/task_perform_clone_lifecycle_management.html"
   - title: SnapCenterでのクローニング処理の監視

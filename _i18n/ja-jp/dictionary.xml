@@ -197,11 +197,8 @@
   <block id="bface44d9eafe9939661dba269100705" category="paragraph">仮想ファイバチャネルスイッチで接続された仮想FC（vFC）LUN</block>
   <block id="8e5abf7ae61642b07fd36f663d41227f" category="paragraph">仮想ファイバチャネルスイッチで接続された仮想FC（vFC）LUNをプロビジョニングするには、Hyper-V Managerを使用する必要があります。</block>
   <block id="215653e704c2ad428517df1dcbfafbf8" category="admonition">Hyper-V のパススルーディスク、およびネットアップストレージでプロビジョニングされた VHD （ x ）でのデータベースのバックアップはサポートされていません。</block>
-  <block id="d2323db6aa3f6333b1375db7f025bd4e" category="paragraph">PowerShellコマンドレットを使用して、SQL ServerデータベースまたはWindowsファイルシステムをバックアップできます。具体的には、SQL ServerデータベースまたはWindowsファイルシステムのバックアップには、SnapCenterサーバとの接続の確立、SQL ServerデータベースインスタンスまたはWindowsファイルシステムの検出、ポリシーの追加、バックアップリソースグループの作成、バックアップと検証が含まれます。</block>
   <block id="135b308ed83c53f1516b7c754566d1c4" category="list-title">開始する前に</block>
-  <block id="c90de0347e94ade70c96034e2ffca3ba" category="list-text">PowerShellコマンドレットを実行できるようにPowerShell環境を準備しておく必要があります。</block>
-  <block id="38d7f66964588305ed5bee44db007183" category="list-text">ストレージシステム接続を追加し、クレデンシャルを作成しておく必要があります。</block>
-  <block id="7d88eb773274afe1c014d0593b26bb0a" category="list-text">ホストを追加し、リソースを検出しておく必要があります。</block>
+  <block id="c90de0347e94ade70c96034e2ffca3ba" category="paragraph">PowerShellコマンドレットを実行できるようにPowerShell環境を準備しておく必要があります。</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">手順</block>
   <block id="623aa9b9d36889377a728b1284e5485e" category="list-text">Open-SmConnectionコマンドレットを使用して、指定したユーザのSnapCenterサーバとの接続セッションを開始します。</block>
   <block id="d5b8eb2056e11e71857a777fd502266b" category="paragraph">ユーザ名とパスワードのプロンプトが表示されます。</block>
@@ -3642,7 +3639,7 @@
   <block id="edc9f0a5a5d57797bf68e37364743831" category="list-text">Linux</block>
   <block id="97aa5d732e113de93c33cd5b5f45d232" category="admonition">Plug-in for IBM DB2はIBM DB2クライアントホストにインストールされます。このホストはWindowsシステムでもLinuxシステムでもかまいません。</block>
   <block id="dae4a538d4ca7b6c0789932062fe718d" category="paragraph">ホスト名</block>
-  <block id="967d70688a2c10907f06f49fb1edf05a" category="paragraph">通信ホスト名を入力します。ホストの完全修飾ドメイン名（FQDN）またはIPアドレスを入力します。SnapCenter は、 DNS の適切な設定によって異なります。そのため、FQDNを入力することを推奨します。</block>
+  <block id="967d70688a2c10907f06f49fb1edf05a" category="paragraph">通信ホスト名を入力します。ホストの完全修飾ドメイン名（FQDN）またはIPアドレスを入力します。SnapCenterは、DNSが適切に設定されているかどうかによって異なります。そのため、FQDNを入力することを推奨します。</block>
   <block id="2daf1cb573c2c61422faf64610cf9402" category="paragraph">クレデンシャル</block>
   <block id="6ccccda80a2e51e22eda9ce7f0dd7e10" category="paragraph">作成したクレデンシャルの名前を選択するか、新しいクレデンシャルを作成します。このクレデンシャルには、リモートホストに対する管理者権限が必要です。詳細については、クレデンシャルの作成に関する情報を参照してください。</block>
   <block id="1b8c590183c60edb79773aff22b2cc3c" category="paragraph">指定したクレデンシャルの名前にカーソルを合わせると、クレデンシャルの詳細を確認できます。</block>
@@ -3696,7 +3693,6 @@
   <block id="d63d0f9078f63941d9f67771c5293aac" category="doc">Linuxホスト上のリソースの自動検出</block>
   <block id="de8a0eac61e71a8d2ba2498bdbf156b2" category="paragraph">リソースとは、SnapCenterによって管理されるLinuxホスト上のIBM DB2データベースとインスタンスです。SnapCenter Plug-in for IBM DB2プラグインをインストールすると、そのLinuxホスト上のすべてのインスタンスのIBM DB2データベースが自動的に検出され、[Resources]ページに表示されます。</block>
   <block id="bf2fb73b7932cdadf3476adc215ac4c1" category="summary">データベースをバックアップするときは、SnapCenterサーバとの接続を確立し、リソースの追加、ポリシーの追加、バックアップリソースグループの作成を行い、バックアップを実行します。</block>
-  <block id="0db7de34dbf5c1c143a3f3c98858115e" category="doc">PowerShellコマンドレットを使用したデータベースのバックアップ</block>
   <block id="13e3d53f499f52435f24ba71dd8286bb" category="list-text">Add-SmResourcesコマンドレットを使用して、手動でリソースを追加します。</block>
   <block id="a681470beeafcaa9104f48f55eba7103" category="paragraph">次に、IBM DB2インスタンスを追加する例を示します。</block>
   <block id="464f41e21c3ca32cd354384c8b421339" category="paragraph">DB2データベースの場合：</block>
@@ -3712,7 +3708,6 @@
   <block id="b9721a35a6c374ded595576ccbd2f789" category="paragraph">次のワークフローは、バックアップ処理の実行順序を示しています。</block>
   <block id="9bb1086732d729daa5079011da1d7f58" category="image-alt">DB2バックアップのワークフロー</block>
   <block id="f6ca7431c38f4f9103a7165ce76ebf07" category="paragraph">PowerShellコマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、クローニングの処理を実行することもできます。PowerShellコマンドレットの詳細については、SnapCenterのコマンドレットのヘルプを使用するか、コマンドレットのリファレンス情報を参照してください。<block ref="5c7d1c91ee3f41bdd6f718a502a5613f" category="inline-link-rx"></block>です。</block>
-  <block id="524291bce284c7a322c8064a7d402ef7" category="doc">IBM DB2のバックアップ</block>
   <block id="bb9d7068e92869688b6abcc02fa7e603" category="list-text">バックアップポリシーを作成しておく必要があります。</block>
   <block id="08c86005ddd32599a5beea4c7b9ff4ad" category="list-text">セカンダリストレージとの SnapMirror 関係があるリソースをバックアップする場合、ストレージユーザに割り当てられた ONTAP ロールには「「 'SnapMirro all' 」権限を含める必要があります。ただし、「 vsadmin 」ロールを使用している場合、「 'SnapMirro all 」権限は必要ありません。</block>
   <block id="b98ec889f59de061a4caf0f10c44b599" category="list-text">Snapshotコピーベースのバックアップ処理の場合は、すべてのテナントデータベースが有効でアクティブであることを確認してください。</block>
@@ -3785,13 +3780,10 @@
   <block id="f13996192c5cd583e2ff57912b5401e3" category="paragraph">また、送信者と受信者のEメールアドレス、およびEメールの件名を指定する必要があります。</block>
   <block id="bec1318185bcb08bbbdb149f6e72458c" category="paragraph">自動検出されたDB2リソースをクローニングすると、クローニングされたリソースは手動リソースとしてマークされます。クローンDB2リソースをリカバリするには、*[リソースをリフレッシュ]*をクリックします。クローンを削除すると、ストレージとホストもクリーンアップされます。</block>
   <block id="8da40f6fe3107c9433a48199413eafc1" category="paragraph">クローン処理後にリソースを更新せずにクローンを削除しようとすると、ストレージとホストはクリーンアップされません。fstabでエントリを手動で削除する必要があります。</block>
-  <block id="0dba3293d94fffec6acecd31b797abb1" category="doc">PowerShellコマンドレットを使用したIBM DB2データベースのバックアップのクローニング</block>
   <block id="7efd97c2a4471de87de7e99332374e4a" category="list-text">Get-SmBackupコマンドレットを使用して、クローニング処理を実行するバックアップを取得します。</block>
   <block id="f03d64352eff2c5a90a8790e99accb55" category="paragraph">この例では、クローニングに2つのバックアップを使用できます。</block>
   <block id="d7272ca580c1be43c009610e69bf10d3" category="list-text">既存のバックアップからクローニング処理を開始し、クローニングされたボリュームをエクスポートするNFSエクスポートのIPアドレスを指定します。</block>
   <block id="7b5f6d9e0f208631c0910d81fcd84413" category="paragraph">この例では、NFSExportIPsアドレスが10.32.212.14であるバックアップをクローニングしています。</block>
-  <block id="e1d21c0573d8edccd1611eecec1c4497" category="paragraph">DB2データベースの場合：</block>
-  <block id="3bf2ba8333d028c6261fc6dc40aa02ef" category="paragraph">DB2インスタンスの場合：</block>
   <block id="b7abd75bd8327fa92ee489faffc1ce74" category="admonition">NFSExportIPsを指定しない場合、デフォルトでクローンターゲットホストにエクスポートされます。</block>
   <block id="e4eeb55e3e0cd2267e0daa6e20349545" category="list-text">Get-SmCloneReportコマンドレットを使用してクローンジョブの詳細を表示し、バックアップが正常にクローニングされたことを確認します。</block>
   <block id="46ca186cb22f8dea3bb75049b7f0e17e" category="paragraph">クローンID、開始日時、終了日時などの詳細を確認できます。</block>
@@ -4097,8 +4089,6 @@
   <block id="c90dd548c691ca9f32913357e116af19" category="paragraph">自動検出されたリソースにはマウントコマンドは必要ありません。</block>
   <block id="df85b9b2d7736db0ac0fccefcb84c8f0" category="admonition">休止、Snapshot、および休止解除の処理を実行するプリコマンドとポストコマンドの場合は、Linuxの場合は_/opt/snapcenter/snapenter/scc/allowed commands.config_path、Windowsの場合は_C：\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands.config_からプラグインホストで使用できるコマンドリストにコマンドが存在するかどうかを確認する必要があります。</block>
   <block id="63da44e9da033b590dde9b4ad197a492" category="paragraph">ロールフォワードステータスが「DB PENDING」の場合にのみリカバリが可能です。このステータスは、アーカイブログが有効なDB2データベースに適用されます。</block>
-  <block id="53b75feee407d1834b322c10e85f7623" category="summary">IBM DB2バックアップをリストアするには、SnapCenterサーバとの接続セッションを開始し、バックアップをリスト表示してバックアップ情報を取得し、バックアップをリストアします。</block>
-  <block id="d1ef025ad5eecf5742761547510f17ec" category="doc">PowerShellコマンドレットを使用したIBM DB2データベースのリストア</block>
   <block id="0be208f27c2aea320f1d6d221e131551" category="list-text">Get-SmBackupコマンドレットおよびGet-SmBackupReportコマンドレットを使用して、リストアするバックアップを特定します。</block>
   <block id="2004c840a5bc74f37ca5c26f2dfd5e0e" category="paragraph">この例では、リストアに使用できるバックアップが2つあります。</block>
   <block id="a1d5af660c5e2d1e4fad83bdc58b7ce2" category="admonition">AppObjectIdは「Host\Plugin\UID」です。UID =&lt;instance_name&gt;は手動で検出されたインスタンスリソースの場合、UID =&lt;instance_name&gt;\&lt;databse_name&gt;はIBM DB2データベースリソースの場合です。ResourceIDは、Get-smResourcesコマンドレットで取得できます。</block>
@@ -4404,7 +4394,6 @@
   <block id="4e783e8dfeae9de37071ca1aacd853de" category="paragraph">リソースとしてLUNを選択し、セカンダリバックアップからクローニングする場合は、デスティネーションボリュームのリストが表示されます。1つのソースに複数のデスティネーションボリュームを設定できます。</block>
   <block id="d21ab82b42875e082ef4574c36d6c5e4" category="admonition">クローニングを実行する前に、iSCSIイニシエータまたはFCPが存在し、代替ホストが設定されてログインしていることを確認する必要があります。</block>
   <block id="a559b2571e56d5cca36de86e59757d8d" category="admonition">休止、Snapshot、および休止解除の処理を実行するプリコマンドとポストコマンドの場合は、Linuxの場合は_/opt/snapcenter/snapenter/scc/allowed commands.config_path、Windowsの場合は_C：\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands_list.txt_からプラグインホストで使用できるコマンドリストにコマンドがあるかどうかを確認する必要があります。</block>
-  <block id="75a7c9b2e73f5c1cc5286ea02330c1bd" category="doc">PowerShellコマンドレットを使用したSAP HANAデータベースのバックアップのクローニング</block>
   <block id="308eb9668aa46089527d28ee157a4176" category="paragraph">この例では、NFSExportIPsのアドレスが10.232.206.169に設定されているバックアップをクローニングしています。</block>
   <block id="7049a25bdae22fafbe95070b989df286" category="list-text">は、ソースSAP HANAサーバでクローニングできます。</block>
   <block id="f18910805a2fa2ea798a785953f19eaf" category="doc">Linuxホスト上のSnapCenter SAP HANAプラグインサービスのCA証明書の設定</block>
@@ -4589,12 +4578,6 @@
   <block id="d73a914cb42f4329fcad78926aa1794f" category="paragraph">「 * リカバリなし * 」を選択します。リカバリ処理は、HANA Studioから手動で実行する必要があります。</block>
   <block id="22d76fd0449efcbebf22dc1d75c06808" category="paragraph">SnapCenter 4.3へのアップグレード後に作成されたバックアップのみをリカバリできます。ただし、ホストとプラグインの両方がSnapCenter 4.3にアップグレードされ、自動検出されたリソースが変換または検出されたあとにリストア対象として選択されたバックアップが作成されている必要があります。</block>
   <block id="3f90ba06baa30f2e66df25302c79cd63" category="doc">PowerShellコマンドレットを使用したリソースのリストア</block>
-  <block id="62bd1df1f8e068497569c97f3e404a98" category="summary">SAP HANA データベースのバックアップをリストアするときは、 SnapCenter サーバとの接続セッションを開始し、バックアップをリストしてバックアップ情報を取得し、バックアップをリストアします。</block>
-  <block id="0f69ffe8d82c94ffce3da6b597e697b5" category="doc">PowerShellコマンドレットを使用したSAP HANAデータベースのリストア</block>
-  <block id="9cb2e8b30975ae43fe6a8ea67898a952" category="list-text">HANA Studioでリカバリプロセスを開始します。</block>
-  <block id="a53d0252472f1610734654e51124858b" category="paragraph">データベースがシャットダウンされます。</block>
-  <block id="57a70f4a4a92a47a28f2f41b69a06ef8" category="admonition">AppObjectIdは「Host\Plugin\UID」です。UID = SIDは単一コンテナタイプのリソースの場合、UID = MDC\SIDは複数のコンテナリソースの場合です。ResourceIDは、Get-smResourcesコマンドレットで取得できます。</block>
-  <block id="1dbedac9aa8fb16b0d7e3f4c912759fc" category="paragraph">バックアップはHANA Studioでリカバリに使用できるようになります。</block>
   <block id="8f088fc353589a53b22d09fce118b2a6" category="doc">SnapCenter Plug-in for SAP HANA Databaseのクレデンシャルを設定する</block>
   <block id="ffa66d0b6548351c980beb43900626f7" category="image-alt">RunAs アカウントをインストールします</block>
   <block id="b497c633c2f7408b8c4d20a9a87604dc" category="paragraph">セカンダリ関係がSnapMirrorのアクティブな同期（当初はSnapMirrorビジネス継続性[SM-BC]としてリリース）である場合は、次のアイコンも表示されます。</block>
@@ -4636,7 +4619,6 @@
   <block id="e705a7920e05c9bb81e85e88f3bc517e" category="admonition">コマンドがコマンドリストに存在しない場合、処理は失敗します。* MySQL 5.7のバージョンでは、MySQLでIGNORE_MYSQLX_PORT = true（デフォルトではfalse）に設定する必要があります。 プロパティファイル。</block>
   <block id="1aa42ebe2562e36443837ba3783d56be" category="list-text">クローンされたMySQLインスタンスを保護することはできません。</block>
   <block id="5ca99b958cb1bd3ef353a484ef374b7c" category="paragraph">クローニングしたMySQLインスタンスを起動するポートを指定します。</block>
-  <block id="7bf249a0d2f6ca34f234e49a7c6ae839" category="doc">PowerShellコマンドレットを使用したMySQLデータベースのバックアップのクローニング</block>
   <block id="617874f47ab7905a23ed519cf3fea6ae" category="list-text">のクローンはソースのMySQLサーバで作成できます。</block>
   <block id="0dfabcb39ba57463ff60fac9a6ef98b9" category="doc">LinuxホストでのSnapCenter MySQLプラグインサービス用のCA証明書の設定</block>
   <block id="fcf09390b67d36433a1b5d8a3baa2685" category="doc">Windowsホスト上のSnapCenter MySQLプラグインサービス用のCA証明書の設定</block>
@@ -4708,9 +4690,6 @@
   <block id="cb883508bba7de6fa1086f8be627f59b" category="list-text">ポイントインタイムと最新の状態への自動リカバリはサポートされていません。</block>
   <block id="9fde62e7bc35c3b39dc1d0d05b5d4c30" category="list-text">[Restore Scope]ページで、*[Complete Resource]*を選択してMySQLデータベースの設定済みデータボリュームをリストアします。</block>
   <block id="3aac36b8956b530dee664d07e15ff001" category="admonition">休止、Snapshot、および休止解除の処理を実行するプリコマンドとポストコマンドの場合は、Linuxの_/opt/snapcenter/snapenter/scc/allowed _ commands.config_pathからプラグインホストで使用できるコマンドリストに該当するコマンドがあるかどうかを確認する必要があります。</block>
-  <block id="cd590f35a0b386a7dbd4ed93e94a2563" category="summary">MySQLバックアップをリストアするには、SnapCenterサーバとの接続セッションを開始し、バックアップをリストしてバックアップ情報を取得し、バックアップをリストアします。</block>
-  <block id="68a34ea2d1e4c6a908fbd0f2e0dfd502" category="doc">PowerShellコマンドレットを使用したMySQLデータベースのリストア</block>
-  <block id="5e9e173d2acff941dc42dd384b711936" category="admonition">AppObjectIdは「Host\Plugin\UID」です。UID =&lt;instance_name&gt;は手動で検出されたインスタンスリソース用、UID =&lt;instance_name&gt;\&lt;databse_name&gt;はMySQLデータベースリソース用です。リソースIDはGet-SmResourcesコマンドレットで取得できます。</block>
   <block id="26f012751d0422897cf8be8bfbe0e184" category="doc">SnapCenter Plug-in for MySQLのクレデンシャルを設定</block>
   <block id="957af8278f8063c6cf7bcf3ea7d98baa" category="summary">SnapCenter は、プラグインアプリケーションと統合されるほか、ストレージシステム上でネットアップのテクノロジと統合されます。Plug-in for MySQL Databaseを操作するには、SnapCenterのグラフィカルユーザインターフェイスを使用します。</block>
   <block id="0ce8bb1c11c9d867461ad1c0b83e04c0" category="doc">SnapCenter Plug-in for MySQLの特長</block>
@@ -4885,8 +4864,7 @@
   <block id="44119ab6cb16491e354c029de67b6782" category="list-text">複数のポリシーをリソースグループに関連付けている場合は、「 * Policy * 」ドロップダウンリストから、バックアップに使用するポリシーを選択します。</block>
   <block id="656764dc4fc9063500ad9c4607e32b3b" category="paragraph"><block ref="656764dc4fc9063500ad9c4607e32b3b" category="inline-link-rx"></block></block>
   <block id="f6e291f8da5e2bfb20622fac181e8aca" category="list-text">VMDK上のアプリケーションデータをバックアップする場合に、SnapCenter Plug-in for VMware vSphereのJavaヒープサイズが十分でないと、バックアップが失敗することがあります。Javaヒープサイズを増やすには、スクリプトファイル/opt/netapp/init_scripts/scvserviceを探します。このスクリプトでは、コマンドによって<block ref="f751567fc5d2c300402db2d50de19910" prefix=" " category="inline-code"></block> SnapCenter VMwareプラグインサービスが開始されます。このコマンドを次のように更新し<block ref="d66632e2d1ccce4227411d877d93c152" prefix=" " category="inline-code"></block>ます。</block>
-  <block id="517a125fd46ee1a60309a280447487c0" category="summary">リソースをバックアップするときは、 SnapCenter サーバとの接続を確立してから、リソースの追加、ポリシーの追加、バックアップリソースグループの作成を行って、バックアップを実行します。</block>
-  <block id="d2a5f76428abadccd7b24ea08a0eee1e" category="doc">PowerShellコマンドレットを使用したリソースのバックアップ</block>
+  <block id="d2a5f76428abadccd7b24ea08a0eee1e" category="inline-link-macro">PowerShellコマンドレットを使用したリソースのバックアップ</block>
   <block id="d278818a36e5f43a96b7082ec24a25e0" category="paragraph">リソースを追加する例を次に示します。</block>
   <block id="d51b1b50a87024de88cbdf1b6d828c21" category="paragraph">新しいバックアップポリシーを作成する例を次に示します。</block>
   <block id="05095cde7f504457949712770df49d6a" category="summary">バックアップのスケジュールを決定する場合に最も重要な要因となるのは、リソースの変更率です。リソースをバックアップする回数が多いほど、リストア時に SnapCenter で使用する必要のあるアーカイブログの数が少なくなります。これにより、リストア処理の時間を短縮できます。</block>
@@ -4896,8 +4874,6 @@
   <block id="2dfac6a9e055d01cbdff5af6e3ac4c33" category="paragraph">バックアップ頻度（バックアップを実行する頻度）は、ポリシー設定の一部です。一部のプラグインではスケジュールタイプとも呼ばれます。たとえば、毎時、毎日、毎週、または毎月としてバックアップ頻度を設定できます。SnapCenter GUI でポリシーにアクセスするには、 * Settings * &gt; * Policies * をクリックします。</block>
   <block id="4fce9b40dcfa287df9c2cd63375d8561" category="paragraph">バックアップスケジュール（バックアップが実行されるタイミング）は、リソースまたはリソースグループの設定に含まれます。たとえば、リソースグループのポリシーで週単位のバックアップが設定されている場合は、毎週木曜日の午後10時にバックアップされるようにスケジュールを設定できます。SnapCenter GUIでリソースグループのスケジュールにアクセスするには、*[リソース]*をクリックし、適切なプラグインを選択して*[表示]*&gt;*[リソースグループ]*をクリックします。</block>
   <block id="219faad869c51c259c3baeb888e7715b" category="doc">NetAppでサポートされているプラグインのバックアップ処理をキャンセルする</block>
-  <block id="8c922e6a0134954b667b072d00b58ce3" category="doc">PowerShellコマンドレットを使用したバックアップのクローニング</block>
-  <block id="dbde28811975e59f9d793cdbedffa379" category="paragraph">PowerShellコマンドレットの詳細については、SnapCenterコマンドレットのヘルプを使用するか、を参照してください<block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block>。</block>
   <block id="e8afddd41cf3a716324442f7a4538460" category="list-text">Get-SmBackupコマンドレットまたはGet-SmResourceGroupコマンドレットを使用してクローニングできるバックアップの一覧を表示します。</block>
   <block id="b92d70c39b6e5b77f828b04b1f8cf2e7" category="paragraph">この例では、指定したリソースグループに関する情報を表示しています。</block>
   <block id="490bfe5ade57157a35bf58b686acb1cf" category="list-text">New-SmCloneコマンドレットを使用して、クローンリソースグループまたは既存のバックアップからクローニング処理を開始します。</block>
@@ -5456,8 +5432,6 @@
   <block id="8c6a5ec4378c1fb0539384c188e10773" category="list-text">「* value *」フィールドにポート番号を指定します。</block>
   <block id="8df8e33d8de2d6167669d469ccf7bacd" category="summary">リソースとは、SnapCenterによって管理されるLinuxホスト上のPostgreSQLクラスタとインスタンスです。SnapCenter Plug-in for PostgreSQLプラグインをインストールすると、そのLinuxホスト上のPostgreSQLクラスタが自動的に検出され、[Resources]ページに表示されます。</block>
   <block id="b7010b9dd54942efc350213b545f8fcc" category="paragraph">リソースとは、SnapCenterによって管理されるLinuxホスト上のPostgreSQLクラスタとインスタンスです。SnapCenter Plug-in for PostgreSQLプラグインをインストールすると、そのLinuxホスト上のすべてのインスタンスのPostgreSQLクラスタが自動的に検出され、[Resources]ページに表示されます。</block>
-  <block id="0d78e7f1a288dafc16b38b2db161bd37" category="summary">クラスタをバックアップするときは、SnapCenterサーバとの接続を確立し、リソースの追加、ポリシーの追加、バックアップリソースグループの作成を行い、バックアップを実行します。</block>
-  <block id="b1cbcfa72bf25e7c520985ac50c60f65" category="doc">PowerShellコマンドレットを使用したクラスタのバックアップ</block>
   <block id="82cdab2339b9d151736b53885e0ce102" category="paragraph">次に、PostgreSQLインスタンスを追加する例を示します。</block>
   <block id="76c214e24b03aa4168d09074b6e14e3f" category="summary">リソース\（cluster\）またはリソースグループのバックアップを作成できます。バックアップのワークフローには、計画、バックアップするクラスタの特定、バックアップポリシーの管理、リソースグループの作成とポリシーの適用、バックアップの作成、処理の監視が含まれます。</block>
   <block id="530895ccaf7ffc619f25f8f9d8ec3597" category="doc">PostgreSQLリソースのバックアップ</block>
@@ -5472,7 +5446,6 @@
   <block id="3aec6404efc9e4c86b1c1e63225bc69f" category="paragraph">既存のバックアップからクローニングするPostgreSQLターゲットポートを入力します。</block>
   <block id="ddeb42879d827df35406b952ceec75ef" category="list-text">クローニング前のコマンド：同じ名前の既存のクラスタを削除</block>
   <block id="ac6903fb60d8773c9c64b4d5c2ae07ca" category="list-text">クローニング後のコマンド：クラスタの検証またはクラスタの開始を行います。</block>
-  <block id="c5f5244e6930e3be5fb9358a7fb198ec" category="doc">PowerShellコマンドレットを使用したPostgreSQLクラスタバックアップのクローニング</block>
   <block id="a46c7c9051556410e34daf87555e4af7" category="paragraph">PostgreSQLクラスタの場合：</block>
   <block id="16304fb8cc6cc60af53bde0bb5ac66b7" category="list-text">クローニングはソースのPostgreSQLサーバで実行できます。</block>
   <block id="15ae17a7cd3cc273763752dd6144c354" category="doc">Linuxホスト上のSnapCenter PostgreSQL Plug-inサービス用のCA証明書の設定</block>
@@ -5553,12 +5526,7 @@
   <block id="2243d9f85be8c57105c8d2eaabc0b881" category="paragraph">「 * リカバリなし * 」を選択します。</block>
   <block id="08a801b87570777fd2e3960aa5df1bb1" category="admonition">手動で追加したPostgreSQLリソースは回復できません。</block>
   <block id="43434635d53a7654c99b7e0b2592780f" category="admonition">SnapCenter Plug-in for PostgreSQLは、手動でのリカバリに役立つように、_/&lt;OS_temp_folder&gt;/&lt;Restore_JobId&gt;/_フォルダにbackup_labelとtablespace_mapを作成します。</block>
-  <block id="77d20f777995de612db657a54e3dd05e" category="summary">PostgreSQLバックアップをリストアするには、SnapCenterサーバとの接続セッションを開始し、バックアップをリストしてバックアップ情報を取得し、バックアップをリストアします。</block>
-  <block id="327dedb40ce8a6597f0c43633fac8ff6" category="doc">PowerShellコマンドレットを使用したPostgreSQLクラスタのリストア</block>
-  <block id="9211fb254b9418c89e77590ae03a0ae8" category="admonition">AppObjectIdは「Host\Plugin\UID」です。UID =&lt;instance_name&gt;は手動で検出されたPostgreSQLインスタンスリソース用、UID =&lt;instance_name&gt;\&lt;databse_name&gt;はPostgreSQLクラスタリソース用です。ResourceIDは、Get-smResourcesコマンドレットで取得できます。</block>
-  <block id="b5c3bf7715665388a63229be96401c77" category="paragraph">この例は、プライマリストレージからクラスタをリストアする方法を示しています。</block>
-  <block id="68457f3725741703167e8a741dfb53a5" category="paragraph">次の例は、セカンダリストレージからクラスタをリストアする方法を示しています。</block>
-  <block id="e9ed9fe137a73fd8f4de1dd2a91bb6b4" category="summary">SnapCenter は、クレデンシャルを使用して SnapCenter 処理を実行するユーザを認証しますSnapCenterプラグインのインストールに使用するクレデンシャルと、クラスタまたはWindowsファイルシステムでデータ保護処理を実行するためのクレデンシャルをそれぞれ作成する必要があります。</block>
+  <block id="e9ed9fe137a73fd8f4de1dd2a91bb6b4" category="summary">SnapCenterでは、クレデンシャルを使用してSnapCenter処理のユーザを認証します。SnapCenterプラグインのインストールに使用するクレデンシャルと、クラスタまたはWindowsファイルシステムでデータ保護処理を実行するためのクレデンシャルをそれぞれ作成する必要があります。</block>
   <block id="e98661df3aff27229a7058376533924a" category="doc">SnapCenter Plug-in for PostgreSQLのクレデンシャルを設定する</block>
   <block id="4a22036d291fcb70270b7a277bb6609d" category="summary">SnapCenter は、プラグインアプリケーションと統合されるほか、ストレージシステム上でネットアップのテクノロジと統合されます。Plug-in for PostgreSQLクラスタを操作するには、SnapCenterグラフィカルユーザインターフェイスを使用します。</block>
   <block id="c988f5ab14bd3d7fcb922a45fca0877c" category="doc">SnapCenter Plug-in for PostgreSQLの機能</block>
@@ -5810,9 +5778,6 @@
   <block id="a1d7cae473cc035fb76e1540b76e2763" category="list-text">リソースグループに、ネットアップストレージとネットアップ以外のストレージ上にアクティブ / パッシブデータベースコピーのあるデータベースまたはデータベース可用性グループが含まれていて、ポリシーでバックアップジョブの作成時に選択するサーバでアクティブ / パッシブデータベースコピーのバックアップ * または * バックアップコピーの選択が完了している場合： その後、バックアップジョブが警告状態になります。</block>
   <block id="b9c7ed41d7e2f0a91ab873b63037fa09" category="paragraph">NetAppストレージ上のアクティブ/パッシブデータベースコピーのバックアップは成功し、ネットアップ以外のストレージ上のアクティブ/パッシブデータベースコピーのバックアップは失敗します。</block>
   <block id="3a16a5fe7a351d2059010bdd627dffd9" category="paragraph">リソースグループを検索するには、検索ボックスにリソースグループ名を入力するか、**をクリックし<block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>てタグを選択します。次に、**をクリックしてフィルタペインを閉じることができます<block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>。</block>
-  <block id="47dfd37b6d44f98f65b2e75ff64e7f3a" category="summary">Exchange Serverデータベースをバックアップするときは、SnapCenterサーバとの接続を確立し、Exchangeサーバデータベースを検出し、ポリシーの追加、バックアップリソースグループの作成、バックアップ、およびバックアップステータスの表示を行います。</block>
-  <block id="6c40f1cde52cc35bedb76a6ac167d83e" category="doc">PowerShellコマンドレットを使用したExchangeリソースのバックアップ</block>
-  <block id="177c6d04e35e22fd728d0f8aa88c6c74" category="admonition">Plug-in for Exchangeではクローニング処理がサポートされないため、Add-SmPolicyコマンドレットのCloneTypeパラメータはPlug-in for Exchangeではサポートされません。</block>
   <block id="584657e4b5bddce78001faf5776544cc" category="paragraph">この例では、フルバックアップとログバックアップのExchangeバックアップタイプを指定して新しいバックアップポリシーを作成しています。</block>
   <block id="208c499842b5bd5ba293e47da51ebd68" category="paragraph">この例では、1時間ごとのフルバックアップとログバックアップのExchangeバックアップタイプを指定して新しいバックアップポリシーを作成しています。</block>
   <block id="206edf297460ddfa7679c1e47ace5ca1" category="paragraph">この例では、Exchangeログのみをバックアップする新しいバックアップポリシーを作成します。</block>
@@ -6156,8 +6121,6 @@
   <block id="937579085613107358fec70acf7e5303" category="paragraph">リストア・プロセスを監視するには、 * Monitor * &gt; * Jobs * ページを使用します。</block>
   <block id="c5394e0a25e8d57564f1756db7179dc8" category="paragraph">バックアップからアクティブデータベースをリストアするときに、レプリカとアクティブデータベースの間に遅延があると、パッシブデータベースが一時停止状態または障害状態になることがあります。</block>
   <block id="57401f2a0bdec87b775b756a5b2946fa" category="paragraph">状態の変化は、アクティブデータベースのログチェーンがフォークし、レプリケーションを中断する新しいブランチを開始したときに発生します。Exchange Serverはレプリカの修正を試みますが、修正できない場合は、リストア後に新しいバックアップを作成し、レプリカを再シードする必要があります。</block>
-  <block id="b2589f75fce91547cb20c051fa1935d2" category="summary">Exchangeデータベースをリストアするには、SnapCenterサーバとの接続セッションを開始し、バックアップをリストしてバックアップ情報を取得し、バックアップをリストアします。</block>
-  <block id="97e9982b58636ac0e13e42585b460313" category="doc">PowerShellコマンドレットを使用したExchangeリソースのリストア</block>
   <block id="53d7030c30fb81234ffed5a3972eb621" category="list-text">コマンドレットを使用して、リストアする1つ以上のバックアップに関する情報を取得します<block ref="3b327888082d0a6615ac0b1cac5ce6dc" prefix=" " category="inline-code"></block> 。</block>
   <block id="a65b207e84f627a2af00b6dd102bd0e3" category="list-text">コマンドレットを使用して、バックアップからデータをリストアします<block ref="ed60514e5ff71a62bddf0cf1df75f8f0" prefix=" " category="inline-code"></block> 。</block>
   <block id="49ab07d3ee1a1aacb53dd0994a535a3f" category="paragraph">この例では、最新の状態へのバックアップをリストアしています。</block>
@@ -6270,7 +6233,7 @@
   <block id="c09c3cc5c352ec79b573a0262d4a9909" category="paragraph">次に、**をクリックしてフィルタペインを閉じることができます<block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="c6cc754896fef7ff6303bf792f45397f" category="list-text">バックアップするアプリケーションボリュームを選択します。</block>
   <block id="fb532da51d82ae5118e8f3d5cb3bbd50" category="paragraph">[Application volume - Protect]ページが表示されます。</block>
-  <block id="8d2ba99665e114b5e2a9d74a31cdf554" category="list-text">リソースページで、次の操作を実行します。</block>
+  <block id="8d2ba99665e114b5e2a9d74a31cdf554" category="list-text">[Resource]ページで、次の操作を実行します。</block>
   <block id="9e1730c2573e54b5d90f6eb3254bfc8e" category="paragraph">このチェックボックスをオンにして、Snapshot名に使用するカスタムの名前形式を入力します。</block>
   <block id="99b1f696253ffa3a8fb97bceb5991c38" category="paragraph">たとえば、customText__policy_hostnameやresource_hostnameなどです。デフォルトでは、Snapshot名にタイムスタンプが追加されます。</block>
   <block id="056af176267461e7d6a2a9e357208bd7" category="paragraph">アーカイブログデスティネーションをバックアップから除外</block>
@@ -7944,7 +7907,7 @@
   <block id="51fb25555c87830dd2151ad5f3b7a845" category="paragraph"><block ref="51fb25555c87830dd2151ad5f3b7a845" category="inline-link-macro-rx"></block></block>
   <block id="f1b0e4721c4648a3a0d9747b1df24457" category="inline-link-macro">リソースの休止処理またはグループ化処理が失敗する</block>
   <block id="832cb1b396b5451b24475f6f96d26d25" category="paragraph"><block ref="832cb1b396b5451b24475f6f96d26d25" category="inline-link-macro-rx"></block></block>
-  <block id="463e628d0fee92af59d880953c74bf11" category="summary">バックアップからデータベースリソースをクローニングする前に、 SnapCenter Server でいくつかのタスクを実行する必要があります。データベースのクローニングは、本番環境のデータベースまたはそのバックアップセットのポイントインタイムコピーを作成するプロセスです。データベースをクローニングして、アプリケーション開発サイクル中に実装が必要な機能を現在のデータベース構造とコンテンツを使用してテストしたり、データウェアハウスへのデータの取り込み時にデータの抽出と操作のツールを使用したり、誤って削除または変更されたデータをリカバリしたりできます。</block>
+  <block id="463e628d0fee92af59d880953c74bf11" category="summary">バックアップからデータベースリソースをクローニングする前に、SnapCenterサーバを使用していくつかのタスクを実行する必要があります。データベースのクローニングは、本番環境のデータベースまたはそのバックアップセットのポイントインタイムコピーを作成するプロセスです。データベースをクローニングして、アプリケーション開発サイクル中に実装が必要な機能を現在のデータベース構造とコンテンツを使用してテストしたり、データウェアハウスへのデータの取り込み時にデータの抽出と操作のツールを使用したり、誤って削除または変更されたデータをリカバリしたりできます。</block>
   <block id="b7d4e9465660c3654b7e3da747496c5c" category="paragraph">データベースのクローニング処理では、ジョブIDに基づいてレポートが生成されます。</block>
   <block id="999e40363ae36d8696166b52a3c23152" category="paragraph">次のワークフローは、クローニング処理の実行順序を示しています。</block>
   <block id="70124670f70878681ab7bb78e2860796" category="image-alt">クローニングのワークフロー図</block>
@@ -8154,9 +8117,7 @@
   <block id="cd580f0c35d4c37236f3153c15452b6f" category="paragraph">デフォルトのスクリプトタイムアウトは60秒です。</block>
   <block id="4b70ba28cecacc0b972de64bf00eafac" category="paragraph">EMSの場合は、<block ref="6a6cc2b71a11174970b94b5318ade705" category="inline-link-rx"></block></block>
   <block id="b8ceb1eaf0d60af03679989562024d6b" category="paragraph">クローンの作成後は、名前を変更しないでください。</block>
-  <block id="8a2bd81e968aaadb6ec10a1b58f541cc" category="inline-link-macro">SQL Serverデータベース、インスタンス、可用性グループをバックアップする</block>
-  <block id="38c78702a48e457f5ef291281168432e" category="paragraph"><block ref="38c78702a48e457f5ef291281168432e" category="inline-link-macro-rx"></block></block>
-  <block id="f9db2c2c51ac713541e90ff79219156d" category="paragraph"><block ref="f9db2c2c51ac713541e90ff79219156d" category="inline-link-macro-rx"></block></block>
+  <block id="8a2bd81e968aaadb6ec10a1b58f541cc" category="sidebar">SQL Serverデータベース、インスタンス、可用性グループをバックアップする</block>
   <block id="f7e7f0dd9d36aec3d609775de2dbbd0b" category="paragraph"><block ref="f7e7f0dd9d36aec3d609775de2dbbd0b" category="inline-link-rx"></block></block>
   <block id="1e9ab426973a56020f8d1db85cb07f06" category="inline-link">フェイルオーバークラスタインスタンスのデータベースクローンが失敗する</block>
   <block id="2df5362c7aa8c12a0dd2f1b211cdf61d" category="paragraph"><block ref="2df5362c7aa8c12a0dd2f1b211cdf61d" category="inline-link-rx"></block></block>
@@ -8885,7 +8846,7 @@
   <block id="45305b0c2be46c68805c14c7667e37d1" category="list-text">Windowsメッセージキューをオンにしておく必要があります。</block>
   <block id="3f9e658ebdc571b944cc7a6bb94fa2fc" category="list-text">ホストのローカル管理者である必要があります。</block>
   <block id="012cef6769a01d5c95c3bd84a1587de6" category="list-text">インストールの場所から、 SnapCenter Plug-in for Microsoft Windows をダウンロードします。</block>
-  <block id="e0080a28dd770f19702e65fb9e7b8c86" category="paragraph">たとえば、デフォルトのインストールパスはNetApp \Package\Package SnapCenter Repositoryです。</block>
+  <block id="e0080a28dd770f19702e65fb9e7b8c86" category="paragraph">たとえば、デフォルトのインストールパスはC：\ProgramData\NetApp\SnapCenter\Package Repositoryです。</block>
   <block id="424b633375f0c25b6599ad41cd5c8834" category="list-text">次のコマンドを入力し、変数をデータに置き換えます。</block>
   <block id="e559b6a335235bf0d42e119acfec64ee" category="paragraph"><block ref="511535100fc5b401f851fbae73960983" prefix="" category="inline-code"></block></block>
   <block id="a9ed368eca2fcc1d3ad4f6e42059e309" category="admonition">Plug-in for Windowsのインストール時に渡されるすべてのパラメータでは、大文字と小文字が区別されます。</block>
@@ -8918,7 +8879,7 @@
   <block id="b651b2481c776bf3bf9ea345a8be10ad" category="summary">リソースのバックアップまたはクローニングを準備するときに、プライマリストレージとセカンダリストレージ上のすべてのバックアップとクローンの図を表示できます。[Topology]ページでは、選択したリソースまたはリソースグループに使用可能なすべてのバックアップとクローンを確認できます。これらのバックアップとクローンの詳細を表示し、選択してデータ保護処理を実行できます。</block>
   <block id="ab4899518bdf2b09eb1ef12f3cb58429" category="list-text">SnapCenter 1.1 からアップグレードした場合、セカンダリ（ミラーまたはバックアップ）上のクローンは、トポロジページのミラーコピーまたはバックアップコピーの下に表示されません。SnapCenter 3.0 では、 SnapCenter 1.1 で作成されたすべてのクローンがローカルコピーの下に表示されます。</block>
   <block id="a5034055581c83d2fec0b4b410e664f4" category="paragraph">サマリカードセクションには、バックアップとクローンの合計数が表示されます。Oracle データベースの場合のみ、サマリカードセクションにはログバックアップの合計数も表示されます。</block>
-  <block id="80c82fe3ce8c148b5edc714385f5f5b1" category="paragraph">SnapCenter Custom Plug-ins を使用している場合、プライマリストレージシステムにあるバックアップの名前は変更できません。</block>
+  <block id="80c82fe3ce8c148b5edc714385f5f5b1" category="paragraph">SnapCenterカスタムプラグインを使用している場合、プライマリストレージシステム上のバックアップの名前は変更できません。</block>
   <block id="82df92bf63205eb90f0513c131abc2dd" category="list-text">クローンを削除する場合は、表でクローンを選択し、<block ref="f790bf9188cee374d2bb1f3790c6a393" category="inline-image-macro-rx" type="image"></block>をクリックして削除します。</block>
   <block id="1a8413b6d25d17625bc85e11bb87aaa7" category="paragraph"><block ref="1a8413b6d25d17625bc85e11bb87aaa7" category="inline-image-macro-rx" type="image"></block></block>
   <block id="4507e0d1a42287b926181e4cb9fda1cf" category="summary">このリリースの SnapCenter サーバおよび SnapCenter プラグインパッケージに関する重要な情報を提供します。これには、解決済みの問題、既知の問題、注意事項、および制限事項が含まれます。</block>
@@ -9730,7 +9691,6 @@
   <block id="d2a6c0fe906c34dcc3199d46b0f064eb" category="sidebar">[Topology]ページでのIBM DB2データベースのバックアップとクローンの表示</block>
   <block id="1f70c9e1700c704dfec3fabce3ea1e61" category="sidebar">IBM DB2のリストア</block>
   <block id="3f1b13e4c36844e70f5e441d547e538a" category="sidebar">自動検出されたデータベースバックアップのリストア</block>
-  <block id="6430c6d3f6715feb3c81d928f75f4ef5" category="sidebar">PowerShellコマンドレットを使用したIBM DB2のリストア</block>
   <block id="1c72949dbb5a015cff1821967cce106f" category="sidebar">IBM DB2リソースバックアップのクローニング</block>
   <block id="b0b60126f154fbea1109285d09dabe64" category="sidebar">IBM DB2データベースのバックアップのクローニング</block>
   <block id="5cb6a75832518fd27c8d399ca2772808" category="sidebar">SnapCenterでのクローニング処理の監視</block>
@@ -9753,7 +9713,6 @@
   <block id="0d1aafd347801e1c28235ed9f606913b" category="sidebar">SnapCenter Plug-in for MySQLのインストール</block>
   <block id="f8ec35321e854dc696eede14c98e61f0" category="sidebar">[Topology]ページでのMySQLデータベースのバックアップとクローンの表示</block>
   <block id="74f11b6391f86775587d7212c298b439" category="sidebar">MySQLのリストア</block>
-  <block id="2fd821a84f4f2d04dfd883d9e831b487" category="sidebar">PowerShellコマンドレットを使用したMySQLのリストア</block>
   <block id="66d8fc5dc91943dfb2a42f390879dbaa" category="sidebar">MySQLリソースのバックアップをクローニング</block>
   <block id="e21d8a65aeaef70217d9755dfc6ca944" category="sidebar">MySQLデータベースのバックアップをクローニング</block>
   <block id="b0aa9b023351939602d9d1e28823f0e3" category="sidebar">NetAppでサポートされているプラグインの保護</block>
@@ -9782,7 +9741,6 @@
   <block id="a60af869a07d535dff66727f74a69b19" category="sidebar">SnapCenter Plug-in for PostgreSQLのインストール</block>
   <block id="146ebe956310ab6aebfd83b175d2bae4" category="sidebar">[Topology]ページでのPostgreSQLクラスタのバックアップとクローンの表示</block>
   <block id="d9b22e5cf88b9d4e6e8fe02a7489ea16" category="sidebar">PostgreSQLのリストア</block>
-  <block id="57318c547ffe570761f4a3f4b7899d67" category="sidebar">PowerShellコマンドレットを使用したPostgreSQLのリストア</block>
   <block id="480aaec5aa69b781016a62284565640a" category="sidebar">PostgreSQLリソースバックアップのクローニング</block>
   <block id="680c5ccf46f4a728694c590785dc9cda" category="sidebar">PostgreSQLクラスタバックアップのクローニング</block>
   <block id="43a8d144e52087845c210b591cf8af3b" category="sidebar">Microsoft Exchange Serverデータベースの保護</block>
@@ -9845,4 +9803,7 @@
   <block id="60bea4969590084ae9e74b765b209fad" category="sidebar">SnapCenterプラグインパッケージのアンインストール</block>
   <block id="fdcd3d6f45be97e0e24b4e793a81fac0" category="sidebar">SnapCenterサーバとプラグインのアップグレード</block>
   <block id="8693aef17f2d371968a29ad0e0dff726" category="sidebar">アップグレードワークフロー</block>
+  <block id="3d64c1dca7f60c2f025bc4b68e25eaec" category="doc">DB2データベースのバックアップ</block>
+  <block id="fc25be62e75052437e6fa7b8d1571f48" category="open-title">SnapCenter UI</block>
+  <block id="41269337bd4507838c6bb1bd7b2141c3" category="sidebar">DB2データベースのバックアップ</block>
 </blocks>

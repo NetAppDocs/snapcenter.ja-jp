@@ -1,17 +1,17 @@
 ---
-permalink: protect-db2/back-up-ibm-db2.html 
+permalink: protect-db2/back-up-db2-databases.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for IBM Db2 
-summary: どのリソースグループにも含まれていないリソースは、のページからバックアップすることができます。 
+summary: データベースをバックアップするときは、SnapCenterサーバとの接続を確立し、リソースの追加、ポリシーの追加、バックアップリソースグループの作成を行い、バックアップを実行します。 
 ---
-= IBM DB2のバックアップ
+= DB2データベースのバックアップ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-どのリソースグループにも含まれていないリソースは、のページからバックアップすることができます。
+データベースをバックアップするときは、SnapCenterサーバとの接続を確立し、リソースの追加、ポリシーの追加、バックアップリソースグループの作成を行い、バックアップを実行します。
 
 .開始する前に
 * バックアップポリシーを作成しておく必要があります。
@@ -29,6 +29,10 @@ Linuxの場合：_/var/opt/snapcenter/scc/allowed _ commands.config_
 
 NOTE: コマンドがコマンドリストに存在しない場合、処理は失敗します。
 
+[role="tabbed-block"]
+====
+.SnapCenter UI
+--
 .手順
 . 左側のナビゲーションペインで、*[リソース]*を選択し、リストから適切なプラグインを選択します。
 . リソースページで、リソースタイプに基づいて *View*] ドロップダウンリストからリソースをフィルタリングします。
@@ -147,3 +151,122 @@ _policy_name_は 、選択したポリシーの名前です。
 
 
 
+
+--
+.PowerShellコマンドレット
+--
+.手順
+. Open-SmConnectionコマンドレットを使用して、指定したユーザのSnapCenterサーバとの接続セッションを開始します。
++
+[listing]
+----
+PS C:\> Open-SmConnection
+----
++
+ユーザ名とパスワードのプロンプトが表示されます。
+
+. Add-SmResourcesコマンドレットを使用して、手動でリソースを追加します。
++
+次に、IBM DB2インスタンスを追加する例を示します。
+
++
+[listing]
+----
+PS C:\> Add-SmResource -HostName 10.32.212.13 -PluginCode DB2 -ResourceType Instance -ResourceName db2inst1 -StorageFootPrint (@{"VolumeName"="windb201_data01";"LUNName"="windb201_data01";"StorageSystem"="scsnfssvm"}) -MountPoints "D:\"
+----
++
+DB2データベースの場合：
+
++
+[listing]
+----
+PS C:\> Add-SmResource -HostName 10.32.212.13 -PluginCode DB2 -ResourceType Database -ResourceName SALESDB -StorageFootPrint (@{"VolumeName"="windb201_data01";"LUNName"="windb201_data01";"StorageSystem"="scsnfssvm"}) -MountPoints "D:\" -Instance DB2
+----
+. Add-SmPolicyコマンドレットを使用して、バックアップポリシーを作成します。
+. リソースを保護するか、Add-SmResourceGroupコマンドレットを使用してSnapCenterに新しいリソースグループを追加します。
+. New-SmBackupコマンドレットを使用して、新しいバックアップジョブを開始します。
++
+この例は、リソースグループをバックアップする方法を示しています。
+
++
+[listing]
+----
+C:\PS> New-SMBackup -ResourceGroupName 'ResourceGroup_with_Db2_Resources' -Policy db2_policy1
+----
++
+次に、DB2インスタンスをバックアップする例を示します。
+
++
+[listing]
+----
+C:\PS> New-SMBackup -Resources @{"Host"="10.32.212.13";"Uid"="DB2INST1";"PluginName"="DB2"} -Policy db2_policy
+----
++
+次に、DB2データベースをバックアップする例を示します。
+
++
+[listing]
+----
+C:\PS> New-SMBackup -Resources @{"Host"="10.32.212.13";"Uid"="DB2INST1\WINARCDB";"PluginName"="DB2"} -Policy db2_policy
+----
+. Get-smJobSummaryReportコマンドレットを使用して、ジョブのステータス（実行中、完了、失敗）を監視します。
++
+[listing]
+----
+PS C:\> Get-SmJobSummaryReport -JobId 467
+
+SmJobId            : 467
+JobCreatedDateTime :
+JobStartDateTime   : 27-Jun-24 01:40:09
+JobEndDateTime     : 27-Jun-24 01:41:15
+JobDuration        : 00:01:06.7013330
+JobName            : Backup of Resource Group 'SCDB201WIN_RAVIR1_OPENLAB_NETAPP_LOCAL_DB2_DB2_WINCIR' with policy 'snapshot-based-db2'
+JobDescription     :
+Status             : Completed
+IsScheduled        : False
+JobError           :
+JobType            : Backup
+PolicyName         : db2_policy
+JobResultData      :
+----
+. Get-SmBackupReportコマンドレットを使用して、リストアやクローニングの処理を実行するバックアップID、バックアップ名などのバックアップジョブの詳細を監視します。
++
+[listing]
+----
+PS C:\> Get-SmBackupReport -JobId 467
+
+BackedUpObjects           : {WINCIR}
+FailedObjects             : {}
+IsScheduled               : False
+HasMetadata               : False
+SmBackupId                : 84
+SmJobId                   : 467
+StartDateTime             : 27-Jun-24 01:40:09
+EndDateTime               : 27-Jun-24 01:41:15
+Duration                  : 00:01:06.7013330
+CreatedDateTime           : 27-Jun-24 18:39:45
+Status                    : Completed
+ProtectionGroupName       : HOSTFQDN_DB2_DB2_WINCIR
+SmProtectionGroupId       : 23
+PolicyName                : db2_policy
+SmPolicyId                : 13
+BackupName                : HOSTFQDN _DB2_DB2_WINCIR_HOST_06-27-2024_01.40.09.7397
+VerificationStatus        : NotApplicable
+VerificationStatuses      :
+SmJobError                :
+BackupType                : SCC_BACKUP
+CatalogingStatus          : NotApplicable
+CatalogingStatuses        :
+ReportDataCreatedDateTime :
+PluginCode                : SCC
+PluginName                : DB2
+PluginDisplayName         : IBM DB2
+JobTypeId                 :
+JobHost                   : HOSTFQDN
+----
+
+
+コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+
+--
+====

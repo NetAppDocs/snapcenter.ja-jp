@@ -22,6 +22,10 @@ NOTE: ファイルシステムをバックアップする場合、 SnapCenter �
 
 IMPORTANT: Windowsファイルシステムコンテキストで作業している場合は、データベースファイルをバックアップしないでください。バックアップを作成しても整合性に欠け、リストア時にデータが失われる可能性があります。データベースファイルを保護するには、データベースに適したSnapCenterプラグイン（SnapCenter Plug-in for Microsoft SQL Server、SnapCenter Plug-in for Microsoft Exchange Server、データベースファイル用のカスタムプラグインなど）を使用する必要があります。
 
+[role="tabbed-block"]
+====
+.SnapCenter UI
+--
 .手順
 . 左側のナビゲーションペインで、 * リソース * をクリックし、リストから適切なプラグインを選択します。
 . [ リソース ] ページで、 [ ファイルシステム ] リソースタイプを選択し、バックアップするリソースを選択します。
@@ -106,3 +110,101 @@ Eメールのデフォルトの件名
 
 . 操作の進行状況を監視するには、 * Monitor * > * Jobs * をクリックします。
 
+
+--
+.PowerShellコマンドレット
+--
+.手順
+. Open-SmConnectionコマンドレットを使用して、指定したユーザのSnapCenterサーバとの接続セッションを開始します。
++
+[listing]
+----
+Open-smconnection  -SMSbaseurl  https://snapctr.demo.netapp.com:8146
+----
++
+ユーザ名とパスワードのプロンプトが表示されます。
+
+. Add-SmPolicyコマンドレットを使用して、バックアップポリシーを作成します。
++
+この例では、SQLバックアップタイプがFULLBACKUPの新しいバックアップポリシーを作成しています。
+
++
+[listing]
+----
+PS C:\> Add-SmPolicy -PolicyName TESTPolicy
+-PluginPolicyType SCSQL -PolicyType Backup
+-SqlBackupType FullBackup -Verbose
+----
++
+この例では、WindowsファイルシステムのバックアップタイプがCrashConsistentの新しいバックアップポリシーを作成しています。
+
++
+[listing]
+----
+PS C:\> Add-SmPolicy -PolicyName FileSystemBackupPolicy
+-PluginPolicyType SCW -PolicyType Backup
+-ScwBackupType CrashConsistent -Verbose
+----
+. Get-SmResourcesコマンドレットを使用して、ホストリソースを検出します。
++
+この例では、指定したホストでMicrosoft SQLプラグインのリソースを検出しています。
+
++
+[listing]
+----
+C:\PS>PS C:\> Get-SmResources -HostName vise-f6.sddev.mycompany.com
+-PluginCode SCSQL
+----
++
+この例では、指定したホスト上のWindowsファイルシステムのリソースを検出しています。
+
++
+[listing]
+----
+C:\PS>PS C:\> Get-SmResources -HostName vise2-f6.sddev.mycompany.com
+-PluginCode SCW
+----
+. Add-SmResourceGroupコマンドレットを使用して、SnapCenterに新しいリソースグループを追加します。
++
+この例では、ポリシーとリソースを指定して新しいSQLデータベースバックアップリソースグループを作成しています。
+
++
+[listing]
+----
+PS C:\> Add-SmResourceGroup -ResourceGroupName AccountingResource
+-Resources @{"Host"="visef6.org.com";
+"Type"="SQL Database";"Names"="vise-f6\PayrollDatabase"}
+-Policies "BackupPolicy"
+----
++
+この例では、ポリシーとリソースを指定して新しいWindowsファイルシステムバックアップリソースグループを作成します。
+
++
+[listing]
+----
+PS C:\> Add-SmResourceGroup -ResourceGroupName EngineeringResource
+-PluginCode SCW -Resources @{"Host"="WIN-VOK20IKID5I";
+"Type"="Windows Filesystem";"Names"="E:\"}
+-Policies "EngineeringBackupPolicy"
+----
+. New-SmBackupコマンドレットを使用して、新しいバックアップジョブを開始します。
++
+[listing]
+----
+PS C:> New-SmBackup -ResourceGroupName PayrollDataset -Policy FinancePolicy
+----
+. Get-SmBackupReportコマンドレットを使用して、バックアップジョブのステータスを表示します。
++
+次に、指定した日付に実行されたすべてのジョブのジョブ概要レポートを表示する例を示します。
+
++
+[listing]
+----
+PS C:\> Get-SmJobSummaryReport -Date '1/27/2016'
+----
+
+
+コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+
+--
+====

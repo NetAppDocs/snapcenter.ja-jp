@@ -48,6 +48,10 @@ GET APIを使用すると、キーの値を表示できます。Set APIはサポ
 * SnapMirrorのアクティブな同期のリストア処理では、プライマリの場所からバックアップを選択する必要があります。
 
 
+[role="tabbed-block"]
+====
+.SnapCenter UI
+--
 .手順
 . 左側のナビゲーションペインで、リソースページの左上にある * リソース * をクリックします。
 . ドロップダウンリストからExchange Serverプラグインを選択します。
@@ -132,3 +136,68 @@ NOTE: プリスクリプトまたはポストスクリプトのパスにドラ�
 バックアップからアクティブデータベースをリストアするときに、レプリカとアクティブデータベースの間に遅延があると、パッシブデータベースが一時停止状態または障害状態になることがあります。
 
 状態の変化は、アクティブデータベースのログチェーンがフォークし、レプリケーションを中断する新しいブランチを開始したときに発生します。Exchange Serverはレプリカの修正を試みますが、修正できない場合は、リストア後に新しいバックアップを作成し、レプリカを再シードする必要があります。
+
+--
+.PowerShellコマンドレット
+--
+.手順
+. コマンドレットを使用して、指定したユーザでSnapCenterサーバとの接続セッションを開始します `Open-SmConnection` 。
++
+[listing]
+----
+Open-smconnection  -SMSbaseurl  https://snapctr.demo.netapp.com:8146/
+----
+. コマンドレットを使用して、リストアする1つ以上のバックアップに関する情報を取得します `Get-SmBackup` 。
++
+次に、使用可能なすべてのバックアップに関する情報を表示する例を示します。
+
++
+[listing]
+----
+PS C:\> Get-SmBackup
+
+BackupId                      BackupName                    BackupTime                    BackupType
+--------                      ----------                    ----------                    ----------
+341                           ResourceGroup_36304978_UTM... 12/8/2017 4:13:24 PM          Full Backup
+342                           ResourceGroup_36304978_UTM... 12/8/2017 4:16:23 PM          Full Backup
+355                           ResourceGroup_06140588_UTM... 12/8/2017 6:32:36 PM          Log Backup
+356                           ResourceGroup_06140588_UTM... 12/8/2017 6:36:20 PM          Full Backup
+----
+. コマンドレットを使用して、バックアップからデータをリストアします `Restore-SmBackup` 。
++
+この例では、最新の状態へのバックアップをリストアしています。
+
++
+[listing]
+----
+C:\PS> Restore-SmBackup -PluginCode SCE -AppObjectId 'sce-w2k12-exch.sceqa.com\sce-w2k12-exch_DB_2' -BackupId 341 -IsRecoverMount:$true
+----
++
+この例では、ポイントインタイムバックアップをリストアしています。
+
++
+[listing]
+----
+C:\ PS> Restore-SmBackup -PluginCode SCE -AppObjectId 'sce-w2k12-exch.sceqa.com\sce-w2k12-exch_DB_2' -BackupId 341 -IsRecoverMount:$true -LogRestoreType ByTransactionLogs -LogCount 2
+----
++
+この例では、セカンダリストレージのバックアップをプライマリストーリーにリストアします。
+
++
+[listing]
+----
+C:\ PS> Restore-SmBackup -PluginCode 'SCE' -AppObjectId 'DB2' -BackupId 81 -IsRecoverMount:$true -Confirm:$false
+-archive @{Primary="paw_vs:vol1";Secondary="paw_vs:vol1_mirror"} -logrestoretype All
+----
++
+パラメータを使用 `-archive` すると、リストアに使用するプライマリボリュームとセカンダリボリュームを指定できます。
+
++
+パラメータを指定する `-IsRecoverMount:$true` と、リストア後にデータベースをマウントできます。
+
+
+
+コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+
+--
+====

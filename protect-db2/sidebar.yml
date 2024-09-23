@@ -102,14 +102,12 @@ entries:
     url: "/protect-db2/create-backup-policies-for-ibm-db2.html"
   - title: リソースグループを作成してポリシーを適用
     url: "/protect-db2/create-resource-groups-and-attach-policies.html"
-  - title: IBM DB2のバックアップ
-    url: "/protect-db2/back-up-ibm-db2.html"
+  - title: DB2データベースのバックアップ
+    url: "/protect-db2/back-up-db2-databases.html"
   - title: リソースグループのバックアップ
     url: "/protect-db2/back-up-resource-groups-ibm-db2.html"
   - title: IBM DB2用のPowerShellコマンドレットを使用して、ストレージシステム接続とクレデンシャルを作成する
     url: "/protect-db2/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-ibm-db2.html"
-  - title: PowerShellコマンドレットを使用したデータベースのバックアップ
-    url: "/protect-db2/back-up-databases-using-powershell-cmdlets-ibm-db2.html"
   - title: バックアップ処理の監視
     entries:
     - title: SnapCenterの[Jobs]ページでのバックアップ処理の監視
@@ -128,8 +126,6 @@ entries:
     url: "/protect-db2/restore-manually-added-resource-backup.html"
   - title: 自動検出されたデータベースバックアップのリストア
     url: "/protect-db2/restore-auto-discovered-database-backup.html"
-  - title: PowerShellコマンドレットを使用したIBM DB2のリストア
-    url: "/protect-db2/restore-ibm-db2-database-using-powershell-cmdlets.html"
   - title: リストア処理の監視
     url: "/protect-db2/monitor-db2-restore-operations.html"
 - title: IBM DB2リソースバックアップのクローニング
@@ -138,8 +134,6 @@ entries:
     url: "/protect-db2/clone-ibm-db2-resource-backups.html"
   - title: IBM DB2データベースのバックアップのクローニング
     url: "/protect-db2/clone-ibm-db2-backup.html"
-  - title: PowerShellコマンドレットを使用したIBM DB2データベースのバックアップのクローニング
-    url: "/protect-db2/clone-ibm-db2-backups-using-powershell-cmdlets.html"
   - title: SnapCenterでのクローニング処理の監視
     url: "/protect-db2/monitor-db2-clone-operations.html"
   - title: クローンをスプリットする

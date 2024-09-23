@@ -23,7 +23,7 @@ SnapCenter Plug-in for Microsoft Windows を SnapCenter の GUI からリモー�
 .手順
 . インストールの場所から、 SnapCenter Plug-in for Microsoft Windows をダウンロードします。
 +
-たとえば、デフォルトのインストールパスはNetApp \Package\Package SnapCenter Repositoryです。
+たとえば、デフォルトのインストールパスはC：\ProgramData\NetApp\SnapCenter\Package Repositoryです。
 
 +
 このパスには、 SnapCenter サーバがインストールされているホストからアクセスできます。

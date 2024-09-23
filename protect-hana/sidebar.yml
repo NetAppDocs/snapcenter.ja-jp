@@ -118,8 +118,6 @@ entries:
     url: "/protect-hana/task_back_up_resource_groups_sap_hana.html"
   - title: PowerShellコマンドレットを使用してSAP HANAデータベース用にストレージシステム接続とクレデンシャルを作成
     url: "/protect-hana/task_create_a_storage_system_connection_and_a_run_as_account_using_powershell_cmdlets_for_sap_hana_database.html"
-  - title: PowerShellコマンドレットを使用したデータベースのバックアップ
-    url: "/protect-hana/task_back_up_databases_using_powershell_cmdlets_sap_hana.html"
   - title: バックアップ処理の監視
     entries:
     - title: SnapCenterの[Jobs]ページでのバックアップ処理の監視
@@ -138,8 +136,6 @@ entries:
     url: "/protect-hana/task_restore_and_recover_a_manually_added_resource_backup.html"
   - title: 自動検出されたデータベースバックアップのリストアとリカバリ
     url: "/protect-hana/task_restore_and_recover_an_auto_discovered_database_backup.html"
-  - title: PowerShellコマンドレットを使用したSAP HANAデータベースのリストア
-    url: "/protect-hana/task_restore_sap_hana_database_using_powershell_cmdlets.html"
   - title: PowerShellコマンドレットを使用したリソースのリストア
     url: "/protect-hana/task_restore_and_recover_resources_using_powershell_cmdlets_hana.html"
   - title: リストア処理の監視
@@ -150,8 +146,6 @@ entries:
     url: "/protect-hana/task_clone_sap_hana_resource_backups.html"
   - title: SAP HANAデータベースのバックアップをクローニング
     url: "/protect-hana/task_clone_a_sap_hana_database_backup.html"
-  - title: PowerShellコマンドレットを使用したSAP HANAデータベースのバックアップのクローニング
-    url: "/protect-hana/task_clone_sap_hana_database_backups_using_powershell_cmdlets.html"
   - title: SnapCenterでのクローニング処理の監視
     url: "/protect-hana/task_monitor_hana_database_clone_operations.html"
   - title: クローンをスプリットする

@@ -65,7 +65,6 @@ NOTE: 十分なディスクスペースを割り当て、logsフォルダによ�
  a| 
 * です。 ネットコア8.0.5
 * PowerShell Core 7.4.2
-* Java 11 Oracle JavaおよびOpenJDK
 
 
 サポートされているバージョンの最新情報については、を参照して https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool"^]ください。

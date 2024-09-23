@@ -106,8 +106,6 @@ entries:
     url: "/protect-mysql/back-up-resource-groups-mysql.html"
   - title: MySQL用のPowerShellコマンドレットを使用して、ストレージシステム接続とクレデンシャルを作成する
     url: "/protect-mysql/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-mysql.html"
-  - title: PowerShellコマンドレットを使用したデータベースのバックアップ
-    url: "/protect-mysql/back-up-databases-using-powershell-cmdlets-mysql.html"
   - title: バックアップ処理の監視
     entries:
     - title: SnapCenterの[Jobs]ページでのバックアップ処理の監視
@@ -126,8 +124,6 @@ entries:
     url: "/protect-mysql/restore-and-recover-a-manually-added-resource-backup.html"
   - title: 自動検出されたデータベースバックアップのリストアとリカバリ
     url: "/protect-mysql/restore-and-recover-an-auto-discovered-database-backup.html"
-  - title: PowerShellコマンドレットを使用したMySQLのリストア
-    url: "/protect-mysql/restore-mysql-using-powershell-cmdlets.html"
   - title: PowerShellコマンドレットを使用したリソースのリストア
     url: "/protect-mysql/restore-and-recover-resources-using-powershell-cmdlets-mysql.html"
   - title: リストア処理の監視
@@ -138,8 +134,6 @@ entries:
     url: "/protect-mysql/clone-mysql-resource-backups.html"
   - title: MySQLデータベースのバックアップをクローニング
     url: "/protect-mysql/clone-mysql-backup.html"
-  - title: PowerShellコマンドレットを使用したMySQLデータベースのバックアップのクローニング
-    url: "/protect-mysql/clone-mysql-backups-using-powershell-cmdlets.html"
   - title: SnapCenterでのクローニング処理の監視
     url: "/protect-mysql/monitor-mysql-clone-operations.html"
   - title: クローンをスプリットする

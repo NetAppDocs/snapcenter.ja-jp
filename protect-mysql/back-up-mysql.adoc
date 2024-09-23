@@ -29,6 +29,10 @@ Linuxの場合：_/var/opt/snapcenter/scc/allowed _commands _list.txt_
 
 NOTE: コマンドがコマンドリストに存在しない場合、処理は失敗します。
 
+[role="tabbed-block"]
+====
+.SnapCenter UI
+--
 .手順
 . 左側のナビゲーションペインで、*[リソース]*を選択し、リストから適切なプラグインを選択します。
 . リソースページで、リソースタイプに基づいて *View*] ドロップダウンリストからリソースをフィルタリングします。
@@ -151,3 +155,87 @@ Java のヒープサイズを増やすには、スクリプトファイル /opt/
 
 
 
+
+--
+.PowerShellコマンドレット
+--
+.手順
+. Open-SmConnectionコマンドレットを使用して、指定したユーザのSnapCenterサーバとの接続セッションを開始します。
++
+[listing]
+----
+Open-SmConnection  -SMSbaseurl  https:\\snapctr.demo.netapp.com:8146\
+----
++
+ユーザ名とパスワードのプロンプトが表示されます。
+
+. Add-SmResourcesコマンドレットを使用して、手動でリソースを追加します。
++
+次に、MySQLインスタンスを追加する例を示します。
+
++
+[listing]
+----
+PS C:\> Add-SmResource -HostName 10.32.212.13 -PluginCode MySQL -ResourceType Instance -ResourceName mysqlinst1 -StorageFootPrint (@{"VolumeName"="winmysql01_data01";"LUNName"="winmysql01_data01";"StorageSystem"="scsnfssvm"}) -MountPoints "D:\"
+----
+. Add-SmPolicyコマンドレットを使用して、バックアップポリシーを作成します。
+. リソースを保護するか、Add-SmResourceGroupコマンドレットを使用してSnapCenterに新しいリソースグループを追加します。
+. New-SmBackupコマンドレットを使用して、新しいバックアップジョブを開始します。
++
+この例は、リソースグループをバックアップする方法を示しています。
+
++
+[listing]
+----
+C:\PS> New-SmBackup -Resources @{"Host"="scs000211748.gdl.englab.netapp.com";"Uid"="mysqld_3306";"PluginName"="MySQL"} -Policy "MySQL_snapshotbased"
+----
++
+この例では、保護されたリソースをバックアップしています。
+
++
+[listing]
+----
+C:\PS> New-SMBackup -Resources @{"Host"="10.232.204.42";"Uid"="MDC\SID";"PluginName"="hana"} -Policy mysql_policy2
+----
+. Get-smJobSummaryReportコマンドレットを使用して、ジョブのステータス（実行中、完了、失敗）を監視します。
++
+[listing]
+----
+PS C:\> Get-smJobSummaryReport -JobID 123
+----
+. Get-SmBackupReportコマンドレットを使用して、リストアやクローニングの処理を実行するバックアップID、バックアップ名などのバックアップジョブの詳細を監視します。
++
+[listing]
+----
+PS C:\> Get-SmBackupReport -JobId 351
+Output:
+BackedUpObjects           : {DB1}
+FailedObjects             : {}
+IsScheduled               : False
+HasMetadata               : False
+SmBackupId                : 269
+SmJobId                   : 2361
+StartDateTime             : 10/4/2016 11:20:45 PM
+EndDateTime               : 10/4/2016 11:21:32 PM
+Duration                  : 00:00:46.2536470
+CreatedDateTime           : 10/4/2016 11:21:09 PM
+Status                    : Completed
+ProtectionGroupName       : Verify_ASUP_Message_windows
+SmProtectionGroupId       : 211
+PolicyName                : test2
+SmPolicyId                : 20
+BackupName                : Verify_ASUP_Message_windows_scc54_10-04-2016_23.20.46.2758
+VerificationStatus        : NotVerified
+VerificationStatuses      :
+SmJobError                :
+BackupType                : SCC_BACKUP
+CatalogingStatus          : NotApplicable
+CatalogingStatuses        :
+ReportDataCreatedDateTime :
+----
+
+
+コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+
+--
+====

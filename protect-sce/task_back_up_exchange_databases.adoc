@@ -26,6 +26,10 @@ summary: 'いずれのリソースグループにも含まれていないデー�
 |===
 
 
+[role="tabbed-block"]
+====
+.SnapCenter UI
+--
 .手順
 . 左側のナビゲーションペインで、 [* リソース ] をクリックし、リストから [Microsoft Exchange Server プラグイン *] を選択します。
 . リソースページで、 * 表示 * リストから * データベース * または * データベース可用性グループ * のいずれかを選択します。
@@ -115,3 +119,105 @@ Java のヒープサイズを増やすには、スクリプトファイル /opt/
 
 
 
+
+--
+.PowerShellコマンドレット
+--
+.手順
+. Open-SmConnectionコマンドレットを使用して、指定したユーザのSnapCenterサーバとの接続セッションを開始します。
++
+[listing]
+----
+Open-smconnection  -SMSbaseurl  https://snapctr.demo.netapp.com:8146/
+----
++
+ユーザ名とパスワードのプロンプトが表示されます。
+
+. Add-SmPolicyコマンドレットを使用して、バックアップポリシーを作成します。
++
+この例では、フルバックアップとログバックアップのExchangeバックアップタイプを指定して新しいバックアップポリシーを作成しています。
+
++
+[listing]
+----
+C:\PS> Add-SmPolicy -PolicyName SCE_w2k12_Full_Log_bkp_Policy -PolicyType Backup -PluginPolicytype SCE -SceBackupType FullBackupAndLogBackup -BackupActiveCopies
+----
++
+この例では、1時間ごとのフルバックアップとログバックアップのExchangeバックアップタイプを指定して新しいバックアップポリシーを作成しています。
+
++
+[listing]
+----
+C:\PS> Add-SmPolicy -PolicyName SCE_w2k12_Hourly_Full_Log_bkp_Policy -PolicyType Backup -PluginPolicytype SCE -SceBackupType FullBackupAndLogBackup -BackupActiveCopies -ScheduleType Hourly -RetentionSettings @{'BackupType'='DATA';'ScheduleType'='Hourly';'RetentionCount'='10'}
+----
++
+この例では、Exchangeログのみをバックアップする新しいバックアップポリシーを作成します。
+
++
+[listing]
+----
+Add-SmPolicy -PolicyName SCE_w2k12_Log_bkp_Policy -PolicyType Backup -PluginPolicytype SCE -SceBackupType LogBackup -BackupActiveCopies
+----
+. Get-SmResourcesコマンドレットを使用して、ホストリソースを検出します。
++
+この例では、指定したホスト上でMicrosoft Exchange Serverプラグインのリソースを検出しています。
+
++
+[listing]
+----
+C:\PS> Get-SmResources -HostName vise-f6.sddev.mycompany.com -PluginCode SCE
+----
+. Add-SmResourceGroupコマンドレットを使用して、SnapCenterに新しいリソースグループを追加します。
++
+この例では、ポリシーとリソースを指定して新しいExchange Serverデータベースバックアップリソースグループを作成しています。
+
++
+[listing]
+----
+C:\PS> Add-SmResourceGroup -ResourceGroupName SCE_w2k12_bkp_RG -Description 'Backup ResourceGroup with Full and Log backup policy' -PluginCode SCE -Policies SCE_w2k12_Full_bkp_Policy,SCE_w2k12_Full_Log_bkp_Policy,SCE_w2k12_Log_bkp_Policy -Resources @{'Host'='sce-w2k12-exch';'Type'='Exchange Database';'Names'='sce-w2k12-exch.sceqa.com\sce-w2k12-exch_DB_1,sce-w2k12-exch.sceqa.com\sce-w2k12-exch_DB_2'}
+----
++
+この例では、ポリシーとリソースを指定して、新しいExchange Database Availability Group（DAG；データベース可用性グループ）バックアップリソースグループを作成しています。
+
++
+[listing]
+----
+Add-SmResourceGroup -ResourceGroupName SCE_w2k12_bkp_RG -Description 'Backup ResourceGroup with Full and Log backup policy' -PluginCode SCE -Policies SCE_w2k12_Full_bkp_Policy,SCE_w2k12_Full_Log_bkp_Policy,SCE_w2k12_Log_bkp_Policy -Resources @{"Host"="DAGSCE0102";"Type"="Database Availability Group";"Names"="DAGSCE0102"}
+----
+. New-SmBackupコマンドレットを使用して、新しいバックアップジョブを開始します。
++
+[listing]
+----
+C:\PS> New-SmBackup -ResourceGroupName SCE_w2k12_bkp_RG -Policy SCE_w2k12_Full_Log_bkp_Policy
+----
++
+この例では、セカンダリストレージに新しいバックアップを作成します。
+
++
+[listing]
+----
+New-SMBackup -DatasetName ResourceGroup1 -Policy Secondary_Backup_Policy4
+----
+. Get-SmBackupReportコマンドレットを使用して、バックアップジョブのステータスを表示します。
++
+次に、指定した日付に実行されたすべてのジョブのジョブ概要レポートを表示する例を示します。
+
++
+[listing]
+----
+C:\PS> Get-SmJobSummaryReport -Date ?1/27/2018?
+----
++
+次に、特定のジョブIDのジョブサマリレポートを表示する例を示します。
+
++
+[listing]
+----
+C:\PS> Get-SmJobSummaryReport -JobId 168
+----
+
+
+コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、『Software Cmdlet Reference Guide ^]』を参照してください https://docs.netapp.com/us-en/snapcenter-cmdlets/index.htmlnapCenter[] 。
+
+--
+====

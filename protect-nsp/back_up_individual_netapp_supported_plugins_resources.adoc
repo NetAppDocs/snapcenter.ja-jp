@@ -18,6 +18,10 @@ summary: 'どのリソースグループにも含まれていない個 々 のNe
 * セカンダリストレージとの SnapMirror 関係があるリソースをバックアップする場合、ストレージユーザに割り当てられた ONTAP ロールには「「 'SnapMirro all' 」権限を含める必要があります。ただし、「 vsadmin 」ロールを使用している場合、「 'SnapMirro all 」権限は必要ありません。
 
 
+[role="tabbed-block"]
+====
+.SnapCenter UI
+--
 .手順
 . 左側のナビゲーションペインで、 * リソース * をクリックし、リストから適切なプラグインを選択します。
 . [ リソース ] ページで、リソースタイプに基づいて、 *View*] ドロップダウンリストからリソースをフィルタリングします。
@@ -131,3 +135,89 @@ NOTE: をクリックしてポリシーを作成することもできます。
 
 . 操作の進行状況を監視するには、 * Monitor * > * Jobs * をクリックします。
 
+
+--
+.PowerShellコマンドレット
+--
+.手順
+. Open-SmConnectionコマンドレットを使用して、指定したユーザのSnapCenterサーバとの接続セッションを開始します。
++
+[listing]
+----
+Open-smconnection  -SMSbaseurl  https:\\snapctr.demo.netapp.com:8146\
+----
++
+ユーザ名とパスワードのプロンプトが表示されます。
+
+. Add-SmResourcesコマンドレットを使用して、リソースを追加します。
++
+リソースを追加する例を次に示します。
+
++
+[listing]
+----
+Add-SmResource -HostName '10.232.206.248' -PluginCode 'DB2' -ResourceName NONREC1 -ResourceType Database -StorageFootPrint ( @
+{"VolumeName"="DB2_NONREC1DB";"LunName"="DB2_NONREC1DB";"Vserver"="vserver_scauto_secondary"}) -Instance db2inst1
+----
+. Add-SmPolicyコマンドレットを使用して、バックアップポリシーを作成します。
++
+新しいバックアップポリシーを作成する例を次に示します。
+
++
+[listing]
+----
+Add-SMPolicy -PolicyName 'db2VolumePolicy' -PolicyType 'Backup' -PluginPolicyType DB2  -description 'VolumePolicy'
+----
+. Add-SmResourceGroupコマンドレットを使用して、SnapCenterに新しいリソースグループを追加します。
++
+この例では、ポリシーとリソースを指定して新しいリソースグループを作成しています。
+
++
+[listing]
+----
+Add-SmResourceGroup -ResourceGroupName 'Verify_ManualBackup_DatabaseLevel_MultipleVolume_unix' -Resources @(@
+{"Host"="10.232.206.248";"Uid"="db2inst2\NONREC"},@{"Host"="10.232.206.248";"Uid"="db2inst1\NONREC"}) -Policies db2ManualPolicy
+----
+. New-SmBackupコマンドレットを使用して、新しいバックアップジョブを開始します。
++
+[listing]
+----
+New-SMBackup -DatasetName Verify_ManualBackup_DatabaseLevel_MultipleVolume_unix -Policy db2ManualPolicy
+----
+. Get-SmBackupReportコマンドレットを使用して、バックアップジョブのステータスを表示します。
++
+次に、指定した日付に実行されたすべてのジョブのジョブ概要レポートを表示する例を示します。
+
++
+[listing]
+----
+PS C:\> Get-SmBackupReport -JobId 351
+Output:
+BackedUpObjects           : {DB1}
+FailedObjects             : {}
+IsScheduled               : False
+HasMetadata               : False
+SmBackupId                : 269
+SmJobId                   : 2361
+StartDateTime             : 10/4/2016 11:20:45 PM
+EndDateTime               : 10/4/2016 11:21:32 PM
+Duration                  : 00:00:46.2536470
+CreatedDateTime           : 10/4/2016 11:21:09 PM
+Status                    : Completed
+ProtectionGroupName       : Verify_ASUP_Message_windows
+SmProtectionGroupId       : 211
+PolicyName                : test2
+SmPolicyId                : 20
+BackupName                : Verify_ASUP_Message_windows_scc54_10-04-2016_23.20.46.2758
+VerificationStatus        : NotVerified
+VerificationStatuses      :
+SmJobError                :
+BackupType                : SCC_BACKUP
+CatalogingStatus          : NotApplicable
+CatalogingStatuses        :
+ReportDataCreatedDateTime :
+----
+
+
+--
+====

@@ -110,8 +110,6 @@ entries:
     url: "/protect-postgresql/back-up-resource-groups-postgresql.html"
   - title: PostgreSQL用のPowerShellコマンドレットを使用して、ストレージシステム接続とクレデンシャルを作成する
     url: "/protect-postgresql/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-postgresql.html"
-  - title: PowerShellコマンドレットを使用したクラスタのバックアップ
-    url: "/protect-postgresql/back-up-clusters-using-powershell-cmdlets-postgresql.html"
   - title: バックアップ処理の監視
     entries:
     - title: SnapCenterの[Jobs]ページでのバックアップ処理の監視
@@ -130,8 +128,6 @@ entries:
     url: "/protect-postgresql/restore-and-recover-a-manually-added-resource-backup.html"
   - title: 自動検出されたクラスタバックアップのリストアとリカバリ
     url: "/protect-postgresql/restore-and-recover-an-auto-discovered-cluster-backup.html"
-  - title: PowerShellコマンドレットを使用したPostgreSQLのリストア
-    url: "/protect-postgresql/restore-postgresql-using-powershell-cmdlets.html"
   - title: PowerShellコマンドレットを使用したリソースのリストア
     url: "/protect-postgresql/restore-and-recover-resources-using-powershell-cmdlets-postgresql.html"
   - title: リストア処理の監視
@@ -142,8 +138,6 @@ entries:
     url: "/protect-postgresql/clone-postgresql-resource-backups.html"
   - title: PostgreSQLクラスタバックアップのクローニング
     url: "/protect-postgresql/clone-postgresql-backup.html"
-  - title: PowerShellコマンドレットを使用したPostgreSQLクラスタバックアップのクローニング
-    url: "/protect-postgresql/clone-postgresql-backups-using-powershell-cmdlets.html"
   - title: SnapCenterでのクローニング処理の監視
     url: "/protect-postgresql/monitor-postgresql-clone-operations.html"
   - title: クローンをスプリットする
