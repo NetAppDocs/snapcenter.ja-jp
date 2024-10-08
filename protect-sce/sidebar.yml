@@ -66,18 +66,16 @@ entries:
     url: "/protect-sce/task_create_backup_policies_for_exchange_server_databases.html"
   - title: Exchange Serverのリソースグループの作成とポリシーの適用
     url: "/protect-sce/task_create_resource_groups_and_attach_policies_for_exchange_servers.html"
+  - title: Exchange Server用のPowerShellコマンドレットを使用して、ストレージシステム接続とクレデンシャルを作成する
+    url: "/protect-sce/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_exchange_database.html"
   - title: Exchangeデータベースのバックアップ
     url: "/protect-sce/task_back_up_exchange_databases.html"
   - title: Exchangeリソースグループをバックアップする
     url: "/protect-sce/task_back_up_exchange_resources_groups.html"
-  - title: Exchange Server用のPowerShellコマンドレットを使用して、ストレージシステム接続とクレデンシャルを作成する
-    url: "/protect-sce/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_exchange_database.html"
   - title: バックアップ処理の監視
     url: "/protect-sce/task_monitor_backup_operations.html"
   - title: Exchangeデータベースのバックアップ処理をキャンセルします
     url: "/protect-sce/task_cancel_backup_operations_for_exchange_database.html"
-  - title: PowerShellコマンドレットを使用したExchangeバックアップの削除
-    url: "/protect-sce/task_remove_exchange_backups_using_powershell_cmdlets.html"
   - title: "[Topology]ページでのExchangeバックアップの表示"
     url: "/protect-sce/task_view_exchange_backups_in_the_topology_page.html"
 - title: Exchangeリソースのリストア

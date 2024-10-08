@@ -54,14 +54,6 @@ entries:
       url: "/protect-scsql/reference_types_of_restore_operations.html"
   - title: SQL Serverのクローニング戦略を定義する
     url: "/protect-scsql/task_define_a_clone_strategy_for_sql_server.html"
-- title: SnapCenter Plug-in for Microsoft SQL Serverのインストールのクイックスタート
-  entries:
-  - title: SnapCenter サーバとプラグインのインストールを準備します
-    url: "/protect-scsql/quick-start-to-prepare-for-snapcenter-plug-in-install-for-sql-server.html"
-  - title: SnapCenter Server for Microsoft SQL Serverをインストールします
-    url: "/protect-scsql/task-install-snapcenter-server-for-sql-server.html"
-  - title: SnapCenter Plug-in for Microsoft SQL Serverのインストール
-    url: "/protect-scsql/task-install-snapcenter-plug-in-for-sql-server.html"
 - title: SnapCenter Plug-in for Microsoft SQL Serverのインストールの準備
   entries:
   - title: SnapCenter Plug-in for Microsoft SQL Serverのインストールワークフロー
@@ -128,24 +120,18 @@ entries:
     url: "/protect-scsql/task_create_resource_groups_and_attach_policies_for_sql_server.html"
   - title: SQLリソスノハツクアツフノヨウケン
     url: "/protect-scsql/concept_requirements_for_backing_up_sql_resources.html"
+  - title: PowerShellコマンドレットを使用してストレージシステム接続とクレデンシャルを作成する
+    url: "/protect-scsql/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_sql.html"
   - title: SQLリソースのバックアップ
     url: "/protect-scsql/task_back_up_sql_resources.html"
   - title: SQL Serverリソースグループのバックアップ
     url: "/protect-scsql/task_back_up_sql_server_resource_groups.html"
-  - title: バックアップ処理の監視
-    entries:
-    - title: SnapCenterの[Jobs]ページでのバックアップ処理の監視
-      url: "/protect-scsql/task_monitor_sql_resources_backup_operations.html"
-    - title: "[Activity]ペインでの処理の監視"
-      url: "/protect-scsql/task_monitor_dataprotection_operations_on_sql_resources_in_the_activity_pane.html"
-  - title: PowerShellコマンドレットを使用してストレージシステム接続とクレデンシャルを作成する
-    url: "/protect-scsql/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_sql.html"
+  - title: SnapCenterの[Jobs]ページでのバックアップ処理の監視
+    url: "/protect-scsql/task_monitor_sql_resources_backup_operations.html"
   - title: SnapCenter Plug-in for Microsoft SQL Serverのバックアップ処理をキャンセルする
     url: "/protect-scsql/task_cancel_the_snapcenter_plug_in_for_sql_server_operations.html"
   - title: "[Topology]ページでのSQL Serverのバックアップとクローンの表示"
     url: "/protect-scsql/task_view_sql_server_backups_and_clones_in_the_topology_page.html"
-  - title: PowerShellコマンドレットを使用したバックアップの削除
-    url: "/protect-scsql/task_remove_backups_using_powershell_cmdlets_for_sql.html"
   - title: PowerShellコマンドレットを使用したセカンダリバックアップ数のクリーンアップ
     url: "/protect-scsql/task_clean_up_the_secondary_backup_count_using_powershell_cmdlets_for_sql.html"
 - title: SQL Serverリソースのリストア

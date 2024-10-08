@@ -60,20 +60,18 @@ entries:
     url: "/protect-scw/task_create_backup_policies_for_windows_file_systems.html"
   - title: Windowsファイルシステムのリソースグループの作成
     url: "/protect-scw/task_create_resource_groups_for_windows_file_systems.html"
+  - title: PowerShellコマンドレットを使用してストレージシステム接続とクレデンシャルを作成する
+    url: "/protect-scw/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_windows.html"
   - title: Windowsファイルシステムの単一リソースをオンデマンドでバックアップ
     url: "/protect-scw/task_back_up_a_single_resource_on_demand_for_windows_file_systems.html"
   - title: Windowsファイルシステムのリソースグループのバックアップ
     url: "/protect-scw/task_back_up_resource_groups_for_windows_file_systems.html"
-  - title: PowerShellコマンドレットを使用してストレージシステム接続とクレデンシャルを作成する
-    url: "/protect-scw/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_windows.html"
   - title: バックアップ処理の監視
     url: "/protect-scw/task_monitor_backup_operations.html"
   - title: バックアップ処理をキャンセルする
     url: "/protect-scw/task_cancel_backup_operations_for_windows_file_system.html"
   - title: "[Topology]ページで関連するバックアップとクローンを表示する"
     url: "/protect-scw/task_view_related_backups_and_clones_in_the_topology_page.html"
-  - title: PowerShellコマンドレットを使用したバックアップの削除
-    url: "/protect-scw/task_remove_backups_using_powershell_cmdlets_for_windows.html"
   - title: PowerShellコマンドレットを使用したセカンダリバックアップ数のクリーンアップ
     url: "/protect-scw/task_clean_up_the_secondary_backup_count_using_powershell_cmdlets_for_windows.html"
 - title: Windowsファイルシステムのリストア

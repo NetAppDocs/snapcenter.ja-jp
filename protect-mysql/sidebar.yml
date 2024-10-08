@@ -100,18 +100,14 @@ entries:
     url: "/protect-mysql/create-backup-policies-for-mysql.html"
   - title: リソースグループを作成してポリシーを適用
     url: "/protect-mysql/create-resource-groups-and-attach-policies.html"
+  - title: MySQL用のPowerShellコマンドレットを使用して、ストレージシステム接続とクレデンシャルを作成する
+    url: "/protect-mysql/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-mysql.html"
   - title: MySQLのバックアップ
     url: "/protect-mysql/back-up-mysql.html"
   - title: リソースグループのバックアップ
     url: "/protect-mysql/back-up-resource-groups-mysql.html"
-  - title: MySQL用のPowerShellコマンドレットを使用して、ストレージシステム接続とクレデンシャルを作成する
-    url: "/protect-mysql/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-mysql.html"
-  - title: バックアップ処理の監視
-    entries:
-    - title: SnapCenterの[Jobs]ページでのバックアップ処理の監視
-      url: "/protect-mysql/monitor-mysql-backup-operations.html"
-    - title: "[Activity]ペインでの処理の監視"
-      url: "/protect-mysql/monitor-dataprotection-operations-on-mysql-in-the-activity-pane.html"
+  - title: SnapCenterの[Jobs]ページでのバックアップ処理の監視
+    url: "/protect-mysql/monitor-mysql-backup-operations.html"
   - title: バックアップ処理をキャンセルする
     url: "/protect-mysql/cancel-backup-operations-for-mysql.html"
   - title: "[Topology]ページでのMySQLデータベースのバックアップとクローンの表示"
