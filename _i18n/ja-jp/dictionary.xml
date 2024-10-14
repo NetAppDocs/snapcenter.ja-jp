@@ -426,7 +426,6 @@
   <block id="1f8a6ebe3d4d002c37961084ee957772" category="list-text">[*Status*]( ステータス *) ドロップダウンから、バックアップステータスを選択します。</block>
   <block id="30816945c60dc2c3f5e65b0a88f9bc19" category="list-text">[ 適用（ Apply ） ] をクリックして、正常に完了した操作を表示する。</block>
   <block id="5f31a909a716e6e46492a1095c0444d8" category="list-text">バックアップジョブを選択し、 ［ * 詳細 * ］ をクリックしてジョブの詳細を表示します。</block>
-  <block id="f4d8f263741562ac4c8e18153f44e752" category="admonition">バックアップジョブのステータスは表示されますが<block ref="718fe53e11bbf4bb30ca7e885db5e6f5" category="inline-image-macro-rx" type="image"></block>、ジョブの詳細をクリックすると、バックアップ処理の子タスクの一部が進行中であるか、警告サインが表示されていることがあります。</block>
   <block id="1c41074e44dc2e55551dfb68d2bc354d" category="list-text">［ ジョブの詳細 ］ ページで、 ［ * ログの表示 * ］ をクリックします。</block>
   <block id="2063f930237a8cb9c2f18d14af2c0772" category="paragraph">*View logs* ボタンをクリックすると、選択した操作の詳細なログが表示されます。</block>
   <block id="18c6c7b07148849996bd7da366d6bf60" category="paragraph">Jobs ページを使用して、 SnapCenter のクローニング処理の進捗状況を監視できます。処理の進捗状況を確認して、処理が完了するタイミングや問題が発生していないかを確認できます。</block>
@@ -461,9 +460,6 @@
   <block id="fe2df42a6411c7acd38e945324686a20" category="list-text">[Status]ドロップダウンメニューから、インストールステータスを選択します。</block>
   <block id="400fae8e788b3721b9ac25fe01f04f50" category="list-text">[ 適用（ Apply ） ] をクリックします。</block>
   <block id="5b946f392253bfdf03165c0157bb4a9e" category="list-text">インストールジョブを選択し、 ［ * 詳細 * ］ をクリックしてジョブの詳細を表示します。</block>
-  <block id="5a4e7986bae0a2c894ba99a3277fcf98" category="paragraph">Remove-SmBackupコマンドレットを使用すると、他のデータ保護処理で不要になったバックアップを削除できます。</block>
-  <block id="a9961b834480ea5a82aff5c0e9cf0da8" category="list-text">Remove-SmBackupコマンドレットを使用して、1つ以上のバックアップを削除します。</block>
-  <block id="ea2acdbc1a4fb35cdfb9da7003b18901" category="paragraph">この例では、バックアップIDを使用してバックアップを2つ削除しています。</block>
   <block id="7cbb56e18d0486bb234f9b23309d948c" category="paragraph">リソースのバックアップをリストアするときは、 SnapCenter サーバとの接続セッションを開始し、バックアップをリストしてバックアップ情報を取得し、バックアップをリストアします。</block>
   <block id="e2bd14bf4c88f10bd2230039f5ac5538" category="list-text">Get-SmBackupおよびGet-SmBackupReportコマンドレットを使用して、リストアする1つ以上のバックアップに関する情報を取得します。</block>
   <block id="d1024e540ddbde0c895907728f551025" category="paragraph">この例では、2015年1月29日から2015年2月3日までのバックアップに関する詳細情報を表示しています。</block>
@@ -6047,9 +6043,6 @@
   <block id="de446367e805aef49330ce87fc36fc93" category="section-title">[Activity]ペインでの処理の監視</block>
   <block id="5eaf8dd6f947b26a0ad9f982dce18311" category="doc">リストア処理の監視</block>
   <block id="8b8199b2cc69508101df27784ccae8d5" category="doc">SnapCenterプラグインパッケージのインストールステータスの監視</block>
-  <block id="c542c48c5883f05c53ef29a5ecb69599" category="summary">Remove-SmBackupコマンドレットを使用すると、他のデータ保護処理にExchangeバックアップが不要になった場合にExchangeバックアップを削除できます。</block>
-  <block id="c67cf2b105f14a1f28e583dd29d713ba" category="doc">PowerShellコマンドレットを使用したExchangeバックアップの削除</block>
-  <block id="dd120ab3ab1d158cb796d4df28443c51" category="list-text">コマンドレットを使用して、1つ以上のバックアップを削除します<block ref="deedcb4a01370ff7adf6a8a79cd7d1e0" prefix=" " category="inline-code"></block> 。</block>
   <block id="ec053c308e147d0958e28a0ea54218e5" category="summary">コピーが破損している場合などにレプリカコピーを再シードする必要がある場合は、SnapCenterの再シード機能を使用して最新のバックアップに再シードできます。</block>
   <block id="aabc88376ed488867dcbd5ebe7ee5f24" category="doc">Exchangeのパッシブノードレプリカの再シード</block>
   <block id="95ae09e6950aff657a0ec2b6e13f37f0" category="list-text">SnapCenterサーバ4.1以降およびPlug-in for Exchange 4.1以降を使用している必要があります。</block>
@@ -7802,59 +7795,8 @@
   <block id="9b0be6917dcf31005f3dc2e8b09de8b9" category="summary">SnapCenter では、バックアップの作成直後にそのバックアップを検証できますが、その場合、バックアップジョブの完了に必要な時間が大幅に増加し、大量のリソースが必要となります。そのため、ほとんどの場合、別のジョブであとで検証を実行するようにスケジュールを設定することを推奨します。たとえば、毎日午後5時にデータベースをバックアップする場合は、1時間後の午後6時に検証を実行するようにスケジュールを設定できます。</block>
   <block id="3886123ab212d4db926aac7f7fc924c0" category="doc">検証ジョブをスケジュールするタイミング</block>
   <block id="697bc0ecd4b925fb05263cb0e73eb0c1" category="paragraph">同じ理由で、通常、バックアップを実行するたびにバックアップの検証を行う必要はありません。通常、バックアップの整合性を確保するには、より少ない頻度で定期的に検証を実行すれば十分です。1つの検証ジョブで複数のバックアップを同時に検証できます。</block>
-  <block id="96ccca164f6b65c860546bba66a6485a" category="summary">SnapCenter ServerおよびSnapCenter Plug-in for Microsoft SQL Serverのインストールの準備手順について説明します。</block>
-  <block id="bb7367ec62fb74511977df150181bc7f" category="doc">SnapCenter サーバとプラグインのインストールを準備します</block>
-  <block id="63408836354c40518fc610de2ff61aef" category="paragraph">SnapCenter ServerおよびSnapCenter Plug-in for Microsoft SQL Serverをインストールするための準備手順をまとめたものです。</block>
-  <block id="c85265a6c5841b0f019403a50b63c44d" category="paragraph">SnapCenterサーバは、ドメインまたはワークグループ内のシステムにインストールできます。</block>
-  <block id="43727cf7c1f0b9055bad0d2c9c2e19ea" category="paragraph">Active Directoryドメインを使用している場合は、ローカル管理者の権限を持つドメインユーザを使用する必要があります。ドメインユーザは、Windowsホストのローカルの管理者グループのメンバーである必要があります。</block>
-  <block id="2632504d1b7b1f77434679b6906040dd" category="paragraph">ワークグループを使用している場合は、ローカル管理者の権限を持つローカルアカウントを使用してください。</block>
-  <block id="7527dcedb498a9e111f7eb26b4f075a6" category="section-title">ライセンス要件</block>
-  <block id="d5c59f9587c1784732bff8ebcc03f9fb" category="paragraph">インストールするライセンスのタイプは環境によって異なります。</block>
-  <block id="d170a0ae7cce61c29600d85d29b948ca" category="paragraph">FASマタハAFFストレエシコントロオラニヒツヨウ</block>
-  <block id="e561227291ef5b9583ca35f38b3d1d62" category="paragraph">SnapCenter Standardライセンスはコントローラベースのライセンスで、Premium Bundleに含まれています。SnapManager Suiteライセンスをお持ちの場合は、SnapCenter Standardライセンスの使用権も取得できます。FASまたはAFFストレージにSnapCenterの試用版をインストールする場合は、営業担当者にお問い合わせください。</block>
-  <block id="faf896433eeb20fca1eb114937251b50" category="paragraph">追加ライセンス（オプション）</block>
-  <block id="9d09cebdc5095408e7e5f8bc09c08c42" category="paragraph">を参照して <block ref="6de8516502145d64739d69762f4898a1" category="inline-link-macro-rx"></block></block>
-  <block id="7a98b5f499da77fa6e09b98a638328d7" category="section-title">ホストおよびポートの要件</block>
-  <block id="266df807c209259b6527f0402eec5ecc" category="paragraph">ONTAPおよびアプリケーションプラグインの最小要件については<block ref="da65d29edc3443bf674cd57705cb58f7" category="inline-link-rx"></block>、[Interoperability Matrix Tool^]を参照してください。</block>
   <block id="8124579383e90243e4b06323d2b37f8d" category="cell">ホスト</block>
-  <block id="a55b17d8324fe50e023be8010d4b5474" category="cell">最小要件</block>
-  <block id="a0315547f70da02dc3ae867b333d7a34" category="paragraph">オペレーティングシステム（64ビット）</block>
-  <block id="0d9aba31602daa8aa7c78b179f23a57a" category="paragraph">を参照し<block ref="5ef8c586cada32cf8eb7b081f126f3ff" category="inline-link-rx"></block></block>
-  <block id="2b55387dd066c5bac646ac61543d152d" category="paragraph">CPU</block>
-  <block id="0e6a971ec5306b612f39cb5f57db7161" category="list-text">サーバホスト：4コア</block>
-  <block id="a4dde000123474f5f78b64627780eba4" category="list-text">プラグインホスト：4コア</block>
-  <block id="e53619c1fe611a51eeeb8d148ba6e532" category="paragraph">RAM</block>
-  <block id="cd8d1469016f031f922bb333a970cfd3" category="list-text">サーバホスト：8 GB</block>
-  <block id="2ee9a06a2f3e6e2ca52cee448cb93f0d" category="list-text">プラグインホスト：4GB</block>
-  <block id="98e13d99df22e8a0a2bae6e969834be4" category="paragraph">ハードドライブの空き容量</block>
-  <block id="21dce67a57cd833547ff3fd4e9e03823" category="paragraph">サーバホスト：</block>
-  <block id="068a44bd0181cde83ae2d162ab70836c" category="list-text">SnapCenterサーバソフトウェアおよびログ用に7 GB</block>
-  <block id="d167c06085657bbc05a48ca527f73219" category="list-text">SnapCenterリポジトリ用に8GB</block>
-  <block id="96e96c23ced7f362fb4cc50d9e3d4bfa" category="list-text">各プラグインホスト：2GB（プラグインのインストールとログ用）。プラグインが専用ホストにインストールされている場合にのみ必要です。</block>
-  <block id="8aba88ca961faed346aac654b3d29bdb" category="paragraph">サードパーティライブラリ</block>
-  <block id="20a50fb41923e75d6b62c157ac6f1a69" category="paragraph">SnapCenter Serverホストおよびプラグインホストに必要：</block>
-  <block id="e30a7ddbf46e9a12a9d9cfebd31fe25a" category="paragraph">ブラウザ</block>
-  <block id="f4c498441e8fe15aea27e35f1b2876a6" category="paragraph">Chrome、Internet Explorer、Microsoft Edge</block>
-  <block id="182aeb116dd563a6020ec9b2d5b6595e" category="cell">ポートタイプ</block>
-  <block id="7d9d926d5125803fd97000a20abb897d" category="paragraph">リポジトリデータベース</block>
-  <block id="ced7e40a06bd114bdd410398e025c7bd" category="paragraph">3306（HTTPS）、双方向</block>
-  <block id="507c0c7f0b8b0e908ce3263a2104c06c" category="paragraph">サポートされるダイナミックポート範囲については、を参照してください<block ref="efe4b06a0c17ae7a9dfd8e1ef1ea50a2" category="inline-link-rx"></block>。</block>
   <block id="5ae5c2db7baad917cb8389420693266d" category="paragraph">Windows向けSnapCenterプラグイン</block>
-  <block id="de80df6466db891ed7d7a31d71335ae1" category="paragraph">443 （ HTTPS ）、双方向、 80 （ HTTP ）、双方向</block>
-  <block id="228eb7fa9d28577ec427d7baedfa7ded" category="paragraph">このポートは、SnapCenterサーバホスト、プラグインホスト、およびSVMまたはONTAPクラスタ間の通信に使用されます。</block>
-  <block id="bc6cdf099cec9fa3dce7fb43c644e659" category="section-title">SnapCenter Plug-in for Microsoft SQL Serverの要件</block>
-  <block id="4bd535cc745449316aa463a5f52133d6" category="paragraph">ローカル管理者権限があり、リモートホストに対するローカルログイン権限があるユーザが必要です。クラスタノードを管理する場合は、クラスタ内のすべてのノードに対する管理者権限を持つユーザが必要です。</block>
-  <block id="cf94e6be5912bb698bcc03d64c605bc4" category="paragraph">SQL Serverに対するsysadmin権限を持つユーザが必要です。このプラグインはMicrosoft VDI Frameworkを使用しますが、これにはsysadminアクセスが必要です。</block>
-  <block id="aa829ddf1acbdd2a8aa6a61635c33dec" category="inline-link-macro">アーカイブバックアップをインポートする</block>
-  <block id="b06af5128852d56366a94b0a3584c1a6" category="paragraph">SnapManager for Microsoft SQL Serverを使用していて、SnapManager for Microsoft SQL ServerからSnapCenterにデータをインポートする場合は、を参照してください。 <block ref="0079f46f6850618db9fdf32f5f6051e0" category="inline-link-macro-rx"></block></block>
-  <block id="3d18a8ecd9e4c9d6e8109fc7dc46902c" category="summary">SnapCenter サーバおよび SnapCenter Plug-in for Microsoft SQL Server をインストールする手順について説明します。</block>
-  <block id="303271a6fa371310673fc55e65bf3af0" category="doc">SnapCenter Plug-in for SQL Serverのインストールのクイックスタート</block>
-  <block id="e05bc1fb0d09110d2709b8329ca82a1f" category="paragraph">SnapCenter ServerおよびSnapCenter Plug-in for Microsoft SQL Serverのインストール手順をまとめたものです。</block>
-  <block id="67f289221dc2b8315be57c85a28e0619" category="section-title">設置を準備</block>
-  <block id="08bb62da8c2fc3e9658022558d277993" category="paragraph">FAS、AFF、またはAll SAN Array（ASA）ストレージコントローラに必要です</block>
-  <block id="f0d7edda487dadb54e43cde1120715ec" category="paragraph">SnapCenter Standardライセンスはコントローラベースのライセンスで、Premium Bundleに含まれています。SnapManager Suiteライセンスをお持ちの場合は、SnapCenter Standardライセンスの使用権も取得できます。FAS、AFF、またはASAストレージにSnapCenterの試用版をインストールする場合は、営業担当者に連絡してPremium Bundleの評価ライセンスを取得してください。</block>
-  <block id="30a4532a5bee2de6dedd7d0dd519c56c" category="list-text">プラグインホスト：1コア</block>
-  <block id="d202821014e7daf2d865aeb8539d7cdf" category="admonition">SnapCenterリポジトリがインストールされているホストにSnapCenterサーバがある場合は、15GBを推奨します。</block>
   <block id="44d77fb23ef94aa2e99acffb06349cce" category="section-title">ステップ1: SnapCenter サーバーをダウンロードしてインストールします</block>
   <block id="72de9cea28a7cca58f8423279c68e8c6" category="list-text">からSnapCenterサーバインストールパッケージをダウンロードし<block ref="d4fdc92072f5257471f3139636068769" category="inline-link-rx"></block> 、exeファイルをダブルクリックします。</block>
   <block id="f3202cac117dff2d56e44da0f9a51af3" category="paragraph">インストールを開始すると、すべての事前確認が実行され、最小要件を満たしていない場合は、該当するエラーまたは警告メッセージが表示されます。警告メッセージは無視してインストールを続行できますが、エラーは修正する必要があります。</block>
@@ -7875,7 +7817,6 @@
   <block id="2384730978fb31977e9e4d8d6cd269a1" category="list-text">ストレージシステムの名前またはIPアドレスを入力します。</block>
   <block id="cc264bb31c32343deef41c8d3130ed2c" category="list-text">ストレージシステムへのアクセスに使用するクレデンシャルを入力します。</block>
   <block id="270527cce60385f686064c6eef36e8dd" category="list-text">チェックボックスをオンにして、イベント管理システム（EMS）とAutoSupportを有効にします。</block>
-  <block id="1b536db2490e46d75b679a68d1866ff2" category="section-title">Plug-in for Microsoft SQL Serverのインストール</block>
   <block id="13c41a91e51556266f1446c3f3118575" category="section-title">手順1：Run AsクレデンシャルをセットアップしてPlug-in for Microsoft SQL Serverをインストールする</block>
   <block id="edb3f96af88f92a47b3be973152729fe" category="list-text">左側のペインで、 * Settings &gt; Credentials &gt; New * をクリックします。</block>
   <block id="50e45622cbe6ba6b72a9cba939e77623" category="section-title">手順2：ホストを追加してPlug-in for Microsoft SQL Serverをインストールする</block>
@@ -8068,7 +8009,6 @@
   <block id="c473dc65af16d92c688e88cffad5b825" category="inline-link">Windowsスケジューラエラーでバックアップが失敗する</block>
   <block id="ee70f525f7b0b70b3e7de9d8f872cbe4" category="paragraph"><block ref="ee70f525f7b0b70b3e7de9d8f872cbe4" category="inline-link-rx"></block></block>
   <block id="393997bd3b722d52ae03ce598aa5cfec" category="paragraph"><block ref="393997bd3b722d52ae03ce598aa5cfec" category="inline-link-rx"></block></block>
-  <block id="7adb9efc9727efcae1dc90797b6d14b7" category="paragraph">リソースグループを検索するには、検索ボックスにリソースグループ名を入力するか、**を選択し<block ref="5daa1c5d91da80c848b68dcd336ec220" category="inline-image-macro-rx" type="image"></block>てタグを選択します。その後、**を選択してフィルタペインを閉じることができます<block ref="5daa1c5d91da80c848b68dcd336ec220" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="8e927494c3186b26a3de09d9578e731f" category="paragraph">ポリシーの * verify * オプションは、スケジュールされたジョブにのみ適用されます。</block>
   <block id="9b51fddaf011faab92bf06f41ccf6d11" category="inline-link-macro">SQL Serverのリソースグループの作成とポリシーの適用</block>
   <block id="35002a531b4134648eef7b46ee445a29" category="paragraph"><block ref="35002a531b4134648eef7b46ee445a29" category="inline-link-macro-rx"></block></block>
@@ -8172,7 +8112,6 @@
   <block id="a06cb63b4e5676ff4993e87c5a096590" category="paragraph">データベースファイルをバックアップします。</block>
   <block id="40e1269ad4c969b2e34a183b8fe9f42e" category="list-text">Snapshotごとにバックアップするデータベースの最大数を入力します。デフォルト値は100</block>
   <block id="4357e1f197bec05bc87b0ef0557cd533" category="open-title">ログバックアップ</block>
-  <block id="9bc97b084411adbb231ca53ca80640b7" category="paragraph">トランザクションログをバックアップします。です。「 * Log backup * 」を選択します。</block>
   <block id="197904dc82a19f6818f66048a61e90f9" category="open-title">コピーのみのバックアップ</block>
   <block id="f16fca991ae99058ce41f2b4b1614852" category="list-text">別のバックアップ・アプリケーションを使用してリソースをバックアップする場合は、 [* コピーのみのバックアップ * ] を選択します。</block>
   <block id="619da134802c3fcab97a2b7c6d14c4ec" category="paragraph">トランザクションログをそのまま保持すると、すべてのバックアップアプリケーションでデータベースをリストアできます。通常、他の状況ではコピーのみのオプションを使用しないでください。</block>
@@ -8221,7 +8160,6 @@
   <block id="4fbf861fa73d7c46a9d919de9dba7f88" category="paragraph">ローカルSnapshotコピーの作成後にSnapMirrorを更新します。</block>
   <block id="b62913a5294dae473801568644e4e8a8" category="list-text">別のボリュームにバックアップセットのミラーコピーを作成する場合（SnapMirror）は、このオプションを選択します。</block>
   <block id="862e27b33388db0f7174e2affc68bbee" category="inline-link-macro">[Topology]ページでのSQL Serverのバックアップとクローンの表示</block>
-  <block id="302f938ad12e73e12a79f805c2ae6a91" category="paragraph">を参照して <block ref="3a3486a8a9b3aade0b0240c2dd89bad5" category="inline-link-macro-rx"></block></block>
   <block id="721dcaba6ffe06898a1264f811fd7874" category="open-title">SnapVaultの更新</block>
   <block id="aafae6ead4b01f0afa9e2d2dcfc5ecdd" category="paragraph">Snapshotコピーの作成後にSnapVault を更新</block>
   <block id="c174e73377b0caee145d55a594cd4122" category="open-title">セカンダリポリシーラベル</block>
@@ -8397,7 +8335,6 @@
   <block id="4efced0758e3c842e9e2cd9af1e96abf" category="list-text">スクリプトページで、クローニング処理の実行前または実行後に実行するプリスクリプトまたはポストスクリプトのパスと引数を入力します。</block>
   <block id="6106775f73edc24edf8af08f95820dc2" category="list-text">クローン処理の実行頻度、クローンスケジュールの開始日時、クローニング処理の実行日、スケジュールの期限、スケジュールの期限が切れたあとにクローンを削除する必要があるかどうかを指定する場合は、 * Configure schedule * を選択します。</block>
   <block id="7fbd5ad78d8bfea99956316bc22a845f" category="paragraph">クローニング処理は、 * Monitor * &gt; * Jobs * ページで監視する必要があります。</block>
-  <block id="c7abd5797dbf501112fdb42c49a4df92" category="doc">PowerShellコマンドレットを使用したバックアップの削除</block>
   <block id="51d95bab000b8bd5e8f9d83c3f25d453" category="summary">再シードは、可用性グループ（ AG ）データベースをリストアするためのオプションです。セカンダリデータベースがAG内のプライマリデータベースと同期していない場合は、セカンダリデータベースを再シードできます。</block>
   <block id="951ead00aca07936d7cbe2d0eaf3bdde" category="doc">可用性グループデータベースの再シード</block>
   <block id="86c8bce86a1532578679c840db2996d0" category="paragraph">再シードは、可用性グループ（AG）データベースをリストアするためのオプションです。セカンダリデータベースがAG内のプライマリデータベースと同期していない場合は、セカンダリデータベースを再シードできます。</block>
@@ -9776,7 +9713,6 @@
   <block id="4cbefe74fbcdea5cde822de543a2b616" category="sidebar">SQL Serverリソスノハツクアツフセンリヤク</block>
   <block id="8e321b2da713147d628c56fbb4185404" category="sidebar">プライマリストレージボリュームまたはセカンダリストレージボリュームを使用したバックアップコピーの検証</block>
   <block id="c839588253fb91ab7c3ffd7dbc89ef20" category="sidebar">SQL Serverノリストアセンリヤク</block>
-  <block id="2dbf352013e90b28f510baa76c1423f6" category="sidebar">SnapCenter Plug-in for Microsoft SQL Serverのインストールのクイックスタート</block>
   <block id="25bf2c62056fbb603e50ca9faa296f05" category="sidebar">SnapCenter Plug-in for Microsoft SQL Serverのインストールの準備</block>
   <block id="32011135d9979489b3395d0006de49b3" category="sidebar">CA証明書のインポート</block>
   <block id="b73d7cecae53125eeec14ebe51927b95" category="sidebar">ディザスタリカバリの設定</block>
@@ -9806,4 +9742,9 @@
   <block id="3d64c1dca7f60c2f025bc4b68e25eaec" category="doc">DB2データベースのバックアップ</block>
   <block id="fc25be62e75052437e6fa7b8d1571f48" category="open-title">SnapCenter UI</block>
   <block id="41269337bd4507838c6bb1bd7b2141c3" category="sidebar">DB2データベースのバックアップ</block>
+  <block id="e8bec8246398463ed040582acbbd61f4" category="admonition">バックアップジョブのステータスは表示されますが<block ref="718fe53e11bbf4bb30ca7e885db5e6f5" category="inline-image-macro-rx" type="image"></block>、ジョブの詳細をクリックすると、バックアップ処理の子タスクの一部が進行中であるか、警告サインが表示されていることがあります。</block>
+  <block id="e12e035acf67bf5c7809b2d4af7617f9" category="paragraph">リソースグループを検索するには、検索ボックスにリソースグループ名を入力するか、**を選択し<block ref="2df6cc2e237d722aa6244879c70fd2d2" category="inline-image-macro-rx" type="image"></block>てタグを選択します。その後、**を選択してフィルタペインを閉じることができます<block ref="2df6cc2e237d722aa6244879c70fd2d2" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="c1c536a43dbea753ec89b25093b7fcbb" category="list-text">トランザクションログをバックアップします。</block>
+  <block id="fd4d4171b69bc5fa698b2dffd93c146c" category="paragraph"><block ref="fd4d4171b69bc5fa698b2dffd93c146c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0ce7c545aa7f6a4537f968c22eef3d36" category="paragraph">を参照して <block ref="49d20c76ef6152c5513f45f2a8001fad" category="inline-link-macro-rx"></block></block>
 </blocks>

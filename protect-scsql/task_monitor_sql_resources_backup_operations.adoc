@@ -7,7 +7,7 @@ summary: SnapCenter Jobs ページを使用して、各バックアップ処理�
 = SnapCenterジョブページでSQLリソースのバックアップ処理を監視する
 :allow-uri-read: 
 :icons: font
-:imagesdir: ../media/ ///
+:imagesdir: ../media/
 
 
 [role="lead"]
