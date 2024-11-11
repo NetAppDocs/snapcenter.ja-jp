@@ -62,39 +62,110 @@ https://imt.netapp.com/matrix/imt.jsp?components=121073;&solution=1257&isHWU&src
 
 == 補助コマンド
 
-SnapCenter Plug-in for SAP HANAで補足コマンドを実行するには、ファイルにそのコマンドを含める必要があります `allowed_commands.config` 。
+SnapCenter Plug-in for SAP HANAで補足コマンドを実行するには、_allowed_commands.config_fileに追加する必要があります。
 
-`allowed_commands.config` ファイルは、SnapCenter Plug-in for SAP HANAディレクトリの「etc」サブディレクトリにあります。
+* Windowsホストのデフォルトの場所：_C：\Program NetApp SnapCenter SnapCenter Plug-in Creator\etc\allowed_commands.config_
+* Linuxホストのデフォルトの場所：_/opt/linux/scc/etc/allowed_commands.config_ NetApp SnapCenter
 
-.Windowsホスト
-デフォルト： `C:\Program Files\NetApp\SnapCenter\HANA\etc\allowed_commands.config`
 
-カスタムパス： `<Custome_Directory>\NetApp\SnapCenter\HANA\etc\allowed_commands.config` Windowsホスト：
+プラグインホストで追加コマンドを許可するには、エディタでopen_allowed_commands.config_fileを指定します。各コマンドは別 々 の行に入力します。大文字と小文字は区別されません。完全修飾パス名を指定し、パス名にスペースが含まれている場合は引用符（"）で囲みます。
 
-.Linuxホスト
-デフォルト： `/opt/NetApp/snapcenter/scc/etc/allowed_commands.config`
-
-カスタムパス： `<Custome_Directory>/NetApp/snapcenter/scc/etc/allowed_commands.config`
-
-プラグインホストで追加のコマンドを許可するには、エディタでファイルを開きます `allowed_commands.config` 。各コマンドを別 々 の行に入力します。大文字と小文字は区別されません。例えば、
+例：
 
 コマンド:mount
 
 コマンド：umount
 
-完全修飾パス名を指定してください。パス名にスペースが含まれている場合は、パス名を引用符（"）で囲みます。例えば、
-
 コマンド："C：\Program Files\NetApp\SnapCreator commands\sdcli.exe"
 
 コマンド：myscript.bat
 
-ファイルが存在しない場合は `allowed_commands.config` 、コマンドまたはスクリプトの実行がブロックされ、次のエラーでワークフローが失敗します。
+_allowed_commands.config_fileが存在しない場合、コマンドまたはスクリプトの実行はブロックされ、次のエラーでワークフローが失敗します。
 
 "[/mnt/mount-a]の実行は許可されていません。プラグインホストのファイル%sにコマンドを追加して許可します。"
 
-コマンドまたはスクリプトがに存在しないと、 `allowed_commands.config`コマンドまたはスクリプトの実行がブロックされ、次のエラーでワークフローが失敗します。
+コマンドまたはスクリプトが_allowed_commands.config_に存在しない場合、コマンドまたはスクリプトの実行はブロックされ、次のエラーでワークフローが失敗します。
 
 "[/mnt/mount-a]の実行は許可されていません。プラグインホストのファイル%sにコマンドを追加して許可します。"
 
 
 NOTE: ワイルドカードエントリ（*）を使用してすべてのコマンドを許可しないでください。
+
+
+
+== Linuxホストのroot以外のユーザに対するsudo Privilegesの設定
+
+SnapCenter 2.0以降のリリースでは、root以外のユーザがSnapCenter Plug-ins Package for Linuxをインストールしてプラグインプロセスを開始できます。プラグインプロセスをroot以外の有効なユーザとして実行します。複数のパスにアクセスできるようにroot以外のユーザにsudo Privilegesを設定する必要があります。
+
+* 必要なもの *
+
+* sudoバージョン1.8.7以降
+* umaskが0027の場合は、Javaフォルダとその中のすべてのファイルのアクセス許可が555であることを確認します。そうしないと、プラグインのインストールが失敗することがあります。
+* root以外のユーザについては、root以外のユーザの名前とユーザのグループが同じであることを確認してください。
+* /etc/ssh/sshd_config_file を編集して、メッセージ認証コードアルゴリズム MACs HMAC-sha2-256 および MACs HMAC-sha2-512 を設定します。
++
+構成ファイルの更新後にsshdサービスを再起動します。
+
++
+例：
+
++
+[listing]
+----
+#Port 22
+#AddressFamily any
+#ListenAddress 0.0.0.0
+#ListenAddress ::
+#Legacy changes
+#KexAlgorithms diffie-hellman-group1-sha1
+#Ciphers aes128-cbc
+#The default requires explicit activation of protocol
+Protocol 2
+HostKey/etc/ssh/ssh_host_rsa_key
+MACs hmac-sha2-256
+----
+
+
+* このタスクについて *
+
+次のパスにアクセスできるようにroot以外のユーザにsudo権限を設定する必要があります。
+
+* /home/_linux_user_//.sc_netapp / snapcenter_linux_host_plugin.bin
+* /custom_location /NetApp/snapcenter/spl/installation/plugins/uninstall
+* /custom_location /NetApp/snapcenter/spl/bin/spl
+
+
+* 手順 *
+
+. SnapCenter Plug-ins Package for LinuxをインストールするLinuxホストにログインします。
+. visudo Linuxユーティリティを使用して、/etc/sudoersファイルに次の行を追加します。
++
+[listing, subs="+quotes"]
+----
+Cmnd_Alias HPPLCMD = sha224:checksum_value== /home/_LINUX_USER_/.sc_netapp/snapcenter_linux_host_plugin.bin, /opt/NetApp/snapcenter/spl/installation/plugins/uninstall, /opt/NetApp/snapcenter/spl/bin/spl, /opt/NetApp/snapcenter/scc/bin/scc
+Cmnd_Alias PRECHECKCMD = sha224:checksum_value== /home/_LINUX_USER_/.sc_netapp/Linux_Prechecks.sh
+Cmnd_Alias CONFIGCHECKCMD = sha224:checksum_value== /opt/NetApp/snapcenter/spl/plugins/scu/scucore/configurationcheck/Config_Check.sh
+Cmnd_Alias SCCMD = sha224:checksum_value== /opt/NetApp/snapcenter/spl/bin/sc_command_executor
+Cmnd_Alias SCCCMDEXECUTOR =checksum_value== /opt/NetApp/snapcenter/scc/bin/sccCommandExecutor
+_LINUX_USER_ ALL=(ALL) NOPASSWD:SETENV: HPPLCMD, PRECHECKCMD, CONFIGCHECKCMD, SCCCMDEXECUTOR, SCCMD
+Defaults: _LINUX_USER_ !visiblepw
+Defaults: _LINUX_USER_ !requiretty
+----
++
+
+NOTE: RACセットアップを実行している場合は、他の許可されているコマンドとともに、/etc/sudoersファイルに次のように追加します。'/RAC/bin/olsnodes'<crs_home>
+
+
+
+_crs_home_fileの値は、/etc/oracle/olr.loc_fileから取得できます。
+
+_linux_user_は、作成したroot以外のユーザの名前です。
+
+_checksum_value_は、次の場所にある* sc_unix_plugins_checksum.txt *ファイルから取得できます。
+
+* _C：\ProgramData\NetApp\SnapCenter\Package Repository\SC_UNIX_plugins_checksum.txt_ SnapCenter ServerがWindowsホストにインストールされている場合。
+* _/opt/NetApp/snapcenter/SnapManagerWeb/Repository/sc _ unix_plugins_checksum.txt _ SnapCenterサーバーがLinuxホストにインストールされている場合。です。
+
+
+
+IMPORTANT: この例は、独自のデータを作成するための参照としてのみ使用してください。

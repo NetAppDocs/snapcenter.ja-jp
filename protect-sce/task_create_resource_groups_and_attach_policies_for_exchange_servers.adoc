@@ -127,7 +127,7 @@ NOTE: バックアップ・ジョブ作成時に選択するサーバ上の * �
 Eメール通知を使用する場合は、GUIまたはPowerShellコマンドを使用して、SMTPサーバの詳細を指定しておく必要があります `Set-SmSmtpServer`。
 
 +
-コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、『Software Cmdlet Reference Guide ^]』も参照して https://docs.netapp.com/us-en/snapcenter-cmdlets/index.htmlnapCenter[] ください。
+コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照することもできます https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
 
 . 概要を確認し、 [ 完了 ] をクリックします。
 

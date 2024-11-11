@@ -33,6 +33,37 @@ NOTE: 監視できるのは、SnapCenter管理者または別のスーパーユ�
 
 
 
+=== スケジュールされたバックアップジョブの管理
+
+SnapCenter 6.0.1リリース以降では、新しいパラメータ* JobConcurrencyThreshold *が導入されました。このパラメータは、任意の時点で実行できるスケジュール済みジョブの数にしきい値を設定します。これにより、システムのハードウェア構成に基づいて実行するバックアップの数を制御できます。
+
+JobConcurrencyThreshold *に割り当てられるデフォルト値は0で、無効になっています。スケジュール・バックアップ・ウィンドウ中にパフォーマンスの低下が見られた場合は'値を割り当てることによって有効にすることができます
+
+
+NOTE: 同時ジョブを管理するために* JobConcurrencyThreshold *を有効にすると、SnapCenterではバックアップの順序を制御できず、スケジュールで指定した時刻にバックアップがトリガーされないことがあります。
+
+.手順
+. _C：\Program Files\WebApp\Web.UI.dll.config_にある_JobConcurrencyThreshold_parameterの値を設定しますNetApp SnapCenter SnapManager。
+. [IIS]、[アプリケーションプール]、[ SnapCenter ]、[再起動]の順にクリックして、SnapCenterアプリケーションプールをリサイクルします。
+. [IIS]、[サイト]、[ SnapCenter ]、[再起動]の順にクリックして、SnapCenter Webサービスを再起動します。
+
+
+
+
+=== 古いジョブの管理
+
+古いジョブは、SnapCenterの中断または不適切なジョブの更新によって作成されます。SnapCenter 6.0.1リリース以降では、72時間以上停止している古いジョブをクリーンアップするための事前定義されたスケジュールが導入されています。スケジュール頻度を変更するには、設定可能なパラメータ* CleanUpStaleJobsIntervalHours *を編集します。
+
+オンデマンドでクリーンアップをトリガーするには、* Monitor *>* Schedules *>* SnapCenter _ StaleJobCleanUp *からスケジュールを実行します。
+
+.手順
+. _C:\Program NetApp SnapCenter WebApp\Web.UI.dll.config_にある_CleanUpStaleJobsIntervalHours_parameterの値を設定しますSnapManager。
+. [IIS]、[アプリケーションプール]、[ SnapCenter ]、[再起動]の順にクリックして、SnapCenterアプリケーションプールをリサイクルします。
+. [IIS]、[サイト]、[ SnapCenter ]、[再起動]の順にクリックして、SnapCenter Webサービスを再起動します。
+
+
+
+
 == スケジュールの監視
 
 現在のスケジュールを表示して、処理の開始日時、前回の実行日時、および次回の実行日時を確認できます。また、処理を実行するホスト、および処理のリソースグループとポリシーの情報を確認することもできます。

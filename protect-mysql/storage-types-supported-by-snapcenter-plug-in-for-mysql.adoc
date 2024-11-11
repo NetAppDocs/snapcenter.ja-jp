@@ -18,22 +18,30 @@ SnapCenter は、物理マシンと仮想マシン（ VM ）の両方でさま�
 
 
  a| 
-物理サーバと仮想サーバ
- a| 
-FCセツソクLUN
-
-
-
- a| 
 物理サーバ
  a| 
-iSCSIセツソクLUN
+* FCセツソクLUN
+* iSCSIセツソクLUN
+* NFS接続ボリューム
+
 
 
 
  a| 
-物理サーバと仮想サーバ
+VMware ESXi
  a| 
-NFS接続ボリューム
+* FCまたはiSCSI ESXi HBAで接続されたRDM LUN Host Bus Adapter（HBA；ホストバスアダプタ）のスキャンは、SnapCenterがホストに存在するすべてのホストバスアダプタをスキャンするため、完了までに時間がかかることがあります。
++
+/opt/NetApp/SnapCenter /spl/plugins/SCU/scucore /modules/SCU/ConfigU/Config_に ある * LinuxConfig.pm * ファイルを編集して、 * scsi_hosts _optimized_rescan * パラメーターの値を 1 に設定し、 ha_driver_names にリストされている HBA のみを再スキャンすることができます。
+
+* iSCSIイニシエータによってゲストシステムに直接接続されたiSCSI LUN
+* NFSデータストア上のVMDK
+* VMFS上のVMDKが作成されました
+* ゲストシステムに直接接続されたNFSボリューム
+* NFSとSANの両方にVVOLデータストアを配置
++
+VVOLデータストアは、ONTAP Tools for VMware vSphereでのみプロビジョニングできます。
+
+
 
 |===

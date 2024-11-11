@@ -41,7 +41,6 @@ NOTE: SnapCenter では、異なるクラスタにある同じ名前の SVM は�
 * SAN環境でOracleデータベースを使用している場合は、SAN環境が次のガイドに記載されている推奨事項に従って設定されていることを確認してください。
 +
 ** https://library.netapp.com/ecm/ecm_download_file/ECMLP2547957["Linux Unified Host Utilities の推奨されるホスト設定"^]
-** https://library.netapp.com/ecm/ecm_download_file/ECMLP2547958["Using Linux Hosts with ONTAP storage"^]
 ** https://library.netapp.com/ecm/ecm_download_file/ECMP1119218["AIX Host Utilitiesの影響を受けるホスト設定"^]
 
 

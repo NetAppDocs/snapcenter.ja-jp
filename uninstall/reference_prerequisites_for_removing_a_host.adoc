@@ -46,5 +46,3 @@ SnapCenterサーバからホストを削除する前に、前提条件を満た�
 * ホスト、SnapCenter Plug-in for Microsoft SQL Server、クレデンシャル、クローンライフサイクルリソースグループ、およびストレージシステムにRBACユーザを割り当てておく必要があります。
 * SnapCenterにRBACユーザとしてログインしておく必要があります。
 
-
-SnapCenter Plug-in for VMware vSphereのアンインストールについては、を参照してください https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_manage_snapcenter_plug-in_for_vmware_vsphere.html#remove-snapcenter-plug-in-for-vmware-vsphere["SnapCenter Plug-in for VMware vSphereの削除"^]。

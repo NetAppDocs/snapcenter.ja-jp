@@ -126,7 +126,7 @@ NOTE: 削除処理を成功させるには、RAC環境内のすべてのノー�
 
 |===
 +
-image:../media/sco_backuppolicy_prunning.gif[""]
+image:../media/sco_backuppolicy_prunning.gif["バックアップポリシー"]
 
 
 
@@ -200,7 +200,7 @@ SnapLockがONTAPのセカンダリ（SnapLock Vault）にのみ設定されて�
 
 SnapLock Vaultの詳細については、を参照してください。 https://docs.netapp.com/us-en/ontap/snaplock/commit-snapshot-copies-worm-concept.html["SnapVaultデスティネーションでSnapshotコピーをWORM状態にコミットする"]
 
-を参照して link:..protect-sco/task_view_oracle_databse_backups_and_clones_in_the_topology_page.html["[Topology]ページでのOracleデータベースのバックアップとクローンの表示"]
+を参照して link:../protect-sco/task_view_oracle_databse_backups_and_clones_in_the_topology_page.html["[Topology]ページでのOracleデータベースのバックアップとクローンの表示"]
 
 
 

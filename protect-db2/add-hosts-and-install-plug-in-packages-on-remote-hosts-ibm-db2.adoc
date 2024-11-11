@@ -26,7 +26,7 @@ SnapCenterの[ホストを追加]ページを使用してホストを追加し�
 * ホストの管理については、管理に関するドキュメントを参照してください。
 * グループ管理サービスアカウント（gMSA）を使用する場合は、管理Privilegesを使用してgMSAを設定する必要があります。
 +
-link:../protect-db2/task_configure_gMSA_on_windows_server_2012_or_later.html["IBM DB2用のWindows Server 2016以降でのグループ管理サービスアカウントの設定"^]
+link:../protect-db2/configure-gMSA-on-windows-server-2012-or-later.html["IBM DB2用のWindows Server 2016以降でのグループ管理サービスアカウントの設定"^]
 
 
 

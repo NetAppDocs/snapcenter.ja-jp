@@ -30,10 +30,9 @@ link:task_back_up_resource_groups_sap_hana.html["リソースグループのバ�
 
 * 休止、Snapshot、および休止解除の処理を実行するプリコマンドとポストコマンドの場合は、該当するコマンドがプラグインホストのコマンドリストで次のパスから使用できるかどうかを確認する必要があります。
 +
-Windowsの場合：_ C：\Program Files\NetApp\SnapCenter \Snapcenter Plug-in Creator\etc\allowed_commands _list .txt_
+** Windowsホストのデフォルトの場所：_C：\Program NetApp SnapCenter SnapCenter Plug-in Creator\etc\allowed_commands.config_
+** Linuxホストのデフォルトの場所：_/opt/linux/scc/etc/allowed_commands.config_ NetApp SnapCenter
 
-+
-Linuxの場合：_/var/opt/snapcenter/scc/allowed _commands _list.txt_
 
 
 
@@ -48,7 +47,7 @@ NOTE: コマンドがコマンドリストに存在しない場合、処理は�
 . 左側のナビゲーションペインで、*[リソース]*を選択し、リストから適切なプラグインを選択します。
 . リソースページで、リソースタイプに基づいて *View*] ドロップダウンリストからリソースをフィルタリングします。
 +
-*を選択しimage:../media/filter_icon.png[""]、ホスト名とリソースタイプを選択してリソースをフィルタリングします。その後、を選択してフィルタペインを閉じることができます image:../media/filter_icon.png[""] 。
+を選択しimage:../media/filter_icon.png["フィルタアイコン"]、ホスト名とリソースタイプを選択してリソースをフィルタリングします。その後、を選択してフィルタペインを閉じることができます image:../media/filter_icon.png["フィルタアイコン"] 。
 
 . バックアップするリソースを選択します。
 . [Resource]ページで、*[Use custom name format for Snapshot copy]*を選択し、Snapshot名に使用するカスタムの名前形式を入力します。
@@ -111,7 +110,7 @@ Snapshotを作成するコマンドを入力するには
 
 |===
 +
-image:../media/application_settings.gif[""]
+image:../media/application_settings.gif["アプリケーション設定"]
 
 
 

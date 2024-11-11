@@ -7,7 +7,7 @@ summary: APIにアクセスすると、ライブセットアップの複雑な�
 = REST APIの使用を開始する
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

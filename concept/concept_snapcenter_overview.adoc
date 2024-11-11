@@ -56,7 +56,7 @@ SnapCenterの主な機能は次のとおりです。
 ユーザ定義のSnapCenterプラグインを作成するフレームワークを提供することで、他の標準またはカスタムのアプリケーションやデータベースでもデータ保護がサポートされます。これにより、同じ単一コンソールから他のアプリケーションやデータベースのデータを保護できます。このフレームワークを活用して、NetAppはMongoDB、MySQL、PostgreSQL、ストレージ、MaxDB向けのSnapCenterプラグインをリリースしました。 Sybase ASE、ORASCPM、MongoDB、DPGlue。これとは別に、開発者ガイドを使用して独自のプラグインを作成できます。
 
 +
-link:concept_develop_a_plug_in_for_your_application.html["アプリケーション用のプラグインを開発"]
+link:../protect-nsp/develop_a_plug_in_for_your_application.html["アプリケーション用のプラグインを開発"]
 
 * ポリシーベースのバックアップ
 +

@@ -13,7 +13,7 @@ summary: Single Mailbox Recovery（SMBR）ソフトウェアを使用すると�
 [role="lead"]
 Single Mailbox Recovery（SMBR）ソフトウェアを使用すると、Exchangeデータベース全体の代わりに、メールまたはメールボックスをリストアおよびリカバリできます。
 
-1つのメールをリカバリするためだけにデータベース全体をリストアすると、多くの時間とリソースが消費されます。SMBRを使用すると、Snapshotのクローンコピーを作成し、Microsoft APIを使用してSMBRにメールボックスをマウントすることで、メールを迅速にリカバリできます。SMBRの使用方法については、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2871407["SMBRアドミニストレーションガイド"^]。
+1つのメールをリカバリするためだけにデータベース全体をリストアすると、多くの時間とリソースが消費されます。SMBRを使用すると、Snapshotのクローンコピーを作成し、Microsoft APIを使用してSMBRにメールボックスをマウントすることで、メールを迅速にリカバリできます。SMBRの使用方法については、を参照してください https://docs.netapp.com/p/snap/smbr/8.3/Administrative-Server-Administration-Guide.pdf["SMBRアドミニストレーションガイド"^]。
 
 SMBRの追加情報については、次の資料を参照してください。
 

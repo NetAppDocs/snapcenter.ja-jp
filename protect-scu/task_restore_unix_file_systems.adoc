@@ -44,7 +44,7 @@ summary: データ損失が発生した場合は、SnapCenterを使用してデ�
 . [PostOps]ページで、リストアジョブの実行後に実行するリストア後のコマンドを入力します。
 +
 
-NOTE: プラグインホストで使用可能なコマンドリストにコマンドが存在するかどうかを、_/opt/NetApp/snapcenter/scc/etc/allowed _ commands.config_pathから確認する必要があります。
+NOTE: プラグインホストの_/ opt/ NetApp / SnapCenter / SCC /etc/allowed_commands.config_pathにあるコマンドリストでコマンドが存在するかどうかを確認する必要があります。
 
 . [ 通知 ] ページの [ 電子メールの設定 *] ドロップダウンリストから、電子メール通知を送信するシナリオを選択します。
 +

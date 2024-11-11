@@ -106,7 +106,7 @@ NOTE: セカンダリストレージのSnapshotの最大数に達しないよう
 . スクリプトページで、バックアップ処理の前後に実行するプリスクリプトまたはポストスクリプトのパスと引数を入力します。
 +
 
-NOTE: プラグインホストで使用可能なコマンドリストにコマンドが存在するかどうかを、_/opt/NetApp/snapcenter/scc/etc/allowed _ commands.config_pathから確認する必要があります。
+NOTE: プラグインホストで使用可能なコマンドリストにコマンドが存在するかどうかを、_/ opt/ NetApp / SnapCenter / SCC /etc/allowed_commands.config_pathから確認する必要があります。
 
 +
 スクリプトのタイムアウト値を指定することもできます。デフォルト値は60秒です。

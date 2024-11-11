@@ -7,7 +7,7 @@ summary: 各API要求でクライアントへの応答が生成されます。�
 = API応答の解釈
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

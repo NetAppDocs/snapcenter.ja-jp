@@ -7,7 +7,7 @@ summary: API呼び出しの処理方法は、HTTP要求で設定されたパラ�
 = API要求を制御する入力変数
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

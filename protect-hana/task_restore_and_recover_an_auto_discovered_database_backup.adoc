@@ -18,21 +18,19 @@ SnapCenterを使用すると、1つ以上のバックアップからデータを
 * リストアするリソースまたはリソースグループに対して実行中のバックアップ処理がある場合は、キャンセルしておく必要があります。
 * リストア前、リストア後、マウント、およびアンマウントの各コマンドを実行する場合は、プラグインホストで使用可能なコマンドリストにコマンドが存在するかどうかを次のパスから確認する必要があります。
 +
-Windowsの場合：_ C：\Program Files\NetApp\SnapCenter \Snapcenter Plug-in Creator\etc\allowed_commands _list .txt_
+** Windowsホストのデフォルトの場所：_C：\Program NetApp SnapCenter SnapCenter Plug-in Creator\etc\allowed_commands.config_
+** Linuxホストのデフォルトの場所：_/opt/linux/scc/etc/allowed_commands.config_ NetApp SnapCenter
 
-+
-Linuxの場合：_/var/opt/snapcenter/scc/allowed _commands _list.txt_
 
-+
+
+
 
 NOTE: コマンドがコマンドリストに存在しない場合、処理は失敗します。
-
-
 
 .タスクの内容
 * ファイルベースのバックアップコピーをSnapCenterからリストアすることはできません。
 * SnapCenter 4.3にアップグレードすると、SnapCenter 4.2で作成したバックアップはリストアできますが、リカバリすることはできません。SnapCenter 4.2で作成されたバックアップをリカバリするには、SnapCenter外部のHANA StudioまたはHANAリカバリスクリプトを使用する必要があります。
-* ONTAP 9.12.1以前のバージョンでは、リストアの一環としてSnapLockヴォールトSnapshotから作成されたクローンにSnapLockヴォールトの有効期限が継承されます。SnapLockの有効期限が過ぎた時点で、ストレージ管理者がクローンを手動でクリーンアップする必要があります。
+* ONTAP 9 .12.1以前のバージョンでは、リストアの一環としてSnapLockヴォールトSnapshotから作成されたクローンには、SnapLockヴォールトの有効期限が継承されます。SnapLockの有効期限が過ぎた時点で、ストレージ管理者がクローンを手動でクリーンアップする必要があります。
 * SnapMirrorのアクティブな同期のリストア処理では、プライマリの場所からバックアップを選択する必要があります。
 
 
@@ -158,10 +156,6 @@ SnapCenter 4.3へのアップグレード後に作成されたバックアップ
 . [ ポスト・オペレーション ] ページで、マウントおよびリストア後のコマンドを入力して、リストア・ジョブの実行後に実行します。
 +
 自動検出されたリソースにはマウントコマンドを使用できません。
-
-+
-
-NOTE: 休止、Snapshot、および休止解除の処理を実行するプリコマンドとポストコマンドの場合は、Linuxの場合は_/opt/snapcenter/snapenter/scc/allowed commands.config_path、Windowsの場合は_C：\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands_list.txt_からプラグインホストで使用できるコマンドリストにコマンドがあるかどうかを確認する必要があります。
 
 . [ 通知 ] ページの [ 電子メールの設定 *] ドロップダウンリストから、電子メールを送信するシナリオを選択します。
 +

@@ -51,7 +51,7 @@ summary: 実行中、キューに格納されている、または応答しな�
  a| 
 [Activity]ペイン
  a| 
-. バックアップジョブを開始したら、[Activity]ペインでをクリックして、 image:../media/activity_pane_icon.gif[""] 最新の5つの処理を表示します。
+. バックアップジョブを開始したら、[Activity]ペインでをクリックして、 image:../media/activity_pane_icon.gif["[Activity]ペインアイコン"] 最新の5つの処理を表示します。
 . 処理を選択します。
 . ［ ジョブの詳細 ］ ページで、 ［ * ジョブのキャンセル * ］ をクリックします。
 

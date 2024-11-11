@@ -1,6 +1,9 @@
 ---
 indexpage:
-  lead: SnapCenterソフトウェアは、シンプルで拡張性に優れた一元管理型プラットフォームです。ハイブリッドクラウドのどこにいても、ONTAPシステムで実行されているアプリケーション、データベース、ホストファイルシステム、VMに対して、アプリケーションと整合性のあるデータ保護を提供します。このドキュメントライブラリには、バージョン6.0の情報が含まれています。
+  title: SnapCenterソフトウェアのドキュメント
+  keywords: snapcenter server, plug-in, data protection, applications, databases,
+    host file systems, VmWare, backup, restore, clone
+  lead: SnapCenterソフトウェアは、シンプルで拡張性に優れた一元管理型プラットフォームです。ハイブリッドクラウドのどこにいても、ONTAPシステムで実行されているアプリケーション、データベース、ホストファイルシステム、VMに対して、アプリケーションと整合性のあるデータ保護を提供します。このドキュメントライブラリには、バージョン6.0および6.0.1の情報が含まれています。
   tiles:
   - title: はじめに
     links:
@@ -8,8 +11,6 @@ indexpage:
       url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3323468
     - title: SnapCenterの詳細
       url: "/concept/concept_snapcenter_overview.html"
-    - title: SQL Serverデータベースを保護するためのクイックリファレンス
-      url: "/protect-scsql/quick_start_to_install_snapcenter_plug-in_for_sql_server.html"
     - title: SnapCenter ServerとSnapCenterプラグインのアップグレード
       url: "/upgrade/upgrade_workflow.html"
   - title: SnapCenterサーバのインストール

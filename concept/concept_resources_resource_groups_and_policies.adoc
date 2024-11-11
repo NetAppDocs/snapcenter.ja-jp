@@ -47,4 +47,4 @@ image::../media/datasets_and_policies.gif[データセットとポリシーの�
 
 次の図は、Windowsファイルシステムのリソース、リソースグループ、およびポリシーの関係を示しています。
 
-image::../media/resources_and_policies_for_wfs.gif[wfs のリソースとポリシー]
+image::../media/resources_and_policies_for_wfs.gif[リソースとポリシー]

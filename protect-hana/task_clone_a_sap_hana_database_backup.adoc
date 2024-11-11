@@ -20,10 +20,9 @@ SnapCenterを使用してバックアップをクローニングできます。�
 * ターゲットのクローンサーバのSAP HANAインスタンスSIDは、[Target Clone SID]フィールドで指定したSIDと同じである必要があります。
 * クローニング前またはクローニング後のコマンドについては、次のパスからプラグインホストで使用できるコマンドリストにコマンドが存在するかどうかを確認する必要があります。
 +
-Windowsの場合：_ C：\Program Files\NetApp\SnapCenter \Snapcenter Plug-in Creator\etc\allowed_commands _list .txt_
+** Windowsの場合：_C：\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands.config_
+** Linuxの場合：_/opt/NetApp/snapcenter/scc/etc/allowed _ commands.config_
 
-+
-Linuxの場合：_/var/opt/snapcenter/scc/allowed _commands _list.txt_
 
 
 
@@ -32,7 +31,7 @@ NOTE: コマンドがコマンドリストに存在しない場合、処理は�
 
 .タスクの内容
 * クローンスプリット処理の制限事項については、を参照してください http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["ONTAP 9 論理ストレージ管理ガイド"^]。
-* ONTAP 9.12.1以前のバージョンでは、リストアの一環としてSnapLockヴォールトSnapshotから作成されたクローンにSnapLockヴォールトの有効期限が継承されます。SnapLockの有効期限が過ぎた時点で、ストレージ管理者がクローンを手動でクリーンアップする必要があります。
+* ONTAP 9 .12.1以前のバージョンでは、リストアの一環としてSnapLockヴォールトSnapshotから作成されたクローンには、SnapLockヴォールトの有効期限が継承されます。SnapLockの有効期限が過ぎた時点で、ストレージ管理者がクローンを手動でクリーンアップする必要があります。
 
 
 [role="tabbed-block"]
@@ -118,13 +117,7 @@ NOTE: スクリプトはプラグインホストで実行されます。
 Linuxマシンのボリュームまたはqtreeに対するmountコマンド：
 
 +
-NFSの例：
-
-+
- mount VSERVER_DATA_IP:%VOLUME_NAME_Clone /mnt
-+
-
-NOTE: 休止、Snapshot、および休止解除の処理を実行するプリコマンドとポストコマンドの場合は、Linuxの場合は_/opt/snapcenter/snapenter/scc/allowed commands.config_path、Windowsの場合は_C：\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands_list.txt_からプラグインホストで使用できるコマンドリストにコマンドがあるかどうかを確認する必要があります。
+NFSの例： `mount VSERVER_DATA_IP:%VOLUME_NAME_Clone /mnt`
 
 
 

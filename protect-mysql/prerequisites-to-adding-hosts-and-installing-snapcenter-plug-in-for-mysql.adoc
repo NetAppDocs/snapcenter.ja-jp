@@ -60,37 +60,23 @@ https://imt.netapp.com/matrix/imt.jsp?components=121071;&solution=1259&isHWU&src
 
 == 補助コマンド
 
-SnapCenter Plug-in for MySQLで補助的なコマンドを実行するには、ファイルにそのコマンドを含める必要があります `allowed_commands.config` 。
+SnapCenter Plug-in for MySQLで補足コマンドを実行するには、_allowed_commands.config_fileに追加する必要があります。
 
-`allowed_commands.config` ファイルは、SnapCenter Plug-in for MySQLディレクトリの「etc」サブディレクトリにあります。
+* Windowsホストのデフォルトの場所：_C：\Program NetApp SnapCenter SnapCenter Plug-in Creator\etc\allowed_commands.config_
+* Linuxホストのデフォルトの場所：_/opt/linux/scc/etc/allowed_commands.config_ NetApp SnapCenter
 
-.Windowsホスト
-デフォルト： `C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands.config`
 
-カスタムパス： `<Custom_Directory>\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands.config`
+プラグインホストで追加コマンドを許可するには、エディタでopen_allowed_commands.config_fileを指定します。各コマンドは別 々 の行に入力します。大文字と小文字は区別されません。完全修飾パス名を指定し、パス名にスペースが含まれている場合は引用符（"）で囲みます。
 
-.Linuxホスト
-デフォルト： `/opt/NetApp/snapcenter/scc/etc/allowed_commands.config`
+例：
 
-カスタムパス： `<Custom_Directory>allowed_commands.config`
+コマンド：mountコマンド：umountコマンド：「C：\Program Files\SnapCreator NetApp Commands\sdcli.exe」コマンド：myscript.bat
 
-プラグインホストで追加のコマンドを許可するには、エディタでファイルを開きます `allowed_commands.config` 。各コマンドを別 々 の行に入力します。大文字と小文字は区別されません。例えば、
-
-コマンド:mount
-
-コマンド：umount
-
-完全修飾パス名を指定してください。パス名にスペースが含まれている場合は、パス名を引用符（"）で囲みます。例えば、
-
-コマンド："C：\Program Files\NetApp\SnapCreator commands\sdcli.exe"
-
-コマンド：myscript.bat
-
-ファイルが存在しない場合は `allowed_commands.config` 、コマンドまたはスクリプトの実行がブロックされ、次のエラーでワークフローが失敗します。
+_allowed_commands.config_fileが存在しない場合、コマンドまたはスクリプトの実行はブロックされ、次のエラーでワークフローが失敗します。
 
 "[/mnt/mount-a]の実行は許可されていません。プラグインホストのファイル%sにコマンドを追加して許可します。"
 
-コマンドまたはスクリプトがに存在しないと、 `allowed_commands.config`コマンドまたはスクリプトの実行がブロックされ、次のエラーでワークフローが失敗します。
+コマンドまたはスクリプトが_allowed_commands.config_に存在しない場合、コマンドまたはスクリプトの実行はブロックされ、次のエラーでワークフローが失敗します。
 
 "[/mnt/mount-a]の実行は許可されていません。プラグインホストのファイル%sにコマンドを追加して許可します。"
 
@@ -106,6 +92,7 @@ SnapCenter 2.0以降のリリースでは、root以外のユーザがSnapCenter 
 * 必要なもの *
 
 * sudoバージョン1.8.7以降
+* umaskが0027の場合は、Javaフォルダとその中のすべてのファイルのアクセス許可が555であることを確認します。そうしないと、プラグインのインストールが失敗することがあります。
 * root以外のユーザについては、root以外のユーザの名前とユーザのグループが同じであることを確認してください。
 * /etc/ssh/sshd_config_file を編集して、メッセージ認証コードアルゴリズム MACs HMAC-sha2-256 および MACs HMAC-sha2-512 を設定します。
 +

@@ -35,9 +35,9 @@ NOTE: mirror-vaultタイプのボリュームにあるバージョンに依存�
 
 セカンダリ関係がSnapMirrorのアクティブな同期（当初はSnapMirrorビジネス継続性[SM-BC]としてリリース）である場合は、次のアイコンも表示されます。
 
-* image:../media/topology_replica_site_up.png["レプリカサイトアップ"] レプリカサイトが稼働していることを示します。
-* image:../media/topology_replica_site_down.png["レプリカサイトダウン"] レプリカサイトがダウンしていることを示します。
-* image:../media/topology_reestablished.png["関係が再確立されました"] セカンダリのミラー関係やバックアップ関係が再確立されていないことを示します。
+* image:../media/topology_replica_site_up.png["レプリカサイトアップ"]レプリカサイトは稼働しています。
+* image:../media/topology_replica_site_down.png["レプリカサイトダウン"]レプリカサイトはダウンしています。
+* image:../media/topology_reestablished.png["関係が再確立されました"]セカンダリミラー関係またはバックアップ関係が再確立されていません。
 
 
 .手順

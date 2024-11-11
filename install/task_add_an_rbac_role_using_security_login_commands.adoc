@@ -64,7 +64,7 @@ NOTE: SnapCenter のドキュメントではロールに割り当てる要素を
 NOTE: このコマンドは権限ごとに繰り返す必要があります。フルアクセスコマンドは、読み取り専用コマンドの前に指定する必要があります。
 
 +
-権限のリストについては、を参照してください link:../install/task_create_an_ontap_cluster_role_with_minimum_privileges.html#ontap-cli-commands-for-creating-roles-and-assigning-permissions["ロールの作成と権限の割り当てに使用するONTAP CLIコマンド"^]。
+権限のリストについては、を参照してください link:task_create_an_ontap_cluster_role_with_minimum_privileges.html#ontap-cli-commands-for-creating-cluster-roles-and-assigning-permissions["ロールの作成と権限の割り当てに使用するONTAP CLIコマンド"^]。
 
 
 

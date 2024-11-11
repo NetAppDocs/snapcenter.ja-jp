@@ -13,4 +13,4 @@ summary: SAP HANA データベースを保護する場合は、 SnapCenter Plug-
 [role="lead"]
 SAP HANA データベースを保護する場合は、 SnapCenter Plug-in for SAP HANA Database をインストールしてセットアップする必要があります。
 
-image::../media/sap_hana_install_configure_workflow.gif[SAP HANA のインストール設定ワークフロー]
+image::../media/sap_hana_install_configure_workflow.png[HANAプラグインのインストールワークフロー]

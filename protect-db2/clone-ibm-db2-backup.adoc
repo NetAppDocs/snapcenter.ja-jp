@@ -16,12 +16,12 @@ SnapCenterを使用してバックアップをクローニングできます。�
 .開始する前に
 * リソースまたはリソースグループをバックアップしておく必要があります。
 * ボリュームをホストするアグリゲートがStorage Virtual Machine（SVM）の割り当て済みアグリゲートリストに含まれている必要があります。
+* 代替ホストでDB2のクローンを作成する場合は、もう一方のホストの元のマウントパスと同じn-1ディレクトリ構造をクローンマウントパスに作成する必要があります。マウントパスには_755_EXECUTION権限が必要です。
 * クローニング前またはクローニング後のコマンドについては、次のパスからプラグインホストで使用できるコマンドリストにコマンドが存在するかどうかを確認する必要があります。
 +
-Windowsの場合：_C：\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands.config_
+** Windowsホストのデフォルトの場所：_C：\Program NetApp SnapCenter SnapCenter Plug-in Creator\etc\allowed_commands.config_
+** Linuxホストのデフォルトの場所：_/opt/linux/scc/etc/allowed_commands.config_ NetApp SnapCenter
 
-+
-Linuxの場合：_/opt/NetApp/snapcenter/scc/etc/allowed _ commands.config_
 
 
 
@@ -115,13 +115,7 @@ NOTE: スクリプトはプラグインホストで実行されます。
 Linuxマシンのボリュームまたはqtreeに対するmountコマンド：
 
 +
-NFSの例：
-
-+
- mount VSERVER_DATA_IP:%VOLUME_NAME_Clone /mnt
-+
-
-NOTE: 休止、Snapshot、および休止解除の処理を実行するプリコマンドとポストコマンドの場合は、Linuxの場合は_/opt/snapcenter/snapenter/scc/allowed commands.config_path、Windowsの場合は_C：\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands.config_からプラグインホストで使用できるコマンドリストにコマンドが存在するかどうかを確認する必要があります。
+NFSの例： `mount VSERVER_DATA_IP:%VOLUME_NAME_Clone /mnt`
 
 
 

@@ -7,7 +7,7 @@ summary: REST は、分散 Web アプリケーションを作成するための�
 = 基盤となるREST Webサービス
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

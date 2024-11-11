@@ -5,11 +5,8 @@ keywords: copyrights, notice, trademarks, patents, privacy, open source
 summary: 法的通知では、著作権に関する声明、商標、特許などにアクセスできます。 
 ---
 = 法的通知
-:hardbreaks:
 :allow-uri-read: 
-:nofooter: 
 :icons: font
-:linkattrs: 
 :imagesdir: ./media/
 
 

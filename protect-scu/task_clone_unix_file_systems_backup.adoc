@@ -57,7 +57,7 @@ SnapCenterを使用すると、ファイルシステムのバックアップを�
 .. クローニング処理の前後に実行するプリコマンドやポストコマンドを入力します。
 +
 
-NOTE: プラグインホストで使用可能なコマンドリストにコマンドが存在するかどうかを、_/opt/NetApp/snapcenter/scc/allowed _ commands.config_pathから確認する必要があります。
+NOTE: プラグインホストで使用可能なコマンドリストにコマンドが存在するかどうかを、_/opt/NetApp/snapcenter/scc/etc/allowed _ commands.config_pathから確認する必要があります。
 
 
 

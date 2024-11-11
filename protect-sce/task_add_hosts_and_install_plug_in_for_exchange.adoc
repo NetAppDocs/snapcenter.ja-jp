@@ -196,7 +196,7 @@ NOTE: HAセットアップでweb.configファイルを更新する場合は、�
 
 == ネットTCP通信用のカスタムポートの設定
 
-SnapCenter 6.0リリース以降、SnapCenter Plug-in for Windowsでは、デフォルトでポート909がネットTCP通信に使用されます。ポート909が使用中の場合は、ネットTCP通信用に別のポートを設定できます。
+デフォルトでは、SnapCenter 6.0リリース以降、Windows用SnapCenterプラグインは、ネットTCP通信にポート909を使用します。ポート909が使用中の場合は、ネットTCP通信用に別のポートを設定できます。
 
 .手順
 . _C：\Program Files\NetApp\SnapCenter\SnapCenter Plug-in for Microsoft Windows\vssproviders\navssprv.exe.config_にある_NetTCPPort_keyの値を必要なポート番号に変更します。

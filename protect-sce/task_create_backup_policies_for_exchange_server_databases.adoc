@@ -285,7 +285,7 @@ IMPORTANT: プライマリのみのポリシーは、Exchange ONTAPボリュー�
 
 [Topology]ページの[Refresh]*ボタンをクリックすると、ONTAPから取得されたセカンダリおよびプライマリのSnapLock有効期限が更新されます。
 
-を参照して link:..protect-sce/task_view_exchange_backups_in_the_topology_page.html["[Topology]ページでのExchangeバックアップの表示"]
+を参照して link:../protect-sce/task_view_exchange_backups_in_the_topology_page.html["[Topology]ページでのExchangeバックアップの表示"]
 
 
 

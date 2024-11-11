@@ -33,4 +33,4 @@ SnapCenter を使用する前に、実行するバックアップ、クローニ
 
 次の図は、データベースのリソース、リソースグループ、およびポリシーの関係を示しています。
 
-image::../media/sco_resourcegroup_policy.gif[SCO リソースグループポリシー]
+image::../media/sco_resourcegroup_policy.gif[リソースグループポリシー]

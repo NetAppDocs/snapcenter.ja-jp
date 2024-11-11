@@ -13,4 +13,4 @@ summary: Oracle データベースを保護する場合は、 SnapCenter Plug-in
 [role="lead"]
 Oracle データベースを保護する場合は、 SnapCenter Plug-in for Oracle Database をインストールしてセットアップする必要があります。
 
-image::../media/sco_install_configure_workflow.png[SCO インストール設定ワークフロー]
+image::../media/sco_install_configure_workflow.png[Oracleプラグインのインストールワークフロー]

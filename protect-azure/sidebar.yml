@@ -2,6 +2,8 @@
 section: protect-azure
 title: Azure NetApp Filesで実行されているアプリケーションを保護
 entries:
+- title: Azure NetApp Filesで実行されているアプリケーションを保護
+  url: "/protect-azure/protect-applications-azure-netapp-files.html"
 - title: SnapCenterのインストールとクレデンシャルの作成
   entries:
   - title: Azure仮想マシンへのSnapCenterのインストール

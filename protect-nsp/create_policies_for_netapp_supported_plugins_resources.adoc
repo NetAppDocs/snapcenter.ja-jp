@@ -119,7 +119,7 @@ ONTAPの保護関係のタイプがミラーとバックアップの場合、こ
 
 [Topology]ページの[Refresh]*ボタンをクリックすると、ONTAPから取得されたセカンダリおよびプライマリのSnapLock有効期限が更新されます。
 
-を参照して link:protect-nsp/view_custom_plug_in_resource_backups_and_clones_in_the_topology_page.html["NetAppでサポートされているプラグインリソースに関連するバックアップとクローンを[Topology]ページで表示する"]
+を参照して link:../protect-nsp/view_netapp_supported_plugins_resource_backups_and_clones_in_the_topology_page.html["NetAppでサポートされているプラグインリソースに関連するバックアップとクローンを[Topology]ページで表示する"]
 
 
 
@@ -134,7 +134,7 @@ SnapLockがONTAPのセカンダリ（SnapLock Vault）にのみ設定されて�
 
 SnapLock Vaultの詳細については、「SnapVaultデスティネーションでSnapshotをWORM状態にコミットする」を参照してください。
 
-を参照して link:protect-nsp/view_netapp_supported_plugins_resource_backups_and_clones_in_the_topology_page.html["NetAppでサポートされているプラグインリソースに関連するバックアップとクローンを[Topology]ページで表示する"]
+link:../protect-nsp/view_netapp_supported_plugins_resource_backups_and_clones_in_the_topology_page.html["NetAppでサポートされているプラグインリソースに関連するバックアップとクローンを[Topology]ページで表示する"]です。
 
 
 

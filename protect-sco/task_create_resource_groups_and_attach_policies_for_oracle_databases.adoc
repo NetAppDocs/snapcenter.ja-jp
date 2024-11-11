@@ -22,7 +22,7 @@ summary: リソースグループはコンテナであり、バックアップ�
 次の図は、データベースのリソース、リソースグループ、およびポリシーの関係を示しています。
 
 +
-image::../media/sco_resourcegroup_policy.gif[SCO リソースグループポリシー]
+image::../media/sco_resourcegroup_policy.gif[リソースグループポリシー]
 
 * SnapLockが有効なポリシーの場合、ONTAP 9.12.1以前のバージョンでは、Snapshotロック期間を指定すると、リストアの一環として改ざん防止Snapshotから作成されたクローンにSnapLockの有効期限が継承されます。SnapLockの有効期限が過ぎた時点で、ストレージ管理者がクローンを手動でクリーンアップする必要があります。
 * SnapMirrorアクティブ同期が設定されていない新しいデータベースを、SnapMirrorアクティブ同期が設定されたリソースを含む既存のリソースグループに追加することはできません。

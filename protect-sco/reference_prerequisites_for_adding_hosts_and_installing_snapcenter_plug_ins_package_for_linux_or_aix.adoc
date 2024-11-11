@@ -25,15 +25,12 @@ SnapCenter Plug-ins Package for AIXは、ファイルレベルのシンボリッ
 * インストールユーザのクレデンシャルを、認証モードをLinuxまたはAIXに設定して作成します。
 * Java 11をLinuxホストまたはAIXホストにインストールしておく必要があります。
 +
+** OracleのJavaとOpenJDKはLinuxでサポートされています
+** AIX用IBM Java。次のサイトからダウンロードできます。 https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?version=11&os=AIX["IBM Semeruランタイムのダウンロード"]
++
 
 NOTE: LinuxホストにJava 11の認定エディションのみがインストールされていることを確認します。
 
-+
-Javaのダウンロードについては、次を参照してください。
-
-+
-** http://www.java.com/en/download/manual.jsp["すべてのオペレーティングシステム用のJavaダウンロード"^]
-** https://www.ibm.com/support/pages/java-sdk-aix["IBM Java for AIX の場合"^]
 
 
 * Linux または AIX ホストで Oracle データベースを実行している場合は、 SnapCenter Plug-in for Oracle Database と SnapCenter Plug-in for UNIX の両方をインストールする必要があります。
@@ -94,7 +91,7 @@ NOTE: 十分なディスクスペースを割り当て、logsフォルダによ�
  a| 
 必要なソフトウェアパッケージ
  a| 
-Java 11 Oracle JavaおよびOpenJDK
+Java 11 OracleおよびOpenJDK
 
 
 NOTE: LinuxホストにJava 11の認定エディションのみがインストールされていることを確認します。
@@ -113,6 +110,7 @@ SnapCenter 2.0以降のリリースでは、root以外のユーザがSnapCenter 
 * 必要なもの *
 
 * sudoバージョン1.8.7以降
+* umaskが0027の場合は、Javaフォルダとその中のすべてのファイルのアクセス許可が555であることを確認します。そうしないと、プラグインのインストールが失敗することがあります。
 * root以外のユーザについては、root以外のユーザの名前とユーザのグループが同じであることを確認してください。
 * /etc/ssh/sshd_config_file を編集して、メッセージ認証コードアルゴリズム MACs HMAC-sha2-256 および MACs HMAC-sha2-512 を設定します。
 +
@@ -238,6 +236,7 @@ SnapCenter 4.4以降では、root以外のユーザがSnapCenter Plug-ins Packag
 * 必要なもの *
 
 * sudoバージョン1.8.7以降
+* umaskが0027の場合は、Javaフォルダとその中のすべてのファイルのアクセス許可が555であることを確認します。そうしないと、プラグインのインストールが失敗することがあります。
 * /etc/ssh/sshd_config_file を編集して、メッセージ認証コードアルゴリズム MACs HMAC-sha2-256 および MACs HMAC-sha2-512 を設定します。
 +
 構成ファイルの更新後にsshdサービスを再起動します。
@@ -406,7 +405,7 @@ NOTE: クレデンシャルの作成時に誤った詳細を指定すると、�
 . [ リソース ] ページで、 [ * 表示 ] リストから [ * データベース * ] を選択します。
 . をクリックし、ホスト名とデータベース タイプを選択してリソースをフィルタします。
 +
-そのあとにimage:../media/filter_icon.png[""]をクリックすると、フィルタ ペインが閉じます。
+そのあとにimage:../media/filter_icon.png["フィルタアイコン"]をクリックすると、フィルタ ペインが閉じます。
 
 . データベースを選択し、 * データベース設定 * > * データベースの設定 * をクリックします。
 . [ データベース設定の設定 ] セクションの [ 既存の資格情報を使用する *] ドロップダウンリストから、 Oracle データベースでデータ保護ジョブを実行するために使用する資格情報を選択します。

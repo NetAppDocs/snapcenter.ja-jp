@@ -7,7 +7,7 @@ summary: RESTでは共通のテクノロジとベストプラクティスが確�
 = 基本的な動作特性
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

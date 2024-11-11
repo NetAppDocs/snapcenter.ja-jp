@@ -24,6 +24,3 @@ NOTE: ネットアップの SnapManager 製品から SnapCenter に移行した�
 NOTE: SnapCenter は、 SnapMirror ボリュームと SnapVault ボリュームのカスケード関係をサポートしていません（ * プライマリ * > * ミラー * > * バックアップ * ）。ファンアウト関係を使用する必要があります。
 
 SnapCenter では、バージョンに依存しない SnapMirror 関係の管理がサポートされます。バージョンに依存しないSnapMirror関係の詳細とその設定方法については、を参照して http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.ic-base%2Fresources%2Fhome.html["ONTAPのドキュメント"^]ください。
-
-
-NOTE: SnapCenter は * sync-mirror * レプリケーションをサポートしていません。

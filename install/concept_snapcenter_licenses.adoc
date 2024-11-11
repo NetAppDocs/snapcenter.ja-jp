@@ -22,7 +22,9 @@ SnapCenter Standard（コントローラベース）
  a| 
 FAS、AFF、オールSANアレイ（ASA）に必要
 
-SnapCenter Standardライセンスはコントローラベースのライセンスで、Premium Bundleに含まれています。SnapManager Suiteライセンスをお持ちの場合は、SnapCenter Standardライセンスの使用権も取得できます。FAS、AFF、またはASAストレージにSnapCenterの試用版をインストールする場合は、営業担当者に連絡してPremium Bundleの評価ライセンスを取得してください。
+SnapCenter Standardライセンスはコントローラベースのライセンスで、ONTAP Oneに含まれています。SnapManager Suiteライセンスをお持ちの場合は、SnapCenter Standardライセンスの使用権も取得できます。FAS、AFF、またはASAストレージにSnapCenterの試用版をインストールする場合は、営業担当者にお問い合わせください。ONTAP Oneの評価版ライセンスを入手できます。
+
+ONTAP Oneに含まれるライセンスについては、を参照してください https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html#licenses-included-with-ontap-one["ONTAP Oneに含まれるライセンス"]。
 
 
 NOTE: SnapCenterは、Data Protection Bundleの一部としても提供されます。A400以降を購入済みの場合は、Data Protection Bundleを購入する必要があります。
@@ -87,7 +89,7 @@ NOTE: セカンダリデスティネーションにSnapCenter Standardライセ�
 
 |===
 
-NOTE: SnapCenter Advanced および SnapCenter NAS ファイルサービスのライセンスは廃止され、現在は提供されていません。Amazon FSx for NetApp ONTAPおよびCloud Volumes ONTAPでは、容量ベースのライセンスは不要になりました。Azure NetApp Filesには標準ライセンスと容量ベースライセンスは必要ありません。
+NOTE: SnapCenter AdvancedとSnapCenter NASファイルサービスのライセンスは廃止され、現在は提供されていません。Amazon FSx for NetApp ONTAP、ONTAP Select、Cloud Volumes ONTAP、Azure NetApp Filesに標準ライセンスと容量ベースライセンスは不要になりました。
 
 1つ以上のSnapCenterライセンスをインストールする必要があります。ライセンスの追加方法については、を参照してください link:../install/concept_snapcenter_standard_controller_based_licenses.html["SnapCenter Standardコントローラベースライセンスを追加"]。
 

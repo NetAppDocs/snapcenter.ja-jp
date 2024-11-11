@@ -18,16 +18,14 @@ SnapCenterを使用すると、1つ以上のバックアップからデータを
 * リストアするリソースまたはリソースグループに対して実行中のバックアップ処理がある場合は、キャンセルしておく必要があります。
 * リストア前、リストア後、マウント、およびアンマウントの各コマンドを実行する場合は、プラグインホストで使用可能なコマンドリストにコマンドが存在するかどうかを次のパスから確認する必要があります。
 +
-Windowsの場合：_C：\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands.config_
+** Windowsホストのデフォルトの場所：_C：\Program NetApp SnapCenter SnapCenter Plug-in Creator\etc\allowed_commands.config_
+** Linuxホストのデフォルトの場所：_/opt/linux/scc/etc/allowed_commands.config_ NetApp SnapCenter
 
-+
-Linuxの場合：_/var/opt/snapcenter/scc/allowed _ commands.config_
 
-+
+
+
 
 NOTE: コマンドがコマンドリストに存在しない場合、処理は失敗します。
-
-
 
 .タスクの内容
 * ファイルベースのバックアップコピーをSnapCenterからリストアすることはできません。
@@ -108,10 +106,6 @@ NOTE: SnapCenter Plug-in for PostgreSQLは、手動でのリカバリに役立�
 . [ ポスト・オペレーション ] ページで、マウントおよびリストア後のコマンドを入力して、リストア・ジョブの実行後に実行します。
 +
 自動検出されたリソースにはマウントコマンドを使用できません。
-
-+
-
-NOTE: 休止、Snapshot、および休止解除の処理を実行するプリコマンドとポストコマンドの場合は、Linuxの場合は_/opt/snapcenter/snapenter/scc/allowed commands.config_path、Windowsの場合は_C：\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands.config_からプラグインホストで使用できるコマンドリストにコマンドが存在するかどうかを確認する必要があります。
 
 . [ 通知 ] ページの [ 電子メールの設定 *] ドロップダウンリストから、電子メールを送信するシナリオを選択します。
 +
