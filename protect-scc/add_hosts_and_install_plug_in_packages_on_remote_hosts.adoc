@@ -1,7 +1,7 @@
 ---
-permalink: protect-nsp/add_hosts_and_install_plug_in_packages_on_remote_hosts.html 
+permalink: protect-scc/add_hosts_and_install_plug_in_packages_on_remote_hosts.html 
 sidebar: sidebar 
-keywords: add hostsNetApp supported plug-ins, MongoDB, ORASCPM, Oracle Applications, SAP ASE, SAP MaxDB, Storage plug-in 
+keywords: add hosts, custom plug-in 
 summary: '[SnapCenter][ホストの追加]ページを使用してホストを追加し、プラグインパッケージをインストールする必要があります。プラグインはリモートホストに自動的にインストールされます。ホストの追加とプラグインパッケージのインストールは、ホストごとまたはクラスタごとに実行できます。' 
 ---
 = ホストを追加してリモートホストにプラグインパッケージをインストールする
@@ -11,7 +11,7 @@ summary: '[SnapCenter][ホストの追加]ページを使用してホストを�
 
 
 [role="lead"]
-SnapCenterの[ホストを追加]ページを使用してホストを追加し、プラグインパッケージをインストールする必要があります。プラグインはリモートホストに自動的にインストールされます。ホストの追加とプラグインパッケージのインストールは、ホストごとまたはクラスタごとに実行できます。
+[SnapCenter][ホストの追加]ページを使用してホストを追加し、プラグインパッケージをインストールする必要があります。プラグインはリモートホストに自動的にインストールされます。ホストの追加とプラグインパッケージのインストールは、ホストごとまたはクラスタごとに実行できます。
 
 .開始する前に
 * この処理は、SnapCenter Adminロールなど、プラグインのインストールとアンインストールの権限のあるロールが割り当てられているユーザが実行する必要があります。
@@ -20,13 +20,12 @@ SnapCenterの[ホストを追加]ページを使用してホストを追加し�
 +
 link:configure_gMSA_on_windows_server_2012_or_later.html["Windows Server 2016以降でカスタムアプリケーション用にグループ管理サービスアカウントを設定する"]
 
-* Windowsホストの場合は、SnapCenter Plug-in for Windowsを選択する必要があります。
 
 
 .タスクの内容
-* SnapCenterサーバをプラグインホストとして別のSnapCenterサーバに追加することはできません。
-* クラスタ（WSFC）にプラグインをインストールすると、プラグインはクラスタのすべてのノードにインストールされます。
+SnapCenterサーバをプラグインホストとして別のSnapCenterサーバに追加することはできません。
 
+クラスタ（WSFC）にプラグインをインストールすると、プラグインはクラスタのすべてのノードにインストールされます。
 
 .手順
 . 左側のナビゲーションペインで、 *Hosts* を選択します。
@@ -45,14 +44,10 @@ link:configure_gMSA_on_windows_server_2012_or_later.html["Windows Server 2016以
 
 ** ウィンドウ
 ** Linux
-** AIX
 
 
 
-NOTE: NetAppでサポートされるプラグインは、Windows、Linux、AIXの各環境で使用できます。
-
-
-NOTE: AIXでは、ストレージアプリケーションとOracleアプリケーションがサポートされます。
+NOTE: カスタムプラグインは、WindowsとLinuxのどちらの環境でも使用できます。
 
 
 
@@ -85,17 +80,6 @@ NOTE: クレデンシャルの認証モードは、ホスト追加ウィザー�
 
 |===
 . [ インストールするプラグインを選択してください * ] セクションで、インストールするプラグインを選択します。
-+
-リストから次のプラグインをインストールできます。
-
-+
-** MongoDB
-** ORASCPM（Oracleアプリケーションとして表示）
-** SAP ASE
-** SAP MaxDB
-** ストレージ
-
-
 . （オプション）*[その他のオプション]*を選択して、他のプラグインをインストールします。
 +
 |===
@@ -117,15 +101,33 @@ NOTE: プラグインを手動でインストールし、カスタムポート�
  a| 
 インストールパス
  a| 
-NetAppでサポートされているプラグインは、WindowsシステムとLinuxシステムのどちらにもインストールできます。
+SnapCenterカスタムプラグインは、WindowsシステムとLinuxシステムのどちらにもインストールできます。
 
 ** Windows 用 SnapCenter Plug-ins パッケージのデフォルトパスは C ： \Program Files\NetApp\SnapManager です。
 +
 必要に応じて、パスをカスタマイズできます。
 
-** SnapCenter Plug-ins Package for LinuxおよびSnapCenter Plug-ins Package for AIXの場合、デフォルトパスはです `/opt/NetApp/snapcenter`。
+** SnapCenter Plug-ins Package for Linuxの場合、デフォルトパスはです `/opt/NetApp/snapcenter`。
 +
 必要に応じて、パスをカスタマイズできます。
+
+** SnapCenter Custom Plug-ins の場合：
++
+... [Custom Plug-ins]セクションで、*[Browse]*を選択し、zip形式のカスタムプラグインフォルダを選択します。
++
+zip形式のフォルダには、カスタムプラグインコードと記述子.xmlファイルが含まれています。
+
++
+Storage Plug-inの場合は、フォルダに移動し `_C:\ProgramData\NetApp\SnapCenter\Package Repository_` て選択します `Storage.zip` 。
+
+... [アップロード]*を選択します。
++
+パッケージをアップロードする前に、zip形式のカスタムプラグインフォルダ内の記述子.xmlファイルが検証されます。
+
++
+SnapCenter サーバにアップロードされたカスタムプラグインが表示されます。
+
+
 
 
 
@@ -155,17 +157,11 @@ NOTE: gMSAは、SnapCenter Plug-in for Windowsサービスのログオンサー�
 [インストール前チェックをスキップ]*チェックボックスを選択していない場合、プラグインをインストールするための要件をホストが満たしているかどうかが検証されます。 ディスクスペース、RAM、PowerShellのバージョン、 NETバージョン、場所（Windowsプラグインの場合）、およびJavaバージョン（Linuxプラグインの場合）が最小要件に照らして検証されます。最小要件を満たしていない場合は、該当するエラーまたは警告メッセージが表示されます。
 
 +
-エラーがディスクスペースまたはRAMに関連している場合は、にあるweb.configファイルを更新してデフォルト値を変更できます `C:\Program Files\NetApp\SnapCenter WebApp`。エラーが他のパラメータに関連している場合は、問題を修正する必要があります。
+エラーがディスクスペースまたはRAMに関連している場合は、C：\Program Files\NetApp\SnapCenter WebAppにあるweb.configファイルを更新してデフォルト値を変更できます。エラーが他のパラメータに関連している場合は、問題を修正する必要があります。
 
 +
 
-NOTE: HAセットアップでSnapManager .Web.UI.dll.configを更新する場合は、両方のノードでファイルを更新し、SnapCenterアプリケーションプールを再起動する必要があります。
-
-+
-Windowsのデフォルトパス： `C:\Program Files\NetApp\SnapCenter WebApp\SnapManager.Web.UI.dll.config`
-
-+
-Linuxのデフォルトパス： `/opt/NetApp/snapcenter/SnapManagerWeb/SnapManager.Web.UI.dll.config`
+NOTE: HAセットアップでweb.configファイルを更新する場合は、両方のノードでファイルを更新する必要があります。
 
 . ホストタイプがLinuxの場合は、フィンガープリントを確認し、*[確認して送信]*を選択します。
 +

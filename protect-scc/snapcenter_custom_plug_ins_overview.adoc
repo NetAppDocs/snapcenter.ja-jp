@@ -1,0 +1,28 @@
+---
+permalink: protect-scc/snapcenter_custom_plug_ins_overview.html 
+sidebar: sidebar 
+keywords: custom plug-ins 
+summary: 使用するアプリケーション用のカスタムプラグインを開発し、 SnapCenter を使用してそれらのアプリケーションのバックアップ、リストア、クローニングを行うことができます。カスタムプラグインは、他の SnapCenter プラグインと同様に NetApp SnapCenter ソフトウェアのホスト側コンポーネントとして機能し、アプリケーションに対応したリソースのデータ保護と管理を実現します。 
+---
+= SnapCenterカスタムプラグインの概要
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用するアプリケーション用のカスタムプラグインを開発し、 SnapCenter を使用してそれらのアプリケーションのバックアップ、リストア、クローニングを行うことができます。カスタムプラグインはNetApp SnapCenterソフトウェアのホスト側コンポーネントとして機能し、アプリケーションに対応したリソースのデータ保護と管理を可能にします。
+
+カスタムプラグインをインストールすると、SnapCenterとNetApp SnapMirrorテクノロジを使用して別のボリュームにバックアップセットのミラーコピーを作成したり、NetApp SnapVaultテクノロジを使用してディスクツーディスクのバックアップレプリケーションを実行したりできます。カスタムプラグインは、WindowsとLinuxのどちらの環境でも使用できます。
+
+
+NOTE: SnapCenterCLIでは、カスタムプラグインコマンドはサポートされません。
+
+カスタムプラグインは[ホストを追加]ページからインストールできます。
+
+link:add_hosts_and_install_plug_in_packages_on_remote_hosts.html["ホストを追加し、プラグインパッケージをリモートホストにインストールする。"^]
+
+
+NOTE: SnapCenterのサポートポリシーでは、SnapCenterカスタムプラグインフレームワーク、コアエンジン、関連するAPIのサポートが対象になります。プラグインのソースコードと、カスタムプラグインフレームワーク上に構築された関連スクリプトはサポート対象外です。
+
+ガイドを参照して、独自のカスタムプラグインを作成できます link:develop_a_plug_in_for_your_application.html["アプリケーション用のプラグインを開発"^] 。

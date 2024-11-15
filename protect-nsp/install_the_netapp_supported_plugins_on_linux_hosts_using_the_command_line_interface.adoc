@@ -25,7 +25,7 @@ NetAppでサポートされているプラグインは、SnapCenterユーザイ�
 ** - DSERVER_IP は、 SnapCenter サーバの IP アドレスを指定します。
 ** - DSERVER_HTTPS_PORT には、 SnapCenter サーバの HTTPS ポートを指定します。
 ** -duser_install_DIR - SnapCenter Plug-ins Package for Linux をインストールするディレクトリを指定します
-** DINSTALL_LOG_name は、ログファイルの名前を指定します。
+** _DINSTALL_LOG_nameには、ログファイルの名前を指定します。
 
 
 +

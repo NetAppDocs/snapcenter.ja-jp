@@ -1,0 +1,18 @@
+---
+permalink: protect-scc/install_snapcenter_custom_plug_in.html 
+sidebar: sidebar 
+keywords: install workflow, custom plug-in 
+summary: カスタムプラグインリソースを保護する場合は、SnapCenterカスタムプラグインをインストールしてセットアップする必要があります。 
+---
+= SnapCenterカスタムプラグインのインストールワークフロー
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+カスタムプラグインリソースを保護する場合は、SnapCenterカスタムプラグインをインストールしてセットアップする必要があります。
+
+image::../media/scc_install_configure_workflow.png[SnapCenterカスタムプラグインのワークフロー]
+
+link:develop_a_plug_in_for_your_application.html["アプリケーション用のプラグインを開発"]

@@ -1,22 +1,22 @@
 ---
-permalink: protect-nsp/create_policies_for_netapp_supported_plugins_resources.html 
+permalink: protect-scc/create_policies_for_custom_plug_in_resources.html 
 sidebar: sidebar 
-keywords: create policies, NetApp supported plug-in 
-summary: SnapCenterを使用してNetAppでサポートされるプラグイン固有のリソースをバックアップする前に、バックアップ対象のリソースまたはリソースグループのバックアップポリシーを作成する必要があります。 
+keywords: create policies, custom plug-in 
+summary: SnapCenterを使用してカスタムプラグイン固有のリソースをバックアップする前に、バックアップするリソースまたはリソースグループのバックアップポリシーを作成する必要があります。 
 ---
-= NetAppでサポートされるプラグインリソースのポリシーの作成
+= カスタムプラグインリソースのポリシーの作成
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenterを使用してNetAppでサポートされるプラグイン固有のリソースをバックアップする前に、バックアップ対象のリソースまたはリソースグループのバックアップポリシーを作成する必要があります。
+SnapCenterを使用してカスタムプラグイン固有のリソースをバックアップする前に、バックアップするリソースまたはリソースグループのバックアップポリシーを作成する必要があります。
 
 .開始する前に
 * バックアップ戦略を定義しておく必要があります。
 +
-詳細については、NetAppでサポートされるプラグインのデータ保護戦略の定義に関する情報を参照してください。
+詳細については、カスタムプラグインのデータ保護戦略の定義に関する情報を参照してください。
 
 * データ保護の準備が完了している必要があります。
 +
@@ -119,7 +119,7 @@ ONTAPの保護関係のタイプがミラーとバックアップの場合、こ
 
 [Topology]ページの[Refresh]*ボタンをクリックすると、ONTAPから取得されたセカンダリおよびプライマリのSnapLock有効期限が更新されます。
 
-を参照して link:../protect-nsp/view_netapp_supported_plugins_resource_backups_and_clones_in_the_topology_page.html["NetAppでサポートされているプラグインリソースに関連するバックアップとクローンを[Topology]ページで表示する"]
+を参照して link:view_custom_plug_in_resource_backups_and_clones_in_the_topology_page.html["[Topology]ページで、カスタムプラグインリソースに関連するバックアップとクローンを表示する"]
 
 
 
@@ -134,7 +134,7 @@ SnapLockがONTAPのセカンダリ（SnapLock Vault）にのみ設定されて�
 
 SnapLock Vaultの詳細については、「SnapVaultデスティネーションでSnapshotをWORM状態にコミットする」を参照してください。
 
-link:../protect-nsp/view_netapp_supported_plugins_resource_backups_and_clones_in_the_topology_page.html["NetAppでサポートされているプラグインリソースに関連するバックアップとクローンを[Topology]ページで表示する"]です。
+を参照して link:view_custom_plug_in_resource_backups_and_clones_in_the_topology_page.html["[Topology]ページで、カスタムプラグインリソースに関連するバックアップとクローンを表示する"]
 
 
 

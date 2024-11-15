@@ -1,5 +1,5 @@
 ---
-permalink: protect-nsp/custom_plugins_in_snapcenter.html 
+permalink: protect-scc/custom_plugins_in_snapcenter.html 
 sidebar: sidebar 
 keywords: Custom plug-in 
 summary: SnapCenter サーバを使用して作成したカスタムプラグインをホストにインストールすると、アプリケーションのデータ保護を有効にすることができます。 

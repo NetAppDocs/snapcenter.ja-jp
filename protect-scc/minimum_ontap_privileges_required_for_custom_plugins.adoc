@@ -1,0 +1,99 @@
+---
+permalink: protect-scc/minimum_ontap_privileges_required_for_custom_plugins.html 
+sidebar: sidebar 
+keywords: Minimum ONTAP privileges 
+summary: 必要な最小 ONTAP 権限は、データ保護に使用する SnapCenter プラグインによって異なります。 
+---
+= カスタムプラグインに必要な最小ONTAP Privileges
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+必要な最小 ONTAP 権限は、データ保護に使用する SnapCenter プラグインによって異なります。
+
+* フルアクセスコマンド： ONTAP 8.3.0 以降で必要な最小権限
++
+** event generate-autosupport-log
+** ジョブ履歴の表示
+** ジョブの停止
+** lun attribute show
+** LUNの作成
+** lun delete
+** LUNジオメトリ
+** LUN igroupの追加
+** lun igroup create
+** lun igroup delete
+** LUN igroupの名前変更
+** lun igroup show
+** LUNマッピングの追加-レポートノード
+** LUNマッピングの作成
+** LUNマッピングの削除
+** lun mapping remove-reporting-nodes
+** lun mapping show
+** LUN変更
+** ボリューム内でのLUNの移動
+** LUNオフライン
+** LUNオンライン
+** LUNのサイズ変更
+** LUNシリアル
+** lun show
+** ネットワークインターフェイス
+** SnapMirrorポリシーadd-rule
+** snapmirror policy modify-rule
+** snapmirror policy remove-rule
+** snapmirror policy show
+** SnapMirrorリストア
+** snapmirror show
+** snapmirror show-history
+** SnapMirrorの更新
+** snapmirror update-ls-set
+** snapmirror list-destinations
+** バージョン
+** ボリュームのクローン作成
+** volume clone show
+** ボリュームクローンスプリットの開始
+** ボリュームクローンスプリットの停止
+** ボリュームの作成
+** ボリュームの削除
+** volume file clone create
+** volume file show-disk-usage
+** ボリュームはオフライン
+** ボリュームはオンライン
+** ボリュームの変更
+** ボリュームqtreeの作成
+** volume qtree delete
+** volume qtree modify
+** volume qtree show
+** ボリュームの制限
+** volume show
+** ボリュームSnapshotの作成
+** ボリュームSnapshotの削除
+** ボリュームSnapshotの変更
+** ボリュームSnapshotの名前変更
+** ボリュームSnapshotリストア
+** ボリュームSnapshotリストア-ファイル
+** volume snapshot show
+** ボリュームのアンマウント
+** SVM CIFS
+** vserver cifs share create
+** vserver cifs share delete
+** vserver cifs shadowcopy show
+** vserver cifs share show
+** vserver cifs show
+** vserver export-policy create
+** vserver export-policy delete
+** vserver export-policy rule create
+** vserver export-policy rule show
+** vserver export-policy show
+** vserver iscsi connection show
+** vserver show
+
+
+* 読み取り専用コマンド： ONTAP 8.3.0 以降で必要な最小権限
++
+** ネットワークインターフェイス
+
+
+

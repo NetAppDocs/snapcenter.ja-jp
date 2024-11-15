@@ -50,13 +50,13 @@ SnapCenterの主な機能は次のとおりです。
 
 * アプリケーションと整合性のある一元的なデータ保護
 +
-データ保護は、ONTAPシステムで実行されているMicrosoft Exchange Server、Microsoft SQL Server、LinuxまたはAIX上のOracleデータベース、SAP HANAデータベース、IBM DB2、およびWindowsホストのファイルシステムでサポートされます。
+データ保護は、ONTAPシステムで実行されているMicrosoft Exchange Server、Microsoft SQL Server、LinuxまたはAIX上のOracleデータベース、SAP HANAデータベース、IBM DB2、PostgreSQL、MySQL、およびWindowsホストのファイルシステムでサポートされます。
 
 +
-ユーザ定義のSnapCenterプラグインを作成するフレームワークを提供することで、他の標準またはカスタムのアプリケーションやデータベースでもデータ保護がサポートされます。これにより、同じ単一コンソールから他のアプリケーションやデータベースのデータを保護できます。このフレームワークを活用して、NetAppはMongoDB、MySQL、PostgreSQL、ストレージ、MaxDB向けのSnapCenterプラグインをリリースしました。 Sybase ASE、ORASCPM、MongoDB、DPGlue。これとは別に、開発者ガイドを使用して独自のプラグインを作成できます。
+ユーザ定義のSnapCenterプラグインを作成するフレームワークを提供することで、他の標準またはカスタムのアプリケーションやデータベースでもデータ保護がサポートされます。これにより、同じ単一コンソールから他のアプリケーションやデータベースのデータを保護できます。このフレームワークを活用することで、NetAppはMongoDB、Storage、MaxDB、Sybase ASE、ORASCPM向けのSnapCenterプラグインをリリースしました。これとは別に、開発者ガイドを使用して独自のプラグインを作成できます。
 
 +
-link:../protect-nsp/develop_a_plug_in_for_your_application.html["アプリケーション用のプラグインを開発"]
+link:../protect-scc/develop_a_plug_in_for_your_application.html["アプリケーション用のプラグインを開発"]
 
 * ポリシーベースのバックアップ
 +
@@ -176,6 +176,11 @@ SnapCenterは、SnapCenter ServerプラグインとSnapCenterプラグインで�
 ** IBM DB2用SnapCenterプラグイン
 ** PostgreSQL向けSnapCenterプラグイン
 ** MySQL用SnapCenterプラグイン
+** MongoDB向けSnapCenterプラグイン
+** ORASCPM用SnapCenterプラグイン（Oracleアプリケーション）
+** SnapCenter Plug-in for SAP ASE
+** SAP MaxDB向けSnapCenterプラグイン
+** SnapCenter Plug-in for Storageプラグイン
 
 
 * SnapCenter Plug-ins Package for Linuxには、次のプラグインが含まれています。
@@ -186,15 +191,20 @@ SnapCenterは、SnapCenter ServerプラグインとSnapCenterプラグインで�
 ** IBM DB2用SnapCenterプラグイン
 ** PostgreSQL向けSnapCenterプラグイン
 ** MySQL用SnapCenterプラグイン
+** MongoDB向けSnapCenterプラグイン
+** ORASCPM用SnapCenterプラグイン（Oracleアプリケーション）
+** SnapCenter Plug-in for SAP ASE
+** SAP MaxDB向けSnapCenterプラグイン
+** SnapCenter Plug-in for Storageプラグイン
 
 
 * SnapCenter Plug-ins Package for AIXには、次のプラグインが含まれています。
 +
 ** SnapCenter Plug-in for Oracle Database
 ** UNIXファイルシステム用SnapCenterプラグイン
+** IBM DB2用SnapCenterプラグイン
 
 
-* SnapCenter NetAppでサポートされるプラグイン
 
 
 SnapCenter Plug-in for VMware vSphere（旧NetAppデータブローカー）は、仮想化されたデータベースおよびファイルシステムに対するSnapCenterのデータ保護処理をサポートするスタンドアロンの仮想アプライアンスです。
@@ -351,6 +361,71 @@ Db2MySQLホスト
  a| 
 LinuxまたはWindows
 
+
+
+ a| 
+MongoDB向けプラグイン
+ a| 
+Plug-ins Package for LinuxおよびPlug-ins Package for Windows
+ a| 
+Plug-in for UNIXまたはPlug-in for Windows
+ a| 
+MongoDBホスト
+ a| 
+LinuxまたはWindows
+
+
+
+ a| 
+ORASCPM用プラグイン（Oracleアプリケーション）
+ a| 
+Plug-ins Package for LinuxおよびPlug-ins Package for Windows
+ a| 
+Plug-in for UNIXまたはPlug-in for Windows
+ a| 
+Oracleホスト
+ a| 
+LinuxまたはWindows
+
+
+
+ a| 
+SAP ASE向けプラグイン
+ a| 
+Plug-ins Package for LinuxおよびPlug-ins Package for Windows
+ a| 
+Plug-in for UNIXまたはPlug-in for Windows
+ a| 
+SAPホスト
+ a| 
+LinuxまたはWindows
+
+
+
+ a| 
+SAP MaxDB用プラグイン
+ a| 
+Plug-ins Package for LinuxおよびPlug-ins Package for Windows
+ a| 
+Plug-in for UNIXまたはPlug-in for Windows
+ a| 
+SAP MaxDBホスト
+ a| 
+LinuxまたはWindows
+
+
+
+ a| 
+Plug-in for Storageプラグイン
+ a| 
+Plug-ins Package for LinuxおよびPlug-ins Package for Windows
+ a| 
+Plug-in for UNIXまたはPlug-in for Windows
+ a| 
+ストレージホスト
+ a| 
+LinuxまたはWindows
+
 |===
 
 NOTE: SnapCenter Plug-in for VMware vSphereは、仮想マシン（VM）、データストア、および仮想マシンディスク（VMDK）のcrash-consistentおよびvm-consistentバックアップおよびリストア処理をサポートします。また、SnapCenterアプリケーション固有のプラグインをサポートして、仮想データベースおよびファイルシステムのアプリケーションと整合性のあるバックアップおよびリストア処理を保護します。
@@ -421,14 +496,12 @@ SnapCenter環境でのSAP HANAデータベースの、アプリケーション�
 
 === NetAppでサポートされるプラグイン機能
 
+NetAppでサポートされるプラグインは、MongoDB、ORASCPM（Oracleアプリケーション）、SAP ASE、SAP MaxDB、およびStorageプラグインです。
+
 * 他のプラグインをサポートして、他のSnapCenterプラグインでサポートされていないアプリケーションやデータベースを管理します。NetAppでサポートされるプラグインは、SnapCenterのインストールには含まれていません。
 * では、別のボリュームにバックアップセットのミラーコピーを作成し、ディスクツーディスクバックアップレプリケーションを実行できます。
 * Windows環境とLinux環境の両方をサポートします。Windows環境では、カスタムプラグインを使用したカスタムアプリケーションで、必要に応じてSnapCenter Plug-in for Microsoft Windowsを使用してファイルシステムの整合性のあるバックアップを作成できます。
 
-
-NetAppでは、サポートされているプラグインの作成と使用がサポートされていますが、作成するプラグインはNetAppでサポートされていません。
-
-詳細については、を参照してください。 link:../protect-nsp/develop_a_plug_in_for_your_application.html["アプリケーション用のプラグインを開発"]
 
 
 

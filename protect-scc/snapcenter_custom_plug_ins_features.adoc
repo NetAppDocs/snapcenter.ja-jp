@@ -1,17 +1,17 @@
 ---
-permalink: protect-nsp/netapp_supported_plugins_features.html 
+permalink: protect-scc/snapcenter_custom_plug_ins_features.html 
 sidebar: sidebar 
-keywords: NetApp supported plug-ins features, MongoDB, ORASCPM, Oracle Applications, SAP ASE, SAP MaxDB, Storage plug-in 
-summary: SnapCenterは、プラグインアプリケーションおよびストレージシステム上でNetAppテクノロジと統合されます。NetAppでサポートされているプラグインを操作するには、SnapCenterのグラフィカルユーザインターフェイスを使用します。 
+keywords: custom plug-ins features 
+summary: SnapCenterは、プラグインアプリケーションおよびストレージシステム上でNetAppテクノロジと統合されます。カスタムプラグインを操作するには、SnapCenterグラフィカルユーザインターフェイスを使用します。 
 ---
-= NetAppでサポートされるプラグイン機能
+= SnapCenterカスタムプラグインの機能
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenterは、プラグインアプリケーションおよびストレージシステム上でNetAppテクノロジと統合されます。MongoDB、ORASCPM（Oracleアプリケーション）、SAP ASE、SAP MaxDB、Storageプラグインなど、NetAppでサポートされているプラグインを使用するには、SnapCenterグラフィカルユーザインターフェイスを使用します。
+SnapCenterは、プラグインアプリケーションおよびストレージシステム上でNetAppテクノロジと統合されます。カスタムプラグインを操作するには、SnapCenterグラフィカルユーザインターフェイスを使用します。
 
 * * 統一されたグラフィカル・ユーザー・インターフェイス *
 +
@@ -23,11 +23,11 @@ SnapCenterのインターフェイスは、プラグインと環境全体で標�
 
 * *無停止のNetAppスナップショットテクノロジ*
 +
-SnapCenterでは、NetAppのSnapshotテクノロジとNetAppでサポートされているプラグインを使用してリソースがバックアップされます。Snapshotはストレージスペースを最小限しか消費しません。
+SnapCenterでは、NetAppのSnapshotテクノロジとカスタムプラグインを使用してリソースがバックアップされます。Snapshotはストレージスペースを最小限しか消費しません。
 
 
 
-NetAppでサポートされるプラグインには、次の利点もあります。
+カスタムプラグイン機能を使用すると、次のようなメリットもあります。
 
 * バックアップ、リストア、クローニングのワークフローがサポートされます。
 * RBACでサポートされるセキュリティと一元化されたロール委譲

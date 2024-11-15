@@ -4,16 +4,14 @@ sidebar: sidebar
 keywords: NetApp supported plug-ins 
 summary: NetAppでサポートされているプラグインをデータ保護処理に使用できます。 
 ---
-= NetAppでサポートされるプラグインとストレージプラグインの機能
+= NetAppでサポートされるプラグインの機能
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-NetAppでサポートされているプラグインをデータ保護処理に使用できます。
-
-* NetApp対応プラグイン*
+NetAppでサポートされているプラグイン（MongoDB、ORASCPM、Oracle Applications、SAP ASE、SAP MaxDB、Storageなど）を使用してデータを保護できます。
 
 * データベース、インスタンス、ドキュメント、表領域などのリソースを追加します。
 * バックアップを作成します。
@@ -24,9 +22,7 @@ NetAppでサポートされているプラグインをデータ保護処理に�
 * バックアップ、リストア、クローニングの各処理のレポートを表示します。
 
 
-* ストレージプラグイン *
-
-ストレージプラグインはデータ保護処理に使用できます。
+NetAppでサポートされているプラグインをデータ保護処理に使用できます。
 
 * ONTAPクラスタ間でストレージボリュームの整合グループSnapshotを作成します。
 * 組み込みのプレ/ポストスクリプトフレームワークを使用してカスタムアプリケーションをバックアップ

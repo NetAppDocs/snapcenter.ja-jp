@@ -1,0 +1,35 @@
+---
+permalink: protect-scc/types_of_restore_strategies_supported_for_manually_added_custom_plugin_resources.html 
+sidebar: sidebar 
+keywords: SnapCenter 
+summary: SnapCenterを使用してリストア処理を正常に実行するには、戦略を定義する必要があります。手動で追加したカスタムプラグインリソースには、2種類のリストア戦略があります。手動で追加したカスタムプラグインリソースはリカバリできません。 
+---
+= 手動で追加したカスタムプラグインリソースでサポートされるリストア戦略のタイプ
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenterを使用してリストア処理を正常に実行するには、戦略を定義する必要があります。手動で追加したカスタムプラグインリソースには、2種類のリストア戦略があります。
+
+
+NOTE: 手動で追加したカスタムプラグインリソースはリカバリできません。
+
+
+
+== リソース全体のリストア
+
+* リソースのすべてのボリューム、qtree、およびLUNをリストア
+
+
+
+NOTE: リソースにボリュームまたはqtreeが含まれている場合、そのボリュームまたはqtreeでリストア対象として選択されたSnapshotのあとに作成されたSnapshotは削除され、リカバリすることはできません。また、同じボリュームまたはqtreeで他のリソースがホストされている場合、そのリソースも削除されます。
+
+
+
+== ファイルレベルのリストア
+
+* ボリューム、qtree、またはディレクトリからファイルをリストア
+* 選択したLUNのみをリストア
+

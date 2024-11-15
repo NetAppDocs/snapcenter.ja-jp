@@ -1,23 +1,20 @@
 ---
-permalink: protect-nsp/install_snapcenter_plug_in_packages_for_linux_or_windows_on_multiple_remote_hosts_using_cmdlets.html 
+permalink: protect-scc/install_snapcenter_plug_in_packages_for_linux_or_windows_on_multiple_remote_hosts_using_cmdlets.html 
 sidebar: sidebar 
 keywords: install, snapcenter 
 summary: PowerShellコマンドレットInstall-SmHostPackageを使用すると、複数のホストにSnapCenter Plug-in Package for Linux / Windowsを同時にインストールできます。 
 ---
-= コマンドレットを使用して、複数のリモートホストにSnapCenter Plug-ins Package for Linux、Windows、AIXをインストールする
+= コマンドレットを使用した複数のリモートホストへのSnapCenter Plug-in Package for Linux / Windowsのインストール
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-PowerShellコマンドレットInstall-SmHostPackageを使用すると、Linux、Windows、AIX用のSnapCenter Plug-in Packageを複数のホストに同時にインストールできます。
+PowerShellコマンドレットInstall-SmHostPackageを使用すると、複数のホストにSnapCenter Plug-in Package for Linux / Windowsを同時にインストールできます。
 
 .開始する前に
 ホストを追加するユーザには、ホストに対する管理者権限が必要です。
-
-
-NOTE: AIXでは、ストレージアプリケーションとOracleアプリケーションがサポートされます。
 
 .手順
 . PowerShellを起動します。

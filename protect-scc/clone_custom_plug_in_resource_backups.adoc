@@ -1,0 +1,28 @@
+---
+permalink: protect-scc/clone_custom_plug_in_resource_backups.html 
+sidebar: sidebar 
+keywords: clone, custom plug-ins 
+summary: クローニングワークフローには、クローニング処理の実行と処理の監視が含まれます。 
+---
+= [Clone SnapCenter Custom Plug-ins]リソースのバックアップ
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+クローニングワークフローには、クローニング処理の実行と処理の監視が含まれます。
+
+.タスクの内容
+リソースのバックアップをクローニングする理由には次のものがあります。
+
+* アプリケーション開発のライフサイクルで、実装が必要な機能を、現在のリソースの構造およびコンテンツを使用してテストするため
+* データウェアハウスにデータを取り込む際のデータ抽出および操作ツール用
+* 誤って削除または変更されたデータをリカバリするため
+
+
+次のワークフローは、クローニング処理の実行順序を示しています。
+
+image::../media/sco_scc_wfs_clone_workflow.png[クローニングのワークフロー]
+
+PowerShellコマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、クローニングの処理を実行することもできます。PowerShellコマンドレットの詳細については、SnapCenterコマンドレットのヘルプを使用するか、を参照してください https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。

@@ -1,0 +1,50 @@
+---
+permalink: protect-scc/install_the_custom_plug_ins_on_linux_hosts_using_the_command_line_interface.html 
+sidebar: sidebar 
+keywords: install, custom plug-in 
+summary: SnapCenterカスタムプラグインは、SnapCenterユーザインターフェイス（UI）を使用してインストールする必要があります。SnapCenter UIからのプラグインのリモートインストールが許可されていない環境では、コマンドラインインターフェイス（CLI）を使用して、コンソールモードまたはサイレントモードでカスタムプラグインをインストールできます。 
+---
+= コマンドラインインターフェイスを使用してLinuxホストにSnapCenterカスタムプラグインをインストールする
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenterカスタムプラグインは、SnapCenterユーザインターフェイス（UI）を使用してインストールする必要があります。SnapCenter UIからのプラグインのリモートインストールが許可されていない環境では、コマンドラインインターフェイス（CLI）を使用して、コンソールモードまたはサイレントモードでカスタムプラグインをインストールできます。
+
+.手順
+. SnapCenter SnapCenter Plug-ins Package for SnapCenterのインストールファイル（Linux_Linux_host_plugin.bin）をC：NetApp \Package\Package Repositoryからカスタムプラグインをインストールするホストにコピーします。
++
+このパスには、SnapCenterサーバがインストールされているホストからアクセスできます。
+
+. コマンドプロンプトで、インストールファイルをコピーしたディレクトリに移動します。
+. プラグインをインストールします。 `path_to_installation_bin_file/snapcenter_linux_host_plugin.bin -i silent -DPORT=port_number_for_host -DSERVER_IP=server_name_or_ip_address -DSERVER_HTTPS_PORT=port_number_for_server`
++
+** -dport には、 SMCore HTTPS 通信ポートを指定します。
+** - DSERVER_IP は、 SnapCenter サーバの IP アドレスを指定します。
+** - DSERVER_HTTPS_PORT には、 SnapCenter サーバの HTTPS ポートを指定します。
+** -duser_install_DIR - SnapCenter Plug-ins Package for Linux をインストールするディレクトリを指定します
+** DINSTALL_LOG_name は、ログファイルの名前を指定します。
+
+
++
+[listing]
+----
+/tmp/sc-plugin-installer/snapcenter_linux_host_plugin.bin -i silent  -DPORT=8145 -DSERVER_IP=scserver.domain.com -DSERVER_HTTPS_PORT=8146 -DUSER_INSTALL_DIR=/opt -DINSTALL_LOG_NAME=SnapCenter_Linux_Host_Plugin_Install_2.log -DCHOSEN_FEATURE_LIST=CUSTOM
+----
+. Add-Smhostコマンドレットと必要なパラメータを使用して、SnapCenterサーバにホストを追加します。
++
+コマンドで使用できるパラメータとその説明については、 RUNNING Get Help command_name _ を使用して参照できます。または、を参照することもできます https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+
+. SnapCenterにログインし、UIまたはPowerShellコマンドレットを使用してカスタムプラグインをアップロードします。
++
+UIからカスタムプラグインをアップロードするには、セクションを参照してください link:add_hosts_and_install_plug_in_packages_on_remote_hosts.html["ホストを追加してリモートホストにプラグインパッケージをインストールする"] 。
+
++
+PowerShellコマンドレットの詳細については、SnapCenterのコマンドレットのヘルプを使用するか、コマンドレットのリファレンス情報を参照してください。
+
++
+https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]です。
+
+

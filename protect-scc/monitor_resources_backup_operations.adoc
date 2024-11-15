@@ -1,0 +1,48 @@
+---
+permalink: protect-scc/monitor_resources_backup_operations.html 
+sidebar: sidebar 
+keywords: SnapCenter Server, custom plug-in 
+summary: SnapCenter Jobs ページを使用して、各バックアップ処理の進捗状況を監視できます。進捗状況を確認して、いつ完了したか、問題が発生していないかを確認できます。 
+---
+= カスタムプラグインリソースのバックアップ処理を監視する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+[SnapCenterJobs]ページを使用して、さまざまなバックアップ処理の進捗状況を監視できます。進捗状況を確認して、いつ完了したか、問題が発生していないかを確認できます。
+
+.タスクの内容
+[Jobs]ページには次のアイコンが表示され、処理の状態が示されます。
+
+* image:../media/progress_icon.gif["実行中のアイコン"] 実行中
+* image:../media/success_icon.gif["完了アイコン"] 完了しまし
+* image:../media/failed_icon.gif["失敗したアイコン"] 失敗
+* image:../media/warning_icon.gif["警告アイコンが表示されています"] 完了（警告あり）または警告のため開始できませんでした
+* image:../media/verification_job_in_queue.gif["検証ジョブをキューに格納"] キューに登録済み
+* image:../media/cancel_icon.gif["キャンセルアイコン"] キャンセル済み
+
+
+.手順
+. 左側のナビゲーションペインで、 *Monitor* をクリックします。
+. [ モニター ] ページで、 [ * ジョブ * ] をクリックします。
+. Jobs （ジョブ）ページで、次の手順を実行します。
++
+.. をクリックして、リストの内容をバックアップ処理だけに絞り込みます。
+.. 開始日と終了日を指定します。
+.. [* タイプ *] ドロップダウン・リストから、 [*Backup*] を選択します。
+.. [*Status*]( ステータス *) ドロップダウンから、バックアップステータスを選択します。
+.. [ 適用（ Apply ） ] をクリックして、正常に完了した操作を表示する。
+
+
+. バックアップジョブを選択し、 ［ * 詳細 * ］ をクリックしてジョブの詳細を表示します。
++
+
+NOTE: バックアップジョブのステータスは表示されますがimage:../media/success_icon.gif["完了アイコン"]、ジョブの詳細をクリックすると、バックアップ処理の子タスクの一部が進行中であるか、警告サインが表示されていることがあります。
+
+. ［ ジョブの詳細 ］ ページで、 ［ * ログの表示 * ］ をクリックします。
++
+*View logs* ボタンをクリックすると、選択した操作の詳細なログが表示されます。
+
+

@@ -1,0 +1,48 @@
+---
+permalink: protect-scc/storage_types_supported_by_custom_plugins.html 
+sidebar: sidebar 
+keywords: SnapCenter Custom Plug-ins 
+summary: SnapCenterは、物理マシンと仮想マシンの両方でさまざまなストレージタイプをサポートしています。SnapCenterカスタムプラグインをインストールする前に、ストレージタイプがサポートされていることを確認する必要があります。 
+---
+= SnapCenterカスタムプラグインでサポートされるストレージタイプ
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenterは、物理マシンと仮想マシンの両方でさまざまなストレージタイプをサポートしています。SnapCenterカスタムプラグインをインストールする前に、ストレージタイプがサポートされていることを確認する必要があります。
+
+|===
+| マシン | ストレージタイプ 
+
+
+ a| 
+VMホストへの物理およびNFSの直接マウント（VMDKおよびRDM LUNはサポートされません）。
+ a| 
+FCセツソクLUN
+
+
+
+ a| 
+VMホストへの物理およびNFSの直接マウント（VMDKおよびRDM LUNはサポートされません）。
+ a| 
+iSCSIセツソクLUN
+
+
+
+ a| 
+VMホストへの物理およびNFSの直接マウント（VMDKおよびRDM LUNはサポートされません）。
+ a| 
+NFS接続ボリューム
+
+
+
+ a| 
+VMware ESXi
+ a| 
+NFSとSANの両方にVVOLデータストアを配置
+
+VVOLデータストアは、ONTAP Tools for VMware vSphereでのみプロビジョニングできます。
+
+|===

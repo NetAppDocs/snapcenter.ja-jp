@@ -1,7 +1,7 @@
 ---
 permalink: protect-nsp/add_resources_to_netapp_supported_plugins.html 
 sidebar: sidebar 
-keywords: NetApp supported plug-in, resources, snapcenter 
+keywords: NetApp supported plug-in, resources, NetApp supported plug-ins, MongoDB, ORASCPM, Oracle Applications, SAP ASE, SAP MaxDB, Storage plug-in 
 summary: バックアップまたはクローンを作成するリソースを追加する必要があります。環境によっては、バックアップまたはクローンを作成するデータベースインスタンスやそのコレクションがリソースに含まれる場合があります。 
 ---
 = NetAppがサポートするプラグインにリソースを追加する
@@ -15,7 +15,6 @@ summary: バックアップまたはクローンを作成するリソースを�
 
 .開始する前に
 * SnapCenterサーバのインストール、ホストの追加、ストレージシステム接続の作成、クレデンシャルの追加などのタスクを完了しておく必要があります。
-* そうだろうな link:develop_a_plug_in_for_your_application.html["アプリケーション用のカスタムプラグインを作成しました"]
 * SnapCenter サーバにプラグインをアップロードしておく必要があります。
 
 
@@ -73,7 +72,7 @@ summary: バックアップまたはクローンを作成するリソースを�
 NOTE: NetAppでサポートされているプラグインでは、リソースの自動検出がサポートされていません。物理環境と仮想環境のストレージの詳細も自動検出されません。リソースの作成時に、物理環境と仮想環境のストレージの情報を指定する必要があります。
 
 +
-image::../media/storage_footprint.gif[ストレージ容量]
+image::../media/storage_footprint.png[ストレージ容量]
 
 . [Resource Settings]ページで、リソースのカスタムのキーと値のペアを指定します。
 +
@@ -164,7 +163,7 @@ MaxDB のバックアップテンプレートパラメータを設定する場�
 
 
 
-=== Sybase ASE用プラグイン
+=== SAP ASE向けプラグイン
 
 リソース設定：
 

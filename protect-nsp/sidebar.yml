@@ -26,18 +26,6 @@ entries:
       url: "/protect-nsp/number_of_backup_jobs_needed.html"
   - title: 手動で追加したNetAppでサポートされるプラグインリソースのリストア戦略のタイプ
     url: "/protect-nsp/types_of_restore_strategies_supported_for_manually_added_netapp_supported_plugins_resources.html"
-- title: アプリケーション用のプラグインを開発
-  entries:
-  - title: 概要
-    url: "/protect-nsp/develop_a_plug_in_for_your_application.html"
-  - title: Perlベースの開発
-    url: "/protect-nsp/perl.html"
-  - title: ネイティブ形式
-    url: "/protect-nsp/native.html"
-  - title: Javaスタイル
-    url: "/protect-nsp/java.html"
-  - title: SnapCenterのカスタムプラグイン
-    url: "/protect-nsp/custom_plugins_in_snapcenter.html"
 - title: NetApp対応プラグインのインストール準備
   entries:
   - title: NetAppでサポートされるプラグインのインストールワークフロー
@@ -112,8 +100,6 @@ entries:
     url: "/protect-nsp/restore_netapp_supported_plugins_resources.html"
   - title: リソースのバックアップのリストア
     url: "/protect-nsp/restore_a_resource_backup.html"
-  - title: PowerShellコマンドレットを使用したリソースのリストア
-    url: "/protect-nsp/restore_and_recover_resources_using_powershell_cmdlets.html"
   - title: リストア処理の監視
     url: "/protect-nsp/monitor_resources_restore_operations.html"
 - title: Clone NetAppでサポートされるプラグインリソースのバックアップ

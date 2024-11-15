@@ -1,20 +1,17 @@
 ---
-permalink: protect-nsp/host_requirements_for_installing_the_snapcenter_plug_in_package_for_linux.html 
+permalink: protect-scc/host_requirements_for_installing_the_snapcenter_plug_in_package_for_linux.html 
 sidebar: sidebar 
 keywords: SnapCenter 
 summary: SnapCenter Plug-ins Package for Linuxをインストールする前に、ホストが要件を満たしていることを確認する必要があります。 
 ---
-= LinuxおよびAIX用SnapCenterプラグインパッケージをインストールするホストの要件
+= SnapCenter Plug-ins Package for Linuxをインストールするホストの要件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter Plug-ins Package for Linux / AIXをインストールする前に、ホストが要件を満たしていることを確認する必要があります。
-
-
-NOTE: AIXでは、ストレージアプリケーションとOracleアプリケーションがサポートされます。
+SnapCenter Plug-ins Package for Linuxをインストールする前に、ホストが要件を満たしていることを確認する必要があります。
 
 |===
 | 項目 | 要件 
@@ -56,8 +53,3 @@ Java 11 Oracle JavaまたはOpenJDK
 
 |===
 サポートされているバージョンの最新情報については、を参照してください。 https://imt.netapp.com/matrix/imt.jsp?components=121073;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool"]
-
-[]
-====
-
-====
