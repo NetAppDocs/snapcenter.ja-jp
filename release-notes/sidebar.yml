@@ -1,0 +1,12 @@
+---
+section: release-notes
+title: リリースノート
+entries:
+- title: リリースノート
+  url: "/release-notes/release-notes.html"
+- title: SnapCenter 6.0.1の新機能
+  url: "/release-notes/what's-new-in-snapcenter601.html"
+- title: SnapCenter 6.0の新機能
+  url: "/release-notes/what's-new-in-snapcenter60.html"
+- title: サポートされるSnapCenterのアップグレードパス
+  url: "/release-notes/upgrade-path.html"

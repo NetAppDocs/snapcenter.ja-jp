@@ -83,13 +83,13 @@ NOTE: メモ： SnapCenter リポジトリがインストールされている�
 必要なソフトウェアパッケージ
  a| 
 * Microsoft .NET Framework 4.7.2以降
-* ASP。 Net Core Hosting Bundle（8.0.5以降）
+* ASP.NET Core Hosting Bundle（バージョン8.0.5以降、以降のすべての.NET 8パッチを含む）
 * PowerShell 7.4.2以降
 
 
 用。 NET固有のトラブルシューティング情報。を参照してください。 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_upgrade_or_install_fails_with_%22This_KB_is_not_related_to_the_OS%22["インターネットに接続されていないレガシーシステムでは、SnapCenter のアップグレードまたはインストールが失敗します"^]
  a| 
-* ASP。 Net Core Runtime 8.0.5以降
+* ASP.NET Core Runtimeバージョン8.0.5以降、以降のすべての.NET 8パッチを含む
 * PowerShell 7.4.2以降
 * nginxはリバースプロキシとして使用できるWebサーバ
 * PAM -デベル

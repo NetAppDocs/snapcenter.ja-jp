@@ -21,13 +21,12 @@ settings:
     url: "/snapcenter-46"
   - version-number: '4.5'
     url: "/snapcenter-45"
-  langs: ja-jp,us-en,ko-kr,zh-cn,zh-tw,de-de,es-es,fr-fr,it-it
+  langs: ja-jp,us-en,de-de,es-es,fr-fr,it-it,pt-br,ko-kr,zh-cn,zh-tw
 sidebar:
   entries:
   - title: SnapCenterソフトウェア6.0のドキュメント
     url: "/index.html"
-  - title: リリースノート
-    url: "/release-notes.html"
+  - section: release-notes
   - section: concept
   - section: install
   - section: protect-scsql

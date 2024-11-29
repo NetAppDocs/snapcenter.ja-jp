@@ -1,0 +1,18 @@
+---
+permalink: release-notes/release-notes.html 
+sidebar: sidebar 
+keywords: release notes, snapcenter 
+summary: このリリースの SnapCenter サーバおよび SnapCenter プラグインパッケージに関する重要な情報を提供します。これには、解決済みの問題、既知の問題、注意事項、および制限事項が含まれます。 
+---
+= リリースノート
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter 6.0および6.0.1で利用可能な新機能と拡張機能について説明します。
+
+新機能と拡張機能の一覧については、およびを参照してくださいlink:what's-new-in-snapcenter601.html["SnapCenter 6.0.1の新機能"]link:what's-new-in-snapcenter60.html["SnapCenter 6.0の新機能"]。
+
+既知の問題、制限事項、解決済みの問題、および新規および変更されたコマンドの詳細については、を参照して https://library.netapp.com/ecm/ecm_download_file/ECMLP3323468["SnapCenterソフトウェア6.0および6.0.1リリースノート"^]ください。リリースノートにアクセスするには、NetAppアカウントでサインインするか、アカウントを作成する必要があります。

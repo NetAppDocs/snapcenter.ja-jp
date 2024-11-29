@@ -46,7 +46,7 @@ NOTE: 十分なディスクスペースを割り当て、logsフォルダによ�
  a| 
 必要なソフトウェアパッケージ
  a| 
-* DOTNETコア8.0.5
+* DOTNET Coreバージョン8.0.5以降、以降のすべての.NET 8パッチを含む
 * PowerShell Core 7.4.2
 
 

@@ -63,7 +63,7 @@ Webサーバ
 +
 ** です。 NET拡張性4.5
 ** アプリケーションの初期化
-** ASP。 Net Core Hosting Bundle（8.0.5以降）
+** ASP.NET Core Hosting Bundle（バージョン8.0.5以降、以降のすべての.NET 8パッチを含む）
 ** サーバー側インクルード
 ** WebSocketプロトコル
 
@@ -89,8 +89,8 @@ IIS管理スクリプトとツール
  a| 
 +.NET Framework 8.0.5の機能+
  a| 
-* .NET Framework 8.0.5
-* ASP。 正味8.0.5
+* .NET Frameworkバージョン8.0.5以降、以降のすべての.NET 8パッチを含む
+* ASP.NETバージョン8.0.5以降、以降のすべての.NET 8パッチを含む
 * Windows Communication Foundation (WCF) HTTPアクティブ化45
 +
 ** TCPのアクティブ化

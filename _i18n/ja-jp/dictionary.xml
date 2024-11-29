@@ -158,7 +158,6 @@
   <block id="074c2f1dacf9047766e7f8d5dce71060" category="paragraph">5GB</block>
   <block id="a5074b94ccbd0ad683e6ad6eb63da188" category="admonition">十分なディスクスペースを割り当て、logsフォルダによるストレージ消費量を監視する必要があります。必要なログスペースは、保護対象のエンティティの数とデータ保護処理の頻度によって異なります。十分なディスクスペースがない場合、最近実行した処理のログは作成されません。</block>
   <block id="c02f07fcd7047bf35e0bb82decca0939" category="paragraph">必要なソフトウェアパッケージ</block>
-  <block id="ce67e9a5c3006b689a5f150a9c30d732" category="list-text">です。 ネットコア8.0.5</block>
   <block id="4a58751c57809081912e30803a16d52e" category="list-text">PowerShell Core 7.4.2</block>
   <block id="b7ccd7f577996dd33bde8070db971b93" category="list-text">Java 11 Oracle JavaおよびOpenJDK</block>
   <block id="a97c26d42ce7ddd336973734ea88cb27" category="inline-link">インターネットに接続されていない従来型システムでは、SnapCenter のアップグレードまたはインストールが失敗します。</block>
@@ -2182,7 +2181,6 @@
   <block id="2ac5f63d0bb2ab4a9898d18445391caf" category="list-text">RabbitMQ</block>
   <block id="62e0b5b350c9e3d2c19aa801d9442ba9" category="list-text">nginx</block>
   <block id="f7e853158b776246c53345b938159cc1" category="list-text">アーラン</block>
-  <block id="4b895fbdf0b21e04dc01c9b2f52bd5ee" category="list-text">.NET Framework 8.0.5</block>
   <block id="21624173efc06090951170116cd13563" category="list-text">PAM -デベル</block>
   <block id="3d265b4e1eeef0ddf17881fa003b18cc" category="list-text">PowerShell</block>
   <block id="6e3da1e6c4de3ddc55b5442f3d8fbf10" category="summary">SnapCenterサーバはLinuxホストにインストールできます。</block>
@@ -2377,7 +2375,6 @@
   <block id="59d694aee32de613287d82bc05ca6d1c" category="list-text">アプリケーション開発機能</block>
   <block id="21d38223d7b05411dcffa3cf951f4951" category="list-text">です。 NET拡張性4.5</block>
   <block id="4a4a6b90f0cd2faf953337dd66e1ebb5" category="list-text">アプリケーションの初期化</block>
-  <block id="77e6d1d743590f1944df090df04f64fb" category="list-text">ASP。 Net Core Hosting Bundle（8.0.5以降）</block>
   <block id="523b9bc8b75666ec69cfaf422f6c2140" category="list-text">サーバー側インクルード</block>
   <block id="ab0b54125d50a09e75f3829e7e90b8ea" category="list-text">WebSocketプロトコル</block>
   <block id="897489f143e2ade13f1fadcd00d4cc7b" category="list-text">管理ツール</block>
@@ -2386,7 +2383,6 @@
   <block id="c198bc954443adcf11c90c285f3d7c07" category="list-text">IIS管理サービス</block>
   <block id="80d3af8b299e19c823acbbffefc4856a" category="list-text">Web管理ツール</block>
   <block id="628b02e3b9750945ce37b6d84682cd2b" category="paragraph">+.NET Framework 8.0.5の機能+</block>
-  <block id="aaf9b73d8f0e71b5b8ed41944e56091d" category="list-text">ASP。 正味8.0.5</block>
   <block id="623ef35114e69633221d2c9bf99f6cab" category="list-text">Windows Communication Foundation (WCF) HTTPアクティブ化45</block>
   <block id="c38d32373eca3e6335e44b42893f0034" category="list-text">TCPのアクティブ化</block>
   <block id="cb6ddd90b08469e2479460ec34538fe2" category="list-text">HTTPアクティブ化</block>
@@ -2438,7 +2434,6 @@
   <block id="d6874413f4fac004d1cb83f02eccc33c" category="admonition">メモ： SnapCenter リポジトリがインストールされているドライブに SnapCenter サーバがある場合は、 15GB にすることを推奨します。</block>
   <block id="f9e40bd22b133e93e9c9d3b4c3adef6e" category="list-text">Microsoft .NET Framework 4.7.2以降</block>
   <block id="4c6ec01f6ae03e08c146fe6865423a4b" category="list-text">PowerShell 7.4.2以降</block>
-  <block id="43e185b7580feec0acd79569efc4e099" category="list-text">ASP。 Net Core Runtime 8.0.5以降</block>
   <block id="149d1be25c7d76696b875863179ac66d" category="list-text">nginxはリバースプロキシとして使用できるWebサーバ</block>
   <block id="6d4ed4face9b51c5caae12208e47fa1e" category="paragraph">PAM（Pluggable Authentication Modules）は、システム管理者が認証を行うプログラムを再コンパイルすることなく認証ポリシーを設定できるシステムセキュリティツールです。</block>
   <block id="14c90652b0a2e523d6e8630706107e75" category="summary">SnapCenterソフトウェアは複数のブラウザで使用できます。</block>
@@ -3348,14 +3343,10 @@
   <block id="dcc66de93aefa3105fda8cbdb3cdc2cf" category="list-text">バックアップを選択し、**をクリックします<block ref="11ec183c45ca833d0220ddbf2e2e1d98" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="13bc47d703b82b962d33b3cf47bf64fb" category="list-text">[名前]ページで*[PDBクローン]*を選択し、その他の詳細を指定します。</block>
   <block id="92336218cb59d91f7080fee85c60b95f" category="list-text">[Post-Ops]ページでは、クローンデータベースのリカバリが実行される場合、デフォルトで*[Until Cancel]*が選択されます。</block>
-  <block id="82a14f04b2bdde64af5a7a694ab98bba" category="section-title">Oracleデータベースのクローンをスプリットする</block>
   <block id="99d089abd651815a06636851b1cec8c5" category="list-text">[ リソース ] ページで、 [ 表示 ] リストから [ * データベース * ] を選択します。</block>
-  <block id="787b61c3679ebc574f4962a1f5aebb0c" category="list-text">クローンリソース（データベースやLUNなど）を選択し、**をクリックします<block ref="11ec183c45ca833d0220ddbf2e2e1d98" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="b50ed45fe1d5aaeff11017e2203d685b" category="section-title">プラガブルデータベースのスプリットクローン</block>
   <block id="9a74e4c2ef4e109873578f5a78083805" category="paragraph">SnapCenterを使用して、プラガブルデータベース（PDB）のクローンをスプリットできます。</block>
   <block id="1e5afaa745cf150ad4119d4e1119ae56" category="list-text">リソースビューまたはリソースグループビューからソースコンテナデータベース（CDB）を選択します。</block>
-  <block id="562ffa91cb05be38d306e7ac7ab12d9c" category="list-text">[Manage Copies]ビューで、プライマリストレージシステムから*[Clones]*を選択します。</block>
-  <block id="62ef6c6e852eca46dfc82fdc6ad386b2" category="list-text">PDBクローン（targetCDB：PDBClone）を選択し、**をクリックします<block ref="11ec183c45ca833d0220ddbf2e2e1d98" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="83a5e957cdd4905f7e78a688fa59e4a6" category="doc">SAP HANAデータベースのバックアップのクローニング</block>
   <block id="1bf25096670c9621cda8c9d3e8bee4ad" category="list-text">[ リソース ] ページで、リソースタイプに基づいて、 *View*] ドロップダウンリストからリソースをフィルタリングします。</block>
   <block id="cdf19c0501e1633fc4a63c1138fda0a6" category="list-text">リソースまたはリソースグループを選択します。</block>
@@ -3612,7 +3603,6 @@
   <block id="ffeedd84ccabb2d989da666544b98228" category="admonition">同じホストを以前に SnapCenter に追加し、フィンガープリントを確認した場合でも、フィンガープリントの検証は必須です。</block>
   <block id="0fcc0f3a2dace0457cd9db71bb8bfef8" category="list-text">Windowsプラグインの場合、インストールログとアップグレードログは_C：\Windows\SnapCenter &lt;JOBID&gt;\にあります。</block>
   <block id="4921a99bb14e7c74ffbcbc45df56f359" category="list-text">Linuxプラグインの場合、インストールログは_/var/opt/snapcenter/logs/SnapCenter _Linux_Host_Plug-in_Install_Install_Linux.log &lt;JOBID&gt;にあり、アップグレードログは_/var/opt/snapcenter/logs/SnapCenter &lt;JOBID&gt;.logにあります。</block>
-  <block id="0a14114e3ff4a5d760adcf058a9a4579" category="paragraph">SnapCenter 6.0バージョンにアップグレードする場合は、既存のPerlベースのPlug-in for DB2がリモートプラグインサーバからアンインストールされます。</block>
   <block id="f55d81a07e6e0581f3e19eff0a932069" category="summary">一部のDB2インスタンスでは自動検出がサポートされていません。これらのリソースは手動で追加する必要があります。</block>
   <block id="b39d1e4f73b157bb2f5b3a972e89eeb6" category="doc">プラグインホストに手動でリソースを追加する</block>
   <block id="48f6b76a211d0c32945a6f4c2a082f3c" category="paragraph">自動検出はWindowsホストではサポートされていません。DB2インスタンスとデータベースリソースは手動で追加する必要があります。</block>
@@ -4552,7 +4542,6 @@
   <block id="5960f7331fcbdec5c21642b1d51cc972" category="list-text">SnapCenter Plug-in for MySQLでは、RDM / VMDK仮想環境にあるリソースの自動検出はサポートされていません。データベースを手動で追加する際に、仮想環境のストレージの情報を指定する必要があります。</block>
   <block id="d6e5affbef5f3cc4e984ce8bcf594a94" category="list-text">左側のナビゲーションペインで、*[リソース]*をクリックし、リストからPlug-in for MySQLを選択します。</block>
   <block id="f09ef27e0279c131a669a6a13b1cbb6a" category="admonition">SnapCenterの外部でインスタンスの名前を変更した場合は、リソースを更新する必要があります。</block>
-  <block id="533bfd13df04fd1382b86a2d79550e09" category="list-text">DOTNETコア8.0.5</block>
   <block id="abb388d4926d485f81269db2a3f0891f" category="summary">SnapCenterは、ストレージシステムレベルおよびファイルシステムレベルでの不要なログおよびデータバックアップの削除、およびMySQLバックアップカタログ内での削除を管理します。</block>
   <block id="62fded2795270fcd11011954ceeb813b" category="doc">SnapCenterによる不要なログバックアップの削除の管理方法</block>
   <block id="a44bea300ebfa8b4240129a005791668" category="doc">MySQLを保護するためのリソース、リソースグループ、ポリシーの使用方法</block>
@@ -9771,7 +9760,6 @@
   <block id="31152c60a83a3da780e5073389e4b747" category="inline-image-macro">リソースグループからポリシーを追加</block>
   <block id="80594268749f867035de9885db91d7c7" category="list-text">[Configure schedules for selected policies]セクションで、スケジュールを設定するポリシーの[Configure Schedules]列内をクリックします <block ref="fb07bcf88c7c1b46f6236382e5e0ff22" category="inline-image-macro-rx" type="image"></block> 。</block>
   <block id="583e42a8940ae8003094ff152460e62b" category="inline-link">SnapCenterソフトウェア6.0および6.0.1リリースノート</block>
-  <block id="5c515af353439e417dd1d3ff4a8a8714" category="paragraph">詳細については、を参照して<block ref="96c6a9ad961cdb98d787b7b13bc5a289" category="inline-link-rx"></block>ください。</block>
   <block id="4d6b1749d463347a1b3df01a9e8b0ea5" category="list-text">アップグレード処理を開始する前に、サーバホストを手動でメンテナンスモードにした場合は、アップグレード後に*[ホスト]*&gt;*[スケジュールのアクティブ化]*をクリックして、サーバホストを手動でメンテナンスモードを終了する必要があります。</block>
   <block id="490e9071957ca8b80f7019e9cb2a8b99" category="list-text">サーバホスト上のリソースの新規検出を実行する必要があります。</block>
   <block id="06eee3caed57cb295b8ae731bc4b8dce" category="paragraph">サーバホストのステータスが停止と表示されている場合は、しばらく待ってから新しい検出を実行できます。また、 *HostRefreshInterval* パラメータの値（デフォルト値は 3600 秒）を 10 分を超える任意の値に変更することもできます。</block>
@@ -9912,4 +9900,67 @@
   <block id="33e8da2f20646df222fc0acf35201fe4" category="sidebar">カスタムプラグインリソースのバックアップ</block>
   <block id="8ffa4ba0dd2df5995fd397c72a149679" category="sidebar">個 々 のカスタムプラグインリソースのバックアップ</block>
   <block id="e734e6e2e702d38ebab6ed3c050a5e72" category="sidebar">カスタムプラグインリソースのバックアップをクローニング</block>
+  <block id="305e2d6826371134136661ce4869e554" category="list-text">.NET Coreバージョン8.0.5以降、以降のすべての.NET 8パッチを含む</block>
+  <block id="52498505b3fc927f491c9b006eecae92" category="list-text">.NET Frameworkバージョン8.0.5以降、以降のすべての.NET 8パッチを含む</block>
+  <block id="76ab71a79937e997e9cf1c7dc354e025" category="list-text">ASP.NET Core Hosting Bundle（バージョン8.0.5以降、以降のすべての.NET 8パッチを含む）</block>
+  <block id="3728d48973e3d053d0a862af7bf6c785" category="list-text">ASP.NETバージョン8.0.5以降、以降のすべての.NET 8パッチを含む</block>
+  <block id="c1de3dacba751659ff9e6c8833e5f903" category="list-text">ASP.NET Core Runtimeバージョン8.0.5以降、以降のすべての.NET 8パッチを含む</block>
+  <block id="881a29d62175189b1872a856fce933da" category="paragraph">SnapCenterを使用すると、データベースのバックアップを使用してOracleデータベースをクローニングできます。作成されるクローンはシッククローンで、親容量プールに作成されます。</block>
+  <block id="57507899dd312cf4de9c076e90990d6a" category="paragraph">SnapCenterでは、SAP HANAデータベースのバックアップを使用してSAP HANAデータベースをクローニングできます。作成されるクローンはシッククローンで、親容量プールに作成されます。</block>
+  <block id="73c291e6ad930a577bf1c1d0267ecd80" category="paragraph">SnapCenterを使用すると、データベースのバックアップを使用してSQLデータベースをクローニングできます。作成されるクローンはシッククローンで、親容量プールに作成されます。</block>
+  <block id="c606038e9f060e87fd33c813592804d3" category="list-text">クローンスプリットはサポートされていません。</block>
+  <block id="30d32a0f164bac6778a1be0b6bbad3d1" category="paragraph">作成したクレデンシャルの名前を選択するか、新しいクレデンシャルを作成します。このクレデンシャルには、リモートホストに対する管理者権限が必要です。詳細については、クレデンシャルの作成に関する情報を参照してください。</block>
+  <block id="0d09fd1c49f1d2d9fdc72b9e6af179ff" category="paragraph">SnapCenter 6.0以降にアップグレードする場合は、既存のPerlベースのPlug-in for DB2がリモートプラグインサーバからアンインストールされます。</block>
+  <block id="8bd5c68a1ade9c22f98424902eb6b969" category="admonition">DB2 pureScale環境およびDB2 multi node（DPF）システムはサポートされていません。</block>
+  <block id="2d2b303d961d395bd777f5532d182df1" category="list-text">DOTNET Coreバージョン8.0.5以降、以降のすべての.NET 8パッチを含む</block>
+  <block id="d26271179537201ce6d4270b088e3629" category="paragraph">SnapCenter 6.0および6.0.1で利用可能な新機能と拡張機能について説明します。</block>
+  <block id="e26065304cca26ac94a12ba286943668" category="inline-link-macro">SnapCenter 6.0.1の新機能</block>
+  <block id="1389d6b3bba6a06a7cec4120c31b52b7" category="inline-link-macro">SnapCenter 6.0の新機能</block>
+  <block id="a63ea5d9f72525ae37d941e9bc5ecbc7" category="paragraph">新機能と拡張機能の一覧については、およびを参照してください<block ref="2b7c5d00a49e44d91d9f881dc992a4a5" category="inline-link-macro-rx"></block><block ref="e9409363ebf38833c42f0fa2ec48a387" category="inline-link-macro-rx"></block>。</block>
+  <block id="e9d4ea3f0c1b4cd9e879f1519fb60c79" category="paragraph">既知の問題、制限事項、解決済みの問題、および新規および変更されたコマンドの詳細については、を参照して<block ref="96c6a9ad961cdb98d787b7b13bc5a289" category="inline-link-rx"></block>ください。リリースノートにアクセスするには、NetAppアカウントでサインインするか、アカウントを作成する必要があります。</block>
+  <block id="89f4d38108821acdbf6cd6b780454397" category="summary">SnapCenterでサポートされているアップグレードパス。</block>
+  <block id="5097f966477870c178d6885558d88ef0" category="doc">サポートされるSnapCenterのアップグレードパス</block>
+  <block id="917e552e8290664f15e1332b2d723ec0" category="paragraph">アップグレードパスを参照すると、SnapCenterの以前のすべてのバージョンから最新バージョンにアップグレードできるかSnapCenter、およびサポートされているプラグインのバージョンを把握することができます。</block>
+  <block id="ab3e1b5fbcd7c46009ad34f096e65d30" category="admonition">たとえば、SnapCenterバージョン4.9を使用していて、6.0.1にアップグレードする場合は、まず5.0にアップグレードしてから、6.0.1へのローリングアップグレードを実行する必要があります。</block>
+  <block id="430bb58f6ef28c742787a646394cc85d" category="summary">SnapCenterソフトウェアのリリース6.0には、いくつかの新機能と拡張機能が含まれています。</block>
+  <block id="c93a09afa54abf05ddd4770e3b2343a1" category="doc">SnapCenterソフトウェア6.0の新機能</block>
+  <block id="5864c825e06c8214939d2a9d0894bf16" category="inline-link-macro">NetAppに対応したエンタープライズワークロードプラグインをサポート</block>
+  <block id="b378547eb64b7be3e2ffe67d84149895" category="cell"><block ref="b378547eb64b7be3e2ffe67d84149895" category="inline-link-macro-rx"></block></block>
+  <block id="3be8c0bcb79f27206e60c05521a2483c" category="paragraph">SnapCenterは、PostgreSQL、MySQL、IBM DB2などのワークロードを管理するためのプラグインを提供します。ワークロードの検出、バックアップ、リストア、マウント、クローニングを自動で実行できます。</block>
+  <block id="1fa76ac55ad0967716ac4dfee12b4407" category="paragraph">SnapCenterには、SAP ASE、SAP MaxDB、MongoDB、Oracleアプリケーション、ONTAPストレージなどのワークロードを管理するためのプラグインも用意されています。ワークロードのバックアップ、リストア、クローニングを実行できます。</block>
+  <block id="2e267d83f08284f9047134b3c074b19b" category="inline-link-macro">クラウドとオンプレミスの両方のワークロードでLinuxバージョンのSnapCenterをサポート</block>
+  <block id="ca5b1ab4090623818a4fec6b963d13f9" category="cell"><block ref="ca5b1ab4090623818a4fec6b963d13f9" category="inline-link-macro-rx"></block></block>
+  <block id="7daff1874dce5a11aba2586028b0c18f" category="list-text">Azure NetApp Files、Amazon FSx for NetApp ONTAP、Cloud Volumes ONTAP、ONTAPストレージをサポートします。</block>
+  <block id="762100fcdd1477c85af12beef8cd62c3" category="list-text">Red Hat Enterprise Linux（RHEL）、Oracle Linux、SUSE Linux Enterprise Server（SLES）などのLinux用の個別のバイナリ。</block>
+  <block id="13600e1a28d7c26b057fc84f30416618" category="list-text">SAP HANA、Oracle、IBM DB2、SAP ASE、SAP MaxDBなどの従来型データベースをサポート</block>
+  <block id="1dbcbbe14ef1a2328b3e7e8b86a02d30" category="list-text">PostgreSQL、MySQL、MongoDBなどの最新のワークロードをサポートします。</block>
+  <block id="42e9bb4040dfb564c8bc793490bd7ba6" category="list-text">ONTAPボリュームとLinuxファイルシステム用のプラグインをサポートしているため、サポートされていないアプリケーションや自社開発のアプリケーションを保護できます。</block>
+  <block id="95c6ebe4e9f4b874b3476bd9c75d257b" category="inline-link-macro">SnapMirror Active Syncのサポート</block>
+  <block id="8440547858789da7c3b2feb37f16cb25" category="cell"><block ref="8440547858789da7c3b2feb37f16cb25" category="inline-link-macro-rx"></block></block>
+  <block id="d318b0578f25b54d744e21d30b035e8a" category="paragraph">透過的なアプリケーションフェイルオーバーとビジネス継続性を実現するように設定されたSANワークロード（データベースやVMware VM）をシームレスにバックアップ、リストア、クローニングできます。</block>
+  <block id="e030f85ea3742a8498cd3f4ce5f26a2f" category="inline-link-macro">SMB3経由でのMicrosoft SQL Serverのサポート</block>
+  <block id="c550e496e988fba14212cef600247fed" category="cell"><block ref="c550e496e988fba14212cef600247fed" category="inline-link-macro-rx"></block></block>
+  <block id="661984b66e3a7f72fbbda59c35c7aa92" category="paragraph">ONTAP、Azure NetApp Files、Amazon FSx for NetApp ONTAP、およびONTAP Cloud VolumesのSMB3プロトコルに導入されたMicrosoft SQL Serverデータベースは、SnapCenterを使用して保護できるようになりました。</block>
+  <block id="534b29f3d774d1d19d1dc1030cdc4b3d" category="inline-link-macro">NVMe / TCPのサポート</block>
+  <block id="98d7af4aa50fe1e0cd7013f44cc2cebc" category="cell"><block ref="98d7af4aa50fe1e0cd7013f44cc2cebc" category="inline-link-macro-rx"></block></block>
+  <block id="6b4fa7a607a45ee2985d38d057ed95a1" category="paragraph">パフォーマンスを向上させるために重要なワークロードをNVMe/TCPに移行する場合は、SnapCenterを使用してアプリケーションとファイルシステムをバックアップおよびリカバリできます。</block>
+  <block id="64727e12025200ba369f3ba7c0682081" category="cell">VMware VVOLのサポート</block>
+  <block id="8717c0ac7cfbe6d918d19dd574d63e73" category="paragraph">VMware VVOLにデータベースとファイルシステムを導入した場合は、SnapCenterを使用してそれらを保護できます。</block>
+  <block id="180a2e8c671bfb57b670570970b59480" category="summary">SnapCenterソフトウェアの6.0.1リリースには、いくつかの新機能と拡張機能が含まれています。</block>
+  <block id="f5db6e0b0a7608b32dd00dbb85353e53" category="doc">SnapCenterソフトウェア6.0.1の新機能</block>
+  <block id="0ee351a583abf7baa869129519adaddb" category="inline-link-macro">Azure NetApp Filesバックアップのサポート</block>
+  <block id="62c2d7366772786ca345ac877bf79c4a" category="cell"><block ref="62c2d7366772786ca345ac877bf79c4a" category="inline-link-macro-rx"></block></block>
+  <block id="4cc6d2996939fe7970c652728017b3e9" category="paragraph">SnapCenterはAzure NetApp Filesバックアップ機能をサポートしており、長期的なリカバリ、アーカイブ、コンプライアンスに対応するフルマネージドバックアップソリューションを提供することで、Azure NetApp Filesのデータ保護機能を拡張します。</block>
+  <block id="f47390dbd7bff67c8e4d16001f8c4395" category="inline-link-macro">LinuxテシツコウスルSnapCenterノコウカヨウセイノサホオト</block>
+  <block id="fa7aa08aceadadc58383fc01281330d1" category="cell"><block ref="fa7aa08aceadadc58383fc01281330d1" category="inline-link-macro-rx"></block></block>
+  <block id="8951fc15a429c65f620e89da09c5240e" category="paragraph">WindowsまたはLinuxで実行されているSnapCenterで、F5ロードバランサ、Microsoftネットワークロードバランシング（NLB）、Amazon Web Services（AWS）Elastic Load Balancing（ELB）、またはAzureロードバランサを使用して高可用性を構成します。</block>
+  <block id="1810fc343d328f63ca20580898910abc" category="inline-link-macro">スケジュールされたバックアップジョブの管理のサポート</block>
+  <block id="a9e5aa37b3dc50c95040bd19f911000b" category="cell"><block ref="a9e5aa37b3dc50c95040bd19f911000b" category="inline-link-macro-rx"></block></block>
+  <block id="6775f2c837a6e0d211c88415495a3ca3" category="paragraph">特定の時間に実行できるスケジュール済みジョブの数にしきい値を設定できます。これにより、システムのハードウェア構成に基づいて実行するバックアップの数を制御できます。</block>
+  <block id="6c1303e3667436380323a8f91aeeb3b1" category="inline-link-macro">古いジョブの管理のサポート</block>
+  <block id="0f16714fed95f3a4b2ef5ba9724d3658" category="cell"><block ref="0f16714fed95f3a4b2ef5ba9724d3658" category="inline-link-macro-rx"></block></block>
+  <block id="4b6d2450b6badef80cca9ba40b34bd88" category="paragraph">72時間以上スタックした古いジョブをクリーンアップできます。</block>
+  <block id="70e43ac38d4ee9a77d2476513c883d81" category="cell">AIXでのIBM DB2、Oracleアプリケーション、およびストレージプラグインのサポート</block>
+  <block id="9b37c223b27baf9481210cc34272107f" category="paragraph">AIXでのIBM DB2、Oracleアプリケーション、ストレージプラグインのデータ保護をサポート</block>
+  <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">リリースノート</block>
 </blocks>
