@@ -17,22 +17,22 @@ SnapCenterソフトウェアの6.0.1リリースには、いくつかの新機�
 | 更新 | 説明 
 
 
-| link:https://review.docs.netapp.com/us-en/snapcenter_sc601_oct2024_releasebranch/protect-azure/protect-applications-azure-netapp-files.html["Azure NetApp Filesバックアップのサポート"]  a| 
+| link:https://docs.netapp.com/us-en/snapcenter/protect-azure/protect-applications-azure-netapp-files.html["Azure NetApp Filesバックアップのサポート"]  a| 
 SnapCenterはAzure NetApp Filesバックアップ機能をサポートしており、長期的なリカバリ、アーカイブ、コンプライアンスに対応するフルマネージドバックアップソリューションを提供することで、Azure NetApp Filesのデータ保護機能を拡張します。
 
 
 
-| link:hhttps://docs.netapp.com/us-en/snapcenter/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html["LinuxテシツコウスルSnapCenterノコウカヨウセイノサホオト"]  a| 
+| link:https://docs.netapp.com/us-en/snapcenter/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html["LinuxテシツコウスルSnapCenterノコウカヨウセイノサホオト"]  a| 
 WindowsまたはLinuxで実行されているSnapCenterで、F5ロードバランサ、Microsoftネットワークロードバランシング（NLB）、Amazon Web Services（AWS）Elastic Load Balancing（ELB）、またはAzureロードバランサを使用して高可用性を構成します。
 
 
 
-| link:https://review.docs.netapp.com/us-en/snapcenter_sc601_oct2024_releasebranch/admin/concept_monitor_jobs_schedules_events_and_logs.html#manage-scheduled-backup-jobs["スケジュールされたバックアップジョブの管理のサポート"]  a| 
+| link:https://docs.netapp.com/us-en/snapcenter/admin/concept_monitor_jobs_schedules_events_and_logs.html#manage-scheduled-backup-jobs["スケジュールされたバックアップジョブの管理のサポート"]  a| 
 特定の時間に実行できるスケジュール済みジョブの数にしきい値を設定できます。これにより、システムのハードウェア構成に基づいて実行するバックアップの数を制御できます。
 
 
 
-| link:https://review.docs.netapp.com/us-en/snapcenter_sc601_oct2024_releasebranch/admin/concept_monitor_jobs_schedules_events_and_logs.html#manage-stale-jobs["古いジョブの管理のサポート"]  a| 
+| link:https://docs.netapp.com/us-en/snapcenter/admin/concept_monitor_jobs_schedules_events_and_logs.html#manage-stale-jobs["古いジョブの管理のサポート"]  a| 
 72時間以上スタックした古いジョブをクリーンアップできます。
 
 
