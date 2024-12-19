@@ -252,11 +252,11 @@ NOTE: smo credential setコマンドは、ホスト上のプロファイルご�
 *** `smsap credential set -repository -dbname repository_database_name -host host_name -port port_number -login -username user_name_for_repository_database`
 *** `smsap profile sync -repository -dbname repository_database_name -host host_name -port port_number -login -username host_user_name_for_repository_database`
 *** `smsap credential set -profile -name profile_name`
-
-
 +
 
 NOTE: SMSAP credential setコマンドは、ホストのプロファイルごとに実行する必要があります。
+
+
 
 
 

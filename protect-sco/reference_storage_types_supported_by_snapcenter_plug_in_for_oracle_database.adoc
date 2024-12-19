@@ -32,7 +32,7 @@ SnapCenter では、 Linux および AIX のストレージプロビジョニン
 * iSCSIセツソクLUN
 * NFS接続ボリューム
 * NVMe-FC
-* nvme-tcpが表示されます
+* NVMe / TCP
 
 
 
@@ -46,7 +46,7 @@ VMware ESXi
 
 * iSCSIイニシエータによってゲストシステムに直接接続されたiSCSI LUN
 * NFSデータストア上のVMDK
-* NVMe-TCP経由で作成されたVMFS上のVMDK
+* NVMe/TCP経由で作成されたVMFS上のVMDK
 +
 
 NOTE: RACは、共有VMDKをサポートするESX 8.0U2でサポートされます。

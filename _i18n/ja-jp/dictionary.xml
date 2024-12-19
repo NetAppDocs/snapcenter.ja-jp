@@ -6688,11 +6688,9 @@
   <block id="c99406925608b95afee1b44a09a0a366" category="section-title">Linuxでサポートされるストレージタイプ</block>
   <block id="1857c63aa94eb5c973b42cb622d32509" category="paragraph">次の表に、Linuxでサポートされるストレージタイプを示します。</block>
   <block id="3ab5865f7b3fcc5851ae24144b15f370" category="list-text">NVMe-FC</block>
-  <block id="ad18d9aa7c4c9bdbf86e39bd6dd5b727" category="list-text">nvme-tcpが表示されます</block>
   <block id="2d9498b8e7a706c04828e3a27d452cf3" category="list-text">FCまたはiSCSI ESXi HBAで接続されたRDM LUN Host Bus Adapter（HBA；ホストバスアダプタ）のスキャンは、SnapCenterがホストに存在するすべてのホストバスアダプタをスキャンするため、完了までに時間がかかることがあります。</block>
   <block id="e0c7a63acdb6963a9d6b2419d93f5f5a" category="paragraph">/opt/NetApp/SnapCenter /spl/plugins/SCU/scucore /modules/SCU/ConfigU/Config_に ある * LinuxConfig.pm * ファイルを編集して、 * scsi_hosts _optimized_rescan * パラメーターの値を 1 に設定し、 ha_driver_names にリストされている HBA のみを再スキャンすることができます。</block>
   <block id="bb2676e02f9905c86303b7f1988d2898" category="list-text">NFSデータストア上のVMDK</block>
-  <block id="13d64591a6e2c6389e1896047405d742" category="list-text">NVMe-TCP経由で作成されたVMFS上のVMDK</block>
   <block id="ae1d120b56beba9c6f5a7802f3e3d61d" category="admonition">RACは、共有VMDKをサポートするESX 8.0U2でサポートされます。</block>
   <block id="a58b8b421b0a6170e7380151af742f28" category="list-text">ゲストシステムに直接接続されたNFSボリューム</block>
   <block id="cbb0646c609fcc3aa70c6c5ae0bdf3fc" category="section-title">AIXでサポートされるストレージタイプ</block>
@@ -9924,43 +9922,51 @@
   <block id="ab3e1b5fbcd7c46009ad34f096e65d30" category="admonition">たとえば、SnapCenterバージョン4.9を使用していて、6.0.1にアップグレードする場合は、まず5.0にアップグレードしてから、6.0.1へのローリングアップグレードを実行する必要があります。</block>
   <block id="430bb58f6ef28c742787a646394cc85d" category="summary">SnapCenterソフトウェアのリリース6.0には、いくつかの新機能と拡張機能が含まれています。</block>
   <block id="c93a09afa54abf05ddd4770e3b2343a1" category="doc">SnapCenterソフトウェア6.0の新機能</block>
-  <block id="5864c825e06c8214939d2a9d0894bf16" category="inline-link-macro">NetAppに対応したエンタープライズワークロードプラグインをサポート</block>
-  <block id="b378547eb64b7be3e2ffe67d84149895" category="cell"><block ref="b378547eb64b7be3e2ffe67d84149895" category="inline-link-macro-rx"></block></block>
   <block id="3be8c0bcb79f27206e60c05521a2483c" category="paragraph">SnapCenterは、PostgreSQL、MySQL、IBM DB2などのワークロードを管理するためのプラグインを提供します。ワークロードの検出、バックアップ、リストア、マウント、クローニングを自動で実行できます。</block>
   <block id="1fa76ac55ad0967716ac4dfee12b4407" category="paragraph">SnapCenterには、SAP ASE、SAP MaxDB、MongoDB、Oracleアプリケーション、ONTAPストレージなどのワークロードを管理するためのプラグインも用意されています。ワークロードのバックアップ、リストア、クローニングを実行できます。</block>
-  <block id="2e267d83f08284f9047134b3c074b19b" category="inline-link-macro">クラウドとオンプレミスの両方のワークロードでLinuxバージョンのSnapCenterをサポート</block>
-  <block id="ca5b1ab4090623818a4fec6b963d13f9" category="cell"><block ref="ca5b1ab4090623818a4fec6b963d13f9" category="inline-link-macro-rx"></block></block>
   <block id="7daff1874dce5a11aba2586028b0c18f" category="list-text">Azure NetApp Files、Amazon FSx for NetApp ONTAP、Cloud Volumes ONTAP、ONTAPストレージをサポートします。</block>
   <block id="762100fcdd1477c85af12beef8cd62c3" category="list-text">Red Hat Enterprise Linux（RHEL）、Oracle Linux、SUSE Linux Enterprise Server（SLES）などのLinux用の個別のバイナリ。</block>
   <block id="13600e1a28d7c26b057fc84f30416618" category="list-text">SAP HANA、Oracle、IBM DB2、SAP ASE、SAP MaxDBなどの従来型データベースをサポート</block>
   <block id="1dbcbbe14ef1a2328b3e7e8b86a02d30" category="list-text">PostgreSQL、MySQL、MongoDBなどの最新のワークロードをサポートします。</block>
   <block id="42e9bb4040dfb564c8bc793490bd7ba6" category="list-text">ONTAPボリュームとLinuxファイルシステム用のプラグインをサポートしているため、サポートされていないアプリケーションや自社開発のアプリケーションを保護できます。</block>
-  <block id="95c6ebe4e9f4b874b3476bd9c75d257b" category="inline-link-macro">SnapMirror Active Syncのサポート</block>
-  <block id="8440547858789da7c3b2feb37f16cb25" category="cell"><block ref="8440547858789da7c3b2feb37f16cb25" category="inline-link-macro-rx"></block></block>
-  <block id="d318b0578f25b54d744e21d30b035e8a" category="paragraph">透過的なアプリケーションフェイルオーバーとビジネス継続性を実現するように設定されたSANワークロード（データベースやVMware VM）をシームレスにバックアップ、リストア、クローニングできます。</block>
   <block id="e030f85ea3742a8498cd3f4ce5f26a2f" category="inline-link-macro">SMB3経由でのMicrosoft SQL Serverのサポート</block>
   <block id="c550e496e988fba14212cef600247fed" category="cell"><block ref="c550e496e988fba14212cef600247fed" category="inline-link-macro-rx"></block></block>
-  <block id="661984b66e3a7f72fbbda59c35c7aa92" category="paragraph">ONTAP、Azure NetApp Files、Amazon FSx for NetApp ONTAP、およびONTAP Cloud VolumesのSMB3プロトコルに導入されたMicrosoft SQL Serverデータベースは、SnapCenterを使用して保護できるようになりました。</block>
   <block id="534b29f3d774d1d19d1dc1030cdc4b3d" category="inline-link-macro">NVMe / TCPのサポート</block>
   <block id="98d7af4aa50fe1e0cd7013f44cc2cebc" category="cell"><block ref="98d7af4aa50fe1e0cd7013f44cc2cebc" category="inline-link-macro-rx"></block></block>
-  <block id="6b4fa7a607a45ee2985d38d057ed95a1" category="paragraph">パフォーマンスを向上させるために重要なワークロードをNVMe/TCPに移行する場合は、SnapCenterを使用してアプリケーションとファイルシステムをバックアップおよびリカバリできます。</block>
-  <block id="64727e12025200ba369f3ba7c0682081" category="cell">VMware VVOLのサポート</block>
-  <block id="8717c0ac7cfbe6d918d19dd574d63e73" category="paragraph">VMware VVOLにデータベースとファイルシステムを導入した場合は、SnapCenterを使用してそれらを保護できます。</block>
   <block id="180a2e8c671bfb57b670570970b59480" category="summary">SnapCenterソフトウェアの6.0.1リリースには、いくつかの新機能と拡張機能が含まれています。</block>
   <block id="f5db6e0b0a7608b32dd00dbb85353e53" category="doc">SnapCenterソフトウェア6.0.1の新機能</block>
   <block id="0ee351a583abf7baa869129519adaddb" category="inline-link-macro">Azure NetApp Filesバックアップのサポート</block>
-  <block id="4cc6d2996939fe7970c652728017b3e9" category="paragraph">SnapCenterはAzure NetApp Filesバックアップ機能をサポートしており、長期的なリカバリ、アーカイブ、コンプライアンスに対応するフルマネージドバックアップソリューションを提供することで、Azure NetApp Filesのデータ保護機能を拡張します。</block>
   <block id="f47390dbd7bff67c8e4d16001f8c4395" category="inline-link-macro">LinuxテシツコウスルSnapCenterノコウカヨウセイノサホオト</block>
-  <block id="8951fc15a429c65f620e89da09c5240e" category="paragraph">WindowsまたはLinuxで実行されているSnapCenterで、F5ロードバランサ、Microsoftネットワークロードバランシング（NLB）、Amazon Web Services（AWS）Elastic Load Balancing（ELB）、またはAzureロードバランサを使用して高可用性を構成します。</block>
-  <block id="1810fc343d328f63ca20580898910abc" category="inline-link-macro">スケジュールされたバックアップジョブの管理のサポート</block>
-  <block id="6775f2c837a6e0d211c88415495a3ca3" category="paragraph">特定の時間に実行できるスケジュール済みジョブの数にしきい値を設定できます。これにより、システムのハードウェア構成に基づいて実行するバックアップの数を制御できます。</block>
-  <block id="6c1303e3667436380323a8f91aeeb3b1" category="inline-link-macro">古いジョブの管理のサポート</block>
-  <block id="4b6d2450b6badef80cca9ba40b34bd88" category="paragraph">72時間以上スタックした古いジョブをクリーンアップできます。</block>
-  <block id="70e43ac38d4ee9a77d2476513c883d81" category="cell">AIXでのIBM DB2、Oracleアプリケーション、およびストレージプラグインのサポート</block>
-  <block id="9b37c223b27baf9481210cc34272107f" category="paragraph">AIXでのIBM DB2、Oracleアプリケーション、ストレージプラグインのデータ保護をサポート</block>
   <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">リリースノート</block>
   <block id="4396a053fce24f7f396ccf91773d1924" category="cell"><block ref="4396a053fce24f7f396ccf91773d1924" category="inline-link-macro-rx"></block></block>
   <block id="c382d5571738a226abf22d83f911bf29" category="cell"><block ref="c382d5571738a226abf22d83f911bf29" category="inline-link-macro-rx"></block></block>
-  <block id="2a332b39aa52e9f2636ba160aca67cb8" category="cell"><block ref="2a332b39aa52e9f2636ba160aca67cb8" category="inline-link-macro-rx"></block></block>
-  <block id="4e57d9d37ed4764b16b2fed20544a690" category="cell"><block ref="4e57d9d37ed4764b16b2fed20544a690" category="inline-link-macro-rx"></block></block>
+  <block id="8b7c42123642e2e4ea7dd426aeb2de58" category="list-text">NVMe / TCP</block>
+  <block id="e32c19b9fdeb1a3c3b963304701ce944" category="list-text">NVMe/TCP経由で作成されたVMFS上のVMDK</block>
+  <block id="6f8d85621ec7e8c73c4ba859ec9c7469" category="inline-link-macro">NetAppのサポートにより、エンタープライズワークロードのプラグインをサポート</block>
+  <block id="478831acf82b0a4b3818fd65c592a742" category="cell"><block ref="478831acf82b0a4b3818fd65c592a742" category="inline-link-macro-rx"></block></block>
+  <block id="1ef9e52684a20f666e12e341c8ef8ce1" category="inline-link-macro">クラウドとオンプレミスの両方のワークロードでLinuxバージョンのSnapCenterをサポート</block>
+  <block id="8759eb4a15f0954f1ffe6a1ba0fcb91b" category="cell"><block ref="8759eb4a15f0954f1ffe6a1ba0fcb91b" category="inline-link-macro-rx"></block></block>
+  <block id="1cbe08eda60fa869e0f775f6bb3d2581" category="paragraph">Red Hat Enterprise Linux（RHEL）、Oracle Linux、SUSE Linux Enterprise Server（SLES）などのLinux用に個別のSnapCenterバイナリを使用できるようになりました。</block>
+  <block id="4f53b479c6b47d73b1fdb28f399b1301" category="inline-link-macro">SnapMirrorアクティブ同期のサポート</block>
+  <block id="a757709afe5913a9ac546212ec3e1688" category="cell"><block ref="a757709afe5913a9ac546212ec3e1688" category="inline-link-macro-rx"></block></block>
+  <block id="426704b1f334cde736f8e5ff800c0a22" category="paragraph">SnapCenterを使用してSnapMirrorのアクティブな同期機能を設定し、データベースやVMware VMのSANワークロードを効率的にバックアップ、リストア、クローニングできるようになりました。これにより、透過的なアプリケーションフェイルオーバーとビジネス継続性が保証されます。</block>
+  <block id="729dead3f3fe6b0217c2f68871edb8ee" category="paragraph">SnapCenterを使用して、ONTAP、Azure NetApp Files、Amazon FSx for NetApp ONTAP、Cloud Volumes ONTAPのSMB3プロトコルに導入されたMicrosoft SQL Serverデータベースを保護できるようになりました。</block>
+  <block id="cadb0ed69287e5a4f65d1590e5e42a58" category="paragraph">SnapCenterでは、アプリケーションとファイルシステムのバックアップとリカバリにNVMe over TCPプロトコルがサポートされるようになりました。</block>
+  <block id="bcaa0376902365340dff7a0ee422b390" category="cell">VMware vSphere Virtual Volumes（VVol）のサポート</block>
+  <block id="d0942f199de3f390337f613419cc5b6d" category="paragraph">SnapCenterを使用して、VVOLに導入されたデータベースとファイルシステムを保護できるようになりました。</block>
+  <block id="6d3c36ceae85dfee8b7d9ccb6f9daa41" category="paragraph">SnapCenterを使用して、Azure NetApp Files上のアプリケーションをAzure Blob Storage（オブジェクトストア）にバックアップおよびクローニングできるようになりました。</block>
+  <block id="dc3cf03517bc0034c89608c70487dd43" category="paragraph">SnapCenterでのHA構成のサポートがLinuxシステムに拡張されました。この構成では、標準のロードバランサを使用できます。</block>
+  <block id="cf70dd989291fe3c73323dca9c132c7a" category="list-text">F5ロードバランサ</block>
+  <block id="3a5261cb56e1fc4dcab4467255cb2f77" category="list-text">Microsoft Network Load Balancing（NLB）</block>
+  <block id="943ca3782b28d89aff2f86a50b332b3c" category="list-text">Amazon Web Services（AWS）</block>
+  <block id="00c0ea0ebc04a689882db84f8ac573b8" category="list-text">エラスティックロードバランシング（ELB）</block>
+  <block id="30b49d6d7f72510603794f5cddeb0f51" category="list-text">Azureロードバランサ</block>
+  <block id="2f95a365481f255b94a459c0cdbe6403" category="inline-link-macro">スケジュールされたバックアップジョブの管理機能</block>
+  <block id="ed432f9ce52c9850999f7b028aad79ff" category="cell"><block ref="ed432f9ce52c9850999f7b028aad79ff" category="inline-link-macro-rx"></block></block>
+  <block id="45504f3ad62432af1eda619e4b060b8a" category="paragraph">スケジュール済みジョブのしきい値を設定して、システムハードウェア構成に基づいて任意の時点で実行するバックアップの数を制御できるようになりました。</block>
+  <block id="4001d0b97ee7312467d6a3f7954548e2" category="inline-link-macro">古いジョブを管理する機能</block>
+  <block id="df630e1703b2829b32d71f57dd02d24e" category="cell"><block ref="df630e1703b2829b32d71f57dd02d24e" category="inline-link-macro-rx"></block></block>
+  <block id="d76b0a3fe3eb0d4b24bd1965df4f6005" category="paragraph">定義済みのスケジュールを設定して、72時間以上停止している古いジョブをクリーンアップできるようになりました。</block>
+  <block id="8a30edb275ecde423390e79fd8e6f1b2" category="cell">AIXで実行されているIBM DB2、Oracleアプリケーション、ストレージプラグイン用のデータ保護機能が搭載されています。</block>
+  <block id="7d8509e50a4a8e004140e403e5253c3c" category="paragraph">AIXで実行されているIBM DB2、Oracleアプリケーション、およびストレージプラグインのデータ保護をサポートします。</block>
 </blocks>
