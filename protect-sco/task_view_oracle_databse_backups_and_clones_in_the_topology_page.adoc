@@ -80,11 +80,11 @@ NOTE: セカンダリストレージにあるバックアップは、名前の�
 ** Oracle Recovery Manager（RMAN）を使用してバックアップをカタログ化した場合、そのバックアップの名前は変更できません。
 
 
-. クローンを削除する場合は、表でクローンを選択し、image:../media/delete_icon.gif[""]をクリックします。
+. クローンを削除する場合は、表でクローンを選択し、image:../media/delete_icon.gif["削除アイコン"]をクリックします。
 
 
 SnapmirrorStatusUpdateWaitTimeに割り当てられている値がより小さい場合は、データボリュームとログボリュームが正常に保護されていても、ミラーとバックアップのバックアップコピーはトポロジページに表示されません。SnapmirrorStatusUpdateWaitTime に割り当てられた値は、 _Set-SmConfigSettings_PowerShell コマンドレットを使用して増やす必要があります。
 
 コマンドで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。
 
-または、またはを参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP3323470["SnapCenter ソフトウェアコマンドリファレンスガイド"^] https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+または、またはを参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP3337666["SnapCenter ソフトウェアコマンドリファレンスガイド"^] https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。

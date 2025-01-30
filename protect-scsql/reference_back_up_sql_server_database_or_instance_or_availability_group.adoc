@@ -19,7 +19,7 @@ SnapCenter Plug-in for Microsoft SQL Server をインストールした環境で
 
 次のワークフローは、バックアップ処理の実行順序を示しています。
 
-image::../media/scsql_backup_workflow.png[SCSQL バックアップワークフロー]
+image::../media/scsql_backup_workflow.gif[SCSQL バックアップワークフロー]
 
 
 NOTE: ネットアップ以外のLUN、破損したデータベース、またはリストア中のデータベースを選択した場合、[Resources]ページの[Backup Now]、[Restore]、[Manage Backups]、および[Clone]オプションは無効になります。

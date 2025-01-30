@@ -15,4 +15,4 @@ summary: リストアのワークフローには、計画、リストア処理�
 
 次のワークフローは、リストア処理の実行順序を示しています。
 
-image::../media/all_plug_ins_restore_workflow.png[all_plug-ins_restore_workflow を実行します]
+image::../media/all_plug_ins_restore_workflow.gif[all_plug-ins_restore_workflow を実行します]

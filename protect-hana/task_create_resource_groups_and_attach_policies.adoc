@@ -186,12 +186,12 @@ Snapshotコピーを作成するためにホストで実行するコマンドを
 .. ドロップダウンリストから1つ以上のポリシーを選択します。
 +
 
-NOTE: **をクリックしてポリシーを作成することもできますimage:../media/add_policy_from_resourcegroup.gif[""]。
+NOTE: **をクリックしてポリシーを作成することもできますimage:../media/add_policy_from_resourcegroup.gif["ポリシーフォームのリソースグループの追加"]。
 
 +
 ポリシーが[Configure schedules for selected policies]セクションに表示されます。
 
-.. [スケジュールの設定]列で、設定するポリシーの**をクリックしますimage:../media/add_policy_from_resourcegroup.gif[""]。
+.. [スケジュールの設定]列で、設定するポリシーの**をクリックしますimage:../media/add_policy_from_resourcegroup.gif["ポリシーフォームのリソースグループの追加"]。
 .. [Add schedules for policy_name_] ダイアログボックスで、スケジュールを設定し、 [OK] をクリックします。
 +
 policy_nameは、選択したポリシーの名前です。

@@ -52,10 +52,6 @@ Snapshotのロック期間を指定すると、保持期間が終了するまで
 +
 ONTAP 9.12.1以前のバージョンでは、リストアの一環としてSnapLockヴォールトSnapshotから作成されたクローンにSnapLockヴォールトの有効期限が継承されます。SnapLockの有効期限が過ぎた時点で、ストレージ管理者がクローンを手動でクリーンアップする必要があります。
 
-+
-
-NOTE: プライマリSnapLock設定はSnapCenterバックアップポリシーで管理され、セカンダリSnapLock設定はONTAPで管理されます。
-
 
 
 
@@ -67,24 +63,26 @@ NOTE: プライマリSnapLock設定はSnapCenterバックアップポリシー�
 . 左側のナビゲーションペインで、*[設定]*を選択します。
 . [設定]ページで、*[ポリシー]*を選択します。
 . [New]*を選択します。
-. [* 名前 *] ページで、ポリシー名と概要を入力します。
+. [名前*]ページで、ポリシーの名前と詳細を入力します。
 
 
 
 
-== ステップ2：バックアップオプションを設定します
+== 手順2：ポリシーオプションを設定する
 
-. バックアップタイプを選択します
-
-
+. [Policy type]ページで、次の手順を実行します。
++
+.. ストレージタイプを選択します。
+.. ポリシーの範囲を選択します。
++
 [role="tabbed-block"]
 ====
 .フルバックアップとログバックアップ
 --
 データベースファイルとトランザクションログをバックアップし、トランザクションログを切り捨てます。
 
-. [ フルバックアップおよびログバックアップ * ] を選択します。
-. Snapshotごとにバックアップするデータベースの最大数を入力します。
+... [ フルバックアップおよびログバックアップ * ] を選択します。
+... Snapshotごとにバックアップするデータベースの最大数を入力します。
 +
 
 NOTE: 同時に複数のバックアップ処理を実行する場合は、この値を増やす必要があります。
@@ -96,8 +94,8 @@ NOTE: 同時に複数のバックアップ処理を実行する場合は、こ�
 --
 データベースファイルをバックアップします。
 
-. [* Full backup* ] を選択します。
-. Snapshotごとにバックアップするデータベースの最大数を入力します。デフォルト値は100
+... [* Full backup* ] を選択します。
+... Snapshotごとにバックアップするデータベースの最大数を入力します。デフォルト値は100
 +
 
 NOTE: 同時に複数のバックアップ処理を実行する場合は、この値を増やす必要があります。
@@ -107,14 +105,14 @@ NOTE: 同時に複数のバックアップ処理を実行する場合は、こ�
 --
 .ログバックアップ
 --
-. トランザクションログをバックアップします。
-. 「 * Log backup * 」を選択します。
+... トランザクションログをバックアップします。
+... 「 * Log backup * 」を選択します。
 
 
 --
 .コピーのみのバックアップ
 --
-. 別のバックアップ・アプリケーションを使用してリソースをバックアップする場合は、 [* コピーのみのバックアップ * ] を選択します。
+... 別のバックアップ・アプリケーションを使用してリソースをバックアップする場合は、 [* コピーのみのバックアップ * ] を選択します。
 
 
 トランザクションログをそのまま保持すると、すべてのバックアップアプリケーションでデータベースをリストアできます。通常、他の状況ではコピーのみのオプションを使用しないでください。
@@ -124,6 +122,14 @@ NOTE: Microsoft SQL では、セカンダリ・ストレージのフル・バッ
 
 --
 ====
+
+
+
+
+
+
+== 手順3：可用性グループを設定する
+
 . 可用性グループの設定セクションで、次の操作を実行します。
 +
 .. 優先バックアップレプリカのみにバックアップ。
@@ -147,12 +153,17 @@ NOTE: Microsoft SQL では、セカンダリ・ストレージのフル・バッ
 
 NOTE: クラスタ構成では、ポリシーで設定された保持設定に従って、バックアップがクラスタの各ノードで保持されます。AGの所有者ノードが変更された場合、保持設定に従ってバックアップが作成され、以前の所有者ノードのバックアップが保持されます。AGの保持設定はノードレベルでのみ適用されます。
 
-. このポリシーのバックアップ頻度をスケジュールします。スケジュールタイプを指定するには、*オンデマンド*、*毎時*、*毎日*、*毎週*、または*毎月*を選択します。
+
+
+
+
+== 手順4：Snapshotとレプリケーションの設定を構成する
+
+. [Snapshot and Replication]ページで、次の手順を実行します。
++
+.. スケジュールタイプを指定するには、「 * on demand * 」、「 * Hourly * 」、「 * Daily * 」、「 * Weekly * 」、または「 * Monthly * 」を選択します。
 +
 ポリシーに対して選択できるスケジュールタイプは1つだけです。
-
-+
-image:../media/backup_settings.gif["バックアップ設定画面。"]
 
 +
 
@@ -166,11 +177,11 @@ NOTE: 午前2時にスケジュールを設定している場合、夏時間（D
 
 
 
-== ステップ3：保持設定を構成する
 
-[ 保持 ] ページでは、 [ バックアップ・タイプ ] ページで選択したバックアップ・タイプに応じて、次のアクションを 1 つ以上実行します。
 
-. [Retention settings for the up-to-the-minute restore operation]セクションで、次のいずれかを実行します。
+== 手順5：最新の状態へのリストア保持を設定する
+
+. [Up-to-the-minute retention settings]セクションで、[Backup type]ページで選択したバックアップタイプに応じて、次の操作を1つ以上実行します。
 
 
 [role="tabbed-block"]
@@ -192,11 +203,15 @@ NOTE: 午前2時にスケジュールを設定している場合、夏時間（D
 
 --
 ====
-. On Demand の保持設定の「 * フルバックアップの保持設定 * 」セクションで、次の操作を実行します。
+
+
+== 手順6：Snapshotを設定する
+
+. フルバックアップの保持設定では、次の操作を実行します。
 +
-.. 保持するSnapshotの総数を指定
+.. 保持するSnapshotの総数を指定してください
 +
-... 保持するSnapshotの数を指定するには、*保持するSnapshotコピーの総数*を選択します。
+... 保持するSnapshotの数を指定するには、*保持するコピー*を選択します。
 ... Snapshotの数が指定した数を超えると、最も古いコピーから順にSnapshotが削除されます。
 
 
@@ -210,60 +225,56 @@ IMPORTANT: デフォルトでは、保持数の値は2に設定されていま�
 
 NOTE: 最大保持数は、 ONTAP 9.4 以降のリソースでは 1018 、 ONTAP 9.3 以前のリソースでは 254 です。保持数を使用しているONTAPバージョンでサポートされる値よりも大きい値に設定すると、バックアップは失敗します。
 
-. Snapshotを保持する期間
+. Snapshotを保持する時間の長さ
 +
-.. Snapshotを保持してから削除するまでの日数を指定する場合は、*[Keep Snapshot copies for]*を選択します。
+.. Snapshotを保持してから削除するまでの日数を指定する場合は、*[コピーの保持期間]*を選択します。
 
 
-. Snapshotのロック期間を指定する場合は、*[Snapshot copy locking period（Snapshotコピーロック期間）]*を選択し、日数、月数、または年数を選択します。
-+
-SnapLock保持期間は100年未満にする必要があります。
-
-
-
-. [ 毎時 ] 、 [ 毎日 ] 、 [ 毎週 ] 、および [ 毎月 ] の保持設定の [ フルバックアップ保持設定 *] セクションで、 [ バックアップタイプ ] ページで選択したスケジュールタイプの保持設定を指定します。
-+
-.. 保持するSnapshotの総数を指定
-+
-... 保持するSnapshotの数を指定するには、*保持するSnapshotコピーの総数*を選択します。Snapshotの数が指定した数を超えると、最も古いコピーから順にSnapshotが削除されます。
-
-
-
-
-
-
-
-IMPORTANT: SnapVaultレプリケーションを有効にする場合は、保持数を2以上に設定する必要があります。保持数を1に設定すると、新しいSnapshotがターゲットにレプリケートされるまで最初のSnapshotがSnapVault関係の参照Snapshotになるため、保持処理が失敗する可能性があります。
-
-. Snapshotを保持する期間
-+
-.. Snapshotを削除するまで保持する日数を指定するには、*[Keep Snapshot copies for]*を選択します。
-
-
-. Snapshotのロック期間を指定する場合は、*[Snapshot copy locking period（Snapshotコピーロック期間）]*を選択し、日数、月数、または年数を選択します。
+. プライマリSnapshotコピーのロック期間を指定する場合は、*プライマリSnapshotコピーのロック期間*を選択し、日、月、または年を選択します。
 +
 SnapLock保持期間は100年未満にする必要があります。
 
+. セカンダリSnapshotコピーのロック期間を指定する場合は、*[セカンダリSnapshotコピーのロック期間]*を選択し、日、月、または年を選択します。
 +
-ログSnapshotの保持期間は、デフォルトで7日に設定されています。Set-SmPolicyコマンドレットを使用して、ログのSnapshot保持期間を変更します。
+このオプションを有効にするには、次のタスクを実行する必要があります。
 
-
-
++
+** [Primary snapshot copy locking period]*を選択します。
+** セカンダリレプリケーションオプションの一方または両方を選択します。
++
 この例では、ログのSnapshot保持数を2に設定しています。
 
++
 .例を示します
 []
 ====
 Set-SmPolicy-PolicyName 'newpol'-PolicyType 'Backup'-PluginPolicyType 'SCSQL'-sqlbackuptype 'FullBackupAndLogBackup'-RetentionSettings@｛backupType='Hourly'；RetentionCount=2｝、@｛backupType='log_snapshot'；ScheduleType=2｝
 
 ====
++
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_retains_Snapshot_copies_of_the_database["SnapCenterがデータベースのSnapshotコピーを保持"]
 
 
 
-== ステップ4：レプリケーション設定を構成します
+. Snapshotラベルを選択してください
++
+選択したSnapshotラベルに応じて、ラベルに一致するセカンダリSnapshot保持ポリシーがONTAPによって適用されます。
 
-. Replication （レプリケーション）ページで、セカンダリストレージシステムへのレプリケーションを指定します。
++
+
+NOTE: ローカル Snapshot コピーの作成後に「 * SnapMirror を更新」を選択した場合は、必要に応じてセカンダリポリシーラベルを指定できます。ただし、ローカル Snapshot コピーの作成後に「 * Update SnapVault 」を選択した場合は、セカンダリポリシーラベルを指定する必要があります。
+
+
+
+
+
+== 手順7：セカンダリレプリケーションオプションを設定する
+
+. [Select secondary replication options]セクションで、次のセカンダリレプリケーションオプションの一方または両方を選択します。
++
+
+NOTE: *セカンダリSnapshotコピーのロック期間*を有効にするには、セカンダリレプリケーションオプションを選択する必要があります。
+
 
 
 [role="tabbed-block"]
@@ -280,7 +291,7 @@ https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/Sn
 セカンダリレプリケーションでは、SnapLockの有効期限によってプライマリSnapLockの有効期限がロードされます。[Topology]ページの[Refresh]*ボタンをクリックすると、ONTAPから取得されたセカンダリおよびプライマリのSnapLock有効期限が更新されます。
 
 +
-を参照して link:task_view_sql_server_backups_and_clones_in_the_topology_page.html["[Topology]ページでのSQL Serverのバックアップとクローンの表示"]
+を参照して link:../protect-scsql/task_view_sql_server_backups_and_clones_in_the_topology_page.html["[Topology]ページでのSQL Serverのバックアップとクローンの表示"]
 
 
 
@@ -300,20 +311,9 @@ SnapLockがONTAPのセカンダリ（SnapLock Vault）にのみ設定されて�
 SnapLock Vaultの詳細については、を参照してください。 https://docs.netapp.com/us-en/ontap/snaplock/commit-snapshot-copies-worm-concept.html["SnapVaultデスティネーションでSnapshotコピーをWORM状態にコミットする"]
 
 +
-を参照して link:task_view_sql_server_backups_and_clones_in_the_topology_page.html["[Topology]ページでのSQL Serverのバックアップとクローンの表示"]
+を参照して link:../protect-scsql/task_view_sql_server_backups_and_clones_in_the_topology_page.html["[Topology]ページでのSQL Serverのバックアップとクローンの表示"]
 
 
-
---
-.セカンダリポリシーラベル
---
-. Snapshotラベルを選択します。
-
-
-選択したSnapshotラベルに応じて、ラベルに一致するセカンダリSnapshot保持ポリシーがONTAPによって適用されます。
-
-
-NOTE: ローカル Snapshot コピーの作成後に「 * SnapMirror を更新」を選択した場合は、必要に応じてセカンダリポリシーラベルを指定できます。ただし、ローカル Snapshot コピーの作成後に「 * Update SnapVault 」を選択した場合は、セカンダリポリシーラベルを指定する必要があります。
 
 --
 .エラー再試行回数
@@ -325,7 +325,7 @@ NOTE: ローカル Snapshot コピーの作成後に「 * SnapMirror を更新�
 ====
 
 
-== 手順5：スクリプト設定を構成します
+== 手順8：スクリプト設定を構成します
 
 . スクリプトページで、バックアップ処理の前後に実行するプリスクリプトまたはポストスクリプトのパスと引数を入力します。
 +
@@ -343,7 +343,7 @@ NOTE: セカンダリストレージがSnapshotの最大数に達しないよう
 
 
 
-== 手順6：検証設定を構成します
+== 手順9：検証設定を構成します
 
 [Verification] ページで、次の手順を実行します。
 
@@ -387,7 +387,7 @@ NOTE: プリスクリプトまたはポストスクリプトのパスにドラ�
 
 
 
-== ステップ7：概要を確認します
+== ステップ10：概要を確認します
 
 . 概要を確認し、*[終了]*を選択します。
 

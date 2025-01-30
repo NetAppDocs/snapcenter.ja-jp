@@ -48,25 +48,28 @@ NOTE: プライマリSnapLock設定はSnapCenterバックアップポリシー�
 . 左側のナビゲーションペインで、 * 設定 * をクリックします。
 . [ 設定 ] ページで、 [ * ポリシー * ] をクリックします。
 . [ 新規作成（ New ） ] をクリックする。
-. [ 名前 ] ページで、ポリシー名と概要を入力します。
-. 設定ページで、次の手順を実行します。
+. [Name]ページで、ポリシーの名前と詳細を入力します。
+. [Policy type]ページで、次の手順を実行します。
 +
-** スケジュールタイプを指定するには、「 * on demand * 」、「 * Hourly * 」、「 * Daily * 」、「 * Weekly * 」、または「 * Monthly * 」を選択します。
+.. ストレージタイプを選択します。
+.. [Custom backup settings]セクションで、プラグインに渡す必要がある特定のバックアップ設定をキーと値の形式で指定します。
++
+プラグインに渡すキー値は複数指定できます。
+
+
+
+. [Snapshot and Replication]ページで、次の手順を実行します。
++
+.. スケジュールタイプを指定するには、「 * on demand * 」、「 * Hourly * 」、「 * Daily * 」、「 * Weekly * 」、または「 * Monthly * 」を選択します。
 +
 
 NOTE: リソースグループを作成する際に、バックアップ処理のスケジュール（開始日、終了日、頻度）を指定できます。これにより、ポリシーとバックアップ頻度が同じであるリソースグループを作成できますが、各ポリシーに異なるバックアップスケジュールを割り当てることができます。
 
 +
-image::../media/backup_settings.gif[バックアップ設定ページ]
-
-+
 
 NOTE: 午前2時にスケジュールを設定している場合、夏時間（DST）中はスケジュールはトリガーされません。
 
-** Custom backup settings （カスタムバックアップ設定）セクションで、プラグインにキーバリュー形式で渡す必要がある特定のバックアップ設定を指定します。プラグインに渡すキー値は複数指定できます。
-
-
-. [Retention]*ページで、*[Backup Type]*ページで選択したバックアップタイプとスケジュールタイプの保持設定を指定します。
+.. [Snapshot settings]セクションで、*[Backup Type]*ページで選択したバックアップタイプとスケジュールタイプの保持設定を指定します。
 +
 |===
 | 状況 | 作業 
@@ -75,7 +78,7 @@ NOTE: 午前2時にスケジュールを設定している場合、夏時間（D
  a| 
 一定数のSnapshotを保持
  a| 
-[保持するSnapshotコピーの総数]*を選択し、保持するSnapshotの数を指定します。
+[保持するコピー数]*を選択し、保持するSnapshotの数を指定します。
 
 Snapshotの数が指定した数を超えると、最も古いコピーから順にSnapshotが削除されます。
 
@@ -90,19 +93,46 @@ NOTE: 最大保持数は、 ONTAP 9.4 以降のリソースでは 1018 、 ONTAP
  a| 
 Snapshotを特定の日数だけ保持
  a| 
-[Keep Snapshot copies for]*を選択し、Snapshotを削除するまでの日数を指定します。
+[コピーを保持する期間]*を選択し、Snapshotを削除するまでの日数を指定します。
 
 
 
  a| 
-Snapshotコピーのロック期間
+プライマリSnapshotコピーロック期間
  a| 
 [Snapshot locking period]を選択し、日、月、または年を選択します。
 
 SnapLock保持期間は100年未満にする必要があります。
 
+
+
+ a| 
+セカンダリSnapshotコピーのロック期間
+ a| 
+[Secondary snapshot copy locking period]*を選択し、[Days]、[Months]、または[Years]を選択します。
+
+このオプションを有効にするには、次のタスクを実行する必要があります。
+
+*** [Primary snapshot copy locking period]*を選択します。
+*** セカンダリレプリケーションオプションの一方または両方を選択します。
+
+
 |===
-. [レプリケーション]*ページで、レプリケーション設定を指定します。
+.. ポリシーラベルを選択します。
++
+選択したポリシーラベルに応じて、ラベルに一致するセカンダリSnapshot保持ポリシーがONTAPによって適用されます。
+
++
+
+NOTE: ローカル Snapshot コピーの作成後に「 * SnapMirror を更新」を選択した場合は、必要に応じてセカンダリポリシーラベルを指定できます。ただし、ローカル Snapshot コピーの作成後に「 * Update SnapVault 」を選択した場合は、セカンダリポリシーラベルを指定する必要があります。
+
+
+
+. [Select secondary replication options]セクションで、次のセカンダリレプリケーションオプションの一方または両方を選択します。
++
+
+NOTE: *セカンダリSnapshotコピーのロック期間*を有効にするには、セカンダリレプリケーションオプションを選択する必要があります。
+
 +
 |===
 | フィールド | 操作 
@@ -119,7 +149,7 @@ ONTAPの保護関係のタイプがミラーとバックアップの場合、こ
 
 [Topology]ページの[Refresh]*ボタンをクリックすると、ONTAPから取得されたセカンダリおよびプライマリのSnapLock有効期限が更新されます。
 
-を参照して link:../protect-nsp/view_netapp_supported_plugins_resource_backups_and_clones_in_the_topology_page.html["NetAppでサポートされているプラグインリソースに関連するバックアップとクローンを[Topology]ページで表示する"]
+を参照して link:view_netapp_supported_plugins_resource_backups_and_clones_in_the_topology_page.html["NetAppでサポートされているプラグインリソースに関連するバックアップとクローンを[Topology]ページで表示する"]
 
 
 
@@ -134,19 +164,7 @@ SnapLockがONTAPのセカンダリ（SnapLock Vault）にのみ設定されて�
 
 SnapLock Vaultの詳細については、「SnapVaultデスティネーションでSnapshotをWORM状態にコミットする」を参照してください。
 
-link:../protect-nsp/view_netapp_supported_plugins_resource_backups_and_clones_in_the_topology_page.html["NetAppでサポートされているプラグインリソースに関連するバックアップとクローンを[Topology]ページで表示する"]です。
-
-
-
- a| 
-* 二次ポリシーラベル *
- a| 
-Snapshotラベルを選択します。
-
-選択したSnapshotラベルに応じて、ラベルに一致するセカンダリSnapshot保持ポリシーがONTAPによって適用されます。
-
-
-NOTE: ローカル Snapshot コピーの作成後に「 * SnapMirror を更新」を選択した場合は、必要に応じてセカンダリポリシーラベルを指定できます。ただし、ローカル Snapshot コピーの作成後に「 * Update SnapVault 」を選択した場合は、セカンダリポリシーラベルを指定する必要があります。
+を参照して link:view_netapp_supported_plugins_resource_backups_and_clones_in_the_topology_page.html["NetAppでサポートされているプラグインリソースに関連するバックアップとクローンを[Topology]ページで表示する"]
 
 
 

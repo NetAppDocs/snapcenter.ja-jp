@@ -13,7 +13,7 @@ summary: F5、ネットワーク負荷分散、またはAmazon Web Servicesを�
 [role="lead"]
 WindowsまたはLinuxで実行されているSnapCenterでハイアベイラビリティ（HA）をサポートするには、F5ロードバランサをインストールします。F5を使用すると、SnapCenterサーバは、同じ場所にある最大2つのホストでアクティブ/パッシブ構成をサポートできます。SnapCenterでF5ロードバランサを使用するには、SnapCenterサーバを設定し、F5ロードバランサを設定する必要があります。
 
-SnapCenterの高可用性をセットアップするために、Microsoftネットワークロードバランシング（NLB）を設定することもできます。ハイアベイラビリティ構成にするには、SnapCenterのインストールとは別にNLBを手動で設定する必要があります。
+ネットワークロードバランシング（NLB）を設定してSnapCenterハイアベイラビリティを設定することもできます。ハイアベイラビリティ構成にするには、SnapCenterのインストールとは別にNLBを手動で設定する必要があります。
 
 クラウド環境では、Amazon Web Services（AWS）Elastic Load Balancing（ELB）とAzureロードバランサを使用して高可用性を設定できます。
 
@@ -23,7 +23,7 @@ SnapCenterの高可用性をセットアップするために、Microsoftネッ�
 --
 ワークフロー図は、F5ロードバランサを使用してSnapCenterサーバーを高可用性に設定する手順を示しています。詳細については、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_SnapCenter_Servers_for_high_availability_using_F5_Load_Balancer["F5 ロードバランサを使用して SnapCenter サーバのハイアベイラビリティを設定する方法"^]。
 
-image::../media/sc-F5-configure-workflow.png[F5を使用したHA構成]
+image::../media/sc-F5-configure-workflow.gif[F5の設定ワークフロー]
 
 次のコマンドレットを使用してF5クラスタを追加および削除するには、（SnapCenterAdminロールが割り当てられていることに加えて）SnapCenter Serverのローカル管理者グループのメンバーである必要があります。
 
@@ -47,7 +47,7 @@ image::../media/sc-F5-configure-workflow.png[F5を使用したHA構成]
 --
 .Network Load Balancing（NLB）を使用したハイアベイラビリティの設定
 --
-Microsoftネットワークロードバランシング（NLB）を設定して、SnapCenterの高可用性をセットアップできます。ハイアベイラビリティ構成にするには、SnapCenterのインストールとは別にNLBを手動で設定する必要があります。
+SnapCenterハイアベイラビリティを設定するには、ネットワークロードバランシング（NLB）を設定します。ハイアベイラビリティ構成にするには、SnapCenterのインストールとは別にNLBを手動で設定する必要があります。
 
 SnapCenterを使用したネットワークロードバランシング（NLB）の設定方法については、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_NLB_and_ARR_with_SnapCenter["NLB に SnapCenter を設定する方法"^]。
 

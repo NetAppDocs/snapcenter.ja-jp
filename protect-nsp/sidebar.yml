@@ -82,6 +82,8 @@ entries:
     url: "/protect-nsp/create_policies_for_netapp_supported_plugins_resources.html"
   - title: リソースグループを作成してポリシーを適用
     url: "/protect-nsp/create_resource_groups_and_attach_policies.html"
+  - title: リソースグループを作成し、ASA R2システム上のリソースに対してセカンダリ保護を有効にする
+    url: "/protect-nsp/create-resource-groups-secondary-protection-for-asa-r2-resources.html"
   - title: PowerShellコマンドレットを使用してストレージシステム接続とクレデンシャルを作成する
     url: "/protect-nsp/create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets.html"
   - title: NetAppでサポートされているプラグインリソースを個別にバックアップする

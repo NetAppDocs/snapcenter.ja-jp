@@ -3,12 +3,12 @@ indexpage:
   title: SnapCenterソフトウェアのドキュメント
   keywords: snapcenter server, plug-in, data protection, applications, databases,
     host file systems, VmWare, backup, restore, clone
-  lead: SnapCenterソフトウェアは、シンプルで拡張性に優れた一元管理型プラットフォームです。ハイブリッドクラウドのどこにいても、ONTAPシステムで実行されているアプリケーション、データベース、ホストファイルシステム、VMに対して、アプリケーションと整合性のあるデータ保護を提供します。このドキュメントライブラリには、バージョン6.0および6.0.1の情報が含まれています。
+  lead: SnapCenterソフトウェアは、シンプルで拡張性に優れた一元管理型プラットフォームです。ハイブリッドクラウドのどこにいても、ONTAPシステムで実行されているアプリケーション、データベース、ホストファイルシステム、VMに対して、アプリケーションと整合性のあるデータ保護を提供します。このドキュメントライブラリには、バージョン6.1の情報が含まれています。
   tiles:
   - title: はじめに
     links:
     - title: リリースノート
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3323468
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3337665
     - title: SnapCenterの詳細
       url: "/concept/concept_snapcenter_overview.html"
     - title: SnapCenter ServerとSnapCenterプラグインのアップグレード
@@ -82,7 +82,7 @@ indexpage:
     - title: コマンドレットリファレンスガイド
       url: https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html
     - title: コマンドリファレンスガイド
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3323470
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3337666
     - title: 以前のバージョンのSnapCenterのドキュメント
       url: https://www.netapp.com/data-protection/backup-recovery/snapcenter-backup-management/documentation/#ProseArticleLinkList13
     - title: NetAppナレッジベース- SnapCenter

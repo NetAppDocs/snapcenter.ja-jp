@@ -48,16 +48,14 @@ SAP HANAデータボリュームのバックアップを作成することはで
 
 
 
-
-NOTE: プライマリSnapLock設定はSnapCenterバックアップポリシーで管理され、セカンダリSnapLock設定はONTAPで管理されます。
-
 .手順
 . 左側のナビゲーションペインで、 * 設定 * をクリックします。
 . [ 設定 ] ページで、 [ * ポリシー * ] をクリックします。
 . [ 新規作成（ New ） ] をクリックする。
-. [ 名前 ] ページで、ポリシー名と概要を入力します。
-. 設定ページで、次の手順を実行します。
+. [Name]ページで、ポリシーの名前と詳細を入力します。
+. [Policy type]ページで、次の手順を実行します。
 +
+** ストレージタイプを選択
 ** バックアップタイプを選択：
 +
 |===
@@ -65,37 +63,34 @@ NOTE: プライマリSnapLock設定はSnapCenterバックアップポリシー�
 
 
  a| 
-データベースの整合性チェックの実行
- a| 
-ファイルベースのバックアップ * を選択します。アクティブなテナントのみがバックアップされます。
-
-
-
- a| 
 Snapshotテクノロジを使用したバックアップの作成
  a| 
 「 * Snapshot Based * 」を選択します。
 
+
+
+ a| 
+データベースの整合性チェックの実行
+ a| 
+ファイルベースのバックアップ * を選択します。アクティブなテナントのみがバックアップされます。
+
 |===
+
+
+. [Snapshot and Replication]ページで、次の手順を実行します。
++
 ** スケジュールタイプを指定するには、「 * on demand * 」、「 * Hourly * 」、「 * Daily * 」、「 * Weekly * 」、または「 * Monthly * 」を選択します。
 +
 
 NOTE: リソースグループを作成する際に、バックアップ処理のスケジュール（開始日、終了日、頻度）を指定できます。これにより、ポリシーとバックアップ頻度が同じであるリソースグループを作成できますが、各ポリシーに異なるバックアップスケジュールを割り当てることもできます。
 
 +
-image::../media/backup_settings.gif[バックアップ設定]
-
-+
 
 NOTE: 午前2時にスケジュールを設定している場合、夏時間（DST）中はスケジュールはトリガーされません。
 
-** [ * カスタム・バックアップ設定 * ] セクションで、キー値形式でプラグインに渡す必要がある特定のバックアップ設定を指定します。
-+
-プラグインに渡すキー値は複数指定できます。
 
 
-
-. [Retention]ページで、[Backup Type]ページで選択したバックアップタイプとスケジュールタイプの保持設定を指定します。
+. [Snapshot and Replication]ページで、[Backup Type]ページで選択したバックアップタイプとスケジュールタイプの保持設定を指定します。
 +
 |===
 | 状況 | 作業 
@@ -104,7 +99,7 @@ NOTE: 午前2時にスケジュールを設定している場合、夏時間（D
  a| 
 一定数のSnapshotを保持
  a| 
-[保持するSnapshotコピーの総数]*を選択し、保持するSnapshotの数を指定します。
+[保持するコピー数]*を選択し、保持するSnapshotの数を指定します。
 
 Snapshotの数が指定した数を超えると、最も古いコピーから順にSnapshotが削除されます。
 
@@ -125,19 +120,44 @@ NOTE: SAP HANAシステムレプリケーションでは、作成されたSnapsh
  a| 
 Snapshotを特定の日数だけ保持
  a| 
-[Keep Snapshot copies for]*を選択し、Snapshotを削除するまでの日数を指定します。
+[コピーを保持する期間]*を選択し、Snapshotを削除するまでの日数を指定します。
 
 
 
  a| 
-Snapshotコピーのロック期間
+プライマリSnapshotコピーロック期間
  a| 
 Snapshotコピーのロック期間を選択し、日、月、または年を選択します。
 
 SnapLock保持期間は100年未満にする必要があります。
 
+
+
+ a| 
+セカンダリSnapshotコピーのロック期間
+ a| 
+[Secondary snapshot copy locking period]*を選択し、[Days]、[Months]、または[Years]を選択します。
+
+このオプションを有効にするには、次のタスクを実行する必要があります。
+
+** [Primary snapshot copy locking period]*を選択します。
+** セカンダリレプリケーションオプションの一方または両方を選択します。
+
+
 |===
-. Snapshot コピーベースのバックアップの場合は、 Replication （レプリケーション）ページでレプリケーション設定を指定します。
+. Snapshotラベルを選択します。
++
+選択したSnapshotラベルに応じて、ラベルに一致するセカンダリSnapshot保持ポリシーがONTAPによって適用されます。
+
++
+
+NOTE: ローカル Snapshot コピーの作成後に「 * SnapMirror を更新」を選択した場合は、必要に応じてセカンダリポリシーラベルを指定できます。ただし、ローカル Snapshot コピーの作成後に「 * Update SnapVault 」を選択した場合は、セカンダリポリシーラベルを指定する必要があります。
+
+. Snapshotコピーベースのバックアップの場合は、[Select secondary replication options]セクションで、次のセカンダリレプリケーションオプションの一方または両方を選択します。
++
+
+NOTE: *セカンダリSnapshotコピーのロック期間*を有効にするには、セカンダリレプリケーションオプションを選択する必要があります。
+
 +
 |===
 | フィールド | 操作 
@@ -171,19 +191,7 @@ SnapLockがONTAPのセカンダリ（SnapLock Vault）にのみ設定されて�
 
 SnapLock Vaultの詳細については、を参照してください。 https://docs.netapp.com/us-en/ontap/snaplock/commit-snapshot-copies-worm-concept.html["SnapVaultデスティネーションでSnapshotコピーをWORM状態にコミットする"]
 
-を参照して link:task_view_sap_hana_database_backups_and_clones_in_the_topology_page_sap_hana.html["[Topology]ページでのSAP HANAデータベースのバックアップとクローンの表示"]
-
-
-
- a| 
-* 二次ポリシーラベル *
- a| 
-Snapshotラベルを選択します。
-
-選択したSnapshotラベルに応じて、ラベルに一致するセカンダリSnapshot保持ポリシーがONTAPによって適用されます。
-
-
-NOTE: ローカル Snapshot コピーの作成後に「 * SnapMirror を更新」を選択した場合は、必要に応じてセカンダリポリシーラベルを指定できます。ただし、ローカル Snapshot コピーの作成後に「 * Update SnapVault 」を選択した場合は、セカンダリポリシーラベルを指定する必要があります。
+を参照して link:../protect-hana/task_view_sap_hana_database_backups_and_clones_in_the_topology_page_sap_hana.html["[Topology]ページでのSAP HANAデータベースのバックアップとクローンの表示"]
 
 
 

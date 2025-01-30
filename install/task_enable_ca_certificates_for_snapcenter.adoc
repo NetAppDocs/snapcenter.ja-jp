@@ -31,10 +31,10 @@ CA証明書を設定し、SnapCenterサーバに対してCA証明書の検証を
 
 [管理対象ホスト]タブのホストには南京錠が表示され、南京錠の色はSnapCenterサーバとプラグインホスト間の接続のステータスを示します。
 
-* *image:../media/enable_ca_issues_icon.png[""]*は、有効になっているかプラグインホストに割り当てられているCA証明書がないことを示します。
-* **image:../media/enable_ca_good_icon.png[""]は、CA証明書が正常に検証されたことを示します。
-* **image:../media/enable_ca_failed_icon.png[""]は、CA証明書を検証できなかったことを示します。
-* **image:../media/enable_ca_undefined_icon.png[""]は、接続情報を取得できなかったことを示します。
+* *image:../media/enable_ca_issues_icon.png["問題アイコン"]*は、有効になっているかプラグインホストに割り当てられているCA証明書がないことを示します。
+* **image:../media/enable_ca_good_icon.png["良いアイコン"]は、CA証明書が正常に検証されたことを示します。
+* **image:../media/enable_ca_failed_icon.png["失敗アイコン"]は、CA証明書を検証できなかったことを示します。
+* **image:../media/enable_ca_undefined_icon.png["未定義アイコン"]は、接続情報を取得できなかったことを示します。
 
 
 

@@ -20,14 +20,14 @@ summary: '[Resources]ページからリソースをバックアップします�
 . [Policies] ページで、次の手順を実行します。
 +
 .. ドロップダウンリストから1つ以上のポリシーを選択します。
-.. スケジュールを設定するポリシーの[スケジュールの設定]列で**を選択しますimage:../media/add_policy_from_resourcegroup.gif[""]。
+.. スケジュールを設定するポリシーの[スケジュールの設定]列で**を選択しますimage:../media/add_policy_from_resourcegroup.gif["ポリシーフォームのリソースグループの追加"]。
 .. [Add schedules for policy_policy_name_]ダイアログボックスで、スケジュールを設定し、*[OK]*を選択します。
 
 
 . [Verification] ページで、次の手順を実行します。
 +
 .. 検証サーバを選択します。
-.. 検証スケジュールを設定するポリシーを選択し、**をクリックしますimage:../media/add_policy_from_resourcegroup.gif[""]。
+.. 検証スケジュールを設定するポリシーを選択し、**をクリックしますimage:../media/add_policy_from_resourcegroup.gif["ポリシーフォームのリソースグループの追加"]。
 .. [バックアップ後に検証を実行する]*または*[スケジュールされた検証を実行する]*を選択します。
 .. [OK] をクリックします。
 

@@ -47,7 +47,7 @@ NOTE: コマンドがコマンドリストに存在しない場合、処理は�
 . 左側のナビゲーションペインで、*[リソース]*を選択し、リストから適切なプラグインを選択します。
 . リソースページで、リソースタイプに基づいて *View*] ドロップダウンリストからリソースをフィルタリングします。
 +
-を選択しimage:../media/filter_icon.png["フィルタアイコン"]、ホスト名とリソースタイプを選択してリソースをフィルタリングします。その後、を選択してフィルタペインを閉じることができます image:../media/filter_icon.png["フィルタアイコン"] 。
+*を選択しimage:../media/filter_icon.gif["フィルタアイコン"]、ホスト名とリソースタイプを選択してリソースをフィルタリングします。その後、を選択してフィルタペインを閉じることができます image:../media/filter_icon.gif["フィルタアイコン"] 。
 
 . バックアップするリソースを選択します。
 . [Resource]ページで、*[Use custom name format for Snapshot copy]*を選択し、Snapshot名に使用するカスタムの名前形式を入力します。
@@ -119,12 +119,12 @@ image:../media/application_settings.gif["アプリケーション設定"]
 .. ドロップダウンリストから1つ以上のポリシーを選択します。
 +
 
-NOTE: **をクリックしてポリシーを作成することもできますimage:../media/add_policy_from_resourcegroup.gif[""]。
+NOTE: **をクリックしてポリシーを作成することもできますimage:../media/add_policy_from_resourcegroup.gif["ポリシーフォームのリソースグループの追加"]。
 
 +
 [ 選択したポリシーのスケジュールを設定 ] セクションに、選択したポリシーが一覧表示されます。
 
-.. スケジュールを設定するポリシーの[スケジュールの設定]列で**を選択しますimage:../media/add_policy_from_resourcegroup.gif[""]。
+.. スケジュールを設定するポリシーの[スケジュールの設定]列で**を選択しますimage:../media/add_policy_from_resourcegroup.gif["ポリシーフォームのリソースグループの追加"]。
 .. [Add schedules for policy_policy_name_]ダイアログボックスで、スケジュールを設定し、*[OK]*を選択します。
 +
 _policy_name_は 、選択したポリシーの名前です。

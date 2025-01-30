@@ -49,7 +49,7 @@ Snapshotコピーにカスタムの名前形式を使用する
 . [Policies] ページで、次の手順を実行します。
 +
 .. ドロップダウンリストから1つ以上のポリシーを選択します。
-.. [スケジュールの設定]列で、設定するポリシーの**をクリックしますimage:../media/add_policy_from_resourcegroup.gif[""]。
+.. [スケジュールの設定]列で、設定するポリシーの**をクリックしますimage:../media/add_policy_from_resourcegroup.gif["ポリシーフォームのリソースグループの追加"]。
 .. [Add schedules for policy_name_] ダイアログボックスで、スケジュールを設定し、 [OK] をクリックします。
 
 

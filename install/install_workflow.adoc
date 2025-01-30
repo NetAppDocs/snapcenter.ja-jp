@@ -13,4 +13,4 @@ summary: ワークフロー図は、 SnapCenter サーバのインストール�
 [role="lead"]
 このワークフローは、SnapCenterサーバのインストールと設定に必要なさまざまなタスクを示しています。
 
-image::../media/install_snapcenter_server.png[SnapCenterサーバのインストール]
+image::../media/install_snapcenter_server.gif[SnapCenterサーバのインストール]

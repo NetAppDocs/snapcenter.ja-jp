@@ -15,6 +15,6 @@ summary: リソース\（cluster\）またはリソースグループのバッ�
 
 次のワークフローは、バックアップ処理の実行順序を示しています。
 
-image::../media/db2_backup_workflow.png[PostgreSQLバックアップのワークフロー]
+image::../media/db2_backup_workflow.gif[PostgreSQLバックアップのワークフロー]
 
 PowerShellコマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、クローニングの処理を実行することもできます。PowerShellコマンドレットの詳細については、SnapCenterのコマンドレットのヘルプを使用するか、コマンドレットのリファレンス情報を参照してください。https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]です。

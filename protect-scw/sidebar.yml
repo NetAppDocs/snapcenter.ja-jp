@@ -60,6 +60,8 @@ entries:
     url: "/protect-scw/task_create_backup_policies_for_windows_file_systems.html"
   - title: Windowsファイルシステムのリソースグループの作成
     url: "/protect-scw/task_create_resource_groups_for_windows_file_systems.html"
+  - title: リソースグループを作成し、ASA R2システム上のWindowsファイルシステムのセカンダリ保護を有効にする
+    url: "/protect-scw/create-resource-groups-secondary-protection-for-asa-r2-windows-file-systems.html"
   - title: PowerShellコマンドレットを使用してストレージシステム接続とクレデンシャルを作成する
     url: "/protect-scw/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_windows.html"
   - title: Windowsファイルシステムの単一リソースをオンデマンドでバックアップ

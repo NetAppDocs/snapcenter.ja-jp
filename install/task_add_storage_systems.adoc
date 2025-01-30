@@ -1,7 +1,7 @@
 ---
 permalink: install/task_add_storage_systems.html 
 sidebar: sidebar 
-keywords: add, storage system, SVM 
+keywords: add, storage system, SVM, ASA r2 systems 
 summary: データ保護処理とプロビジョニング処理を実行するには、 ONTAP ストレージへの SnapCenter アクセスを付与するストレージシステムをセットアップする必要があります。スタンドアロンの SVM を追加するか、複数の SVM で構成されるクラスタを追加することができます。 
 ---
 = ストレージシステムを追加する
@@ -11,7 +11,7 @@ summary: データ保護処理とプロビジョニング処理を実行する�
 
 
 [role="lead"]
-データ保護とプロビジョニングの処理を実行するために、SnapCenterからONTAPストレージまたはAmazon FSx for NetApp ONTAPへのアクセスを許可するストレージシステムをセットアップする必要があります。
+データ保護とプロビジョニングの処理を実行するために、SnapCenterからONTAPストレージ、ASA R2システム、またはAmazon FSx for NetApp ONTAPへのアクセスを許可するストレージシステムをセットアップする必要があります。
 
 スタンドアロンのSVMを追加することも、複数のSVMで構成されるクラスタを追加することもできます。Amazon FSx for NetApp ONTAPを使用している場合は、fsxadminアカウントを使用して複数のSVMで構成されるFSx管理LIFを追加するか、SnapCenterでFSx SVMを追加できます。
 

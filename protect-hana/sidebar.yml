@@ -112,6 +112,8 @@ entries:
     url: "/protect-hana/task_create_backup_policies_for_sap_hana_databases.html"
   - title: リソースグループを作成してポリシーを適用
     url: "/protect-hana/task_create_resource_groups_and_attach_policies.html"
+  - title: リソースグループを作成し、ASA R2システムでSAP HANAリソースのセカンダリ保護を有効にする
+    url: "/protect-hana/create-resource-groups-secondary-protection-for-asa-r2-hana-resources.html"
   - title: PowerShellコマンドレットを使用してSAP HANAデータベース用にストレージシステム接続とクレデンシャルを作成
     url: "/protect-hana/task_create_a_storage_system_connection_and_a_run_as_account_using_powershell_cmdlets_for_sap_hana_database.html"
   - title: SAP HANAデータベースのバックアップ

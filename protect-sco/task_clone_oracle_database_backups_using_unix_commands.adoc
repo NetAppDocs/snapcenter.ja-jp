@@ -17,7 +17,7 @@ summary: クローニングワークフローには、計画、クローニン�
 
 次のコマンドを実行して、Oracleデータベースのクローン仕様ファイルを作成し、クローニング処理を開始する必要があります。
 
-コマンドで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP3323470["SnapCenter ソフトウェアコマンドリファレンスガイド"^]。
+コマンドで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP3337666["SnapCenter ソフトウェアコマンドリファレンスガイド"^]。
 
 * 手順 *
 

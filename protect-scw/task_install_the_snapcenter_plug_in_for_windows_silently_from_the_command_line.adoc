@@ -14,7 +14,7 @@ summary: SnapCenter Plug-in for Microsoft Windows を SnapCenter の GUI から�
 SnapCenter Plug-in for Microsoft Windows を SnapCenter の GUI からリモートでインストールできない場合は、 Windows ホスト上にローカルにインストールできます。SnapCenter Plug-in for Microsoft Windows のインストールプログラムを、 Windows のコマンドラインからサイレントモードで自動的に実行できます。
 
 .開始する前に
-* Microsoftがインストールされている必要があります。 Net 4.7.2以降。
+* バンドルをホストするASP.NET Core Runtime 8.0.12（およびそれ以降のすべての8.0.xパッチ）をインストールしておく必要があります。
 * PowerShell 7.4.2以降がインストールされている必要があります。
 * Windowsメッセージキューをオンにしておく必要があります。
 * ホストのローカル管理者である必要があります。

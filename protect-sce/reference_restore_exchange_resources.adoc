@@ -15,6 +15,6 @@ SnapCenterを使用すると、1つ以上のバックアップをアクティブ
 
 次のワークフローは、Exchangeデータベースリストア処理の実行順序を示しています。
 
-image:../media/all_plug_ins_restore_workflow.png["リストアのワークフロー"]
+image:../media/all_plug_ins_restore_workflow.gif["リストアのワークフロー"]
 
 PowerShellコマンドレットを手動またはスクリプトで使用して、バックアップとリストアの処理を実行することもできます。PowerShellコマンドレットの詳細については、SnapCenterコマンドレットのヘルプを使用するか、を参照してください https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。

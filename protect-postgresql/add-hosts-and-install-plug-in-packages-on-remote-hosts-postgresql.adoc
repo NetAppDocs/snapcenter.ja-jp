@@ -26,7 +26,7 @@ SnapCenterの[ホストを追加]ページを使用してホストを追加し�
 * ホストの管理については、管理に関するドキュメントを参照してください。
 * グループ管理サービスアカウント（gMSA）を使用する場合は、管理Privilegesを使用してgMSAを設定する必要があります。
 +
-link:../protect-postgresql/configure-gMSA-on-windows-server-2012-or-later.html["Windows Server 2016以降でPostgreSQL用にグループ管理サービスアカウントを設定する"^]
+link:../protect-postgresql/configure-gMSA-on-windows-server-2012-or-later.html["Windows Server 2016以降でPostgreSQL用にグループ管理サービスアカウントを設定する"]
 
 
 

@@ -68,4 +68,4 @@ NOTE: SnapCenter ホストを強制的に削除する場合は、そのホスト
 
 `/opt/NetApp/snapcenter/spl/bin/spl restart`
 
-コマンドで使用できるパラメータとその説明については、Get-Help Command_nameを実行して確認できます。または、を参照して https://library.netapp.com/ecm/ecm_download_file/ECMLP3323470["SnapCenter ソフトウェアコマンドリファレンスガイド"^]ください。
+コマンドで使用できるパラメータとその説明については、Get-Help Command_nameを実行して確認できます。または、を参照して https://library.netapp.com/ecm/ecm_download_file/ECMLP3337666["SnapCenter ソフトウェアコマンドリファレンスガイド"^]ください。

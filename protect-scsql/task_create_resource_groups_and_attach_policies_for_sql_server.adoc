@@ -78,12 +78,12 @@ NOTE: 最近リソースを追加した場合は、リソースリストを更�
 .. ドロップダウンリストから1つ以上のポリシーを選択します。
 +
 
-NOTE: **をクリックしてポリシーを作成することもできますimage:../media/add_policy_from_resourcegroup.gif[""]。
+NOTE: **をクリックしてポリシーを作成することもできますimage:../media/add_policy_from_resourcegroup.gif["ポリシーフォームのリソースグループの追加"]。
 
 +
 [ 選択したポリシーのスケジュールを設定 ] セクションに、選択したポリシーが一覧表示されます。
 
-.. [Configure schedules for selected policies]セクションで、スケジュールを設定するポリシーの[Configure Schedules]列にある***をクリックしますimage:../media/add_policy_from_resourcegroup.gif[""]。
+.. [Configure schedules for selected policies]セクションで、スケジュールを設定するポリシーの[Configure Schedules]列にある***をクリックしますimage:../media/add_policy_from_resourcegroup.gif["ポリシーフォームのリソースグループの追加"]。
 .. [Add schedules for policy_name_] ダイアログボックスで、開始日、有効期限、頻度を指定してスケジュールを設定し、 [*OK] をクリックします。
 +
 この処理は、ポリシーに指定されている頻度ごとに実行する必要があります。設定されたスケジュールは、 [ 選択したポリシーのスケジュールの設定 *] セクションの [ 適用されたスケジュール ] 列に一覧表示されます。
@@ -111,7 +111,7 @@ NOTE: **をクリックしてポリシーを作成することもできますima
 NOTE: 検証サーバのバージョンは、プライマリデータベースをホストしているSQLサーバのバージョンおよびエディションと一致している必要があります。
 
 .. Load locators * （ロケータのロード）をクリックして、 SnapMirror ボリュームと SnapVault ボリュームをロードし、セカンダリ・ストレージ上で検証を実行します。
-.. 検証スケジュールを設定するポリシーを選択し、**をクリックしますimage:../media/add_policy_from_resourcegroup.gif[""]。
+.. 検証スケジュールを設定するポリシーを選択し、**をクリックしますimage:../media/add_policy_from_resourcegroup.gif["ポリシーフォームのリソースグループの追加"]。
 .. [Add Verification Schedules policy_name]ダイアログボックスで、次の操作を実行します。
 +
 |===

@@ -100,6 +100,8 @@ entries:
     url: "/protect-mysql/create-backup-policies-for-mysql.html"
   - title: リソースグループを作成してポリシーを適用
     url: "/protect-mysql/create-resource-groups-and-attach-policies.html"
+  - title: ASA R2システムでリソースグループを作成し、MySQLリソースのセカンダリ保護を有効にする
+    url: "/protect-mysql/create-resource-groups-secondary-protection-for-asa-r2-mysql-resources.html"
   - title: MySQL用のPowerShellコマンドレットを使用して、ストレージシステム接続とクレデンシャルを作成する
     url: "/protect-mysql/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-mysql.html"
   - title: MySQLのバックアップ

@@ -15,7 +15,7 @@ summary: リソース（データベース）またはリソースグループ�
 
 次のワークフローは、バックアップ処理の実行順序を示しています。
 
-image::../media/sco_backup_workflow.png[Oracle でのバックアップワークフロー]
+image::../media/sco_backup_workflow.gif[Oracle でのバックアップワークフロー]
 
 Oracleデータベースのバックアップを作成する際に、データベースで複数の処理が実行されないように、Oracleデータベースホスト上の_/var/opt/snapcenter/sco/lockディレクトリに処理ロックファイル（_.SM_lock_dbsid_）が作成されます。処理ロックファイルは、データベースのバックアップが完了すると自動的に削除されます。
 

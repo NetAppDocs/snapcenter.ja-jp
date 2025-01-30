@@ -33,47 +33,61 @@ SnapCenter サーバとアプリケーションまたはデータベースのプ
 次の表に、各ポートとそのデフォルト値を示します。
 
 |===
-| ポートのタイプ | デフォルトポート 
+| ポート名 | ポート番号 | プロトコル | 方向 | 説明 
 
 
  a| 
 SnapCenterポート
  a| 
-8146（HTTPS）、URL _\https://server:8146_のように双方向、カスタマイズ可能
+8146
+ a| 
+HTTPS
+ a| 
+双方向
+ a| 
+このポートは、SnapCenterクライアント（SnapCenterユーザ）とSnapCenterサーバの間の通信に使用され、プラグインホストからSnapCenterサーバへの通信にも使用されます。
 
-SnapCenter クライアント（ SnapCenter ユーザ）と SnapCenter サーバ間の通信に使用されます。プラグインホストから SnapCenter サーバへの通信にも使用されます。
-
-ポートをカスタマイズするには、を参照してください。 https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["インストールウィザードを使用してSnapCenterサーバをインストールします。"]
+ポート番号はカスタマイズできます。
 
 
 
  a| 
 SnapCenter SMCore通信ポート
  a| 
-8145（HTTPS）、双方向、カスタマイズ可能
+8145
+ a| 
+HTTPS
+ a| 
+双方向
+ a| 
+このポートは、SnapCenter サーバとSnapCenter プラグインがインストールされているホストの間の通信に使用されます。
 
-このポートは、 SnapCenter サーバと SnapCenter プラグインがインストールされているホストの間の通信に使用されます。
-
-ポートをカスタマイズするには、を参照してください。 https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["インストールウィザードを使用してSnapCenterサーバをインストールします。"]
+ポート番号はカスタマイズできます。
 
 
 
  a| 
 スケジューラサービスポート
  a| 
-8154（HTTPS）
-
+8154
+ a| 
+HTTPS
+ a| 
+ a| 
 このポートは、SnapCenterサーバホスト内で管理されるすべてのプラグインのSnapCenterスケジューラワークフローを一元的にオーケストレーションするために使用されます。
 
-ポートをカスタマイズするには、を参照してください。 https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["インストールウィザードを使用してSnapCenterサーバをインストールします。"]
+ポート番号はカスタマイズできます。
 
 
 
  a| 
 RabbitMQポート
  a| 
-5672（TCP）
-
+5672
+ a| 
+TCP
+ a| 
+ a| 
 これはRabbitMQがリッスンするデフォルトポートで、スケジューラサービスとSnapCenter間のパブリッシャ/サブスクライバモデル通信に使用されます。
 
 
@@ -81,78 +95,85 @@ RabbitMQポート
  a| 
 MySQLのポート
  a| 
-3306（HTTPS）、双方向、カスタマイズ可能
-
-このポートは、SnapCenterとMySQLリポジトリデータベースの間の通信に使用されます。
-
-SnapCenterサーバからMySQLサーバへのセキュアな接続を確立できます。 link:../install/concept_configure_secured_mysql_connections_with_snapcenter_server.html["詳細"]
-
-ポートをカスタマイズするには、を参照してください。 https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["インストールウィザードを使用してSnapCenterサーバをインストールします。"]
+3306
+ a| 
+HTTPS
+ a| 
+ a| 
+このポートは、SnapCenterリポジトリデータベースとの通信に使用されます。SnapCenterサーバからMySQLサーバへのセキュアな接続を確立できます。 link:../install/concept_configure_secured_mysql_connections_with_snapcenter_server.html["詳細"]
 
 
 
  a| 
 Windowsプラグインホスト
  a| 
-135、445（TCP）
-
-ポート135と445に加えて、Microsoftが指定したダイナミックポート範囲もオープンにする必要があります。リモートインストール操作では、このポート範囲を動的に検索するWindows Management Instrumentation（WMI）サービスを使用します。
-
-サポートされるダイナミックポート範囲については、を参照してください。 https://support.microsoft.com/kb/832017["Windows のサービス概要とネットワークポート要件"^]
-
-ポートは、 SnapCenter サーバとプラグインをインストールするホストとの間の通信に使用されます。プラグインパッケージのバイナリをWindowsプラグインホストにプッシュするには、プラグインホストでのみポートを開く必要があり、インストール後に閉じることができます。
+135、445
+ a| 
+TCP
+ a| 
+ a| 
+このポートは、SnapCenterサーバとプラグインがインストールされているホストの間の通信に使用されます。Microsoftが指定した追加のダイナミックポート範囲もオープンにする必要があります。
 
 
 
  a| 
 LinuxまたはAIXプラグインホスト
  a| 
-22（SSH）
-
-ポートは、 SnapCenter サーバとプラグインをインストールするホストとの間の通信に使用されます。プラグインパッケージのバイナリを Linux または AIX プラグインのホストにコピーするために SnapCenter で使用されます。これらのポートを開いておくか、ファイアウォールまたは iptables から除外しておく必要があります。
+22
+ a| 
+SSH
+ a| 
+単方向
+ a| 
+このポートは、SnapCenterサーバとホスト間の通信に使用され、サーバからクライアントホストに開始されます。
 
 
 
  a| 
-SnapCenter Plug-ins Package for Windows、SnapCenter Plug-ins Package for Linux、SnapCenter Plug-ins Package for AIX
+Windows、Linux、AIX向けSnapCenterプラグインパッケージ
  a| 
-8145（HTTPS）、双方向、カスタマイズ可能
+8145
+ a| 
+HTTPS
+ a| 
+双方向
+ a| 
+このポートは、SMCoreとプラグインパッケージがインストールされているホストの間の通信に使用されます。カスタマイズ可能。
 
-このポートは、SMCoreとプラグインパッケージがインストールされているホストの間の通信に使用されます。
-
-通信パスも、 SVM 管理 LIF と SnapCenter サーバの間で開いている必要があります。
-
-ポートをカスタマイズするには、またはを参照してください。 https://docs.netapp.com/us-en/snapcenter/protect-scw/task_add_hosts_and_install_snapcenter_plug_in_for_microsoft_windows.html["ホストを追加してSnapCenter Plug-in for Microsoft Windowsをインストールする"] https://docs.netapp.com/us-en/snapcenter/protect-sco/task_add_hosts_and_installing_the_snapcenter_plug_ins_package_for_linux_or_aix.html["ホストを追加してLinuxまたはAIX用のSnapCenter Plug-insパッケージをインストールします。"]
+ポート番号はカスタマイズできます。
 
 
 
  a| 
 SnapCenter Plug-in for Oracle Database
  a| 
-27216、カスタマイズ可能
-
+27216
+ a| 
+ a| 
+ a| 
 デフォルトのJDBCポートは、Oracleデータベースへの接続にOracle用プラグインで使用されます。
-
-ポートをカスタマイズするには、を参照してください。 https://docs.netapp.com/us-en/snapcenter/protect-sco/task_add_hosts_and_installing_the_snapcenter_plug_ins_package_for_linux_or_aix.html["ホストを追加してLinuxまたはAIX用のSnapCenter Plug-insパッケージをインストールします。"]
 
 
 
  a| 
 SnapCenter Plug-in for Exchangeデータベース
  a| 
-909、カスタマイズ可能
-
+909
+ a| 
+ a| 
+ a| 
 デフォルトのNETです。 TCPポートは、Plug-in for WindowsでExchange VSSコールバックに接続するために使用されます。
-
-ポートをカスタマイズするには、を参照してください link:../protect-sce/task_add_hosts_and_install_plug_in_for_exchange.html["ホストを追加してPlug-in for Exchangeをインストールする"]。
 
 
 
  a| 
 NetAppでサポートされるSnapCenter用プラグイン
  a| 
-9090（HTTPS）、固定
-
+9090
+ a| 
+HTTPS
+ a| 
+ a| 
 カスタムプラグインホストでのみ使用される内部ポートです。ファイアウォールの例外は必要ありません。
 
 SnapCenterサーバとカスタムプラグインの間の通信は、ポート8145を介してルーティングされます。
@@ -162,31 +183,49 @@ SnapCenterサーバとカスタムプラグインの間の通信は、ポート8
  a| 
 ONTAPクラスタまたはSVMの通信ポート
  a| 
-443（HTTPS）、bidirectional80（HTTP）、bidirectional
+* 443（HTTPS）
+* 80（HTTP）
 
+ a| 
+* HTTPS
+* HTTP
+
+ a| 
+双方向
+ a| 
 このポートは、SnapCenterサーバを実行するホストとSVMの間の通信にSAL（ストレージ抽象化レイヤ）で使用されます。現在、このポートは、SnapCenterプラグインホストとSVMの間の通信にSnapCenter for Windows Plug-inホストのSALでも使用されています。
 
 
 
  a| 
-SnapCenter Plug-in for SAP HANA Database vCodeのスペルチェックポート
+SAP HANAデータベース向けSnapCenterプラグイン
  a| 
-3instance_number13または3instance_number15、HTTPまたはHTTPS、双方向、カスタマイズ可能
+* 3instance_number13
+* 3instance_number15
 
+ a| 
+* HTTPS
+* HTTP
+
+ a| 
+双方向
+ a| 
 マルチテナントデータベースコンテナ（MDC）のシングルテナントの場合、ポート番号は13で終わります。MDC以外の場合、ポート番号は15で終わります。
 
-たとえば、32013はインスタンス20のポート番号で、31015はインスタンス10のポート番号です。
-
-ポートをカスタマイズするには、を参照してください。 https://docs.netapp.com/us-en/snapcenter/protect-hana/task_add_hosts_and_install_plug_in_packages_on_remote_hosts_sap_hana.html["ホストを追加し、プラグインパッケージをリモートホストにインストールする。"]
+ポート番号はカスタマイズできます。
 
 
 
  a| 
-ドメインコントローラの通信ポート
+PostgreSQL向けSnapCenterプラグイン
  a| 
-認証が正しく機能するためにドメインコントローラのファイアウォールで開く必要があるポートについては、Microsoftのドキュメントを参照してください。
+5432
+ a| 
+ a| 
+ a| 
+このポートは、PostgreSQL用プラグインによるPostgreSQLクラスタへの通信に使用されるデフォルトのPostgreSQLポートです。
 
-SnapCenter サーバ、プラグインホスト、またはその他の Windows クライアントがユーザを認証できるように、ドメインコントローラで Microsoft の必要なポートを開く必要があります。
+ポート番号はカスタマイズできます。
 
 |===
 ポートの詳細を変更するには、を参照してください link:../admin/concept_manage_hosts.html#modify-plug-in-hosts["プラグインホストの変更"]。

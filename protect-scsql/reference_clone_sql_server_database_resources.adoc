@@ -17,7 +17,7 @@ summary: バックアップからデータベースリソースをクローニ�
 
 次のワークフローは、クローニング処理の実行順序を示しています。
 
-image::../media/scsql_clone_workflow.png[クローニングのワークフロー図]
+image::../media/scsql_clone_workflow.gif[クローニングのワークフロー図]
 
 PowerShellコマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、リカバリ、検証、クローニングの各処理を実行することもできます。PowerShellコマンドレットの詳細については、SnapCenterコマンドレットのヘルプを使用するか、 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"]
 

@@ -22,9 +22,9 @@ SAP HANAデータベースでデータ保護処理を実行するには、HDBユ
 .手順
 . 左側のナビゲーションペインで、 * リソース * をクリックし、リストから SnapCenter Plug-in for SAP HANA Database を選択します。
 . [ リソース ] ページで、 [ * 表示 * ] リストからリソースタイプを選択します。
-. （オプション）をクリックし image:../media/filter_icon.png["フィルタアイコン"] 、ホスト名を選択します。
+. （オプション）をクリックし image:../media/filter_icon.gif["フィルタアイコン"] 、ホスト名を選択します。
 +
-そのあとにimage:../media/filter_icon.png["フィルタアイコン"]をクリックすると、フィルタ ペインが閉じます。
+そのあとにimage:../media/filter_icon.gif["フィルタアイコン"]をクリックすると、フィルタ ペインが閉じます。
 
 . データベースを選択し、 * データベースの設定 * をクリックします。
 . [Configure database settings]セクションで、「HDB Secure User Store Key」と入力します。

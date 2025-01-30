@@ -81,9 +81,12 @@ NOTE: 十分なディスクスペースを割り当て、logsフォルダによ�
  a| 
 必要なソフトウェアパッケージ
  a| 
-* .NET Coreバージョン8.0.5以降、以降のすべての.NET 8パッチを含む
+* ASP.NET Core Runtime 8.0.12（およびそれ以降のすべての8.0.xパッチ）Hosting Bundle
 * PowerShell Core 7.4.2
 * Java 11 Oracle JavaおよびOpenJDK
++
+Java 11 Oracle JavaおよびOpenJDKが必要なのは、SAP HANA、IBM DB2、PostgreSQL、MySQL、NetAppでサポートされるプラグイン、およびWindowsホストにインストール可能なその他のカスタムアプリケーションのみです。
+
 
 
 サポートされているバージョンの最新情報については、を参照して https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool"^]ください。
@@ -165,9 +168,12 @@ NOTE: 十分なディスクスペースを割り当て、logsフォルダによ�
  a| 
 必要なソフトウェアパッケージ
  a| 
-* .NET Coreバージョン8.0.5以降、以降のすべての.NET 8パッチを含む
+* ASP.NET Core Runtime 8.0.12（およびそれ以降のすべての8.0.xパッチ）Hosting Bundle
 * PowerShell Core 7.4.2
 * Java 11 Oracle JavaおよびOpenJDK
++
+Java 11 Oracle JavaおよびOpenJDKが必要なのは、SAP HANA、IBM DB2、PostgreSQL、MySQL、NetAppでサポートされるプラグイン、およびWindowsホストにインストール可能なその他のカスタムアプリケーションのみです。
+
 
 
 サポートされているバージョンの最新情報については、を参照して https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool"^]ください。

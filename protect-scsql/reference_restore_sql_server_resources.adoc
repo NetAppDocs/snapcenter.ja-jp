@@ -15,7 +15,7 @@ SnapCenter を使用して SQL Server データベースをリストアするに
 
 次のワークフローは、データベースリストア処理の実行順序を示しています。
 
-image::../media/all_plug_ins_restore_workflow.png[all_plug-ins_restore_workflow を実行します]
+image::../media/all_plug_ins_restore_workflow.gif[all_plug-ins_restore_workflow を実行します]
 
 PowerShellコマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、リカバリ、検証、クローニングの各処理を実行することもできます。PowerShellコマンドレットの詳細については、SnapCenterコマンドレットのヘルプを使用するか、 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"]
 

@@ -29,6 +29,7 @@ SnapCenterは次の方法で導入できます。
 ** ONTAP FAS、AFF、またはAll SAN Array（ASA）プライマリシステム上にあり、ONTAP FAS、AFF、またはASAセカンダリシステムにレプリケートされるデータ
 ** ONTAP Selectプライマリシステム上のデータ
 ** ONTAP FAS、AFF、またはASAのプライマリシステムとセカンダリシステムにあり、ローカルのStorageGRIDオブジェクトストレージで保護されているデータ
+** ONTAP ASA R2プライマリシステムとセカンダリシステム上のデータ
 
 
 * ハイブリッドクラウドにオンプレミスで導入し、以下のデータを保護
@@ -89,7 +90,7 @@ REST APIの詳細については、を参照してください https://docs.neta
 Windowsコマンドレットの詳細については、を参照してください https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
 
 +
-UNIXコマンドの詳細については、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP3323470["SnapCenter ソフトウェアコマンドリファレンスガイド"^]。
+UNIXコマンドの詳細については、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP3337666["SnapCenter ソフトウェアコマンドリファレンスガイド"^]。
 
 * データ保護のダッシュボードとレポートの一元化
 * セキュリティと委任のためのRole-Based Access Control（RBAC；ロールベースアクセス制御）。
@@ -111,10 +112,10 @@ SnapCenterのハイアベイラビリティは、外部のロードバランサ�
 
 * SnapLock
 +
-SnapLockは、規制やガバナンスに準拠するためにWrite Once、Read Many（WORM）ストレージを使用して変更不可能な状態でファイルを保管する組織向けの、ハイパフォーマンスなコンプライアンス解決策です。
+SnapLockは、規制やガバナンスに準拠するためにWrite Once、Read Many（WORM）ストレージを使用して変更不可能な状態でファイルを保管する組織向けの、ハイパフォーマンスなコンプライアンスソリューションです。SnapLockの詳細については、を参照してください https://docs.netapp.com/us-en/ontap/snaplock/["SnapLockとは"]。
 
 +
-SnapLockの詳細については、 https://docs.netapp.com/us-en/ontap/snaplock/["SnapLockとは"]
+スナップショットをロックすると、誤ってまたは悪意を持って削除されることがなくなります。SnapCenterでは、プライマリとセカンダリの両方のSnapshotのロック期間を指定できます。
 
 * SnapMirrorアクティブ同期（当初はSnapMirrorビジネス継続性[SM-BC]としてリリース）
 +

@@ -13,4 +13,4 @@ summary: NetAppでサポートされるプラグインリソースを保護す�
 [role="lead"]
 NetAppでサポートされるプラグインリソースを保護する場合は、SnapCenter NetAppでサポートされるプラグインをインストールしてセットアップする必要があります。
 
-image::../media/sap_hana_install_configure_workflow.png[][ SnapCenter NetAppがサポートするプラグインのワークフロー]
+image::../media/scc_install_configure_workflow.gif[SnapCenter NetAppでサポートされるプラグインのワークフロー]

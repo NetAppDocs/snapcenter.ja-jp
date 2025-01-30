@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <blocks>
   <block id="be9f9eca92a7b91f5cf9f485b92f2f33" category="admonition">CA証明書RSAキーの長さは3072ビット以上にする必要があります。</block>
-  <block id="76f30afe00c2fd9de2c57b507789aa7c" category="paragraph">8154（HTTPS）</block>
   <block id="064270f4c1b637c782011391ccc057cb" category="paragraph">RabbitMQポート</block>
-  <block id="310b8da14055c2cf4702264e02854d3d" category="paragraph">5672（TCP）</block>
   <block id="c55a170d16570920e099a9e43d38db67" category="paragraph">これはRabbitMQがリッスンするデフォルトポートで、スケジューラサービスとSnapCenter間のパブリッシャ/サブスクライバモデル通信に使用されます。</block>
   <block id="f5a551e6a3161ca6d9ee33d926d734d5" category="list-text">Microsoft Edge 110.0.1587.17以降</block>
   <block id="d41d8cd98f00b204e9800998ecf8427e" category="doc"></block>
@@ -23,7 +21,6 @@
   <block id="f07d683ff584804916c5fb4327c3415a" category="list-text">左側のナビゲーションペインで、 * Monitor * &gt; * Jobs * をクリックします。</block>
   <block id="69af9660907978082fde059126622d8c" category="list-text">操作を選択し、 * ジョブのキャンセル * をクリックします。</block>
   <block id="0e8f9ce78b94dad391f7bf1190e4c848" category="paragraph">[Activity]ペイン</block>
-  <block id="385678dd00c5a8c59bf6e2b642301b5d" category="list-text">バックアップ処理を開始したら、[Activity]ペインの**をクリックし<block ref="f176a951032bbb2fc179630a5e58fad8" category="inline-image-macro-rx" type="image"></block>て、最新の5つの処理を表示します。</block>
   <block id="5605734dc1e0ba578df46e1ad0adc35e" category="list-text">処理を選択します。</block>
   <block id="87d17d6ca32a6bc54b23a511eb3a0f58" category="list-text">［ ジョブの詳細 ］ ページで、 ［ * ジョブのキャンセル * ］ をクリックします。</block>
   <block id="569d7ad91ac8653d08a314e2f0c4f16d" category="paragraph">処理がキャンセルされ、リソースが以前の状態に戻ります。</block>
@@ -428,7 +425,6 @@
   <block id="7f3e84692f24d61327601751bb201dc8" category="list-text">[* Monitor*] ページで、 [* Jobs] をクリックします。</block>
   <block id="7ece64d8d9ea3a89221dea21761b07d9" category="list-text">[* ジョブ * ] ページで、次の手順を実行します。</block>
   <block id="ba4484b740822363967ef7dbb090de6a" category="inline-image-macro">フィルタアイコン</block>
-  <block id="e513bb233ea5be3f5a949deebfe7811f" category="list-text">をクリックしてリストをフィルタリングし、クローニング処理のみを表示します。</block>
   <block id="4cfa68aad234b91494e417f8012ca40d" category="list-text">[*Type*]( タイプ *) ドロップダウンリストから '[*Clone*]( クローン *) を選択します</block>
   <block id="7c18f9fe3e82229bbf88d4133dde72bd" category="list-text">[ * Status * ] ドロップダウン・リストから、クローンのステータスを選択します。</block>
   <block id="33edcafc3b101b5da89793db6c9151a5" category="list-text">[ 適用（ Apply ） ] をクリックして、正常に完了した操作を表示する。</block>
@@ -439,7 +435,6 @@
   <block id="c5b4990f8ae878fb8402d7252a8784c6" category="paragraph">いずれかの処理をクリックすると、*[ジョブの詳細]*ページに処理の詳細が表示されます。</block>
   <block id="883f217b99bc288ae19aa7d6d60b021f" category="paragraph">[Jobs]ページを使用して、さまざまなSnapCenterリストア処理の進捗状況を監視できます。処理の進捗状況を確認して、処理が完了するタイミングや問題が発生していないかを確認できます。</block>
   <block id="ee9237c14a6c4cc7b6b4a10fbf38aa79" category="paragraph">リストア後の状態によって、リストア処理後のリソースの状況と、追加で実行できるリストア操作がわかります。</block>
-  <block id="069fa852337561671b88be2afd1ea4ef" category="list-text">をクリックしてリストをフィルタリングし、リストア処理のみを表示します。</block>
   <block id="72703ba150df91059707035aef45dd74" category="list-text">[* タイプ *] ドロップダウン・リストから、 [* リストア *] を選択します。</block>
   <block id="a28133afd7846d1e77aa696930846108" category="list-text">[* Status *] ドロップダウン・リストから、リストア・ステータスを選択します。</block>
   <block id="e12538143afda34a18dc094aa39a01ff" category="list-text">[ 適用（ Apply ） ] をクリックして、正常に完了した操作を表示する。</block>
@@ -476,7 +471,6 @@
   <block id="c0a1b33f51c24ec7a0237c45c3a450f8" category="list-text">リストから適切なリソースを選択します。</block>
   <block id="e984402842ada9bf4703b2df6ce206b3" category="paragraph">リソーストポロジページが表示されます。</block>
   <block id="5abc1a8dd70429d4e480ae097bb0e53a" category="inline-image-macro">スプリットクローンアイコン</block>
-  <block id="29f4a82ad48601f6358f85c39f7e717c" category="list-text">[コピーの管理]*ビューで、クローンリソース（データベースやLUNなど）を選択し、**をクリックします<block ref="617082709f2853987bafcbc3d4381f40" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="f5cfd65b6cd03934d8269e3f878035d8" category="list-text">スプリットするクローンの推定サイズとアグリゲートで使用可能なスペースを確認し、 * Start * をクリックします。</block>
   <block id="8b9460bf38a68108bcdd278a386b3156" category="list-text">操作の進行状況を監視するには、 * Monitor * &gt; * Jobs * をクリックします。</block>
   <block id="ff09e99880e5a1ea7500cf09b4e8de2a" category="paragraph">SMCoreサービスが再起動すると、クローンスプリット処理が応答を停止します。Stop-SmJobコマンドレットを実行してクローンスプリット処理を停止してから、クローンスプリット処理を再試行してください。</block>
@@ -504,7 +498,6 @@
   <block id="95963f8927c154efb88b58300907395e" category="admonition">クローンリソースに関連付けられているバックアップは削除できません。</block>
   <block id="e3f56aa0bce767daf2b14864c354b8c0" category="paragraph">リソースまたはリソースグループのトポロジページが表示されます。</block>
   <block id="f5284898efb9a6c5033f0a9dc818cb37" category="paragraph">セカンダリストレージシステム上のバックアップは削除できません。</block>
-  <block id="107b0b3efdd6bdd1080f8bfc26e2dc6f" category="list-text">バックアップを選択し、<block ref="097a6d0ab39a212263c3129e9214fa08" category="inline-image-macro-rx" type="image"></block>をクリックします。</block>
   <block id="cb3436fef348c07ba3d9f412be444f39" category="paragraph">SAP HANAデータベースのバックアップを削除すると、関連付けられているSAP HANAカタログも削除されます。</block>
   <block id="b61d80f092eb0e582c00ae1b6238b80a" category="admonition">最後に残っているバックアップが削除されると、関連付けられているHANAカタログのエントリを削除できません。</block>
   <block id="a72cc47fad7d1846d19b085d2e77e5ba" category="list-text">[OK]*をクリックします。</block>
@@ -653,7 +646,6 @@
   <block id="33e064f29b9e817a8e3b29ebdbe9e58d" category="list-text">関連付けられているアセット（ホスト、ユーザ、およびグループ）がある場合、ドメインの登録を解除すると、アセットは操作できなくなります。</block>
   <block id="882dc26e2380d66f18dab972132841dc" category="list-text">信頼されていないドメインの登録を解除するには、 SnapCenter ユーザインターフェイスまたは PowerShell コマンドレットを使用します。</block>
   <block id="120ccafdaf964af639f60c4ed26eaafb" category="list-text">ドメインのリストから、登録を解除するドメインを選択します。</block>
-  <block id="cde4c5c90d02e08fbdbc0d8eed8ec493" category="list-text">をクリックし <block ref="097a6d0ab39a212263c3129e9214fa08" category="inline-image-macro-rx" type="image"></block>、* OK *をクリックします。</block>
   <block id="b36ee7ff89fbb252e1b22b5a6cce9b0f" category="summary">SnapCenter から実行される各種の処理に関する情報は、 SnapCenter サーバのデータベースリポジトリに格納されます。SnapCenter サーバをデータ損失から保護するには、リポジトリのバックアップを作成する必要があります。</block>
   <block id="7d0bb889cb0b99adea9fd13298f9dc65" category="doc">SnapCenterサーバリポジトリの管理</block>
   <block id="a1e91e17ee1b5e24f7c7302a0064632f" category="paragraph">SnapCenter サーバリポジトリは、 NSM データベースと呼ばれることもあります。</block>
@@ -937,7 +929,6 @@
   <block id="8c411f19384fd18609b701e849181586" category="list-text">[ リソース ] ページで、 [ * 表示 * ] ドロップダウンリストからリソースまたはリソースグループを選択します。</block>
   <block id="a64016381e6438b14094f8f349371c74" category="paragraph">リソースまたはリソースグループのトポロジページが表示されます。</block>
   <block id="09927e90b474cc9f796b7d9acc2e1efb" category="list-text">[ コピーの管理 ] ビューで ' プライマリまたはセカンダリ（ミラーまたはレプリケートされた）ストレージ・システムから [ クローン *] を選択します</block>
-  <block id="d718de0b5487a29072ea2bbe613540c0" category="list-text">クローンを選択し、<block ref="097a6d0ab39a212263c3129e9214fa08" category="inline-image-macro-rx" type="image"></block>をクリックします。</block>
   <block id="69f37a47c45070ea3bfe0bbb2f6a87ae" category="paragraph">SAP HANAデータベースのクローンを削除する場合は、[Delete Clone]ページで次の操作を実行します。</block>
   <block id="176ce7b60b4395d5aad1c012ee334b24" category="list-text">「 * Pre-clone delete * 」フィールドに、クローンを削除する前に実行するコマンドを入力します。</block>
   <block id="c6f0c699832cc7d7011d7d15f50b434c" category="list-text">Unmount * フィールドで、クローンを削除する前にクローンをアンマウントするコマンドを入力します。</block>
@@ -1105,7 +1096,6 @@
   <block id="9a9a51f1993f5461829d8466a8fb013e" category="paragraph">REST APIの詳細については、を参照してください<block ref="ea5c19f623f4ce0e4a3a37a512890f94" category="inline-link-rx"></block>。</block>
   <block id="c4c043cf140b5a7134a11a4a9825d3a1" category="paragraph">Windowsコマンドレットの詳細については、を参照してください<block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block>。</block>
   <block id="34b88b9f409afc7274c8a769ee450883" category="inline-link">SnapCenter ソフトウェアコマンドリファレンスガイド</block>
-  <block id="6626df1bb0990520c9816604ec788dbd" category="paragraph">UNIXコマンドの詳細については、を参照してください<block ref="1be7dd030b7b4d460912ef60d82c1252" category="inline-link-rx"></block>。</block>
   <block id="44764ea524336d8792197315c021bc65" category="list-text">データ保護のダッシュボードとレポートの一元化</block>
   <block id="36fbf00d5877eca259aff6ad5fc25b19" category="list-text">セキュリティと委任のためのRole-Based Access Control（RBAC；ロールベースアクセス制御）。</block>
   <block id="571dae8a7f248327dfd110856b096a06" category="list-text">高可用性を備えたリポジトリデータベース</block>
@@ -1117,9 +1107,7 @@
   <block id="e7cf8487e37960d508be850cc465db13" category="list-text">ディザスタリカバリ（DR）</block>
   <block id="c4e950e6ae10611fc22e75c70937d0c1" category="paragraph">リソースの破損やサーバのクラッシュなどの災害が発生した場合に、SnapCenterサーバをリカバリできます。</block>
   <block id="acdc6b4f6edd40f37bce01247a32ff86" category="list-text">SnapLock</block>
-  <block id="e6c4248fcff66b43c157dbc37ec22080" category="paragraph">SnapLockは、規制やガバナンスに準拠するためにWrite Once、Read Many（WORM）ストレージを使用して変更不可能な状態でファイルを保管する組織向けの、ハイパフォーマンスなコンプライアンス解決策です。</block>
   <block id="f14c7b4687be07acacb0f5aeed1474f5" category="inline-link">SnapLockとは</block>
-  <block id="9568c3d36fdcbbda09d1ee5c2f00b57a" category="paragraph">SnapLockの詳細については、<block ref="1a4ea27499d0dd9854f827c9e87479f3" category="inline-link-rx"></block></block>
   <block id="09e67fdf7831d393b41ce0d8f15d404a" category="list-text">SnapMirrorアクティブ同期（当初はSnapMirrorビジネス継続性[SM-BC]としてリリース）</block>
   <block id="e0dffcf4f6e23c33a87445934bfed926" category="paragraph">SnapMirror Active Syncを使用すると、サイト全体に障害が発生してもビジネスサービスの運用を継続できるため、アプリケーションをセカンダリコピーを使用して透過的にフェイルオーバーできます。SnapMirror Active Syncでフェイルオーバーをトリガーするために、手動操作や追加のスクリプト作成は必要ありません。</block>
   <block id="108b992c720e99adbd1f893194020c9a" category="paragraph">この機能でサポートされるプラグインは、SnapCenter Plug-in for SQL Server、SnapCenter Plug-in for Windows、SnapCenter Plug-in for Oracle Database、SnapCenter Plug-in for SAP HANA Database、SnapCenter Plug-in for Microsoft Exchange Server、SnapCenter Plug-in for UNIXです。</block>
@@ -1904,7 +1892,6 @@
   <block id="87438cb05e7f3a99d7cb0f708d03820f" category="paragraph"><block ref="ea43c7e49a1fe1350e315672bfbac09f" prefix="" category="inline-code"></block></block>
   <block id="5828bd4572658b3ec60c10c123756d37" category="section-title">SVMロールの作成と権限の割り当て用のONTAP CLIコマンド</block>
   <block id="926b7acb0dd0dddac1e9ab03e87150b7" category="paragraph">ONTAPのロールを作成して権限を割り当てるには、いくつかのCLIコマンドを実行する必要があります。</block>
-  <block id="26d0f7d5ea2b87e82f98d6e622ecf6a0" category="admonition">5.0以降では、SVM管理者ユーザはREST APIでのみサポートされます。SVM管理者以外を使用してロールを作成する場合は、ZAPIを使用してください。</block>
   <block id="0cf3e7b313a6954f7aed921dae42be39" category="list-text"><block ref="36ad9b98fe40ea7db5d149de26f34551" prefix="" category="inline-code"></block></block>
   <block id="72cadc86fec7539ff25b27cc5baed79b" category="list-text"><block ref="e63bba1cea64ca5fd1cd450d7e67f3d6" prefix="" category="inline-code"></block></block>
   <block id="35191da723a7990e2ec356b702112b64" category="list-text"><block ref="2219f9604207a8fc511d6c958b3da777" prefix="" category="inline-code"></block></block>
@@ -2276,61 +2263,25 @@
   <block id="718d9231009edb9654b9f6f52346a835" category="list-text">ファイアウォール、プロキシ、またはその他のネットワークデバイスが接続に干渉しないようにしてください。</block>
   <block id="eceb61ca100437ca326b49341fc1f909" category="list-text">SnapCenter のインストール時にカスタムポートを指定した場合は、プラグインホストに、 SnapCenter Plug-in Loader のそのポート用のファイアウォールルールを追加する必要があります。</block>
   <block id="29e256a27c9d420cee02c5cda005de01" category="paragraph">次の表に、各ポートとそのデフォルト値を示します。</block>
-  <block id="3672cca688eb0474cd3fee2add1a2067" category="cell">ポートのタイプ</block>
-  <block id="4d4690457f78e9e5cbfbcd0e36fbeff0" category="cell">デフォルトポート</block>
   <block id="ed00b70cc595a411eff2cc42510a291f" category="paragraph">SnapCenterポート</block>
-  <block id="b213e31ffc319fa7b61f00a8dfad6e75" category="paragraph">8146（HTTPS）、URL _\https://server:8146_のように双方向、カスタマイズ可能</block>
-  <block id="57f72d0cb40826596637a0e2fc16a647" category="paragraph">SnapCenter クライアント（ SnapCenter ユーザ）と SnapCenter サーバ間の通信に使用されます。プラグインホストから SnapCenter サーバへの通信にも使用されます。</block>
-  <block id="c90d9871b4b86a10a62cd2bf2c1ea688" category="inline-link">インストールウィザードを使用してSnapCenterサーバをインストールします。</block>
-  <block id="1d72d65109e6906ab81717720199491b" category="paragraph">ポートをカスタマイズするには、を参照してください。<block ref="724cb62a2271057d0541cdb8153d9260" category="inline-link-rx"></block></block>
   <block id="18622e175ff22b2375f9cbc2314b3285" category="paragraph">SnapCenter SMCore通信ポート</block>
-  <block id="c69cfd47967e253717494d2c7047647d" category="paragraph">8145（HTTPS）、双方向、カスタマイズ可能</block>
-  <block id="4f5e4136027ec0a3e4043eb5412b3ba4" category="paragraph">このポートは、 SnapCenter サーバと SnapCenter プラグインがインストールされているホストの間の通信に使用されます。</block>
   <block id="a22e3c4898555ed30acf91192f3c301a" category="paragraph">スケジューラサービスポート</block>
   <block id="0703d446ecd330b75f76dab17472df37" category="paragraph">このポートは、SnapCenterサーバホスト内で管理されるすべてのプラグインのSnapCenterスケジューラワークフローを一元的にオーケストレーションするために使用されます。</block>
   <block id="91ca015b30de2a05aff2f16ec93231dd" category="paragraph">MySQLのポート</block>
-  <block id="e029a63ec5a2d5331a40bbf8a483cc16" category="paragraph">3306（HTTPS）、双方向、カスタマイズ可能</block>
-  <block id="efe50212c612e0d762535b54fd67befd" category="paragraph">このポートは、SnapCenterとMySQLリポジトリデータベースの間の通信に使用されます。</block>
-  <block id="13aef2b62d8736d22562e85c99ca60eb" category="paragraph">SnapCenterサーバからMySQLサーバへのセキュアな接続を確立できます。 <block ref="cd7568118ad87382648cb2133a315ffd" category="inline-link-macro-rx"></block></block>
   <block id="4abc501abe98e95144eba2c4d17174ad" category="paragraph">Windowsプラグインホスト</block>
-  <block id="0d1c7f3b029cde2163a99c08de7fc3c3" category="paragraph">135、445（TCP）</block>
-  <block id="9ce593479d7ce75e23fe1f85463ed78d" category="paragraph">ポート135と445に加えて、Microsoftが指定したダイナミックポート範囲もオープンにする必要があります。リモートインストール操作では、このポート範囲を動的に検索するWindows Management Instrumentation（WMI）サービスを使用します。</block>
-  <block id="226b043eb3d7a2d0adf657f14cb25689" category="inline-link">Windows のサービス概要とネットワークポート要件</block>
-  <block id="bc40ff6b34d5fee4e2df3ad7383271dc" category="paragraph">サポートされるダイナミックポート範囲については、を参照してください。<block ref="89dbd1724554234088076a511a419e1e" category="inline-link-rx"></block></block>
-  <block id="32196bca89704936d522cb1276210a4d" category="paragraph">ポートは、 SnapCenter サーバとプラグインをインストールするホストとの間の通信に使用されます。プラグインパッケージのバイナリをWindowsプラグインホストにプッシュするには、プラグインホストでのみポートを開く必要があり、インストール後に閉じることができます。</block>
   <block id="31287d49a8a96de2e8d195c76a865396" category="paragraph">LinuxまたはAIXプラグインホスト</block>
-  <block id="1a2adde630ce403775b36ecc095d2424" category="paragraph">22（SSH）</block>
-  <block id="a2002f0ffc921c6059b6f5f4eb253a2a" category="paragraph">ポートは、 SnapCenter サーバとプラグインをインストールするホストとの間の通信に使用されます。プラグインパッケージのバイナリを Linux または AIX プラグインのホストにコピーするために SnapCenter で使用されます。これらのポートを開いておくか、ファイアウォールまたは iptables から除外しておく必要があります。</block>
-  <block id="31f529a0df8945f588cf74976fdc7586" category="paragraph">SnapCenter Plug-ins Package for Windows、SnapCenter Plug-ins Package for Linux、SnapCenter Plug-ins Package for AIX</block>
-  <block id="d829d0859e6b0dd3bfe932917f84e6c8" category="paragraph">このポートは、SMCoreとプラグインパッケージがインストールされているホストの間の通信に使用されます。</block>
-  <block id="491f6dce42ce05c7e58e183454c51d1a" category="paragraph">通信パスも、 SVM 管理 LIF と SnapCenter サーバの間で開いている必要があります。</block>
   <block id="6999d09aed9c7b160e001c5345554e29" category="inline-link">ホストを追加してSnapCenter Plug-in for Microsoft Windowsをインストールする</block>
-  <block id="60f072866c2d325a151d990670aa5b4c" category="inline-link">ホストを追加してLinuxまたはAIX用のSnapCenter Plug-insパッケージをインストールします。</block>
-  <block id="ac01fd33e160c622162b42b1f7e4fe18" category="paragraph">ポートをカスタマイズするには、またはを参照してください。<block ref="32882cfc4755cb17eefc59506f087a6f" category="inline-link-rx"></block><block ref="477bb7222f583d223b46c2b591c18bd9" category="inline-link-rx"></block></block>
-  <block id="7a98cbc0c5e5dce2a73d58b863b10101" category="paragraph">27216、カスタマイズ可能</block>
   <block id="7d75ac58eb57fae611a633f5e57d62d0" category="paragraph">デフォルトのJDBCポートは、Oracleデータベースへの接続にOracle用プラグインで使用されます。</block>
-  <block id="97e62e758724ab080cbfe2799c388822" category="paragraph">ポートをカスタマイズするには、を参照してください。<block ref="477bb7222f583d223b46c2b591c18bd9" category="inline-link-rx"></block></block>
   <block id="10dbf6dc6b3b30fd58efded1253516d8" category="paragraph">SnapCenter Plug-in for Exchangeデータベース</block>
-  <block id="887e494e1537403503502585dd80ca57" category="paragraph">909、カスタマイズ可能</block>
   <block id="b0ca30368b247fa738c8bdba36dd4d73" category="paragraph">デフォルトのNETです。 TCPポートは、Plug-in for WindowsでExchange VSSコールバックに接続するために使用されます。</block>
   <block id="43e4843cc378c4665771060dbab161eb" category="inline-link-macro">ホストを追加してPlug-in for Exchangeをインストールする</block>
-  <block id="accc958f08cd768c04d4e40292acd632" category="paragraph">ポートをカスタマイズするには、を参照してください <block ref="db95a9150e60a9ea9da8200975d83e74" category="inline-link-macro-rx"></block>。</block>
   <block id="cc0974b8a511f2e4b4d021cda6e5e820" category="paragraph">NetAppでサポートされるSnapCenter用プラグイン</block>
-  <block id="2bde8e78a8311f7295c811c0640dc508" category="paragraph">9090（HTTPS）、固定</block>
   <block id="8274b92467b904471dd368868a40cf7c" category="paragraph">カスタムプラグインホストでのみ使用される内部ポートです。ファイアウォールの例外は必要ありません。</block>
   <block id="640e1e1057328dc7a71ff3efe908fb8c" category="paragraph">SnapCenterサーバとカスタムプラグインの間の通信は、ポート8145を介してルーティングされます。</block>
   <block id="48552dce4d9810446c70f66f21f08120" category="paragraph">ONTAPクラスタまたはSVMの通信ポート</block>
-  <block id="0e2baf6e148be111338e84354edd4364" category="paragraph">443（HTTPS）、bidirectional80（HTTP）、bidirectional</block>
   <block id="a26bff28c23606c7396b4619af8af1bd" category="paragraph">このポートは、SnapCenterサーバを実行するホストとSVMの間の通信にSAL（ストレージ抽象化レイヤ）で使用されます。現在、このポートは、SnapCenterプラグインホストとSVMの間の通信にSnapCenter for Windows Plug-inホストのSALでも使用されています。</block>
-  <block id="6529e3cc72b3980f54f2d2ad982c79c2" category="paragraph">SnapCenter Plug-in for SAP HANA Database vCodeのスペルチェックポート</block>
-  <block id="a703a5f03b1b230925e5a7bef766ea84" category="paragraph">3instance_number13または3instance_number15、HTTPまたはHTTPS、双方向、カスタマイズ可能</block>
   <block id="5afe34fece774db451a111901841c2f9" category="paragraph">マルチテナントデータベースコンテナ（MDC）のシングルテナントの場合、ポート番号は13で終わります。MDC以外の場合、ポート番号は15で終わります。</block>
-  <block id="f79f66ef0d80eeeac5a8a3b2f86e2d84" category="paragraph">たとえば、32013はインスタンス20のポート番号で、31015はインスタンス10のポート番号です。</block>
   <block id="a344a2fc65197b27dcccc38ac1ef85a3" category="inline-link">ホストを追加し、プラグインパッケージをリモートホストにインストールする。</block>
-  <block id="fa9e479c30699c2d65f7d1107b28b62a" category="paragraph">ポートをカスタマイズするには、を参照してください。<block ref="6bb20f223531bd59e001c776ffe35812" category="inline-link-rx"></block></block>
-  <block id="16e7597f6d1a1595520060010a775409" category="paragraph">ドメインコントローラの通信ポート</block>
-  <block id="fa51be75ce838b88fdd3475b507591a3" category="paragraph">認証が正しく機能するためにドメインコントローラのファイアウォールで開く必要があるポートについては、Microsoftのドキュメントを参照してください。</block>
-  <block id="c659718bc9e53e4da63cb36d6025798c" category="paragraph">SnapCenter サーバ、プラグインホスト、またはその他の Windows クライアントがユーザを認証できるように、ドメインコントローラで Microsoft の必要なポートを開く必要があります。</block>
   <block id="0cfe29479bcdd52d04233cb07867b8dc" category="paragraph">ポートの詳細を変更するには、を参照してください <block ref="e76f469a4971f2c04dd83de4f8464750" category="inline-link-macro-rx"></block>。</block>
   <block id="318e9318f3e81f666ea14f7560451333" category="summary">SnapCenter サーバは、ドメインまたはワークグループ内のシステムにインストールできます。ワークグループとドメインの両方の場合、インストールに使用するユーザーにはマシンに対する管理者権限が必要です。</block>
   <block id="0322b41f8bf313240d64c3e6923b4ee4" category="doc">ドメインとワークグループの要件</block>
@@ -2382,7 +2333,6 @@
   <block id="78c975d196302e5a815b5039fb07ae94" category="paragraph">IIS管理スクリプトとツール</block>
   <block id="c198bc954443adcf11c90c285f3d7c07" category="list-text">IIS管理サービス</block>
   <block id="80d3af8b299e19c823acbbffefc4856a" category="list-text">Web管理ツール</block>
-  <block id="628b02e3b9750945ce37b6d84682cd2b" category="paragraph">+.NET Framework 8.0.5の機能+</block>
   <block id="623ef35114e69633221d2c9bf99f6cab" category="list-text">Windows Communication Foundation (WCF) HTTPアクティブ化45</block>
   <block id="c38d32373eca3e6335e44b42893f0034" category="list-text">TCPのアクティブ化</block>
   <block id="cb6ddd90b08469e2479460ec34538fe2" category="list-text">HTTPアクティブ化</block>
@@ -2432,7 +2382,6 @@
   <block id="9f101c0e6e5929a04c9e7663fdf91eda" category="paragraph">15GB</block>
   <block id="eab6f98d53a6f96361c17edca2b02553" category="paragraph">SnapCenterリポジトリ用の最小ハードドライブ容量</block>
   <block id="d6874413f4fac004d1cb83f02eccc33c" category="admonition">メモ： SnapCenter リポジトリがインストールされているドライブに SnapCenter サーバがある場合は、 15GB にすることを推奨します。</block>
-  <block id="f9e40bd22b133e93e9c9d3b4c3adef6e" category="list-text">Microsoft .NET Framework 4.7.2以降</block>
   <block id="4c6ec01f6ae03e08c146fe6865423a4b" category="list-text">PowerShell 7.4.2以降</block>
   <block id="149d1be25c7d76696b875863179ac66d" category="list-text">nginxはリバースプロキシとして使用できるWebサーバ</block>
   <block id="6d4ed4face9b51c5caae12208e47fa1e" category="paragraph">PAM（Pluggable Authentication Modules）は、システム管理者が認証を行うプログラムを再コンパイルすることなく認証ポリシーを設定できるシステムセキュリティツールです。</block>
@@ -2560,7 +2509,6 @@
   <block id="5c47cbaa537c35e208658ea0c916ea4f" category="paragraph">user_nameは、手順3で作成したユーザの名前です。</block>
   <block id="e4dbf1e5d099c4253a603227e4b3bc08" category="summary">データ保護処理とプロビジョニング処理を実行するには、 ONTAP ストレージへの SnapCenter アクセスを付与するストレージシステムをセットアップする必要があります。スタンドアロンの SVM を追加するか、複数の SVM で構成されるクラスタを追加することができます。</block>
   <block id="787d250b4622b9b1f34f52b01f5768aa" category="doc">ストレージシステムを追加する</block>
-  <block id="032615c5bcc68f759618748b90e724e4" category="paragraph">データ保護とプロビジョニングの処理を実行するために、SnapCenterからONTAPストレージまたはAmazon FSx for NetApp ONTAPへのアクセスを許可するストレージシステムをセットアップする必要があります。</block>
   <block id="4f67c4f1ef581c464d2fe1030e753de4" category="paragraph">スタンドアロンのSVMを追加することも、複数のSVMで構成されるクラスタを追加することもできます。Amazon FSx for NetApp ONTAPを使用している場合は、fsxadminアカウントを使用して複数のSVMで構成されるFSx管理LIFを追加するか、SnapCenterでFSx SVMを追加できます。</block>
   <block id="70991649072f70fdb060c64c2144c8c8" category="paragraph">SnapCenter では、異なるクラスタに同じ名前のストレージシステムを複数配置することはサポートされていません。SnapCenter でサポートされるストレージシステムには、それぞれ一意の名前およびデータ LIF の IP アドレスを割り当てる必要があります。</block>
   <block id="d8c79769d1510f53b50beb7c46e3e14f" category="list-text">ストレージシステムを設定する際に、イベント管理システム（EMS）およびAutoSupportの機能を有効にすることもできます。AutoSupportツールは、システムの健常性に関するデータを収集し、システムのトラブルシューティング用にNetAppテクニカルサポートに自動的に送信します。</block>
@@ -2989,10 +2937,6 @@
   <block id="1962fbbcfa72e74639e8c071188af514" category="list-text">SnapCenterサーバの証明書のステータスは、Get-SmCertificateSettingsコマンドレットを使用して表示できます。</block>
   <block id="642d53c4397a8183a95764b5cea282e1" category="paragraph">コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照して<block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block>ください。</block>
   <block id="1240073aadeb78a3e72b1cedfb5cec2f" category="list-text">設定ページで、 * 設定 * &gt; * グローバル設定 * &gt; * CA 証明書設定 * と進みます。</block>
-  <block id="a6e94fec2cfcadd0e75ac025786feb7f" category="list-text">*<block ref="ce7f8fe6cf825357e942960470acb5bc" category="inline-image-macro-rx" type="image"></block>*は、有効になっているかプラグインホストに割り当てられているCA証明書がないことを示します。</block>
-  <block id="7e3928e5fbab66336d372237e4cbdf9e" category="list-text">**<block ref="8a3d7884daddd17bfb2b09432e2ce305" category="inline-image-macro-rx" type="image"></block>は、CA証明書が正常に検証されたことを示します。</block>
-  <block id="8258ae56901671cb007addfc10304189" category="list-text">**<block ref="06e27aa71e40b6b132770e924873ea71" category="inline-image-macro-rx" type="image"></block>は、CA証明書を検証できなかったことを示します。</block>
-  <block id="68a38243967848fa994f49b48322e472" category="list-text">**<block ref="8f76bb3096524e73151026384cb04044" category="inline-image-macro-rx" type="image"></block>は、接続情報を取得できなかったことを示します。</block>
   <block id="f58587d65108da4c76429348beba1493" category="summary">SnapCenterサーバとWindowsプラグインホストに対して、証明書ベースの認証を有効にする必要があります。</block>
   <block id="ac91c641781bd7c7379113e123abc706" category="doc">証明書ベースの認証を有効にします</block>
   <block id="2deb2b431122c2428813248c5cc7e3cf" category="paragraph">SnapCenter ServerおよびWindowsプラグインホストに対して証明書ベースの認証を有効にするには、次のPowerShellコマンドレットを実行します。Linuxプラグインホストで双方向SSLを有効にすると、証明書ベースの認証が有効になります。</block>
@@ -3212,8 +3156,6 @@
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">オープンソース</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知ファイルには、ネットアップソフトウェアで使用されるサードパーティの著作権およびライセンスに関する情報が記載されています。</block>
-  <block id="cc9c144a05e7301072ca2f216913e4c3" category="inline-link">SnapCenter 6.0に関する注意事項</block>
-  <block id="936428293f9124add31f34823746f405" category="paragraph"><block ref="936428293f9124add31f34823746f405" category="inline-link-rx"></block></block>
   <block id="4b94425e098b41d12bc8e290ef43106f" category="summary">ホストを追加してプラグインパッケージをインストールしてください。</block>
   <block id="5a19eafc64d4b27754e1ea4fcdfa49f1" category="doc">ホストを追加してSnapCenter Plug-in for Oracle Databaseをインストールする</block>
   <block id="c4442e1ad348b99929c68427ef54fee7" category="paragraph">[ホストの追加]ページを使用してホストを追加し、SnapCenter Plug-ins Package for LinuxまたはSnapCenter Plug-ins Package for AIXをインストールできます。プラグインはリモートホストに自動的にインストールされます。</block>
@@ -3275,7 +3217,6 @@
   <block id="100eb4bb64628d6bc8890851c8173103" category="list-text">[Add schedules for policy_policy_name_]ダイアログボックスで、スケジュールを設定し、*[OK]*を選択します。</block>
   <block id="8aad6e1ddba0855250f3f027cd30ba41" category="list-text">[Verification] ページで、次の手順を実行します。</block>
   <block id="444abdb0adbf904dfeb2b6b85da3e698" category="list-text">検証サーバを選択します。</block>
-  <block id="a69de308424c0233fb5435c6ed27ec7d" category="list-text">検証スケジュールを設定するポリシーを選択し、**をクリックします<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="102beeaa44096cb1c4640f46b3cabe69" category="list-text">[バックアップ後に検証を実行する]*または*[スケジュールされた検証を実行する]*を選択します。</block>
   <block id="30b65b6968f11ce5399cacf995839f65" category="list-text">[ 通知 ] ページの [ 電子メールの設定 *] ドロップダウンリストから、電子メールを送信するシナリオを選択します。</block>
   <block id="5477ea177e290e8ac1c03a7ee8f2a92b" category="list-text">[今すぐバックアップ]*を選択します。</block>
@@ -3413,7 +3354,6 @@
   <block id="73f45971c435fbf9828b3c34fe76a670" category="paragraph">SnapCenter を使用して Oracle データベースリソースをバックアップする前に、バックアップ対象のリソースまたはリソースグループのバックアップポリシーを作成する必要があります。</block>
   <block id="32005b30ff172564875bf82c9538168f" category="list-text">ドロップダウンリストから[Oracle Database]を選択します。</block>
   <block id="3c6544f27197f56a0b07b5ed264760dc" category="list-text">[ 名前 ] ページで、ポリシー名と概要を入力します。</block>
-  <block id="49868beda0a485f260d92cbafbd9e394" category="list-text">[Backup Type] ページで、次の手順を実行します。</block>
   <block id="079151e2a65ec7ff3445310b706078c0" category="list-text">バックアップタイプとして、オンラインバックアップまたはオフラインバックアップを選択します。</block>
   <block id="8b8c2f1f1f946cab105eddd8de3b0774" category="list-text">Oracle Recovery Manager （ RMAN ）を使用してバックアップをカタログ化する場合は、 [* Catalog backup with Oracle Recovery Manager （ RMAN ） * ] を選択します。</block>
   <block id="0f89e00e852da1ba5114492b2441c803" category="list-text">バックアップ後にアーカイブ・ログのプルーニングを行う場合は、バックアップ後にアーカイブ・ログをプルーニング * を選択します。</block>
@@ -3423,7 +3363,6 @@
   <block id="3518a771040ff2bbfb74570c920f9e5a" category="list-text">概要を確認し、 [ 完了 ] をクリックします。</block>
   <block id="2dad511118029c962a70a1aac4b16b52" category="doc">SAP HANAデータベースのバックアップポリシーの作成</block>
   <block id="2fd8d5ede56ca6e33060f1eb3dd0734b" category="paragraph">SnapCenter を使用して SAP HANA データベースのリソースをバックアップする前に、バックアップ対象のリソースまたはリソースグループのバックアップポリシーを作成する必要があります。</block>
-  <block id="c741f40a4fb7e6bd9a457120a09a6498" category="list-text">設定ページで、次の手順を実行します。</block>
   <block id="d9c103e9b28e2bebca1491609f830d9e" category="list-text">バックアップタイプを選択します。</block>
   <block id="4954c41a9a08ab45a310519b5fd1e579" category="list-text">Snapshotテクノロジを使用してバックアップを作成する場合は、* Snapshotベース*を選択します。</block>
   <block id="bd399fbf6546e1ea1b462c96e03932f3" category="doc">SQL Serverデータベースのバックアップポリシーの作成</block>
@@ -3478,9 +3417,7 @@
   <block id="041394902f3d98321d4bfd68f857de13" category="paragraph">アーカイブログファイルのデスティネーションを指定します。</block>
   <block id="0e37d8b83258c6a647c282f496b46f7b" category="list-text">Resources ページで、 * Host * ドロップダウン・リストからホスト名を選択し、 * Resource Type * ドロップダウン・リストからリソース・タイプを選択します。</block>
   <block id="c7e757b993a892f1adbc4d9d429ada9a" category="list-text">[ 使用可能なリソース（ Available Resources ） ] セクションからリソースを選択し、右矢印をクリックして [ 選択したリソース（ * Selected Resources ） ] セクションに移動します。</block>
-  <block id="eb40bd4c68324257632328b6d08fa139" category="list-text">[スケジュールの設定]列で、設定するポリシーの**をクリックします<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="a4412452c9cff96f8d11e97e688ba35e" category="list-text">[Add schedules for policy_name_] ダイアログボックスで、スケジュールを設定し、 [OK] をクリックします。</block>
-  <block id="9563afdee3cf0b9796a53f40dab22f0c" category="list-text">検証スケジュールを設定するポリシーを選択し、*をクリックします。<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a762c8a08fd8dd6ac2427dad067d141f" category="doc">リソースグループを作成してSAP HANAバックアップポリシーを適用</block>
   <block id="b75f291f313008e72d9ff0963164ee31" category="doc">リソースグループの作成とSQLバックアップポリシーの適用</block>
   <block id="b527fc3a6976bd9e2f49e06db6a69f45" category="list-text">Microsoft SQL Server スケジューラを選択します。</block>
@@ -3620,7 +3557,6 @@
   <block id="5efe9e6fa4156b39ced69425eba7fb49" category="paragraph">クレデンシャルを選択するか、クレデンシャルの情報を追加します。</block>
   <block id="deec2d29ae112d513d1bbd8cb6f3a23c" category="paragraph">これはオプションです。</block>
   <block id="4e4f9229f5def86d57e9acaf8014a093" category="list-text">[ストレージフットプリントの入力]ページで、ストレージタイプを選択して1つ以上のボリューム、LUN、およびqtreeを選択し、*[保存]*をクリックします。</block>
-  <block id="266587454e01a92f0bfd85f3e920b6e9" category="paragraph">オプション：*アイコンをクリックすると、他のストレージシステムからボリューム、LUN、およびqtreeを追加できます<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="bdf0204433b7ea9c415d7d723d74d2ef" category="list-text">オプション：[Resource Settings]ページで、WindowsホストのリソースにIBM DB2プラグインのカスタムのキーと値のペアを入力します。</block>
   <block id="da0726c01021262f418bf88a38a3c39d" category="paragraph">データベースは、ホスト名、関連するリソースグループとポリシー、全体的なステータスなどの情報とともに表示されます。</block>
   <block id="3f1fe53287c04e073da002e39b799896" category="paragraph">リソースへのアクセスをユーザに許可する場合は、ユーザにリソースを割り当てる必要があります。これにより、ユーザは自分に割り当てられているアセットに対して権限のある操作を実行できます。</block>
@@ -3768,16 +3704,12 @@
   <block id="ef159f58c5d4147a84912e438fda3bb6" category="list-text">ストレージタイプを選択します。</block>
   <block id="b093b4eff25852e5f19297a922c5587f" category="list-text">[ * カスタム・バックアップ設定 * ] セクションで、キー値形式でプラグインに渡す必要がある特定のバックアップ設定を指定します。</block>
   <block id="fc757224d0f11cae40cba577a1aa87f2" category="paragraph">プラグインに渡すキー値は複数指定できます。</block>
-  <block id="2912e0170c14e088a116711f9cbe4f80" category="list-text">[Snapshot]ページで、* on demand *、* Hourly *、* Daily *、* Weekly *、または* Monthly *を選択してスケジュールタイプを指定します。</block>
   <block id="6dfee293c05174bbd44cb5148876cd2b" category="admonition">リソースグループを作成する際に、バックアップ処理のスケジュール（開始日、終了日、頻度）を指定できます。これにより、ポリシーとバックアップ頻度が同じであるリソースグループを作成できますが、各ポリシーに異なるバックアップスケジュールを割り当てることもできます。</block>
-  <block id="6b09ab256ee91abfcbae14dc82d761dc" category="image-alt">バックアップ設定</block>
   <block id="a16b9f3426d9cfca29c06a875b667023" category="admonition">午前2時にスケジュールを設定している場合、夏時間（DST）中はスケジュールはトリガーされません。</block>
-  <block id="a29c5de65117578eb18a0f15a40b9ac9" category="list-text">[Snapshot settings]セクションで、保持するSnapshotの数を指定します。</block>
   <block id="37ae1a6ca66d0b61973983bd6574d27c" category="paragraph">一定数のSnapshotを保持</block>
   <block id="efd0e7113b1b066fe01d1864a1941ca3" category="paragraph">[保持するコピー数]*を選択し、保持するSnapshotの数を指定します。</block>
   <block id="6796d1dc6ea82caaec4fb6b7707b6c3f" category="paragraph">Snapshotの数が指定した数を超えると、最も古いコピーから順にSnapshotが削除されます。</block>
   <block id="636437d9837df3f003188baf4d9bbf49" category="admonition">SnapshotコピーベースのバックアップでSnapVaultレプリケーションを有効にする場合は、保持数を2以上に設定する必要があります。保持数を1に設定すると、新しいSnapshotがターゲットにレプリケートされるまで最初のSnapshotがSnapVault関係の参照Snapshotになるため、保持処理が失敗する可能性があります。</block>
-  <block id="2d34c94acc0a14e4499355c2d2cf7595" category="list-text">[Retention and backup]ページで、[Backup Type]ページで選択したバックアップタイプとスケジュールタイプの保持設定を指定します。</block>
   <block id="a04d5d44d1dc39ffabb036a653aa3bd2" category="summary">リソースグループはコンテナであり、バックアップおよび保護するリソースを追加する必要があります。リソースグループを使用すると、特定のアプリケーションに関連付けられているすべてのデータを同時にバックアップできます。リソースグループはすべてのデータ保護ジョブに必要です。また、リソースグループに1つ以上のポリシーを適用して、実行するデータ保護ジョブのタイプを定義する必要があります。</block>
   <block id="7f9a1e0f8fc64e3f207d5cd83dd8e67f" category="doc">リソースグループを作成してポリシーを適用</block>
   <block id="1d04752f728a1a0076882979b222e962" category="admonition">リソースグループ名は250文字以内にする必要があります。</block>
@@ -3857,8 +3789,6 @@
   <block id="ad19113026dc77ce4d582f20058e7d2e" category="list-text">左側のナビゲーションペインで、*[リソース]*をクリックし、リストからPlug-in for IBM DB2を選択します。</block>
   <block id="3e025b4a685d145a938552cff1a33612" category="list-text">[Resources]ページで、[View]リストからリソースタイプを選択します。</block>
   <block id="b630478df4d6cf0a952d6dc7f39a7398" category="inline-image-macro">フィルタアイコン</block>
-  <block id="539da50c1cfbe2a04bb6b229f1dd0ee9" category="list-text">（オプション）*をクリックし<block ref="6baddd7f5b485bce282661b4e4579f17" category="inline-image-macro-rx" type="image"></block>、ホスト名を選択します。</block>
-  <block id="dc56c1ed4d6e6f9e0b65bd544aa90f17" category="paragraph">次に、**をクリックしてフィルタペインを閉じることができます<block ref="6baddd7f5b485bce282661b4e4579f17" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="0f034106893faef4643a4f2e45058c52" category="list-text">[* リソースの更新 * ] をクリックして、ホストで使用可能なリソースを検出します。</block>
   <block id="eb037ec78f327455a8e36a07871d70c6" category="paragraph">リソースは、リソースタイプ、ホスト名、関連するリソースグループ、バックアップタイプ、ポリシー、全体的なステータスなどの情報とともに表示されます。</block>
   <block id="d960a78735f8828146abd7c7f897adb9" category="list-text">データベースがNetAppストレージにあり、保護されていない場合は、[全体のステータス]列に「保護されていません」と表示されます。</block>
@@ -4117,7 +4047,6 @@
   <block id="3923067f4ce9be3fa5f505420591ee38" category="inline-image-macro">削除アイコン</block>
   <block id="a6ea6a770733073de3f90cdf4e56ebe4" category="list-text">クローンを削除する場合は、表でクローンを選択し、<block ref="c2bbcd7602467a0298801d314b839a50" category="inline-image-macro-rx" type="image"></block>をクリックします。</block>
   <block id="6fa0c9d6ea713436f9f94730ad807a6e" category="inline-image-macro">クローンスプリットアイコン</block>
-  <block id="707e7244678c886a17fce7971b0d7f8f" category="list-text">クローンをスプリットする場合は、テーブルでクローンを選択し、をクリックします <block ref="dbe4426598190620d33a8464bcc14686" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="cd30d3b1f2e4929e0c3acd3e0d3a1dd2" category="summary">Plug-in for IBM DB2をインストールした環境では、SnapCenterを使用してIBM DB2とそのリソースをバックアップ、リストア、クローニングできます。これらの処理をサポートするタスクを実行することもできます。</block>
   <block id="5ff676b44b8e1689869b0d9ec82d80ca" category="doc">SnapCenter Plug-in for IBM DB2の機能</block>
   <block id="6a35ea12fc56a0b481135a2c9b6acde2" category="paragraph">Plug-in for IBM DB2 Databaseをインストールした環境では、SnapCenterを使用して、IBM DB2データベースとそのリソースをバックアップ、リストア、およびクローニングできます。これらの処理をサポートするタスクを実行することもできます。</block>
@@ -4334,11 +4263,9 @@
   <block id="4fcec4fe97075a54e91b04a9e79f56ff" category="list-text">Snapshotのロック期間を指定すると、保持期間が終了するまでSnapshotが削除されません。その結果、保持されるSnapshotの数がポリシーで指定されている数よりも多くなる可能性があります。</block>
   <block id="19999b58b15a4b6c9b7d47212a32aeba" category="list-text">バックアップタイプを選択：</block>
   <block id="1ec8e0dcd181569d863906d3db3cbc7a" category="paragraph">データベースの整合性チェックの実行</block>
-  <block id="5ea8c203a8e8ed3f981e261385d48b32" category="paragraph">ファイルベースのバックアップ * を選択します。アクティブなテナントのみがバックアップされます。</block>
   <block id="dc82007d2d72fe3595e4a12ab929226d" category="paragraph">Snapshotテクノロジを使用したバックアップの作成</block>
   <block id="58c4ab72512763368202ec9054d5b838" category="paragraph">「 * Snapshot Based * 」を選択します。</block>
   <block id="b8d6ee3998ffd19868fb72c367024f19" category="list-text">スケジュールタイプを指定するには、「 * on demand * 」、「 * Hourly * 」、「 * Daily * 」、「 * Weekly * 」、または「 * Monthly * 」を選択します。</block>
-  <block id="33b9f4074a30cf7699528b526f1e171d" category="list-text">[Retention]ページで、[Backup Type]ページで選択したバックアップタイプとスケジュールタイプの保持設定を指定します。</block>
   <block id="cee00ab879a477aea09f4b1f404b14fc" category="paragraph">一定数のSnapshotを保持</block>
   <block id="b19465911649130b0ad9e7ed87b43f2f" category="paragraph">[保持するSnapshotコピーの総数]*を選択し、保持するSnapshotの数を指定します。</block>
   <block id="7537e0d42ad63b5bae18964aee575640" category="paragraph">Snapshotの数が指定した数を超えると、最も古いコピーから順にSnapshotが削除されます。</block>
@@ -4348,10 +4275,8 @@
   <block id="3d721f84f4ba496ced30bffcfa1591da" category="admonition">SAP HANAシステムレプリケーションでは、作成されたSnapshotの合計数はリソースグループに設定された保持数と同じになります。最も古いSnapshotの削除は、最も古いSnapshotが配置されているノードに基づいて行われます。たとえば、SAP HANAシステムレプリケーションプライマリとSAP HANAシステムレプリケーションセカンダリを含むリソースグループの保持期間は7に設定されます。一度に作成できるSnapshotの数は、SAP HANAシステムレプリケーションプライマリとSAP HANAシステムレプリケーションセカンダリの両方を含め、最大7つです。</block>
   <block id="298d4bea409e146b0187ec130a39fb72" category="paragraph">Snapshotを特定の日数だけ保持</block>
   <block id="e736f4106d35f31cff1a51f091e56c06" category="paragraph">[Keep Snapshot copies for]*を選択し、Snapshotを削除するまでの日数を指定します。</block>
-  <block id="971b3c1d99a5aa6f2b187690d01d852c" category="paragraph">Snapshotコピーのロック期間</block>
   <block id="86b78accb82bf0596de946657114e7dd" category="paragraph">Snapshotコピーのロック期間を選択し、日、月、または年を選択します。</block>
   <block id="e7c020bcc5fc6c46eea0af3b48696115" category="paragraph">SnapLock保持期間は100年未満にする必要があります。</block>
-  <block id="d19356a2f0a6b22cf9697eeb6f1aaab2" category="list-text">Snapshot コピーベースのバックアップの場合は、 Replication （レプリケーション）ページでレプリケーション設定を指定します。</block>
   <block id="53ef3d7584a54991b60fba81e93d201f" category="paragraph">* ローカル Snapshot コピー作成後に SnapMirror を更新 *</block>
   <block id="1275946d22bd30ab4fa43a93760353bd" category="paragraph">別のボリュームにバックアップセットのミラーコピーを作成する場合（SnapMirrorレプリケーション）は、このフィールドを選択します。</block>
   <block id="fd109b0493348c99a956dc708f79412f" category="paragraph">このオプションは、SnapMirrorのアクティブな同期に対して有効にする必要があります。</block>
@@ -4365,7 +4290,6 @@
   <block id="7389de2f41b1c6eb64e4d894ab05e286" category="paragraph">SnapLockがONTAPのセカンダリ（SnapLock Vault）にのみ設定されている場合、[Topology]ページの*[Refresh]*ボタンをクリックすると、ONTAPから取得したセカンダリのロック期間が更新されます。</block>
   <block id="d5d1fb88800eaa5cdf83e2dae3c93633" category="inline-link">SnapVaultデスティネーションでSnapshotコピーをWORM状態にコミットする</block>
   <block id="64c2ad2359ef41b8550053e63b4db5d2" category="paragraph">SnapLock Vaultの詳細については、を参照してください。<block ref="8b200d34c0f23901ee8d0559f7380d4b" category="inline-link-rx"></block></block>
-  <block id="e95e870e56d78f07b5959255a76d16ab" category="paragraph">* 二次ポリシーラベル *</block>
   <block id="7236d615f588fda61e35cc1fa07c46cb" category="paragraph">Snapshotラベルを選択します。</block>
   <block id="9a5f5dfff4956ecfacfdc016d25c212b" category="paragraph">選択したSnapshotラベルに応じて、ラベルに一致するセカンダリSnapshot保持ポリシーがONTAPによって適用されます。</block>
   <block id="f4d84b8f919668d97d6f1c1e6384cfac" category="admonition">ローカル Snapshot コピーの作成後に「 * SnapMirror を更新」を選択した場合は、必要に応じてセカンダリポリシーラベルを指定できます。ただし、ローカル Snapshot コピーの作成後に「 * Update SnapVault 」を選択した場合は、セカンダリポリシーラベルを指定する必要があります。</block>
@@ -4748,7 +4672,6 @@
   <block id="f53a0b9ab494a6b7301d6461450af71d" category="paragraph">PowerShellコマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、クローニングの処理を実行することもできます。PowerShellコマンドレットの詳細については、SnapCenterコマンドレットのヘルプを使用するか、<block ref="b1f5996558dd020cdfc2747708228767" category="inline-link-rx"></block></block>
   <block id="58ec0509621b150bb63b0fd69f20665f" category="doc">NetAppでサポートされているプラグインリソースのリソースグループのバックアップ</block>
   <block id="0dd1baa389f6493ff89ba4f1d23f127b" category="list-text">セカンダリストレージとの SnapMirror 関係があるリソースをバックアップする場合、ストレージユーザに割り当てられた ONTAP ロールには「「 'napmirror all' 」権限を含める必要があります。ただし、「 vsadmin 」ロールを使用している場合、「 'SnapMirro all 」権限は必要ありません。</block>
-  <block id="30a67a946d29a3e673f6bc6ed240d621" category="paragraph">リソース グループを検索することができます。そのためには、検索ボックスにリソース グループ名を入力するか、<block ref="6baddd7f5b485bce282661b4e4579f17" category="inline-image-macro-rx" type="image"></block>をクリックし、タグを選択します。そのあとに<block ref="6baddd7f5b485bce282661b4e4579f17" category="inline-image-macro-rx" type="image"></block>をクリックすると、フィルタ ペインが閉じます。</block>
   <block id="6c22568aa6116c11fda42febcf7b796a" category="list-text">[ リソースグループ ] ページで、バックアップするリソースグループを選択し、 [ 今すぐバックアップ * ] をクリックします。</block>
   <block id="44119ab6cb16491e354c029de67b6782" category="list-text">複数のポリシーをリソースグループに関連付けている場合は、「 * Policy * 」ドロップダウンリストから、バックアップに使用するポリシーを選択します。</block>
   <block id="656764dc4fc9063500ad9c4607e32b3b" category="paragraph"><block ref="656764dc4fc9063500ad9c4607e32b3b" category="inline-link-rx"></block></block>
@@ -4803,14 +4726,9 @@
   <block id="0b15a431b87402bce4bdb3d69d72102d" category="list-text">バックアップポリシーは、バックアップを管理、スケジュール、および保持する方法を規定する一連のルールです。レプリケーション、スクリプト、アプリケーション設定を指定することもできます。</block>
   <block id="f29871ab419804e987d1bfb5f3274244" category="list-text">ポリシーでオプションを指定することで、別のリソースグループにポリシーを再利用して時間を節約できます。</block>
   <block id="42671d398be6103911a06f9936ab9855" category="admonition">リソースグループを作成する際に、バックアップ処理のスケジュール（開始日、終了日、頻度）を指定できます。これにより、ポリシーとバックアップ頻度が同じであるリソースグループを作成できますが、各ポリシーに異なるバックアップスケジュールを割り当てることができます。</block>
-  <block id="81c16fb186449755e5295df30b1def81" category="image-alt">バックアップ設定ページ</block>
-  <block id="ce6e296d4e6f07e1cb707c2eaeaf04ad" category="list-text">Custom backup settings （カスタムバックアップ設定）セクションで、プラグインにキーバリュー形式で渡す必要がある特定のバックアップ設定を指定します。プラグインに渡すキー値は複数指定できます。</block>
-  <block id="73a585528f834ea371b34dbbb981d2fc" category="list-text">[Retention]*ページで、*[Backup Type]*ページで選択したバックアップタイプとスケジュールタイプの保持設定を指定します。</block>
   <block id="95dfd611f9419ea2abdea4d84377aeab" category="admonition">SnapVaultレプリケーションを有効にする場合は、保持数を2以上に設定する必要があります。保持数を1に設定すると、新しいSnapshotがターゲットにレプリケートされるまで最初のSnapshotがSnapVault関係の参照Snapshotになるため、保持処理が失敗する可能性があります。</block>
   <block id="7cd1d77689881addd5facf23970563df" category="paragraph">[Snapshot locking period]を選択し、日、月、または年を選択します。</block>
-  <block id="7a81b88ed3ac8ca5e67c201e36eca211" category="list-text">[レプリケーション]*ページで、レプリケーション設定を指定します。</block>
   <block id="7630e21f8142849489483b7354d0643a" category="paragraph">ONTAPの保護関係のタイプがミラーとバックアップの場合、このオプションのみを選択すると、プライマリで作成されたSnapshotはデスティネーションに転送されませんが、デスティネーションのリストに表示されます。このSnapshotをリストア処理の対象としてデスティネーションで選択すると、「Secondary Location is not available for the selected vaulted/mirrored backup」というエラーメッセージが表示されます。</block>
-  <block id="24e494fecce985b1d55e2034cb5b4db5" category="inline-link-macro">NetAppでサポートされているプラグインリソースに関連するバックアップとクローンを[Topology]ページで表示する</block>
   <block id="d2f577cb0769d7c31f2785dd590b9f27" category="paragraph">SnapLock Vaultの詳細については、「SnapVaultデスティネーションでSnapshotをWORM状態にコミットする」を参照してください。</block>
   <block id="4f2f5ecb6e9ddbc65d919530d4364ba6" category="admonition">セカンダリストレージのSnapshotの最大数に達しないように、ONTAPでセカンダリストレージのSnapMirror保持ポリシーを設定する必要があります。</block>
   <block id="e1d3704586d47446c7a9812c933e6d8e" category="paragraph">リソースグループはコンテナであり、バックアップおよび保護するリソースを追加する必要があります。特定のアプリケーションに関連するすべてのデータを同時にバックアップできます。また、リソースグループに1つ以上のポリシーを適用して、実行するデータ保護ジョブのタイプを定義する必要があります。</block>
@@ -5205,7 +5123,6 @@
   <block id="b64964f7c6cb3e2d0ad50647f28415f4" category="list-text">必要に応じて、プラグインホストにJava 11をインストールします。</block>
   <block id="48b0f0fb43e0a3e1a7bac0922b6b61c9" category="list-text">データパス（LIF）が複数ある場合やdNFS構成を使用している場合は、データベースホストでSnapCenter CLIを使用して次の作業を実行できます。</block>
   <block id="d3af75b5ec004883495ea045fb886b21" category="list-text">デフォルトでは、データベースホストのすべての IP アドレスが、クローンボリュームの Storage Virtual Machine （ SVM ）の NFS ストレージエクスポートポリシーに追加されます。特定のIPアドレスを使用する場合、またはIPアドレスのサブセットに制限する場合は、Set-PreferredHostIPsInStorageExportPolicy CLIを実行します。</block>
-  <block id="de748d4f218eb82701a830c41d04af9f" category="list-text">SVM に複数のデータパス（ LIF ）がある場合は、 NFS クローンボリュームをマウントするための適切なデータパス（ LIF ）が SnapCenter によって選択されます。ただし、特定のデータパス（LIF）を指定する場合は、Set-SvmPreferredDataPath CLIを実行する必要があります。コマンドで使用できるパラメータとその説明については、 RUNNING Get Help command_name _ を使用して参照できます。または、を参照することもできます<block ref="1be7dd030b7b4d460912ef60d82c1252" category="inline-link-rx"></block>。</block>
   <block id="17f9957a5b4dff4ca41989ac66b4057b" category="list-text">ポート9090がホストの他のアプリケーションで使用されていないことを確認します。</block>
   <block id="70470fa292d95a8fc9a82053e4e3efc0" category="paragraph">ポート9090は、SnapCenterで必要な他のポートに加えて、NetAppでサポートされるプラグイン用にリザーブする必要があります。</block>
   <block id="db39871b690a95f007f3b71acd6533d2" category="doc">ホストを追加してNetAppでサポートされるプラグインをインストールするための前提条件</block>
@@ -5545,7 +5462,6 @@
   <block id="5aa777c1f960829a25522e1d2a549871" category="list-text">Update-MailboxDatabaseCopy</block>
   <block id="0f14951f7fd1d656890413b5b92b9059" category="summary">SnapCenterを使用すると、1つ以上のバックアップをアクティブファイルシステムにリストアして、Exchangeデータベースをリストアできます。</block>
   <block id="c37b0bdb3c7a24db287508745921aed4" category="paragraph">次のワークフローは、Exchangeデータベースリストア処理の実行順序を示しています。</block>
-  <block id="aa6ca9252fe71f2526184035732777e9" category="paragraph"><block ref="aa6ca9252fe71f2526184035732777e9" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0f6ded3f852082112b8e6d16a0668d83" category="paragraph">PowerShellコマンドレットを手動またはスクリプトで使用して、バックアップとリストアの処理を実行することもできます。PowerShellコマンドレットの詳細については、SnapCenterコマンドレットのヘルプを使用するか、を参照してください<block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block>。</block>
   <block id="4ca48d63db1547d2aa6b271f22219b7b" category="doc">SnapCenter Plug-in for Microsoft Windowsおよびfor Microsoft Exchange Serverでサポートされるストレージタイプ</block>
   <block id="cbf06340cf7e3ebe82b098559b7d3b1d" category="paragraph">Windows Server では、 SnapCenter プロビジョニングとデータ保護がサポートされます。サポートされるバージョンの最新情報については<block ref="ac8016761c99410cb5502fc617daf49f" category="inline-link-rx"></block>、NetApp Interoperability Matrix Tool^]を参照してください。</block>
@@ -5618,14 +5534,12 @@
   <block id="1aa4e724dd9a6c283aa6653b764530f0" category="list-text">左側のナビゲーションペインで、 [* リソース ] をクリックし、リストから [Microsoft Exchange Server プラグイン *] を選択します。</block>
   <block id="56211ba6636186607e13945dac559a10" category="list-text">リソースページで、 * 表示 * リストから * データベース * または * データベース可用性グループ * のいずれかを選択します。</block>
   <block id="0ad1c36a6c3e0a80135136739263c1d7" category="admonition">DAGで、アクティブなデータベースコピーがネットアップ以外のストレージにあり、少なくとも1つのパッシブデータベースコピーがNetAppストレージにある場合は、データベースを保護できます。</block>
-  <block id="8ec049c5812d131f3e960eb36acfe281" category="paragraph">*をクリックし<block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>、ホスト名とデータベースタイプを選択してリソースをフィルタリングします。次に、**をクリックしてフィルタペインを閉じることができます<block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="bb40ccbb928b274cb38a895aef70f856" category="list-text">データベースをバックアップする場合は、データベース名をクリックします。</block>
   <block id="8373034f279dfd1570ec179c090b858c" category="list-text">Topology ビューが表示されたら、 *Protect* をクリックします。</block>
   <block id="c5f4c29439aa6c78216cfa3f9865548c" category="list-text">[Database - Protect Resource]ウィザードが表示されたら、手順3に進みます。</block>
   <block id="54449f6b5c8531f99928e88f563830f0" category="list-text">データベース可用性グループをバックアップする場合は、データベース可用性グループの名前をクリックします。</block>
   <block id="eb71c7e77b1cb5486117cdac9d378fb6" category="list-text">カスタムのSnapshot名を指定する場合は、[リソース]ページで*[Snapshotコピーにカスタムの名前形式を使用する]*チェックボックスを選択し、Snapshot名に使用するカスタムの名前形式を入力します。</block>
   <block id="2ebdd237cad2d1f8e79c0e03ecacf3e4" category="admonition">バックアップ・ジョブ作成時に選択するサーバ上の * バックアップ・コピーがポリシーに含まれている場合は、サーバ選択オプションが表示され、 1 つ以上のサーバを選択できます。サーバ選択オプションでは、選択したデータベースがNetAppストレージ上にあるサーバのみが表示されます。</block>
-  <block id="d9efe8cd3b84ef411469a4acc1e9bb8a" category="list-text">スケジュールを設定するポリシーの[スケジュールの設定]列で**をクリックします<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="b04a2aa13bc9b5c2000bf98771ae837a" category="list-text">[Add schedules for policy_name] ウィンドウで、スケジュールを設定し、 [*OK*] をクリックします。</block>
   <block id="0f9a723c6f5eb511c1b09b3ba75314b7" category="paragraph">また、送信者と受信者のEメールアドレス、およびEメールの件名を指定する必要があります。リソース上で実行されたバックアップ処理のレポートを添付する場合は、 [ ジョブレポートの添付（ Attach Job Report ） ] を選択します。</block>
   <block id="4dcb8f86b6b59353b86d64a1b6090e41" category="admonition">Eメール通知を使用する場合は、GUIまたはPowerShellコマンドSet-SmSmSmtpServerを使用して、SMTPサーバの詳細を指定しておく必要があります。</block>
@@ -5637,7 +5551,6 @@
   <block id="1bbe027c3f1875faca6a0e19b110374a" category="list-text">リソースグループに異なるホストの複数のデータベースが含まれている場合、ネットワークの問題が原因で、一部のホストでのバックアップ処理の開始に時間がかかることがあります。PowerShellコマンドレットを使用して、の値を設定します<block ref="d64fa5ed6e4f9d90354e90ccc68fcee6" prefix=" " category="inline-code"></block><block ref="0ed3c2119f203df035d396aaee45a14a" prefix=" " category="inline-code"></block><block ref="c49971dbd0f66cf4e6b62fc441967947" prefix=" " category="inline-code"></block> 。</block>
   <block id="a1d7cae473cc035fb76e1540b76e2763" category="list-text">リソースグループに、ネットアップストレージとネットアップ以外のストレージ上にアクティブ / パッシブデータベースコピーのあるデータベースまたはデータベース可用性グループが含まれていて、ポリシーでバックアップジョブの作成時に選択するサーバでアクティブ / パッシブデータベースコピーのバックアップ * または * バックアップコピーの選択が完了している場合： その後、バックアップジョブが警告状態になります。</block>
   <block id="b9c7ed41d7e2f0a91ab873b63037fa09" category="paragraph">NetAppストレージ上のアクティブ/パッシブデータベースコピーのバックアップは成功し、ネットアップ以外のストレージ上のアクティブ/パッシブデータベースコピーのバックアップは失敗します。</block>
-  <block id="3a16a5fe7a351d2059010bdd627dffd9" category="paragraph">リソースグループを検索するには、検索ボックスにリソースグループ名を入力するか、**をクリックし<block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>てタグを選択します。次に、**をクリックしてフィルタペインを閉じることができます<block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="584657e4b5bddce78001faf5776544cc" category="paragraph">この例では、フルバックアップとログバックアップのExchangeバックアップタイプを指定して新しいバックアップポリシーを作成しています。</block>
   <block id="208c499842b5bd5ba293e47da51ebd68" category="paragraph">この例では、1時間ごとのフルバックアップとログバックアップのExchangeバックアップタイプを指定して新しいバックアップポリシーを作成しています。</block>
   <block id="206edf297460ddfa7679c1e47ace5ca1" category="paragraph">この例では、Exchangeログのみをバックアップする新しいバックアップポリシーを作成します。</block>
@@ -5747,7 +5660,6 @@
   <block id="5c63811228c15739fc821ea5492e3502" category="list-text">デフォルトでは、 SnapCenter は DAG 内の他のすべてのホストでこのデータベースの最も古いフルバックアップを検出し、フルバックアップの前に作成されたこのホスト上のすべてのログバックアップを削除します。</block>
   <block id="9363a6dd8a937e03c1a0328e0f457267" category="list-text">ログバックアップのみを使用する DAG 内のホストのデフォルトの保持設定を上書きするには、 _C ： \Program Files\NetApp\SnapManager WebApp\web.config_file にキー * MaxLogBackupOnlyCountWithoutFullBackup * を追加します。</block>
   <block id="2bc5f650183b4c6ef420f08e9de42168" category="paragraph">この例の値が10の場合、ホストで保持できるログバックアップは最大10個です。</block>
-  <block id="5aeb9e6d879dba508efed2806a37d0b1" category="list-text">[Replication]ページで、次のセカンダリレプリケーションオプションのいずれかまたは両方を選択します。</block>
   <block id="3c2828ba75d966a57611ae076f53de62" category="paragraph">ローカルSnapshot作成後にSnapMirrorを更新する</block>
   <block id="993129239b6168608f9de64f4e71982a" category="paragraph">バックアップセットのミラーコピーを別のボリューム（SnapMirror）に保持する場合は、このオプションを選択します。</block>
   <block id="40498d24c539723661ac936dda3099dc" category="admonition">プライマリのみのポリシーは、Exchange ONTAPボリュームに対してSnapMirrorのアクティブな同期が設定されている場合は使用できません。SnapCenterではこれが許可されていません。「ミラー」オプションを有効にする必要があります。</block>
@@ -5846,7 +5758,6 @@
   <block id="96b6fde24fc45821a7c8c021ba21b20b" category="list-text">左側のナビゲーションペインで、 [ リソース ] をクリックし、 [ リソース ] ページの左上にあるプラグインのドロップダウンリストから [Microsoft Exchange Server*] を選択します。</block>
   <block id="71edd90271636e3f12b43102371d4d7d" category="list-text">リソースページで、 * 表示 * ドロップダウン・リストから * データベース * 、 * データベース可用性グループ * 、または * リソース・グループ * を選択します。</block>
   <block id="322a7c54d7c7799de3e202746d568ea4" category="paragraph">すべてのデータベースとDAGは、それぞれのDAGまたはホスト名とともにFQDN形式で表示されるため、複数のデータベースを区別できます。</block>
-  <block id="d67212a409942028d92b1df9ab4f35be" category="paragraph">をクリック <block ref="2df6cc2e237d722aa6244879c70fd2d2" category="inline-image-macro-rx" type="image"></block> し、ホスト名とExchangeサーバを選択してリソースをフィルタリングします。そのあとに<block ref="2df6cc2e237d722aa6244879c70fd2d2" category="inline-image-macro-rx" type="image"></block>をクリックすると、フィルタ ペインが閉じます。</block>
   <block id="a52716605edda155f499cf4c4572c6d5" category="list-text">[ リソースの更新 ] をクリックします。</block>
   <block id="e447517e5ec13b3c9e98a7c686d29ac7" category="paragraph">新しく追加、名前変更、または削除されたリソースは、SnapCenterサーバインベントリに更新されます。</block>
   <block id="100eb6faf67bf674d493eae8a5daad8d" category="paragraph">リソースは、リソース名、データベース可用性グループ名、データベースが現在アクティブなサーバ、コピーがあるサーバ、前回のバックアップ時刻、全体的なステータスなどの情報とともに表示されます。</block>
@@ -6037,7 +5948,6 @@
   <block id="f718f3aee36dcfdcdb35028984a1e647" category="admonition">プラグインをインストールするホストに* OpenSSL 1.0.2G*がインストールされていることを確認します。</block>
   <block id="ceb8053c7838cc55543eb21a9426de24" category="paragraph">次のコマンドを実行して、バイナリパッケージの署名を検証します。</block>
   <block id="f454a08c3c09ccd56f92c300d394cf1e" category="list-text">Linuxホストの場合：<block ref="c319b701e180ce91b77f310475381d12" prefix=" " category="inline-code"></block></block>
-  <block id="9da5a8f942c8a23f24249f767440fb3d" category="list-text">AIXホストの場合：<block ref="df3a3103b9e18ec4362f3fe7eb83c8e3" prefix=" " category="inline-code"></block></block>
   <block id="2105795cf0eeea463be3933a65ba4c8d" category="section-title">コマンドレットを使用した複数のリモートホストへのインストール</block>
   <block id="8bfbb41a79c1c2438e1a53e2a727fb3c" category="paragraph">Linux 用 SnapCenter Plug-ins Package または SnapCenter Plug-ins Package for AIX を複数のホストにインストールするには、 _ Install -SmHostPackage_PowerShell コマンドレットを使用する必要があります。</block>
   <block id="367659a073d284a1e67b11ac7a540d28" category="paragraph">プラグインパッケージをインストールする各ホストで、ローカル管理者の権限を持つドメインユーザとして SnapCenter にログインする必要があります。</block>
@@ -6139,7 +6049,6 @@
   <block id="8d966b8b205c32c6438a2938fdfb039e" category="paragraph"><block ref="7c2d477bf0b1be0667978cccbcd46d25" prefix="" category="inline-code"></block></block>
   <block id="7a5e7be0933e3148df8c1083de81b020" category="paragraph">パラメータの値を変更したら、次のコマンドを実行してSnapCenter Plug-in Loader（SPL）サービスを再起動します。</block>
   <block id="b2db2a6d191f5b90f084ac27e053d277" category="paragraph"><block ref="36f2d43624c91c43be48d881c1118e2e" prefix="" category="inline-code"></block></block>
-  <block id="33b308bb22974faaabb712d6ca8f8cc4" category="paragraph">コマンドで使用できるパラメータとその説明については、Get-Help Command_nameを実行して確認できます。または、を参照して<block ref="1be7dd030b7b4d460912ef60d82c1252" category="inline-link-rx"></block>ください。</block>
   <block id="9349160e3cfa891f6e3eab62e5e808aa" category="summary">SnapCenter を使用して、アプリケーションボリュームのバックアップのクローニング、クローンのスプリット、およびクローンの削除を行うことができます。</block>
   <block id="bfea201e67b6d8c8dfeba47e522016aa" category="doc">アプリケーションボリュームのバックアップをクローニング</block>
   <block id="32b6ce3b4c07da5c7a5e9de96444b2c2" category="paragraph">SnapCenterを使用して、アプリケーションボリュームのバックアップをクローニングできます。</block>
@@ -6153,7 +6062,6 @@
   <block id="b171e637bb7cf16f18741fbe5702d170" category="list-text">[Scripts]ページで、クローニング前に実行するスクリプトの名前、ファイルシステムをマウントするコマンド、およびクローニング後に実行するスクリプトの名前を指定します。</block>
   <block id="914e3ed381a18db751f3d27cad180ad7" category="paragraph">また、送信者と受信者のEメールアドレス、およびEメールの件名を指定する必要があります。実行したクローン処理のレポートを添付する場合は、 * ジョブレポートの添付 * を選択します。</block>
   <block id="056f16a497e3816baf36ca8bb1f47e69" category="section-title">アプリケーションボリュームのクローンをスプリットする</block>
-  <block id="04e3f50ebfc3fe23fe3b15e74ef0c167" category="list-text">クローニングされたリソースを選択し、をクリックします <block ref="4e76ccc6d666f337d0615fe61d91903b" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="1ea3b0b9fdff483105222183288bb47b" category="section-title">アプリケーションボリュームのクローンを削除する</block>
   <block id="84725751afcea79e33e8f51ae4a1add6" category="paragraph">不要になったクローンは削除できます。他のクローンのソースと同様に機能するクローンは削除できません。</block>
   <block id="f79f988986305ca48b434d9c452f0fdb" category="list-text">Delete Clone ページで、次の操作を実行します。</block>
@@ -6309,8 +6217,6 @@
   <block id="2f66d67da390e5c77db3fc5e681393ab" category="list-text">NFS環境でOracleデータベースを使用している場合は、マウント、クローニング、検証、およびリストアの処理を実行できるように、プライマリストレージまたはセカンダリストレージ用に少なくとも1つのNFSデータLIFを設定しておく必要があります。</block>
   <block id="904e44e9990e7591adda05fc061919d3" category="list-text">SVM に複数のデータパス（ LIF ）がある場合は、 NFS クローンボリュームをマウントするための適切なデータパス（ LIF ）が SnapCenter によって選択されます。ただし、特定のデータパス（LIF）を指定する場合は、Set-SvmPreferredDataPath CLIを実行する必要があります。詳細については、コマンドリファレンスガイドを参照してください。</block>
   <block id="0d38af714784f793aaf023f367e4c39b" category="list-text">SAN環境でOracleデータベースを使用している場合は、SAN環境が次のガイドに記載されている推奨事項に従って設定されていることを確認してください。</block>
-  <block id="26b193fe4fa8dbe180bbe20800729e6b" category="inline-link">Linux Unified Host Utilities の推奨されるホスト設定</block>
-  <block id="e705af1c7f38eac38e2f493fc039f70e" category="list-text"><block ref="e705af1c7f38eac38e2f493fc039f70e" category="inline-link-rx"></block></block>
   <block id="b1ada800560d7bd73c2da9a36d6ae229" category="inline-link">AIX Host Utilitiesの影響を受けるホスト設定</block>
   <block id="9e202af09678a2aeb1c20235b8ed2aad" category="list-text"><block ref="9e202af09678a2aeb1c20235b8ed2aad" category="inline-link-rx"></block></block>
   <block id="ba09c94fed381b580a726fc94531b160" category="list-text">Oracle LinuxまたはRHELオペレーティングシステムのLVMにOracleデータベースがある場合は、最新バージョンの論理ボリューム管理（LVM）をインストールします。</block>
@@ -6753,8 +6659,6 @@
   <block id="6920404cf085bab5be2132dbc275f33b" category="paragraph">リソースグループは、ホストまたはクラスタ上のリソースの集まりです。バックアップ処理は、リソースグループに定義されているすべてのリソースに対して実行されます。</block>
   <block id="a833804e6b707a2a653d8b6273573c9f" category="paragraph">リソースグループは、[Resources]ページからオンデマンドでバックアップできます。リソースグループにポリシーが適用され、スケジュールが設定されている場合は、スケジュールに従ってバックアップが作成されます。</block>
   <block id="4c4d4c133d15d97bf3bef74ffeeeb66a" category="list-text">左側のナビゲーションペインで、*[リソース]*を選択し、リストから適切なプラグインを選択します。</block>
-  <block id="b2ad47c7842f5e26da4387acfcdb5046" category="list-text">検索ボックスにリソースグループ名を入力するか、をクリックし <block ref="2df6cc2e237d722aa6244879c70fd2d2" category="inline-image-macro-rx" type="image"></block>てタグを選択します。</block>
-  <block id="313b973ed20ae0f32242d787d703216d" category="paragraph">をクリックしてフィルタ ペインを閉じます。</block>
   <block id="50aa129d52e712ab3c9a0f93f956d9e2" category="list-text">[Resource Group]ページで、バックアップするリソースグループを選択します。</block>
   <block id="3ce47918d2033ed0d68d1e7c6a9b1c45" category="admonition">2つのデータベースが統合されたリソースグループがあり、一方のデータベースにネットアップ以外のストレージにデータがある場合は、もう一方のデータベースがネットアップストレージにあるにもかかわらず、バックアップ処理が中止されます。</block>
   <block id="5655480ae4615b223f1d67d63b4ee784" category="list-text">リソースグループに複数のポリシーが関連付けられている場合は、*[ポリシー]*ドロップダウンリストから使用するバックアップポリシーを選択します。</block>
@@ -6771,7 +6675,6 @@
   <block id="6ad2ce3e86cc5cb973fc58ac689e7da9" category="paragraph">SnapCenterアカウントのログインセッションは1つだけで、トークンはユーザのホームディレクトリに格納されます。</block>
   <block id="e116415b72f3d645af9ae9ed88b2ca8e" category="admonition">接続セッションは24時間のみ有効です。ただし、TokenNeverExpiresオプションを使用してトークンを作成すると、期限切れにならず、セッションが常に有効になるトークンを作成できます。</block>
   <block id="7e914e26f4d0379973fb7bcf833e2e78" category="paragraph">次のコマンドを実行して、SnapCenterサーバとの接続の確立、Oracleデータベースインスタンスの検出、ポリシーとリソースグループの追加、バックアップと検証を行います。</block>
-  <block id="bc3f01c8b7967405e08d06ae461bdcd7" category="paragraph">コマンドで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。または、を参照することもできます<block ref="1be7dd030b7b4d460912ef60d82c1252" category="inline-link-rx"></block>。</block>
   <block id="0f7d3f55b83a8ace70fddcd69afec394" category="list-text">指定されたユーザ用に SnapCenter サーバとの接続セッションを開始します： _Open-SmConnection_</block>
   <block id="5f5aa2c43f2c9d5fc9897a8474705e9e" category="list-text">ホストリソースの検出処理を実行します： _Get-SmResources_</block>
   <block id="cc13eead3ad12f772f02d5464a4dcd46" category="list-text">Real Application Cluster （ RAC ）データベースのバックアップ処理に使用する Oracle データベースのクレデンシャルと優先ノードを設定します： _Configure - SmOracleDatabase_</block>
@@ -6784,8 +6687,6 @@
   <block id="ecc2d042ed750fbf1eac63637f9b3077" category="list-text">SnapCenter からログを取得します： _Get-SmLogs_</block>
   <block id="381bb74dcb857609537acee4a3539bed" category="summary">いずれのリソースグループにも含まれていないリソースは、[Resources]ページからバックアップできます。</block>
   <block id="bb3bb922fc2fe1b5851c8c139e13f07b" category="doc">Oracleリソースのバックアップ</block>
-  <block id="8772efe51abd031bf2630ddf99b43a79" category="list-text">をクリックし、ホスト名とデータベース タイプを選択してリソースをフィルタします。</block>
-  <block id="2120056b5c6b43acb41f77a74a912128" category="paragraph">そのあとに<block ref="2df6cc2e237d722aa6244879c70fd2d2" category="inline-image-macro-rx" type="image"></block>をクリックすると、フィルタ ペインが閉じます。</block>
   <block id="d8e3db119b7cf9c31602a2121bfa4365" category="list-text">バックアップするデータベースを選択します。</block>
   <block id="d24902f60cccf9a4d0ef979587d1d4fd" category="paragraph">Database - Protect （データベース - 保護）ページが表示されます。</block>
   <block id="90db41db3c301da492422a8fbb244c83" category="list-text">[Resources]ページでは、次の手順を実行できます。</block>
@@ -6940,7 +6841,6 @@
   <block id="5299a9981347e8ed830ad1271991cfef" category="paragraph">それ以外の場合は、「 'sys' 」ユーザまたはクローン・ホストに適用可能な「 'ysasm' 」権限を持つユーザで構成された Oracle ASM クレデンシャルを選択します。</block>
   <block id="f437b2d19ac957d858a486434d127abb" category="paragraph">プリスクリプトは、 _ /var/opt/snapcenter /spl/scripts_or 内のいずれかのフォルダに保存する必要があります。デフォルトでは、 /var/opt/snapcenter /spl/scripts_path が読み込まれます。スクリプトをこのパス内の任意のフォルダに配置した場合は、スクリプトを配置するフォルダまでの完全なパスを指定する必要があります。</block>
   <block id="16fd6c5ba15e0b08636432410b53736d" category="list-text">[Database parameter settings]セクションで、データベースの初期化に使用される事前入力されたデータベースパラメータの値を変更します。</block>
-  <block id="bb0b2c5483daeba4571c62a9f8c145a2" category="paragraph">**をクリックすると、パラメータを追加できます<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="740d25cb39f88917f1483c14a13c4359" category="paragraph">Oracle Standard Editionを使用していて、データベースがアーカイブログモードで実行されている場合、またはアーカイブREDOログからデータベースをリストアする場合は、パラメータを追加してパスを指定します。</block>
   <block id="312ab5f954ecd0e93c772e23e3efbb64" category="list-text">LOG_ARCHIVE _ dest の略</block>
   <block id="9d702669585828b8f94fde687d36b914" category="list-text">log_archive_duplex_dest</block>
@@ -7064,7 +6964,6 @@
   <block id="e457b5ee7ca69de08b3486e30ef1d570" category="list-text">SnapCenter のインストール、ホストの追加、データベースの検出、ストレージシステム接続の作成などのタスクを実行して、データ保護の準備をしておく必要があります。</block>
   <block id="37467ff0195d6765df22bdc34e035d04" category="list-text">Snapshotをミラーセカンダリストレージまたはバックアップセカンダリストレージにレプリケートする場合は、SnapCenter管理者がソースとデスティネーションの両方のボリューム用にSVMを割り当てておく必要があります。</block>
   <block id="099321e862ba2170dc1c3e6b1f02ef72" category="paragraph">ONTAP 9.12.1以前のバージョンでは、リストアの一環としてSnapLockヴォールトSnapshotから作成されたクローンにSnapLockヴォールトの有効期限が継承されます。SnapLockの有効期限が過ぎた時点で、ストレージ管理者がクローンを手動でクリーンアップする必要があります。</block>
-  <block id="c6272790ba3defb969393b0e958243b0" category="admonition">プライマリSnapLock設定はSnapCenterバックアップポリシーで管理され、セカンダリSnapLock設定はONTAPで管理されます。</block>
   <block id="12a8a88fbbb12cf46de8ed3c3c9c4df5" category="list-text">ドロップダウン・リストから「 * Oracle Database * 」を選択します。</block>
   <block id="e290a9defe5f60a7f464d11afc89eb7f" category="list-text">オンライン・バックアップ * を作成する場合は、 * オンライン・バックアップ * を選択します。</block>
   <block id="2970dd9d72c00fe91590d9b297f952f6" category="paragraph">すべてのデータファイル、制御ファイル、アーカイブログファイル、データファイルと制御ファイル、アーカイブログファイルのいずれをバックアップするかを指定する必要があります。</block>
@@ -7088,7 +6987,6 @@
   <block id="be859d432cb8f72f5fb9b4c1622d56b1" category="paragraph">バックアップに含まれるログデスティネーションからアーカイブログを削除</block>
   <block id="3330083979ff2e07d7e4609ee2228f08" category="paragraph">[ * バックアップの一部である保存先からアーカイブ・ログを削除する * ] を選択します。</block>
   <block id="9696f79f02f1b72ee2751fa3ac8cee1b" category="admonition">アーカイブログバックアップを保持できるのは、バックアップの一部としてアーカイブログファイルを選択した場合だけです。</block>
-  <block id="7cc68b5677a3b2fc34e03106ab7871ff" category="list-text">Replication （レプリケーション）ページで、レプリケーション設定を指定します。</block>
   <block id="0eb8f2f819c8b84106d6c0414648f1c5" category="inline-link-macro">[Topology]ページでのOracleデータベースのバックアップとクローンの表示</block>
   <block id="ffb3ae9f69a62e97d1deccf8e6b8f1ff" category="paragraph">プリスクリプトとポストスクリプトは、 /var/opt/snapcenter /spl/scripts_or に保存するか、このパス内の任意のフォルダに保存する必要があります。デフォルトでは、 /var/opt/snapcenter /spl/scripts_path が読み込まれます。スクリプトを保存するフォルダをこのパス内に作成してある場合は、パス内のそれらのフォルダを指定する必要があります。</block>
   <block id="1b4b1a8701700f9bb0245d7c920ebd16" category="paragraph">スクリプトのタイムアウト値を指定することもできます。デフォルト値は60秒です。</block>
@@ -7149,7 +7047,6 @@
   <block id="937ef2c7b74b1eec347f0c9aded49e70" category="paragraph">Oracle Recovery Manager（RMAN）を使用してOracleデータベースのバックアップをカタログ化し、Oracle RMANリポジトリにバックアップ情報を格納できます。</block>
   <block id="73ab77a4e0e6c4115d8951e76174358b" category="paragraph">SnapCenter GUIでOracleバックアップポリシーを作成するときにカタログ化オプションを有効にした場合は、バックアップ処理の一環としてOracle RMANを使用してバックアップがカタログ化されます。Catalog-SmBackupWithOracleRMANコマンドを実行して、バックアップの遅延カタログ化を実行することもできます。バックアップをカタログ化したら、Get-SmBackupDetailsコマンドを実行して、カタログ化されたバックアップの情報（カタログ化されたデータファイルのタグ、制御ファイルのカタログパス、カタログ化されたアーカイブログの場所など）を取得できます。</block>
   <block id="c24d7ca4d411ef11bd70445406475c9e" category="paragraph">クロスチェックを実行すると、リポジトリレコードが物理ステータスと一致しないバックアップに関するRMANリポジトリ情報を更新できます。たとえば、ユーザがオペレーティングシステムコマンドを使用してディスクからアーカイブログを削除しても、実際にはディスクにログがない場合でも、制御ファイルにはディスクにログがあることが示されます。クロスチェック処理では、制御ファイルの情報を更新できます。クロスチェックをイネーブルにするには、Set-SmConfigSettingsコマンドを実行し、ENABLE_CROSSCHECKパラメータにtrueを割り当てます。デフォルト値は FALSE です。</block>
-  <block id="11e43ab461a103a8bc4cd483c4f53487" category="paragraph">コマンドで使用できるパラメータとその説明については、Get-Help Command_nameを実行して確認できます。または、を参照することもできます<block ref="1be7dd030b7b4d460912ef60d82c1252" category="inline-link-rx"></block>。</block>
   <block id="7004c590f0cedfca0304271af0b72b63" category="section-title">プライマリストレージボリュームまたはセカンダリストレージボリュームを使用したバックアップコピーの検証</block>
   <block id="0aaa1195903b8c3291fdc5c0850cc98a" category="summary">データベースをクローニングする前に戦略を定義しておくと、クローニング処理を確実に成功させることができます。</block>
   <block id="f41173dd94f009e5a3617883b76d2aeb" category="doc">Oracleデータベースのクローニング戦略を定義する</block>
@@ -7284,7 +7181,6 @@
   <block id="3883545e9f031c735dbdc8f40c3853a6" category="paragraph">不要になった場合は、プラガブルデータベース（PDB）のクローンを削除できます。</block>
   <block id="9b7e4959127de26d75609e3142e4d19c" category="paragraph">PDBがクローニングされるターゲットCDBのバックアップを作成した場合、PDBクローンを削除すると、クローニングされたPDBもターゲットCDBのバックアップから削除されます。</block>
   <block id="0a86810ca19714269dbf245dd700442c" category="admonition">PDBクローンは、インベントリビューまたはリソースビューに表示されません。</block>
-  <block id="6927683b616825cb773183b147e9e3fa" category="list-text">PDBクローン（targetCDB：PDBClone）を選択し、をクリックします <block ref="097a6d0ab39a212263c3129e9214fa08" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="8d70bdd589ad1d5053591608060dd666" category="summary">リソースとは、SnapCenterで管理されるホスト上のOracleデータベースです。使用可能なデータベースを検出したあとに、これらのデータベースをリソースグループに追加してデータ保護処理を実行できます。</block>
   <block id="bcbd15ff750a5bdd0a69b69272c96224" category="doc">バックアップに使用できるOracleデータベースを検出します</block>
   <block id="14391af03493ba1cebd9404bb5bda74c" category="list-text">データベースが仮想マシンディスク（VMDK）またはrawデバイスマッピング（RDM）にある場合は、SnapCenter Plug-in for VMware vSphereを導入してSnapCenterに登録する必要があります。</block>
@@ -7346,7 +7242,6 @@
   <block id="69e42ea21f7ea24c6b6f4e546e5fd834" category="paragraph"><block ref="f274dc93ba0b848fb70350d03f8cd1a0" prefix="" category="inline-code"></block></block>
   <block id="bc22dd302511c4acf4836040c65325d5" category="list-text">バックアップIDを取得するには、次のコマンドを実行します。</block>
   <block id="a00ce87c37f466b173bc4525b9e62be8" category="paragraph"><block ref="458d83fc2eecf23329f81a7d3ab0b722" prefix="" category="inline-code"></block></block>
-  <block id="417dd85a136c799492c1ff6bac4c3407" category="paragraph">コマンドで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。または、を参照することもできます<block ref="1be7dd030b7b4d460912ef60d82c1252" category="inline-link-rx"></block>。</block>
   <block id="9637bf398b0d618db1f07c6ac29233d8" category="section-title">データベースバックアップのアンマウント</block>
   <block id="c4b42b6394982de365aef2dea04b7478" category="paragraph">マウントされたデータベースバックアップのファイルにアクセスする必要がなくなった場合は、そのバックアップを手動でアンマウントできます。</block>
   <block id="5bdcda8fa398715c0e816de58d9f6f32" category="inline-image-macro">アンマウントアイコン</block>
@@ -7369,7 +7264,6 @@
   <block id="d7e2fe8d57177433ec8525953525ce2b" category="list-text">プライマリクローン仕様ファイルを指定し、ポリシーでセカンダリ更新オプションが選択されていない場合、プライマリ上にバックアップが作成され、プライマリからクローンが作成されます。</block>
   <block id="eebf4dbc30cb79473f44b0746798f0d8" category="list-text">Run_Refresh - SmClone_ 。</block>
   <block id="2dca23ddca1615e63d449ef4dd543431" category="paragraph">"PL-SCO-20032: CanExecute 操作がエラーで失敗した場合 : PL-SCO-300331: Redo ログファイル +SC_2959770772_clmdb/clredolog/redo01_01.log Exist" エラーメッセージが表示されたときに、操作が失敗した場合は、 -WaitToTriggerClone_" に高い値を指定してください。</block>
-  <block id="24416ae32ddffe1257e6415b4f8b9d2d" category="paragraph">UNIXコマンドの詳細については、を参照してください<block ref="1be7dd030b7b4d460912ef60d82c1252" category="inline-link-rx"></block>。</block>
   <block id="98ecfe0d837e77006a17452ca412bc0a" category="doc">Oracleデータベースのリストアとリカバリ</block>
   <block id="39777df60ae8ddc1548b34cdead2def2" category="list-text">リカバリは、設定したアーカイブログの場所にあるアーカイブログを使用して実行されます。データベースがARCHIVELOGモードで実行されている場合は、REDOログファイルのいっぱいになったグループが1つ以上のオフラインデスティネーション（まとめてアーカイブREDOログ）に保存されます。SnapCenterは、指定したSCN、選択した日時、または[すべてのログ]オプションに基づいて、最適な数のログバックアップを特定してマウントします。リカバリに必要なアーカイブログが設定された場所にない場合は、ログを含むSnapshotをマウントし、パスを外部アーカイブログとして指定する必要があります。</block>
   <block id="fbb97552b0524a5656aa7f96bad51e9d" category="paragraph">ASMデータベースをASMlibからASMFDに移行する場合、ASMlibで作成されたバックアップを使用してデータベースをリストアすることはできません。ASMFD設定でバックアップを作成し、リストアに使用する必要があります。同様に、ASMデータベースをASMFDからASMlibに移行する場合は、リストアするバックアップをASMlib構成で作成する必要があります。</block>
@@ -7480,21 +7374,17 @@
   <block id="4cdff21e1a3b3a11f16dc574421a1599" category="doc">Oracleデータベースクローンのスプリット</block>
   <block id="b1b82801e9c78c50ebcf99fde0aea87a" category="list-text">クローンをスプリットすると、クローンのバックアップコピーが削除されます。</block>
   <block id="cba97cc8f5b2bb7297dd2360ae8b024a" category="list-text">クローンスプリット処理の制限事項については、を参照して<block ref="3ae98799f9586e965a749204c2b3e8f9" category="inline-link-rx"></block>ください。</block>
-  <block id="932be043b11149e991bf82c52befcebf" category="list-text">クローニングされたリソース（データベースやLUNなど）を選択し、をクリックします <block ref="4e76ccc6d666f337d0615fe61d91903b" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="c073ee3bf31639ca8cd5dfdf2fe18185" category="paragraph">SMCoreサービスが再起動し、クローンスプリット処理が実行されたデータベースが[リソース]ページにクローンとして表示されると、クローンスプリット処理が応答を停止します。_Stop-SmJob_cmdlet を実行してクローンスプリット処理を停止し、クローンスプリット処理を再試行する必要があります。</block>
   <block id="103e35e260868e1aa1c36274a7301158" category="paragraph">クローンがスプリットされているかどうかを確認するためにポーリング時間を長くしたり、ポーリング時間を短くしたりする場合は、SMCoreServiceHost.exe.configファイルのCloneSplitStatusCheckPollTimeパラメータの値を変更して、SMCoreがクローンスプリット処理のステータスをポーリングする時間間隔を設定できます。値はミリ秒単位で、デフォルト値は5分です。</block>
   <block id="fbfa277a055cde6a44aa257516ef119c" category="admonition">バックアップ、リストア、または別のクローンスプリットが実行中の場合、クローンスプリットの開始処理は失敗します。クローンスプリット処理を再開するのは、実行中の処理が完了してからにしてください。</block>
   <block id="156cbb91cfb42345ea9b28c562e803a7" category="summary">SnapCenter を使用して、クローニングされた Pluggable Database \ （ PDB\ ）をスプリットできます。</block>
   <block id="0841514f865605a705539d269e140769" category="paragraph">PDBがクローニングされるターゲットCDBのバックアップを作成した場合、PDBクローンをスプリットすると、クローニングされたPDBがそのPDBを含むターゲットCDBのすべてのバックアップからも削除されます。</block>
-  <block id="fbea596c70f1dfc79ca7ad9bfdcc546a" category="list-text">PDBクローン（targetCDB：PDBClone）を選択し、をクリックします <block ref="4e76ccc6d666f337d0615fe61d91903b" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="49b39d27e489b805a366414e3b30c78b" category="paragraph">[Summary Card]セクションには、バックアップとクローンの総数、およびログバックアップの総数が表示されます。</block>
   <block id="9672f59acbe87e1f0d5b5b9ce8bec042" category="list-text">表でバックアップを選択し、データ保護アイコンをクリックして、リストア、クローニング、マウント、アンマウント、名前変更、カタログ化、カタログ解除、および削除の各処理を実行します。</block>
   <block id="83bc09268539a35b9e5bb05f51759445" category="list-text">ログバックアップを選択した場合は、名前変更、マウント、アンマウント、カタログ化解除、 および DELETE 処理が含まれます。</block>
   <block id="d832fec799a3a70760ed7fe13bef388d" category="list-text">Oracle Recovery Manager（RMAN）を使用してバックアップをカタログ化した場合、そのバックアップの名前は変更できません。</block>
-  <block id="80720ca63de6ce126b5aefa74149e369" category="list-text">クローンを削除する場合は、表でクローンを選択し、<block ref="097a6d0ab39a212263c3129e9214fa08" category="inline-image-macro-rx" type="image"></block>をクリックします。</block>
   <block id="123f58b5f6c3fc41829ae40b968fcda4" category="paragraph">SnapmirrorStatusUpdateWaitTimeに割り当てられている値がより小さい場合は、データボリュームとログボリュームが正常に保護されていても、ミラーとバックアップのバックアップコピーはトポロジページに表示されません。SnapmirrorStatusUpdateWaitTime に割り当てられた値は、 _Set-SmConfigSettings_PowerShell コマンドレットを使用して増やす必要があります。</block>
   <block id="11dbb257c91d345a6a0cee430763b610" category="paragraph">コマンドで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。</block>
-  <block id="1b6ea21913ed2f5402c7b5b80ca1f739" category="paragraph">または、またはを参照することもできます<block ref="1be7dd030b7b4d460912ef60d82c1252" category="inline-link-rx"></block><block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block>。</block>
   <block id="3e2d2f6a646250c8b750be0ca26e5b46" category="summary">プライマリストレージボリュームまたはセカンダリストレージボリュームを使用してバックアップコピーを検証します。</block>
   <block id="77536321746ee899d10dbbec054c87ce" category="doc">バックアップコピーを検証する場所</block>
   <block id="ebae46e6c1cf802f26210eac01893036" category="doc">Plug-in for SQL Serverのプライマリストレージボリュームまたはセカンダリストレージボリュームを使用したバックアップコピーの検証</block>
@@ -7822,7 +7712,6 @@
   <block id="99eb5243897677d4ecbe85a62d686e8c" category="paragraph">たとえば、customText_policy_hostnameやresource_hostnameなどです。デフォルトでは、Snapshot名にタイムスタンプが追加されます。</block>
   <block id="fb87909a252e4e2dc396bcfb921e0428" category="list-text">[Policies] ページで、次のタスクを実行します。</block>
   <block id="075e5d48960664645c5727a530a7c640" category="list-text">[Policies] セクションで、ドロップダウンリストから 1 つ以上のポリシーを選択します。</block>
-  <block id="51967c03859d379ed44f57ea268dd825" category="paragraph">ポリシーを作成するには、**を選択し<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>てポリシーウィザードを開始します。</block>
   <block id="204b899f0e95e32b80ec8ea79f53c1ec" category="paragraph">[ 選択したポリシーのスケジュールを設定する *] セクションに、選択したポリシーが一覧表示されます。</block>
   <block id="8eca00bd5e799ca761dc094888307893" category="list-text">[ポリシーのスケジュールを追加]*<block ref="4595028aeeeb2fdba0f5fec9c2385d0d" prefix=" " category="inline-code"></block> ダイアログボックスで、スケジュールを設定し、*[OK]*を選択します。</block>
   <block id="08fe75bd987fb2dedbe7641f478927f0" category="paragraph"><block ref="4595028aeeeb2fdba0f5fec9c2385d0d" prefix=" " category="inline-code"></block>選択したポリシーの名前が表示されます。</block>
@@ -7831,7 +7720,6 @@
   <block id="b3391d8fe49978b6cd1149c12195eefc" category="paragraph">検証サーバ（ローカルホストまたはリモートホスト）は複数選択できます。</block>
   <block id="714c955a93d0173dfa1f64ba57283a64" category="admonition">検証サーバのバージョンは、プライマリデータベースをホストしているSQL Serverのエディションのバージョン以上である必要があります。</block>
   <block id="165a706b2aac1c99b9bead7d6d155859" category="list-text">セカンダリ・ストレージ・システム上のバックアップを検証するには ' セカンダリ・ロケータをロードを選択します</block>
-  <block id="28d224f5fce20ca21cc66cf83832a2b1" category="list-text">検証スケジュールを設定するポリシーを選択し、**を選択します<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="73d5c45d8fe4cd81e69573ed4a382644" category="list-text">Add Verification Schedules_policy_name_dialog box で、次の処理を実行します。</block>
   <block id="770dea1a7ffca4cdfedbdad1adb3687d" category="paragraph">[ バックアップ後に検証を実行 ] を選択します。</block>
   <block id="55fe9b117fac71b33a8f95f9010bde5a" category="paragraph">[ スケジュールされた検証を実行する ] を選択します。</block>
@@ -7937,9 +7825,6 @@
   <block id="398199fedb54e43a278fa46313e8a350" category="section-title">手順1：ポリシー名を作成します</block>
   <block id="527845dfb36351f269fc0788cbb25f31" category="list-text">[設定]ページで、*[ポリシー]*を選択します。</block>
   <block id="35f738c979f3c37836b8abb8e955fca3" category="list-text">[New]*を選択します。</block>
-  <block id="f8c86cc4b1c8e607fa2e36ce41958b14" category="list-text">[* 名前 *] ページで、ポリシー名と概要を入力します。</block>
-  <block id="efb5373e3d8e2817008f63857d38a814" category="section-title">ステップ2：バックアップオプションを設定します</block>
-  <block id="f7b8f416ca34a425d97e1cba3100233c" category="list-text">バックアップタイプを選択します</block>
   <block id="c4dee4ab1e265b9beacb9e140fafa516" category="open-title">フルバックアップとログバックアップ</block>
   <block id="7e26a626a8bd9210daa716e7391b1a91" category="paragraph">データベースファイルとトランザクションログをバックアップし、トランザクションログを切り捨てます。</block>
   <block id="367e13921e2255a8cbd12c7825418d0e" category="list-text">Snapshotごとにバックアップするデータベースの最大数を入力します。</block>
@@ -7960,51 +7845,30 @@
   <block id="243090f66a6c5d6db7d61a99489c240c" category="paragraph">バックアップのAGレプリカを決定する最小バックアップ優先順位と最大バックアップ優先順位を指定します。たとえば、最小優先度を10、最大優先度を50に設定できます。この場合、優先度が10より大きく50未満のすべてのAGレプリカがバックアップ対象とみなされます。</block>
   <block id="4035686675283d0f53d4a20e3a9588f0" category="paragraph">デフォルトでは、最小プライオリティは1、最大プライオリティは100です。</block>
   <block id="95f62fbbdd8b59bc3cdee3bd3e382046" category="admonition">クラスタ構成では、ポリシーで設定された保持設定に従って、バックアップがクラスタの各ノードで保持されます。AGの所有者ノードが変更された場合、保持設定に従ってバックアップが作成され、以前の所有者ノードのバックアップが保持されます。AGの保持設定はノードレベルでのみ適用されます。</block>
-  <block id="a9e3835459894cca73ddb217d50af0db" category="list-text">このポリシーのバックアップ頻度をスケジュールします。スケジュールタイプを指定するには、*オンデマンド*、*毎時*、*毎日*、*毎週*、または*毎月*を選択します。</block>
   <block id="016bcd6d9710c9d2dde84a3ff020b0de" category="paragraph">ポリシーに対して選択できるスケジュールタイプは1つだけです。</block>
-  <block id="c7075c18b2e266ad847d25c7cdafc611" category="image-alt">バックアップ設定画面。</block>
   <block id="1947481e76eb40f4adf8f5246fa95ff6" category="admonition">リソースグループを作成する際に、バックアップ処理のスケジュール（開始日、終了日、頻度）を指定できます。これにより、ポリシーとバックアップ頻度が同じであるリソースグループを作成できますが、各ポリシーに異なるバックアップスケジュールを割り当てることができます。</block>
-  <block id="ef077dad77fac08deaf5fe61aced7bc3" category="section-title">ステップ3：保持設定を構成する</block>
-  <block id="886ea91e68cf0b81982d756722488f4e" category="paragraph">[ 保持 ] ページでは、 [ バックアップ・タイプ ] ページで選択したバックアップ・タイプに応じて、次のアクションを 1 つ以上実行します。</block>
-  <block id="73d1997538c5c2799ee681d5e59023ad" category="list-text">[Retention settings for the up-to-the-minute restore operation]セクションで、次のいずれかを実行します。</block>
   <block id="d8d914bba3878c80c4a43efb4e1ce72c" category="open-title">特定のコピー数</block>
   <block id="8822b1db0297028652e02db3e4af760f" category="paragraph">特定の数のSnapshotのみを保持します。</block>
   <block id="619f22faf39c2dfe9a11af29647bb1a6" category="list-text">［ * 最新の &lt; 日数 &gt; 日数に適用可能なログバックアップを保持する ］ オプションを選択し、保持する日数を指定します。この上限に近づいた場合は、古いコピーを削除できます。</block>
   <block id="fe9e179b8597c5b1e7f1e2ff0644a5c8" category="open-title">特定の日数</block>
   <block id="82c2224d099110596a9863d056598afe" category="paragraph">バックアップコピーを特定の日数だけ保持します。</block>
   <block id="9bbf41d74c8f89f293d3299ea7bebf83" category="list-text">［ * 最新の &lt; 日数 &gt; フル・バックアップに適用可能なログ・バックアップを保持する ］ オプションを選択し、ログ・バックアップ・コピーを保持する日数を指定します。</block>
-  <block id="9de90deec5302da2195d39aecfada280" category="list-text">On Demand の保持設定の「 * フルバックアップの保持設定 * 」セクションで、次の操作を実行します。</block>
-  <block id="01161b2ea6c2a575567c66cd20fb2d2b" category="list-text">保持するSnapshotの総数を指定</block>
-  <block id="3e44a8badc4e63dbe09602ec7a645d6d" category="list-text">保持するSnapshotの数を指定するには、*保持するSnapshotコピーの総数*を選択します。</block>
-  <block id="77a7fd8cca8cbeb3ef776e9176ff5639" category="admonition">デフォルトでは、保持数の値は2に設定されています。保持数を1に設定すると、新しいSnapshotがターゲットにレプリケートされるまで最初のSnapshotがSnapVault関係の参照Snapshotになるため、保持処理が失敗する可能性があります。</block>
-  <block id="785922db862c289384ffb00097fa1b09" category="list-text">Snapshotを保持する期間</block>
-  <block id="b02e59c697fe2e431d0b9971224415f2" category="list-text">Snapshotを保持してから削除するまでの日数を指定する場合は、*[Keep Snapshot copies for]*を選択します。</block>
-  <block id="22a17a0f81564b386d059bfef330f60f" category="list-text">Snapshotのロック期間を指定する場合は、*[Snapshot copy locking period（Snapshotコピーロック期間）]*を選択し、日数、月数、または年数を選択します。</block>
   <block id="0e549e42000cf1cd2bd13dc132e61448" category="paragraph">SnapLock保持期間は100年未満にする必要があります。</block>
-  <block id="058ebe875bccef9354f43eaa6facdc04" category="list-text">[ 毎時 ] 、 [ 毎日 ] 、 [ 毎週 ] 、および [ 毎月 ] の保持設定の [ フルバックアップ保持設定 *] セクションで、 [ バックアップタイプ ] ページで選択したスケジュールタイプの保持設定を指定します。</block>
-  <block id="c5de403e1806c217cf2924175f84c487" category="list-text">保持するSnapshotの数を指定するには、*保持するSnapshotコピーの総数*を選択します。Snapshotの数が指定した数を超えると、最も古いコピーから順にSnapshotが削除されます。</block>
-  <block id="6dbf7587b461da1c5b97d671cf358311" category="list-text">Snapshotを削除するまで保持する日数を指定するには、*[Keep Snapshot copies for]*を選択します。</block>
-  <block id="8e21880c3d6be6527ce936f273c2dfdb" category="paragraph">ログSnapshotの保持期間は、デフォルトで7日に設定されています。Set-SmPolicyコマンドレットを使用して、ログのSnapshot保持期間を変更します。</block>
   <block id="4caf8c069465c53a1a175fa4a08aa0a8" category="paragraph">この例では、ログのSnapshot保持数を2に設定しています。</block>
   <block id="92ac5fc0212c94ee50e6dc85913caeec" category="example-title">例を示します</block>
   <block id="8047dd542f0833c625160d18deaef831" category="paragraph">Set-SmPolicy-PolicyName 'newpol'-PolicyType 'Backup'-PluginPolicyType 'SCSQL'-sqlbackuptype 'FullBackupAndLogBackup'-RetentionSettings@｛backupType='Hourly'；RetentionCount=2｝、@｛backupType='log_snapshot'；ScheduleType=2｝</block>
   <block id="f2d35fb96ac070e63c88b1b43cf8c70b" category="inline-link">SnapCenterがデータベースのSnapshotコピーを保持</block>
   <block id="96df6a4d32e4546cfd055ffa3e9a7097" category="paragraph"><block ref="96df6a4d32e4546cfd055ffa3e9a7097" category="inline-link-rx"></block></block>
-  <block id="b1cf83519efa64342d0b96985ded3691" category="section-title">ステップ4：レプリケーション設定を構成します</block>
-  <block id="91c72a64980863f26bec585770f3d671" category="list-text">Replication （レプリケーション）ページで、セカンダリストレージシステムへのレプリケーションを指定します。</block>
   <block id="df5624cba097e4a1613f2162cfe02d72" category="open-title">SnapMirrorの更新</block>
   <block id="4fbf861fa73d7c46a9d919de9dba7f88" category="paragraph">ローカルSnapshotコピーの作成後にSnapMirrorを更新します。</block>
   <block id="b62913a5294dae473801568644e4e8a8" category="list-text">別のボリュームにバックアップセットのミラーコピーを作成する場合（SnapMirror）は、このオプションを選択します。</block>
   <block id="862e27b33388db0f7174e2affc68bbee" category="inline-link-macro">[Topology]ページでのSQL Serverのバックアップとクローンの表示</block>
   <block id="721dcaba6ffe06898a1264f811fd7874" category="open-title">SnapVaultの更新</block>
   <block id="aafae6ead4b01f0afa9e2d2dcfc5ecdd" category="paragraph">Snapshotコピーの作成後にSnapVault を更新</block>
-  <block id="c174e73377b0caee145d55a594cd4122" category="open-title">セカンダリポリシーラベル</block>
   <block id="149450cb3a9e3ecae5eaba7a4573516f" category="paragraph">選択したSnapshotラベルに応じて、ラベルに一致するセカンダリSnapshot保持ポリシーがONTAPによって適用されます。</block>
   <block id="103ff4d651f40a22f8ac13b7d439054e" category="open-title">エラー再試行回数</block>
-  <block id="d9179dd8d5b7e66714a9152a60aff94d" category="section-title">手順5：スクリプト設定を構成します</block>
   <block id="1701175190dfd6dd06812a1b97af8f95" category="paragraph">たとえば、SNMPトラップの更新、アラートの自動化、ログの送信を行うスクリプトを実行できます。</block>
   <block id="dccc8011e6f51f002aae83ff00479c7d" category="admonition">セカンダリストレージがSnapshotの最大数に達しないように、ONTAPでSnapMirror保持ポリシーを設定する必要があります。</block>
-  <block id="a6e367864d05c1235a3dc068e29fb052" category="section-title">手順6：検証設定を構成します</block>
   <block id="369cd91c3e11b99e6fa5850b92b3090a" category="list-text">整合性構造をデータベースの物理構造に制限する（physical_only）</block>
   <block id="e11807f1f1cff5721f85802ddac261ed" category="list-text">すべての情報メッセージを抑制（INFOMSGSなし）</block>
   <block id="82f15136daedc726dba1051c43c28284" category="list-text">すべての情報メッセージを停止するには、「 * 」を選択します（ NO_INFOMSGS ）。デフォルトで選択されています。</block>
@@ -8012,7 +7876,6 @@
   <block id="62acb38bef8d64c5f91175e7ae80611b" category="list-text">クラスタ化されていないインデックスをチェックしない（NOINDEX）</block>
   <block id="7872e7b32ee763197ad7b5b084205b8c" category="list-text">非クラスタ化インデックスをチェックしない場合は、「 * 非クラスタ化インデックスをチェックしない」を選択します。SQL Serverデータベースは、Microsoft SQL Server Database Consistency Checker（DBCC）を使用して、データベース内のオブジェクトの論理的および物理的な整合性をチェックします。</block>
   <block id="610559e33fd2c1c02990a8421918d746" category="list-text">内部データベーススナップショット（TABLOCK）を使用する代わりに、チェックを制限してロックを取得する</block>
-  <block id="79418e51dfe3ef30c9d30317f30d19e2" category="section-title">ステップ7：概要を確認します</block>
   <block id="0ebfc8ee6fcce1769e02ab4f33c1967f" category="summary">リソースグループはコンテナであり、一緒にバックアップして保護するリソースを追加します。リソースグループを使用すると、特定のアプリケーションに関連するすべてのデータを同時にバックアップできます。リソースグループはすべてのデータ保護ジョブに必要です。また、リソースグループに1つ以上のポリシーを適用して、実行するデータ保護ジョブのタイプを定義する必要があります。</block>
   <block id="8a256fc5affeb3e3570c3c8e73ce682b" category="paragraph">リソースを個別に保護する場合、新しいリソースグループを作成する必要はありません。保護されたリソースでバックアップを作成することができます。</block>
   <block id="80b4392036b2c71988077d45b3eedc67" category="paragraph">リソースグループをあとで検索する際に役立つラベルを1つ以上入力します。たとえば、HRをタグとして複数のリソースグループに追加した場合、後でHRタグに関連付けられているすべてのリソースグループを検索できます。</block>
@@ -8021,7 +7884,6 @@
   <block id="78504af1df199590dc7639bdc6191b6f" category="admonition">最近リソースを追加した場合は、リソースリストを更新しないと、使用可能なリソースのリストにリソースが表示されません。</block>
   <block id="3c8499d37e5b698773c087e64ded0e3e" category="list-text">[ 使用可能なリソース ] セクションから [ 選択したリソース ] セクションにリソースを移動するには、次のいずれかの手順を実行します。</block>
   <block id="6a56bc07f3745de1f0cdc0e035cac845" category="list-text">[ 使用可能なリソース（ Available Resources ） ] セクションからリソースを選択し、右矢印をクリックして [ 選択したリソース（ * Selected Resources ） ] セクションに移動する。</block>
-  <block id="326396bcf3264f58325650243635c607" category="list-text">[Configure schedules for selected policies]セクションで、スケジュールを設定するポリシーの[Configure Schedules]列にある***をクリックします<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="1d40f8a03f97a2b7db68e496f7964df0" category="paragraph">この処理は、ポリシーに指定されている頻度ごとに実行する必要があります。設定されたスケジュールは、 [ 選択したポリシーのスケジュールの設定 *] セクションの [ 適用されたスケジュール ] 列に一覧表示されます。</block>
   <block id="de1ddb63cbc6eefd83b0824a3d2ba0b2" category="paragraph">スケジュールポリシーに関連付けるスケジューラインスタンスも選択する必要があります。</block>
   <block id="1848b4701478a3042656d71c7fb7eb58" category="paragraph">[Microsoft SQL Server scheduler]を選択しない場合、デフォルトは[Microsoft Windows scheduler]になります。</block>
@@ -8311,7 +8173,6 @@
   <block id="6d1672aa795ab1d854ff0bb90d3f6cd5" category="paragraph">必要に応じてパスをカスタマイズできます。カスタムパスを使用する場合は、sudoersのデフォルトのコンテンツがカスタムパスで更新されていることを確認してください。</block>
   <block id="c5a7e6d82b07e7afa4c1c02448cc27f7" category="paragraph">ホストにマウントされているすべてのファイルシステムが自動的に検出され、[Resources]ページに表示されます。何も表示されない場合は、 * リソースを更新 * をクリックします。</block>
   <block id="3f1950eacb4451e75dc9187ae778c567" category="list-text">[リソース]ページで、[表示]リストから*[パス]*を選択します。</block>
-  <block id="e93fead65568a68416a84782db26a773" category="list-text">をクリックし <block ref="2df6cc2e237d722aa6244879c70fd2d2" category="inline-image-macro-rx" type="image"></block>、ホスト名とUNIXファイルシステムを選択してリソースをフィルタリングします。</block>
   <block id="e874731a7ef6d4af41255b41e914d98d" category="list-text">バックアップするファイルシステムを選択します。</block>
   <block id="5ddcb8bdaf878bbfe13ae4b383e53782" category="list-text">[Application Settings]ページで、次の手順を実行します。</block>
   <block id="c0ef36b0de24636d562f90f82af953c8" category="list-text">次のいずれかのバックアップ整合性オプションを選択します。</block>
@@ -8523,14 +8384,6 @@
   <block id="d178d4da02a7bf832ce07d2c8808aad5" category="list-text">データ保護の準備が完了している必要があります。</block>
   <block id="b86339a65c66fe618ad5df64a1271357" category="paragraph">データ保護の準備として、SnapCenterのインストール、ホストの追加、リソースの検出、Storage Virtual Machine（SVM）接続の作成などのタスクを完了する必要があります。</block>
   <block id="9f35f4e7b1b8337e12bc210c7cc37233" category="paragraph">デフォルト値はfalseです。</block>
-  <block id="7e27b1bb2d5d912d937124cbd703bfd5" category="list-text">既存のポリシーを使用できるかどうかを確認するには、ポリシー名を選択し、 [* 詳細 * ] をクリックします。</block>
-  <block id="ab9f87626b98185c7aa3a7012ed804c3" category="paragraph">既存のポリシーを確認したら、次のいずれかを実行できます。</block>
-  <block id="e386e4a454a71b532f5461e182e6ea32" category="list-text">既存のポリシーを使用する。</block>
-  <block id="4de3c0c7a329c036679ae5d6debd6837" category="list-text">既存のポリシーをコピーしてポリシー設定を変更する。</block>
-  <block id="8c80ab949b8c4f5204c34e59ffd5d6db" category="list-text">新しいポリシーを作成します。</block>
-  <block id="e8c762de3a8dd5521656740e398525de" category="list-text">新しいポリシーを作成するには、 * New * をクリックします。</block>
-  <block id="d3a7899ba84bc1cba2dbfdbfddb73d2b" category="list-text">[ 名前 ] ページで、ポリシー名と概要 を入力します。</block>
-  <block id="f471a8ee4242d9fbaf7751c9646120e4" category="list-text">[ バックアップオプション ] ページで、次のタスクを実行します。</block>
   <block id="6f43068825ab7b26f4e535c04ac19468" category="list-text">バックアップ設定を選択します。</block>
   <block id="99ab5dae334a718f97e7fe69ed4dead8" category="paragraph">ファイルシステム整合性バックアップ</block>
   <block id="f8c8c78e7ffffce80ffbd21d203b7d09" category="paragraph">ファイルシステムが配置されたディスクドライブをバックアップ処理の開始前に SnapCenter で休止し、バックアップ処理の終了後に再開する場合は、このオプションを選択します。</block>
@@ -8538,10 +8391,7 @@
   <block id="6fcd2b366746426d9183a35adf0558b9" category="paragraph">ファイルシステムが配置されたディスクドライブを SnapCenter で休止しない場合は、このオプションを選択します。</block>
   <block id="e969e3b78211d3360385217cc17ba23b" category="list-text">スケジュール頻度（ポリシータイプ）を選択します。</block>
   <block id="52b19e85e6a29b6fe5690f47944f859f" category="paragraph">ポリシーではバックアップの頻度のみを指定します。バックアップの具体的な保護スケジュールは、リソースグループで定義します。そのため、複数のリソースグループで同じポリシーとバックアップ頻度を共有していても、バックアップスケジュールが異なる場合があります。</block>
-  <block id="de22735eba76a2843e4c2bd28dfb8f2c" category="list-text">[Retention]ページで、オンデマンドバックアップおよび選択したスケジュール頻度の保持設定を指定します。</block>
-  <block id="8e77ee8a8b856638f0a6d0872be527cd" category="paragraph">保持するSnapshotコピーの総数</block>
   <block id="7e038afa02819cb4c7edd12ab0c9a3cf" category="paragraph">SnapCenterストアのSnapshot数を指定してからSnapshotを自動的に削除する場合は、このオプションを選択します。</block>
-  <block id="0a3cfeac0775871baedb24392bc4423c" category="paragraph">次の期間を経過したSnapshotコピーを削除</block>
   <block id="9fbc3fb0ee9d4d329dbc0f3053b7b871" category="paragraph">SnapCenter がバックアップコピーを保持する日数を指定する場合は、このオプションを選択します。指定した日数を過ぎると削除されます。</block>
   <block id="cab00f169fcfeb601710dd89ecbfedf0" category="admonition">保持数は2以上に設定する必要があります。保持数の最小値は2です。</block>
   <block id="f6be498f0ce984a9f472edc345bed193" category="paragraph">このオプションは、SnapSnapMirrorのアクティブな同期に対して有効にする必要があります。</block>
@@ -8605,7 +8455,6 @@
   <block id="b9eabe260cd8a0a2c241b35d09dfb062" category="paragraph">オプションは、プラグインを手動でインストールしたあとに、プラグインをインストールするための要件をホストが満たしているかどうかを検証しない場合に使用でき<block ref="340b7328d82897326900685536aac803" prefix=" " category="inline-code"></block> ます。</block>
   <block id="7372096d67d7a00d21e644f03bd6b3f6" category="summary">SnapCenter Plug-in for Microsoft Windows を SnapCenter の GUI からリモートでインストールできない場合は、 Windows ホスト上にローカルにインストールできます。SnapCenter Plug-in for Microsoft Windows のインストールプログラムを、 Windows のコマンドラインからサイレントモードで自動的に実行できます。</block>
   <block id="3065bc79c85488f5e9c34540aa589dee" category="doc">コマンドラインからのSnapCenter Plug-in for Microsoft Windowsのサイレントインストール</block>
-  <block id="08e9631e1208ded677a67844beb7e0f6" category="list-text">Microsoftがインストールされている必要があります。 Net 4.7.2以降。</block>
   <block id="06b79cf9e641e40d79092a668abcecac" category="list-text">PowerShell 7.4.2以降がインストールされている必要があります。</block>
   <block id="45305b0c2be46c68805c14c7667e37d1" category="list-text">Windowsメッセージキューをオンにしておく必要があります。</block>
   <block id="3f9e658ebdc571b944cc7a6bb94fa2fc" category="list-text">ホストのローカル管理者である必要があります。</block>
@@ -9362,7 +9211,6 @@
   <block id="521d29d37f5561d4922ece42dc92cb07" category="cell">SnapCenterサーバのバージョン</block>
   <block id="7676f59833cee6720de923cfeef21ede" category="cell">SnapCenterサーバを直接アップグレードできる環境</block>
   <block id="8d0f374d6bbbe36aead49222bc8c909f" category="cell">サポートされるプラグインのバージョン</block>
-  <block id="622fbbcf746903b903f2af5462c8550a" category="cell">4.9</block>
   <block id="336669dbe720233ed5577ddf81b653d3" category="cell">5.0</block>
   <block id="9f41f9f1c434718ae6e50ffba61152d0" category="cell">6.0</block>
   <block id="dd9f485e72f96875e028693823f26e70" category="inline-link">SnapCenter Plug-in for VMware vSphere をアップグレードします</block>
@@ -9396,7 +9244,6 @@
   <block id="832ab315e74cc6d95c21009b0c52cb2b" category="sidebar">コマンドリファレンスガイド</block>
   <block id="cd04e5d32cbb18b14141238ca9a7ea20" category="sidebar">以前のバージョンのSnapCenterのドキュメント</block>
   <block id="66bdd10c104f52b4f8519b652bc8e084" category="sidebar">NetAppナレッジベース- SnapCenter</block>
-  <block id="6e91a2dc60b4347cdbac1d690aabcd92" category="sidebar">SnapCenterソフトウェア6.0のドキュメント</block>
   <block id="b3121ceac9c3b1c097a1f53db3eff2a7" category="sidebar">SnapCenterサーバとプラグインの管理</block>
   <block id="fea84990764109b117844dae6e7232a7" category="sidebar">ダッシュボードを表示</block>
   <block id="0460583622f03a52d7693094d6fa2452" category="sidebar">概念</block>
@@ -9549,19 +9396,8 @@
   <block id="fc25be62e75052437e6fa7b8d1571f48" category="open-title">SnapCenter UI</block>
   <block id="41269337bd4507838c6bb1bd7b2141c3" category="sidebar">DB2データベースのバックアップ</block>
   <block id="e8bec8246398463ed040582acbbd61f4" category="admonition">バックアップジョブのステータスは表示されますが<block ref="718fe53e11bbf4bb30ca7e885db5e6f5" category="inline-image-macro-rx" type="image"></block>、ジョブの詳細をクリックすると、バックアップ処理の子タスクの一部が進行中であるか、警告サインが表示されていることがあります。</block>
-  <block id="e12e035acf67bf5c7809b2d4af7617f9" category="paragraph">リソースグループを検索するには、検索ボックスにリソースグループ名を入力するか、**を選択し<block ref="2df6cc2e237d722aa6244879c70fd2d2" category="inline-image-macro-rx" type="image"></block>てタグを選択します。その後、**を選択してフィルタペインを閉じることができます<block ref="2df6cc2e237d722aa6244879c70fd2d2" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="c1c536a43dbea753ec89b25093b7fcbb" category="list-text">トランザクションログをバックアップします。</block>
-  <block id="fd4d4171b69bc5fa698b2dffd93c146c" category="paragraph"><block ref="fd4d4171b69bc5fa698b2dffd93c146c" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="0ce7c545aa7f6a4537f968c22eef3d36" category="paragraph">を参照して <block ref="49d20c76ef6152c5513f45f2a8001fad" category="inline-link-macro-rx"></block></block>
-  <block id="f1ff0c05dfb4e925abe0b462d70242ef" category="inline-image-macro">アクティビティペインのアイコン</block>
-  <block id="4fc2b8f7aeb3b17b4232931b18b2b255" category="list-text">クローン処理を開始したら、[Activity]ペインでをクリックして、 <block ref="13753e5a610a88f42eae8580b5eb44fe" category="inline-image-macro-rx" type="image"></block> 最新の5つの処理を表示します。</block>
-  <block id="989b97d92261aac165fb7e4084ec528e" category="list-text">リストア処理を開始したら、[Activity]ペインをクリックして、 <block ref="13753e5a610a88f42eae8580b5eb44fe" category="inline-image-macro-rx" type="image"></block> 最新の5つの処理を表示します。</block>
-  <block id="8a2d854f3ed01537f746853e4251a06f" category="list-text">をクリックして、リストの内容をバックアップ処理だけに絞り込みます。</block>
-  <block id="fa2b52d925a319c14066bc2b6261b577" category="inline-image-macro">[Activity]ペイン</block>
-  <block id="094ad8ce7ac78cda3037724bf89d3e0c" category="list-text">[Activity]ペインでをクリックすると、 <block ref="fc99bdfee24cc239c6c2af614cd55db0" category="inline-image-macro-rx" type="image"></block> 最新の5つの処理が表示されます。</block>
   <block id="7495c2e60977b03d4fd9f88701c5a72c" category="inline-image-macro">[ 詳細 ] アイコン</block>
-  <block id="f8863466038d02e0ea409061b5e84cea" category="list-text">をクリックし<block ref="725f4bf2ffc300942027282d0182533f" category="inline-image-macro-rx" type="image"></block>、*[サービスの開始]*または*[サービスの再開]*をクリックします。</block>
-  <block id="ce7d10a7f8e0cc4c10cc5df939616661" category="list-text">をクリックし<block ref="725f4bf2ffc300942027282d0182533f" category="inline-image-macro-rx" type="image"></block>、*[スケジュールの中断]*をクリックして、このプラグインのホストをメンテナンスモードにします。</block>
   <block id="661d7f3440f79c7cdba268704c99709b" category="section-title">スケジュールされたバックアップジョブの管理</block>
   <block id="ef30beea0251db2596d06cfa85d10e78" category="paragraph">SnapCenter 6.0.1リリース以降では、新しいパラメータ* JobConcurrencyThreshold *が導入されました。このパラメータは、任意の時点で実行できるスケジュール済みジョブの数にしきい値を設定します。これにより、システムのハードウェア構成に基づいて実行するバックアップの数を制御できます。</block>
   <block id="6c7acb582c281d3eb228c64b0f6326ed" category="paragraph">JobConcurrencyThreshold *に割り当てられるデフォルト値は0で、無効になっています。スケジュール・バックアップ・ウィンドウ中にパフォーマンスの低下が見られた場合は'値を割り当てることによって有効にすることができます</block>
@@ -9578,17 +9414,14 @@
   <block id="23162359b252c2000ad518a55793125e" category="summary">F5、ネットワーク負荷分散、またはAmazon Web Servicesを使用してSnapCenterで高可用性を設定する</block>
   <block id="83e606e7229254f977fc3348f76ce3d4" category="doc">高可用性を実現するためのSnapCenterサーバの設定</block>
   <block id="3f885fa4441e45ab56f7266ba93b9290" category="paragraph">WindowsまたはLinuxで実行されているSnapCenterでハイアベイラビリティ（HA）をサポートするには、F5ロードバランサをインストールします。F5を使用すると、SnapCenterサーバは、同じ場所にある最大2つのホストでアクティブ/パッシブ構成をサポートできます。SnapCenterでF5ロードバランサを使用するには、SnapCenterサーバを設定し、F5ロードバランサを設定する必要があります。</block>
-  <block id="218165c33a5ae5731bf58f9d27c24e62" category="paragraph">SnapCenterの高可用性をセットアップするために、Microsoftネットワークロードバランシング（NLB）を設定することもできます。ハイアベイラビリティ構成にするには、SnapCenterのインストールとは別にNLBを手動で設定する必要があります。</block>
   <block id="08966309e9619d374846ea7cc8ead3ed" category="paragraph">クラウド環境では、Amazon Web Services（AWS）Elastic Load Balancing（ELB）とAzureロードバランサを使用して高可用性を設定できます。</block>
   <block id="026c74cf033fccdbeac6574d083691f5" category="paragraph">ワークフロー図は、F5ロードバランサを使用してSnapCenterサーバーを高可用性に設定する手順を示しています。詳細については、を参照してください<block ref="4d4c1b07c3f7cab3f346d17a2617da56" category="inline-link-rx"></block>。</block>
-  <block id="bed39dc5b0673572550b7b7061a3218b" category="image-alt">F5を使用したHA構成</block>
   <block id="43279440aa73faeb0bd5bf72d7a0b48c" category="paragraph">詳細については、を参照してください<block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block>。</block>
   <block id="0f68b904e33d9ac04605aecc958bcf52" category="paragraph">追加情報</block>
   <block id="5d8d9a5294b7f49c7e6eda95dc97aa5e" category="list-text">ロードバランサのセットアップ（NLBまたはF5）で、NLBまたはF5ホストによって部分的に解決されたホストを追加し、SnapCenterホストがこのホストにアクセスできない場合は、SnapCenterホストページでホストの停止状態と実行状態が頻繁に切り替わります。この問題を解決するには、両方のSnapCenterホストがNLBまたはF5ホストのホストを解決できることを確認する必要があります。</block>
   <block id="1ae7e8fbd3510fd41a698f9f0cf2cbf7" category="list-text">MFA設定用のSnapCenterコマンドをすべてのホストで実行する必要があります。証明書利用者の設定は、F5クラスタの詳細を使用してActive Directoryフェデレーションサービス（AD FS）サーバで行う必要があります。MFAを有効にすると、ホストレベルのSnapCenter UIアクセスがブロックされます。</block>
   <block id="8c6cf0affef9a2ff0bd66ef71fffc88b" category="list-text">フェイルオーバー中は、監査ログの設定が2番目のホストに反映されません。したがって、F5パッシブホストがアクティブになったときに、監査ログの設定を手動で繰り返す必要があります。</block>
   <block id="4e85a18a479b8d024339b90999211255" category="open-title">Network Load Balancing（NLB）を使用したハイアベイラビリティの設定</block>
-  <block id="f917fa2002c266a5f8f979e421af9be8" category="paragraph">Microsoftネットワークロードバランシング（NLB）を設定して、SnapCenterの高可用性をセットアップできます。ハイアベイラビリティ構成にするには、SnapCenterのインストールとは別にNLBを手動で設定する必要があります。</block>
   <block id="a55ba9881d51a3c066610f69511dfbec" category="paragraph">SnapCenterを使用したネットワークロードバランシング（NLB）の設定方法については、を参照してください<block ref="7c591114a211d5c4cd3a99a4eda53989" category="inline-link-rx"></block>。</block>
   <block id="033195e6536a96441bcc74661d5c91d2" category="open-title">AWS Elastic Load Balancing（ELB）を使用してハイアベイラビリティを設定</block>
   <block id="02105c7812ca24735380576ac54c8ded" category="paragraph">Amazon Web Services（AWS）でハイアベイラビリティSnapCenter環境を設定するには、別 々 のアベイラビリティゾーン（AZ）に2台のSnapCenterサーバをセットアップし、自動フェイルオーバーを設定します。このアーキテクチャには、仮想プライベートIPアドレス、ルーティングテーブル、およびアクティブMySQLデータベースとスタンバイMySQLデータベース間の同期が含まれます。</block>
@@ -9640,13 +9473,8 @@
   <block id="a167444fdea2847400372052380975f2" category="inline-link">ONTAP Oneに含まれるライセンス</block>
   <block id="ecad5e8e1aac5e2b9870fc1d4a8bbb91" category="paragraph">ONTAP Oneに含まれるライセンスについては、を参照してください<block ref="c2fb007f72246516006250865a9beb37" category="inline-link-rx"></block>。</block>
   <block id="156a5008fbec69c3f4a424d5bca0e1d8" category="admonition">SnapCenter AdvancedとSnapCenter NASファイルサービスのライセンスは廃止され、現在は提供されていません。Amazon FSx for NetApp ONTAP、ONTAP Select、Cloud Volumes ONTAP、Azure NetApp Filesに標準ライセンスと容量ベースライセンスは不要になりました。</block>
-  <block id="0bdca5e0ab33d528c5802fd664bf2552" category="list-text">をクリックし<block ref="725f4bf2ffc300942027282d0182533f" category="inline-image-macro-rx" type="image"></block>、*[証明書の検証を有効にする]*をクリックします。</block>
   <block id="dbd495ad96b61252237734b22b1ddf62" category="admonition">ユーザ名とグループ名に使用できる特殊文字は、スペース（）、ハイフン（-）、アンダースコア（_）、コロン（:）です。</block>
-  <block id="10c463026bbaee0709b93b0139ba3d53" category="paragraph">権限のリストについては、を参照してください <block ref="2901d46777c33f0a10c5ed76244cf8df" category="inline-link-macro-rx"></block>。</block>
-  <block id="942dbb6d6983b62133e7cb19a64a987d" category="admonition">SnapCenter 5.0以降では、クラスタ管理者ユーザはREST APIでのみサポートされます。クラスタ管理者以外のユーザを使用してロールを作成する場合は、ZAPIを使用してください。</block>
   <block id="3c1eae5e6ea0b19f0a43abeaee269bc2" category="paragraph">必要に応じて、PowerShellコマンドレットを使用して、いくつかのインストールと設定の手順を実行できます。PowerShell 7.4.2以降を使用している必要があります。</block>
-  <block id="d029edb6d5e618db69d6695447cb5921" category="inline-image-macro">ポリシーの追加</block>
-  <block id="13af1e6e8d1084c613485933fd275f79" category="list-text">をクリックして新しいドメインを登録します。</block>
   <block id="5d825eb71cc82b0659f98bbe8206a991" category="paragraph">一元化されたプラグインホストでもHANAシステムホストでもかまいません。</block>
   <block id="1d98dbd46a33302abdc8ef53dd47dfbc" category="admonition">他のホストのHANAデータベースを管理する一元化されたホストにHANAプラグインをインストールした場合、クローンの作成または削除時に、ターゲットサーバが一元化されたホストであるため、SnapCenterではホスト側の処理（ファイルシステムのマウントまたはアンマウント）が意図的にスキップされます。マウントおよびアンマウント処理を実行するには、クローニング前またはクローニング後のカスタムスクリプトを使用する必要があります。</block>
   <block id="8daa80e39a9f9c433d3ff261cfefbbc1" category="list-text">[Policy type]ページで、次の手順を実行します。</block>
@@ -9668,16 +9496,10 @@
   <block id="9a6872cf47cae5149dfd734be3f2eee0" category="paragraph"><block ref="9a6872cf47cae5149dfd734be3f2eee0" category="inline-link-macro-rx"></block></block>
   <block id="8e19afdc338ba661156ea544d8900948" category="list-text">Windowsホストのデフォルトの場所：_C：\Program NetApp SnapCenter SnapCenter Plug-in Creator\etc\allowed_commands.config_</block>
   <block id="9caff3e623c10756488f112cf68c1bdb" category="list-text">Linuxホストのデフォルトの場所：_/opt/linux/scc/etc/allowed_commands.config_ NetApp SnapCenter</block>
-  <block id="49861976c8aec8a4ea2fc667f9a73ed2" category="paragraph">を選択し<block ref="6baddd7f5b485bce282661b4e4579f17" category="inline-image-macro-rx" type="image"></block>、ホスト名とリソースタイプを選択してリソースをフィルタリングします。その後、を選択してフィルタペインを閉じることができます <block ref="6baddd7f5b485bce282661b4e4579f17" category="inline-image-macro-rx" type="image"></block> 。</block>
   <block id="de442c1c5f086f8cd46c5e1596a736e0" category="inline-image-macro">アプリケーション設定</block>
   <block id="b007c2553f690c5642e3c051e56c8888" category="paragraph"><block ref="b007c2553f690c5642e3c051e56c8888" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="f49fbd72db0b9fab7d885a0a9c08d945" category="paragraph">リソースグループを検索するには、検索ボックスにリソースグループ名を入力するか、を選択し <block ref="6baddd7f5b485bce282661b4e4579f17" category="inline-image-macro-rx" type="image"></block>、タグを選択します。その後、を選択してフィルタペインを閉じることができます <block ref="6baddd7f5b485bce282661b4e4579f17" category="inline-image-macro-rx" type="image"></block> 。</block>
   <block id="19ae66ec34519cd9bba3ba4d21885728" category="list-text">代替ホストでDB2のクローンを作成する場合は、もう一方のホストの元のマウントパスと同じn-1ディレクトリ構造をクローンマウントパスに作成する必要があります。マウントパスには_755_EXECUTION権限が必要です。</block>
   <block id="e306dfd80a0071e037c3714aee0570ca" category="paragraph">NFSの例：<block ref="5a10fb86869e630a9b16280e46e7a9c0" prefix=" " category="inline-code"></block></block>
-  <block id="099af53f601532dbd31e0ea99ffdeb64" category="inline-image-macro">削除</block>
-  <block id="eefec303079ad17405c889e092e105b0" category="inline-image-macro">スプリットする</block>
-  <block id="b497366c6577785fe9801f1c4520d131" category="list-text">クローンを選択し、をクリックしてクローンを削除するか、をクリックし <block ref="2abfb6468d1715201355d3f7ae1b0b18" category="inline-image-macro-rx" type="image"></block> <block ref="b53821d0420e47a1bec99612ea55fe06" category="inline-image-macro-rx" type="image"></block> てクローンをスプリットします。</block>
-  <block id="bc2faf9cfff4af7ddce453baee102386" category="image-alt">DB2プラグインのインストールワークフロー</block>
   <block id="00f021da4ee1dfc3af26ea2f2b087f3d" category="summary">ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。SnapCenter Plug-in for IBM DB2は、Windows、Linux、AIXの各環境でサポートされています。</block>
   <block id="aaaeb8b358ac20bc19461cb3746ba1aa" category="doc">ホストを追加してPlug-in Package for Windows、Linux、AIXをインストールするための前提条件</block>
   <block id="ab280fc194f40a49b9bf7fa0699b9674" category="section-title">LinuxホストとAIXホスト</block>
@@ -9693,71 +9515,37 @@
   <block id="6438242bbf0785352457b2d27f996fab" category="paragraph">SnapCenter Plug-in for SAP HANAで補足コマンドを実行するには、_allowed_commands.config_fileに追加する必要があります。</block>
   <block id="be6a3009ef913bdb05ad5dcc6a85522c" category="list-text">_/opt/NetApp/snapcenter/SnapManagerWeb/Repository/sc _ unix_plugins_checksum.txt _ SnapCenterサーバーがLinuxホストにインストールされている場合。です。</block>
   <block id="5963ab71f62223b99ab2a8d41253f63b" category="list-text">ONTAP 9 .12.1以前のバージョンでは、リストアの一環としてSnapLockヴォールトSnapshotから作成されたクローンには、SnapLockヴォールトの有効期限が継承されます。SnapLockの有効期限が過ぎた時点で、ストレージ管理者がクローンを手動でクリーンアップする必要があります。</block>
-  <block id="3e11d2d295566989e2233ff60e6125b0" category="list-text">（オプション）をクリックし <block ref="6baddd7f5b485bce282661b4e4579f17" category="inline-image-macro-rx" type="image"></block> 、ホスト名を選択します。</block>
-  <block id="947661b39b7c991ef5152930320ca399" category="paragraph">そのあとに<block ref="6baddd7f5b485bce282661b4e4579f17" category="inline-image-macro-rx" type="image"></block>をクリックすると、フィルタ ペインが閉じます。</block>
   <block id="1a9021b48e175eab12433c298ff56815" category="paragraph">を参照して <block ref="b1f915c7c5750493ecc0b8edd085dcc5" category="inline-link-macro-rx"></block></block>
-  <block id="128387e56188dede8d398c8db5747d0c" category="paragraph">を参照して <block ref="7b61486d739fb4f1d37092b600cea0e2" category="inline-link-macro-rx"></block></block>
-  <block id="544ce3a4086488c7ddb25f2f3fe68eef" category="image-alt">HANAプラグインのインストールワークフロー</block>
   <block id="69121a1d44f10a92dbe09d3149df381d" category="list-text">ONTAP 9 .12.1以前のバージョンでは、リストアの一環としてSnapLockヴォールトSnapshotから作成されたクローンには、SnapLockヴォールトの有効期限が継承されます。SnapLockの有効期限が過ぎた時点で、ストレージ管理者がクローンを手動でクリーンアップする必要があります。</block>
-  <block id="dc6eece0d1c3cc7890a8af82421c5ad8" category="image-alt">Run Asアカウント</block>
   <block id="e4e20e487427668c9eb45005ed27c7d9" category="list-text"><block ref="f1bb24fedf54e3d093c9bb7855932eac" category="inline-image-macro-rx" type="image"></block>レプリカサイトは稼働しています。</block>
   <block id="67d621a910962f0e62e92d71abef5f82" category="list-text"><block ref="f7c487bd356729dc17d531f50658e480" category="inline-image-macro-rx" type="image"></block>レプリカサイトはダウンしています。</block>
   <block id="81109b7018cf5a49179bafc13001ef7d" category="list-text"><block ref="129c9657fb84202dacfb694c718f35e3" category="inline-image-macro-rx" type="image"></block>セカンダリミラー関係またはバックアップ関係が再確立されていません。</block>
-  <block id="3b2cf035eed86210d47451a63b27cb42" category="image-alt">バックアップの設定</block>
-  <block id="3c7e30719cf957fa5f893f4d685d0902" category="inline-image-macro">アプリケーション設定</block>
-  <block id="60ccd8ce4835e654ad2f119631f760ba" category="paragraph"><block ref="60ccd8ce4835e654ad2f119631f760ba" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="bf36d92f953c39f9c34f415d0a33abea" category="inline-image-macro">分割アイコン</block>
-  <block id="61fe685392c533fbc0158b786cc2e8db" category="list-text">クローンを選択し、をクリックしてクローンを削除するか、をクリックし <block ref="f790bf9188cee374d2bb1f3790c6a393" category="inline-image-macro-rx" type="image"></block> <block ref="af27f4687dc6119f6ba6a093f4b02146" category="inline-image-macro-rx" type="image"></block> てクローンをスプリットします。</block>
   <block id="5907ea239c10f50b7323b0aeba1fba7a" category="paragraph">SnapCenter Plug-in for MySQLで補足コマンドを実行するには、_allowed_commands.config_fileに追加する必要があります。</block>
   <block id="6c6546a1d66d16f54220063be95cd675" category="paragraph">コマンド：mountコマンド：umountコマンド：「C：\Program Files\SnapCreator NetApp Commands\sdcli.exe」コマンド：myscript.bat</block>
-  <block id="4d1df2561c7f84f9fdcbf35605a3f16a" category="paragraph">をクリックし <block ref="6baddd7f5b485bce282661b4e4579f17" category="inline-image-macro-rx" type="image"></block>、ホスト名とリソースタイプを選択してリソースをフィルタリングします。そのあとに<block ref="6baddd7f5b485bce282661b4e4579f17" category="inline-image-macro-rx" type="image"></block>をクリックすると、フィルタ ペインが閉じます。</block>
   <block id="befb7dc583c8febf5a46d9cdfcc4c0ae" category="paragraph">PowerShellコマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、クローニングの処理を実行することもできます。PowerShellコマンドレットの詳細については、SnapCenterコマンドレットのヘルプを使用するか、を参照してください<block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block>。</block>
-  <block id="47fba8999215aef239d0259b99bd3661" category="paragraph">を参照して <block ref="5dbaf97869ae0d589f7b1136f8d73b5b" category="inline-link-macro-rx"></block></block>
-  <block id="7e9cfab6df70c6dff0d3649a11776b6b" category="paragraph"><block ref="5dbaf97869ae0d589f7b1136f8d73b5b" category="inline-link-macro-rx"></block>です。</block>
-  <block id="993eadf7a2cb8de49e7fe555d0aaccd7" category="paragraph"><block ref="993eadf7a2cb8de49e7fe555d0aaccd7" category="inline-link-macro-rx"></block></block>
   <block id="13a8bcf1ab7af4ef3d5b6c599fcfb48a" category="list-text">SnapCenter 5.0以前から移行された手動で追加したリソースを変更する場合は、カスタムキーと値のペアの*[リソースの設定]*ページで次の手順を実行します。</block>
   <block id="b1d260097d66f4e0383c58eff0dec2d7" category="paragraph">SnapCenter Plug-in for PostgreSQLで補助コマンドを実行するには、そのコマンドを_allowed_commands.config_fileに含める必要があります。</block>
   <block id="00ce76c4a82581ba4f40735084d398ea" category="list-text">VMFS上のVMDK</block>
-  <block id="286471197670cbf6786e397f076201eb" category="inline-image-macro">Exchangeデータベースバックアップのワークフロー</block>
-  <block id="3ef6dadac08a4e8e9e6ebc1a55927182" category="paragraph"><block ref="3ef6dadac08a4e8e9e6ebc1a55927182" category="inline-image-macro-rx" type="image"></block></block>
   <block id="674c96c16f7602e83b96fa663048ef94" category="paragraph">1つのメールをリカバリするためだけにデータベース全体をリストアすると、多くの時間とリソースが消費されます。SMBRを使用すると、Snapshotのクローンコピーを作成し、Microsoft APIを使用してSMBRにメールボックスをマウントすることで、メールを迅速にリカバリできます。SMBRの使用方法については、を参照してください<block ref="dc9c5fd4e84870d0f6b216c9a2a9c7c9" category="inline-link-rx"></block>。</block>
   <block id="f143fe4cc3b7f9fcdda327b0c4198658" category="paragraph">デフォルトでは、SnapCenter 6.0リリース以降、Windows用SnapCenterプラグインは、ネットTCP通信にポート909を使用します。ポート909が使用中の場合は、ネットTCP通信用に別のポートを設定できます。</block>
-  <block id="fe5ec8feada5426edfbf09d9c0183ad3" category="inline-image-macro">サポートされていないストレージ</block>
-  <block id="5ddee3328199656a93dc5945c6f4d70a" category="paragraph">[Resources]ページの <block ref="e6c560081448bd0c632185320ee350c6" category="inline-image-macro-rx" type="image"></block> アイコンは、データベースがネットアップ以外のストレージにあることを示します。</block>
   <block id="e5853824edfd7a231aa749ddb5019448" category="paragraph">コマンドレットで使用できるパラメータとその説明については、 RUN_Get-Help コマンド _NAME_ を実行して参照できます。または、を参照してください<block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block>。</block>
   <block id="074e98ee808be5c0873cbe47fb77ad92" category="paragraph">を参照して <block ref="e764ff5d7aa80de55e4c1d0864ae1ce6" category="inline-link-macro-rx"></block></block>
   <block id="44040e214e919d86d6a1f3f26db3d22c" category="inline-image-macro">編集アイコン</block>
   <block id="68819c7042f13f544d27a782b1c23806" category="list-text">をクリックし <block ref="b4ece97e1b8d14f42e755a2c424f87a6" category="inline-image-macro-rx" type="image"></block> て値を変更します。</block>
-  <block id="83e6465f5f218f66388c0caf2b844f54" category="list-text">をクリックし <block ref="f790bf9188cee374d2bb1f3790c6a393" category="inline-image-macro-rx" type="image"></block> て値を変更します。</block>
-  <block id="c43dd80d47fea64435455e504071f953" category="paragraph">リソースグループを検索するには、検索ボックスにリソースグループ名を入力するか、をクリックし<block ref="6baddd7f5b485bce282661b4e4579f17" category="inline-image-macro-rx" type="image"></block>てタグを選択します。そのあとに<block ref="6baddd7f5b485bce282661b4e4579f17" category="inline-image-macro-rx" type="image"></block>をクリックすると、フィルタ ペインが閉じます。</block>
-  <block id="aff3b3f6147f5d074df2ac051c6673e1" category="list-text">をクリックし、ホスト名とデータベース タイプを選択してリソースをフィルタします。</block>
-  <block id="72e291007eec5ec2c1baffdcaddca679" category="admonition">をクリックしてポリシーを作成することもできます。</block>
-  <block id="8b1f4e453213aaa072e0eb5f2b2255bc" category="list-text">スケジュールを設定するポリシーの[Configure Schedules]列で、<block ref="a95a62d0c6e3c2c004fbf02ff719d8fb" category="inline-image-macro-rx" type="image"></block>をクリックします。</block>
   <block id="cb62fbb794888232bcd99a94764ba3fb" category="image-alt">リソースグループポリシー</block>
-  <block id="15c87383334adc4307e9ee7d7c89dbbd" category="image-alt">Oracleプラグインのインストールワークフロー</block>
   <block id="79a43ebcb13d1d4c2e8786939bbd0a57" category="list-text">OracleのJavaとOpenJDKはLinuxでサポートされています</block>
   <block id="4f89061470b39de2158694538d7101af" category="inline-link">IBM Semeruランタイムのダウンロード</block>
   <block id="1c4627ccac14a61e3bce6d3629218d85" category="list-text">AIX用IBM Java。次のサイトからダウンロードできます。<block ref="cf41b0c524544b137d4105ff48ece522" category="inline-link-rx"></block></block>
   <block id="94cfbdf843ad80dab8b4c63aa78522c5" category="paragraph">Java 11 OracleおよびOpenJDK</block>
   <block id="2584ae0844f37bdb517dc8e38d68a2f5" category="list-text">バックアップジョブを開始したら、[Activity]ペインでをクリックして、 <block ref="64eace402f8f00b7a999e38fb6d87e55" category="inline-image-macro-rx" type="image"></block> 最新の5つの処理を表示します。</block>
-  <block id="6c03aa1717232d545a44daaae4b5b0ad" category="inline-image-macro">バックアップポリシー</block>
-  <block id="f1751dcba579d0a16da41f58898e91b5" category="paragraph"><block ref="f1751dcba579d0a16da41f58898e91b5" category="inline-image-macro-rx" type="image"></block></block>
   <block id="8da2271859ceaf1866467967dd6640c9" category="paragraph">を参照して <block ref="dc20cca85782861f6e03c00cec5a33c0" category="inline-link-macro-rx"></block></block>
-  <block id="bdda12782942eeffc984c92d6bb4cbc3" category="paragraph">をクリックし、ホスト名とデータベース タイプを選択してリソースをフィルタします。その後、アイコンをクリックしてフィルタペインを閉じることができます <block ref="6baddd7f5b485bce282661b4e4579f17" category="inline-image-macro-rx" type="image"></block> 。</block>
-  <block id="4b369d22fef677e7d31134db72dcd702" category="image-alt">LUNマッピング</block>
   <block id="1edc23bb6f80cdc062019a1682663523" category="list-text">image::../media/filter_icon.png [filter icon]を選択し、ホスト名を選択してインスタンスをフィルタリングします。</block>
   <block id="b77b964ba6ca3ecaea1848000516bb15" category="list-text">image::../media/filter_icon.png [フィルタアイコン]を選択して、フィルタペインを閉じます。</block>
-  <block id="d04e0061a8db1194116fdbb3ba8b1f66" category="paragraph">をクリックし、ホスト名とSQL Serverインスタンスを選択してリソースをフィルタリングします。そのあとに<block ref="6baddd7f5b485bce282661b4e4579f17" category="inline-image-macro-rx" type="image"></block>をクリックすると、フィルタ ペインが閉じます。</block>
-  <block id="4209ab289fa9f58725292c25ea501038" category="image-alt">SQLワークフロー</block>
   <block id="1f9cec44a67d0cb091f291ec274eb962" category="admonition">プラグインホストで使用可能なコマンドリストにコマンドが存在するかどうかを、_/ opt/ NetApp / SnapCenter / SCC /etc/allowed_commands.config_pathから確認する必要があります。</block>
   <block id="2493d298e793f43c33d4e25490ba6411" category="admonition">プラグインホストの_/ opt/ NetApp / SnapCenter / SCC /etc/allowed_commands.config_pathにあるコマンドリストでコマンドが存在するかどうかを確認する必要があります。</block>
   <block id="82b5f56e4e495a0f42039a0e31754afa" category="image-alt">インストールワークフロー</block>
   <block id="91da037872518a1a728ddd088fba0a5e" category="image-alt">Exchangeデータベースのバックアップワークフロー</block>
   <block id="ac4db59a3117eb625954347693361d30" category="inline-image-macro">ポリシーフォームのリソースグループの追加</block>
-  <block id="f2db3b4db7305bcfb8821e17a62a214c" category="paragraph">既存のポリシーがいずれも要件を満たさない場合は、既存のポリシーをコピーして変更するか、<block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block>をクリックしてポリシー ウィザードで新しいポリシーを作成できます。</block>
-  <block id="31152c60a83a3da780e5073389e4b747" category="inline-image-macro">リソースグループからポリシーを追加</block>
-  <block id="80594268749f867035de9885db91d7c7" category="list-text">[Configure schedules for selected policies]セクションで、スケジュールを設定するポリシーの[Configure Schedules]列内をクリックします <block ref="fb07bcf88c7c1b46f6236382e5e0ff22" category="inline-image-macro-rx" type="image"></block> 。</block>
-  <block id="583e42a8940ae8003094ff152460e62b" category="inline-link">SnapCenterソフトウェア6.0および6.0.1リリースノート</block>
   <block id="4d6b1749d463347a1b3df01a9e8b0ea5" category="list-text">アップグレード処理を開始する前に、サーバホストを手動でメンテナンスモードにした場合は、アップグレード後に*[ホスト]*&gt;*[スケジュールのアクティブ化]*をクリックして、サーバホストを手動でメンテナンスモードを終了する必要があります。</block>
   <block id="490e9071957ca8b80f7019e9cb2a8b99" category="list-text">サーバホスト上のリソースの新規検出を実行する必要があります。</block>
   <block id="06eee3caed57cb295b8ae731bc4b8dce" category="paragraph">サーバホストのステータスが停止と表示されている場合は、しばらく待ってから新しい検出を実行できます。また、 *HostRefreshInterval* パラメータの値（デフォルト値は 3600 秒）を 10 分を超える任意の値に変更することもできます。</block>
@@ -9765,11 +9553,8 @@
   <block id="c58e9b1492d681b897440ca05419e132" category="paragraph">アップグレードの手順でWindows、Linux、またはAIXのプラグインホストがメンテナンスモードになるため、アップグレードする各プラグインホストを手動でメンテナンスモードにする必要はありません。メンテナンスモードでは、アップグレード中にプラグインホストでスケジュールされたジョブが実行されることはありません。</block>
   <block id="5e8cc9f28d33dd253f7204b7723e45b6" category="list-text">いずれかのプラグインホストの[全体のステータス]列に[アップグレード可能]と表示されている場合は、プラグインホスト名をクリックして次の手順を実行します。</block>
   <block id="4a6523c97d32192c20325b06357138e5" category="list-text">プラグインホストがプラグインをアップグレードするための要件を満たしているかどうかを検証しない場合は、*[事前確認をスキップ]*を選択します。</block>
-  <block id="33c84bccd362a09a3f531b53bc6f29cc" category="list-text">複数のプラグインホストをアップグレードする場合は、すべてのホストを選択してをクリックし<block ref="5dfd6339d943e611b369decf59f9c96d" category="inline-image-macro-rx" type="image"></block>、*[アップグレード]*&gt;*[OK]*をクリックします。</block>
   <block id="f4bbec82b72e54df820fc15b640e3b5d" category="paragraph">[事前チェックをスキップ]*チェックボックスを選択していない場合は、プラグインをインストールするための要件を満たしているかどうかを確認するためにプラグインホストが検証されます。最小要件を満たしていない場合は、該当するエラーまたは警告メッセージが表示されます。問題を修正したら、 [* アップグレード ] をクリックします。</block>
   <block id="a24cb0112e51902b6b3ed4606a7cd727" category="cell">6.0.1</block>
-  <block id="22cbf6497132aefc41cc34f24b8abc93" category="admonition">たとえば、SnapCenterバージョン4.9を使用していて、6.0.1にアップグレードする場合は、まず5.0にアップグレードしてから、6.0へのローリングアップグレードを実行する必要があります。</block>
-  <block id="ef32bf0484293958fd8b49026606bf5e" category="sidebar">SnapCenterソフトウェアは、シンプルで拡張性に優れた一元管理型プラットフォームです。ハイブリッドクラウドのどこにいても、ONTAPシステムで実行されているアプリケーション、データベース、ホストファイルシステム、VMに対して、アプリケーションと整合性のあるデータ保護を提供します。このドキュメントライブラリには、バージョン6.0および6.0.1の情報が含まれています。</block>
   <block id="db1c2c3cb6f2d1f2978caf1a4dce483c" category="sidebar">NetAppでサポートされているプラグインを使用してアプリケーションを保護</block>
   <block id="e66b727df529163e059dccac755199b5" category="paragraph">データ保護は、ONTAPシステムで実行されているMicrosoft Exchange Server、Microsoft SQL Server、LinuxまたはAIX上のOracleデータベース、SAP HANAデータベース、IBM DB2、PostgreSQL、MySQL、およびWindowsホストのファイルシステムでサポートされます。</block>
   <block id="4dee8d3c72d98ca6077f2c8d5e31691e" category="paragraph">ユーザ定義のSnapCenterプラグインを作成するフレームワークを提供することで、他の標準またはカスタムのアプリケーションやデータベースでもデータ保護がサポートされます。これにより、同じ単一コンソールから他のアプリケーションやデータベースのデータを保護できます。このフレームワークを活用することで、NetAppはMongoDB、Storage、MaxDB、Sybase ASE、ORASCPM向けのSnapCenterプラグインをリリースしました。これとは別に、開発者ガイドを使用して独自のプラグインを作成できます。</block>
@@ -9801,7 +9586,6 @@
   <block id="a828e35048c20e82de816a6786560bfe" category="paragraph">Linuxのデフォルトパス：<block ref="a64d770b5f8b2257daf194a8f30a5882" prefix=" " category="inline-code"></block></block>
   <block id="33e8bd0cb41cde44deff796a222fa9cf" category="doc">LinuxおよびAIX用SnapCenterプラグインパッケージをインストールするホストの要件</block>
   <block id="fc25ac2856df14fba18477a9cf699e7a" category="paragraph">SnapCenter Plug-ins Package for Linux / AIXをインストールする前に、ホストが要件を満たしていることを確認する必要があります。</block>
-  <block id="a0d05ac13a4562be381d9152320c4194" category="image-alt">][ SnapCenter NetAppがサポートするプラグインのワークフロー</block>
   <block id="48ed8f3ff553bb06e5db886bd2c6e619" category="doc">コマンドレットを使用して、複数のリモートホストにSnapCenter Plug-ins Package for Linux、Windows、AIXをインストールする</block>
   <block id="442903fceb71220ba92d6bc08fba383f" category="paragraph">PowerShellコマンドレットInstall-SmHostPackageを使用すると、Linux、Windows、AIX用のSnapCenter Plug-in Packageを複数のホストに同時にインストールできます。</block>
   <block id="b281607668dced6feda7018d01ede377" category="list-text">_DINSTALL_LOG_nameには、ログファイルの名前を指定します。</block>
@@ -9827,7 +9611,6 @@
   <block id="9378c23d00fd78b8947bd7e11f09030a" category="summary">どのリソースグループにも含まれていない個 々 のSnapCenterカスタムプラグインリソースは、[Resources]ページからバックアップできます。リソースはオンデマンドでバックアップできます。また、リソースにポリシーが適用され、スケジュールが設定されている場合は、スケジュールに従って自動的にバックアップが実行されます。</block>
   <block id="08b954c361c2ce7b23e572ce828859aa" category="doc">個 々 のSnapCenterカスタムプラグインリソースのバックアップ</block>
   <block id="a37b4d82e3dae7c24db9d5162f48fd96" category="paragraph">どのリソースグループにも含まれていないカスタムプラグインリソースは、[Resources]ページから個別にバックアップできます。リソースはオンデマンドでバックアップできます。また、リソースにポリシーが適用され、スケジュールが設定されている場合は、スケジュールに従って自動的にバックアップが実行されます。</block>
-  <block id="2b88427244b62aacd4debde72476dcb0" category="paragraph">をクリックし <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>、ホスト名とリソースタイプを選択してリソースをフィルタリングします。そのあとに<block ref="2df6cc2e237d722aa6244879c70fd2d2" category="inline-image-macro-rx" type="image"></block>をクリックすると、フィルタ ペインが閉じます。</block>
   <block id="665e27cacd5b140b3ca5a518bbd41724" category="doc">カスタムプラグインリソースのリソースグループのバックアップ</block>
   <block id="e4e0cadac57fe2f7fc1d76c019a73967" category="doc">カスタムプラグインリソースのバックアップスケジュール</block>
   <block id="79db142fcc9311cc0f07d756c08b4ca0" category="doc">SnapCenterカスタムプラグインのバックアップ処理をキャンセルする</block>
@@ -9898,11 +9681,6 @@
   <block id="33e8da2f20646df222fc0acf35201fe4" category="sidebar">カスタムプラグインリソースのバックアップ</block>
   <block id="8ffa4ba0dd2df5995fd397c72a149679" category="sidebar">個 々 のカスタムプラグインリソースのバックアップ</block>
   <block id="e734e6e2e702d38ebab6ed3c050a5e72" category="sidebar">カスタムプラグインリソースのバックアップをクローニング</block>
-  <block id="305e2d6826371134136661ce4869e554" category="list-text">.NET Coreバージョン8.0.5以降、以降のすべての.NET 8パッチを含む</block>
-  <block id="52498505b3fc927f491c9b006eecae92" category="list-text">.NET Frameworkバージョン8.0.5以降、以降のすべての.NET 8パッチを含む</block>
-  <block id="76ab71a79937e997e9cf1c7dc354e025" category="list-text">ASP.NET Core Hosting Bundle（バージョン8.0.5以降、以降のすべての.NET 8パッチを含む）</block>
-  <block id="3728d48973e3d053d0a862af7bf6c785" category="list-text">ASP.NETバージョン8.0.5以降、以降のすべての.NET 8パッチを含む</block>
-  <block id="c1de3dacba751659ff9e6c8833e5f903" category="list-text">ASP.NET Core Runtimeバージョン8.0.5以降、以降のすべての.NET 8パッチを含む</block>
   <block id="881a29d62175189b1872a856fce933da" category="paragraph">SnapCenterを使用すると、データベースのバックアップを使用してOracleデータベースをクローニングできます。作成されるクローンはシッククローンで、親容量プールに作成されます。</block>
   <block id="57507899dd312cf4de9c076e90990d6a" category="paragraph">SnapCenterでは、SAP HANAデータベースのバックアップを使用してSAP HANAデータベースをクローニングできます。作成されるクローンはシッククローンで、親容量プールに作成されます。</block>
   <block id="73c291e6ad930a577bf1c1d0267ecd80" category="paragraph">SnapCenterを使用すると、データベースのバックアップを使用してSQLデータベースをクローニングできます。作成されるクローンはシッククローンで、親容量プールに作成されます。</block>
@@ -9910,63 +9688,348 @@
   <block id="30d32a0f164bac6778a1be0b6bbad3d1" category="paragraph">作成したクレデンシャルの名前を選択するか、新しいクレデンシャルを作成します。このクレデンシャルには、リモートホストに対する管理者権限が必要です。詳細については、クレデンシャルの作成に関する情報を参照してください。</block>
   <block id="0d09fd1c49f1d2d9fdc72b9e6af179ff" category="paragraph">SnapCenter 6.0以降にアップグレードする場合は、既存のPerlベースのPlug-in for DB2がリモートプラグインサーバからアンインストールされます。</block>
   <block id="8bd5c68a1ade9c22f98424902eb6b969" category="admonition">DB2 pureScale環境およびDB2 multi node（DPF）システムはサポートされていません。</block>
-  <block id="2d2b303d961d395bd777f5532d182df1" category="list-text">DOTNET Coreバージョン8.0.5以降、以降のすべての.NET 8パッチを含む</block>
-  <block id="d26271179537201ce6d4270b088e3629" category="paragraph">SnapCenter 6.0および6.0.1で利用可能な新機能と拡張機能について説明します。</block>
-  <block id="e26065304cca26ac94a12ba286943668" category="inline-link-macro">SnapCenter 6.0.1の新機能</block>
-  <block id="1389d6b3bba6a06a7cec4120c31b52b7" category="inline-link-macro">SnapCenter 6.0の新機能</block>
-  <block id="a63ea5d9f72525ae37d941e9bc5ecbc7" category="paragraph">新機能と拡張機能の一覧については、およびを参照してください<block ref="2b7c5d00a49e44d91d9f881dc992a4a5" category="inline-link-macro-rx"></block><block ref="e9409363ebf38833c42f0fa2ec48a387" category="inline-link-macro-rx"></block>。</block>
-  <block id="e9d4ea3f0c1b4cd9e879f1519fb60c79" category="paragraph">既知の問題、制限事項、解決済みの問題、および新規および変更されたコマンドの詳細については、を参照して<block ref="96c6a9ad961cdb98d787b7b13bc5a289" category="inline-link-rx"></block>ください。リリースノートにアクセスするには、NetAppアカウントでサインインするか、アカウントを作成する必要があります。</block>
   <block id="89f4d38108821acdbf6cd6b780454397" category="summary">SnapCenterでサポートされているアップグレードパス。</block>
   <block id="5097f966477870c178d6885558d88ef0" category="doc">サポートされるSnapCenterのアップグレードパス</block>
   <block id="917e552e8290664f15e1332b2d723ec0" category="paragraph">アップグレードパスを参照すると、SnapCenterの以前のすべてのバージョンから最新バージョンにアップグレードできるかSnapCenter、およびサポートされているプラグインのバージョンを把握することができます。</block>
-  <block id="ab3e1b5fbcd7c46009ad34f096e65d30" category="admonition">たとえば、SnapCenterバージョン4.9を使用していて、6.0.1にアップグレードする場合は、まず5.0にアップグレードしてから、6.0.1へのローリングアップグレードを実行する必要があります。</block>
-  <block id="430bb58f6ef28c742787a646394cc85d" category="summary">SnapCenterソフトウェアのリリース6.0には、いくつかの新機能と拡張機能が含まれています。</block>
-  <block id="c93a09afa54abf05ddd4770e3b2343a1" category="doc">SnapCenterソフトウェア6.0の新機能</block>
-  <block id="3be8c0bcb79f27206e60c05521a2483c" category="paragraph">SnapCenterは、PostgreSQL、MySQL、IBM DB2などのワークロードを管理するためのプラグインを提供します。ワークロードの検出、バックアップ、リストア、マウント、クローニングを自動で実行できます。</block>
-  <block id="1fa76ac55ad0967716ac4dfee12b4407" category="paragraph">SnapCenterには、SAP ASE、SAP MaxDB、MongoDB、Oracleアプリケーション、ONTAPストレージなどのワークロードを管理するためのプラグインも用意されています。ワークロードのバックアップ、リストア、クローニングを実行できます。</block>
-  <block id="7daff1874dce5a11aba2586028b0c18f" category="list-text">Azure NetApp Files、Amazon FSx for NetApp ONTAP、Cloud Volumes ONTAP、ONTAPストレージをサポートします。</block>
-  <block id="762100fcdd1477c85af12beef8cd62c3" category="list-text">Red Hat Enterprise Linux（RHEL）、Oracle Linux、SUSE Linux Enterprise Server（SLES）などのLinux用の個別のバイナリ。</block>
-  <block id="13600e1a28d7c26b057fc84f30416618" category="list-text">SAP HANA、Oracle、IBM DB2、SAP ASE、SAP MaxDBなどの従来型データベースをサポート</block>
-  <block id="1dbcbbe14ef1a2328b3e7e8b86a02d30" category="list-text">PostgreSQL、MySQL、MongoDBなどの最新のワークロードをサポートします。</block>
-  <block id="42e9bb4040dfb564c8bc793490bd7ba6" category="list-text">ONTAPボリュームとLinuxファイルシステム用のプラグインをサポートしているため、サポートされていないアプリケーションや自社開発のアプリケーションを保護できます。</block>
-  <block id="e030f85ea3742a8498cd3f4ce5f26a2f" category="inline-link-macro">SMB3経由でのMicrosoft SQL Serverのサポート</block>
-  <block id="c550e496e988fba14212cef600247fed" category="cell"><block ref="c550e496e988fba14212cef600247fed" category="inline-link-macro-rx"></block></block>
-  <block id="534b29f3d774d1d19d1dc1030cdc4b3d" category="inline-link-macro">NVMe / TCPのサポート</block>
-  <block id="98d7af4aa50fe1e0cd7013f44cc2cebc" category="cell"><block ref="98d7af4aa50fe1e0cd7013f44cc2cebc" category="inline-link-macro-rx"></block></block>
-  <block id="180a2e8c671bfb57b670570970b59480" category="summary">SnapCenterソフトウェアの6.0.1リリースには、いくつかの新機能と拡張機能が含まれています。</block>
-  <block id="f5db6e0b0a7608b32dd00dbb85353e53" category="doc">SnapCenterソフトウェア6.0.1の新機能</block>
-  <block id="0ee351a583abf7baa869129519adaddb" category="inline-link-macro">Azure NetApp Filesバックアップのサポート</block>
-  <block id="f47390dbd7bff67c8e4d16001f8c4395" category="inline-link-macro">LinuxテシツコウスルSnapCenterノコウカヨウセイノサホオト</block>
   <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">リリースノート</block>
-  <block id="4396a053fce24f7f396ccf91773d1924" category="cell"><block ref="4396a053fce24f7f396ccf91773d1924" category="inline-link-macro-rx"></block></block>
-  <block id="c382d5571738a226abf22d83f911bf29" category="cell"><block ref="c382d5571738a226abf22d83f911bf29" category="inline-link-macro-rx"></block></block>
   <block id="8b7c42123642e2e4ea7dd426aeb2de58" category="list-text">NVMe / TCP</block>
   <block id="e32c19b9fdeb1a3c3b963304701ce944" category="list-text">NVMe/TCP経由で作成されたVMFS上のVMDK</block>
-  <block id="6f8d85621ec7e8c73c4ba859ec9c7469" category="inline-link-macro">NetAppのサポートにより、エンタープライズワークロードのプラグインをサポート</block>
-  <block id="478831acf82b0a4b3818fd65c592a742" category="cell"><block ref="478831acf82b0a4b3818fd65c592a742" category="inline-link-macro-rx"></block></block>
-  <block id="1ef9e52684a20f666e12e341c8ef8ce1" category="inline-link-macro">クラウドとオンプレミスの両方のワークロードでLinuxバージョンのSnapCenterをサポート</block>
-  <block id="8759eb4a15f0954f1ffe6a1ba0fcb91b" category="cell"><block ref="8759eb4a15f0954f1ffe6a1ba0fcb91b" category="inline-link-macro-rx"></block></block>
-  <block id="1cbe08eda60fa869e0f775f6bb3d2581" category="paragraph">Red Hat Enterprise Linux（RHEL）、Oracle Linux、SUSE Linux Enterprise Server（SLES）などのLinux用に個別のSnapCenterバイナリを使用できるようになりました。</block>
-  <block id="4f53b479c6b47d73b1fdb28f399b1301" category="inline-link-macro">SnapMirrorアクティブ同期のサポート</block>
-  <block id="a757709afe5913a9ac546212ec3e1688" category="cell"><block ref="a757709afe5913a9ac546212ec3e1688" category="inline-link-macro-rx"></block></block>
-  <block id="426704b1f334cde736f8e5ff800c0a22" category="paragraph">SnapCenterを使用してSnapMirrorのアクティブな同期機能を設定し、データベースやVMware VMのSANワークロードを効率的にバックアップ、リストア、クローニングできるようになりました。これにより、透過的なアプリケーションフェイルオーバーとビジネス継続性が保証されます。</block>
-  <block id="729dead3f3fe6b0217c2f68871edb8ee" category="paragraph">SnapCenterを使用して、ONTAP、Azure NetApp Files、Amazon FSx for NetApp ONTAP、Cloud Volumes ONTAPのSMB3プロトコルに導入されたMicrosoft SQL Serverデータベースを保護できるようになりました。</block>
-  <block id="cadb0ed69287e5a4f65d1590e5e42a58" category="paragraph">SnapCenterでは、アプリケーションとファイルシステムのバックアップとリカバリにNVMe over TCPプロトコルがサポートされるようになりました。</block>
-  <block id="bcaa0376902365340dff7a0ee422b390" category="cell">VMware vSphere Virtual Volumes（VVol）のサポート</block>
-  <block id="d0942f199de3f390337f613419cc5b6d" category="paragraph">SnapCenterを使用して、VVOLに導入されたデータベースとファイルシステムを保護できるようになりました。</block>
-  <block id="6d3c36ceae85dfee8b7d9ccb6f9daa41" category="paragraph">SnapCenterを使用して、Azure NetApp Files上のアプリケーションをAzure Blob Storage（オブジェクトストア）にバックアップおよびクローニングできるようになりました。</block>
-  <block id="dc3cf03517bc0034c89608c70487dd43" category="paragraph">SnapCenterでのHA構成のサポートがLinuxシステムに拡張されました。この構成では、標準のロードバランサを使用できます。</block>
-  <block id="cf70dd989291fe3c73323dca9c132c7a" category="list-text">F5ロードバランサ</block>
-  <block id="3a5261cb56e1fc4dcab4467255cb2f77" category="list-text">Microsoft Network Load Balancing（NLB）</block>
-  <block id="943ca3782b28d89aff2f86a50b332b3c" category="list-text">Amazon Web Services（AWS）</block>
-  <block id="00c0ea0ebc04a689882db84f8ac573b8" category="list-text">エラスティックロードバランシング（ELB）</block>
-  <block id="30b49d6d7f72510603794f5cddeb0f51" category="list-text">Azureロードバランサ</block>
-  <block id="2f95a365481f255b94a459c0cdbe6403" category="inline-link-macro">スケジュールされたバックアップジョブの管理機能</block>
-  <block id="ed432f9ce52c9850999f7b028aad79ff" category="cell"><block ref="ed432f9ce52c9850999f7b028aad79ff" category="inline-link-macro-rx"></block></block>
-  <block id="45504f3ad62432af1eda619e4b060b8a" category="paragraph">スケジュール済みジョブのしきい値を設定して、システムハードウェア構成に基づいて任意の時点で実行するバックアップの数を制御できるようになりました。</block>
-  <block id="4001d0b97ee7312467d6a3f7954548e2" category="inline-link-macro">古いジョブを管理する機能</block>
-  <block id="df630e1703b2829b32d71f57dd02d24e" category="cell"><block ref="df630e1703b2829b32d71f57dd02d24e" category="inline-link-macro-rx"></block></block>
-  <block id="d76b0a3fe3eb0d4b24bd1965df4f6005" category="paragraph">定義済みのスケジュールを設定して、72時間以上停止している古いジョブをクリーンアップできるようになりました。</block>
-  <block id="8a30edb275ecde423390e79fd8e6f1b2" category="cell">AIXで実行されているIBM DB2、Oracleアプリケーション、ストレージプラグイン用のデータ保護機能が搭載されています。</block>
-  <block id="7d8509e50a4a8e004140e403e5253c3c" category="paragraph">AIXで実行されているIBM DB2、Oracleアプリケーション、およびストレージプラグインのデータ保護をサポートします。</block>
+  <block id="6182907e4faa060590fa16b6618267ff" category="list-text">バックアップ処理を開始したら、[Activity]ペインの**をクリックし<block ref="64eace402f8f00b7a999e38fb6d87e55" category="inline-image-macro-rx" type="image"></block>て、最新の5つの処理を表示します。</block>
+  <block id="2195436323887735af2364f786f80226" category="paragraph">リソースグループを作成して、ASA R2システム上のリソースを追加する必要があります。リソースグループの作成時にセカンダリ保護をプロビジョニングすることもできます。</block>
+  <block id="1eab3c3d0f33f3d7bc4889f831b110eb" category="list-text">ONTAP 9.xリソースとASA R2リソースの両方を同じリソースグループに追加しないでください。</block>
+  <block id="448f895ff3efc800d1022f96c0a8152d" category="list-text">ONTAP 9.xリソースとASA R2リソースの両方を含むデータベースがないことを確認してください。</block>
+  <block id="cfe6ceb613b8c79ddaa50fd81c4d50f7" category="list-text">セカンダリ保護は、ログインしているユーザに「* SecondaryProtection *」機能が有効なロールが割り当てられている場合にのみ使用できます。</block>
+  <block id="02c08ba64a49ab91b070c39eb9b35153" category="list-text">セカンダリ保護を有効にした場合、プライマリおよびセカンダリ整合グループの作成時にリソースグループがメンテナンスモードになります。プライマリとセカンダリの整合グループが作成されると、リソースグループはメンテナンスモードを終了します。</block>
+  <block id="56e8de23cefd0d0f363894c372194be6" category="list-text">SnapCenterでは、クローンリソースのセカンダリ保護はサポートされません。</block>
+  <block id="4922afff58e56f43cc5776e4a5e99f83" category="admonition">必要に応じて、プレフィックスを含め、アプリケーションで設定されたものとまったく同じ宛先を使用する必要があります。</block>
+  <block id="7427eed457c5e84805f52163533f54cc" category="list-text">[リソース]ページで、*[ホスト]*ドロップダウンリストからデータベースホスト名を選択します。</block>
+  <block id="fbc10569dc389675fee6352fb1b4cb23" category="list-text">[Available Resources]セクションからASA R2リソースを選択し、[Selected Resources]セクションに移動します。</block>
+  <block id="7a0b4e88da8a34408ba5411350da4302" category="list-text">[Application Settings]ページで、バックアップオプションを選択します。</block>
+  <block id="b614e8dcab32a85ee15a92386aa5e15b" category="list-text">選択したポリシーでセカンダリ保護が有効になっている場合は、[Secondary Protection]ページが表示され、次の手順を実行する必要があります。</block>
+  <block id="9fb4498d8fffe86d08886c02dd432626" category="list-text">レプリケーションポリシーのタイプを選択します。</block>
+  <block id="6b2bc4f031caca4d21083f62fac1a776" category="admonition">同期レプリケーションポリシーはサポートされていません。</block>
+  <block id="8885fa1b4c9fc6a40ee54657dde099ba" category="list-text">使用する整合グループサフィックスを指定します。</block>
+  <block id="56f3b0d6c3c2e8950e1ca146fe972f7b" category="list-text">[デスティネーションクラスタ]と[デスティネーションSVM ]のドロップダウンで、使用するピアクラスタとSVMを選択します。</block>
+  <block id="7b016ac7bac6fbf2fc99bb1ca2112dfe" category="admonition">クラスタとSVMのピアリングはSnapCenterではサポートされていません。クラスタとSVMのピアリングを実行するには、System ManagerまたはONTAP CLIを使用する必要があります。</block>
+  <block id="a65d82cfebb383a017ed83c52e387db8" category="admonition">リソースがSnapCenterの外部ですでに保護されている場合、それらのリソースは[Secondary Protected Resources]セクションに表示されます。</block>
+  <block id="5d8c9a4bb6e8d1777bae069ef096beea" category="list-text">ASP.NET Core Runtime 8.0.12（およびそれ以降のすべての8.0.xパッチ）Hosting Bundle</block>
+  <block id="06c4f26f61be470dd3c5f2224d734b82" category="paragraph">Java 11 Oracle JavaおよびOpenJDKが必要なのは、SAP HANA、IBM DB2、PostgreSQL、MySQL、NetAppでサポートされるプラグイン、およびWindowsホストにインストール可能なその他のカスタムアプリケーションのみです。</block>
+  <block id="74d26a36312c4111c79f5a49e9e0b24f" category="list-text">クローン処理を開始したら、[Activity]ペインでをクリックして、 <block ref="64eace402f8f00b7a999e38fb6d87e55" category="inline-image-macro-rx" type="image"></block> 最新の5つの処理を表示します。</block>
+  <block id="f7e244689831620cc4531ae6c4d2e935" category="list-text">リストア処理を開始したら、[Activity]ペインをクリックして、 <block ref="64eace402f8f00b7a999e38fb6d87e55" category="inline-image-macro-rx" type="image"></block> 最新の5つの処理を表示します。</block>
+  <block id="75c43dfa09fd33ec50ad9523e384b113" category="list-text">をクリックして、リストの内容をバックアップ処理だけに絞り込みます。</block>
+  <block id="58d5d8d34dda65e7d6b6683db348677f" category="list-text">をクリックしてリストをフィルタリングし、クローニング処理のみを表示します。</block>
+  <block id="c7638ea172bcd64d9b81c1ae7561fc69" category="list-text">[Activity]ペインでをクリックすると、 <block ref="64eace402f8f00b7a999e38fb6d87e55" category="inline-image-macro-rx" type="image"></block> 最新の5つの処理が表示されます。</block>
+  <block id="dc72b46d45b54aaf8fcbd9182344ca4f" category="list-text">をクリックしてリストをフィルタリングし、リストア処理のみを表示します。</block>
+  <block id="3cd82612e480c58079504704ed2c0a79" category="list-text">[コピーの管理]*ビューで、クローンリソース（データベースやLUNなど）を選択し、**をクリックします<block ref="2f96607f64ba24c5f626d621154c3ebd" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="2e058f605716b945e61377c0df0687de" category="list-text">バックアップを選択し、<block ref="f790bf9188cee374d2bb1f3790c6a393" category="inline-image-macro-rx" type="image"></block>をクリックします。</block>
+  <block id="14726728af6158ee595d6fedee05c2f7" category="list-text">アイコンをクリックし <block ref="725f4bf2ffc300942027282d0182533f" category="inline-image-macro-rx" type="image"></block> 、*[サービスの開始]*または*[サービスの再開]*をクリックします。</block>
+  <block id="783a4d6f23877e2fba6250c05a4f21f6" category="list-text">アイコンをクリックし <block ref="725f4bf2ffc300942027282d0182533f" category="inline-image-macro-rx" type="image"></block> 、*[スケジュールの中断]*をクリックして、このプラグインのホストをメンテナンスモードにします。</block>
+  <block id="7dd024354fe8487d857c0a0818270399" category="list-text">をクリックし <block ref="f790bf9188cee374d2bb1f3790c6a393" category="inline-image-macro-rx" type="image"></block>、* OK *をクリックします。</block>
+  <block id="781ffefd65873ffc476623160ecbe609" category="list-text">クローンを選択し、<block ref="f790bf9188cee374d2bb1f3790c6a393" category="inline-image-macro-rx" type="image"></block>をクリックします。</block>
+  <block id="6e13f804ad8be111cf6ad70744afe388" category="list-text">ONTAP ASA R2プライマリシステムとセカンダリシステム上のデータ</block>
+  <block id="3c76eb0943bd609158e412bd2ccff2ae" category="paragraph">UNIXコマンドの詳細については、を参照してください<block ref="a6987fd1f481831496b6e000c63cd27d" category="inline-link-rx"></block>。</block>
+  <block id="e0228d77ebd874250f86d035ed4533fb" category="paragraph">SnapLockは、規制やガバナンスに準拠するためにWrite Once、Read Many（WORM）ストレージを使用して変更不可能な状態でファイルを保管する組織向けの、ハイパフォーマンスなコンプライアンスソリューションです。SnapLockの詳細については、を参照してください<block ref="1a4ea27499d0dd9854f827c9e87479f3" category="inline-link-rx"></block>。</block>
+  <block id="a5232d3babd70554298f5577703c894e" category="paragraph">スナップショットをロックすると、誤ってまたは悪意を持って削除されることがなくなります。SnapCenterでは、プライマリとセカンダリの両方のSnapshotのロック期間を指定できます。</block>
+  <block id="651f8f48e0ff0ede39a3224558b4b516" category="paragraph">セカンダリ保護</block>
+  <block id="f9c655f2d65a07a71b2deab50b74ffae" category="paragraph">ネットワークロードバランシング（NLB）を設定してSnapCenterハイアベイラビリティを設定することもできます。ハイアベイラビリティ構成にするには、SnapCenterのインストールとは別にNLBを手動で設定する必要があります。</block>
+  <block id="0a0bca773054c9a47b687411e5ff20e8" category="image-alt">F5の設定ワークフロー</block>
+  <block id="27c157ca432e76f965ac30465e4a7d94" category="paragraph">SnapCenterハイアベイラビリティを設定するには、ネットワークロードバランシング（NLB）を設定します。ハイアベイラビリティ構成にするには、SnapCenterのインストールとは別にNLBを手動で設定する必要があります。</block>
+  <block id="731ac89bec4a57f1e740c167b65c6f53" category="summary">SnapCenterで処理を実行するためにONTAP adminロールを使用する必要がないように、ASA R2システム用のONTAPクラスタロールを作成する必要があります。</block>
+  <block id="abdbfb1150ad2e22831c6bdbf7bac8d8" category="doc">ASA R2システム用のONTAPクラスタロールの作成</block>
+  <block id="e9b2b5318f8e0a091701779303286b3d" category="paragraph"><block ref="521866eaeb21c4de1e69035692bb2bfd" prefix="" category="inline-code"></block></block>
+  <block id="756632ce9408c1b6a169c54868eec28a" category="list-text"><block ref="a577f90d5b71a35c8202952fa83fd625" prefix="" category="inline-code"></block></block>
+  <block id="7b0529cf1b98b7efdba62bf78594c36d" category="list-text"><block ref="6f419513fe2d8fc28bf79b7b8668aff9" prefix="" category="inline-code"></block></block>
+  <block id="ece3a0c44dd3049f0b221a674b611a24" category="list-text"><block ref="d339394adf2150c08a69d8a174aa8ea8" prefix="" category="inline-code"></block></block>
+  <block id="205f6098577a9c9227447741af5384d5" category="list-text"><block ref="7191001e4d8d175d21aed5ed3ec1b802" prefix="" category="inline-code"></block></block>
+  <block id="45741ae9657bb85f48420491f87e9f0d" category="list-text"><block ref="a9bdd9996ab75586ca9ba53eb506b766" prefix="" category="inline-code"></block></block>
+  <block id="b968807118ed4d4ecb1ed94de102f610" category="list-text"><block ref="f4428e55c376d7e0439f1da2772c0a6d" prefix="" category="inline-code"></block></block>
+  <block id="6c96f21476a12900a5af42063b68fa14" category="list-text"><block ref="8257d210377c4b52a81597ac292a5a92" prefix="" category="inline-code"></block></block>
+  <block id="76949f9bf1ac6b7b7607db3c6fde030e" category="list-text"><block ref="ba1777d5455687bfa703c2266b1c1ebb" prefix="" category="inline-code"></block></block>
+  <block id="6638554046b8123676dbc4f27c3af9a7" category="list-text"><block ref="a58540a89520a813a876291736fe1fc6" prefix="" category="inline-code"></block></block>
+  <block id="d9d19d5ff65406e546078cfb251bc7d1" category="list-text"><block ref="28b6880b74d93110c9c8cf9f0b8ec2c2" prefix="" category="inline-code"></block></block>
+  <block id="b6a543ce5bb1e273e511bede272e9480" category="list-text"><block ref="c7653ceec2eed7762d253d157e2af6f6" prefix="" category="inline-code"></block></block>
+  <block id="8e0de756ff4e7ac3be145298824b99ab" category="list-text"><block ref="72924a36bfca9554a09c41e9f2553325" prefix="" category="inline-code"></block></block>
+  <block id="3ca1891bc05b723c099cff2b51fc8529" category="list-text"><block ref="e973d0c623a722677300e5211589c2bb" prefix="" category="inline-code"></block></block>
+  <block id="9e422583236d94007341dd2f1ea5c3bf" category="list-text"><block ref="ce98852515dba6c69d8cadb63d0b0924" prefix="" category="inline-code"></block></block>
+  <block id="150f5e2d2bbfc9515a0cf19f5cfb78cf" category="list-text"><block ref="b58bfe0f03c84dd62a9ee2931ced9b8e" prefix="" category="inline-code"></block></block>
+  <block id="dc7e4332f30a78544c57ff51a169f4c2" category="summary">ASA R2システムのSVMをSanpCenterで使用するように設定し、vsadminロールを使用しない場合は、SVMロールを作成する必要があります。</block>
+  <block id="48dba86fa4ce5de943ef3072ea74d595" category="doc">ASA R2システム用のSVMロールの作成</block>
+  <block id="0c645d1cfd7f66061d3e5a68e06bc4df" category="paragraph">ASA R2システムで新しいSVMユーザのロールを作成するには、いくつかのONTAP CLIコマンドを実行する必要があります。ASA R2システムのSVMをSnapCenterで使用するように設定し、vsadminロールを使用しない場合は、このロールが必要です。</block>
+  <block id="3a3326ab8a855eda366dde90677dcceb" category="paragraph"><block ref="8116804423bfe31ed3dfa65643146cde" prefix="" category="inline-code"></block></block>
+  <block id="ceb09374475caa40385e66db6413f535" category="list-text"><block ref="62422d81270184927cae1001a7799732" prefix="" category="inline-code"></block></block>
+  <block id="2523fae0d4c9e7a295a409276c552f2b" category="list-text"><block ref="58c812fa3d72aa1f67c5bcf47b8d10b2" prefix="" category="inline-code"></block></block>
+  <block id="d7ff44479a01a036582de6f73e6fa383" category="list-text"><block ref="e9967857cb5dc5bf3fbf2f1585b28f1f" prefix="" category="inline-code"></block></block>
+  <block id="6c564c3a266dbf820583e6b51eb0d28d" category="list-text"><block ref="a1ca6037abbcac7f0e524c46b7abb7a1" prefix="" category="inline-code"></block></block>
+  <block id="8c4149a5e3a16e71c373cac16eab56eb" category="list-text"><block ref="8031b6dd89dc17bc568c9124170bb66a" prefix="" category="inline-code"></block></block>
+  <block id="1f46b6eec6f3def165a94aea4fbd2de8" category="list-text"><block ref="d873942b6f54bbecd97eb915c6e95c45" prefix="" category="inline-code"></block></block>
+  <block id="73c050ddeaec2b5e5a856c81666f8026" category="list-text">アイコンをクリックし <block ref="725f4bf2ffc300942027282d0182533f" category="inline-image-macro-rx" type="image"></block> 、*[証明書の検証を有効にする]*をクリックします。</block>
+  <block id="920adb74812a2a6ff8228ec39336b73d" category="list-text">.NET Runtime 8.0.12（およびそれ以降のすべての8.0.xパッチ）</block>
+  <block id="6b63b2c9e9fc8565ca7f55eec1449221" category="summary">SnapCenter 6.1は、SANのみのお客様のニーズに合わせてシンプルな操作性を実現するASA R2システムをサポートしています。</block>
+  <block id="dc19adb3867a6ca8f2d35a62dfbd96bb" category="doc">SnapCenterでのASA R2システムのサポートについて</block>
+  <block id="1416963498f1d1667a15f42da20627af" category="paragraph">ASA R2システムは、単一のHAペア環境ですべてのSANプロトコル（iSCSI、FC、NVMe over TCP/IP）をサポートします。SCSI（iSCSIおよびFC）プロトコルは、ホストとストレージの間のすべてのパスがアクティブ/最適化されるように、マルチパスに対称アクティブ/アクティブアーキテクチャを使用します。iSCSIプロトコルとNVMe/TCPプロトコルは、ホストとストレージ間の直接パスをサポートします。</block>
+  <block id="233125590fad11d81c05c1b0279c56f1" category="admonition">SnapCenterでは、ASA R2システムでVMware Virtual Machine File System（VMFS）のみがサポートされます。</block>
+  <block id="8ba78ca0516a69b587aca58206efc01f" category="paragraph">ASA R2システムでは、ストレージユニットとコンシステンシグループを使用できます。</block>
+  <block id="cbfbe4198cb19fb37eabe0aa86e2ffb7" category="list-text">ストレージユニットを使用すると、SANホストでデータ処理に使用できるストレージスペースが確保されます。ストレージユニットとは、SCSIホストの場合はLUN、NVMeホストの場合はNVMeネームスペースを指します。</block>
+  <block id="298f9913142475c2f50f06e582b038a8" category="list-text">整合グループは、1つのユニットとして管理されるストレージユニットの集まりです。</block>
+  <block id="bdf9fa44ea18e3651b8e2895550e6f7f" category="paragraph">ASA R2システムは、ストレージユニットとコンシステンシグループを使用して、ストレージ管理とデータ保護を簡素化します。たとえば、10個のストレージユニットで構成されるデータベースが整合グループ内にあり、データベース全体をバックアップする必要があるとします。各ストレージユニットを個別にバックアップする代わりに、整合グループをバックアップすることでデータベース全体を保護できます。</block>
+  <block id="989977a18a476a92018e04dd60ec37c1" category="inline-link">ASA R2システムの詳細</block>
+  <block id="16606bd097711751ac955e1f9e2fdf2a" category="paragraph"><block ref="091d07e2c34db8f37554078364b07cbc" category="inline-link-rx"></block>です。</block>
+  <block id="5e80eec7154c601a727d82c736e43d5a" category="section-title">ASA R2システム用のSnapCenter 6.1でサポートされる機能</block>
+  <block id="703f6cb1f80801e89c413d10438b1a65" category="paragraph">ASA R2ストレージシステムを使用している場合、SnapCenterでは、SnapCenterでサポートされるすべてのアプリケーションに対して次の処理を実行できます。</block>
+  <block id="b3c78f6e772922673e6d35ae6df26cbd" category="list-text">VMDK経由でのアプリケーションのプライマリバックアップの作成</block>
+  <block id="7e358fa759baa4f70a96f79cf29b4c61" category="list-text">セカンダリストレージシステムへの整合グループSnapshotの転送</block>
+  <block id="e4cc11f5ac51267a510e423fca1a6266" category="list-text">バックアップのリストアと代替保存場所からのリストア</block>
+  <block id="eaf84a062a0d8e38f825a0f02f3d1272" category="list-text">VMware vMotionを使用したプライマリストレージとセカンダリストレージの両方からのIn Placeリストア</block>
+  <block id="74307ec7ea96b1aa508fc7b092900aec" category="list-text">プライマリストレージとセカンダリストレージの両方からの接続とコピーリストア</block>
+  <block id="9b0e5d4aa3544e7e2154f18fb865684a" category="list-text">バックアップのクローニングと別の場所へのクローニング</block>
+  <block id="d9adcab280785205b6ba203ee246eb6b" category="section-title">ASA R2システム用のSnapCenter 6.1でサポートされない機能</block>
+  <block id="a0f3e47cc5179a026d7b861797055f6d" category="list-text">rawデバイスマッピング（RDM）</block>
+  <block id="b47dab3c647bba9b7ad0a8fc0cde81dc" category="list-text">Oracleヨウノアプリケーションホリユウム</block>
+  <block id="7236f926bc1402ad0d847fd55a34001d" category="list-text">SAP HANA NDV</block>
+  <block id="da612433b3e7d1bdc94a92a26f362677" category="list-text">LockVault</block>
+  <block id="32003f26ce5a5c05fba8d25bec258e4d" category="list-text">改ざん防止スナップショット</block>
+  <block id="b4bc3604610d39195e11a5ae303f5af1" category="list-text">フレックスグループ</block>
+  <block id="425514993f273b658b0218c334836b26" category="list-text">階層整合グループ</block>
+  <block id="4e8cbbcd8088f634c6f45af755c363c9" category="list-text">ONTAP 9.xからASA R2システムへの移行</block>
+  <block id="980869fd79cd78a3682752206f149791" category="list-text">スナップショットの名前変更</block>
+  <block id="63d730ecaee7f6e096a0f2026e24241b" category="list-text">SQLプラグインホストのログディレクトリのセカンダリプロビジョニングは、SnapCenterでサポートされていません。は、ONTAP CLIまたはSystem Managerを使用して手動で設定する必要があります。</block>
+  <block id="bc3c828cce582fafd1e35e77b8c84327" category="cell">ポート名</block>
+  <block id="f78fb51edae6a69d5e1e911a2b6fc268" category="cell">ポート番号</block>
+  <block id="02674a4ef33e11c879283629996c8ff8" category="cell">方向</block>
+  <block id="202ed3792e2cfa7318b12ead83763c37" category="paragraph">8146</block>
+  <block id="0e8433f9a404f1f3ba601c14b026d321" category="paragraph">HTTPS</block>
+  <block id="abd4328c725637aabedbd02d3b7ffd40" category="paragraph">双方向</block>
+  <block id="57866de61bc9736856544f9431bab0fc" category="paragraph">このポートは、SnapCenterクライアント（SnapCenterユーザ）とSnapCenterサーバの間の通信に使用され、プラグインホストからSnapCenterサーバへの通信にも使用されます。</block>
+  <block id="bb07f54f9658822141c38bac46449ce8" category="paragraph">ポート番号はカスタマイズできます。</block>
+  <block id="0c0cfd9478c6551fbfe74a7acb6fc037" category="paragraph">8145</block>
+  <block id="bb68b5529560433e58ff13eb45622724" category="paragraph">このポートは、SnapCenter サーバとSnapCenter プラグインがインストールされているホストの間の通信に使用されます。</block>
+  <block id="d627f44819e0cdb235a1ba10dc32df2e" category="paragraph">8154</block>
+  <block id="e7c573c14a09b84f6b7782ce3965f335" category="paragraph">5672</block>
+  <block id="b136ef5f6a01d816991fe3cf7a6ac763" category="paragraph">TCP</block>
+  <block id="16fc18d787294ad5171100e33d05d4e2" category="paragraph">3306</block>
+  <block id="7da8090ec8d5ceac88850953ed8ca77e" category="paragraph">このポートは、SnapCenterリポジトリデータベースとの通信に使用されます。SnapCenterサーバからMySQLサーバへのセキュアな接続を確立できます。 <block ref="cd7568118ad87382648cb2133a315ffd" category="inline-link-macro-rx"></block></block>
+  <block id="a1639b6147c7f85402852464ce33b9ae" category="paragraph">135、445</block>
+  <block id="5d8dd57144f3173af07b91e57b3e3365" category="paragraph">このポートは、SnapCenterサーバとプラグインがインストールされているホストの間の通信に使用されます。Microsoftが指定した追加のダイナミックポート範囲もオープンにする必要があります。</block>
+  <block id="b6d767d2f8ed5d21a44b0e5886680cb9" category="paragraph">22</block>
+  <block id="765553e6c7ac8592c389acb9878a050a" category="paragraph">SSH</block>
+  <block id="7c91d399b1b0815caa55eebe8056c2b7" category="paragraph">単方向</block>
+  <block id="64ec1e1554e8fa08090ea258f520c9e9" category="paragraph">このポートは、SnapCenterサーバとホスト間の通信に使用され、サーバからクライアントホストに開始されます。</block>
+  <block id="39a36a098454e387df2924220bccc000" category="paragraph">Windows、Linux、AIX向けSnapCenterプラグインパッケージ</block>
+  <block id="37069e85e2aa11a189d1cd3d878993f0" category="paragraph">このポートは、SMCoreとプラグインパッケージがインストールされているホストの間の通信に使用されます。カスタマイズ可能。</block>
+  <block id="617eed14b937d3e2c5cec24f79eb134d" category="paragraph">27216</block>
+  <block id="a4300b002bcfb71f291dac175d52df94" category="paragraph">909</block>
+  <block id="38f629170ac3ab74b9d6d2cc411c2f3c" category="paragraph">9090</block>
+  <block id="faddd57d1fffbff724d6e92950b8e8c3" category="list-text">443（HTTPS）</block>
+  <block id="1c6bde00cd912e15a51576cfce7d0f55" category="list-text">80（HTTP）</block>
+  <block id="293c9ea246ff9985dc6f62a650f78986" category="list-text">HTTP</block>
+  <block id="4e364bac618760c41023e54190a70ba0" category="list-text">3instance_number13</block>
+  <block id="c168c4383d3f0e3cae7be4b16b75d74b" category="list-text">3instance_number15</block>
+  <block id="2e92962c0b6996add9517e4242ea9bdc" category="paragraph">5432</block>
+  <block id="b8231355e7b2029d105ac5543f0e6aa8" category="paragraph">このポートは、PostgreSQL用プラグインによるPostgreSQLクラスタへの通信に使用されるデフォルトのPostgreSQLポートです。</block>
+  <block id="5444e411b400fd0c1d17ad74b8d82bff" category="paragraph">+.NET Framework 8.0.12の機能+</block>
+  <block id="8c16affd19f6d2610f039e0bf745fe04" category="list-text">.NET Framework 8.0.12（およびそれ以降のすべての8.0.xパッチ）</block>
+  <block id="36ab4d2d051baac565e5a2261da2c98d" category="admonition">ASP.NETコアは、Windows上のSnapCenterサーバーの一時ファイルシステムにアクセスするためにIIS_IUSRSを必要とします。</block>
+  <block id="78f63cd4c898dfa4fb35e6755c784b8e" category="list-text">SnapCenter 6.1は、ONTAP 9.16.1を実行するNetApp ASA R2システム（ASA A1K、ASA A70、およびASA A90）をサポートします。</block>
+  <block id="a96666c23540f7c6d0da8ca6ab7b57d5" category="paragraph">ASA R2システムは、オールフラッシュプラットフォーム上に構築されたSAN専用環境向けに、ハードウェアとソフトウェアの統合ソリューションを提供します。ASA R2システムのストレージレイヤ、サポートされるプロトコル、ONTAPパーソナリティの実装において、他のONTAPシステム（ASA、AFF、FAS）とは異なります。</block>
+  <block id="1bb71df56b7ae979d57d7cedfffe49f5" category="inline-link">ASA r2のドキュメント</block>
+  <block id="5cbf1300bdf2b6a56588b252b251a998" category="paragraph">ASA R2システムの詳細については、を参照してください<block ref="d94cf7303df26cfd7838987d91518061" category="inline-link-rx"></block>。</block>
+  <block id="de14602aec2aa05e977975d7781f0163" category="paragraph">権限のリストについては、を参照してください <block ref="d791b2cd4a5fa29c456ec537e56c834d" category="inline-link-macro-rx"></block>。</block>
+  <block id="941e965dc43f6c446ee98bb1e90043c5" category="paragraph">データ保護とプロビジョニングの処理を実行するために、SnapCenterからONTAPストレージ、ASA R2システム、またはAmazon FSx for NetApp ONTAPへのアクセスを許可するストレージシステムをセットアップする必要があります。</block>
+  <block id="fe6b24611189aae46c678d06ae54d930" category="inline-image-macro">問題アイコン</block>
+  <block id="cfb59d313d3d150257ad3503cfac30d5" category="list-text">*<block ref="ecd4f5716c3fedededf657f04d3a8555" category="inline-image-macro-rx" type="image"></block>*は、有効になっているかプラグインホストに割り当てられているCA証明書がないことを示します。</block>
+  <block id="54e21450ca5748b32fd20773be0dcedc" category="inline-image-macro">良いアイコン</block>
+  <block id="f456b2565daba52ff66dbc0367032e52" category="list-text">**<block ref="f58524931ce44e13fec3fcdc1a7ee85b" category="inline-image-macro-rx" type="image"></block>は、CA証明書が正常に検証されたことを示します。</block>
+  <block id="e22aacb67367b58b5fac836f3eeed221" category="inline-image-macro">失敗アイコン</block>
+  <block id="db0b0928878bc6f7157e21c6bcb98e45" category="list-text">**<block ref="008151d95ac196e43d2b3483f9e5a0b1" category="inline-image-macro-rx" type="image"></block>は、CA証明書を検証できなかったことを示します。</block>
+  <block id="b618a910cf6913786f002b81f8c68b29" category="inline-image-macro">未定義アイコン</block>
+  <block id="f79223ed88950e342e86b7b49a4754b0" category="list-text">**<block ref="31f3aaed9a9bf45960790968b6c989cf" category="inline-image-macro-rx" type="image"></block>は、接続情報を取得できなかったことを示します。</block>
+  <block id="dddf3c98ce717f2c803bfbb3e00ab335" category="list-text">をクリックして新しいドメインを登録します。</block>
+  <block id="7194a77b27ca79615dcf6dd232710c52" category="inline-link">SnapCenter 6.1に関する注意事項</block>
+  <block id="077b1607930ff1f5ea2a35c6bd385625" category="paragraph"><block ref="077b1607930ff1f5ea2a35c6bd385625" category="inline-link-rx"></block></block>
+  <block id="ddc7a1dcd5b30eb0947ce31cc8f2d939" category="list-text">スケジュールを設定するポリシーの[スケジュールの設定]列で**を選択します<block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="2cd8b8c68f6fcf7e0dad392639951464" category="list-text">検証スケジュールを設定するポリシーを選択し、**をクリックします<block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="26d41db9e082320c220bc9f4fdc9368a" category="list-text">[スケジュールの設定]列で、設定するポリシーの**をクリックします<block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="fe1b76e0eac300691861a035c41a7383" category="list-text">検証スケジュールを設定するポリシーを選択し、*をクリックします。<block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1b86f687162b949a2ae9f098fe3c374c" category="paragraph">オプション：*アイコンをクリックすると、他のストレージシステムからボリューム、LUN、およびqtreeを追加できます<block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="00207d0dcfc45dfe9cca4f6d52ab414a" category="paragraph">を選択し<block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>、ホスト名とリソースタイプを選択してリソースをフィルタリングします。その後、を選択してフィルタペインを閉じることができます <block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block> 。</block>
+  <block id="f8dc70317cf930da9ea2e5de83a6d682" category="paragraph"><block ref="f8dc70317cf930da9ea2e5de83a6d682" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="fa7f32e2f8d30b30801183475758fcf9" category="paragraph">リソースグループを検索するには、検索ボックスにリソースグループ名を入力するか、を選択し <block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>、タグを選択します。その後、を選択してフィルタペインを閉じることができます <block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block> 。</block>
+  <block id="3647bf9dd45aec95324b1d33efb72c8f" category="list-text">[Name]ページで、ポリシーの名前と詳細を入力します。</block>
+  <block id="51c4ef6c91626ee6bcba80f0f3a8fd59" category="list-text">[Snapshot and Replication]ページで、次の操作を実行します。</block>
+  <block id="e70a56107961334e45231ff9d5f1bda8" category="list-text">[Snapshot settings]セクションで、次の操作を実行します。</block>
+  <block id="d21b6c7742082098834aa7ac817fc423" category="paragraph">[コピーを保持する期間]*を選択し、Snapshotを削除するまでの日数を指定します。</block>
+  <block id="a37760bcf65acb1e666f7880b234b107" category="paragraph">プライマリSnapshotコピーロック期間</block>
+  <block id="8c4df87df7072888db58abdf493c82ba" category="paragraph">プライマリのSnapshotロック期間を指定する場合は、[Snapshotコピーのロック期間]を選択し、日、月、または年を選択します。</block>
+  <block id="37f001fbef310181d8f4577b4c03a798" category="paragraph">セカンダリSnapshotのロック期間</block>
+  <block id="2e37f31a39b30876eff1858ef3d01783" category="paragraph">[Secondary snapshot copy locking period]*を選択し、[Days]、[Months]、または[Years]を選択します。</block>
+  <block id="d4fab0a3b9169228dc7321f4155040a6" category="paragraph">このオプションを有効にするには、次のタスクを実行する必要があります。</block>
+  <block id="768d22eeffe1b0d643b0ed933c3e5f76" category="list-text">[Primary snapshot copy locking period]*を選択します。</block>
+  <block id="8dedb6d4cefe12f20aa79a3e591fbe62" category="list-text">セカンダリレプリケーションオプションの一方または両方を選択します。</block>
+  <block id="49d10f32e6045f6eb1e87608c6663036" category="list-text">[Select secondary replication options]セクションで、次のセカンダリレプリケーションオプションの一方または両方を選択します。</block>
+  <block id="8a2dda8619fc89210a82c7915ff8404f" category="admonition">*セカンダリSnapshotコピーのロック期間*を有効にするには、セカンダリレプリケーションオプションを選択する必要があります。</block>
+  <block id="e0db40503bb9a725a94275ee8cd82432" category="paragraph">+選択したSnapshotラベルに応じて、ラベルに一致するセカンダリSnapshot保持ポリシーがONTAPによって適用されます。</block>
+  <block id="7924c7d510ee4c17272379c570f53baa" category="paragraph">+注：*[ローカルSnapshotコピーの作成後にSnapMirrorを更新する]*を選択した場合は、必要に応じてセカンダリポリシーラベルを指定できます。ただし、ローカル Snapshot コピーの作成後に「 * Update SnapVault 」を選択した場合は、セカンダリポリシーラベルを指定する必要があります。</block>
+  <block id="21c50f2705444dd3390a81b7b2265c1d" category="admonition">**をクリックしてポリシーを作成することもできます<block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="1fdb686d7eb7b44f458d7be7367ce764" category="doc">ASA R2システム上のIBM DB2リソースに対してリソースグループを作成し、セカンダリ保護を有効にする</block>
+  <block id="58500be789107a86aa8893793e67951d" category="inline-image-macro">クローンをスプリット</block>
+  <block id="267150a514869a4de116f0c7d72ec560" category="list-text">クローンを選択し、をクリックしてクローンを削除するか、をクリックし <block ref="f790bf9188cee374d2bb1f3790c6a393" category="inline-image-macro-rx" type="image"></block> <block ref="16199d2eb7d7252498e560be9c8c8d7c" category="inline-image-macro-rx" type="image"></block> てクローンをスプリットします。</block>
+  <block id="ace2594bb6a64aadbacd4be39091a66e" category="list-text">（オプション）*をクリックし<block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>、ホスト名を選択します。</block>
+  <block id="c8423c98c01c2381cdca31eeba6dc9c8" category="paragraph">次に、**をクリックしてフィルタペインを閉じることができます<block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="f0f75b15928c75bd50f34ccc17e99e20" category="image-alt">SAP HANAプラグインをインストール</block>
+  <block id="b4240a370916269e9e607c7f28467dae" category="list-text">クローンをスプリットする場合は、テーブルでクローンを選択し、をクリックします <block ref="b987b2cc529ddae5a8806305ea139282" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="70ca3376527bd24a0337df8d04ba764f" category="doc">リソースグループを作成し、ASA R2システムでSAP HANAリソースのセカンダリ保護を有効にする</block>
+  <block id="ca9b001029951b7faec5c704c59712f8" category="paragraph">*を選択し<block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>、ホスト名とリソースタイプを選択してリソースをフィルタリングします。その後、を選択してフィルタペインを閉じることができます <block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block> 。</block>
+  <block id="903ffff09a2c4fc90564138e0bd806c1" category="list-text">（オプション）をクリックし <block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block> 、ホスト名を選択します。</block>
+  <block id="21ace889b71fc27e50261e003179aba6" category="paragraph">そのあとに<block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>をクリックすると、フィルタ ペインが閉じます。</block>
+  <block id="bf68bbb1cd9f14d935defb0193db0f09" category="list-text">ストレージタイプを選択</block>
+  <block id="3009655ab1da62eba23172a74602918b" category="paragraph">ファイルベースのバックアップ * を選択します。アクティブなテナントのみがバックアップされます。</block>
+  <block id="8945d91112d6305825278287a12463cf" category="list-text">[Snapshot and Replication]ページで、次の手順を実行します。</block>
+  <block id="26c5fd73c2f414e21745bac4c9061520" category="list-text">[Snapshot and Replication]ページで、[Backup Type]ページで選択したバックアップタイプとスケジュールタイプの保持設定を指定します。</block>
+  <block id="eff059db75a3581eefbc224fcb754955" category="paragraph">[保持するコピー数]*を選択し、保持するSnapshotの数を指定します。</block>
+  <block id="75653881b192c0f71e63eff99df780b0" category="paragraph">セカンダリSnapshotコピーのロック期間</block>
+  <block id="ad6c4cefab999b5d3b0c637f45be0c1e" category="list-text">Snapshotコピーベースのバックアップの場合は、[Select secondary replication options]セクションで、次のセカンダリレプリケーションオプションの一方または両方を選択します。</block>
+  <block id="c0cfc52080e2a067b98e24711aebb894" category="paragraph"><block ref="c0cfc52080e2a067b98e24711aebb894" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="90f9660dfd88af9a8e7316dbe773ef8d" category="list-text">[Custom backup settings]セクションで、プラグインに渡す必要がある特定のバックアップ設定をキーと値の形式で指定します。</block>
+  <block id="8ec0c5b593d331f0bf00c2469725e303" category="list-text">[Snapshot settings]セクションで、*[Backup Type]*ページで選択したバックアップタイプとスケジュールタイプの保持設定を指定します。</block>
+  <block id="b794f07b4da865ba0ea5b2e45e40e2d7" category="list-text">ポリシーラベルを選択します。</block>
+  <block id="d8321bde9335ee452a7c54b922588669" category="paragraph">選択したポリシーラベルに応じて、ラベルに一致するセカンダリSnapshot保持ポリシーがONTAPによって適用されます。</block>
+  <block id="40760df99ad1881cc4099caa2853c64b" category="inline-link-macro">[Topology]ページでのMySQLリソースに関連するバックアップとクローンの表示</block>
+  <block id="81a788b178a1784f4d3b3c98f0a5c0fd" category="paragraph">を参照して <block ref="6710edbd3b148f1744e483f97807e560" category="inline-link-macro-rx"></block></block>
+  <block id="c708e7888448bf0b8b9020a354adbf4d" category="doc">ASA R2システムでリソースグループを作成し、MySQLリソースのセカンダリ保護を有効にする</block>
+  <block id="fe1f6ec78b7a8d6869a93911e4f70d13" category="paragraph">をクリックし <block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>、ホスト名とリソースタイプを選択してリソースをフィルタリングします。そのあとに<block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>をクリックすると、フィルタ ペインが閉じます。</block>
+  <block id="cfb5b4c0c8592af00f49aa8cf998ed5b" category="paragraph">リソース グループを検索することができます。そのためには、検索ボックスにリソース グループ名を入力するか、<block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>をクリックし、タグを選択します。そのあとに<block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>をクリックすると、フィルタ ペインが閉じます。</block>
+  <block id="2fedd3aa708790c002ed751d54ed27ee" category="paragraph"><block ref="2fedd3aa708790c002ed751d54ed27ee" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f455d5d0b326044651ec799aa3250e91" category="doc">リソースグループを作成し、ASA R2システム上のリソースに対してセカンダリ保護を有効にする</block>
+  <block id="54131ac137e0428a48243c6552fd5559" category="paragraph">を参照して <block ref="582182fe79d6b435038edcbe448ef476" category="inline-link-macro-rx"></block></block>
+  <block id="b2c46b2b0702b19d5fccc4f1b9f8648a" category="paragraph">SnapLock Vaultの詳細については、「SnapVaultデスティネーションでSnapshotをWORM状態にコミットする」を参照してください。</block>
+  <block id="d2b3fcd21580309bc53248671abf5edb" category="image-alt">SnapCenter NetAppでサポートされるプラグインのワークフロー</block>
+  <block id="6dbd0d50e334f8371da5ec40fc37adb2" category="list-text">SVM に複数のデータパス（ LIF ）がある場合は、 NFS クローンボリュームをマウントするための適切なデータパス（ LIF ）が SnapCenter によって選択されます。ただし、特定のデータパス（LIF）を指定する場合は、Set-SvmPreferredDataPath CLIを実行する必要があります。コマンドで使用できるパラメータとその説明については、 RUNNING Get Help command_name _ を使用して参照できます。または、を参照することもできます<block ref="a6987fd1f481831496b6e000c63cd27d" category="inline-link-rx"></block>。</block>
+  <block id="3b666c1c85e6d7621ddbf36de893633c" category="paragraph"><block ref="3b666c1c85e6d7621ddbf36de893633c" category="inline-link-macro-rx"></block></block>
+  <block id="cdfd383dc16da3ad6abe4e1c059a6094" category="list-text">[Backup and Replication]ページで、次の操作を実行します。</block>
+  <block id="a01b7da75a123f67d2bd092bd390357b" category="inline-link-macro">[Topology]ページでPostgreSQLリソースに関連するバックアップとクローンを表示</block>
+  <block id="8cc434d6a6795129514dec808d2a0b5f" category="paragraph">を参照して <block ref="ba5835b9b929a25573989def442b6620" category="inline-link-macro-rx"></block></block>
+  <block id="74bf63bf6d2c3ea39571d20c69e750c5" category="doc">ASA R2システムで、リソースグループを作成し、PostgreSQLリソースのセカンダリ保護を有効にする</block>
+  <block id="2fa3565e934ce96d4dfda01caf5687f0" category="paragraph">をクリックし <block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>、ホスト名とリソースタイプを選択してリソースをフィルタリングします。そのあとに<block ref="5daa1c5d91da80c848b68dcd336ec220" category="inline-image-macro-rx" type="image"></block>をクリックすると、フィルタ ペインが閉じます。</block>
+  <block id="049723d2545fe83b1346dfc8b0e73157" category="inline-image-macro">バックアップワークフローエクスチェンジャーサーバデータベース</block>
+  <block id="17867b811722d46682fd65b7a3aa094d" category="paragraph"><block ref="17867b811722d46682fd65b7a3aa094d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="11347fc37982208b4dafefd65b23ac33" category="paragraph"><block ref="11347fc37982208b4dafefd65b23ac33" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cab8e98ca5648936d9681023a189ff82" category="inline-image-macro">サポートされていないアイコン</block>
+  <block id="fc010c4fbed1e9bd039bba3313b4e32d" category="paragraph">[Resources]ページの <block ref="466fc0768c855378f7de26f2ff8e793d" category="inline-image-macro-rx" type="image"></block> アイコンは、データベースがネットアップ以外のストレージにあることを示します。</block>
+  <block id="df2bffc03e6082b490c6b2d988187ed8" category="paragraph">*をクリックし<block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>、ホスト名とデータベースタイプを選択してリソースをフィルタリングします。次に、**をクリックしてフィルタペインを閉じることができます<block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="4ffa6a9b9bc170ee4e0b8840c7170d2a" category="list-text">スケジュールを設定するポリシーの[スケジュールの設定]列で**をクリックします<block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="5c72942e47dd59d535a0243e01b915c5" category="paragraph">リソースグループを検索するには、検索ボックスにリソースグループ名を入力するか、**をクリックし<block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>てタグを選択します。次に、**をクリックしてフィルタペインを閉じることができます<block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="75dd626c2900bf0ae903a1af9ff5bb4d" category="list-text">[Backup Type and Replication]ページで、次の手順を実行します。</block>
+  <block id="66e5ec1722ee55d19932c5bc96d7c5c3" category="list-text">ポリシーラベルを選択します。</block>
+  <block id="5a448dc3de839f6ccafc3c5c79832c90" category="admonition">*セカンダリSnapshotコピーのロック期間*を有効にするには、セカンダリレプリケーションオプションを選択する必要があります。[Retention]ページで、*[Secondary snapshot copy locking period]*オプションを使用できます。</block>
+  <block id="41b7523d6eb2b3d6f06599d202b36bc2" category="paragraph">プライマリSnapshotロック期間</block>
+  <block id="bdb12321d80003b575f05b8f7554d39f" category="paragraph">[Primary snapshot copy locking period]*を選択し、[Days]、[Months]、または[Years]を選択します。</block>
+  <block id="a76a81f87730cc587fdae2f40fc9d18b" category="paragraph">をクリック <block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block> し、ホスト名とExchangeサーバを選択してリソースをフィルタリングします。そのあとに<block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>をクリックすると、フィルタ ペインが閉じます。</block>
+  <block id="95ca7268c72e31c20f65d0b5b54ea8c6" category="list-text"><block ref="f790bf9188cee374d2bb1f3790c6a393" category="inline-image-macro-rx" type="image"></block>[削除アイコン]をクリックして値を変更します。</block>
+  <block id="dffd94234b3c1a116e4948ff3c5072e3" category="list-text">AIXホストの場合：<block ref="b116e79e4da50b16dcaed1ed3f1567e1" prefix=" " category="inline-code"></block></block>
+  <block id="d1f43f7b8d3d193845fa35a92bbdd6a6" category="paragraph">リソースグループを検索するには、検索ボックスにリソースグループ名を入力するか、**をクリックし<block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>てタグを選択します。次に、**をクリックしてフィルタペインを閉じることができます<block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="c00a655ac4b7e93c83b7d1e532a271e3" category="list-text">*をクリックし<block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>、ホスト名とデータベースタイプを選択してリソースをフィルタリングします。</block>
+  <block id="f63dd098114d3f8b75e78f18fe6c2a93" category="list-text">スケジュールを設定するポリシーの[Configure Schedules]列で、<block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block>をクリックします。</block>
+  <block id="92d77f5c034495123ea4c7adc77aeefa" category="paragraph">コマンドで使用できるパラメータとその説明については、Get-Help Command_nameを実行して確認できます。または、を参照して<block ref="a6987fd1f481831496b6e000c63cd27d" category="inline-link-rx"></block>ください。</block>
+  <block id="0930d24a992b94bd9c44e45e7df5d54f" category="list-text">クローニングされたリソースを選択し、をクリックします <block ref="16199d2eb7d7252498e560be9c8c8d7c" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="e41304e7d689f8fed5c98620228184cf" category="inline-link">Using Linux Hosts with ONTAP storage</block>
+  <block id="4261289fb5bad467a2ad973679d86c14" category="list-text"><block ref="4261289fb5bad467a2ad973679d86c14" category="inline-link-rx"></block></block>
+  <block id="9f900e80deb2aaa055d4cbb3ad7a004c" category="doc">ASA R2システム上のOracleリソースに対してリソースグループを作成し、セカンダリ保護を有効にする</block>
+  <block id="ac2143151de8327ea138e8859397a3b3" category="image-alt">Oracleプラグインのインストール</block>
+  <block id="f4e54f1fe48ac3ce5112308b1eceabc9" category="list-text">をクリックし、ホスト名とデータベース タイプを選択してリソースをフィルタします。</block>
+  <block id="cf36ffc4ba53a8ecbd58193758b7e7f2" category="list-text">検索ボックスにリソースグループ名を入力するか、をクリックし <block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>てタグを選択します。</block>
+  <block id="fab9a033dfbc33ab049bd62138584423" category="paragraph">をクリックしてフィルタ ペインを閉じます。</block>
+  <block id="0368e71bb17355bfa46d48de37edc0d2" category="paragraph">コマンドで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。または、を参照することもできます<block ref="a6987fd1f481831496b6e000c63cd27d" category="inline-link-rx"></block>。</block>
+  <block id="61cdbe28fdf91e577bdcd2f7eb0d2b9d" category="paragraph">**をクリックすると、パラメータを追加できます<block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="c784d3cba09b3b53f393f1421e45c4df" category="section-title">ホストの優先IPを更新する</block>
+  <block id="85ad854c35f24af1b7c52632e891c37a" category="paragraph">クローン処理が完了すると、ストレージアクセスレイヤ（SAL）からクローンへのパスが_SAL:SAL_FORMAT &lt;nfs_lif_IP&gt;になります&lt;JunctionPath&gt;。優先IPを指定するには、SCCLIコマンドを使用してホストでIPを設定する必要があります。</block>
+  <block id="4c24416a293a8e081e08e5e39cc7f75a" category="list-text">データベースホストにログインします。</block>
+  <block id="3fe1536329f78e2a2bd3dd1b4bc16131" category="list-text">指定したユーザについて、SnapCenterとのPowerShell接続セッションを開始します。</block>
+  <block id="5127bb5818426c9a226f86808b688df6" category="paragraph">Open-SmConnection</block>
+  <block id="867c3faee746a08544027a49e1de7f1e" category="list-text">空のファイルを作成します。</block>
+  <block id="07ed21dcf5a57cf39b9b5cfb76fb846b" category="paragraph">/var/opt/scu/scu/etc/storagepreference.propertiesをタッチしますSnapCenter。</block>
+  <block id="6c93cc64a7801ec01ef5805090e43216" category="list-text">SVMの優先データLIFを設定します。</block>
+  <block id="637c6e310591f5495b266d32fe83b80a" category="paragraph">Add-SvmPreferredDataPath -svm &lt;SVM Name&gt;-datapath &lt; IP address or FQDN&gt;</block>
+  <block id="cd87470e18e4c28dd7685ba05347a175" category="list-text">優先パスを確認します。</block>
+  <block id="086b52b2347b7d0117f75b824161b710" category="paragraph">Get-SvmPreferredDataPath</block>
+  <block id="1f2f3e12ff4f97d73d1a5cd5e868e8ac" category="list-text">ストレージタイプを選択します。</block>
+  <block id="53c290080b9a8ccd05a9d80581239ba9" category="list-text">ポリシーの範囲を選択：</block>
+  <block id="dd5009f31a17957857ac61cd2bc47405" category="inline-image-macro">削除ポリシー</block>
+  <block id="1524074fad20a78ac464c12b7c0ab1be" category="paragraph"><block ref="1524074fad20a78ac464c12b7c0ab1be" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5116143fc568cf90dd6d42f66fce7458" category="list-text">[Snapshot and Replication]ページで、次の手順を実行します。</block>
+  <block id="eb1d9d00c6e807619cab9ea37bcf137a" category="list-text">[Data snapshot retention settings]セクションで、[Backup Type]ページで選択したバックアップタイプとスケジュールタイプの保持設定を指定します。</block>
+  <block id="a5f1bd1f3375b552f48386ca5d05e45a" category="paragraph">プライマリSnapshotコピーのロック期間を指定する場合は、*プライマリSnapshotコピーのロック期間*を選択し、日、月、または年を選択します。</block>
+  <block id="2c1e6867a6e3b711ba7c5a6b89167c44" category="paragraph">セカンダリSnapshotコピーのロック期間を指定する場合は、*[セカンダリSnapshotコピーのロック期間]*を選択し、日、月、または年を選択します。</block>
+  <block id="218bd996ffd443419d26b630b917d4da" category="list-text">[Archive Log snapshot retention settings]セクションで、[Backup Type]ページで選択したバックアップタイプとスケジュールタイプの保持設定を指定します。</block>
+  <block id="17e51acfcdd274bfcfeb54ea63213736" category="list-text">ポリシーラベルを選択します。</block>
+  <block id="e38051a0d9227426e5f8160402a78211" category="paragraph">コマンドで使用できるパラメータとその説明については、Get-Help Command_nameを実行して確認できます。または、を参照することもできます<block ref="a6987fd1f481831496b6e000c63cd27d" category="inline-link-rx"></block>。</block>
+  <block id="8a2ba757e81446f3bb13c549e71a6fe2" category="list-text">PDBクローン（targetCDB：PDBClone）を選択し、をクリックします <block ref="f790bf9188cee374d2bb1f3790c6a393" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="81dfe22f147e5863ac036d5825fc0d36" category="paragraph"><block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>[フィルタアイコン]をクリックし、ホスト名とデータベースタイプを選択してリソースをフィルタリングします。次に、imagfilter_icon.gif[フィルタアイコン]_icon.png[]アイコンをクリックしてフィルタペインを閉じます。</block>
+  <block id="669176988e2770456c38c567c99afee6" category="paragraph">コマンドで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。または、を参照することもできます<block ref="a6987fd1f481831496b6e000c63cd27d" category="inline-link-rx"></block>。</block>
+  <block id="796405e4b0f07f89056f5608f7f10669" category="paragraph">UNIXコマンドの詳細については、を参照してください<block ref="a6987fd1f481831496b6e000c63cd27d" category="inline-link-rx"></block>。</block>
+  <block id="4fb3b2f69e00418d4f3dcd3ecbd61d1e" category="list-text">クローニングされたリソース（データベースやLUNなど）を選択し、をクリックします <block ref="16199d2eb7d7252498e560be9c8c8d7c" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="c0eb997ff74c60645cc757d2031ca50a" category="list-text">PDBクローン（targetCDB：PDBClone）を選択し、をクリックします <block ref="16199d2eb7d7252498e560be9c8c8d7c" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="e13720033977db6e0527dfee3b780f5b" category="list-text">クローンを削除する場合は、表でクローンを選択し、<block ref="f790bf9188cee374d2bb1f3790c6a393" category="inline-image-macro-rx" type="image"></block>をクリックします。</block>
+  <block id="c3574823a3ee32c7dee18739df74fe59" category="paragraph">または、またはを参照することもできます<block ref="a6987fd1f481831496b6e000c63cd27d" category="inline-link-rx"></block><block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block>。</block>
+  <block id="8ee05325e57cc519cdb31ab5c97c3054" category="image-alt">ヒタイシヨウLUNマツヒンク</block>
+  <block id="c347b6ffeaa299dea564511a8a531ca5" category="doc">ASA R2システム上のMicrosoft SQL Serverリソースに対してリソースグループを作成し、セカンダリ保護を有効にする</block>
+  <block id="8d2ad583a58059f543540eb44dc0662b" category="list-text">バックアップ処理を最適化するには、Windowsクラスタ名とIPアドレスのリバースルックアップレコードをDNSサーバに作成する必要があります。</block>
+  <block id="d37852978c46aa13c36a17157154650e" category="paragraph">ポリシーを作成するには、**を選択し<block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block>てポリシーウィザードを開始します。</block>
+  <block id="d9f7bf198a4e16d6eac71d858bb536ee" category="list-text">検証スケジュールを設定するポリシーを選択し、**を選択します<block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="ed1f105e7535983bff7c7f9f8e4f107a" category="paragraph">リソースグループを検索するには、検索ボックスにリソースグループ名を入力するか、を選択し<block ref="5daa1c5d91da80c848b68dcd336ec220" category="inline-image-macro-rx" type="image"></block>てタグを選択します。その後、を選択してフィルタペインを閉じることができます <block ref="5daa1c5d91da80c848b68dcd336ec220" category="inline-image-macro-rx" type="image"></block> 。</block>
+  <block id="8afa408584d29764258b270df6ce5bdc" category="list-text">[名前*]ページで、ポリシーの名前と詳細を入力します。</block>
+  <block id="1521a10fed723843c0eeeb32530d66c7" category="section-title">手順2：ポリシーオプションを設定する</block>
+  <block id="6991ff67fe0e130a64576892443f6b8e" category="list-text">ポリシーの範囲を選択します。</block>
+  <block id="8fdc59ef35636ec784c4e884aaab3677" category="section-title">手順3：可用性グループを設定する</block>
+  <block id="c1a2c50eda2bdfc31f8738d944060f7b" category="section-title">手順4：Snapshotとレプリケーションの設定を構成する</block>
+  <block id="d0c1bab8b14d6463d0eb4b48a1d7c022" category="section-title">手順5：最新の状態へのリストア保持を設定する</block>
+  <block id="95d9925f651ec42942208922e3a7cc42" category="list-text">[Up-to-the-minute retention settings]セクションで、[Backup type]ページで選択したバックアップタイプに応じて、次の操作を1つ以上実行します。</block>
+  <block id="b0979bc6345d3ccd768df597984ba719" category="section-title">手順6：Snapshotを設定する</block>
+  <block id="3f3c97f3f0e759d8024c445503dd2861" category="list-text">フルバックアップの保持設定では、次の操作を実行します。</block>
+  <block id="643abe185bf0a21fec16ba4fee7bb56a" category="list-text">保持するSnapshotの総数を指定してください</block>
+  <block id="9d5d6bc304b305d8b8b1942879231bdf" category="list-text">保持するSnapshotの数を指定するには、*保持するコピー*を選択します。</block>
+  <block id="955e59c39a685284fed2337a93e106ba" category="admonition">デフォルトでは、保持数の値は2に設定されています。保持数を1に設定すると、新しいSnapshotがターゲットにレプリケートされるまで最初のSnapshotがSnapVault関係の参照Snapshotになるため、保持処理が失敗する可能性があります。</block>
+  <block id="de89a185c7194c68782b531cfd26fd28" category="list-text">Snapshotを保持する時間の長さ</block>
+  <block id="baf9bfd10581e4153f7ec33ae67cdfc2" category="list-text">Snapshotを保持してから削除するまでの日数を指定する場合は、*[コピーの保持期間]*を選択します。</block>
+  <block id="d2f6ae7e40615559468909d9d4717552" category="list-text">Snapshotラベルを選択してください</block>
+  <block id="6eeddb49abf2b478b28ef816bcc9d4b5" category="section-title">手順7：セカンダリレプリケーションオプションを設定する</block>
+  <block id="81acf3e2ad702e58e6f17b488f420f60" category="paragraph">を参照して <block ref="a3a1de85b36025c39faacf264d5c19f2" category="inline-link-macro-rx"></block></block>
+  <block id="ef37f84ddc9d52086dc669514422940b" category="section-title">手順8：スクリプト設定を構成します</block>
+  <block id="854e2e3ab4ce6b320cc251695063649f" category="section-title">手順9：検証設定を構成します</block>
+  <block id="6845735840443d5eeecc1e7c717556d5" category="section-title">ステップ10：概要を確認します</block>
+  <block id="3344ec3be3ba6c35b1bf91ceb5a030fc" category="list-text">[Configure schedules for selected policies]セクションで、スケジュールを設定するポリシーの[Configure Schedules]列にある***をクリックします<block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="c4fcce06d2389c100156c16a05a82d53" category="paragraph">をクリックし、ホスト名とSQL Serverインスタンスを選択してリソースをフィルタリングします。そのあとに<block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>をクリックすると、フィルタ ペインが閉じます。</block>
+  <block id="b939ed84d044fba5e8dd9883cfcbd407" category="image-alt">SQLワークフローのインストールワークフロー</block>
+  <block id="70a68f7604ec10b890cc322d45bd3115" category="doc">リソースグループを作成し、ASA R2システム上のUNIXファイルシステムのセカンダリ保護を有効にする</block>
+  <block id="ea64a472e78bd4b210304f394bbe8e3a" category="list-text">をクリックし <block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>、ホスト名とUNIXファイルシステムを選択してリソースをフィルタリングします。</block>
+  <block id="fe87c152ea8a027207bc606ca85f3c4c" category="list-text">バックアップ設定を指定します。</block>
+  <block id="9cda14399e82414944fcea8fffd39485" category="list-text">[Retention]ページで、[Backup and Replication]ページで選択したバックアップタイプとスケジュールタイプの保持設定を指定します。</block>
+  <block id="5f455fba952d07764d32e75250b5ba52" category="paragraph">プライマリのSnapshotロック期間を指定する場合は、*[Primary snapshot copy locking period（プライマリSnapshotコピーロック期間）]*を選択し、日数、月数、または年数を選択します。</block>
+  <block id="68cdec5e109e43073b7bf9bf31a79009" category="doc">リソースグループを作成し、ASA R2システム上のWindowsファイルシステムのセカンダリ保護を有効にする</block>
+  <block id="6f939f8b76abcb6333b6300620a5e0f3" category="image-alt">バックアップのワークフロー</block>
+  <block id="6af63e081593a62ed023786db3b2e4ee" category="paragraph">既存のポリシーがいずれも要件を満たさない場合は、既存のポリシーをコピーして変更するか、<block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block>をクリックしてポリシー ウィザードで新しいポリシーを作成できます。既存のポリシーがいずれも要件を満たさない場合は、既存のポリシーをコピーして変更するか、<block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block>をクリックしてポリシー ウィザードで新しいポリシーを作成できます。</block>
+  <block id="aaaf75dac15cb1e6c194f595a3e698ea" category="list-text">[Configure schedules for selected policies]セクションで、スケジュールを設定するポリシーの[Configure Schedules]列内をクリックします <block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block> 。</block>
+  <block id="062f802707d9bac33ce3eb1dda50bef8" category="list-text">[Backup and Replication]ページで、次のタスクを実行します。</block>
+  <block id="0af1635030b363d3c63388943f467ffb" category="list-text">ポリシーラベルを選択します。</block>
+  <block id="2e82139291d3aead86689e606ecfb3f6" category="list-text">[Retention settings]ページで、オンデマンドバックアップおよび選択したスケジュール頻度の保持設定を指定します。</block>
+  <block id="e1282ba4f34b11ff282fb7d9970b2736" category="paragraph">保持するSnapshotコピーの総数</block>
+  <block id="890049ee281f6f438392008ad804b79b" category="paragraph">Snapshotコピーの保持期間</block>
+  <block id="cd57cfd18c8588efd33f1587c562e1f0" category="list-text">バンドルをホストするASP.NET Core Runtime 8.0.12（およびそれ以降のすべての8.0.xパッチ）をインストールしておく必要があります。</block>
+  <block id="37a72f0a6be56bf333e34afd56e02051" category="paragraph">SnapCenter 6.1で使用できる新機能と拡張機能について説明します。</block>
+  <block id="9b158dce63142730ba189d0e12431ec8" category="inline-link-macro">SnapCenter 6.1の新機能</block>
+  <block id="4a0c8bd65f8fdcc6af3bc9ef18a3f989" category="paragraph">新機能と拡張機能の一覧については、を参照してください<block ref="4f8e9916d8d6ddf6a19a65cc210544e6" category="inline-link-macro-rx"></block>。</block>
+  <block id="4a3f09c73e2dacacbebddfd96cac1948" category="inline-link">SnapCenterソフトウェア6.1リリースノート</block>
+  <block id="77400fe4524142ac29310162939726cb" category="paragraph">既知の問題、制限事項、解決済みの問題、および新規および変更されたコマンドの詳細については、を参照して<block ref="5c68c6454568b27710c4196bb910da4f" category="inline-link-rx"></block>ください。リリースノートにアクセスするには、NetAppアカウントでサインインするか、アカウントを作成する必要があります。</block>
+  <block id="d6eb82c324cab2f36e345863fad95090" category="cell">6.1</block>
+  <block id="e62d168588d6c1af2fbd37668a7343da" category="summary">SnapCenterソフトウェアのリリース6.1には、いくつかの新機能と拡張機能が含まれています。</block>
+  <block id="0220307da5eec95fc03c435ffbbc2bfa" category="doc">SnapCenterソフトウェア6.1の新機能</block>
+  <block id="1e095c69621645fccc8f12cd7f35f6fc" category="inline-link-macro">ASA R2システムのサポート</block>
+  <block id="cf1b0e66e5b65c6a3b32f92fdc6552c4" category="cell"><block ref="cf1b0e66e5b65c6a3b32f92fdc6552c4" category="inline-link-macro-rx"></block></block>
+  <block id="cc753d144910e12701641281c8cb88ed" category="paragraph">SnapCenterでASA R2システムがサポートされるようになり、SANのみのお客様のニーズに合わせてシンプルなエクスペリエンスを実現できるようになりました。</block>
+  <block id="915d43127ff96a6e94b70e22873bdfb5" category="cell">セカンダリ改ざん防止スナップショットをサポート</block>
+  <block id="3725caead33410ce98d5a292b7c0cc95" category="paragraph">SnapCenterでは、セカンダリSnapshotのロック期間を指定できます。</block>
+  <block id="92d37724657724129ae0451584c728aa" category="inline-link">SnapCenter Plug-in for VMware vSphereの削除</block>
+  <block id="79cfb9f00fa8ea603f631e679e453fad" category="paragraph">SnapCenter Plug-in for VMware vSphereのアンインストールについては、を参照してください<block ref="cae8a6db54fa4da6d80207fee61e78d1" category="inline-link-rx"></block>。</block>
+  <block id="9792c7ba1a8a833a1c75e11c4a7b46c3" category="list-text">複数のホストをアップグレードする場合は、すべてのホストを選択してをクリックし <block ref="725f4bf2ffc300942027282d0182533f" category="inline-image-macro-rx" type="image"></block>、*[アップグレード]*&gt;*[OK]*をクリックします。</block>
+  <block id="eafbda6a16d2997896c70ba8ded3db33" category="sidebar">SnapCenterソフトウェアは、シンプルで拡張性に優れた一元管理型プラットフォームです。ハイブリッドクラウドのどこにいても、ONTAPシステムで実行されているアプリケーション、データベース、ホストファイルシステム、VMに対して、アプリケーションと整合性のあるデータ保護を提供します。このドキュメントライブラリには、バージョン6.1の情報が含まれています。</block>
+  <block id="888e5b40ea166427f96db1a9c08af7fc" category="sidebar">SnapCenterソフトウェア6.1のドキュメント</block>
 </blocks>

@@ -26,6 +26,6 @@ summary: クローニングワークフローには、クローニング処理�
 
 次のワークフローは、クローニング処理の実行順序を示しています。
 
-image::../media/sco_scc_wfs_clone_workflow.png[クローニングのワークフロー]
+image::../media/sco_scc_wfs_clone_workflow.gif[クローニングのワークフロー]
 
 PowerShellコマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、クローニングの処理を実行することもできます。PowerShellコマンドレットの詳細については、SnapCenterのコマンドレットのヘルプを使用するか、コマンドレットのリファレンス情報を参照してください。

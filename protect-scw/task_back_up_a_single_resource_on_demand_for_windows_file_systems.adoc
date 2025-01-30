@@ -44,12 +44,12 @@ IMPORTANT: Windowsファイルシステムコンテキストで作業してい�
 既存のポリシーを選択し、 [*Details*] をクリックすると、そのポリシーを使用できるかどうかを確認できます。
 
 +
-既存のポリシーがいずれも要件を満たさない場合は、既存のポリシーをコピーして変更するか、image:../media/add_policy_from_resourcegroup.gif["ポリシーフォームのリソースグループの追加"]をクリックしてポリシー ウィザードで新しいポリシーを作成できます。
+既存のポリシーがいずれも要件を満たさない場合は、既存のポリシーをコピーして変更するか、image:../media/add_policy_from_resourcegroup.gif["ポリシーフォームのリソースグループの追加"]をクリックしてポリシー ウィザードで新しいポリシーを作成できます。既存のポリシーがいずれも要件を満たさない場合は、既存のポリシーをコピーして変更するか、image:../media/add_policy_from_resourcegroup.gif["ポリシーフォームのリソースグループの追加"]をクリックしてポリシー ウィザードで新しいポリシーを作成できます。
 
 +
 選択したポリシーは、 [Configure schedules for selected policies] セクションの [Policy （ポリシー） ] カラムに表示されます。
 
-.. [Configure schedules for selected policies]セクションで、スケジュールを設定するポリシーの[Configure Schedules]列内をクリックします image:../media/add_policy_from_resourcegroup.gif["リソースグループからポリシーを追加"] 。
+.. [Configure schedules for selected policies]セクションで、スケジュールを設定するポリシーの[Configure Schedules]列内をクリックします image:../media/add_policy_from_resourcegroup.gif["ポリシーフォームのリソースグループの追加"] 。
 .. [Add schedules for policy_name_] ダイアログボックスで、開始日、有効期限、頻度を指定してスケジュールを設定し、 [*Finish] をクリックします。
 +
 設定されたスケジュールは、 [Configure schedules for selected policies] セクションの [Applied Schedules] カラムに表示されます。

@@ -43,7 +43,7 @@ summary: キューに登録されているバックアップ処理をキャン�
  a| 
 [Activity]ペイン
  a| 
-.. バックアップ処理を開始したら、[Activity]ペインの**をクリックしimage:../media/activity_pane_icon.gif[""]て、最新の5つの処理を表示します。
+.. バックアップ処理を開始したら、[Activity]ペインの**をクリックしimage:../media/activity_pane_icon.gif["[Activity]ペインアイコン"]て、最新の5つの処理を表示します。
 .. 処理を選択します。
 .. ［ ジョブの詳細 ］ ページで、 ［ * ジョブのキャンセル * ］ をクリックします。
 

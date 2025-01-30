@@ -17,22 +17,7 @@ summary: SnapCenterでサポートされているアップグレードパス。
 | SnapCenterサーバのバージョン | SnapCenterサーバを直接アップグレードできる環境 | サポートされるプラグインのバージョン 
 
 
-.2+| 4.9 | 5.0  a| 
-* 4.9
-* 5.0
-
-
-
-
-| 6.0  a| 
-* 6.0
-
-
-
-
-.2+| 5.0  a| 
-6.0
- a| 
+.3+| 5.0 | 6.0  a| 
 * 5.0
 * 6.0
 
@@ -45,13 +30,31 @@ summary: SnapCenterでサポートされているアップグレードパス。
 
 
 
-| 6.0 | 6.0.1  a| 
+| 6.1  a| 
+* 6.1
+
+
+
+
+.2+| 6.0  a| 
+6.0.1
+ a| 
 * 6.0
 * 6.0.1
 
 
+
+
+| 6.1  a| 
+* 6.1
+
+
+
+
+| 6.0.1 | 6.1  a| 
+* 6.0.1
+* 6.1
+
+
 |===
-
-IMPORTANT: たとえば、SnapCenterバージョン4.9を使用していて、6.0.1にアップグレードする場合は、まず5.0にアップグレードしてから、6.0.1へのローリングアップグレードを実行する必要があります。
-
 SnapCenter Plug-in for VMware vSphereのアップグレードについては、を参照してください https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_upgrade.html["SnapCenter Plug-in for VMware vSphere をアップグレードします"^]。

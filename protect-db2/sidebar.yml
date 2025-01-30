@@ -102,6 +102,8 @@ entries:
     url: "/protect-db2/create-backup-policies-for-ibm-db2.html"
   - title: リソースグループを作成してポリシーを適用
     url: "/protect-db2/create-resource-groups-and-attach-policies.html"
+  - title: ASA R2システム上のIBM DB2リソースに対してリソースグループを作成し、セカンダリ保護を有効にする
+    url: "/protect-db2/create-resource-groups-secondary-protection-for-asa-r2-db2-resources.html"
   - title: IBM DB2用のPowerShellコマンドレットを使用して、ストレージシステム接続とクレデンシャルを作成する
     url: "/protect-db2/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-ibm-db2.html"
   - title: DB2データベースのバックアップ

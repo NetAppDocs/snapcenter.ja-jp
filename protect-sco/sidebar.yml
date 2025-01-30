@@ -68,6 +68,8 @@ entries:
     url: "/protect-sco/task_create_backup_policies_for_oracle_database.html"
   - title: リソースグループの作成
     url: "/protect-sco/task_create_resource_groups_and_attach_policies_for_oracle_databases.html"
+  - title: ASA R2システム上のOracleリソースに対してリソースグループを作成し、セカンダリ保護を有効にする
+    url: "/protect-sco/create-resource-groups-secondary-protection-for-asa-r2-oracle-resources.html"
   - title: Oracleリソースのバックアップ
     url: "/protect-sco/task_back_up_oracle_resources.html"
   - title: リソースグループのバックアップ

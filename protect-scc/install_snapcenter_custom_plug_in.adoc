@@ -13,6 +13,6 @@ summary: カスタムプラグインリソースを保護する場合は、SnapC
 [role="lead"]
 カスタムプラグインリソースを保護する場合は、SnapCenterカスタムプラグインをインストールしてセットアップする必要があります。
 
-image::../media/scc_install_configure_workflow.png[SnapCenterカスタムプラグインのワークフロー]
+image::../media/scc_install_configure_workflow.gif[SnapCenterカスタムプラグインのワークフロー]
 
 link:develop_a_plug_in_for_your_application.html["アプリケーション用のプラグインを開発"]

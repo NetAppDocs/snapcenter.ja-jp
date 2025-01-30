@@ -104,6 +104,8 @@ entries:
     url: "/protect-postgresql/create-backup-policies-for-postgresql.html"
   - title: リソースグループを作成してポリシーを適用
     url: "/protect-postgresql/create-resource-groups-and-attach-policies.html"
+  - title: ASA R2システムで、リソースグループを作成し、PostgreSQLリソースのセカンダリ保護を有効にする
+    url: "/protect-postgresql/create-resource-groups-secondary-protection-for-asa-r2-postgresql-resources.html"
   - title: PostgreSQL用のPowerShellコマンドレットを使用して、ストレージシステム接続とクレデンシャルを作成する
     url: "/protect-postgresql/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-postgresql.html"
   - title: PostgreSQLのバックアップ
