@@ -9490,7 +9490,6 @@
   <block id="03ba6af8c8aacc925daefdecc52c1ced" category="paragraph">Azure NetApp Filesは、バックアップの長期保持にコストがかかるプレミアムストレージソリューションです。コストを最適化するために、Azure NetApp FilesストレージからAzureオブジェクトストアにバックアップを移動できます。SnapCenter 6.0.1以降では、Azure NetApp Files上にあるアプリケーションをAzure Blob Storage（オブジェクトストア）にバックアップおよびクローニングできます。短期的なリカバリ用にAzure NetApp FilesストレージにボリュームSnapshotコピーを2つ、長期的なリカバリ用にAzure Blob Storageにもう1つ、データのコピーを2つ保持できます。</block>
   <block id="20c30f0cc89f35ed825a3cd3d901372c" category="paragraph">Azure NetApp Filesバックアップを含むポリシーが有効でリソースに関連付けられている場合、SnapCenterはボリュームSnapshotの作成とAzure Blob Storageへのバックアップを処理します。SnapCenterによってバックアップヴォールトが作成され、ボリュームのバックアップが有効になります。ボリュームのバックアップを有効にした場合、SnapCenterは既存のバックアップを使用します。</block>
   <block id="e55ea9fc643ab80ebff324b5ff0d6b8d" category="list-text">FASまたはAFF ONTAPおよびFSxNストレージシステムのオブジェクトストレージ機能はサポートされていません。</block>
-  <block id="5b44b7d138d30c112390cba3570d49bf" category="list-text">OracleとSAP HANAのマウントワークフローとカタログワークフローはサポートされていません。</block>
   <block id="1e05d9799692ccd6b7989f741f68ec55" category="list-text">オブジェクトストレージからのバックアップ検証、REST APIのサポート、オブジェクトストレージからのクローンライフサイクル管理、およびオブジェクトストレージバックアップのレポート機能はサポートされていません。</block>
   <block id="c54485c49dccc7921e44c57c0bc07610" category="list-text">Azure Blob Storage上のバックアップからAzure NetApp Filesへのリストアはサポートされていません。クローニングオプションを使用することもできます。</block>
   <block id="9a6872cf47cae5149dfd734be3f2eee0" category="paragraph"><block ref="9a6872cf47cae5149dfd734be3f2eee0" category="inline-link-macro-rx"></block></block>
@@ -10032,4 +10031,6 @@
   <block id="9792c7ba1a8a833a1c75e11c4a7b46c3" category="list-text">複数のホストをアップグレードする場合は、すべてのホストを選択してをクリックし <block ref="725f4bf2ffc300942027282d0182533f" category="inline-image-macro-rx" type="image"></block>、*[アップグレード]*&gt;*[OK]*をクリックします。</block>
   <block id="eafbda6a16d2997896c70ba8ded3db33" category="sidebar">SnapCenterソフトウェアは、シンプルで拡張性に優れた一元管理型プラットフォームです。ハイブリッドクラウドのどこにいても、ONTAPシステムで実行されているアプリケーション、データベース、ホストファイルシステム、VMに対して、アプリケーションと整合性のあるデータ保護を提供します。このドキュメントライブラリには、バージョン6.1の情報が含まれています。</block>
   <block id="888e5b40ea166427f96db1a9c08af7fc" category="sidebar">SnapCenterソフトウェア6.1のドキュメント</block>
+  <block id="fc8e535c7339f77157a0f93f32cb1f80" category="list-text">OracleとSAP HANAのマウントワークフローとカタログワークフローは、オブジェクトストレージのバックアップではサポートされませんが、Snapshotではサポートされます。</block>
+  <block id="2128757ca4207f5d5000cd4894d8c58f" category="list-text">Oracle PDBクローンはオブジェクトストレージのバックアップではサポートされませんが、Snapshotではサポートされます。</block>
 </blocks>
