@@ -1635,7 +1635,6 @@
   <block id="5010ac065b072d3a5a66d4913af22358" category="section-title">共有FC RDM LUNの作成</block>
   <block id="10680a7aa79949d8b454b29a782cc64a" category="paragraph">FC RDM LUNを使用してMicrosoftクラスタ内のノード間でストレージを共有するには、まず共有クォーラムディスクと共有ストレージディスクを作成し、それらをクラスタ内の両方の仮想マシンに追加する必要があります。</block>
   <block id="cbdb6828febec04786f22df9a1ccc748" category="inline-link">物理ホスト間で仮想マシンをクラスタ化します</block>
-  <block id="343e62dffb88999e9c503088341e1fc0" category="paragraph">共有ディスクの作成に Plug-in for Windows は使用しません。共有LUNを作成し、クラスタ内の各仮想マシンに追加する必要があります。詳細については、を参照してください<block ref="4339506e2feb8115940eea5a6e9ba248" category="inline-link-rx"></block>。</block>
   <block id="c939b5dd7dddc4f1908d7f58a2ab351d" category="summary">SnapCenter でデータ保護処理を有効にするには、複数のライセンスが必要です。インストールする SnapCenter ライセンスのタイプは、ストレージ環境および使用する機能によって異なります。</block>
   <block id="07cdb1cc7dcc527060e65d98659cb1d4" category="doc">SnapCenterライセンス</block>
   <block id="03d6fc6f0007d8c1e15a56f0a4522686" category="paragraph">SnapCenterでは、アプリケーション、データベース、ファイルシステム、仮想マシンのデータ保護を実現するために複数のライセンスが必要です。インストールする SnapCenter ライセンスのタイプは、ストレージ環境および使用する機能によって異なります。</block>
@@ -2038,7 +2037,6 @@
   <block id="e5111e1a8d09cf3b9cc87da0144221fb" category="list-text">すべてのブラウザタブを閉じ、ブラウザを再度開いて既存またはアクティブなセッションCookieをクリアし、再度ログインします。</block>
   <block id="907fe6bfcd498fe3e561f7fb3ee67c89" category="paragraph">SnapCenter MFA機能は、REST APIを使用して有効にすることもできます。</block>
   <block id="b73f485c1067e4b3168b292142131855" category="inline-link">複数のタブで同時にログインを試行すると、MFAエラーが表示されます</block>
-  <block id="9e4f9470d66f1730ad7525f9043126be" category="paragraph">トラブルシューティング情報については、を参照してください<block ref="361c774ee5cb22be42ef8ea152ed45ad" category="inline-link-rx"></block>。</block>
   <block id="aeb89440d41f10fd9cc43ab75d800138" category="section-title">AD FS MFAメタデータの更新</block>
   <block id="19b3ff63dd3f3b6c1e3e48e8b3be6141" category="paragraph">アップグレード、CA証明書の更新、DRなど、AD FSサーバで変更があった場合は、SnapCenterでAD FS MFAメタデータを更新する必要があります。</block>
   <block id="6ef1300bebff7801c85a1789a6c0790a" category="list-text">FQDN &gt;/FederationMetadata/2007-06/FederationMetadata.xmlからAD FSフェデレーションメタデータファイルをダウンロードし <block ref="a9571343becbc81f25857902551c1e72" category="inline-link-rx"></block> ます。"</block>
@@ -2047,8 +2045,6 @@
   <block id="f668cd2acef670f8b213c6c785ddf8d6" category="paragraph"><block ref="7da21d8fe0787a3171af06722db1ee6f" prefix="" category="inline-code"></block></block>
   <block id="97088f26ec75cb4d55c4fe5eeb3b62b4" category="section-title">SnapCenter MFAメタデータの更新</block>
   <block id="ac82039d46e3be923c813d3d4c5456e4" category="paragraph">ADFSサーバで修復、CA証明書の更新、DRなどの変更があった場合は、AD FSでSnapCenter MFAメタデータを更新する必要があります。</block>
-  <block id="56ec825045a003fc115765658ea8b639" category="list-text">[*証明書利用者信頼*]をクリックします。</block>
-  <block id="83e84b83a6a686044df5e13021693e95" category="list-text">SnapCenter 用に作成された証明書利用者信頼を右クリックし、*削除*をクリックします。</block>
   <block id="d929cc2f30ed7ebb91266d0b79b5f2cf" category="paragraph">証明書利用者信頼のユーザ定義名が表示されます。</block>
   <block id="18231d11def74e66e747d2eb30fc1c50" category="list-text">多要素認証（MFA）を有効にします。</block>
   <block id="0f5b112cebb37022dbfe2c80e388d605" category="paragraph">を参照して <block ref="5ec6b0ec41fc91e8184fa478c63adb14" category="inline-link-macro-rx"></block></block>
@@ -7909,8 +7905,6 @@
   <block id="5d119381977c6ff7d37f0df02522b5a7" category="list-text">データベースバックアップからのクローニング</block>
   <block id="c236bac131d0c45fb131c82a9be9626b" category="paragraph">クローンデータベースは、新しいアプリケーションを開発する場合のベースラインとして使用でき、本番環境で発生したアプリケーションエラーの切り分けにも役立ちます。データベースのソフトエラーからのリカバリにも使用できます。</block>
   <block id="f23686c03668cab87b56c945fea15bb6" category="paragraph">SnapCenter を使用して、本番環境のデータベースがビジー状態でないときに定期的なクローニングジョブをスケジュール設定できます。</block>
-  <block id="0441f921ecb29005b4b309df792042a3" category="summary">SQL Serverのリストア戦略を定義しておくと、データベースを正常にリストアできます。</block>
-  <block id="24fc557949539a292d3c18f3c9454f62" category="doc">SQL Serverのリストア戦略を定義する</block>
   <block id="2e80c4cfa5c04ee6722df6b343b1b1df" category="summary">リソースとは、インストールしたプラグインで管理されるデータベース、アプリケーションインスタンス、可用性グループなどのコンポーネントです。これらのリソースをリソースグループに追加してデータ保護ジョブを実行できますが、その前に使用可能なリソースを特定しておく必要があります。使用可能なリソースを確認することで、プラグインのインストールが正常に完了したことの確認にもなります。</block>
   <block id="ecf0b987abaa45528fdf383aaa587dfa" category="list-text">SnapCenterサーバのインストール、ホストの追加、ストレージシステム接続の作成、クレデンシャルの追加などのタスクを完了しておく必要があります。</block>
   <block id="dbf32a76a7158bc00ab7beb879cf30c4" category="list-text">Microsoft SQLデータベースを検出するには、次のいずれかの条件を満たしている必要があります。</block>
@@ -9008,9 +9002,6 @@
   <block id="8ffddc72407882a56963d8f378c8a456" category="list-text">プライマリストレージの更新</block>
   <block id="9f4800cf67d29558e0e5678693afc837" category="paragraph">ストレージ機器更改（Tech Refresh）では、プライマリストレージを新しいストレージに置き換えることができます。既存のセカンダリストレージをプライマリストレージに変換することはできません。</block>
   <block id="1e1065b586c984207ccf5533c1320669" category="list-text">セカンダリストレージの更新</block>
-  <block id="3d31d63019c8a7405127998ac1be0ceb" category="paragraph">サポートされるその他のシナリオは次のとおりです。</block>
-  <block id="0985fc6b1b51806986eb62030f325040" category="list-text">SVM名の変更</block>
-  <block id="fc957d9228b0c0b7e2969feb8f831113" category="list-text">ボリューム名の変更</block>
   <block id="7fd4a62a4b2e1acfeaddfc8e7f2832c8" category="section-title">プライマリストレージのバックアップを更新する</block>
   <block id="ff8ce159bd650a518bc9706cce5196da" category="paragraph">ストレージの機器更改が完了したら、storage tech refresh APIまたはコマンドレットを実行して、SnapCenter内の古いバックアップを新しいストレージの詳細で更新する必要があります。</block>
   <block id="e1efdab7eb1b670b3a9bd8ace49c4b03" category="list-text">古いストレージから新しいストレージにデータを移行します。</block>
@@ -10033,4 +10024,9 @@
   <block id="888e5b40ea166427f96db1a9c08af7fc" category="sidebar">SnapCenterソフトウェア6.1のドキュメント</block>
   <block id="fc8e535c7339f77157a0f93f32cb1f80" category="list-text">OracleとSAP HANAのマウントワークフローとカタログワークフローは、オブジェクトストレージのバックアップではサポートされませんが、Snapshotではサポートされます。</block>
   <block id="2128757ca4207f5d5000cd4894d8c58f" category="list-text">Oracle PDBクローンはオブジェクトストレージのバックアップではサポートされませんが、Snapshotではサポートされます。</block>
+  <block id="6eec14240810faadbd60c3ec98b543e7" category="paragraph">共有ディスクはPlug-in for Windowsを使用して作成されません。共有LUNを作成し、クラスタ内の各仮想マシンに追加する必要があります。詳細については、を参照してください<block ref="0564b16166a6e24aa234d21e5bcdc18a" category="inline-link-rx"></block>。</block>
+  <block id="744d48cfa6032e04d109166f7ff6aeaf" category="paragraph">トラブルシューティング情報については、を参照してください<block ref="361c774ee5cb22be42ef8ea152ed45ad" category="inline-link-rx"></block>。</block>
+  <block id="a141599a0eec0e6d9aea907fc97ea039" category="list-text">[証明書利用者信頼]*を選択します。</block>
+  <block id="458f1b484cf2f93e8e2f35b3f5a3b94a" category="list-text">SnapCenter用に作成した証明書利用者信頼を右クリックし、*[削除]*を選択します。</block>
+  <block id="c6cd54ad2b3bca5fe6357919d1ec62e7" category="list-text">BundleおよびPowerShell 7.4.2以降をホストするASP.NET Core Runtime 8.0.12（およびそれ以降のすべての8.0.xパッチ）をインストールする必要があります。</block>
 </blocks>
