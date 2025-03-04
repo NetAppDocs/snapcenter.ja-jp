@@ -1,17 +1,17 @@
 ---
 permalink: install/task_add_an_rbac_role_using_security_login_commands.html 
 sidebar: sidebar 
-keywords: RBAC roles, add, ONTAP RBAC role 
-summary: ストレージシステムでclustered ONTAPを実行している場合は、security loginコマンドを使用してONTAP RBACロールを追加できます。 
+keywords: RBAC roles, add, NetApp ONTAP RBAC role 
+summary: ストレージシステムでclustered NetApp ONTAPを実行している場合は、security loginコマンドを使用してNetApp ONTAP RBACロールを追加できます。 
 ---
-= security loginコマンドを使用してONTAP RBACロールを追加する
+= security loginコマンドを使用してNetApp ONTAP RBACロールを追加する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-ストレージシステムでclustered ONTAPを実行している場合は、security loginコマンドを使用してONTAP RBACロールを追加できます。
+ストレージシステムでclustered ONTAPを実行している場合は、security loginコマンドを使用してNetApp ONTAP RBACロールを追加できます。
 
 .開始する前に
 * clustered ONTAPを実行するストレージシステム用にONTAP RBACロールを作成する前に、次の項目について確認しておく必要があります。
@@ -37,12 +37,12 @@ summary: ストレージシステムでclustered ONTAPを実行している場�
 
 * このタスクについて *
 
-これらのロールをストレージシステムで簡単に設定するには、NetAppコミュニティフォーラムに掲載されているRBAC User Creator for Data ONTAPツールを使用します。
+これらのロールをストレージシステムで簡単に設定するには、NetAppコミュニティフォーラムに掲載されているRBAC User Creator for NetApp ONTAPツールを使用します。
 
-このツールは、ONTAP権限の適切な設定を自動的に処理します。たとえば、RBAC User Creator for Data ONTAPツールでは、フルアクセス権限が最初に表示されるように、権限が正しい順序で自動的に追加されます。読み取り専用権限を最初に追加してからフルアクセス権限を追加すると、ONTAPはフルアクセス権限を重複としてマークし、無視します。
+このツールは、ONTAP Privilegesの正しく設定を自動的に処理します。たとえば、RBAC User Creator for NetApp ONTAPツールでは、フルアクセスのPrivilegesが最初に表示されるように、Privilegesが正しい順序で自動的に追加されます。最初に読み取り専用Privilegesを追加してからフルアクセスPrivilegesを追加すると、ONTAPはフルアクセスPrivilegesを重複としてマークし、無視します。
 
 
-NOTE: SnapCenter または ONTAP をあとからアップグレードする場合は、 RBAC User Creator for Data ONTAP ツールを再度実行して、以前に作成したユーザロールを更新する必要があります。以前のバージョンの SnapCenter または ONTAP 用に作成したユーザロールは、アップグレード後のバージョンでは正常に機能しません。ツールを再実行すると、アップグレードが自動的に処理されます。ロールを再作成する必要はありません。
+NOTE: SnapCenterまたはONTAPをあとからアップグレードする場合は、RBAC User Creator for NetApp ONTAPツールを再実行して、以前に作成したユーザロールを更新する必要があります。以前のバージョンのSnapCenterまたはONTAP用に作成されたユーザロールは、アップグレード後のバージョンでは正常に機能しません。ツールを再実行すると、アップグレードが自動的に処理されます。ロールを再作成する必要はありません。
 
 ONTAP RBACロールの設定の詳細については、を参照してください http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-adm-auth-rbac/home.html["ONTAP 9管理者認証とRBACパワーガイド"^]。
 

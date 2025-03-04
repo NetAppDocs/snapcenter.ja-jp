@@ -26,7 +26,7 @@ SnapCenterは次の方法で導入できます。
 
 * オンプレミスで次のデータを保護：
 +
-** ONTAP FAS、AFF、またはAll SAN Array（ASA）プライマリシステム上にあり、ONTAP FAS、AFF、またはASAセカンダリシステムにレプリケートされるデータ
+** ONTAP FAS、AFF、またはASAプライマリシステム上にあり、ONTAP FAS、AFF、またはASAセカンダリシステムにレプリケートされるデータ
 ** ONTAP Selectプライマリシステム上のデータ
 ** ONTAP FAS、AFF、またはASAのプライマリシステムとセカンダリシステムにあり、ローカルのStorageGRIDオブジェクトストレージで保護されているデータ
 ** ONTAP ASA R2プライマリシステムとセカンダリシステム上のデータ

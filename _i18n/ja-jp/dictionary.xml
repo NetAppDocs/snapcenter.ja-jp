@@ -50,7 +50,6 @@
   <block id="1ac86f6dd27abfcb13588ec9dff9ba2a" category="list-text">バックアップスケジュール</block>
   <block id="d25ed0a2e5a416476005adbae8f92042" category="paragraph">バックアップスケジュール（バックアップが実行されるタイミング）は、リソースグループ設定の一部です。たとえば、リソースグループのポリシーで週単位のバックアップが設定されている場合は、毎週木曜日の午後10時にバックアップが実行されるようにスケジュールを設定できます。リソースグループのスケジュールにアクセスするには、 * リソース * &gt; * リソースグループ * をクリックします。</block>
   <block id="04a9cf8066f01cc2ca9e6a6e6b25a340" category="paragraph">必要な最小 ONTAP 権限は、データ保護に使用する SnapCenter プラグインによって異なります。</block>
-  <block id="f787fb91924061fe015dd390115ff7b0" category="list-text">フルアクセスコマンド： ONTAP 8.3.0 以降で必要な最小権限</block>
   <block id="f29e68a537349e874e09abd00f21d020" category="list-text">event generate-autosupport-log</block>
   <block id="e3890e588ffa00d05486b60aaec37e39" category="list-text">ジョブ履歴の表示</block>
   <block id="5b4f487acd2a1e48d6c43939945c2783" category="list-text">ジョブの停止</block>
@@ -515,7 +514,6 @@
   <block id="8e9c48fe78f7db8b873c1b8d90139e22" category="list-text">_Disable-SmDataCollectionEms_ と入力して、 EMS データ収集を無効にします。</block>
   <block id="446a2f14b20bdf1f8fabde0cb8e8b51f" category="section-title">EMSデータ収集の開始</block>
   <block id="4250a340e7b9c6a47392e8eb582132b9" category="paragraph">EMSデータ収集はデフォルトで有効になっており、インストール日から7日ごとに実行されるようにスケジュールされています。無効にした場合は、 _Enable-SmDataCollectionEMS_cmdlet を使用して、 EMS データ収集を再開できます。</block>
-  <block id="d06bfbc0749c176c2a7d908e8b92e373" category="paragraph">Data ONTAP event generate-autosupport-log権限がStorage Virtual Machine（SVM）ユーザに付与されている。</block>
   <block id="d4eebbbd9ad773c8069231c64b1463fd" category="list-text">EMS データ収集を有効にするには、「 _Enable -SmDataCollectionEMS_ 」と入力します。</block>
   <block id="e491daede62a6579dd942889f56f16d7" category="section-title">EMSデータ収集のスケジュールとターゲットSVMを変更</block>
   <block id="98e5542972b0ba06f813e4c68d3fec0b" category="paragraph">PowerShellコマンドレットを使用して、EMSデータ収集のスケジュールやターゲットStorage Virtual Machine（SVM）を変更できます。</block>
@@ -676,7 +674,6 @@
   <block id="09a6d5e712449f112a3dcd2169dac55a" category="paragraph">SnapCenter リポジトリをリストアする場合は、リストア処理中にリポジトリデータベースにアクセスできないため、実行中の他の SnapCenter 処理に影響します。</block>
   <block id="f65a265b9c1e948edcb4b8b5bd492a18" category="list-text">_Restore-SmRepositoryBackup_cmdlet を使用して、リポジトリのバックアップをリストアします。</block>
   <block id="ec9dad1ea2b1a5314f82d20d3bf23f49" category="paragraph">次のコマンドレットでは、 iSCSI LUN または VMDK にあるバックアップから SnapCenter MySQL データベースリポジトリをリストアします。</block>
-  <block id="322c20f898d5631d47f9131b0ff643f9" category="paragraph">次のコマンドレットは、バックアップファイルが iSCSI LUN 内で誤って削除された場合に、 SnapCenter MySQL データベースをリストアします。VMDKの場合は、ONTAPスナップショットからバックアップを手動でリストアします。</block>
   <block id="ba26ffcdcd99a1aea9b86f7be319ba8b" category="admonition">リストア処理の実行後にリポジトリバックアップが取得されると、リポジトリのリストア処理に使用されたバックアップはリストに表示されません。</block>
   <block id="071788d560dec04e39684f7e9734f7f8" category="section-title">SnapCenterリポジトリを移行する</block>
   <block id="36a43a17d046b7175ef97b0dd0dbf8f8" category="paragraph">SnapCenter サーバのデータベースリポジトリをデフォルトの場所から別のディスクに移行することができます。リポジトリは、より多くのスペースがあるディスクに再配置する場合に移行できます。</block>
@@ -1067,7 +1064,6 @@
   <block id="28cff6abd4b7b43406436e547f34789e" category="paragraph">SnapCenterには、SnapCenter Serverと個別の軽量プラグインの両方が含まれています。リモートアプリケーションホストへのプラグインの導入を自動化したり、バックアップ、検証、クローニング処理のスケジュールを設定したり、すべてのデータ保護処理を監視したりできます。</block>
   <block id="66f12d94976f038895bab4372ee87640" category="paragraph">SnapCenterは次の方法で導入できます。</block>
   <block id="ad5726653853fba2b5d98515c638da77" category="list-text">オンプレミスで次のデータを保護：</block>
-  <block id="f6ce44442588fc16e1d7cc2d3995eff2" category="list-text">ONTAP FAS、AFF、またはAll SAN Array（ASA）プライマリシステム上にあり、ONTAP FAS、AFF、またはASAセカンダリシステムにレプリケートされるデータ</block>
   <block id="7deab53ede49d0d1a58c65f2e25ff259" category="list-text">ONTAP Selectプライマリシステム上のデータ</block>
   <block id="3f897d901d24f02777ff0994b7823d1a" category="list-text">ONTAP FAS、AFF、またはASAのプライマリシステムとセカンダリシステムにあり、ローカルのStorageGRIDオブジェクトストレージで保護されているデータ</block>
   <block id="bc549d53e5e7a7aeb8a41511751a99f2" category="list-text">ハイブリッドクラウドにオンプレミスで導入し、以下のデータを保護</block>
@@ -1270,7 +1266,6 @@
   <block id="6fe96fe83e4fe586b0886b2e5017d10d" category="paragraph">たとえば、SQL Server環境でSnapshot処理やデータ保護処理を実行する場合は、WindowsまたはSQLの適切なクレデンシャルを使用してクレデンシャルを設定する必要があります。SnapCenter サーバは、どちらの方法で設定されたクレデンシャルも認証します。Windowsファイルシステム環境でONTAPストレージ上でSnapshot処理とデータ保護処理を実行する場合は、SnapCenterのadminロールにWindowsホストに対するadmin権限が必要です。</block>
   <block id="1247a4f73aec617351c15da7677f2470" category="paragraph">同様に、Oracleデータベースに対してデータ保護処理を実行する場合に、データベースホストでオペレーティングシステム（OS）認証が無効になっている場合は、OracleデータベースまたはOracle ASMのクレデンシャルを使用してクレデンシャルを設定する必要があります。SnapCenterサーバは、操作に応じて、次のいずれかの方法を使用して設定されたクレデンシャルを認証します。</block>
   <block id="880474ac5a13e7ace0b497d868bfcec8" category="section-title">SnapCenter Plug-in for VMware vSphere の RBAC をサポートしています</block>
-  <block id="f801aae5c222a63a7b4293067447308c" category="paragraph">VMと整合性のあるデータ保護にSnapCenter VMwareプラグインを使用している場合は、vCenter ServerでRBACをさらに強化できます。SnapCenter VMwareプラグインは、vCenter Server RBACとData ONTAP RBACの両方をサポートしています。</block>
   <block id="924b38ecfddee0161d42ebb991f8e8a3" category="paragraph">詳しくは、を参照してください。<block ref="1ec180cad4f4e747c7ef776c635100ff" category="inline-link-rx"></block></block>
   <block id="fee7e83316f093eca52deec4c8b672ce" category="paragraph">ストレージシステムへのアクセスに必要な権限を持つvsadminアカウントを作成する必要があります。</block>
   <block id="f5e109b370464d84cabe080f73038355" category="inline-link-macro">最小限の権限で ONTAP クラスタロールを作成します</block>
@@ -1641,7 +1636,6 @@
   <block id="794df3791a8c800841516007427a2aa3" category="cell">ライセンス</block>
   <block id="b428bd66304bced88a8f85c2e42e2a8d" category="cell">必要な場合</block>
   <block id="932a86c21601cea5fd4dd8e8496f1347" category="paragraph">SnapCenter Standard（コントローラベース）</block>
-  <block id="e9f8485c0c52ec084887222481b5cb66" category="paragraph">FAS、AFF、オールSANアレイ（ASA）に必要</block>
   <block id="54e6e66bc0a69ef86d9bb0b63900793e" category="admonition">SnapCenterは、Data Protection Bundleの一部としても提供されます。A400以降を購入済みの場合は、Data Protection Bundleを購入する必要があります。</block>
   <block id="06bfcdba3ea733216950ad2dd53126d5" category="paragraph">SnapMirrorまたはSnapVault</block>
   <block id="253b40ae359ba25b56231803430c4873" category="paragraph">ONTAP</block>
@@ -1673,11 +1667,9 @@
   <block id="802a2285a60e079b52f32ba2c3140d0d" category="paragraph">NetApp®Single Mailbox Recoveryは、2023年5月12日に販売終了（EOA）になりました。詳細については、を参照してください <block ref="5a98ce97c5b40ecef6f220dc57d4f14a" category="inline-link-macro-rx"></block>。NetAppは、2020年6月24日に導入されたマーケティング用パーツ番号を通じて、メールボックスの容量、メンテナンス、サポートを購入したお客様をサポート対象期間中も引き続きサポートします。</block>
   <block id="03da3b5726a1efd6df1fc511966c89a6" category="paragraph">NetApp Single Mailbox Recoveryは、Ontrackが提供するパートナー製品です。Ontrack PowerControlsには、NetApp Single Mailbox Recoveryと同様の機能が用意されています。お客様は、新しいOntrack PowerControlsソフトウェアライセンスとOntrack PowerControlsメンテナンスおよびサポートの更新をOntrackから（licensingteam@ontrack.com経由で）調達し、2023年5月12日のEOA日以降にメールボックスをきめ細かくリカバリできます。</block>
   <block id="28f9c2d1c67ea659588c7bfc2680e96d" category="summary">FAS、AFF、またはASAストレージコントローラを使用している場合は、SnapCenter Standardコントローラベースライセンスが必要です。</block>
-  <block id="e6c51d0ec467f9742ef4d9ed2bfd5390" category="paragraph">FAS、AFF、またはオールSANアレイ（ASA）ストレージコントローラを使用している場合は、コントローラベースのSnapCenterライセンスが必要です。</block>
   <block id="b1c23ca4e9e67a158bfb24299743d88f" category="paragraph">コントローラベースライセンスには次のような特徴があります。</block>
   <block id="5300768d44eab29e62cfac966d22baea" category="list-text">Premium Bundle または Flash Bundle （ベースパックには含まれません）の購入に SnapCenter Standard のライセンスが含まれます。</block>
   <block id="c55c867b9e6458f61ad9c49c7535bfab" category="list-text">無制限のストレージ使用量</block>
-  <block id="6b22646455acfe9efc53d4f10b58a5fe" category="list-text">ONTAP System Managerまたはストレージクラスタのコマンドラインを使用して、FAS、AFF、またはASAのストレージコントローラに直接追加して有効にします</block>
   <block id="c0919ecf5802c65bf773794b7af70540" category="admonition">SnapCenter コントローラベースのライセンスについては、 SnapCenter GUI にライセンス情報を入力しません。</block>
   <block id="17449a90a0d7161db56cba83fa4f2728" category="list-text">コントローラのシリアル番号にロックされています</block>
   <block id="eb55a5732c8239cbf4f476df49cc20a3" category="paragraph">必要なライセンスの詳細については、を参照してください <block ref="6de8516502145d64739d69762f4898a1" category="inline-link-macro-rx"></block>。</block>
@@ -1709,7 +1701,6 @@
   <block id="1220394f5402b4332338e11150062d91" category="list-text">system show -instanceコマンドを入力し、出力を確認してコントローラのシリアル番号を特定します。</block>
   <block id="065b83de49a875bb4bd71dbe16fad428" category="list-text">シリアル番号を記録します。</block>
   <block id="4fb6996a4b0fc33cbed31ac896875422" category="section-title">手順4：コントローラベースライセンスのシリアル番号を取得します</block>
-  <block id="da68fe81ae35bfda8d512b213d4ea64f" category="paragraph">FAS または AFF ストレージを使用している場合、NetApp Support Siteから SnapCenter コントローラベースのライセンスを取得してから、 ONTAP コマンドラインを使用してインストールできます。</block>
   <block id="26e6565b87611c0e2e61e424bbf253a8" category="list-text">NetAppサポートサイトの有効なログインクレデンシャルが必要です。</block>
   <block id="315713e21026e04eaaa2b9a3821e4c3d" category="paragraph">有効なクレデンシャルを入力しないと、検索のための情報は返されません。</block>
   <block id="253fa4a7008b4934e4b20001065ef254" category="list-text">コントローラのシリアル番号が必要です。</block>
@@ -2389,7 +2380,6 @@
   <block id="1e1ed4854c77f284f3e97b0843b6e570" category="doc">サポートされるストレージシステムとアプリケーション</block>
   <block id="ed3518bf4a914f119b6bdecebdd5768f" category="paragraph">サポートされるストレージシステム、アプリケーション、およびデータベースを確認しておく必要があります。</block>
   <block id="16f0739cf9b014b8e0cab25818f1687c" category="list-text">SnapCenterは、データを保護するためにONTAP 9 12.1以降をサポートしています。</block>
-  <block id="213ee580d561421ab50f46ea0b22affa" category="list-text">SnapCenterはAmazon FSx for NetApp ONTAPをサポートしており、SnapCenterソフトウェア4.5 P1パッチリリースからデータを保護します。</block>
   <block id="dc39fb71951ab3bfb20cab9c1beb9446" category="paragraph">Amazon FSx for NetApp ONTAPを使用している場合は、データ保護処理を実行するために、SnapCenterサーバホストプラグインを4.5 P1以降にアップグレードしてください。</block>
   <block id="47217be9e2af813e09f7a7760c32e8ce" category="paragraph">Non-Volatile Memory Express（NVMe）over Transport Control Protocol（TCP）をサポートします。</block>
   <block id="cc788b7e72b2a734dd0985bd1e0e9fe3" category="inline-link">Amazon FSX for NetApp ONTAP のドキュメント</block>
@@ -2466,7 +2456,6 @@
   <block id="994b4bd5e17452cd36f1c413715e9b54" category="list-text">必要なすべてのアセットについて、この手順を繰り返します。</block>
   <block id="4cc186df234138a57b2e8c5d8e5f7f8d" category="list-text">[ 保存（ Save ） ] をクリックします。</block>
   <block id="7a94136f80a88afa27fcebdcd0e728a6" category="paragraph">ユーザまたはグループを追加してロールを割り当てたら、リソースリストを更新します。</block>
-  <block id="6c778a52dc5f13a6dd5e629e65cf1082" category="summary">ストレージシステムでclustered ONTAPを実行している場合は、security loginコマンドを使用してONTAP RBACロールを追加できます。</block>
   <block id="a69e754efca1b9623b6b0f65a2d8dc73" category="doc">security loginコマンドを使用してONTAP RBACロールを追加する</block>
   <block id="474d9e4d882e646ea038c1c3f1057d2e" category="list-text">clustered ONTAPを実行するストレージシステム用にONTAP RBACロールを作成する前に、次の項目について確認しておく必要があります。</block>
   <block id="ebe591ae9d43ae4398d95940e9fd9562" category="list-text">実行するタスク（複数可）</block>
@@ -2477,9 +2466,6 @@
   <block id="dee6c2623edcbb8e68bfe81ea75668fa" category="paragraph">フルアクセス権限は必ず最初に割り当てる必要があります。</block>
   <block id="1deb5fee27bfdda7d20d4c10f6e8f273" category="list-text">ユーザにロールを割り当てます。</block>
   <block id="407e9947315902e28583d3951a4332d4" category="list-text">SnapCenter プラグインがクラスタ全体のクラスタ管理者 IP に接続されているか、またはクラスタ内の SVM に直接接続されているかに応じて、設定は異なります。</block>
-  <block id="b0d5e2e1ad5a75d6a2a8f8b07fde4928" category="paragraph">これらのロールをストレージシステムで簡単に設定するには、NetAppコミュニティフォーラムに掲載されているRBAC User Creator for Data ONTAPツールを使用します。</block>
-  <block id="8e841d21791a29493ed9fc18a2573067" category="paragraph">このツールは、ONTAP権限の適切な設定を自動的に処理します。たとえば、RBAC User Creator for Data ONTAPツールでは、フルアクセス権限が最初に表示されるように、権限が正しい順序で自動的に追加されます。読み取り専用権限を最初に追加してからフルアクセス権限を追加すると、ONTAPはフルアクセス権限を重複としてマークし、無視します。</block>
-  <block id="5f1f3816baaf1ae27261430125d83764" category="admonition">SnapCenter または ONTAP をあとからアップグレードする場合は、 RBAC User Creator for Data ONTAP ツールを再度実行して、以前に作成したユーザロールを更新する必要があります。以前のバージョンの SnapCenter または ONTAP 用に作成したユーザロールは、アップグレード後のバージョンでは正常に機能しません。ツールを再実行すると、アップグレードが自動的に処理されます。ロールを再作成する必要はありません。</block>
   <block id="9dc5053bca32e6394932747f3adab2c4" category="inline-link">ONTAP 9管理者認証とRBACパワーガイド</block>
   <block id="cf450319b4b50a20dcf243d6273acbf4" category="paragraph">ONTAP RBACロールの設定の詳細については、を参照してください<block ref="4054a3747c1ed1604c443c75434e693a" category="inline-link-rx"></block>。</block>
   <block id="74fec6bb431ffa93b327d4933607ec3f" category="admonition">SnapCenter のドキュメントではロールに割り当てる要素を「権限」と呼びますが、OnCommand システムマネージャGUIでは、_privilegeではなく、TERM_attribute__が使用されます。ONTAP RBACロールを設定する場合、これらの用語はどちらも同じ意味です。</block>
@@ -2540,7 +2526,6 @@
   <block id="6f9f8c6ff90de911912e63ac72e07121" category="paragraph">fsxadminを使用してFSxクラスタを追加した場合は、ここにFSxクラスタが表示されます。</block>
   <block id="33369003833687837d9530cf914920b1" category="paragraph">クラスタ名をクリックすると、クラスタに含まれるすべての SVM が SVM セクションに表示されます。</block>
   <block id="0386bdeabfbeabf10a27e1684fb9871a" category="paragraph">ONTAP の GUI を使用して ONTAP クラスタに新しい SVM を追加した場合は、 * Rediscover* をクリックすると、新しく追加した SVM が表示されます。</block>
-  <block id="cff41786c5502cd7deaf78557f919f0f" category="admonition">FASまたはAFFストレージシステムをオールSANアレイ（ASA）にアップグレードした場合は、SnapCenterサーバのストレージ接続を更新して、SnapCenterの新しいストレージタイプを反映する必要があります。</block>
   <block id="cca118bc594fa4e8713e94b8b6656358" category="paragraph">SnapCenterがアクセスできるすべてのストレージシステムからEメール通知を送信するには、クラスタ管理者が各ストレージシステムノードでAutoSupportを有効にする必要があります。そのためには、ストレージシステムのコマンドラインから次のコマンドを実行します。</block>
   <block id="2a41146d1eea3c93eec15e8eb831797f" category="paragraph"><block ref="8f230e9ca65c4719bd75e249d2c0deac" prefix="" category="inline-code"></block></block>
   <block id="90ad471fa77b40e816901adea8426b02" category="admonition">Storage Virtual Machine（SVM）管理者にはAutoSupportへのアクセス権はありません。</block>
@@ -4265,7 +4250,6 @@
   <block id="cee00ab879a477aea09f4b1f404b14fc" category="paragraph">一定数のSnapshotを保持</block>
   <block id="b19465911649130b0ad9e7ed87b43f2f" category="paragraph">[保持するSnapshotコピーの総数]*を選択し、保持するSnapshotの数を指定します。</block>
   <block id="7537e0d42ad63b5bae18964aee575640" category="paragraph">Snapshotの数が指定した数を超えると、最も古いコピーから順にSnapshotが削除されます。</block>
-  <block id="225ea283dca2590a2a542a782ac56927" category="admonition">最大保持数は、 ONTAP 9.4 以降のリソースでは 1018 、 ONTAP 9.3 以前のリソースでは 254 です。保持数を使用しているONTAPバージョンでサポートされる値よりも大きい値に設定すると、バックアップは失敗します。</block>
   <block id="a73c04130d1785278e42ce85b94c154d" category="admonition">SnapshotコピーベースのバックアップでSnapVaultレプリケーションを有効にする場合は、保持数を2以上に設定する必要があります。保持数を1に設定すると、新しいSnapshotがターゲットにレプリケートされるまで最初のSnapshotがSnapVault関係の参照Snapshotになるため、保持処理が失敗する可能性があります。</block>
   <block id="c0ab35de65d78830f03751afe7a38d7b" category="admonition">SAP HANAシステムレプリケーションでは、SAP HANAシステムのすべてのリソースを1つのリソースグループに追加することを推奨します。これにより、適切な数のバックアップが保持されます。</block>
   <block id="3d721f84f4ba496ced30bffcfa1591da" category="admonition">SAP HANAシステムレプリケーションでは、作成されたSnapshotの合計数はリソースグループに設定された保持数と同じになります。最も古いSnapshotの削除は、最も古いSnapshotが配置されているノードに基づいて行われます。たとえば、SAP HANAシステムレプリケーションプライマリとSAP HANAシステムレプリケーションセカンダリを含むリソースグループの保持期間は7に設定されます。一度に作成できるSnapshotの数は、SAP HANAシステムレプリケーションプライマリとSAP HANAシステムレプリケーションセカンダリの両方を含め、最大7つです。</block>
@@ -4760,7 +4744,6 @@
   <block id="ee951528ab77b8d58d90d5ab615dd4aa" category="paragraph">プラグインの名前。英数字を使用できます。例：DB2、MySQL、MongoDB</block>
   <block id="ff1642648bf25086a549307da08e818d" category="paragraph">ネイティブ形式で作成されたプラグインの場合は、ファイルの拡張子を指定しないでください。たとえば、プラグイン名がMongoDB.shの場合は、名前をMongoDBと指定します。</block>
   <block id="34b6cd75171affba6957e308dcbd92be" category="paragraph">バージョン</block>
-  <block id="96472ac7d17b3fa637c939c5dbe7aa2c" category="paragraph">プラグインのバージョン。メジャーバージョンとマイナーバージョンの両方を含めることができます。例：1.0、1.1、2.0、2.1</block>
   <block id="3b868ced6f60acf5ee565ac021d42941" category="paragraph">DisplayName</block>
   <block id="0c5cf3f9437d836d57e97dfa37ce8453" category="paragraph">SnapCenter サーバに表示されるプラグインの名前。同じプラグインの複数のバージョンが書き込まれている場合は、表示名がすべてのバージョンで同じであることを確認してください。</block>
   <block id="54d2dab039ee358ddca7d63d0f413e56" category="paragraph">プラグインタイプ</block>
@@ -5188,7 +5171,6 @@
   <block id="c2230088d27abaa2d470e15431fe93b5" category="list-text">組み込みのプレ/ポストスクリプトフレームワークを使用してカスタムアプリケーションをバックアップ</block>
   <block id="b7ef57ec0d80db01d4596e446c5f7c1f" category="paragraph">ONTAPボリューム、LUN、またはqtreeをバックアップできます。</block>
   <block id="b24c71863603f1e22b9646ccb63beac7" category="list-text">SnapCenterポリシーを使用して、既存のレプリケーション関係（SnapVault / SnapMirror /ユニファイドレプリケーション）を利用して、プライマリで作成されたSnapshotをONTAPセカンダリに更新します。</block>
-  <block id="36fecb1daf18c8eeaacbcc8cdc70f4a6" category="paragraph">ONTAPのプライマリとセカンダリには、ONTAP FAS、AFF、All SAN Array（ASA）、Select、Cloud ONTAPがあります。</block>
   <block id="0930cbd774389ffda4b953dfada42944" category="list-text">ONTAPボリューム、LUN、またはファイル全体をリカバリ</block>
   <block id="01416c60ab0c357d59811f108a67d5bd" category="paragraph">ブラウズ機能またはインデックス機能が製品に組み込まれていないため、それぞれのファイルパスを手動で指定する必要があります。</block>
   <block id="17f0138477115892c87d600e535c1ed0" category="paragraph">qtreeまたはディレクトリのリストアはサポートされていませんが、バックアップ範囲がqtreeレベルで定義されている場合にのみ、qtreeのクローニングとエクスポートを実行できます。</block>
@@ -5814,10 +5796,7 @@
   <block id="8b8199b2cc69508101df27784ccae8d5" category="doc">SnapCenterプラグインパッケージのインストールステータスの監視</block>
   <block id="ec053c308e147d0958e28a0ea54218e5" category="summary">コピーが破損している場合などにレプリカコピーを再シードする必要がある場合は、SnapCenterの再シード機能を使用して最新のバックアップに再シードできます。</block>
   <block id="aabc88376ed488867dcbd5ebe7ee5f24" category="doc">Exchangeのパッシブノードレプリカの再シード</block>
-  <block id="95ae09e6950aff657a0ec2b6e13f37f0" category="list-text">SnapCenterサーバ4.1以降およびPlug-in for Exchange 4.1以降を使用している必要があります。</block>
-  <block id="48d90a5e363abeb3058a0de5e6f65119" category="paragraph">レプリカの再シードは、バージョン4.1より前のSnapCenterではサポートされていません。</block>
   <block id="b2570b05b44ba71c96d94339ccd4972a" category="list-text">再シードするデータベースのバックアップを作成しておく必要があります。</block>
-  <block id="6bdff70e9de2a356cc9745518bb414e7" category="cell">* ベストプラクティス：ノード間の遅延を回避するために、再シード処理を実行する前に新しいバックアップを作成するか、最新のバックアップを実行しているホストを選択することを推奨します。</block>
   <block id="f4bfc70881af07e0b233d284dd9a5c22" category="list-text">左側のナビゲーションペインで、 [* リソース ] をクリックし、リストから [Microsoft Exchange Server プラグイン *] を選択します。</block>
   <block id="0fade6059cbb08ae2900df60356ee4c4" category="list-text">[Resources]ページで、[View]リストから適切なオプションを選択します。</block>
   <block id="08367630ec592ba2c7487a0cf5b3bbe7" category="paragraph">単一のデータベースを再シードするには</block>
@@ -6245,8 +6224,6 @@
   <block id="abd96a9e67c87700d0ddbbf79ca1ad42" category="list-text">ONTAPの選択的LUNマップ（SLM）機能のサポート</block>
   <block id="fcc8a219537ae52cbcb4de4b42305ef7" category="paragraph">デフォルトで有効になっているSLM機能は、最適パスのないLUNを定期的に検出して修正します。SLMを設定するには、/var/opt/snapcenter/scu/etcにあるscu.propertiesファイルのパラメータを変更します。</block>
   <block id="5bc73a697938fe752e1c9b686f4c9bca" category="list-text">この機能を無効にするには、ENABLE_LUNPATH_MONITORINGパラメータの値をfalseに設定します。</block>
-  <block id="1988e9c8cf124cb346a67d52ea613567" category="inline-link">ONTAP 9 SANアドミニストレーションガイド</block>
-  <block id="bb05b6e20b4cf14467757d0be8887ff0" category="list-text">LUNパスが自動的に修正される頻度を指定するには、LUNPATH_MONITORING_INTERVALパラメータに値（時間単位）を割り当てます。SLMの詳細については、を参照して<block ref="cb74c6abbb61537bc6ce7c3d4eb82b8a" category="inline-link-rx"></block>ください。</block>
   <block id="5773f6440e36169f1e12e5bf94061c09" category="list-text">LinuxでのNon-Volatile Memory Express（NVMe）のサポート</block>
   <block id="258f389f9aaafec4ce1ef8c36ad97497" category="list-text">NVMe utilがホストにインストールされている必要があります。</block>
   <block id="ab89efb871fba5e381bbef07f0387285" category="paragraph">代替ホストにクローニングまたはマウントするには、NVMe utilをインストールする必要があります。</block>
@@ -7093,7 +7070,6 @@
   <block id="af50d714aae8420f1fba06fef93a651c" category="list-text">クローニングされたファイルシステムがホストからアンマウントされ、クローニングされたボリュームがONTAPから削除されます。</block>
   <block id="f3d8e7bed549389cd494b6bfbb85a42f" category="admonition">Flex ASMセットアップ（RACクラスタ内のノード数よりも基数が少ない）またはVMDKまたはRDM上のASM RACデータベースでは、Connect and Copyリストア方式のみがサポートされます。</block>
   <block id="08a1ae55d996ee98dd80c5c4c62d96d9" category="paragraph">In Place リストアを強制的に有効にした場合でも、次のシナリオでは SnapCenter によって Connect and Copy リストアが実行されます。</block>
-  <block id="10dba007e44356285cbd9088246559ad" category="list-text">セカンダリストレージシステムからのリストア（Data ONTAP 8.3より前のバージョンの場合）</block>
   <block id="a0a19d4dbaa7f0338115cde34d5f3fac" category="list-text">データベースインスタンスが設定されていないOracle RACセットアップのノードにあるASMディスクグループのリストア</block>
   <block id="ec96fc3f26a5e3def34349a5ba3106a0" category="list-text">Oracle RACセットアップで、いずれかのピアノード（ASMインスタンスまたはクラスタインスタンスが実行されていない場合、またはピアノードが停止している場合）</block>
   <block id="21f04616c9f47b98a118438980bfa7c0" category="list-text">制御ファイルのみのリストア</block>
@@ -7103,7 +7079,6 @@
   <block id="1b143938aaf5bb9e6ff4dad55436c4c6" category="list-text">Oracle RACに新しいノードが追加されたが、SnapCenterサーバは新たに追加されたノードを認識しない</block>
   <block id="8fe5511a781b8c0eb456871713250421" category="section-title">In Placeリストア</block>
   <block id="d4f49b060e7bae27b677a5d8d6a56473" category="paragraph">データベースレイアウトがバックアップとほぼ同じで、ストレージとデータベーススタックで設定を変更していない場合は、In Placeリストアが実行され、ファイルまたはLUNのリストアがONTAP上で実行されます。SnapCenter では、 In Place リストア方式の一環として Single File SnapRestore （ SFSR ）のみがサポートされます。</block>
-  <block id="d1977d8080b26c1ee878aaa6c61e9d31" category="admonition">Data ONTAP 8.3以降では、セカンダリサイトからのIn Placeリストアがサポートされます。</block>
   <block id="37349ec346f2d78876e8b6f263b4cb20" category="paragraph">データベースでIn Placeリストアを実行する場合は、ASMディスクグループにデータファイルだけがあることを確認してください。ASMディスクグループまたはデータベースの物理構造に変更を加えたあとに、バックアップを作成する必要があります。In Placeリストアの実行後、ディスクグループにはバックアップ時と同じ数のデータファイルが格納されます。</block>
   <block id="45fbe01b3c6942c8f893e08fa3c65f19" category="paragraph">ディスクグループまたはマウントポイントが次の条件に一致すると、In Placeリストアが自動的に適用されます。</block>
   <block id="003fdb57b0f7d55f85205faea9f2db43" category="list-text">バックアップ後に新しいデータファイルが追加されない（外部ファイルチェック）</block>
@@ -7369,7 +7344,6 @@
   <block id="382cdda6e690bf1f356fe8262a77acad" category="list-text">[ * 表領域 * ] を選択し、リストアする表領域を指定します。</block>
   <block id="4cdff21e1a3b3a11f16dc574421a1599" category="doc">Oracleデータベースクローンのスプリット</block>
   <block id="b1b82801e9c78c50ebcf99fde0aea87a" category="list-text">クローンをスプリットすると、クローンのバックアップコピーが削除されます。</block>
-  <block id="cba97cc8f5b2bb7297dd2360ae8b024a" category="list-text">クローンスプリット処理の制限事項については、を参照して<block ref="3ae98799f9586e965a749204c2b3e8f9" category="inline-link-rx"></block>ください。</block>
   <block id="c073ee3bf31639ca8cd5dfdf2fe18185" category="paragraph">SMCoreサービスが再起動し、クローンスプリット処理が実行されたデータベースが[リソース]ページにクローンとして表示されると、クローンスプリット処理が応答を停止します。_Stop-SmJob_cmdlet を実行してクローンスプリット処理を停止し、クローンスプリット処理を再試行する必要があります。</block>
   <block id="103e35e260868e1aa1c36274a7301158" category="paragraph">クローンがスプリットされているかどうかを確認するためにポーリング時間を長くしたり、ポーリング時間を短くしたりする場合は、SMCoreServiceHost.exe.configファイルのCloneSplitStatusCheckPollTimeパラメータの値を変更して、SMCoreがクローンスプリット処理のステータスをポーリングする時間間隔を設定できます。値はミリ秒単位で、デフォルト値は5分です。</block>
   <block id="fbfa277a055cde6a44aa257516ef119c" category="admonition">バックアップ、リストア、または別のクローンスプリットが実行中の場合、クローンスプリットの開始処理は失敗します。クローンスプリット処理を再開するのは、実行中の処理が完了してからにしてください。</block>
@@ -7850,7 +7824,6 @@
   <block id="82c2224d099110596a9863d056598afe" category="paragraph">バックアップコピーを特定の日数だけ保持します。</block>
   <block id="9bbf41d74c8f89f293d3299ea7bebf83" category="list-text">［ * 最新の &lt; 日数 &gt; フル・バックアップに適用可能なログ・バックアップを保持する ］ オプションを選択し、ログ・バックアップ・コピーを保持する日数を指定します。</block>
   <block id="0e549e42000cf1cd2bd13dc132e61448" category="paragraph">SnapLock保持期間は100年未満にする必要があります。</block>
-  <block id="4caf8c069465c53a1a175fa4a08aa0a8" category="paragraph">この例では、ログのSnapshot保持数を2に設定しています。</block>
   <block id="92ac5fc0212c94ee50e6dc85913caeec" category="example-title">例を示します</block>
   <block id="8047dd542f0833c625160d18deaef831" category="paragraph">Set-SmPolicy-PolicyName 'newpol'-PolicyType 'Backup'-PluginPolicyType 'SCSQL'-sqlbackuptype 'FullBackupAndLogBackup'-RetentionSettings@｛backupType='Hourly'；RetentionCount=2｝、@｛backupType='log_snapshot'；ScheduleType=2｝</block>
   <block id="f2d35fb96ac070e63c88b1b43cf8c70b" category="inline-link">SnapCenterがデータベースのSnapshotコピーを保持</block>
@@ -8484,7 +8457,6 @@
   <block id="6a1ea7acf8d1cfa3f328f2086b1d0e71" category="paragraph">バックアップのリストア後に受信者にメールを送信するには、「 * Always * 」、「 * On Failure * 」、または「 * on failure or warning * 」を選択します。SMTPサーバ、Eメールのデフォルトの件名、送信先と送信元のEメールアドレスを入力します。</block>
   <block id="ef96beee5f80fc2bcd7726a450b3a989" category="admonition">リストアしたファイルシステムにデータベースが含まれている場合は、データベースもリストアする必要があります。データベースをリストアしないと、データベースが無効な状態になっている可能性があります。データベースのリストアの詳細については、そのデータベースのデータ保護ガイドを参照してください。</block>
   <block id="b651b2481c776bf3bf9ea345a8be10ad" category="summary">リソースのバックアップまたはクローニングを準備するときに、プライマリストレージとセカンダリストレージ上のすべてのバックアップとクローンの図を表示できます。[Topology]ページでは、選択したリソースまたはリソースグループに使用可能なすべてのバックアップとクローンを確認できます。これらのバックアップとクローンの詳細を表示し、選択してデータ保護処理を実行できます。</block>
-  <block id="ab4899518bdf2b09eb1ef12f3cb58429" category="list-text">SnapCenter 1.1 からアップグレードした場合、セカンダリ（ミラーまたはバックアップ）上のクローンは、トポロジページのミラーコピーまたはバックアップコピーの下に表示されません。SnapCenter 3.0 では、 SnapCenter 1.1 で作成されたすべてのクローンがローカルコピーの下に表示されます。</block>
   <block id="a5034055581c83d2fec0b4b410e664f4" category="paragraph">サマリカードセクションには、バックアップとクローンの合計数が表示されます。Oracle データベースの場合のみ、サマリカードセクションにはログバックアップの合計数も表示されます。</block>
   <block id="80c82fe3ce8c148b5edc714385f5f5b1" category="paragraph">SnapCenterカスタムプラグインを使用している場合、プライマリストレージシステム上のバックアップの名前は変更できません。</block>
   <block id="82df92bf63205eb90f0513c131abc2dd" category="list-text">クローンを削除する場合は、表でクローンを選択し、<block ref="f790bf9188cee374d2bb1f3790c6a393" category="inline-image-macro-rx" type="image"></block>をクリックして削除します。</block>
@@ -9151,7 +9123,6 @@
   <block id="93e063301f68e16961686672bfe6208e" category="list-text">SnapCenter サーバホストまたはプラグインホストで変更した SnapCenter 構成ファイルをすべてバックアップしておく必要があります。</block>
   <block id="77b44cc84c18e6f68f7831889cfc9abd" category="paragraph">SnapCenter 構成ファイルの例： SnapDrive Service.exe.config 、 SMCoreServiceHost.exe.config など。</block>
   <block id="a6230500cc307e0a76e575726dcf9cdd" category="list-text">アップグレード中に、SQLスクリプトが実行されてNSMデータベース内のExchangeデータが更新され、DAGとホストのショートネームがFQDNに変換されます。これは、SnapCenter ServerとExchangeプラグインを併用している場合にのみ該当します。</block>
-  <block id="ed00a9e405426a3469fc285a29a849ab" category="list-text">SnapCenter Plug-in for Microsoft SQL Server、SnapCenter Plug-in for Microsoft Exchange Server、およびSnapCenter Plug-in for Microsoft Windowsでは、scripts_pathを実行するために、サーバとプラグインホストの両方をバージョン4.7にアップグレードすることを推奨します。</block>
   <block id="d707739d912438c4a86ec02ff6529da1" category="paragraph">ポリシーでプリスクリプトとポストスクリプトが有効になっている既存のバックアップスケジュールと検証スケジュールの場合、バックアップ処理はアップグレード後も引き続き機能します。</block>
   <block id="8159134911a3775f77dfaeafb846c0d3" category="paragraph">［*ジョブの詳細*］ページで、スクリプトをscripts_pathにコピーし、ポリシーを編集してscripts_pathに対するパスを指定するように警告メッセージが表示されます。クローンライフサイクルジョブの場合は、サブジョブレベルで警告メッセージが表示されます。</block>
   <block id="d6d9056bd3ccaf6f2ea25c46f86b217c" category="list-text">NetApp Support Siteから SnapCenter サーバインストールパッケージをダウンロードします。</block>
@@ -9460,9 +9431,6 @@
   <block id="caa08201cb734b2c4b9c07d88af03f12" category="list-text">必要に応じて、セカンダリホストを再構築します。<block ref="fe77a15e62ab867fe36429b52c13f7a6" prefix=" " category="inline-code"></block></block>
   <block id="6027414af513eb2fd2ff4d1ba01ecc48" category="list-text">2番目のホストにフェイルオーバーします。<block ref="0b9b9eafa89b540bbf9b9ff9bde04610" prefix=" " category="inline-code"></block></block>
   <block id="c5161716a036dddca2f68cda30000d0f" category="paragraph">== NLBからF5に切り替えて高可用性を実現</block>
-  <block id="39dc06ca99004e21bf85ae55cfbb26ff" category="paragraph">SnapCenter Standardライセンスはコントローラベースのライセンスで、ONTAP Oneに含まれています。SnapManager Suiteライセンスをお持ちの場合は、SnapCenter Standardライセンスの使用権も取得できます。FAS、AFF、またはASAストレージにSnapCenterの試用版をインストールする場合は、営業担当者にお問い合わせください。ONTAP Oneの評価版ライセンスを入手できます。</block>
-  <block id="a167444fdea2847400372052380975f2" category="inline-link">ONTAP Oneに含まれるライセンス</block>
-  <block id="ecad5e8e1aac5e2b9870fc1d4a8bbb91" category="paragraph">ONTAP Oneに含まれるライセンスについては、を参照してください<block ref="c2fb007f72246516006250865a9beb37" category="inline-link-rx"></block>。</block>
   <block id="156a5008fbec69c3f4a424d5bca0e1d8" category="admonition">SnapCenter AdvancedとSnapCenter NASファイルサービスのライセンスは廃止され、現在は提供されていません。Amazon FSx for NetApp ONTAP、ONTAP Select、Cloud Volumes ONTAP、Azure NetApp Filesに標準ライセンスと容量ベースライセンスは不要になりました。</block>
   <block id="dbd495ad96b61252237734b22b1ddf62" category="admonition">ユーザ名とグループ名に使用できる特殊文字は、スペース（）、ハイフン（-）、アンダースコア（_）、コロン（:）です。</block>
   <block id="3c1eae5e6ea0b19f0a43abeaee269bc2" category="paragraph">必要に応じて、PowerShellコマンドレットを使用して、いくつかのインストールと設定の手順を実行できます。PowerShell 7.4.2以降を使用している必要があります。</block>
@@ -9480,7 +9448,6 @@
   <block id="30e30875c1a26a8c3649817182f09da6" category="paragraph">SnapCenterは、Azure NetApp Files上にあるOracle、SQL、SAP HANAなどのアプリケーションの保護をサポートしています。6.0.1リリース以降のSnapCenterでは、Azure NetApp Filesバックアップ機能がサポートされています。この機能を使用すると、長期的なリカバリ、アーカイブ、コンプライアンスのためのフルマネージドバックアップソリューションが提供されるため、Azure NetApp Filesのデータ保護機能が拡張されます。</block>
   <block id="03ba6af8c8aacc925daefdecc52c1ced" category="paragraph">Azure NetApp Filesは、バックアップの長期保持にコストがかかるプレミアムストレージソリューションです。コストを最適化するために、Azure NetApp FilesストレージからAzureオブジェクトストアにバックアップを移動できます。SnapCenter 6.0.1以降では、Azure NetApp Files上にあるアプリケーションをAzure Blob Storage（オブジェクトストア）にバックアップおよびクローニングできます。短期的なリカバリ用にAzure NetApp FilesストレージにボリュームSnapshotコピーを2つ、長期的なリカバリ用にAzure Blob Storageにもう1つ、データのコピーを2つ保持できます。</block>
   <block id="20c30f0cc89f35ed825a3cd3d901372c" category="paragraph">Azure NetApp Filesバックアップを含むポリシーが有効でリソースに関連付けられている場合、SnapCenterはボリュームSnapshotの作成とAzure Blob Storageへのバックアップを処理します。SnapCenterによってバックアップヴォールトが作成され、ボリュームのバックアップが有効になります。ボリュームのバックアップを有効にした場合、SnapCenterは既存のバックアップを使用します。</block>
-  <block id="e55ea9fc643ab80ebff324b5ff0d6b8d" category="list-text">FASまたはAFF ONTAPおよびFSxNストレージシステムのオブジェクトストレージ機能はサポートされていません。</block>
   <block id="1e05d9799692ccd6b7989f741f68ec55" category="list-text">オブジェクトストレージからのバックアップ検証、REST APIのサポート、オブジェクトストレージからのクローンライフサイクル管理、およびオブジェクトストレージバックアップのレポート機能はサポートされていません。</block>
   <block id="c54485c49dccc7921e44c57c0bc07610" category="list-text">Azure Blob Storage上のバックアップからAzure NetApp Filesへのリストアはサポートされていません。クローニングオプションを使用することもできます。</block>
   <block id="9a6872cf47cae5149dfd734be3f2eee0" category="paragraph"><block ref="9a6872cf47cae5149dfd734be3f2eee0" category="inline-link-macro-rx"></block></block>
@@ -9850,13 +9817,8 @@
   <block id="8c4df87df7072888db58abdf493c82ba" category="paragraph">プライマリのSnapshotロック期間を指定する場合は、[Snapshotコピーのロック期間]を選択し、日、月、または年を選択します。</block>
   <block id="37f001fbef310181d8f4577b4c03a798" category="paragraph">セカンダリSnapshotのロック期間</block>
   <block id="2e37f31a39b30876eff1858ef3d01783" category="paragraph">[Secondary snapshot copy locking period]*を選択し、[Days]、[Months]、または[Years]を選択します。</block>
-  <block id="d4fab0a3b9169228dc7321f4155040a6" category="paragraph">このオプションを有効にするには、次のタスクを実行する必要があります。</block>
-  <block id="768d22eeffe1b0d643b0ed933c3e5f76" category="list-text">[Primary snapshot copy locking period]*を選択します。</block>
-  <block id="8dedb6d4cefe12f20aa79a3e591fbe62" category="list-text">セカンダリレプリケーションオプションの一方または両方を選択します。</block>
   <block id="49d10f32e6045f6eb1e87608c6663036" category="list-text">[Select secondary replication options]セクションで、次のセカンダリレプリケーションオプションの一方または両方を選択します。</block>
   <block id="8a2dda8619fc89210a82c7915ff8404f" category="admonition">*セカンダリSnapshotコピーのロック期間*を有効にするには、セカンダリレプリケーションオプションを選択する必要があります。</block>
-  <block id="e0db40503bb9a725a94275ee8cd82432" category="paragraph">+選択したSnapshotラベルに応じて、ラベルに一致するセカンダリSnapshot保持ポリシーがONTAPによって適用されます。</block>
-  <block id="7924c7d510ee4c17272379c570f53baa" category="paragraph">+注：*[ローカルSnapshotコピーの作成後にSnapMirrorを更新する]*を選択した場合は、必要に応じてセカンダリポリシーラベルを指定できます。ただし、ローカル Snapshot コピーの作成後に「 * Update SnapVault 」を選択した場合は、セカンダリポリシーラベルを指定する必要があります。</block>
   <block id="21c50f2705444dd3390a81b7b2265c1d" category="admonition">**をクリックしてポリシーを作成することもできます<block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="1fdb686d7eb7b44f458d7be7367ce764" category="doc">ASA R2システム上のIBM DB2リソースに対してリソースグループを作成し、セカンダリ保護を有効にする</block>
   <block id="58500be789107a86aa8893793e67951d" category="inline-image-macro">クローンをスプリット</block>
@@ -10029,4 +9991,52 @@
   <block id="c6cd54ad2b3bca5fe6357919d1ec62e7" category="list-text">BundleおよびPowerShell 7.4.2以降をホストするASP.NET Core Runtime 8.0.12（およびそれ以降のすべての8.0.xパッチ）をインストールする必要があります。</block>
   <block id="088d994d276e3b7e6090022acb48aaf7" category="list-text">SnapCenter 6.1は、ONTAP 9.16.1を実行するNetApp ASA R2システムをサポートします。</block>
   <block id="a1c01ec21d4b8df32fe29facff7e7688" category="paragraph">ASA R2システムは、オールフラッシュプラットフォーム上に構築されたSAN専用環境向けに、ハードウェアとソフトウェアの統合ソリューションを提供します。</block>
+  <block id="9044893459e9f46e1e17047570a05298" category="list-text">フルアクセスコマンド： ONTAP 9.12.1 以降で必要な最小権限</block>
+  <block id="a70835f5bcf15a6863468bb82abc19de" category="inline-link">FlexCloneボリュームを親ボリュームからスプリットします。</block>
+  <block id="fc3cc01cd9612e6f3077d4a6505ead8a" category="list-text">FlexCloneのボリュームスプリット処理の詳細については、を参照してください<block ref="5db08c189f8e967bc5a82064aa92c31e" category="inline-link-rx"></block>。</block>
+  <block id="41fbf2c9674d14c871b1a98dff345ddd" category="paragraph">NetApp ONTAP event generate-svm-log権限がStorage Virtual Machine（AutoSupport）ユーザに付与されている。</block>
+  <block id="251c52ce7ef8b529e63b81a2f40b7a26" category="paragraph">バックアップファイルがiSCSI LUNから誤って削除された場合に、SnapCenterのMySQLデータベースをリストアするコマンドレットの例を次に示します。VMDKの場合は、ONTAPスナップショットからバックアップを手動でリストアします。</block>
+  <block id="b9832b10a87d0c3793ed3b413ee1d839" category="section-title">REST APIをサポート</block>
+  <block id="bc9f5cd1669f71a2b0bd213a944d8fdb" category="paragraph">ONTAPおよびASA R2ストレージシステムへのすべてのストレージ接続は、デフォルトでZAPIを経由します。一部のONTAPバージョンでREST APIを有効にできます。</block>
+  <block id="421f02448bcd1490276fcd375668a6be" category="paragraph">次の構成ファイルで構成キーを変更できます。</block>
+  <block id="94b74299dc7f33d5bf8e4fc497c26334" category="list-text">IsRestEnabledForStorageConnection</block>
+  <block id="cbd8678f4d2dba6d97b2ccfc54882755" category="paragraph">デフォルト値は false です。</block>
+  <block id="f0688c9d46cbff7f5beea9484384b94b" category="list-text">MinOntapVersionToUseREST</block>
+  <block id="d4c8b7e3186cc7a235889624e991da17" category="paragraph">デフォルト値は9.13.1です。</block>
+  <block id="47d8f56926b22a7924da528e4f31b5c0" category="list-title">REST APIを使用した接続を有効にする</block>
+  <block id="3417b0a11f8af3b1f8164a8e20bf282c" category="list-text">IsRestEnabledForStorageConnectionをtrueに設定します。</block>
+  <block id="ddba2c3830da989226db244ba9e5c6e5" category="list-text">サーバとWindowsプラグインの両方のホストにSMCoreServiceHost.dll.configとSnapDriveService.dll.configのキーを追加します。</block>
+  <block id="b11d97cb8b208a769f494e058b30b6b7" category="paragraph">_&lt;add key="IsRestEnabledForStorageConnection" value="true" /&gt;_</block>
+  <block id="4a4a2eb369b6eb05f8fff0bc1a85bd94" category="list-title">REST APIを使用した接続を特定のバージョンのONTAPに制限する</block>
+  <block id="e533a16b31a9f8c3587cecc2af8a8fe1" category="list-text">設定パラメータMinOntapVersionToUseRESTをtrueに設定します。</block>
+  <block id="3718cae69e88fbef374d622befa883f6" category="paragraph">_&lt;add key="MinOntapVersionToUseREST" value="9.13.1" /&gt;_</block>
+  <block id="4cfd86a863ba0d1e8735375105b45c40" category="list-text">サーバーでSmCoreのサービスを再起動し、プラグインマシンでプラグインとSnapDriveサービスを再起動します。</block>
+  <block id="b80a17415adfb59b3e776fff090809b3" category="list-text">ONTAP FAS、AFF、またはASAプライマリシステム上にあり、ONTAP FAS、AFF、またはASAセカンダリシステムにレプリケートされるデータ</block>
+  <block id="cdd64112d524e2506ad9aaa5ea6bf0f8" category="paragraph">VMと整合性のあるデータ保護にSnapCenter VMwareプラグインを使用している場合は、vCenter ServerでRBACをさらに強化できます。SnapCenter VMwareプラグインは、vCenter Server RBACとNetApp ONTAP RBACの両方をサポートしています。</block>
+  <block id="7e3e9dbf627ec3409c614f9c9b2cb57e" category="paragraph">FAS、AFF、ASAに必要</block>
+  <block id="82d07a027b5d595de4499a5069c4ccf5" category="paragraph">SnapCenter Standardライセンスはコントローラベースのライセンスで、NetApp ONTAP Oneに含まれています。SnapManager Suiteライセンスをお持ちの場合は、SnapCenter Standardライセンスの使用権も取得できます。FAS、AFF、またはASAストレージにSnapCenterの試用版をインストールする場合は、営業担当者にお問い合わせください。NetApp ONTAP Oneの評価版ライセンスを入手できます。</block>
+  <block id="173cbb56fed3c8d1bffc40cfe1678533" category="inline-link">NetApp ONTAP Oneに含まれるライセンス</block>
+  <block id="94875c624efb32d934c5cd2c0c78f2f0" category="paragraph">NetApp ONTAP Oneに含まれるライセンスについては、を参照してください<block ref="0ab66dfac600c25af9e742e0f8819421" category="inline-link-rx"></block>。</block>
+  <block id="8bf34d96b4ef3036d5fecf25c54f239f" category="list-text">ONTAPシステムマネージャまたはONTAP CLIを使用して、FAS、AFF、またはASAのストレージコントローラに直接追加することで有効にします。</block>
+  <block id="f59cbb2508b7e0a4a75f1eddabac7e1e" category="paragraph">FAS、ASA、またはAFFのストレージを使用している場合は、ONTAPコマンドラインを使用してインストールする前に、NetAppサポートサイトからSnapCenterコントローラベースライセンスを取得できます。</block>
+  <block id="ab396c0026ca30099e9b89003c80fcf5" category="list-text">SnapCenterはAmazon FSx for NetApp ONTAPをサポートしてデータを保護します。</block>
+  <block id="9efdf202df78f9a33e298564c835e4ba" category="summary">ストレージシステムでclustered NetApp ONTAPを実行している場合は、security loginコマンドを使用してNetApp ONTAP RBACロールを追加できます。</block>
+  <block id="2ad5f6ef1c47048e237f2fafae87313a" category="doc">security loginコマンドを使用してNetApp ONTAP RBACロールを追加する</block>
+  <block id="e1be0500812e131476a1a2d9b7429541" category="paragraph">ストレージシステムでclustered ONTAPを実行している場合は、security loginコマンドを使用してNetApp ONTAP RBACロールを追加できます。</block>
+  <block id="34a087679e427c81dd4b62602fb6e759" category="paragraph">これらのロールをストレージシステムで簡単に設定するには、NetAppコミュニティフォーラムに掲載されているRBAC User Creator for NetApp ONTAPツールを使用します。</block>
+  <block id="cd63f10378363da86bcf8672b918512a" category="paragraph">このツールは、ONTAP Privilegesの正しく設定を自動的に処理します。たとえば、RBAC User Creator for NetApp ONTAPツールでは、フルアクセスのPrivilegesが最初に表示されるように、Privilegesが正しい順序で自動的に追加されます。最初に読み取り専用Privilegesを追加してからフルアクセスPrivilegesを追加すると、ONTAPはフルアクセスPrivilegesを重複としてマークし、無視します。</block>
+  <block id="0715b20c4e81f0c852f66480ef00c667" category="admonition">SnapCenterまたはONTAPをあとからアップグレードする場合は、RBAC User Creator for NetApp ONTAPツールを再実行して、以前に作成したユーザロールを更新する必要があります。以前のバージョンのSnapCenterまたはONTAP用に作成されたユーザロールは、アップグレード後のバージョンでは正常に機能しません。ツールを再実行すると、アップグレードが自動的に処理されます。ロールを再作成する必要はありません。</block>
+  <block id="30962a20671f7b70a267e94343e24484" category="list-text">FAS、ASA、AFF ONTAPおよびAmazon FSx for NetApp ONTAPストレージシステムのオブジェクトストレージ機能はサポートされません。</block>
+  <block id="02cf8992ec066e2a6c94ef201a56fde4" category="list-text">FlexCloneのボリュームスプリット処理の詳細については、を参照してください<block ref="a740171a60876518d945f2e24ddd79f9" category="inline-link-rx"></block>。</block>
+  <block id="d664b55967efa51159bf2dcaad494f28" category="admonition">最大保持値は1018です。保持数を使用しているONTAPバージョンでサポートされる値よりも大きい値に設定すると、バックアップは失敗します。</block>
+  <block id="45674f4fab4d30d82c5e48053de84a2d" category="paragraph">ONTAPのプライマリとセカンダリは、ONTAP FAS、AFF、ASA、ONTAP Select、Cloud Volumes ONTAPのいずれかです。</block>
+  <block id="5809b9053ee07314ee267cf4861e2fe2" category="paragraph">プラグインのバージョン。メジャーバージョンとマイナーバージョンの両方を含めることができます。例：5.0、6.0、6.1</block>
+  <block id="04421acf26388af407e2e444d1d9a4ea" category="paragraph">+ノード間の遅延を回避するには、再シード処理を実行する前に新しいバックアップを作成するか、最新のバックアップを実行するホストを選択します。</block>
+  <block id="0002a57eb89728985300757fccb645db" category="inline-link">ONTAP 9 SANの管理セクション</block>
+  <block id="9b84e6db97d84dfea46f94fa87561146" category="list-text">LUNパスが自動的に修正される頻度を指定するには、LUNPATH_MONITORING_INTERVALパラメータに値（時間単位）を割り当てます。SLMの詳細については、を参照して<block ref="791bce609970821d75a70463f2e5a4f8" category="inline-link-rx"></block>ください。</block>
+  <block id="d51e2f3016053dc7090b1d16e111cc04" category="list-text">セカンダリストレージシステムからのリストア</block>
+  <block id="bf1764b9ff5a6e7b28ab3b2166bff7a4" category="admonition">NetApp ONTAPでは、セカンダリサイトからのIn Placeリストアがサポートされています。</block>
+  <block id="cdc0da196ab05c60eaebdca9a2459cd1" category="list-text">FlexCloneのボリュームスプリット処理の詳細については、を参照してください。<block ref="a740171a60876518d945f2e24ddd79f9" category="inline-link-rx"></block></block>
+  <block id="dc4d7bf5602b12335597fd5350deab23" category="admonition">最大保持値は1018です。保持数を使用しているNetApp ONTAPバージョンでサポートされる値よりも大きい値に設定すると、バックアップは失敗します。</block>
+  <block id="ee96dd48de878c0191d0701d853dd514" category="paragraph">この例では、ログSnapshotの保持期間を2に設定しています。</block>
 </blocks>

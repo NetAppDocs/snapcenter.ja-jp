@@ -6,8 +6,6 @@ summary: SnapCenter から実行される各種の処理に関する情報は、
 ---
 = SnapCenterサーバリポジトリの管理
 :allow-uri-read: 
-:icons: font
-:imagesdir: ../media/
 
 
 [role="lead"]
@@ -96,7 +94,7 @@ SnapCenter リポジトリをリストアする場合は、リストア処理中
 C:\PS>Restore-SmRepositoryBackup -BackupName MYSQL_DS_SC_Repository_mva-x3550-s09_09-15-2016_10.32.00.4445
 ----
 +
-次のコマンドレットは、バックアップファイルが iSCSI LUN 内で誤って削除された場合に、 SnapCenter MySQL データベースをリストアします。VMDKの場合は、ONTAPスナップショットからバックアップを手動でリストアします。
+バックアップファイルがiSCSI LUNから誤って削除された場合に、SnapCenterのMySQLデータベースをリストアするコマンドレットの例を次に示します。VMDKの場合は、ONTAPスナップショットからバックアップを手動でリストアします。
 
 +
 [listing]

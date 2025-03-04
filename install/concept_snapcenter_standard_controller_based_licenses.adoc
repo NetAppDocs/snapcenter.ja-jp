@@ -11,13 +11,13 @@ summary: FAS、AFF、またはASAストレージコントローラを使用し�
 
 
 [role="lead"]
-FAS、AFF、またはオールSANアレイ（ASA）ストレージコントローラを使用している場合は、コントローラベースのSnapCenterライセンスが必要です。
+FAS、AFF、またはASAストレージコントローラを使用している場合は、SnapCenter Standardコントローラベースライセンスが必要です。
 
 コントローラベースライセンスには次のような特徴があります。
 
 * Premium Bundle または Flash Bundle （ベースパックには含まれません）の購入に SnapCenter Standard のライセンスが含まれます。
 * 無制限のストレージ使用量
-* ONTAP System Managerまたはストレージクラスタのコマンドラインを使用して、FAS、AFF、またはASAのストレージコントローラに直接追加して有効にします
+* ONTAPシステムマネージャまたはONTAP CLIを使用して、FAS、AFF、またはASAのストレージコントローラに直接追加することで有効にします。
 +
 
 NOTE: SnapCenter コントローラベースのライセンスについては、 SnapCenter GUI にライセンス情報を入力しません。
@@ -162,7 +162,7 @@ All-Flash Optimized: false
 
 == 手順4：コントローラベースライセンスのシリアル番号を取得します
 
-FAS または AFF ストレージを使用している場合、NetApp Support Siteから SnapCenter コントローラベースのライセンスを取得してから、 ONTAP コマンドラインを使用してインストールできます。
+FAS、ASA、またはAFFのストレージを使用している場合は、ONTAPコマンドラインを使用してインストールする前に、NetAppサポートサイトからSnapCenterコントローラベースライセンスを取得できます。
 
 .開始する前に
 * NetAppサポートサイトの有効なログインクレデンシャルが必要です。

@@ -28,7 +28,7 @@ SnapCenterを使用してバックアップをクローニングできます。�
 NOTE: コマンドがコマンドリストに存在しない場合、処理は失敗します。
 
 .タスクの内容
-* クローンスプリット処理の制限事項については、を参照してください http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["ONTAP 9 論理ストレージ管理ガイド"^]。
+* FlexCloneのボリュームスプリット処理の詳細については、を参照してくださいhttps://docs.netapp.com/us-en/ontap/volumes/split-flexclone-from-parent-task.html["FlexCloneボリュームを親ボリュームからスプリットします。"]。
 * ONTAP 9.12.1以前のバージョンでは、リストアの一環としてSnapLockヴォールトSnapshotから作成されたクローンにSnapLockヴォールトの有効期限が継承されます。SnapLockの有効期限が過ぎた時点で、ストレージ管理者がクローンを手動でクリーンアップする必要があります。
 
 

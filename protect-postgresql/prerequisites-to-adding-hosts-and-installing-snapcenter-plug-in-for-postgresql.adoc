@@ -86,7 +86,7 @@ NOTE: ワイルドカードエントリ（*）を使用してすべてのコマ�
 
 == Linuxホストのroot以外のユーザに対するsudo Privilegesの設定
 
-SnapCenter 2.0以降のリリースでは、root以外のユーザがSnapCenter Plug-ins Package for Linuxをインストールしてプラグインプロセスを開始できます。プラグインプロセスをroot以外の有効なユーザとして実行します。複数のパスにアクセスできるようにroot以外のユーザにsudo Privilegesを設定する必要があります。
+SnapCenterでは、root以外のユーザがSnapCenter Plug-ins Package for Linuxをインストールしてプラグインプロセスを開始できます。プラグインプロセスをroot以外の有効なユーザとして実行します。複数のパスにアクセスできるようにroot以外のユーザにsudo Privilegesを設定する必要があります。
 
 * 必要なもの *
 

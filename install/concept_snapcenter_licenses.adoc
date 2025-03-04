@@ -20,11 +20,11 @@ SnapCenterでは、アプリケーション、データベース、ファイル�
  a| 
 SnapCenter Standard（コントローラベース）
  a| 
-FAS、AFF、オールSANアレイ（ASA）に必要
+FAS、AFF、ASAに必要
 
-SnapCenter Standardライセンスはコントローラベースのライセンスで、ONTAP Oneに含まれています。SnapManager Suiteライセンスをお持ちの場合は、SnapCenter Standardライセンスの使用権も取得できます。FAS、AFF、またはASAストレージにSnapCenterの試用版をインストールする場合は、営業担当者にお問い合わせください。ONTAP Oneの評価版ライセンスを入手できます。
+SnapCenter Standardライセンスはコントローラベースのライセンスで、NetApp ONTAP Oneに含まれています。SnapManager Suiteライセンスをお持ちの場合は、SnapCenter Standardライセンスの使用権も取得できます。FAS、AFF、またはASAストレージにSnapCenterの試用版をインストールする場合は、営業担当者にお問い合わせください。NetApp ONTAP Oneの評価版ライセンスを入手できます。
 
-ONTAP Oneに含まれるライセンスについては、を参照してください https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html#licenses-included-with-ontap-one["ONTAP Oneに含まれるライセンス"]。
+NetApp ONTAP Oneに含まれるライセンスについては、を参照してください https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html#licenses-included-with-ontap-one["NetApp ONTAP Oneに含まれるライセンス"]。
 
 
 NOTE: SnapCenterは、Data Protection Bundleの一部としても提供されます。A400以降を購入済みの場合は、Data Protection Bundleを購入する必要があります。

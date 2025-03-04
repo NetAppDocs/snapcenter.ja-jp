@@ -14,6 +14,9 @@ summary: サポートされるストレージシステム、アプリケーシ�
 サポートされるストレージシステム、アプリケーション、およびデータベースを確認しておく必要があります。
 
 * SnapCenterは、データを保護するためにONTAP 9 12.1以降をサポートしています。
++
+ONTAP 9.12.1以前のバージョンでは、リストアの一環としてSnapLockヴォールトSnapshotから作成されたクローンにSnapLockヴォールトの有効期限が継承されます。SnapLockの有効期限が過ぎた時点で、ストレージ管理者がクローンを手動でクリーンアップする必要があります。
+
 * SnapCenter 6.1は、ONTAP 9.16.1を実行するNetApp ASA R2システムをサポートします。
 +
 ASA R2システムは、オールフラッシュプラットフォーム上に構築されたSAN専用環境向けに、ハードウェアとソフトウェアの統合ソリューションを提供します。
@@ -21,7 +24,7 @@ ASA R2システムは、オールフラッシュプラットフォーム上に�
 +
 ASA R2システムの詳細については、を参照してください https://docs.netapp.com/us-en/asa-r2/index.html["ASA r2のドキュメント"^]。
 
-* SnapCenterはAmazon FSx for NetApp ONTAPをサポートしており、SnapCenterソフトウェア4.5 P1パッチリリースからデータを保護します。
+* SnapCenterはAmazon FSx for NetApp ONTAPをサポートしてデータを保護します。
 +
 Amazon FSx for NetApp ONTAPを使用している場合は、データ保護処理を実行するために、SnapCenterサーバホストプラグインを4.5 P1以降にアップグレードしてください。
 

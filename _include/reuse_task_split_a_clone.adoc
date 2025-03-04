@@ -13,7 +13,7 @@ SnapCenterを使用して、クローンリソースを親リソースからス�
 Clone1は中間クローンではなくなるため、Clone2をスプリットしたら、Clone1でクローンスプリット処理を実行できます。
 
 * クローンをスプリットすると、そのクローンのバックアップコピーとクローンジョブが削除されます。
-* クローンスプリット処理の制限事項については、を参照してください http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["ONTAP 9 論理ストレージ管理ガイド"^]。
+* FlexCloneのボリュームスプリット処理の詳細については、を参照してください https://docs.netapp.com/us-en/ontap/volumes/split-flexclone-from-parent-task.html["FlexCloneボリュームを親ボリュームからスプリットします。"^]。
 * ストレージシステム上のボリュームまたはアグリゲートがオンラインであることを確認します。
 
 

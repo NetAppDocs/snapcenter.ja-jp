@@ -13,7 +13,7 @@ summary: 必要な最小 ONTAP 権限は、データ保護に使用する SnapCe
 [role="lead"]
 必要な最小 ONTAP 権限は、データ保護に使用する SnapCenter プラグインによって異なります。
 
-* フルアクセスコマンド： ONTAP 8.3.0 以降で必要な最小権限
+* フルアクセスコマンド： ONTAP 9.12.1 以降で必要な最小権限
 +
 ** event generate-autosupport-log
 ** ジョブ履歴の表示

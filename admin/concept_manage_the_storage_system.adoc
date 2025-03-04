@@ -99,3 +99,38 @@ NOTE: クラスタに含まれる SVM は選択できません。
 NOTE: ONTAP GUI を使用して ONTAP クラスタから SVM を削除した場合は、 SnapCenter GUI で * Rediscover* をクリックして SVM リストを更新します。
 
 
+
+
+
+== REST APIをサポート
+
+ONTAPおよびASA R2ストレージシステムへのすべてのストレージ接続は、デフォルトでZAPIを経由します。一部のONTAPバージョンでREST APIを有効にできます。
+
+次の構成ファイルで構成キーを変更できます。
+
+* IsRestEnabledForStorageConnection
++
+デフォルト値は false です。
+
+* MinOntapVersionToUseREST
++
+デフォルト値は9.13.1です。
+
+
+
+.REST APIを使用した接続を有効にする
+. IsRestEnabledForStorageConnectionをtrueに設定します。
+. サーバとWindowsプラグインの両方のホストにSMCoreServiceHost.dll.configとSnapDriveService.dll.configのキーを追加します。
++
+_<add key="IsRestEnabledForStorageConnection" value="true" />_
+
+
+
+.REST APIを使用した接続を特定のバージョンのONTAPに制限する
+. 設定パラメータMinOntapVersionToUseRESTをtrueに設定します。
+. サーバとWindowsプラグインの両方のホストにSMCoreServiceHost.dll.configとSnapDriveService.dll.configのキーを追加します。
++
+_<add key="MinOntapVersionToUseREST" value="9.13.1" />_
+
+. サーバーでSmCoreのサービスを再起動し、プラグインマシンでプラグインとSnapDriveサービスを再起動します。
+
