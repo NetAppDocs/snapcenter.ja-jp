@@ -3318,7 +3318,6 @@
   <block id="98950caea953c79d817eba870ba7ae48" category="summary">SnapCenterでAzureクレデンシャルを作成し、Azure NetAppアカウントにアクセスします。</block>
   <block id="1ed01bab203e8745a0dcfe58f019c1d9" category="doc">SnapCenterでAzureクレデンシャルを作成する</block>
   <block id="df807c6f76450e7af962b9ec2ffe867e" category="paragraph">Azure NetAppアカウントにアクセスするには、SnapCenterでAzureクレデンシャルを作成する必要があります。</block>
-  <block id="c564c60262d5040cb9b4b2cb05c8532d" category="paragraph">Azureクレデンシャルを作成する前に、Azureでサービスプリンシパルを作成しておく必要があります。Azureクレデンシャルを作成するには、サービスプリンシパルに関連付けられたテナントID、クライアントID、およびシークレットキーが必要です。</block>
   <block id="2c15d2ecea29fd187ddafb032b93d4a6" category="list-text">[ 設定 ] ページで、 [* 資格情報 ] をクリックします。</block>
   <block id="2c918b288cc3e2bd0419ef617cee7af1" category="list-text">[クレデンシャル]ページで、クレデンシャルの作成に必要な次の情報を指定します。</block>
   <block id="dcd46a1f9a42cb16a43e224e294b8f7a" category="paragraph">クレデンシャル名</block>
@@ -10039,4 +10038,11 @@
   <block id="cdc0da196ab05c60eaebdca9a2459cd1" category="list-text">FlexCloneのボリュームスプリット処理の詳細については、を参照してください。<block ref="a740171a60876518d945f2e24ddd79f9" category="inline-link-rx"></block></block>
   <block id="dc4d7bf5602b12335597fd5350deab23" category="admonition">最大保持値は1018です。保持数を使用しているNetApp ONTAPバージョンでサポートされる値よりも大きい値に設定すると、バックアップは失敗します。</block>
   <block id="ee96dd48de878c0191d0701d853dd514" category="paragraph">この例では、ログSnapshotの保持期間を2に設定しています。</block>
+  <block id="ab6d9fe11358cebc1d2cc02fa1c47496" category="list-text">Azureでサービスプリンシパルを作成したことを確認します。</block>
+  <block id="6f346066b074941885d0989051206e4e" category="list-text">サービスプリンシパルに関連付けられたテナントID、クライアントID、およびシークレットキーが使用可能であることを確認します。</block>
+  <block id="db4af27eace345776f29f9a3dbb3b5ff" category="list-text">テナントIDは、Azureポータルの[Entra ID]の[Overview]ページで確認できます。</block>
+  <block id="dc2337ddc542969fd93e297dc61108a9" category="list-text">クライアントIDは、エンタープライズアプリケーション/サービスプリンシパルのアプリケーションIDとも呼ばれます。これは、SnapCenterのサービスプリンシパルとして機能するために作成したエンタープライズアプリケーションの[Overview]ページにあるAzureポータルで確認できます。</block>
+  <block id="ee69fc7e193d5b369d8bd7792465c781" category="list-text">クライアントシークレットキーは、シークレット値とも呼ばれます。このクライアントシークレットをAzure Portalで作成するには、[Entra ID]の*[App registrations]*に移動します。作成したエンタープライズアプリを選択したら、*[証明書とシークレット]*に移動し、*[新しいクライアントシークレット]*に移動します。</block>
+  <block id="732f79401041a0ecc8df586c30756a84" category="admonition">シークレット値は、作成時にのみアクセスできます。あとからアクセスすることはできません。</block>
+  <block id="f221207f0adcd828979d33693cf006d5" category="list-text">サービスプリンシパルに権限を付与する必要があります。Contributorのロールにより、サービスプリンシパルはAzureで必要なアクションを実行できます。これは、[サブスクリプション]ページの[アクセス制御（IAM）]ページから付与できます。</block>
 </blocks>
