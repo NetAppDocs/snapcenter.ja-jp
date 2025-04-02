@@ -5388,7 +5388,6 @@
   <block id="f367d650e57088caf7b808e01235016d" category="inline-link">SnapCenter を使用して SMBR のセカンダリストレージからリストアする方法</block>
   <block id="41b4c689a8b0e3ba8bfecb2a1e608e46" category="list-text"><block ref="41b4c689a8b0e3ba8bfecb2a1e608e46" category="inline-link-rx"></block></block>
   <block id="f004280f6db6ea5f9302c9851388d751" category="inline-link">SMBR を使用した SnapVault からの Microsoft Exchange メールのリカバリ</block>
-  <block id="1b0fb59a5bc951f7dc82cb43fe362145" category="list-text"><block ref="00a76af185a73b84e54e96058031aef5" category="inline-link-rx"></block></block>
   <block id="e1470cbc380c0e4285ea434aa1f30381" category="doc">SnapMirrorレプリケーションとSnapVaultレプリケーションのためのストレージシステムの準備</block>
   <block id="e53c11d95478892635e2a7753106adc5" category="summary">ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。</block>
   <block id="690761e3a499ee562da842d3bd6f2db0" category="doc">ホストを追加してSnapCenter Plug-in for Microsoft Exchange Serverをインストールするための前提条件</block>
@@ -7907,7 +7906,6 @@
   <block id="2a1a78f96ec6b03f3ccdd06b708e6f1a" category="list-text">（オプション）SnapCenter Plug-in for SQL Serverの構成ファイルをディザスタリカバリ（DR）バックアップから新しいマシンに置き換えます。</block>
   <block id="9f2c74676fb5b339a2fd4a0ccd75bd1e" category="list-text">WindowsおよびSQLスケジュールを、DRバックアップのSnapCenter Plug-in for SQL Serverフォルダからインポートします。</block>
   <block id="27e7993c4841ae5fd670cdd945ccb96d" category="inline-link-macro">ディザスタリカバリ API</block>
-  <block id="ab9238ca6f628634f6f6f2cf63502cdb" category="paragraph">ビデオを参照してください <block ref="44de5c9fafab2e4e76e19e3717abc2e2" category="inline-link-macro-rx"></block> 。</block>
   <block id="a8827ae14ad272b19b5554bf29b0dd50" category="summary">SnapCenter Plug-in for SQL Serverプライマリストレージがオンラインに戻ったら、プライマリストレージにフェイルバックする必要があります。</block>
   <block id="c259d7aac6b257b97bf45bb54cdbfb28" category="doc">SnapCenter Plug-in for SQL Serverセカンダリストレージからプライマリストレージへのフェイルバック</block>
   <block id="7ffc5c3595639b4cfa7e25819a476178" category="list-text">Managed Hosts ページから SnapCenter Plug-in for SQL Server を * Maintenance * モードにします。</block>
@@ -10045,4 +10043,6 @@
   <block id="ee69fc7e193d5b369d8bd7792465c781" category="list-text">クライアントシークレットキーは、シークレット値とも呼ばれます。このクライアントシークレットをAzure Portalで作成するには、[Entra ID]の*[App registrations]*に移動します。作成したエンタープライズアプリを選択したら、*[証明書とシークレット]*に移動し、*[新しいクライアントシークレット]*に移動します。</block>
   <block id="732f79401041a0ecc8df586c30756a84" category="admonition">シークレット値は、作成時にのみアクセスできます。あとからアクセスすることはできません。</block>
   <block id="f221207f0adcd828979d33693cf006d5" category="list-text">サービスプリンシパルに権限を付与する必要があります。Contributorのロールにより、サービスプリンシパルはAzureで必要なアクションを実行できます。これは、[サブスクリプション]ページの[アクセス制御（IAM）]ページから付与できます。</block>
+  <block id="c23d56866a5b11fd0d8dc189fcf21298" category="list-text"><block ref="341e3fddad4b27511133b6917a75bb8a" category="inline-link-rx"></block></block>
+  <block id="57cf9c4ee485623172a5c60cbee423a4" category="paragraph">ビデオを参照してください <block ref="96716f545c5cf1a209bf10c1a798ce38" category="inline-link-macro-rx"></block> 。</block>
 </blocks>

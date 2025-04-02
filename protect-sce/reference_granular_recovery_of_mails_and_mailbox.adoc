@@ -19,5 +19,5 @@ SMBRの追加情報については、次の資料を参照してください。
 
 * https://kb.netapp.com/Legacy/SMBR/How_to_manually_restore_a_single_item_with_SMBR["SMBRを使用して単一アイテムを手動でリストアする方法（Ontrack電源制御リストアにも適用可能）"]
 * https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Single_Mailbox_Recovery_(SMBR)/How_to_restore_from_secondary_storage_in_SMBR_with_SnapCenter["SnapCenter を使用して SMBR のセカンダリストレージからリストアする方法"^]
-* https://www.youtube.com/watch?v=fOMuaaXrreI&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg&index=3["SMBR を使用した SnapVault からの Microsoft Exchange メールのリカバリ"^]
+* https://www.youtube.com/watch?v=wMSo049rREY&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg&index=3["SMBR を使用した SnapVault からの Microsoft Exchange メールのリカバリ"^]
 
