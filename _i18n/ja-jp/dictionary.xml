@@ -3972,7 +3972,6 @@
   <block id="bed33f0d8ca7a361d2db96468ec4530a" category="paragraph">SnapCenterは、シングル・インスタンスおよびマルチ・インスタンスのDB2セットアップをサポートしています。Plug-in for IBM DB2 Databaseは、Linux環境とWindows環境の両方で使用できます。Windows環境では、DB2は手動リソースとしてサポートされます。</block>
   <block id="c3395454ca09d74ac87021eb3fc9f403" category="paragraph">Plug-in for IBM DB2 Databaseがインストールされている場合は、SnapCenterとNetApp SnapMirrorテクノロジを使用して、バックアップセットのミラーコピーを別のボリュームに作成できます。また、本プラグインをNetApp SnapVaultテクノロジとともに使用して、標準への準拠を目的としたディスクツーディスクのバックアップ・レプリケーションを実行することもできます。</block>
   <block id="ee9977908b8afee30488e8caec66d0fb" category="paragraph">SnapCenter Plug-in for DB2は、ONTAPおよびAzure NetAppのファイルストレージレイアウトでNFSとSANをサポートします。</block>
-  <block id="d63a091b1a9135cd24b47b631680f297" category="paragraph">VMDKまたは仮想ストレージレイアウトはサポートされていません。</block>
   <block id="d91a0b52cfc5d0c3e4b59e8544b3c61d" category="doc">クローンをスプリットする</block>
   <block id="f36fcdaf30a6f579eb56856f5e83318d" category="summary">SnapCenter は、物理マシンと仮想マシン（ VM ）の両方でさまざまなストレージタイプをサポートしています。SnapCenter Plug-in for IBM DB2をインストールする前に、ストレージタイプがサポートされていることを確認する必要があります。</block>
   <block id="6426213ce16798143b0b51f16c7f4f53" category="doc">SnapCenter Plug-in for IBM DB2でサポートされるストレージタイプ</block>
@@ -4498,7 +4497,6 @@
   <block id="7f30d362b46650080b9026ef95dfe5f2" category="paragraph">SnapCenterでは、シングルインスタンスのMySQLセットアップがサポートされます。Plug-in for MySQL Databaseは、LinuxとWindowsのどちらの環境でも使用できます。Windows環境では、MySQLは手動リソースとしてサポートされます。</block>
   <block id="e417b7c5210d9ffe922c02319c459751" category="paragraph">Plug-in for MySQL Databaseがインストールされている場合は、SnapCenterとNetApp SnapMirrorテクノロジを使用して、別のボリュームにバックアップセットのミラーコピーを作成できます。また、本プラグインをNetApp SnapVaultテクノロジとともに使用して、標準への準拠を目的としたディスクツーディスクのバックアップ・レプリケーションを実行することもできます。</block>
   <block id="8a1b03bf3dea7ac1c1925685477e35ea" category="paragraph">SnapCenter Plug-in for MySQLは、ONTAPおよびAzure NetAppのファイルストレージレイアウトでNFSとSANをサポートします。</block>
-  <block id="72f4f1f1ebc26a28eb085ea04d34b5db" category="paragraph">VMDKまたは仮想ストレージレイアウトがサポートされます。</block>
   <block id="aeb9838805bc067b8277d80da271966d" category="paragraph">シンボリックリンクはサポートされません。</block>
   <block id="3a16a89981eac15a65e1d123f0f768f0" category="summary">SnapCenter は、物理マシンと仮想マシン（ VM ）の両方でさまざまなストレージタイプをサポートしています。SnapCenter Plug-in for MySQLをインストールする前に、ストレージタイプがサポートされていることを確認する必要があります。</block>
   <block id="a8e3ba965f3e160532b9d3ee582e1c53" category="doc">SnapCenter Plug-in for MySQLでサポートされるストレージタイプ</block>
@@ -10045,4 +10043,5 @@
   <block id="f221207f0adcd828979d33693cf006d5" category="list-text">サービスプリンシパルに権限を付与する必要があります。Contributorのロールにより、サービスプリンシパルはAzureで必要なアクションを実行できます。これは、[サブスクリプション]ページの[アクセス制御（IAM）]ページから付与できます。</block>
   <block id="c23d56866a5b11fd0d8dc189fcf21298" category="list-text"><block ref="341e3fddad4b27511133b6917a75bb8a" category="inline-link-rx"></block></block>
   <block id="57cf9c4ee485623172a5c60cbee423a4" category="paragraph">ビデオを参照してください <block ref="96716f545c5cf1a209bf10c1a798ce38" category="inline-link-macro-rx"></block> 。</block>
+  <block id="5c8b8bc332cb41802ffbe6c5cda258ab" category="paragraph">VMDK、VVol、およびRDMの仮想ストレージレイアウトがサポートされます。</block>
 </blocks>

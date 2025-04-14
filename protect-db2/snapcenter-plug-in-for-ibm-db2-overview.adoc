@@ -26,4 +26,4 @@ Plug-in for IBM DB2 Databaseがインストールされている場合は、Snap
 
 SnapCenter Plug-in for DB2は、ONTAPおよびAzure NetAppのファイルストレージレイアウトでNFSとSANをサポートします。
 
-VMDKまたは仮想ストレージレイアウトはサポートされていません。
+VMDK、VVol、およびRDMの仮想ストレージレイアウトがサポートされます。

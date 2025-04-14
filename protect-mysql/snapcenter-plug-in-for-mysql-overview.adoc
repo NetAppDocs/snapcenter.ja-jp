@@ -19,6 +19,6 @@ Plug-in for MySQL Databaseがインストールされている場合は、SnapCe
 
 SnapCenter Plug-in for MySQLは、ONTAPおよびAzure NetAppのファイルストレージレイアウトでNFSとSANをサポートします。
 
-VMDKまたは仮想ストレージレイアウトがサポートされます。
+VMDK、VVol、およびRDMの仮想ストレージレイアウトがサポートされます。
 
 シンボリックリンクはサポートされません。

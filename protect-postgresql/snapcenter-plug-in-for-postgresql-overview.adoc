@@ -19,4 +19,4 @@ Plug-in for PostgreSQLクラスタがインストールされている場合は�
 
 SnapCenter Plug-in for PostgreSQLは、ONTAPおよびAzure NetAppのファイルストレージレイアウトでNFSとSANをサポートします。
 
-VMDKまたは仮想ストレージレイアウトがサポートされます。
+VMDK、VVol、およびRDMの仮想ストレージレイアウトがサポートされます。
