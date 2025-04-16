@@ -1055,7 +1055,6 @@
   <block id="9c124c0fc8c6cc2725dad57b45c85eb0" category="paragraph">次の図は、データベースのリソース、リソースグループ、およびポリシーの関係を示しています。</block>
   <block id="ac79b4abc4dc6d0e9ec4abc5ca6b78a2" category="image-alt">データセットとポリシーの図</block>
   <block id="a2736a5a798a9322639036f21c70d1d1" category="paragraph">次の図は、Windowsファイルシステムのリソース、リソースグループ、およびポリシーの関係を示しています。</block>
-  <block id="0344fda8fff2d8c5a125ffa5ba5f19a7" category="summary">SnapCenterソフトウェアは、シンプルで拡張性に優れた一元管理型プラットフォームです。ハイブリッドクラウドのどこにいても、ONTAPシステムで実行されるアプリケーション、データベース、ホストファイルシステム、VMに対して、アプリケーションと整合性のあるデータ保護を提供します。</block>
   <block id="6309043436d4e7e5bad9a81c89ff15e4" category="doc">SnapCenterの概要</block>
   <block id="edaafea0543ae64ebb79a2ed2e7a055b" category="paragraph">SnapCenterは、NetAppのSnapshot、SnapRestore、FlexClone、SnapMirror、SnapVaultのテクノロジを活用して、次の機能を提供します。</block>
   <block id="6d02db19251dfec578c356202bfb1bdc" category="list-text">高速でスペース効率に優れた、アプリケーションと整合性のあるディスクベースのバックアップ</block>
@@ -1371,7 +1370,6 @@
   <block id="2968590fdb19353b9fdbc6088dd778eb" category="list-text">Mount（Oracleデータベースのみ）</block>
   <block id="5a3f263989738cd612ecc94d6ff5f735" category="list-text">unmount（Oracleデータベースのみ）</block>
   <block id="a90c9bf6b95fa2c04eefdb89d6650e4b" category="paragraph">Job Monitor権限を使用すると、さまざまなロールのメンバーは、割り当てられているすべてのオブジェクトに対する処理を確認できます。</block>
-  <block id="7608e75619cff3eeb4e8bce40481b456" category="doc">SnapCenterソフトウェアのドキュメント</block>
   <block id="979623b664e821ca043ae0d13a9b68a0" category="summary">クレデンシャルで使用される認証方法は、アプリケーションや環境に応じて異なります。クレデンシャルで認証されたユーザは、 SnapCenter の処理を実行できます。プラグインのインストールに使用するクレデンシャルとデータ保護処理に使用するクレデンシャルをそれぞれ1組ずつ作成する必要があります。</block>
   <block id="5b00a6bb860d50a1c997c998160e673c" category="doc">クレデンシャルの認証方式</block>
   <block id="7e68841acc918ef617f53709d7f28228" category="section-title">Windows認証</block>
@@ -2372,7 +2370,6 @@
   <block id="4c6ec01f6ae03e08c146fe6865423a4b" category="list-text">PowerShell 7.4.2以降</block>
   <block id="149d1be25c7d76696b875863179ac66d" category="list-text">nginxはリバースプロキシとして使用できるWebサーバ</block>
   <block id="6d4ed4face9b51c5caae12208e47fa1e" category="paragraph">PAM（Pluggable Authentication Modules）は、システム管理者が認証を行うプログラムを再コンパイルすることなく認証ポリシーを設定できるシステムセキュリティツールです。</block>
-  <block id="14c90652b0a2e523d6e8630706107e75" category="summary">SnapCenterソフトウェアは複数のブラウザで使用できます。</block>
   <block id="6d84e3718084e0db779da4ff8791a2f2" category="doc">サポートされるブラウザ</block>
   <block id="e49b0f86241cddbd59f6488d104741df" category="list-text">Chromeバージョン125以降</block>
   <block id="abac3270d109e89fa7d33d34cb7eace2" category="paragraph">サポートされているバージョンの最新情報については、を参照してください<block ref="734369dbdcbe00444fc7be843d617a6c" category="inline-link-rx"></block>。</block>
@@ -9965,8 +9962,6 @@
   <block id="4a3f09c73e2dacacbebddfd96cac1948" category="inline-link">SnapCenterソフトウェア6.1リリースノート</block>
   <block id="77400fe4524142ac29310162939726cb" category="paragraph">既知の問題、制限事項、解決済みの問題、および新規および変更されたコマンドの詳細については、を参照して<block ref="5c68c6454568b27710c4196bb910da4f" category="inline-link-rx"></block>ください。リリースノートにアクセスするには、NetAppアカウントでサインインするか、アカウントを作成する必要があります。</block>
   <block id="d6eb82c324cab2f36e345863fad95090" category="cell">6.1</block>
-  <block id="e62d168588d6c1af2fbd37668a7343da" category="summary">SnapCenterソフトウェアのリリース6.1には、いくつかの新機能と拡張機能が含まれています。</block>
-  <block id="0220307da5eec95fc03c435ffbbc2bfa" category="doc">SnapCenterソフトウェア6.1の新機能</block>
   <block id="1e095c69621645fccc8f12cd7f35f6fc" category="inline-link-macro">ASA R2システムのサポート</block>
   <block id="cf1b0e66e5b65c6a3b32f92fdc6552c4" category="cell"><block ref="cf1b0e66e5b65c6a3b32f92fdc6552c4" category="inline-link-macro-rx"></block></block>
   <block id="cc753d144910e12701641281c8cb88ed" category="paragraph">SnapCenterでASA R2システムがサポートされるようになり、SANのみのお客様のニーズに合わせてシンプルなエクスペリエンスを実現できるようになりました。</block>
@@ -9975,8 +9970,6 @@
   <block id="92d37724657724129ae0451584c728aa" category="inline-link">SnapCenter Plug-in for VMware vSphereの削除</block>
   <block id="79cfb9f00fa8ea603f631e679e453fad" category="paragraph">SnapCenter Plug-in for VMware vSphereのアンインストールについては、を参照してください<block ref="cae8a6db54fa4da6d80207fee61e78d1" category="inline-link-rx"></block>。</block>
   <block id="9792c7ba1a8a833a1c75e11c4a7b46c3" category="list-text">複数のホストをアップグレードする場合は、すべてのホストを選択してをクリックし <block ref="725f4bf2ffc300942027282d0182533f" category="inline-image-macro-rx" type="image"></block>、*[アップグレード]*&gt;*[OK]*をクリックします。</block>
-  <block id="eafbda6a16d2997896c70ba8ded3db33" category="sidebar">SnapCenterソフトウェアは、シンプルで拡張性に優れた一元管理型プラットフォームです。ハイブリッドクラウドのどこにいても、ONTAPシステムで実行されているアプリケーション、データベース、ホストファイルシステム、VMに対して、アプリケーションと整合性のあるデータ保護を提供します。このドキュメントライブラリには、バージョン6.1の情報が含まれています。</block>
-  <block id="888e5b40ea166427f96db1a9c08af7fc" category="sidebar">SnapCenterソフトウェア6.1のドキュメント</block>
   <block id="fc8e535c7339f77157a0f93f32cb1f80" category="list-text">OracleとSAP HANAのマウントワークフローとカタログワークフローは、オブジェクトストレージのバックアップではサポートされませんが、Snapshotではサポートされます。</block>
   <block id="2128757ca4207f5d5000cd4894d8c58f" category="list-text">Oracle PDBクローンはオブジェクトストレージのバックアップではサポートされませんが、Snapshotではサポートされます。</block>
   <block id="6eec14240810faadbd60c3ec98b543e7" category="paragraph">共有ディスクはPlug-in for Windowsを使用して作成されません。共有LUNを作成し、クラスタ内の各仮想マシンに追加する必要があります。詳細については、を参照してください<block ref="0564b16166a6e24aa234d21e5bcdc18a" category="inline-link-rx"></block>。</block>
@@ -10044,4 +10037,11 @@
   <block id="c23d56866a5b11fd0d8dc189fcf21298" category="list-text"><block ref="341e3fddad4b27511133b6917a75bb8a" category="inline-link-rx"></block></block>
   <block id="57cf9c4ee485623172a5c60cbee423a4" category="paragraph">ビデオを参照してください <block ref="96716f545c5cf1a209bf10c1a798ce38" category="inline-link-macro-rx"></block> 。</block>
   <block id="5c8b8bc332cb41802ffbe6c5cda258ab" category="paragraph">VMDK、VVol、およびRDMの仮想ストレージレイアウトがサポートされます。</block>
+  <block id="e5385a9de21528bfedd644f4c0331eb1" category="summary">SnapCenterソフトウェアは、ハイブリッドクラウドのどこにいてもONTAPシステムで実行されるアプリケーション、データベース、ホストファイルシステム、VMに対して、アプリケーションと整合性のあるデータ保護を提供する、シンプルで拡張性に優れた一元管理型プラットフォームです。</block>
+  <block id="0d391616b89aaac354c13202aaccb4ba" category="summary">SnapCenterソフトウェアは複数のブラウザで使用できます。</block>
+  <block id="68578ccfcf5117ca8a9a2d7d884e320f" category="summary">SnapCenterソフトウェアの6.1リリースには、いくつかの新機能と拡張機能が含まれています。</block>
+  <block id="600ede45d5c4a07242a73e3a5a885e15" category="doc">SnapCenterソフトウェア6.1の新機能</block>
+  <block id="8f13c7650e8ef95e186d64196ea879a5" category="sidebar">SnapCenterソフトウェアは、シンプルで拡張性に優れた一元管理型プラットフォームです。ハイブリッドクラウドのどこにいても、ONTAPシステムで実行されているアプリケーション、データベース、ホストファイルシステム、VMに対して、アプリケーションと整合性のあるデータ保護を提供します。このドキュメントライブラリには、バージョン6.1の情報が含まれています。</block>
+  <block id="8127605cde4cee83a23b35f1207c7572" category="sidebar">SnapCenterソフトウェアのドキュメント</block>
+  <block id="f3e84c2e19a0aa80c716ba1fc7f07e0e" category="sidebar">SnapCenterソフトウェア6.1のドキュメント</block>
 </blocks>

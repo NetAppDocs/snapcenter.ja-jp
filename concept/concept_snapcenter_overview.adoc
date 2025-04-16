@@ -2,7 +2,7 @@
 permalink: concept/concept_snapcenter_overview.html 
 sidebar: sidebar 
 keywords: SnapCenter overview 
-summary: SnapCenterソフトウェアは、シンプルで拡張性に優れた一元管理型プラットフォームです。ハイブリッドクラウドのどこにいても、ONTAPシステムで実行されるアプリケーション、データベース、ホストファイルシステム、VMに対して、アプリケーションと整合性のあるデータ保護を提供します。 
+summary: SnapCenterソフトウェアは、ハイブリッドクラウドのどこにいてもONTAPシステムで実行されるアプリケーション、データベース、ホストファイルシステム、VMに対して、アプリケーションと整合性のあるデータ保護を提供する、シンプルで拡張性に優れた一元管理型プラットフォームです。 
 ---
 = SnapCenterの概要
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: SnapCenterソフトウェアは、シンプルで拡張性に優れた�
 
 
 [role="lead"]
-SnapCenterソフトウェアは、シンプルで拡張性に優れた一元管理型プラットフォームです。ハイブリッドクラウドのどこにいても、ONTAPシステムで実行されるアプリケーション、データベース、ホストファイルシステム、VMに対して、アプリケーションと整合性のあるデータ保護を提供します。
+SnapCenterソフトウェアは、ハイブリッドクラウドのどこにいてもONTAPシステムで実行されるアプリケーション、データベース、ホストファイルシステム、VMに対して、アプリケーションと整合性のあるデータ保護を提供する、シンプルで拡張性に優れた一元管理型プラットフォームです。
 
 SnapCenterは、NetAppのSnapshot、SnapRestore、FlexClone、SnapMirror、SnapVaultのテクノロジを活用して、次の機能を提供します。
 
