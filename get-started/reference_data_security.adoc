@@ -1,10 +1,10 @@
 ---
-permalink: concept/reference_data_security.html 
+permalink: get-started/reference_data_security.html 
 sidebar: sidebar 
-keywords: security,authentication, CA certificates 
+keywords: security, authentication, CA certificates, FIPS, SSL, AES, TLS, RBAC, MFA, multi-factor authentication 
 summary: SnapCenter では、データのセキュリティを確保するために厳格なセキュリティおよび認証機能を採用しています。 
 ---
-= セキュリティ機能
+= SnapCenterのセキュリティ機能
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -17,23 +17,20 @@ SnapCenter には、次のセキュリティ機能が含まれています。
 
 * SnapCenter へのすべての通信には、 HTTP over SSL （ HTTPS ）が使用されます。
 * SnapCenter のすべてのクレデンシャルは、 Advanced Encryption Standard （ AES ）暗号化を使用して保護されます。
-* SnapCenter で使用しているセキュリティアルゴリズムは、 Federal Information Processing Standard （ FIPS ；連邦情報処理標準）に準拠しています。
-* SnapCenterでは、お客様から提供された承認済みCA証明書の使用がサポートされています。
-* SnapCenter 4.1.1以降では、ONTAPとの通信にTransport Layer Security（TLS）1.2がサポートされています。クライアントとサーバ間の通信にもTLS 1.2を使用できます。
-+
-5.0以降、SnapCenterはONTAPとの通信用に(TLS) 1.3をサポートしています。
-
-* SnapCenterは、ネットワーク通信全体のセキュリティを提供するために、特定のSSL暗号スイートのセットをサポートしています。
-+
-詳細については、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_the_supported_SSL_Cipher_Suite["サポートされているSSL暗号スイートを設定する方法"]。
-
+* は、Federal Information Processing Standard（FIPS；連邦情報処理標準）に準拠したセキュリティアルゴリズムをサポートします。
+* 顧客から提供された承認済みCA証明書の使用をサポートします。
+* ONTAPとの通信では、Transport Layer Security（TLS）1.3がサポートされます。クライアントとサーバ間の通信にもTLS 1.2を使用できます。
+* は、特定のSSL暗号スイートのセットをサポートして、ネットワーク通信全体にセキュリティを提供します。 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_the_supported_SSL_Cipher_Suite["詳細"]です。
 * SnapCenter は、会社のファイアウォールの内側にインストールされ、 SnapCenter サーバへのアクセス、および SnapCenter サーバとプラグイン間の通信を可能にします。
 * SnapCenter APIおよび操作アクセスでは、AES暗号化で暗号化されたトークンが使用されます。このトークンは24時間後に期限切れになります。
 * SnapCenter は、ログイン用に Windows Active Directory と統合されているほか、アクセス権限を制御するロールベースアクセス制御（ RBAC ）も統合されています。
 * IPSecは、SnapCenter on ONTAP for WindowsおよびLinuxホストマシンでサポートされています。 https://docs.netapp.com/us-en/ontap/networking/configure_ip_security_@ipsec@_over_wire_encryption.html#use-ipsec-identities["詳細"]です。
 * SnapCenter PowerShellコマンドレットはセッションで保護されます。
-* デフォルトでは、操作を行わないまま 15 分が経過すると、 5 分後に SnapCenter からログアウトすることを示す警告が表示されます。操作を行わないまま 20 分が経過すると、 SnapCenter からログアウトされ、再度ログインする必要があります。ログアウト期間は変更できます。
-* ログインに5回以上失敗すると、ログインが一時的に無効になります。
+* デフォルトでは、操作を行わないまま15分が経過すると、SnapCenterは5分後にログアウトすることを警告します。
++
+操作を行わないまま20分が経過すると、SnapCenterからログアウトされ、再度ログインする必要があります。ログアウト期間は変更できます。
+
+* ログインに5回失敗すると、ログインは一時的に無効になります。
 * SnapCenterサーバとONTAP間のCA証明書認証をサポートします。 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_securely_connect_SnapCenter_with_ONTAP_using_CA_certificate["詳細"]です。
 * 整合性検証ツールはSnapCenterサーバとプラグインに追加され、新規インストールおよびアップグレード処理の際に、出荷されたすべてのバイナリが検証されます。
 

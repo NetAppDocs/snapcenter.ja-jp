@@ -17,7 +17,7 @@ SnapCenterソフトウェアの6.1リリースには、いくつかの新機能�
 | 更新 | 説明 
 
 
-| link:../install/learn-about-supporting-asa-r2-in-snapcenter.html["ASA R2システムのサポート"]  a| 
+| link:../get-started/reference_supported_storage_systems_and_applications.html["ASA R2システムのサポート"]  a| 
 SnapCenterでASA R2システムがサポートされるようになり、SANのみのお客様のニーズに合わせてシンプルなエクスペリエンスを実現できるようになりました。
 
 

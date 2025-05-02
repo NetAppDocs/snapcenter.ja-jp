@@ -35,7 +35,7 @@ Plug-in for Windows には、上記の主要な機能以外にも次のような
 * RBACでサポートされるセキュリティと一元化されたロール委譲
 * NetApp FlexClone テクノロジを使用して、本番用ファイルシステムのスペース効率に優れたコピーを作成し、テストまたはデータの抽出を行います
 +
-FlexCloneのライセンス情報については、を参照してください link:../install/concept_snapcenter_licenses.html["SnapCenterライセンス"^]。
+FlexCloneのライセンス情報については、を参照してください link:../get-started/concept_snapcenter_licenses.html["SnapCenterライセンス"^]。
 
 * 複数のサーバで同時に複数のバックアップを実行可能
 * PowerShellコマンドレットを使用してバックアップ、リストア、クローニングの処理のスクリプトを作成できます。

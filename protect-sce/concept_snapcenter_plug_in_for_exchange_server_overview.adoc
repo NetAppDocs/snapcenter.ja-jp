@@ -22,3 +22,7 @@ NetApp Single Mailbox Recoveryは、Ontrackが提供するパートナー製品�
 Plug-in for ExchangeはSnapMirror Active Sync（当初はSnapMirror Business Continuity [SM-BC]としてリリース）をサポートしています。これにより、サイト全体に障害が発生してもビジネスサービスの運用を継続でき、アプリケーションがセカンダリコピーを使用して透過的にフェイルオーバーできるようになります。SnapMirror Active Syncでフェイルオーバーをトリガーするために、手動操作や追加のスクリプト作成は必要ありません。
 
 SnapMirror Active Syncの非対称モード、フェイルオーバーモード、または二重モード以外のモードがサポートされます。これは、最適パスがプライマリ側のLUNの所有者ノードからのみ作成されるソリューションを意味します。セカンダリクラスタパス上のI/Oは、プライマリクラスタにプロキシ経由で処理されます。同期レプリケーションは、プライマリからセカンダリへの単方向です。
+
+* SnapCenter環境のMicrosoft Exchange ServerデータベースとDatabase Availability Group（DAG；データベース可用性グループ）に対して、アプリケーション対応のバックアップ処理とリストア処理を自動化します。
+* SnapCenter Plug-in for VMware vSphereを導入してSnapCenterに登録すると、RDM LUN上の仮想Exchange Serverがサポートされます。
+

@@ -4,16 +4,14 @@ sidebar: sidebar
 keywords: REST APIs, swagger 
 summary: REST API を使用して SnapCenter のいくつかの管理操作を実行する方法について説明します。REST APIはSwagger Webページから利用できます。 
 ---
-= REST APIの概要
+= REST APIを使用したSnapCenter自動化
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-REST APIを使用して、SnapCenterのいくつかの管理処理を実行できます。REST APIはSwagger Webページから利用できます。
-
-<SnapCenter_IP_address_or_name>のドキュメントを表示したり、<SnapCenter_port>呼び出しを手動で問題したりするには、Swagger Webページ（_\ https：//：/ swagger /_）にアクセスします。
+REST API を使用して、 SnapCenter のいくつかの管理操作を実行できます。REST APIはSwagger Webページから利用できます。<SnapCenter_IP_address_or_name>のドキュメントを表示したり、<SnapCenter_port>呼び出しを手動で問題したりするには、Swagger Webページ（_\ https：//：/ swagger /_）にアクセスします。
 
 REST APIをサポートするプラグインは次のとおりです。
 
@@ -22,3 +20,5 @@ REST APIをサポートするプラグインは次のとおりです。
 * カスタムプラグイン
 * Oracleデータベース向けプラグイン
 
+
+SnapCenter Plug-in for VMware vSphere REST APIについては、を参照してください。 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_rest_apis_overview.html["SnapCenter Plug-in for VMware vSphere REST API"^]

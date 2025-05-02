@@ -10,17 +10,13 @@ indexpage:
     - title: リリースノート
       url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3337665
     - title: SnapCenterの詳細
-      url: "/concept/concept_snapcenter_overview.html"
+      url: "/get-started/concept_snapcenter_overview.html"
+    - title: SnapCenterソフトウェアのクイックスタート
+      url: "/get-started/quick-start-snapcenter.html"
     - title: SnapCenter ServerとSnapCenterプラグインのアップグレード
       url: "/upgrade/upgrade_workflow.html"
   - title: SnapCenterサーバのインストール
     links:
-    - title: 必要なライセンス
-      url: "/install/concept_snapcenter_licenses.html"
-    - title: ポートの設定
-      url: "/install/reference_connection_and_port_requirements.html"
-    - title: 登録してSnapCenterソフトウェアにアクセス
-      url: "/install/register_enable_software_access.html"
     - title: WindowsホストへのSnapCenterサーバのインストール
       url: "/install/task_install_the_snapcenter_server_using_the_install_wizard.html"
     - title: LinuxホストへのSnapCenterサーバのインストール

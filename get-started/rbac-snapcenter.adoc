@@ -1,19 +1,40 @@
 ---
-permalink: concept/reference_pre_defined_snapcenter_roles_and_permissions.html 
+permalink: get-started/rbac-snapcenter.html 
 sidebar: sidebar 
-keywords: RBAC, role, permission, pre-defined role 
-summary: SnapCenter には、事前定義されたロールが用意されており、それぞれ一連の権限がすでに有効になっています。ロールベースアクセス制御（ RBAC ）をセットアップして管理するときは、これらの事前定義されたロールを使用するか、新しいロールを作成できます。 
+keywords: RBAC, roles, permissions, application-level RBAC, ONTAP permissions, default snapcenter roles, ONTAP permissions, SnapCenter Admin role 
+summary: SnapCenter のロールベースアクセス制御（ RBAC ）と ONTAP 権限を使用して、 SnapCenter 管理者はロールの作成とアクセス権限の設定を行うことができます。この一元管理されたアクセスにより、アプリケーション管理者は委任された環境で安全に作業を行うことができます。 
 ---
-= 事前定義された SnapCenter ロールと権限
+= SnapCenterでのロールベースアクセス制御
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenter には、事前定義されたロールが用意されており、それぞれ一連の権限がすでに有効になっています。ロールベースアクセス制御（RBAC）を設定および管理する場合は、事前定義されたロールを使用するか、新しいロールを作成できます。
+SnapCenterのロールベースアクセス制御（RBAC）とONTAP権限を使用すると、SnapCenter管理者は、SnapCenterリソースの制御を別のユーザまたはユーザグループに委譲できます。この一元管理されたアクセスにより、アプリケーション管理者は委任された環境で安全に作業を行うことができます。
 
-SnapCenter には、次の事前定義されたロールが含まれています。
+ロールの作成と変更、ユーザへのリソースアクセスの追加はいつでも実行できます。ただし、SnapCenterを初めてセットアップするときは、少なくともActive Directoryユーザまたはグループをロールに追加してから、それらのユーザまたはグループにリソースアクセスを追加する必要があります。
+
+
+NOTE: SnapCenterを使用してユーザアカウントまたはグループアカウントを作成することはできません。オペレーティングシステムまたはデータベースのActive Directoryにユーザアカウントまたはグループアカウントを作成する必要があります。
+
+
+
+== SnapCenterのRBACの種類
+
+SnapCenter では、次のタイプのロールベースアクセス制御を使用します。
+
+* SnapCenter RBAC
+* アプリケーションレベルのRBAC
+* VMware vSphere RBAC用SnapCenterプラグイン
+* ONTAPケンケン
+
+
+
+
+=== SnapCenter RBAC
+
+SnapCenterには事前定義されたロールがあり、それらのロールにユーザまたはユーザグループを割り当てることができます。定義済みのロールは次のとおりです。
 
 * SnapCenter 管理者ロール
 * App Backup and Clone Adminロール
@@ -21,19 +42,61 @@ SnapCenter には、次の事前定義されたロールが含まれています
 * Infrastructure Adminロール
 
 
+ユーザにロールを割り当てると、SnapCenterAdminロールを割り当てていないかぎり、そのユーザに関連するジョブだけが[Jobs]ページに表示されます。
+
+また、新しいロールを作成して権限とユーザを管理することもできます。ユーザまたはグループに権限を割り当てて、ホスト、ストレージ接続、リソースグループなどのSnapCenterオブジェクトにアクセスすることができます。
+
+RBACの権限は、同じフォレスト内のユーザとグループ、および異なるフォレストに属するユーザに割り当てることができます。フォレスト間でネストされたグループに属するユーザにRBAC権限を割り当てることはできません。
+
+
+NOTE: カスタムロールを作成する場合は、SnapCenterAdminロールのすべての権限が含まれている必要があります。Host addやHost removeなど、一部の権限のみをコピーした場合は、それらの処理を実行できません。
+
+ユーザは、グラフィカルユーザインターフェイス（GUI）またはPowerShellコマンドレットを使用して、ログイン時に認証を指定する必要があります。ユーザが複数のロールのメンバーである場合は、ログインクレデンシャルを入力すると、使用するロールを指定するように求められます。また、APIを実行するための認証も必要です。
+
+
+
+=== アプリケーションレベルのRBAC
+
+SnapCenterは、クレデンシャルを使用して、許可されたSnapCenterユーザがアプリケーションレベルの権限も持っていることを確認します。
+
+たとえば、SQL Server環境でデータ保護処理を実行する場合は、WindowsまたはSQLの適切なクレデンシャルを使用してクレデンシャルを設定する必要があります。SnapCenterサーバは、いずれかの方法で設定されたクレデンシャルを認証します。Windowsファイルシステム環境でONTAPストレージ上でデータ保護処理を実行する場合は、Windowsホスト上でSnapCenterのadminロールにadmin Privilegesが設定されている必要があります。
+
+同様に、Oracleデータベースに対してデータ保護処理を実行する場合に、データベースホストでオペレーティングシステム（OS）認証が無効になっている場合は、OracleデータベースまたはOracle ASMのクレデンシャルを使用してクレデンシャルを設定する必要があります。SnapCenterサーバは、操作に応じて、次のいずれかの方法を使用して設定されたクレデンシャルを認証します。
+
+
+
+=== SnapCenter Plug-in for VMware vSphere の RBAC をサポートしています
+
+VMと整合性のあるデータ保護にSnapCenter VMwareプラグインを使用している場合は、vCenter ServerでRBACをさらに強化できます。SnapCenter VMwareプラグインは、vCenter Server RBACとONTAP RBACの両方をサポートしています。 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_types_of_rbac_for_snapcenter_users.html["詳細"^]
+
+|===
+
+
+| * ベストプラクティス： * SnapCenter Plug-in for VMware vSphere の処理用に ONTAP ロールを 1 つ作成し、必要な権限をすべて割り当てることを推奨します。 
+|===
+
+
+=== ONTAPケンケン
+
+ストレージシステムへのアクセスに必要な権限を持つvsadminアカウントを作成する必要があります。link:../install/task_add_a_user_or_group_and_assign_role_and_assets.html["詳細"]
+
+
+
+== 事前定義されたSnapCenterロールに割り当てられた権限
+
 ロールにユーザを追加するときは、Storage Connection権限を割り当ててStorage Virtual Machine（SVM）の通信を有効にするか、SVMをユーザに割り当ててSVMを使用する権限を有効にする必要があります。Storage Connection 権限を割り当てられたユーザは SVM 接続を作成できます。
 
 たとえば、 SnapCenter Admin ロールのユーザは、 SVM 接続を作成し、 App Backup and Clone Admin ロールのユーザに割り当てることができます。 App Backup and Clone Admin ロールには、デフォルトでは SVM 接続を作成または編集する権限は付与されていません。SVM 接続がないと、ユーザはバックアップ、クローニング、リストアの処理を実行できません。
 
 
 
-== SnapCenter 管理者ロール
+=== SnapCenter 管理者ロール
 
 SnapCenter Admin ロールでは、すべての権限が有効になっています。このロールの権限は変更できません。ロールにユーザやグループを追加したり、削除したりできます。
 
 
 
-== App Backup and Clone Adminロール
+=== App Backup and Clone Adminロール
 
 App Backup and Clone Adminロールには、アプリケーションのバックアップとクローン関連のタスクに対して管理操作を実行するために必要な権限があります。このロールには、ホスト管理、プロビジョニング、ストレージ接続管理、またはリモートインストールに関する権限はありません。
 
@@ -311,7 +374,7 @@ App Backup and Clone Adminロールには、アプリケーションのバック
 |===
 
 
-== Backup and Clone Viewerロール
+=== Backup and Clone Viewerロール
 
 Backup and Clone Viewerロールには、すべての権限が読み取り専用で表示されます。また、検出、レポート、およびダッシュボードへのアクセスに必要な権限も有効になっています。
 
@@ -590,7 +653,7 @@ Backup and Clone Viewerロールには、すべての権限が読み取り専用
 |===
 
 
-== Infrastructure Adminロール
+=== Infrastructure Adminロール
 
 Infrastructure Adminロールでは、ホスト管理、ストレージ管理、プロビジョニング、リソースグループ、リモートインストールレポート、 をクリックし、ダッシュボードにアクセスします。
 

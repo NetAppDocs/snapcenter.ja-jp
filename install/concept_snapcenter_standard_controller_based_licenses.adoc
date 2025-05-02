@@ -25,7 +25,7 @@ NOTE: SnapCenter コントローラベースのライセンスについては、
 * コントローラのシリアル番号にロックされています
 
 
-必要なライセンスの詳細については、を参照してください link:../install/concept_snapcenter_licenses.html["SnapCenterライセンス"^]。
+必要なライセンスの詳細については、を参照してください link:../get-started/concept_snapcenter_licenses.html["SnapCenterライセンス"]。
 
 
 

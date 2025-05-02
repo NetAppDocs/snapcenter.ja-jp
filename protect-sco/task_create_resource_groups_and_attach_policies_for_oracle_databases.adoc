@@ -1,7 +1,7 @@
 ---
 permalink: protect-sco/task_create_resource_groups_and_attach_policies_for_oracle_databases.html 
 sidebar: sidebar 
-keywords: run as 
+keywords: run as, resource groups, policies, Oracle database 
 summary: リソースグループはコンテナであり、バックアップして保護するリソースを追加します。リソースグループを使用すると、特定のアプリケーションに関連付けられているすべてのデータを同時にバックアップできます。 
 ---
 = Oracleデータベース用のリソースグループの作成とポリシーの適用

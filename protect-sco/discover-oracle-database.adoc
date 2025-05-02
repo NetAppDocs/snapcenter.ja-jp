@@ -45,7 +45,7 @@ RAC One Nodeデータベースは、/etc/oratabエントリに基づいてのみ
 
 
 
-== Oracleバージョン12cR2～18cの場合
+== Oracleバージョン12cR2から18c、19c、21c
 
 .RACデータベース
 RACデータベースはsrvctl configコマンドを使用して検出されます。/etc/oratabファイルにデータベースエントリが格納されている必要があります。

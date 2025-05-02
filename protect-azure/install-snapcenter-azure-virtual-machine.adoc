@@ -14,8 +14,8 @@ summary: Azure仮想マシンにSnapCenterをダウンロードしてインス�
 NetApp Support SiteからSnapCenterソフトウェアをダウンロードし、Azure仮想マシンにインストールできます。
 
 .開始する前に
-* Azure Windows仮想マシンがSnapCenterサーバのインストール要件を満たしていることを確認します。詳細については、を参照してください link:../install/reference_domain_and_workgroup_requirements.html["SnapCenterサーバのインストールの準備"]。
-* Azure NetApp Filesを初めてお使いで、既存のNetAppアカウントをお持ちでない場合は、SnapCenterソフトウェアにアクセスできるように登録済みであることを確認してください。
+* Azure Windows仮想マシンがSnapCenterサーバのインストール要件を満たしていることを確認します。詳細については、を参照してください link:../install/requirements-to-install-snapcenter-server.html["SnapCenterサーバをインストールするための要件"]。
+* Azure NetApp Filesを初めてお使いで、既存のNetAppアカウントをお持ちでない場合は、SnapCenterソフトウェアにアクセスできるように登録済みであることを確認してください。情報については、を参照してくださいlink:../install/register_enable_software_access.html["登録してSnapCenterソフトウェアにアクセス"]。
 
 
 .手順

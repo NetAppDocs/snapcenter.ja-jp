@@ -15,8 +15,6 @@ SnapCenterサーバインストーラの実行可能ファイルを実行して�
 
 .開始する前に
 * SnapCenterをインストールするための十分な権限がないroot以外のユーザを使用してSnapCenterサーバをインストールする場合は、NetAppサポートサイトからsudoersチェックサムファイルを入手してください。Linuxのバージョンに基づいて適切なチェックサムファイルを使用する必要があります。
-* のインストール中。 NETランタイム。インストール時に_libicu_libraryの依存関係の解決に失敗した場合は、次のコマンドを実行してinstall_libicu_を実行します。 `yum install -y libicu`
-* _perl_が使用できないためにSnapCenterサーバのインストールが失敗した場合は、次のコマンドを実行してinstall_perl_をインストールします。 `yum install -y perl`
 * SUSE Linuxでsudoパッケージを使用できない場合は、認証エラーを回避するためにsudoパッケージをインストールします。
 * SUSE Linuxの場合は、インストールの失敗を回避するためにホスト名を設定します。
 * コマンドを実行して、セキュアなLinuxのステータスを確認します `sestatus`。SELinux status_が「enabled」で、_current mode_が「enforcing」の場合は、次の手順を実行します。
@@ -66,6 +64,8 @@ _webapp_external_port_のデフォルト値は8146です。
 ** SnapCenterへのログインに使用するキーベースの認証
 
 
+* のインストール中。 NETランタイム。インストール時に_libicu_libraryの依存関係の解決に失敗した場合は、次のコマンドを実行してinstall_libicu_を実行します。 `yum install -y libicu`
+* _perl_が使用できないためにSnapCenterサーバのインストールが失敗した場合は、次のコマンドを実行してinstall_perl_をインストールします。 `yum install -y perl`
 
 
 .手順
@@ -140,23 +140,4 @@ SnapCenterサーバをインストールするために渡されるパラメー�
 .. 実行 `setsebool -P httpd_can_network_connect on`
 
 
-
-
-
-
-== 製品を登録してサポートを有効にする
-
-NetAppを初めてご利用になり、NetAppアカウントをお持ちでない場合は、製品を登録してサポートを有効にする必要があります。
-
-.手順
-. SnapCenterのインストール後、*[ヘルプ]>[バージョン情報]*に移動します。
-. [_About SnapCenter _]ダイアログボックスで、971で始まる20桁のSnapCenterインスタンスをメモします。
-. をクリックします https://register.netapp.com[]
-. [* I am not a registered NetApp Customer* ] をクリックします。
-. 自分自身を登録するには、詳細を指定してください。
-. NetApp Reference SNフィールドは空白のままにします。
-. [Product Line]ドロップダウンから[* SnapCenter *]を選択します。
-. 課金プロバイダを選択します。
-. 20桁のSnapCenterインスタンスIDを入力します。
-. [Submit （送信） ] をクリックします。
 

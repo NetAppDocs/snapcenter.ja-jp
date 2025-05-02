@@ -95,3 +95,18 @@ NFSとSANの両方にVVOLデータストアを配置します。 VVOLデータ�
 * NVMeはサポートされません。
 * プロビジョニングはサポートされていません。
 
+
+
+
+== 特徴
+
+* LinuxまたはAIXシステム上の基盤となるホストストレージスタックを処理することで、Plug-in for Oracle DatabaseでOracleデータベースのデータ保護処理を実行できます。
+* ONTAPを実行しているストレージシステムで、Network File System（NFS；ネットワークファイルシステム）プロトコルとStorage Area Network（SAN；ストレージエリアネットワーク）プロトコルをサポートします。
+* Linuxシステムでは、SnapCenter Plug-in for VMware vSphereを導入してSnapCenterに登録すると、VMDKおよびRDM LUN上のOracleデータベースがサポートされます。
+* SANファイルシステムでのAIX用マウントガードとLVMレイアウトをサポートします。
+* SANファイルシステムでのインラインロギングとAIXシステムでのLVMレイアウトでの拡張ジャーナルファイルシステム（JFS2）のみをサポートします。
++
+SANデバイス上に構築されたSANネイティブデバイス、ファイルシステム、LVMレイアウトがサポートされます。
+
+* SnapCenter環境でのUNIXファイルシステムに対するアプリケーション対応のバックアップ、リストア、クローニングの処理を自動化
+

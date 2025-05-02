@@ -1,0 +1,45 @@
+---
+permalink: get-started/quick-start-snapcenter.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= SnapCenterソフトウェアのクイックスタート
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+クイックスタートガイドでは、SnapCenterソフトウェアをインストールして設定するための基本的な手順について説明します。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1つ"]SnapCenterサーバのインストールの準備
+[role="quick-margin-para"]
+SnapCenterサーバをインストールするためのすべての要件が満たされていることを確認する必要があります。
+
+[role="quick-margin-list"]
+* link:../install/requirements-to-install-snapcenter-server.html["要件"]
+* link:../install/register_enable_software_access.html["登録してSnapCenterソフトウェアにアクセス"]
+* link:../install/enable_multifactor_authentication.html["多要素認証を有効にする"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2つ"]SnapCenterサーバのインストール
+[role="quick-margin-para"]
+SnapCenterサーバは、WindowsホストとLinuxホストのどちらにもインストールできます。からSnapCenterサーバインストールパッケージをダウンロードし https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["NetAppサポートサイト"^]、インストーラを実行します。
+
+[role="quick-margin-list"]
+* link:../install/task_install_the_snapcenter_server_using_the_install_wizard.html["WindowsへのSnapCenterサーバのインストール"]
+* link:../install/install_snapcenter_server_linux.html["LinuxへのSnapCenterサーバのインストール"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["3つ"]SnapCenterサーバの設定
+[role="quick-margin-para"]
+SnapCenterサーバをインストールしたら、環境に応じて設定する必要があります。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["4つ"]アプリケーション用のプラグインをインストールする
+[role="quick-margin-para"]
+使用中のアプリケーションに基づいて、アプリケーション固有のプラグインをインストールするためのすべての要件が満たされていることを確認してから、それぞれのプラグインのインストールに進みます。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["5 つ"]アプリケーションを保護
+[role="quick-margin-para"]
+SnapCenterサーバと必要なプラグインのインストールが完了したら、アプリケーションバックアップの作成を開始できます。これらのバックアップは、必要に応じて、あとでリストアやクローニングに使用できます。

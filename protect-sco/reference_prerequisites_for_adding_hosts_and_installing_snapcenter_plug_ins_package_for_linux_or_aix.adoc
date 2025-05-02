@@ -390,7 +390,7 @@ Oracleデータベースに対してデータ保護処理を実行する際に�
 
 * このタスクについて *
 
-Oracleデータベースでサポートされているさまざまな認証方式を確認してください。詳細については、を参照してください link:../install/concept_authentication_methods_for_your_credentials.html["クレデンシャルの認証方式"^]。
+Oracleデータベースでサポートされているさまざまな認証方式を確認してください。詳細については、を参照してください link:../get-started/concept_authentication_methods_for_your_credentials.html["クレデンシャルの認証方式"^]。
 
 個 々 のリソースグループのクレデンシャルを設定する場合にユーザ名に完全なadmin権限がない場合は、少なくともリソースグループとバックアップの権限が必要です。
 
