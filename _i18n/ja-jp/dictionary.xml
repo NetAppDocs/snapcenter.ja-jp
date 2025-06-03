@@ -1220,10 +1220,6 @@
   <block id="29f5a8e74a222b5510e8be032050b383" category="section-title">Oracle ASM認証</block>
   <block id="e4f2c1a090559162f10c4470255c0329" category="section-title">RMANカタログ認証</block>
   <block id="96ae1fb9380ea3c1b68bff5ff0805725" category="paragraph">RMANカタログ認証方式は、Oracle Recovery Manager（RMAN）カタログデータベースに照らして認証します。外部カタログメカニズムを設定し、データベースをカタログデータベースに登録した場合は、RMANカタログ認証を追加する必要があります。</block>
-  <block id="248724fdb43c06d73682eae495a17c67" category="summary">SnapCenter を使用して、 FC 接続 LUN または iSCSI 接続 LUN を設定できます。SnapCenter を使用して、既存の LUN を Windows ホストに接続することもできます。</block>
-  <block id="30837f98cbd95f5a4cd8f19178a695e8" category="doc">LUNストレージの設定</block>
-  <block id="9660abd0b48a5f9635c3e498547f1163" category="inline-link">ONTAP 9 SAN構成ガイド</block>
-  <block id="e44dc355289fca4137269dc7b5607927" category="paragraph">LUNは、SAN構成におけるストレージの基本単位です。Windowsホストは、システム上のLUNを仮想ディスクとして認識します。詳細については、を参照してください<block ref="9216224738613ab52bfe8b66b8e2b039" category="inline-link-rx"></block>。</block>
   <block id="ad5caf46af1da5ea3bb28f96c57941f2" category="section-title">iSCSIセッションを確立する</block>
   <block id="5702420822d09ff123dca89121a7edb1" category="paragraph">iSCSIを使用してLUNに接続する場合は、LUNを作成して通信を有効にする前にiSCSIセッションを確立する必要があります。</block>
   <block id="17e2d63e3b45ecbfe13bcc32fec929d0" category="paragraph">* 始める前に *</block>
@@ -1253,11 +1249,6 @@
   <block id="e56e6eb9f96878a5d909655ad543a59d" category="list-text">入力が完了したら、 * 接続 * をクリックします。</block>
   <block id="8103ea1f974b6fe78b3263b7a1107692" category="paragraph">SnapCenter が iSCSI セッションを確立します。</block>
   <block id="d92abf366bd9060c59bb86c051a977d0" category="list-text">この手順を繰り返して、ターゲットごとにセッションを確立します。</block>
-  <block id="4abe930f7ed4aa8557d64ff364aa1be7" category="section-title">iSCSIセッションの切断</block>
-  <block id="cbb23b8d6f2ddac05adf3b8df4d48c63" category="paragraph">複数のセッションを使用しているターゲットからiSCSIセッションの切断が必要になる場合があります。</block>
-  <block id="8604cb873c825c8a47d73b5809f9ece3" category="list-text">iSCSI セッションのリストから、切断するセッションを選択し、 * セッションの切断 * をクリックします。</block>
-  <block id="404198fd96b17670e542d194555e13b5" category="list-text">[ セッションの切断 ] ダイアログボックスで、 [OK] をクリックします。</block>
-  <block id="690d3c16f8977d088a13175ac12ac454" category="paragraph">SnapCenter によって iSCSI セッションが切断されます。</block>
   <block id="8871af3db2b33c68b1e7799897970dbb" category="summary">SnapCenter サーバと MySQL サーバ間の通信をスタンドアロン構成または Network Load Balancing （ NLB ）構成で保護する場合は、 Secure Sockets Layer （ SSL ）証明書とキーファイルを生成できます。</block>
   <block id="2c83e33769333482559e227de9729593" category="doc">SnapCenterサーバとのセキュアなMySQL接続の設定</block>
   <block id="073e8e92522cf9a79fe89d146dc9c6e4" category="paragraph">SnapCenter サーバと MySQL サーバ間の通信をスタンドアロン構成または Network Load Balancing （ NLB ）構成で保護する場合は、 Secure Sockets Layer （ SSL ）証明書とキーファイルを生成できます。</block>
@@ -1563,9 +1554,7 @@
   <block id="11ed0a0d13245c242749913d8aee1584" category="paragraph"><block ref="00e4488b078759955b869ee4c172156a" prefix="" category="inline-code"></block></block>
   <block id="e0b8c0081a448231b99fbbd92c77468c" category="summary">データ保護処理を実行する前に、ストレージ接続をセットアップし、SnapCenterサーバとSnapCenterプラグインで使用するクレデンシャルを追加する必要があります。</block>
   <block id="1dd26f6fcf67127f078a9bb0e9318802" category="doc">ストレージ接続とクレデンシャル</block>
-  <block id="6a57d2f6137b4e66b867cbd6a5c2622a" category="list-text">* ストレージ接続 *</block>
   <block id="96da08df10311c05ab070820f34934cd" category="paragraph">ストレージ接続により、SnapCenter ServerプラグインとSnapCenterプラグインはONTAPストレージにアクセスできます。これらの接続の設定には、AutoSupportおよびEvent Management System（EMS；イベント管理システム）機能の設定も含まれます。</block>
-  <block id="3a8e375f86c81e7b283b9ee0db531e4d" category="list-text">* 資格情報 *</block>
   <block id="1128bf8c7fbf508706d1da7b9442abbf" category="list-text">ドメイン管理者または管理者グループの任意のメンバー</block>
   <block id="b8031226b769413159c3d5ab1797ec8e" category="paragraph">ドメイン管理者またはSnapCenterプラグインをインストールするシステムの管理者グループの任意のメンバーを指定します。ユーザ名フィールドの有効な形式は次のとおりです。</block>
   <block id="e9c2622b465de104c38e33657be6878b" category="list-text">NETBIOS_USERNAME_</block>
@@ -1976,14 +1965,10 @@
   <block id="d980d1319cdc2e847ec81791913617aa" category="list-text"><block ref="20c46755c96f02dde2f4eed87e68d5d1" prefix="" category="inline-code"></block></block>
   <block id="c9d5338c9cdd07e93595b944d815cb6b" category="list-text"><block ref="eaba2b789999def4688a2d7d4052792b" prefix="" category="inline-code"></block></block>
   <block id="e37068689bf336f6598b2d7e4c655d04" category="list-text"><block ref="eca0518c19e4265640a4cff88fbe761b" prefix="" category="inline-code"></block></block>
-  <block id="e2d84dceaeb159e34341cf9ed5c25d5b" category="summary">SnapCenterサーバインストーラを使用すると、インストール時にLinuxホストでLinuxの機能とロールが有効になります。これらは、トラブルシューティングやホストシステムのメンテナンスに役立つ場合があります。</block>
   <block id="0615d0e2ee2ca176a2602bdbb3cbf96e" category="doc">インストルチユウニLinuxホストテユウコウニナルキノウ</block>
-  <block id="bff6720248dd6aaffe2e42a4d70ef683" category="paragraph">SnapCenterサーバは以下のソフトウェアパッケージをインストールします。これらのパッケージは、トラブルシューティングやホストシステムのメンテナンスに役立ちます。</block>
   <block id="2ac5f63d0bb2ab4a9898d18445391caf" category="list-text">RabbitMQ</block>
-  <block id="62e0b5b350c9e3d2c19aa801d9442ba9" category="list-text">nginx</block>
   <block id="f7e853158b776246c53345b938159cc1" category="list-text">アーラン</block>
   <block id="21624173efc06090951170116cd13563" category="list-text">PAM -デベル</block>
-  <block id="3d265b4e1eeef0ddf17881fa003b18cc" category="list-text">PowerShell</block>
   <block id="6e3da1e6c4de3ddc55b5442f3d8fbf10" category="summary">SnapCenterサーバはLinuxホストにインストールできます。</block>
   <block id="a5133039db74945642b3f4bbb769135d" category="doc">LinuxホストへのSnapCenterサーバのインストール</block>
   <block id="01030a4579e57d7bfe53d02858238c30" category="paragraph">SnapCenterサーバインストーラの実行可能ファイルを実行して、SnapCenterサーバをインストールできます。</block>
@@ -2092,8 +2077,6 @@
   <block id="a344a2fc65197b27dcccc38ac1ef85a3" category="inline-link">ホストを追加し、プラグインパッケージをリモートホストにインストールする。</block>
   <block id="b9bb47785399146845eaead624481439" category="paragraph">ドメイントラスト、マルチドメインフォレスト、およびクロスドメイントラストはサポートされますが、クロスフォレストドメインはサポートされません。詳細については、Active Directoryドメインと信頼に関するMicrosoftのドキュメントを参照してください。</block>
   <block id="017007d9e00e31e53994cdd0aad0c593" category="admonition">SnapCenter サーバをインストールしたあとに、 SnapCenter ホストが配置されているドメインを変更しないでください。SnapCenter サーバをインストールした時点のドメインから SnapCenter サーバホストを削除して、 SnapCenter サーバをアンインストールしようとすると、アンインストール処理は失敗します。</block>
-  <block id="b6ac2f945924adc12a6cced3f4732d89" category="summary">SnapCenter Server インストーラを使用すると、インストール中に Windows ホストで Windows の機能とロールが有効になります。これらは、トラブルシューティングやホストシステムのメンテナンスに役立つ場合があります。</block>
-  <block id="03b777e98e70f41a1b91fc53f61e82ae" category="doc">インストール時にWindowsホストで有効になる機能</block>
   <block id="3adbdb3ac060038aa0e6e6c138ef9873" category="cell">カテゴリ</block>
   <block id="21021ea0e52be8e9c599f4dff41e5be0" category="cell">機能</block>
   <block id="3e197446d1794d1838e3734e66b2162c" category="paragraph">Webサーバ</block>
@@ -2243,18 +2226,12 @@
   <block id="4cc186df234138a57b2e8c5d8e5f7f8d" category="list-text">[ 保存（ Save ） ] をクリックします。</block>
   <block id="7a94136f80a88afa27fcebdcd0e728a6" category="paragraph">ユーザまたはグループを追加してロールを割り当てたら、リソースリストを更新します。</block>
   <block id="a69e754efca1b9623b6b0f65a2d8dc73" category="doc">security loginコマンドを使用してONTAP RBACロールを追加する</block>
-  <block id="474d9e4d882e646ea038c1c3f1057d2e" category="list-text">clustered ONTAPを実行するストレージシステム用にONTAP RBACロールを作成する前に、次の項目について確認しておく必要があります。</block>
-  <block id="ebe591ae9d43ae4398d95940e9fd9562" category="list-text">実行するタスク（複数可）</block>
-  <block id="7a0abee5eccc23660191580add8cd728" category="list-text">これらのタスクの実行に必要な権限</block>
-  <block id="f8d5d5371173552fd813059761bfc086" category="list-text">RBACロールを設定するには、次の操作を実行する必要があります。</block>
   <block id="1559a0574adcf52bb6e38eec37381b49" category="list-text">コマンドおよびコマンドディレクトリ（あるいはその両方）に権限を付与します。</block>
   <block id="875c5aedd735db244786063faf6da722" category="paragraph">各コマンド/コマンドディレクトリには、フルアクセスと読み取り専用の2つのアクセスレベルがあります。</block>
   <block id="dee6c2623edcbb8e68bfe81ea75668fa" category="paragraph">フルアクセス権限は必ず最初に割り当てる必要があります。</block>
   <block id="1deb5fee27bfdda7d20d4c10f6e8f273" category="list-text">ユーザにロールを割り当てます。</block>
-  <block id="407e9947315902e28583d3951a4332d4" category="list-text">SnapCenter プラグインがクラスタ全体のクラスタ管理者 IP に接続されているか、またはクラスタ内の SVM に直接接続されているかに応じて、設定は異なります。</block>
   <block id="9dc5053bca32e6394932747f3adab2c4" category="inline-link">ONTAP 9管理者認証とRBACパワーガイド</block>
   <block id="cf450319b4b50a20dcf243d6273acbf4" category="paragraph">ONTAP RBACロールの設定の詳細については、を参照してください<block ref="4054a3747c1ed1604c443c75434e693a" category="inline-link-rx"></block>。</block>
-  <block id="74fec6bb431ffa93b327d4933607ec3f" category="admonition">SnapCenter のドキュメントではロールに割り当てる要素を「権限」と呼びますが、OnCommand システムマネージャGUIでは、_privilegeではなく、TERM_attribute__が使用されます。ONTAP RBACロールを設定する場合、これらの用語はどちらも同じ意味です。</block>
   <block id="eaa07c06fe679751494bfd4b2951b580" category="list-text">ストレージシステムで、次のコマンドを入力して新しいロールを作成します。</block>
   <block id="2c7e6d2877f857f126c24c7742e84098" category="paragraph"><block ref="c33f6523b710a03a2fd5d3e78562afa6" prefix="" category="inline-code"></block></block>
   <block id="af7e38d09fe8c21a2365c6a2c6e9bafe" category="list-text">svm_nameには、SVMの名前を指定します。空白のままにすると、デフォルトでクラスタ管理者が設定されます。</block>
@@ -2442,7 +2419,6 @@
   <block id="554b18f954019b477e2e91a5765d0334" category="summary">既存の SnapCenter ロールに加えて、独自のロールを作成して権限をカスタマイズできます。</block>
   <block id="57cf47fd5cdb4fa24f625917dbf7b4cb" category="doc">ロールの作成</block>
   <block id="009dc93979222b8650a313a069bc7b26" category="list-text">をクリックします <block ref="db9d5f6f137b990473b3ea783cd913f5" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="5c53e4d8c07d4cd65ccef16c0c161e93" category="list-text">[Add Role] ページで、新しいロールの名前と概要を指定します。</block>
   <block id="bdc510da052289a87e1a226330d7f96c" category="paragraph">このロールのメンバーに他のメンバーが割り当てられているオブジェクトが表示されないようにするには、このオプションの選択を解除してください。</block>
   <block id="01da87f05c72e88b0ab5bc8ce0bb2575" category="list-text">[ アクセス許可 ] ページで、そのロールに割り当てるアクセス許可を選択するか、 [ すべて選択 ] をクリックしてそのロールにすべてのアクセス許可を付与します。</block>
   <block id="3375e2b7dd26ec739f41b8bcc986e140" category="summary">最小限の権限で ONTAP クラスタロールを作成して、 SnapCenter の admin ロールを使用して ONTAP で処理を実行する必要がないようにする必要があります。</block>
@@ -8192,7 +8168,6 @@
   <block id="7372096d67d7a00d21e644f03bd6b3f6" category="summary">SnapCenter Plug-in for Microsoft Windows を SnapCenter の GUI からリモートでインストールできない場合は、 Windows ホスト上にローカルにインストールできます。SnapCenter Plug-in for Microsoft Windows のインストールプログラムを、 Windows のコマンドラインからサイレントモードで自動的に実行できます。</block>
   <block id="3065bc79c85488f5e9c34540aa589dee" category="doc">コマンドラインからのSnapCenter Plug-in for Microsoft Windowsのサイレントインストール</block>
   <block id="06b79cf9e641e40d79092a668abcecac" category="list-text">PowerShell 7.4.2以降がインストールされている必要があります。</block>
-  <block id="45305b0c2be46c68805c14c7667e37d1" category="list-text">Windowsメッセージキューをオンにしておく必要があります。</block>
   <block id="3f9e658ebdc571b944cc7a6bb94fa2fc" category="list-text">ホストのローカル管理者である必要があります。</block>
   <block id="012cef6769a01d5c95c3bd84a1587de6" category="list-text">インストールの場所から、 SnapCenter Plug-in for Microsoft Windows をダウンロードします。</block>
   <block id="e0080a28dd770f19702e65fb9e7b8c86" category="paragraph">たとえば、デフォルトのインストールパスはC：\ProgramData\NetApp\SnapCenter\Package Repositoryです。</block>
@@ -8974,8 +8949,6 @@
   <block id="b3121ceac9c3b1c097a1f53db3eff2a7" category="sidebar">SnapCenterサーバとプラグインの管理</block>
   <block id="fea84990764109b117844dae6e7232a7" category="sidebar">ダッシュボードを表示</block>
   <block id="e413eba49b15917b0c9dbf2620f3e66e" category="sidebar">ディザスタリカバリ</block>
-  <block id="ab5f4e39159ac71e7f3f1e7080905a20" category="sidebar">SnapCenterサーバのインストール</block>
-  <block id="bb8e9cdba9e13f92c0ca73c3ae3f6c05" category="sidebar">Storage Virtual Machineの接続とクレデンシャル</block>
   <block id="6bcc192d7209e867a0f8afd8938c62eb" category="sidebar">多要素認証（MFA）を管理します。</block>
   <block id="3a42fbb761150585f7eaf7c0a04e8c90" category="sidebar">SnapCenterへのログイン</block>
   <block id="1231c8ea8da87c73515938fe7d9cafd5" category="sidebar">WindowsホストのCA証明書の設定</block>
@@ -8987,7 +8960,6 @@
   <block id="0095bd100c1750fd3bff002bda60502e" category="sidebar">Active Directory、LDAP、LDAPSの設定</block>
   <block id="055367d73c719054881d2c3df6cfb418" category="sidebar">ハイアベイラビリティの設定</block>
   <block id="66533c4e3134a6b220ad1336cd288c49" category="sidebar">ロールベースアクセス制御（RBAC）の設定</block>
-  <block id="5d4caff07857398d579cdda92ce3f34f" category="sidebar">ストレージシステムのプロビジョニング</block>
   <block id="0daccd45abdac281e7508c5de0fa492c" category="sidebar">Windowsホストでのストレージのプロビジョニング</block>
   <block id="dd5c6b13be74557c3408d452b60be7a6" category="sidebar">SnapCenterのインストールとクレデンシャルの作成</block>
   <block id="5534321a47754ebc6b65953a14037ee4" category="sidebar">IBM DB2の保護</block>
@@ -9464,7 +9436,6 @@
   <block id="8c4149a5e3a16e71c373cac16eab56eb" category="list-text"><block ref="8031b6dd89dc17bc568c9124170bb66a" prefix="" category="inline-code"></block></block>
   <block id="1f46b6eec6f3def165a94aea4fbd2de8" category="list-text"><block ref="d873942b6f54bbecd97eb915c6e95c45" prefix="" category="inline-code"></block></block>
   <block id="73c050ddeaec2b5e5a856c81666f8026" category="list-text">アイコンをクリックし <block ref="725f4bf2ffc300942027282d0182533f" category="inline-image-macro-rx" type="image"></block> 、*[証明書の検証を有効にする]*をクリックします。</block>
-  <block id="920adb74812a2a6ff8228ec39336b73d" category="list-text">.NET Runtime 8.0.12（およびそれ以降のすべての8.0.xパッチ）</block>
   <block id="233125590fad11d81c05c1b0279c56f1" category="admonition">SnapCenterでは、ASA R2システムでVMware Virtual Machine File System（VMFS）のみがサポートされます。</block>
   <block id="989977a18a476a92018e04dd60ec37c1" category="inline-link">ASA R2システムの詳細</block>
   <block id="b3c78f6e772922673e6d35ae6df26cbd" category="list-text">VMDK経由でのアプリケーションのプライマリバックアップの作成</block>
@@ -9745,7 +9716,6 @@
   <block id="9efdf202df78f9a33e298564c835e4ba" category="summary">ストレージシステムでclustered NetApp ONTAPを実行している場合は、security loginコマンドを使用してNetApp ONTAP RBACロールを追加できます。</block>
   <block id="2ad5f6ef1c47048e237f2fafae87313a" category="doc">security loginコマンドを使用してNetApp ONTAP RBACロールを追加する</block>
   <block id="e1be0500812e131476a1a2d9b7429541" category="paragraph">ストレージシステムでclustered ONTAPを実行している場合は、security loginコマンドを使用してNetApp ONTAP RBACロールを追加できます。</block>
-  <block id="34a087679e427c81dd4b62602fb6e759" category="paragraph">これらのロールをストレージシステムで簡単に設定するには、NetAppコミュニティフォーラムに掲載されているRBAC User Creator for NetApp ONTAPツールを使用します。</block>
   <block id="cd63f10378363da86bcf8672b918512a" category="paragraph">このツールは、ONTAP Privilegesの正しく設定を自動的に処理します。たとえば、RBAC User Creator for NetApp ONTAPツールでは、フルアクセスのPrivilegesが最初に表示されるように、Privilegesが正しい順序で自動的に追加されます。最初に読み取り専用Privilegesを追加してからフルアクセスPrivilegesを追加すると、ONTAPはフルアクセスPrivilegesを重複としてマークし、無視します。</block>
   <block id="0715b20c4e81f0c852f66480ef00c667" category="admonition">SnapCenterまたはONTAPをあとからアップグレードする場合は、RBAC User Creator for NetApp ONTAPツールを再実行して、以前に作成したユーザロールを更新する必要があります。以前のバージョンのSnapCenterまたはONTAP用に作成されたユーザロールは、アップグレード後のバージョンでは正常に機能しません。ツールを再実行すると、アップグレードが自動的に処理されます。ロールを再作成する必要はありません。</block>
   <block id="30962a20671f7b70a267e94343e24484" category="list-text">FAS、ASA、AFF ONTAPおよびAmazon FSx for NetApp ONTAPストレージシステムのオブジェクトストレージ機能はサポートされません。</block>
@@ -9964,4 +9934,19 @@
   <block id="2eadd26d0e5aeb8538a0e0d8cf0e68bf" category="sidebar">ニンショウホウシキ</block>
   <block id="06ad314b340900d226b1196e1fe289e9" category="sidebar">クイックスタート</block>
   <block id="a9246bf3c3eb55a8aee642477b14a8f7" category="sidebar">NetAppサポートサイトに登録</block>
+  <block id="f8f43715a5fc1f86f8da231ed019b0c6" category="section-title">ストレージ接続</block>
+  <block id="596fc94bf8faf17d4f6a3ec6fc53437f" category="paragraph">SnapCenter Server は、ホスト システムのトラブルシューティングとメンテナンスに役立つ以下のソフトウェア パッケージをインストールします。</block>
+  <block id="74b83e8446b3a82f3063984fb362fc4a" category="paragraph">SnapCenter GUI を使用してホストのプロビジョニングおよびスペース再利用ジョブを実行しない場合、PowerShell コマンドレットを使用できます。コマンドレットは直接使用できるほか、スクリプトに追加することもできます。</block>
+  <block id="63865c4d9ae769f19103f3ee2d977184" category="list-text">実行するタスク (1 つまたは複数) と、それらのタスクを実行するために必要な権限を特定します。</block>
+  <block id="d7d6797642e09c2dc77b50ef5e78df62" category="list-text">SnapCenter プラグインがクラスタ全体の Cluster Administrator IP に接続されているか、クラスタ内の SVM に直接接続されているかに応じて構成を識別します。</block>
+  <block id="02db4b32d20778ef679bcd2da9e5e94a" category="paragraph">ストレージ システムでのこれらのロールの構成を簡素化するには、NetApp コミュニティ フォーラムに掲載されている NetApp ONTAP ツール用の RBAC User Creator を使用できます。</block>
+  <block id="edb8104325c03cc5ddc6550b87275741" category="paragraph">独自のロールを作成するには、「SnapCenterAdmin」ロールとしてログインする必要があります。</block>
+  <block id="8116454de7e5e8911f5a289d793b43d9" category="list-text">新しいロールの名前と説明を指定します。</block>
+  <block id="0d27cfd920c0e17d1df5689d46baa774" category="admonition">ユーザー名とグループ名には、スペース ( )、ハイフン (-)、アンダースコア (_)、コロン (:) の特殊文字のみを使用できます。</block>
+  <block id="28dbcf5fe30fd921ce51a9e1c3a6c30f" category="section-title">インストール中に Windows ホストで有効になる機能</block>
+  <block id="83e7de52a01e78e22c88a405e22e660a" category="paragraph">SnapCenter Serverインストーラは、インストール中にWindowsホスト上でWindowsの機能とロールを有効にします。これらは、ホストシステムのトラブルシューティングやメンテナンスに役立つ場合があります。</block>
+  <block id="76335228f2ee14e5df4e858ae5e7684c" category="sidebar">SnapCenter Serverのインストールと構成</block>
+  <block id="d39d360863f3fda3c5d615dc978e14ae" category="sidebar">SnapCenterサーバーをインストールする</block>
+  <block id="3199d4d0758d0f4f53db9a8f36670c18" category="sidebar">SnapCenterサーバーを構成する</block>
+  <block id="4c975961e88401702aa6aac167300031" category="sidebar">ストレージシステムの追加とプロビジョニング</block>
 </blocks>

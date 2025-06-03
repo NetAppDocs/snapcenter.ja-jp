@@ -11,7 +11,7 @@ summary: ホストのプロビジョニングやスペース再生のジョブ�
 
 
 [role="lead"]
-ホストのプロビジョニングやスペース再生のジョブにSnapCenter GUIを使用しない場合は、SnapCenter Plug-in for Microsoft Windowsに付属のPowerShellコマンドレットを使用します。コマンドレットは直接使用できるほか、スクリプトに追加することもできます。
+SnapCenter GUI を使用してホストのプロビジョニングおよびスペース再利用ジョブを実行しない場合、PowerShell コマンドレットを使用できます。コマンドレットは直接使用できるほか、スクリプトに追加することもできます。
 
 リモートのプラグインホストでコマンドレットを実行する場合は、SnapCenter Open-SMConnectionコマンドレットを実行してSnapCenterサーバへの接続を確立する必要があります。
 

@@ -1,7 +1,7 @@
 ---
 permalink: install/task_reclaim_space_on_the_storage_system.html 
 sidebar: sidebar 
-keywords: space 
+keywords: space, storage system, reclaim 
 summary: ファイルが削除または変更されると、NTFSはLUN上の使用可能なスペースを追跡しますが、新しい情報はストレージシステムには報告しません。新しく解放されたブロックがストレージで使用可能とマークされるようにするには、Plug-in for Windowsホストでスペース再生PowerShellコマンドレットを実行します。 
 ---
 = ストレージシステム上のスペースの再生

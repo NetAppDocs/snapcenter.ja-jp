@@ -1,7 +1,7 @@
 ---
 permalink: install/task_add_an_rbac_role_using_security_login_commands.html 
 sidebar: sidebar 
-keywords: RBAC roles, add, NetApp ONTAP RBAC role 
+keywords: RBAC roles, add, NetApp ONTAP RBAC role, storage system 
 summary: ストレージシステムでclustered NetApp ONTAPを実行している場合は、security loginコマンドを使用してNetApp ONTAP RBACロールを追加できます。 
 ---
 = security loginコマンドを使用してNetApp ONTAP RBACロールを追加する
@@ -14,30 +14,20 @@ summary: ストレージシステムでclustered NetApp ONTAPを実行してい�
 ストレージシステムでclustered ONTAPを実行している場合は、security loginコマンドを使用してNetApp ONTAP RBACロールを追加できます。
 
 .開始する前に
-* clustered ONTAPを実行するストレージシステム用にONTAP RBACロールを作成する前に、次の項目について確認しておく必要があります。
-+
-** 実行するタスク（複数可）
-** これらのタスクの実行に必要な権限
-
-
-* RBACロールを設定するには、次の操作を実行する必要があります。
-+
-** コマンドおよびコマンドディレクトリ（あるいはその両方）に権限を付与します。
+* 実行するタスク (1 つまたは複数) と、それらのタスクを実行するために必要な権限を特定します。
+* コマンドおよびコマンドディレクトリ（あるいはその両方）に権限を付与します。
 +
 各コマンド/コマンドディレクトリには、フルアクセスと読み取り専用の2つのアクセスレベルがあります。
 
 +
 フルアクセス権限は必ず最初に割り当てる必要があります。
 
-** ユーザにロールを割り当てます。
-** SnapCenter プラグインがクラスタ全体のクラスタ管理者 IP に接続されているか、またはクラスタ内の SVM に直接接続されているかに応じて、設定は異なります。
+* ユーザにロールを割り当てます。
+* SnapCenter プラグインがクラスタ全体の Cluster Administrator IP に接続されているか、クラスタ内の SVM に直接接続されているかに応じて構成を識別します。
 
 
-
-
-* このタスクについて *
-
-これらのロールをストレージシステムで簡単に設定するには、NetAppコミュニティフォーラムに掲載されているRBAC User Creator for NetApp ONTAPツールを使用します。
+.タスクの内容
+ストレージ システムでのこれらのロールの構成を簡素化するには、NetApp コミュニティ フォーラムに掲載されている NetApp ONTAP ツール用の RBAC User Creator を使用できます。
 
 このツールは、ONTAP Privilegesの正しく設定を自動的に処理します。たとえば、RBAC User Creator for NetApp ONTAPツールでは、フルアクセスのPrivilegesが最初に表示されるように、Privilegesが正しい順序で自動的に追加されます。最初に読み取り専用Privilegesを追加してからフルアクセスPrivilegesを追加すると、ONTAPはフルアクセスPrivilegesを重複としてマークし、無視します。
 
@@ -46,11 +36,7 @@ NOTE: SnapCenterまたはONTAPをあとからアップグレードする場合�
 
 ONTAP RBACロールの設定の詳細については、を参照してください http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-adm-auth-rbac/home.html["ONTAP 9管理者認証とRBACパワーガイド"^]。
 
-
-NOTE: SnapCenter のドキュメントではロールに割り当てる要素を「権限」と呼びますが、OnCommand システムマネージャGUIでは、_privilegeではなく、TERM_attribute__が使用されます。ONTAP RBACロールを設定する場合、これらの用語はどちらも同じ意味です。
-
-* 手順 *
-
+.手順
 . ストレージシステムで、次のコマンドを入力して新しいロールを作成します。
 +
 `security login role create <role_name\> -cmddirname "command" -access all –vserver <svm_name\>`

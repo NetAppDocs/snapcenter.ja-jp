@@ -1,7 +1,7 @@
 ---
 permalink: install/task_install_the_snapcenter_server_using_the_install_wizard.html 
 sidebar: sidebar 
-keywords: install, snapcenter software, install wizard 
+keywords: install, snapcenter software, install wizard, features enabled 
 summary: SnapCenterサーバインストーラの実行可能ファイルを実行して、SnapCenterサーバをインストールできます。 
 ---
 = WindowsホストへのSnapCenterサーバのインストール
@@ -63,3 +63,127 @@ NOTE: [Cancel] * ボタンをクリックすると、実行中のステップが
 ログファイルは常に、管理者ユーザの%temp%フォルダに（古いものから順に）表示されます。ログの場所をリダイレクトする場合は、コマンドプロンプトから次のコマンドを実行してSnapCenterサーバのインストールを開始します。``C:\installer_location\installer_name.exe /log"C:\"``
 
 
+
+
+
+== インストール中に Windows ホストで有効になる機能
+
+SnapCenter Serverインストーラは、インストール中にWindowsホスト上でWindowsの機能とロールを有効にします。これらは、ホストシステムのトラブルシューティングやメンテナンスに役立つ場合があります。
+
+|===
+| カテゴリ | 機能 
+
+
+ a| 
+Webサーバ
+ a| 
+* インターネットインフォメーションサービス
+* World Wide Webサービス
+* 一般的なHTTP機能
++
+** 既定のドキュメント
+** ディレクトリの参照
+** HTTPエラー
+** HTTPリダイレクション
+** 静的なコンテンツ
+** WebDAV発行
+
+
+* 健全性と診断
++
+** カスタムログ
+** HTTPロギング
+** ログツール
+** リクエストモニター
+** トレース
+
+
+* パフォーマンス機能
++
+** 静的なコンテンツの圧縮
+
+
+* セキュリティ
++
+** IPセキュリティ
+** Basic Authentication の略
+** 一元化されたSSL証明書のサポート
+** クライアント証明書マッピング認証
+** IIS クライアント証明書マッピング認証
+** IPおよびドメインの制限
+** 要求フィルタリング
+** URL認証
+** Windows認証
+
+
+* アプリケーション開発機能
++
+** です。 NET拡張性4.5
+** アプリケーションの初期化
+** ASP.NET Core Runtime 8.0.12（およびそれ以降のすべての8.0.xパッチ）Hosting Bundle
+** サーバー側インクルード
+** WebSocketプロトコル
+
+
+* 管理ツール
++
+** IIS管理コンソール
+
+
+
+
+
+
+ a| 
+IIS管理スクリプトとツール
+ a| 
+* IIS管理サービス
+* Web管理ツール
+
+
+
+
+ a| 
++.NET Framework 8.0.12の機能+
+ a| 
+* ASP.NET Core Runtime 8.0.12（およびそれ以降のすべての8.0.xパッチ）Hosting Bundle
+* Windows Communication Foundation (WCF) HTTPアクティブ化45
++
+** TCPのアクティブ化
+** HTTPアクティブ化
+
+
+
+
+用。 NET固有のトラブルシューティング情報。を参照してください。 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_upgrade_or_install_fails_with_%22This_KB_is_not_related_to_the_OS%22["インターネットに接続されていないレガシーシステムでは、SnapCenter のアップグレードまたはインストールが失敗します"^]
+
+
+
+ a| 
+メッセージキュー
+ a| 
+* メッセージキューサービス
++
+
+NOTE: SnapCenter が作成および管理する MSMQ サービスを他のアプリケーションが使用していないことを確認します。
+
+* RabbitMQ
+* アーラン
+
+
+
+
+ a| 
+Windowsプロセスアクティブ化サービス
+ a| 
+* プロセスモデル
+
+
+
+
+ a| 
+セツテイAPI
+ a| 
+すべて
+
+|===
