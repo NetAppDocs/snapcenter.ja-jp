@@ -16,7 +16,7 @@ summary: ホストを追加してプラグインパッケージをインスト�
 * Java 11をホストにインストールしておく必要があります。
 +
 
-NOTE: IBM Javaはサポートされていません。
+NOTE: IBM Java は Windows および Linux ホストではサポートされていません。
 
 * Windowsの場合、Plug-in CreatorサービスはWindowsユーザ「LocalSystem」を使用して実行する必要があります。これは、Plug-in for MySQLがドメイン管理者としてインストールされている場合のデフォルトの動作です。
 * Windowsホストにプラグインをインストールするときに、組み込みでないクレデンシャルを指定した場合やユーザがローカルワークグループに属している場合は、ホストのUACを無効にする必要があります。SnapCenter Plug-in for Microsoft Windowsは、WindowsホストへのMySQLプラグインと一緒にデフォルトで導入されます。
@@ -33,7 +33,7 @@ NOTE: IBM Javaはサポートされていません。
 * rootユーザまたはroot以外のユーザに対してパスワードベースのSSH接続を有効にしておく必要があります。
 * Java 11をWindowsホストにインストールしておく必要があります。
 +
-http://www.java.com/en/download/manual.jsp["すべてのオペレーティングシステム用のJavaダウンロード"]
+http://www.java.com/en/download/manual.jsp["すべてのオペレーティングシステム用のJAVAをダウンロード"]
 
 +
 https://imt.netapp.com/matrix/imt.jsp?components=121071;&solution=1259&isHWU&src=IMT["NetApp Interoperability Matrix Tool"]
@@ -47,7 +47,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=121071;&solution=1259&isHWU&src
 * rootユーザまたはroot以外のユーザに対してパスワードベースのSSH接続を有効にしておく必要があります。
 * Java 11をLinuxホストにインストールしておく必要があります。
 +
-http://www.java.com/en/download/manual.jsp["すべてのオペレーティングシステム用のJavaダウンロード"]
+http://www.java.com/en/download/manual.jsp["すべてのオペレーティングシステム用のJAVAをダウンロード"]
 
 +
 https://imt.netapp.com/matrix/imt.jsp?components=121071;&solution=1259&isHWU&src=IMT["NetApp Interoperability Matrix Tool"]

@@ -17,6 +17,10 @@ summary: ホストを追加してプラグインパッケージをインスト�
 NOTE: AIXでは、ストレージアプリケーションとOracleアプリケーションがサポートされます。
 
 * Java 11をLinux、Windows、またはAIXのホストにインストールしておく必要があります。
++
+
+NOTE: IBM Java は Windows および Linux ホストではサポートされていません。
+
 * Windowsホストにプラグインをインストールするときに、組み込みでないクレデンシャルを指定する場合や、ユーザがローカルワークグループに属している場合は、ホストのUACを無効にする必要があります。
 * NetAppでサポートされるプラグイン（MongoDB、ORASCPM、Oracle Applications、SAP ASE、SAP MaxDB、Storageなど）が、ホストの追加処理を実行するクライアントホストに配置されている必要があります。
 
@@ -34,6 +38,9 @@ iSCSIを使用している場合は、iSCSIサービスが実行されている�
 * ローカル管理者Privilegesを持つドメインユーザと、リモートホストに対するローカルログイン権限が必要です。
 * SnapCenter でクラスタノードを管理する場合は、クラスタ内のすべてのノードに対する管理者権限を持つユーザが必要です。
 * SnapCenter Plug-in for Microsoft Windowsを手動で選択する必要があります。
++
+http://www.java.com/en/download/manual.jsp["Windows用JAVAをダウンロード"]
+
 
 
 
@@ -49,7 +56,10 @@ NOTE: AIXでは、ストレージアプリケーションとOracleアプリケ�
 SnapCenter ServerホストにWindows Server 2019またはWindows Server 2016を使用している場合は、Java 11をインストールする必要があります。要件の最新情報については、 Interoperability Matrix Tool （ IMT ）を参照してください。
 
 +
-http://www.java.com/en/download/manual.jsp["すべてのオペレーティングシステム用のJavaダウンロード"]
+http://www.java.com/en/download/manual.jsp["Linux用JAVAをダウンロード"]
+
++
+https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?license=IBM["AIX用JAVAをダウンロード"]
 
 +
 https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT["NetApp Interoperability Matrix Tool"]

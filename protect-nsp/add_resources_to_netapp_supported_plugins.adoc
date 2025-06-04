@@ -197,5 +197,6 @@ UNIXの場合は必須です。このパラメータは、Snap Creatorエージ�
 * ORA_TEMPは、一時ファイルのディレクトリを指定します。
 * ORACLE_HOMEには、Oracleソフトウェアがインストールされているディレクトリを指定します。
 * archive_log_onlyは、アーカイブログをバックアップするかどうかを指定します。
-* oracle_backup_modeは、オンラインバックアップとオフラインバックアップのどちらを実行するかを指定します。
+* ORACLE_BACKUPMODE は、オンライン バックアップを実行するかオフライン バックアップを実行するかを指定します。
+* ORACLE_EXPORT_PARAMETERS は、_bin/su_ 実行中に環境変数をエクスポートできるかどうかを指定します。ORACLE_EXPORT_PARAMETERSの値は *y* に設定する必要があります。
 

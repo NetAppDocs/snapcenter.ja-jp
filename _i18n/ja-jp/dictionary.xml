@@ -3611,7 +3611,6 @@
   <block id="c783d48d811b4aab13eb61840dc3ee7c" category="paragraph">Javaのパスは、ホストマシンの環境パス変数で設定する必要があります。</block>
   <block id="94a5e03dcafcb993f53258c83811415f" category="list-text">バックアップレプリケーションが必要な場合は、SnapMirrorとSnapVaultをセットアップします。</block>
   <block id="8b78d81fcf70311e0778d7ca1a1da748" category="list-text">Java 11をホストにインストールしておく必要があります。</block>
-  <block id="3a6eb59ee064b09b020c1a87c5de4988" category="admonition">IBM Javaはサポートされていません。</block>
   <block id="ab4159cc3447ed2c57efc22073c9a591" category="list-text">Windowsの場合、Plug-in CreatorサービスはWindowsユーザ「LocalSystem」を使用して実行する必要があります。これは、Plug-in for IBM DB2がドメイン管理者としてインストールされている場合のデフォルトの動作です。</block>
   <block id="e4a8446fdfa57d72bb5925250cccc5b7" category="list-text">Windowsホストにプラグインをインストールするときに、組み込みでないクレデンシャルを指定した場合やユーザがローカルワークグループに属している場合は、ホストのUACを無効にする必要があります。SnapCenter Plug-in for Microsoft Windowsは、WindowsホストにIBM DB2プラグインを使用してデフォルトで導入されます。</block>
   <block id="70557a0ca3b5f90edd18cfc0d99671ad" category="list-text">SnapCenterサーバがPlug-in for IBM DB2ホストの8145ポートまたはカスタムポートにアクセスできる必要があります。</block>
@@ -4378,7 +4377,6 @@
   <block id="0b12a00876503fb1813afee6ad9b0a76" category="list-text">ORA_TEMPは、一時ファイルのディレクトリを指定します。</block>
   <block id="e1ab4aa639aa539548c7d55759dc7004" category="list-text">ORACLE_HOMEには、Oracleソフトウェアがインストールされているディレクトリを指定します。</block>
   <block id="57808f9033b6670d0e1ff1ecc8197488" category="list-text">archive_log_onlyは、アーカイブログをバックアップするかどうかを指定します。</block>
-  <block id="6d6058c414d1170875e11ce8a19484f0" category="list-text">oracle_backup_modeは、オンラインバックアップとオフラインバックアップのどちらを実行するかを指定します。</block>
   <block id="c4e433903376436b2e77e2cfdc6f5913" category="summary">どのリソースグループにも含まれていない個 々 のNetAppサポートプラグインリソースは、[Resources]ページからバックアップできます。リソースはオンデマンドでバックアップできます。また、リソースにポリシーが適用され、スケジュールが設定されている場合は、スケジュールに従って自動的にバックアップが実行されます。</block>
   <block id="6ce5278b296a0a5a39af4a4d0cbd927c" category="doc">NetAppでサポートされているプラグインリソースを個別にバックアップする</block>
   <block id="085ab917326888bb9fd0378b5efb84b9" category="list-text">バックアップするリソースをクリックします。</block>
@@ -9949,4 +9947,16 @@
   <block id="d39d360863f3fda3c5d615dc978e14ae" category="sidebar">SnapCenterサーバーをインストールする</block>
   <block id="3199d4d0758d0f4f53db9a8f36670c18" category="sidebar">SnapCenterサーバーを構成する</block>
   <block id="4c975961e88401702aa6aac167300031" category="sidebar">ストレージシステムの追加とプロビジョニング</block>
+  <block id="81f9b64ab1987ed2d00f4d52a80ca52b" category="paragraph">サポートされているバージョンの最新情報については、を参照して<block ref="315018c067f16596ddc2e2de507c24d0" category="inline-link-rx"></block>ください。</block>
+  <block id="0885e9f12d8cb35b0f02655c34c87004" category="admonition">IBM Java は Windows および Linux ホストではサポートされていません。</block>
+  <block id="48c9a1bf5de7bf57f1efa648f3bc8d17" category="inline-link">Windows用JAVAをダウンロード</block>
+  <block id="a4560fe71d10d98deabf55fdf50b90f0" category="paragraph"><block ref="a4560fe71d10d98deabf55fdf50b90f0" category="inline-link-rx"></block></block>
+  <block id="25827211b51e5a08cc74ddb2f845f386" category="inline-link">Linux用JAVAをダウンロード</block>
+  <block id="0632a773655c14c1b1e9ced88bc550ed" category="paragraph"><block ref="0632a773655c14c1b1e9ced88bc550ed" category="inline-link-rx"></block></block>
+  <block id="ffef625a5852f63e8c97e120b261e871" category="inline-link">AIX用JAVAをダウンロード</block>
+  <block id="1cf0cff6e7cd05dac4238e50abe74627" category="paragraph"><block ref="1cf0cff6e7cd05dac4238e50abe74627" category="inline-link-rx"></block></block>
+  <block id="67366bdaf9086e6015fe527a27beb845" category="inline-link">すべてのオペレーティングシステム用のJAVAをダウンロード</block>
+  <block id="230f7d0fc162c3a559cd8b29556f41f4" category="paragraph"><block ref="230f7d0fc162c3a559cd8b29556f41f4" category="inline-link-rx"></block></block>
+  <block id="17103b09b3247a2b39032b11b995b325" category="list-text">ORACLE_BACKUPMODE は、オンライン バックアップを実行するかオフライン バックアップを実行するかを指定します。</block>
+  <block id="849d9298ad9d6def4918273148b3d4bf" category="list-text">ORACLE_EXPORT_PARAMETERS は、_bin/su_ 実行中に環境変数をエクスポートできるかどうかを指定します。ORACLE_EXPORT_PARAMETERSの値は *y* に設定する必要があります。</block>
 </blocks>
