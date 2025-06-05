@@ -9958,5 +9958,5 @@
   <block id="67366bdaf9086e6015fe527a27beb845" category="inline-link">すべてのオペレーティングシステム用のJAVAをダウンロード</block>
   <block id="230f7d0fc162c3a559cd8b29556f41f4" category="paragraph"><block ref="230f7d0fc162c3a559cd8b29556f41f4" category="inline-link-rx"></block></block>
   <block id="17103b09b3247a2b39032b11b995b325" category="list-text">ORACLE_BACKUPMODE は、オンライン バックアップを実行するかオフライン バックアップを実行するかを指定します。</block>
-  <block id="849d9298ad9d6def4918273148b3d4bf" category="list-text">ORACLE_EXPORT_PARAMETERS は、_bin/su_ 実行中に環境変数をエクスポートできるかどうかを指定します。ORACLE_EXPORT_PARAMETERSの値は *y* に設定する必要があります。</block>
+  <block id="e787bc810fe0c9919da5538cad8cb1f1" category="list-text">ORACLE_EXPORT_PARAMETERS は、_/bin/su &lt;sqlplus を実行しているユーザー&gt; -c sqlplus /nolog &lt;cmd&gt;_ の実行中に、上記で定義された環境変数を再エクスポートするかどうかを指定します。これは通常、sqlplus を実行しているユーザーが、_connect / as sysdba_ を使用してデータベースに接続するために必要なすべての環境変数を設定していない場合に発生します。</block>
 </blocks>

@@ -198,5 +198,5 @@ UNIXの場合は必須です。このパラメータは、Snap Creatorエージ�
 * ORACLE_HOMEには、Oracleソフトウェアがインストールされているディレクトリを指定します。
 * archive_log_onlyは、アーカイブログをバックアップするかどうかを指定します。
 * ORACLE_BACKUPMODE は、オンライン バックアップを実行するかオフライン バックアップを実行するかを指定します。
-* ORACLE_EXPORT_PARAMETERS は、_bin/su_ 実行中に環境変数をエクスポートできるかどうかを指定します。ORACLE_EXPORT_PARAMETERSの値は *y* に設定する必要があります。
+* ORACLE_EXPORT_PARAMETERS は、_/bin/su <sqlplus を実行しているユーザー> -c sqlplus /nolog <cmd>_ の実行中に、上記で定義された環境変数を再エクスポートするかどうかを指定します。これは通常、sqlplus を実行しているユーザーが、_connect / as sysdba_ を使用してデータベースに接続するために必要なすべての環境変数を設定していない場合に発生します。
 
