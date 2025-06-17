@@ -15,7 +15,7 @@ SnapCenterを使用すると、ファイルシステムのバックアップを�
 
 .開始する前に
 * fstabファイルの更新をスキップするには、_/opt/NetApp/snapcenter/scc/etc _にある_agent.properties_ファイルで_skip_fstab_update_to * true *の値を設定します。
-* 静的なクローンボリューム名とジャンクションパスを設定するには、_/opt/NetApp/snapcenter/scc/etc _にある_agent.properties_ファイルで_use_custom_clone_volume_name_format_の値を* true *に設定します。ファイルを更新したら、コマンドを実行してSnapCenter forカスタムプラグインサービスを再起動する必要があります `/opt/NetApp/snapcenter/scc/bin/scc restart`。
+* 静的なクローンボリューム名とジャンクションパスを設定するには、_/opt/NetApp/snapcenter/scc/etc _にある_agent.properties_ファイルで_use_custom_clone_volume_name_format_の値を* true *に設定します。ファイルを更新した後、次のコマンドを実行して SnapCenter プラグイン作成者サービスを再起動する必要があります。  `/opt/NetApp/snapcenter/scc/bin/scc restart` 。
 +
 例：このプロパティを指定しない場合、クローンボリュームの名前とジャンクションパスは<Source_volume_name>_<Timestamp>のようになりますが、<Source_volume_name>_<Clone_Name>になります。
 

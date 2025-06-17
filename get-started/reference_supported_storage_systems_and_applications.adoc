@@ -27,43 +27,6 @@ Non-Volatile Memory Express（NVMe）over Transport Control Protocol（TCP）を
 Amazon FSx for NetApp ONTAPの詳細については、を参照してください https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["Amazon FSX for NetApp ONTAP のドキュメント"^]。
 
 * NetApp ONTAP 9.16.1を実行しているNetApp ASA R2システム。
-+
-ASA R2システムは、オールフラッシュプラットフォーム上に構築されたSAN専用環境向けに、ハードウェアとソフトウェアの統合ソリューションを提供します。 https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["ASA R2システムの詳細"]です。
-
-+
-
-NOTE: SnapCenterでは、ASA R2システムでVMware Virtual Machine File System（VMFS）のみがサポートされます。
-
-+
-|===
-| サポートされる処理 | サポートされない処理 
-
-
- a| 
-** VMDK経由でのアプリケーションのプライマリバックアップの作成
-** セカンダリストレージシステムへの整合グループSnapshotの転送
-** バックアップのリストアと代替保存場所からのリストア
-+
-*** VMware vMotionを使用したプライマリストレージとセカンダリストレージの両方からのIn Placeリストア
-*** プライマリストレージとセカンダリストレージの両方からの接続とコピーリストア
-
-
-** バックアップのクローニングと別の場所へのクローニング
-
- a| 
-** rawデバイスマッピング（RDM）
-** Oracleヨウノアプリケーションホリユウム
-** SAP HANA NDV
-** LockVault
-** 改ざん防止スナップショット
-** フレックスグループ
-** 階層整合グループ
-** ONTAP 9.xからASA R2システムへの移行
-** スナップショットの名前変更
-** SQLプラグインホストのログディレクトリのセカンダリプロビジョニングは、SnapCenterでサポートされていません。は、ONTAP CLIまたはSystem Managerを使用して手動で設定する必要があります。
-
-
-|===
 
 
 

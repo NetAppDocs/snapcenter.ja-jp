@@ -23,7 +23,7 @@ summary: 'リソースグループは、ホストまたはクラスタ上のリ�
 NOTE: ファイルシステムをバックアップする場合、 SnapCenter は、バックアップするファイルシステムのボリュームマウントポイント（ VMP ）にマウントされている LUN をバックアップしません。
 
 
-IMPORTANT: Windowsファイルシステムコンテキストで作業している場合は、データベースファイルをバックアップしないでください。バックアップを作成しても整合性に欠け、リストア時にデータが失われる可能性があります。データベースファイルを保護するには、データベースに適したSnapCenterプラグイン（SnapCenter Plug-in for Microsoft SQL Server、SnapCenter Plug-in for Microsoft Exchange Server、データベースファイル用のカスタムプラグインなど）を使用する必要があります。
+IMPORTANT: Windowsファイルシステムのコンテキストで作業している場合は、データベースファイルをバックアップしないでください。バックアップを作成しても整合性に欠け、リストア時にデータが失われる可能性があります。データベースファイルを保護するには、データベースに適したSnapCenterプラグイン（例：SnapCenter Plug-in for Microsoft SQL Server、SnapCenter Plug-in for Microsoft Exchange Server）を使用する必要があります。
 
 .手順
 . 左側のナビゲーションペインで、 * リソース * をクリックし、リストから適切なプラグインを選択します。

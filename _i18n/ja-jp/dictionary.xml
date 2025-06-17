@@ -239,61 +239,39 @@
   <block id="3f6d09cc9873ed364060e363eb690882" category="paragraph">この例では、指定したMicrosoft SQL Serverインスタンスのクローンを作成しています。</block>
   <block id="8bba4e71f54b16435c964d34ad49c363" category="list-text">Get-SmCloneReportコマンドレットを使用して、クローンジョブのステータスを表示します。</block>
   <block id="4351322fd6537f248b9b6c0f176648c0" category="paragraph">この例では、指定したジョブIDのクローンレポートを表示しています。</block>
-  <block id="9da463b2b61e23d3fe7ab13642c5e3aa" category="doc">カスタムプラグインキーストアのパスワードと使用中のCA署名キーペアのエイリアスを管理します。</block>
-  <block id="e585ba53f75038fd8dca93c08078885c" category="paragraph">カスタムプラグインキーストアとその証明書のパスワードの管理、 CA 証明書の設定、カスタムプラグインの信頼ストアへのルート証明書または中間証明書の設定、 SnapCenter Custom Plug-ins の信頼ストアを使用したカスタムプラグインの信頼ストアへの CA 署名キーペアの設定、インストールされたデジタル証明書のアクティブ化が必要です。</block>
-  <block id="cf47054fd8ae4e335b6638a86a798a1a" category="paragraph">カスタムプラグインでは、ファイル「 keystore.JKS 」を使用します。このファイルは、信頼ストアおよびキーストアとして _/opt/NetApp/snapcenter / scc /etc/both にあります。</block>
-  <block id="b741c1960e79b37abf87bc732960670f" category="list-text">カスタムプラグインキーストアのデフォルトパスワードは、カスタムプラグインエージェントのプロパティファイルから取得できます。</block>
   <block id="98da4d648a6b6a09c02dc4412d8c0e0f" category="paragraph">キー'keystore_pass'に対応する値です。</block>
   <block id="e32ebbb17be02a7eaf806904e218c1c1" category="list-text">キーストアのパスワードを変更します。</block>
   <block id="9c53ace0e3dbdc38d844dcf02f4304ba" category="list-text">キーストア内の秘密鍵エントリのすべてのエイリアスのパスワードを、キーストアと同じパスワードに変更します。</block>
   <block id="d4cf07e2f6f2f8f14d91659efdc82d0f" category="paragraph">_agent.properties_ ファイル内のキー keystore.pass に対しても同じキーを更新します。</block>
   <block id="e1114844301394bfab9164689b3f9f77" category="list-text">パスワードを変更したら、サービスを再起動します。</block>
-  <block id="1746a736dc1a04cee7ebe7c17449348d" category="admonition">カスタムプラグインキーストアのパスワードと、秘密鍵に関連付けられているすべてのエイリアスパスワードを同じにする必要があります。</block>
-  <block id="256bd726c5c8cab1c5ea0f9e796f5965" category="section-title">カスタムプラグインの信頼ストアへのルート証明書または中間証明書の設定</block>
-  <block id="155033ac3710d50f11dcf73b23618ff9" category="paragraph">ルート証明書または中間証明書は、カスタムプラグインの信頼ストアに秘密鍵なしで設定する必要があります。</block>
-  <block id="e7d98cce277602959c429147cc1b190e" category="list-text">カスタムプラグインキーストアを含むフォルダ（ /opt/NetApp/snapcenter / scc など）に移動します</block>
   <block id="7d315e2f30c60f7b0d5a4fe26f119ab2" category="list-text">「keystore.jks」ファイルを探します。</block>
   <block id="706343adbd839cf9e73fb5f15c1cb3b9" category="list-text">キーストアに追加された証明書を一覧表示します。</block>
   <block id="4713a041a2807fdb6a09974cfc241836" category="paragraph"><block ref="e8068ca056ca63060cbe1fc5c3b7e50a" prefix="" category="inline-code"></block></block>
   <block id="e792c32ecac1acaff7821d45e1e214d7" category="list-text">ルート証明書または中間証明書を追加します。</block>
-  <block id="9712b66959e53dd56caee0b446a4b341" category="list-text">カスタムプラグインの信頼ストアにルート証明書または中間証明書を設定したら、サービスを再起動します。</block>
   <block id="1df512af62f1258662a90107366384d7" category="admonition">ルートCA証明書のあとに中間CA証明書を追加する必要があります。</block>
-  <block id="fa022a8acd4a44b539e8d7e8455ffe19" category="section-title">カスタムプラグインの信頼ストアへのCA署名キーペアの設定</block>
-  <block id="9d74dd7b3f156596731e7aa28b4bb608" category="paragraph">カスタムプラグインの信頼ストアにCA署名キーペアを設定する必要があります。</block>
-  <block id="8b671385ba9f578c2d4665cf8a08dacb" category="list-text">カスタムプラグインキーストア/opt/NetApp/snapcenter/scc/etcが格納されているフォルダに移動します。</block>
   <block id="bf9029c481f886c6ac95d1935371b6f0" category="list-text">秘密鍵と公開鍵の両方が設定されたCA証明書を追加します。</block>
   <block id="3cd11cc425dd94ba261d4cd011a9f11e" category="paragraph"><block ref="85ed7d9d20abb8cfcdef8583cba4ef35" prefix="" category="inline-code"></block></block>
   <block id="ea64c68df49294aed2c5b2fcf603e243" category="list-text">キーストアに追加された証明書を一覧表示します。</block>
   <block id="d57e9c478525aa47932eeb7d8b217240" category="list-text">キーストアに追加された新しいCA証明書に対応するエイリアスがキーストアに含まれていることを確認します。</block>
   <block id="4b80542fc3ef5daca43d02c37fe3b113" category="list-text">CA証明書に追加した秘密鍵のパスワードをキーストアのパスワードに変更します。</block>
-  <block id="da4bc7b82286be276a29a9685b0b51a1" category="paragraph">デフォルトのカスタムプラグインキーストアパスワードは、agent.propertiesファイルのキーkeystore_passの値です。</block>
   <block id="97814763a021bc6959932c2ea2dbfb8b" category="list-text">CA 証明書のエイリアス名が長く、スペースまたは特殊文字（「 * 」、「」）が含まれている場合は、エイリアス名を単純な名前に変更します。</block>
   <block id="35f7e8cf7bad794e99c08792680394bd" category="list-text">agent.propertiesファイルのCA証明書からエイリアス名を設定します。</block>
   <block id="56362f2790b041340e92aa3c79fb1cf8" category="paragraph">この値をSCC_CERTIFICATE_ALIASキーに対して更新します。</block>
-  <block id="c3600e2dd0c2139061208ea301e0862e" category="list-text">カスタムプラグインの信頼ストアにCA署名キーペアを設定したら、サービスを再起動します。</block>
-  <block id="a6d1b1f70aba7a076e87d9ee31c17824" category="section-title">SnapCenterカスタムプラグインの証明書失効リスト（CRL）を設定する</block>
-  <block id="64b09f6e0509cd50f9f53e4d3b8816dc" category="list-text">SnapCenterカスタムプラグインは、事前に設定されたディレクトリでCRLファイルを検索します。</block>
-  <block id="26e84c8fe3deb08970e1f17fbc4649f5" category="list-text">SnapCenterカスタムプラグインのCRLファイルのデフォルトディレクトリは「opt/netapp/snapcenter/scc/etc/crl」です。</block>
   <block id="4f1ac502e9d4dc79e3c307cd196d50fb" category="list-text">crl_pathキーに対して、agent.propertiesファイルのデフォルトディレクトリを変更および更新できます。</block>
   <block id="1b782c06b199c89589ed8bcf1a6ca9ab" category="paragraph">このディレクトリには、複数のCRLファイルを配置できます。受信証明書は、各CRLに対して検証されます。</block>
-  <block id="51a29df7437c4fa534c9d8e3649160c0" category="paragraph">カスタムプラグインキーストアとその証明書のパスワードの管理、 CA 証明書の設定、カスタムプラグインの信頼ストアへのルート証明書または中間証明書の設定、 SnapCenter Custom Plug-ins の信頼ストアを使用したカスタムプラグインの信頼ストアへの CA 署名キーペアの設定、インストールされたデジタル証明書のアクティブ化が必要です。</block>
-  <block id="1b212b031e5ee4eaf1c77f008a7bd0b9" category="paragraph">カスタムプラグインは、 _ C ： \Program Files\NetApp\SnapManager \Snapcenter Plug-in Creator\etc_both にある file_keystore.JKS_を 信頼ストアおよびキーストアとして使用します。</block>
   <block id="4f2ba1a9b499a3443a6a6c444cbd8466" category="paragraph">key_keystore.pass_ に対応する値です。</block>
   <block id="19dced36a23aa4c7507c49068eb2c03e" category="paragraph">_keytool -storepasswd -keystore keystore.JKS_</block>
   <block id="2538e30b14698ab0bf9957f2d5adcee5" category="admonition">Windowsコマンドプロンプトで「keytool」コマンドが認識されない場合は、keytoolコマンドを完全なパスに置き換えます。</block>
   <block id="66a51628c6dd933a877f720913f2b927" category="paragraph">_C ： \Program Files\Java\&lt;JDK_version &gt;\bin\keytool .exe "-storepasswd -keystore keystore.JKS_</block>
   <block id="fae24c68746428bc01a6976996e11eb6" category="paragraph">_keytool -keypasswd -alias "alias_name_in_cert" -keystore keystore.JKS_</block>
-  <block id="ce01b951440a84341498063a416262a0" category="list-text">カスタムプラグインの keystore _C ： \Program Files\NetApp\Virtual \SnapCenter \Snapcenter Plug-in Creator\etc\備え ているフォルダに移動します</block>
   <block id="40fdd302087eb1ad5eb70b4d6ab94188" category="paragraph">_keytool -list -v キーストア .JKS_</block>
   <block id="c9e96240b81287a92a56796f491e6a47" category="paragraph">_keytool -import-trustcacerts -alias myRootCA -file/root/USERTrustRSA_Root.cer -keystore keystore.JKS_</block>
-  <block id="da800a422c568642a01c09610b340ea4" category="list-text">カスタムプラグインの keystore _C ： \Program Files\NetApp\Virtual \SnapCenter \Snapcenter Plug-in Creator\etc\備え ているフォルダに移動します</block>
   <block id="86970546fa51f1a9590e947c5a0e3735" category="list-text">file_keystore.JKS_&lt;/Z1&gt; を探します。</block>
   <block id="7814f27ab5a9368264f40840cdf8b5bc" category="paragraph">_keytool -importkeystore -srckeystore.root/ snapcenter.ssl.test.netapp.com.pfx -srcstoretype pkcs12 -destkeystore keystore.JKS -deststoretype JKS_</block>
   <block id="008f667e8b400f4409460460559f3b36" category="paragraph">_keytool -keypasswd -alias "alias_name_in_ca_cert" -keystore keystore.JKS__</block>
   <block id="78fbcacb199632d7e1e185a59b3d6969" category="list-text">_agent.properties_ ファイルの CA 証明書からエイリアス名を設定します。</block>
   <block id="f754813b7455488818507c1642b87112" category="inline-link">SnapCenter CA 証明書の証明書失効リストファイルを更新する方法</block>
   <block id="24a2e65207c09cf282d93673b4d914e6" category="list-text">関連するCA証明書の最新のCRLファイルをダウンロードするには、を参照してください<block ref="1355b024e4e4799b05a4da32dd5811b2" category="inline-link-rx"></block>。</block>
-  <block id="078b96147129ddd471a2936a85c4743b" category="list-text">SnapCenter カスタムプラグインの CRL ファイルのデフォルトディレクトリは、 _'C:\Program Files\NetApp\SnapCenter \Snapcenter Plug-in Creator\etc\crl'_ です。</block>
   <block id="30a5a3b4225672f77174a7923dcd20be" category="list-text">_agent.properties_ ファイルのデフォルトディレクトリを、キー crl_path に対して変更および更新できます。</block>
   <block id="0915303fa7e4b0735941130c587f9dbe" category="list-text">このディレクトリには、複数のCRLファイルを配置できます。</block>
   <block id="08a3d5b2eaf4018edc7c9931318d54df" category="paragraph">受信証明書は、各CRLに対して検証されます。</block>
@@ -907,7 +885,6 @@
   <block id="17e8778d8c90c74e73ce69b783ab43c1" category="summary">[リソース]ページでは、リソースを検出してデータ保護処理を実行できます。実行できる処理は、リソースの管理に使用しているプラグインによって異なります。</block>
   <block id="ab086c14cb132b8320c7cbc2ff98beb8" category="doc">[Resources]ページでサポートされる処理</block>
   <block id="03a22b4793d1f2149f11fd0a56deec92" category="paragraph">[Resources]ページでは、次のタスクを実行できます。</block>
-  <block id="f8bad27d582beaf32e0a7dd92962e679" category="cell">Custom Plug-ins の場合</block>
   <block id="e031aa35d36af6ad3a2f25d8d2b55ab0" category="paragraph">リソースをバックアップに使用できるかどうかの確認</block>
   <block id="881fb6b4239768030b702b670cfa09d7" category="paragraph">リソースのオンデマンドバックアップの実行</block>
   <block id="eab65d0c5e3102595bc672894104a214" category="paragraph">バックアップからのリストア</block>
@@ -1042,7 +1019,6 @@
   <block id="b340c2b4a7a978a510c8ebb351622143" category="list-text">Cloud Volumes ONTAP（旧ONTAP Cloud）プライマリシステム上のデータ</block>
   <block id="b380e442ff5c6e48e283af8b6f99806f" category="list-text">Amazon FSx for ONTAP上のデータ</block>
   <block id="97f2c8bf124398ba05bca9cc6fb869b1" category="list-text">プライマリAzure NetApp Files上のデータ（Oracle、Microsoft SQL、SAP HANA）</block>
-  <block id="07af457ed5409f58b0d5ca2b41b5ec39" category="inline-link-macro">アプリケーション用のプラグインを開発</block>
   <block id="1e06a8cc16bd3bc423f81e8ff56e4fc0" category="list-text">ポリシーベースのバックアップ</block>
   <block id="9939c592ab7bc8c3264f4ed7fde3bd18" category="paragraph">ポリシーベースのバックアップでは、NetApp Snapshotテクノロジを活用して、スペース効率に優れた、アプリケーションと整合性のあるディスクベースのバックアップを高速で作成できます。必要に応じて、既存の保護関係を更新して、セカンダリストレージへのバックアップの保護を自動化することもできます。</block>
   <block id="c6f23063f5e9e828f1d4a0d52255f07c" category="list-text">複数のリソースのバックアップ</block>
@@ -1095,8 +1071,6 @@
   <block id="d2d37741a3c204436d78ca699e0e7154" category="paragraph">Plug-in for UNIXまたはPlug-in for Windows</block>
   <block id="5d5cde1005f814f00d44032094a9a04f" category="paragraph">HDBSQLクライアントホスト</block>
   <block id="4abb41aae1dfe9c81afb3c3672df559c" category="paragraph">LinuxまたはWindows</block>
-  <block id="98c5825b9b497a5e2a61777325ed802f" category="paragraph">カスタムプラグイン</block>
-  <block id="0c6a45824d8aa208ef88a943b710cb80" category="paragraph">カスタムアプリケーションホスト</block>
   <block id="7affc9aa382d06b530a170abd5ed58b0" category="paragraph">DB2ホスト</block>
   <block id="de2f98bb47449438a4cc0f3280943d06" category="paragraph">PostgreSQLホスト</block>
   <block id="a364132418180f0b14b5eb7db8b87808" category="admonition">SnapCenter Plug-in for VMware vSphereは、仮想マシン（VM）、データストア、および仮想マシンディスク（VMDK）のcrash-consistentおよびvm-consistentバックアップおよびリストア処理をサポートします。また、SnapCenterアプリケーション固有のプラグインをサポートして、仮想データベースおよびファイルシステムのアプリケーションと整合性のあるバックアップおよびリストア処理を保護します。</block>
@@ -2069,8 +2043,6 @@
   <block id="b0ca30368b247fa738c8bdba36dd4d73" category="paragraph">デフォルトのNETです。 TCPポートは、Plug-in for WindowsでExchange VSSコールバックに接続するために使用されます。</block>
   <block id="43e4843cc378c4665771060dbab161eb" category="inline-link-macro">ホストを追加してPlug-in for Exchangeをインストールする</block>
   <block id="cc0974b8a511f2e4b4d021cda6e5e820" category="paragraph">NetAppでサポートされるSnapCenter用プラグイン</block>
-  <block id="8274b92467b904471dd368868a40cf7c" category="paragraph">カスタムプラグインホストでのみ使用される内部ポートです。ファイアウォールの例外は必要ありません。</block>
-  <block id="640e1e1057328dc7a71ff3efe908fb8c" category="paragraph">SnapCenterサーバとカスタムプラグインの間の通信は、ポート8145を介してルーティングされます。</block>
   <block id="48552dce4d9810446c70f66f21f08120" category="paragraph">ONTAPクラスタまたはSVMの通信ポート</block>
   <block id="a26bff28c23606c7396b4619af8af1bd" category="paragraph">このポートは、SnapCenterサーバを実行するホストとSVMの間の通信にSAL（ストレージ抽象化レイヤ）で使用されます。現在、このポートは、SnapCenterプラグインホストとSVMの間の通信にSnapCenter for Windows Plug-inホストのSALでも使用されています。</block>
   <block id="5afe34fece774db451a111901841c2f9" category="paragraph">マルチテナントデータベースコンテナ（MDC）のシングルテナントの場合、ポート番号は13で終わります。MDC以外の場合、ポート番号は15で終わります。</block>
@@ -3397,9 +3369,7 @@
   <block id="131fcad5beed0c840fb92cba21bbb148" category="list-text">誤って削除または変更されたデータをリカバリするため</block>
   <block id="b37c1f7095772e66402cd084c5dc13a3" category="paragraph">次のワークフローは、クローニング処理の実行順序を示しています。</block>
   <block id="515099a9db2d69620b1bbc080fe5200a" category="paragraph">PowerShellコマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、クローニングの処理を実行することもできます。PowerShellコマンドレットの詳細については、SnapCenterのコマンドレットのヘルプを使用するか、コマンドレットのリファレンス情報を参照してください。</block>
-  <block id="a761057277bd72c46a263ca5ddd62742" category="summary">Linuxホスト上のSnapCenterカスタムプラグインサービス用のCA証明書の設定</block>
   <block id="62efa2c3113bfa21f93723855cb62c9a" category="doc">Linuxホスト上のSnapCenter IBM DB2 Plug-insサービスのCA証明書の設定</block>
-  <block id="56e9f299379f1f27ee946b3cc5197ca7" category="summary">Windowsホスト上のSnapCenterカスタムプラグインサービス用のCA証明書の設定</block>
   <block id="a601121a2919d3d268279f81d4b8569b" category="doc">Windowsホスト上のSnapCenter IBM DB2 Plug-insサービス用のCA証明書の設定</block>
   <block id="1f8ca173b65dfa4ec89689efd778bdb1" category="summary">Windows ホストプラグインサービスで CA 証明書を設定します</block>
   <block id="257f5cefc00605ee767b1d8dcdf64b40" category="summary">Windows Server 2016 以降では、管理ドメインアカウントからサービスアカウントパスワードの自動管理を提供するグループ Managed Service Account \ （ gMSA \ ）を作成できます。</block>
@@ -3620,7 +3590,6 @@
   <block id="92f854eabda8c2aa761e01fba1c6ffd4" category="list-text">rootユーザまたはroot以外のユーザに対してパスワードベースのSSH接続を有効にしておく必要があります。</block>
   <block id="74b8e77de0b5018c5ab2ca7eb523ff31" category="list-text">Java 11をWindowsホストにインストールしておく必要があります。</block>
   <block id="6919c26b69875a76335f5a1dd643e508" category="inline-link">すべてのオペレーティングシステム用のJavaダウンロード</block>
-  <block id="9226092112d9484949841b47e3b0500e" category="paragraph"><block ref="9226092112d9484949841b47e3b0500e" category="inline-link-rx"></block></block>
   <block id="cfe19b0ae08454358fbe515d88fd6095" category="section-title">Linuxホスト</block>
   <block id="129fdeda5a8637916b3b579b072e4eaa" category="list-text">Java 11をLinuxホストにインストールしておく必要があります。</block>
   <block id="29a9fb7975f0f566600524d35939f828" category="list-text">LinuxホストでIBM DB2データベースを実行している場合は、Plug-in for IBM DB2のインストール時にSnapCenter Plug-in for UNIXが自動的にインストールされます。</block>
@@ -4295,22 +4264,12 @@
   <block id="715f053db5d8f4a2009a86dc1edc360a" category="admonition">プラグインを手動でインストールし、カスタムポートを指定した場合は、同じポートを指定する必要があります。そうしないと、処理は失敗します。</block>
   <block id="379d6944e6fc810a2d3e6719a4897b18" category="list-text">Windows 用 SnapCenter Plug-ins パッケージのデフォルトパスは C ： \Program Files\NetApp\SnapManager です。</block>
   <block id="d71af843d2746ce96eb5d7b9a854feec" category="paragraph">必要に応じて、パスをカスタマイズできます。</block>
-  <block id="1737705dbef82bb547572b98803f1837" category="list-text">SnapCenter Plug-ins Package for Linuxの場合、デフォルトパスはです<block ref="ad6569b575c0a3830082f4336038186a" prefix=" " category="inline-code"></block>。</block>
-  <block id="dbd5f1a081ee2b60f9256f0d615c8572" category="list-text">SnapCenter Custom Plug-ins の場合：</block>
-  <block id="7b8c46b7e7cbdb1b301a0eea6904e6e8" category="list-text">[Custom Plug-ins]セクションで、*[Browse]*を選択し、zip形式のカスタムプラグインフォルダを選択します。</block>
-  <block id="908b8e036ea9ce39ce7b1ef72289d440" category="paragraph">zip形式のフォルダには、カスタムプラグインコードと記述子.xmlファイルが含まれています。</block>
-  <block id="f32c4686d8ce92964750c998b8d606a6" category="paragraph">Storage Plug-inの場合は、フォルダに移動し<block ref="b674835168d7ff13979b400c993ce08f" prefix=" " category="inline-code"></block> て選択します<block ref="1ae0ec02713418737a2965bdbb97e689" prefix=" " category="inline-code"></block> 。</block>
-  <block id="3268d25ce0e47e87022d19706bd20155" category="list-text">[アップロード]*を選択します。</block>
-  <block id="14c63a85dc0d2eb17d6a4de481e630f9" category="paragraph">パッケージをアップロードする前に、zip形式のカスタムプラグインフォルダ内の記述子.xmlファイルが検証されます。</block>
-  <block id="22b9c22ece0544103d4ef5fde3f3591c" category="paragraph">SnapCenter サーバにアップロードされたカスタムプラグインが表示されます。</block>
   <block id="ab443ca6692007d7b4d66d4e3044cbd8" category="paragraph">[インストール前チェックをスキップ]*チェックボックスを選択していない場合、プラグインをインストールするための要件をホストが満たしているかどうかが検証されます。 ディスクスペース、RAM、PowerShellのバージョン、 NETバージョン、場所（Windowsプラグインの場合）、およびJavaバージョン（Linuxプラグインの場合）が最小要件に照らして検証されます。最小要件を満たしていない場合は、該当するエラーまたは警告メッセージが表示されます。</block>
   <block id="8fa2fcad4f9983d73cc8cf50dc7850bb" category="list-text">ホストタイプがLinuxの場合は、フィンガープリントを確認し、*[確認して送信]*を選択します。</block>
   <block id="31b463f293ed77bac56a34d46826de49" category="paragraph">インストール固有のログファイルはlogsにあり<block ref="beb5ec5a83e557b91eccba92e6ac85e2" prefix=" " category="inline-code"></block> ます。</block>
   <block id="48f5a315d78b006c306e66d7b35fa6f4" category="summary">バックアップまたはクローンを作成するリソースを追加する必要があります。環境によっては、バックアップまたはクローンを作成するデータベースインスタンスやそのコレクションがリソースに含まれる場合があります。</block>
   <block id="fdadbc4689c75884565947c7d9c98734" category="doc">NetAppがサポートするプラグインにリソースを追加する</block>
   <block id="04e793c2d8facdc933edd3335c890a34" category="list-text">SnapCenterサーバのインストール、ホストの追加、ストレージシステム接続の作成、クレデンシャルの追加などのタスクを完了しておく必要があります。</block>
-  <block id="be2d786365162f9949969e2f176ef13a" category="inline-link-macro">アプリケーション用のカスタムプラグインを作成しました</block>
-  <block id="2f1bb1e2ce78c864a4c44750e9b9b27c" category="list-text">そうだろうな <block ref="e6320dc4470de75ec154297543865168" category="inline-link-macro-rx"></block></block>
   <block id="797f1e031962d70e46335925184febf4" category="list-text">SnapCenter サーバにプラグインをアップロードしておく必要があります。</block>
   <block id="b828f6db4e08909e879dfbf229208eff" category="list-text">[リソース]ページで、*[リソースの追加]*を選択します。</block>
   <block id="0750f05e0542388153777a63b5fa887c" category="paragraph">リソースの名前を入力します。</block>
@@ -4483,126 +4442,15 @@
   <block id="f389a38ece1c258dbc71da8826870236" category="paragraph">policy_nameは、選択したポリシーの名前です。</block>
   <block id="6041b17ee877813c3440ee714e48b911" category="paragraph">設定されたスケジュールは、 [ 適用されたスケジュール ] 列に一覧表示されます。サードパーティのバックアップスケジュールがSnapCenterバックアップスケジュールと重複している場合はサポートされません。</block>
   <block id="d40040f6fe85caa89878dd7a41e7b55b" category="list-text">[Notification]*ページの[Email preference]*ドロップダウンリストから、Eメールを送信するシナリオを選択します。</block>
-  <block id="2ed40d52224af2dfedf93c8eb0550f77" category="summary">SnapCenter サーバを使用して作成したカスタムプラグインをホストにインストールすると、アプリケーションのデータ保護を有効にすることができます。</block>
-  <block id="3a08617a6dcc882e91018fc505870b76" category="doc">SnapCenterのカスタムプラグイン</block>
-  <block id="b5c77f66454d4e3d57521e8099507412" category="paragraph">Java、Perl、またはネイティブ形式で作成したカスタムプラグインをSnapCenterサーバを使用してホストにインストールし、アプリケーションのデータ保護を有効にすることができます。このチュートリアルで説明する手順に従って、プラグインをエクスポートしてSnapCenterホストにインストールしておく必要があります。</block>
-  <block id="def6cbe35e3566226b7c54e977f98930" category="section-title">プラグイン記述ファイルの作成</block>
-  <block id="976aa48091e83c884b1bc20161aa0e8d" category="paragraph">作成するプラグインごとに、説明ファイルが必要です。定義ファイルには、プラグインの詳細が定義されています。ファイル名はPlugin_descriptor.xmlである必要があります。</block>
-  <block id="2a858e5af94e1d82cb7fd1f759d4baca" category="section-title">プラグイン記述子ファイルの属性と重要度の使用</block>
-  <block id="f2bbdf9f72c085adc4d0404e370f0f4c" category="cell">属性</block>
-  <block id="ee951528ab77b8d58d90d5ab615dd4aa" category="paragraph">プラグインの名前。英数字を使用できます。例：DB2、MySQL、MongoDB</block>
-  <block id="ff1642648bf25086a549307da08e818d" category="paragraph">ネイティブ形式で作成されたプラグインの場合は、ファイルの拡張子を指定しないでください。たとえば、プラグイン名がMongoDB.shの場合は、名前をMongoDBと指定します。</block>
   <block id="34b6cd75171affba6957e308dcbd92be" category="paragraph">バージョン</block>
-  <block id="3b868ced6f60acf5ee565ac021d42941" category="paragraph">DisplayName</block>
-  <block id="0c5cf3f9437d836d57e97dfa37ce8453" category="paragraph">SnapCenter サーバに表示されるプラグインの名前。同じプラグインの複数のバージョンが書き込まれている場合は、表示名がすべてのバージョンで同じであることを確認してください。</block>
-  <block id="54d2dab039ee358ddca7d63d0f413e56" category="paragraph">プラグインタイプ</block>
-  <block id="326b513459a506fbe18fb4f520147f3a" category="paragraph">プラグインの作成に使用した言語。サポートされている値は、Perl、Java、およびNativeです。ネイティブプラグインタイプには、UNIX/Linuxシェルスクリプト、Windowsスクリプト、Python、またはその他のスクリプト言語が含まれます。</block>
-  <block id="fa1a5da2f5e6077f069628887da13577" category="paragraph">OSNAME</block>
-  <block id="17c0dd84a508c3b3e37bfd914e437f4e" category="paragraph">プラグインがインストールされているホストOSの名前。有効な値は Windows と Linux です。1つのプラグインを複数のOSタイプ（Perlタイプのプラグインなど）に導入することができます。</block>
-  <block id="3c25d129875719f5f76e5fa54f1b1eb6" category="paragraph">osVersion</block>
-  <block id="2f3304349b38afaa2855ab50c05c0003" category="paragraph">プラグインがインストールされているホストOSのバージョン。</block>
-  <block id="68754c5409cf75557f589988d16e70a8" category="paragraph">リソース名</block>
-  <block id="45ca72149d5299e90bdfd0611fdaef0a" category="paragraph">プラグインがサポートできるリソースタイプの名前。たとえば、データベース、インスタンス、コレクションなどです。</block>
-  <block id="30269022e9d8f51beaabb52e5d0de2b7" category="paragraph">親</block>
-  <block id="6e8218f013ee42d0412f9d978960d8a0" category="paragraph">場合、 ResourceName は階層的に別のリソースタイプに依存し、 Parent は親のリソースタイプを決定します。</block>
-  <block id="356fa51a18abd3979458137c245e26dd" category="paragraph">たとえば、DB2プラグインの場合、ResourceNameの「Database」には親の「Instance」があります。</block>
-  <block id="2d1c51425a11058cd7d38ce3e170cac2" category="paragraph">RequireFileSystemPlugin</block>
-  <block id="12e4a7a7f5584eca1707daff9799ddcb" category="paragraph">YesまたはNo リストアウィザードにリカバリタブを表示するかどうかを指定します。</block>
-  <block id="99d7049aa2436fc0274fe8143ee9980d" category="paragraph">ResourceRequiresAuthentication</block>
-  <block id="682ea36f3e6a876888f478562923ef91" category="paragraph">YesまたはNo ストレージの検出後にデータ保護処理を実行するために、自動検出されたリソースと自動検出されなかったリソースのどちらにクレデンシャルが必要かを指定します。</block>
-  <block id="3b6e31accf8f7d471ccede19bef9c46e" category="paragraph">RequireFileSystemClone</block>
-  <block id="12ddbad8eb62f87e7653d4724c724ae8" category="paragraph">YesまたはNo クローンワークフローでファイルシステムプラグインの統合が必要かどうかを指定します。</block>
-  <block id="08468ea67deda9eabf4c738efb3e0a08" category="paragraph">カスタムプラグインDB2のPlugin_descriptor.xmlファイルの例を次に示します。</block>
-  <block id="8594c7cccef100e5c0eb21345360ebac" category="section-title">ZIPファイルの作成</block>
-  <block id="3f3dfb2bed1ad4a9c0c24a5f9d35ee33" category="paragraph">プラグインが開発されて記述子ファイルが作成されたら、プラグインファイルと Plugin_descriptor.xml ファイルをフォルダに追加して zip する必要があります。</block>
-  <block id="5eb723e8c62415c9fa399f579b9e3a0c" category="paragraph">ZIPファイルを作成する前に、次の点を考慮する必要があります。</block>
-  <block id="97b7d14580cb5042f27c97545e119962" category="list-text">スクリプト名はプラグイン名と同じにする必要があります。</block>
-  <block id="8294fc13032dd7dea44bf40d376c0536" category="list-text">Perl プラグインの場合、 ZIP フォルダにスクリプトファイルが格納されているフォルダと、記述ファイルがこのフォルダの外部にある必要があります。フォルダ名はプラグイン名と同じである必要があります。</block>
-  <block id="24058605bd3c5f43ac3119235935f3dd" category="list-text">Perl プラグイン以外のプラグインを使用する場合は、 ZIP フォルダに記述子とスクリプトファイルが含まれている必要があります。</block>
-  <block id="0b09ff35492353da9faf3a44ec77f0b1" category="list-text">OSのバージョンは数字である必要があります。</block>
   <block id="fd05d7f6bfc90e815087880e8e915b43" category="paragraph">例：</block>
-  <block id="14f6f665a52b2f183f6d5b54aed98391" category="list-text">DB2プラグイン：db2.pmファイルとPlugin_descriptor.xmlファイルを「db2.zip」に追加します。</block>
-  <block id="caa156f24a82b8a7670c99f131312f67" category="list-text">Java を使用して開発されたプラグイン： jar ファイル、依存する jar ファイル、 Plugin_descriptor.xml ファイルをフォルダに追加して zip ファイルを保存します。</block>
-  <block id="bd4678e87b1f9d0f9ca2818993233e7b" category="section-title">プラグインのZIPファイルのアップロード</block>
-  <block id="82c8db559767b2ba0d057500c849d4ef" category="paragraph">プラグインを目的のホストに導入できるように、プラグインの ZIP ファイルを SnapCenter サーバにアップロードする必要があります。</block>
-  <block id="c99cbda86a0df9c85a90522320e83b3c" category="paragraph">UIまたはコマンドレットを使用してプラグインをアップロードできます。</block>
-  <block id="0bbe49164732887d91aedfbb7323cd9f" category="paragraph">* UI ： *</block>
-  <block id="ff266e0a81aeb28d8bd639d0e6747ca5" category="list-text">プラグインの ZIP ファイルを * Add * または * Modify Host * ワークフローウィザードの一部としてアップロードします</block>
-  <block id="b1ce1fadb8885384867d388e4cb04034" category="list-text">[ 選択 ] をクリックしてカスタムプラグインをアップロードします。 *</block>
-  <block id="d903a152f577e4c5d7d652897f5b1937" category="paragraph">* PowerShell ： *</block>
-  <block id="55b8e92bcb8dde8186cf4ceac6338bce" category="list-text">Upload-SmPluginPackageコマンドレット</block>
-  <block id="3b1bcb11ca95b8e7cac83075102f8b18" category="paragraph">例：PS&gt;Upload -SmPluginPackage -AbsolutePath c:\DB2_1.zip</block>
-  <block id="30b91011e7233366bf6fe72b9e39581e" category="paragraph">PowerShell コマンドレットの詳細については、 SnapCenter のコマンドレットのヘルプを使用するか、コマンドレットのリファレンス情報を参照してください。</block>
-  <block id="fdd90a3a6fddb98b5af79243529077e9" category="section-title">カスタムプラグインの導入</block>
-  <block id="22a9a756176e1eda572d9437ffccee0c" category="paragraph">アップロードしたカスタムプラグインを、 * Add * および * Modify Host * ワークフローの一環として、目的のホストに導入できるようになりました。SnapCenter サーバに複数のバージョンのプラグインをアップロードして、特定のホストに導入するバージョンを選択できます。</block>
-  <block id="cba124a80c7364b61d7d348bd9115983" category="paragraph">プラグインをアップロードする方法の詳細については、を参照してください。 <block ref="f72fab5b6c914bbb8d5e6637ea3f5a3f" category="inline-link-macro-rx"></block></block>
   <block id="6aba9ab9639862100a3f951f105883b5" category="summary">バックアップジョブを作成する前にバックアップ戦略を定義しておくと、リソースの正常なリストアやクローニングに必要なバックアップを確実に作成できます。バックアップ戦略の大部分は、サービスレベルアグリーメント（ SLA\ ）、目標復旧時間（ RTO\ ）、および目標復旧時点（ RPO\ ）によって決まります。</block>
   <block id="24940fc9df90a646aba3659646256b87" category="doc">バックアップ戦略を定義する</block>
   <block id="aec3dc1357d1c4a5e8173a948d80fd3c" category="paragraph">バックアップジョブを作成する前にバックアップ戦略を定義しておくと、リソースの正常なリストアやクローニングに必要なバックアップを確実に作成できます。バックアップ戦略の大部分は、Service Level Agreement（SLA；サービスレベルアグリーメント）、Recovery Time Objective（RTO；目標復旧時間）、Recovery Point Objective（RPO；目標復旧時点）によって決まります。</block>
   <block id="2cd86db6267706ae2b61eb8f47d98ca8" category="list-text">整合グループSnapshotが必要かどうかを決定し、整合グループSnapshotを削除するための適切なオプションを決定します。</block>
   <block id="3342baf28ca203b7bf1c234a26c83caf" category="list-text">レプリケーションのために NetApp SnapMirror テクノロジを使用するか、または長期保持のために NetApp SnapVault テクノロジを使用するかを決定します。</block>
   <block id="ca9c798c580412195f975431858e693e" category="list-text">バックアップ処理の前後にコマンドを実行するかどうかを決定し、実行する場合はプリスクリプトまたはポストスクリプトを用意します。</block>
-  <block id="8c1af9a95c5ff9086ee5697a78397ae5" category="summary">SnapCenterサーバを使用すると、アプリケーションをSnapCenterのプラグインとして導入および管理できます。</block>
   <block id="3b878279a04dc47d60932cb294d96259" category="doc">概要</block>
-  <block id="72631a8144cabf57a431e307c720be4b" category="paragraph">SnapCenterサーバを使用すると、アプリケーションをSnapCenterのプラグインとして導入および管理できます。データ保護機能と管理機能を備えた SnapCenter サーバに、お好みのアプリケーションを接続できます。</block>
-  <block id="3e4caa3106c658c78cb8f07a8040c65b" category="paragraph">SnapCenterでは、さまざまなプログラミング言語を使用してカスタムプラグインを開発できます。Perl 、 Java 、バッチ、またはその他のスクリプト言語を使用してカスタムプラグインを開発できます。</block>
-  <block id="9849d87f4a93f5d4014f828811411be7" category="paragraph">SnapCenterでカスタムプラグインを使用するには、次のタスクを実行する必要があります。</block>
-  <block id="b8b5e387feaa3019653b29082e61092a" category="list-text">このガイドの手順に従って、アプリケーション用のプラグインを作成します。</block>
-  <block id="fb254bad9756ac882a9a0ba12cc7f1a3" category="list-text">記述ファイルの作成</block>
-  <block id="79b97ed047d15d26a3a56e559a6ee5c1" category="list-text">カスタムプラグインをエクスポートしてSnapCenterホストにインストールする</block>
-  <block id="eb433b0d697c578418f0cd3d4afc4c2b" category="list-text">プラグインのzipファイルをSnapCenterサーバにアップロードする</block>
-  <block id="e496e0539b9dd2e96430fc87371ed61a" category="section-title">すべてのAPI呼び出しでの汎用プラグインの処理</block>
-  <block id="8f666ea75217f50d6b8e5b63ca8751e2" category="paragraph">API呼び出しごとに、次の情報を使用します。</block>
-  <block id="ae72a628ad181d8f535ebd38c3104e8a" category="list-text">プラグインパラメータ</block>
-  <block id="25fa01d9ae5853b4c852556532e7eb4b" category="list-text">終了コード</block>
-  <block id="3630b6a87abf72b5c44dff83a2dea610" category="list-text">エラーメッセージをログに記録</block>
-  <block id="78e3ac100920c9872e08c76930a7e91d" category="list-text">データの整合性</block>
-  <block id="bfe440282107a24a7f07fb7cde8d910e" category="section-title">プラグインパラメータを使用</block>
-  <block id="35db931c36efc6fd97acd3861031f51b" category="paragraph">API呼び出しごとに一連のパラメータがプラグインに渡されます。次の表に、各パラメータの具体的な情報を示します。</block>
-  <block id="261addf78c7b2c961032b3dd08ba0b1f" category="cell">目的</block>
-  <block id="e58a1b00942e66d8b4abc960da7877ab" category="paragraph">アクション</block>
-  <block id="c34381ed69c7f02b4dfb02bf8b48cbd2" category="paragraph">ワークフロー名を指定します。たとえば、 discover 、 backup 、 fileOrVolRestore 、または cloneVolAndLun などです</block>
-  <block id="85132af6b5f14319cb4c91ec6ddffe43" category="paragraph">リソース</block>
-  <block id="33d565acf954a6f64930fc8a33b8887e" category="paragraph">保護するリソースを一覧表示します。リソースはUIDとタイプで識別されます。リストは次の形式でプラグインに表示されます。</block>
-  <block id="5bcb0da9a36a1c572d065a30f8bf053e" category="paragraph">「 &lt;UID&gt; 、 &lt;type&gt;; &lt;UID&gt; 、 &lt;type&gt; 」のように入力します。例：「 Instance1 、 Instance ； Instance2\\DB1 、 Database 」</block>
-  <block id="73ac956100d167ecf25451e02d702abf" category="paragraph">app_name</block>
-  <block id="d98b83ea9db8d1b781f919f903e371d2" category="paragraph">使用しているプラグインを指定します。たとえば、DB2、MySQLなどです。SnapCenterサーバには、リストされているアプリケーションのサポートが組み込まれています。このパラメータでは大文字と小文字が区別されます。</block>
-  <block id="bf0c17384b9ca428972bdedc4d300472" category="paragraph">APP_IGNORE_ERROR</block>
-  <block id="58ddfd237075f98aaf9a2d3ce090ba23" category="paragraph">（YまたはN）これにより、アプリケーションエラーが発生したときにSnapCenterが終了するか、終了しません。これは、複数のデータベースをバックアップする場合に、単一障害でバックアップ処理を停止しないようにする場合に便利です。</block>
-  <block id="a6c02d2ac0e23234c7d73d00796cf9ca" category="paragraph">&lt;resource_name&gt; ____APP_INSTANY_USERNAME</block>
-  <block id="571d40fbca77d57e458825ee9fec7d81" category="paragraph">リソースに対してSnapCenterクレデンシャルが設定されている。</block>
-  <block id="ac12b35e15b7bf0fe21aedd97341ea12" category="paragraph">&lt;resource_name&gt; _APP_INSTANY_PASSWORD</block>
-  <block id="69fb88b801201290c49c951f3495b0fc" category="paragraph">&lt;resource_name&gt; _&lt;custom_param&gt; です</block>
-  <block id="78b0bbec6424e6db00f54a699cf409f7" category="paragraph">すべてのリソースレベルのカスタムキー値は、先頭に「 &lt;resource_name&gt;_ 」を付けたプラグインで使用できます。たとえば、カスタムキーが「 MySQLDB 」という名前のリソースの「 MASTER_SLAVE 」である場合、このキーは MySQLDB_MASTER_SLAVE として使用できます</block>
-  <block id="9a3e4e66558b9e88155f13dabd069d1b" category="section-title">終了コードを使用する</block>
-  <block id="47133f388993d841298613bc6cb0c588" category="paragraph">プラグインは、終了コードを使用して処理のステータスをホストに返します。各コードには特定の意味があり、プラグインは正しい終了コードを使用して同じことを示します。</block>
-  <block id="027d514221d3a080cc31a97eca829e35" category="paragraph">次の表に、エラーコードとその意味を示します。</block>
-  <block id="4e1209f3613deab3181eef2bb07b5abf" category="cell">終了コード</block>
-  <block id="cfcd208495d565ef66e7dff9f98764da" category="paragraph">0</block>
-  <block id="3cdc0e6cbe36c89d83cc097e8eb9ae0e" category="paragraph">処理に成功しました。</block>
-  <block id="ac627ab1ccbdb62ec96e702f07f6425b" category="paragraph">99</block>
-  <block id="531ad89069f8f8f15f4fbe6b5106144d" category="paragraph">要求された操作はサポートされていないか、</block>
-  <block id="f899139df5e1059396431415e770c6dd" category="paragraph">100</block>
-  <block id="a02c5c002d95db500c8de596769f3b32" category="paragraph">処理に失敗しました。休止解除をスキップして終了します。デフォルトでは休止解除が選択されます。</block>
-  <block id="38b3eff8baf56627478ec76a704e9b52" category="paragraph">101</block>
-  <block id="5fd968dddc0f547ae55ad643501730f9" category="paragraph">処理に失敗しました。バックアップ処理を続行してください。</block>
-  <block id="795f3202b17cb6bc3d4b771d8c6c9eaf" category="paragraph">その他</block>
-  <block id="cf6768b0593033ad3660ef5d8ec95ab1" category="paragraph">処理に失敗しました。休止解除を実行して終了します。</block>
-  <block id="6c09649d97d8d1b80bdcd8b29909efa0" category="paragraph">エラー・メッセージは、プラグインからSnapCenterサーバに渡されます。メッセージには、メッセージ、ログレベル、およびタイムスタンプが含まれます。</block>
-  <block id="b6586b3851e09c9af6725f25ffaefa5f" category="paragraph">次の表に、レベルとその目的を示します。</block>
-  <block id="551b723eafd6a31d444fcb2f5920fbd3" category="paragraph">情報</block>
-  <block id="6905d11030694877d5bd1b6fc5418232" category="paragraph">情報メッセージ</block>
-  <block id="32bd8a1db2275458673903bdb84cb277" category="paragraph">警告</block>
-  <block id="9b3ec49fce0de74c3bf44404f9ff5fed" category="paragraph">警告メッセージ</block>
-  <block id="bb1ca97ec761fc37101737ba0aa2e7c5" category="paragraph">エラー</block>
-  <block id="c5bbc13af6039ac4cf215911e482b5d4" category="paragraph">エラーメッセージ</block>
-  <block id="dc30ec20708ef7b0f641ef78b7880a15" category="paragraph">デバッグ</block>
-  <block id="d42e0a7293390bdb767f2ef26688c1dd" category="paragraph">デバッグメッセージ</block>
-  <block id="2d3e4144aa384b18849ab9a8abad74d6" category="paragraph">トレース</block>
-  <block id="55c8a5aea70abd0da5bad464b4622442" category="paragraph">トレースメッセージ</block>
-  <block id="1b767ffb7a06925c6ffafd5f616d41d9" category="section-title">データの整合性を維持</block>
-  <block id="e7ad26b22ddd01feb4792581738bc23a" category="paragraph">カスタムプラグインでは、同じワークフローを実行してもデータが保持されます。たとえば、プラグインは休止の終了時にデータを格納でき、休止解除処理に使用できます。</block>
-  <block id="4cf477198b533ad0884bbb1836790433" category="paragraph">保持するデータは、プラグインによって結果オブジェクトの一部として設定されます。 特定の形式に従っており、プラグイン開発の各スタイルで詳細に説明されています。</block>
   <block id="09b368e7a40c6562c6eb5235c4eda0ba" category="summary">SnapCenter Plug-ins Package for Linuxをインストールする前に、ホストが要件を満たしていることを確認する必要があります。</block>
   <block id="fdcd362ac5f5f9817e70642dd2a48bfd" category="list-text">Oracle Linux</block>
   <block id="8e3a492a9b736283405d7d14febefe64" category="paragraph">Java 11 Oracle JavaまたはOpenJDK</block>
@@ -4614,7 +4462,6 @@
   <block id="82975dfa27b0a20ad62378df0b7a4c08" category="paragraph">リソースグループは、保護対象となるものと、曜日と時間の観点から保護する場合を定義するものと考えてください。ポリシーは、保護する方法を定義するポリシーと考えてください。たとえば、すべてのデータベースまたはホストのすべてのファイルシステムをバックアップする場合は、すべてのデータベースまたはホストのすべてのファイルシステムを含むリソースグループを作成します。そのあとに、日次ポリシーと時間次ポリシーの2つのポリシーをリソースグループに適用できます。リソースグループを作成してポリシーを適用する際に、ファイルベースのバックアップを1日1回実行するようにリソースグループを設定し、別のスケジュールでSnapshotベースのバックアップを1時間ごとに実行するように設定します。</block>
   <block id="041c2bc239865621fefddc8c25a37009" category="summary">NetAppでサポートされるプラグインリソースを保護する場合は、SnapCenter NetAppでサポートされるプラグインをインストールしてセットアップする必要があります。</block>
   <block id="51810f5f2de2f019cb898ee5bb825600" category="doc">SnapCenter NetAppでサポートされるプラグインのインストールワークフロー</block>
-  <block id="935a5e63802feb7c41be8f11c154dcc4" category="paragraph"><block ref="935a5e63802feb7c41be8f11c154dcc4" category="inline-link-macro-rx"></block></block>
   <block id="6728b4a43abbebd3cc07a2cacc5e0c06" category="paragraph">ホストを追加するユーザには、ホストに対する管理者権限が必要です。</block>
   <block id="d3b3bbe44f365266410ca923ecee56a6" category="summary">SnapCenter NetAppでサポートされているプラグインは、SnapCenterユーザインターフェイス（UI）を使用してインストールする必要があります。SnapCenter UIからのプラグインのリモートインストールが許可されていない環境では、NetAppでサポートされるプラグインを、コマンドラインインターフェイス（CLI）を使用してコンソールモードまたはサイレントモードでインストールできます。</block>
   <block id="d2c5b20234fc44c2f17c36b2966fd013" category="doc">コマンドラインインターフェイスを使用して、NetAppでサポートされているプラグインをLinuxホストにインストールする</block>
@@ -4623,114 +4470,6 @@
   <block id="8460c814d2264b52e9cfe3b2ce6e050f" category="list-text">SnapCenterにログインし、UIまたはPowerShellコマンドレットを使用して、NetAppでサポートされているプラグインをアップロードします。</block>
   <block id="790130b06f69422e92249f29ad5b0c24" category="paragraph">NetAppでサポートされるプラグインは、のセクションを参照してUIからアップロードできます <block ref="f72fab5b6c914bbb8d5e6637ea3f5a3f" category="inline-link-macro-rx"></block> 。</block>
   <block id="6d61da8537780fd23a681da23103b991" category="paragraph">PowerShellコマンドレットの詳細については、SnapCenterのコマンドレットのヘルプを使用するか、コマンドレットのリファレンス情報を参照してください。</block>
-  <block id="3c67b94e6822d49d50263c7db382c071" category="summary">Java スタイルを使用してプラグインを開発します。</block>
-  <block id="731641b378060335e231f40a61efb08e" category="doc">Javaスタイル</block>
-  <block id="8a01447d4257ebcaab42390ee2f4240d" category="paragraph">Javaカスタムプラグインは、データベースやインスタンスなどのアプリケーションと直接対話します。</block>
-  <block id="19560bbbab2877a2271992ff54c2acf6" category="paragraph">Javaプログラミング言語を使用してプラグインを開発するときは、いくつかの制限事項に注意する必要があります。</block>
-  <block id="109df424c58b79c2ecda4d66296b6c11" category="cell">プラグインの特性</block>
-  <block id="18c21c5db5968d04ad5d182fe7fa9835" category="cell">Javaプラグイン</block>
-  <block id="7971813474da107714e72f8fd7b40a67" category="paragraph">複雑さ</block>
-  <block id="63bcaffdaf5f82923762b545238b463d" category="paragraph">低~中</block>
-  <block id="5feb6a47efae7a2d8887389df8701873" category="paragraph">メモリフットプリント</block>
-  <block id="e6044c19b3a51182a3d4997958319ec9" category="paragraph">最大10～20 MB</block>
-  <block id="47fafe578fde976b0ee978115a8d193b" category="paragraph">他のライブラリへの依存</block>
-  <block id="ae048ccf4cb143d7894ff3509eed7c9e" category="paragraph">アプリケーション通信用ライブラリ</block>
-  <block id="5906becd36463d6d7a26b280f6afaa5e" category="paragraph">スレッド数</block>
-  <block id="c4ca4238a0b923820dcc509a6f75849b" category="paragraph">1</block>
-  <block id="a23d40c086cc8a7ddcc39dd3d7747fd5" category="paragraph">スレッドランタイム</block>
-  <block id="d69f265ea27772294d467d9ce2f7c976" category="paragraph">1時間未満</block>
-  <block id="70709e4ff5198c12de87c5bb1ef4d7e1" category="section-title">Java制限の理由</block>
-  <block id="95c0a67d0cfd35b1a8a48578d91c0495" category="paragraph">SnapCenterエージェントの目標は、継続的かつ安全で堅牢なアプリケーション統合を実現することです。Javaプラグインをサポートすることで、プラグインがメモリリークなどの望ましくない問題を引き起こす可能性があります。これらの問題は、特に物事を使いやすくすることを目的としている場合には、取り組むのが難しいです。プラグインの複雑さがそれほど複雑でない場合、開発者がエラーを導入した可能性ははるかに低くなります。Java プラグインの危険性は、 SnapCenter エージェント自体と同じ JVM で実行されていることです。プラグインがクラッシュしたり、メモリがリークしたりすると、Agentに悪影響を及ぼす可能性があります。</block>
-  <block id="5516fae9f196982df00a03b33d90be7d" category="section-title">サポートされる方法</block>
-  <block id="4c3880bb027f159e801041b1021e88e8" category="cell">方法</block>
-  <block id="b651efdb98a5d6bd2b3935d0c3f4a5e2" category="cell">必須</block>
-  <block id="a9e54eef51002049412033909783cd2f" category="cell">いつ誰に電話したの?</block>
-  <block id="6034a2219adc98364247fafa6c7ac86e" category="paragraph">プラグインのバージョンを返す必要があります。</block>
-  <block id="158432aca9b72e6906771c2e2fddbb8c" category="paragraph">SnapCenter サーバまたはエージェントがプラグインのバージョンを要求します。</block>
-  <block id="b55904d7759e5a6f24d4ca0dbdafd019" category="paragraph">休止</block>
-  <block id="7a7937f1bd01629dfc078d9cfaca3c7f" category="paragraph">アプリケーションで休止を実行する必要があります。ほとんどの場合、これは、アプリケーションをSnapCenterサーバがバックアップ（スナップショットなど）を作成できる状態にすることを意味します。</block>
-  <block id="15f6d11fd1f65efe57d9b506c0e06313" category="paragraph">SnapCenter サーバが Snapshot コピーを作成する前、または一般的なバックアップを実行します。</block>
-  <block id="b52dd62394b28fe653e8d770689ea60c" category="paragraph">休止解除</block>
-  <block id="09ed5f9b77aca4b8dd337f525d41ea4c" category="paragraph">アプリケーションで休止解除を実行する必要があります。ほとんどの場合、これはアプリケーションを通常の動作状態に戻すことを意味します。</block>
-  <block id="2de9454fcd2f1befcb26b81a260ae3c9" category="paragraph">SnapCenterサーバがスナップショットを作成した後、または一般的にバックアップを実行した後。</block>
-  <block id="8c6384dda98d8864d00e29dc96179970" category="paragraph">クリーンアップ</block>
-  <block id="ff36b404767cd635ab945ad85f4f04b9" category="paragraph">プラグインがクリーンアップする必要があるすべての処理を担当します。</block>
-  <block id="5c34b664bab5b91f3ebdcd206cf4d801" category="paragraph">SnapCenterサーバ上のワークフローが終了したとき（正常に完了したとき、または失敗したとき）。</block>
-  <block id="2dba998b900ac4660779ce6a046d48b2" category="paragraph">clonePre</block>
-  <block id="47f24b1cf1e23bb722f60f453ffd948b" category="paragraph">クローニング処理の実行前に必要な処理を実行する必要があります。</block>
-  <block id="dc3a3a59937dce595851a0e3c9e62ed8" category="paragraph">ユーザが「cloneVol」または「cloneLun」アクションをトリガーし、組み込みのクローニングウィザード（GUI / CLI）を使用した場合。</block>
-  <block id="42db709c3bb49ea37396262616eeac0b" category="paragraph">clonePost</block>
-  <block id="f7e930c0ca4b6495b9a8cb8417e2f98c" category="paragraph">クローニング処理の実行後に必要な処理を実行する必要があります。</block>
-  <block id="359714a793ff358ab1a5390adaa15c7f" category="paragraph">restorePre</block>
-  <block id="5690bc55e76e08851a976d18b9bc3459" category="paragraph">は、リストア処理の呼び出し前に実行する必要があるアクションを実行する必要があります。</block>
-  <block id="cfb841a76e5c0388b7181075bba9ada0" category="paragraph">ユーザがリストア処理をトリガーしたとき。</block>
-  <block id="d063ebca2216dedd83b697b745d3372e" category="paragraph">アプリケーションのリストア/リカバリを実行します。</block>
-  <block id="b64c136408bbb80dfa6717a62d239726" category="paragraph">アプリケーションバージョン</block>
-  <block id="34baf03c93a4a627f25d6fc913b37041" category="paragraph">プラグインで管理されているアプリケーションのバージョンを取得します。</block>
-  <block id="665d60e7553e146d8e88c2b9877fa0e0" category="paragraph">ASUPデータ収集の一環として、バックアップ/リストア/クローンなどのすべてのワークフローで使用できます。</block>
-  <block id="368fe771261fcb18f7988833c9294a20" category="section-title">チュートリアル</block>
-  <block id="1cecf8d2916dc8f549c641e76e5c659a" category="paragraph">このセクションでは、Javaプログラミング言語を使用してカスタムプラグインを作成する方法について説明します。</block>
-  <block id="dd2ea46cec759c9daa1731186a69847a" category="section-title">Eclipseの設定</block>
-  <block id="5059336e047b64e5cc20bd336d53cded" category="list-text">Eclipseで新しいJavaプロジェクト「TutorialPlugin」を作成する</block>
-  <block id="b978a7bf524628221c941358ed3b236b" category="list-text">[ 完了 ] をクリックします。</block>
-  <block id="da571635edcc3b6941bcbb47f042963f" category="list-text">新しいプロジェクト * -&gt; * プロパティ * -&gt; * Java ビルドパス * -&gt; * ライブラリ * -&gt; * 外部 JAR の追加 * を右クリックします</block>
-  <block id="afce1d4d057bf9e937eca261048a8a7d" category="list-text">ホストエージェントの../lib/フォルダに移動し、jars scAgent-5.0-core.jarおよびcommon-5.0.jarを選択します。</block>
-  <block id="4c2d5f28ee3c2d47fa766db121601ccc" category="list-text">プロジェクトを選択し、 * src フォルダー * -&gt; * New * -&gt; * Package * を右クリックして、 com.netapp.snapcreator.agent.plugin.TutorialPlugin という名前で新しいパッケージを作成します</block>
-  <block id="9aa678f69b6fbd924a453ac88be2da01" category="list-text">新しいパッケージを右クリックし'新規&gt; Javaクラスを選択します</block>
-  <block id="cc5b6288914bdaaf663a91781a25ff9e" category="list-text">名前に「TutorialPlugin」と入力します。</block>
-  <block id="8a5763cf603724a39de4260b78d1c6ef" category="list-text">スーパークラスの参照ボタンをクリックし、「 * AbstractPlugin 」を検索します。表示される結果は1つだけです。</block>
-  <block id="8c7e2b6bfd819565c59f2b392665abef" category="list-text">Javaクラス：</block>
-  <block id="27b2b5799cd8f27199a041f901952b56" category="section-title">必要なメソッドの実装</block>
-  <block id="ee5587e793308a8685469da87916cd09" category="paragraph">休止、休止解除、およびバージョンは、各カスタムJavaプラグインで実装する必要がある必須のメソッドです。</block>
-  <block id="a385e5de06fb17f83d17b95cff5edd39" category="paragraph">プラグインのバージョンを返すversionメソッドを次に示します。</block>
-  <block id="cf7c15f920ccc654c43c2a5340be404e" category="paragraph">メソッドはContextオブジェクトで渡されます。これには、LoggerやContext Storeなどの複数のヘルパーと、現在の操作に関する情報（ワークフローID、ジョブID）が含まれます。ロガーを取得するには、final Logger logger=context.getLogger();を呼び出します。loggerオブジェクトは、logbackなど、他のロギングフレームワークで知られている同様のメソッドを提供します。結果オブジェクトでは、終了コードを指定することもできます。この例では問題がなかったため、0が返されます。その他の終了コードは、さまざまな障害シナリオにマッピングできます。</block>
-  <block id="61880f414ea2ba4bed74bf724a7efde5" category="section-title">結果オブジェクトの使用</block>
-  <block id="d15e98368b4822d2679ffe319f70bca0" category="paragraph">resultオブジェクトには、次のパラメータが含まれています。</block>
-  <block id="7a1920d61156abc05a60135aefe8bc67" category="cell">デフォルト</block>
-  <block id="fa535ffb25e1fd20341652f9be21e06e" category="paragraph">構成</block>
-  <block id="84c917becdd45097d9cc6311fe2d384c" category="paragraph">構成が空です</block>
-  <block id="91c257476f447587fd9c6bbc2d3fd998" category="paragraph">このパラメータを使用すると、設定パラメータをサーバに返送できます。プラグインで更新するパラメータを指定できます。この変更が SnapCenter サーバの構成に実際に反映されるかどうかは、設定の APP_CONF_PERSISTENCE = Y または N パラメータに依存します。</block>
-  <block id="dc64d90dcdc95c2383f1db1b60ae0079" category="paragraph">終了コード</block>
-  <block id="04b19c92f619855670b011d1450a3753" category="paragraph">処理のステータスを示します。「 0 」は、操作が正常に実行されたことを示します。その他の値はエラーまたは警告を示します。</block>
-  <block id="21d983484658a89e3070776fae2261f5" category="paragraph">標準出力</block>
-  <block id="7314d91688d87d3e5c9b52feb712ab26" category="paragraph">リストが空です</block>
-  <block id="655ca11c9140ec6288b58b79c6bb4a09" category="paragraph">これは、 stdout メッセージを SnapCenter サーバに返送するために使用できます。</block>
-  <block id="8c475733023face864f545eeca057033" category="paragraph">標準エラー</block>
-  <block id="21ef94ba119907117f364df896f3dec8" category="paragraph">このオプションを使用すると、 stderr メッセージを SnapCenter サーバに返送できます。</block>
-  <block id="41de6d6cfb8953c021bbe4ba0701c8a1" category="paragraph">メッセージ</block>
-  <block id="987747103127b1269c03daef522318fe" category="paragraph">このリストには、プラグインがサーバーに返すすべてのメッセージが含まれています。SnapCenterサーバは、これらのメッセージをCLIまたはGUIに表示します。</block>
-  <block id="99753828b61fb11a098d17cc40833de4" category="inline-link">ビルダパターン</block>
-  <block id="3950454679ab5b1fb320d0285a746f19" category="paragraph">SnapCenterエージェントは、すべての結果タイプに対してビルダーを提供し <block ref="3144c223957296a77caf645e6d0ca2e0" category="inline-link-rx"></block>ます。これにより、非常に簡単に使用できます。</block>
-  <block id="f16224a7d2e117c1c6004388a38e5a1f" category="paragraph">たとえば、終了コードを0に設定し、stdoutとstderrのリストを設定し、configパラメータを設定し、サーバに返送されるログメッセージを追加します。すべてのパラメータが必要ない場合は、必要なパラメータのみを送信してください。各パラメータにはデフォルト値があるため、以下のコードから.withExitCode(0)を削除しても、結果は影響を受けません。</block>
-  <block id="8860923af296bdac25a4497406b57662" category="section-title">VersionResult</block>
-  <block id="5e2c436a0c1116523458920900625aa7" category="paragraph">VersionResultは、SnapCenterサーバーにプラグインのバージョンを通知します。また、 result から継承されるため、 config 、 exitCode 、 stdout 、 stderr 、および messages パラメータが含まれます。</block>
-  <block id="3b329734e45b57e60f3df64c2cf412a9" category="paragraph">メジャー</block>
-  <block id="e9fe51210c5ecbbdc30bc9326fa943b1" category="paragraph">プラグインのメジャーバージョンフィールド。</block>
-  <block id="6fed0c378a4b4e8c1e7dc5c16dabb388" category="paragraph">マイナー</block>
-  <block id="3550287ffc4359734a0031c175193fdd" category="paragraph">プラグインのマイナーバージョンフィールド。</block>
-  <block id="156e10596fdc76ee5300bab931d89c0f" category="paragraph">パッチ</block>
-  <block id="76e77e1098ad643957d7c5c9df22f01b" category="paragraph">プラグインのパッチバージョンフィールド。</block>
-  <block id="c74c1f42f141c011ca6bd8b1114fc3d0" category="paragraph">構築</block>
-  <block id="04feeef72aa7060480f2ff21cb04404b" category="paragraph">プラグインのビルドバージョンフィールド。</block>
-  <block id="fdd378ed98ea7cd4f7a8bd10d40352b3" category="section-title">コンテキストオブジェクトの使用</block>
-  <block id="1d2371f72c4ef61cbb3e573ca275f8f3" category="paragraph">contextオブジェクトには、次のメソッドがあります。</block>
-  <block id="237c5740526e5a5fabdce09eb2155078" category="cell">コンテキストメソッド</block>
-  <block id="ed90d972be4b4cc0150929cd58469816" category="paragraph">文字列 getWorkflowId();</block>
-  <block id="df1e3aa8600b8512002fe0822a7d768d" category="paragraph">現在のワークフローで SnapCenter サーバによって使用されているワークフロー ID を返します。</block>
-  <block id="bdb6c277ff6a1becf6660510785d77b3" category="paragraph">config getconfig();</block>
-  <block id="0ed8b4c7dca05c28c63be3280f70e3d7" category="paragraph">SnapCenter サーバからエージェントに送信されている設定を返します。</block>
-  <block id="04b3c4ea531620d4fc4ced9c79e3dfb0" category="section-title">ワークフローID</block>
-  <block id="9654c976940a07a77d7f08ca8e9ca7c7" category="paragraph">ワークフロー ID は、実行中の特定のワークフローを SnapCenter サーバが参照するために使用する ID です。</block>
-  <block id="37d64f01ccd77885519f2a946af921e6" category="paragraph">このオブジェクトには、ユーザが SnapCenter サーバの設定で設定できるパラメータのほとんどが含まれます。ただし、セキュリティ上の理由から、これらのパラメータの一部はサーバ側でフィルタリングされる場合があります。次に、 Config にアクセスしてパラメータを取得する例を示します。</block>
-  <block id="fb4b95f7efbccbc9f673de67cb4a063c" category="paragraph">""//MyParameter"に、SnapCenterサーバ上のconfigから読み込まれたパラメータが含まれるようになりました。configパラメータキーが存在しない場合は、空の文字列("")を返します。</block>
-  <block id="308a084b70c4908d42de7192cbf8efe1" category="section-title">プラグインのエクスポート</block>
-  <block id="7cac39bd02f3b909f147bea7e251deba" category="paragraph">SnapCenterホストにインストールするには、プラグインをエクスポートする必要があります。</block>
-  <block id="ff0741643ca10baccfc83aad90426d28" category="paragraph">Eclipseで次のタスクを実行します。</block>
-  <block id="9b3f778b7349e7c6a31e5dd3a35d16f3" category="list-text">プラグインのベースパッケージを右クリックします（この例では com.netapp.snapcreator.agent.plugin.TutorialPlugin ）。</block>
-  <block id="37233c4c635b4449c6d038a07e100c20" category="list-text">「 * Export * -&gt; * Java * -&gt; * JAR File * 」を選択します</block>
-  <block id="8167729e48b2ebf78082747fb306ad04" category="list-text">次のウィンドウで、インストール先の jar ファイルのパスを指定します。 tutorial_plugin.jar プラグインのベースクラスは TutorialPlugin.class という名前で、同じ名前のフォルダにプラグインを追加する必要があります。</block>
-  <block id="956dcc9eb4dcc7a9760461455f0c02d3" category="paragraph">プラグインが他のライブラリに依存している場合は、次のフォルダを作成できます。lib/</block>
-  <block id="bc60c50c66a380f1b4c5ad98a8a84f77" category="paragraph">プラグインが依存するjarファイル（データベースドライバなど）を追加できます。SnapCenter は、プラグインをロードすると、このフォルダ内のすべての jar ファイルを自動的に関連付けて、クラスパスに追加します。</block>
   <block id="9eb3887b1fa3a0da9e8ef9686bd7bf75" category="doc">NetAppでサポートされるプラグインに必要な最小ONTAP権限</block>
   <block id="521a461a889ed9e3e14096d08771f661" category="list-text">lun attribute show</block>
   <block id="845a2fac965d9f41d0e11a08d1c7197e" category="list-text">LUNジオメトリ</block>
@@ -4738,42 +4477,6 @@
   <block id="4296ddd7efb320da072fa7a5dd6ba651" category="doc">NetAppでサポートされるプラグインリソースのバックアップ処理を監視する</block>
   <block id="5cb1dacc777773340db72f2c8b05f284" category="doc">NetAppでサポートされるプラグインリソースのリストア処理を監視する</block>
   <block id="551510ad784e6da2c3f884b2632f3d7f" category="doc">NetApp対応プラグインのインストールステータスの監視</block>
-  <block id="75358aefb0b5382303d826391e171b80" category="summary">ネイティブ形式を使用してプラグインを開発します。</block>
-  <block id="a53167d736047727cea2a026673cbf9c" category="doc">ネイティブ形式</block>
-  <block id="b61671fc72387581a19e7fa9168cddd9" category="paragraph">SnapCenterでは、プラグインを作成するためにPerl以外のプログラミング言語やスクリプト言語がサポートされています。これはネイティブスタイルプログラミングと呼ばれ、スクリプトファイルまたはバッチファイルを使用できます。</block>
-  <block id="9e1d95a32a87ab7a7016653485b2c883" category="paragraph">ネイティブ形式のプラグインは、以下に示す特定の規則に従う必要があります。</block>
-  <block id="9105be47cce360c85333e7099eb4c750" category="paragraph">プラグインは実行可能である必要があります</block>
-  <block id="fd0fc4f6fd59d6453ab6ed576feea21e" category="list-text">UNIXシステムの場合、エージェントを実行するユーザーにはプラグインに対する実行権限が必要です。</block>
-  <block id="cf193b9eadc1f00e9060d96e39debdf8" category="list-text">Windows システムの場合、 PowerShell プラグインのサフィックスは .ps1 に、その他の Windows スクリプトのサフィックスは .cmd または .bat にする必要があり、ユーザによって実行可能である必要があります</block>
-  <block id="c5e258fd4d379f7ee29c2741de49c400" category="list-text">プラグインは、コマンドライン引数に対して「-quiesce」、「-unquiesce」のように応答する必要があります。</block>
-  <block id="7f57e2af384da47f51bbde01334bdb02" category="list-text">操作または関数が実装されていない場合、プラグインは終了コード99を返す必要があります。</block>
-  <block id="7f3d3a1e6ed5d85b534a958e89ca7425" category="list-text">プラグインは、結果をサーバーに返すために特定の構文を使用する必要があります。</block>
-  <block id="375c26c661581c12f82c94065d73be46" category="section-title">一般的なプラグイン処理</block>
-  <block id="930c14b6cb69ee7acceefefc56797566" category="section-title">エラーメッセージのロギング</block>
-  <block id="b17bab2e169e781f68778276e3c1ff06" category="paragraph">各操作は、コンテンツを表示して保存するサーバーにメッセージを送り返すことができます。メッセージには、メッセージレベル、タイムスタンプ、およびメッセージテキストが含まれます。複数行メッセージがサポートされています。</block>
-  <block id="fb2ea703b13d059f6b7ea5da806021df" category="paragraph">形式：</block>
-  <block id="125c7bffe5ed1068b5bc10027f14f7b4" category="section-title">プラグインスタブの使用</block>
-  <block id="ef7349bf7e64c5812dde44dfe1ea9ed5" category="paragraph">SnapCenterプラグインにはプラグインスタブが実装されている必要があります。これらは、SnapCenterサーバが特定のワークフローに基づいて呼び出すメソッドです。</block>
-  <block id="5081968c60b2b22a3c3a6539101eab58" category="cell">プラグインスタブ</block>
-  <block id="27a8a8bedafd19538124ce3fdb309e4e" category="cell">オプション / 必須</block>
-  <block id="80f9d1ce28ebdbb90f6e6b35c5c789ad" category="paragraph">休止</block>
-  <block id="ac67ede5a84eb5a1add7ff4440e9a485" category="paragraph">必須</block>
-  <block id="726d39dceafdcf2a244cb0bcdb262380" category="paragraph">このスタブは休止を実行します。これにより、アプリケーションがスナップショットを作成できる状態になります。これは、ストレージSnapshot処理の前に呼び出されます。</block>
-  <block id="aa092af188e3be05b1a73b3b230ec735" category="paragraph">休止解除</block>
-  <block id="2b8b2c493b09b013588a02ac57204e14" category="paragraph">このスタブは休止解除を実行します。アプリケーションは通常の状態になります。この処理は、ストレージSnapshot処理のあとに呼び出されます。</block>
-  <block id="6cf49b275e3f780958fd8f3a3d44acb5" category="paragraph">clone_pre</block>
-  <block id="d57c24f3fe52d16e7169b912dd647f0d" category="paragraph">オプション</block>
-  <block id="f7eeb12c0ae87e1a428729d93636f705" category="paragraph">このスタブは、クローニング前のタスクを実行します。ここでは、組み込みのSnapCenterクローニングインターフェイスを使用しており、「clone_vol or clone_lun」アクションの実行時にのみトリガーされます。</block>
-  <block id="ee2aa59563c4e74a0c51b3581f20083e" category="paragraph">clone_post</block>
-  <block id="ebb061953c0454b2c8ee7b0ac615ebcd" category="paragraph">オプション</block>
-  <block id="7d08df91908649fc980c6e4561c46d42" category="paragraph">このスタブは、クローニング後のタスクを実行します。これは、組み込みのSnapCenterクローニングインターフェイスを使用しており、「clone_volまたはclone_lun」処理の実行時にのみトリガーされることを前提としています。</block>
-  <block id="a407f96cd552cb223b9e4711ef984ed7" category="paragraph">restore_pre</block>
-  <block id="aadbc30f9f18452d76bb86a523d4013d" category="paragraph">このスタブは、リストア前のタスクを実行します。ここでは、組み込みのSnapCenterリストアインターフェイスを使用しており、リストア処理の実行中にのみトリガーされます。</block>
-  <block id="bb2ac0b8da1f64a3498af147ba43fc10" category="paragraph">リストア</block>
-  <block id="2403fd80c93c90b1c0cd4c37ae4a7227" category="paragraph">このスタブは、すべてのリストア処理を実行します。この要件は、組み込みのリストアインターフェイスを使用していないことを前提としています。リストア処理の実行中にトリガーされます。</block>
-  <block id="ff7c0fcd6a31e735a61c001f75426961" category="section-title">例</block>
-  <block id="bf448b76d11422f4a518bec20eb47937" category="section-title">Windows PowerShell</block>
-  <block id="39607e626df161fbad55aa17c0d5c725" category="paragraph">システムでスクリプトを実行できるかどうかを確認します。スクリプトを実行できない場合は、スクリプトにSet-ExecutionPolicyバイパスを設定し、操作を再試行します。</block>
   <block id="e4891e855778eb8bfa7326df11fb3b8a" category="summary">SnapCenterは、プラグインアプリケーションおよびストレージシステム上でNetAppテクノロジと統合されます。NetAppでサポートされているプラグインを操作するには、SnapCenterのグラフィカルユーザインターフェイスを使用します。</block>
   <block id="7140c9ed643472273949574e79ba9b60" category="paragraph">SnapCenterのインターフェイスは、プラグインと環境全体で標準化され、一貫性があります。SnapCenterのインターフェイスから、すべてのプラグインで、バックアップ、リストア、リカバリ、クローニングの各処理を一貫した方法で実行できるほか、ダッシュボードビューで概要を把握したり、ロールベースアクセス制御（RBAC）を設定したり、ジョブを監視したりできます。</block>
   <block id="542226a75e67e826476b8a6313eb2a61" category="list-text">*無停止のNetAppスナップショットテクノロジ*</block>
@@ -4784,66 +4487,9 @@
   <block id="6f340d12d1d89a06a86c347f946aadae" category="doc">NetAppでサポートされるプラグインの概要</block>
   <block id="0ef428737d69052be8c7b16e117c7af7" category="paragraph">NetAppでサポートされるプラグインがインストールされている場合は、SnapCenterとNetApp SnapMirrorテクノロジを使用して別のボリュームにバックアップセットのミラーコピーを作成し、NetApp SnapVaultテクノロジを使用してディスクツーディスクのバックアップレプリケーションを実行できます。NetAppでサポートされているプラグインは、WindowsとLinuxのどちらの環境でも使用できます。</block>
   <block id="051fcccc818f247e161e5bd9fe65741b" category="admonition">SnapCenterCLIでは、NetAppでサポートされるプラグインコマンドはサポートされません。</block>
-  <block id="49ee0af5f7bb584f9569b5628fd1170e" category="paragraph">NetAppにはStorageプラグインが用意されており、SnapCenterに組み込まれているカスタムプラグインフレームワークを使用して、ONTAPストレージ上のデータボリュームのデータ保護処理を実行できます。</block>
   <block id="5c02c38860d64c515a98f74285c5e9af" category="paragraph"><block ref="5c02c38860d64c515a98f74285c5e9af" category="inline-link-macro-rx"></block></block>
-  <block id="022c56789408e44b04cf1944babfa527" category="admonition">SnapCenterのサポートポリシーでは、SnapCenterカスタムプラグインフレームワーク、コアエンジン、関連するAPIのサポートが対象になります。プラグインのソースコードと、カスタムプラグインフレームワーク上に構築された関連スクリプトはサポート対象外です。</block>
-  <block id="858560511f7cf57cf79818f39ae5e7e5" category="paragraph">ガイドを参照して、独自のカスタムプラグインを作成できます <block ref="07744b4146eed8737957be4236ad4ea6" category="inline-link-macro-rx"></block> 。</block>
   <block id="fee335c3c26419e1b2971157844984a7" category="doc">必要なバックアップジョブの数</block>
   <block id="b55afd5b52f01e281bc890c6adab0b29" category="paragraph">通常、選択するバックアップジョブの数は、リソースが配置されているボリュームの数によって異なります。たとえば、あるボリュームに小規模なリソースのグループを配置し、別のボリュームに大規模なリソースを配置した場合は、小規模なリソース用のバックアップジョブと大規模なリソース用のバックアップジョブをそれぞれ1つずつ作成できます。</block>
-  <block id="6edd2daf14dde352ee9ebb9ecbfb2fc4" category="summary">Perl を使用してプラグインを開発します。</block>
-  <block id="3f272cbd9f3d98a46dc5be01d6d1c28f" category="doc">Perlベースの開発</block>
-  <block id="11190b0b920a84adaeb302d40a45ce80" category="paragraph">Perlを使用してプラグインを開発するときは、特定の規則に従う必要があります。</block>
-  <block id="1a5265d73355a139c4fc8415f55a7a75" category="list-text">コンテンツは読み取り可能でなければなりません</block>
-  <block id="c355814a69aed5dc3c7043e4e911e1b7" category="list-text">setenv、quiesce、およびunquiesceの必須処理を実装する必要がある</block>
-  <block id="24217546d978eb20d25b4a8e23476c5e" category="list-text">結果をエージェントに渡すには、特定の構文を使用する必要があります。</block>
-  <block id="7e8a9233aabfc19acbe7c8db2f6496b8" category="list-text">内容は &lt;plugin_name&gt;.pm ファイルとして保存してください</block>
-  <block id="ffbd4f869a45a0eb33f8c5a8782dd924" category="paragraph">実行可能な処理：</block>
-  <block id="702ca092b068045e4b2a46bde0a6b8ae" category="list-text">setenv</block>
-  <block id="b7c58211de9baee1e71f10e4d6beb2de" category="list-text">clone_pre、clone_post</block>
-  <block id="547c4772ea7f61438244cb3b06eb4c00" category="list-text">restore_pre、リストア</block>
-  <block id="ecfb9f08f09baba9587e427bc8a820b1" category="list-text">クリーンアップ</block>
-  <block id="23470f65b59c12a53de5d619a2341725" category="section-title">結果オブジェクトの使用</block>
-  <block id="8a394f3ff75e356a00bc923e2d3a24bb" category="paragraph">すべてのカスタムプラグイン処理で結果オブジェクトを定義する必要があります。このオブジェクトは、メッセージ、終了コード、stdout、およびstderrをホストエージェントに送信します。</block>
-  <block id="baab955e25314f23a1e534211ed3c5ef" category="paragraph">結果オブジェクト：</block>
-  <block id="d27ee45005dfdaf4349666580bb9be73" category="paragraph">結果オブジェクトを返します。</block>
-  <block id="f820ed664a4b8487fe2f25ae4bcb8cb9" category="section-title">データの整合性の維持</block>
-  <block id="e972893c09832e7d698c9f7367e2dfae" category="paragraph">同じワークフローの実行中に、処理間（クリーンアップを除く）でデータを保持することができます。これにはキーと値のペアを使用します。データのキーと値のペアは結果オブジェクトの一部として設定され、同じワークフローの後続の操作で保持されて使用できます。</block>
-  <block id="6cf3334937a25069e083aa3194d19562" category="paragraph">次のコード例では、保持するデータを設定します。</block>
-  <block id="79baca2ff9e61f20978b854c76a89ef4" category="paragraph">上記のコードは、2つのキーと値のペアを設定します。これらのペアは、後続の操作で入力として使用できます。2つのキーと値のペアには、次のコードを使用してアクセスできます。</block>
-  <block id="1a433a5ec4d06561757ffdd94aec551b" category="paragraph">各処理は、コンテンツを表示して保存するホストエージェントにメッセージを送信できます。メッセージには、メッセージレベル、タイムスタンプ、およびメッセージテキストが含まれます。複数行メッセージがサポートされています。</block>
-  <block id="d24d2a5d893e94e9391c84ea41254a56" category="paragraph">msgObjを使用して、collectメソッドを使用してメッセージをキャプチャします。</block>
-  <block id="d865f2a752b423058b8d44eb74362907" category="paragraph">結果オブジェクトにメッセージを適用します。</block>
-  <block id="2507f897ba239023fb34486297f3f9e4" category="paragraph">カスタムプラグインはプラグインスタブを公開する必要があります。これらは、ワークフローに基づいてSnapCenterサーバが呼び出すメソッドです。</block>
-  <block id="84ad2bc533ff1fd26e84106c755353ec" category="paragraph">このスタブは、環境と設定オブジェクトを設定します。</block>
-  <block id="1d7698b4eaa4207bc437a7978e65fe43" category="paragraph">環境の解析や処理はここで行う必要があります。スタブが呼び出されるたびに、setenvスタブが直前に呼び出されます。Perl形式のプラグインでのみ必要です。</block>
-  <block id="a8a94f37b262c1f49012caf671d0c45b" category="paragraph">このスタブは、アプリケーションのバージョンを取得するために使用されます。</block>
-  <block id="abfc3a65538a6ec86502b2b498b6b4a6" category="paragraph">検出</block>
-  <block id="e0a2f30f2f2475916ba71c6ad7a65096" category="paragraph">このスタブは、エージェントまたはホストでホストされているインスタンスやデータベースなどのアプリケーションオブジェクトを検出するために使用されます。</block>
-  <block id="f4cd43f678664ff68fad4028fb6a40c4" category="paragraph">プラグインは、検出されたアプリケーションオブジェクトを特定の形式で応答の一部として返します。このスタブは、アプリケーションがSnapDrive for Unixと統合されている場合にのみ使用されます。</block>
-  <block id="34c6a8e1099863a52dbf55536f87b658" category="admonition">Linuxファイルシステム（Linuxフレーバー）がサポートされています。AIX/Solaris（Unixフレーバー）はサポートされていません。</block>
-  <block id="8cf57b0816d44a1b975402b721da2725" category="paragraph">検出_完了</block>
-  <block id="ce9d724a7186956382a6ad763f302ffc" category="admonition">Linuxファイルシステム（Linuxフレーバー）がサポートされています。AIXおよびSolaris（Unixフレーバー）はサポートされていません。</block>
-  <block id="0fd08e22cd8a21cd901e68b42968c2e6" category="paragraph">このスタブは休止を実行します。つまり、アプリケーションをSnapshotを作成できる状態にします。これは、Snapshot処理の前に呼び出されます。保持するアプリケーションのメタデータは、応答の一部として設定する必要があります。このメタデータは、対応するストレージSnapshotでの後続のクローニングまたはリストア処理中に、構成パラメータの形式で返されます。</block>
-  <block id="7371795f7797164be99265838bc9b9fa" category="paragraph">このスタブは、アプリケーションを通常の状態にすることを意味する休止解除を実行します。これは、Snapshotの作成後に呼び出されます。</block>
-  <block id="34db83eb305843e804a58cb6bd2946a1" category="paragraph">このスタブは、クローニング前タスクを実行します。これは、組み込みのSnapCenterサーバクローニングインターフェイスを使用していることを前提としており、クローニング処理の実行時にトリガーされます。</block>
-  <block id="91ebd6a2af6dffd236dfae9ec811613c" category="paragraph">このスタブは、クローニング後のタスクを実行します。これは、組み込みのSnapCenterサーバクローニングインターフェイスを使用していることを前提としており、クローニング処理の実行時にのみトリガーされます。</block>
-  <block id="04aa63c67e2110767959dc93267c3482" category="paragraph">このスタブは、リストア前のタスクを実行します。ここでは、組み込みのSnapCenterサーバリストアインターフェイスを使用しており、リストア処理の実行中にトリガーされることを前提としています。</block>
-  <block id="b436cb5751d3f78735122bbbbc5fbcae" category="paragraph">このスタブは、アプリケーションのリストアタスクを実行します。これは、組み込みのSnapCenterサーバリストアインターフェイスを使用していることを前提としており、リストア処理の実行時にのみトリガーされます。</block>
-  <block id="627a1357fb9b62d60cc9248505d3e500" category="paragraph">このスタブは、バックアップ、リストア、またはクローン処理のあとにクリーンアップを実行します。クリーンアップは、通常のワークフロー実行中またはワークフローの障害発生時に実行できます。設定パラメータaction（backup、cloneVolAndLun、fileOrVolRestore）を参照して、クリーンアップが呼び出されるワークフロー名を推測できます。構成パラメータERROR_MESSAGEは、ワークフローの実行中にエラーが発生したかどうかを示します。ERROR_MESSAGEがNULLではなく定義されている場合、ワークフローエラーの実行中にクリーンアップが呼び出されます。</block>
-  <block id="5e603fe8549380dcb8b43465eef93edd" category="paragraph">APP_VERSION</block>
-  <block id="e55578a72ee7d0d6a8dd80db1eadc9de" category="paragraph">このスタブは、 SnapCenter がプラグインによって管理されるアプリケーションバージョンの詳細を取得するために使用されます。</block>
-  <block id="b931464c4daac142af5d9024d181308d" category="section-title">プラグインパッケージ情報</block>
-  <block id="53bb9f86994f54a34977830fee345c0b" category="paragraph">各プラグインには、次の情報が必要です。</block>
-  <block id="456d0deba6a86c9585590550c797502d" category="section-title">運用</block>
-  <block id="4d57719f8e32047d1cae3a5ddb0172f7" category="paragraph">カスタムプラグインでは、setenv、バージョン、休止、休止解除など、さまざまな処理をコーディングできます。</block>
-  <block id="4f8f149ca6bb5234a087b671085eeaf4" category="section-title">setenv処理setenvショリ</block>
-  <block id="3eee7d4df3f419567cb503c91871613e" category="paragraph">setenv処理は、Perlを使用して作成されたプラグインに必要です。ENVを設定し、プラグインパラメータに簡単にアクセスできます。</block>
-  <block id="7b7666de772bf908b0fe869a75e4f8dd" category="section-title">バージョン処理</block>
-  <block id="0a6e6f5e5a5a02cca44ae7aade91bf90" category="paragraph">バージョン処理は、アプリケーションのバージョン情報を返します。</block>
-  <block id="ecf480bc589751647a8416a2af91ddb1" category="section-title">休止処理</block>
-  <block id="64443c9749b5ec77960e18487a9628cc" category="paragraph">休止処理resourcesパラメータに指定されたリソースに対してアプリケーション休止処理を実行します。</block>
-  <block id="9061e762662985a3ffadd9af623ea433" category="section-title">休止解除処理</block>
-  <block id="96ebe9d14f194daa158da373ecb5b686" category="paragraph">アプリケーションの休止解除には休止解除処理が必要です。リソースのリストは、resourcesパラメータで確認できます。</block>
   <block id="031130cc740dce019fe31437829d3261" category="doc">NetAppでサポートされるプラグインに対応したSnapMirrorおよびSnapVaultレプリケーションのためのストレージシステムの準備</block>
   <block id="b5d24747e2254cd74a278959e55db769" category="summary">SnapCenter NetAppでサポートされるプラグインを使用する前に、SnapCenter管理者がSnapCenterサーバをインストールして設定し、前提条件となるタスクを実行する必要があります。</block>
   <block id="6f9abdf4e6349ffead799b7fe0fb5848" category="doc">NetAppでサポートされるプラグインを使用するための前提条件</block>
@@ -4854,19 +4500,8 @@
   <block id="17f9957a5b4dff4ca41989ac66b4057b" category="list-text">ポート9090がホストの他のアプリケーションで使用されていないことを確認します。</block>
   <block id="70470fa292d95a8fc9a82053e4e3efc0" category="paragraph">ポート9090は、SnapCenterで必要な他のポートに加えて、NetAppでサポートされるプラグイン用にリザーブする必要があります。</block>
   <block id="db39871b690a95f007f3b71acd6533d2" category="doc">ホストを追加してNetAppでサポートされるプラグインをインストールするための前提条件</block>
-  <block id="e26fb7c625f4366f8f4f984c45ecd6fc" category="list-text">カスタム プラグインを作成しておく必要があります。詳細については、開発者向け情報を参照してください。</block>
-  <block id="896f53a1228bbdd8ed2cd52ad89184a3" category="list-text">Java 11をLinuxホストまたはWindowsホストにインストールしておく必要があります。</block>
   <block id="0db377921f4ce762c62526131097968f" category="section-title">全般</block>
   <block id="3c8f1b708d97734299340f633acf1b28" category="paragraph">iSCSIを使用している場合は、iSCSIサービスが実行されている必要があります。</block>
-  <block id="9415aa73bf3f3a2a034e0e07c5d506cf" category="section-title">SHA512ハッシュ</block>
-  <block id="c0d35e9a1cb18fc944b55e22f446f2b2" category="list-text">Linuxホストでは、SHA512ハッシュは、_/var/opt/snapcenter/scc/custom plugin _checksum_list .txt_にあります</block>
-  <block id="d0f01849d252d5215ffa795d5e7a4791" category="list-text">Windowsホストでは、SHA512ハッシュは_ C：\Program Files\NetApp\SnapManager Plug-in Creator\etc\custom_plugin_schecksum_list .txt_にあります</block>
-  <block id="f362104a88b92368af76c609011528ab" category="paragraph">カスタムのインストールパスでは、SHA512ハッシュは_&lt;custom path&gt;\NetApp\SnapCenter \Snapcenter Plug-in Creator\etc\custom_plugin_checksum_list .txt_にあります</block>
-  <block id="f550adf3d7f52f3afc0e6e45b71e2055" category="list-text">プラグインzipファイルのSHA512ハッシュが生成されました。</block>
-  <block id="9e4265226dcf4f703d217f82220d17ea" category="paragraph">のようなオンラインツールを使用できます<block ref="4aa52332da75b2ec4912a713935bc342" category="inline-link-rx"></block>。</block>
-  <block id="94e0e32bde2e2ee99521f81221ceee7a" category="list-text">生成されたSHA512ハッシュをcustom_plugin_checksum_listファイルの新しい行に追加しました。</block>
-  <block id="17bc29e04b5123febcd35bdbc90142b4" category="paragraph">コメントは、ハッシュが属するプラグインを識別するために#記号で始まります。</block>
-  <block id="7867996900fccc9a8502aad8682cccfe" category="paragraph">次に、チェックサムファイル内のSHA512ハッシュのエントリ例を示します。</block>
   <block id="dbef26874057ae0be535fee20766f8cb" category="list-text">SnapCenter でクラスタノードを管理する場合は、クラスタ内のすべてのノードに対する管理者権限を持つユーザが必要です。</block>
   <block id="1bd7b03e9e6f0b21298c8109c8f483ce" category="paragraph">SnapCenter ServerホストにWindows Server 2019またはWindows Server 2016を使用している場合は、Java 11をインストールする必要があります。要件の最新情報については、 Interoperability Matrix Tool （ IMT ）を参照してください。</block>
   <block id="4bb4114cf33351f203faec5f1e34960e" category="paragraph"><block ref="11d2d1b194d6948e42dc38dca8202191" category="inline-link-rx"></block></block>
@@ -7896,7 +7531,6 @@
   <block id="a5ca52319667a9026b1bc2e22f2beb97" category="doc">UNIXファイルシステムのバックアップのクローニング</block>
   <block id="e9c28603a5457f192761e9b2f99dbd6f" category="paragraph">SnapCenterを使用すると、ファイルシステムのバックアップを使用してUNIXファイルシステムをクローニングできます。</block>
   <block id="c047b1e4cdd418f78d9226b059701f24" category="list-text">fstabファイルの更新をスキップするには、_/opt/NetApp/snapcenter/scc/etc _にある_agent.properties_ファイルで_skip_fstab_update_to * true *の値を設定します。</block>
-  <block id="89085a9fdaa76a7c7b97a098e68225e5" category="list-text">静的なクローンボリューム名とジャンクションパスを設定するには、_/opt/NetApp/snapcenter/scc/etc _にある_agent.properties_ファイルで_use_custom_clone_volume_name_format_の値を* true *に設定します。ファイルを更新したら、コマンドを実行してSnapCenter forカスタムプラグインサービスを再起動する必要があります<block ref="f4da0aeb9d91444725fc84b066ea329b" prefix=" " category="inline-code"></block>。</block>
   <block id="acd9911e42880fa2170c4c68b4e0559a" category="paragraph">例：このプロパティを指定しない場合、クローンボリュームの名前とジャンクションパスは&lt;Source_volume_name&gt;_&lt;Timestamp&gt;のようになりますが、&lt;Source_volume_name&gt;_&lt;Clone_Name&gt;になります。</block>
   <block id="b3881d2c47f92a4fc24d4bd513af4d3a" category="paragraph">これにより、SnapCenterでfstabを更新したくない場合にfstabファイルを手動で更新できるように、名前が一定に保たれます。</block>
   <block id="6fefea88d23f9f3cedd5fd8b05ce984f" category="list-text">[リソース]ページで、*[表示]*リストから*[パス]*または*[リソースグループ]*を選択します。</block>
@@ -8012,7 +7646,6 @@
   <block id="a561a8020c6cf9c0bfcf2c0057ac1550" category="list-text">Microsoft Exchange Server</block>
   <block id="78898e52fcbdc5337204a384f2456d4f" category="list-text">Microsoft SQL Server</block>
   <block id="86083f3ea21c2385b4f013aae3c57858" category="list-text">SAP HANA</block>
-  <block id="9633d377e08af5a450ec353928e1d24b" category="list-text">カスタムプラグイン</block>
   <block id="f66a5076dc4b38e6e6f6d1850002d8e7" category="list-text">クラスタへのプラグインのインストール</block>
   <block id="d5567ab77d3010f86325ff6576826879" category="paragraph">クラスタ（WSFC、Oracle RAC、またはExchange DAG）にプラグインをインストールすると、クラスタのすべてのノードにインストールされます。</block>
   <block id="6b138857d259637a1bf0819ec12805f4" category="list-text">Eシリーズストレージ</block>
@@ -8034,7 +7667,6 @@
   <block id="61be258ec26cd6598544b7c05bf8b36a" category="doc">Windowsファイルシステムの単一リソースをオンデマンドでバックアップ</block>
   <block id="866879cbf88bb77398ac3c336063ceea" category="paragraph">セカンダリストレージとの SnapMirror 関係があるリソースをバックアップする場合、ストレージユーザに割り当てられたロールには「 "'napmirror all" 」権限を含める必要があります。ただし、「 vsadmin 」ロールを使用している場合、「 'SnapMirro all 」権限は必要ありません。</block>
   <block id="cd56c631927fec23fdd13a60faf10217" category="admonition">ファイルシステムをバックアップする場合、 SnapCenter は、バックアップするファイルシステムのボリュームマウントポイント（ VMP ）にマウントされている LUN をバックアップしません。</block>
-  <block id="22f16e8b28f69b96450fdb879b633af1" category="admonition">Windowsファイルシステムコンテキストで作業している場合は、データベースファイルをバックアップしないでください。バックアップを作成しても整合性に欠け、リストア時にデータが失われる可能性があります。データベースファイルを保護するには、データベースに適したSnapCenterプラグイン（SnapCenter Plug-in for Microsoft SQL Server、SnapCenter Plug-in for Microsoft Exchange Server、データベースファイル用のカスタムプラグインなど）を使用する必要があります。</block>
   <block id="1c726678cd6140171263bcf8b41347de" category="list-text">[ リソース ] ページで、 [ ファイルシステム ] リソースタイプを選択し、バックアップするリソースを選択します。</block>
   <block id="94470133339a09768284b95eccb8271a" category="list-text">File System-Protect ウィザードが自動的に起動しない場合は、 [*Protect] をクリックしてウィザードを開始します。</block>
   <block id="c62706269a2329ff51bf94ff5010638a" category="paragraph">リソースグループの作成タスクの説明に従って、保護設定を指定します。</block>
@@ -8200,7 +7832,6 @@
   <block id="ef96beee5f80fc2bcd7726a450b3a989" category="admonition">リストアしたファイルシステムにデータベースが含まれている場合は、データベースもリストアする必要があります。データベースをリストアしないと、データベースが無効な状態になっている可能性があります。データベースのリストアの詳細については、そのデータベースのデータ保護ガイドを参照してください。</block>
   <block id="b651b2481c776bf3bf9ea345a8be10ad" category="summary">リソースのバックアップまたはクローニングを準備するときに、プライマリストレージとセカンダリストレージ上のすべてのバックアップとクローンの図を表示できます。[Topology]ページでは、選択したリソースまたはリソースグループに使用可能なすべてのバックアップとクローンを確認できます。これらのバックアップとクローンの詳細を表示し、選択してデータ保護処理を実行できます。</block>
   <block id="a5034055581c83d2fec0b4b410e664f4" category="paragraph">サマリカードセクションには、バックアップとクローンの合計数が表示されます。Oracle データベースの場合のみ、サマリカードセクションにはログバックアップの合計数も表示されます。</block>
-  <block id="80c82fe3ce8c148b5edc714385f5f5b1" category="paragraph">SnapCenterカスタムプラグインを使用している場合、プライマリストレージシステム上のバックアップの名前は変更できません。</block>
   <block id="82df92bf63205eb90f0513c131abc2dd" category="list-text">クローンを削除する場合は、表でクローンを選択し、<block ref="f790bf9188cee374d2bb1f3790c6a393" category="inline-image-macro-rx" type="image"></block>をクリックして削除します。</block>
   <block id="1a8413b6d25d17625bc85e11bb87aaa7" category="paragraph"><block ref="1a8413b6d25d17625bc85e11bb87aaa7" category="inline-image-macro-rx" type="image"></block></block>
   <block id="4507e0d1a42287b926181e4cb9fda1cf" category="summary">このリリースの SnapCenter サーバおよび SnapCenter プラグインパッケージに関する重要な情報を提供します。これには、解決済みの問題、既知の問題、注意事項、および制限事項が含まれます。</block>
@@ -8468,7 +8099,6 @@
   <block id="d4c6b8eab0d95c64db4fab0b39d86dca" category="list-text">SQLデータベースのバックアップをリストアする</block>
   <block id="7b55eb37603aaec85de642c9761138e1" category="list-text">Oracleデータベースバックアップのリストア</block>
   <block id="b2a27804c27c83e05c725b342e1b42b3" category="list-text">カスタムアプリケーションのバックアップのリストア</block>
-  <block id="1f99ce4c7ce86789f3d81cc35f531f17" category="list-text">カスタムプラグインリソースを作成する</block>
   <block id="b867b97647a809df3c6e5231f0bef598" category="list-text">SAP HANAリソースを作成する</block>
   <block id="cbc56a4c2ad51ccea1242d4d4d348ae1" category="list-text">カスタムアプリケーション用のプラグインを使用してカスタムリソースを保護</block>
   <block id="2b42cb8c0a099907ef8a3de2f16f80a4" category="list-text">Plug-in for Microsoft SQL Serverを使用したMicrosoft SQL Serverリソースの保護</block>
@@ -8758,7 +8388,6 @@
   <block id="f3442009cf8c0e228473ba15a66ac563" category="paragraph">SnapCenter GUI を使用して、ホストを削除し、個々のプラグインまたはプラグインパッケージをアンインストールできます。また、 SnapCenter Server ホストのコマンドラインインターフェイス（ CLI ）を使用するか、または任意のホストでローカルに Windows * プログラムのアンインストール * オプションを使用して、リモートホスト上の個々のプラグインまたはプラグインパッケージをアンインストールすることもできます。</block>
   <block id="bf3d95dececb2ee8a103358b2c9b04f2" category="paragraph">SnapCenterサーバからホストを削除する前に、前提条件を満たしておく必要があります。</block>
   <block id="af429d236566c534d6dc055192e779cf" category="list-text">管理者としてログインする必要があります。</block>
-  <block id="50f2247c873481cfb368dd204a79a45d" category="list-text">SnapCenterカスタムプラグインを使用している場合は、ホストに関連付けられているクローンをSnapCenterからすべて削除する必要があります。</block>
   <block id="9030d3b6bdc2b1e3d07fcc87c359b081" category="list-text">ホストで検出ジョブが実行されていないことを確認する必要があります。</block>
   <block id="7cf2b1be955f9e0063c5ff9339bec7a6" category="list-text">ホストに関連付けられているすべてのオブジェクトを削除するには、必要な権限を持つロールが割り当てられている必要があります。そうしないと、削除処理が失敗します。</block>
   <block id="58577ea8db4fe9fa7618604aa126c15d" category="list-text">SnapCenter へのホストの追加後に SSH キーが変更された場合は、フィンガープリントを確認する必要があります。</block>
@@ -9004,7 +8633,6 @@
   <block id="2d9eb22f67056d86366a15efb099883a" category="sidebar">NetAppでサポートされるプラグインのバックアップ戦略</block>
   <block id="d8af169199bfc163fc18d9c1ac586c27" category="sidebar">NetAppでサポートされているプラグインリソースのバックアップスケジュール</block>
   <block id="bda453cd5a6724b496252c260674fa69" category="sidebar">手動で追加したNetAppでサポートされるプラグインリソースのリストア戦略のタイプ</block>
-  <block id="eada736bfcfe3be151f853e6f08f6d26" category="sidebar">ネイティブ形式</block>
   <block id="792464ae681ba52772c64594e159d7f2" category="sidebar">NetApp対応プラグインのインストール準備</block>
   <block id="e65dc40ee96b13cf83d05151b71aaa6f" category="sidebar">NetAppでサポートされるプラグインのインストールワークフロー</block>
   <block id="19bd9625214c87b1c38eac929848e1ba" category="sidebar">NetApp対応プラグインのインストール</block>
@@ -9241,7 +8869,6 @@
   <block id="f4bbec82b72e54df820fc15b640e3b5d" category="paragraph">[事前チェックをスキップ]*チェックボックスを選択していない場合は、プラグインをインストールするための要件を満たしているかどうかを確認するためにプラグインホストが検証されます。最小要件を満たしていない場合は、該当するエラーまたは警告メッセージが表示されます。問題を修正したら、 [* アップグレード ] をクリックします。</block>
   <block id="a24cb0112e51902b6b3ed4606a7cd727" category="cell">6.0.1</block>
   <block id="db1c2c3cb6f2d1f2978caf1a4dce483c" category="sidebar">NetAppでサポートされているプラグインを使用してアプリケーションを保護</block>
-  <block id="e66b727df529163e059dccac755199b5" category="paragraph">データ保護は、ONTAPシステムで実行されているMicrosoft Exchange Server、Microsoft SQL Server、LinuxまたはAIX上のOracleデータベース、SAP HANAデータベース、IBM DB2、PostgreSQL、MySQL、およびWindowsホストのファイルシステムでサポートされます。</block>
   <block id="309dab896f56b3d37ea98a7bf810fbfa" category="paragraph">MongoDBホスト</block>
   <block id="5cee7b6aa7ee8f8137a525779101e458" category="paragraph">SAP ASE向けプラグイン</block>
   <block id="a1ed78eb846876547dbbead9faf94c49" category="paragraph">SAPホスト</block>
@@ -9277,84 +8904,6 @@
   <block id="7327f5f0e2968d1fa35822d7d6f788aa" category="paragraph">使用する認証タイプを選択します。</block>
   <block id="43cc85c69233f4440d07f2e3061c15a5" category="admonition">LinuxおよびAIXユーザのみに適用されます。</block>
   <block id="d2359afa8132d4e27ade60817ab1a816" category="paragraph">NetAppでサポートされているプラグイン（MongoDB、ORASCPM、Oracle Applications、SAP ASE、SAP MaxDB、Storageなど）を使用してデータを保護できます。</block>
-  <block id="14aee625cd152256e849c1aa7031d871" category="admonition">カスタムプラグインは、WindowsとLinuxのどちらの環境でも使用できます。</block>
-  <block id="e535346a3db70ff385fc97189dce883d" category="paragraph">SnapCenterカスタムプラグインは、WindowsシステムとLinuxシステムのどちらにもインストールできます。</block>
-  <block id="5acceba2cee4fe40d121e90d997fa439" category="doc">SnapCenterカスタムプラグインへのリソースの追加</block>
-  <block id="1f3ce8cb4c6bb4bf02aa0b3d1e189ae7" category="paragraph">リソースを追加したら、リソースの詳細を変更できます。</block>
-  <block id="a426ad547c71e321ba843cef964120d7" category="doc">SnapCenterカスタムプラグインリソースのバックアップ</block>
-  <block id="9378c23d00fd78b8947bd7e11f09030a" category="summary">どのリソースグループにも含まれていない個 々 のSnapCenterカスタムプラグインリソースは、[Resources]ページからバックアップできます。リソースはオンデマンドでバックアップできます。また、リソースにポリシーが適用され、スケジュールが設定されている場合は、スケジュールに従って自動的にバックアップが実行されます。</block>
-  <block id="08b954c361c2ce7b23e572ce828859aa" category="doc">個 々 のSnapCenterカスタムプラグインリソースのバックアップ</block>
-  <block id="a37b4d82e3dae7c24db9d5162f48fd96" category="paragraph">どのリソースグループにも含まれていないカスタムプラグインリソースは、[Resources]ページから個別にバックアップできます。リソースはオンデマンドでバックアップできます。また、リソースにポリシーが適用され、スケジュールが設定されている場合は、スケジュールに従って自動的にバックアップが実行されます。</block>
-  <block id="665e27cacd5b140b3ca5a518bbd41724" category="doc">カスタムプラグインリソースのリソースグループのバックアップ</block>
-  <block id="e4e0cadac57fe2f7fc1d76c019a73967" category="doc">カスタムプラグインリソースのバックアップスケジュール</block>
-  <block id="79db142fcc9311cc0f07d756c08b4ca0" category="doc">SnapCenterカスタムプラグインのバックアップ処理をキャンセルする</block>
-  <block id="f574c5c8b76c4ae3d8e59b1478323386" category="doc">[Clone SnapCenter Custom Plug-ins]リソースのバックアップ</block>
-  <block id="89f4fce6715ddef3315f9c412063572c" category="list-text">デフォルトのクローニング処理でクローニングされるのは、ストレージオブジェクトのみです。アプリケーションレベルのクローニング処理は、その機能がカスタムプラグインで提供されている場合にのみ実行できます。</block>
-  <block id="15af88bae18a779b0123b601ed1f33b1" category="summary">SnapCenterを使用してカスタムプラグイン固有のリソースをバックアップする前に、バックアップするリソースまたはリソースグループのバックアップポリシーを作成する必要があります。</block>
-  <block id="45ff3f433bdb1ede8743b649a4ecb7c3" category="doc">カスタムプラグインリソースのポリシーの作成</block>
-  <block id="90de5bc1543ef2c832e0acbf4e27cc39" category="paragraph">詳細については、カスタムプラグインのデータ保護戦略の定義に関する情報を参照してください。</block>
-  <block id="75b3f5ccaa0a432666656554ea274cd8" category="inline-link-macro">[Topology]ページで、カスタムプラグインリソースに関連するバックアップとクローンを表示する</block>
-  <block id="f14c7af4999f47dba1e2a191fea8c11f" category="paragraph">を参照して <block ref="0bc29e24db2bfeb522f90f83680fcdb4" category="inline-link-macro-rx"></block></block>
-  <block id="6ad653f84eed0c76647686ab11205da7" category="doc">カスタムプラグインリソースの保護におけるリソース、リソースグループ、ポリシーの使用方法</block>
-  <block id="2fc5c212a0ba7f3f442fe029d893a845" category="summary">カスタムプラグインリソースを保護する場合は、SnapCenterカスタムプラグインをインストールしてセットアップする必要があります。</block>
-  <block id="d9ac41630ae6a20177466403e2d328d8" category="doc">SnapCenterカスタムプラグインのインストールワークフロー</block>
-  <block id="caef6d3f9e7cdd9ed1d3eaabe29db549" category="paragraph">カスタムプラグインリソースを保護する場合は、SnapCenterカスタムプラグインをインストールしてセットアップする必要があります。</block>
-  <block id="8f328255df3c97c90d7cfcc63b284018" category="image-alt">SnapCenterカスタムプラグインのワークフロー</block>
-  <block id="0d137907411e77ba81a3c7f3193d7c4a" category="summary">SnapCenterカスタムプラグインは、SnapCenterユーザインターフェイス（UI）を使用してインストールする必要があります。SnapCenter UIからのプラグインのリモートインストールが許可されていない環境では、コマンドラインインターフェイス（CLI）を使用して、コンソールモードまたはサイレントモードでカスタムプラグインをインストールできます。</block>
-  <block id="b5c24629ead5c583e2208216205af10a" category="doc">コマンドラインインターフェイスを使用してLinuxホストにSnapCenterカスタムプラグインをインストールする</block>
-  <block id="0f18e8aaa7478aae88b697e6b89d15f0" category="paragraph">SnapCenterカスタムプラグインは、SnapCenterユーザインターフェイス（UI）を使用してインストールする必要があります。SnapCenter UIからのプラグインのリモートインストールが許可されていない環境では、コマンドラインインターフェイス（CLI）を使用して、コンソールモードまたはサイレントモードでカスタムプラグインをインストールできます。</block>
-  <block id="ef5b54514d2bc2cec099dbe31b43d400" category="list-text">SnapCenter SnapCenter Plug-ins Package for SnapCenterのインストールファイル（Linux_Linux_host_plugin.bin）をC：NetApp \Package\Package Repositoryからカスタムプラグインをインストールするホストにコピーします。</block>
-  <block id="f96e2a1e803fa28017557015321ddb3a" category="list-text">SnapCenterにログインし、UIまたはPowerShellコマンドレットを使用してカスタムプラグインをアップロードします。</block>
-  <block id="bdc72ebb02dfcda19f5dd85c44715b14" category="paragraph">UIからカスタムプラグインをアップロードするには、セクションを参照してください <block ref="f72fab5b6c914bbb8d5e6637ea3f5a3f" category="inline-link-macro-rx"></block> 。</block>
-  <block id="301724bd950c161b79552d6f655df446" category="doc">カスタムプラグインに必要な最小ONTAP Privileges</block>
-  <block id="322752ebdea85a56b4a5d899f24c4325" category="doc">カスタムプラグインリソースのクローニング処理を監視する</block>
-  <block id="ea74c30d0b14b0ca9fd30f2713505fb0" category="doc">カスタムプラグインリソースのバックアップ処理を監視する</block>
-  <block id="78d6b4b75546fc8aa5983130521da2da" category="doc">カスタムプラグインリソースのリストア処理を監視する</block>
-  <block id="36c1f2ec62294c41aad60383fd84873d" category="doc">カスタムプラグインのインストールステータスの監視</block>
-  <block id="6af1ebe4d54e4d359cfda12fdfc23a05" category="doc">SnapMirrorおよびSnapVaultレプリケーション用のストレージシステムをカスタムプラグイン用に準備する</block>
-  <block id="c338295edd6028b8881fc2e030e0af4c" category="summary">SnapCenterカスタムプラグインを使用する前に、SnapCenter管理者がSnapCenterサーバをインストールして設定し、前提条件となるタスクを実行する必要があります。</block>
-  <block id="2f2b7315a3ee2bd24ebcb2968f2d7471" category="doc">SnapCenterカスタムプラグインを使用するための前提条件</block>
-  <block id="563eeaf2ba85a493983bca82e8f08302" category="paragraph">SnapCenterで必要な他のポートに加えて、ポート9090をカスタムプラグイン用にリザーブする必要があります。</block>
-  <block id="cfc5bf454b40740731ed76f94a8f970c" category="summary">ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。カスタムプラグインは、WindowsとLinuxのどちらの環境でも使用できます。</block>
-  <block id="d4a7ff82c08a07473e6db99d099607ac" category="doc">ホストを追加してSnapCenterカスタムプラグインをインストールするための前提条件</block>
-  <block id="af0b5aed7941c6f843b87c68b201035e" category="paragraph">ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。カスタムプラグインは、WindowsとLinuxのどちらの環境でも使用できます。</block>
-  <block id="f6435544e19487a5d349a72241d6531d" category="list-text">カスタムプラグインが、ホストの追加処理を実行するクライアントホストにインストールされている必要があります。</block>
-  <block id="d0304f4e107917a8451ca9cbb3d3b342" category="list-text">カスタムプラグインの場合は、カスタムプラグインファイルのSHA512ハッシュを_custom_plugin_checksum_list_fileに追加しておく必要があります。</block>
-  <block id="a05404237ea51ddb4ea1e7c6debd0079" category="paragraph">custom_plugin_checksum_listは、SnapCenterによるホストへのカスタムプラグインインストールの一部です。</block>
-  <block id="8af2774827e3e07de108382c962be1a0" category="list-text">アプリケーション用に作成したカスタムプラグインの場合は、次の手順を実行しておく必要があります。</block>
-  <block id="2124f96b55bd8bcfe23c27d4d7c30129" category="list-text">デフォルトのリストア処理では、ストレージオブジェクトのみがリストアされます。アプリケーションレベルのリストア処理は、その機能がカスタムプラグインで提供されている場合にのみ実行できます。</block>
-  <block id="d586cfbb655ff9a83e5820c52931584f" category="doc">カスタムプラグインリソースのリストア</block>
-  <block id="08bd15b8d89877f65879f0e9486f22f7" category="doc">SnapCenterカスタムプラグインのクレデンシャルを設定</block>
-  <block id="4f0a79bbbb1c2f86716f750b2620d7ca" category="list-text">カスタムフラクインアフリケエシヨン</block>
-  <block id="eaa33d42e6fa75d8b2d8dabc59d645aa" category="summary">SnapCenterは、プラグインアプリケーションおよびストレージシステム上でNetAppテクノロジと統合されます。カスタムプラグインを操作するには、SnapCenterグラフィカルユーザインターフェイスを使用します。</block>
-  <block id="7e2dbe0ceba88df5406b9c6925b9b55b" category="doc">SnapCenterカスタムプラグインの機能</block>
-  <block id="be729a6539659c901e8d8721dbd4263d" category="paragraph">SnapCenterでは、NetAppのSnapshotテクノロジとカスタムプラグインを使用してリソースがバックアップされます。Snapshotはストレージスペースを最小限しか消費しません。</block>
-  <block id="15b52e4150617b0308c95562aaf68617" category="paragraph">カスタムプラグイン機能を使用すると、次のようなメリットもあります。</block>
-  <block id="f5f43eea7e5881f7c06831585bdf5df3" category="summary">使用するアプリケーション用のカスタムプラグインを開発し、 SnapCenter を使用してそれらのアプリケーションのバックアップ、リストア、クローニングを行うことができます。カスタムプラグインは、他の SnapCenter プラグインと同様に NetApp SnapCenter ソフトウェアのホスト側コンポーネントとして機能し、アプリケーションに対応したリソースのデータ保護と管理を実現します。</block>
-  <block id="d30c90ed422af36347bce4755fe70260" category="doc">SnapCenterカスタムプラグインの概要</block>
-  <block id="caa41de91fb5b317c8ea619089e3c365" category="paragraph">使用するアプリケーション用のカスタムプラグインを開発し、 SnapCenter を使用してそれらのアプリケーションのバックアップ、リストア、クローニングを行うことができます。カスタムプラグインはNetApp SnapCenterソフトウェアのホスト側コンポーネントとして機能し、アプリケーションに対応したリソースのデータ保護と管理を可能にします。</block>
-  <block id="cb5170fba0d79e8f77791b01b65474cb" category="paragraph">カスタムプラグインをインストールすると、SnapCenterとNetApp SnapMirrorテクノロジを使用して別のボリュームにバックアップセットのミラーコピーを作成したり、NetApp SnapVaultテクノロジを使用してディスクツーディスクのバックアップレプリケーションを実行したりできます。カスタムプラグインは、WindowsとLinuxのどちらの環境でも使用できます。</block>
-  <block id="612ec908f9242be88271aff279afcb8c" category="admonition">SnapCenterCLIでは、カスタムプラグインコマンドはサポートされません。</block>
-  <block id="ac1853e1b8c52dcd72090686ddcea0a4" category="paragraph">カスタムプラグインは[ホストを追加]ページからインストールできます。</block>
-  <block id="83aeb7b594481ad598eb0b519836777b" category="summary">SnapCenterは、物理マシンと仮想マシンの両方でさまざまなストレージタイプをサポートしています。SnapCenterカスタムプラグインをインストールする前に、ストレージタイプがサポートされていることを確認する必要があります。</block>
-  <block id="c48a2f5430d3aff55420b834363bcc46" category="doc">SnapCenterカスタムプラグインでサポートされるストレージタイプ</block>
-  <block id="c646559470c5e7c2ce007b2f588217ce" category="summary">SnapCenterを使用してリストア処理を正常に実行するには、戦略を定義する必要があります。手動で追加したカスタムプラグインリソースには、2種類のリストア戦略があります。手動で追加したカスタムプラグインリソースはリカバリできません。</block>
-  <block id="74f3688654489538321178bb35e0308a" category="doc">手動で追加したカスタムプラグインリソースでサポートされるリストア戦略のタイプ</block>
-  <block id="d09f169f58ca3636a49dbb1d90c5ccb2" category="paragraph">SnapCenterを使用してリストア処理を正常に実行するには、戦略を定義する必要があります。手動で追加したカスタムプラグインリソースには、2種類のリストア戦略があります。</block>
-  <block id="10b4ebc3af3b43078bbe14cbd2f856b5" category="admonition">手動で追加したカスタムプラグインリソースはリカバリできません。</block>
-  <block id="068e66f9f630e931ca9256c9d49a4894" category="doc">[Topology]ページで、カスタムプラグインリソースに関連するバックアップとクローンを表示する</block>
-  <block id="ffcbfe2535c5e409d12457d03945597a" category="summary">カスタムプラグインはデータ保護処理に使用できます。</block>
-  <block id="91ed5f58b9ed12fe9c0ba6ac5fbaa1b7" category="doc">SnapCenterカスタムプラグインの機能</block>
-  <block id="5bb2f9bf573dcbada2bc999d2acc3d80" category="paragraph">カスタムプラグインはデータ保護処理に使用できます。</block>
-  <block id="f130b1c1614c0136264ae62249141b2f" category="sidebar">カスタムアプリケーションの保護</block>
-  <block id="ad41f7a9e85843a998743e132424a395" category="sidebar">SnapCenterカスタムプラグイン</block>
-  <block id="27a900f1a63545d14b71e4b2d44fc8a9" category="sidebar">SnapCenter Custom Plug-ins の機能</block>
-  <block id="3d8a9e359cdf4b956d6850836e03a25e" category="sidebar">カスタムプラグインのバックアップ戦略</block>
-  <block id="08759ac851b4d644eddfd819f2b366e9" category="sidebar">SnapCenterカスタムプラグインのインストール準備</block>
-  <block id="834849dd07442651b1ce8092c92186f0" category="sidebar">SnapCenterカスタムプラグインのインストール</block>
-  <block id="33e8da2f20646df222fc0acf35201fe4" category="sidebar">カスタムプラグインリソースのバックアップ</block>
-  <block id="8ffa4ba0dd2df5995fd397c72a149679" category="sidebar">個 々 のカスタムプラグインリソースのバックアップ</block>
-  <block id="e734e6e2e702d38ebab6ed3c050a5e72" category="sidebar">カスタムプラグインリソースのバックアップをクローニング</block>
   <block id="881a29d62175189b1872a856fce933da" category="paragraph">SnapCenterを使用すると、データベースのバックアップを使用してOracleデータベースをクローニングできます。作成されるクローンはシッククローンで、親容量プールに作成されます。</block>
   <block id="57507899dd312cf4de9c076e90990d6a" category="paragraph">SnapCenterでは、SAP HANAデータベースのバックアップを使用してSAP HANAデータベースをクローニングできます。作成されるクローンはシッククローンで、親容量プールに作成されます。</block>
   <block id="73c291e6ad930a577bf1c1d0267ecd80" category="paragraph">SnapCenterを使用すると、データベースのバックアップを使用してSQLデータベースをクローニングできます。作成されるクローンはシッククローンで、親容量プールに作成されます。</block>
@@ -9434,24 +8983,15 @@
   <block id="8c4149a5e3a16e71c373cac16eab56eb" category="list-text"><block ref="8031b6dd89dc17bc568c9124170bb66a" prefix="" category="inline-code"></block></block>
   <block id="1f46b6eec6f3def165a94aea4fbd2de8" category="list-text"><block ref="d873942b6f54bbecd97eb915c6e95c45" prefix="" category="inline-code"></block></block>
   <block id="73c050ddeaec2b5e5a856c81666f8026" category="list-text">アイコンをクリックし <block ref="725f4bf2ffc300942027282d0182533f" category="inline-image-macro-rx" type="image"></block> 、*[証明書の検証を有効にする]*をクリックします。</block>
-  <block id="233125590fad11d81c05c1b0279c56f1" category="admonition">SnapCenterでは、ASA R2システムでVMware Virtual Machine File System（VMFS）のみがサポートされます。</block>
   <block id="989977a18a476a92018e04dd60ec37c1" category="inline-link">ASA R2システムの詳細</block>
   <block id="b3c78f6e772922673e6d35ae6df26cbd" category="list-text">VMDK経由でのアプリケーションのプライマリバックアップの作成</block>
   <block id="7e358fa759baa4f70a96f79cf29b4c61" category="list-text">セカンダリストレージシステムへの整合グループSnapshotの転送</block>
-  <block id="e4cc11f5ac51267a510e423fca1a6266" category="list-text">バックアップのリストアと代替保存場所からのリストア</block>
-  <block id="eaf84a062a0d8e38f825a0f02f3d1272" category="list-text">VMware vMotionを使用したプライマリストレージとセカンダリストレージの両方からのIn Placeリストア</block>
-  <block id="74307ec7ea96b1aa508fc7b092900aec" category="list-text">プライマリストレージとセカンダリストレージの両方からの接続とコピーリストア</block>
-  <block id="9b0e5d4aa3544e7e2154f18fb865684a" category="list-text">バックアップのクローニングと別の場所へのクローニング</block>
   <block id="a0f3e47cc5179a026d7b861797055f6d" category="list-text">rawデバイスマッピング（RDM）</block>
   <block id="b47dab3c647bba9b7ad0a8fc0cde81dc" category="list-text">Oracleヨウノアプリケーションホリユウム</block>
   <block id="7236f926bc1402ad0d847fd55a34001d" category="list-text">SAP HANA NDV</block>
   <block id="da612433b3e7d1bdc94a92a26f362677" category="list-text">LockVault</block>
-  <block id="32003f26ce5a5c05fba8d25bec258e4d" category="list-text">改ざん防止スナップショット</block>
-  <block id="b4bc3604610d39195e11a5ae303f5af1" category="list-text">フレックスグループ</block>
   <block id="425514993f273b658b0218c334836b26" category="list-text">階層整合グループ</block>
-  <block id="4e8cbbcd8088f634c6f45af755c363c9" category="list-text">ONTAP 9.xからASA R2システムへの移行</block>
   <block id="980869fd79cd78a3682752206f149791" category="list-text">スナップショットの名前変更</block>
-  <block id="63d730ecaee7f6e096a0f2026e24241b" category="list-text">SQLプラグインホストのログディレクトリのセカンダリプロビジョニングは、SnapCenterでサポートされていません。は、ONTAP CLIまたはSystem Managerを使用して手動で設定する必要があります。</block>
   <block id="bc3c828cce582fafd1e35e77b8c84327" category="cell">ポート名</block>
   <block id="f78fb51edae6a69d5e1e911a2b6fc268" category="cell">ポート番号</block>
   <block id="02674a4ef33e11c879283629996c8ff8" category="cell">方向</block>
@@ -9559,7 +9099,6 @@
   <block id="a01b7da75a123f67d2bd092bd390357b" category="inline-link-macro">[Topology]ページでPostgreSQLリソースに関連するバックアップとクローンを表示</block>
   <block id="8cc434d6a6795129514dec808d2a0b5f" category="paragraph">を参照して <block ref="ba5835b9b929a25573989def442b6620" category="inline-link-macro-rx"></block></block>
   <block id="74bf63bf6d2c3ea39571d20c69e750c5" category="doc">ASA R2システムで、リソースグループを作成し、PostgreSQLリソースのセカンダリ保護を有効にする</block>
-  <block id="2fa3565e934ce96d4dfda01caf5687f0" category="paragraph">をクリックし <block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>、ホスト名とリソースタイプを選択してリソースをフィルタリングします。そのあとに<block ref="5daa1c5d91da80c848b68dcd336ec220" category="inline-image-macro-rx" type="image"></block>をクリックすると、フィルタ ペインが閉じます。</block>
   <block id="049723d2545fe83b1346dfc8b0e73157" category="inline-image-macro">バックアップワークフローエクスチェンジャーサーバデータベース</block>
   <block id="17867b811722d46682fd65b7a3aa094d" category="paragraph"><block ref="17867b811722d46682fd65b7a3aa094d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="11347fc37982208b4dafefd65b23ac33" category="paragraph"><block ref="11347fc37982208b4dafefd65b23ac33" category="inline-image-macro-rx" type="image"></block></block>
@@ -9690,7 +9229,6 @@
   <block id="41fbf2c9674d14c871b1a98dff345ddd" category="paragraph">NetApp ONTAP event generate-svm-log権限がStorage Virtual Machine（AutoSupport）ユーザに付与されている。</block>
   <block id="251c52ce7ef8b529e63b81a2f40b7a26" category="paragraph">バックアップファイルがiSCSI LUNから誤って削除された場合に、SnapCenterのMySQLデータベースをリストアするコマンドレットの例を次に示します。VMDKの場合は、ONTAPスナップショットからバックアップを手動でリストアします。</block>
   <block id="b9832b10a87d0c3793ed3b413ee1d839" category="section-title">REST APIをサポート</block>
-  <block id="bc9f5cd1669f71a2b0bd213a944d8fdb" category="paragraph">ONTAPおよびASA R2ストレージシステムへのすべてのストレージ接続は、デフォルトでZAPIを経由します。一部のONTAPバージョンでREST APIを有効にできます。</block>
   <block id="421f02448bcd1490276fcd375668a6be" category="paragraph">次の構成ファイルで構成キーを変更できます。</block>
   <block id="94b74299dc7f33d5bf8e4fc497c26334" category="list-text">IsRestEnabledForStorageConnection</block>
   <block id="cbd8678f4d2dba6d97b2ccfc54882755" category="paragraph">デフォルト値は false です。</block>
@@ -9720,7 +9258,6 @@
   <block id="02cf8992ec066e2a6c94ef201a56fde4" category="list-text">FlexCloneのボリュームスプリット処理の詳細については、を参照してください<block ref="a740171a60876518d945f2e24ddd79f9" category="inline-link-rx"></block>。</block>
   <block id="d664b55967efa51159bf2dcaad494f28" category="admonition">最大保持値は1018です。保持数を使用しているONTAPバージョンでサポートされる値よりも大きい値に設定すると、バックアップは失敗します。</block>
   <block id="45674f4fab4d30d82c5e48053de84a2d" category="paragraph">ONTAPのプライマリとセカンダリは、ONTAP FAS、AFF、ASA、ONTAP Select、Cloud Volumes ONTAPのいずれかです。</block>
-  <block id="5809b9053ee07314ee267cf4861e2fe2" category="paragraph">プラグインのバージョン。メジャーバージョンとマイナーバージョンの両方を含めることができます。例：5.0、6.0、6.1</block>
   <block id="04421acf26388af407e2e444d1d9a4ea" category="paragraph">+ノード間の遅延を回避するには、再シード処理を実行する前に新しいバックアップを作成するか、最新のバックアップを実行するホストを選択します。</block>
   <block id="0002a57eb89728985300757fccb645db" category="inline-link">ONTAP 9 SANの管理セクション</block>
   <block id="9b84e6db97d84dfea46f94fa87561146" category="list-text">LUNパスが自動的に修正される頻度を指定するには、LUNPATH_MONITORING_INTERVALパラメータに値（時間単位）を割り当てます。SLMの詳細については、を参照して<block ref="791bce609970821d75a70463f2e5a4f8" category="inline-link-rx"></block>ください。</block>
@@ -9785,7 +9322,6 @@
   <block id="be01a357ae2c9752875b5385c732b017" category="section-title">主な特長</block>
   <block id="167ec2cbfb2138b492dfdc49a527d301" category="paragraph">SnapCenterの主な機能は次のとおりです。</block>
   <block id="8cf888c772c03c3d648b58558da6e63e" category="list-text">さまざまなアプリケーションに対して、アプリケーションと整合性のある一元的なデータ保護を実現</block>
-  <block id="969aec922664277bd496cc9933e20159" category="paragraph">ユーザ定義のSnapCenterプラグインを作成するフレームワークを提供することで、他の標準またはカスタムのアプリケーションやデータベースでもデータ保護がサポートされます。これにより、同じ単一コンソールから他のアプリケーションやデータベースのデータを保護できます。このフレームワークを活用することで、NetAppはMongoDB、Storage、MaxDB、Sybase ASE、ORASCPM向けのSnapCenterプラグインをリリースしました。開発者ガイドを使用して独自のプラグインを作成することもできます。</block>
   <block id="fbe4c82f71e9d38697b35f4a20991f38" category="paragraph">SnapCenterには、ハイブリッドクラウドの任意のデスティネーションにあるリソースのバックアップとクローンを管理するための単一のインターフェイスであるGUIが用意されています。</block>
   <block id="7c3bb00618d034ac43cb570a8e2d7a19" category="paragraph">SnapCenterにはREST APIが用意されており、ほとんどの機能を任意のオーケストレーションソフトウェアと統合できます。また、Windows PowerShellコマンドレットやコマンドラインインターフェイスも使用できます。</block>
   <block id="14b689a9c9a340e9114e5ea589110eca" category="list-text">データ保護のダッシュボードとレポート作成の一元化</block>
@@ -9808,7 +9344,6 @@
   <block id="8ec3dce9728ccf15c37266b6c382c785" category="paragraph">SAP HANAデータベース向けSnapCenterプラグイン</block>
   <block id="aabe8e5d9d24c243240731f0310c18bb" category="paragraph">Linux用プラグインパッケージおよびWindows用プラグインパッケージ</block>
   <block id="d28c7359652d719e6982acbdc3c49f95" category="paragraph">Plug-in for UNIXまたはPlug-in for Windows</block>
-  <block id="889c03fdc6c55696632723dd9c7bd2b3" category="paragraph">フアイルシステムノハツクアツフ、Plug-in for Windows</block>
   <block id="ce9bfd38dcbd5fc4c9c9c8f23dfe195b" category="paragraph">IBM DB2用SnapCenterプラグイン</block>
   <block id="c6a2afa4c0921c400b8b7c2be39a338e" category="paragraph">Plug-ins Package for LinuxおよびPlug-ins Package for Windows</block>
   <block id="8ab4d821b694c7a4a2ccc5b89c6bb24e" category="paragraph">Linux、AIX、またはWindows</block>
@@ -9875,9 +9410,6 @@
   <block id="7450cfde7058dc5e1f7909d0280fd7ae" category="list-text">Azure NetApp Files</block>
   <block id="4d82a1ec1af02725042c8c785564ee7a" category="list-text">Amazon FSx for NetApp ONTAP</block>
   <block id="ababa124e254733f565e62afc357fc79" category="list-text">NetApp ONTAP 9.16.1を実行しているNetApp ASA R2システム。</block>
-  <block id="c00f42dba6437d6e7cbff9b51cdc87bf" category="paragraph">ASA R2システムは、オールフラッシュプラットフォーム上に構築されたSAN専用環境向けに、ハードウェアとソフトウェアの統合ソリューションを提供します。<block ref="b840388ca7e01a42ddc42d721bbbf472" category="inline-link-rx"></block>です。</block>
-  <block id="8f01bf34bec2cec23a4702e931ee94b0" category="cell">サポートされる処理</block>
-  <block id="ff887f516fdd30d87fb1832af91506bf" category="cell">サポートされない処理</block>
   <block id="0b4e0166878acdd36f882f2270445c06" category="section-title">サポートされるアプリケーションとデータベース</block>
   <block id="29756d78461f8a62cb986dc97f47496b" category="paragraph">SnapCenterは、さまざまなアプリケーションやデータベースの保護をサポートしています。サポートされているアプリケーションとデータベースの詳細については、を参照してください<block ref="734369dbdcbe00444fc7be843d617a6c" category="inline-link-rx"></block>。</block>
   <block id="ee0febdaba6d4c618d2cca84b2c49df1" category="paragraph">SnapCenterは、Amazon Web Services（AWS）のSoftware-Defined Data Center（SDDC）環境上のVMware Cloudで、OracleとMicrosoft SQLのワークロードの保護をサポートします。<block ref="95513dc65edb533209d1910ac5e4b37d" category="inline-link-rx"></block>です。</block>
@@ -9959,4 +9491,72 @@
   <block id="230f7d0fc162c3a559cd8b29556f41f4" category="paragraph"><block ref="230f7d0fc162c3a559cd8b29556f41f4" category="inline-link-rx"></block></block>
   <block id="17103b09b3247a2b39032b11b995b325" category="list-text">ORACLE_BACKUPMODE は、オンライン バックアップを実行するかオフライン バックアップを実行するかを指定します。</block>
   <block id="e787bc810fe0c9919da5538cad8cb1f1" category="list-text">ORACLE_EXPORT_PARAMETERS は、_/bin/su &lt;sqlplus を実行しているユーザー&gt; -c sqlplus /nolog &lt;cmd&gt;_ の実行中に、上記で定義された環境変数を再エクスポートするかどうかを指定します。これは通常、sqlplus を実行しているユーザーが、_connect / as sysdba_ を使用してデータベースに接続するために必要なすべての環境変数を設定していない場合に発生します。</block>
+  <block id="a6f6a01605d225b6eccb8bc600198254" category="doc">プラグインキーストアのパスワードと使用中のCA署名キーペアのエイリアスを管理する</block>
+  <block id="177f575b5a8eadec287bb6d168449027" category="paragraph">インストールされたデジタル証明書をアクティブ化するには、SnapCenter プラグイン サービスを使用して、プラグイン キーストアとその証明書のパスワードを管理し、CA 証明書を構成し、プラグイン トラストストアにルート証明書または中間証明書を構成し、プラグイン トラストストアに CA 署名キー ペアを構成する必要があります。</block>
+  <block id="8593559b9e887ff645a2a050b5b8f36c" category="paragraph">プラグインは、信頼ストアとキーストアの両方として、_/opt/NetApp/snapcenter/scc/etc_ にあるファイル「keystore.jks」を使用します。</block>
+  <block id="181646988f2fcb9185be86e172665b21" category="list-text">プラグイン エージェント プロパティ ファイルからプラグイン キーストアのデフォルト パスワードを取得できます。</block>
+  <block id="65ae86cb8ec34e4ba158707d94c60dfb" category="admonition">プラグイン キーストアのパスワードと、秘密キーに関連付けられたすべてのエイリアス パスワードは同じである必要があります。</block>
+  <block id="d02bf6c91e930dd1afe81c8526ca7b7f" category="section-title">ルート証明書または中間証明書をプラグイン信頼ストアに設定する</block>
+  <block id="c95c637d3299603ad3c7196bc054ae99" category="paragraph">信頼ストアをプラグインするには、秘密キーなしでルート証明書または中間証明書を構成する必要があります。</block>
+  <block id="8b71edfb7cf1a59a74ff54b086516e28" category="list-text">プラグイン キーストアが格納されているフォルダー (/opt/NetApp/snapcenter/scc/etc) に移動します。</block>
+  <block id="983edb30b4dfb1a2ba42f9f9cc14950e" category="list-text">ルート証明書または中間証明書をプラグイン信頼ストアに設定した後、サービスを再起動します。</block>
+  <block id="00abca26ff8eb112359137dcfb9ea01a" category="section-title">CA署名キーペアをプラグイン信頼ストアに設定する</block>
+  <block id="45731a3aa52bf1909e9e9dc6161cc898" category="paragraph">CA 署名キー ペアをプラグイン信頼ストアに設定する必要があります。</block>
+  <block id="d1d422661c78b9eab46b9f8b1765e58e" category="list-text">プラグイン キーストア /opt/NetApp/snapcenter/scc/etc が含まれるフォルダーに移動します。</block>
+  <block id="f992e83f751357f9d9ccabefb7ab5af0" category="paragraph">デフォルトのプラグイン キーストア パスワードは、agent.properties ファイルのキー KEYSTORE_PASS の値です。</block>
+  <block id="3755aa47db20dfb4e7857d21af35c6f3" category="list-text">CA 署名キー ペアをプラグイン トラスト ストアに設定した後、サービスを再起動します。</block>
+  <block id="202758a186edfc5ecc21db45129fcefb" category="section-title">プラグインの証明書失効リスト（CRL）を構成する</block>
+  <block id="1448a860ca909fe5a4b713898b4d9e26" category="list-text">SnapCenter プラグインは、事前に構成されたディレクトリ内の CRL ファイルを検索します。</block>
+  <block id="c3c1d60ea5e2b53ad2638c5cdea5f89c" category="list-text">SnapCenter プラグインの CRL ファイルのデフォルト ディレクトリは、「opt/NetApp/snapcenter/scc/etc/crl」です。</block>
+  <block id="60e92bca5961a0f4e81c024688a1272c" category="paragraph">インストールされたデジタル証明書をアクティブ化するには、SnapCenter プラグイン サービスを使用して、プラグイン キーストアとその証明書のパスワードを管理し、CA 証明書を構成し、プラグイン トラストストアにルート証明書または中間証明書を構成し、プラグイン トラストストアに CA 署名キー ペアを構成する必要があります。</block>
+  <block id="4ee0dfdd2373ec8e5a3ddda3da0957dc" category="paragraph">プラグインは、信頼ストアとキーストアの両方として、_C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc_ にあるファイル _keystore.jks_ を使用します。</block>
+  <block id="8800bf627a6fbf38d58c52773ec76fe4" category="list-text">プラグインキーストアが格納されているフォルダ_C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc_に移動します。</block>
+  <block id="6a9186e5073444d4dfe469c0ec025eeb" category="list-text">プラグインキーストアが格納されているフォルダ_C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc_に移動します。</block>
+  <block id="c32f72f0e4fef5bd690d9026e9a2280f" category="section-title">SnapCenterプラグインの証明書失効リスト（CRL）を構成する</block>
+  <block id="75ef750cae4cd63d012437bf3a7d1602" category="list-text">SnapCenter プラグインは、事前に構成されたディレクトリ内の CRL ファイルを検索します。</block>
+  <block id="0e3a5e9fc260fc0d407d8321dcc8003b" category="list-text">SnapCenter プラグインの CRL ファイルのデフォルト ディレクトリは、_'C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\ etc\crl'_ です。</block>
+  <block id="2fad35de9dcd671455c9e72f29a4b223" category="paragraph">ONTAPへのすべてのASA、AFF、またはFASシステム接続は、デフォルトでZAPIを経由します。RESTAPIは、特定のONTAPバージョンで有効にできます。</block>
+  <block id="599bdb9ade4d424c1d0e46738185a553" category="paragraph">SnapCenter は、ZAPI をサポートしていない ASA r2 システム上のすべての操作を REST API を活用して実行します。</block>
+  <block id="c2ecaf82710b87f701c30b03217ce358" category="paragraph">データ保護は、ONTAPシステムで実行されているMicrosoft Exchange Server、Microsoft SQL Server、LinuxまたはAIX上のOracleデータベース、SAP HANAデータベース、IBM DB2、PostgreSQL、MySQL、およびWindowsホストのファイルシステムでサポートされます。SnapCenter は、MongoDB、Storage、MaxDB、Sybase ASE、ORASCPM などのアプリケーションの保護もサポートしています。</block>
+  <block id="856b104aa0e600cd87dcca68d37108cd" category="doc">ASA r2 システムでサポートされている SnapCenter 操作</block>
+  <block id="b7e8225960284afe2c6e37957709cd90" category="paragraph">ASA r2 ストレージ システムは、SnapCenter 6.1 以降でサポートされます。 <block ref="b840388ca7e01a42ddc42d721bbbf472" category="inline-link-rx"></block></block>
+  <block id="9495c0bfae580f7cd9a35b1c4bda619f" category="paragraph">*ASA r2 システム用の SnapCenter でサポートされている操作*</block>
+  <block id="48a4a4a55c074d578a28288306965ebc" category="list-text">プライマリおよびセカンダリストレージシステムから元のホストまたは代替ホストへのバックアップの復元</block>
+  <block id="88f032fba4d12f7f4fad32b78d6163d7" category="list-text">VMware vMotionを使用したプライマリおよびセカンダリストレージシステムからのインプレースリストア</block>
+  <block id="5eaeee1ce928de977b68a25b9c1b1a94" category="list-text">プライマリおよびセカンダリストレージシステムの両方から接続してコピーを復元します</block>
+  <block id="2ac74f7e56e1eda352b17c65251f4a20" category="list-text">バックアップを元のホストまたは代替ホストに複製する</block>
+  <block id="1ad6d2de484cb785da5c2ff1e4e68a57" category="paragraph">SnapCenterは、ONTAPコンシステンシーグループを検出または作成できます。また、セカンダリ保護のために、宛先クラスタへのSnapMirror関係をプロビジョニングおよび初期化することもできます。</block>
+  <block id="6f04bce7ee68a94f8a7107a6ec8f82ef" category="paragraph">アプリケーションに対して ASA r2 システムで二次保護を有効にする方法については、以下を参照してください。</block>
+  <block id="1cc48bfa9deb8cbe9ac86aa7814eafc2" category="inline-link">Microsoft SQL Server リソースの二次保護を有効にする</block>
+  <block id="6a7bda8e55fec33c0e84308f3a7487d9" category="list-text"><block ref="6a7bda8e55fec33c0e84308f3a7487d9" category="inline-link-rx"></block></block>
+  <block id="5c1b83640f350debd19233ccd7049769" category="inline-link">SAP HANAリソースの二次保護を有効にする</block>
+  <block id="d131b0bb4a16e5b8478497ccfbef33c2" category="list-text"><block ref="d131b0bb4a16e5b8478497ccfbef33c2" category="inline-link-rx"></block></block>
+  <block id="efbcba99976e07d78be176f7a90cf7c3" category="inline-link">Oracleリソースの二次保護を有効にする</block>
+  <block id="762704371851ac78abed72b308f150fd" category="list-text"><block ref="762704371851ac78abed72b308f150fd" category="inline-link-rx"></block></block>
+  <block id="0f7bcbbc798cf4cdc39bcef282b498c5" category="inline-link">Windows ファイルシステムの二次保護を有効にする</block>
+  <block id="fcb42b4cc88ab54bad8c728c28ce5cf1" category="list-text"><block ref="fcb42b4cc88ab54bad8c728c28ce5cf1" category="inline-link-rx"></block></block>
+  <block id="08afd0e5f77c43d4c319bd80bc5b8c42" category="inline-link">IBM Db2 リソースの二次保護を有効にする</block>
+  <block id="d4ff69210257038e91bba291abba0cf1" category="list-text"><block ref="d4ff69210257038e91bba291abba0cf1" category="inline-link-rx"></block></block>
+  <block id="9c0d7b7516b5687a46d05b9ace283b3c" category="inline-link">PostgreSQLリソースの二次保護を有効にする</block>
+  <block id="4849562b6b637f3d2719b247874cc4be" category="list-text"><block ref="4849562b6b637f3d2719b247874cc4be" category="inline-link-rx"></block></block>
+  <block id="3944a1fa201376f3d60be17195d11a58" category="inline-link">MySQLリソースの二次保護を有効にする</block>
+  <block id="3e9349ede03e4e736f3e3c2ecdd0127c" category="list-text"><block ref="3e9349ede03e4e736f3e3c2ecdd0127c" category="inline-link-rx"></block></block>
+  <block id="0a056b3a2b95775025d0fee578294c1f" category="inline-link">Unix ファイルシステムの二次保護を有効にする</block>
+  <block id="e0c95c8b145fa66da52032a54146f332" category="list-text"><block ref="e0c95c8b145fa66da52032a54146f332" category="inline-link-rx"></block></block>
+  <block id="9ce9bd6fed2b4f30097bcf0873565710" category="paragraph">*ASA r2 システムでは SnapCenter ではサポートされていない操作*</block>
+  <block id="c4bf0f56feeec9a45e973768fbc4f47e" category="list-text">スナップショットの改ざん防止</block>
+  <block id="ee1ef6cf0f3971b44eb2abcac958fb8d" category="list-text">FlexGroupボリューム</block>
+  <block id="29a720af33d29332fae31060b6910f77" category="list-text">ASA、AFF、またはFASストレージ システムからASA r2ストレージ システムへの移行</block>
+  <block id="7abee40aa1933e637766c0d692411a73" category="list-text">ASA、AFF、またはFASリソースとASA r2リソースが混在するデータベースの保護</block>
+  <block id="dbc2c133826d732ac86927b2062c928d" category="list-text">SQLプラグインホストのログディレクトリの二次プロビジョニング</block>
+  <block id="e29e29246a71235f47845c88c4a61f52" category="paragraph">これはプラグイン ホストでのみ使用される内部ポートであり、ファイアウォールの例外は必要ありません。</block>
+  <block id="225b299c2a6edae75ebfaff049e07f4e" category="paragraph">SnapCenter サーバーとプラグイン間の通信は、ポート 8145 を介してルーティングされます。</block>
+  <block id="0b30312a6625cb4a7b0de67a44ddd45a" category="summary">Linuxホスト上のSnapCenter IBM Db2Plug-insサービスのCA証明書を構成する</block>
+  <block id="65acd7dc10bede8dffde6b75a88e10ce" category="summary">Linuxホスト上のSnapCenter MySQLプラグインサービスのCA証明書を構成する</block>
+  <block id="755c3af5dacbed1425beceef56b811a7" category="paragraph">NetApp は、SnapCenter に組み込まれたプラグイン フレームワークを使用して ONTAP ストレージ上のデータ ボリュームのデータ保護操作を実行するためのストレージ プラグインを提供します。</block>
+  <block id="4d76fbc52a6896285d31894d4b91bb5a" category="admonition">SnapCenterのサポートポリシーは、プラグインフレームワーク、コアエンジン、および関連APIのサポートを対象とします。プラグインのソースコードおよびプラグインフレームワーク上に構築された関連スクリプトはサポート対象外となります。</block>
+  <block id="1cf1276b6cea0875fbd56150cf88c2ad" category="list-text">静的なクローンボリューム名とジャンクションパスを設定するには、_/opt/NetApp/snapcenter/scc/etc _にある_agent.properties_ファイルで_use_custom_clone_volume_name_format_の値を* true *に設定します。ファイルを更新した後、次のコマンドを実行して SnapCenter プラグイン作成者サービスを再起動する必要があります。 <block ref="f4da0aeb9d91444725fc84b066ea329b" prefix=" " category="inline-code"></block> 。</block>
+  <block id="a537fd276cd3fe8ae075cca47114fd6a" category="admonition">Windowsファイルシステムのコンテキストで作業している場合は、データベースファイルをバックアップしないでください。バックアップを作成しても整合性に欠け、リストア時にデータが失われる可能性があります。データベースファイルを保護するには、データベースに適したSnapCenterプラグイン（例：SnapCenter Plug-in for Microsoft SQL Server、SnapCenter Plug-in for Microsoft Exchange Server）を使用する必要があります。</block>
+  <block id="6fea498808c5d97bb251d0bdbc3943eb" category="sidebar">Linuxホスト上のSnapCenterプラグインサービスのCA証明書を構成する</block>
+  <block id="5c1418af1ce8eeaeb3745b659e1fcfe8" category="sidebar">Windowsホスト上のSnapCenterプラグインサービスのCA証明書を構成する</block>
 </blocks>

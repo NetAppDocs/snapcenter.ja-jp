@@ -104,7 +104,9 @@ NOTE: ONTAP GUI を使用して ONTAP クラスタから SVM を削除した場�
 
 == REST APIをサポート
 
-ONTAPおよびASA R2ストレージシステムへのすべてのストレージ接続は、デフォルトでZAPIを経由します。一部のONTAPバージョンでREST APIを有効にできます。
+ONTAPへのすべてのASA、AFF、またはFASシステム接続は、デフォルトでZAPIを経由します。RESTAPIは、特定のONTAPバージョンで有効にできます。
+
+SnapCenter は、ZAPI をサポートしていない ASA r2 システム上のすべての操作を REST API を活用して実行します。
 
 次の構成ファイルで構成キーを変更できます。
 

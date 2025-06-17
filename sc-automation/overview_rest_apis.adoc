@@ -17,7 +17,6 @@ REST APIをサポートするプラグインは次のとおりです。
 
 * Microsoft SQL Server用プラグイン
 * SAP HANAデータベース向けプラグイン
-* カスタムプラグイン
 * Oracleデータベース向けプラグイン
 
 

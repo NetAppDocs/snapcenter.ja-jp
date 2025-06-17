@@ -55,10 +55,7 @@ SnapCenterの主な機能は次のとおりです。
 
 * さまざまなアプリケーションに対して、アプリケーションと整合性のある一元的なデータ保護を実現
 +
-データ保護は、ONTAPシステムで実行されているMicrosoft Exchange Server、Microsoft SQL Server、LinuxまたはAIX上のOracleデータベース、SAP HANAデータベース、IBM DB2、PostgreSQL、MySQL、およびWindowsホストのファイルシステムでサポートされます。
-
-+
-ユーザ定義のSnapCenterプラグインを作成するフレームワークを提供することで、他の標準またはカスタムのアプリケーションやデータベースでもデータ保護がサポートされます。これにより、同じ単一コンソールから他のアプリケーションやデータベースのデータを保護できます。このフレームワークを活用することで、NetAppはMongoDB、Storage、MaxDB、Sybase ASE、ORASCPM向けのSnapCenterプラグインをリリースしました。開発者ガイドを使用して独自のプラグインを作成することもできます。
+データ保護は、ONTAPシステムで実行されているMicrosoft Exchange Server、Microsoft SQL Server、LinuxまたはAIX上のOracleデータベース、SAP HANAデータベース、IBM DB2、PostgreSQL、MySQL、およびWindowsホストのファイルシステムでサポートされます。SnapCenter は、MongoDB、Storage、MaxDB、Sybase ASE、ORASCPM などのアプリケーションの保護もサポートしています。
 
 * ポリシーベースのバックアップ
 +
@@ -182,19 +179,6 @@ Linux用プラグインパッケージおよびWindows用プラグインパッ�
 Plug-in for UNIXまたはPlug-in for Windows
  a| 
 HDBSQLクライアントホスト
- a| 
-LinuxまたはWindows
-
-
-
- a| 
-SnapCenterカスタムプラグイン
- a| 
-Linux用プラグインパッケージおよびWindows用プラグインパッケージ
- a| 
-フアイルシステムノハツクアツフ、Plug-in for Windows
- a| 
-カスタムアプリケーションホスト
  a| 
 LinuxまたはWindows
 

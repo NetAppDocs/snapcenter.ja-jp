@@ -60,9 +60,9 @@ entries:
       url: "/protect-nsp/get_the_CA_certificate_thumbprint.html"
     - title: WindowsホストプラグインサービスでのCA証明書の設定
       url: "/protect-nsp/configure_CA_certificate_with_Windows_host_plug-in_services.html"
-    - title: Linuxホスト上のSnapCenterカスタムプラグインサービス用のCA証明書の設定
+    - title: Linuxホスト上のSnapCenterプラグインサービスのCA証明書を構成する
       url: "/protect-nsp/configure_CA_certificate_on_Linux_host.html"
-    - title: Windowsホスト上のSnapCenterカスタムプラグインサービス用のCA証明書の設定
+    - title: Windowsホスト上のSnapCenterプラグインサービスのCA証明書を構成する
       url: "/protect-nsp/configure_CA_certificate_on_windows_host.html"
     - title: プラグインに対してCA証明書を有効にする
       url: "/protect-nsp/enable_ca_certificates_for_plug-ins.html"
