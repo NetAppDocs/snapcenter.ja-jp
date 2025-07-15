@@ -8733,7 +8733,6 @@
   <block id="83e606e7229254f977fc3348f76ce3d4" category="doc">高可用性を実現するためのSnapCenterサーバの設定</block>
   <block id="3f885fa4441e45ab56f7266ba93b9290" category="paragraph">WindowsまたはLinuxで実行されているSnapCenterでハイアベイラビリティ（HA）をサポートするには、F5ロードバランサをインストールします。F5を使用すると、SnapCenterサーバは、同じ場所にある最大2つのホストでアクティブ/パッシブ構成をサポートできます。SnapCenterでF5ロードバランサを使用するには、SnapCenterサーバを設定し、F5ロードバランサを設定する必要があります。</block>
   <block id="08966309e9619d374846ea7cc8ead3ed" category="paragraph">クラウド環境では、Amazon Web Services（AWS）Elastic Load Balancing（ELB）とAzureロードバランサを使用して高可用性を設定できます。</block>
-  <block id="026c74cf033fccdbeac6574d083691f5" category="paragraph">ワークフロー図は、F5ロードバランサを使用してSnapCenterサーバーを高可用性に設定する手順を示しています。詳細については、を参照してください<block ref="4d4c1b07c3f7cab3f346d17a2617da56" category="inline-link-rx"></block>。</block>
   <block id="43279440aa73faeb0bd5bf72d7a0b48c" category="paragraph">詳細については、を参照してください<block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block>。</block>
   <block id="0f68b904e33d9ac04605aecc958bcf52" category="paragraph">追加情報</block>
   <block id="5d8d9a5294b7f49c7e6eda95dc97aa5e" category="list-text">ロードバランサのセットアップ（NLBまたはF5）で、NLBまたはF5ホストによって部分的に解決されたホストを追加し、SnapCenterホストがこのホストにアクセスできない場合は、SnapCenterホストページでホストの停止状態と実行状態が頻繁に切り替わります。この問題を解決するには、両方のSnapCenterホストがNLBまたはF5ホストのホストを解決できることを確認する必要があります。</block>
@@ -8952,7 +8951,6 @@
   <block id="6e13f804ad8be111cf6ad70744afe388" category="list-text">ONTAP ASA R2プライマリシステムとセカンダリシステム上のデータ</block>
   <block id="651f8f48e0ff0ede39a3224558b4b516" category="paragraph">セカンダリ保護</block>
   <block id="f9c655f2d65a07a71b2deab50b74ffae" category="paragraph">ネットワークロードバランシング（NLB）を設定してSnapCenterハイアベイラビリティを設定することもできます。ハイアベイラビリティ構成にするには、SnapCenterのインストールとは別にNLBを手動で設定する必要があります。</block>
-  <block id="0a0bca773054c9a47b687411e5ff20e8" category="image-alt">F5の設定ワークフロー</block>
   <block id="27c157ca432e76f965ac30465e4a7d94" category="paragraph">SnapCenterハイアベイラビリティを設定するには、ネットワークロードバランシング（NLB）を設定します。ハイアベイラビリティ構成にするには、SnapCenterのインストールとは別にNLBを手動で設定する必要があります。</block>
   <block id="731ac89bec4a57f1e740c167b65c6f53" category="summary">SnapCenterで処理を実行するためにONTAP adminロールを使用する必要がないように、ASA R2システム用のONTAPクラスタロールを作成する必要があります。</block>
   <block id="abdbfb1150ad2e22831c6bdbf7bac8d8" category="doc">ASA R2システム用のONTAPクラスタロールの作成</block>
@@ -9559,4 +9557,6 @@
   <block id="a537fd276cd3fe8ae075cca47114fd6a" category="admonition">Windowsファイルシステムのコンテキストで作業している場合は、データベースファイルをバックアップしないでください。バックアップを作成しても整合性に欠け、リストア時にデータが失われる可能性があります。データベースファイルを保護するには、データベースに適したSnapCenterプラグイン（例：SnapCenter Plug-in for Microsoft SQL Server、SnapCenter Plug-in for Microsoft Exchange Server）を使用する必要があります。</block>
   <block id="6fea498808c5d97bb251d0bdbc3943eb" category="sidebar">Linuxホスト上のSnapCenterプラグインサービスのCA証明書を構成する</block>
   <block id="5c1418af1ce8eeaeb3745b659e1fcfe8" category="sidebar">Windowsホスト上のSnapCenterプラグインサービスのCA証明書を構成する</block>
+  <block id="f890e4e7d1398542e6dfe99fa9cf5732" category="paragraph">F5ロードバランサを使用して高可用性を実現するSnapCenterサーバの構成手順については、以下を参照してください。 <block ref="4d4c1b07c3f7cab3f346d17a2617da56" category="inline-link-rx"></block> 。</block>
+  <block id="78805a221a988e79ef3f42d7c5bfd418" category="paragraph">イメージ（ Image ）</block>
 </blocks>
