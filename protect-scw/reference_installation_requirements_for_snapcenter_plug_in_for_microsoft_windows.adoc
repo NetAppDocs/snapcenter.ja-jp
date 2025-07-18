@@ -41,6 +41,8 @@ Microsoft Windows
 
 サポートされているバージョンの最新情報については、を参照して https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool"^]ください。
 
+Windows クラスター セットアップを使用している場合は、Windows リモート管理 (WinRM) もインストールして構成する必要があります。
+
 
 
  a| 
