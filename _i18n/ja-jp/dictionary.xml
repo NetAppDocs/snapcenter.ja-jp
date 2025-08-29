@@ -1005,14 +1005,10 @@
   <block id="e72e41b6444b5d653a8ae41192189e01" category="summary">SnapCenter を使用する前に、実行するバックアップ、クローニング、およびリストアの処理に関連する基本的な概念を理解しておくと役立ちます。ここでは、さまざまな処理のリソース、リソースグループ、およびポリシーを操作します。</block>
   <block id="9c124c0fc8c6cc2725dad57b45c85eb0" category="paragraph">次の図は、データベースのリソース、リソースグループ、およびポリシーの関係を示しています。</block>
   <block id="6309043436d4e7e5bad9a81c89ff15e4" category="doc">SnapCenterの概要</block>
-  <block id="edaafea0543ae64ebb79a2ed2e7a055b" category="paragraph">SnapCenterは、NetAppのSnapshot、SnapRestore、FlexClone、SnapMirror、SnapVaultのテクノロジを活用して、次の機能を提供します。</block>
   <block id="6d02db19251dfec578c356202bfb1bdc" category="list-text">高速でスペース効率に優れた、アプリケーションと整合性のあるディスクベースのバックアップ</block>
-  <block id="3f47ac8ce2ea087a29a167d91aa9f473" category="list-text">迅速できめ細かなリストア、アプリケーションと整合性のあるリカバリ</block>
   <block id="730379f67cffd2b9f827972fda727e5c" category="list-text">スペース効率に優れた高速クローニング</block>
-  <block id="ad5726653853fba2b5d98515c638da77" category="list-text">オンプレミスで次のデータを保護：</block>
   <block id="7deab53ede49d0d1a58c65f2e25ff259" category="list-text">ONTAP Selectプライマリシステム上のデータ</block>
   <block id="3f897d901d24f02777ff0994b7823d1a" category="list-text">ONTAP FAS、AFF、またはASAのプライマリシステムとセカンダリシステムにあり、ローカルのStorageGRIDオブジェクトストレージで保護されているデータ</block>
-  <block id="bc549d53e5e7a7aeb8a41511751a99f2" category="list-text">ハイブリッドクラウドにオンプレミスで導入し、以下のデータを保護</block>
   <block id="f5c37d824040662f50cbb8a32d77182d" category="list-text">ONTAP FAS、AFF、またはASAプライマリシステム上にあり、Cloud Volumes ONTAPにレプリケートされるデータ</block>
   <block id="f7b38c62b0e74d318a255bc3094cf531" category="list-text">ONTAP FAS、AFF、ASAのプライマリシステムとセカンダリシステムにあり、クラウドのオブジェクトストレージとアーカイブストレージで保護されているデータ（BlueXPのバックアップとリカバリの統合を使用）</block>
   <block id="ca5570a253e3c0a27562c65c06bb6125" category="list-text">パブリッククラウドに導入し、以下のデータを保護</block>
@@ -1020,14 +1016,9 @@
   <block id="b380e442ff5c6e48e283af8b6f99806f" category="list-text">Amazon FSx for ONTAP上のデータ</block>
   <block id="97f2c8bf124398ba05bca9cc6fb869b1" category="list-text">プライマリAzure NetApp Files上のデータ（Oracle、Microsoft SQL、SAP HANA）</block>
   <block id="1e06a8cc16bd3bc423f81e8ff56e4fc0" category="list-text">ポリシーベースのバックアップ</block>
-  <block id="9939c592ab7bc8c3264f4ed7fde3bd18" category="paragraph">ポリシーベースのバックアップでは、NetApp Snapshotテクノロジを活用して、スペース効率に優れた、アプリケーションと整合性のあるディスクベースのバックアップを高速で作成できます。必要に応じて、既存の保護関係を更新して、セカンダリストレージへのバックアップの保護を自動化することもできます。</block>
-  <block id="c6f23063f5e9e828f1d4a0d52255f07c" category="list-text">複数のリソースのバックアップ</block>
-  <block id="050fe282bd8b711ba366c400655d1e2a" category="paragraph">SnapCenterリソースグループを使用すると、同じタイプの複数のリソース（アプリケーション、データベース、またはホストファイルシステム）を同時にバックアップできます。</block>
   <block id="6be8f3086a30e59e908d53eb620b51dd" category="list-text">リストアとリカバリ</block>
   <block id="b28420c602ed165d9f1cc771175a4c88" category="paragraph">SnapCenterは、バックアップの迅速できめ細かなリストアと、アプリケーションと整合性のある時間ベースのリカバリを実現します。ハイブリッドクラウド内の任意のデスティネーションからリストアできます。</block>
   <block id="217601d383b816e6a2548e57b5006f92" category="list-text">クローニング</block>
-  <block id="e83cfee5e1167f2033d1e804f1841a96" category="paragraph">SnapCenterは、スペース効率に優れ、アプリケーションと整合性のある高速クローニングを実現し、ソフトウェア開発を高速化します。クローニングは、ハイブリッドクラウド内の任意のデスティネーションで実行できます。</block>
-  <block id="4f6da05ed76330876dac0fffae948e27" category="list-text">単一のユーザ管理グラフィカルユーザインターフェイス（GUI）</block>
   <block id="c534b8c3e9d947f12540681e6b032d6e" category="list-text">REST API、Windowsコマンドレット、UNIXコマンド</block>
   <block id="34b88b9f409afc7274c8a769ee450883" category="inline-link">SnapCenter ソフトウェアコマンドリファレンスガイド</block>
   <block id="aa4473d6d9a217be25c4635b52860652" category="list-text">プラグインのプッシュインストールを自動化</block>
@@ -1050,7 +1041,6 @@
   <block id="3245d8514a844d08673af1fb25bec2f4" category="list-text">PostgreSQL向けSnapCenterプラグイン</block>
   <block id="aa96d0986aa898ff8efdb0e691f15a6c" category="list-text">MySQL用SnapCenterプラグイン</block>
   <block id="2e41c2081a8838f41650e76a978d4057" category="list-text">SnapCenter Plug-in for Oracle Database</block>
-  <block id="b62cae9c23cf035ec4b43fec7f0697d6" category="paragraph">SnapCenterサーバおよびプラグインは、HTTPSを使用してホストエージェントと通信します。SnapCenter 処理に関する情報は、 SnapCenter リポジトリに保存されます。</block>
   <block id="a6d093f66e362f8852d5b0ce5d1adf5a" category="section-title">SnapCenterプラグイン</block>
   <block id="e1087bd8c9bab7e111508724bff61f97" category="paragraph">各SnapCenterプラグインは、特定の環境、データベース、アプリケーションをサポートします。</block>
   <block id="9a8bf4c46d108a9dadf51b9b7637621f" category="cell">プラグイン名</block>
@@ -1073,7 +1063,6 @@
   <block id="4abb41aae1dfe9c81afb3c3672df559c" category="paragraph">LinuxまたはWindows</block>
   <block id="7affc9aa382d06b530a170abd5ed58b0" category="paragraph">DB2ホスト</block>
   <block id="de2f98bb47449438a4cc0f3280943d06" category="paragraph">PostgreSQLホスト</block>
-  <block id="a364132418180f0b14b5eb7db8b87808" category="admonition">SnapCenter Plug-in for VMware vSphereは、仮想マシン（VM）、データストア、および仮想マシンディスク（VMDK）のcrash-consistentおよびvm-consistentバックアップおよびリストア処理をサポートします。また、SnapCenterアプリケーション固有のプラグインをサポートして、仮想データベースおよびファイルシステムのアプリケーションと整合性のあるバックアップおよびリストア処理を保護します。</block>
   <block id="8c3d0c00ea667e3e0723e5cdc6473a09" category="inline-link">SnapCenter Plug-in for VMware vSphereのドキュメント</block>
   <block id="043833147a39840644f2ff01a835f90d" category="section-title">SnapCenter Plug-in for Microsoft SQL Serverの機能</block>
   <block id="50e95eafa6faf8d2ee3f01921820b42b" category="list-text">SnapCenter環境で使用するMicrosoft SQL Serverデータベースのアプリケーション対応のバックアップ、リストア、クローニングの処理を自動化します。</block>
@@ -1098,8 +1087,6 @@
   <block id="b0e07179f36c91a15e47f4d7a80a4360" category="section-title">NetAppでサポートされるプラグイン機能</block>
   <block id="3012455ba6e0ba02dfa333bdecc83c57" category="section-title">SnapCenterリポジトリ</block>
   <block id="cc1d85843af98a2ce08e58f1408e6364" category="paragraph">SnapCenterリポジトリ（NSMデータベースと呼ばれることもあります）には、すべてのSnapCenter処理の情報とメタデータが格納されます。</block>
-  <block id="b795272c033653aa88e12f8f4fd442ca" category="paragraph">MySQLサーバリポジトリデータベースは、SnapCenterサーバのインストール時にデフォルトでインストールされます。MySQLサーバーがすでにインストールされていて、SnapCenterサーバーを新規インストールする場合は、MySQLサーバーをアンインストールする必要があります。</block>
-  <block id="15d048e327e80031abf5c8b2302df43b" category="paragraph">SnapCenterでは、SnapCenterリポジトリデータベースとしてMySQL Server 8.0.37以降がサポートされます。以前のリリースのSnapCenterで以前のバージョンのMySQL Serverを使用していた場合は、SnapCenterのアップグレード時に、MySQL Serverが8.0.37以降にアップグレードされます。</block>
   <block id="132ec4f136226945615e1d3845afb9d0" category="paragraph">SnapCenterリポジトリには、次の情報とメタデータが格納されます。</block>
   <block id="5a26534ccd7cfe885d29bb4751dbc4af" category="list-text">バックアップ、クローニング、リストア、検証のメタデータ</block>
   <block id="9ceb046e6eba84331a9300ae7040cfa9" category="list-text">レポート作成、ジョブ、イベントの情報</block>
@@ -1463,11 +1450,8 @@
   <block id="b1c23ca4e9e67a158bfb24299743d88f" category="paragraph">コントローラベースライセンスには次のような特徴があります。</block>
   <block id="5300768d44eab29e62cfac966d22baea" category="list-text">Premium Bundle または Flash Bundle （ベースパックには含まれません）の購入に SnapCenter Standard のライセンスが含まれます。</block>
   <block id="c55c867b9e6458f61ad9c49c7535bfab" category="list-text">無制限のストレージ使用量</block>
-  <block id="c0919ecf5802c65bf773794b7af70540" category="admonition">SnapCenter コントローラベースのライセンスについては、 SnapCenter GUI にライセンス情報を入力しません。</block>
   <block id="17449a90a0d7161db56cba83fa4f2728" category="list-text">コントローラのシリアル番号にロックされています</block>
   <block id="19a8e13fe92c770e7ed404e67e6bec99" category="section-title">手順1：SnapManager Suiteライセンスがインストールされているかどうかを確認します</block>
-  <block id="4675b365d16842b130752bb3fa27614d" category="paragraph">SnapCenter GUIを使用して、SnapManager SuiteライセンスがFAS、AFF、またはASAプライマリストレージシステムにインストールされているかどうかを確認し、SnapManager Suiteライセンスが必要なストレージシステムを特定できます。SnapManager Suiteライセンスは、プライマリストレージシステム上のFAS、AFF、ASA SVMまたはクラスタにのみ適用されます。</block>
-  <block id="6aa5717c99b34de9980debfbe3c6fa76" category="admonition">コントローラにSnapManager Suiteライセンスがすでにある場合は、SnapCenter Standardコントローラベースライセンスが自動的に提供されます。SnapManagerSuite ライセンスと SnapCenter 標準のコントローラベースのライセンスは同じ意味で使用されますが、同じライセンスを指します。</block>
   <block id="cc9c449ada243c7f7945df60c3bb511a" category="list-text">左側のナビゲーションペインで、*[ストレージシステム]*を選択します。</block>
   <block id="05f4bbedc7296e63af5610bfc33574b5" category="list-text">ストレージシステムページの * タイプドロップダウンから、追加したすべての SVM またはクラスタを表示するかどうかを選択します。</block>
   <block id="9ba45610f0250c3f3d93d968194d341c" category="list-text">追加されたすべての SVM を表示するには、 * ONTAP SVM * を選択します。</block>
@@ -1482,19 +1466,15 @@
   <block id="eba5bfa2c0dc8d9f24998cf70fa891a6" category="list-text">[Not Applicable]は、Amazon FSx for NetApp ONTAP、Cloud Volumes ONTAP、ONTAP Select、またはセカンダリストレージプラットフォーム上にストレージコントローラがあるため、SnapManager Suiteライセンスが適用されないことを示します。</block>
   <block id="778623bf565f3d8f537019c7e81b0948" category="section-title">手順2：コントローラにインストールされているライセンスを特定します</block>
   <block id="3585befdeb665365a6ab248a97882128" category="paragraph">ONTAPコマンドラインを使用して、コントローラにインストールされているすべてのライセンスを表示できます。FAS、AFF、またはASAシステムのクラスタ管理者である必要があります。</block>
-  <block id="e7590fb47d0f1f083a0a8a323aa643a0" category="admonition">コントローラでは、SnapCenter StandardコントローラベースライセンスがSnapManagerSuiteライセンスとして表示されます。</block>
   <block id="062174c6682cfbf4f3b6b5c1d6707824" category="list-text">ONTAPコマンドラインを使用してNetAppコントローラにログインします。</block>
-  <block id="9865599458fea2a88fc4f94d29ab5c4e" category="list-text">license showコマンドを入力し、出力を表示して、SnapManager Suiteライセンスがインストールされているかどうかを確認します。</block>
   <block id="587b796170a9abac4701cd8aa1bb38cb" category="example-title">出力例</block>
   <block id="5b12cbd18ef5bbd432e4411b45e422ad" category="paragraph">この例では、 SnapManagerSuite ライセンスをインストールするため、 SnapCenter の追加ライセンスは必要ありません。</block>
   <block id="09bfdac33144afac4f96f313740dc959" category="section-title">手順3：コントローラのシリアル番号を取得します</block>
-  <block id="aad4d9def4b52672ae7f25a26b4f8fde" category="paragraph">コントローラベースライセンスのシリアル番号を取得するには、コントローラのシリアル番号が必要です。ONTAPコマンドラインを使用してコントローラのシリアル番号を取得できます。FAS、AFF、またはASAシステムのクラスタ管理者である必要があります。</block>
   <block id="ed996e97427b9382e039c0a5dde5d493" category="list-text">ONTAPコマンドラインを使用してコントローラにログインします。</block>
   <block id="1220394f5402b4332338e11150062d91" category="list-text">system show -instanceコマンドを入力し、出力を確認してコントローラのシリアル番号を特定します。</block>
   <block id="065b83de49a875bb4bd71dbe16fad428" category="list-text">シリアル番号を記録します。</block>
   <block id="4fb6996a4b0fc33cbed31ac896875422" category="section-title">手順4：コントローラベースライセンスのシリアル番号を取得します</block>
   <block id="26e6565b87611c0e2e61e424bbf253a8" category="list-text">NetAppサポートサイトの有効なログインクレデンシャルが必要です。</block>
-  <block id="315713e21026e04eaaa2b9a3821e4c3d" category="paragraph">有効なクレデンシャルを入力しないと、検索のための情報は返されません。</block>
   <block id="253fa4a7008b4934e4b20001065ef254" category="list-text">コントローラのシリアル番号が必要です。</block>
   <block id="9d2169c1c2855b78a7aeaa4f42d27dc7" category="inline-link">NetAppサポートサイト</block>
   <block id="9340114ddf8bf8ff75303afd847a3076" category="list-text">にログインし<block ref="1850de052c61829b534b07ba1a2ca402" category="inline-link-rx"></block>ます。</block>
@@ -1516,16 +1496,12 @@
   <block id="a138b0f06f247274d2e4ba8de6e7bf8d" category="list-text">SnapManager Suiteライセンスがインストールされていることを確認します。</block>
   <block id="8822a9cc146d06e4ec77936054fb11ca" category="paragraph"><block ref="a28d3d0bcb86e95ea1d046dfacb69a1e" prefix="" category="inline-code"></block></block>
   <block id="392e651b70e91641288713738f526ce0" category="section-title">ステップ6:試用版ライセンスを削除します</block>
-  <block id="f01f22cfc141e64ad20b64a9b3f2ac85" category="paragraph">コントローラベースの SnapCenter 標準ライセンスを使用していて、容量ベースの試用版ライセンス ( シリアル番号は「 50 」で終わる ) を削除する必要がある場合は、 MySQL コマンドを使用して、試用版ライセンスを手動で削除する必要があります。試用版ライセンスは、SnapCenter GUIでは削除できません。</block>
   <block id="b69cd8afc7ba47f5300e7eb1864b6e2f" category="admonition">トライアルライセンスを手動で削除する必要があるのは、 SnapCenter の標準コントローラベースのライセンスを使用している場合のみです。</block>
   <block id="68dae2573ac7874d6dd234af4fa4c752" category="list-text">SnapCenterサーバで、PowerShellウィンドウを開いてMySQLパスワードをリセットします。</block>
-  <block id="aa5c2438bb48bc6f9fc91294d9f5f2c1" category="list-text">SnapCenterAdminアカウントのSnapCenterサーバとの接続セッションを開始するには、Open-SmConnectionコマンドレットを実行します。</block>
   <block id="677b5668995b5d565b03294fb7b16727" category="list-text">Set-SmRepositoryPasswordを実行してMySQLパスワードをリセットします。</block>
-  <block id="de07b96d6e0726ed58c0b7506fed6a37" category="paragraph">コマンドレットの詳細については、を参照してください<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block>。</block>
   <block id="bdc5e2c886d9f1d7c2db87ea0140c771" category="list-text">コマンドプロンプトを開き、mysql -u root -pを実行してMySQLにログインします。</block>
   <block id="4c6cef07724f31f81802bd1558b3066b" category="paragraph">パスワードの入力を求められます。パスワードのリセット時に指定したクレデンシャルを入力します。</block>
   <block id="730761cf69bd21652f5f5b9dc5170f63" category="list-text">データベースから試用版ライセンスを削除します。</block>
-  <block id="11ed0a0d13245c242749913d8aee1584" category="paragraph"><block ref="00e4488b078759955b869ee4c172156a" prefix="" category="inline-code"></block></block>
   <block id="e0b8c0081a448231b99fbbd92c77468c" category="summary">データ保護処理を実行する前に、ストレージ接続をセットアップし、SnapCenterサーバとSnapCenterプラグインで使用するクレデンシャルを追加する必要があります。</block>
   <block id="1dd26f6fcf67127f078a9bb0e9318802" category="doc">ストレージ接続とクレデンシャル</block>
   <block id="96da08df10311c05ab070820f34934cd" category="paragraph">ストレージ接続により、SnapCenter ServerプラグインとSnapCenterプラグインはONTAPストレージにアクセスできます。これらの接続の設定には、AutoSupportおよびEvent Management System（EMS；イベント管理システム）機能の設定も含まれます。</block>
@@ -2397,7 +2373,6 @@
   <block id="822239f41b07c86cff067dac38fab7f4" category="doc">最小限の権限でONTAPクラスタロールを作成する</block>
   <block id="f0f84683ce75bc63984c13f94c8f8c3d" category="paragraph">最小限の権限で ONTAP クラスタロールを作成して、 SnapCenter の admin ロールを使用して ONTAP で処理を実行する必要がないようにする必要があります。複数のONTAP CLIコマンドを実行して、ONTAPクラスタロールを作成し、最小限の権限を割り当てることができます。</block>
   <block id="5d34ca6ba489992e0959bb7d8068013f" category="paragraph"><block ref="d1683d4b4ec40f50e1dd2e99bed52f27" prefix="" category="inline-code"></block></block>
-  <block id="3b558f738f420e0cfe944e3e6cd3376a" category="paragraph"><block ref="579f833e539fe796410bf28fa13821a4" prefix="" category="inline-code"></block></block>
   <block id="e36c8512e3778b0a83d27f616b9ba1ff" category="paragraph"><block ref="ddc74c1b972d1817ec49e31cd8f40007" prefix="" category="inline-code"></block></block>
   <block id="d96a08e21a2a6f654ce7bfb34d9c3bf4" category="section-title">クラスタロールの作成と権限の割り当て用のONTAP CLIコマンド</block>
   <block id="166504d6fb19fa3fcbbf622275eef589" category="paragraph">クラスタロールを作成して権限を割り当てるために実行する必要があるONTAP CLIコマンドがいくつかあります。</block>
@@ -9230,8 +9205,6 @@
   <block id="82d07a027b5d595de4499a5069c4ccf5" category="paragraph">SnapCenter Standardライセンスはコントローラベースのライセンスで、NetApp ONTAP Oneに含まれています。SnapManager Suiteライセンスをお持ちの場合は、SnapCenter Standardライセンスの使用権も取得できます。FAS、AFF、またはASAストレージにSnapCenterの試用版をインストールする場合は、営業担当者にお問い合わせください。NetApp ONTAP Oneの評価版ライセンスを入手できます。</block>
   <block id="173cbb56fed3c8d1bffc40cfe1678533" category="inline-link">NetApp ONTAP Oneに含まれるライセンス</block>
   <block id="94875c624efb32d934c5cd2c0c78f2f0" category="paragraph">NetApp ONTAP Oneに含まれるライセンスについては、を参照してください<block ref="0ab66dfac600c25af9e742e0f8819421" category="inline-link-rx"></block>。</block>
-  <block id="8bf34d96b4ef3036d5fecf25c54f239f" category="list-text">ONTAPシステムマネージャまたはONTAP CLIを使用して、FAS、AFF、またはASAのストレージコントローラに直接追加することで有効にします。</block>
-  <block id="f59cbb2508b7e0a4a75f1eddabac7e1e" category="paragraph">FAS、ASA、またはAFFのストレージを使用している場合は、ONTAPコマンドラインを使用してインストールする前に、NetAppサポートサイトからSnapCenterコントローラベースライセンスを取得できます。</block>
   <block id="9efdf202df78f9a33e298564c835e4ba" category="summary">ストレージシステムでclustered NetApp ONTAPを実行している場合は、security loginコマンドを使用してNetApp ONTAP RBACロールを追加できます。</block>
   <block id="2ad5f6ef1c47048e237f2fafae87313a" category="doc">security loginコマンドを使用してNetApp ONTAP RBACロールを追加する</block>
   <block id="e1be0500812e131476a1a2d9b7429541" category="paragraph">ストレージシステムでclustered ONTAPを実行している場合は、security loginコマンドを使用してNetApp ONTAP RBACロールを追加できます。</block>
@@ -9299,13 +9272,9 @@
   <block id="4472af35b609c9246e4bb55f728b01c4" category="paragraph">スクリプトはバックアップポリシーで指定されます。バックアップジョブが開始されると、ポリシーによってスクリプトがバックアップ対象のリソースに自動的に関連付けられます。バックアップポリシーの作成時に、プリスクリプトとポストスクリプトの引数を指定できます。</block>
   <block id="fdc25f4e4e50282783f6d6bbd351fb7c" category="doc">SnapCenterで必要なライセンス</block>
   <block id="ece5d50a5bb2d395e1da043ece57184c" category="paragraph">プロトコルライセンス</block>
-  <block id="e0067e0950b0060576d778dc781cc470" category="paragraph">SnapCenterソフトウェアは、ハイブリッドクラウド内のONTAPシステムで動作するアプリケーション、データベース、ホストファイルシステム、VMに対して、アプリケーションと整合性のあるデータ保護を提供する、シンプルで拡張性に優れたプラットフォームです。</block>
-  <block id="80c547faf272be2b228fc24b6cf865f5" category="paragraph">SnapCenterには、SnapCenter Serverと個別の軽量プラグインの両方が含まれています。リモートアプリケーションホストへのプラグインの導入を自動化したり、バックアップ、検証、クローニング処理のスケジュールを設定したり、すべてのデータ保護処理を監視したりできます。</block>
-  <block id="17166d817786a7b08901227773723cf1" category="paragraph">SnapCenterは、オンプレミスまたはパブリッククラウドにインストールしてデータを保護できます。</block>
   <block id="be01a357ae2c9752875b5385c732b017" category="section-title">主な特長</block>
   <block id="167ec2cbfb2138b492dfdc49a527d301" category="paragraph">SnapCenterの主な機能は次のとおりです。</block>
   <block id="8cf888c772c03c3d648b58558da6e63e" category="list-text">さまざまなアプリケーションに対して、アプリケーションと整合性のある一元的なデータ保護を実現</block>
-  <block id="fbe4c82f71e9d38697b35f4a20991f38" category="paragraph">SnapCenterには、ハイブリッドクラウドの任意のデスティネーションにあるリソースのバックアップとクローンを管理するための単一のインターフェイスであるGUIが用意されています。</block>
   <block id="7c3bb00618d034ac43cb570a8e2d7a19" category="paragraph">SnapCenterにはREST APIが用意されており、ほとんどの機能を任意のオーケストレーションソフトウェアと統合できます。また、Windows PowerShellコマンドレットやコマンドラインインターフェイスも使用できます。</block>
   <block id="14b689a9c9a340e9114e5ea589110eca" category="list-text">データ保護のダッシュボードとレポート作成の一元化</block>
   <block id="b869d32b0a220d5f6624202b4105ce29" category="list-text">セキュリティと委譲のためのロールベースアクセス制御（RBAC）</block>
@@ -9314,7 +9283,6 @@
   <block id="0f45de2ede2fe6c32648866c22d6562e" category="list-text">SnapLock<block ref="5d492c0956f305803cd514ba32423952" category="inline-link-rx"></block></block>
   <block id="462fdcf093443297c1f9338c2c3383e2" category="list-text">同期ミラーリング<block ref="95fe696371e9165fe75b9b2447e07b1a" category="inline-link-rx"></block></block>
   <block id="befd5249dc22444101ff9cd8ae621549" category="section-title">SnapCenterのアーキテクチャとコンポーネント</block>
-  <block id="544e93f3cdb44bfd113d60fcd99e1eaa" category="paragraph">SnapCenterプラットフォームは、一元化された管理サーバとプラグインホストを含む多層アーキテクチャを基盤としています。SnapCenterはマルチサイトデータセンターをサポートしています。SnapCenterサーバホストとプラグインホストは地理的に離れた場所に配置できます。</block>
   <block id="5e8f0f670e38fbdf628b0883f946934f" category="image-alt">入力/出力ダイアログを示す図、または書き込まれた内容を表す図</block>
   <block id="92382cc3deb4906d36097ac6011e91bb" category="paragraph">SnapCenterには、SnapCenterサーバ、Windows用のSnapCenterプラグインパッケージ、およびLinux用のSnapCenterプラグインパッケージが含まれています。各パッケージには、さまざまなアプリケーションやインフラコンポーネント用のプラグインが含まれています。</block>
   <block id="c66f894c16e09b048b2a6915abe8e051" category="paragraph">SnapCenterサーバは、Microsoft WindowsおよびLinux（RHEL 8.x、RHEL 9.x、SLES 15 SP5）オペレーティングシステムをサポートしています。SnapCenterサーバには、Webサーバ、一元化されたHTML5ベースのユーザインターフェイス、PowerShellコマンドレット、REST API、SnapCenterリポジトリが含まれています。</block>
@@ -9339,7 +9307,6 @@
   <block id="0e7de338b19130a498349175e4a58590" category="paragraph">SAP MaxDB対応のSnapCenterプラグイン</block>
   <block id="3fa99d68ba982a33659ca2379e3e8ff4" category="paragraph">SnapCenter Plug-in for Storageプラグイン</block>
   <block id="6750ae8e3ac97dc2f5fc26009449892d" category="paragraph">Plug-ins Package for LinuxおよびPlug-ins Package for Windows</block>
-  <block id="a3b8e6be3869d2fb101f596d05e3b4e7" category="paragraph">データベースまたはファイルシステムがVMに格納されている場合や、VMとデータストアを保護する場合は、SnapCenter Plug-in for VMware vSphere仮想アプライアンスを導入する必要があります。詳細については、を参照してください<block ref="856325c2376fb402b33d836e8e7311f1" category="inline-link-rx"></block>。</block>
   <block id="ebc4b17076689e818245c6a254bc3841" category="doc">SnapCenterソフトウェアのクイックスタート</block>
   <block id="fe3df7903e4787d992afd733b0e0aa92" category="paragraph">クイックスタートガイドでは、SnapCenterソフトウェアをインストールして設定するための基本的な手順について説明します。</block>
   <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">1つ</block>
@@ -9566,4 +9533,37 @@
   <block id="401632ff9d010db44abc6611b886a1fb" category="paragraph">*ベスト プラクティス:* ログアウトして再度ログインするか、新しいブラウザーを開いてSnapCenterユーザー インターフェイスにアクセスします。</block>
   <block id="2894135a685829401e009e2fb1bc8cfe" category="paragraph">SnapCenter にサーバ ホストのステータスが停止として表示される場合は、しばらく待ってから新規検出を実行してください。*HostRefreshInterval* パラメータの値 (デフォルト値は 3600 秒) を 10 分を超える任意の値に変更することもできます。</block>
   <block id="91e42bb62d5ea6816d03c5a5de9ccfad" category="list-text">アップグレードが失敗した場合は、失敗したインストールをクリーンアップし、以前のバージョンのSnapCenterを再インストールして、NSM データベースを以前の状態に復元します。</block>
+  <block id="d39f4a97d8aa5892dc79d2b31c49cde5" category="paragraph">SnapCenter softwareは、アプリケーション一貫性のあるデータ保護を実現するシンプルで集中化されたスケーラブルなプラットフォームです。ハイブリッド クラウド内のONTAPシステム上のアプリケーション、データベース、ホスト ファイル システム、および VM を保護します。</block>
+  <block id="1161c9fd21b6d9ad537516dd735c8f85" category="paragraph">SnapCenter は、 NetApp Snapshot、 SnapRestore、 FlexClone、 SnapMirror、およびSnapVaultテクノロジーを使用して、次の機能を提供します。</block>
+  <block id="18da5f770adc321e5d554727bd238664" category="list-text">高速で詳細なリストアとアプリケーション整合性のあるリカバリ</block>
+  <block id="82c18a70878cd373500ae86edaa8c132" category="paragraph">SnapCenterには、 SnapCenter Server と軽量プラグインが含まれています。リモート アプリケーション ホストへのプラグインの展開を自動化し、バックアップ、検証、クローン操作をスケジュールし、データ保護操作を監視することができます。</block>
+  <block id="1f0cb45d83b41c1ce41bc65a1f8d91ed" category="paragraph">データを保護するために、 SnapCenter をオンプレミスまたはパブリック クラウドにインストールできます。</block>
+  <block id="d7a374ccd4f0b1d1e9e0798f4b1a8869" category="list-text">オンプレミスでは次のものを保護します。</block>
+  <block id="67387428a7e5d4e4205f94627d948f8a" category="list-text">ハイブリッド クラウド内のオンプレミスで次のものを保護します。</block>
+  <block id="dfcd27a2398e2137fe772b14d150822c" category="paragraph">ポリシーベースのバックアップでは、NetApp Snapshotテクノロジを利用して、高速でスペース効率に優れ、アプリケーションと整合性のあるディスクベースのバックアップを作成します。既存の保護関係を更新することで、これらのバックアップをセカンダリ ストレージに自動的に保護するように設定することもできます。</block>
+  <block id="4f2fa2357cd0758124af2752680b0f38" category="list-text">複数のリソースのバックアップ</block>
+  <block id="43b72483415c88320d60f1fc8a4b38b2" category="paragraph">SnapCenterリソース グループを使用すると、同じ種類の複数のリソース (アプリケーション、データベース、またはホスト ファイル システム) を一度にバックアップできます。</block>
+  <block id="e048ab4f81e7759a39a859c1ae5a79c2" category="paragraph">SnapCenter は、迅速でスペース効率が高く、アプリケーションと一貫性のあるクローン作成を実現します。クローニングは、ハイブリッド クラウド内の任意のデスティネーションで実行できます。</block>
+  <block id="1262f35a107c5968275c3edf3c56eb84" category="list-text">単一ユーザー管理グラフィカルユーザーインターフェース</block>
+  <block id="752689013e2985d7b19018df00f3b7b8" category="paragraph">SnapCenter は、あらゆるハイブリッド クラウドの宛先のバックアップとクローンを管理するための単一のインターフェイスを提供します。</block>
+  <block id="3832908a72119ba8d0b1faf1588da9f2" category="paragraph">SnapCenter は、中央管理サーバーとプラグイン ホストを使用した階層化設計を使用します。サーバーとプラグイン ホストは異なる場所に配置できます。</block>
+  <block id="1d8ca39a8b19e487e6a5decec32baf83" category="paragraph">SnapCenter は、操作に関する情報をSnapCenterリポジトリに保存します。</block>
+  <block id="5fefa7f3d3b16845a72ae6dbd05daee8" category="paragraph">SnapCenter Plug-in for VMware vSphereは、仮想マシン (VM)、データストア、仮想マシン ディスク (VMDK) のクラッシュ整合性および VM 整合性のバックアップとリストア操作をサポートします。また、仮想化されたデータベースとファイル システムのアプリケーション整合性のあるバックアップおよび復元操作もサポートします。</block>
+  <block id="12ae0b4b790b9a1fadc5cd19958e7891" category="paragraph">データベース、ファイルシステム、VM、またはVM上のデータストアを保護するには、 SnapCenter Plug-in for VMware vSphereを展開します。詳細については、<block ref="856325c2376fb402b33d836e8e7311f1" category="inline-link-rx"></block> 。</block>
+  <block id="e341c72410665bafc2c007eb116e98b1" category="paragraph">SnapCenter Server をインストールすると、デフォルトで MySQL Server リポジトリ データベースがインストールされます。  MySQL Server がすでにインストールされていて、 SnapCenter Server の新規インストールを実行する場合は、MySQL Server をアンインストールする必要があります。</block>
+  <block id="90f6284c67326cc494a0d7c664bc0130" category="paragraph">SnapCenterでは、SnapCenterリポジトリ データベースとしてMySQL Server 8.0.37以降がサポートされます。以前のバージョンの MySQL Server を以前のリリースのSnapCenterと併用する場合、 SnapCenterのアップグレード プロセスによって MySQL Server はバージョン 8.0.37 以降にアップグレードされます。</block>
+  <block id="92abb015a8ee1a77855e690131dadbb4" category="list-text">ONTAP System Manager またはONTAP CLI を使用して、 FAS、 AFF、またはASAストレージ コントローラに直接追加されます。</block>
+  <block id="7125e641e5662264883f8aaeea3e82d4" category="admonition">SnapCenterコントローラベースのライセンスについては、 SnapCenterユーザー インターフェイスにライセンス情報を入力しません。</block>
+  <block id="7a033f7dc254bbd0058e53fdcff1bb27" category="paragraph">SnapCenterユーザー インターフェイスを使用して、 SnapManager Suite ライセンスがFAS、 AFF、またはASAプライマリ ストレージ システムにインストールされているかどうかを確認し、ライセンスが必要なシステムを特定できます。SnapManager Suiteライセンスは、プライマリ ストレージ システム上のFAS、AFF、およびASA SVM / クラスタにのみ適用されます。</block>
+  <block id="d84b90a7e575831a7b9fd2b1f8321c73" category="admonition">コントローラにすでにSnapManager Suite ライセンスがある場合、 SnapCenter は標準コントローラベースのライセンス権限を自動的に提供します。SnapManager SuiteライセンスとSnapCenter Standardコントローラベース ライセンスは同じライセンスを表しています。</block>
+  <block id="d553d8a6fc62f3d8567f93ee39689025" category="admonition">コントローラには、 SnapCenter Standard コントローラ ベースのライセンスが SnapManagerSuite ライセンスとして表示されます。</block>
+  <block id="f47d644cff3f38f3fe18cdfd3946f164" category="list-text">license show コマンドを入力し、出力を表示して SnapManagerSuite ライセンスがインストールされているかどうかを確認します。</block>
+  <block id="5c1790e9b20f9160d116ea4a6d92c4bf" category="paragraph">ONTAPコマンドラインを使用してコントローラのシリアル番号を取得します。コントローラベースのライセンスのシリアル番号を取得するには、 FAS、 AFF、またはASAシステムのクラスタ管理者である必要があります。</block>
+  <block id="916aa221ab9dbad5bdf10318bc6645ae" category="paragraph">FAS、 ASA、またはAFFストレージを使用している場合は、 ONTAPコマンドラインを使用してインストールする前に、 NetAppサポート サイトからSnapCenterコントローラベースのライセンスを取得できます。</block>
+  <block id="086d25a4c755caee6d45473239c5de33" category="paragraph">有効な資格情報を入力しない場合は、検索に対して情報が返されません。</block>
+  <block id="1e9427347d7c2da702bcda6ee8066e34" category="paragraph">コントローラベースのSnapCenter Standard ライセンスを使用しており、容量ベースの試用ライセンス (シリアル番号が「`50`」で終わる) を削除する必要がある場合は、MySQL コマンドを使用して試用ライセンスを手動で削除する必要があります。試用ライセンスは、 SnapCenterユーザー インターフェイスを使用して削除することはできません。</block>
+  <block id="023ba4b197892a3704c54c4fa35189c5" category="list-text">Open-SmConnection コマンドレットを実行して、SnapCenterAdmin アカウントのSnapCenter Server との接続を確立します。</block>
+  <block id="0f6e39c02439e0ed8443edc2be967e14" category="paragraph">コマンドレットの詳細については、以下を参照してください。<block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block> 。</block>
+  <block id="87592b536cbfa9f8d915045e1c7873f1" category="paragraph"><block ref="2c04bf704e48a12576c63de2102c1c43" prefix="" category="inline-code"></block></block>
+  <block id="fa091713eff4575bdb9b210ff2415c9c" category="paragraph"><block ref="b883ee9ba55ef21bf483fd5986981580" prefix="" category="inline-code"></block></block>
 </blocks>

@@ -17,10 +17,10 @@ FAS、AFF、またはASAストレージコントローラを使用している�
 
 * Premium Bundle または Flash Bundle （ベースパックには含まれません）の購入に SnapCenter Standard のライセンスが含まれます。
 * 無制限のストレージ使用量
-* ONTAPシステムマネージャまたはONTAP CLIを使用して、FAS、AFF、またはASAのストレージコントローラに直接追加することで有効にします。
+* ONTAP System Manager またはONTAP CLI を使用して、 FAS、 AFF、またはASAストレージ コントローラに直接追加されます。
 +
 
-NOTE: SnapCenter コントローラベースのライセンスについては、 SnapCenter GUI にライセンス情報を入力しません。
+NOTE: SnapCenterコントローラベースのライセンスについては、 SnapCenterユーザー インターフェイスにライセンス情報を入力しません。
 
 * コントローラのシリアル番号にロックされています
 
@@ -31,10 +31,10 @@ NOTE: SnapCenter コントローラベースのライセンスについては、
 
 == 手順1：SnapManager Suiteライセンスがインストールされているかどうかを確認します
 
-SnapCenter GUIを使用して、SnapManager SuiteライセンスがFAS、AFF、またはASAプライマリストレージシステムにインストールされているかどうかを確認し、SnapManager Suiteライセンスが必要なストレージシステムを特定できます。SnapManager Suiteライセンスは、プライマリストレージシステム上のFAS、AFF、ASA SVMまたはクラスタにのみ適用されます。
+SnapCenterユーザー インターフェイスを使用して、 SnapManager Suite ライセンスがFAS、 AFF、またはASAプライマリ ストレージ システムにインストールされているかどうかを確認し、ライセンスが必要なシステムを特定できます。SnapManager Suiteライセンスは、プライマリ ストレージ システム上のFAS、AFF、およびASA SVM / クラスタにのみ適用されます。
 
 
-NOTE: コントローラにSnapManager Suiteライセンスがすでにある場合は、SnapCenter Standardコントローラベースライセンスが自動的に提供されます。SnapManagerSuite ライセンスと SnapCenter 標準のコントローラベースのライセンスは同じ意味で使用されますが、同じライセンスを指します。
+NOTE: コントローラにすでにSnapManager Suite ライセンスがある場合、 SnapCenter は標準コントローラベースのライセンス権限を自動的に提供します。SnapManager SuiteライセンスとSnapCenter Standardコントローラベース ライセンスは同じライセンスを表しています。
 
 .手順
 . 左側のナビゲーションペインで、*[ストレージシステム]*を選択します。
@@ -66,11 +66,11 @@ NOTE: コントローラにSnapManager Suiteライセンスがすでにある場
 ONTAPコマンドラインを使用して、コントローラにインストールされているすべてのライセンスを表示できます。FAS、AFF、またはASAシステムのクラスタ管理者である必要があります。
 
 
-NOTE: コントローラでは、SnapCenter StandardコントローラベースライセンスがSnapManagerSuiteライセンスとして表示されます。
+NOTE: コントローラには、 SnapCenter Standard コントローラ ベースのライセンスが SnapManagerSuite ライセンスとして表示されます。
 
 .手順
 . ONTAPコマンドラインを使用してNetAppコントローラにログインします。
-. license showコマンドを入力し、出力を表示して、SnapManager Suiteライセンスがインストールされているかどうかを確認します。
+. license show コマンドを入力し、出力を表示して SnapManagerSuite ライセンスがインストールされているかどうかを確認します。
 +
 .出力例
 [%collapsible]
@@ -110,7 +110,7 @@ SnapManagerSuite  license  SnapManagerSuite License -
 
 == 手順3：コントローラのシリアル番号を取得します
 
-コントローラベースライセンスのシリアル番号を取得するには、コントローラのシリアル番号が必要です。ONTAPコマンドラインを使用してコントローラのシリアル番号を取得できます。FAS、AFF、またはASAシステムのクラスタ管理者である必要があります。
+ONTAPコマンドラインを使用してコントローラのシリアル番号を取得します。コントローラベースのライセンスのシリアル番号を取得するには、 FAS、 AFF、またはASAシステムのクラスタ管理者である必要があります。
 
 .手順
 . ONTAPコマンドラインを使用してコントローラにログインします。
@@ -162,12 +162,12 @@ All-Flash Optimized: false
 
 == 手順4：コントローラベースライセンスのシリアル番号を取得します
 
-FAS、ASA、またはAFFのストレージを使用している場合は、ONTAPコマンドラインを使用してインストールする前に、NetAppサポートサイトからSnapCenterコントローラベースライセンスを取得できます。
+FAS、 ASA、またはAFFストレージを使用している場合は、 ONTAPコマンドラインを使用してインストールする前に、 NetAppサポート サイトからSnapCenterコントローラベースのライセンスを取得できます。
 
 .開始する前に
 * NetAppサポートサイトの有効なログインクレデンシャルが必要です。
 +
-有効なクレデンシャルを入力しないと、検索のための情報は返されません。
+有効な資格情報を入力しない場合は、検索に対して情報が返されません。
 
 * コントローラのシリアル番号が必要です。
 
@@ -220,7 +220,7 @@ SnapCenter を試用版としてインストールする場合は、営業担当
 
 == ステップ6:試用版ライセンスを削除します
 
-コントローラベースの SnapCenter 標準ライセンスを使用していて、容量ベースの試用版ライセンス ( シリアル番号は「 50 」で終わる ) を削除する必要がある場合は、 MySQL コマンドを使用して、試用版ライセンスを手動で削除する必要があります。試用版ライセンスは、SnapCenter GUIでは削除できません。
+コントローラベースのSnapCenter Standard ライセンスを使用しており、容量ベースの試用ライセンス (シリアル番号が「`50`」で終わる) を削除する必要がある場合は、MySQL コマンドを使用して試用ライセンスを手動で削除する必要があります。試用ライセンスは、 SnapCenterユーザー インターフェイスを使用して削除することはできません。
 
 
 NOTE: トライアルライセンスを手動で削除する必要があるのは、 SnapCenter の標準コントローラベースのライセンスを使用している場合のみです。
@@ -228,10 +228,10 @@ NOTE: トライアルライセンスを手動で削除する必要があるの�
 .手順
 . SnapCenterサーバで、PowerShellウィンドウを開いてMySQLパスワードをリセットします。
 +
-.. SnapCenterAdminアカウントのSnapCenterサーバとの接続セッションを開始するには、Open-SmConnectionコマンドレットを実行します。
+.. Open-SmConnection コマンドレットを実行して、SnapCenterAdmin アカウントのSnapCenter Server との接続を確立します。
 .. Set-SmRepositoryPasswordを実行してMySQLパスワードをリセットします。
 +
-コマンドレットの詳細については、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^]。
+コマンドレットの詳細については、以下を参照してください。 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"^] 。
 
 
 
@@ -241,6 +241,6 @@ NOTE: トライアルライセンスを手動で削除する必要があるの�
 
 . データベースから試用版ライセンスを削除します。
 +
-`use nsm;``DELETE FROM nsm_License WHERE nsm_License_Serial_Number='510000050';`
+`use nsm;DELETE FROM nsm_License WHERE nsm_License_Serial_Number='510000050';`
 
 
