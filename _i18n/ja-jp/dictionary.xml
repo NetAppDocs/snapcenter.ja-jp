@@ -3943,14 +3943,11 @@
   <block id="58c4ab72512763368202ec9054d5b838" category="paragraph">「 * Snapshot Based * 」を選択します。</block>
   <block id="b8d6ee3998ffd19868fb72c367024f19" category="list-text">スケジュールタイプを指定するには、「 * on demand * 」、「 * Hourly * 」、「 * Daily * 」、「 * Weekly * 」、または「 * Monthly * 」を選択します。</block>
   <block id="cee00ab879a477aea09f4b1f404b14fc" category="paragraph">一定数のSnapshotを保持</block>
-  <block id="b19465911649130b0ad9e7ed87b43f2f" category="paragraph">[保持するSnapshotコピーの総数]*を選択し、保持するSnapshotの数を指定します。</block>
   <block id="7537e0d42ad63b5bae18964aee575640" category="paragraph">Snapshotの数が指定した数を超えると、最も古いコピーから順にSnapshotが削除されます。</block>
   <block id="a73c04130d1785278e42ce85b94c154d" category="admonition">SnapshotコピーベースのバックアップでSnapVaultレプリケーションを有効にする場合は、保持数を2以上に設定する必要があります。保持数を1に設定すると、新しいSnapshotがターゲットにレプリケートされるまで最初のSnapshotがSnapVault関係の参照Snapshotになるため、保持処理が失敗する可能性があります。</block>
   <block id="c0ab35de65d78830f03751afe7a38d7b" category="admonition">SAP HANAシステムレプリケーションでは、SAP HANAシステムのすべてのリソースを1つのリソースグループに追加することを推奨します。これにより、適切な数のバックアップが保持されます。</block>
   <block id="3d721f84f4ba496ced30bffcfa1591da" category="admonition">SAP HANAシステムレプリケーションでは、作成されたSnapshotの合計数はリソースグループに設定された保持数と同じになります。最も古いSnapshotの削除は、最も古いSnapshotが配置されているノードに基づいて行われます。たとえば、SAP HANAシステムレプリケーションプライマリとSAP HANAシステムレプリケーションセカンダリを含むリソースグループの保持期間は7に設定されます。一度に作成できるSnapshotの数は、SAP HANAシステムレプリケーションプライマリとSAP HANAシステムレプリケーションセカンダリの両方を含め、最大7つです。</block>
   <block id="298d4bea409e146b0187ec130a39fb72" category="paragraph">Snapshotを特定の日数だけ保持</block>
-  <block id="e736f4106d35f31cff1a51f091e56c06" category="paragraph">[Keep Snapshot copies for]*を選択し、Snapshotを削除するまでの日数を指定します。</block>
-  <block id="86b78accb82bf0596de946657114e7dd" category="paragraph">Snapshotコピーのロック期間を選択し、日、月、または年を選択します。</block>
   <block id="e7c020bcc5fc6c46eea0af3b48696115" category="paragraph">SnapLock保持期間は100年未満にする必要があります。</block>
   <block id="53ef3d7584a54991b60fba81e93d201f" category="paragraph">* ローカル Snapshot コピー作成後に SnapMirror を更新 *</block>
   <block id="1275946d22bd30ab4fa43a93760353bd" category="paragraph">別のボリュームにバックアップセットのミラーコピーを作成する場合（SnapMirrorレプリケーション）は、このフィールドを選択します。</block>
@@ -4390,7 +4387,6 @@
   <block id="f29871ab419804e987d1bfb5f3274244" category="list-text">ポリシーでオプションを指定することで、別のリソースグループにポリシーを再利用して時間を節約できます。</block>
   <block id="42671d398be6103911a06f9936ab9855" category="admonition">リソースグループを作成する際に、バックアップ処理のスケジュール（開始日、終了日、頻度）を指定できます。これにより、ポリシーとバックアップ頻度が同じであるリソースグループを作成できますが、各ポリシーに異なるバックアップスケジュールを割り当てることができます。</block>
   <block id="95dfd611f9419ea2abdea4d84377aeab" category="admonition">SnapVaultレプリケーションを有効にする場合は、保持数を2以上に設定する必要があります。保持数を1に設定すると、新しいSnapshotがターゲットにレプリケートされるまで最初のSnapshotがSnapVault関係の参照Snapshotになるため、保持処理が失敗する可能性があります。</block>
-  <block id="7cd1d77689881addd5facf23970563df" category="paragraph">[Snapshot locking period]を選択し、日、月、または年を選択します。</block>
   <block id="7630e21f8142849489483b7354d0643a" category="paragraph">ONTAPの保護関係のタイプがミラーとバックアップの場合、このオプションのみを選択すると、プライマリで作成されたSnapshotはデスティネーションに転送されませんが、デスティネーションのリストに表示されます。このSnapshotをリストア処理の対象としてデスティネーションで選択すると、「Secondary Location is not available for the selected vaulted/mirrored backup」というエラーメッセージが表示されます。</block>
   <block id="d2f577cb0769d7c31f2785dd590b9f27" category="paragraph">SnapLock Vaultの詳細については、「SnapVaultデスティネーションでSnapshotをWORM状態にコミットする」を参照してください。</block>
   <block id="4f2f5ecb6e9ddbc65d919530d4364ba6" category="admonition">セカンダリストレージのSnapshotの最大数に達しないように、ONTAPでセカンダリストレージのSnapMirror保持ポリシーを設定する必要があります。</block>
@@ -5002,7 +4998,6 @@
   <block id="baf51638fcd69f7ad248b14cc9899660" category="inline-link-macro">[Topology]ページでのExchangeバックアップの表示</block>
   <block id="d515aa4634219e7d2319e5e18234ff1a" category="paragraph">ローカルSnapshot作成後にSnapVaultを更新</block>
   <block id="74634d46f4094928b9a2dbffb638ae7f" category="paragraph">ディスクツーディスクのバックアップレプリケーションを実行する場合は、このオプションを選択します。</block>
-  <block id="58d70fc926069f010ab51ffa86e123d8" category="paragraph">セカンダリポリシーラベル</block>
   <block id="e64e99351ad3ec8079ffd2d91fbd7f12" category="paragraph">エラー時の再試行回数</block>
   <block id="39007747bb71ef47183e492e75b22469" category="paragraph">レプリケーションの最大試行回数を入力します。この回数を超えると処理が停止します。</block>
   <block id="8a24b0ef145ce6b12a15abff3b19d28f" category="list-text">スクリプトページで、バックアップ処理の前後に実行するプリスクリプトまたはポストスクリプトのパスと引数を入力します。</block>
@@ -6292,7 +6287,6 @@
   <block id="2c4f60cdfab4e71a27e2dfbd9362e411" category="summary">SnapCenter を使用して Oracle データベースリソースをバックアップする前に、バックアップ対象のリソースまたはリソースグループのバックアップポリシーを作成する必要があります。バックアップポリシーは、バックアップを管理、スケジュール、および保持する方法を規定する一連のルールです。レプリケーション、スクリプト、およびバックアップタイプの設定を指定することもできます。ポリシーを作成すると、別のリソースやリソースグループでポリシーを再利用して時間を節約できます。</block>
   <block id="e457b5ee7ca69de08b3486e30ef1d570" category="list-text">SnapCenter のインストール、ホストの追加、データベースの検出、ストレージシステム接続の作成などのタスクを実行して、データ保護の準備をしておく必要があります。</block>
   <block id="37467ff0195d6765df22bdc34e035d04" category="list-text">Snapshotをミラーセカンダリストレージまたはバックアップセカンダリストレージにレプリケートする場合は、SnapCenter管理者がソースとデスティネーションの両方のボリューム用にSVMを割り当てておく必要があります。</block>
-  <block id="099321e862ba2170dc1c3e6b1f02ef72" category="paragraph">ONTAP 9.12.1以前のバージョンでは、リストアの一環としてSnapLockヴォールトSnapshotから作成されたクローンにSnapLockヴォールトの有効期限が継承されます。SnapLockの有効期限が過ぎた時点で、ストレージ管理者がクローンを手動でクリーンアップする必要があります。</block>
   <block id="12a8a88fbbb12cf46de8ed3c3c9c4df5" category="list-text">ドロップダウン・リストから「 * Oracle Database * 」を選択します。</block>
   <block id="e290a9defe5f60a7f464d11afc89eb7f" category="list-text">オンライン・バックアップ * を作成する場合は、 * オンライン・バックアップ * を選択します。</block>
   <block id="2970dd9d72c00fe91590d9b297f952f6" category="paragraph">すべてのデータファイル、制御ファイル、アーカイブログファイル、データファイルと制御ファイル、アーカイブログファイルのいずれをバックアップするかを指定する必要があります。</block>
@@ -6315,7 +6309,6 @@
   <block id="57af7cc9669227d9ac6afec5db802561" category="paragraph">すべての保存先からアーカイブ・ログを削除する * を選択します。</block>
   <block id="be859d432cb8f72f5fb9b4c1622d56b1" category="paragraph">バックアップに含まれるログデスティネーションからアーカイブログを削除</block>
   <block id="3330083979ff2e07d7e4609ee2228f08" category="paragraph">[ * バックアップの一部である保存先からアーカイブ・ログを削除する * ] を選択します。</block>
-  <block id="9696f79f02f1b72ee2751fa3ac8cee1b" category="admonition">アーカイブログバックアップを保持できるのは、バックアップの一部としてアーカイブログファイルを選択した場合だけです。</block>
   <block id="0eb8f2f819c8b84106d6c0414648f1c5" category="inline-link-macro">[Topology]ページでのOracleデータベースのバックアップとクローンの表示</block>
   <block id="ffb3ae9f69a62e97d1deccf8e6b8f1ff" category="paragraph">プリスクリプトとポストスクリプトは、 /var/opt/snapcenter /spl/scripts_or に保存するか、このパス内の任意のフォルダに保存する必要があります。デフォルトでは、 /var/opt/snapcenter /spl/scripts_path が読み込まれます。スクリプトを保存するフォルダをこのパス内に作成してある場合は、パス内のそれらのフォルダを指定する必要があります。</block>
   <block id="1b4b1a8701700f9bb0245d7c920ebd16" category="paragraph">スクリプトのタイムアウト値を指定することもできます。デフォルト値は60秒です。</block>
@@ -7179,17 +7172,12 @@
   <block id="82c2224d099110596a9863d056598afe" category="paragraph">バックアップコピーを特定の日数だけ保持します。</block>
   <block id="9bbf41d74c8f89f293d3299ea7bebf83" category="list-text">［ * 最新の &lt; 日数 &gt; フル・バックアップに適用可能なログ・バックアップを保持する ］ オプションを選択し、ログ・バックアップ・コピーを保持する日数を指定します。</block>
   <block id="0e549e42000cf1cd2bd13dc132e61448" category="paragraph">SnapLock保持期間は100年未満にする必要があります。</block>
-  <block id="92ac5fc0212c94ee50e6dc85913caeec" category="example-title">例を示します</block>
-  <block id="8047dd542f0833c625160d18deaef831" category="paragraph">Set-SmPolicy-PolicyName 'newpol'-PolicyType 'Backup'-PluginPolicyType 'SCSQL'-sqlbackuptype 'FullBackupAndLogBackup'-RetentionSettings@｛backupType='Hourly'；RetentionCount=2｝、@｛backupType='log_snapshot'；ScheduleType=2｝</block>
-  <block id="f2d35fb96ac070e63c88b1b43cf8c70b" category="inline-link">SnapCenterがデータベースのSnapshotコピーを保持</block>
-  <block id="96df6a4d32e4546cfd055ffa3e9a7097" category="paragraph"><block ref="96df6a4d32e4546cfd055ffa3e9a7097" category="inline-link-rx"></block></block>
   <block id="df5624cba097e4a1613f2162cfe02d72" category="open-title">SnapMirrorの更新</block>
   <block id="4fbf861fa73d7c46a9d919de9dba7f88" category="paragraph">ローカルSnapshotコピーの作成後にSnapMirrorを更新します。</block>
   <block id="b62913a5294dae473801568644e4e8a8" category="list-text">別のボリュームにバックアップセットのミラーコピーを作成する場合（SnapMirror）は、このオプションを選択します。</block>
   <block id="862e27b33388db0f7174e2affc68bbee" category="inline-link-macro">[Topology]ページでのSQL Serverのバックアップとクローンの表示</block>
   <block id="721dcaba6ffe06898a1264f811fd7874" category="open-title">SnapVaultの更新</block>
   <block id="aafae6ead4b01f0afa9e2d2dcfc5ecdd" category="paragraph">Snapshotコピーの作成後にSnapVault を更新</block>
-  <block id="149450cb3a9e3ecae5eaba7a4573516f" category="paragraph">選択したSnapshotラベルに応じて、ラベルに一致するセカンダリSnapshot保持ポリシーがONTAPによって適用されます。</block>
   <block id="103ff4d651f40a22f8ac13b7d439054e" category="open-title">エラー再試行回数</block>
   <block id="1701175190dfd6dd06812a1b97af8f95" category="paragraph">たとえば、SNMPトラップの更新、アラートの自動化、ログの送信を行うスクリプトを実行できます。</block>
   <block id="dccc8011e6f51f002aae83ff00479c7d" category="admonition">セカンダリストレージがSnapshotの最大数に達しないように、ONTAPでSnapMirror保持ポリシーを設定する必要があります。</block>
@@ -9012,8 +9000,6 @@
   <block id="51c4ef6c91626ee6bcba80f0f3a8fd59" category="list-text">[Snapshot and Replication]ページで、次の操作を実行します。</block>
   <block id="e70a56107961334e45231ff9d5f1bda8" category="list-text">[Snapshot settings]セクションで、次の操作を実行します。</block>
   <block id="d21b6c7742082098834aa7ac817fc423" category="paragraph">[コピーを保持する期間]*を選択し、Snapshotを削除するまでの日数を指定します。</block>
-  <block id="a37760bcf65acb1e666f7880b234b107" category="paragraph">プライマリSnapshotコピーロック期間</block>
-  <block id="8c4df87df7072888db58abdf493c82ba" category="paragraph">プライマリのSnapshotロック期間を指定する場合は、[Snapshotコピーのロック期間]を選択し、日、月、または年を選択します。</block>
   <block id="37f001fbef310181d8f4577b4c03a798" category="paragraph">セカンダリSnapshotのロック期間</block>
   <block id="2e37f31a39b30876eff1858ef3d01783" category="paragraph">[Secondary snapshot copy locking period]*を選択し、[Days]、[Months]、または[Years]を選択します。</block>
   <block id="49d10f32e6045f6eb1e87608c6663036" category="list-text">[Select secondary replication options]セクションで、次のセカンダリレプリケーションオプションの一方または両方を選択します。</block>
@@ -9035,13 +9021,11 @@
   <block id="8945d91112d6305825278287a12463cf" category="list-text">[Snapshot and Replication]ページで、次の手順を実行します。</block>
   <block id="26c5fd73c2f414e21745bac4c9061520" category="list-text">[Snapshot and Replication]ページで、[Backup Type]ページで選択したバックアップタイプとスケジュールタイプの保持設定を指定します。</block>
   <block id="eff059db75a3581eefbc224fcb754955" category="paragraph">[保持するコピー数]*を選択し、保持するSnapshotの数を指定します。</block>
-  <block id="75653881b192c0f71e63eff99df780b0" category="paragraph">セカンダリSnapshotコピーのロック期間</block>
   <block id="ad6c4cefab999b5d3b0c637f45be0c1e" category="list-text">Snapshotコピーベースのバックアップの場合は、[Select secondary replication options]セクションで、次のセカンダリレプリケーションオプションの一方または両方を選択します。</block>
   <block id="c0cfc52080e2a067b98e24711aebb894" category="paragraph"><block ref="c0cfc52080e2a067b98e24711aebb894" category="inline-image-macro-rx" type="image"></block></block>
   <block id="90f9660dfd88af9a8e7316dbe773ef8d" category="list-text">[Custom backup settings]セクションで、プラグインに渡す必要がある特定のバックアップ設定をキーと値の形式で指定します。</block>
   <block id="8ec0c5b593d331f0bf00c2469725e303" category="list-text">[Snapshot settings]セクションで、*[Backup Type]*ページで選択したバックアップタイプとスケジュールタイプの保持設定を指定します。</block>
   <block id="b794f07b4da865ba0ea5b2e45e40e2d7" category="list-text">ポリシーラベルを選択します。</block>
-  <block id="d8321bde9335ee452a7c54b922588669" category="paragraph">選択したポリシーラベルに応じて、ラベルに一致するセカンダリSnapshot保持ポリシーがONTAPによって適用されます。</block>
   <block id="40760df99ad1881cc4099caa2853c64b" category="inline-link-macro">[Topology]ページでのMySQLリソースに関連するバックアップとクローンの表示</block>
   <block id="81a788b178a1784f4d3b3c98f0a5c0fd" category="paragraph">を参照して <block ref="6710edbd3b148f1744e483f97807e560" category="inline-link-macro-rx"></block></block>
   <block id="c708e7888448bf0b8b9020a354adbf4d" category="doc">ASA R2システムでリソースグループを作成し、MySQLリソースのセカンダリ保護を有効にする</block>
@@ -9068,7 +9052,6 @@
   <block id="5c72942e47dd59d535a0243e01b915c5" category="paragraph">リソースグループを検索するには、検索ボックスにリソースグループ名を入力するか、**をクリックし<block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>てタグを選択します。次に、**をクリックしてフィルタペインを閉じることができます<block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="75dd626c2900bf0ae903a1af9ff5bb4d" category="list-text">[Backup Type and Replication]ページで、次の手順を実行します。</block>
   <block id="66e5ec1722ee55d19932c5bc96d7c5c3" category="list-text">ポリシーラベルを選択します。</block>
-  <block id="5a448dc3de839f6ccafc3c5c79832c90" category="admonition">*セカンダリSnapshotコピーのロック期間*を有効にするには、セカンダリレプリケーションオプションを選択する必要があります。[Retention]ページで、*[Secondary snapshot copy locking period]*オプションを使用できます。</block>
   <block id="41b7523d6eb2b3d6f06599d202b36bc2" category="paragraph">プライマリSnapshotロック期間</block>
   <block id="bdb12321d80003b575f05b8f7554d39f" category="paragraph">[Primary snapshot copy locking period]*を選択し、[Days]、[Months]、または[Years]を選択します。</block>
   <block id="a76a81f87730cc587fdae2f40fc9d18b" category="paragraph">をクリック <block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block> し、ホスト名とExchangeサーバを選択してリソースをフィルタリングします。そのあとに<block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>をクリックすると、フィルタ ペインが閉じます。</block>
@@ -9105,8 +9088,6 @@
   <block id="1524074fad20a78ac464c12b7c0ab1be" category="paragraph"><block ref="1524074fad20a78ac464c12b7c0ab1be" category="inline-image-macro-rx" type="image"></block></block>
   <block id="5116143fc568cf90dd6d42f66fce7458" category="list-text">[Snapshot and Replication]ページで、次の手順を実行します。</block>
   <block id="eb1d9d00c6e807619cab9ea37bcf137a" category="list-text">[Data snapshot retention settings]セクションで、[Backup Type]ページで選択したバックアップタイプとスケジュールタイプの保持設定を指定します。</block>
-  <block id="a5f1bd1f3375b552f48386ca5d05e45a" category="paragraph">プライマリSnapshotコピーのロック期間を指定する場合は、*プライマリSnapshotコピーのロック期間*を選択し、日、月、または年を選択します。</block>
-  <block id="2c1e6867a6e3b711ba7c5a6b89167c44" category="paragraph">セカンダリSnapshotコピーのロック期間を指定する場合は、*[セカンダリSnapshotコピーのロック期間]*を選択し、日、月、または年を選択します。</block>
   <block id="218bd996ffd443419d26b630b917d4da" category="list-text">[Archive Log snapshot retention settings]セクションで、[Backup Type]ページで選択したバックアップタイプとスケジュールタイプの保持設定を指定します。</block>
   <block id="17e51acfcdd274bfcfeb54ea63213736" category="list-text">ポリシーラベルを選択します。</block>
   <block id="e38051a0d9227426e5f8160402a78211" category="paragraph">コマンドで使用できるパラメータとその説明については、Get-Help Command_nameを実行して確認できます。または、を参照することもできます<block ref="a6987fd1f481831496b6e000c63cd27d" category="inline-link-rx"></block>。</block>
@@ -9138,7 +9119,6 @@
   <block id="955e59c39a685284fed2337a93e106ba" category="admonition">デフォルトでは、保持数の値は2に設定されています。保持数を1に設定すると、新しいSnapshotがターゲットにレプリケートされるまで最初のSnapshotがSnapVault関係の参照Snapshotになるため、保持処理が失敗する可能性があります。</block>
   <block id="de89a185c7194c68782b531cfd26fd28" category="list-text">Snapshotを保持する時間の長さ</block>
   <block id="baf9bfd10581e4153f7ec33ae67cdfc2" category="list-text">Snapshotを保持してから削除するまでの日数を指定する場合は、*[コピーの保持期間]*を選択します。</block>
-  <block id="d2f6ae7e40615559468909d9d4717552" category="list-text">Snapshotラベルを選択してください</block>
   <block id="6eeddb49abf2b478b28ef816bcc9d4b5" category="section-title">手順7：セカンダリレプリケーションオプションを設定する</block>
   <block id="81acf3e2ad702e58e6f17b488f420f60" category="paragraph">を参照して <block ref="a3a1de85b36025c39faacf264d5c19f2" category="inline-link-macro-rx"></block></block>
   <block id="ef37f84ddc9d52086dc669514422940b" category="section-title">手順8：スクリプト設定を構成します</block>
@@ -9151,7 +9131,6 @@
   <block id="ea64a472e78bd4b210304f394bbe8e3a" category="list-text">をクリックし <block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>、ホスト名とUNIXファイルシステムを選択してリソースをフィルタリングします。</block>
   <block id="fe87c152ea8a027207bc606ca85f3c4c" category="list-text">バックアップ設定を指定します。</block>
   <block id="9cda14399e82414944fcea8fffd39485" category="list-text">[Retention]ページで、[Backup and Replication]ページで選択したバックアップタイプとスケジュールタイプの保持設定を指定します。</block>
-  <block id="5f455fba952d07764d32e75250b5ba52" category="paragraph">プライマリのSnapshotロック期間を指定する場合は、*[Primary snapshot copy locking period（プライマリSnapshotコピーロック期間）]*を選択し、日数、月数、または年数を選択します。</block>
   <block id="68cdec5e109e43073b7bf9bf31a79009" category="doc">リソースグループを作成し、ASA R2システム上のWindowsファイルシステムのセカンダリ保護を有効にする</block>
   <block id="6f939f8b76abcb6333b6300620a5e0f3" category="image-alt">バックアップのワークフロー</block>
   <block id="6af63e081593a62ed023786db3b2e4ee" category="paragraph">既存のポリシーがいずれも要件を満たさない場合は、既存のポリシーをコピーして変更するか、<block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block>をクリックしてポリシー ウィザードで新しいポリシーを作成できます。既存のポリシーがいずれも要件を満たさない場合は、既存のポリシーをコピーして変更するか、<block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block>をクリックしてポリシー ウィザードで新しいポリシーを作成できます。</block>
@@ -9221,7 +9200,6 @@
   <block id="bf1764b9ff5a6e7b28ab3b2166bff7a4" category="admonition">NetApp ONTAPでは、セカンダリサイトからのIn Placeリストアがサポートされています。</block>
   <block id="cdc0da196ab05c60eaebdca9a2459cd1" category="list-text">FlexCloneのボリュームスプリット処理の詳細については、を参照してください。<block ref="a740171a60876518d945f2e24ddd79f9" category="inline-link-rx"></block></block>
   <block id="dc4d7bf5602b12335597fd5350deab23" category="admonition">最大保持値は1018です。保持数を使用しているNetApp ONTAPバージョンでサポートされる値よりも大きい値に設定すると、バックアップは失敗します。</block>
-  <block id="ee96dd48de878c0191d0701d853dd514" category="paragraph">この例では、ログSnapshotの保持期間を2に設定しています。</block>
   <block id="ab6d9fe11358cebc1d2cc02fa1c47496" category="list-text">Azureでサービスプリンシパルを作成したことを確認します。</block>
   <block id="6f346066b074941885d0989051206e4e" category="list-text">サービスプリンシパルに関連付けられたテナントID、クライアントID、およびシークレットキーが使用可能であることを確認します。</block>
   <block id="db4af27eace345776f29f9a3dbb3b5ff" category="list-text">テナントIDは、Azureポータルの[Entra ID]の[Overview]ページで確認できます。</block>
@@ -9566,4 +9544,17 @@
   <block id="0f6e39c02439e0ed8443edc2be967e14" category="paragraph">コマンドレットの詳細については、以下を参照してください。<block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block> 。</block>
   <block id="87592b536cbfa9f8d915045e1c7873f1" category="paragraph"><block ref="2c04bf704e48a12576c63de2102c1c43" prefix="" category="inline-code"></block></block>
   <block id="fa091713eff4575bdb9b210ff2415c9c" category="paragraph"><block ref="b883ee9ba55ef21bf483fd5986981580" prefix="" category="inline-code"></block></block>
+  <block id="971b3c1d99a5aa6f2b187690d01d852c" category="paragraph">スナップショットコピーのロック期間</block>
+  <block id="6b98a909e75e4d7d49461b7870f270bb" category="paragraph">*スナップショット コピーのロック期間* を選択し、日、月、または年を指定します。</block>
+  <block id="7f9c21c186057efab059e539477e7cb8" category="list-text">ポリシーラベルを指定します。</block>
+  <block id="2c5bee50fa6fe5f3871c65e5847d0382" category="paragraph">リモート レプリケーションのプライマリ スナップショットにSnapMirrorラベルを割り当てることで、プライマリ スナップショットによってスナップショット レプリケーション操作をSnapCenterからONTAPセカンダリ システムにオフロードできるようになります。これは、ポリシー ページでSnapMirrorまたはSnapVaultオプションを有効にしなくても実行できます。</block>
+  <block id="4dd3845fa1427b8270fec6409779e3ce" category="paragraph">スナップショットの数が指定数を超えると、最も古いスナップショットが最初に削除されます。</block>
+  <block id="9f4dc04b028094d2b50c905cb66cb584" category="admonition">最大保持値は 1018 です。保持期間がONTAPバージョンでサポートされている値よりも高い値に設定されている場合、バックアップは失敗します。</block>
+  <block id="1df9ce8f8ee70d4668259711a2f20cd1" category="paragraph">*スナップショット コピーのロック期間* を選択し、日、月、または年を指定します。</block>
+  <block id="83c353dab613896fa690239dff46e104" category="admonition">最大保持値は 1018 です。保持期間がONTAPバージョンでサポートされている値よりも高い値に設定されている場合、バックアップは失敗します。</block>
+  <block id="3300240ffba2f4633a53323d37d6b7e1" category="paragraph">+ スナップショットのロック期間を指定すると、保持期間が終了するまでスナップショットが削除されなくなります。その結果、ポリシーで指定した数よりも多くのSnapshotが保持される可能性があります。</block>
+  <block id="dca9965d6a6b336628078d10c70a83d6" category="paragraph">+ ONTAP 9.12.1 以下のバージョンでは、リストアの一環としてSnapLock Vault スナップショットから作成されたクローンには、 SnapLock Vault の有効期限が継承されます。SnapLockの有効期限が過ぎたあと、ストレージ管理者がクローンを手動でクリーンアップする必要があります。</block>
+  <block id="bd4112ff24244ca0e669eb1f5a3bae9b" category="paragraph">*スナップショット コピーのロック期間* を選択し、期間を日数、月数、または年数で指定します。</block>
+  <block id="4b0801e52b058b04e3451f31a90447e6" category="list-text">*スナップショット コピーのロック期間* を選択し、期間を日数、月数、または年数で指定します。</block>
+  <block id="5c2f59b69b9e772c86d6723464bda765" category="paragraph">スナップショットのロック期間を選択し、期間を日数、月数、または年数で指定します。</block>
 </blocks>
