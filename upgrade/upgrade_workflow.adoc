@@ -13,7 +13,7 @@ summary: SnapCenter サーバおよびプラグインをアップグレードす
 [role="lead"]
 SnapCenterの各リリースには、更新されたSnapCenterサーバとプラグインパッケージが含まれています。プラグインパッケージの更新は、 SnapCenter インストーラで配布されます。利用可能なアップデートをチェックするように SnapCenter を設定できます。
 
-このワークフローは、SnapCenterサーバとプラグインパッケージのアップグレードに必要なさまざまなタスクを示しています。
+ワークフローには、 SnapCenter Server およびプラグイン パッケージをアップグレードするために完了する必要があるタスクがリストされます。
 
 image::../media/upgrade_workflow.gif[アップグレードワークフロー]
 
@@ -21,20 +21,17 @@ image::../media/upgrade_workflow.gif[アップグレードワークフロー]
 
 == サポートされるアップグレードパス
 
-アップグレードパスを参照すると、SnapCenterの以前のすべてのバージョンから最新バージョンにアップグレードできるかSnapCenter、およびサポートされているプラグインのバージョンを把握することができます。
+このセクションでは、アップグレードできるSnapCenter のバージョンとサポートされているプラ​​グインのバージョンを示します。
+
+
+NOTE: SnapCenter Server を 6.2 にアップグレードする場合は、プラグインも 6.2 にアップグレードしてください。
 
 |===
 | SnapCenterサーバのバージョン | SnapCenterサーバを直接アップグレードできる環境 | サポートされるプラグインのバージョン 
 
 
-.3+| 5.0 | 6.0  a| 
-* 5.0
+.3+| 6.0 | 6.0.1  a| 
 * 6.0
-
-
-
-
-| 6.0.1  a| 
 * 6.0.1
 
 
@@ -46,25 +43,29 @@ image::../media/upgrade_workflow.gif[アップグレードワークフロー]
 
 
 
-.2+| 6.0  a| 
-6.0.1
+| 6.2  a| 
+* 6.2
+
+
+
+
+.2+| 6.0.1  a| 
+6.1
  a| 
-* 6.0
-* 6.0.1
-
-
-
-
-| 6.1  a| 
 * 6.1
 
 
 
 
-| 6.0.1 | 6.1  a| 
-* 6.0.1
-* 6.1
+| 6.2  a| 
+* 6.2
+
+
+
+
+| 6.1 | 6.2  a| 
+* 6.2
 
 
 |===
-SnapCenter Plug-in for VMware vSphereのアップグレードについては、を参照してください https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_upgrade.html["SnapCenter Plug-in for VMware vSphere をアップグレードします"^]。
+SnapCenter Plug-in for VMware vSphere のアップグレード方法については、以下を参照してください。 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_upgrade.html["SnapCenter Plug-in for VMware vSphere をアップグレードします"^] 。

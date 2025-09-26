@@ -11,7 +11,7 @@ summary: ASA R2システムのSVMをSanpCenterで使用するように設定し�
 
 
 [role="lead"]
-ASA R2システムで新しいSVMユーザのロールを作成するには、いくつかのONTAP CLIコマンドを実行する必要があります。ASA R2システムのSVMをSnapCenterで使用するように設定し、vsadminロールを使用しない場合は、このロールが必要です。
+ASA r2 システムで新しい SVM ユーザーのロールを作成するには、いくつかのONTAP CLI コマンドを実行する必要があります。このロールは、 ASA r2 システムで SVM をSnapCenterで使用するように構成し、vsadmin ロールを使用しない場合に必要です。
 
 * 手順 *
 

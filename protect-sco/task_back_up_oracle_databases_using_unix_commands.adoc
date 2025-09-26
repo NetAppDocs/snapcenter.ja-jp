@@ -30,7 +30,7 @@ NOTE: 接続セッションは24時間のみ有効です。ただし、TokenNeve
 
 次のコマンドを実行して、SnapCenterサーバとの接続の確立、Oracleデータベースインスタンスの検出、ポリシーとリソースグループの追加、バックアップと検証を行います。
 
-コマンドで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP3337666["SnapCenter ソフトウェアコマンドリファレンスガイド"^]。
+コマンドで使用できるパラメータとその説明に関する情報は、Get-Help _command_name_ を実行すると取得できます。あるいは、 https://library.netapp.com/ecm/ecm_download_file/ECMLP3359469["SnapCenter ソフトウェアコマンドリファレンスガイド"^] 。
 
 * 手順 *
 

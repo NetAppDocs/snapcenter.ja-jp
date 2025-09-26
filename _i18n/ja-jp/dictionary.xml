@@ -1097,17 +1097,12 @@
   <block id="4ee2d383554981f4ea8eff4f35db6832" category="inline-link">SnapCenter Plug-in for VMware vSphere REST API</block>
   <block id="2d058bff360144951b6c9212e64bf5d8" category="paragraph">SnapCenter Plug-in for VMware vSphere REST APIについては、を参照してください。<block ref="bf36dff0c9f063d6a54a8208136c7e68" category="inline-link-rx"></block></block>
   <block id="c89d1d1a076ae6db4420d478e9a43bd1" category="summary">SnapCenter のロールベースアクセス制御（ RBAC ）と ONTAP 権限を使用して、 SnapCenter 管理者はロールの作成とアクセス権限の設定を行うことができます。この一元管理されたアクセスにより、アプリケーション管理者は委任された環境で安全に作業を行うことができます。</block>
-  <block id="a6434cb33fd5968114b46f8371c99b97" category="paragraph">SnapCenterのロールベースアクセス制御（RBAC）とONTAP権限を使用すると、SnapCenter管理者は、SnapCenterリソースの制御を別のユーザまたはユーザグループに委譲できます。この一元管理されたアクセスにより、アプリケーション管理者は委任された環境で安全に作業を行うことができます。</block>
-  <block id="e8a9ea3436295dbce3f5e848ea8c441a" category="admonition">SnapCenterを使用してユーザアカウントまたはグループアカウントを作成することはできません。オペレーティングシステムまたはデータベースのActive Directoryにユーザアカウントまたはグループアカウントを作成する必要があります。</block>
-  <block id="8b4e9abf70f654cf29a1dd56b5572032" category="paragraph">SnapCenter では、次のタイプのロールベースアクセス制御を使用します。</block>
   <block id="5e8182c0fb39e16fe0a96577565e2e28" category="list-text">SnapCenter RBAC</block>
   <block id="9624ca855be2906ad6628109f1d9e3d0" category="list-text">アプリケーションレベルのRBAC</block>
   <block id="67c73d0c05c627af68622cc01164ae15" category="list-text">ONTAPケンケン</block>
   <block id="57dc1aab3659c78a4e7752db4d4e652d" category="paragraph">RBACの権限は、同じフォレスト内のユーザとグループ、および異なるフォレストに属するユーザに割り当てることができます。フォレスト間でネストされたグループに属するユーザにRBAC権限を割り当てることはできません。</block>
   <block id="c75f7811d70d17dbcd88e9d03752cbed" category="section-title">認証</block>
-  <block id="f99af3f9d6fe830ae8bd2fc15f75f35f" category="paragraph">ユーザは、グラフィカルユーザインターフェイス（GUI）またはPowerShellコマンドレットを使用して、ログイン時に認証を指定する必要があります。ユーザが複数のロールのメンバーである場合は、ログインクレデンシャルを入力すると、使用するロールを指定するように求められます。また、APIを実行するための認証も必要です。</block>
   <block id="4621c32301e9db3796cade120966e4ac" category="paragraph">SnapCenterは、クレデンシャルを使用して、許可されたSnapCenterユーザがアプリケーションレベルの権限も持っていることを確認します。</block>
-  <block id="1247a4f73aec617351c15da7677f2470" category="paragraph">同様に、Oracleデータベースに対してデータ保護処理を実行する場合に、データベースホストでオペレーティングシステム（OS）認証が無効になっている場合は、OracleデータベースまたはOracle ASMのクレデンシャルを使用してクレデンシャルを設定する必要があります。SnapCenterサーバは、操作に応じて、次のいずれかの方法を使用して設定されたクレデンシャルを認証します。</block>
   <block id="880474ac5a13e7ace0b497d868bfcec8" category="section-title">SnapCenter Plug-in for VMware vSphere の RBAC をサポートしています</block>
   <block id="c30d59401403b986989fc4a149ff2aea" category="summary">SnapCenter では、データのセキュリティを確保するために厳格なセキュリティおよび認証機能を採用しています。</block>
   <block id="79333b6bf46efb54b1410de6b731a635" category="paragraph">SnapCenter には、次のセキュリティ機能が含まれています。</block>
@@ -1139,8 +1134,6 @@
   <block id="c3ab820456c9495a13e6c8d3bf203adb" category="list-text">App Backup and Clone Adminロール</block>
   <block id="9cbf4a13bbbfd716d85a344992a28d5c" category="list-text">Backup and Clone Viewerロール</block>
   <block id="c79885b0ddab0b04ef9ffcd2a2adc001" category="list-text">Infrastructure Adminロール</block>
-  <block id="c6e575969465b9ba25194550f4409a37" category="paragraph">ロールにユーザを追加するときは、Storage Connection権限を割り当ててStorage Virtual Machine（SVM）の通信を有効にするか、SVMをユーザに割り当ててSVMを使用する権限を有効にする必要があります。Storage Connection 権限を割り当てられたユーザは SVM 接続を作成できます。</block>
-  <block id="a1a7f8fc168b0e00b72aa67994aca50a" category="paragraph">たとえば、 SnapCenter Admin ロールのユーザは、 SVM 接続を作成し、 App Backup and Clone Admin ロールのユーザに割り当てることができます。 App Backup and Clone Admin ロールには、デフォルトでは SVM 接続を作成または編集する権限は付与されていません。SVM 接続がないと、ユーザはバックアップ、クローニング、リストアの処理を実行できません。</block>
   <block id="9c841e2716f76afb092d7a07c5b70179" category="paragraph">SnapCenter Admin ロールでは、すべての権限が有効になっています。このロールの権限は変更できません。ロールにユーザやグループを追加したり、削除したりできます。</block>
   <block id="a874cfab5c47d6543b2c7212ad2c31f5" category="paragraph">App Backup and Clone Adminロールには、アプリケーションのバックアップとクローン関連のタスクに対して管理操作を実行するために必要な権限があります。このロールには、ホスト管理、プロビジョニング、ストレージ接続管理、またはリモートインストールに関する権限はありません。</block>
   <block id="d08ccf52b4cdd08e41cfb99ec42e0b29" category="cell">権限</block>
@@ -1164,9 +1157,7 @@
   <block id="1281764038ea27ade56d7d2b8be22798" category="paragraph">アンマウント</block>
   <block id="0d73a80a294d9fcca263cef71862af94" category="paragraph">フルボリュームリストア</block>
   <block id="c3c73b7f9d382d2231b0aa3e8a26db67" category="paragraph">ジョブモニタ</block>
-  <block id="df44602e169cb1f9dbb6288c7e86985e" category="paragraph">Backup and Clone Viewerロールには、すべての権限が読み取り専用で表示されます。また、検出、レポート、およびダッシュボードへのアクセスに必要な権限も有効になっています。</block>
   <block id="969d7fda8acd2ab121789be3a975bbb4" category="paragraph">Infrastructure Adminロールでは、ホスト管理、ストレージ管理、プロビジョニング、リソースグループ、リモートインストールレポート、 をクリックし、ダッシュボードにアクセスします。</block>
-  <block id="8e9100a341414c9d65801258490fe489" category="cell">* ベストプラクティス： * SnapCenter Plug-in for VMware vSphere の処理用に ONTAP ロールを 1 つ作成し、必要な権限をすべて割り当てることを推奨します。</block>
   <block id="979623b664e821ca043ae0d13a9b68a0" category="summary">クレデンシャルで使用される認証方法は、アプリケーションや環境に応じて異なります。クレデンシャルで認証されたユーザは、 SnapCenter の処理を実行できます。プラグインのインストールに使用するクレデンシャルとデータ保護処理に使用するクレデンシャルをそれぞれ1組ずつ作成する必要があります。</block>
   <block id="5b00a6bb860d50a1c997c998160e673c" category="doc">クレデンシャルの認証方式</block>
   <block id="7e68841acc918ef617f53709d7f28228" category="section-title">Windows認証</block>
@@ -2109,7 +2100,6 @@
   <block id="6d4ed4face9b51c5caae12208e47fa1e" category="paragraph">PAM（Pluggable Authentication Modules）は、システム管理者が認証を行うプログラムを再コンパイルすることなく認証ポリシーを設定できるシステムセキュリティツールです。</block>
   <block id="ba7cbf773bd0f0004c4d97fba5034cdb" category="summary">サポートされるストレージシステム、アプリケーション、およびデータベースを確認しておく必要があります。</block>
   <block id="1e1ed4854c77f284f3e97b0843b6e570" category="doc">サポートされるストレージシステムとアプリケーション</block>
-  <block id="47217be9e2af813e09f7a7760c32e8ce" category="paragraph">Non-Volatile Memory Express（NVMe）over Transport Control Protocol（TCP）をサポートします。</block>
   <block id="cc788b7e72b2a734dd0985bd1e0e9fe3" category="inline-link">Amazon FSX for NetApp ONTAP のドキュメント</block>
   <block id="6ae4072dd3f83211384c8e5499a7935c" category="paragraph">Amazon FSx for NetApp ONTAPの詳細については、を参照してください<block ref="6acd76e3ffef3be13d939109e0593e26" category="inline-link-rx"></block>。</block>
   <block id="2e2da9aed107a3761b9b4f5441c315fc" category="summary">既存のNetAppアカウントをお持ちでない場合は、次の手順に従ってソフトウェアにアクセスするために登録する必要があります。</block>
@@ -5260,8 +5250,6 @@
   <block id="8544e54da381581f9b9e4e593c42cb57" category="list-text">[ アプリケーションボリュームの追加 ] をクリックします。</block>
   <block id="3e98357302d4518e158bc9dc7f45c162" category="list-text">[Name]フィールドに、アプリケーションボリュームの名前を入力します。</block>
   <block id="53b78d17407010f7e0c4051f330998b4" category="list-text">[Host Name]フィールドにホストの名前を入力します。</block>
-  <block id="2e1075c2f00fe853dfc8acda6a66a53f" category="list-text">[Storage Footprint]ページで、ストレージシステム名を入力し、1つ以上のボリュームを選択し、関連付けられているLUNまたはqtreeを指定します。</block>
-  <block id="bc1281f9dd3caf1b8951ef83af9fbe38" category="paragraph">複数のストレージシステムを追加できます。</block>
   <block id="80e5eb37566e84270d23254e8f050156" category="list-text">[ リソース ] ページで、 *View* リストから * アプリケーションボリューム * を選択すると、追加したすべてのアプリケーションボリュームが表示されます。</block>
   <block id="088ea09c5845b030ebf8ae5975d090cb" category="section-title">アプリケーションボリュームの変更</block>
   <block id="6c6c48e7a3a56b7164aaa8b8eb204354" category="paragraph">バックアップが作成されていない場合は、アプリケーションボリュームの追加時に指定したすべての値を変更できます。バックアップが作成された場合、変更できるのはストレージシステムの詳細だけです。</block>
@@ -8487,13 +8475,11 @@
   <block id="adebd9b53fa49781be98cf46c0afc646" category="summary">SnapCenter サーバおよびプラグインをアップグレードする方法、およびサポートされるアップグレードパスについて説明します</block>
   <block id="5b416e1633d16aad217a2e0fc2d097f8" category="doc">アップグレードワークフロー</block>
   <block id="994e8a3ae2b587ba4467292fb5e6ba75" category="paragraph">SnapCenterの各リリースには、更新されたSnapCenterサーバとプラグインパッケージが含まれています。プラグインパッケージの更新は、 SnapCenter インストーラで配布されます。利用可能なアップデートをチェックするように SnapCenter を設定できます。</block>
-  <block id="1942fea7712357c67be30cfd20652b93" category="paragraph">このワークフローは、SnapCenterサーバとプラグインパッケージのアップグレードに必要なさまざまなタスクを示しています。</block>
   <block id="f640c846348fd61e77b392f8bb721f0c" category="image-alt">アップグレードワークフロー</block>
   <block id="eccc8325175b53fdef9a1846222d4161" category="section-title">サポートされるアップグレードパス</block>
   <block id="521d29d37f5561d4922ece42dc92cb07" category="cell">SnapCenterサーバのバージョン</block>
   <block id="7676f59833cee6720de923cfeef21ede" category="cell">SnapCenterサーバを直接アップグレードできる環境</block>
   <block id="8d0f374d6bbbe36aead49222bc8c909f" category="cell">サポートされるプラグインのバージョン</block>
-  <block id="336669dbe720233ed5577ddf81b653d3" category="cell">5.0</block>
   <block id="9f41f9f1c434718ae6e50ffba61152d0" category="cell">6.0</block>
   <block id="dd9f485e72f96875e028693823f26e70" category="inline-link">SnapCenter Plug-in for VMware vSphere をアップグレードします</block>
   <block id="25878f69131b31b18aeda7ba36139c1b" category="admonition">SnapCenter Plug-in for VMware vSphereのアップグレードについては、を参照してください<block ref="9fa07c2f7a59d2185d48077e327b705e" category="inline-link-rx"></block>。</block>
@@ -8861,7 +8847,6 @@
   <block id="8bd5c68a1ade9c22f98424902eb6b969" category="admonition">DB2 pureScale環境およびDB2 multi node（DPF）システムはサポートされていません。</block>
   <block id="89f4d38108821acdbf6cd6b780454397" category="summary">SnapCenterでサポートされているアップグレードパス。</block>
   <block id="5097f966477870c178d6885558d88ef0" category="doc">サポートされるSnapCenterのアップグレードパス</block>
-  <block id="917e552e8290664f15e1332b2d723ec0" category="paragraph">アップグレードパスを参照すると、SnapCenterの以前のすべてのバージョンから最新バージョンにアップグレードできるかSnapCenter、およびサポートされているプラグインのバージョンを把握することができます。</block>
   <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">リリースノート</block>
   <block id="8b7c42123642e2e4ea7dd426aeb2de58" category="list-text">NVMe / TCP</block>
   <block id="e32c19b9fdeb1a3c3b963304701ce944" category="list-text">NVMe/TCP経由で作成されたVMFS上のVMDK</block>
@@ -8921,7 +8906,6 @@
   <block id="150f5e2d2bbfc9515a0cf19f5cfb78cf" category="list-text"><block ref="b58bfe0f03c84dd62a9ee2931ced9b8e" prefix="" category="inline-code"></block></block>
   <block id="dc7e4332f30a78544c57ff51a169f4c2" category="summary">ASA R2システムのSVMをSanpCenterで使用するように設定し、vsadminロールを使用しない場合は、SVMロールを作成する必要があります。</block>
   <block id="48dba86fa4ce5de943ef3072ea74d595" category="doc">ASA R2システム用のSVMロールの作成</block>
-  <block id="0c645d1cfd7f66061d3e5a68e06bc4df" category="paragraph">ASA R2システムで新しいSVMユーザのロールを作成するには、いくつかのONTAP CLIコマンドを実行する必要があります。ASA R2システムのSVMをSnapCenterで使用するように設定し、vsadminロールを使用しない場合は、このロールが必要です。</block>
   <block id="3a3326ab8a855eda366dde90677dcceb" category="paragraph"><block ref="8116804423bfe31ed3dfa65643146cde" prefix="" category="inline-code"></block></block>
   <block id="ceb09374475caa40385e66db6413f535" category="list-text"><block ref="62422d81270184927cae1001a7799732" prefix="" category="inline-code"></block></block>
   <block id="2523fae0d4c9e7a295a409276c552f2b" category="list-text"><block ref="58c812fa3d72aa1f67c5bcf47b8d10b2" prefix="" category="inline-code"></block></block>
@@ -8931,13 +8915,8 @@
   <block id="1f46b6eec6f3def165a94aea4fbd2de8" category="list-text"><block ref="d873942b6f54bbecd97eb915c6e95c45" prefix="" category="inline-code"></block></block>
   <block id="73c050ddeaec2b5e5a856c81666f8026" category="list-text">アイコンをクリックし <block ref="725f4bf2ffc300942027282d0182533f" category="inline-image-macro-rx" type="image"></block> 、*[証明書の検証を有効にする]*をクリックします。</block>
   <block id="989977a18a476a92018e04dd60ec37c1" category="inline-link">ASA R2システムの詳細</block>
-  <block id="b3c78f6e772922673e6d35ae6df26cbd" category="list-text">VMDK経由でのアプリケーションのプライマリバックアップの作成</block>
-  <block id="7e358fa759baa4f70a96f79cf29b4c61" category="list-text">セカンダリストレージシステムへの整合グループSnapshotの転送</block>
   <block id="a0f3e47cc5179a026d7b861797055f6d" category="list-text">rawデバイスマッピング（RDM）</block>
-  <block id="b47dab3c647bba9b7ad0a8fc0cde81dc" category="list-text">Oracleヨウノアプリケーションホリユウム</block>
-  <block id="7236f926bc1402ad0d847fd55a34001d" category="list-text">SAP HANA NDV</block>
   <block id="da612433b3e7d1bdc94a92a26f362677" category="list-text">LockVault</block>
-  <block id="425514993f273b658b0218c334836b26" category="list-text">階層整合グループ</block>
   <block id="980869fd79cd78a3682752206f149791" category="list-text">スナップショットの名前変更</block>
   <block id="bc3c828cce582fafd1e35e77b8c84327" category="cell">ポート名</block>
   <block id="f78fb51edae6a69d5e1e911a2b6fc268" category="cell">ポート番号</block>
@@ -8986,8 +8965,6 @@
   <block id="b618a910cf6913786f002b81f8c68b29" category="inline-image-macro">未定義アイコン</block>
   <block id="f79223ed88950e342e86b7b49a4754b0" category="list-text">**<block ref="31f3aaed9a9bf45960790968b6c989cf" category="inline-image-macro-rx" type="image"></block>は、接続情報を取得できなかったことを示します。</block>
   <block id="dddf3c98ce717f2c803bfbb3e00ab335" category="list-text">をクリックして新しいドメインを登録します。</block>
-  <block id="7194a77b27ca79615dcf6dd232710c52" category="inline-link">SnapCenter 6.1に関する注意事項</block>
-  <block id="077b1607930ff1f5ea2a35c6bd385625" category="paragraph"><block ref="077b1607930ff1f5ea2a35c6bd385625" category="inline-link-rx"></block></block>
   <block id="ddc7a1dcd5b30eb0947ce31cc8f2d939" category="list-text">スケジュールを設定するポリシーの[スケジュールの設定]列で**を選択します<block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="2cd8b8c68f6fcf7e0dad392639951464" category="list-text">検証スケジュールを設定するポリシーを選択し、**をクリックします<block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="26d41db9e082320c220bc9f4fdc9368a" category="list-text">[スケジュールの設定]列で、設定するポリシーの**をクリックします<block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block>。</block>
@@ -9036,7 +9013,6 @@
   <block id="54131ac137e0428a48243c6552fd5559" category="paragraph">を参照して <block ref="582182fe79d6b435038edcbe448ef476" category="inline-link-macro-rx"></block></block>
   <block id="b2c46b2b0702b19d5fccc4f1b9f8648a" category="paragraph">SnapLock Vaultの詳細については、「SnapVaultデスティネーションでSnapshotをWORM状態にコミットする」を参照してください。</block>
   <block id="d2b3fcd21580309bc53248671abf5edb" category="image-alt">SnapCenter NetAppでサポートされるプラグインのワークフロー</block>
-  <block id="6dbd0d50e334f8371da5ec40fc37adb2" category="list-text">SVM に複数のデータパス（ LIF ）がある場合は、 NFS クローンボリュームをマウントするための適切なデータパス（ LIF ）が SnapCenter によって選択されます。ただし、特定のデータパス（LIF）を指定する場合は、Set-SvmPreferredDataPath CLIを実行する必要があります。コマンドで使用できるパラメータとその説明については、 RUNNING Get Help command_name _ を使用して参照できます。または、を参照することもできます<block ref="a6987fd1f481831496b6e000c63cd27d" category="inline-link-rx"></block>。</block>
   <block id="3b666c1c85e6d7621ddbf36de893633c" category="paragraph"><block ref="3b666c1c85e6d7621ddbf36de893633c" category="inline-link-macro-rx"></block></block>
   <block id="cdfd383dc16da3ad6abe4e1c059a6094" category="list-text">[Backup and Replication]ページで、次の操作を実行します。</block>
   <block id="a01b7da75a123f67d2bd092bd390357b" category="inline-link-macro">[Topology]ページでPostgreSQLリソースに関連するバックアップとクローンを表示</block>
@@ -9055,12 +9031,10 @@
   <block id="41b7523d6eb2b3d6f06599d202b36bc2" category="paragraph">プライマリSnapshotロック期間</block>
   <block id="bdb12321d80003b575f05b8f7554d39f" category="paragraph">[Primary snapshot copy locking period]*を選択し、[Days]、[Months]、または[Years]を選択します。</block>
   <block id="a76a81f87730cc587fdae2f40fc9d18b" category="paragraph">をクリック <block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block> し、ホスト名とExchangeサーバを選択してリソースをフィルタリングします。そのあとに<block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>をクリックすると、フィルタ ペインが閉じます。</block>
-  <block id="95ca7268c72e31c20f65d0b5b54ea8c6" category="list-text"><block ref="f790bf9188cee374d2bb1f3790c6a393" category="inline-image-macro-rx" type="image"></block>[削除アイコン]をクリックして値を変更します。</block>
   <block id="dffd94234b3c1a116e4948ff3c5072e3" category="list-text">AIXホストの場合：<block ref="b116e79e4da50b16dcaed1ed3f1567e1" prefix=" " category="inline-code"></block></block>
   <block id="d1f43f7b8d3d193845fa35a92bbdd6a6" category="paragraph">リソースグループを検索するには、検索ボックスにリソースグループ名を入力するか、**をクリックし<block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>てタグを選択します。次に、**をクリックしてフィルタペインを閉じることができます<block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="c00a655ac4b7e93c83b7d1e532a271e3" category="list-text">*をクリックし<block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>、ホスト名とデータベースタイプを選択してリソースをフィルタリングします。</block>
   <block id="f63dd098114d3f8b75e78f18fe6c2a93" category="list-text">スケジュールを設定するポリシーの[Configure Schedules]列で、<block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block>をクリックします。</block>
-  <block id="92d77f5c034495123ea4c7adc77aeefa" category="paragraph">コマンドで使用できるパラメータとその説明については、Get-Help Command_nameを実行して確認できます。または、を参照して<block ref="a6987fd1f481831496b6e000c63cd27d" category="inline-link-rx"></block>ください。</block>
   <block id="0930d24a992b94bd9c44e45e7df5d54f" category="list-text">クローニングされたリソースを選択し、をクリックします <block ref="16199d2eb7d7252498e560be9c8c8d7c" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="e41304e7d689f8fed5c98620228184cf" category="inline-link">Using Linux Hosts with ONTAP storage</block>
   <block id="4261289fb5bad467a2ad973679d86c14" category="list-text"><block ref="4261289fb5bad467a2ad973679d86c14" category="inline-link-rx"></block></block>
@@ -9069,7 +9043,6 @@
   <block id="f4e54f1fe48ac3ce5112308b1eceabc9" category="list-text">をクリックし、ホスト名とデータベース タイプを選択してリソースをフィルタします。</block>
   <block id="cf36ffc4ba53a8ecbd58193758b7e7f2" category="list-text">検索ボックスにリソースグループ名を入力するか、をクリックし <block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>てタグを選択します。</block>
   <block id="fab9a033dfbc33ab049bd62138584423" category="paragraph">をクリックしてフィルタ ペインを閉じます。</block>
-  <block id="0368e71bb17355bfa46d48de37edc0d2" category="paragraph">コマンドで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。または、を参照することもできます<block ref="a6987fd1f481831496b6e000c63cd27d" category="inline-link-rx"></block>。</block>
   <block id="61cdbe28fdf91e577bdcd2f7eb0d2b9d" category="paragraph">**をクリックすると、パラメータを追加できます<block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="c784d3cba09b3b53f393f1421e45c4df" category="section-title">ホストの優先IPを更新する</block>
   <block id="85ad854c35f24af1b7c52632e891c37a" category="paragraph">クローン処理が完了すると、ストレージアクセスレイヤ（SAL）からクローンへのパスが_SAL:SAL_FORMAT &lt;nfs_lif_IP&gt;になります&lt;JunctionPath&gt;。優先IPを指定するには、SCCLIコマンドを使用してホストでIPを設定する必要があります。</block>
@@ -9090,15 +9063,11 @@
   <block id="eb1d9d00c6e807619cab9ea37bcf137a" category="list-text">[Data snapshot retention settings]セクションで、[Backup Type]ページで選択したバックアップタイプとスケジュールタイプの保持設定を指定します。</block>
   <block id="218bd996ffd443419d26b630b917d4da" category="list-text">[Archive Log snapshot retention settings]セクションで、[Backup Type]ページで選択したバックアップタイプとスケジュールタイプの保持設定を指定します。</block>
   <block id="17e51acfcdd274bfcfeb54ea63213736" category="list-text">ポリシーラベルを選択します。</block>
-  <block id="e38051a0d9227426e5f8160402a78211" category="paragraph">コマンドで使用できるパラメータとその説明については、Get-Help Command_nameを実行して確認できます。または、を参照することもできます<block ref="a6987fd1f481831496b6e000c63cd27d" category="inline-link-rx"></block>。</block>
   <block id="8a2ba757e81446f3bb13c549e71a6fe2" category="list-text">PDBクローン（targetCDB：PDBClone）を選択し、をクリックします <block ref="f790bf9188cee374d2bb1f3790c6a393" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="81dfe22f147e5863ac036d5825fc0d36" category="paragraph"><block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>[フィルタアイコン]をクリックし、ホスト名とデータベースタイプを選択してリソースをフィルタリングします。次に、imagfilter_icon.gif[フィルタアイコン]_icon.png[]アイコンをクリックしてフィルタペインを閉じます。</block>
-  <block id="669176988e2770456c38c567c99afee6" category="paragraph">コマンドで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。または、を参照することもできます<block ref="a6987fd1f481831496b6e000c63cd27d" category="inline-link-rx"></block>。</block>
-  <block id="796405e4b0f07f89056f5608f7f10669" category="paragraph">UNIXコマンドの詳細については、を参照してください<block ref="a6987fd1f481831496b6e000c63cd27d" category="inline-link-rx"></block>。</block>
   <block id="4fb3b2f69e00418d4f3dcd3ecbd61d1e" category="list-text">クローニングされたリソース（データベースやLUNなど）を選択し、をクリックします <block ref="16199d2eb7d7252498e560be9c8c8d7c" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="c0eb997ff74c60645cc757d2031ca50a" category="list-text">PDBクローン（targetCDB：PDBClone）を選択し、をクリックします <block ref="16199d2eb7d7252498e560be9c8c8d7c" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="e13720033977db6e0527dfee3b780f5b" category="list-text">クローンを削除する場合は、表でクローンを選択し、<block ref="f790bf9188cee374d2bb1f3790c6a393" category="inline-image-macro-rx" type="image"></block>をクリックします。</block>
-  <block id="c3574823a3ee32c7dee18739df74fe59" category="paragraph">または、またはを参照することもできます<block ref="a6987fd1f481831496b6e000c63cd27d" category="inline-link-rx"></block><block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block>。</block>
   <block id="8ee05325e57cc519cdb31ab5c97c3054" category="image-alt">ヒタイシヨウLUNマツヒンク</block>
   <block id="c347b6ffeaa299dea564511a8a531ca5" category="doc">ASA R2システム上のMicrosoft SQL Serverリソースに対してリソースグループを作成し、セカンダリ保護を有効にする</block>
   <block id="8d2ad583a58059f543540eb44dc0662b" category="list-text">バックアップ処理を最適化するには、Windowsクラスタ名とIPアドレスのリバースルックアップレコードをDNSサーバに作成する必要があります。</block>
@@ -9141,16 +9110,8 @@
   <block id="e1282ba4f34b11ff282fb7d9970b2736" category="paragraph">保持するSnapshotコピーの総数</block>
   <block id="890049ee281f6f438392008ad804b79b" category="paragraph">Snapshotコピーの保持期間</block>
   <block id="cd57cfd18c8588efd33f1587c562e1f0" category="list-text">バンドルをホストするASP.NET Core Runtime 8.0.12（およびそれ以降のすべての8.0.xパッチ）をインストールしておく必要があります。</block>
-  <block id="37a72f0a6be56bf333e34afd56e02051" category="paragraph">SnapCenter 6.1で使用できる新機能と拡張機能について説明します。</block>
-  <block id="9b158dce63142730ba189d0e12431ec8" category="inline-link-macro">SnapCenter 6.1の新機能</block>
-  <block id="4a0c8bd65f8fdcc6af3bc9ef18a3f989" category="paragraph">新機能と拡張機能の一覧については、を参照してください<block ref="4f8e9916d8d6ddf6a19a65cc210544e6" category="inline-link-macro-rx"></block>。</block>
-  <block id="4a3f09c73e2dacacbebddfd96cac1948" category="inline-link">SnapCenterソフトウェア6.1リリースノート</block>
-  <block id="77400fe4524142ac29310162939726cb" category="paragraph">既知の問題、制限事項、解決済みの問題、および新規および変更されたコマンドの詳細については、を参照して<block ref="5c68c6454568b27710c4196bb910da4f" category="inline-link-rx"></block>ください。リリースノートにアクセスするには、NetAppアカウントでサインインするか、アカウントを作成する必要があります。</block>
   <block id="d6eb82c324cab2f36e345863fad95090" category="cell">6.1</block>
   <block id="1e095c69621645fccc8f12cd7f35f6fc" category="inline-link-macro">ASA R2システムのサポート</block>
-  <block id="cc753d144910e12701641281c8cb88ed" category="paragraph">SnapCenterでASA R2システムがサポートされるようになり、SANのみのお客様のニーズに合わせてシンプルなエクスペリエンスを実現できるようになりました。</block>
-  <block id="915d43127ff96a6e94b70e22873bdfb5" category="cell">セカンダリ改ざん防止スナップショットをサポート</block>
-  <block id="3725caead33410ce98d5a292b7c0cc95" category="paragraph">SnapCenterでは、セカンダリSnapshotのロック期間を指定できます。</block>
   <block id="92d37724657724129ae0451584c728aa" category="inline-link">SnapCenter Plug-in for VMware vSphereの削除</block>
   <block id="79cfb9f00fa8ea603f631e679e453fad" category="paragraph">SnapCenter Plug-in for VMware vSphereのアンインストールについては、を参照してください<block ref="cae8a6db54fa4da6d80207fee61e78d1" category="inline-link-rx"></block>。</block>
   <block id="9792c7ba1a8a833a1c75e11c4a7b46c3" category="list-text">複数のホストをアップグレードする場合は、すべてのホストを選択してをクリックし <block ref="725f4bf2ffc300942027282d0182533f" category="inline-image-macro-rx" type="image"></block>、*[アップグレード]*&gt;*[OK]*をクリックします。</block>
@@ -9212,10 +9173,7 @@
   <block id="5c8b8bc332cb41802ffbe6c5cda258ab" category="paragraph">VMDK、VVol、およびRDMの仮想ストレージレイアウトがサポートされます。</block>
   <block id="e5385a9de21528bfedd644f4c0331eb1" category="summary">SnapCenterソフトウェアは、ハイブリッドクラウドのどこにいてもONTAPシステムで実行されるアプリケーション、データベース、ホストファイルシステム、VMに対して、アプリケーションと整合性のあるデータ保護を提供する、シンプルで拡張性に優れた一元管理型プラットフォームです。</block>
   <block id="68578ccfcf5117ca8a9a2d7d884e320f" category="summary">SnapCenterソフトウェアの6.1リリースには、いくつかの新機能と拡張機能が含まれています。</block>
-  <block id="600ede45d5c4a07242a73e3a5a885e15" category="doc">SnapCenterソフトウェア6.1の新機能</block>
-  <block id="8f13c7650e8ef95e186d64196ea879a5" category="sidebar">SnapCenterソフトウェアは、シンプルで拡張性に優れた一元管理型プラットフォームです。ハイブリッドクラウドのどこにいても、ONTAPシステムで実行されているアプリケーション、データベース、ホストファイルシステム、VMに対して、アプリケーションと整合性のあるデータ保護を提供します。このドキュメントライブラリには、バージョン6.1の情報が含まれています。</block>
   <block id="8127605cde4cee83a23b35f1207c7572" category="sidebar">SnapCenterソフトウェアのドキュメント</block>
-  <block id="f3e84c2e19a0aa80c716ba1fc7f07e0e" category="sidebar">SnapCenterソフトウェア6.1のドキュメント</block>
   <block id="e76a4ae8df1bf6770838ce7c7d94e229" category="paragraph">プラグインサービスの開始（Windowsホストで実行されているプラグインにのみ該当）</block>
   <block id="8e6af76634121af640a2987aea883af4" category="doc">SnapCenterクレデンシャルの認証方式</block>
   <block id="ab1717232c31936a0349a64fd823f3c9" category="paragraph">クレデンシャルで使用される認証方法は、アプリケーションや環境に応じて異なります。クレデンシャルで認証されたユーザは、 SnapCenter の処理を実行できます。プラグインのインストールに使用するクレデンシャルとデータ保護処理に使用するクレデンシャルをそれぞれ1組ずつ作成する必要があります。</block>
@@ -9312,16 +9270,10 @@
   <block id="0c009e2dd71d00302c96ee23f56096a6" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block>アプリケーションを保護</block>
   <block id="52a52f83f343872ccfdccea36d808fbe" category="paragraph">SnapCenterサーバと必要なプラグインのインストールが完了したら、アプリケーションバックアップの作成を開始できます。これらのバックアップは、必要に応じて、あとでリストアやクローニングに使用できます。</block>
   <block id="f13285409ed0f9b4e02f4b32dde1d33b" category="doc">SnapCenterでのロールベースアクセス制御</block>
-  <block id="c9828fe019b2727bf358cb0c2478e00e" category="paragraph">ロールの作成と変更、ユーザへのリソースアクセスの追加はいつでも実行できます。ただし、SnapCenterを初めてセットアップするときは、少なくともActive Directoryユーザまたはグループをロールに追加してから、それらのユーザまたはグループにリソースアクセスを追加する必要があります。</block>
   <block id="d57877ec626f302c9e7b1e10875a9aba" category="section-title">SnapCenterのRBACの種類</block>
   <block id="de366de90ac02d57b616cbb9abcdf3bf" category="list-text">VMware vSphere RBAC用SnapCenterプラグイン</block>
-  <block id="8592af0d51ce75785397c9766e688d3e" category="paragraph">SnapCenterには事前定義されたロールがあり、それらのロールにユーザまたはユーザグループを割り当てることができます。定義済みのロールは次のとおりです。</block>
-  <block id="007a5b05d417439d7f97ec008cdc5503" category="paragraph">ユーザにロールを割り当てると、SnapCenterAdminロールを割り当てていないかぎり、そのユーザに関連するジョブだけが[Jobs]ページに表示されます。</block>
   <block id="9ca340103de1d28a94c059e44a33383f" category="paragraph">また、新しいロールを作成して権限とユーザを管理することもできます。ユーザまたはグループに権限を割り当てて、ホスト、ストレージ接続、リソースグループなどのSnapCenterオブジェクトにアクセスすることができます。</block>
-  <block id="2f76e68b8e64dc2201f5063e384a8abe" category="admonition">カスタムロールを作成する場合は、SnapCenterAdminロールのすべての権限が含まれている必要があります。Host addやHost removeなど、一部の権限のみをコピーした場合は、それらの処理を実行できません。</block>
-  <block id="39c904af75907a4d55bdd66945c2263a" category="paragraph">たとえば、SQL Server環境でデータ保護処理を実行する場合は、WindowsまたはSQLの適切なクレデンシャルを使用してクレデンシャルを設定する必要があります。SnapCenterサーバは、いずれかの方法で設定されたクレデンシャルを認証します。Windowsファイルシステム環境でONTAPストレージ上でデータ保護処理を実行する場合は、Windowsホスト上でSnapCenterのadminロールにadmin Privilegesが設定されている必要があります。</block>
   <block id="c8bff4b06f4bf572d4901653835a04c3" category="paragraph">VMと整合性のあるデータ保護にSnapCenter VMwareプラグインを使用している場合は、vCenter ServerでRBACをさらに強化できます。SnapCenter VMwareプラグインは、vCenter Server RBACとONTAP RBACの両方をサポートしています。<block ref="8ce4aadb919efeeb2d5eb9e4e24e0325" category="inline-link-rx"></block></block>
-  <block id="b04339a4190897882d5056f48b492577" category="paragraph">ストレージシステムへのアクセスに必要な権限を持つvsadminアカウントを作成する必要があります。<block ref="4788713879ad0dd4b6ac16aeef8f00b9" category="inline-link-macro-rx"></block></block>
   <block id="936fc5cf40b66aba18242ea8b14d5c34" category="section-title">事前定義されたSnapCenterロールに割り当てられた権限</block>
   <block id="01dad866320f752a70be4c8b1afc9d88" category="doc">SnapCenterのセキュリティ機能</block>
   <block id="12071348264f48526f2f806ad19b4835" category="list-text">は、Federal Information Processing Standard（FIPS；連邦情報処理標準）に準拠したセキュリティアルゴリズムをサポートします。</block>
@@ -9337,7 +9289,6 @@
   <block id="655128b143567b934dd54966cc45ec47" category="list-text">NetApp ONTAP 9.12.1以降</block>
   <block id="7450cfde7058dc5e1f7909d0280fd7ae" category="list-text">Azure NetApp Files</block>
   <block id="4d82a1ec1af02725042c8c785564ee7a" category="list-text">Amazon FSx for NetApp ONTAP</block>
-  <block id="ababa124e254733f565e62afc357fc79" category="list-text">NetApp ONTAP 9.16.1を実行しているNetApp ASA R2システム。</block>
   <block id="0b4e0166878acdd36f882f2270445c06" category="section-title">サポートされるアプリケーションとデータベース</block>
   <block id="29756d78461f8a62cb986dc97f47496b" category="paragraph">SnapCenterは、さまざまなアプリケーションやデータベースの保護をサポートしています。サポートされているアプリケーションとデータベースの詳細については、を参照してください<block ref="734369dbdcbe00444fc7be843d617a6c" category="inline-link-rx"></block>。</block>
   <block id="ee0febdaba6d4c618d2cca84b2c49df1" category="paragraph">SnapCenterは、Amazon Web Services（AWS）のSoftware-Defined Data Center（SDDC）環境上のVMware Cloudで、OracleとMicrosoft SQLのワークロードの保護をサポートします。<block ref="95513dc65edb533209d1910ac5e4b37d" category="inline-link-rx"></block>です。</block>
@@ -9447,14 +9398,10 @@
   <block id="599bdb9ade4d424c1d0e46738185a553" category="paragraph">SnapCenter は、ZAPI をサポートしていない ASA r2 システム上のすべての操作を REST API を活用して実行します。</block>
   <block id="c2ecaf82710b87f701c30b03217ce358" category="paragraph">データ保護は、ONTAPシステムで実行されているMicrosoft Exchange Server、Microsoft SQL Server、LinuxまたはAIX上のOracleデータベース、SAP HANAデータベース、IBM DB2、PostgreSQL、MySQL、およびWindowsホストのファイルシステムでサポートされます。SnapCenter は、MongoDB、Storage、MaxDB、Sybase ASE、ORASCPM などのアプリケーションの保護もサポートしています。</block>
   <block id="856b104aa0e600cd87dcca68d37108cd" category="doc">ASA r2 システムでサポートされている SnapCenter 操作</block>
-  <block id="b7e8225960284afe2c6e37957709cd90" category="paragraph">ASA r2 ストレージ システムは、SnapCenter 6.1 以降でサポートされます。 <block ref="b840388ca7e01a42ddc42d721bbbf472" category="inline-link-rx"></block></block>
   <block id="9495c0bfae580f7cd9a35b1c4bda619f" category="paragraph">*ASA r2 システム用の SnapCenter でサポートされている操作*</block>
-  <block id="48a4a4a55c074d578a28288306965ebc" category="list-text">プライマリおよびセカンダリストレージシステムから元のホストまたは代替ホストへのバックアップの復元</block>
   <block id="88f032fba4d12f7f4fad32b78d6163d7" category="list-text">VMware vMotionを使用したプライマリおよびセカンダリストレージシステムからのインプレースリストア</block>
   <block id="5eaeee1ce928de977b68a25b9c1b1a94" category="list-text">プライマリおよびセカンダリストレージシステムの両方から接続してコピーを復元します</block>
   <block id="2ac74f7e56e1eda352b17c65251f4a20" category="list-text">バックアップを元のホストまたは代替ホストに複製する</block>
-  <block id="1ad6d2de484cb785da5c2ff1e4e68a57" category="paragraph">SnapCenterは、ONTAPコンシステンシーグループを検出または作成できます。また、セカンダリ保護のために、宛先クラスタへのSnapMirror関係をプロビジョニングおよび初期化することもできます。</block>
-  <block id="6f04bce7ee68a94f8a7107a6ec8f82ef" category="paragraph">アプリケーションに対して ASA r2 システムで二次保護を有効にする方法については、以下を参照してください。</block>
   <block id="1cc48bfa9deb8cbe9ac86aa7814eafc2" category="inline-link">Microsoft SQL Server リソースの二次保護を有効にする</block>
   <block id="6a7bda8e55fec33c0e84308f3a7487d9" category="list-text"><block ref="6a7bda8e55fec33c0e84308f3a7487d9" category="inline-link-rx"></block></block>
   <block id="5c1b83640f350debd19233ccd7049769" category="inline-link">SAP HANAリソースの二次保護を有効にする</block>
@@ -9475,7 +9422,6 @@
   <block id="c4bf0f56feeec9a45e973768fbc4f47e" category="list-text">スナップショットの改ざん防止</block>
   <block id="ee1ef6cf0f3971b44eb2abcac958fb8d" category="list-text">FlexGroupボリューム</block>
   <block id="29a720af33d29332fae31060b6910f77" category="list-text">ASA、AFF、またはFASストレージ システムからASA r2ストレージ システムへの移行</block>
-  <block id="7abee40aa1933e637766c0d692411a73" category="list-text">ASA、AFF、またはFASリソースとASA r2リソースが混在するデータベースの保護</block>
   <block id="dbc2c133826d732ac86927b2062c928d" category="list-text">SQLプラグインホストのログディレクトリの二次プロビジョニング</block>
   <block id="e29e29246a71235f47845c88c4a61f52" category="paragraph">これはプラグイン ホストでのみ使用される内部ポートであり、ファイアウォールの例外は必要ありません。</block>
   <block id="225b299c2a6edae75ebfaff049e07f4e" category="paragraph">SnapCenter サーバーとプラグイン間の通信は、ポート 8145 を介してルーティングされます。</block>
@@ -9557,4 +9503,82 @@
   <block id="bd4112ff24244ca0e669eb1f5a3bae9b" category="paragraph">*スナップショット コピーのロック期間* を選択し、期間を日数、月数、または年数で指定します。</block>
   <block id="4b0801e52b058b04e3451f31a90447e6" category="list-text">*スナップショット コピーのロック期間* を選択し、期間を日数、月数、または年数で指定します。</block>
   <block id="5c2f59b69b9e772c86d6723464bda765" category="paragraph">スナップショットのロック期間を選択し、期間を日数、月数、または年数で指定します。</block>
+  <block id="88d9e24753477cfb09f25b21c0a59b9e" category="paragraph">SnapCenterは、Snapshot処理の完了後に、SnapMirrorとSnapVaultに対する更新を実行します。SnapMirrorおよびSnapVault の更新は、 SnapCenterジョブの一部として実行されます。SnapMirrorアクティブ同期を使用している場合は、 SnapMirrorアクティブ同期と非同期関係の両方に対してデフォルトのSnapMirrorまたはSnapVaultスケジュールを使用します。</block>
+  <block id="f347968a4de8b3b247caa682bf0f6240" category="section-title">一貫性グループ（CG）</block>
+  <block id="b36742dbca767f044c826ec8fbe9b099" category="inline-link-macro">一貫性グループ</block>
+  <block id="95b64a20a2db4c159dee86787823dbff" category="paragraph">整合性グループは、単一のユニットとして管理されるボリュームの集合です。  CG は、ストレージ ユニットおよびボリューム間でデータの一貫性を保つために同期されます。 ONTAPでは、複数のボリュームにまたがるアプリケーション ワークロードの管理が容易になり、保護が保証されます。詳細はこちら<block ref="e3fa34f0a183afb2fde78d5c0bcf8944" category="inline-link-macro-rx"></block> 。</block>
+  <block id="3d2174aeb8ed8c653211741f95bf82b5" category="paragraph">ASA r2 ストレージ システムは、 SnapCenter 6.1 以降でサポートされます。<block ref="8282a433e360eb53c7146eae7e6c919b" category="inline-link-rx"></block> 。</block>
+  <block id="fcc6d2668bf7d486bbebe88e6ebcafac" category="paragraph">SnapCenter は、物理システムと仮想マシン ファイル システム (VMFS) で実行されるアプリケーションのプライマリ保護とセカンダリ保護の両方をサポートします。  SnapCenter は、 ASA r2 システム上のすべての操作に REST API を使用します。  ASA r2 システムは ZAPI をサポートしていません。</block>
+  <block id="928fe5b86c85a90f1dd411e2499b4911" category="list-text">アプリケーションのプライマリバックアップの作成</block>
+  <block id="e8f70758ce1ebf2129e56741fa84fc19" category="list-text">階層的整合性グループのスナップショットをセカンダリストレージシステムに移動する</block>
+  <block id="0361013e37238c5a27537b54089d9c27" category="list-text">プライマリおよびセカンダリストレージシステムから元のホストまたは代替ホストへのバックアップの復元</block>
+  <block id="ac946ae7b415df20f529a46fd24b98e3" category="list-text">Oracleのアプリケーションボリュームの保護</block>
+  <block id="5097ab7bd6d21f43a44cf3fa2819d1a9" category="list-text">SAP HANA NDVの保護</block>
+  <block id="dea949f89da961edae31cb07cf178de2" category="inline-link">ONTAPコンシステンシーグループの詳細</block>
+  <block id="33f6f98912a46b71470b0b88a5796453" category="paragraph">SnapCenter はONTAP整合性グループを検出または作成します。二次保護のために、宛先クラスタにSnapMirror関係を設定します。<block ref="c9cf167a41f1aec3d6cac7c4bebb9647" category="inline-link-rx"></block> 。</block>
+  <block id="66a780869a0bc12446e0ddcc0035ae9b" category="admonition">SnapCenter 6.2 (サーバとプラグイン) およびONTAP 9.17.1 にアップグレードすると、 SnapCenter は最初のスケジュールされたバックアップ中にフラット コンシステンシ グループを階層型コンシステンシ グループに変更します。</block>
+  <block id="9f2d0dc08fd406b0b8600cb2332c7a4c" category="paragraph">アプリケーションに対してASA r2 システムで二次保護を有効にする方法については、以下を参照してください。</block>
+  <block id="7e2e4828b97a80ed5f31feecd44dbb2c" category="list-text">ASA、 AFF、またはFASリソースとASA r2 リソースが混在するデータベースの保護</block>
+  <block id="6fe3ae956085a9133eaacd31f9913d80" category="list-text">Windows リソースのプロビジョニング</block>
+  <block id="3e17ad5c21f5763c3ec42c72b28831f9" category="list-text">SnapMirror Active Syncフェイルオーバーがある場合の二次保護</block>
+  <block id="8fda05d0d5dc4c21680bc806b4b5d00e" category="list-text">SnapMirrorアクティブ同期が有効な場合の不揮発性メモリ エクスプレス (NVMe) プロトコル</block>
+  <block id="ce69d758f9a6bec23f9c27fcc9e412ad" category="list-text">AIX上で実行されるアプリケーションの保護</block>
+  <block id="58b7e6269a90f98426cc77f0ae13268f" category="list-text">Microsoft SQL リソースの災害復旧</block>
+  <block id="b30158c7fa46aee24e490898d671bc95" category="paragraph">SnapCenter のロールベース アクセス制御 (RBAC) とONTAP権限により、 SnapCenter管理者はユーザーまたはグループにリソース アクセスを割り当てることができます。この集中管理されたアクセスにより、アプリケーション管理者は指定された環境内で安全に作業できるようになります。</block>
+  <block id="309756228a9746144b98b5d69a86513d" category="paragraph">ロールを作成または変更し、ユーザーにリソース アクセスを追加する必要があります。  SnapCenter を初めてセットアップするときは、Active Directory ユーザーまたはグループをロールに追加し、それらのユーザーまたはグループにリソースを割り当てます。</block>
+  <block id="cc7189f4c07659090445fd16c85392de" category="admonition">SnapCenter はユーザー アカウントまたはグループ アカウントを作成しません。オペレーティング システムまたはデータベースの Active Directory にユーザー アカウントまたはグループ アカウントを作成します。</block>
+  <block id="1294035acf56fcb2ee658fdb1caf21f3" category="paragraph">SnapCenter は、次のタイプのロールベースのアクセス制御をサポートしています。</block>
+  <block id="75a26496b2bf414af9e579e87fcf7f7a" category="paragraph">SnapCenter には事前定義されたロールがあり、これらのロールにユーザーまたはグループを割り当てることができます。</block>
+  <block id="1c824809edac653a7f2402a54726bbb3" category="paragraph">ユーザーにロールを割り当てると、そのユーザーが SnapCenterAdmin ロールを持っていない限り、 SnapCenterそのユーザーに関連するジョブが [ジョブ] ページに表示されます。</block>
+  <block id="c463d704b604bb0e4a44ab5198f250a3" category="admonition">カスタム ロールを作成するときは、SnapCenterAdmin ロールのすべての権限が含まれていることを確認してください。一部の権限のみをコピーすると、 SnapCenterによってすべての操作の実行が阻止されます。</block>
+  <block id="f07c3a86a889108d1123eb9a7020b716" category="paragraph">ユーザーは、ユーザー インターフェイスまたは PowerShell コマンドレットを使用してログインするときに認証する必要があります。ユーザーが複数のロールを持っている場合は、ログイン後にロールを選択します。API を実行するには認証も必要です。</block>
+  <block id="13e09db1bf5e1c29d1b3ff5cbc25200f" category="paragraph">たとえば、SQL Server 環境でデータ保護操作を実行するには、適切な Windows または SQL 資格情報を設定します。  ONTAPストレージ上の Windows ファイル システム環境でデータ保護操作を実行する場合、 SnapCenter管理者ロールには Windows ホストに対する管理者権限が必要です。</block>
+  <block id="84e3d4f2b980c06798f1ea5b71db7612" category="paragraph">同様に、Oracle データベースでデータ保護操作を実行する場合、データベース ホストでオペレーティング システム (OS) 認証が無効になっている場合は、Oracle データベースまたは Oracle ASM 資格情報を使用して資格情報を設定する必要があります。SnapCenter Serverは、処理に応じて、いずれかの方法で設定されたクレデンシャルを認証します。</block>
+  <block id="2537acb1dcecf2bb045e640678bc4d28" category="paragraph">注: NetApp、SnapCenter Plug-in for VMware vSphere操作用に 1 つのONTAPロールを作成し、必要なすべての権限を割り当てることをお勧めします。</block>
+  <block id="2019816d7f8d1634743e43281cebbbeb" category="paragraph">ストレージ システムにアクセスするために必要な権限を持つ vsadmin アカウントを作成する必要があります。<block ref="4788713879ad0dd4b6ac16aeef8f00b9" category="inline-link-macro-rx"></block></block>
+  <block id="ec7108c1f489d11ef4093aba09ed0426" category="paragraph">ユーザーをロールに追加するときは、StorageConnection 権限を割り当ててストレージ仮想マシン (SVM) 通信を有効にするか、ユーザーに SVM を割り当てて SVM を使用する権限を付与します。ストレージ接続権限により、ユーザーは SVM 接続を作成できます。</block>
+  <block id="4fa772613b9230db9720cbffec0bb577" category="paragraph">たとえば、 SnapCenter管理者は SVM 接続を作成し、それを App Backup および Clone 管理者ユーザーに割り当てることができますが、App Backup および Clone 管理者ユーザーは SVM 接続を作成または編集できません。  SVM 接続がないと、ユーザーはバックアップ、クローン作成、または復元操作を実行できません。</block>
+  <block id="9f159c30e60b26f31f5d8cd1c8be396c" category="paragraph">バックアップおよびクローン ビューアー ロールには、すべての権限の読み取り専用ビューが付与されます。また、検出、レポート、およびダッシュボードへのアクセスに必要な権限も有効になっています。</block>
+  <block id="035924fdde240e490096f67f520b2a14" category="paragraph">Amazon FSx for NetApp ONTAP は、トランスポート制御プロトコル (TCP) 経由の不揮発性メモリエクスプレス (NVMe) をサポートしています。</block>
+  <block id="3973825448e1695dd11390dad8f1df7d" category="list-text">NetApp ONTAP 9.16.1 以降を実行しているNetApp ASA r2 システム</block>
+  <block id="65bb9cafce054984dfcbd59e86fce377" category="paragraph">SnapCenter Server 6.2 およびSnapCenterプラグイン 6.2 を使用している場合は、 ONTAP 9.17.1 を使用する必要があります。</block>
+  <block id="f3dde5fad667fb972961b6f701156637" category="paragraph">SnapCenterサーバとプラグインをインストールした後、 SnapCenterの REST API を有効にして、 SnapMirror のアクティブ同期関係を検出する必要があります。</block>
+  <block id="3bb944e9cbfa3d955346c885e83c07b2" category="list-text">SnapCenterサーバー ホストで、_C:\Program Files\ NetApp\SMCore\SMCoreServiceHost.dll.config_ ファイルを編集して、_IsRestEnabledForStorageConnection_ パラメーターの値を _true_ に変更し、 SnapCenter SMCore サービスを再起動します。</block>
+  <block id="9542c26f82881425e6e9e8ba6e59679f" category="list-text">Windows プラグイン ホストの場合:</block>
+  <block id="c8b21d5f027718e63a4436fe0c39b873" category="list-text">_C:\Program Files\ NetApp\ SnapCenter\SMCore\SMCoreServiceHost.dll.config_ ファイルを編集して、_IsRestEnabledForStorageConnection_ パラメータの値を _true_ に変更します。</block>
+  <block id="688684488a7d080aa39f8cf8ee987f33" category="list-text">_C:\Program Files\ NetApp\ SnapCenter\SMCore\SnapDriveService.dll.config_ ファイルを編集して、_IsRestEnabledForStorageConnection_ パラメータの値を _true_ に変更します。</block>
+  <block id="71853e69c97656091e1ccd739e228e7c" category="list-text">SnapCenter SMCore サービスを再起動します。</block>
+  <block id="e7da6395a99301c869ec8939ad3351c5" category="paragraph">ASA r2 システムで新しい SVM ユーザーのロールを作成するには、いくつかのONTAP CLI コマンドを実行する必要があります。このロールは、 ASA r2 システムで SVM をSnapCenterで使用するように構成し、vsadmin ロールを使用しない場合に必要です。</block>
+  <block id="1103eb1f6654db72f56132d6ce60314d" category="inline-link">SnapCenter 6.2 に関するお知らせ</block>
+  <block id="19ebec718f0cd2ae87495f51da298086" category="paragraph"><block ref="19ebec718f0cd2ae87495f51da298086" category="inline-link-rx"></block></block>
+  <block id="223ee142b61cd4579ffa55b3c511adbe" category="list-text">SVM に複数のデータ パス (LIF) がある場合、 SnapCenter はNFS クローン ボリュームをマウントするための適切なデータ パス (LIF) を選択します。ただし、データ パス（LIF）を1つに特定する場合は、Set-SvmPreferredDataPath CLIを実行する必要があります。コマンドで使用できるパラメータとその説明に関する情報は、_Get-Help command_name_ を実行すると取得できます。あるいは、<block ref="4a5b4acb82a31b5d3a197c5ec1468fe8" category="inline-link-rx"></block> 。</block>
+  <block id="95c937cfb2c57f00a2d2ef3ceafe0a1c" category="list-text">「ストレージ フットプリント」ページで、次のアクションを実行します。</block>
+  <block id="c64c055a256278373345c4759cc269fe" category="list-text">ストレージタイプを選択します。</block>
+  <block id="effc7a4b937dedb033f6979733da3aa9" category="list-text">ストレージ システム名を入力します。</block>
+  <block id="409f598b752b995f6f2326bda7c4f815" category="list-text">ストレージユニットを選択します。</block>
+  <block id="785dc4b462634580fc1eb2f77acb239c" category="paragraph">複数のストレージユニットを追加できます。</block>
+  <block id="b80a6daf1581b8ab554db7d606c1428c" category="list-text">クリック<block ref="f790bf9188cee374d2bb1f3790c6a393" category="inline-image-macro-rx" type="image"></block>アプリケーションボリュームを削除します。</block>
+  <block id="bb7642a6340577eecc8f765b360b6eae" category="paragraph">コマンドで使用できるパラメータとその説明は、Get-Help command_nameを実行して確認できます。または、<block ref="4a5b4acb82a31b5d3a197c5ec1468fe8" category="inline-link-rx"></block> 。</block>
+  <block id="57c72a5ff23bb1db581b8001531dcb35" category="paragraph">コマンドで使用できるパラメータとその説明に関する情報は、Get-Help _command_name_ を実行すると取得できます。あるいは、<block ref="4a5b4acb82a31b5d3a197c5ec1468fe8" category="inline-link-rx"></block> 。</block>
+  <block id="9bc40fe6e0b9523fba111ee7815e3a1b" category="paragraph">コマンドで使用できるパラメータとその説明は、Get-Help command_nameを実行して確認できます。あるいは、<block ref="4a5b4acb82a31b5d3a197c5ec1468fe8" category="inline-link-rx"></block> 。</block>
+  <block id="202db78e7e2ac241d08b359f1f79644f" category="paragraph">コマンドで使用できるパラメータとその説明に関する情報は、Get-Help _command_name_ を実行すると取得できます。あるいは、<block ref="4a5b4acb82a31b5d3a197c5ec1468fe8" category="inline-link-rx"></block> 。</block>
+  <block id="052131f99fadbb192418dc45065d8c15" category="paragraph">UNIXコマンドの詳細については、<block ref="4a5b4acb82a31b5d3a197c5ec1468fe8" category="inline-link-rx"></block> 。</block>
+  <block id="67998d9af35dea74903e9cdb371f7e7a" category="paragraph">あるいは、<block ref="4a5b4acb82a31b5d3a197c5ec1468fe8" category="inline-link-rx"></block>または<block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block>。</block>
+  <block id="e2affc8ad90cb942103d56d82396b5f7" category="paragraph">SnapCenter 6.2 で利用できる新機能と強化された機能について説明します。</block>
+  <block id="652468e7a8f47c94c0dfc2bbbe3f6788" category="inline-link-macro">SnapCenter 6.2の新機能</block>
+  <block id="d5d7d6e218fb8deef9aa758f16f3e053" category="paragraph">新機能と拡張機能の完全なリストについては、こちらをご覧ください。 <block ref="ba56a05032a421946bbeef30dde12674" category="inline-link-macro-rx"></block> 。</block>
+  <block id="24443d9133830b434ac05072f0c9653a" category="inline-link">SnapCenterソフトウェア 6.2 リリースノート</block>
+  <block id="34319768640d09bbc428643b51adb5af" category="paragraph">既知の問題、制限事項、修正された問題、新規および変更されたコマンドの詳細については、<block ref="b5242c8747d109e2a469b208226df65c" category="inline-link-rx"></block> 。リリース ノートにアクセスするには、NetAppアカウントでサインインするか、アカウントを作成する必要があります。</block>
+  <block id="320bd16b81d8a6a0a077d7308db7683d" category="paragraph">アップグレード パスには、アップグレードできるSnapCenter のバージョンとサポートされているプラ​​グインのバージョンが表示されます。</block>
+  <block id="f734f899336791933d28373bca69a72f" category="admonition">SnapCenter Server を 6.2 にアップグレードする場合は、プラグインも 6.2 にアップグレードしてください。</block>
+  <block id="7a22247de8db3271f3bf8573be10e986" category="cell">6.2</block>
+  <block id="cb2f94cd974dcdf68577ffd66816a900" category="doc">SnapCenter software6.2 の新機能</block>
+  <block id="02a7a1f2d7c2b92647dd96da7bf06024" category="paragraph">SnapCenter softwareの 6.2 リリースには、次の新機能が含まれています。</block>
+  <block id="efd8ec518c3271e168cebeb4a21d4fc3" category="paragraph">SnapCenter 6.2 (サーバおよびプラグイン) は、 ONTAP 9.17.1 とともに、階層的整合性グループを利用して、物理システム (Linux および Windows) および仮想マシン ファイル システム (VMFS) で実行されているアプリケーションのプライマリ保護とセカンダリ保護の両方をサポートします。</block>
+  <block id="669e7e163e3b320fc474c04f2cd99bdc" category="paragraph">SnapCenter 6.2 およびONTAP 9.17.1 にアップグレードすると、 SnapCenter は最初のスケジュールされたバックアップ中にフラット コンシステンシ グループを階層型コンシステンシ グループに変更します。</block>
+  <block id="9e1557573461036ce114499c0c41ed6f" category="paragraph">ワークフローには、 SnapCenter Server およびプラグイン パッケージをアップグレードするために完了する必要があるタスクがリストされます。</block>
+  <block id="dd201952143a00ac8776c871aff1b834" category="paragraph">このセクションでは、アップグレードできるSnapCenter のバージョンとサポートされているプラ​​グインのバージョンを示します。</block>
+  <block id="24f24d3f1f893e4176aff86940b1f7bd" category="paragraph">SnapCenter Plug-in for VMware vSphere のアップグレード方法については、以下を参照してください。<block ref="9fa07c2f7a59d2185d48077e327b705e" category="inline-link-rx"></block> 。</block>
+  <block id="97e76bbffdf8f08342d1c5a741af4b2a" category="sidebar">SnapCenter softwareは、ハイブリッド クラウド内の任意の場所にあるONTAPシステムで実行されているアプリケーション、データベース、ホスト ファイル システム、および VM に対して、アプリケーション整合性のあるデータ保護を提供する、シンプルで集中化されたスケーラブルなプラットフォームです。このドキュメント ライブラリにはバージョン6.2の情報が含まれています。</block>
+  <block id="1e0eab11641f75c3ff495410ce40bf66" category="sidebar">SnapCenter software6.2 ドキュメント</block>
 </blocks>

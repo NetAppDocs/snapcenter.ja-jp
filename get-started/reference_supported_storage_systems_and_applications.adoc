@@ -21,12 +21,15 @@ SnapCenterでサポートされるストレージシステム、アプリケー�
 * Azure NetApp Files
 * Amazon FSx for NetApp ONTAP
 +
-Non-Volatile Memory Express（NVMe）over Transport Control Protocol（TCP）をサポートします。
+Amazon FSx for NetApp ONTAP は、トランスポート制御プロトコル (TCP) 経由の不揮発性メモリエクスプレス (NVMe) をサポートしています。
 
 +
 Amazon FSx for NetApp ONTAPの詳細については、を参照してください https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["Amazon FSX for NetApp ONTAP のドキュメント"^]。
 
-* NetApp ONTAP 9.16.1を実行しているNetApp ASA R2システム。
+* NetApp ONTAP 9.16.1 以降を実行しているNetApp ASA r2 システム
++
+SnapCenter Server 6.2 およびSnapCenterプラグイン 6.2 を使用している場合は、 ONTAP 9.17.1 を使用する必要があります。
+
 
 
 

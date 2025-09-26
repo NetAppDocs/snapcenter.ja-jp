@@ -1,28 +1,25 @@
 ---
 permalink: 'release-notes/what"s-new-in-snapcenter61.html' 
 sidebar: sidebar 
-keywords: what is new, features, enhancements, 6.1 
+keywords: what is new, features, enhancements, 6.2 
 summary: SnapCenterソフトウェアの6.1リリースには、いくつかの新機能と拡張機能が含まれています。 
 ---
-= SnapCenterソフトウェア6.1の新機能
+= SnapCenter software6.2 の新機能
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SnapCenterソフトウェアの6.1リリースには、いくつかの新機能と拡張機能が含まれています。
+SnapCenter softwareの 6.2 リリースには、次の新機能が含まれています。
 
 |===
 | 更新 | 説明 
 
 
 | link:../get-started/reference_supported_storage_systems_and_applications.html["ASA R2システムのサポート"]  a| 
-SnapCenterでASA R2システムがサポートされるようになり、SANのみのお客様のニーズに合わせてシンプルなエクスペリエンスを実現できるようになりました。
+SnapCenter 6.2 (サーバおよびプラグイン) は、 ONTAP 9.17.1 とともに、階層的整合性グループを利用して、物理システム (Linux および Windows) および仮想マシン ファイル システム (VMFS) で実行されているアプリケーションのプライマリ保護とセカンダリ保護の両方をサポートします。
 
-
-
-| セカンダリ改ざん防止スナップショットをサポート  a| 
-SnapCenterでは、セカンダリSnapshotのロック期間を指定できます。
+SnapCenter 6.2 およびONTAP 9.17.1 にアップグレードすると、 SnapCenter は最初のスケジュールされたバックアップ中にフラット コンシステンシ グループを階層型コンシステンシ グループに変更します。
 
 |===

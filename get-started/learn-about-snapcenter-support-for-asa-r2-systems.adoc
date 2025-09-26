@@ -11,14 +11,14 @@ summary: サポートされるストレージシステム、アプリケーシ�
 
 
 [role="lead"]
-ASA r2 ストレージ システムは、SnapCenter 6.1 以降でサポートされます。  https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["ASA R2システムの詳細"]
+ASA r2 ストレージ システムは、 SnapCenter 6.1 以降でサポートされます。 https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["ASA R2システムの詳細"^] 。
 
-SnapCenter は、ZAPI をサポートしていない ASA r2 システム上のすべての操作を REST API を活用して実行します。
+SnapCenter は、物理システムと仮想マシン ファイル システム (VMFS) で実行されるアプリケーションのプライマリ保護とセカンダリ保護の両方をサポートします。  SnapCenter は、 ASA r2 システム上のすべての操作に REST API を使用します。  ASA r2 システムは ZAPI をサポートしていません。
 
 *ASA r2 システム用の SnapCenter でサポートされている操作*
 
-* VMDK経由でのアプリケーションのプライマリバックアップの作成
-* セカンダリストレージシステムへの整合グループSnapshotの転送
+* アプリケーションのプライマリバックアップの作成
+* 階層的整合性グループのスナップショットをセカンダリストレージシステムに移動する
 * プライマリおよびセカンダリストレージシステムから元のホストまたは代替ホストへのバックアップの復元
 +
 ** VMware vMotionを使用したプライマリおよびセカンダリストレージシステムからのインプレースリストア
@@ -26,11 +26,19 @@ SnapCenter は、ZAPI をサポートしていない ASA r2 システム上の�
 
 
 * バックアップを元のホストまたは代替ホストに複製する
+* rawデバイスマッピング（RDM）
+* Oracleのアプリケーションボリュームの保護
+* SAP HANA NDVの保護
+* LockVault
+* SQLプラグインホストのログディレクトリの二次プロビジョニング
 
 
-SnapCenterは、ONTAPコンシステンシーグループを検出または作成できます。また、セカンダリ保護のために、宛先クラスタへのSnapMirror関係をプロビジョニングおよび初期化することもできます。
+SnapCenter はONTAP整合性グループを検出または作成します。二次保護のために、宛先クラスタにSnapMirror関係を設定します。 https://docs.netapp.com/us-en/ontap/consistency-groups["ONTAPコンシステンシーグループの詳細"^] 。
 
-アプリケーションに対して ASA r2 システムで二次保護を有効にする方法については、以下を参照してください。
+
+NOTE: SnapCenter 6.2 (サーバとプラグイン) およびONTAP 9.17.1 にアップグレードすると、 SnapCenter は最初のスケジュールされたバックアップ中にフラット コンシステンシ グループを階層型コンシステンシ グループに変更します。
+
+アプリケーションに対してASA r2 システムで二次保護を有効にする方法については、以下を参照してください。
 
 * https://docs.netapp.com/us-en/snapcenter/protect-scsql/create-resource-groups-secondary-protection-for-asa-r2-mssql-resources.html["Microsoft SQL Server リソースの二次保護を有効にする"]
 * https://docs.netapp.com/us-en/snapcenter/protect-hana/create-resource-groups-secondary-protection-for-asa-r2-hana-resources.html["SAP HANAリソースの二次保護を有効にする"]
@@ -44,15 +52,15 @@ SnapCenterは、ONTAPコンシステンシーグループを検出または作�
 
 *ASA r2 システムでは SnapCenter ではサポートされていない操作*
 
-* rawデバイスマッピング（RDM）
-* Oracleヨウノアプリケーションホリユウム
-* SAP HANA NDV
-* LockVault
 * スナップショットの改ざん防止
 * FlexGroupボリューム
-* 階層整合グループ
 * ASA、AFF、またはFASストレージ システムからASA r2ストレージ システムへの移行
-* ASA、AFF、またはFASリソースとASA r2リソースが混在するデータベースの保護
+* ASA、 AFF、またはFASリソースとASA r2 リソースが混在するデータベースの保護
 * スナップショットの名前変更
-* SQLプラグインホストのログディレクトリの二次プロビジョニング
+* Windows リソースのプロビジョニング
+* SnapMirror Active Syncフェイルオーバーがある場合の二次保護
+* SnapMirrorアクティブ同期が有効な場合の不揮発性メモリ エクスプレス (NVMe) プロトコル
+* AIX上で実行されるアプリケーションの保護
+* Tech Refresh
+* Microsoft SQL リソースの災害復旧
 

@@ -59,6 +59,6 @@ NOTE: クローン仕様ファイルは、 /var/opt/snapcenter /sca/clone_specs_
 "PL-SCO-20032: CanExecute 操作がエラーで失敗した場合 : PL-SCO-300331: Redo ログファイル +SC_2959770772_clmdb/clredolog/redo01_01.log Exist" エラーメッセージが表示されたときに、操作が失敗した場合は、 -WaitToTriggerClone_" に高い値を指定してください。
 
 +
-UNIXコマンドの詳細については、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP3337666["SnapCenter ソフトウェアコマンドリファレンスガイド"^]。
+UNIXコマンドの詳細については、 https://library.netapp.com/ecm/ecm_download_file/ECMLP3359469["SnapCenter ソフトウェアコマンドリファレンスガイド"^] 。
 
 

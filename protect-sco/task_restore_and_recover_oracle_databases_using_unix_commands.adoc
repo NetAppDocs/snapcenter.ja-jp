@@ -17,7 +17,7 @@ summary: リストアとリカバリのワークフローには、計画、リ�
 
 * 次のコマンドを実行して、SnapCenterサーバとの接続を確立し、バックアップをリスト表示してその情報を取得し、バックアップをリストアする必要があります。
 +
-コマンドで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。または、を参照することもできます https://library.netapp.com/ecm/ecm_download_file/ECMLP3337666["SnapCenter ソフトウェアコマンドリファレンスガイド"^]。
+コマンドで使用できるパラメータとその説明に関する情報は、Get-Help _command_name_ を実行すると取得できます。あるいは、 https://library.netapp.com/ecm/ecm_download_file/ECMLP3359469["SnapCenter ソフトウェアコマンドリファレンスガイド"^] 。
 
 * SnapMirrorのアクティブな同期のリストア処理では、プライマリの場所からバックアップを選択する必要があります。
 

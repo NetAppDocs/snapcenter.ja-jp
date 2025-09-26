@@ -3,12 +3,14 @@ indexpage:
   title: SnapCenterソフトウェアのドキュメント
   keywords: snapcenter server, plug-in, data protection, applications, databases,
     host file systems, VmWare, backup, restore, clone, asa r2
-  lead: SnapCenterソフトウェアは、シンプルで拡張性に優れた一元管理型プラットフォームです。ハイブリッドクラウドのどこにいても、ONTAPシステムで実行されているアプリケーション、データベース、ホストファイルシステム、VMに対して、アプリケーションと整合性のあるデータ保護を提供します。このドキュメントライブラリには、バージョン6.1の情報が含まれています。
+  lead: SnapCenter softwareは、ハイブリッド クラウド内の任意の場所にあるONTAPシステムで実行されているアプリケーション、データベース、ホスト
+    ファイル システム、および VM に対して、アプリケーション整合性のあるデータ保護を提供する、シンプルで集中化されたスケーラブルなプラットフォームです。このドキュメント
+    ライブラリにはバージョン6.2の情報が含まれています。
   tiles:
   - title: はじめに
     links:
     - title: リリースノート
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3337665
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467
     - title: SnapCenterの詳細
       url: "/get-started/concept_snapcenter_overview.html"
     - title: ASA r2 システムでサポートされている SnapCenter 操作
@@ -80,7 +82,7 @@ indexpage:
     - title: コマンドレットリファレンスガイド
       url: https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html
     - title: コマンドリファレンスガイド
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3337666
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3359469
     - title: 以前のバージョンのSnapCenterのドキュメント
       url: https://www.netapp.com/data-protection/backup-recovery/snapcenter-backup-management/documentation/#ProseArticleLinkList13
     - title: NetAppナレッジベース- SnapCenter
