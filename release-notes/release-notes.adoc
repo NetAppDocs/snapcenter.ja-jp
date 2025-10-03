@@ -15,4 +15,4 @@ SnapCenter 6.2 で利用できる新機能と強化された機能について�
 
 新機能と拡張機能の完全なリストについては、こちらをご覧ください。 link:what's-new-in-snapcenter61.html["SnapCenter 6.2の新機能"] 。
 
-既知の問題、制限事項、修正された問題、新規および変更されたコマンドの詳細については、 https://library.netapp.com/ecm/ecm_download_file/ECMLP3337665["SnapCenterソフトウェア 6.2 リリースノート"^] 。リリース ノートにアクセスするには、NetAppアカウントでサインインするか、アカウントを作成する必要があります。
+既知の問題、制限事項、修正された問題、新規および変更されたコマンドの詳細については、 https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467["SnapCenterソフトウェア 6.2 リリースノート"^] 。リリース ノートにアクセスするには、NetAppアカウントでサインインするか、アカウントを作成する必要があります。
