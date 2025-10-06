@@ -11,7 +11,7 @@ summary: LinuxホストのSnapCenterサーバでCA証明書を設定する必要
 
 
 [role="lead"]
-LinuxにSnapCenterサーバをインストールすると、インストーラによって自己署名証明書が作成されます。CA証明書を使用する場合は、nginxリバースプロキシ、監査ログ、およびSnapCenterサービスの証明書を設定する必要があります。
+LinuxにSnapCenter Serverをインストールすると、インストーラによって自己署名証明書が作成されます。CA 証明書を使用する場合は、nginx リバース プロキシ、監査ログ、およびSnapCenterの証明書を構成する必要があります。
 
 
 
@@ -45,7 +45,7 @@ _INSTALL_DIR_IS_のデフォルト値は_/ opt_です。
 
 
 
-== SnapCenterサービス証明書の設定
+== SnapCenter証明書を構成する
 
 .手順
 . viまたは任意のテキストエディタを使用して、次の設定ファイルを開きます。
@@ -60,7 +60,7 @@ _INSTALL_DIR_IS_のデフォルト値は_/ opt_です。
 
 . SERVICE_CERTIFICATE_PATH *キーと* SERVICE_CERTIFICATE_PASSWORD *キーを編集して、CA証明書のパスとパスワードをそれぞれ追加します。
 +
-SnapCenterサービス証明書では、_.pfx_formatのみがサポートされます。
+SnapCenter証明書では _.pfx_ 形式のみがサポートされます。
 
 . ファイルを保存して閉じます。
 . すべてのサービスを再起動します。

@@ -1010,7 +1010,6 @@
   <block id="7deab53ede49d0d1a58c65f2e25ff259" category="list-text">ONTAP Selectプライマリシステム上のデータ</block>
   <block id="3f897d901d24f02777ff0994b7823d1a" category="list-text">ONTAP FAS、AFF、またはASAのプライマリシステムとセカンダリシステムにあり、ローカルのStorageGRIDオブジェクトストレージで保護されているデータ</block>
   <block id="f5c37d824040662f50cbb8a32d77182d" category="list-text">ONTAP FAS、AFF、またはASAプライマリシステム上にあり、Cloud Volumes ONTAPにレプリケートされるデータ</block>
-  <block id="f7b38c62b0e74d318a255bc3094cf531" category="list-text">ONTAP FAS、AFF、ASAのプライマリシステムとセカンダリシステムにあり、クラウドのオブジェクトストレージとアーカイブストレージで保護されているデータ（BlueXPのバックアップとリカバリの統合を使用）</block>
   <block id="ca5570a253e3c0a27562c65c06bb6125" category="list-text">パブリッククラウドに導入し、以下のデータを保護</block>
   <block id="b340c2b4a7a978a510c8ebb351622143" category="list-text">Cloud Volumes ONTAP（旧ONTAP Cloud）プライマリシステム上のデータ</block>
   <block id="b380e442ff5c6e48e283af8b6f99806f" category="list-text">Amazon FSx for ONTAP上のデータ</block>
@@ -1508,7 +1507,6 @@
   <block id="95029af97d5c955874317a8cc0ddb417" category="paragraph">個 々 のリソースグループのクレデンシャルを設定し、ユーザ名に完全なadmin権限がない場合は、少なくともリソースグループとバックアップの権限を割り当てる必要があります。</block>
   <block id="24d3d7a47c8a6bc8f8121257c5b3734e" category="summary">LinuxホストのSnapCenterサーバでCA証明書を設定する必要があります。</block>
   <block id="a4edcfdfc889aead495fa92bc734d112" category="doc">LinuxホストのCA証明書の設定</block>
-  <block id="18ae08106eef2261e3ddf3194dc3429d" category="paragraph">LinuxにSnapCenterサーバをインストールすると、インストーラによって自己署名証明書が作成されます。CA証明書を使用する場合は、nginxリバースプロキシ、監査ログ、およびSnapCenterサービスの証明書を設定する必要があります。</block>
   <block id="bdb64fa4c7cfc41de86c180fed3a74a3" category="section-title">nginx証明書の設定</block>
   <block id="bf5dd606dc54b8a102d4848f6293df53" category="list-text">/etc/nginx/conf.d_に移動します。<block ref="ebff76a76b37531f3434f4bfdc9bd6d2" prefix=" " category="inline-code"></block></block>
   <block id="5b0c642dda05deb86e7125990e1b3d31" category="list-text">viまたは任意のテキストエディタを使用して* snapcenter.conf *を開きます。</block>
@@ -1522,13 +1520,11 @@
   <block id="fa9ee7f4ef8bb2ab6cefea40930760f8" category="list-text">AUDILOG_CERTIFICATE_PATH *キーと* AUDILOG_CERTIFICATE_PASSWORD *キーを編集して、それぞれCA証明書のパスとパスワードを含めます。</block>
   <block id="d5fd9ad0c29ecbaec9f0a9d6615b47f6" category="paragraph">監査ログ証明書では、_.pfx_formatのみがサポートされます。</block>
   <block id="00ee24396aca54b4f6c836a787b63361" category="list-text">snapmanagerweb *サービスを再起動します。<block ref="c45cb1774a978712d2a7471bbefe6e51" prefix=" " category="inline-code"></block></block>
-  <block id="f3715a4e5728396f7be1bdbaaca98851" category="section-title">SnapCenterサービス証明書の設定</block>
   <block id="5378454eddc5733c8a37aa2d0f538173" category="list-text">viまたは任意のテキストエディタを使用して、次の設定ファイルを開きます。</block>
   <block id="2d1487edff39ef32df796c3f332e5af4" category="list-text">_INSTALL_DIR /NetApp/snapcenter/SnapManagerWeb/SnapManagerWeb.UI.dll.config_</block>
   <block id="ec6c7d95279ecbfc15ae033c6b6ce173" category="list-text">_INSTALL_DIR /NetApp/snapcenter/SMCore/SMCoreServiceHost.dll.config_</block>
   <block id="53af01d18c1d8e8c1bf8178140cfbc85" category="list-text">_install_DIR /NetApp/snapcenter/Scheduler/Scheduler.api.dll.config_</block>
   <block id="9797d0b330551d54a3004ee8339ea2ba" category="list-text">SERVICE_CERTIFICATE_PATH *キーと* SERVICE_CERTIFICATE_PASSWORD *キーを編集して、CA証明書のパスとパスワードをそれぞれ追加します。</block>
-  <block id="0f278f6bc55db5d981f2fbc237afe8d3" category="paragraph">SnapCenterサービス証明書では、_.pfx_formatのみがサポートされます。</block>
   <block id="a3e66f24b77a616cc07a99fbe97c88e2" category="list-text">ファイルを保存して閉じます。</block>
   <block id="66ff4f7d59911f532e5382ba09adb157" category="list-text">すべてのサービスを再起動します。</block>
   <block id="dd5be82d05db99d06412d2c63b8fe671" category="list-text"><block ref="c45cb1774a978712d2a7471bbefe6e51" prefix="" category="inline-code"></block></block>
@@ -9581,4 +9577,12 @@
   <block id="97e76bbffdf8f08342d1c5a741af4b2a" category="sidebar">SnapCenter softwareは、ハイブリッド クラウド内の任意の場所にあるONTAPシステムで実行されているアプリケーション、データベース、ホスト ファイル システム、および VM に対して、アプリケーション整合性のあるデータ保護を提供する、シンプルで集中化されたスケーラブルなプラットフォームです。このドキュメント ライブラリにはバージョン6.2の情報が含まれています。</block>
   <block id="1e0eab11641f75c3ff495410ce40bf66" category="sidebar">SnapCenter software6.2 ドキュメント</block>
   <block id="9968307e35346723a7def9d1da87a203" category="paragraph">既知の問題、制限事項、修正された問題、新規および変更されたコマンドの詳細については、<block ref="bedfbb0cb9ae5977029e72ca67318671" category="inline-link-rx"></block> 。リリース ノートにアクセスするには、NetAppアカウントでサインインするか、アカウントを作成する必要があります。</block>
+  <block id="ea1c96f839915f73d25b910bbc92b734" category="list-text">ONTAP FAS、 AFF、またはASAプライマリおよびセカンダリ システム上に存在し、 NetApp のバックアップおよびリカバリ統合を使用してクラウド内のオブジェクトおよびアーカイブ ストレージに保護されているデータ</block>
+  <block id="45099ef1959df4e973d03fee8da8217e" category="paragraph">LinuxにSnapCenter Serverをインストールすると、インストーラによって自己署名証明書が作成されます。CA 証明書を使用する場合は、nginx リバース プロキシ、監査ログ、およびSnapCenterの証明書を構成する必要があります。</block>
+  <block id="f2c3d774134cb37665bf8a734950fe0b" category="section-title">SnapCenter証明書を構成する</block>
+  <block id="767f07b2bcd3e25b3f22994ec92e8447" category="paragraph">SnapCenter証明書では _.pfx_ 形式のみがサポートされます。</block>
+  <block id="bc2fe31b1e2682a9a79513d792e9c721" category="section-title">BlueXPはNetAppコンソールになりました</block>
+  <block id="995c8f79a8e07fbd8d519e45d03d6004" category="paragraph">NetAppコンソールは、強化され再構築されたBlueXP基盤上に構築され、オンプレミスとクラウド環境全体にわたるエンタープライズ グレードのNetAppストレージとNetAppデータ サービスの集中管理を提供し、リアルタイムの分析情報、ワークフローの高速化、および高度なセキュリティとコンプライアンスを備えた簡素化された管理を実現します。</block>
+  <block id="2ef9d641d45afe99b74ad6f9a9f797ad" category="inline-link-macro">NetAppコンソールのリリースノート</block>
+  <block id="1e3eeac5409758903bc21870184a640a" category="paragraph">変更内容の詳細については、<block ref="06d876b9fcdfcba8772d93beac1ca38b" category="inline-link-macro-rx"></block> 。</block>
 </blocks>
