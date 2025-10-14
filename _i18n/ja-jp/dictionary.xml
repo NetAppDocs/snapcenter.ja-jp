@@ -1993,7 +1993,6 @@
   <block id="718d9231009edb9654b9f6f52346a835" category="list-text">ファイアウォール、プロキシ、またはその他のネットワークデバイスが接続に干渉しないようにしてください。</block>
   <block id="eceb61ca100437ca326b49341fc1f909" category="list-text">SnapCenter のインストール時にカスタムポートを指定した場合は、プラグインホストに、 SnapCenter Plug-in Loader のそのポート用のファイアウォールルールを追加する必要があります。</block>
   <block id="29e256a27c9d420cee02c5cda005de01" category="paragraph">次の表に、各ポートとそのデフォルト値を示します。</block>
-  <block id="ed00b70cc595a411eff2cc42510a291f" category="paragraph">SnapCenterポート</block>
   <block id="18622e175ff22b2375f9cbc2314b3285" category="paragraph">SnapCenter SMCore通信ポート</block>
   <block id="a22e3c4898555ed30acf91192f3c301a" category="paragraph">スケジューラサービスポート</block>
   <block id="0703d446ecd330b75f76dab17472df37" category="paragraph">このポートは、SnapCenterサーバホスト内で管理されるすべてのプラグインのSnapCenterスケジューラワークフローを一元的にオーケストレーションするために使用されます。</block>
@@ -9585,4 +9584,5 @@
   <block id="995c8f79a8e07fbd8d519e45d03d6004" category="paragraph">NetAppコンソールは、強化され再構築されたBlueXP基盤上に構築され、オンプレミスとクラウド環境全体にわたるエンタープライズ グレードのNetAppストレージとNetAppデータ サービスの集中管理を提供し、リアルタイムの分析情報、ワークフローの高速化、および高度なセキュリティとコンプライアンスを備えた簡素化された管理を実現します。</block>
   <block id="2ef9d641d45afe99b74ad6f9a9f797ad" category="inline-link-macro">NetAppコンソールのリリースノート</block>
   <block id="1e3eeac5409758903bc21870184a640a" category="paragraph">変更内容の詳細については、<block ref="06d876b9fcdfcba8772d93beac1ca38b" category="inline-link-macro-rx"></block> 。</block>
+  <block id="e6f36a956625505e0a3733e3e0073fa0" category="paragraph">SnapCenter Webポート</block>
 </blocks>
