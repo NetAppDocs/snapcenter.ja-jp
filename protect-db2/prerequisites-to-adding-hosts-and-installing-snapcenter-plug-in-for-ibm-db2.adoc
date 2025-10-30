@@ -34,9 +34,6 @@ NOTE: IBM Java は Windows および Linux ホストではサポートされて�
 +
 http://www.java.com/en/download/manual.jsp["Windows用JAVAをダウンロード"]
 
-+
-https://imt.netapp.com/matrix/imt.jsp?components=121066;&solution=1259&isHWU&src=IMT["NetApp Interoperability Matrix Tool"]
-
 
 
 
@@ -50,9 +47,6 @@ http://www.java.com/en/download/manual.jsp["Linux用JAVAをダウンロード"]
 
 +
 https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?license=IBM["AIX用JAVAをダウンロード"]
-
-+
-https://imt.netapp.com/matrix/imt.jsp?components=121066;&solution=1259&isHWU&src=IMT["NetApp Interoperability Matrix Tool"]
 
 * LinuxホストでIBM DB2データベースを実行している場合は、Plug-in for IBM DB2のインストール時にSnapCenter Plug-in for UNIXが自動的にインストールされます。
 * プラグインのインストールには、デフォルトのシェルとして* bash *が必要です。

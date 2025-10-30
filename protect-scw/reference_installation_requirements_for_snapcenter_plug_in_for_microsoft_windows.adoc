@@ -39,7 +39,7 @@ SnapCenter Plug-ins Package for Windowsをインストールする前に、基�
  a| 
 Microsoft Windows
 
-サポートされているバージョンの最新情報については、を参照して https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool"^]ください。
+サポートされているバージョンに関する最新情報については、 https://imt.netapp.com/imt/imt.jsp?components=180332;134509;180321;180339;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool"^] 。
 
 Windows クラスター セットアップを使用している場合は、Windows リモート管理 (WinRM) もインストールして構成する必要があります。
 
@@ -68,8 +68,6 @@ NOTE: 十分なディスクスペースを割り当て、logsフォルダによ�
 * ASP.NET Core Runtime 8.0.12（およびそれ以降のすべての8.0.xパッチ）Hosting Bundle
 * PowerShell Core 7.4.2
 
-
-サポートされているバージョンの最新情報については、を参照して https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool"^]ください。
 
 用。 NET固有のトラブルシューティング情報。を参照してください。 https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_upgrade_or_install_fails_with_This_KB_is_not_related_to_the_OS["インターネットに接続されていない従来型システムでは、SnapCenter のアップグレードまたはインストールが失敗します。"]
 

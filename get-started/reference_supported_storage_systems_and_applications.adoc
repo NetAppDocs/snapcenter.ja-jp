@@ -36,6 +36,6 @@ SnapCenter Server 6.2 およびSnapCenterプラグイン 6.2 を使用してい�
 
 == サポートされるアプリケーションとデータベース
 
-SnapCenterは、さまざまなアプリケーションやデータベースの保護をサポートしています。サポートされているアプリケーションとデータベースの詳細については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool"^]。
+SnapCenterでは、さまざまなアプリケーションやデータベースの保護がサポートされています。
 
 SnapCenterは、Amazon Web Services（AWS）のSoftware-Defined Data Center（SDDC）環境上のVMware Cloudで、OracleとMicrosoft SQLのワークロードの保護をサポートします。https://community.netapp.com/t5/Tech-ONTAP-Blogs/Protect-Oracle-MS-SQL-workloads-using-NetApp-SnapCenter-in-VMware-Cloud-on-AWS/ba-p/449168["詳細"^]です。

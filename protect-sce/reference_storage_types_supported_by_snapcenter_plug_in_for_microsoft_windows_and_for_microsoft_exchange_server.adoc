@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Microsoft Exchange Server 
 summary: SnapCenter は、物理マシンと仮想マシンの両方でさまざまなストレージタイプをサポートしています。ホストに対応したパッケージをインストールする前に、ストレージタイプがサポートされているかどうかを確認する必要があります。 
 ---
-= SnapCenter Plug-in for Microsoft Windowsおよびfor Microsoft Exchange Serverでサポートされるストレージタイプ
+= SnapCenter Plug-in for Microsoft Exchange Server でサポートされるストレージ タイプ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,7 +13,7 @@ summary: SnapCenter は、物理マシンと仮想マシンの両方でさまざ
 [role="lead"]
 SnapCenter は、物理マシンと仮想マシンの両方でさまざまなストレージタイプをサポートしています。ホストに対応したパッケージをインストールする前に、ストレージタイプがサポートされているかどうかを確認する必要があります。
 
-Windows Server では、 SnapCenter プロビジョニングとデータ保護がサポートされます。サポートされるバージョンの最新情報については https://imt.netapp.com/matrix/imt.jsp?components=121031;&solution=1259&isHWU&src=IMT[]、NetApp Interoperability Matrix Tool^]を参照してください。
+Windows Serverでは、SnapCenterによるプロビジョニングとデータ保護がサポートされます。サポートされているバージョンに関する最新情報については、 https://imt.netapp.com/imt/imt.jsp?components=180321;180339;180327;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool"^] 。
 
 |===
 | マシン | ストレージタイプ | を使用してプロビジョニング | サポートのメモ 

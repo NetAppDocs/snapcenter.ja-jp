@@ -17,10 +17,7 @@ SnapCenterユーザインターフェイス（UI）を使用して、SnapCenter 
 * Plug-in for MySQL Databaseは、MySQLインスタンスを保護する必要がある各Linuxホストにインストールする必要があります。
 * SnapCenter Plug-in for MySQL DatabaseをインストールするLinuxホストは、依存するソフトウェア、データベース、およびオペレーティングシステムの要件を満たしている必要があります。
 +
-サポートされる構成の最新情報については、Interoperability Matrix Tool（IMT）を参照してください。
-
-+
-https://imt.netapp.com/matrix/imt.jsp?components=121070;&solution=1259&isHWU&src=IMT["NetApp Interoperability Matrix Tool"]
+その https://imt.netapp.com/imt/imt.jsp?components=180320;180330;180338;&solution=1257&isHWU&src=IMT["Interoperability Matrix Tool（IMT）"] サポートされている構成に関する最新情報が含まれています。
 
 * SnapCenter Plug-in for MySQL Databaseは、SnapCenter Plug-ins Package for Linuxに含まれています。SnapCenter Plug-ins Package for Linuxをインストールする前に、SnapCenterをWindowsホストにインストールしておく必要があります。
 

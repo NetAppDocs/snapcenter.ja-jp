@@ -60,7 +60,7 @@ NOTE: PDB移行およびPDBクローニング処理はサポートされてい�
 
 
 
-サポートされているOracleのバージョンの最新情報については、を参照して https://imt.netapp.com/matrix/imt.jsp?components=121071;&solution=1259&isHWU&src=IMT["NetApp Interoperability Matrix Tool"^]ください。
+サポートされているOracleバージョンの最新情報については、 https://imt.netapp.com/imt/imt.jsp?components=180338;180332;134509;180320;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool"^]。
 
 
 

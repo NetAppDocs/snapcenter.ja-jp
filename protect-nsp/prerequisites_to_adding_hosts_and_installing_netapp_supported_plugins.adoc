@@ -53,16 +53,13 @@ NOTE: AIXでは、ストレージアプリケーションとOracleアプリケ�
 * rootユーザまたはroot以外のユーザに対してパスワードベースのSSH接続を有効にしておく必要があります。
 * Java 11をLinuxホストにインストールしておく必要があります。
 +
-SnapCenter ServerホストにWindows Server 2019またはWindows Server 2016を使用している場合は、Java 11をインストールする必要があります。要件の最新情報については、 Interoperability Matrix Tool （ IMT ）を参照してください。
+SnapCenter ServerホストにWindows Server 2019またはWindows Server 2016を使用している場合は、Java 11をインストールする必要があります。
 
 +
 http://www.java.com/en/download/manual.jsp["Linux用JAVAをダウンロード"]
 
 +
 https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?license=IBM["AIX用JAVAをダウンロード"]
-
-+
-https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT["NetApp Interoperability Matrix Tool"]
 
 * 複数のパスにアクセスできるようにroot以外のユーザにsudo権限を設定する必要があります。visudo Linuxユーティリティを使用して、/etc/sudoersファイルに次の行を追加します。
 +
@@ -148,8 +145,6 @@ Java 11 IBM Java
 を最新バージョンにアップグレードした場合は、/var/opt/java/spl/etc/ spl.propertiesにあるJAVA_HOMEオプションが正しいSnapCenterバージョンと正しいパスに設定されていることを確認する必要があります。
 
 |===
-サポートされているバージョンの最新情報については、を参照して https://imt.netapp.com/matrix/imt.jsp?components=121073;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool"^]ください。
-
 
 
 === AIXホストのroot以外のユーザに対するsudo Privilegesの設定

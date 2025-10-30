@@ -156,14 +156,13 @@ EMSの場合は、 https://docs.netapp.com/us-en/snapcenter/admin/concept_manage
 
 . 概要を確認し、*[終了]*を選択します。
 . 処理の進捗状況を監視するために、*[監視]*>*[ジョブ]*を選択します。
++
+
+NOTE: クローンの作成後は、名前を変更しないでください。
 
 
-.終了後
-クローンの作成後は、名前を変更しないでください。
 
 .関連情報
-https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Clone_operation_might_fail_or_take_longer_time_to_complete_with_default_TCP_TIMEOUT_value["デフォルトのTCP_TIMEOUT値を使用すると、クローニング処理が失敗したり完了までに時間がかかることがある"]
-
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/The_failover_cluster_instance_database_clone_fails["フェイルオーバークラスタインスタンスのデータベースクローンが失敗する"]
 
 --

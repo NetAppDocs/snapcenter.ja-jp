@@ -31,8 +31,6 @@ VMware準仮想SCSIコントローラをサポートします。RDMディスク�
 
 
 
-サポートされているバージョンの最新情報については、を参照してください https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["NetApp Interoperability Matrix Tool"^]。
-
 
 
 === VMware ESXiサーバ関連の制限事項

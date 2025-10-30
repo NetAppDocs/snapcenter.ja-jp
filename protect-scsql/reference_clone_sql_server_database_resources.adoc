@@ -19,12 +19,4 @@ summary: バックアップからデータベースリソースをクローニ�
 
 image::../media/scsql_clone_workflow.gif[クローニングのワークフロー図]
 
-PowerShellコマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、リカバリ、検証、クローニングの各処理を実行することもできます。PowerShellコマンドレットの詳細については、SnapCenterコマンドレットのヘルプを使用するか、 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"]
-
-* 詳細はこちら *
-
-link:task_clone_from_a_sql_server_database_backup.html["SQL Serverデータベースバックアップからのクローニング"]
-
-link:task_perform_clone_lifecycle_management.html["クローンライフサイクルの実行"]
-
-link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Clone_operation_might_fail_or_take_longer_time_to_complete_with_default_TCP_TIMEOUT_value["デフォルトのTCP_TIMEOUT値を使用すると、クローニング処理が失敗したり完了までに時間がかかることがある"]
+PowerShellコマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、リカバリ、検証、クローニングの処理を実行することもできます。PowerShellコマンドレットの詳細については、 SnapCenterコマンドレットのヘルプを使用するか、 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["SnapCenter ソフトウェアコマンドレットリファレンスガイド"]。
