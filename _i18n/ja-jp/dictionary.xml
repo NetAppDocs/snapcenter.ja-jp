@@ -3149,9 +3149,6 @@
   <block id="2e9892fdbfed0b91269baed4bcb0a87e" category="list-text">[ ポスト・オペレーション ] ページで、マウントおよびリストア後のコマンドを入力して、リストア・ジョブの実行後に実行します。</block>
   <block id="53d187685aedd87c48a1c968cc264e39" category="paragraph">また、送信者と受信者のEメールアドレスとEメールの件名を指定する必要があります。また、 [* 設定 * （ Settings * ） ] &gt; [* グローバル設定 * （ * Global Settings * ） ] ページでも SMTP を設定する必要があります。</block>
   <block id="06297b8a736154148ec90e3788831eaa" category="doc">SQL Serverデータベースのリストアとリカバリ</block>
-  <block id="b01943524a657671dfae0f3f1f0948e5" category="paragraph">SnapCenter を使用して、バックアップされた SQL Server データベースをリストアできます。データベースリストアは複数の段階からなるプロセスで、すべてのデータとログページが指定したSQL Serverバックアップから指定したデータベースにコピーされます。</block>
-  <block id="d57ab9c40b6ffc9dcc2fc7f01323fd00" category="paragraph">リストアのターゲットインスタンスに、SMB ADActive Directoryドメインに属し、ファイル権限を適切に設定する権限があるActive Directoryユーザが設定されていることを確認する必要があります。クレデンシャルはSnapCenterでインスタンスレベルで設定する必要があります。</block>
-  <block id="a100da424c2475757cbb38f72d7cb1e9" category="paragraph">SnapCenter Plug-inサービスのサービスアカウントがActive Directoryユーザでない場合は、代替ホストへのリストアの実行中にソースボリュームを偽装して必要な処理を実行できるように、ソースボリュームを完全に制御できるユーザが必要です。</block>
   <block id="ddec2d3a4d88b9b7250ed10e6ef19f3f" category="list-text">[コピーの管理]ビューで、*[バックアップ]*をストレージシステムから選択します。</block>
   <block id="04eac12d68f85a13d177dcc006084a83" category="list-text">表からバックアップを選択し、アイコンをクリックします <block ref="401f8f248ae37b21256b9fc8e83bcaa3" category="inline-image-macro-rx" type="image"></block> 。</block>
   <block id="d8ff4520b6c4267ed19fca77339d67e9" category="list-text">[Restore Scope]ページで、次のいずれかのオプションを選択します。</block>
@@ -8418,14 +8415,11 @@
   <block id="5045fb7fa597d081bf2426b83c9cdd64" category="list-text">Linux マシンにアクセスできる root 以外のユーザの場合は、アップグレード操作を実行する前に、 _/etc/sudoers_file を最新のチェックサム値で更新する必要があります。</block>
   <block id="953da7cb078e246536e2103b53508984" category="list-text">デフォルトでは、SnapCenterは環境からJAVA_HOMEを検出します。修正された JAVA_HOME を使用する場合、 Linux ホストでプラグインをアップグレードする場合は、 /var/opt/snapcenter /spl/etc/__ にある _spl.properties_ ファイルに skip_JAVAHOME_update パラメータを手動で追加し、値を true に設定する必要があります。</block>
   <block id="28cc8014ba404c5800363561063ce630" category="paragraph">JAVA_HOMEの値は、プラグインがアップグレードされたとき、またはSnapCenter Plug-in Loader（SPL）サービスが再起動されたときに更新されます。SPLをアップグレードまたは再起動する前に、SKIP_JAVAHOME_UPDATEパラメータを追加して値をtrueに設定すると、JAVA_HOMEの値は更新されません。</block>
-  <block id="35702b2ddcae5a0a26dfc495c46421b5" category="list-text">SnapCenter サーバホストまたはプラグインホストで変更したすべての SnapCenter 構成ファイルをバックアップしておく必要があります。</block>
   <block id="27881336d2ff10b5a1baa10f7bca34a1" category="list-text">SnapCenter Plug-in for Microsoft SQL Server、SnapCenter Plug-in for Microsoft Exchange Server、およびSnapCenter Plug-in for Microsoft Windowsでは、scripts_pathを実行するために、サーバとプラグインホストの両方を最新バージョンにアップグレードすることを推奨します。</block>
   <block id="f957674174a2517cb9b6bb5f34a9d71f" category="list-text">左側のナビゲーションペインで、 * Hosts * &gt; * Managed Hosts * をクリックします。</block>
   <block id="313500fb86a172e846d699cb256626d3" category="list-text">次のいずれかのタスクを実行してホストをアップグレードします。</block>
   <block id="350ab458822097282ecb476b2095dc18" category="list-text">[ * その他のオプション * ] をクリックします。</block>
   <block id="8ab368eff7e361869ef717b446f7ec1b" category="paragraph">関連するすべてのサービスがプラグインのアップグレード中に再起動されます。</block>
-  <block id="cb2e95d4ff0d177df515e750d19325ff" category="admonition">パッケージ内のすべてのプラグインが選択されますが、以前のバージョンの SnapCenter でインストールされていたプラグインのみがアップグレードされ、残りのプラグインはインストールされません。新しいプラグインをインストールするには、 * Add plug-ins * オプションを使用する必要があります。</block>
-  <block id="5b0ab4f13189d5492729a711510fe362" category="admonition">エラーがディスクスペースまたはRAMに関連している場合は、C：\Program Files\NetApp\SnapCenter WebAppにあるweb.configまたはC：\Windows\System32\WindowsPowerShell\v1.0\Modules\SnapCenter\にあるPowerShell構成ファイルを更新して、デフォルト値を変更できます。エラーがそれ以外のパラメータに関連している場合は、問題を修正してから要件を再度検証する必要があります。</block>
   <block id="cf044e013213ce911e1c405431776fd2" category="summary">SnapCenterサーバのインストーラファイルを使用して、SnapCenterサーバをアップグレードできます。</block>
   <block id="f34cbfe2adfe04f9d83a717751b7eb49" category="doc">LinuxホストでのSnapCenterサーバのアップグレード</block>
   <block id="6900156655d97de161f864f12caf71cd" category="list-text">いずれかの操作を実行して、SnapCenterサーバをアップグレードします。</block>
@@ -8761,10 +8755,7 @@
   <block id="ac4db59a3117eb625954347693361d30" category="inline-image-macro">ポリシーフォームのリソースグループの追加</block>
   <block id="490e9071957ca8b80f7019e9cb2a8b99" category="list-text">サーバホスト上のリソースの新規検出を実行する必要があります。</block>
   <block id="86b796a66464051399647b9c6f8c917f" category="list-text">サーバホストをアップグレードしたら、ストレージシステムを追加する前にプラグインもアップグレードする必要があります。</block>
-  <block id="c58e9b1492d681b897440ca05419e132" category="paragraph">アップグレードの手順でWindows、Linux、またはAIXのプラグインホストがメンテナンスモードになるため、アップグレードする各プラグインホストを手動でメンテナンスモードにする必要はありません。メンテナンスモードでは、アップグレード中にプラグインホストでスケジュールされたジョブが実行されることはありません。</block>
-  <block id="5e8cc9f28d33dd253f7204b7723e45b6" category="list-text">いずれかのプラグインホストの[全体のステータス]列に[アップグレード可能]と表示されている場合は、プラグインホスト名をクリックして次の手順を実行します。</block>
   <block id="4a6523c97d32192c20325b06357138e5" category="list-text">プラグインホストがプラグインをアップグレードするための要件を満たしているかどうかを検証しない場合は、*[事前確認をスキップ]*を選択します。</block>
-  <block id="f4bbec82b72e54df820fc15b640e3b5d" category="paragraph">[事前チェックをスキップ]*チェックボックスを選択していない場合は、プラグインをインストールするための要件を満たしているかどうかを確認するためにプラグインホストが検証されます。最小要件を満たしていない場合は、該当するエラーまたは警告メッセージが表示されます。問題を修正したら、 [* アップグレード ] をクリックします。</block>
   <block id="a24cb0112e51902b6b3ed4606a7cd727" category="cell">6.0.1</block>
   <block id="db1c2c3cb6f2d1f2978caf1a4dce483c" category="sidebar">NetAppでサポートされているプラグインを使用してアプリケーションを保護</block>
   <block id="309dab896f56b3d37ea98a7bf810fbfa" category="paragraph">MongoDBホスト</block>
@@ -8833,7 +8824,6 @@
   <block id="7b016ac7bac6fbf2fc99bb1ca2112dfe" category="admonition">クラスタとSVMのピアリングはSnapCenterではサポートされていません。クラスタとSVMのピアリングを実行するには、System ManagerまたはONTAP CLIを使用する必要があります。</block>
   <block id="a65d82cfebb383a017ed83c52e387db8" category="admonition">リソースがSnapCenterの外部ですでに保護されている場合、それらのリソースは[Secondary Protected Resources]セクションに表示されます。</block>
   <block id="5d8c9a4bb6e8d1777bae069ef096beea" category="list-text">ASP.NET Core Runtime 8.0.12（およびそれ以降のすべての8.0.xパッチ）Hosting Bundle</block>
-  <block id="06c4f26f61be470dd3c5f2224d734b82" category="paragraph">Java 11 Oracle JavaおよびOpenJDKが必要なのは、SAP HANA、IBM DB2、PostgreSQL、MySQL、NetAppでサポートされるプラグイン、およびWindowsホストにインストール可能なその他のカスタムアプリケーションのみです。</block>
   <block id="74d26a36312c4111c79f5a49e9e0b24f" category="list-text">クローン処理を開始したら、[Activity]ペインでをクリックして、 <block ref="64eace402f8f00b7a999e38fb6d87e55" category="inline-image-macro-rx" type="image"></block> 最新の5つの処理を表示します。</block>
   <block id="f7e244689831620cc4531ae6c4d2e935" category="list-text">リストア処理を開始したら、[Activity]ペインをクリックして、 <block ref="64eace402f8f00b7a999e38fb6d87e55" category="inline-image-macro-rx" type="image"></block> 最新の5つの処理を表示します。</block>
   <block id="75c43dfa09fd33ec50ad9523e384b113" category="list-text">をクリックして、リストの内容をバックアップ処理だけに絞り込みます。</block>
@@ -9460,8 +9450,6 @@
   <block id="9f4dc04b028094d2b50c905cb66cb584" category="admonition">最大保持値は 1018 です。保持期間がONTAPバージョンでサポートされている値よりも高い値に設定されている場合、バックアップは失敗します。</block>
   <block id="1df9ce8f8ee70d4668259711a2f20cd1" category="paragraph">*スナップショット コピーのロック期間* を選択し、日、月、または年を指定します。</block>
   <block id="83c353dab613896fa690239dff46e104" category="admonition">最大保持値は 1018 です。保持期間がONTAPバージョンでサポートされている値よりも高い値に設定されている場合、バックアップは失敗します。</block>
-  <block id="3300240ffba2f4633a53323d37d6b7e1" category="paragraph">+ スナップショットのロック期間を指定すると、保持期間が終了するまでスナップショットが削除されなくなります。その結果、ポリシーで指定した数よりも多くのSnapshotが保持される可能性があります。</block>
-  <block id="dca9965d6a6b336628078d10c70a83d6" category="paragraph">+ ONTAP 9.12.1 以下のバージョンでは、リストアの一環としてSnapLock Vault スナップショットから作成されたクローンには、 SnapLock Vault の有効期限が継承されます。SnapLockの有効期限が過ぎたあと、ストレージ管理者がクローンを手動でクリーンアップする必要があります。</block>
   <block id="bd4112ff24244ca0e669eb1f5a3bae9b" category="paragraph">*スナップショット コピーのロック期間* を選択し、期間を日数、月数、または年数で指定します。</block>
   <block id="4b0801e52b058b04e3451f31a90447e6" category="list-text">*スナップショット コピーのロック期間* を選択し、期間を日数、月数、または年数で指定します。</block>
   <block id="5c2f59b69b9e772c86d6723464bda765" category="paragraph">スナップショットのロック期間を選択し、期間を日数、月数、または年数で指定します。</block>
@@ -9559,7 +9547,6 @@
   <block id="02ad1debcdf6904dd2ade67597e4c26e" category="paragraph">サポートされているバージョンに関する最新情報については、 <block ref="0bd5b4c33632bb634c82faaae99e0602" category="inline-link-rx"></block>。</block>
   <block id="73f538f8783386e78b66d9443bb98bd0" category="paragraph">サポートされているバージョンに関する最新情報については、 <block ref="9ba7ed904923f6110f4eb8cece054441" category="inline-link-rx"></block>。</block>
   <block id="891f174b4f7f5c2ac6b414ca9ea01713" category="paragraph">サポートされているバージョンに関する最新情報については、<block ref="00e02cae149cc9de4aea278bb76f630e" category="inline-link-rx"></block> 。</block>
-  <block id="2a38b23cace66a1ff7fcaae540c065e1" category="paragraph">+ サポートされているバージョンに関する最新情報については、<block ref="6191699ded4b56fe00b3328a9193fb3c" category="inline-link-rx"></block>。</block>
   <block id="c9dd6bad4c7d561872f2e2d498a990bf" category="inline-link">Interoperability Matrix Tool（IMT）</block>
   <block id="298397a9c073629495179c7913e1c3ce" category="paragraph">その<block ref="af6eb6bb2f15f565365a0be0579b55eb" category="inline-link-rx"></block> サポートされている構成に関する最新情報が含まれています。</block>
   <block id="c09f9355ffec7a4ebce82be71a8c243f" category="paragraph">その<block ref="fb864633e8f65af932ce118a1d181b8d" category="inline-link-rx"></block> サポートされている構成に関する最新情報が含まれています。</block>
@@ -9574,4 +9561,24 @@
   <block id="3c5c3e6bd14b3e4e352c8002cf589e92" category="paragraph">サポートされているOracleバージョンの最新情報については、<block ref="a89f191aac75a149b4bd1d52674271e1" category="inline-link-rx"></block>。</block>
   <block id="376e524c167313cb5049a67eee645bf3" category="paragraph">PowerShellコマンドレットを手動またはスクリプトで使用して、バックアップ、リストア、リカバリ、検証、クローニングの処理を実行することもできます。PowerShellコマンドレットの詳細については、 SnapCenterコマンドレットのヘルプを使用するか、<block ref="b1f5996558dd020cdfc2747708228767" category="inline-link-rx"></block>。</block>
   <block id="de59c74d77a24fb63e10ea5992296495" category="paragraph">サポートされているバージョンに関する最新情報については、<block ref="80c012152b8b3575d1f77200bc55e9c0" category="inline-link-rx"></block> 。</block>
+  <block id="f587e89ab918fcf18ed5c0ffdedc9786" category="paragraph">SnapCenter を使用して SQL Server データベースを復元できます。データベースの復元は、指定された SQL Server バックアップから指定されたデータベースにすべてのデータとログ ページをコピーする多段階のプロセスです。</block>
+  <block id="a19742e4f79508fd2f82ea91c9e7a5e3" category="list-text">SMB ADactive Directory ドメインに属し、ファイル権限を適切に設定する権限を持つ Active Directory ユーザーを使用して、ターゲット インスタンスを構成します。</block>
+  <block id="01035fbbef8f1d9bed3ad2d75910a86c" category="list-text">SnapCenterインスタンス レベルで資格情報を構成します。</block>
+  <block id="700a7bc7d0744345e2640d52fba1df4a" category="list-text">SQLデータベースがCIFS共有上に存在する場合、プラグインホストのRunASアカウントとSQLサービスアカウント（ドメインアカウント）が<block ref="b8c01e6d87a4102e23290347adb462dd" prefix=" " category="inline-code"></block>ONTAPの CIFS サーバーのグループ。</block>
+  <block id="09da854586f602a61d3fc60a97bbbb5b" category="list-text">SMB 構成では、ターゲット インスタンスの SQL 認証はサポートされません。必要な権限を持つ Active Directory ユーザーを使用して、 SnapCenterでターゲット インスタンスを構成します。</block>
+  <block id="f7e59a77fa11340fef8227a328e62d86" category="list-text">SnapCenterプラグイン サービス アカウントが Active Directory ユーザーでない場合は、代替ホストに復元するときに、ソース ボリュームを完全に制御できるユーザーが使用可能であることを確認します。</block>
+  <block id="603fd2d976f1d2209eb474e981bba40d" category="list-text">データベースを同じ SQL サーバーに復元するには、「*バックアップが作成されたのと同じホストにデータベースを復元する*」を選択します。</block>
+  <block id="c01dc1fd63429e8cff63cb032a3be876" category="list-text">バックアップが作成された同じホストまたは別のホスト内の別の SQL サーバーにデータベースを復元する場合は、[データベースを別のホストに復元] を選択します。</block>
+  <block id="31ae52b0966c33f60d2eddd47c4462bc" category="paragraph">サポートされているバージョンに関する最新情報については、<block ref="6191699ded4b56fe00b3328a9193fb3c" category="inline-link-rx"></block> 。</block>
+  <block id="a297d3c29a77573953e92a4001fb1ee1" category="list-text">MySQL 8.0より前のバージョンをご利用の場合は、MySQLXプラグインを手動でインストールして有効化する必要があります。MySQL 8.0以降では、MySQLXプラグインはデフォルトでインストールされ、有効化されています。</block>
+  <block id="099321e862ba2170dc1c3e6b1f02ef72" category="paragraph">ONTAP 9.12.1以前のバージョンでは、リストアの一環としてSnapLock Vault Snapshotから作成されたクローンが、SnapLock Vaultの有効期限を継承します。SnapLockの有効期限が過ぎたあと、ストレージ管理者がクローンを手動でクリーンアップする必要があります。</block>
+  <block id="c409d3675d172c2cf6427c7f99ed6a77" category="list-text">Oracle用プラグインは一時ファイルをバックアップしないため、一時ファイルのリストア</block>
+  <block id="f98d06e0365bbdb788bff3b7d98e015e" category="doc">SnapCenterプラグインパッケージをアップグレードする</block>
+  <block id="5afd668caa3def0cebf1f64a3e6a9d0c" category="paragraph">プラグイン パッケージは、SnapCenterアップグレードと一緒に配布されます。アップグレード手順により、Windows、Linux、または AIX プラグイン ホストは自動的にメンテナンス モードになります。メンテナンス モードでは、アップグレード中にプラグイン ホストがスケジュールされたジョブを実行できなくなります。</block>
+  <block id="50263858fed39155040b6bb90507bcee" category="paragraph">システムはパッケージ内のすべてのプラグインを選択しますが、以前のバージョンのSnapCenterでインストールしたプラグインのみがアップグレードされます。システムは残りのプラグインをインストールしません。新しいプラグインをインストールするには、「*プラグインの追加*」オプションを使用します。</block>
+  <block id="6d49197dab9dd6c6555e0981f8aa6207" category="list-text">Windows プラグイン ホストに PowerShell Core 7.4.2 がインストールされていることを確認します。</block>
+  <block id="0b1004975d827c800b2ea1d2934ebcdd" category="list-text">Windows および Linux プラグイン ホストに Java 11 Oracle Java および OpenJDK がインストールされていることを確認します。</block>
+  <block id="9ece03be74b25dcc59b19ce7d0ef2dfb" category="list-text">SnapCenter Server ホストまたはプラグイン ホスト上の変更されたすべてのSnapCenter構成ファイル (SnapDriveService.exe.config、SMCoreServiceHost.exe.config など) をバックアップします。</block>
+  <block id="def9934ca3f718accf65ee67850cf9eb" category="list-text">いずれかのプラグイン ホストの [全体ステータス] 列に「アップグレード可能」と表示される場合は、プラグイン ホスト名をクリックして、次の操作を実行します。</block>
+  <block id="25c5cc506d7be2c3d358fc8fd23f0e8f" category="admonition">*事前チェックをスキップ*を選択しない場合、 SnapCenter はプラグイン ホストが要件を満たしているかどうかを確認します。要件が満たされていない場合は、エラー メッセージまたは警告メッセージが表示されます。エラーがディスク容量または RAM に関連している場合は、_C:\Program Files\ NetApp\ SnapCenter WebApp_ にある web.config、または _C:\Windows\System32\WindowsPowerShell\v1.0\Modules\ SnapCenter\_ にある PowerShell 構成ファイルのいずれかを更新して、デフォルト値を変更できます。エラーがそれ以外のパラメータに関連している場合は、問題を修正してから要件を再度検証する必要があります。</block>
 </blocks>

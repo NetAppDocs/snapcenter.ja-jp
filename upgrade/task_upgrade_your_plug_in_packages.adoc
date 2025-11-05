@@ -4,64 +4,53 @@ sidebar: sidebar
 keywords: upgrade, upgrade plug-in packages 
 summary: プラグインパッケージは、 SnapCenter アップグレードの一環として配布されます。 
 ---
-= プラグインパッケージのアップグレード
+= SnapCenterプラグインパッケージをアップグレードする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-プラグインパッケージは、 SnapCenter アップグレードの一環として配布されます。
+プラグイン パッケージは、SnapCenterアップグレードと一緒に配布されます。アップグレード手順により、Windows、Linux、または AIX プラグイン ホストは自動的にメンテナンス モードになります。メンテナンス モードでは、アップグレード中にプラグイン ホストがスケジュールされたジョブを実行できなくなります。
 
-アップグレードの手順でWindows、Linux、またはAIXのプラグインホストがメンテナンスモードになるため、アップグレードする各プラグインホストを手動でメンテナンスモードにする必要はありません。メンテナンスモードでは、アップグレード中にプラグインホストでスケジュールされたジョブが実行されることはありません。
+システムはパッケージ内のすべてのプラグインを選択しますが、以前のバージョンのSnapCenterでインストールしたプラグインのみがアップグレードされます。システムは残りのプラグインをインストールしません。新しいプラグインをインストールするには、「*プラグインの追加*」オプションを使用します。
 
 .開始する前に
 * Linux マシンにアクセスできる root 以外のユーザの場合は、アップグレード操作を実行する前に、 _/etc/sudoers_file を最新のチェックサム値で更新する必要があります。
+* Windows プラグイン ホストに PowerShell Core 7.4.2 がインストールされていることを確認します。
+* Windows および Linux プラグイン ホストに Java 11 Oracle Java および OpenJDK がインストールされていることを確認します。
 * デフォルトでは、SnapCenterは環境からJAVA_HOMEを検出します。修正された JAVA_HOME を使用する場合、 Linux ホストでプラグインをアップグレードする場合は、 /var/opt/snapcenter /spl/etc/__ にある _spl.properties_ ファイルに skip_JAVAHOME_update パラメータを手動で追加し、値を true に設定する必要があります。
 +
 JAVA_HOMEの値は、プラグインがアップグレードされたとき、またはSnapCenter Plug-in Loader（SPL）サービスが再起動されたときに更新されます。SPLをアップグレードまたは再起動する前に、SKIP_JAVAHOME_UPDATEパラメータを追加して値をtrueに設定すると、JAVA_HOMEの値は更新されません。
 
-* SnapCenter サーバホストまたはプラグインホストで変更したすべての SnapCenter 構成ファイルをバックアップしておく必要があります。
-+
-SnapCenter 構成ファイルの例： SnapDrive Service.exe.config 、 SMCoreServiceHost.exe.config など。
-
+* SnapCenter Server ホストまたはプラグイン ホスト上の変更されたすべてのSnapCenter構成ファイル (SnapDriveService.exe.config、SMCoreServiceHost.exe.config など) をバックアップします。
 
 
 .タスクの内容
-* SnapCenter Plug-in for Microsoft SQL Server、SnapCenter Plug-in for Microsoft Exchange Server、およびSnapCenter Plug-in for Microsoft Windowsでは、scripts_pathを実行するために、サーバとプラグインホストの両方を最新バージョンにアップグレードすることを推奨します。
-+
+SnapCenter Plug-in for Microsoft SQL Server、SnapCenter Plug-in for Microsoft Exchange Server、およびSnapCenter Plug-in for Microsoft Windowsでは、scripts_pathを実行するために、サーバとプラグインホストの両方を最新バージョンにアップグレードすることを推奨します。
+
 ポリシーでプリスクリプトとポストスクリプトが有効になっている既存のバックアップスケジュールと検証スケジュールの場合、バックアップ処理はアップグレード後も引き続き機能します。
 
-+
 ［*ジョブの詳細*］ページで、スクリプトをscripts_pathにコピーし、ポリシーを編集してscripts_pathに対するパスを指定するように警告メッセージが表示されます。クローンライフサイクルジョブの場合は、サブジョブレベルで警告メッセージが表示されます。
-
-
 
 .手順
 . 左側のナビゲーションペインで、 * Hosts * > * Managed Hosts * をクリックします。
 . 次のいずれかのタスクを実行してホストをアップグレードします。
 +
-** いずれかのプラグインホストの[全体のステータス]列に[アップグレード可能]と表示されている場合は、プラグインホスト名をクリックして次の手順を実行します。
+** いずれかのプラグイン ホストの [全体ステータス] 列に「アップグレード可能」と表示される場合は、プラグイン ホスト名をクリックして、次の操作を実行します。
 +
 ... [ * その他のオプション * ] をクリックします。
 ... プラグインホストがプラグインをアップグレードするための要件を満たしているかどうかを検証しない場合は、*[事前確認をスキップ]*を選択します。
++
+
+NOTE: *事前チェックをスキップ*を選択しない場合、 SnapCenter はプラグイン ホストが要件を満たしているかどうかを確認します。要件が満たされていない場合は、エラー メッセージまたは警告メッセージが表示されます。エラーがディスク容量または RAM に関連している場合は、_C:\Program Files\ NetApp\ SnapCenter WebApp_ にある web.config、または _C:\Windows\System32\WindowsPowerShell\v1.0\Modules\ SnapCenter\_ にある PowerShell 構成ファイルのいずれかを更新して、デフォルト値を変更できます。エラーがそれ以外のパラメータに関連している場合は、問題を修正してから要件を再度検証する必要があります。
+
 ... [* アップグレード ] をクリックします。
 
 
 ** 複数のホストをアップグレードする場合は、すべてのホストを選択してをクリックし image:../media/more_icon.gif["[ 詳細 ] アイコン"]、*[アップグレード]*>*[OK]*をクリックします。
 +
 関連するすべてのサービスがプラグインのアップグレード中に再起動されます。
-
-+
-
-NOTE: パッケージ内のすべてのプラグインが選択されますが、以前のバージョンの SnapCenter でインストールされていたプラグインのみがアップグレードされ、残りのプラグインはインストールされません。新しいプラグインをインストールするには、 * Add plug-ins * オプションを使用する必要があります。
-
-+
-[事前チェックをスキップ]*チェックボックスを選択していない場合は、プラグインをインストールするための要件を満たしているかどうかを確認するためにプラグインホストが検証されます。最小要件を満たしていない場合は、該当するエラーまたは警告メッセージが表示されます。問題を修正したら、 [* アップグレード ] をクリックします。
-
-+
-
-NOTE: エラーがディスクスペースまたはRAMに関連している場合は、C：\Program Files\NetApp\SnapCenter WebAppにあるweb.configまたはC：\Windows\System32\WindowsPowerShell\v1.0\Modules\SnapCenter\にあるPowerShell構成ファイルを更新して、デフォルト値を変更できます。エラーがそれ以外のパラメータに関連している場合は、問題を修正してから要件を再度検証する必要があります。
 
 
 

@@ -22,6 +22,7 @@ NOTE: IBM Java は Windows および Linux ホストではサポートされて�
 * Windowsホストにプラグインをインストールするときに、組み込みでないクレデンシャルを指定した場合やユーザがローカルワークグループに属している場合は、ホストのUACを無効にする必要があります。SnapCenter Plug-in for Microsoft Windowsは、WindowsホストへのMySQLプラグインと一緒にデフォルトで導入されます。
 * SnapCenterサーバがPlug-in for MySQLホストの8145ポートまたはカスタムポートにアクセスできる必要があります。
 * MySQL 5.7の場合は、MySQLの設定ファイル（my.cnfまたはmysql-server.cnf）にbinlogを指定する必要があります。
+* MySQL 8.0より前のバージョンをご利用の場合は、MySQLXプラグインを手動でインストールして有効化する必要があります。MySQL 8.0以降では、MySQLXプラグインはデフォルトでインストールされ、有効化されています。
 
 
 
