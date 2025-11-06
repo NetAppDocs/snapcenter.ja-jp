@@ -17,6 +17,5 @@ Plug-in for SQL Server をインストールすると、 SnapCenter で NetApp S
 
 * SnapCenter環境で使用するMicrosoft SQL Serverデータベースのアプリケーション対応のバックアップ、リストア、クローニングの処理を自動化します。
 * SnapCenter Plug-in for VMware vSphereを導入してSnapCenterに登録すると、VMDK上のMicrosoft SQL ServerデータベースおよびRaw Device Mapping（RDM；rawデバイスマッピング）LUNがサポートされます。
-* SMB共有のプロビジョニングのみをサポートします。SMB共有でのSQL Serverデータベースのバックアップはサポートされていません。
 * SnapManager for Microsoft SQL ServerからSnapCenterへのバックアップのインポートをサポートします。
 
