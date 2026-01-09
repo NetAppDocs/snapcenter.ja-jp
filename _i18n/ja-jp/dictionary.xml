@@ -1064,7 +1064,6 @@
   <block id="043833147a39840644f2ff01a835f90d" category="section-title">SnapCenter Plug-in for Microsoft SQL Serverの機能</block>
   <block id="50e95eafa6faf8d2ee3f01921820b42b" category="list-text">SnapCenter環境で使用するMicrosoft SQL Serverデータベースのアプリケーション対応のバックアップ、リストア、クローニングの処理を自動化します。</block>
   <block id="e40237d2b53363bc373f8134071d1be1" category="list-text">SnapCenter Plug-in for VMware vSphereを導入してSnapCenterに登録すると、VMDK上のMicrosoft SQL ServerデータベースおよびRaw Device Mapping（RDM；rawデバイスマッピング）LUNがサポートされます。</block>
-  <block id="a7e3ff2bca34971756f1600032ff8b61" category="list-text">SMB共有のプロビジョニングのみをサポートします。SMB共有でのSQL Serverデータベースのバックアップはサポートされていません。</block>
   <block id="6bff10ef4d0d0d6d7ed28de9adc0169d" category="list-text">SnapManager for Microsoft SQL ServerからSnapCenterへのバックアップのインポートをサポートします。</block>
   <block id="1b789581aeaa48640561ebae3b263a76" category="list-text">SnapCenter環境のWindowsホストで実行されている他のプラグインに対してアプリケーション対応のデータ保護を実現</block>
   <block id="d764b7be86ece9a7b21fa445a8e1493c" category="list-text">SnapCenter環境内のMicrosoftファイルシステムに対するアプリケーション対応のバックアップ、リストア、クローニングの処理を自動化</block>
@@ -2052,10 +2051,6 @@
   <block id="cb6ddd90b08469e2479460ec34538fe2" category="list-text">HTTPアクティブ化</block>
   <block id="9756c6d75626032c8da05d425c1d0ca9" category="inline-link">インターネットに接続されていないレガシーシステムでは、SnapCenter のアップグレードまたはインストールが失敗します</block>
   <block id="462fbac4d281be78bedf063a9dbd9f61" category="paragraph">用。 NET固有のトラブルシューティング情報。を参照してください。<block ref="b173f6267e94bec8cf82a1d95b991ed7" category="inline-link-rx"></block></block>
-  <block id="c3dbd8c35d4829310dd57365a749f10f" category="paragraph">メッセージキュー</block>
-  <block id="9c7750973d73f078f45c6bfd80cbfc85" category="list-text">メッセージキューサービス</block>
-  <block id="be0efd214f0b56cf8372d18ec1837f53" category="admonition">SnapCenter が作成および管理する MSMQ サービスを他のアプリケーションが使用していないことを確認します。</block>
-  <block id="7eaa993723e57b3bfc99923c196e2e17" category="list-text">RabbitMQ</block>
   <block id="a8e1305e0c86caf1fec261807b3362ef" category="paragraph">Windowsプロセスアクティブ化サービス</block>
   <block id="494ecde4fb6ee77e99799902ed23cd14" category="list-text">プロセスモデル</block>
   <block id="293616622aeda675821b42e39b4d4e7b" category="paragraph">セツテイAPI</block>
@@ -6795,7 +6790,6 @@
   <block id="c48d82f0b1e5949ce3d34dc8ac74b4b5" category="paragraph">SQL Serverシステムデータベースの検証はサポートされていません。SnapCenterは、検証処理を実行するためにデータベースのクローニングを行います。SnapCenterではSQL Serverシステムデータベースをクローニングできないため、これらのデータベースの検証はサポートされていません。</block>
   <block id="c27ceb4a4892c429a975a62841762540" category="list-text">バックアップ処理とクローニング処理のスケジュールを設定する</block>
   <block id="aa71cd3a5a90a32aafb3072b19a68b09" category="list-text">バックアップ処理、リストア処理、クローニング処理を監視する</block>
-  <block id="c343d8ab7af87f16e58b8e8040d7813a" category="admonition">Plug-in for SQL Server では、 SMB 共有の SQL Server データベースのバックアップとリカバリはサポートされません。</block>
   <block id="9b0be6917dcf31005f3dc2e8b09de8b9" category="summary">SnapCenter では、バックアップの作成直後にそのバックアップを検証できますが、その場合、バックアップジョブの完了に必要な時間が大幅に増加し、大量のリソースが必要となります。そのため、ほとんどの場合、別のジョブであとで検証を実行するようにスケジュールを設定することを推奨します。たとえば、毎日午後5時にデータベースをバックアップする場合は、1時間後の午後6時に検証を実行するようにスケジュールを設定できます。</block>
   <block id="3886123ab212d4db926aac7f7fc924c0" category="doc">検証ジョブをスケジュールするタイミング</block>
   <block id="697bc0ecd4b925fb05263cb0e73eb0c1" category="paragraph">同じ理由で、通常、バックアップを実行するたびにバックアップの検証を行う必要はありません。通常、バックアップの整合性を確保するには、より少ない頻度で定期的に検証を実行すれば十分です。1つの検証ジョブで複数のバックアップを同時に検証できます。</block>
@@ -9581,4 +9575,6 @@
   <block id="9ece03be74b25dcc59b19ce7d0ef2dfb" category="list-text">SnapCenter Server ホストまたはプラグイン ホスト上の変更されたすべてのSnapCenter構成ファイル (SnapDriveService.exe.config、SMCoreServiceHost.exe.config など) をバックアップします。</block>
   <block id="def9934ca3f718accf65ee67850cf9eb" category="list-text">いずれかのプラグイン ホストの [全体ステータス] 列に「アップグレード可能」と表示される場合は、プラグイン ホスト名をクリックして、次の操作を実行します。</block>
   <block id="25c5cc506d7be2c3d358fc8fd23f0e8f" category="admonition">*事前チェックをスキップ*を選択しない場合、 SnapCenter はプラグイン ホストが要件を満たしているかどうかを確認します。要件が満たされていない場合は、エラー メッセージまたは警告メッセージが表示されます。エラーがディスク容量または RAM に関連している場合は、_C:\Program Files\ NetApp\ SnapCenter WebApp_ にある web.config、または _C:\Windows\System32\WindowsPowerShell\v1.0\Modules\ SnapCenter\_ にある PowerShell 構成ファイルのいずれかを更新して、デフォルト値を変更できます。エラーがそれ以外のパラメータに関連している場合は、問題を修正してから要件を再度検証する必要があります。</block>
+  <block id="ef99553115dfc1718a9b51a970da1ae9" category="paragraph">アーカイブ ログ ファイルの拡張子を指定します。</block>
+  <block id="7f051ce525ea23f09ed6b21ec49fa590" category="paragraph">たとえば、アーカイブ ログが log_backup_0_1.log の場合、ファイル拡張子として .log を指定します。</block>
 </blocks>
