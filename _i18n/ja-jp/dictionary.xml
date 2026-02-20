@@ -1395,7 +1395,6 @@
   <block id="b88dbedd8fcea13adf629d85780a25e4" category="list-text">Plug-in for Windows では、 Microsoft クラスタ内の仮想マシンでの MPIO はサポートされません。</block>
   <block id="5010ac065b072d3a5a66d4913af22358" category="section-title">共有FC RDM LUNの作成</block>
   <block id="10680a7aa79949d8b454b29a782cc64a" category="paragraph">FC RDM LUNを使用してMicrosoftクラスタ内のノード間でストレージを共有するには、まず共有クォーラムディスクと共有ストレージディスクを作成し、それらをクラスタ内の両方の仮想マシンに追加する必要があります。</block>
-  <block id="cbdb6828febec04786f22df9a1ccc748" category="inline-link">物理ホスト間で仮想マシンをクラスタ化します</block>
   <block id="c939b5dd7dddc4f1908d7f58a2ab351d" category="summary">SnapCenter でデータ保護処理を有効にするには、複数のライセンスが必要です。インストールする SnapCenter ライセンスのタイプは、ストレージ環境および使用する機能によって異なります。</block>
   <block id="07cdb1cc7dcc527060e65d98659cb1d4" category="doc">SnapCenterライセンス</block>
   <block id="03d6fc6f0007d8c1e15a56f0a4522686" category="paragraph">SnapCenterでは、アプリケーション、データベース、ファイルシステム、仮想マシンのデータ保護を実現するために複数のライセンスが必要です。インストールする SnapCenter ライセンスのタイプは、ストレージ環境および使用する機能によって異なります。</block>
@@ -9065,7 +9064,6 @@
   <block id="9792c7ba1a8a833a1c75e11c4a7b46c3" category="list-text">複数のホストをアップグレードする場合は、すべてのホストを選択してをクリックし <block ref="725f4bf2ffc300942027282d0182533f" category="inline-image-macro-rx" type="image"></block>、*[アップグレード]*&gt;*[OK]*をクリックします。</block>
   <block id="fc8e535c7339f77157a0f93f32cb1f80" category="list-text">OracleとSAP HANAのマウントワークフローとカタログワークフローは、オブジェクトストレージのバックアップではサポートされませんが、Snapshotではサポートされます。</block>
   <block id="2128757ca4207f5d5000cd4894d8c58f" category="list-text">Oracle PDBクローンはオブジェクトストレージのバックアップではサポートされませんが、Snapshotではサポートされます。</block>
-  <block id="6eec14240810faadbd60c3ec98b543e7" category="paragraph">共有ディスクはPlug-in for Windowsを使用して作成されません。共有LUNを作成し、クラスタ内の各仮想マシンに追加する必要があります。詳細については、を参照してください<block ref="0564b16166a6e24aa234d21e5bcdc18a" category="inline-link-rx"></block>。</block>
   <block id="744d48cfa6032e04d109166f7ff6aeaf" category="paragraph">トラブルシューティング情報については、を参照してください<block ref="361c774ee5cb22be42ef8ea152ed45ad" category="inline-link-rx"></block>。</block>
   <block id="a141599a0eec0e6d9aea907fc97ea039" category="list-text">[証明書利用者信頼]*を選択します。</block>
   <block id="458f1b484cf2f93e8e2f35b3f5a3b94a" category="list-text">SnapCenter用に作成した証明書利用者信頼を右クリックし、*[削除]*を選択します。</block>
@@ -9577,4 +9575,8 @@
   <block id="25c5cc506d7be2c3d358fc8fd23f0e8f" category="admonition">*事前チェックをスキップ*を選択しない場合、 SnapCenter はプラグイン ホストが要件を満たしているかどうかを確認します。要件が満たされていない場合は、エラー メッセージまたは警告メッセージが表示されます。エラーがディスク容量または RAM に関連している場合は、_C:\Program Files\ NetApp\ SnapCenter WebApp_ にある web.config、または _C:\Windows\System32\WindowsPowerShell\v1.0\Modules\ SnapCenter\_ にある PowerShell 構成ファイルのいずれかを更新して、デフォルト値を変更できます。エラーがそれ以外のパラメータに関連している場合は、問題を修正してから要件を再度検証する必要があります。</block>
   <block id="ef99553115dfc1718a9b51a970da1ae9" category="paragraph">アーカイブ ログ ファイルの拡張子を指定します。</block>
   <block id="7f051ce525ea23f09ed6b21ec49fa590" category="paragraph">たとえば、アーカイブ ログが log_backup_0_1.log の場合、ファイル拡張子として .log を指定します。</block>
+  <block id="1e70ac4737c2e839c6fd901789e3bafb" category="paragraph">共有ディスクの作成にPlug-in for Windowsは使用しません。共有LUNを作成し、クラスタ内の各仮想マシンに追加する必要があります。</block>
+  <block id="ae0aa1a81eb18e69d5fc662eaee0efd5" category="inline-link-macro">Broadcom技術ドキュメント</block>
+  <block id="35108ed715245e1479e838ca41d91463" category="paragraph"><block ref="fba62a4233b1f0aa3ff3e46f7f59037b" category="inline-link-macro-rx"></block>を参照し、物理ホスト間での仮想マシンのクラスタリングと、Microsoft クラスタ用の共有 FC RDM LUN の作成に関するドキュメントを検索します。</block>
+  <block id="82b9e59bccf9587b5e339fa8a0f02dd5" category="list-text">NVMe コントローラは NVMe データストアでのみサポートされます。</block>
 </blocks>
