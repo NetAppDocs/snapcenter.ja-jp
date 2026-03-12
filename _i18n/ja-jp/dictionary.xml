@@ -3199,7 +3199,6 @@
   <block id="8d8222bc5c37db0562c84d9175b85db9" category="paragraph">手動検出は、次の構成ではサポートされません。</block>
   <block id="238f9ee47b0694879bca4ad15ab7cfe7" category="list-text">RDMとVMDKのレイアウト</block>
   <block id="0e74c3e0dd316d16d24798ac1b0249ef" category="list-text">左側のナビゲーションペインで*[リソース]*を選択し、ドロップダウンリストからSnapCenter Plug-in for IBM DB2を選択します。</block>
-  <block id="6425c50f54d17cde35a57532dc8e8d08" category="list-text">[リソース]ページで、*[IBM DB2リソースの追加]*をクリックします。</block>
   <block id="75795411fa0821e8da73e95200ff81ad" category="paragraph">データベース名を指定します。</block>
   <block id="1c07f24dbaeb847f4662960d2691d528" category="paragraph">ホスト名</block>
   <block id="ce7a42c0c120b0e761b1d9b2851def5b" category="paragraph">ホスト名を入力します。</block>
@@ -3209,7 +3208,6 @@
   <block id="5efe9e6fa4156b39ced69425eba7fb49" category="paragraph">クレデンシャルを選択するか、クレデンシャルの情報を追加します。</block>
   <block id="deec2d29ae112d513d1bbd8cb6f3a23c" category="paragraph">これはオプションです。</block>
   <block id="4e4f9229f5def86d57e9acaf8014a093" category="list-text">[ストレージフットプリントの入力]ページで、ストレージタイプを選択して1つ以上のボリューム、LUN、およびqtreeを選択し、*[保存]*をクリックします。</block>
-  <block id="bdf0204433b7ea9c415d7d723d74d2ef" category="list-text">オプション：[Resource Settings]ページで、WindowsホストのリソースにIBM DB2プラグインのカスタムのキーと値のペアを入力します。</block>
   <block id="da0726c01021262f418bf88a38a3c39d" category="paragraph">データベースは、ホスト名、関連するリソースグループとポリシー、全体的なステータスなどの情報とともに表示されます。</block>
   <block id="3f1fe53287c04e073da002e39b799896" category="paragraph">リソースへのアクセスをユーザに許可する場合は、ユーザにリソースを割り当てる必要があります。これにより、ユーザは自分に割り当てられているアセットに対して権限のある操作を実行できます。</block>
   <block id="65029b82973fe89d2af9288d26c3e30b" category="paragraph"><block ref="65029b82973fe89d2af9288d26c3e30b" category="inline-link-macro-rx"></block></block>
@@ -9579,4 +9577,21 @@
   <block id="ae0aa1a81eb18e69d5fc662eaee0efd5" category="inline-link-macro">Broadcom技術ドキュメント</block>
   <block id="35108ed715245e1479e838ca41d91463" category="paragraph"><block ref="fba62a4233b1f0aa3ff3e46f7f59037b" category="inline-link-macro-rx"></block>を参照し、物理ホスト間での仮想マシンのクラスタリングと、Microsoft クラスタ用の共有 FC RDM LUN の作成に関するドキュメントを検索します。</block>
   <block id="82b9e59bccf9587b5e339fa8a0f02dd5" category="list-text">NVMe コントローラは NVMe データストアでのみサポートされます。</block>
+  <block id="cc05f18551b367465c63e80895a59c04" category="list-text">リソースページで、* IBM DB2 リソースの追加*を選択します。</block>
+  <block id="89cb4324d3c17b7b0eaa5b7eb935edd8" category="paragraph">マウントパス</block>
+  <block id="cc1a25d74bb64939e2163e074e092923" category="paragraph">リソースがマウントされるマウントパスを入力します。これは Windows ホストにのみ適用されます。</block>
+  <block id="30deb25c4a7c59e8200ce96d5e23156f" category="paragraph">このフィールドはオプションです。</block>
+  <block id="d353032aed6d3d3117bcf87b841c7809" category="list-text">オプション：リソース設定ページで、SnapCenter Plug-in for IBM Db2がインストールされているLinuxホスト上のリソースについて、IBM Db2プラグインのカスタムキーと値のペアを入力します。集中管理されたWindowsプラグインとして登録されたIBM Db2データベースでは、カスタムキーと値のペアはサポートされません。</block>
+  <block id="a56c9defea42601d21f4c5106fa4712f" category="paragraph">データベースは、ホスト名、関連付けられたリソースグループとポリシー、全体的なステータスなどの情報とともに表示されます。</block>
+  <block id="aeab626a715ace67f9b44eba97173286" category="list-text">ONTAP 9.12.1以前では、リストアの一部としてSnapLock Vaultスナップショットから作成されたクローンは、SnapLock Vaultの有効期限を継承します。ストレージ管理者は、SnapLockの有効期限後に手動でクローンをクリーンアップする必要があります。</block>
+  <block id="988351bdb1f1d7ecd10610f11fe7bd42" category="list-text">[ リソース ] ページで、*新しいリソース グループ* を選択します。</block>
+  <block id="5c97cba64ecb09baf4d77b8f9af3d46f" category="paragraph">Snapshot にカスタム名形式を使用する</block>
+  <block id="5ff5fcae197a653580a534917740d7f8" category="list-text">*Scripts*矢印を選択し、静止、Snapshot、および静止解除処理の事前コマンドと事後コマンドを入力します。障害発生時に終了する前に実行する事前コマンドを入力することもできます。</block>
+  <block id="d3436e2d89e59038914374a22cc8c673" category="list-text">*カスタム構成*矢印を選択し、このリソースを使用するすべてのデータ保護操作に必要なカスタムキーと値のペアを入力します。</block>
+  <block id="98f1c90d5d623746b2adfec471311f76" category="list-text">*Snapshot Copy Tool* の矢印を選択して、スナップショットを作成するツールを選択します：</block>
+  <block id="7658971f73ec7751e63de7b917ad3277" category="paragraph">スナップショットを作成するためにホスト上で実行するコマンドを入力します。</block>
+  <block id="375a1cee000ea12f25f7ea0aa40c92d2" category="paragraph"><block ref="375a1cee000ea12f25f7ea0aa40c92d2" category="inline-link-macro-rx"></block></block>
+  <block id="3edc812c3aede1bb8931ed56901c3d63" category="list-text">Linux または AIX ホストに Java 11 がインストールされている必要があります。</block>
+  <block id="67444cdbc60594b36af73fd32a491c3e" category="paragraph"><block ref="67444cdbc60594b36af73fd32a491c3e" category="inline-link-macro-rx"></block></block>
+  <block id="947890351727a5bfefd25ab911655064" category="paragraph"><block ref="947890351727a5bfefd25ab911655064" category="inline-link-macro-rx"></block></block>
 </blocks>
