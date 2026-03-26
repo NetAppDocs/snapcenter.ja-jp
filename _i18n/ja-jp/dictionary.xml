@@ -9610,4 +9610,7 @@
   <block id="8d3b5ad5b9f27b4f9781e490487c376e" category="paragraph">新機能と拡張機能の完全なリストについては、<block ref="333326639e0f94ceb693906a79235ec5" category="inline-link-macro-rx"></block>をご覧ください。</block>
   <block id="2f1352033f9cdf5dbec684bea0d87ee5" category="summary">SnapCenter software の 6.2 リリースには、いくつかの新機能と機能強化が含まれています。</block>
   <block id="f4090871da1ea3c21c90ff0a2bfe77db" category="paragraph">SnapCenter software の 6.2 リリースには、次の拡張機能が含まれています。</block>
+  <block id="e8210c34cf4a643a11f3bfc4c0fd905f" category="paragraph">その他のハイパーバイザー</block>
+  <block id="ff968c11eab0f01c02347241d47d4a25" category="paragraph">KVM、Xen、Hyper-V、ハイパースケーラーハイパーバイザー上で動作するLinuxは、ゲストOSが以下の方法を使用して必要なONTAPストレージリソースに直接TCP/IPアクセスできる場合にサポートされます：</block>
+  <block id="19228485fa8108fc9a8c5a7a0e681742" category="admonition">VMware以外では、データストアおよび生デバイスのプレゼンテーションはサポートされていません。</block>
 </blocks>
