@@ -152,8 +152,6 @@
   <block id="074c2f1dacf9047766e7f8d5dce71060" category="paragraph">5GB</block>
   <block id="a5074b94ccbd0ad683e6ad6eb63da188" category="admonition">十分なディスクスペースを割り当て、logsフォルダによるストレージ消費量を監視する必要があります。必要なログスペースは、保護対象のエンティティの数とデータ保護処理の頻度によって異なります。十分なディスクスペースがない場合、最近実行した処理のログは作成されません。</block>
   <block id="c02f07fcd7047bf35e0bb82decca0939" category="paragraph">必要なソフトウェアパッケージ</block>
-  <block id="4a58751c57809081912e30803a16d52e" category="list-text">PowerShell Core 7.4.2</block>
-  <block id="b7ccd7f577996dd33bde8070db971b93" category="list-text">Java 11 Oracle JavaおよびOpenJDK</block>
   <block id="a97c26d42ce7ddd336973734ea88cb27" category="inline-link">インターネットに接続されていない従来型システムでは、SnapCenter のアップグレードまたはインストールが失敗します。</block>
   <block id="bb92d00cc055d1fa0c3023946870bfd5" category="paragraph">用。 NET固有のトラブルシューティング情報。を参照してください。<block ref="d20f19fe60cd205f06739b1a5caeb450" category="inline-link-rx"></block></block>
   <block id="bd5309e59a4bca83b633c90ae5daf38b" category="paragraph">SnapCenterプラグインとONTAP SnapMirrorテクノロジを併用すると、バックアップセットのミラーコピーを別のボリュームに作成できます。また、ONTAP SnapVaultテクノロジを併用すると、標準への準拠やその他のガバナンス関連の目的でディスクツーディスクのバックアップレプリケーションを実行できます。これらのタスクを実行する前に、ソースボリュームとデスティネーションボリュームの間にデータ保護関係を設定し、その関係を初期化する必要があります。</block>
@@ -306,7 +304,6 @@
   <block id="d1b003977a68c3208b9ef1bf9532d449" category="paragraph">ホスト・プラグインのインストールは ' ストレージ・システム接続の追加中は実行しないでくださいホスト・キャッシュが更新されず ' データベース・ステータスが SnapCenter GUI に表示される場合がありますこれは ' バックアップには使用できませんまたは NetApp ストレージには使用できません</block>
   <block id="bf4755d91b7ab31c59d1db6e3e0d486c" category="list-text">ストレージシステム名は一意である必要があります。</block>
   <block id="9dc8e047a541efb2a67b4741eb6500c5" category="paragraph">SnapCenter では、異なるクラスタに同じ名前のストレージシステムを複数配置することはサポートされていません。SnapCenterでサポートする各ストレージシステムには、一意の名前と一意の管理LIF IPアドレスが必要です。</block>
-  <block id="13d1cfa343dd610d15ad68b43ed6733b" category="list-text">Open-SmConnectionコマンドレットを使用して、PowerShell Core接続セッションを開始します。</block>
   <block id="5f33ad7660b988577691dd43179928b3" category="paragraph">この例では、PowerShellセッションを開きます。</block>
   <block id="14b1dd1b0650310a574acd9df305fcf6" category="list-text">Add-SmStorageConnectionコマンドレットを使用して、ストレージシステムへの新しい接続を作成します。</block>
   <block id="8063cf09117aac08fa8d47462bb2483e" category="paragraph">新しいストレージシステム接続を作成する例を次に示します。</block>
@@ -3173,7 +3170,6 @@
   <block id="8fcead60ab027b22fe363a8f3f8135b4" category="paragraph">Windowsホストで、グループ管理サービスアカウント（gMSA）を使用してプラグインサービスを実行する場合は、このチェックボックスをオンにします。</block>
   <block id="ec5329c8e55159fbb40b18d6e5ab2599" category="admonition">gMSA名をdomainName\accountName$の形式で指定してください。</block>
   <block id="3258f498fadd468c49c745cd6710c797" category="admonition">gMSAは、SnapCenter Plug-in for Windowsサービスのログオンサービスアカウントとしてのみ使用されます。</block>
-  <block id="7e5dacddaaa8672290ea4564cf1c41ad" category="paragraph">[インストール前チェックをスキップ]チェックボックスを選択していない場合は、プラグインをインストールするための要件をホストが満たしているかどうかを検証するためにホストが検証されます。 ディスクスペース、RAM、PowerShellのバージョン、 NETバージョン、場所（Windowsプラグインの場合）、およびJava 11（WindowsプラグインとLinuxプラグインの場合）が最小要件に照らして検証されます。最小要件を満たしていない場合は、該当するエラーまたは警告メッセージが表示されます。</block>
   <block id="c181770b13b5991ed973b65ad0a64c1f" category="paragraph">エラーがディスクスペースまたはRAMに関連している場合は、C：\Program Files\NetApp\SnapCenter WebAppにあるweb.configファイルを更新してデフォルト値を変更できます。エラーが他のパラメータに関連している場合は、問題を修正する必要があります。</block>
   <block id="dd81c680ca1fd86d935da9ccaf370cee" category="admonition">HAセットアップでweb.configファイルを更新する場合は、両方のノードでファイルを更新する必要があります。</block>
   <block id="ffeedd84ccabb2d989da666544b98228" category="admonition">同じホストを以前に SnapCenter に追加し、フィンガープリントを確認した場合でも、フィンガープリントの検証は必須です。</block>
@@ -3314,7 +3310,6 @@
   <block id="99cfce1788abdce92fe7f446ec8d1da4" category="paragraph">バックアップスケジュールは、リソースまたはリソースグループの設定の一部です。たとえば、リソースグループのポリシーで週単位のバックアップが設定されている場合は、毎週木曜日の午後10時にバックアップが実行されるようにスケジュールを設定できます。</block>
   <block id="6aeab35488d70b793616d60842ca0876" category="summary">PowerShellコマンドレットを使用してIBM DB2データベースをバックアップ、リストア、またはクローニングするには、Storage Virtual Machine（SVM）接続とクレデンシャルを作成する必要があります。</block>
   <block id="7df89a57cd954d9fccb7460aba44487f" category="doc">IBM DB2用のPowerShellコマンドレットを使用して、ストレージシステム接続とクレデンシャルを作成する</block>
-  <block id="118cab1ac580f1a92885e2cf6b354202" category="list-text">[SnapCenterPS]*をクリックしてPowerShell Coreを起動します。</block>
   <block id="e31df119bb2635e68229d174653ee578" category="paragraph">次に、Windowsクレデンシャルを使用してFinanceAdminという名前の新しいクレデンシャルを作成する例を示します。</block>
   <block id="dabd3a5e1251c743ed158ee90a82f546" category="list-text">IBM DB2通信ホストをSnapCenterサーバに追加します。</block>
   <block id="5f425eebf9102e123afb94bd2d71ff06" category="paragraph">Linuxの場合：</block>
@@ -3440,7 +3435,6 @@
   <block id="a51e41e4cd7b03dd48ce2e65ed3e1736" category="list-text">SUSE Linux Enterprise Server（SLES）</block>
   <block id="083ad21990802d20fc5fdefdb7255565" category="paragraph">2GB</block>
   <block id="1ec72ff98c807b748e55dd0ff1dbf757" category="admonition">十分なディスクスペースを割り当て、logsフォルダによるストレージ消費量を監視する必要があります。必要なログスペースは、保護するエンティティの数とデータ保護処理の頻度によって異なります。十分なディスクスペースがない場合、最近実行した処理のログは作成されません。</block>
-  <block id="bac8e3a852c936b4db89afd35d4d962a" category="paragraph">を最新バージョンにアップグレードした場合は、/var/opt/java/spl/etc/ spl.propertiesにあるJAVA_HOMEオプションが正しいSnapCenterバージョンと正しいパスに設定されていることを確認する必要があります。</block>
   <block id="05fc12ecf449ac264abfd66ddab37332" category="doc">SnapCenter Plug-ins Package for Windowsをインストールするホストの要件</block>
   <block id="b64ce6798f05dcb19198fdb563d3be2c" category="summary">SnapCenterは、ストレージシステムレベルおよびファイルシステムレベルでの不要なログおよびデータバックアップの削除、およびIBM DB2バックアップカタログ内での削除を管理します。</block>
   <block id="352752e5faea0777db6f96a1ad413289" category="doc">SnapCenterによる不要なデータバックアップの削除の管理方法</block>
@@ -3504,10 +3498,8 @@
   <block id="d3bd1679f97e986f5eabfb3cb076e96b" category="list-text">SnapCenterサーバをインストールして設定します。</block>
   <block id="a5d8946536d3ffa699ada66ee92654d6" category="list-text">SnapCenterサーバにログインします。</block>
   <block id="521e4c748d90979b116ba375769e0ef9" category="list-text">必要に応じて、ストレージシステム接続を追加し、クレデンシャルを作成してSnapCenter環境を設定します。</block>
-  <block id="80718846c9ca830ee95177bb30f81b82" category="list-text">LinuxホストまたはWindowsホストにJava 11をインストールします。</block>
   <block id="c783d48d811b4aab13eb61840dc3ee7c" category="paragraph">Javaのパスは、ホストマシンの環境パス変数で設定する必要があります。</block>
   <block id="94a5e03dcafcb993f53258c83811415f" category="list-text">バックアップレプリケーションが必要な場合は、SnapMirrorとSnapVaultをセットアップします。</block>
-  <block id="8b78d81fcf70311e0778d7ca1a1da748" category="list-text">Java 11をホストにインストールしておく必要があります。</block>
   <block id="ab4159cc3447ed2c57efc22073c9a591" category="list-text">Windowsの場合、Plug-in CreatorサービスはWindowsユーザ「LocalSystem」を使用して実行する必要があります。これは、Plug-in for IBM DB2がドメイン管理者としてインストールされている場合のデフォルトの動作です。</block>
   <block id="e4a8446fdfa57d72bb5925250cccc5b7" category="list-text">Windowsホストにプラグインをインストールするときに、組み込みでないクレデンシャルを指定した場合やユーザがローカルワークグループに属している場合は、ホストのUACを無効にする必要があります。SnapCenter Plug-in for Microsoft Windowsは、WindowsホストにIBM DB2プラグインを使用してデフォルトで導入されます。</block>
   <block id="70557a0ca3b5f90edd18cfc0d99671ad" category="list-text">SnapCenterサーバがPlug-in for IBM DB2ホストの8145ポートまたはカスタムポートにアクセスできる必要があります。</block>
@@ -3515,10 +3507,7 @@
   <block id="361ef555cc4b1de8cd252d68a14901af" category="list-text">ローカル管理者Privilegesを持つドメインユーザと、リモートホストに対するローカルログイン権限が必要です。</block>
   <block id="e978910a0a826388ce9c16d9683c5bd4" category="list-text">Plug-in for IBM DB2をWindowsホストにインストールすると、SnapCenter Plug-in for Microsoft Windowsが自動的にインストールされます。</block>
   <block id="92f854eabda8c2aa761e01fba1c6ffd4" category="list-text">rootユーザまたはroot以外のユーザに対してパスワードベースのSSH接続を有効にしておく必要があります。</block>
-  <block id="74b8e77de0b5018c5ab2ca7eb523ff31" category="list-text">Java 11をWindowsホストにインストールしておく必要があります。</block>
-  <block id="6919c26b69875a76335f5a1dd643e508" category="inline-link">すべてのオペレーティングシステム用のJavaダウンロード</block>
   <block id="cfe19b0ae08454358fbe515d88fd6095" category="section-title">Linuxホスト</block>
-  <block id="129fdeda5a8637916b3b579b072e4eaa" category="list-text">Java 11をLinuxホストにインストールしておく必要があります。</block>
   <block id="29a9fb7975f0f566600524d35939f828" category="list-text">LinuxホストでIBM DB2データベースを実行している場合は、Plug-in for IBM DB2のインストール時にSnapCenter Plug-in for UNIXが自動的にインストールされます。</block>
   <block id="17049c1cdf73c2b4b41219f99ace3f81" category="list-text">プラグインのインストールには、デフォルトのシェルとして* bash *が必要です。</block>
   <block id="c1c3f7f413cbbea9483f5bb44d108a05" category="section-title">補助コマンド</block>
@@ -4367,7 +4356,6 @@
   <block id="3b878279a04dc47d60932cb294d96259" category="doc">概要</block>
   <block id="09b368e7a40c6562c6eb5235c4eda0ba" category="summary">SnapCenter Plug-ins Package for Linuxをインストールする前に、ホストが要件を満たしていることを確認する必要があります。</block>
   <block id="fdcd362ac5f5f9817e70642dd2a48bfd" category="list-text">Oracle Linux</block>
-  <block id="8e3a492a9b736283405d7d14febefe64" category="paragraph">Java 11 Oracle JavaまたはOpenJDK</block>
   <block id="b292068e5bdee43d554d534df100834f" category="paragraph">サポートされているバージョンの最新情報については、を参照してください。<block ref="bf4b590a983f5498451b0eaa24cb5904" category="inline-link-rx"></block></block>
   <block id="3d409e4955bb3de9bcf0382e6ed02f3c" category="doc">NetAppでサポートされるプラグインリソースの保護におけるリソース、リソースグループ、ポリシーの使用方法</block>
   <block id="fa195f3aeab33bc32aac81731432394a" category="list-text">リソースとは、SnapCenterでバックアップまたはクローニングするデータベース、Windowsファイルシステム、VMのことです。</block>
@@ -4408,7 +4396,6 @@
   <block id="b5d24747e2254cd74a278959e55db769" category="summary">SnapCenter NetAppでサポートされるプラグインを使用する前に、SnapCenter管理者がSnapCenterサーバをインストールして設定し、前提条件となるタスクを実行する必要があります。</block>
   <block id="6f9abdf4e6349ffead799b7fe0fb5848" category="doc">NetAppでサポートされるプラグインを使用するための前提条件</block>
   <block id="0b6e81623d0567d25f80dc022436e00c" category="list-text">ホストを追加し、プラグインをインストールしてアップロードします。</block>
-  <block id="b64964f7c6cb3e2d0ad50647f28415f4" category="list-text">必要に応じて、プラグインホストにJava 11をインストールします。</block>
   <block id="48b0f0fb43e0a3e1a7bac0922b6b61c9" category="list-text">データパス（LIF）が複数ある場合やdNFS構成を使用している場合は、データベースホストでSnapCenter CLIを使用して次の作業を実行できます。</block>
   <block id="d3af75b5ec004883495ea045fb886b21" category="list-text">デフォルトでは、データベースホストのすべての IP アドレスが、クローンボリュームの Storage Virtual Machine （ SVM ）の NFS ストレージエクスポートポリシーに追加されます。特定のIPアドレスを使用する場合、またはIPアドレスのサブセットに制限する場合は、Set-PreferredHostIPsInStorageExportPolicy CLIを実行します。</block>
   <block id="17f9957a5b4dff4ca41989ac66b4057b" category="list-text">ポート9090がホストの他のアプリケーションで使用されていないことを確認します。</block>
@@ -5740,8 +5727,6 @@
   <block id="b2e43cf8357eaf43ddb786837e13f48b" category="list-text">AIXホストにSnapCenter Plug-ins Package for AIXをインストールする場合は、ディレクトリレベルのシンボリックリンクを手動で解決しておく必要があります。</block>
   <block id="7ea03b56d913b0b846ddb14167eed21a" category="paragraph">SnapCenter Plug-ins Package for AIXは、ファイルレベルのシンボリックリンクを自動的に解決しますが、JAVA_HOMEの絶対パスを取得するためのディレクトリレベルのシンボリックリンクは解決しません。</block>
   <block id="b5920495a710a16336b4343815e09685" category="list-text">インストールユーザのクレデンシャルを、認証モードをLinuxまたはAIXに設定して作成します。</block>
-  <block id="cadca0993c074565e0295e47c4f0c2a0" category="list-text">Java 11をLinuxホストまたはAIXホストにインストールしておく必要があります。</block>
-  <block id="48b525b2b37df887839c2e72d7a4a780" category="admonition">LinuxホストにJava 11の認定エディションのみがインストールされていることを確認します。</block>
   <block id="41ad31577018e71491bd0866701dd1b5" category="list-text">Linux または AIX ホストで Oracle データベースを実行している場合は、 SnapCenter Plug-in for Oracle Database と SnapCenter Plug-in for UNIX の両方をインストールする必要があります。</block>
   <block id="b45e2244ecb857cf03fd685ecf2522d6" category="admonition">Plug-in for Oracle Database では、 SAP を対象とした Oracle データベースの管理も可能です。ただし、SAP BR * Toolsとの統合はサポートされていません。</block>
   <block id="b327d38de9a934b16819cbfb7fe94387" category="list-text">Oracleデータベース11.2.0.3以降を使用している場合は、13366202 Oracleパッチをインストールする必要があります。</block>
@@ -5753,7 +5738,6 @@
   <block id="cddfaa01c32e2362546c78364751248b" category="admonition">SnapCenter Plug-in for UNIXはSnapCenter Plug-ins Package for AIXに含まれており、同時ボリュームグループはサポートされません。</block>
   <block id="ad569cc1cca820033bb20ffe1d5bc4a5" category="paragraph">AIX 7.1以降</block>
   <block id="974c2262615af73433567515efbb80e9" category="paragraph">4GB</block>
-  <block id="97ee77f84790cbf22d7e32413911f94c" category="paragraph">Java 11 IBM Java</block>
   <block id="f805f99adc12df0c565005d33166c7bc" category="section-title">AIXホストのroot以外のユーザに対するsudo Privilegesの設定</block>
   <block id="449945354085db74a6111d72389e1ae2" category="paragraph">SnapCenter 4.4以降では、root以外のユーザがSnapCenter Plug-ins Package for AIXをインストールしてプラグインプロセスを開始できます。プラグインプロセスをroot以外の有効なユーザとして実行します。複数のパスにアクセスできるようにroot以外のユーザにsudo Privilegesを設定する必要があります。</block>
   <block id="841774125775c871852a88e3823b3b8c" category="list-text">/home/_aix_user_//.sc_netapp /snapcenter aix_host_plugin.bsx</block>
@@ -5763,7 +5747,6 @@
   <block id="1937942be6bc478199bc930af1623991" category="paragraph">SnapCenter は、クレデンシャルを使用して SnapCenter 処理を実行するユーザを認証しますLinuxホストまたはAIXホストにプラグインパッケージをインストールするためのクレデンシャルを作成する必要があります。</block>
   <block id="93ec70472eb9ceff1f5bd3b65b97df6c" category="paragraph">クレデンシャルは、rootユーザ、またはプラグインをインストールしてプロセスを開始するsudo権限を持つroot以外のユーザに対して作成されます。</block>
   <block id="11dbb070e552e50e58059b5d673f1d1a" category="paragraph">詳細については、またはを参照してください <block ref="f3719d4df312e2308fdbfca4904a6c51" category="inline-xref-macro-rx"></block> 。 <block ref="0cff305d940e3d5ee78f36245aa0f592" category="inline-xref-macro-rx"></block></block>
-  <block id="bb7cb5e0c78f0ae62b8ec079f1b70efc" category="cell">* ベストプラクティス： * ホストを導入してプラグインをインストールしたあとでクレデンシャルを作成することは可能ですが、 SVM を追加したあとで、ホストを導入してプラグインをインストールする前にクレデンシャルを作成することを推奨します。</block>
   <block id="a789173ed9b6f7eea2bff098b4efbb2b" category="list-text">[クレデンシャル]ページで、クレデンシャル情報を入力します。</block>
   <block id="67b9087c700b41bfc960610e03f7b788" category="paragraph">SnapCenterプラグインをインストールするシステムのドメイン管理者を指定します。[Username]フィールドの有効な形式は次のとおりです。</block>
   <block id="678fe3118680b05727ac6f1183530e90" category="paragraph">プラグインホストのオペレーティングシステムに応じて、LinuxまたはAIXを選択します。</block>
@@ -5772,8 +5755,6 @@
   <block id="e35a87504c653f801b6c01e104a25258" category="paragraph">Oracleデータベースに対してデータ保護処理を実行する際に使用するクレデンシャルを設定する必要があります。</block>
   <block id="242cdc11ae22f217c93ae40e14e96194" category="paragraph">個 々 のリソースグループのクレデンシャルを設定する場合にユーザ名に完全なadmin権限がない場合は、少なくともリソースグループとバックアップの権限が必要です。</block>
   <block id="7b13621f41f0146d0ffd2434af94438a" category="paragraph">Oracleデータベース認証を有効にしている場合は、リソースビューに赤い南京錠のアイコンが表示されます。データベースを保護できるようにデータベースのクレデンシャルを設定するか、データベースをリソースグループに追加してデータ保護処理を実行する必要があります。</block>
-  <block id="9d84c90ce04a969ca09498823506ba1f" category="admonition">クレデンシャルの作成時に誤った詳細を指定すると、エラーメッセージが表示されます。[ キャンセル ] をクリックしてから、もう一度実行してください。</block>
-  <block id="5de6e0a70b653c8dab85d2d2bccf04ae" category="list-text">データベースを選択し、 * データベース設定 * &gt; * データベースの設定 * をクリックします。</block>
   <block id="6df18cfefa59a0d65ea120d8247b7ba8" category="list-text">[ データベース設定の設定 ] セクションの [ 既存の資格情報を使用する *] ドロップダウンリストから、 Oracle データベースでデータ保護ジョブを実行するために使用する資格情報を選択します。</block>
   <block id="bc36b053b483bc3f05afdf22b15ab4cf" category="admonition">Oracleユーザにはsysdba権限が必要です。</block>
   <block id="f711a8eede361a793f45284580f869aa" category="paragraph">をクリックしてクレデンシャルを作成することもできます <block ref="db9d5f6f137b990473b3ea783cd913f5" category="inline-image-macro-rx" type="image"></block>。</block>
@@ -5785,7 +5766,6 @@
   <block id="65c2449dd103d146930974c3c6b38806" category="paragraph">RACデータベースインスタンスが存在する1つまたはすべてのクラスタノードを優先ノードとして指定できます。バックアップ処理は、指定したノードでのみ、指定した順序で実行されます。</block>
   <block id="368fea2d6bbc65dc4e5625eb27f9bd66" category="paragraph">RAC One Nodeでは、優先ノードに表示されるノードは1つだけで、この優先ノードはデータベースが現在ホストされているノードです。</block>
   <block id="cc64f4c44fdc213d2a7145638c9720aa" category="paragraph">RAC One Node データベースのフェイルオーバーまたは再配置後に、 SnapCenter リソースページでリソースを更新すると、データベースが以前にホストされていた優先 RAC ノード * リストからホストが削除されます。データベースを再配置する RAC ノードは *RAC ノード * に表示され、手動で優先 RAC ノードとして設定する必要があります。</block>
-  <block id="b73216514e4678fde5a5aea6c63626c9" category="paragraph">詳細については、を参照してください <block ref="8f2b39531f2b3f3e4e9667f4d7ba23f5" category="inline-link-macro-rx"></block>。</block>
   <block id="eded1b44110b92f9241411e35d136afb" category="summary">Oracleデータベースをバックアップする前に、前提条件が満たされていることを確認する必要があります。</block>
   <block id="9360f4c3e5a30ff18eeda4aaa14df772" category="doc">Oracleデータベースのバックアップ要件</block>
   <block id="6ad0c4eabf145f10088d2d96c2e233bf" category="list-text">データベースでセカンダリ保護が有効になっている場合は、そのデータベースに属するすべてのデータボリュームとアーカイブログボリュームが保護されていることを確認しておく必要があります。</block>
@@ -7396,7 +7376,6 @@
   <block id="2e1961167c1057a818d6fff279cd9778" category="list-text">rootユーザまたはroot以外のユーザ、またはSSHキーベースの認証にはパスワードベースの認証を使用できます。</block>
   <block id="fed1505389358193273003d88a5d4e8b" category="paragraph">SnapCenter Plug-in for Unix File Systemsは、root以外のユーザがインストールできます。ただし、プラグインプロセスをインストールして開始するには、root以外のユーザにsudo権限を設定する必要があります。プラグインのインストール後、プロセスはroot以外の有効なユーザとして実行されます。</block>
   <block id="45d6e373e26981f8611297351f3acd1f" category="list-text">インストールユーザのクレデンシャルを、認証モードをLinuxに設定して作成します。</block>
-  <block id="def18ece6fc73f693c0b0bc38b5819e3" category="paragraph">Javaのダウンロードについては、次を参照してください。<block ref="dc93a441af3c4c177b993a3220d67dc7" category="inline-link-rx"></block></block>
   <block id="2a7635ab90a70c9b88a3224a15801d77" category="summary">SnapCenterの[ホストの追加]ページを使用してホストを追加し、SnapCenter Plug-ins Package for Linuxをインストールできます。プラグインはリモートホストに自動的にインストールされます。</block>
   <block id="a88f3a0dc41bb52a8a27e3e459b7645d" category="doc">GUIを使用したホストの追加とPlug-ins Package for Linuxのインストール</block>
   <block id="f2775f4fafb2b712a12d25a5b894532a" category="paragraph">[ホストの追加]ページを使用してホストを追加し、SnapCenter Plug-ins Package for Linuxをインストールできます。プラグインはリモートホストに自動的にインストールされます。</block>
@@ -8714,10 +8693,7 @@
   <block id="44040e214e919d86d6a1f3f26db3d22c" category="inline-image-macro">編集アイコン</block>
   <block id="68819c7042f13f544d27a782b1c23806" category="list-text">をクリックし <block ref="b4ece97e1b8d14f42e755a2c424f87a6" category="inline-image-macro-rx" type="image"></block> て値を変更します。</block>
   <block id="cb62fbb794888232bcd99a94764ba3fb" category="image-alt">リソースグループポリシー</block>
-  <block id="79a43ebcb13d1d4c2e8786939bbd0a57" category="list-text">OracleのJavaとOpenJDKはLinuxでサポートされています</block>
   <block id="4f89061470b39de2158694538d7101af" category="inline-link">IBM Semeruランタイムのダウンロード</block>
-  <block id="1c4627ccac14a61e3bce6d3629218d85" category="list-text">AIX用IBM Java。次のサイトからダウンロードできます。<block ref="cf41b0c524544b137d4105ff48ece522" category="inline-link-rx"></block></block>
-  <block id="94cfbdf843ad80dab8b4c63aa78522c5" category="paragraph">Java 11 OracleおよびOpenJDK</block>
   <block id="2584ae0844f37bdb517dc8e38d68a2f5" category="list-text">バックアップジョブを開始したら、[Activity]ペインでをクリックして、 <block ref="64eace402f8f00b7a999e38fb6d87e55" category="inline-image-macro-rx" type="image"></block> 最新の5つの処理を表示します。</block>
   <block id="8da2271859ceaf1866467967dd6640c9" category="paragraph">を参照して <block ref="dc20cca85782861f6e03c00cec5a33c0" category="inline-link-macro-rx"></block></block>
   <block id="1edc23bb6f80cdc062019a1682663523" category="list-text">image::../media/filter_icon.png [filter icon]を選択し、ホスト名を選択してインスタンスをフィルタリングします。</block>
@@ -8759,7 +8735,6 @@
   <block id="c8df28b406eabc43243b92181d68f712" category="paragraph">NetAppでサポートされるプラグインは、[ホストを追加]ページからインストールできます。</block>
   <block id="cb15647de6f65c6f817e3b480a54f7db" category="summary">ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。NetAppでサポートされているプラグインは、Windows、Linux、AIXの両方の環境で使用できます。</block>
   <block id="01b37fc83542f28040f13cc0ca72a787" category="paragraph">ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。NetAppでサポートされるプラグインは、Windows、Linux、AIXの各環境でサポートされます。</block>
-  <block id="a12fcc2714160353d9eaad3f6b1236bc" category="list-text">Java 11をLinux、Windows、またはAIXのホストにインストールしておく必要があります。</block>
   <block id="4baf1f02e89e733c2e9e86eb70c5a37b" category="list-text">NetAppでサポートされるプラグイン（MongoDB、ORASCPM、Oracle Applications、SAP ASE、SAP MaxDB、Storageなど）が、ホストの追加処理を実行するクライアントホストに配置されている必要があります。</block>
   <block id="0612f5c4c0ebcf5d100decba8d34d5a2" category="list-text">SnapCenter Plug-in for Microsoft Windowsを手動で選択する必要があります。</block>
   <block id="97f324a8c5553ff0e590a7f1d7426c7b" category="list-text">LinuxまたはAIXホスト</block>
@@ -9284,14 +9259,6 @@
   <block id="3199d4d0758d0f4f53db9a8f36670c18" category="sidebar">SnapCenterサーバーを構成する</block>
   <block id="4c975961e88401702aa6aac167300031" category="sidebar">ストレージシステムの追加とプロビジョニング</block>
   <block id="0885e9f12d8cb35b0f02655c34c87004" category="admonition">IBM Java は Windows および Linux ホストではサポートされていません。</block>
-  <block id="48c9a1bf5de7bf57f1efa648f3bc8d17" category="inline-link">Windows用JAVAをダウンロード</block>
-  <block id="a4560fe71d10d98deabf55fdf50b90f0" category="paragraph"><block ref="a4560fe71d10d98deabf55fdf50b90f0" category="inline-link-rx"></block></block>
-  <block id="25827211b51e5a08cc74ddb2f845f386" category="inline-link">Linux用JAVAをダウンロード</block>
-  <block id="0632a773655c14c1b1e9ced88bc550ed" category="paragraph"><block ref="0632a773655c14c1b1e9ced88bc550ed" category="inline-link-rx"></block></block>
-  <block id="ffef625a5852f63e8c97e120b261e871" category="inline-link">AIX用JAVAをダウンロード</block>
-  <block id="1cf0cff6e7cd05dac4238e50abe74627" category="paragraph"><block ref="1cf0cff6e7cd05dac4238e50abe74627" category="inline-link-rx"></block></block>
-  <block id="67366bdaf9086e6015fe527a27beb845" category="inline-link">すべてのオペレーティングシステム用のJAVAをダウンロード</block>
-  <block id="230f7d0fc162c3a559cd8b29556f41f4" category="paragraph"><block ref="230f7d0fc162c3a559cd8b29556f41f4" category="inline-link-rx"></block></block>
   <block id="17103b09b3247a2b39032b11b995b325" category="list-text">ORACLE_BACKUPMODE は、オンライン バックアップを実行するかオフライン バックアップを実行するかを指定します。</block>
   <block id="e787bc810fe0c9919da5538cad8cb1f1" category="list-text">ORACLE_EXPORT_PARAMETERS は、_/bin/su &lt;sqlplus を実行しているユーザー&gt; -c sqlplus /nolog &lt;cmd&gt;_ の実行中に、上記で定義された環境変数を再エクスポートするかどうかを指定します。これは通常、sqlplus を実行しているユーザーが、_connect / as sysdba_ を使用してデータベースに接続するために必要なすべての環境変数を設定していない場合に発生します。</block>
   <block id="a6f6a01605d225b6eccb8bc600198254" category="doc">プラグインキーストアのパスワードと使用中のCA署名キーペアのエイリアスを管理する</block>
@@ -9438,7 +9405,6 @@
   <block id="5097ab7bd6d21f43a44cf3fa2819d1a9" category="list-text">SAP HANA NDVの保護</block>
   <block id="dea949f89da961edae31cb07cf178de2" category="inline-link">ONTAPコンシステンシーグループの詳細</block>
   <block id="33f6f98912a46b71470b0b88a5796453" category="paragraph">SnapCenter はONTAP整合性グループを検出または作成します。二次保護のために、宛先クラスタにSnapMirror関係を設定します。<block ref="c9cf167a41f1aec3d6cac7c4bebb9647" category="inline-link-rx"></block> 。</block>
-  <block id="66a780869a0bc12446e0ddcc0035ae9b" category="admonition">SnapCenter 6.2 (サーバとプラグイン) およびONTAP 9.17.1 にアップグレードすると、 SnapCenter は最初のスケジュールされたバックアップ中にフラット コンシステンシ グループを階層型コンシステンシ グループに変更します。</block>
   <block id="9f2d0dc08fd406b0b8600cb2332c7a4c" category="paragraph">アプリケーションに対してASA r2 システムで二次保護を有効にする方法については、以下を参照してください。</block>
   <block id="7e2e4828b97a80ed5f31feecd44dbb2c" category="list-text">ASA、 AFF、またはFASリソースとASA r2 リソースが混在するデータベースの保護</block>
   <block id="6fe3ae956085a9133eaacd31f9913d80" category="list-text">Windows リソースのプロビジョニング</block>
@@ -9486,9 +9452,7 @@
   <block id="202db78e7e2ac241d08b359f1f79644f" category="paragraph">コマンドで使用できるパラメータとその説明に関する情報は、Get-Help _command_name_ を実行すると取得できます。あるいは、<block ref="4a5b4acb82a31b5d3a197c5ec1468fe8" category="inline-link-rx"></block> 。</block>
   <block id="052131f99fadbb192418dc45065d8c15" category="paragraph">UNIXコマンドの詳細については、<block ref="4a5b4acb82a31b5d3a197c5ec1468fe8" category="inline-link-rx"></block> 。</block>
   <block id="67998d9af35dea74903e9cdb371f7e7a" category="paragraph">あるいは、<block ref="4a5b4acb82a31b5d3a197c5ec1468fe8" category="inline-link-rx"></block>または<block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block>。</block>
-  <block id="e2affc8ad90cb942103d56d82396b5f7" category="paragraph">SnapCenter 6.2 で利用できる新機能と強化された機能について説明します。</block>
   <block id="652468e7a8f47c94c0dfc2bbbe3f6788" category="inline-link-macro">SnapCenter 6.2の新機能</block>
-  <block id="24443d9133830b434ac05072f0c9653a" category="inline-link">SnapCenterソフトウェア 6.2 リリースノート</block>
   <block id="320bd16b81d8a6a0a077d7308db7683d" category="paragraph">アップグレード パスには、アップグレードできるSnapCenter のバージョンとサポートされているプラ​​グインのバージョンが表示されます。</block>
   <block id="f734f899336791933d28373bca69a72f" category="admonition">SnapCenter Server を 6.2 にアップグレードする場合は、プラグインも 6.2 にアップグレードしてください。</block>
   <block id="7a22247de8db3271f3bf8573be10e986" category="cell">6.2</block>
@@ -9500,7 +9464,6 @@
   <block id="24f24d3f1f893e4176aff86940b1f7bd" category="paragraph">SnapCenter Plug-in for VMware vSphere のアップグレード方法については、以下を参照してください。<block ref="9fa07c2f7a59d2185d48077e327b705e" category="inline-link-rx"></block> 。</block>
   <block id="97e76bbffdf8f08342d1c5a741af4b2a" category="sidebar">SnapCenter softwareは、ハイブリッド クラウド内の任意の場所にあるONTAPシステムで実行されているアプリケーション、データベース、ホスト ファイル システム、および VM に対して、アプリケーション整合性のあるデータ保護を提供する、シンプルで集中化されたスケーラブルなプラットフォームです。このドキュメント ライブラリにはバージョン6.2の情報が含まれています。</block>
   <block id="1e0eab11641f75c3ff495410ce40bf66" category="sidebar">SnapCenter software6.2 ドキュメント</block>
-  <block id="9968307e35346723a7def9d1da87a203" category="paragraph">既知の問題、制限事項、修正された問題、新規および変更されたコマンドの詳細については、<block ref="bedfbb0cb9ae5977029e72ca67318671" category="inline-link-rx"></block> 。リリース ノートにアクセスするには、NetAppアカウントでサインインするか、アカウントを作成する必要があります。</block>
   <block id="ea1c96f839915f73d25b910bbc92b734" category="list-text">ONTAP FAS、 AFF、またはASAプライマリおよびセカンダリ システム上に存在し、 NetApp のバックアップおよびリカバリ統合を使用してクラウド内のオブジェクトおよびアーカイブ ストレージに保護されているデータ</block>
   <block id="45099ef1959df4e973d03fee8da8217e" category="paragraph">LinuxにSnapCenter Serverをインストールすると、インストーラによって自己署名証明書が作成されます。CA 証明書を使用する場合は、nginx リバース プロキシ、監査ログ、およびSnapCenterの証明書を構成する必要があります。</block>
   <block id="f2c3d774134cb37665bf8a734950fe0b" category="section-title">SnapCenter証明書を構成する</block>
@@ -9523,7 +9486,6 @@
   <block id="d289bbfe1554f83d213d5958a481c248" category="paragraph">サポートされているバージョンに関する最新情報については、<block ref="00e02cae149cc9de4aea278bb76f630e" category="inline-link-rx"></block>。</block>
   <block id="0be174a8508a59f21b484245da1e1605" category="paragraph">サポートされているバージョンに関する最新情報については、<block ref="845d98cf9e1414112b381d552d9c8014" category="inline-link-rx"></block> 。</block>
   <block id="57c12b0c6639b8884c79259831fa9f28" category="paragraph">その<block ref="45ef37a4bb1edb251808bfcdb0b9e22c" category="inline-link-rx"></block> サポートされている構成に関する最新情報が含まれています。</block>
-  <block id="f101abf86e878a2ecb48d889221777be" category="paragraph">SnapCenter ServerホストにWindows Server 2019またはWindows Server 2016を使用している場合は、Java 11をインストールする必要があります。</block>
   <block id="a0d1f8ac2dd9261f6193237061098514" category="paragraph">その<block ref="b6383984df7f2080eb1163b0aa6a5917" category="inline-link-rx"></block> サポートされている構成に関する最新情報が含まれています。</block>
   <block id="6fc7bf078a50f1c4ddd79c0229afe3ff" category="doc">SnapCenter Plug-in for Microsoft Exchange Server でサポートされるストレージ タイプ</block>
   <block id="08fed5985d86e1f1278601d57e1bff6b" category="paragraph">Windows Serverでは、SnapCenterによるプロビジョニングとデータ保護がサポートされます。サポートされているバージョンに関する最新情報については、<block ref="bf4b37302d584cabdf50327923359db4" category="inline-link-rx"></block> 。</block>
@@ -9546,8 +9508,6 @@
   <block id="f98d06e0365bbdb788bff3b7d98e015e" category="doc">SnapCenterプラグインパッケージをアップグレードする</block>
   <block id="5afd668caa3def0cebf1f64a3e6a9d0c" category="paragraph">プラグイン パッケージは、SnapCenterアップグレードと一緒に配布されます。アップグレード手順により、Windows、Linux、または AIX プラグイン ホストは自動的にメンテナンス モードになります。メンテナンス モードでは、アップグレード中にプラグイン ホストがスケジュールされたジョブを実行できなくなります。</block>
   <block id="50263858fed39155040b6bb90507bcee" category="paragraph">システムはパッケージ内のすべてのプラグインを選択しますが、以前のバージョンのSnapCenterでインストールしたプラグインのみがアップグレードされます。システムは残りのプラグインをインストールしません。新しいプラグインをインストールするには、「*プラグインの追加*」オプションを使用します。</block>
-  <block id="6d49197dab9dd6c6555e0981f8aa6207" category="list-text">Windows プラグイン ホストに PowerShell Core 7.4.2 がインストールされていることを確認します。</block>
-  <block id="0b1004975d827c800b2ea1d2934ebcdd" category="list-text">Windows および Linux プラグイン ホストに Java 11 Oracle Java および OpenJDK がインストールされていることを確認します。</block>
   <block id="9ece03be74b25dcc59b19ce7d0ef2dfb" category="list-text">SnapCenter Server ホストまたはプラグイン ホスト上の変更されたすべてのSnapCenter構成ファイル (SnapDriveService.exe.config、SMCoreServiceHost.exe.config など) をバックアップします。</block>
   <block id="def9934ca3f718accf65ee67850cf9eb" category="list-text">いずれかのプラグイン ホストの [全体ステータス] 列に「アップグレード可能」と表示される場合は、プラグイン ホスト名をクリックして、次の操作を実行します。</block>
   <block id="25c5cc506d7be2c3d358fc8fd23f0e8f" category="admonition">*事前チェックをスキップ*を選択しない場合、 SnapCenter はプラグイン ホストが要件を満たしているかどうかを確認します。要件が満たされていない場合は、エラー メッセージまたは警告メッセージが表示されます。エラーがディスク容量または RAM に関連している場合は、_C:\Program Files\ NetApp\ SnapCenter WebApp_ にある web.config、または _C:\Windows\System32\WindowsPowerShell\v1.0\Modules\ SnapCenter\_ にある PowerShell 構成ファイルのいずれかを更新して、デフォルト値を変更できます。エラーがそれ以外のパラメータに関連している場合は、問題を修正してから要件を再度検証する必要があります。</block>
@@ -9570,10 +9530,6 @@
   <block id="d3436e2d89e59038914374a22cc8c673" category="list-text">*カスタム構成*矢印を選択し、このリソースを使用するすべてのデータ保護操作に必要なカスタムキーと値のペアを入力します。</block>
   <block id="98f1c90d5d623746b2adfec471311f76" category="list-text">*Snapshot Copy Tool* の矢印を選択して、スナップショットを作成するツールを選択します：</block>
   <block id="7658971f73ec7751e63de7b917ad3277" category="paragraph">スナップショットを作成するためにホスト上で実行するコマンドを入力します。</block>
-  <block id="375a1cee000ea12f25f7ea0aa40c92d2" category="paragraph"><block ref="375a1cee000ea12f25f7ea0aa40c92d2" category="inline-link-macro-rx"></block></block>
-  <block id="3edc812c3aede1bb8931ed56901c3d63" category="list-text">Linux または AIX ホストに Java 11 がインストールされている必要があります。</block>
-  <block id="67444cdbc60594b36af73fd32a491c3e" category="paragraph"><block ref="67444cdbc60594b36af73fd32a491c3e" category="inline-link-macro-rx"></block></block>
-  <block id="947890351727a5bfefd25ab911655064" category="paragraph"><block ref="947890351727a5bfefd25ab911655064" category="inline-link-macro-rx"></block></block>
   <block id="4eecf71620cb916df975db3d622e9c30" category="paragraph">SnapCenter サーバリポジトリは、NSMデータベースと呼ばれることもあります。使用可能なすべてのコマンドレットの詳細については、<block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block>を参照してください。</block>
   <block id="e9087f4d1c2c90b2c0e70f14ce029f2b" category="paragraph">SnapCenter サーバリポジトリをバックアップすると、データ損失からデータを保護できます。リポジトリをバックアップするには、<block ref="f89bc12c0d2d413f64b24c351b6b566d" prefix=" " category="inline-code"></block> コマンドレットを実行します。</block>
   <block id="7de02e43c7e5e44fea6db42bf98f4e4f" category="paragraph"><block ref="f89bc12c0d2d413f64b24c351b6b566d" prefix=" " category="inline-code"></block>コマンドレットは、次のタスクを実行します：</block>
@@ -9607,10 +9563,82 @@
   <block id="5223ed0f09a7ed8f79cb34ee678642b2" category="admonition">カスタムキーと値のペアは、Linux システム上の SAP HANA データベース用 SnapCenter プラグインではサポートされていますが、SnapCenter Plug-in for Microsoft Windows に登録された SAP HANA データベースではサポートされていません。</block>
   <block id="fef844efd5d5274641ab5a8e530ced87" category="admonition">*<block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block>*を選択してポリシーを作成することもできます。</block>
   <block id="d3562ace999b51c49c22ce4c580579b0" category="list-text">「スケジュールの設定」列で、設定するポリシーの *<block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block>* を選択します。</block>
-  <block id="8d3b5ad5b9f27b4f9781e490487c376e" category="paragraph">新機能と拡張機能の完全なリストについては、<block ref="333326639e0f94ceb693906a79235ec5" category="inline-link-macro-rx"></block>をご覧ください。</block>
   <block id="2f1352033f9cdf5dbec684bea0d87ee5" category="summary">SnapCenter software の 6.2 リリースには、いくつかの新機能と機能強化が含まれています。</block>
   <block id="f4090871da1ea3c21c90ff0a2bfe77db" category="paragraph">SnapCenter software の 6.2 リリースには、次の拡張機能が含まれています。</block>
   <block id="e8210c34cf4a643a11f3bfc4c0fd905f" category="paragraph">その他のハイパーバイザー</block>
   <block id="ff968c11eab0f01c02347241d47d4a25" category="paragraph">KVM、Xen、Hyper-V、ハイパースケーラーハイパーバイザー上で動作するLinuxは、ゲストOSが以下の方法を使用して必要なONTAPストレージリソースに直接TCP/IPアクセスできる場合にサポートされます：</block>
   <block id="19228485fa8108fc9a8c5a7a0e681742" category="admonition">VMware以外では、データストアおよび生デバイスのプレゼンテーションはサポートされていません。</block>
+  <block id="d5339ec2460f6dc04a037cc1e0c21e2c" category="list-text">PowerShell 7.4.13</block>
+  <block id="3eff2fffafd42d18c698c1f6d5b8528d" category="list-text">Java 17（Oracle JavaおよびOpenJDK）</block>
+  <block id="0b28f3dba3d0679c7ead8286c1b86497" category="admonition">SnapCenter 6.2.1（サーバーとプラグイン）および ONTAP 9.17.1 にアップグレードすると、SnapCenter は最初のスケジュールされたバックアップ時に、フラットな整合性グループを階層的な整合性グループに変更します。</block>
+  <block id="690134bf1736a3c694f96c546d17c21d" category="paragraph">[Skip prechecks]チェック ボックスを選択していない場合、プラグインをインストールするための要件をホストが満たしているかどうかを検証するためにホストが検証されます。ディスク スペース、RAM、PowerShellのバージョン、.NETのバージョン、場所（Windowsプラグインの場合）、Java 17（WindowsプラグインとLinuxプラグインの場合）が最小要件に照らして検証されます。最小要件を満たしていない場合、対応するエラーまたは警告メッセージが表示されます。</block>
+  <block id="1eb0af61a769d0522873cb3b2942d431" category="list-text">*SnapCenterPS*を選択してPowerShellを起動します。</block>
+  <block id="852731c1b7550625486510fe72aa91ae" category="paragraph">Javaを最新バージョンにアップグレードした場合は、/var/opt/snapcenter/spl/etc/spl.propertiesにあるJAVA_HOMEオプションが正しいJavaバージョンと正しいパスに設定されていることを確認する必要があります。</block>
+  <block id="76b820fbb056248b792f7d6bd52d26b2" category="list-text">LinuxホストまたはWindowsホストにJava 17をインストールします。</block>
+  <block id="4abb709c6d05f5f86be6a29ebfa3b2cd" category="list-text">Java 17をホストにインストールしておく必要があります。</block>
+  <block id="d5c967ad4811c11d6537b7432e92b977" category="list-text">Java 17をWindowsホストにインストールしておく必要があります。</block>
+  <block id="32c6d5ca3ecff4133066e972e1572ac7" category="inline-link-macro">Windows 用 Java をダウンロード</block>
+  <block id="f46c99c6dad9cfc1105a9eb84bac7db0" category="paragraph"><block ref="f46c99c6dad9cfc1105a9eb84bac7db0" category="inline-link-macro-rx"></block></block>
+  <block id="5d8727327c9fe92d26bd0015c2bbe68c" category="list-text">Linux または AIX ホストに Java 17 がインストールされている必要があります。</block>
+  <block id="277beaf4372bf50e1af3a4104115fe0a" category="inline-link-macro">Linux 用 Java をダウンロード</block>
+  <block id="028890b6d9b6139ffe4f229f30b7bbfa" category="paragraph"><block ref="028890b6d9b6139ffe4f229f30b7bbfa" category="inline-link-macro-rx"></block></block>
+  <block id="067bc8a063d23efc69ec35694bac526f" category="inline-link-macro">AIX 用 Java をダウンロード</block>
+  <block id="d8f3c02dacf7aa14b7984862d6519daa" category="paragraph"><block ref="d8f3c02dacf7aa14b7984862d6519daa" category="inline-link-macro-rx"></block></block>
+  <block id="21edd03e54925331f15a7eeccef5d870" category="inline-link-macro">すべてのオペレーティング システム用の Java をダウンロード</block>
+  <block id="b463ee31d784a22ba3ba4b0645fa7aaa" category="paragraph"><block ref="b463ee31d784a22ba3ba4b0645fa7aaa" category="inline-link-macro-rx"></block></block>
+  <block id="229b8bb179d661c3d6ed2a72028f7029" category="list-text">Java 17をLinuxホストにインストールしておく必要があります。</block>
+  <block id="8c6b5164102ae393bac5cf68a8e53c50" category="paragraph">Java 17（Oracle JavaまたはOpenJDK）</block>
+  <block id="c137369ed677f84e8f10d176b75f0f60" category="list-text">必要に応じて、Java 17をプラグインのホストにインストールします。</block>
+  <block id="645c05cc982c6967f4b780067b08d7e5" category="list-text">Linux、Windows、またはAIXホストにJava 17がインストールされている必要があります。</block>
+  <block id="d39860bc8546eab4e9a54056d3755ef2" category="paragraph"><block ref="d39860bc8546eab4e9a54056d3755ef2" category="inline-link-macro-rx"></block></block>
+  <block id="635642373e8f1e4e290c872a3e808345" category="paragraph">SnapCenter ServerホストにWindows Server 2019またはWindows Server 2016を使用している場合は、Java 17をインストールする必要があります。</block>
+  <block id="8e38e28ee0341b15ba2a3e98884afe4b" category="paragraph"><block ref="8e38e28ee0341b15ba2a3e98884afe4b" category="inline-link-macro-rx"></block></block>
+  <block id="c51e95a7ba6f7936384db31eff8869e3" category="paragraph"><block ref="c51e95a7ba6f7936384db31eff8869e3" category="inline-link-rx"></block></block>
+  <block id="d018402cf57ffa7c0393b1d67057e5e4" category="paragraph">Java 17 IBM Java</block>
+  <block id="44c13dc9a1753cb466fee3ad110bb019" category="summary">データ保護操作を実行するには、PostgreSQLクラスタのクラスタユーザークレデンシャルを設定する必要があります。</block>
+  <block id="3243b2db06af9a3a8b41f285981576ec" category="doc">PostgreSQLクラスタのクレデンシャルを設定します</block>
+  <block id="502ea8597e926db5739accdc503c5c90" category="list-text">PostgreSQLクラスタに有効な認証情報が設定されていない場合、自動検出されたリソースに対してのみ赤い南京錠アイコンが表示されます。その後の検出操作中に、設定された認証情報が間違っている、またはクラスタ自体へのアクセスを許可していないことが判明した場合、赤い南京錠アイコンが再び表示されます。</block>
+  <block id="c9a75870f8ba894399624e689c422596" category="list-text">データ保護操作を実行するためにリソースを保護したり、リソースグループに追加したりするには、有効な PostgreSQL クラスタクレデンシャルを設定する必要があります。</block>
+  <block id="d55b89ea75b27c9de81ad2f6398cb84d" category="list-text">認証情報に設定されているPostgreSQLユーザーは、クラスタにアクセスし、バックアップおよび復元操作を実行するための十分な権限を持っている必要があります。最低限、ユーザーは*SUPERUSER*ロール、または同等の権限（*pg_read_all_data*、*pg_write_all_data*、*replication*権限など）を持っている必要があります。</block>
+  <block id="10ba74df3991cdbaaf9f0670d4001cf5" category="list-text">SnapCenterは、設定された認証情報を使用して、*psql* または *libpq* クライアント経由で PostgreSQL インスタンスに接続します。PostgreSQL クライアントツールがプラグインホストにインストールされていることを確認してください。</block>
+  <block id="dd3e905814dfdaf48b383528621ea0ee" category="admonition">クラスターを構成する前に、まず PostgreSQL の認証情報をSnapCenterに追加する必要があります。</block>
+  <block id="cbf3301d0d753e8461dcc76725f98e1d" category="list-text">左側のナビゲーション ペインで * リソース * を選択し、リストから SnapCenter Plug-in for PostgreSQL cluster を選択します。</block>
+  <block id="66e4f4069d5574fce9f76098a0d21eef" category="list-text">（オプション）<block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>を選択し、ホスト名を選択します。</block>
+  <block id="92e6162b6295f71cd24f1ddaa4deabdb" category="paragraph">次に、<block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>を選択してフィルターペインを閉じることができます。</block>
+  <block id="c1327e03f464857dae9e0881c85d39e5" category="list-text">クラスターを選択し、次に*認証情報の構成*を選択します。</block>
+  <block id="ffcbcede6515ab2fc9732ecf5f1d76df" category="list-text">SnapCenter で PostgreSQL クラスタユーザー用に設定されている認証情報を選択します。認証情報には、データ保護操作を実行するのに十分な権限を持つ有効なユーザー名とパスワードが含まれている必要があります。</block>
+  <block id="9a9700301d1207689b2cfec2adf03e45" category="paragraph">トポロジーページからクラスタ構成を変更できます。</block>
+  <block id="f374913797d0295c317d0055e71b421e" category="doc">リソースグループレベルで整合性グループのSnapshotを有効にする</block>
+  <block id="a9cf5d66edaed6a32b08051d0eb943ab" category="paragraph">デフォルトでは、SnapCenter Plug-in for Oracle Databaseは、Automatic Storage Management（ASM）ディスク グループまたはLogical Volume Management（LVM）ボリューム グループ レベルで整合性グループのSnapshotを作成します。ベスト プラクティスとして、単一のリソース グループ内のデータベースは、ASMディスク グループまたはLVMボリューム グループ間でONTAPボリュームを共有しないでください。</block>
+  <block id="b9f94b68be04293cfc27b9c82cc9f8d3" category="paragraph">ただし、ASM ディスク グループまたは LVM ボリューム グループが基盤の ONTAP ボリュームを共有している場合、重複するスナップショットの競合により、整合性グループのスナップショットが失敗する可能性があります。このような場合、SnapCenter はボリュームレベルのスナップショットに自動的にフォールバックします。</block>
+  <block id="dfb289753e6224ef9124760edf05ea07" category="paragraph">ボリュームがASMディスク グループまたはLVMボリューム グループ間で共有されるシナリオでは、SnapCenterはリソース グループ レベルでの整合性グループ Snapshotの有効化をサポートします。これにより、リソース グループ内のデータベースに関連付けられているすべてのASMディスク グループまたはLVMボリューム グループが、単一の整合性グループ Snapshotに確実にキャプチャされます。以下に、この機能の使用方法を説明します。</block>
+  <block id="5c741578980e7704da528093f5e324cd" category="list-text">SnapCenter サーバで次の構成ファイルに移動します：</block>
+  <block id="104eca5a6c04470e26d35fe31b06c3ea" category="paragraph"><block ref="be2c922dfeee4a22e9331f08a784def3" prefix="" category="inline-code"></block>。</block>
+  <block id="46376aff63fb964edf22387df4324caa" category="list-text"><block ref="bc0b5416c67e568e5fd5d624fd885d11" prefix=" " category="inline-code"></block>パラメータを見つけて、その値を *false* から *true* に変更します。</block>
+  <block id="911f345bc86988158b772d982e282ada" category="list-text">変更を有効にするには、<block ref="92d506e04aeaf411d00bd3530505a36b" prefix=" " category="inline-code"></block>サービスを再起動します。</block>
+  <block id="2c2657517ad43d08352a5451f985e40e" category="list-text">Java 17をLinuxホストまたはAIXホストにインストールしておく必要があります。</block>
+  <block id="c21b5da89b1f81162977127cb9031d22" category="list-text">LinuxではOracleのJavaとOpenJDKがサポートされています。</block>
+  <block id="3a963dcf9de35dbba651650701736b82" category="list-text">IBM Java for AIX。<block ref="c0de5e0b50d0c2c65f1c384a68baae61" category="inline-link-rx"></block>からダウンロードできます。</block>
+  <block id="5644b685e992d1f3592d7905a4bf7ce2" category="admonition">Linuxホストには、Java 17の認定版のみがインストールされていることを確認してください。</block>
+  <block id="34173baea9817dda310abe58b671a2f7" category="paragraph">Java 17（OracleまたはOpenJDK）</block>
+  <block id="4984a1c61cf9b38d22b24181dc7e50e9" category="list-text"><block ref="07b421e5f5e0300b1a0fd6cc22745306" prefix=" " category="inline-code"></block>ファイルを編集して、メッセージ認証コードアルゴリズムを設定します：MACs hmac-sha2-256 および MACs hmac-sha2-512。</block>
+  <block id="1eb22a3ae1c2ce45dd6dd271f5a31da7" category="admonition">ホストの導入とプラグインのインストール後にクレデンシャルを作成することもできますが、* ベストプラクティス * は、SVM を追加した後、ホストを導入してプラグインをインストールする前にクレデンシャルを作成することです。</block>
+  <block id="6b7e4e697475dd4860abcf786126c1c7" category="admonition">認証情報を作成する際に誤った情報を入力した場合、エラーメッセージが表示されます。*Cancel*を選択してから、もう一度お試しください。</block>
+  <block id="a67c677fb64ec1097b791d50fa972eeb" category="list-text"><block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>を選択し、次にホスト名とデータベースの種類を選択してリソースを絞り込みます。</block>
+  <block id="d8f223fc0bc1bca623d2d7c084e193c2" category="list-text">データベースを選択し、次に*データベース設定*＞*データベースの構成*を選択します。</block>
+  <block id="dab985facceb94f13f985f8249833bc0" category="paragraph">詳細については、<block ref="8f2b39531f2b3f3e4e9667f4d7ba23f5" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="fe83151208012d5b73e22523d7f033ba" category="paragraph">Javaのダウンロードに関する情報については、<block ref="f2ff54b9e43f2ec55847a13d208d9402" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="41a4b4dac1c1d04e2b895fdb51832356" category="paragraph">SnapCenter 6.2および6.2.1で利用可能な新機能と拡張機能について説明します。</block>
+  <block id="ba326f97f514ee86456bacdbb611b94c" category="inline-link-macro">SnapCenter 6.2.1の新機能</block>
+  <block id="1e8a051ced3087d8f8c0358cafb2bae4" category="paragraph">新機能と機能強化の完全なリストについては、<block ref="dbbc4e697b5acac11e7237418d4e74e7" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="660e11cd0d8b7a0d5f30a5c4ab9874ee" category="paragraph">新機能と機能強化の完全なリストについては、<block ref="333326639e0f94ceb693906a79235ec5" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="6fb4aad380990fd6f7b6d9b9431147f8" category="inline-link">SnapCenter Software 6.2.1リリースノート</block>
+  <block id="555ee24c1ccffeec9a9363373d9b08a6" category="paragraph">既知の問題、制限事項、修正された問題、および新規コマンドと変更されたコマンドの詳細については、<block ref="039e73fc576f8d9ddcba7242690e2327" category="inline-link-rx"></block>を参照してください。リリースノートにアクセスするには、NetAppアカウントでサインインするか、アカウントを作成する必要があります。</block>
+  <block id="5aae26cfc631423a28ee9f3eea8618b0" category="cell">6.2.1</block>
+  <block id="4405435b2ad2e79a5a4506de478aafd7" category="summary">SnapCenter ソフトウェアの 6.2.1 リリースには新機能や機能拡張はなく、SnapCenter サーバおよびプラグインに関する既知のバグ修正と認定バージョンの更新のみが含まれています。</block>
+  <block id="fed22bd00ec1bb7537e843bbc0886bcc" category="doc">SnapCenter software 6.2.1の新機能</block>
+  <block id="f6a2ad4b89455cf23e3e4843e1f51aee" category="inline-link-macro">SnapCenter 6.2.1 リリースノート</block>
+  <block id="f0de22be0ad3dd3c1e51ed207f0e298e" category="paragraph">SnapCenterソフトウェアの6.2.1リリースには、新機能や機能強化はありません。SnapCenterサーバーとプラグインの既知のバグ修正と適格バージョンのアップデートのみが含まれています。詳細については、<block ref="f297672c4e3c5441ce384d3bd8457e0c" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="8ca913d8030ab27ecf31b8863c908b83" category="list-text">Windows プラグイン ホストに PowerShell 7.4.13 がインストールされていることを確認してください。</block>
+  <block id="1a0f97251fd1801dcc25004385c56be0" category="list-text">WindowsおよびLinuxプラグインホストにJava 17（Oracle JavaおよびOpenJDK）がインストールされていることを確認してください。</block>
 </blocks>

@@ -4,6 +4,8 @@ title: リリースノート
 entries:
 - title: リリースノート
   url: "/release-notes/release-notes.html"
+- title: SnapCenter 6.2.1の新機能
+  url: "/release-notes/what's-new-in-snapcenter621.html"
 - title: SnapCenter 6.2の新機能
   url: "/release-notes/what's-new-in-snapcenter62.html"
 - title: サポートされるSnapCenterのアップグレードパス

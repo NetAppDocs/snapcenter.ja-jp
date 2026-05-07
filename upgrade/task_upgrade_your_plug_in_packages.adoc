@@ -17,8 +17,8 @@ summary: プラグインパッケージは、 SnapCenter アップグレード�
 
 .開始する前に
 * Linux マシンにアクセスできる root 以外のユーザの場合は、アップグレード操作を実行する前に、 _/etc/sudoers_file を最新のチェックサム値で更新する必要があります。
-* Windows プラグイン ホストに PowerShell Core 7.4.2 がインストールされていることを確認します。
-* Windows および Linux プラグイン ホストに Java 11 Oracle Java および OpenJDK がインストールされていることを確認します。
+* Windows プラグイン ホストに PowerShell 7.4.13 がインストールされていることを確認してください。
+* WindowsおよびLinuxプラグインホストにJava 17（Oracle JavaおよびOpenJDK）がインストールされていることを確認してください。
 * デフォルトでは、SnapCenterは環境からJAVA_HOMEを検出します。修正された JAVA_HOME を使用する場合、 Linux ホストでプラグインをアップグレードする場合は、 /var/opt/snapcenter /spl/etc/__ にある _spl.properties_ ファイルに skip_JAVAHOME_update パラメータを手動で追加し、値を true に設定する必要があります。
 +
 JAVA_HOMEの値は、プラグインがアップグレードされたとき、またはSnapCenter Plug-in Loader（SPL）サービスが再起動されたときに更新されます。SPLをアップグレードまたは再起動する前に、SKIP_JAVAHOME_UPDATEパラメータを追加して値をtrueに設定すると、JAVA_HOMEの値は更新されません。

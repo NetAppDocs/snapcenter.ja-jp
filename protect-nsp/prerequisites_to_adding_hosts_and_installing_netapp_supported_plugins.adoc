@@ -16,7 +16,7 @@ summary: ホストを追加してプラグインパッケージをインスト�
 
 NOTE: AIXでは、ストレージアプリケーションとOracleアプリケーションがサポートされます。
 
-* Java 11をLinux、Windows、またはAIXのホストにインストールしておく必要があります。
+* Linux、Windows、またはAIXホストにJava 17がインストールされている必要があります。
 +
 
 NOTE: IBM Java は Windows および Linux ホストではサポートされていません。
@@ -39,7 +39,7 @@ iSCSIを使用している場合は、iSCSIサービスが実行されている�
 * SnapCenter でクラスタノードを管理する場合は、クラスタ内のすべてのノードに対する管理者権限を持つユーザが必要です。
 * SnapCenter Plug-in for Microsoft Windowsを手動で選択する必要があります。
 +
-http://www.java.com/en/download/manual.jsp["Windows用JAVAをダウンロード"]
+link:https://www.oracle.com/java/technologies/downloads/#java17["Windows 用 Java をダウンロード"]
 
 
 
@@ -51,15 +51,15 @@ http://www.java.com/en/download/manual.jsp["Windows用JAVAをダウンロード"
 NOTE: AIXでは、ストレージアプリケーションとOracleアプリケーションがサポートされます。
 
 * rootユーザまたはroot以外のユーザに対してパスワードベースのSSH接続を有効にしておく必要があります。
-* Java 11をLinuxホストにインストールしておく必要があります。
+* Java 17をLinuxホストにインストールしておく必要があります。
 +
-SnapCenter ServerホストにWindows Server 2019またはWindows Server 2016を使用している場合は、Java 11をインストールする必要があります。
+SnapCenter ServerホストにWindows Server 2019またはWindows Server 2016を使用している場合は、Java 17をインストールする必要があります。
 
 +
-http://www.java.com/en/download/manual.jsp["Linux用JAVAをダウンロード"]
+link:https://www.oracle.com/java/technologies/downloads/#java17["Linux 用 Java をダウンロード"]
 
 +
-https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?license=IBM["AIX用JAVAをダウンロード"]
+https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?license=IBM["AIX 用 Java をダウンロード"]
 
 * 複数のパスにアクセスできるようにroot以外のユーザにsudo権限を設定する必要があります。visudo Linuxユーティリティを使用して、/etc/sudoersファイルに次の行を追加します。
 +
@@ -140,9 +140,9 @@ NOTE: 十分なディスクスペースを割り当て、logsフォルダによ�
  a| 
 必要なソフトウェアパッケージ
  a| 
-Java 11 IBM Java
+Java 17 IBM Java
 
-を最新バージョンにアップグレードした場合は、/var/opt/java/spl/etc/ spl.propertiesにあるJAVA_HOMEオプションが正しいSnapCenterバージョンと正しいパスに設定されていることを確認する必要があります。
+Javaを最新バージョンにアップグレードした場合は、/var/opt/snapcenter/spl/etc/spl.propertiesにあるJAVA_HOMEオプションが正しいJavaバージョンと正しいパスに設定されていることを確認する必要があります。
 
 |===
 

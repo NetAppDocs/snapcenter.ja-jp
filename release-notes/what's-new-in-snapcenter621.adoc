@@ -1,0 +1,14 @@
+---
+permalink: 'release-notes/what"s-new-in-snapcenter621.html' 
+sidebar: sidebar 
+keywords: what is new, features, enhancements, 6.2.1 
+summary: SnapCenter ソフトウェアの 6.2.1 リリースには新機能や機能拡張はなく、SnapCenter サーバおよびプラグインに関する既知のバグ修正と認定バージョンの更新のみが含まれています。 
+---
+= SnapCenter software 6.2.1の新機能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenterソフトウェアの6.2.1リリースには、新機能や機能強化はありません。SnapCenterサーバーとプラグインの既知のバグ修正と適格バージョンのアップデートのみが含まれています。詳細については、link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467["SnapCenter 6.2.1 リリースノート"^]を参照してください。

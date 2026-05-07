@@ -13,7 +13,7 @@ summary: ホストを追加してプラグインパッケージをインスト�
 [role="lead"]
 ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。SnapCenter Plug-in for IBM DB2は、Windows、Linux、AIXの各環境でサポートされています。
 
-* Java 11をホストにインストールしておく必要があります。
+* Java 17をホストにインストールしておく必要があります。
 +
 
 NOTE: IBM Java は Windows および Linux ホストではサポートされていません。
@@ -30,9 +30,9 @@ NOTE: IBM Java は Windows および Linux ホストではサポートされて�
 * ローカル管理者Privilegesを持つドメインユーザと、リモートホストに対するローカルログイン権限が必要です。
 * Plug-in for IBM DB2をWindowsホストにインストールすると、SnapCenter Plug-in for Microsoft Windowsが自動的にインストールされます。
 * rootユーザまたはroot以外のユーザに対してパスワードベースのSSH接続を有効にしておく必要があります。
-* Java 11をWindowsホストにインストールしておく必要があります。
+* Java 17をWindowsホストにインストールしておく必要があります。
 +
-link:https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html["Windows用JAVAをダウンロード"^]
+link:https://www.oracle.com/java/technologies/downloads/#java17["Windows 用 Java をダウンロード"^]
 
 
 
@@ -41,12 +41,12 @@ link:https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.htm
 == LinuxホストとAIXホスト
 
 * rootユーザまたはroot以外のユーザに対してパスワードベースのSSH接続を有効にしておく必要があります。
-* Linux または AIX ホストに Java 11 がインストールされている必要があります。
+* Linux または AIX ホストに Java 17 がインストールされている必要があります。
 +
-link:https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html["Linux用JAVAをダウンロード"^]
+link:https://www.oracle.com/java/technologies/downloads/#java17["Linux 用 Java をダウンロード"^]
 
 +
-link:https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?license=IBM["AIX用JAVAをダウンロード"^]
+link:https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?license=IBM["AIX 用 Java をダウンロード"^]
 
 * LinuxホストでIBM DB2データベースを実行している場合は、Plug-in for IBM DB2のインストール時にSnapCenter Plug-in for UNIXが自動的にインストールされます。
 * プラグインのインストールには、デフォルトのシェルとして* bash *が必要です。

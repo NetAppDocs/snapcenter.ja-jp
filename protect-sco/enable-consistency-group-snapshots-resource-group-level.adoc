@@ -1,0 +1,28 @@
+---
+permalink: protect-sco/enable-consistency-group-snapshots-resource-group-level.html 
+sidebar: sidebar 
+keywords: consistency group, enable, create, resource group level 
+summary: リソースグループはコンテナであり、バックアップして保護するリソースを追加します。リソースグループを使用すると、特定のアプリケーションに関連付けられているすべてのデータを同時にバックアップできます。 
+---
+= リソースグループレベルで整合性グループのSnapshotを有効にする
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+デフォルトでは、SnapCenter Plug-in for Oracle Databaseは、Automatic Storage Management（ASM）ディスク グループまたはLogical Volume Management（LVM）ボリューム グループ レベルで整合性グループのSnapshotを作成します。ベスト プラクティスとして、単一のリソース グループ内のデータベースは、ASMディスク グループまたはLVMボリューム グループ間でONTAPボリュームを共有しないでください。
+
+ただし、ASM ディスク グループまたは LVM ボリューム グループが基盤の ONTAP ボリュームを共有している場合、重複するスナップショットの競合により、整合性グループのスナップショットが失敗する可能性があります。このような場合、SnapCenter はボリュームレベルのスナップショットに自動的にフォールバックします。
+
+.タスクの内容
+ボリュームがASMディスク グループまたはLVMボリューム グループ間で共有されるシナリオでは、SnapCenterはリソース グループ レベルでの整合性グループ Snapshotの有効化をサポートします。これにより、リソース グループ内のデータベースに関連付けられているすべてのASMディスク グループまたはLVMボリューム グループが、単一の整合性グループ Snapshotに確実にキャプチャされます。以下に、この機能の使用方法を説明します。
+
+.手順
+. SnapCenter サーバで次の構成ファイルに移動します：
++
+`C:\Program Files\NetApp\SMCore\SMCoreServiceHost.dll.config`。
+
+.  `isCgSnapshotForRg`パラメータを見つけて、その値を *false* から *true* に変更します。
+. 変更を有効にするには、 `SMCoreService`サービスを再起動します。
+

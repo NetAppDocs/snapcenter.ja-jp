@@ -27,7 +27,7 @@ SnapCenter では、異なるクラスタに同じ名前のストレージシス
 
 
 .手順
-. [SnapCenterPS]*をクリックしてPowerShell Coreを起動します。
+. *SnapCenterPS*を選択してPowerShellを起動します。
 . Add-SmStorageConnectionコマンドレットを使用して、ストレージシステムへの新しい接続を作成します。
 +
 [listing]

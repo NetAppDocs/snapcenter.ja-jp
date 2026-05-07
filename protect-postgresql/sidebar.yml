@@ -96,6 +96,8 @@ entries:
   entries:
   - title: バックアップのワークフロー
     url: "/protect-postgresql/back-up-postgresql-resources.html"
+  - title: PostgreSQLクラスタのクレデンシャルを設定します
+    url: "/protect-postgresql/configure-credentials-for-postgresql-cluster.html"
   - title: クラスタの自動検出
     url: "/protect-postgresql/discover-the-clusters-automatically.html"
   - title: プラグインホストに手動でリソースを追加する
