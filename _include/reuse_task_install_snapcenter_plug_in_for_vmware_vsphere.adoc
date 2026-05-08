@@ -10,7 +10,7 @@
 
 == CA証明書の導入
 
-SnapCenter Plug-in for VMware vSphereでCA証明書を設定する方法については、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_create_and_or_import_an_SSL_certificate_to_SnapCenter_Plug-in_for_VMware_vSphere_(SCV)["SSL 証明書を作成またはインポートします"^]。
+CA証明書をSnapCenter Plug-in for VMware vSphereで構成するには、 https://kb.netapp.com/data-mgmt/SnapCenter/SC_KBs/How_to_create_and_or_import_an_SSL_certificate_to_SnapCenter_Plug-in_for_VMware_vSphere["SSL 証明書を作成またはインポートします"^]を参照してください。
 
 
 

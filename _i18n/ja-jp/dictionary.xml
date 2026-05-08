@@ -364,7 +364,6 @@
   <block id="6d2bf94f38d1fdf840fe9b231866899c" category="inline-link">導入の概要</block>
   <block id="95d04783b89b5d5f8a4c905e6a139950" category="paragraph">展開の詳細については、を参照してください<block ref="09fdd78e4c4f2997a9baa6b6e4423d52" category="inline-link-rx"></block>。</block>
   <block id="c9abc3786b4bb68c9d780c7e265731ff" category="inline-link">SSL 証明書を作成またはインポートします</block>
-  <block id="77e6d176ef9b9d439f75a9636390005d" category="paragraph">SnapCenter Plug-in for VMware vSphereでCA証明書を設定する方法については、を参照してください<block ref="1b5e247395791063ff5d33fa4a1ba4ec" category="inline-link-rx"></block>。</block>
   <block id="3228309100966454e78a162d4ba9bd75" category="section-title">CRLファイルの設定</block>
   <block id="456dce50d13fcf7c2c4881e39c114254" category="paragraph">SnapCenter Plug-in for VMware vSphereは、事前に設定されたディレクトリでCRLファイルを検索します。VMware vSphere 用 SnapCenter プラグインの CRL ファイルのデフォルトディレクトリは、 _/opt/NetApp/config/crl_です 。</block>
   <block id="2794927004b00b8d766ca3deca4c7096" category="paragraph">[SnapCenterJobs]ページを使用して、さまざまなバックアップ処理の進捗状況を監視できます。進捗状況を確認して、いつ完了したか、問題が発生していないかを確認できます。</block>
@@ -2587,9 +2586,7 @@
   <block id="ac91c641781bd7c7379113e123abc706" category="doc">証明書ベースの認証を有効にします</block>
   <block id="2deb2b431122c2428813248c5cc7e3cf" category="paragraph">SnapCenter ServerおよびWindowsプラグインホストに対して証明書ベースの認証を有効にするには、次のPowerShellコマンドレットを実行します。Linuxプラグインホストで双方向SSLを有効にすると、証明書ベースの認証が有効になります。</block>
   <block id="012d451c2966c8058914f66afd3ff9be" category="list-text">クライアント証明書ベースの認証を有効にするには：</block>
-  <block id="c7414a7d4890863a34509bebe1bd9225" category="paragraph"><block ref="a578dd94961bb2b0ce287d29a112740b" prefix="" category="inline-code"></block><block ref="e685e5103f8306754d61ec1a0da15686" prefix=" " category="inline-code"></block><block ref="a71cdd4660400fab236be52b25300411" prefix=" " category="inline-code"></block></block>
   <block id="8b5db05d124326542535790d2a1a0411" category="list-text">クライアント証明書ベースの認証を無効にするには：</block>
-  <block id="b5cfca9930b60b6f87f38ad0e8d31765" category="paragraph"><block ref="ee29fb805334372351c3e459eaf40ac3" prefix="" category="inline-code"></block><block ref="e685e5103f8306754d61ec1a0da15686" prefix=" " category="inline-code"></block><block ref="b1b73520f4b4ea4d2583cc59029bbe0d" prefix=" " category="inline-code"></block></block>
   <block id="ea57705c00c3f1344bb41c72a946f63e" category="summary">PowerShellコマンドを使用して、Windowsホスト上のSnapCenterサーバとプラグインの間の相互通信を保護するために、双方向SSL通信を有効にすることができます。</block>
   <block id="fb1f4d52b01df105765d83ddca95f1be" category="doc">Windowsホストで双方向SSL通信を有効にする</block>
   <block id="e087a1e7d63b58aa401ef5206b4045df" category="paragraph">すべてのプラグインとSMCoreエージェントのコマンドを最初に実行し、次にサーバのコマンドを実行します。</block>
@@ -9229,7 +9226,6 @@
   <block id="334226d3cfa4581cf30266ef27f8d444" category="list-text">SnapCenter Plug-in for VMware vSphereを導入してSnapCenterに登録すると、RDM LUN上の仮想Exchange Serverがサポートされます。</block>
   <block id="d606f67e2e785da61d4eec544382d173" category="section-title">Oracleバージョン12cR2から18c、19c、21c</block>
   <block id="6a02cc7ce0251bbc4d48ab0a5e120358" category="paragraph">Oracleデータベースでサポートされているさまざまな認証方式を確認してください。詳細については、を参照してください <block ref="7870051f24add37682324e1578aee75d" category="inline-link-macro-rx"></block>。</block>
-  <block id="cb5d59c817a7392efa454c9c69508067" category="paragraph"><block ref="cb5d59c817a7392efa454c9c69508067" category="inline-link-rx"></block></block>
   <block id="98f770b0af18ca763421bac22b4b6805" category="section-title">特徴</block>
   <block id="d662aa2b841a0c131c86e10f89661f14" category="paragraph">FlexCloneのライセンス情報については、を参照してください <block ref="d9f19820592fa27802c8f2a3fe0b8c47" category="inline-link-macro-rx"></block>。</block>
   <block id="073f586b61cc6ba33a4441cb7dadca15" category="cell"><block ref="073f586b61cc6ba33a4441cb7dadca15" category="inline-link-macro-rx"></block></block>
@@ -9641,4 +9637,8 @@
   <block id="f0de22be0ad3dd3c1e51ed207f0e298e" category="paragraph">SnapCenterソフトウェアの6.2.1リリースには、新機能や機能強化はありません。SnapCenterサーバーとプラグインの既知のバグ修正と適格バージョンのアップデートのみが含まれています。詳細については、<block ref="f297672c4e3c5441ce384d3bd8457e0c" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="8ca913d8030ab27ecf31b8863c908b83" category="list-text">Windows プラグイン ホストに PowerShell 7.4.13 がインストールされていることを確認してください。</block>
   <block id="1a0f97251fd1801dcc25004385c56be0" category="list-text">WindowsおよびLinuxプラグインホストにJava 17（Oracle JavaおよびOpenJDK）がインストールされていることを確認してください。</block>
+  <block id="92f7e9adcc0061bde4c2abd78f00e01e" category="paragraph">CA証明書をSnapCenter Plug-in for VMware vSphereで構成するには、<block ref="e0ef04da7ad7ee6e29cb49ed5497582e" category="inline-link-rx"></block>を参照してください。</block>
+  <block id="0ff275ffe02e672fcd7c5215c9cbcfb6" category="paragraph"><block ref="a578dd94961bb2b0ce287d29a112740b" prefix="" category="inline-code"></block><block ref="e685e5103f8306754d61ec1a0da15686" prefix=" " category="inline-code"></block><block ref="0897acf49c7c1ea9f76efe59187aa046" prefix=" " category="inline-code"></block></block>
+  <block id="11428fc511268a2c63fa0e7ebcb2530d" category="paragraph"><block ref="ee29fb805334372351c3e459eaf40ac3" prefix="" category="inline-code"></block><block ref="e685e5103f8306754d61ec1a0da15686" prefix=" " category="inline-code"></block><block ref="0897acf49c7c1ea9f76efe59187aa046" prefix=" " category="inline-code"></block></block>
+  <block id="2af0fc8c21c11cf5ed04e0063f53931e" category="paragraph"><block ref="2af0fc8c21c11cf5ed04e0063f53931e" category="inline-link-rx"></block></block>
 </blocks>
