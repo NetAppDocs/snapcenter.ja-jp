@@ -15,18 +15,18 @@ summary: ホストを追加してプラグインパッケージをインスト�
 
 * iSCSIを使用している場合は、iSCSIサービスが実行されている必要があります。
 * ローカル管理者Privilegesを持つドメインユーザと、リモートホストに対するローカルログイン権限が必要です。
-* スタンドアロン構成およびデータベース可用性グループ構成にMicrosoft Exchange Server 2013、2016、または2019を使用している必要があります。
+* スタンドアロン構成およびデータベース可用性グループ構成には、Microsoft Exchange Server を使用する必要があります。サポートされている Microsoft Exchange Server のバージョンについては、link:https://imt.netapp.com/imt/#search["Interoperability Matrix Tool（IMT）"^]を参照してください。
 * Windowsホストにプラグインをインストールするときに、組み込みでないクレデンシャルを指定した場合やユーザがローカルワークグループに属している場合は、ホストのUACを無効にする必要があります。
 * SnapCenter でクラスタノードを管理する場合は、クラスタ内のすべてのノードに対する管理者権限を持つユーザが必要です。
 * Exchange Serverの管理権限を持つユーザが必要です。
 * SnapManager for Microsoft Exchange ServerおよびSnapDrive for Windowsがすでにインストールされている場合は、SnapCenterを使用したデータ保護を確実に行うために、同じExchange ServerにPlug-in for Exchangeをインストールする前に、SnapDrive for Windowsで使用するVSSハードウェアプロバイダの登録を解除する必要があります。
 * SnapManager for Microsoft Exchange Server と Plug-in for Exchange が同じサーバにインストールされている場合は、 SnapManager for Microsoft Exchange Server で作成されたすべてのスケジュールを Windows スケジューラから一時停止または削除する必要があります。
 * ホストをサーバから完全修飾ドメイン名（FQDN）に解決できる必要があります。hosts ファイルが解決可能になるように変更され、短縮名と FQDN の両方が hosts ファイルに指定されている場合は、 SnapCenter hosts ファイルに次の形式でエントリを作成します： _<IP_address> <host_fqdn><host_name> _ 。
-* 次のポートがファイアウォールでブロックされていないことを確認してください。ブロックされていないと、ホストの追加処理が失敗します。この問題を解決するには、ダイナミックポート範囲を設定する必要があります。詳細については、を参照してください https://docs.microsoft.com/en-us/troubleshoot/windows-server/networking/configure-rpc-dynamic-port-allocation-with-firewalls["Microsoftのドキュメント"^]。
+* ファイアウォールで以下のポートがブロックされていないことを確認してください。ブロックされている場合、ホストの追加操作は失敗します。この問題を解決するには、動的ポート範囲を設定する必要があります。詳細については、 https://docs.microsoft.com/en-us/troubleshoot/windows-server/networking/configure-rpc-dynamic-port-allocation-with-firewalls["Microsoftのドキュメント"^]を参照してください。サポートされているバージョンのMicrosoft Exchange Serverについては、link:https://imt.netapp.com/imt/#search["Interoperability Matrix Tool（IMT）"^]を参照してください。
 +
-** ポート範囲50000～51000（Windows 2016およびExchange 2016の場合）
-** Windows Server 2012 R2およびExchange 2013のポート範囲6000~6500
 ** Windows 2019のポート範囲49152~65536
+** ポート範囲50000～51000（Windows 2016およびExchange 2016の場合）
+** Windows Server 2012 R2とExchange 2013のポート範囲は6,000～6,500です。
 
 
 

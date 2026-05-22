@@ -4672,16 +4672,13 @@
   <block id="e53c11d95478892635e2a7753106adc5" category="summary">ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。</block>
   <block id="690761e3a499ee562da842d3bd6f2db0" category="doc">ホストを追加してSnapCenter Plug-in for Microsoft Exchange Serverをインストールするための前提条件</block>
   <block id="8dd7d2aae8c4a449ae4eb17577d64964" category="list-text">iSCSIを使用している場合は、iSCSIサービスが実行されている必要があります。</block>
-  <block id="3135b36cd939fa03c3be552b0fbe8534" category="list-text">スタンドアロン構成およびデータベース可用性グループ構成にMicrosoft Exchange Server 2013、2016、または2019を使用している必要があります。</block>
   <block id="6f4630c11483dcb4143ae30dadd50487" category="list-text">Windowsホストにプラグインをインストールするときに、組み込みでないクレデンシャルを指定した場合やユーザがローカルワークグループに属している場合は、ホストのUACを無効にする必要があります。</block>
   <block id="28d2b8ff10c1db028f2426c313a6f6ac" category="list-text">Exchange Serverの管理権限を持つユーザが必要です。</block>
   <block id="b387198e1b998aa635e2ad89704fa61e" category="list-text">SnapManager for Microsoft Exchange ServerおよびSnapDrive for Windowsがすでにインストールされている場合は、SnapCenterを使用したデータ保護を確実に行うために、同じExchange ServerにPlug-in for Exchangeをインストールする前に、SnapDrive for Windowsで使用するVSSハードウェアプロバイダの登録を解除する必要があります。</block>
   <block id="e14f254ce5508b044595b70ba76e2dd9" category="list-text">SnapManager for Microsoft Exchange Server と Plug-in for Exchange が同じサーバにインストールされている場合は、 SnapManager for Microsoft Exchange Server で作成されたすべてのスケジュールを Windows スケジューラから一時停止または削除する必要があります。</block>
   <block id="363807fbbec214888e9bb4ab89312c45" category="list-text">ホストをサーバから完全修飾ドメイン名（FQDN）に解決できる必要があります。hosts ファイルが解決可能になるように変更され、短縮名と FQDN の両方が hosts ファイルに指定されている場合は、 SnapCenter hosts ファイルに次の形式でエントリを作成します： _&lt;IP_address&gt; &lt;host_fqdn&gt;&lt;host_name&gt; _ 。</block>
   <block id="727d6ec7c143ece348a58c5723f2f025" category="inline-link">Microsoftのドキュメント</block>
-  <block id="49178d8917274413da493299118d6557" category="list-text">次のポートがファイアウォールでブロックされていないことを確認してください。ブロックされていないと、ホストの追加処理が失敗します。この問題を解決するには、ダイナミックポート範囲を設定する必要があります。詳細については、を参照してください<block ref="70d4a5fd2803e35738264291f84fc1aa" category="inline-link-rx"></block>。</block>
   <block id="16b480a328aa6342db0d1f44787d9eaf" category="list-text">ポート範囲50000～51000（Windows 2016およびExchange 2016の場合）</block>
-  <block id="3d865e6796dba371ef2bbaf9003ed1eb" category="list-text">Windows Server 2012 R2およびExchange 2013のポート範囲6000~6500</block>
   <block id="2973bd6a9b781fc2968849d58205311c" category="list-text">Windows 2019のポート範囲49152~65536</block>
   <block id="fe76fc133ce5d0e6aa2e73fa56ca464c" category="paragraph">ポート範囲を特定するには、次のコマンドを実行します。</block>
   <block id="70766abc1e0d9fa835c550fd65fe8108" category="list-text">netsh int ipv4 show dynamicport tcp</block>
@@ -9641,4 +9638,7 @@
   <block id="0ff275ffe02e672fcd7c5215c9cbcfb6" category="paragraph"><block ref="a578dd94961bb2b0ce287d29a112740b" prefix="" category="inline-code"></block><block ref="e685e5103f8306754d61ec1a0da15686" prefix=" " category="inline-code"></block><block ref="0897acf49c7c1ea9f76efe59187aa046" prefix=" " category="inline-code"></block></block>
   <block id="11428fc511268a2c63fa0e7ebcb2530d" category="paragraph"><block ref="ee29fb805334372351c3e459eaf40ac3" prefix="" category="inline-code"></block><block ref="e685e5103f8306754d61ec1a0da15686" prefix=" " category="inline-code"></block><block ref="0897acf49c7c1ea9f76efe59187aa046" prefix=" " category="inline-code"></block></block>
   <block id="2af0fc8c21c11cf5ed04e0063f53931e" category="paragraph"><block ref="2af0fc8c21c11cf5ed04e0063f53931e" category="inline-link-rx"></block></block>
+  <block id="58065290ed803cdf3874ac1d4114dcef" category="list-text">スタンドアロン構成およびデータベース可用性グループ構成には、Microsoft Exchange Server を使用する必要があります。サポートされている Microsoft Exchange Server のバージョンについては、<block ref="a56461e56210fb5ec91e8f031015b65a" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="00ae82bfdfa80871841f81003a4c71b8" category="list-text">ファイアウォールで以下のポートがブロックされていないことを確認してください。ブロックされている場合、ホストの追加操作は失敗します。この問題を解決するには、動的ポート範囲を設定する必要があります。詳細については、<block ref="70d4a5fd2803e35738264291f84fc1aa" category="inline-link-rx"></block>を参照してください。サポートされているバージョンのMicrosoft Exchange Serverについては、<block ref="a56461e56210fb5ec91e8f031015b65a" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="e009ef54959ef44bca3f7d7710210754" category="list-text">Windows Server 2012 R2とExchange 2013のポート範囲は6,000～6,500です。</block>
 </blocks>
