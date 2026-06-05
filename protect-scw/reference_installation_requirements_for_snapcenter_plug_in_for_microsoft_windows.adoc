@@ -65,7 +65,7 @@ NOTE: 十分なディスクスペースを割り当て、logsフォルダによ�
  a| 
 必要なソフトウェアパッケージ
  a| 
-* ASP.NET Core Runtime 8.0.12（およびそれ以降のすべての8.0.xパッチ）Hosting Bundle
+* ASP.NET Core Runtime 8.0.24（およびそれ以降のすべての 8.0.x パッチ） Hosting Bundle
 * PowerShell 7.4.13
 
 

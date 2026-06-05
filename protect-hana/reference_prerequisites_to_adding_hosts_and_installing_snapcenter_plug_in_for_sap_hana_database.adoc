@@ -13,7 +13,7 @@ summary: ホストを追加してプラグインパッケージをインスト�
 [role="lead"]
 ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。SnapCenter Plug-in for SAP HANA Database は、 Windows と Linux のどちらの環境でも使用できます。
 
-* Java 17をホストにインストールしておく必要があります。
+* ホストにJava 17、Java 11（SnapCenter 6.2のみ）をインストールしておく必要があります。
 +
 
 NOTE: IBM Java は Windows および Linux ホストではサポートされていません。
@@ -33,7 +33,7 @@ NOTE: IBM Java は Windows および Linux ホストではサポートされて�
 * ローカル管理者Privilegesを持つドメインユーザと、リモートホストに対するローカルログイン権限が必要です。
 * Plug-in for SAP HANA DatabaseをWindowsホストにインストールすると、SnapCenter Plug-in for Microsoft Windowsが自動的にインストールされます。
 * rootユーザまたはroot以外のユーザに対してパスワードベースのSSH接続を有効にしておく必要があります。
-* Java 17をWindowsホストにインストールしておく必要があります。
+* Windowsホストには、Java 17、Java 11（SnapCenter 6.2のみ）がインストールされている必要があります。
 +
 link:https://www.oracle.com/java/technologies/downloads/#java17["すべてのオペレーティング システム用の Java をダウンロード"]
 
@@ -44,7 +44,7 @@ link:https://www.oracle.com/java/technologies/downloads/#java17["すべてのオ
 == Linuxホスト
 
 * rootユーザまたはroot以外のユーザに対してパスワードベースのSSH接続を有効にしておく必要があります。
-* Java 17をLinuxホストにインストールしておく必要があります。
+* Linux ホストに Java 17、Java 11（SnapCenter 6.2 のみ）をインストールしておく必要があります。
 +
 link:https://www.oracle.com/java/technologies/downloads/#java17["すべてのオペレーティング システム用の Java をダウンロード"]
 

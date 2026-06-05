@@ -16,7 +16,7 @@ SnapCenter Plug-in for PostgreSQLを使用する前に、SnapCenter管理者がS
 * SnapCenterサーバをインストールして設定します。
 * SnapCenterサーバにログインします。
 * 必要に応じて、ストレージシステム接続を追加し、クレデンシャルを作成してSnapCenter環境を設定します。
-* LinuxホストまたはWindowsホストにJava 17をインストールします。
+* Linux または Windows ホストに Java 17、Java 11（SnapCenter 6.2 のみ）をインストールします。
 +
 Javaのパスは、ホストマシンの環境パス変数で設定する必要があります。
 

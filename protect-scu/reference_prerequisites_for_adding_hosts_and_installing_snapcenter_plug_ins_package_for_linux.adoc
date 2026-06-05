@@ -16,13 +16,17 @@ summary: ホストを追加してプラグインパッケージをインスト�
 * iSCSIを使用している場合は、iSCSIサービスが実行されている必要があります。
 * rootユーザまたはroot以外のユーザ、またはSSHキーベースの認証にはパスワードベースの認証を使用できます。
 +
+
+NOTE: RSAキーは、SnapCenterでサポートされている唯一のSSHキー形式です。SSHキーの作成方法の詳細については、ナレッジベースの記事link:https://kb.netapp.com/data-mgmt/SnapCenter/SC_KBs/How_to_create_an_RSA_key_for_SnapCenter_SSH_Key_Based_credential["SnapCenter SSHキーベースの認証情報用のRSAキーの作成方法"^]を参照してください。
+
++
 SnapCenter Plug-in for Unix File Systemsは、root以外のユーザがインストールできます。ただし、プラグインプロセスをインストールして開始するには、root以外のユーザにsudo権限を設定する必要があります。プラグインのインストール後、プロセスはroot以外の有効なユーザとして実行されます。
 
 * インストールユーザのクレデンシャルを、認証モードをLinuxに設定して作成します。
-* Java 17をLinuxホストにインストールしておく必要があります。
+* Linux ホストに Java 17、Java 11（SnapCenter 6.2 のみ）をインストールしておく必要があります。
 +
 
-NOTE: Linuxホストには、Java 17の認定版のみがインストールされていることを確認してください。
+NOTE: Linuxホスト上にJava 17、Java 11（SnapCenter 6.2のみ）の認定版のみをインストールしていることを確認してください。
 
 +
 Javaのダウンロードに関する情報については、link:https://www.oracle.com/java/technologies/downloads/#java17["すべてのオペレーティング システム用の Java をダウンロード"^]を参照してください。
@@ -70,12 +74,12 @@ NOTE: 十分なディスクスペースを割り当て、logsフォルダによ�
  a| 
 必要なソフトウェアパッケージ
  a| 
-Java 17（Oracle JavaおよびOpenJDK）
+Java 17（Oracle JavaまたはOpenJDK）、Java 11（SnapCenter 6.2のみ）
 
 
-NOTE: Linuxホストには、Java 17の認定版のみがインストールされていることを確認してください。
+NOTE: Linuxホスト上にJava 17、Java 11（SnapCenter 6.2のみ）の認定版のみをインストールしていることを確認してください。
 
 Javaを最新バージョンにアップグレードした場合は、/var/opt/snapcenter/spl/etc/spl.propertiesにあるJAVA_HOMEオプションが正しいJavaバージョンと正しいパスに設定されていることを確認する必要があります。
 
 |===
-サポートされているバージョンに関する最新情報については、 https://imt.netapp.com/imt/imt.jsp?components=180320;180338;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool"] 。
+サポートされているバージョンの最新情報については、 https://imt.netapp.com/imt/imt.jsp?components=180320;180338;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool"^]を参照してください。

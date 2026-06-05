@@ -16,7 +16,7 @@ summary: SnapCenter サーバインストーラの実行ファイルを使用し
 .開始する前に
 * SnapCenter Server ホストを最新の Windows 更新プログラムで更新し、保留中のシステム再起動がないことを確認します。
 * アップグレードを開始する前に、他の操作が実行されていないことを確認してください。
-* ASP.NET Core ランタイム 8.0.12 (およびそれ以降のすべての 8.0.x パッチ) ホスティング バンドルと PowerShell 7.4.2 以降をインストールします。
+* ASP.NET Core Runtime 8.0.24（およびそれ以降のすべての 8.0.x パッチ）Hosting Bundle および PowerShell 7.4.2 以降をインストールします。
 * ジョブが実行されていないことを確認した後、 SnapCenterリポジトリ (MySQL) データベースをバックアップします。SnapCenter ServerとExchangeプラグインをアップグレードする前に、これを行っておくことが推奨されます。
 +
 詳細については、を参照してください link:../admin/concept_manage_the_snapcenter_server_repository.html#back-up-the-snapcenter-repository["SnapCenterリポジトリのバックアップ"^]。
