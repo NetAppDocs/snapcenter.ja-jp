@@ -17,7 +17,8 @@ SnapCenter NetAppでサポートされるプラグインを使用する前に、
 * SnapCenterサーバにログインします。
 * 必要に応じて、ストレージシステム接続を追加し、クレデンシャルを作成してSnapCenter環境を設定します。
 * ホストを追加し、プラグインをインストールしてアップロードします。
-* 該当する場合は、プラグインホストにJava 17、Java 11（SnapCenter 6.2のみ）をインストールします。
+* 該当する場合は、SnapCenter 6.2.1以降用にJava 17（Oracle JavaまたはOpenJDK）をインストールするか、または
+* プラグインホスト上のSnapCenter 6.2以前用のJava 11。
 * データパス（LIF）が複数ある場合やdNFS構成を使用している場合は、データベースホストでSnapCenter CLIを使用して次の作業を実行できます。
 +
 ** デフォルトでは、データベースホストのすべての IP アドレスが、クローンボリュームの Storage Virtual Machine （ SVM ）の NFS ストレージエクスポートポリシーに追加されます。特定のIPアドレスを使用する場合、またはIPアドレスのサブセットに制限する場合は、Set-PreferredHostIPsInStorageExportPolicy CLIを実行します。

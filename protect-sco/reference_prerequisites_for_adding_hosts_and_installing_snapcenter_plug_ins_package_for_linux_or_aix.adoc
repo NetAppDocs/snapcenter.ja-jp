@@ -23,13 +23,14 @@ SnapCenter Plug-in for Oracle Database は、 root 以外のユーザがイン�
 SnapCenter Plug-ins Package for AIXは、ファイルレベルのシンボリックリンクを自動的に解決しますが、JAVA_HOMEの絶対パスを取得するためのディレクトリレベルのシンボリックリンクは解決しません。
 
 * インストールユーザのクレデンシャルを、認証モードをLinuxまたはAIXに設定して作成します。
-* Linux または AIX ホストに Java 17、Java 11（SnapCenter 6.2 のみ）をインストールしておく必要があります。
+* Java 17 をインストールする必要があります（SnapCenter 6.2.1 以降）または
+* Linux または AIX ホスト上の Java 11（SnapCenter 6.2 以前の場合）。
 +
 ** LinuxではOracleのJavaとOpenJDKがサポートされています。
 ** IBM Java for AIX。 https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?version=17&os=AIX["IBM Semeruランタイムのダウンロード"^]からダウンロードできます。
 +
 
-NOTE: Linuxホスト上にJava 17、Java 11（SnapCenter 6.2のみ）の認定版のみをインストールしていることを確認してください。
+NOTE: Linux ホストに Java 17 の認定版のみ（SnapCenter 6.2.1 以降の場合）または Java 11（SnapCenter 6.2 以前の場合）がインストールされていることを確認してください。
 
 
 
@@ -91,10 +92,12 @@ NOTE: 十分なディスクスペースを割り当て、logsフォルダによ�
  a| 
 必要なソフトウェアパッケージ
  a| 
-Java 17（Oracle または OpenJDK）、Java 11（SnapCenter 6.2のみ）
+* SnapCenter 6.2.1以降の場合はJava 17（OracleまたはOpenJDK）、または
+* SnapCenter 6.2以前用のJava 11
 
 
-NOTE: Linuxホスト上にJava 17、Java 11（SnapCenter 6.2のみ）の認定版のみをインストールしていることを確認してください。
+
+NOTE: Linux ホストに SnapCenter 6.2.1 以降用の Java 17 の認定版のみ、または SnapCenter 6.2 以前用の Java 11 の認定版のみがインストールされていることを確認してください。
 
 Javaを最新バージョンにアップグレードした場合は、/var/opt/snapcenter/spl/etc/spl.propertiesにあるJAVA_HOMEオプションが正しいJavaバージョンと正しいパスに設定されていることを確認する必要があります。
 
@@ -219,7 +222,9 @@ NOTE: 十分なディスクスペースを割り当て、logsフォルダによ�
  a| 
 必要なソフトウェアパッケージ
  a| 
-IBM Java 17、IBM Java 11（SnapCenter 6.2のみ）
+* IBM Java 17 for SnapCenter 6.2.1 以降または
+* SnapCenter 6.2以前のIBM Java 11
+
 
 Javaを最新バージョンにアップグレードした場合は、/var/opt/snapcenter/spl/etc/spl.propertiesにあるJAVA_HOMEオプションが正しいJavaバージョンと正しいパスに設定されていることを確認する必要があります。
 

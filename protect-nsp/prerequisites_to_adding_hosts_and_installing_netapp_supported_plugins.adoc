@@ -16,7 +16,8 @@ summary: ホストを追加してプラグインパッケージをインスト�
 
 NOTE: AIXでは、ストレージアプリケーションとOracleアプリケーションがサポートされます。
 
-* Linux、Windows、またはAIXホスト上にJava 17、Java 11（SnapCenter 6.2のみ）をインストールしておく必要があります。
+* SnapCenter 6.2.1以降では、Java 17（Oracle JavaまたはOpenJDK）をインストールする必要があります。または
+* Linux、Windows、またはAIXホスト上のSnapCenter 6.2以前用のJava 11。
 +
 
 NOTE: IBM Java は Windows および Linux ホストではサポートされていません。
@@ -51,9 +52,10 @@ link:https://www.oracle.com/java/technologies/downloads/#java17["Windows 用 Jav
 NOTE: AIXでは、ストレージアプリケーションとOracleアプリケーションがサポートされます。
 
 * rootユーザまたはroot以外のユーザに対してパスワードベースのSSH接続を有効にしておく必要があります。
-* Linux ホストに Java 17、Java 11（SnapCenter 6.2 のみ）をインストールしておく必要があります。
+* SnapCenter 6.2.1以降では、Java 17（Oracle JavaまたはOpenJDK）をインストールする必要があります。または
+* Linux ホスト上の SnapCenter 6.2 以前用の Java 11。
 +
-Windows Server 2019 または Windows Server 2016 を SnapCenter Server ホストに使用している場合は、Java 17、Java 11（SnapCenter 6.2 のみ）をインストールする必要があります。
+Windows Server 2019 または Windows Server 2016 を SnapCenter Server ホストに使用している場合は、SnapCenter 6.2.1 以降には Java 17（Oracle Java または OpenJDK）を、SnapCenter 6.2 以前には Java 11 をインストールする必要があります。
 
 +
 link:https://www.oracle.com/java/technologies/downloads/#java17["Linux 用 Java をダウンロード"]
@@ -140,7 +142,9 @@ NOTE: 十分なディスクスペースを割り当て、logsフォルダによ�
  a| 
 必要なソフトウェアパッケージ
  a| 
-Java 17、Java 11（SnapCenter 6.2のみ）、IBM Java
+* SnapCenter 6.2.1以降用のJava 17、IBM Javaまたは
+* SnapCenter 6.2以前用Java 11、IBM Java
+
 
 Javaを最新バージョンにアップグレードした場合は、/var/opt/snapcenter/spl/etc/spl.propertiesにあるJAVA_HOMEオプションが正しいJavaバージョンと正しいパスに設定されていることを確認する必要があります。
 

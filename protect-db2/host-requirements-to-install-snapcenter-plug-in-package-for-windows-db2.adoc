@@ -48,7 +48,8 @@ NOTE: 十分なディスクスペースを割り当て、logsフォルダによ�
  a| 
 * ASP.NET Core Runtime 8.0.24（およびそれ以降のすべての 8.0.x パッチ） Hosting Bundle
 * PowerShell 7.4.13
-* Java 17（Oracle JavaまたはOpenJDK）、Java 11（SnapCenter 6.2のみ）
+* SnapCenter 6.2.1以降の場合はJava 17（Oracle JavaまたはOpenJDK）、または
+* SnapCenter 6.2以前用のJava 11
 
 
 用。 NET固有のトラブルシューティング情報。を参照してください。 https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_upgrade_or_install_fails_with_This_KB_is_not_related_to_the_OS["インターネットに接続されていない従来型システムでは、SnapCenter のアップグレードまたはインストールが失敗します。"]

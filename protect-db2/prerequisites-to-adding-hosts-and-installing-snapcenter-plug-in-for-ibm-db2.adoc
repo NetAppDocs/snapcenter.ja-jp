@@ -13,7 +13,8 @@ summary: ホストを追加してプラグインパッケージをインスト�
 [role="lead"]
 ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。SnapCenter Plug-in for IBM DB2は、Windows、Linux、AIXの各環境でサポートされています。
 
-* ホストにJava 17、Java 11（SnapCenter 6.2のみ）をインストールしておく必要があります。
+* SnapCenter 6.2.1以降では、Java 17（Oracle JavaまたはOpenJDK）をインストールする必要があります。または
+* ホスト上のSnapCenter 6.2以前用のJava 11。
 +
 
 NOTE: IBM Java は Windows および Linux ホストではサポートされていません。
@@ -30,7 +31,8 @@ NOTE: IBM Java は Windows および Linux ホストではサポートされて�
 * ローカル管理者Privilegesを持つドメインユーザと、リモートホストに対するローカルログイン権限が必要です。
 * Plug-in for IBM DB2をWindowsホストにインストールすると、SnapCenter Plug-in for Microsoft Windowsが自動的にインストールされます。
 * rootユーザまたはroot以外のユーザに対してパスワードベースのSSH接続を有効にしておく必要があります。
-* Windowsホストには、Java 17、Java 11（SnapCenter 6.2のみ）がインストールされている必要があります。
+* SnapCenter 6.2.1以降では、Java 17（Oracle JavaまたはOpenJDK）をインストールする必要があります。または
+* ホスト上のSnapCenter 6.2以前用のJava 11。
 +
 link:https://www.oracle.com/java/technologies/downloads/#java17["Windows 用 Java をダウンロード"^]
 
@@ -41,7 +43,8 @@ link:https://www.oracle.com/java/technologies/downloads/#java17["Windows 用 Jav
 == LinuxホストとAIXホスト
 
 * rootユーザまたはroot以外のユーザに対してパスワードベースのSSH接続を有効にしておく必要があります。
-* Linux または AIX ホストに Java 17、Java 11（SnapCenter 6.2 のみ）をインストールしておく必要があります。
+* SnapCenter 6.2.1以降では、Java 17（Oracle JavaまたはOpenJDK）をインストールする必要があります。または
+* Linux または AIX ホスト上の SnapCenter 6.2 以前用の Java 11。
 +
 link:https://www.oracle.com/java/technologies/downloads/#java17["Linux 用 Java をダウンロード"^]
 

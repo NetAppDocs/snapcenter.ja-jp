@@ -2062,7 +2062,6 @@
   <block id="9f101c0e6e5929a04c9e7663fdf91eda" category="paragraph">15GB</block>
   <block id="eab6f98d53a6f96361c17edca2b02553" category="paragraph">SnapCenterリポジトリ用の最小ハードドライブ容量</block>
   <block id="d6874413f4fac004d1cb83f02eccc33c" category="admonition">メモ： SnapCenter リポジトリがインストールされているドライブに SnapCenter サーバがある場合は、 15GB にすることを推奨します。</block>
-  <block id="4c6ec01f6ae03e08c146fe6865423a4b" category="list-text">PowerShell 7.4.2以降</block>
   <block id="149d1be25c7d76696b875863179ac66d" category="list-text">nginxはリバースプロキシとして使用できるWebサーバ</block>
   <block id="6d4ed4face9b51c5caae12208e47fa1e" category="paragraph">PAM（Pluggable Authentication Modules）は、システム管理者が認証を行うプログラムを再コンパイルすることなく認証ポリシーを設定できるシステムセキュリティツールです。</block>
   <block id="ba7cbf773bd0f0004c4d97fba5034cdb" category="summary">サポートされるストレージシステム、アプリケーション、およびデータベースを確認しておく必要があります。</block>
@@ -7653,7 +7652,6 @@
   <block id="b9eabe260cd8a0a2c241b35d09dfb062" category="paragraph">オプションは、プラグインを手動でインストールしたあとに、プラグインをインストールするための要件をホストが満たしているかどうかを検証しない場合に使用でき<block ref="340b7328d82897326900685536aac803" prefix=" " category="inline-code"></block> ます。</block>
   <block id="7372096d67d7a00d21e644f03bd6b3f6" category="summary">SnapCenter Plug-in for Microsoft Windows を SnapCenter の GUI からリモートでインストールできない場合は、 Windows ホスト上にローカルにインストールできます。SnapCenter Plug-in for Microsoft Windows のインストールプログラムを、 Windows のコマンドラインからサイレントモードで自動的に実行できます。</block>
   <block id="3065bc79c85488f5e9c34540aa589dee" category="doc">コマンドラインからのSnapCenter Plug-in for Microsoft Windowsのサイレントインストール</block>
-  <block id="06b79cf9e641e40d79092a668abcecac" category="list-text">PowerShell 7.4.2以降がインストールされている必要があります。</block>
   <block id="3f9e658ebdc571b944cc7a6bb94fa2fc" category="list-text">ホストのローカル管理者である必要があります。</block>
   <block id="012cef6769a01d5c95c3bd84a1587de6" category="list-text">インストールの場所から、 SnapCenter Plug-in for Microsoft Windows をダウンロードします。</block>
   <block id="e0080a28dd770f19702e65fb9e7b8c86" category="paragraph">たとえば、デフォルトのインストールパスはC：\ProgramData\NetApp\SnapCenter\Package Repositoryです。</block>
@@ -8333,10 +8331,7 @@
   <block id="41d1b82d8194a6e390428f5e2eace78b" category="paragraph">アンインストールを確認するための確認入力に0以外の値を入力します。</block>
   <block id="a7e402a09cf33c2060ecbdb749dd7977" category="summary">SnapCenterは、NetAppサポートサイトと定期的に通信し、利用可能なソフトウェア更新についてユーザに通知します。スケジュールを作成して、利用可能な更新に関する情報を受信する間隔を指定することもできます。</block>
   <block id="243fa8b3087ff5e0b8de4d51c71aa24c" category="doc">利用可能なアップデートを確認するためのSnapCenterの設定</block>
-  <block id="86d9a4e53238020341a7cca7bbe68ff8" category="list-text">[設定]ページで、*[ソフトウェア]*をクリックします。</block>
   <block id="677b4f66c084ede8f48394ab8ce8969c" category="paragraph">[Available Software]ページには、使用可能なプラグインパッケージ、使用可能なバージョン、およびインストールステータスが表示されます。</block>
-  <block id="79f9ba8457e2aeaced209e98800790ef" category="list-text">[ * アップデートの確認 * ] をクリックして、新しいバージョンのプラグインパッケージが利用可能かどうかを確認します。</block>
-  <block id="55f0dab8010fdb26ffb7d3d63275f2bd" category="list-text">[ スケジュール更新 ] をクリックして、利用可能な更新に関する情報を受け取る間隔を指定するスケジュールを作成します。</block>
   <block id="e218113d9d20db943c1804f6d106df38" category="list-text">[ 更新の確認 *] で間隔を選択します。</block>
   <block id="644de64c921a575ddfcd3087ae6d3de1" category="list-text">SnapCenter サーバ管理ウィンドウの資格情報を選択し、 * OK * をクリックします。</block>
   <block id="c589a9c8b3b9ae7adc1d5609288b15f4" category="summary">SnapCenter サーバインストーラの実行ファイルを使用して、 SnapCenter サーバをアップグレードできます。</block>
@@ -8627,7 +8622,6 @@
   <block id="c5161716a036dddca2f68cda30000d0f" category="paragraph">== NLBからF5に切り替えて高可用性を実現</block>
   <block id="156a5008fbec69c3f4a424d5bca0e1d8" category="admonition">SnapCenter AdvancedとSnapCenter NASファイルサービスのライセンスは廃止され、現在は提供されていません。Amazon FSx for NetApp ONTAP、ONTAP Select、Cloud Volumes ONTAP、Azure NetApp Filesに標準ライセンスと容量ベースライセンスは不要になりました。</block>
   <block id="dbd495ad96b61252237734b22b1ddf62" category="admonition">ユーザ名とグループ名に使用できる特殊文字は、スペース（）、ハイフン（-）、アンダースコア（_）、コロン（:）です。</block>
-  <block id="3c1eae5e6ea0b19f0a43abeaee269bc2" category="paragraph">必要に応じて、PowerShellコマンドレットを使用して、いくつかのインストールと設定の手順を実行できます。PowerShell 7.4.2以降を使用している必要があります。</block>
   <block id="5d825eb71cc82b0659f98bbe8206a991" category="paragraph">一元化されたプラグインホストでもHANAシステムホストでもかまいません。</block>
   <block id="1d98dbd46a33302abdc8ef53dd47dfbc" category="admonition">他のホストのHANAデータベースを管理する一元化されたホストにHANAプラグインをインストールした場合、クローンの作成または削除時に、ターゲットサーバが一元化されたホストであるため、SnapCenterではホスト側の処理（ファイルシステムのマウントまたはアンマウント）が意図的にスキップされます。マウントおよびアンマウント処理を実行するには、クローニング前またはクローニング後のカスタムスクリプトを使用する必要があります。</block>
   <block id="8daa80e39a9f9c433d3ff261cfefbbc1" category="list-text">[Policy type]ページで、次の手順を実行します。</block>
@@ -9610,7 +9604,6 @@
   <block id="fed22bd00ec1bb7537e843bbc0886bcc" category="doc">SnapCenter software 6.2.1の新機能</block>
   <block id="f6a2ad4b89455cf23e3e4843e1f51aee" category="inline-link-macro">SnapCenter 6.2.1 リリースノート</block>
   <block id="f0de22be0ad3dd3c1e51ed207f0e298e" category="paragraph">SnapCenterソフトウェアの6.2.1リリースには、新機能や機能強化はありません。SnapCenterサーバーとプラグインの既知のバグ修正と適格バージョンのアップデートのみが含まれています。詳細については、<block ref="f297672c4e3c5441ce384d3bd8457e0c" category="inline-link-macro-rx"></block>を参照してください。</block>
-  <block id="8ca913d8030ab27ecf31b8863c908b83" category="list-text">Windows プラグイン ホストに PowerShell 7.4.13 がインストールされていることを確認してください。</block>
   <block id="92f7e9adcc0061bde4c2abd78f00e01e" category="paragraph">CA証明書をSnapCenter Plug-in for VMware vSphereで構成するには、<block ref="e0ef04da7ad7ee6e29cb49ed5497582e" category="inline-link-rx"></block>を参照してください。</block>
   <block id="0ff275ffe02e672fcd7c5215c9cbcfb6" category="paragraph"><block ref="a578dd94961bb2b0ce287d29a112740b" prefix="" category="inline-code"></block><block ref="e685e5103f8306754d61ec1a0da15686" prefix=" " category="inline-code"></block><block ref="0897acf49c7c1ea9f76efe59187aa046" prefix=" " category="inline-code"></block></block>
   <block id="11428fc511268a2c63fa0e7ebcb2530d" category="paragraph"><block ref="ee29fb805334372351c3e459eaf40ac3" prefix="" category="inline-code"></block><block ref="e685e5103f8306754d61ec1a0da15686" prefix=" " category="inline-code"></block><block ref="0897acf49c7c1ea9f76efe59187aa046" prefix=" " category="inline-code"></block></block>
@@ -9621,27 +9614,48 @@
   <block id="89f809cf75828a2d4c90b8f6a2d824a8" category="list-text">ASP.NET Core Runtime 8.0.24（およびそれ以降のすべての 8.0.x パッチ） Hosting Bundle</block>
   <block id="2ec3c1941108a0b73ba16cd1f51e91a2" category="list-text">(Oracle JavaまたはOpenJDK) (またはSnapCenter 6.2の場合はJava 11)</block>
   <block id="4fcda169e2d730f4d7e58ab11dada974" category="paragraph">+.NET Frameworkの機能+</block>
-  <block id="937b867b6811c326a6fb0a62d27cf6a6" category="paragraph">*事前チェックをスキップ*チェックボックスを選択していない場合、ホストがプラグインのインストール要件を満たしているかどうかを確認するためにホストが検証されます。ディスク容量、RAM、PowerShellバージョン、.NETバージョン、場所（Windowsプラグインの場合）、およびJava 17、Java 11（SnapCenter 6.2のみ）がWindowsおよびLinuxプラグインの両方について最小要件に対して検証されます。最小要件を満たしていない場合は、適切なエラーメッセージまたは警告メッセージが表示されます。</block>
-  <block id="98404830bda33c326f08421f8e66a557" category="paragraph">Java 17（Oracle JavaまたはOpenJDK）、Java 11（SnapCenter 6.2のみ）</block>
-  <block id="d9699e478a64c2cd9e68890eeb4ee28c" category="list-text">Linux または Windows ホストに Java 17、Java 11（SnapCenter 6.2 のみ）をインストールします。</block>
-  <block id="04f3c2e1748713ce6ffb6d71f40813eb" category="list-text">ホストにJava 17、Java 11（SnapCenter 6.2のみ）をインストールしておく必要があります。</block>
-  <block id="56207fd8e31acfaba8fc77b4284c626b" category="list-text">Windowsホストには、Java 17、Java 11（SnapCenter 6.2のみ）がインストールされている必要があります。</block>
-  <block id="b074c2b09d4eae87877d27f927846db1" category="list-text">Linux または AIX ホストに Java 17、Java 11（SnapCenter 6.2 のみ）をインストールしておく必要があります。</block>
-  <block id="ecfe67e2a421ab06268efcf96e930ce4" category="list-text">Linux ホストに Java 17、Java 11（SnapCenter 6.2 のみ）をインストールしておく必要があります。</block>
-  <block id="c9e8463e6bf45b62fd2a34f2725df1ab" category="list-text">該当する場合は、プラグインホストにJava 17、Java 11（SnapCenter 6.2のみ）をインストールします。</block>
-  <block id="6c2994c44d696dc528a1d8049851e839" category="list-text">Linux、Windows、またはAIXホスト上にJava 17、Java 11（SnapCenter 6.2のみ）をインストールしておく必要があります。</block>
-  <block id="a89d2fe9f2ff0a8e1e92d72cd2f9f49c" category="paragraph">Windows Server 2019 または Windows Server 2016 を SnapCenter Server ホストに使用している場合は、Java 17、Java 11（SnapCenter 6.2 のみ）をインストールする必要があります。</block>
-  <block id="f4efa9e0b8156c9a98c0e876cd85ffa4" category="paragraph">Java 17、Java 11（SnapCenter 6.2のみ）、IBM Java</block>
-  <block id="54a91fc01e87691018b949fcec747376" category="list-text">Linux または AIX ホストに Java 17、Java 11（SnapCenter 6.2 のみ）をインストールしておく必要があります。</block>
-  <block id="8c3fd16186617c8701712d39240492eb" category="admonition">Linuxホスト上にJava 17、Java 11（SnapCenter 6.2のみ）の認定版のみをインストールしていることを確認してください。</block>
-  <block id="aaf42b0e39de3b7c551c103b09e31930" category="paragraph">Java 17（Oracle または OpenJDK）、Java 11（SnapCenter 6.2のみ）</block>
-  <block id="5f225ab9372945dab0ec755670f88ea5" category="paragraph">IBM Java 17、IBM Java 11（SnapCenter 6.2のみ）</block>
   <block id="665be5e1b9dadcbb7301375fc518ac35" category="inline-link-macro">SnapCenter SSHキーベースの認証情報用のRSAキーの作成方法</block>
   <block id="3b7da8598a81d63ce4f466a50cc7f36d" category="admonition">RSAキーは、SnapCenterでサポートされている唯一のSSHキー形式です。SSHキーの作成方法の詳細については、ナレッジベースの記事<block ref="d40341440b723151f44e615b4ce137a9" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="017b89dbeed4d6c39a07b04821e77062" category="paragraph">サポートされているバージョンの最新情報については、<block ref="7bd33b95d0920bcbb6caeb370fe1470a" category="inline-link-rx"></block>を参照してください。</block>
   <block id="3bb60a37742e52f43083aadd15b42634" category="admonition">File System Consistentの場合、ボリュームグループに含まれるLUNに対して、整合性グループのスナップショットが作成されます。</block>
   <block id="039e5b00c69b5f0b1d8102eed90a99d2" category="admonition">リソースグループに異なるファイルシステムを追加した場合、リソースグループ内の異なるファイルシステムに属するすべてのボリュームは、整合性グループに配置されます。「crash consistent state（障害など予期しないシャットダウン時と同様）」の状態バックアップ時には、ファイルシステムまたはボリュームが1つしかない場合でも、デフォルトで整合性グループのスナップショットが作成されます。</block>
   <block id="81dc1fd31e1618567754ef16f452f80d" category="list-text">ASP.NET Core Runtime 8.0.24（およびそれ以降のすべての 8.0.x パッチ）Hosting Bundle がインストールされている必要があります。</block>
-  <block id="2cab5653ed51756a3f6bca5df3bfda26" category="list-text">ASP.NET Core Runtime 8.0.24（およびそれ以降のすべての 8.0.x パッチ）Hosting Bundle および PowerShell 7.4.2 以降をインストールします。</block>
-  <block id="b4ded5b580f7ff4ca7eca5d658d4e55f" category="list-text">WindowsおよびLinuxプラグインホストにJava 17（Oracle JavaまたはOpenJDK）がインストールされていることを確認してください（SnapCenter 6.2のみの場合はJava 11）。</block>
+  <block id="6d379457554ecca51ab298da606eeb2d" category="list-text">PowerShell 7.4.13以降</block>
+  <block id="a169558050265df89ca0306e418e6a7b" category="paragraph">オプションで、PowerShellコマンドレットを使用していくつかのインストールおよび構成手順を実行できます。PowerShell 7.4.13以降を使用する必要があります。</block>
+  <block id="7bc90b8946c9287aa4837e2c5d0f1a81" category="paragraph">*Skip prechecks*チェックボックスを選択していない場合、ホストがプラグインのインストール要件を満たしているかどうかを確認するために検証されます。ディスク容量、RAM、PowerShellバージョン、.NETバージョン、場所（Windowsプラグインの場合）、およびJava 17（SnapCenter 6.2.1以降の場合）またはJava 11（SnapCenter 6.2以前の場合）がWindowsおよびLinuxプラグインの両方について最小要件に対して検証されます。最小要件を満たしていない場合は、適切なエラーメッセージまたは警告メッセージが表示されます。</block>
+  <block id="abfbfd83f2c483daf4440823a9e0a9ab" category="list-text">SnapCenter 6.2.1以降の場合はJava 17（Oracle JavaまたはOpenJDK）、または</block>
+  <block id="dfbd857138771ee8449cb85654e62cf2" category="list-text">SnapCenter 6.2以前用のJava 11</block>
+  <block id="ffd1a97da6d9463bfd834a42505ddd6b" category="list-text">SnapCenter 6.2.1以降の場合はJava 17（Oracle JavaまたはOpenJDK）をインストールするか、または</block>
+  <block id="546926a720f9dc7c00286127d57d2155" category="list-text">Linux または Windows ホスト上の SnapCenter 6.2 以前用の Java 11。</block>
+  <block id="5996261d2f1d31f4f804897d9e4eb07f" category="list-text">SnapCenter 6.2.1以降では、Java 17（Oracle JavaまたはOpenJDK）をインストールする必要があります。または</block>
+  <block id="3bb66432d41243ee00b353a799874a9c" category="list-text">ホスト上のSnapCenter 6.2以前用のJava 11。</block>
+  <block id="92908a41204679133faed8314eae374e" category="list-text">Linux または AIX ホスト上の SnapCenter 6.2 以前用の Java 11。</block>
+  <block id="9adc1f2bc331d9d94d9a205e48957d36" category="list-text">Windows ホスト上の SnapCenter 6.2 以前用の Java 11。</block>
+  <block id="51475d2ed2902cef48dd258ccabb797f" category="list-text">Linux ホスト上の SnapCenter 6.2 以前用の Java 11。</block>
+  <block id="43fd72623499b5234779dd47f414cbbc" category="list-text">該当する場合は、SnapCenter 6.2.1以降用にJava 17（Oracle JavaまたはOpenJDK）をインストールするか、または</block>
+  <block id="647b5ed7d2fe5d2447dab38c7968bf25" category="list-text">プラグインホスト上のSnapCenter 6.2以前用のJava 11。</block>
+  <block id="285cfe0af3a19e1eb54755170c50209c" category="list-text">Linux、Windows、またはAIXホスト上のSnapCenter 6.2以前用のJava 11。</block>
+  <block id="72ba6005a64f422a3d5be89eb973a40d" category="paragraph">Windows Server 2019 または Windows Server 2016 を SnapCenter Server ホストに使用している場合は、SnapCenter 6.2.1 以降には Java 17（Oracle Java または OpenJDK）を、SnapCenter 6.2 以前には Java 11 をインストールする必要があります。</block>
+  <block id="053398b8efb795d378bd0be3e1aa5134" category="list-text">SnapCenter 6.2.1以降用のJava 17、IBM Javaまたは</block>
+  <block id="0d7e20101a3e419a465e1b6f8a1ebc37" category="list-text">SnapCenter 6.2以前用Java 11、IBM Java</block>
+  <block id="c842fd3cfc5f62a17cf7f19fd729eaa2" category="list-text">Java 17 をインストールします（SnapCenter 6.2.1 以降）または</block>
+  <block id="ddfb156e468d0aa9a0ffb0fcdba4a8d4" category="list-text">Linux または Windows ホスト上の Java 11（SnapCenter 6.2 以前の場合）。</block>
+  <block id="109ff0460272edc0bd3491d5f2eb73e0" category="list-text">Java 17 をインストールする必要があります（SnapCenter 6.2.1 以降）または</block>
+  <block id="0c494a1e6f3783c5f3e653b10574a52b" category="list-text">ホスト上のJava 11（SnapCenter 6.2以前の場合）。</block>
+  <block id="33fbc477dfdbff390971c493832a3265" category="list-text">Windows ホスト上の Java 11（SnapCenter 6.2 以前の場合）。</block>
+  <block id="a7ef3d889d89cbb2d0e4fc54c9de1d70" category="list-text">Linux ホスト上の Java 11（SnapCenter 6.2 以前の場合）。</block>
+  <block id="a8f721a877a07dc425cb496a5a8b12c0" category="list-text">Linux または AIX ホスト上の Java 11（SnapCenter 6.2 以前の場合）。</block>
+  <block id="f046fe622c3b6e85f42746be044fc2ab" category="admonition">Linux ホストに Java 17 の認定版のみ（SnapCenter 6.2.1 以降の場合）または Java 11（SnapCenter 6.2 以前の場合）がインストールされていることを確認してください。</block>
+  <block id="ad4079e1181a0e9bb4d9fa57bb01ec8b" category="list-text">SnapCenter 6.2.1以降の場合はJava 17（OracleまたはOpenJDK）、または</block>
+  <block id="9ce62cd4575b0c0494165028b8132a2e" category="admonition">Linux ホストに SnapCenter 6.2.1 以降用の Java 17 の認定版のみ、または SnapCenter 6.2 以前用の Java 11 の認定版のみがインストールされていることを確認してください。</block>
+  <block id="94b8a8fb91d667b4a4496a600e8d33db" category="list-text">IBM Java 17 for SnapCenter 6.2.1 以降または</block>
+  <block id="9542d1521504d218851303316af3283e" category="list-text">SnapCenter 6.2以前のIBM Java 11</block>
+  <block id="b01cafc658d1fa9656a555819d02f92a" category="list-text">SnapCenter 6.2.1以降にはJava 17をインストールする必要があります。または</block>
+  <block id="a7969fc9aa7edecbc676b844a3cebb1d" category="list-text">PowerShell 7.4.13以降がインストールされている必要があります。</block>
+  <block id="5721856931f9d7a5db61bfbfdaa64f25" category="list-text">*設定*ページで*ソフトウェア*を選択します。</block>
+  <block id="78697add9083ce88242f5ce4c68a5ff4" category="list-text">*アップデートを確認*を選択して、新しいバージョンのプラグインパッケージが利用可能かどうかを確認します。</block>
+  <block id="0b87bff3a1b090fd638eb30e63a17a17" category="list-text">*Schedule Updates* を選択して、利用可能な更新に関する情報を受け取る間隔を指定するスケジュールを作成します：</block>
+  <block id="bcb8accb5335c40025954514ef35481e" category="list-text">ASP.NET Core Runtime 8.0.24（およびそれ以降のすべての 8.0.x パッチ）Hosting Bundle および PowerShell 7.4.13 以降をインストールします。</block>
+  <block id="0d4f9ea16fd7eba541b088d3783fd1a6" category="list-text">ASP.NET Core Runtime 8.0.24（およびそれ以降のすべての 8.0.x パッチ）Hosting Bundle とPowerShell 7.4.13 以降が Windows プラグインホストにインストールされていることを確認してください。</block>
+  <block id="a0eb79b89395199c485c81b2df9a6da3" category="list-text">SnapCenter 6.2.1以降ではJava 17（Oracle JavaまたはOpenJDK）、SnapCenter 6.2以前ではJava 11が、WindowsおよびLinuxプラグインホストにインストールされていることを確認してください。</block>
 </blocks>
