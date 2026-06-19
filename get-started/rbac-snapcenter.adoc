@@ -200,7 +200,7 @@ App Backup and Clone Adminロールには、アプリケーションのバック
  a| 
 はい
  a| 
-いいえ
+はい
  a| 
 いいえ
 
