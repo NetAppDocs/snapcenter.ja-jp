@@ -13,8 +13,7 @@ summary: ホストを追加してプラグインパッケージをインスト�
 [role="lead"]
 ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。SnapCenter Plug-in for SAP HANA Database は、 Windows と Linux のどちらの環境でも使用できます。
 
-* SnapCenter 6.2.1以降では、Java 17（Oracle JavaまたはOpenJDK）をインストールする必要があります。または
-* ホスト上のSnapCenter 6.2以前用のJava 11。
+* ホストに Java 17 （Oracle Java、OpenJDK、または SAP JDK）（SnapCenter 6.2.1 以降の場合）または Java 11 （SnapCenter 6.2 以前の場合）をインストールしておく必要があります。
 +
 
 NOTE: IBM Java は Windows および Linux ホストではサポートされていません。
@@ -34,8 +33,7 @@ NOTE: IBM Java は Windows および Linux ホストではサポートされて�
 * ローカル管理者Privilegesを持つドメインユーザと、リモートホストに対するローカルログイン権限が必要です。
 * Plug-in for SAP HANA DatabaseをWindowsホストにインストールすると、SnapCenter Plug-in for Microsoft Windowsが自動的にインストールされます。
 * rootユーザまたはroot以外のユーザに対してパスワードベースのSSH接続を有効にしておく必要があります。
-* SnapCenter 6.2.1以降では、Java 17（Oracle JavaまたはOpenJDK）をインストールする必要があります。または
-* Windows ホスト上の SnapCenter 6.2 以前用の Java 11。
+* Windowsホストに、SnapCenter 6.2.1以降の場合はJava 17（Oracle Java、OpenJDK、またはSAP JDK）を、SnapCenter 6.2以前の場合はJava 11をインストールしておく必要があります。
 +
 link:https://www.oracle.com/java/technologies/downloads/#java17["すべてのオペレーティング システム用の Java をダウンロード"]
 
@@ -46,8 +44,7 @@ link:https://www.oracle.com/java/technologies/downloads/#java17["すべてのオ
 == Linuxホスト
 
 * rootユーザまたはroot以外のユーザに対してパスワードベースのSSH接続を有効にしておく必要があります。
-* SnapCenter 6.2.1以降では、Java 17（Oracle JavaまたはOpenJDK）をインストールする必要があります。または
-* Linux ホスト上の SnapCenter 6.2 以前用の Java 11。
+* Linuxホストに、SnapCenter 6.2.1以降の場合はJava 17（Oracle Java、OpenJDK、またはSAP JDK）を、SnapCenter 6.2以前の場合はJava 11をインストールしておく必要があります。
 +
 link:https://www.oracle.com/java/technologies/downloads/#java17["すべてのオペレーティング システム用の Java をダウンロード"]
 

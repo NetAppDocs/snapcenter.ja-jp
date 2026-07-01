@@ -48,8 +48,7 @@ NOTE: 十分なディスクスペースを割り当て、logsフォルダによ�
  a| 
 必要なソフトウェアパッケージ
  a| 
-* SnapCenter 6.2.1以降の場合はJava 17（Oracle JavaまたはOpenJDK）、または
-* SnapCenter 6.2以前用のJava 11
+* Java 17 （Oracle Java、OpenJDK、またはSAP JDK）（SnapCenter 6.2.1以降）またはJava 11（SnapCenter 6.2以前）
 
 
 Javaを最新バージョンにアップグレードした場合は、/var/opt/snapcenter/spl/etc/spl.propertiesにあるJAVA_HOMEオプションが正しいJavaバージョンと正しいパスに設定されていることを確認する必要があります。

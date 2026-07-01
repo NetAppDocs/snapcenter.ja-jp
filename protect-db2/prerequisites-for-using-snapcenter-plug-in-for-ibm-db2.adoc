@@ -16,8 +16,7 @@ SnapCenter Plug-in for IBM DB2を使用する前に、SnapCenter管理者がSnap
 * SnapCenterサーバをインストールして設定します。
 * SnapCenterサーバにログインします。
 * 必要に応じて、ストレージシステム接続を追加し、クレデンシャルを作成してSnapCenter環境を設定します。
-* SnapCenter 6.2.1以降の場合はJava 17（Oracle JavaまたはOpenJDK）をインストールするか、または
-* Linux または Windows ホスト上の SnapCenter 6.2 以前用の Java 11。
+* Linux または Windows ホストに、SnapCenter 6.2.1 以降の場合は Java 17（Oracle Java、OpenJDK、または SAP JDK）を、SnapCenter 6.2 以前の場合は Java 11 をインストールしてください。
 +
 Javaのパスは、ホストマシンの環境パス変数で設定する必要があります。
 

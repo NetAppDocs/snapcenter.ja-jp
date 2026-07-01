@@ -11,7 +11,7 @@ summary: SnapCenter software の 6.2 リリースには、いくつかの新機�
 
 
 [role="lead"]
-SnapCenter software の 6.2 リリースには、次の拡張機能が含まれています。
+SnapCenter software 6.2 リリースには、既知のバグ修正と、SnapCenter サーバーおよびプラグインの対応バージョンのアップデートが含まれています。また、以下の拡張機能も含まれています。詳細については、link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467["SnapCenter 6.2.2 リリースノート"^]を参照してください。
 
 |===
 | 更新 | 説明 

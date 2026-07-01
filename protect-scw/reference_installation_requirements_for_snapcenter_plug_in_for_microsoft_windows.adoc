@@ -65,9 +65,11 @@ NOTE: 十分なディスクスペースを割り当て、logsフォルダによ�
  a| 
 必要なソフトウェアパッケージ
  a| 
-* ASP.NET Core Runtime 8.0.24（およびそれ以降のすべての 8.0.x パッチ） Hosting Bundle
-* PowerShell 7.4.13
+* ASP.NET Core Runtime 10.0.7 Hosting Bundle（またはそれ以降のバージョン）
+* PowerShell 7.6.1（以降）
 
+
+お使いの特定のSnapCenterバージョンに対応するASP.NET CoreおよびPowerShellの最新の認定バージョンについては、link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467["SnapCenter Software Release Notes"^]を参照してください。
 
 用。 NET固有のトラブルシューティング情報。を参照してください。 https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_upgrade_or_install_fails_with_This_KB_is_not_related_to_the_OS["インターネットに接続されていない従来型システムでは、SnapCenter のアップグレードまたはインストールが失敗します。"]
 

@@ -23,8 +23,7 @@ NOTE: RSAキーは、SnapCenterでサポートされている唯一のSSHキー�
 SnapCenter Plug-in for Unix File Systemsは、root以外のユーザがインストールできます。ただし、プラグインプロセスをインストールして開始するには、root以外のユーザにsudo権限を設定する必要があります。プラグインのインストール後、プロセスはroot以外の有効なユーザとして実行されます。
 
 * インストールユーザのクレデンシャルを、認証モードをLinuxに設定して作成します。
-* SnapCenter 6.2.1以降にはJava 17をインストールする必要があります。または
-* Linux ホスト上の SnapCenter 6.2 以前用の Java 11。
+* Linuxホストに、SnapCenter 6.2.1以降の場合はJava 17を、SnapCenter 6.2以前の場合はJava 11をインストールしている必要があります。
 +
 
 NOTE: Linux ホストに SnapCenter 6.2.1 以降用の Java 17 の認定版のみ、または SnapCenter 6.2 以前用の Java 11 の認定版のみがインストールされていることを確認してください。
@@ -75,8 +74,7 @@ NOTE: 十分なディスクスペースを割り当て、logsフォルダによ�
  a| 
 必要なソフトウェアパッケージ
  a| 
-* SnapCenter 6.2.1以降の場合はJava 17（Oracle JavaまたはOpenJDK）、または
-* SnapCenter 6.2以前用のJava 11
+* Java 17 （Oracle Java、OpenJDK、またはSAP JDK）（SnapCenter 6.2.1以降）またはJava 11（SnapCenter 6.2以前）
 
 
 

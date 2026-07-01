@@ -11,10 +11,12 @@ summary: このリリースの SnapCenter サーバおよび SnapCenter プラ�
 
 
 [role="lead"]
-SnapCenter 6.2および6.2.1で利用可能な新機能と拡張機能について説明します。
+SnapCenter 6.2、6.2.1、および 6.2.2 で利用可能な新機能と強化された機能について説明します。
+
+新機能と機能強化の完全なリストについては、link:what's-new-in-snapcenter622.html["SnapCenter 6.2.2の新機能"]を参照してください。
 
 新機能と機能強化の完全なリストについては、link:what's-new-in-snapcenter621.html["SnapCenter 6.2.1の新機能"]を参照してください。
 
 新機能と機能強化の完全なリストについては、link:what's-new-in-snapcenter62.html["SnapCenter 6.2の新機能"]を参照してください。
 
-既知の問題、制限事項、修正された問題、および新規コマンドと変更されたコマンドの詳細については、 https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467["SnapCenter Software 6.2.1リリースノート"^]を参照してください。リリースノートにアクセスするには、NetAppアカウントでサインインするか、アカウントを作成する必要があります。
+既知の問題、制限事項、修正された問題、および新規コマンドと変更されたコマンドの詳細については、 https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467["SnapCenter Software 6.2.2リリースノート"^]を参照してください。リリースノートにアクセスするには、NetAppアカウントでサインインするか、アカウントを作成する必要があります。

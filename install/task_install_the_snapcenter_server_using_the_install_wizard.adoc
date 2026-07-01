@@ -120,7 +120,7 @@ Webサーバ
 +
 ** です。 NET拡張性4.5
 ** アプリケーションの初期化
-** ASP.NET Core Runtime 8.0.24（およびそれ以降のすべての 8.0.x パッチ） Hosting Bundle
+** ASP.NET Core 10.0.7 Hosting Bundle （以降）特定の SnapCenter バージョンに対応した最新の適格 ASP.NET Core バージョンについては、link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467["SnapCenter Software Release Notes"^] を参照してください。
 ** サーバー側インクルード
 ** WebSocketプロトコル
 
@@ -146,11 +146,11 @@ IIS管理スクリプトとツール
  a| 
 +.NET Frameworkの機能+
  a| 
-* ASP.NET Core Runtime 8.0.24（およびそれ以降のすべての 8.0.x パッチ） Hosting Bundle
+* ASP.NET Core Runtime 10.0.7 Hosting Bundle（またはそれ以降のバージョン）
 * Windows Communication Foundation (WCF) HTTPアクティブ化45
 +
 ** TCPのアクティブ化
-** HTTPアクティブ化
+** HTTP Activation については、特定の SnapCenter バージョンに対応した最新の ASP.NET Core の認定バージョンを link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467["SnapCenter Software Release Notes"^] で確認してください。
 
 
 

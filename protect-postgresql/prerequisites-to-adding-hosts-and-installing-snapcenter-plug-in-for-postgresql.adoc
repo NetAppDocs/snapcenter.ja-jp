@@ -13,8 +13,7 @@ summary: ホストを追加してプラグインパッケージをインスト�
 [role="lead"]
 ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。SnapCenter Plug-in for PostgreSQLは、WindowsとLinuxの両方の環境で使用できます。
 
-* Java 17 をインストールする必要があります（SnapCenter 6.2.1 以降）または
-* ホスト上のJava 11（SnapCenter 6.2以前の場合）。
+* Java 17（SnapCenter 6.2.1 以降の場合）または Java 11（SnapCenter 6.2 以前の場合）をホストにインストールしておく必要があります。
 +
 
 NOTE: IBM Java は Windows および Linux ホストではサポートされていません。
@@ -31,8 +30,7 @@ NOTE: IBM Java は Windows および Linux ホストではサポートされて�
 * ローカル管理者Privilegesを持つドメインユーザと、リモートホストに対するローカルログイン権限が必要です。
 * Plug-in for PostgreSQLをWindowsホストにインストールすると、SnapCenter Plug-in for Microsoft Windowsが自動的にインストールされます。
 * rootユーザまたはroot以外のユーザに対してパスワードベースのSSH接続を有効にしておく必要があります。
-* Java 17 をインストールする必要があります（SnapCenter 6.2.1 以降）または
-* Windows ホスト上の Java 11（SnapCenter 6.2 以前の場合）。
+* Java 17（SnapCenter 6.2.1 以降の場合）または Java 11（SnapCenter 6.2 以前の場合）を Windows ホストにインストールしている必要があります。
 +
 link:https://www.oracle.com/java/technologies/downloads/#java17["すべてのオペレーティング システム用の Java をダウンロード"]
 
@@ -43,8 +41,7 @@ link:https://www.oracle.com/java/technologies/downloads/#java17["すべてのオ
 == Linuxホスト
 
 * rootユーザまたはroot以外のユーザに対してパスワードベースのSSH接続を有効にしておく必要があります。
-* Java 17 をインストールする必要があります（SnapCenter 6.2.1 以降）または
-* Linux ホスト上の Java 11（SnapCenter 6.2 以前の場合）。
+* Java 17（SnapCenter 6.2.1 以降）または Java 11（SnapCenter 6.2 以前）を Linux ホストにインストールしておく必要があります。
 +
 link:https://www.oracle.com/java/technologies/downloads/#java17["すべてのオペレーティング システム用の Java をダウンロード"]
 
