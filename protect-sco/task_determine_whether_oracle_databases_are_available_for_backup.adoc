@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials,SnapCenter Plug-in for Oracle Databases, non-database entries, oratab 
 summary: リソースとは、SnapCenterで管理されるホスト上のOracleデータベースです。使用可能なデータベースを検出したあとに、これらのデータベースをリソースグループに追加してデータ保護処理を実行できます。 
 ---
-= バックアップに使用できるOracleデータベースを検出します
+= SnapCenter でバックアップ可能な Oracle データベースを検出する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -25,6 +25,7 @@ summary: リソースとは、SnapCenterで管理されるホスト上のOracle�
 
 
 
+[[step-1-prevent-snapcenter-from-discovering-non-database-entries]]
 == 手順1：SnapCenter でデータベース以外のエントリが検出されないようにする
 
 oratabファイルに追加されたデータベース以外のエントリがSnapCenterで検出されないようにすることができます。
@@ -66,6 +67,7 @@ IMPORTANT: SnapCenterプラグインをアップグレードする前に、sc_or
 
 
 
+[[step-2-discover-resources]]
 == ステップ2：リソースを検出する
 
 プラグインをインストールすると、そのホスト上のすべてのデータベースが自動的に検出されて[リソース]ページに表示されます。

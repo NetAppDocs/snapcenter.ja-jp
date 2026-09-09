@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for IBM Db2 
 summary: リソースのバックアップまたはクローニングを準備するときに、プライマリストレージとセカンダリストレージ上のすべてのバックアップとクローンの図を表示すると役立つことがあります。 
 ---
-= [Topology]ページでのIBM DB2のバックアップとクローンの表示
+= IBM Db2 のバックアップとクローンを SnapCenter トポロジーページで表示する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

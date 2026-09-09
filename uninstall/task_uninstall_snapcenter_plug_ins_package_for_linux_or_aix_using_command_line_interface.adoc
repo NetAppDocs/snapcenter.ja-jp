@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: uninstall plug-ins, linux, aix, command-line interface, cli 
 summary: コマンドラインインターフェイスを使用して、SnapCenter Plug-ins Package for LinuxまたはSnapCenter Plug-ins Package for AIXをアンインストールできます。 
 ---
-= CLIを使用したLinuxまたはAIX用プラグインパッケージのアンインストール
+= CLI を使用して Linux または AIX 用 SnapCenter プラグインパッケージをアンインストールする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

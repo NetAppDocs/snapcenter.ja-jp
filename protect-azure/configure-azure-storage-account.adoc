@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: snapcenter, azure, azure storage account, subscription ID, azure credential, azure netapp account 
 summary: SnapCenterでAzureストレージアカウントを設定します。 
 ---
-= Azureストレージアカウントの設定
+= Azure ストレージ アカウントを SnapCenter で構成する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: monitor, NetApp supported plug-in 
 summary: 'SnapCenterプラグインパッケージのインストールの進捗状況は、[Jobs]ページで監視できます。インストールの進捗状況をチェックして、インストールが完了するタイミングや問題が発生していないかどうかを確認できます。' 
 ---
-= NetApp対応プラグインのインストールステータスの監視
+= SnapCenterでのNetAppサポートプラグインのインストールステータスを監視します
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

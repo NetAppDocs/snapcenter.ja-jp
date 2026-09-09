@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resource groups, attach policies, snapcenter, Oracle, backup polices, schedule 
 summary: リソースグループはコンテナであり、バックアップおよび保護するリソースを追加する必要があります。 
 ---
-= リソースグループを作成してOracleバックアップポリシーを適用
+= SnapCenter でリソース グループを作成し、Oracle バックアップ ポリシーを適用する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

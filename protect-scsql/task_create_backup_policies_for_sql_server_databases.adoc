@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup policy 
 summary: SnapCenter を使用して SQL Server リソースをバックアップする前に、リソースまたはリソースグループのバックアップポリシーを作成することができます。また、リソースグループの作成時や単一のリソースのバックアップ時にバックアップポリシーを作成することもできます。 
 ---
-= SQL Serverデータベースのバックアップポリシーの作成
+= SnapCenter で SQL Server データベースのバックアップポリシーを作成する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -58,6 +58,7 @@ ONTAP 9.12.1以前のバージョンでは、リストアの一環としてSnapL
 
 
 
+[[step-1-create-policy-name]]
 == 手順1：ポリシー名を作成します
 
 . 左側のナビゲーションペインで、*[設定]*を選択します。
@@ -68,6 +69,7 @@ ONTAP 9.12.1以前のバージョンでは、リストアの一環としてSnapL
 
 
 
+[[step-2-configure-policy-options]]
 == 手順2：ポリシーオプションを設定する
 
 . [Policy type]ページで、次の手順を実行します。
@@ -128,6 +130,7 @@ NOTE: Microsoft SQL では、セカンダリ・ストレージのフル・バッ
 
 
 
+[[step-3-configure-availability-group-settings]]
 == 手順3：可用性グループを設定する
 
 . 可用性グループの設定セクションで、次の操作を実行します。
@@ -157,6 +160,7 @@ NOTE: クラスタ構成では、ポリシーで設定された保持設定に�
 
 
 
+[[step-4-configure-snapshot-and-replication-settings]]
 == 手順4：Snapshotとレプリケーションの設定を構成する
 
 . [Snapshot and Replication]ページで、次の手順を実行します。
@@ -179,6 +183,7 @@ NOTE: 午前2時にスケジュールを設定している場合、夏時間（D
 
 
 
+[[step-5-configure-up-to-the-minute-retention-settings]]
 == 手順5：最新の状態へのリストア保持を設定する
 
 . [Up-to-the-minute retention settings]セクションで、[Backup type]ページで選択したバックアップタイプに応じて、次の操作を1つ以上実行します。
@@ -205,6 +210,7 @@ NOTE: 午前2時にスケジュールを設定している場合、夏時間（D
 ====
 
 
+[[step-6-configure-snapshot-settings]]
 == 手順6：Snapshotを設定する
 
 . フルバックアップの保持設定では、次の操作を実行します。
@@ -245,6 +251,7 @@ NOTE: リモート レプリケーションのプライマリ スナップショ
 
 
 
+[[step-7-configure-secondary-replication-options]]
 == 手順7：セカンダリレプリケーションオプションを設定する
 
 . [Select secondary replication options]セクションで、次のセカンダリレプリケーションオプションの一方または両方を選択します。
@@ -298,6 +305,7 @@ SnapLock Vaultの詳細については、を参照してください。 https://
 ====
 
 
+[[step-8-configure-script-settings]]
 == 手順8：スクリプト設定を構成します
 
 . スクリプトページで、バックアップ処理の前後に実行するプリスクリプトまたはポストスクリプトのパスと引数を入力します。
@@ -316,6 +324,7 @@ NOTE: セカンダリストレージがSnapshotの最大数に達しないよう
 
 
 
+[[step-9-configure-verification-settings]]
 == 手順9：検証設定を構成します
 
 [Verification] ページで、次の手順を実行します。
@@ -360,6 +369,7 @@ NOTE: プリスクリプトまたはポストスクリプトのパスにドラ�
 
 
 
+[[step-10-review-summary]]
 == ステップ10：概要を確認します
 
 . 概要を確認し、*[終了]*を選択します。

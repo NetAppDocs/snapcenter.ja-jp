@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore operation 
 summary: プライマリストレージまたはセカンダリストレージのバックアップコピーからSQL Serverデータベースをリストアできます。また、データベースを元の場所だけでなく別の場所にリストアすることもできるため、要件に応じてリストア先を選択できます。 
 ---
-= リストア処理のソースとデスティネーション
+= SnapCenter における SQL Server リストア操作のソースと宛先
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,12 +15,14 @@ summary: プライマリストレージまたはセカンダリストレージ�
 
 
 
+[[sources-for-a-restore-operation]]
 == リストア処理のソース
 
 データベースはプライマリストレージまたはセカンダリストレージからリストアできます。
 
 
 
+[[destinations-for-a-restore-operation]]
 == リストア処理のデスティネーション
 
 データベースはさまざまなデスティネーションにリストアできます。

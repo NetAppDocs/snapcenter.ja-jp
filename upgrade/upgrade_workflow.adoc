@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: upgrade, snapcenter server, plug-ins, workflow, upgrade path 
 summary: SnapCenter サーバおよびプラグインをアップグレードする方法、およびサポートされるアップグレードパスについて説明します 
 ---
-= アップグレードワークフロー
+= SnapCenterサーバーアップグレードのワークフロー
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -19,6 +19,7 @@ image::../media/upgrade_workflow.gif[アップグレードワークフロー]
 
 
 
+[[supported-upgrade-paths]]
 == サポートされるアップグレードパス
 
 このセクションでは、アップグレードできるSnapCenter のバージョンとサポートされているプラ​​グインのバージョンを示します。

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: monitor, SAP HANA databases, restore operations 
 summary: '[Jobs]ページを使用して、さまざまなSnapCenterリストア処理の進捗状況を監視できます。処理の進捗状況を確認して、処理が完了するタイミングや問題が発生していないかを確認できます。' 
 ---
-= SAP HANAデータベースのリストア処理を監視する
+= SAP HANAデータベースの SnapCenter リストア操作の監視
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

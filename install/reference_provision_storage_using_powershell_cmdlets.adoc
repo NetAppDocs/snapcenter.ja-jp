@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Provision storage, snapcenter 
 summary: ホストのプロビジョニングやスペース再生のジョブにSnapCenter GUIを使用しない場合は、SnapCenter Plug-in for Microsoft Windowsに付属のPowerShellコマンドレットを使用します。コマンドレットは直接使用できるほか、スクリプトに追加することもできます。 
 ---
-= PowerShellコマンドレットを使用したストレージのプロビジョニング
+= SnapCenter PowerShell ストレージ プロビジョニング用コマンドレット
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

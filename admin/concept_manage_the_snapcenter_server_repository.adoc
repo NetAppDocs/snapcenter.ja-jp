@@ -15,6 +15,7 @@ SnapCenter サーバリポジトリは、NSMデータベースと呼ばれるこ
 
 
 
+[[prerequisites-for-protecting-the-snapcenter-repository]]
 == SnapCenter リポジトリを保護するための前提条件
 
 SnapCenterリポジトリを保護するには、環境が一定の前提条件を満たしている必要があります。
@@ -38,6 +39,7 @@ SnapCenter リポジトリのホストに、ネットアップストレージデ
 
 
 
+[[back-up-the-snapcenter-repository]]
 == SnapCenterリポジトリのバックアップ
 
 SnapCenter サーバリポジトリをバックアップすると、データ損失からデータを保護できます。リポジトリをバックアップするには、 `Protect-SmRepository` コマンドレットを実行します。
@@ -64,6 +66,7 @@ SnapCenter サーバリポジトリをバックアップすると、データ損
 
 
 
+[[view-backups-of-the-snapcenter-repository]]
 == SnapCenterリポジトリのバックアップの表示
 
  `Get-SmRepositoryBackups`コマンドレットを実行すると、SnapCenter サーバデータベースリポジトリのバックアップのリストを表示できます。詳細については、 https://docs.netapp.com/us-en/snapcenter-cmdlets/Get-SmRepositoryBackups.html["SnapCenter software コマンドレットリファレンスガイド - Get-SmRepositoryBackups"^]を参照してください。
@@ -78,6 +81,7 @@ SnapCenter サーバリポジトリをバックアップすると、データ損
 
 
 
+[[restore-the-snapcenter-database-repository]]
 == SnapCenterデータベースリポジトリのリストア
 
 SnapCenterリポジトリを復元するには、 `Restore-SmRepositoryBackup`コマンドレットを実行します。
@@ -111,6 +115,7 @@ NOTE: リストア処理の実行後にリポジトリバックアップが取�
 
 
 
+[[migrate-the-snapcenter-repository]]
 == SnapCenterリポジトリを移行する
 
 SnapCenter サーバのデータベースリポジトリをデフォルトの場所から別のディスクに移行することができます。リポジトリは、より多くのスペースがあるディスクに再配置する場合に移行できます。
@@ -135,6 +140,7 @@ SnapCenter サーバのデータベースリポジトリをデフォルトの場
 
 
 
+[[reset-the-snapcenter-repository-password]]
 == SnapCenterリポジトリのパスワードをリセットする
 
 MySQL Server リポジトリデータベースのパスワードは、 SnapCenter 4.2 以降の SnapCenter Server のインストール時に自動的に生成されます。この自動生成されたパスワードは、 SnapCenter ユーザにはいかなる時点でも知られていません。リポジトリデータベースにアクセスする場合は、パスワードをリセットする必要があります。

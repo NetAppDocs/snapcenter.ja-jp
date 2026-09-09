@@ -8,6 +8,7 @@
 
 
 
+[[manage-password-for-plug-in-keystore-and-alias-of-the-ca-signed-key-pair-in-use]]
 == プラグインキーストアのパスワードと使用中のCA署名キーペアのエイリアスを管理する
 
 .手順
@@ -32,6 +33,7 @@ NOTE: プラグイン キーストアのパスワードと、秘密キーに関�
 
 
 
+[[configure-root-or-intermediate-certificates-to-plug-in-trust-store]]
 == ルート証明書または中間証明書をプラグイン信頼ストアに設定する
 
 信頼ストアをプラグインするには、秘密キーなしでルート証明書または中間証明書を構成する必要があります。
@@ -54,6 +56,7 @@ NOTE: ルートCA証明書のあとに中間CA証明書を追加する必要が�
 
 
 
+[[configure-ca-signed-key-pair-to-plug-in-trust-store]]
 == CA署名キーペアをプラグイン信頼ストアに設定する
 
 CA 署名キー ペアをプラグイン信頼ストアに設定する必要があります。
@@ -92,6 +95,7 @@ CA 署名キー ペアをプラグイン信頼ストアに設定する必要が�
 
 
 
+[[configure-certificate-revocation-list-crl-for-plug-ins]]
 == プラグインの証明書失効リスト（CRL）を構成する
 
 .タスクの内容

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: svm role, privileges, asa r2 systems 
 summary: ASA R2システムのSVMをSanpCenterで使用するように設定し、vsadminロールを使用しない場合は、SVMロールを作成する必要があります。 
 ---
-= ASA R2システム用のSVMロールの作成
+= ASA r2システムのSVMロールをSnapCenterで作成する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -35,6 +35,7 @@ NOTE: このコマンドは権限ごとに繰り返す必要があります。
 
 
 
+[[ontap-cli-commands-for-creating-svm-roles-and-assigning-permissions]]
 == SVMロールの作成と権限の割り当て用のONTAP CLIコマンド
 
 ONTAPのロールを作成して権限を割り当てるには、いくつかのCLIコマンドを実行する必要があります。

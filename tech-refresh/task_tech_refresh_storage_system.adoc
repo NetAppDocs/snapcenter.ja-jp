@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: tech refresh, storage system, 
 summary: ストレージシステムの機器更改を実行するには、古いストレージから新しいストレージにデータを移動し、新しいストレージを対応するホストにマウントしてから、データベースを起動します。 
 ---
-= ストレージシステムの機器更改
+= SnapCenter でストレージシステムのテクニカルリフレッシュを実行する
 :allow-uri-read: 
 
 
@@ -33,6 +33,7 @@ summary: ストレージシステムの機器更改を実行するには、古�
 
 
 
+[[update-the-backups-of-the-primary-storage]]
 == プライマリストレージのバックアップを更新する
 
 ストレージの機器更改が完了したら、storage tech refresh APIまたはコマンドレットを実行して、SnapCenter内の古いバックアップを新しいストレージの詳細で更新する必要があります。
@@ -104,6 +105,7 @@ NOTE: ONTAPでクローン階層を移行することはできません。移行
 
 
 
+[[update-the-backups-of-the-secondary-storage]]
 == セカンダリストレージのバックアップを更新する
 
 ストレージの機器更改が完了したら、storage tech refresh APIまたはコマンドレットを実行して、SnapCenter内の古いバックアップを新しいストレージの詳細で更新する必要があります。

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for MySQL 
 summary: リソースグループは、ホスト上のリソースの集まりです。リソースグループのバックアップ処理は、リソースグループに定義されているすべてのリソースに対して実行されます。 
 ---
-= リソースグループのバックアップ
+= SnapCenterを使用したMySQLリソースグループのバックアップ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

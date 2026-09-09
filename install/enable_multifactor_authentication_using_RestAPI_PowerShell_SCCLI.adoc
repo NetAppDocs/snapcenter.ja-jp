@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: mfa, authentication, multifactor authentication 
 summary: REST API、PowerShell、およびSCCLIインターフェイスを使用してMFAを管理できます。 
 ---
-= REST API、PowerShell、SCCLIを使用して多要素認証（MFA）を管理
+= REST API、PowerShell、およびSCCLIを使用したSnapCenterでのMFAの管理
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ MFAログインは、ブラウザ、REST API、PowerShell、およびSCCLIから
 
 
 
+[[setup-ad-fs-as-oauthoidc]]
 == AD FSをOAuth/OIDCとしてセットアップします
 
 * Windows GUIウィザードを使用してAD FSを構成します*
@@ -92,6 +93,7 @@ MFAログインは、ブラウザ、REST API、PowerShell、およびSCCLIから
 
 
 
+[[create-application-group-using-powershell-commands]]
 == PowerShellコマンドを使用してアプリケーショングループを作成します
 
 PowerShellコマンドを使用して、アプリケーショングループ、Web APIを作成し、スコープと要求を追加できます。これらのコマンドは、自動スクリプト形式で使用できます。詳細については、<link to KB article>を参照してください。
@@ -171,6 +173,7 @@ PowerShellコマンドを使用して、アプリケーショングループ、W
 
 
 
+[[update-access-token-expiry-time]]
 == アクセストークンの有効期限を更新します
 
 アクセストークンの有効期限は、PowerShellコマンドを使用して更新できます。
@@ -190,6 +193,7 @@ PowerShellコマンドを使用して、アプリケーショングループ、W
 
 
 
+[[get-the-bearer-token-from-ad-fs]]
 == AD FSからBearerトークンを取得します
 
 RESTクライアント（Postmanなど）で以下のパラメータを入力する必要があり、ユーザクレデンシャルを入力するように求められます。さらに、ベアラートークンを取得するには、第2要素認証(あなたが持っているものとあなたがいるもの)を入力する必要があります。

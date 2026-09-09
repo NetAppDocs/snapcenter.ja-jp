@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Database, clone, database, backups 
 summary: SnapCenter を使用してバックアップをクローニングすることができます。 
 ---
-= SAP HANAデータベースのバックアップのクローニング
+= SnapCenter を使用した SAP HANA データベースバックアップのクローニング
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

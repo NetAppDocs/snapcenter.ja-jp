@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials, install plug-in, Linux, GUI, add host, monitor 
 summary: 'SnapCenterの[ホストの追加]ページを使用してホストを追加し、SnapCenter Plug-ins Package for Linuxをインストールできます。プラグインはリモートホストに自動的にインストールされます。' 
 ---
-= GUIを使用したホストの追加とPlug-ins Package for Linuxのインストール
+= GUIを使用してホストを追加し、Linux用SnapCenterプラグインパッケージをインストールする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -125,6 +125,7 @@ NOTE: 同じホストを以前に SnapCenter に追加し、フィンガープ�
 
 
 
+[[monitor-installation-status]]
 == インストールステータスの監視
 
 SnapCenterプラグインパッケージのインストールの進捗状況は、[Jobs]ページで監視できます。インストールの進捗状況をチェックして、インストールが完了するタイミングや問題が発生していないかどうかを確認できます。

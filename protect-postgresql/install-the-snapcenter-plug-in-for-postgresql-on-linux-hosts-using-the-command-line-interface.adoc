@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: install, SnapCenter Plug-in for postgresql 
 summary: SnapCenter Plug-in for PostgreSQLクラスタは、SnapCenterユーザインターフェイス（UI）を使用してインストールする必要があります。ご使用の環境でSnapCenter UIからのプラグインのリモートインストールが許可されていない場合は、コマンドラインインターフェイス（CLI1）を使用して、コンソールモードまたはサイレントモードでPlug-in for PostgreSQLクラスタをインストールできます。 
 ---
-= コマンドラインインターフェイスを使用してSnapCenter Plug-in for PostgreSQLをLinuxホストにインストールする
+= CLI を使用して Linux ホストに SnapCenter Plug-in for PostgreSQL をインストールする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

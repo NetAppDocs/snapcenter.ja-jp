@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter 
 summary: CA 証明書のサムプリントを取得します。 
 ---
-= CA証明書サムプリントの取得
+= SnapCenter のCA証明書のサムプリントを取得する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ permalink: sc-automation/concept_rest_web_services_foundation.html
 keywords: uri endpoints, http messages, json format 
 summary: REST は、分散 Web アプリケーションを作成するためのスタイルです。WebサービスAPIの設計に適用すると、サーバベースのリソースを公開してその状態を管理するための一連のテクノロジとベストプラクティスが確立されます。主流のプロトコルと標準を使用して、SnapCenterを管理するための柔軟な基盤を提供します。 
 ---
-= 基盤となるREST Webサービス
+= REST WebサービスはSnapCenterの基盤です
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,24 +15,28 @@ Representational State Transfer（REST）は、分散Webアプリケーション
 
 
 
+[[resources-and-state-representation]]
 == リソースと状態の表示
 
 リソースは、Webベースシステムの基本コンポーネントです。REST Webサービスアプリケーションを作成する際の初期設計タスクには、次のものがあります。
 
 
 
+[[identification-of-system-or-server-based-resources]]
 === システムまたはサーバベースのリソースの識別
 
 すべてのシステムはリソースを使用し、維持します。リソースには、ファイル、ビジネストランザクション、プロセス、または管理エンティティがあります。REST Webサービスに基づいてアプリケーションを設計する際の最初のタスクの1つは、リソースを特定することです。
 
 
 
+[[definition-of-resource-states-and-associated-state-operations]]
 === リソースの状態および関連する状態操作の定義
 
 リソースは常に有限数の状態のいずれかにあります。状態、および状態の変化に影響を与えるために使用される関連操作は、明確に定義する必要があります。
 
 
 
+[[uri-endpoints]]
 == URIエンドポイント
 
 すべてのRESTリソースは、明確に定義されたアドレス指定方式を使用して定義および利用可能にする必要があります。リソースが配置され、識別されるエンドポイントでは、Uniform Resource Identifier（URI）が使用されます。
@@ -41,6 +45,7 @@ URIは、ネットワーク内の各リソースに一意の名前を作成す�
 
 
 
+[[http-messages]]
 == HTTP メッセージ
 
 Hypertext Transfer Protocol（HTTP）は、Webサービスのクライアントとサーバがリソースに関する要求と応答のメッセージを交換するために使用するプロトコルです。
@@ -49,6 +54,7 @@ Webサービスアプリケーションの設計の一環として、HTTPメソ�
 
 
 
+[[json-formatting]]
 == JSONの形式
 
 Webサービスのクライアントとサーバの間で情報を構造化して転送する方法はいくつかありますが、最も一般的な方法はJavaScript Object Notation（JSON）です。

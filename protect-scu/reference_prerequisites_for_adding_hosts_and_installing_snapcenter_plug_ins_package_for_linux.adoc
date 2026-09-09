@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: prerequisites, iSCSI, host requirement for Linux, sudo privileges, non-root user, credentials, authenticate, domain administrator, local administrator, workgroup, sudo, root user 
 summary: ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。 
 ---
-= ホストを追加してPlug-ins Package for Linuxをインストールするための前提条件
+= ホストを追加し、Linux用 SnapCenter プラグインパッケージをインストールするための前提条件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -36,6 +36,7 @@ Javaのダウンロードに関する情報については、link:https://www.or
 
 
 
+[[linux-host-requirements]]
 == Linuxホストの要件
 
 SnapCenter Plug-ins Package for Linuxをインストールする前に、ホストが要件を満たしていることを確認する必要があります。

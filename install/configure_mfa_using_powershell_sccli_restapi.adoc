@@ -15,6 +15,7 @@ SnapCenter Serverでは、PowerShell、SCCLI、およびREST APIを使用してM
 
 
 
+[[snapcenter-mfa-cli-authentication]]
 == SnapCenter MFA CLI認証
 
 PowerShellとSCCLIでは、既存のコマンドレット（Open-SmConnection）を「AccessToken」というもう1つのフィールドで拡張し、ベアラートークンを使用してユーザを認証します。
@@ -25,12 +26,14 @@ PowerShellとSCCLIでは、既存のコマンドレット（Open-SmConnection）
 
 
 
+[[snapcenter-mfa-rest-api-authentication]]
 == SnapCenter MFA REST API認証
 
 REST <access token>クライアント(Postmanやswaggerなど)でBearerトークンを_Authorization = Bearer _の形式で使用し、ヘッダーにユーザRoleNameを指定すると、SnapCenterからの応答が成功します。
 
 
 
+[[mfa-rest-api-workflow]]
 == MFA REST APIワークフロー
 
 MFAがAD FSで設定されている場合、REST APIを使用してSnapCenterアプリケーションにアクセスするには、アクセス（Bearer）トークンを使用して認証する必要があります。
@@ -78,6 +81,7 @@ MFAがAD FSで設定されている場合、REST APIを使用してSnapCenterア
 
 
 
+[[enable-or-disable-snapcenter-mfa-functionality-for-rest-api-cli-and-gui]]
 == REST API、CLI、GUIのSnapCenter MFA機能を有効または無効にします
 
 * GUI *

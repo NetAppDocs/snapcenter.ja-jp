@@ -25,6 +25,7 @@ NOTE: IBM Java は Windows および Linux ホストではサポートされて�
 
 
 
+[[windows-hosts]]
 == Windowsホスト
 
 * ローカル管理者Privilegesを持つドメインユーザと、リモートホストに対するローカルログイン権限が必要です。
@@ -38,6 +39,7 @@ link:https://www.oracle.com/java/technologies/downloads/#java17["すべてのオ
 
 
 
+[[linux-hosts]]
 == Linuxホスト
 
 * rootユーザまたはroot以外のユーザに対してパスワードベースのSSH接続を有効にしておく必要があります。
@@ -51,6 +53,7 @@ link:https://www.oracle.com/java/technologies/downloads/#java17["すべてのオ
 
 
 
+[[supplemental-commands]]
 == 補助コマンド
 
 SnapCenter Plug-in for PostgreSQLで補助コマンドを実行するには、そのコマンドを_allowed_commands.config_fileに含める必要があります。
@@ -78,6 +81,7 @@ NOTE: ワイルドカードエントリ（*）を使用してすべてのコマ�
 
 
 
+[[configure-sudo-privileges-for-non-root-users-for-linux-host]]
 == Linuxホストのroot以外のユーザに対するsudo Privilegesの設定
 
 SnapCenterでは、root以外のユーザがSnapCenter Plug-ins Package for Linuxをインストールしてプラグインプロセスを開始できます。プラグインプロセスをroot以外の有効なユーザとして実行します。複数のパスにアクセスできるようにroot以外のユーザにsudo Privilegesを設定する必要があります。

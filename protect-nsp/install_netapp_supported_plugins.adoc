@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: install workflow, NetApp supported plug-in 
 summary: NetAppでサポートされるプラグインリソースを保護する場合は、SnapCenter NetAppでサポートされるプラグインをインストールしてセットアップする必要があります。 
 ---
-= SnapCenter NetAppでサポートされるプラグインのインストールワークフロー
+= SnapCenter NetAppサポートプラグインのインストールワークフロー
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

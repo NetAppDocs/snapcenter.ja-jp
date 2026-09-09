@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for mysql 
 summary: SnapCenterでは、自動的に検出されたSnapRestoreデータベースに対して、ボリュームベースのMySQL \（VBSR\）、単一ファイルSnapRestore、および接続とコピーのリストアタイプがサポートされます。 
 ---
-= 自動検出されたMySQLのリストア処理のタイプ
+= SnapCenter で自動検出された MySQL データベースの復元タイプ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ SnapCenter Plug-in for MySQLでは、自動的に検出されたMySQLデータ�
 
 
 
+[[single-file-snaprestore-is-performed-in-nfs-environments-for-the-following-scenarios]]
 == NFS環境でSingle File SnapRestoreを実行するシナリオは、次のとおりです。
 
 * [Complete Resource]オプションのみが選択されている場合
@@ -23,6 +24,7 @@ SnapCenter Plug-in for MySQLでは、自動的に検出されたMySQLデータ�
 
 
 
+[[single-file-snaprestore-is-performed-in-san-environments-for-the-following-scenarios]]
 == 単一ファイル SnapRestore は、次のような状況で SAN 環境で実行されます。
 
 * [Complete Resource]オプションのみが選択されている場合

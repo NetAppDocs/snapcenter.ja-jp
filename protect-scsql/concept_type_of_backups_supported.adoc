@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Type of backups 
 summary: SnapCenter を使用して SQL Server システムおよびユーザデータベースをバックアップするときは、データベース、 SQL Server インスタンス、可用性グループ（ AG ）などのリソースタイプを選択する必要があります。Snapshotテクノロジを使用して、リソースが配置されているボリュームのオンラインの読み取り専用コピーが作成されます。 
 ---
-= サポートされるバックアップのタイプ
+= SnapCenter でサポートされているバックアップの種類
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

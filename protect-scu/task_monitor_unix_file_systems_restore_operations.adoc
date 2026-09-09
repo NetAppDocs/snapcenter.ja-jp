@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore, monitor, unix file systems 
 summary: '[Jobs]ページを使用して、さまざまなSnapCenterリストア処理の進捗状況を監視できます。処理の進捗状況を確認して、処理が完了するタイミングや問題が発生していないかを確認できます。' 
 ---
-= UNIXファイルシステムのリストア処理を監視する
+= SnapCenter でのUNIXファイルシステムのリストア操作の監視
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

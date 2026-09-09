@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storage types, iSCSI, NFS, RDM, VMDK, NFS, LVM, ASM, SAN filesystem 
 summary: SnapCenter は、物理マシンと仮想マシンの両方でさまざまなストレージタイプをサポートしています。SnapCenter Plug-ins Package for LinuxまたはSnapCenter Plug-ins Package for AIXをインストールする前に、ストレージタイプがサポートされていることを確認する必要があります。 
 ---
-= Plug-in for Oracle Databaseでサポートされるストレージタイプ
+= SnapCenter Plug-in for Oracle Databaseでサポートされるストレージ タイプ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -17,6 +17,7 @@ SnapCenter では、 Linux および AIX のストレージプロビジョニン
 
 
 
+[[storage-types-supported-on-linux]]
 == Linuxでサポートされるストレージタイプ
 
 次の表に、Linuxでサポートされるストレージタイプを示します。
@@ -76,6 +77,7 @@ NOTE: VMware以外では、データストアおよび生デバイスのプレ�
 |===
 
 
+[[storage-types-supported-on-aix]]
 == AIXでサポートされるストレージタイプ
 
 次の表に、AIXでサポートされるストレージタイプを示します。

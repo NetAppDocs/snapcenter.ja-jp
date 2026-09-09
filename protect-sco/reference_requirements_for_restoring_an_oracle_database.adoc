@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Oracleデータベースをリストアする前に、前提条件が満たされていることを確認する必要があります。 
 ---
-= Oracleデータベースをリストアする際の要件
+= SnapCenter Oracle データベースをリストアするための要件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

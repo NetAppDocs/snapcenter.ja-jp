@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Microsoft Exchange Server, NET TCP 
 summary: SnapCenterAdd Host ページを使用して、 Windows ホストを追加できます。指定したホストに Plug-in for Exchange が自動的にインストールされます。プラグインのインストールには、この方法を推奨します。ホストの追加とプラグインのインストールは、ホストごとまたはクラスタごとに実行できます。 
 ---
-= ホストを追加してPlug-in for Exchangeをインストールする
+= ホストを追加し、Microsoft Exchange Server用のSnapCenterプラグインをインストールします
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -194,6 +194,7 @@ NOTE: HAセットアップでweb.configファイルを更新する場合は、�
 
 
 
+[[configure-custom-port-for-net-tcp-communication]]
 == ネットTCP通信用のカスタムポートの設定
 
 デフォルトでは、SnapCenter 6.0リリース以降、Windows用SnapCenterプラグインは、ネットTCP通信にポート909を使用します。ポート909が使用中の場合は、ネットTCP通信用に別のポートを設定できます。

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: disaster recovery 
 summary: SnapCenter Plug-in for SQL Serverが停止したら、次の手順を手動で実行してプラグインをリカバリします。 
 ---
-= SnapCenter Plug-in for SQL Serverのディザスタリカバリ
+= 災害後に SnapCenter Plug-in for SQL Server を回復する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,7 +15,7 @@ SnapCenter Plug-in for SQL Serverが停止した場合は、次の手順に従�
 
 .開始する前に
 * セカンダリホストのオペレーティングシステム、アプリケーション、およびホスト名は、プライマリホストと同じである必要があります。
-* [ ホストの追加 ] または [ ホストの変更 ] ページを使用して、 SnapCenter Plug-in for SQL Server を別のホストにプッシュします。詳細については、を参照してください link:https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_hosts.html["ホストの管理"] 。
+* *ホストの追加*または*ホストの変更*ページを使用して、SQL Server 用 SnapCenter プラグインを別のホストにプッシュします。詳細については、link:https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_hosts.html["SnapCenter でホストを管理する"]を参照してください。
 
 
 .手順

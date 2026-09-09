@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Postgresql 
 summary: 一部のPostgreSQLインスタンスでは自動検出がサポートされていません。これらのリソースは手動で追加する必要があります。 
 ---
-= プラグインホストに手動でリソースを追加する
+= SnapCenter PostgreSQLリソースをプラグインホストに手動で追加する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

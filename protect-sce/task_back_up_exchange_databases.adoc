@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: 'いずれのリソースグループにも含まれていないデータベースは、[Resources]ページからバックアップできます。' 
 ---
-= Exchangeデータベースのバックアップ
+= Exchange データベースを SnapCenter でバックアップする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

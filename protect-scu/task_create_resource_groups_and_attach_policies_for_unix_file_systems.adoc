@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: unix file systems, resource group, policy 
 summary: リソースグループはコンテナであり、バックアップして保護するリソースを追加します。 
 ---
-= UNIXファイルシステムのリソースグループの作成とポリシーの適用
+= SnapCenter でUNIXファイルシステムのリソースグループを作成してポリシーを関連付ける
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

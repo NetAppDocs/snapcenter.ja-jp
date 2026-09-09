@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: install, snapcenter software, install, linux host 
 summary: SnapCenterサーバはLinuxホストにインストールできます。 
 ---
-= LinuxホストへのSnapCenterサーバのインストール
+= Linux ホストへの SnapCenter サーバーのインストール
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -144,6 +144,7 @@ SnapCenterサーバをインストールするために渡されるパラメー�
 
 
 
+[[features-enabled-on-linux-host-during-installation]]
 == インストルチユウニLinuxホストテユウコウニナルキノウ
 
 SnapCenter Server は、ホスト システムのトラブルシューティングとメンテナンスに役立つ以下のソフトウェア パッケージをインストールします。

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: security,authentication, export CA certificates 
 summary: SnapCenterサーバからプラグインホストにCA証明書をエクスポートする必要があります。 
 ---
-= SnapCenterサーバから認証局（CA）証明書をエクスポートします
+= SnapCenter サーバから CA 証明書をエクスポートする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

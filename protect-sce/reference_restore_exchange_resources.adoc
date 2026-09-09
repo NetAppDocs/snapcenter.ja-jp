@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Microsoft Exchange Server 
 summary: SnapCenterを使用すると、1つ以上のバックアップをアクティブファイルシステムにリストアして、Exchangeデータベースをリストアできます。 
 ---
-= リストアのワークフロー
+= SnapCenter での Exchange データベース復元ワークフロー
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: HDB User Store Key, HDBSQL OS User, SAP HANA database 
 summary: SAP HANAデータベースでデータ保護処理を実行するには、HDBユーザストアキーとHDBSQL OSユーザを設定する必要があります。 
 ---
-= SAP HANAデータベースのHDBユーザストアキーとHDBSQL OSユーザを設定
+= HDBユーザーストアキーとHDBSQL OSユーザーをSnapCenter SAP HANAデータベース用に設定する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

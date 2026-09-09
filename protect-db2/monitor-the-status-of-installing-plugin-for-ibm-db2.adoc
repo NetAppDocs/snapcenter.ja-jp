@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: monitor, install, snapCenter plug-in for IBM Db2 
 summary: 'SnapCenterプラグインパッケージのインストールの進捗状況は、[Jobs]ページで監視できます。インストールの進捗状況をチェックして、インストールが完了するタイミングや問題が発生していないかどうかを確認できます。' 
 ---
-= Plug-in for IBM DB2のインストールステータスの監視
+= IBM Db2用 SnapCenter プラグインのインストール状況を監視する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

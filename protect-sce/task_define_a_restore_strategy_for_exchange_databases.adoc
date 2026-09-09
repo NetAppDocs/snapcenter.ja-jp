@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: Exchange Serverのリストア戦略を定義しておくと、データベースを正常にリストアできます。 
 ---
-= Exchangeデータベースのリストア戦略を定義する
+= SnapCenter で Exchange データベースのリストア戦略を定義する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ Exchange Serverのリストア戦略を定義しておくと、データベー�
 
 
 
+[[sources-for-a-restore-operation-in-exchange-server]]
 == Exchange Serverでのリストア処理のソース
 
 プライマリストレージ上のバックアップコピーからExchange Serverデータベースをリストアできます。
@@ -23,6 +24,7 @@ Exchange Serverのリストア戦略を定義しておくと、データベー�
 
 
 
+[[types-of-restore-operations-supported-for-exchange-server]]
 == Exchange Serverでサポートされるリストア処理のタイプ
 
 SnapCenterを使用すると、Exchangeリソースに対してさまざまなタイプのリストア処理を実行できます。
@@ -33,6 +35,7 @@ SnapCenterを使用すると、Exchangeリソースに対してさまざまな�
 
 
 
+[[restore-up-to-the-minute]]
 === 最新の状態へのリストア
 
 最新の状態へのリストア処理では、障害発生時点までデータベースがリカバリされます。SnapCenterでは、この処理が次の順序で実行されます。
@@ -64,6 +67,7 @@ SnapCenterを使用すると、Exchangeリソースに対してさまざまな�
 
 
 
+[[restore-to-a-previous-point-in-time]]
 === 過去のポイントインタイムへのリストア
 
 ポイントインタイムリストア処理では、データベースは過去の特定の時刻にのみリストアされます。ポイントインタイムリストア処理は、次の状況で実行されます。

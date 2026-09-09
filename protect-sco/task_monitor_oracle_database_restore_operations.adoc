@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore, monitor 
 summary: '[Jobs]ページを使用して、さまざまなSnapCenterリストア処理の進捗状況を監視できます。処理の進捗状況を確認して、処理が完了するタイミングや問題が発生していないかを確認できます。' 
 ---
-= Oracleデータベースのリストア処理を監視する
+= SnapCenter で Oracle データベースのリストア操作を監視する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

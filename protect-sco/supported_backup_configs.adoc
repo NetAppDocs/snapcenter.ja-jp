@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup type, preferred nodes, catalog backups, schedules, backup name format, retention, verification 
 summary: SnapCenter では、各種の Oracle データベース構成のバックアップがサポートされます。 
 ---
-= バックアップでサポートされるOracleデータベース構成
+= SnapCenter でのバックアップにサポートされている Oracle データベース構成
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

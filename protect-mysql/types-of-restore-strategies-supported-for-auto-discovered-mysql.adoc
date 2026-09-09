@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for mysql 
 summary: SnapCenterを使用してリストア処理を正常に実行するには、戦略を定義する必要があります。自動的に検出されたMySQLデータベースには、2種類のリストア戦略があります。 
 ---
-= 自動検出されたMySQLでサポートされるリストア戦略のタイプ
+= SnapCenter で自動検出された MySQL データベースの復元戦略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

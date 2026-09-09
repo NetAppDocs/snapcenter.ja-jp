@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SQL Server Database, clone, database, backups 
 summary: SnapCenter を使用してバックアップをクローニングすることができます。 
 ---
-= SQL Serverデータベースバックアップのクローニング
+= SnapCenter を使用した SQL Server データベースバックアップのクローニング
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -50,6 +50,7 @@ SQL ServerデータベースANFボリュームが手動のQoS容量プールに�
 
 
 
+[[perform-clone-lifecycle]]
 == クローンライフサイクルの実行
 
 SnapCenter を使用すると、リソースグループまたはデータベースからクローンを作成できます。クローニングはオンデマンドで実行することも、リソースグループまたはデータベースに対して定期的なクローニング処理をスケジュール設定することもできます。バックアップを定期的にクローニングすると、クローンを使用してアプリケーションの開発、データの取り込み、またはデータのリカバリを行うことができます。

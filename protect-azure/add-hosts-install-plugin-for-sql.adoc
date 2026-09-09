@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add host, install, install plug-in, SQL 
 summary: ホストを追加してプラグインパッケージをインストールしてください。 
 ---
-= ホストを追加してSnapCenter Plug-in for SQL Server Databaseをインストールする
+= ホストを追加して、Microsoft SQL Server用のSnapCenter プラグインをインストールします
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

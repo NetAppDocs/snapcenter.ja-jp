@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: RBAC, add user, add group, assign role, assign assets 
 summary: SnapCenterユーザのロールベースアクセス制御を設定するには、ユーザまたはグループを追加してロールを割り当てます。ロールによって、SnapCenterユーザがアクセスできるオプションが決まります。 
 ---
-= ユーザまたはグループを追加してロールとアセットを割り当てる
+= SnapCenter でユーザーまたはグループを追加し、ロールとアセットを割り当てる
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

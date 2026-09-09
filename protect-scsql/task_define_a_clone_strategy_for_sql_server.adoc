@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clone strategy 
 summary: クローニング戦略を定義しておくと、それに従ってデータベースのクローニングを実行することができます。 
 ---
-= SQL Serverのクローニング戦略を定義する
+= SQL Server の SnapCenter におけるクローニング戦略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -19,6 +19,7 @@ summary: クローニング戦略を定義しておくと、それに従って�
 
 
 
+[[limitations-of-clone-operations]]
 == クローニング処理の制限事項
 
 データベースをクローニングする前に、クローニング処理の制限事項を確認しておく必要があります。
@@ -31,6 +32,7 @@ summary: クローニング戦略を定義しておくと、それに従って�
 
 
 
+[[types-of-clone-operations]]
 == クローニング処理のタイプ
 
 SnapCenter を使用して、 SQL Server データベースのバックアップまたは本番環境のデータベースをクローニングすることができます。

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for IBM Db2 
 summary: リストアとリカバリのワークフローには、計画、リストア処理の実行、および処理の監視が含まれます。 
 ---
-= リストアのワークフロー
+= SnapCenter Plug-in for IBM Db2 のリストアワークフロー
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

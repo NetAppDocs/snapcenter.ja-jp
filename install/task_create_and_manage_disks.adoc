@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: disks, create, manage, clustered disks, view 
 summary: Windowsホストは、ストレージシステム上のLUNを仮想ディスクとして認識します。SnapCenterを使用して、FC接続LUNまたはiSCSI接続LUNを作成および設定できます。 
 ---
-= ディスクの作成と管理
+= SnapCenter でのディスクの作成と管理
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -23,6 +23,7 @@ NOTE: SnapCenter では、ディスク名の変更はサポートされていま
 
 
 
+[[view-the-disks-on-a-host]]
 == ホスト上のディスクの表示
 
 SnapCenter で管理している各 Windows ホスト上のディスクを表示できます。
@@ -39,6 +40,7 @@ SnapCenter で管理している各 Windows ホスト上のディスクを表示
 
 
 
+[[view-clustered-disks]]
 == クラスタ化ディスクの表示
 
 SnapCenterで管理しているクラスタ上のクラスタディスクを表示できます。クラスタ化されたディスクは、[Hosts]ドロップダウンからクラスタを選択した場合にのみ表示されます。
@@ -55,6 +57,7 @@ SnapCenterで管理しているクラスタ上のクラスタディスクを表�
 
 
 
+[[establish-an-iscsi-session]]
 == iSCSIセッションを確立する
 
 iSCSIを使用してLUNに接続する場合は、LUNを作成して通信を有効にする前にiSCSIセッションを確立する必要があります。
@@ -129,6 +132,7 @@ SnapCenter が iSCSI セッションを確立します。
 
 
 
+[[create-fc-connected-or-iscsi-connected-luns-or-disks]]
 == FC接続またはiSCSI接続のLUNまたはディスクを作成する
 
 Windowsホストは、ストレージシステム上のLUNを仮想ディスクとして認識します。SnapCenter を使用して、 FC 接続 LUN または iSCSI 接続 LUN を作成および設定できます。
@@ -359,6 +363,7 @@ SnapCenter によって LUN が作成され、ホスト上の指定したドラ�
 
 
 
+[[resize-a-disk]]
 == ディスクのサイズ変更
 
 ストレージシステムのニーズの変化に応じて、ディスクのサイズを増減できます。
@@ -398,6 +403,7 @@ SnapCenter はディスクのサイズを変更します。
 
 
 
+[[connect-a-disk]]
 == ディスクの接続
 
 [Connect Disk]ウィザードを使用して、既存のLUNをホストに接続したり、切断されたLUNを再接続したりできます。
@@ -580,6 +586,7 @@ SnapCenter は、ホスト上の指定したドライブまたはドライブパ
 
 
 
+[[disconnect-a-disk]]
 == ディスクの切断
 
 LUN は内容を残したままホストから切断できます。ただし、スプリットせずにクローンを切断した場合、クローンの内容は失われます。
@@ -613,6 +620,7 @@ SnapCenter によってディスクが切断されます。
 
 
 
+[[delete-a-disk]]
 == ディスクの削除
 
 不要になったディスクは削除できます。削除したディスクは復元できません。

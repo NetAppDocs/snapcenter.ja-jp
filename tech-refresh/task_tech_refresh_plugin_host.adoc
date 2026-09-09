@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: tech refresh, plug-in host, supported plug-ins, prerequisites to refresh plug-in hosts, application hosts, limitations for tech refresh of plug-in hosts 
 summary: プラグインホストの機器更改を実行するために、古いホストから新しいホストにリソースを移動します。 
 ---
-= SnapCenterプラグインホストの機器更改
+= SnapCenter プラグインホストのテクノロジーリフレッシュを実行する
 :allow-uri-read: 
 
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore resources 
 summary: リソースのバックアップをリストアするときは、 SnapCenter サーバとの接続セッションを開始し、バックアップをリストしてバックアップ情報を取得し、バックアップをリストアします。 
 ---
-= PowerShellコマンドレットを使用したリソースのリストア
+= SnapCenter PowerShell コマンドレットを使用してリソースを復元する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

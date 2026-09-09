@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: snapmirror, snapvault, storage system, replication 
 summary: SnapCenter プラグインは、 ONTAP の SnapMirror テクノロジおよび SnapVault テクノロジと組み合わせて使用できます 
 ---
-= NetAppでサポートされるプラグインに対応したSnapMirrorおよびSnapVaultレプリケーションのためのストレージシステムの準備
+= SnapCenterでのSnapMirrorおよびSnapVaultレプリケーションのためのストレージ システムの準備
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

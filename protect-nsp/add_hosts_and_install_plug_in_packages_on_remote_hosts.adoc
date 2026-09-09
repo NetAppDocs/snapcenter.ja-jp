@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add hostsNetApp supported plug-ins, MongoDB, ORASCPM, Oracle Applications, SAP ASE, SAP MaxDB, Storage plug-in 
 summary: '[SnapCenter][ホストの追加]ページを使用してホストを追加し、プラグインパッケージをインストールする必要があります。プラグインはリモートホストに自動的にインストールされます。ホストの追加とプラグインパッケージのインストールは、ホストごとまたはクラスタごとに実行できます。' 
 ---
-= ホストを追加してリモートホストにプラグインパッケージをインストールする
+= ホストを追加し、リモートホストに SnapCenter プラグインパッケージをインストールする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

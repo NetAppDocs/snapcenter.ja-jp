@@ -34,7 +34,7 @@ SnapCenterサーバをプラグインホストとして別のSnapCenterサーバ
 
 ホストの追加とプラグインパッケージのインストールは、ホストごとまたはクラスタごとに実行できます。クラスタまたはWindows Server Failover Clustering（WSFC）にプラグインをインストールする場合、プラグインはクラスタのすべてのノードにインストールされます。
 
-ホストの管理については、を参照してください link:../admin/concept_manage_hosts.html["ホストの管理"^]。
+ホストの管理に関する情報については、link:../admin/concept_manage_hosts.html["SnapCenter でホストを管理する"^]を参照してください。
 
 .手順
 . 左側のナビゲーションペインで、 *Hosts* を選択します。

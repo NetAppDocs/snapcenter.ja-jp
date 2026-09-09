@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials 
 summary: リソースとは、SnapCenterで管理されるLinuxホスト上のPostgreSQLクラスタです。これらのリソースをリソースグループに追加して、使用可能なPostgreSQLクラスタを検出したあとにデータ保護処理を実行できます。 
 ---
-= クラスタの自動検出
+= SnapCenter で PostgreSQL クラスタを自動的に検出する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

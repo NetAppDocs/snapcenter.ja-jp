@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Credentials,SnapCenter Plug-in for IBM Db2 
 summary: SnapCenter Plug-in for IBM DB2を使用する前に、SnapCenter管理者がSnapCenterサーバをインストールして設定し、前提条件となるタスクを実行する必要があります。 
 ---
-= SnapCenter Plug-in for IBM DB2を使用するための前提条件
+= IBM Db2用 SnapCenter プラグインを使用するための前提条件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

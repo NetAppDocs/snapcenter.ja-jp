@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: snapcenter server, azure virtual machine, install 
 summary: Azure仮想マシンにSnapCenterをダウンロードしてインストールします。 
 ---
-= Azure仮想マシンへのSnapCenterのインストール
+= Azure仮想マシンにSnapCenterをインストールする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -47,6 +47,7 @@ NOTE: [Cancel] * ボタンをクリックすると、実行中のステップが
 
 
 
+[[register-the-product-to-enable-support]]
 == 製品を登録してサポートを有効にする
 
 NetAppを初めてご利用になり、NetAppアカウントをお持ちでない場合は、製品を登録してサポートを有効にする必要があります。

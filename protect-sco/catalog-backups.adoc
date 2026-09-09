@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: oracle databases discover 
 summary: SnapCenter によるOracleデータベースの検出方法 
 ---
-= Oracle Recovery Managerを使用してバックアップをカタログ化する方法
+= SnapCenter が Oracle RMAN を使用してバックアップをカタログ化する方法
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -21,12 +21,14 @@ RACデータベースのバックアップをカタログ化する場合は、�
 
 
 
+[[external-catalog-database]]
 == 外部カタログデータベース
 
 デフォルトでは、ターゲットデータベースの制御ファイルがカタログ化に使用されます。外部カタログデータベースを追加する場合は、SnapCenterグラフィカルユーザインターフェイス（GUI）のデータベース設定ウィザードを使用して、外部カタログのクレデンシャルと透過ネットワーク印刷材（TNS）名を指定して構成できます。CLIから外部カタログデータベースを設定するには、-OracleRmanCatalogCredentialNameオプションと-OracleRmanCatalogTnsNameオプションを指定してConfigure-SmOracleDatabaseコマンドを実行します。
 
 
 
+[[rman-command]]
 == RMANコマンド
 
 SnapCenter GUIでOracleバックアップポリシーを作成するときにカタログ化オプションを有効にした場合は、バックアップ処理の一環としてOracle RMANを使用してバックアップがカタログ化されます。コマンドを実行して、バックアップのカタログ化を遅らせて実行することもできます `Catalog-SmBackupWithOracleRMAN` 。
@@ -35,6 +37,7 @@ SnapCenter GUIでOracleバックアップポリシーを作成するときにカ
 
 
 
+[[naming-format]]
 == 命名形式
 
 SnapCenter 3.0以降では、ASMディスクグループ名が16文字以上の場合、バックアップに使用される命名形式はSC_HASHCODEofDISKGROUP_DBSID_BACKUPIDです。ただし、ディスクグループ名が16文字未満の場合、バックアップに使用される命名形式はDISKGROUPNAME_DBSID_BACKUPIDです。これは、SnapCenter 2.0で使用されている形式と同じです。
@@ -43,6 +46,7 @@ HASHCODEofDISKGROUPは、ASMディスクグループごとに一意の、自動�
 
 
 
+[[crosscheck-operations]]
 == クロスチェック処理
 
 クロスチェックを実行すると、リポジトリレコードが物理ステータスと一致しないバックアップに関するRMANリポジトリ情報を更新できます。たとえば、ユーザがオペレーティングシステムコマンドを使用してディスクからアーカイブログを削除しても、実際にはディスクにログがない場合でも、制御ファイルにはディスクにログがあることが示されます。
@@ -53,6 +57,7 @@ HASHCODEofDISKGROUPは、ASMディスクグループごとに一意の、自動�
 
 
 
+[[remove-catalog-information]]
 == カタログ情報を削除します
 
 カタログ情報を削除するには、Uncatalog-SmBackupWithOracleRMANコマンドを実行します。SnapCenter GUI ではカタログ情報を削除できません。ただし、バックアップを削除するとき、またはカタログ化されたバックアップに関連付けられている保持期間とリソースグループを削除するときに、カタログ化されたバックアップの情報が削除されます。

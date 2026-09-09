@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: retain transaction log backups 
 summary: SnapCenter Plug-in for Microsoft SQL Server では、最新の状態へのリストア処理を実行するために、トランザクションログバックアップが必要です。この場合、 2 つのフルバックアップの間の任意の時点の状態にデータベースがリストアされます。 
 ---
-= ソースストレージシステムにトランザクションログバックアップを保持する期間
+= SnapCenter でトランザクションログバックアップを保持する期間
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

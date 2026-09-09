@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: prerequisites, iSCSI, Oracle path, host requirement for Linux, sudo privileges, non-root user, host requirements for AIX, credentials, authenticate, domain administrator, local administrator, workgroup, sudo, root user 
 summary: ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。 
 ---
-= ホストを追加してPlug-ins Package for Linux / AIXをインストールするための前提条件
+= ホストを追加し、Linux または AIX 向け SnapCenter プラグインパッケージをインストールするための前提条件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -49,6 +49,7 @@ NOTE: /etc/fstabファイルのUUIDマッピングはSnapCenterでサポート�
 
 
 
+[[linux-host-requirements]]
 == Linuxホストの要件
 
 SnapCenter Plug-ins Package for Linuxをインストールする前に、ホストが要件を満たしていることを確認する必要があります。
@@ -104,6 +105,7 @@ Javaを最新バージョンにアップグレードした場合は、/var/opt/s
 
 
 
+[[configure-sudo-privileges-for-non-root-users-for-linux-host]]
 === Linuxホストのroot以外のユーザに対するsudo Privilegesの設定
 
 SnapCenter 2.0以降のリリースでは、root以外のユーザがSnapCenter Plug-ins Package for Linuxをインストールしてプラグインプロセスを開始できます。プラグインプロセスをroot以外の有効なユーザとして実行します。複数のパスにアクセスできるようにroot以外のユーザにsudo Privilegesを設定する必要があります。
@@ -182,6 +184,7 @@ IMPORTANT: この例は、独自のデータを作成するための参照とし
 
 
 
+[[aix-host-requirements]]
 == AIXホストの要件
 
 SnapCenter Plug-ins Package for AIXをインストールする前に、ホストが要件を満たしていることを確認する必要があります。
@@ -230,6 +233,7 @@ Javaを最新バージョンにアップグレードした場合は、/var/opt/s
 
 
 
+[[configure-sudo-privileges-for-non-root-users-for-aix-host]]
 === AIXホストのroot以外のユーザに対するsudo Privilegesの設定
 
 SnapCenter 4.4以降では、root以外のユーザがSnapCenter Plug-ins Package for AIXをインストールしてプラグインプロセスを開始できます。プラグインプロセスをroot以外の有効なユーザとして実行します。複数のパスにアクセスできるようにroot以外のユーザにsudo Privilegesを設定する必要があります。
@@ -307,6 +311,7 @@ IMPORTANT: この例は、独自のデータを作成するための参照とし
 
 
 
+[[set-up-credentials]]
 == クレデンシャルの設定
 
 SnapCenter は、クレデンシャルを使用して SnapCenter 処理を実行するユーザを認証しますLinuxホストまたはAIXホストにプラグインパッケージをインストールするためのクレデンシャルを作成する必要があります。
@@ -380,6 +385,7 @@ root 以外のユーザのクレデンシャルを作成する場合は、「 * 
 
 
 
+[[configure-credentials-for-an-oracle-database]]
 == Oracleデータベースのクレデンシャルを設定
 
 Oracleデータベースに対してデータ保護処理を実行する際に使用するクレデンシャルを設定する必要があります。

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: role, create, permission 
 summary: 既存の SnapCenter ロールに加えて、独自のロールを作成して権限をカスタマイズできます。 
 ---
-= ロールの作成
+= SnapCenter でロールを作成する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

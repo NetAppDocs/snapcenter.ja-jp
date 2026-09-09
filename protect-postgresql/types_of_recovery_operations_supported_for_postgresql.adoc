@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: recovery operations 
 summary: SnapCenterを使用すると、PostgreSQLに対してさまざまな種類のリカバリ操作を実行できます。 
 ---
-= PostgreSQLクラスタでサポートされるリカバリ処理のタイプ
+= SnapCenter でのPostgreSQLクラスタのリカバリ操作
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore and recovery strategy, IBM Db2 resources, snapcenter 
 summary: データベースのリストアとリカバリを行う前に戦略を定義しておくと、リストア処理とリカバリ処理を正常に実行できるようになります。 
 ---
-= IBM DB2リソースのリストアおよびリカバリ戦略の定義
+= SnapCenter で IBM Db2 リソースのリストアおよびリカバリ戦略を定義する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

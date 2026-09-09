@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: NetApp supported plug-ins 
 summary: SnapCenterは、物理マシンと仮想マシンの両方でさまざまなストレージタイプをサポートしています。NetAppでサポートされているプラグインをインストールする前に、ストレージタイプがサポートされているかどうかを確認する必要があります。 
 ---
-= NetAppでサポートされるプラグインでサポートされるストレージタイプ
+= SnapCenterのNetAppサポート プラグインでサポートされるストレージ タイプ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: oracle databases discover 
 summary: バックアップ保持オプション： 
 ---
-= バックアップ保持オプション
+= SnapCenter のバックアップ保持オプション
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

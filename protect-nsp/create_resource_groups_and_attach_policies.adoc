@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resource groups, attach policies, snapcenter 
 summary: リソースグループはコンテナであり、バックアップおよび保護するリソースを追加する必要があります。 
 ---
-= リソースグループを作成してポリシーを適用
+= SnapCenter でリソースグループを作成してポリシーを適用する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

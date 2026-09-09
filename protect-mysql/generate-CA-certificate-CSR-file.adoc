@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter 
 summary: 証明書署名要求（ CSR ）を生成し、証明書をインポートできます。 
 ---
-= CA証明書CSRファイルの生成
+= SnapCenter の CA 証明書 CSR ファイルを生成する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

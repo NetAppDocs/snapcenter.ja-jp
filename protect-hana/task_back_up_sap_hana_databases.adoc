@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Database 
 summary: どのリソースグループにも含まれていないリソースは、のページからバックアップすることができます。 
 ---
-= SAP HANAデータベースのバックアップ
+= SAP HANAデータベースをSnapCenterでバックアップする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

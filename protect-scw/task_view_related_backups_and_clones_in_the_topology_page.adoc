@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: view backups, view clones 
 summary: 'リソースのバックアップまたはクローニングを準備するときに、プライマリストレージとセカンダリストレージ上のすべてのバックアップとクローンの図を表示できます。[Topology]ページでは、選択したリソースまたはリソースグループに使用可能なすべてのバックアップとクローンを確認できます。これらのバックアップとクローンの詳細を表示し、選択してデータ保護処理を実行できます。' 
 ---
-= [Topology]ページで関連するバックアップとクローンを表示する
+= Windows の SnapCenter トポロジーページで関連するバックアップとクローンを表示する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

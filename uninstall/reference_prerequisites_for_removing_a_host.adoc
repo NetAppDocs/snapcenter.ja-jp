@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: uninstall, prerequisites, plug-in, plug-in packages 
 summary: データ保護ジョブの管理に SnapCenter を使用する必要がなくなった場合は、ホストを削除できます。たとえば、保護が必要なデータがなくなったホストを削除できます。SnapCenter サーバからホストを削除する前に、前提条件となるタスクを実行する必要があります。 
 ---
-= ホストを削除するための前提条件
+= ホストを SnapCenter から削除するための前提条件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -24,6 +24,7 @@ SnapCenterサーバからホストを削除する前に、前提条件を満た�
 
 
 
+[[prerequisites-to-remove-a-host-using-role-based-access-control]]
 == ロールベースアクセス制御を使用するホストを削除するための前提条件
 
 * ホストの読み取りと削除、プラグインのインストールとアンインストール、およびオブジェクトの削除の権限を持つRBACロールを使用してログインしておく必要があります。
@@ -37,6 +38,7 @@ SnapCenterサーバからホストを削除する前に、前提条件を満た�
 
 
 
+[[prerequisites-to-remove-a-host-with-clones-created-from-clone-lifecycle-operation]]
 == クローンライフサイクル処理で作成されたクローンを含むホストを削除するための前提条件
 
 * SQLデータベースのクローンライフサイクル管理を使用してクローンジョブを作成しておく必要があります。

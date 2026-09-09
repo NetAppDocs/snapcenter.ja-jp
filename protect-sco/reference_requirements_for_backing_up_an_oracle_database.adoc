@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: requirements, prerequisites 
 summary: Oracleデータベースをバックアップする前に、前提条件が満たされていることを確認する必要があります。 
 ---
-= Oracleデータベースのバックアップ要件
+= OracleデータベースをSnapCenterでバックアップするための要件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

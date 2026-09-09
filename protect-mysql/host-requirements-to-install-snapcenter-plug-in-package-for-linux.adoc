@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter 
 summary: SnapCenter Plug-ins Package for Linuxをインストールする前に、基本的なホストシステムのスペースとサイジングの要件を理解しておく必要があります。 
 ---
-= SnapCenter Plug-ins Package for Linuxをインストールするホストの要件
+= Linux 用 SnapCenter プラグインパッケージをインストールする前のホスト要件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

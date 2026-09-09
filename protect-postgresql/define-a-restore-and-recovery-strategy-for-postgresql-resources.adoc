@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore and recovery strategy, postgresql resources, snapcenter 
 summary: クラスタのリストアとリカバリを実行する前に戦略を定義しておくと、リストア処理とリカバリ処理を正常に実行できるようになります。 
 ---
-= PostgreSQLリソースのリストアおよびリカバリ戦略の定義
+= SnapCenter で PostgreSQL のリストアおよびリカバリ戦略を定義する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

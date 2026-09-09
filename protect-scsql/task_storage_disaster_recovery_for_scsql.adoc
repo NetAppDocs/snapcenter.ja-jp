@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: disaster recovery 
 summary: 'SnapCenter Plug-in for SQL Serverストレージをリカバリするには、[グローバル設定]ページでストレージのDRモードを有効にします。' 
 ---
-= SnapCenter Plug-in for SQL Server向けストレージディザスタリカバリ（DR）
+= 災害発生後の SnapCenter Plug-in for SQL Server ストレージのリカバリ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials 
 summary: リソースとは、SnapCenterで管理されているLinuxホスト上のSAP HANAデータベースとデータボリューム以外のボリュームです。使用可能なSAP HANAデータベースを検出したあとに、これらのリソースをリソースグループに追加してデータ保護処理を実行できます。 
 ---
-= データベースの自動検出
+= SnapCenter で SAP HANA データベースを自動的に検出する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

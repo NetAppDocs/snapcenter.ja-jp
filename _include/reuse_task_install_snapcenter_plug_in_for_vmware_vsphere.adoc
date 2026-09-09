@@ -8,12 +8,14 @@
 
 
 
+[[deploy-ca-certificate]]
 == CA証明書の導入
 
 CA証明書をSnapCenter Plug-in for VMware vSphereで構成するには、 https://kb.netapp.com/data-mgmt/SnapCenter/SC_KBs/How_to_create_and_or_import_an_SSL_certificate_to_SnapCenter_Plug-in_for_VMware_vSphere["SSL 証明書を作成またはインポートします"^]を参照してください。
 
 
 
+[[configure-the-crl-file]]
 == CRLファイルの設定
 
 SnapCenter Plug-in for VMware vSphereは、事前に設定されたディレクトリでCRLファイルを検索します。VMware vSphere 用 SnapCenter プラグインの CRL ファイルのデフォルトディレクトリは、 _/opt/NetApp/config/crl_です 。

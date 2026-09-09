@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter, import, import ca certificate, mmc, microsoft management console 
 summary: Microsoft管理コンソール（MMC）を使用して、SnapCenterサーバおよびWindowsホストプラグインにCA証明書をインポートする必要があります。 
 ---
-= CA証明書のインポート
+= SnapCenter の CA 証明書をインポートする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

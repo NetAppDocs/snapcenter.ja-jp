@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create policies, sql, backup policies 
 summary: バックアップするリソースまたはリソースグループのバックアップポリシーを作成します。 
 ---
-= SQL Serverデータベースのバックアップポリシーの作成
+= SnapCenter で SQL Server データベースのバックアップポリシーを作成する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

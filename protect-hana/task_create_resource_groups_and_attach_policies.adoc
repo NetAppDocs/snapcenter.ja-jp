@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resource groups, attach policies, snapcenter 
 summary: リソースグループはコンテナであり、バックアップおよび保護するリソースを追加する必要があります。リソースグループを使用すると、特定のアプリケーションに関連付けられているすべてのデータを同時にバックアップできます。リソースグループはすべてのデータ保護ジョブに必要です。また、リソースグループに1つ以上のポリシーを適用して、実行するデータ保護ジョブのタイプを定義する必要があります。 
 ---
-= リソースグループを作成してポリシーを適用
+= リソースグループを作成し、SnapCenter SAP HANAデータベースのポリシーを適用します
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

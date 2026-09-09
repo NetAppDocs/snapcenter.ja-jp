@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: overview, unix file system, plug-in for unix file system, backup, restore, clone 
 summary: Plug-in for Unix file systemsは、TOF UNIXファイルシステムのバックアップ、リストア、およびクローニングをサポートしています。 
 ---
-= UNIXファイルシステム用SnapCenterプラグインの機能
+= UNIXファイルシステム向け SnapCenter プラグインについて
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -23,6 +23,7 @@ Plug-in for UNIXファイルシステムをインストールした環境では�
 
 
 
+[[supported-configurations]]
 == サポートされる構成
 
 |===
@@ -84,6 +85,7 @@ NFSとSANの両方にVVOLデータストアを配置します。 VVOLデータ�
 |===
 
 
+[[limitations]]
 == 制限事項
 
 * ボリュームグループでのRDMと仮想ディスクの混在はサポートされていません。
@@ -98,6 +100,7 @@ NFSとSANの両方にVVOLデータストアを配置します。 VVOLデータ�
 
 
 
+[[features]]
 == 特徴
 
 * LinuxまたはAIXシステム上の基盤となるホストストレージスタックを処理することで、Plug-in for Oracle DatabaseでOracleデータベースのデータ保護処理を実行できます。

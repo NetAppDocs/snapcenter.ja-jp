@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: alternate methods, install, plug-ins package, linux, aix, remote hosts, cmdlets, cluster host, silent mode, console mode 
 summary: SnapCenter Plug-ins Package for Linux または SnapCenter Plug-ins Package for AIX を別の方法でインストールすることもできます。 
 ---
-= Plug-ins Package for Linux / AIXの別のインストール方法
+= Linux または AIX 向け SnapCenter プラグインを手動でインストールする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -26,6 +26,7 @@ NOTE: プラグインをインストールするホストに* OpenSSL 1.0.2G*が
 
 
 
+[[install-on-multiple-remote-hosts-using-cmdlets]]
 == コマンドレットを使用した複数のリモートホストへのインストール
 
 Linux 用 SnapCenter Plug-ins Package または SnapCenter Plug-ins Package for AIX を複数のホストにインストールするには、 _ Install -SmHostPackage_PowerShell コマンドレットを使用する必要があります。
@@ -53,6 +54,7 @@ NOTE: 事前確認スクリプトでは、ファイアウォールの拒否ル�
 
 
 
+[[install-on-cluster-host]]
 == クラスタホストにインストール
 
 SnapCenter Plug-ins Package for LinuxまたはSnapCenter Plug-ins Package for AIXは、クラスタホストの両方のノードにインストールする必要があります。
@@ -79,6 +81,7 @@ NOTE: 他のSnapCenter処理の実行中にフェイルオーバーが発生す�
 
 
 
+[[install-plug-ins-package-for-linux-in-silent-mode]]
 == Plug-ins Package for Linuxをサイレントモードでインストールする
 
 コマンドラインインターフェイス（CLI）を使用して、SnapCenter Plug-ins Package for Linuxをサイレントモードでインストールできます。
@@ -115,6 +118,7 @@ IMPORTANT: プラグインパッケージのインストールでは、 SnapCent
 
 
 
+[[install-plug-ins-package-for-aix-in-silent-mode]]
 == サイレントモードでのPlug-ins Package for AIXのインストール
 
 コマンドラインインターフェイス（CLI）を使用して、AIX用SnapCenterプラグインパッケージをサイレントモードでインストールできます。

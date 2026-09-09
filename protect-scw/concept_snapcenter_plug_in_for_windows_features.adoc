@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter 
 summary: Plug-in for Windowsは、ストレージシステム上でNetApp Snapshotテクノロジと統合されます。Plug-in for Windows の操作には、 SnapCenter インターフェイスを使用します。 
 ---
-= SnapCenter Plug-in for Windowsの機能
+= SnapCenter Plug-in for Microsoft Windowsの特長
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

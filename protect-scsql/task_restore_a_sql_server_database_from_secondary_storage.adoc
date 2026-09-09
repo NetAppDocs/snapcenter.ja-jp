@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore operation 
 summary: セカンダリストレージシステム上の物理 LUN （ RDM 、 iSCSI 、または FCP ）から、バックアップされた SQL Server データベースをリストアできます。リストア機能は段階的に行われ、すべてのデータとログページがセカンダリストレージシステム上の指定されたSQL Serverバックアップから指定されたデータベースにコピーされます。 
 ---
-= セカンダリストレージからSQL Serverデータベースをリストアする
+= SnapCenter のセカンダリストレージから SQL Server データベースを復元する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

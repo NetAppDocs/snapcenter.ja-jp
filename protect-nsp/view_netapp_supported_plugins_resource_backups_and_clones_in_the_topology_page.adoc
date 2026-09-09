@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: view NetApp supported plug-in resource 
 summary: 'リソースのバックアップまたはクローニングを準備するときに、プライマリストレージとセカンダリストレージ上のすべてのバックアップとクローンの図を表示すると役立つことがあります。[Topology]ページでは、選択したリソースまたはリソースグループに使用可能なすべてのバックアップとクローンを確認できます。これらのバックアップとクローンの詳細を表示し、選択してデータ保護処理を実行できます。' 
 ---
-= NetAppでサポートされているプラグインリソースに関連するバックアップとクローンを[Topology]ページで表示する
+= NetAppがサポートするプラグインリソースのバックアップとクローンをSnapCenterで表示する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

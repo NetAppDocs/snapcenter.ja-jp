@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Server, NetApp supported plug-in 
 summary: SnapCenter Jobs ページを使用して、各バックアップ処理の進捗状況を監視できます。進捗状況を確認して、いつ完了したか、問題が発生していないかを確認できます。 
 ---
-= NetAppでサポートされるプラグインリソースのバックアップ処理を監視する
+= SnapCenterにおけるNetAppサポートプラグインリソースのバックアップ処理の監視
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

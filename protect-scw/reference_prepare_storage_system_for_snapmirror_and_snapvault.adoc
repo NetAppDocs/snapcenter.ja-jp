@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: requirements 
 summary: SnapCenterプラグインとONTAP SnapMirrorテクノロジを併用すると、バックアップセットのミラーコピーを別のボリュームに作成できます。また、ONTAP SnapVaultテクノロジを併用すると、標準への準拠やその他のガバナンス関連の目的でディスクツーディスクのバックアップレプリケーションを実行できます。これらのタスクを実行する前に、ソースボリュームとデスティネーションボリュームの間にデータ保護関係を設定し、その関係を初期化する必要があります。 
 ---
-= SnapMirrorレプリケーションとSnapVaultレプリケーションのためのストレージシステムの準備
+= SnapCenter の SnapMirror および SnapVault 用ストレージシステムの準備
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

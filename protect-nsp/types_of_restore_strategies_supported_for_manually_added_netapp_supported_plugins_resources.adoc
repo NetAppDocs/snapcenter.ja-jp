@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter 
 summary: SnapCenterを使用してリストア処理を正常に実行するには、戦略を定義する必要があります。手動で追加したNetAppでサポートされるプラグインリソースには、2種類のリストア戦略があります。手動で追加したNetApp対応プラグインリソースはリカバリできません。 
 ---
-= 手動で追加したNetAppでサポートされるプラグインリソースでサポートされるリストア戦略のタイプ
+= NetApp がサポートする SnapCenter のプラグインリソースリストア戦略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -18,6 +18,7 @@ NOTE: 手動で追加したNetApp対応プラグインリソースはリカバ�
 
 
 
+[[complete-resource-restore]]
 == リソース全体のリストア
 
 * リソースのすべてのボリューム、qtree、およびLUNをリストア
@@ -28,6 +29,7 @@ NOTE: リソースにボリュームまたはqtreeが含まれている場合、
 
 
 
+[[file-level-restore]]
 == ファイルレベルのリストア
 
 * ボリューム、qtree、またはディレクトリからファイルをリストア

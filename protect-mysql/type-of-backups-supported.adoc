@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for mysql 
 summary: Backup typeには、作成するバックアップのタイプを指定します。SnapCenterでは、MySQLデータベースに対してSnapshotコピーベースのバックアップタイプがサポートされます。 
 ---
-= サポートされるバックアップのタイプ
+= SnapCenter Plug-in for MySQL でサポートされているバックアップタイプ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ Backup typeには、作成するバックアップのタイプを指定します
 
 
 
+[[snapshot-copy-based-backup]]
 == Snapshotコピーベースのバックアップ
 
 Snapshotコピーベースのバックアップでは、NetAppのSnapshotテクノロジを利用して、MySQLデータベースが格納されているボリュームのオンラインの読み取り専用コピーを作成します。

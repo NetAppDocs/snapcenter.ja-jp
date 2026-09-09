@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Database 
 summary: 一部のHANAインスタンスでは自動検出がサポートされません。これらのリソースは手動で追加する必要があります。 
 ---
-= プラグインホストに手動でリソースを追加する
+= SAP HANA の SnapCenter プラグインホストにリソースを手動で追加する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

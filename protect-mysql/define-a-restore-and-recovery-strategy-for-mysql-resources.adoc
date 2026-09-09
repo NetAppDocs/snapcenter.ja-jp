@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore and recovery strategy, MySQL resources, snapcenter 
 summary: データベースのリストアとリカバリを行う前に戦略を定義しておくと、リストア処理とリカバリ処理を正常に実行できるようになります。 
 ---
-= MySQLリソースのリストアとリカバリの戦略を定義する
+= MySQLリソースの復元および復旧戦略を SnapCenter で定義する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

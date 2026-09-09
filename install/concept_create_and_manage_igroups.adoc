@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: igroup 
 summary: イニシエータグループ（igroup）を作成して、ストレージシステム上の特定のLUNにアクセスできるホストを指定します。SnapCenter を使用して、 Windows ホストの igroup の作成、名前変更、変更、削除を行うことができます。 
 ---
-= igroupの作成と管理
+= SnapCenter での igroup の作成と管理
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ summary: イニシエータグループ（igroup）を作成して、ストレ�
 
 
 
+[[create-an-igroup]]
 == igroupを作成する
 
 SnapCenter を使用して、 Windows ホスト上に igroup を作成できます。igroup を LUN にマッピングすると、ディスクの作成ウィザードまたはディスク接続ウィザードでこの igroup を使用できるようになります。
@@ -72,6 +73,7 @@ SnapCenter により、ストレージシステムに igroup が作成されま�
 
 
 
+[[rename-an-igroup]]
 == igroupの名前を変更する
 
 SnapCenter を使用して、既存の igroup の名前を変更できます。
@@ -87,6 +89,7 @@ SnapCenter を使用して、既存の igroup の名前を変更できます。
 
 
 
+[[modify-an-igroup]]
 == igroupを変更する
 
 SnapCenter を使用すると、既存の igroup にイニシエータを追加できます。igroupの作成時に追加できるホストは1つだけです。クラスタ用のigroupを作成する場合は、igroupを変更してそのigroupに他のノードを追加できます。
@@ -103,6 +106,7 @@ SnapCenter を使用すると、既存の igroup にイニシエータを追加�
 
 
 
+[[delete-an-igroup]]
 == igroupを削除する
 
 SnapCenter を使用して、不要になった igroup を削除できます。

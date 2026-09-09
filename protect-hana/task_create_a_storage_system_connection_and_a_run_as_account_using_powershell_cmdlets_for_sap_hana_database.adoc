@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Database 
 summary: PowerShellコマンドレットを使用してSAP HANAデータベースのバックアップ、リストア、クローニングを行う前に、Storage Virtual Machine（SVM）接続とクレデンシャルを作成する必要があります。 
 ---
-= PowerShellコマンドレットを使用してSAP HANAデータベース用にストレージシステム接続とクレデンシャルを作成
+= SAP HANAデータベース用のSnapCenter PowerShell コマンドレットを使用してストレージシステム接続とクレデンシャルを作成する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

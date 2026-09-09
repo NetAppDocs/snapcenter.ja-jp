@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: refresh clone, clone 
 summary: 'クローンを更新するには、 [Refresh-SmClone] コマンドを実行します。このコマンドは、データベースのバックアップを作成し、既存のクローンを削除して、同じ名前のクローンを作成します。' 
 ---
-= クローンを更新します。
+= SnapCenter で Oracle データベースのクローンを更新する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

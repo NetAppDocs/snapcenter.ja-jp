@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: alternate host, clone, Unix file systems, file systems 
 summary: SnapCenterを使用すると、ファイルシステムのバックアップを使用してUNIXファイルシステムデータベースをクローニングできます。 
 ---
-= UNIXファイルシステムのバックアップのクローニング
+= UNIXファイルシステムのバックアップをSnapCenterでクローニングする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

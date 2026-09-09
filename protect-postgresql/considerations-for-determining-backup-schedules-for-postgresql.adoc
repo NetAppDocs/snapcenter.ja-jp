@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for PostgreSQL 
 summary: バックアップのスケジュールを決定する場合に最も重要な要因となるのは、リソースの変更率です。使用頻度の高いリソースは1時間ごとにバックアップし、使用頻度の低いリソースは1日に1回バックアップすることもできます。その他の要因としては、組織におけるリソースの重要性、サービスレベルアグリーメント（ SLA ）、目標復旧時点（ RPO ）などがあります。 
 ---
-= PostgreSQLのバックアップスケジュールを決定する際の考慮事項
+= SnapCenter Plug-in for PostgreSQL のバックアップスケジュール要因
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

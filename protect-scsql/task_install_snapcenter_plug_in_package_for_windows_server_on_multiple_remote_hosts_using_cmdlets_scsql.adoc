@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials 
 summary: PowerShellコマンドレットInstall-SmHostPackageを使用すると、SnapCenter Plug-in for Microsoft SQL Serverを複数のホストに同時にインストールできます。 
 ---
-= コマンドレットを使用した複数のリモートホストへのSnapCenter Plug-in for Microsoft SQL Serverのインストール
+= コマンドレットを使用して複数のホストに SnapCenter Plug-in for Microsoft SQL Server をインストールする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

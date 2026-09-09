@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Databases 
 summary: SnapCenterを使用してリストア処理を正常に実行するには、戦略を定義する必要があります。自動検出されたSAP HANAデータベースには、2種類のリストア戦略があります。 
 ---
-= 自動検出されたSAP HANAデータベースでサポートされるリストア戦略のタイプ
+= SnapCenter 自動検出されたSAP HANAデータベースの復元戦略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ SnapCenterを使用してリストア処理を正常に実行するには、戦�
 
 
 
+[[complete-resource-restore]]
 == リソース全体のリストア
 
 * リソースのすべてのボリューム、qtree、およびLUNをリストア
@@ -30,6 +31,7 @@ NOTE: リソースにボリュームまたはqtreeが含まれている場合、
 
 
 
+[[tenant-database]]
 == テナントデータベース
 
 * テナントデータベースをリストア

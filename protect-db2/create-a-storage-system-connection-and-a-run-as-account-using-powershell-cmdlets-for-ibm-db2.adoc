@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for IBM Db2 
 summary: PowerShellコマンドレットを使用してIBM DB2データベースをバックアップ、リストア、またはクローニングするには、Storage Virtual Machine（SVM）接続とクレデンシャルを作成する必要があります。 
 ---
-= IBM DB2用のPowerShellコマンドレットを使用して、ストレージシステム接続とクレデンシャルを作成する
+= IBM Db2 用の SnapCenter コマンドレットを使用してストレージ接続とクレデンシャルを作成する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

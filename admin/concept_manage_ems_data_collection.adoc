@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EMS data collection 
 summary: PowerShellコマンドレットを使用して、Event Management System（EMS；イベント管理システム）によるデータ収集のスケジュール設定と管理を行うことができます。EMS データ収集では、 SnapCenter サーバ、インストールされている SnapCenter プラグインパッケージ、ホストに関する情報などが収集され、指定した ONTAP Storage Virtual Machine （ SVM ）に送信されます。 
 ---
-= EMSデータ収集の管理
+= SnapCenter で EMS データ収集を管理する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -18,6 +18,7 @@ NOTE: データ収集タスクの実行中はシステムのCPU利用率が高�
 
 
 
+[[stop-ems-data-collection]]
 == EMSデータ収集の停止
 
 EMSデータ収集はデフォルトで有効になっており、インストール日から7日ごとに実行されます。データ収集は、 PowerShell コマンドレットの _Disable -SmDataCollectionEMS_ を使用していつでも無効にできます。
@@ -29,6 +30,7 @@ EMSデータ収集はデフォルトで有効になっており、インスト�
 
 
 
+[[start-ems-data-collection]]
 == EMSデータ収集の開始
 
 EMSデータ収集はデフォルトで有効になっており、インストール日から7日ごとに実行されるようにスケジュールされています。無効にした場合は、 _Enable-SmDataCollectionEMS_cmdlet を使用して、 EMS データ収集を再開できます。
@@ -42,6 +44,7 @@ NetApp ONTAP event generate-svm-log権限がStorage Virtual Machine（AutoSuppor
 
 
 
+[[change-ems-data-collection-schedule-and-target-svm]]
 == EMSデータ収集のスケジュールとターゲットSVMを変更
 
 PowerShellコマンドレットを使用して、EMSデータ収集のスケジュールやターゲットStorage Virtual Machine（SVM）を変更できます。
@@ -54,6 +57,7 @@ PowerShellコマンドレットを使用して、EMSデータ収集のスケジ�
 
 
 
+[[monitor-ems-data-collection-status]]
 == EMSデータ収集のステータスを監視する
 
 いくつかのPowerShellコマンドレットを使用して、EMSデータ収集のステータスを監視できます。スケジュール、Storage Virtual Machine（SVM）ターゲット、およびステータスに関する情報を取得できます。

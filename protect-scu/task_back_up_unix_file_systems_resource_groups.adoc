@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup, resource group 
 summary: リソースグループのバックアップ処理は、リソースグループに定義されているすべてのリソースに対して実行されます。 
 ---
-= UNIXファイルシステムリソースグループのバックアップ
+= SnapCenter UNIX ファイルシステムのリソースグループをバックアップする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

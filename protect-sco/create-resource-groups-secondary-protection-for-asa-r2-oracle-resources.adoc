@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa r2, secondary protection, consistency group, primary consistency group, secondary consistency group 
 summary: リソースグループはコンテナであり、バックアップして保護するリソースを追加します。リソースグループを使用すると、特定のアプリケーションに関連付けられているすべてのデータを同時にバックアップできます。 
 ---
-= ASA R2システム上のOracleリソースに対してリソースグループを作成し、セカンダリ保護を有効にする
+= Oracle リソースの ASA r2 セカンダリ保護のための SnapCenter リソースグループの作成
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

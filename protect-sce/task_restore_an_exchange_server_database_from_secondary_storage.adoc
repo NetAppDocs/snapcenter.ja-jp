@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: バックアップしたExchange Serverデータベースは、セカンダリストレージ（ミラーまたはバックアップ）からリストアできます。 
 ---
-= セカンダリストレージからExchange Serverデータベースをリストアする
+= SnapCenter のセカンダリストレージから Exchange データベースをリストアする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

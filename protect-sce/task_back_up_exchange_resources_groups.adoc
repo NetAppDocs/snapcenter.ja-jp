@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: 'リソースグループはホストまたはExchange DAG上のリソースの集まりであり、リソースグループにはDAG全体または個 々 のデータベースを含めることができます。リソースグループは[リソース]ページでバックアップできます。' 
 ---
-= Exchangeリソースグループをバックアップする
+= SnapCenter を使用して Exchange リソースグループをバックアップする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

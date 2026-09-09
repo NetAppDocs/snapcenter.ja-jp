@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for PostgreSQL 
 summary: PowerShellコマンドレットを使用してPostgreSQLクラスタをバックアップ、リストア、またはクローニングするには、Storage Virtual Machine（SVM）接続とクレデンシャルを作成する必要があります。 
 ---
-= PostgreSQL用のPowerShellコマンドレットを使用して、ストレージシステム接続とクレデンシャルを作成する
+= PowerShell コマンドレットを使用して SnapCenter PostgreSQL のストレージ接続とクレデンシャルを作成する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

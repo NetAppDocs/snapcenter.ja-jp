@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: uninstall, snapcenter server, windows 
 summary: 'SnapCenterサーバを使用してデータ保護ジョブを管理する必要がなくなった場合は、SnapCenterサーバホストの[プログラムと機能]コントロールパネルを使用してSnapCenterサーバをアンインストールできます。SnapCenter サーバをアンインストールすると、そのコンポーネントがすべて削除されます。' 
 ---
-= WindowsホストでのSnapCenterサーバのアンインストール
+= Windows ホスト上の SnapCenter サーバーをアンインストールする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: split clone, snapcenter 
 summary: SnapCenterを使用して、クローンリソースを親リソースからスプリットできます。スプリットされたクローンは親リソースから独立します。 
 ---
-= クローンをスプリットする
+= SAP HANAデータベースのSnapCenterクローンを分割する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

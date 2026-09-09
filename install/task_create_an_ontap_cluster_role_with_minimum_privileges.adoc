@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP cluster role, privileges 
 summary: 最小限の権限で ONTAP クラスタロールを作成して、 SnapCenter の admin ロールを使用して ONTAP で処理を実行する必要がないようにする必要があります。 
 ---
-= 最小限の権限でONTAPクラスタロールを作成する
+= SnapCenter の最小権限を持つ ONTAP クラスタロールを作成する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -35,6 +35,7 @@ NOTE: このコマンドは権限ごとに繰り返す必要があります。
 
 
 
+[[ontap-cli-commands-for-creating-cluster-roles-and-assigning-permissions]]
 == クラスタロールの作成と権限の割り当て用のONTAP CLIコマンド
 
 クラスタロールを作成して権限を割り当てるために実行する必要があるONTAP CLIコマンドがいくつかあります。

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for PostgreSQL,run as 
 summary: SnapCenterを使用してバックアップをクローニングできます。クローニングはプライマリとセカンダリのどちらのバックアップからも実行できます。 
 ---
-= PostgreSQLバックアップをクローニング
+= SnapCenter で PostgreSQL バックアップをクローニングする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

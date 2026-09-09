@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: uninstall, remove, remove host 
 summary: 'SnapCenterサーバでホストを削除すると、まずSnapCenterの[Resources]ページにそのホストに対して表示されているバックアップ、クローン、クローニングジョブ、リソースグループ、およびリソースが削除され、次にホスト上のプラグインパッケージがアンインストールされます。' 
 ---
-= ホストを削除
+= SnapCenter からホストを削除する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

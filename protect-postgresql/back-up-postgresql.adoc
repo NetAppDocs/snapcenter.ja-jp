@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for PostgreSQL 
 summary: どのリソースグループにも含まれていないリソースは、のページからバックアップすることができます。 
 ---
-= PostgreSQLのバックアップ
+= SnapCenterでPostgreSQLをバックアップする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

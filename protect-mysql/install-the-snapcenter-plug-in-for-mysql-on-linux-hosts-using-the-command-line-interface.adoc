@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: install, SnapCenter Plug-in for MySQL 
 summary: SnapCenterユーザインターフェイス（UI）を使用して、SnapCenter Plug-in for MySQL Databaseをインストールする必要があります。ご使用の環境でSnapCenter UIからのプラグインのリモートインストールが許可されていない場合は、コマンドラインインターフェイス（CLI1）を使用して、コンソールモードまたはサイレントモードでPlug-in for MySQL Databaseをインストールできます。 
 ---
-= コマンドラインインターフェイスを使用して、LinuxホストにSnapCenter Plug-in for MySQLをインストールする
+= CLIを使用してLinuxホスト上にMySQL用 SnapCenter プラグインをインストールする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

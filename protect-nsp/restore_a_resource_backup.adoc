@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore 
 summary: SnapCenterを使用してリソースをリストアできます。リストア処理の機能は、使用するプラグインによって異なります。 
 ---
-= リソースのバックアップのリストア
+= SnapCenter でリソースバックアップをリストアする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

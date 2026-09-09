@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for postgresql 
 summary: 必要なバックアップジョブの数を左右する要因としては、リソースのサイズ、使用中のボリュームの数、リソースの変更率、サービスレベルアグリーメント（ SLA\ ）などがあります。 
 ---
-= PostgreSQLに必要なバックアップジョブの数
+= SnapCenter Plug-in for PostgreSQL の必要なバックアップジョブ数
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

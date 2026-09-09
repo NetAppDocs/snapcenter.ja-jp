@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Database 
 summary: リソースのバックアップまたはクローニングを準備するときに、プライマリストレージとセカンダリストレージ上のすべてのバックアップとクローンの図を表示すると役立つことがあります。 
 ---
-= [Topology]ページでのSAP HANAデータベースのバックアップとクローンの表示
+= SnapCenterのトポロジページでSAP HANAのバックアップとクローンを表示します
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

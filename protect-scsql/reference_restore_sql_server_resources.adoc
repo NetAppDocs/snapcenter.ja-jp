@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Restore workflow 
 summary: SnapCenter を使用して SQL Server データベースをリストアするには、 1 つ以上のバックアップからアクティブファイルシステムにデータをリストアし、データベースをリカバリします。可用性グループ内のデータベースをリストアし、リストアしたデータベースを可用性グループに追加することもできます。SQL Serverデータベースをリストアする前に、いくつかの準備作業を実行する必要があります。 
 ---
-= リストアのワークフロー
+= SnapCenter Plug-in for Microsoft SQL Server のリストアワークフロー
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

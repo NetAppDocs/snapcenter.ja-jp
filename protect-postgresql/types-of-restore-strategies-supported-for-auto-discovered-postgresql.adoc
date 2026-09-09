@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for postgresql 
 summary: SnapCenterを使用してリストア処理を正常に実行するには、戦略を定義する必要があります。自動的に検出されたPostgreSQLクラスタには、2種類の復元方法があります。 
 ---
-= 自動検出されたPostgreSQLでサポートされるリストア戦略のタイプ
+= SnapCenter で自動検出された PostgreSQL のリストア戦略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

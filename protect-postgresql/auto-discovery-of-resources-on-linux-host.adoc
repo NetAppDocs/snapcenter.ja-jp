@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for PostgreSQL 
 summary: 'リソースとは、SnapCenterによって管理されるLinuxホスト上のPostgreSQLクラスタとインスタンスです。SnapCenter Plug-in for PostgreSQLプラグインをインストールすると、そのLinuxホスト上のPostgreSQLクラスタが自動的に検出され、[Resources]ページに表示されます。' 
 ---
-= Linuxホスト上のリソースの自動検出
+= Linux ホスト上の SnapCenter PostgreSQL リソースの自動検出
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

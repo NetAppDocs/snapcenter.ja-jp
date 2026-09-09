@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup types, cloning type, clone name, limitations 
 summary: データベースをクローニングする前に戦略を定義しておくと、クローニング処理を確実に成功させることができます。 
 ---
-= Oracleデータベースのクローニング戦略を定義する
+= SnapCenter での Oracle データベースのクローン戦略について学ぶ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ summary: データベースをクローニングする前に戦略を定義し�
 
 
 
+[[types-of-backups-supported-for-cloning]]
 == クローニングでサポートされるバックアップのタイプ
 
 SnapCenterでは、Oracleデータベースのさまざまなタイプのバックアップのクローニングがサポートされます。
@@ -37,6 +38,7 @@ NOTE: アーカイブログバックアップのクローニングはサポー�
 
 
 
+[[types-of-cloning-supported-for-oracle-databases]]
 == Oracleデータベースでサポートされるクローニングのタイプ
 
 Oracle データベース環境では、 SnapCenter がデータベースバックアップのクローニングをサポートします。バックアップは、プライマリストレージシステムとセカンダリストレージシステムからクローニングできます。
@@ -50,6 +52,7 @@ NOTE: クローンの更新処理は、UNIXコマンドでのみ実行できま�
 
 
 
+[[clone-naming-conventions-for-oracle-databases]]
 == Oracleデータベースのクローンの命名規則
 
 SnapCenter 3.0 以降では、ファイルシステムのクローンに、 ASM ディスクグループのクローンとは異なる命名規則が使用されます。
@@ -63,6 +66,7 @@ HASHCODEofDISKGROUPは、ASMディスクグループごとに一意の、自動�
 
 
 
+[[limitations-of-cloning-oracle-databases]]
 == Oracleデータベースのクローニングに関する制限事項
 
 データベースをクローニングする前に、クローニング処理の制限事項を確認しておく必要があります。

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: キューに登録されているリストアジョブはキャンセルできます。 
 ---
-= Exchangeデータベースのリストア処理をキャンセルします
+= SnapCenter で Exchange データベースのリストア操作をキャンセルする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

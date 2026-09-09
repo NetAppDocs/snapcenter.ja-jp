@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: split clone 
 summary: SnapCenterを使用して、クローンリソースを親リソースからスプリットできます。スプリットされたクローンは親リソースから独立します。 
 ---
-= クローンをスプリットする
+= SnapCenter Plug-in for SQL Server でクローンを分割する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

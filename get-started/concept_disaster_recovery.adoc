@@ -17,6 +17,7 @@ SnapCenterディザスタリカバリ（DR）機能を使用すると、リソ�
 
 
 
+[[snapcenter-server-dr]]
 == SnapCenter サーバDR
 
 * SnapCenter サーバのデータはバックアップされ、SnapCenter サーバにプラグインを追加したり、管理したりすることなくリカバリできます。
@@ -28,6 +29,7 @@ SnapCenterディザスタリカバリ（DR）機能を使用すると、リソ�
 
 
 
+[[snapcenter-plug-in-and-storage-dr]]
 == SnapCenter プラグインとストレージDR
 
 DRは、SnapCenter Plug-in for SQL Serverでのみ使用できます。プラグインが停止している場合は、別のSQLホストに切り替えて、いくつかの手順に従ってデータをリカバリします。を参照して link:../protect-scsql/task_disaster_recovery_scsql.html["SnapCenter Plug-in for SQL Serverのディザスタリカバリ"]

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Manage resource groups 
 summary: リソースグループに対してさまざまな処理を実行できます。 
 ---
-= リソースグループの管理
+= SnapCenter でリソースグループを管理する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -39,6 +39,7 @@ NOTE: リソースグループからリソースを削除した場合、リソ�
 
 
 
+[[stop-and-resume-operations-on-resource-groups]]
 == リソースグループに対する処理の停止と再開
 
 スケジュールされた処理がリソースグループで開始されないように一時的に無効にすることができます。これらの処理は、必要に応じてあとで有効にすることができます。
@@ -55,6 +56,7 @@ NOTE: リソースグループからリソースを削除した場合、リソ�
 
 
 
+[[delete-resource-groups]]
 == リソースグループの削除
 
 リソースグループ内のリソースを保護する必要がなくなった場合は、リソースグループを削除できます。SnapCenter からプラグインを削除する前に、リソースグループを削除する必要があります。

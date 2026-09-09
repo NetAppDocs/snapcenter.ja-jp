@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: snapmirror, snapvault, storage system, replication 
 summary: SnapCenter プラグインは、 ONTAP の SnapMirror テクノロジおよび SnapVault テクノロジと組み合わせて使用できます 
 ---
-= SAP HANAデータベース向けに、SnapMirrorおよびSnapVaultレプリケーション用のストレージシステムを準備する
+= SnapMirror および SnapVault による SnapCenter での SAP HANA データベースのレプリケーション
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

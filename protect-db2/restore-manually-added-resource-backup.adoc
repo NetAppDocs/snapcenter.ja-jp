@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for IBM Db2 
 summary: SnapCenterを使用すると、1つ以上のバックアップからデータをリストアおよびリカバリできます。 
 ---
-= 手動で追加したリソースバックアップのリストア
+= SnapCenterによる手動で追加されたリソースのバックアップのリストア
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

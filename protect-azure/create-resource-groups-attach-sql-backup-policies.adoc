@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resource groups, attach policies, snapcenter, sql, backup polices, schedule 
 summary: リソースグループはコンテナであり、バックアップおよび保護するリソースを追加する必要があります。 
 ---
-= リソースグループの作成とSQLバックアップポリシーの適用
+= SnapCenter リソースグループを作成し、SQL Server バックアップポリシーを適用する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

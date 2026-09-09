@@ -15,6 +15,7 @@ SnapCenter サーバと MySQL サーバ間の通信をスタンドアロン構�
 
 
 
+[[configure-secured-mysql-connections-for-standalone-snapcenter-server-configurations]]
 == スタンドアロンSnapCenterサーバ構成用のセキュアなMySQL接続の設定
 
 SnapCenter サーバと MySQL サーバ間の通信を保護する場合は、 Secure Sockets Layer （ SSL ）証明書およびキーファイルを生成できます。証明書とキーファイルは MySQL Server と SnapCenter Server で設定する必要があります。
@@ -128,6 +129,7 @@ ssl-key="C:/ProgramData/NetApp/SnapCenter/MySQL Data/Data/client-key.pem"
 
 
 
+[[configure-secured-mysql-connections-for-ha-configurations]]
 == HA構成用のセキュアなMySQL接続の設定
 
 SnapCenterサーバとMySQLサーバ間の通信を保護する場合は、高可用性（HA）ノードの両方に対してSecure Sockets Layer（SSL）証明書とキーファイルを生成できます。証明書とキーファイルは、MySQLサーバとHAノードで設定する必要があります。

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for MySQL 
 summary: どのリソースグループにも含まれていないリソースは、のページからバックアップすることができます。 
 ---
-= MySQLのバックアップ
+= MySQLリソースをSnapCenterでバックアップする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

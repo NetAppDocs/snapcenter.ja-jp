@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for postgresql 
 summary: リソースのバックアップまたはクローニングを準備するときに、プライマリストレージとセカンダリストレージ上のすべてのバックアップとクローンの図を表示すると役立つことがあります。 
 ---
-= [Topology]ページでPostgreSQLのバックアップとクローンを表示
+= PostgreSQL のバックアップとクローンを SnapCenter トポロジーページで表示する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

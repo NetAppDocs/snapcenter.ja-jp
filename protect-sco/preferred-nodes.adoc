@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: oracle databases discover 
 summary: SnapCenter によるOracleデータベースの検出方法 
 ---
-= RACセツトアツフノユウセンノオト
+= SnapCenter が RAC 構成で優先ノードを使用する方法
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -26,12 +26,14 @@ node3は優先ノードのリストにないため、バックアップには使
 
 
 
+[[flex-asm-setup]]
 == Flex ASMセットアップ
 
 Flex ASMセットアップでは、カーディナリティがRACクラスタ内のノード数より少ない場合、リーフノードは優先ノードとしてリストされません。Flex ASMクラスタノードのロールに変更があった場合は、優先ノードが更新されるように手動でを検出する必要があります。
 
 
 
+[[required-database-state]]
 == 必要なデータベースの状態
 
 バックアップを正常に完了するには、優先ノード上のRACデータベースインスタンスが必要な状態である必要があります。

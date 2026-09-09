@@ -17,6 +17,7 @@ summary: SnapCenter によるOracleデータベースの検出方法
 
 
 
+[[for-oracle-versions-11g-to-12cr1]]
 == Oracle バージョン 11_________ ～ 12_c_R1
 
 .RACデータベース
@@ -45,6 +46,7 @@ RAC One Nodeデータベースは、/etc/oratabエントリに基づいてのみ
 
 
 
+[[for-oracle-versions-12cr2-to-18c-19c-or-21c]]
 == Oracleバージョン12cR2から18c、19c、21c
 
 .RACデータベース

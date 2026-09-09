@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create policies, NetApp supported plug-in 
 summary: SnapCenterを使用してNetAppでサポートされるプラグイン固有のリソースをバックアップする前に、バックアップ対象のリソースまたはリソースグループのバックアップポリシーを作成する必要があります。 
 ---
-= NetAppでサポートされるプラグインリソースのポリシーの作成
+= NetAppでサポートされているプラグインリソース用のSnapCenterポリシーを作成します
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

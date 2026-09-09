@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for IBM DB2 
 summary: 'リソースとは、SnapCenterによって管理されるLinuxホスト上のIBM DB2データベースとインスタンスです。SnapCenter Plug-in for IBM DB2プラグインをインストールすると、そのLinuxホスト上のIBM DB2データベースが自動的に検出されて[リソース]ページに表示されます。' 
 ---
-= Linuxホスト上のリソースの自動検出
+= SnapCenterがLinuxホスト上のIBM Db2リソースを自動的に検出する方法
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

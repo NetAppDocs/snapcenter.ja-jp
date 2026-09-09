@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: SnapCenter Plug-in for Microsoft Exchange ServerをSnapManager for Microsoft Exchange Serverと共存させるには、SnapManager for Microsoft Exchange ServerがインストールされているExchange ServerにSnapCenter Plug-in for Microsoft Exchange Serverをインストールし、SnapManager for Exchangeのスケジュールを無効にして、SnapCenter Plug-in for Microsoft Exchange Serverを使用して新しいスケジュールとバックアップを設定する必要があります。 
 ---
-= ExchangeとSnapCenterが共存するようにSnapManager 7.xを設定する
+= SnapManager for Exchange が SnapCenter と共存するように設定する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

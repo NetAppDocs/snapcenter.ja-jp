@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: tech refresh, SnapCenter Server, cmdlet, APIs, F5, rollback, decommission, disaster recovery, standalone 
 summary: 新しいホストに同じバージョンのSnapCenterサーバをインストールしてから、APIを実行するか、コマンドレットを実行して古いサーバからSnapCenterをバックアップし、新しいサーバにリストアします。 
 ---
-= SnapCenterサーバホストの機器更改
+= SnapCenter サーバーホストのテクノロジーリフレッシュを実行する
 :allow-uri-read: 
 
 
@@ -55,6 +55,7 @@ NOTE: 古いSnapCenterホストでweb.configファイルを手動で更新した
 
 
 
+[[tech-refresh-of-a-node-in-f5-cluster]]
 == F5クラスタ内のノードの機器更改（Tech Refresh）
 
 F5クラスタ内のノードを削除して新しいノードを追加すると、機器更改（Tech Refresh）を実行できます。更新が必要なノードがアクティブな場合は、クラスタの別のノードをアクティブにしてからノードを削除します。
@@ -66,22 +67,26 @@ NOTE: F5クラスタのURLが変更された場合は、API：またはコマン
 
 
 
+[[decommissioning-the-old-snapcenter-server-host]]
 == 古いSnapCenterサーバホストの運用停止
 
 新しいSnapCenterサーバが稼働中であり、すべてのプラグインホストが新しいSnapCenterサーバホストと通信できることを確認したら、古いSnapCenterサーバホストを削除できます。
 
 
 
+[[rollback-to-the-old-snapcenter-server-host]]
 == 古いSnapCenterサーバホストへのロールバック
 
 問題が発生した場合は、API：またはコマンドレット：_Set-SmServerConfig_を使用して、すべてのホストのSnapCenterサーバURLを更新することで、古いSnapCenterサーバホストを元に戻すことができます `/<snapcenter_version>/server/configureurl` 。
 
 
 
+[[disaster-recovery]]
 == ディザスタリカバリ
 
 
 
+[[disaster-recovery-of-standalone-snapcenter-host]]
 === スタンドアロンSnapCenterホストのディザスタリカバリ
 
 サーバのバックアップを新しいホストにリストアすることで、ディザスタリカバリを実行できます。
@@ -115,6 +120,7 @@ NOTE: server_etc/host_entriesはリストアされません。古いサーバか
 
 
 
+[[disaster-recovery-of-snapcenter-f5-cluster]]
 === SnapCenter F5クラスタのディザスタリカバリ
 
 ディザスタリカバリを実行するには、サーバのバックアップを新しいホストにリストアし、スタンドアロンホストをクラスタに変換します。

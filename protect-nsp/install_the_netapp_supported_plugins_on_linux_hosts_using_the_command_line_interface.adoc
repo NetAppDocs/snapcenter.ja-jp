@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: install, NetApp supported plug-in 
 summary: SnapCenter NetAppでサポートされているプラグインは、SnapCenterユーザインターフェイス（UI）を使用してインストールする必要があります。SnapCenter UIからのプラグインのリモートインストールが許可されていない環境では、NetAppでサポートされるプラグインを、コマンドラインインターフェイス（CLI）を使用してコンソールモードまたはサイレントモードでインストールできます。 
 ---
-= コマンドラインインターフェイスを使用して、NetAppでサポートされているプラグインをLinuxホストにインストールする
+= SnapCenter CLIを使用したLinuxホストへのNetAppサポート プラグインのインストール
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

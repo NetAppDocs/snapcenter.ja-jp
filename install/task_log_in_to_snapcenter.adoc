@@ -92,6 +92,7 @@ Linuxホストで実行されているSnapCenterにプラグインホストを�
 
 
 
+[[log-in-to-snapcenter-using-multi-factor-authentication-mfa]]
 == 多要素認証（MFA）を使用したSnapCenterへのログイン
 
 SnapCenterサーバは、Active Directoryの一部であるドメインアカウントに対してMFAをサポートしています。
@@ -125,6 +126,7 @@ AD FSページにユーザ名またはパスワードが無効であるという
 
 
 
+[[modify-the-snapcenter-default-gui-session-timeout]]
 == SnapCenterのデフォルトのGUIセッションタイムアウトを変更します。
 
 SnapCenter GUI のセッションタイムアウト時間を変更して、デフォルトのタイムアウト時間である 20 分以上に設定できます。
@@ -140,6 +142,7 @@ SnapCenter GUI のセッションタイムアウト時間を変更して、デ�
 
 
 
+[[secure-the-snapcenter-web-server-by-disabling-ssl-3-0]]
 == SSL 3.0を無効にしてSnapCenter Webサーバを保護する
 
 セキュリティ上の理由から、 SnapCenter Web サーバで SSL (Secure Socket Layer) 3.0 プロトコルが有効になっている場合は、 Microsoft IIS で無効にする必要があります。

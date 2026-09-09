@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup, cli, commands 
 summary: バックアップのワークフローには、計画、バックアップするリソースの特定、バックアップポリシーの作成、リソースグループの作成とポリシーの適用、バックアップの作成、処理の監視が含まれます。 
 ---
-= UNIXコマンドを使用したOracleデータベースのバックアップ
+= SnapCenter で UNIX コマンドを使用して Oracle データベースをバックアップする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

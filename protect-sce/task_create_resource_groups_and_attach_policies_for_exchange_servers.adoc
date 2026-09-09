@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resource group 
 summary: リソースグループはすべてのデータ保護ジョブに必要です。また、リソースグループに1つ以上のポリシーを適用して、実行するデータ保護ジョブのタイプと保護スケジュールを定義する必要があります。 
 ---
-= Exchange Serverのリソースグループの作成とポリシーの適用
+= SnapCenter で Exchange Server のリソースグループを作成してポリシーを適用する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

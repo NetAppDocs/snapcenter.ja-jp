@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: audit, log, configure 
 summary: ソフトウェアプラットフォームおよびそれらのプラットフォームで実行されているすべてのソフトウェアのセキュリティイベントをログに記録するようにを設定できます。 
 ---
-= 監査ログの設定
+= SnapCenter で監査ログ設定を構成する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

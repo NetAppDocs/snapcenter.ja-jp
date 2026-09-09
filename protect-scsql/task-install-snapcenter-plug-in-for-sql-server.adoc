@@ -15,6 +15,7 @@ SnapCenter Plug-in for Microsoft SQL Serverのインストール手順をまと�
 
 
 
+[[step-1-set-up-run-as-credentials-to-install-the-plug-in-for-microsoft-sql-server]]
 == 手順1：Run AsクレデンシャルをセットアップしてPlug-in for Microsoft SQL Serverをインストールする
 
 . 左側のペインで、 * Settings > Credentials > New * をクリックします。
@@ -29,6 +30,7 @@ SnapCenter Plug-in for Microsoft SQL Serverのインストール手順をまと�
 
 
 
+[[step-2-add-a-host-and-install-the-plug-in-for-microsoft-sql-server]]
 == 手順2：ホストを追加してPlug-in for Microsoft SQL Serverをインストールする
 
 . SnapCenter GUI の左ペインで、 *Hosts > Managed Hosts > Add* の順にクリックします。

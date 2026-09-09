@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: NetApp supported plug-ins 
 summary: NetAppでサポートされているプラグインをデータ保護処理に使用できます。 
 ---
-= NetAppでサポートされるプラグインの機能
+= SnapCenterでサポートされているNetAppプラグインについて説明します
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

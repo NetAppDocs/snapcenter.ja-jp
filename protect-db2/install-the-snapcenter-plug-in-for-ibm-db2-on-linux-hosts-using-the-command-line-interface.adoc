@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: install, SnapCenter Plug-in for IBM Db2 
 summary: SnapCenter Plug-in for IBM DB2 Databaseは、SnapCenterのユーザインターフェイス（UI）を使用してインストールする必要があります。ご使用の環境でSnapCenter UIからのプラグインのリモートインストールが許可されていない場合は、コマンドラインインターフェイス（CLI1）を使用して、コンソールモードまたはサイレントモードでPlug-in for IBM DB2 Databaseをインストールできます。 
 ---
-= コマンドラインインターフェイスを使用して、LinuxホストにSnapCenter Plug-in for IBM DB2をインストールする
+= CLI を使用して Linux ホストに IBM Db2 用 SnapCenter プラグインをインストールする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

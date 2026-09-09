@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: application volume, resource group, back up, database 
 summary: アプリケーションボリュームのみ、またはアプリケーションボリュームとデータベースが混在したリソースグループをバックアップできます。 
 ---
-= アプリケーションボリュームリソースグループをバックアップする
+= SnapCenter でアプリケーションボリュームリソースグループをバックアップする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

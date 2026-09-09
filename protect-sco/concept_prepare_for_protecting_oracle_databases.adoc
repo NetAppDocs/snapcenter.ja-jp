@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: oracle, preparation for protection, prerequisites 
 summary: バックアップ、クローニング、リストアなどのデータ保護処理を実行する場合は、事前に戦略を定義し、環境をセットアップする必要があります。また、 SnapVault サーバで SnapMirror テクノロジと SnapCenter テクノロジを使用するように設定することもできます。 
 ---
-= Oracleデータベースを保護する準備
+= OracleデータベースをSnapCenterで保護するための前提条件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

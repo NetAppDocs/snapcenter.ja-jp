@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cancel restore 
 summary: キューに登録されているリストアジョブはキャンセルできます。 
 ---
-= リストア処理をキャンセルする
+= SnapCenter での復元操作のキャンセル
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

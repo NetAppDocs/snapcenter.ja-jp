@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: modify RBAC, role, users, groups 
 summary: SnapCenterでは、ロール、ユーザ、およびグループを変更できます。 
 ---
-= RBACの管理
+= SnapCenter で RBAC を管理する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ SnapCenterでは、ロール、ユーザ、およびグループを変更でき�
 
 
 
+[[modify-a-role]]
 == ロールを変更します。
 
 SnapCenter ロールを変更して、ユーザまたはグループを削除したり、そのロールに関連付けられている権限を変更したりできます。ロール全体で使用されている権限を変更または削除する場合は、ロールを変更すると特に便利です。
@@ -44,6 +45,7 @@ NOTE: このオプションを有効にすると、オブジェクトまたは�
 
 
 
+[[modify-users-and-groups]]
 == ユーザとグループの変更
 
 SnapCenter のユーザまたはグループを変更して、ロールとアセットを変更できます。

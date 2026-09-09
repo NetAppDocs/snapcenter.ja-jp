@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Manage storage system 
 summary: ストレージシステムを追加したら、ストレージシステムの構成や接続を変更したり、ストレージシステムを削除したりできます。 
 ---
-= ストレージシステムの管理
+= SnapCenter でストレージシステムを管理する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ summary: ストレージシステムを追加したら、ストレージシス�
 
 
 
+[[modify-storage-system-configuration]]
 == ストレージシステムの設定を変更する
 
 ユーザ名、パスワード、プラットフォーム、ポート、プロトコルを変更する場合、 SnapCenter を使用してストレージシステムの設定を変更できます。 タイムアウト時間、優先 IP アドレス、またはメッセージングオプション。
@@ -72,6 +73,7 @@ ONTAPクラスタ
 
 
 
+[[delete-the-storage-system]]
 == ストレージシステムを削除する
 
 SnapCenter を使用して、使用していないストレージシステムを削除できます。
@@ -102,6 +104,7 @@ NOTE: ONTAP GUI を使用して ONTAP クラスタから SVM を削除した場�
 
 
 
+[[rest-api-support]]
 == REST APIをサポート
 
 ONTAPへのすべてのASA、AFF、またはFASシステム接続は、デフォルトでZAPIを経由します。RESTAPIは、特定のONTAPバージョンで有効にできます。

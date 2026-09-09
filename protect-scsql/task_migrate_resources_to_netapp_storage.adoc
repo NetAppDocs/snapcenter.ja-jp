@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: migrate resources 
 summary: SnapCenter Plug-in for Microsoft Windows を使用してネットアップストレージシステムをプロビジョニングしたら、 SnapCenter グラフィカルユーザインターフェイス \ （ GUI\ ）または PowerShell コマンドレットを使用して、リソースをネットアップストレージシステムに移行するか、またはあるネットアップ LUN から別のネットアップ LUN に移行できます。 
 ---
-= NetAppストレージシステムへのリソースの移行
+= SnapCenterでリソースをNetAppストレージに移行します
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

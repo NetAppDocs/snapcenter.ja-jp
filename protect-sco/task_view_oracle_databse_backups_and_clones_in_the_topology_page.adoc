@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Oracle Databases 
 summary: リソースのバックアップまたはクローニングを準備するときに、プライマリストレージとセカンダリストレージ上のすべてのバックアップとクローンの図を表示すると役立つことがあります。 
 ---
-= [Topology]ページでのOracleデータベースのバックアップとクローンの表示
+= Oracle データベースのバックアップとクローンを SnapCenter トポロジーページで表示する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Microsoft Exchange Server 
 summary: Plug-in for Exchangeを使用して、Exchange Serverデータベースのバックアップとリストアを実行できます。 
 ---
-= SnapCenter Plug-in for Microsoft Exchange Serverの機能
+= Microsoft Exchange Server 向け SnapCenter プラグインの機能
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

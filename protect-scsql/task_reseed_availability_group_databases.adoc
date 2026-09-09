@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reseed 
 summary: 再シードは、可用性グループ（ AG ）データベースをリストアするためのオプションです。セカンダリデータベースがAG内のプライマリデータベースと同期していない場合は、セカンダリデータベースを再シードできます。 
 ---
-= 可用性グループデータベースの再シード
+= SnapCenter で可用性グループデータベースを再シードする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

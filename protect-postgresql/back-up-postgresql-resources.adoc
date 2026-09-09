@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for PostgreSQL 
 summary: リソース\（cluster\）またはリソースグループのバックアップを作成できます。バックアップのワークフローには、計画、バックアップするクラスタの特定、バックアップポリシーの管理、リソースグループの作成とポリシーの適用、バックアップの作成、処理の監視が含まれます。 
 ---
-= PostgreSQLリソースのバックアップ
+= SnapCenter PostgreSQL リソースのバックアップワークフロー
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

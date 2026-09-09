@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: NetApp supported plug-in, resources, NetApp supported plug-ins, MongoDB, ORASCPM, Oracle Applications, SAP ASE, SAP MaxDB, Storage plug-in 
 summary: バックアップまたはクローンを作成するリソースを追加する必要があります。環境によっては、バックアップまたはクローンを作成するデータベースインスタンスやそのコレクションがリソースに含まれる場合があります。 
 ---
-= NetAppがサポートするプラグインにリソースを追加する
+= NetAppがサポートするSnapCenterのプラグインにリソースを追加する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -101,12 +101,14 @@ IMPORTANT: SnapCenter以外でデータベースの名前が変更された場�
 
 
 
+[[parameters-to-configure-the-resource]]
 == リソースを構成するパラメータ
 
 プラグインを手動で追加する場合は、[Resource Settings]ページで次のパラメータを使用してリソースを設定できます。
 
 
 
+[[plug-in-for-mongodb]]
 === MongoDB向けプラグイン
 
 リソース設定：
@@ -130,6 +132,7 @@ MongoDB.propertiesファイルには、次のパラメータを指定する必�
 
 
 
+[[plug-in-for-maxdb]]
 === MaxDB用プラグイン
 
 リソース設定：
@@ -163,6 +166,7 @@ MaxDB のバックアップテンプレートパラメータを設定する場�
 
 
 
+[[plug-in-for-sap-ase]]
 === SAP ASE向けプラグイン
 
 リソース設定：
@@ -187,6 +191,7 @@ UNIXの場合は必須です。このパラメータは、Snap Creatorエージ�
 
 
 
+[[plug-in-for-oracle-applications-orascpm]]
 === Oracleアプリケーション向けプラグイン（ORASCPM）
 
 リソース設定：

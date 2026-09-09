@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: application volume, back up 
 summary: アプリケーションボリュームがどのリソースグループにも属していない場合は、リソースページからアプリケーションボリュームをバックアップできます。 
 ---
-= アプリケーションボリュームのバックアップ
+= SnapCenter でアプリケーションボリュームをバックアップする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

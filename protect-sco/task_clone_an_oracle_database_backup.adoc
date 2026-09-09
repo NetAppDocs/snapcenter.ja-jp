@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Credentials, alternate host, clone, FRA, OMF 
 summary: SnapCenterを使用すると、データベースのバックアップを使用してOracleデータベースをクローニングできます。 
 ---
-= Oracleデータベースバックアップのクローニング
+= OracleデータベースのバックアップをSnapCenterでクローニングする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -358,6 +358,7 @@ AIXのセットアップでは、lkdevコマンドを使用してロックし、
 
 
 
+[[update-the-preferred-ip-on-the-host]]
 == ホストの優先IPを更新する
 
 クローン処理が完了すると、ストレージアクセスレイヤ（SAL）からクローンへのパスが_SAL:SAL_FORMAT <nfs_lif_IP>になります<JunctionPath>。優先IPを指定するには、SCCLIコマンドを使用してホストでIPを設定する必要があります。

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials 
 summary: リソースとは、インストールしたプラグインで管理されるデータベース、Exchangeデータベース可用性グループです。これらのリソースをリソースグループに追加してデータ保護ジョブを実行できますが、その前に使用可能なリソースを特定しておく必要があります。使用可能なリソースを確認することで、プラグインのインストールが正常に完了したことの確認にもなります。 
 ---
-= Exchangeリソースをバックアップに使用できるかどうかの確認
+= SnapCenter で Exchange リソースがバックアップに使用可能かどうかを確認する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

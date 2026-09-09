@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clone, cancel 
 summary: キューに登録されているクローニング処理をキャンセルできます。 
 ---
-= SQLリソースのクローニング処理をキャンセルします。
+= SnapCenter で SQL リソースのクローン操作をキャンセルする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Backup workflow 
 summary: SnapCenter Plug-in for Microsoft SQL Server をインストールした環境では、 SnapCenter を使用して SQL Server リソースをバックアップすることができます。 
 ---
-= バックアップのワークフロー
+= SQL Server の SnapCenter におけるバックアップワークフロー
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -28,6 +28,7 @@ PowerShellコマンドレットを手動またはスクリプトで使用して�
 
 
 
+[[how-snapcenter-backs-up-databases]]
 == SnapCenter でのデータベースのバックアップ方法
 
 SnapCenterでは、Snapshotテクノロジを使用して、LUNまたはVMDK上にあるSQL Serverデータベースをバックアップします。SnapCenterは、データベースのSnapshotを作成することによってバックアップを作成します。

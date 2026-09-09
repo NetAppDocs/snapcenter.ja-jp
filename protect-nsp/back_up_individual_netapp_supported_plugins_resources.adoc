@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup, NetApp supported plug-ins, NetApp supported plug-ins, MongoDB, ORASCPM, Oracle Applications, SAP ASE, SAP MaxDB, Storage plug-in 
 summary: 'どのリソースグループにも含まれていない個 々 のNetAppサポートプラグインリソースは、[Resources]ページからバックアップできます。リソースはオンデマンドでバックアップできます。また、リソースにポリシーが適用され、スケジュールが設定されている場合は、スケジュールに従って自動的にバックアップが実行されます。' 
 ---
-= NetAppでサポートされているプラグインリソースを個別にバックアップする
+= SnapCenterでNetAppがサポートする個々のプラグインリソースをバックアップする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

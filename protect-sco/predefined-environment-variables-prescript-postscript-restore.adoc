@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: environment variable, predefined, prescript, postscript, restore 
 summary: SnapCenterでは、データベースのリストア時にプリスクリプトとポストスクリプトを実行するときに、事前定義された環境変数を使用できます。 
 ---
-= リストア固有のプリスクリプトとポストスクリプト用に事前定義された環境変数
+= SnapCenter リストア用のprescriptおよびpostscript環境変数
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

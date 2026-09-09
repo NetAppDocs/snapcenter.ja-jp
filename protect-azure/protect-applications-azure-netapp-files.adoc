@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: azure netapp files, ANF, back up, restore, clone, ANF backup, Azure Blob storage 
 summary: Azure NetApp Filesで実行されているアプリケーションをバックアップ、リストア、クローニングできます。 
 ---
-= Azure NetApp Filesで実行されているアプリケーションを保護
+= Azure NetApp Files のアプリケーション保護（SnapCenter）について学ぶ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -19,6 +19,7 @@ Azure NetApp Filesバックアップを含むポリシーが有効でリソー�
 
 
 
+[[limitations]]
 == 制限事項
 
 * FAS、ASA、AFF ONTAPおよびAmazon FSx for NetApp ONTAPストレージシステムのオブジェクトストレージ機能はサポートされません。

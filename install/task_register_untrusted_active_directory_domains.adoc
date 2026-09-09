@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Active Directory 
 summary: 信頼されていない複数のActive Directoryドメインのホスト、ユーザ、およびグループを管理するには、Active DirectoryをSnapCenterサーバに登録する必要があります。 
 ---
-= 信頼されていないActive Directoryドメインの登録
+= 信頼されていない Active Directory ドメインを SnapCenter に登録する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Manage resources 
 summary: SnapCenter は、 Active Directory \ （ AD \ ）の信頼できるドメインのホストを管理するだけでなく、複数の AD 信頼されていないドメインのホストも管理します。信頼されていない AD ドメインを SnapCenter サーバに登録する必要があります。SnapCenter では、複数の信頼されていない AD ドメインのユーザとグループがサポートされます 
 ---
-= 信頼されないドメインのリソースを管理します。
+= 信頼できないドメインの SnapCenter リソースを管理する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -19,6 +19,7 @@ SnapCenter サーバに登録されていないドメインに属する Active D
 
 
 
+[[modify-untrusted-domains]]
 == 信頼されていないドメインの変更
 
 信頼されていないドメインを変更して、ドメインコントローラのIPアドレスまたは完全修飾ドメイン名（FQDN）を更新できます。
@@ -58,6 +59,7 @@ FQDN を指定し、 * resolve * をクリックします。
 
 
 
+[[unregister-untrusted-active-directory-domains]]
 == 信頼されていないActive Directoryドメインの登録解除
 
 信頼されていないActive Directoryドメインに関連付けられているアセットを使用しない場合は、そのドメインの登録を解除できます。

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Backup retention options 
 summary: バックアップコピーを保持する日数を選択することも、保持するバックアップコピーの数（ONTAPの最大コピー数255）を指定することもできます。たとえば、組織で、10日分のバックアップコピーや130個のバックアップコピーを保持する必要があるとします。 
 ---
-= Plug-in for SQL Serverノハツクアツフホシオフシヨン
+= SnapCenter Plug-in for SQL Server のバックアップ保持オプション
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

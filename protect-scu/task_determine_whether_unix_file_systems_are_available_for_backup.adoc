@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for UNIX file systems, discovery,file systems, UNIX, Unix file systems 
 summary: 'Plug-in for UNIXファイルシステムをインストールすると、ホスト上のファイルシステムが自動的に検出されて[Resources]ページに表示されます。' 
 ---
-= バックアップに使用できるUNIXファイルシステムの検出
+= SnapCenter でバックアップに使用できる UNIX ファイルシステムを検出します
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

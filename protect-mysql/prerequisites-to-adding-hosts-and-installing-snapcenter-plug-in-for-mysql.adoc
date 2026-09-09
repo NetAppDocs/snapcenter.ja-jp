@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials 
 summary: ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。SnapCenter Plug-in for MySQLは、WindowsとLinuxの両方の環境で使用できます。 
 ---
-= ホストを追加してSnapCenter Plug-in for MySQLをインストールするための前提条件
+= ホストを追加してMySQL向けSnapCenterプラグインをインストールするための前提条件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -27,6 +27,7 @@ NOTE: IBM Java は Windows および Linux ホストではサポートされて�
 
 
 
+[[windows-hosts]]
 == Windowsホスト
 
 * ローカル管理者Privilegesを持つドメインユーザと、リモートホストに対するローカルログイン権限が必要です。
@@ -40,6 +41,7 @@ link:https://www.oracle.com/java/technologies/downloads/#java17["すべてのオ
 
 
 
+[[linux-hosts]]
 == Linuxホスト
 
 * rootユーザまたはroot以外のユーザに対してパスワードベースのSSH接続を有効にしておく必要があります。
@@ -53,6 +55,7 @@ link:https://www.oracle.com/java/technologies/downloads/#java17["すべてのオ
 
 
 
+[[supplemental-commands]]
 == 補助コマンド
 
 SnapCenter Plug-in for MySQLで補足コマンドを実行するには、_allowed_commands.config_fileに追加する必要があります。
@@ -80,6 +83,7 @@ NOTE: ワイルドカードエントリ（*）を使用してすべてのコマ�
 
 
 
+[[configure-sudo-privileges-for-non-root-users-for-linux-host]]
 == Linuxホストのroot以外のユーザに対するsudo Privilegesの設定
 
 SnapCenterでは、root以外のユーザがSnapCenter Plug-ins Package for Linuxをインストールしてプラグインプロセスを開始できます。プラグインプロセスをroot以外の有効なユーザとして実行します。複数のパスにアクセスできるようにroot以外のユーザにsudo Privilegesを設定する必要があります。

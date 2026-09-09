@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for MySQL 
 summary: 一部のMySQLインスタンスでは自動検出がサポートされていません。これらのリソースは手動で追加する必要があります。 
 ---
-= プラグインホストに手動でリソースを追加する
+= MySQL リソースをプラグインホストに手動で追加する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

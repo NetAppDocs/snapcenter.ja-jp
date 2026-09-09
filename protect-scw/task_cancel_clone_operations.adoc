@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cancel clone 
 summary: キューに格納されているクローニングジョブをキャンセルすることができます。 
 ---
-= クローニング処理をキャンセルします
+= SnapCenterでのクローン操作のキャンセル
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

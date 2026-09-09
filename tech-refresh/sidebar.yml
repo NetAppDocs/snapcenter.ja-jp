@@ -2,9 +2,9 @@
 section: tech-refresh
 title: Tech Refresh
 entries:
-- title: SnapCenterサーバホストの機器更改
+- title: SnapCenter サーバーホストのテクノロジーリフレッシュを実行する
   url: "/tech-refresh/task_tech_refresh_server_host.html"
-- title: SnapCenterプラグインホストの機器更改
+- title: SnapCenter プラグインホストのテクノロジーリフレッシュを実行する
   url: "/tech-refresh/task_tech_refresh_plugin_host.html"
-- title: ストレージシステムの機器更改
+- title: SnapCenter でストレージシステムのテクニカルリフレッシュを実行する
   url: "/tech-refresh/task_tech_refresh_storage_system.html"

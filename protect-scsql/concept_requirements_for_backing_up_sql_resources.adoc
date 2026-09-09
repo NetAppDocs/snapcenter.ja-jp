@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Requirements 
 summary: SQLリソースをバックアップする前に、いくつかの要件を満たしていることを確認する必要があります。 
 ---
-= SQLリソスノハツクアツフノヨウケン
+= SnapCenter で SQL リソースをバックアップするための要件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

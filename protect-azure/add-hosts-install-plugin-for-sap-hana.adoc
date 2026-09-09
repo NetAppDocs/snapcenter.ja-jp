@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add host, install, install plug-in, SAP HANA 
 summary: ホストを追加してプラグインパッケージをインストールしてください。 
 ---
-= ホストを追加してSnapCenter Plug-in for SAP HANA Databaseをインストールする
+= ホストを追加し、SAP HANAデータベース向けSnapCenterプラグインをインストールします
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

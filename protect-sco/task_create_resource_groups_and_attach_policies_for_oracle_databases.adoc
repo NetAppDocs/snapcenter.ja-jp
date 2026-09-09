@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: run as, resource groups, policies, Oracle database 
 summary: リソースグループはコンテナであり、バックアップして保護するリソースを追加します。リソースグループを使用すると、特定のアプリケーションに関連付けられているすべてのデータを同時にバックアップできます。 
 ---
-= Oracleデータベース用のリソースグループの作成とポリシーの適用
+= SnapCenter で Oracle データベースのリソースグループを作成してポリシーを適用する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

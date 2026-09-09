@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: unix file systems, preparation for protection, prerequisites 
 summary: バックアップ、クローニング、リストアなどのデータ保護処理を実行する前に、環境をセットアップする必要があります。 
 ---
-= UNIXファイルシステムの保護の準備
+= UNIXファイルシステムをSnapCenterで保護するための前提条件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

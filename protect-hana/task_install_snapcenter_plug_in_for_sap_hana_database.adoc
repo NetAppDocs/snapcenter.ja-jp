@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: installing 
 summary: SAP HANA データベースを保護する場合は、 SnapCenter Plug-in for SAP HANA Database をインストールしてセットアップする必要があります。 
 ---
-= SnapCenter Plug-in for SAP HANA Databaseのインストールワークフロー
+= SnapCenter Plug-in for SAP HANA データベースのインストールワークフロー
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

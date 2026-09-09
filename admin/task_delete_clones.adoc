@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Delete clones 
 summary: 不要になったクローンは削除できます。 
 ---
-= クローンの削除
+= SnapCenter クローンの削除
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

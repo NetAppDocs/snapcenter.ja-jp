@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Exchange Server 
 summary: バックアップ、クローニング、リストアなどのデータ保護処理を実行する場合は、事前に戦略を定義し、環境をセットアップする必要があります。また、 SnapVault サーバで SnapMirror テクノロジと SnapCenter テクノロジを使用するように設定することもできます。 
 ---
-= データ保護の準備
+= Microsoft Exchange Server 向け SnapCenter プラグインのデータ保護の前提条件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -21,6 +21,7 @@ link:https://docs.netapp.com/us-en/ontap-automation/getting_started_with_the_res
 
 
 
+[[prerequisites-for-using-the-snapcenter-plug-in-for-microsoft-exchange-server]]
 == SnapCenter Plug-in for Microsoft Exchange Serverを使用するための前提条件
 
 Plug-in for Exchangeを使用する前に、SnapCenter管理者がSnapCenterサーバをインストールして設定し、前提条件となるタスクを実行する必要があります。
@@ -49,6 +50,7 @@ https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/["SnapCenter Plug-in for 
 
 
 
+[[how-resources-resource-groups-and-policies-are-used-for-protecting-exchange-server]]
 == Exchange Serverを保護するためのリソース、リソースグループ、ポリシーの使用方法
 
 SnapCenterを使用する前に、実行するバックアップ、リストア、および再シードの処理に関連する基本的な概念を理解しておくと役立ちます。ここでは、さまざまな処理のリソース、リソースグループ、およびポリシーを操作します。

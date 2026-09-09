@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: NetApp supported plug-ins, MongoDB, ORASCPM, Oracle Applications, SAP ASE, SAP MaxDB, Storage plug-in 
 summary: 使用しているアプリケーション用にNetAppでサポートされているプラグインを開発し、SnapCenterを使用してそれらのアプリケーションをバックアップ、リストア、クローニングすることができます。他のSnapCenterプラグインと同様に、NetApp対応プラグインはNetApp SnapCenterソフトウェアのホスト側コンポーネントとして機能し、アプリケーションに対応したリソースのデータ保護と管理を可能にします。 
 ---
-= NetAppでサポートされるプラグインの概要
+= NetAppがサポートするSnapCenter用プラグインについて
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ permalink: sc-automation/task_get_started_with_the_rest_api.html
 keywords: REST API 
 summary: APIにアクセスすると、ライブセットアップの複雑なワークフロープロセスでAPIを使用する前に、ある程度の情報を確認できます。 
 ---
-= REST APIの使用を開始する
+= SnapCenter REST API を使い始める
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ SnapCenter REST APIはすぐに使用を開始できます。APIにアクセス�
 
 
 
+[[hello-world]]
 == Hello world
 
 システムで簡単なコマンドを実行して、SnapCenter REST APIの使用を開始し、使用可能かどうかを確認できます。

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for MySQL 
 summary: PowerShellコマンドレットを使用してMySQLデータベースをバックアップ、リストア、またはクローニングするには、Storage Virtual Machine（SVM）接続とクレデンシャルを作成する必要があります。 
 ---
-= MySQL用のPowerShellコマンドレットを使用して、ストレージシステム接続とクレデンシャルを作成する
+= MySQL 用の SnapCenter PowerShell コマンドレットを使用してストレージシステム接続とクレデンシャルを作成する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

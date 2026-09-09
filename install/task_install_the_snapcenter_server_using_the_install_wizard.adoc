@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: install, snapcenter software, install wizard, features enabled 
 summary: SnapCenterサーバインストーラの実行可能ファイルを実行して、SnapCenterサーバをインストールできます。 
 ---
-= WindowsホストへのSnapCenterサーバのインストール
+= Windows ホストへの SnapCenter サーバーのインストール
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -66,6 +66,7 @@ NOTE: [Cancel] * ボタンをクリックすると、実行中のステップが
 
 
 
+[[features-enabled-on-windows-host-during-installation]]
 == インストール中に Windows ホストで有効になる機能
 
 SnapCenter Serverインストーラは、インストール中にWindowsホスト上でWindowsの機能とロールを有効にします。これらは、ホストシステムのトラブルシューティングやメンテナンスに役立つ場合があります。

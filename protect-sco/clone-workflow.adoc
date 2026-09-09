@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clone operation, clone, workflow 
 summary: クローニングワークフローには、計画、クローニング処理の実行、および処理の監視が含まれます。 
 ---
-= クローニングのワークフロー
+= OracleデータベースのSnapCenterクローン ワークフロー
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

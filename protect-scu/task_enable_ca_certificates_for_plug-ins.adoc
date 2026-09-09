@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter, enable ca certificate, ca certificate 
 summary: CA 証明書を設定し、 Oracle プラグインホストに CA 証明書を導入する必要があります。 
 ---
-= プラグインに対してCA証明書を有効にする
+= UNIX 用 SnapCenter プラグインで CA 証明書を有効にする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup 
 summary: バックアップのワークフローには、計画、バックアップするリソースの特定、バックアップポリシーの管理、リソースグループの作成とポリシーの適用、バックアップの作成、処理の監視が含まれます。 
 ---
-= NetAppでサポートされているプラグインリソースのバックアップ
+= SnapCenter の NetApp サポートプラグインリソースのバックアップワークフロー
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

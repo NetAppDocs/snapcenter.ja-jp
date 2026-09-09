@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore 
 summary: SnapCenter を使用すると、ファイルシステムのバックアップをリストアできます。ファイルシステムのリストアは、指定したバックアップのすべてのデータをファイルシステムの元の場所にコピーする複数の段階からなるプロセスです。 
 ---
-= Windowsファイルシステムのバックアップのリストア
+= SnapCenter SnapCenterを使用してWindowsファイルシステムのバックアップをリストアする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

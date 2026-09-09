@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for postgresql 
 summary: リストアとリカバリのワークフローには、計画、リストア処理の実行、および処理の監視が含まれます。 
 ---
-= リストアのワークフロー
+= SnapCenter Plug-in for PostgreSQL のリストアワークフロー
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

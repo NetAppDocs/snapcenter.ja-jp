@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: コピーが破損している場合などにレプリカコピーを再シードする必要がある場合は、SnapCenterの再シード機能を使用して最新のバックアップに再シードできます。 
 ---
-= Exchangeのパッシブノードレプリカの再シード
+= SnapCenter でパッシブ Exchange ノードレプリカを再シードする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

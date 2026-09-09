@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for IBM Db2 
 summary: Plug-in for IBM DB2をインストールした環境では、SnapCenterを使用してIBM DB2とそのリソースをバックアップ、リストア、クローニングできます。これらの処理をサポートするタスクを実行することもできます。 
 ---
-= SnapCenter Plug-in for IBM DB2の機能
+= SnapCenter Plug-in for IBM Db2の機能について
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

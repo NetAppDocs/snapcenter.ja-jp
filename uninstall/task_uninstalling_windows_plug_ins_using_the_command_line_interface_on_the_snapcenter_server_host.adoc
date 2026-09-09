@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: uninstall, windows plug-ins, powershell cmdlet 
 summary: SnapCenter Server ホストのコマンドラインインターフェイスで Uninstall-SmHostPackage コマンドレットを使用すると、 1 つ以上のホストから個々のプラグインまたはプラグインパッケージをアンインストールできます。 
 ---
-= PowerShellコマンドレットを使用したWindowsプラグインのアンインストール
+= PowerShellを使用したSnapCenter Windowsプラグインのアンインストール
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

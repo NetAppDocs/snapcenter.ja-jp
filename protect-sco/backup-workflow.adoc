@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup, workflow 
 summary: リソース（データベース）またはリソースグループのバックアップを作成できます。 
 ---
-= バックアップ手順 の概要
+= SnapCenter Oracleデータベースのバックアップワークフロー
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

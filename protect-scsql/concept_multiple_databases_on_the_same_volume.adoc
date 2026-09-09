@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Multiple databases 
 summary: バックアップポリシーにはバックアップあたりの最大データベース数を設定できるオプション（デフォルト値は 100 \ ）があるため、すべてのデータベースを同じボリュームに配置できます。 
 ---
-= 同じボリューム上の複数のデータベース
+= 同じボリューム上の複数のデータベース（SnapCenter）
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials 
 summary: リソースとは、SnapCenterで管理されるLinuxホスト上のIBM DB2データベースです。使用可能なIBM DB2データベースを検出したあとに、これらのリソースをリソースグループに追加してデータ保護処理を実行できます。 
 ---
-= データベースの自動検出
+= IBM Db2 データベースを SnapCenter で自動的に検出する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

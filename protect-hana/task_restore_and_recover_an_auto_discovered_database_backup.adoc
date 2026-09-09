@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Database 
 summary: SnapCenterを使用すると、1つ以上のバックアップからデータをリストアおよびリカバリできます。 
 ---
-= 自動検出されたデータベースバックアップのリストアとリカバリ
+= SnapCenter で自動検出されたデータベースバックアップのリストアとリカバリを行う
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

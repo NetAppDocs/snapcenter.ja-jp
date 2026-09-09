@@ -4,37 +4,37 @@ title: SnapCenterサーバとプラグインの管理
 entries:
 - title: ダッシュボードを表示
   entries:
-  - title: ダッシュボードの概要
+  - title: SnapCenter ダッシュボードについて
     url: "/admin/concept_overview_of_dashboard.html"
-  - title: ダッシュボードに情報を表示する方法
+  - title: SnapCenter ダッシュボードの情報を表示する
     url: "/admin/task_how_to_view_information_on_the_dashboard.html"
-  - title: ダッシュボードからジョブのステータスレポートを要求する
+  - title: SnapCenter ダッシュボードからジョブのステータスレポートをリクエストする
     url: "/admin/task_request_status_reports_of_the_jobs_from_the_dashboard.html"
-  - title: ダッシュボードから保護ステータスのレポートを要求する
+  - title: SnapCenter ダッシュボードから保護ステータスレポートをリクエストする
     url: "/admin/task_request_reports_of_the_protection_status_from_the_dashboard.html"
-- title: RBACの管理
+- title: SnapCenter で RBAC を管理する
   url: "/admin/task_manage_rbac.html"
-- title: ホストの管理
+- title: SnapCenter でホストを管理する
   url: "/admin/concept_manage_hosts.html"
-- title: "[Resources]ページでサポートされる処理"
+- title: SnapCenter の「リソース」ページからサポートされている操作
   url: "/admin/concept_what_operations_can_be_performed_from_the_resource_page.html"
-- title: ポリシーの管理
+- title: SnapCenter でポリシーを管理する
   url: "/admin/concept_manage_policies.html"
-- title: リソースグループの管理
+- title: SnapCenter でリソースグループを管理する
   url: "/admin/task_manage_resource_groups.html"
-- title: バックアップの管理
+- title: SnapCenter でバックアップを管理する
   url: "/admin/concept_manage_backups.html"
-- title: クローンの削除
+- title: SnapCenter クローンの削除
   url: "/admin/task_delete_clones.html"
-- title: ジョブ、スケジュール、イベント、ログの監視
+- title: SnapCenter のジョブ、スケジュール、イベント、およびログの監視
   url: "/admin/concept_monitor_jobs_schedules_events_and_logs.html"
-- title: SnapCenterのレポート機能の概要
+- title: SnapCenter のレポート機能について学ぶ
   url: "/admin/concept_overview_of_snapcenter_reports.html"
 - title: SnapCenterサーバリポジトリの管理
   url: "/admin/concept_manage_the_snapcenter_server_repository.html"
-- title: 信頼されないドメインのリソースを管理します。
+- title: 信頼できないドメインの SnapCenter リソースを管理する
   url: "/admin/concept_manage_resources_of_untrusted_domains.html"
-- title: ストレージシステムの管理
+- title: SnapCenter でストレージシステムを管理する
   url: "/admin/concept_manage_the_storage_system.html"
-- title: EMSデータ収集の管理
+- title: SnapCenter で EMS データ収集を管理する
   url: "/admin/concept_manage_ems_data_collection.html"

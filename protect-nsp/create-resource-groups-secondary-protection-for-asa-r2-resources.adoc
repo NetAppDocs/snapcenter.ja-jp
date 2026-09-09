@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa r2, secondary protection, consistency group, primary consistency group, secondary consistency group 
 summary: リソースグループはコンテナであり、バックアップして保護するリソースを追加します。リソースグループを使用すると、特定のアプリケーションに関連付けられているすべてのデータを同時にバックアップできます。 
 ---
-= リソースグループを作成し、ASA R2システム上のリソースに対してセカンダリ保護を有効にする
+= SnapCenter でリソースグループを作成し、セカンダリ保護を有効にする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

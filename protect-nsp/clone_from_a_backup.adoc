@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clone 
 summary: SnapCenterを使用してバックアップをクローニングできます。クローニングはプライマリとセカンダリのどちらのバックアップからも実行できます。クローニング処理の機能は、使用するプラグインによって異なります。 
 ---
-= バックアップからのクローニング
+= SnapCenter のバックアップからクローンを作成する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

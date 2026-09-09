@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for mysql 
 summary: Plug-in for MySQLをインストールした環境では、SnapCenterを使用してMySQLとそのリソースをバックアップ、リストア、およびクローニングすることができます。これらの処理をサポートするタスクを実行することもできます。 
 ---
-= SnapCenter Plug-in for MySQLの機能
+= SnapCenter Plug-in for MySQL の機能について
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

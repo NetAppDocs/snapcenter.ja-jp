@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: register, new customer, NetApp account, enable support 
 summary: NetAppアカウントをお持ちでない場合は、製品を登録してサポートを有効にする必要があります。 
 ---
-= SnapCenterの登録
+= SnapCenter を登録してサポートを有効にする
 :allow-uri-read: 
 
 

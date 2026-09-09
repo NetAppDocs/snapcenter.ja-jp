@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: guest OS, VMware ESXi server, limitations, RDM, Microsoft cluster 
 summary: VMware 環境での SnapCenter Plug-in for Microsoft Windows を使用して、 LUN の作成と管理、および Snapshot バックアップコピーの管理を行うことができます。 
 ---
-= VMware環境でのストレージのプロビジョニング
+= SnapCenter VMware環境でのストレージ プロビジョニング
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ VMware環境では、SnapCenter Plug-in for Microsoft Windowsを使用して、L
 
 
 
+[[supported-vmware-guest-os-platforms]]
 == サポートされるVMwareゲストOSプラットフォーム
 
 * サポートされているバージョンのWindows Server
@@ -33,6 +34,7 @@ VMware準仮想SCSIコントローラをサポートします。RDMディスク�
 
 
 
+[[vmware-esxi-server-related-limitations]]
 === VMware ESXiサーバ関連の制限事項
 
 * ESXi クレデンシャルを使用して仮想マシン上の Microsoft クラスタに Plug-in for Windows をインストールすることはできません。
@@ -46,6 +48,7 @@ VMware準仮想SCSIコントローラをサポートします。RDMディスク�
 
 
 
+[[minimum-vcenter-privileges-required-for-snapcenter-rdm-operations]]
 === SnapCenter RDMの処理に必要な最小限のvCenter権限
 
 ゲストOSでRDM処理を実行するには、ホストに対する次のvCenter権限が必要です。
@@ -61,6 +64,7 @@ VMware準仮想SCSIコントローラをサポートします。RDMディスク�
 
 
 
+[[manage-fc-rdm-luns-in-a-microsoft-cluster]]
 == MicrosoftクラスタのFC RDM LUNを管理します。
 
 Plug-in for Windowsを使用して、FC RDM LUNを使用するMicrosoftクラスタを管理できますが、まずプラグインの外部で共有RDMクォーラムと共有ストレージを作成し、クラスタ内の仮想マシンにディスクを追加する必要があります。
@@ -69,6 +73,7 @@ ESXi 5.5以降では、ESX iSCSIおよびFCoEハードウェアを使用してMi
 
 
 
+[[requirements]]
 === 要件
 
 Plug-in for Windows では、特定の構成要件を満たしていれば、 2 つの異なる ESX サーバまたは ESXi サーバに属する 2 台の仮想マシンで構成された Microsoft クラスタで FC RDM LUN の使用がサポートされます。この構成は、クラスタ全体のボックスとも呼ばれます。
@@ -111,6 +116,7 @@ RDM LUNを作成すると、ALUAを使用してイニシエータグループが
 
 
 
+[[limitations]]
 === 制限事項
 
 Plug-in for Windows では、異なる ESX サーバまたは ESXi サーバに属する異なる仮想マシン上の FC / iSCSI RDM LUN を使用する Microsoft クラスタがサポートされます。
@@ -130,6 +136,7 @@ NOTE: この機能は、ESX 5.5iより前のリリースではサポートされ
 
 
 
+[[create-a-shared-fc-rdm-lun]]
 === 共有FC RDM LUNの作成
 
 FC RDM LUNを使用してMicrosoftクラスタ内のノード間でストレージを共有するには、まず共有クォーラムディスクと共有ストレージディスクを作成し、それらをクラスタ内の両方の仮想マシンに追加する必要があります。
@@ -138,6 +145,7 @@ FC RDM LUNを使用してMicrosoftクラスタ内のノード間でストレー�
 
 
 
+[[related-information]]
 == 関連情報
 
 link:https://techdocs.broadcom.com["Broadcom技術ドキュメント"^]を参照し、物理ホスト間での仮想マシンのクラスタリングと、Microsoft クラスタ用の共有 FC RDM LUN の作成に関するドキュメントを検索します。

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup policies, policies, unix file systems, file systems 
 summary: バックアップするUNIXファイルシステムのバックアップポリシーを作成します。 
 ---
-= UNIXファイルシステムのバックアップポリシーの作成
+= SnapCenter で UNIX ファイルシステムのバックアップポリシーを作成する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

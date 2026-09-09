@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cancel, restore 
 summary: キューに登録されているリストアジョブはキャンセルできます。 
 ---
-= SQLリソースのリストア処理をキャンセルします。
+= SnapCenter で SQL リソースの復元操作をキャンセルする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

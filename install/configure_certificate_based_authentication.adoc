@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: exporting certificates, enable certificate-based authentication, certificate-based authentication, configure CA signed key pair, configure root, configure intermediate certificates, security,authentication, export CA certificates 
 summary: SnapCenter 証明書をエクスポートする。 
 ---
-= 証明書ベースの認証の設定
+= SnapCenter の証明書ベースの認証を設定する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ summary: SnapCenter 証明書をエクスポートする。
 
 
 
+[[enable-certificate-based-authentication]]
 == 証明書ベースの認証を有効にします
 
 SnapCenter ServerおよびWindowsプラグインホストに対して証明書ベースの認証を有効にするには、次のPowerShellコマンドレットを実行します。Linuxプラグインホストで双方向SSLを有効にすると、証明書ベースの認証が有効になります。
@@ -31,6 +32,7 @@ SnapCenter ServerおよびWindowsプラグインホストに対して証明書�
 
 
 
+[[export-certificate-authority-ca-certificates-from-snapcenter-server]]
 == SnapCenterサーバから認証局（CA）証明書をエクスポートします
 
 Microsoft管理コンソール（MMC）を使用して、SnapCenterサーバからプラグインホストにCA証明書をエクスポートする必要があります。
@@ -84,6 +86,7 @@ NOTE: 証明書ベースの認証は、SnapCenter HA構成およびSnapCenter Pl
 
 
 
+[[import-ca-certificate-to-the-windows-plug-in-hosts]]
 == WindowsプラグインホストへのCA証明書のインポート
 
 エクスポートしたSnapCenterサーバCA証明書を使用するには、Microsoft管理コンソール（MMC）を使用して、関連する証明書をSnapCenter Windowsプラグインホストにインポートする必要があります。
@@ -131,6 +134,7 @@ NOTE: 証明書ベースの認証は、SnapCenter HA構成およびSnapCenter Pl
 |===
 
 
+[[import-ca-certificate-to-the-unix-plug-in-hosts]]
 == CA証明書をUNIXプラグインホストにインポートします
 
 CA証明書をUNIXプラグインホストにインポートする必要があります。
@@ -154,6 +158,7 @@ CA証明書をUNIXプラグインホストにインポートする必要があ�
 
 
 
+[[configure-root-or-intermediate-certificates-to-spl-trust-store]]
 === spl trust-storeに対するルート証明書または中間証明書の設定
 
 ルート証明書または中間証明書をspl trust-storeに設定する必要があります。ルートCA証明書のあとに中間CA証明書を追加する必要があります。
@@ -171,6 +176,7 @@ CA証明書をUNIXプラグインホストにインポートする必要があ�
 
 
 
+[[configure-ca-signed-key-pair-to-spl-trust-store]]
 === SPL trust-storeへのCA署名済みキーペアの設定
 
 SPL trust-storeにCA署名付きキーペアを設定する必要があります。
@@ -201,6 +207,7 @@ SPL trust-storeにCA署名付きキーペアを設定する必要があります
 
 
 
+[[export-snapcenter-certificates]]
 == SnapCenter証明書のエクスポート
 
 SnapCenter証明書は.pfx形式でエクスポートする必要があります。

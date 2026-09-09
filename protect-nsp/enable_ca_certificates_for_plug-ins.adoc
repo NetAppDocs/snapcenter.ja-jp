@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter, ca certificates 
 summary: CA証明書を設定し、SnapCenterサーバと対応するプラグインホストにCA証明書を導入する必要があります。 
 ---
-= プラグインに対してCA証明書を有効にする
+= SnapCenter プラグインの CA 証明書を有効にする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

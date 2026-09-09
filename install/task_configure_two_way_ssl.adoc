@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: security,two-way ssl,configure two-way ssl, windows host 
 summary: Windowsホスト上のSnapCenterサーバとプラグインの間の相互通信を保護するために、双方向SSL通信を設定する必要があります。 
 ---
-= Windowsホストでの双方向SSL通信の設定
+= SnapCenter Windows ホストで双方向 SSL 通信を設定する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -113,6 +113,7 @@ Windowsレジストリエディタで、次のパスに移動します。
 
 
 
+[[configure-snapcenter-windows-plug-in-for-two-way-ssl-communication]]
 == 双方向SSL通信用のSnapCenter Windowsプラグインを設定します
 
 SnapCenter Windowsプラグインは、PowerShellコマンドを使用して双方向SSL通信用に設定する必要があります。

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: recovery operations 
 summary: SnapCenterでは、SAP HANAデータベースに対してさまざまなタイプのリカバリ処理を実行できます。 
 ---
-= SAP HANAデータベースでサポートされるリカバリ処理のタイプ
+= SAP HANAデータベースのSnapCenterにおけるリカバリ操作の種類
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

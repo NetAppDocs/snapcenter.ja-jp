@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: SnapCenterを使用してMicrosoft Exchange Serverリソースをバックアップする前に、Exchangeリソースまたはリソースグループのバックアップポリシーを作成できます。また、リソースグループの作成時や単一のリソースのバックアップ時にバックアップポリシーを作成することもできます。 
 ---
-= Exchange Serverデータベースのバックアップポリシーの作成
+= Exchange Server データベースのバックアップポリシーを SnapCenter で作成する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: application volume, overview, backup, non-data volumes 
 summary: アプリケーションボリュームは、Oracleデータベースに関連する情報が格納されるストレージです。 
 ---
-= アプリケーションボリュームとは
+= SnapCenter Plug-in for Oracle Database のアプリケーションボリュームについて
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

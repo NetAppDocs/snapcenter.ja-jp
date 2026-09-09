@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for PostgreSQL 
 summary: プラグインを使用して、リソースグループの整合性グループのSnapshotを作成できます。整合グループはコンテナであり、複数のボリュームを格納して1つのエンティティとして管理できます。整合グループは、複数のボリュームの同時Snapshotであり、ボリュームグループの整合性のあるコピーを提供します。 
 ---
-= SnapCenter Plug-in for PostgreSQLでの整合グループSnapshotの使用方法
+= SnapCenter Plug-in for PostgreSQLでの整合グループSnapshotコピーの使用方法
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

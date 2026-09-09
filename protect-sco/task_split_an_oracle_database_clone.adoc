@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: split a clone, split 
 summary: SnapCenterを使用して、クローンリソースを親リソースからスプリットできます。スプリットされたクローンは親リソースから独立します。 
 ---
-= Oracleデータベースクローンのスプリット
+= SnapCenter で Oracle データベースクローンを分割する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

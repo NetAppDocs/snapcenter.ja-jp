@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backups 
 summary: 'Snapshotがないセカンダリバックアップのバックアップ数をクリーンアップするには、Remove-SmBackupコマンドレットを使用します。このコマンドレットは、[Manage Copies]トポロジに表示されるSnapshotの総数が、セカンダリストレージのSnapshotの保持設定と一致しない場合に使用します。' 
 ---
-= PowerShellコマンドレットを使用したセカンダリバックアップ数のクリーンアップ
+= SnapCenter PowerShell コマンドレットを使用してセカンダリバックアップカウントをクリーンアップする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

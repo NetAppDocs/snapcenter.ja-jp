@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for postgresql 
 summary: SnapCenterを使用すると、1つ以上のバックアップからデータをリストアおよびリカバリできます。 
 ---
-= 自動検出されたクラスタバックアップのリストアとリカバリ
+= 自動検出されたクラスタバックアップを SnapCenter Plug-in for PostgreSQL でリストアおよびリカバリする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

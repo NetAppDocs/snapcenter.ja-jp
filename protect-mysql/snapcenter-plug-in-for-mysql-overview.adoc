@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for MySQL 
 summary: SnapCenter Plug-in for MySQLは、MySQLデータベースに対応したデータ保護管理を可能にする、NetApp SnapCenterソフトウェアのホスト側コンポーネントです。Plug-in for MySQL Databaseは、SnapCenter環境でのMySQLデータベースのバックアップ、リストア、クローニングを自動化します。 
 ---
-= SnapCenter Plug-in for MySQLの概要
+= SnapCenter Plug-in for MySQLについて学ぶ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add host, install, install plug-in, oracle, database 
 summary: ホストを追加してプラグインパッケージをインストールしてください。 
 ---
-= ホストを追加してSnapCenter Plug-in for Oracle Databaseをインストールする
+= ホストを追加して、Oracle Database用 SnapCenter プラグインをインストールします
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

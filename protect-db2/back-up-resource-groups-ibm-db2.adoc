@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for IBM Db2 
 summary: リソースグループは、ホスト上のリソースの集まりです。リソースグループのバックアップ処理は、リソースグループに定義されているすべてのリソースに対して実行されます。 
 ---
-= リソースグループのバックアップ
+= SnapCenter での IBM Db2 リソースグループのバックアップ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

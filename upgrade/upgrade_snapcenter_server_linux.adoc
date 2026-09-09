@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: upgrade, upgrade snapcenter server, linux 
 summary: SnapCenterサーバのインストーラファイルを使用して、SnapCenterサーバをアップグレードできます。 
 ---
-= LinuxホストでのSnapCenterサーバのアップグレード
+= Linux ホスト上の SnapCenter サーバーをアップグレードする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

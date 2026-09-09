@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Backup copy verification 
 summary: バックアップコピーは、プライマリストレージボリューム、またはSnapMirrorまたはSnapVaultセカンダリストレージボリュームで検証できます。セカンダリストレージボリュームを使用した検証により、プライマリストレージボリュームの負荷が軽減されます。 
 ---
-= Plug-in for SQL Serverのプライマリストレージボリュームまたはセカンダリストレージボリュームを使用したバックアップコピーの検証
+= SnapCenter Plug-in for SQL Server のバックアップコピーの検証
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

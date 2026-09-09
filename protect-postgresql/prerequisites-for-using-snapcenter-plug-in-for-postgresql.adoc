@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Credentials,SnapCenter Plug-in for postgresql 
 summary: SnapCenter Plug-in for PostgreSQLを使用する前に、SnapCenter管理者がSnapCenter Serverをインストールして設定し、前提条件となるタスクを実行する必要があります。 
 ---
-= SnapCenter Plug-in for PostgreSQLを使用するための前提条件
+= PostgreSQL用SnapCenterプラグインを使用するための前提条件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

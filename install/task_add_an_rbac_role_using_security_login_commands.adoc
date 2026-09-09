@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: RBAC roles, add, NetApp ONTAP RBAC role, storage system 
 summary: ストレージシステムでclustered NetApp ONTAPを実行している場合は、security loginコマンドを使用してNetApp ONTAP RBACロールを追加できます。 
 ---
-= security loginコマンドを使用してNetApp ONTAP RBACロールを追加する
+= セキュリティログインコマンドを使用して SnapCenter の ONTAP RBAC ロールを追加する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

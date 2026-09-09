@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create policies, Oracle, backup policies 
 summary: バックアップするリソースまたはリソースグループのバックアップポリシーを作成します。 
 ---
-= Oracleデータベースのバックアップポリシーの作成
+= SnapCenter で Oracle データベースのバックアップポリシーを作成する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

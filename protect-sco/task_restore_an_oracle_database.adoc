@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore, recover, Oracle 
 summary: データ損失が発生した場合は、 SnapCenter を使用して 1 つ以上のバックアップからアクティブファイルシステムにデータをリストアし、そのあとにデータベースをリカバリできます。 
 ---
-= Oracleデータベースのリストアとリカバリ
+= SnapCenter で Oracle データベースをリストアおよびリカバリする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

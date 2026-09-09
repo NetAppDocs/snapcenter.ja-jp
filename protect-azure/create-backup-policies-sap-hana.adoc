@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create policies, SAP HANA, backup policies 
 summary: バックアップするリソースまたはリソースグループのバックアップポリシーを作成します。 
 ---
-= SAP HANAデータベースのバックアップポリシーの作成
+= SnapCenter で SAP HANA データベースのバックアップポリシーを作成する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

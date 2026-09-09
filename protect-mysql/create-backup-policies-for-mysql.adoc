@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for MySQL 
 summary: SnapCenterを使用してMySQLデータベースリソースをバックアップする前に、バックアップするリソースまたはリソースグループのバックアップポリシーを作成する必要があります。バックアップポリシーは、バックアップを管理、スケジュール、および保持する方法を規定する一連のルールです。 
 ---
-= MySQLのバックアップポリシーの作成
+= SnapCenterによるMySQLのバックアップ ポリシーの作成
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

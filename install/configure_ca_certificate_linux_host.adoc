@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter, configure, CA certificate, linux, linux host 
 summary: LinuxホストのSnapCenterサーバでCA証明書を設定する必要があります。 
 ---
-= LinuxホストのCA証明書の設定
+= Linux ホスト上の SnapCenter に CA 証明書を設定する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ LinuxにSnapCenter Serverをインストールすると、インストーラに�
 
 
 
+[[configure-nginx-certificate]]
 == nginx証明書の設定
 
 .手順
@@ -28,6 +29,7 @@ LinuxにSnapCenter Serverをインストールすると、インストーラに�
 
 
 
+[[configure-audit-log-certificate]]
 == 監査ログ証明書の設定
 
 .手順
@@ -45,6 +47,7 @@ _INSTALL_DIR_IS_のデフォルト値は_/ opt_です。
 
 
 
+[[configure-snapcenter-certificate]]
 == SnapCenter証明書を構成する
 
 .手順

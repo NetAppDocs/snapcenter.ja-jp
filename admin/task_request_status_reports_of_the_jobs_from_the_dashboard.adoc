@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: dashboard, snapcenter 
 summary: '[ダッシュボード]ページでは、バックアップ、リストア、およびクローニングジョブに関するレポートを表示できます。これは、 SnapCenter 環境で成功または失敗したジョブの総数を確認する場合に便利です。' 
 ---
-= ダッシュボードからジョブのステータスレポートを要求する
+= SnapCenter ダッシュボードからジョブのステータスレポートをリクエストする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

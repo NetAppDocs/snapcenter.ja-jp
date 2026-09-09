@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backing up 
 summary: 'リソースグループに含まれていないリソースは、[Resources]ページからオンデマンドでバックアップできます。' 
 ---
-= Windowsファイルシステムの単一リソースをオンデマンドでバックアップ
+= Windowsファイルシステムリソースを SnapCenter でオンデマンドでバックアップする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

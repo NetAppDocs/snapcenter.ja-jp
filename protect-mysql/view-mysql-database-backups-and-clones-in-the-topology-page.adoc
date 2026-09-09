@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for mysql 
 summary: リソースのバックアップまたはクローニングを準備するときに、プライマリストレージとセカンダリストレージ上のすべてのバックアップとクローンの図を表示すると役立つことがあります。 
 ---
-= [Topology]ページでのMySQLのバックアップとクローンの表示
+= SnapCenterのトポロジページでMySQLのバックアップとクローンを表示します
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter 
 summary: Windows ホストプラグインサービスで CA 証明書を設定します 
 ---
-= WindowsホストプラグインサービスでのCA証明書の設定
+= SnapCenter Windowsプラグインサービス用のCA証明書を構成します
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

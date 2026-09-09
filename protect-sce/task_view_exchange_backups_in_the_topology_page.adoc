@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: リソースのバックアップを準備する際には、プライマリストレージとセカンダリストレージ上のすべてのバックアップの図を表示すると役立つことがあります。 
 ---
-= [Topology]ページでのExchangeバックアップの表示
+= SnapCenter トポロジーページで Exchange バックアップを表示する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

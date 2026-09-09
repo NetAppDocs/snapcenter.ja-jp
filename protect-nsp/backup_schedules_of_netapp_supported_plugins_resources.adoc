@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: NetApp supported plug-in 
 summary: バックアップのスケジュールを決定する場合に最も重要な要因となるのは、リソースの変更率です。リソースをバックアップする回数が多いほど、リストア時に SnapCenter で使用する必要のあるアーカイブログの数が少なくなります。これにより、リストア処理の時間を短縮できます。 
 ---
-= NetAppでサポートされているプラグインリソースのバックアップスケジュール
+= SnapCenter の NetApp サポート対象プラグインリソースのバックアップスケジュール
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

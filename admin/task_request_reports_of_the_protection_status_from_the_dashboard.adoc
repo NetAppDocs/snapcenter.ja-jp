@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: dashboard 
 summary: ダッシュボードを使用して、特定のプラグインで管理されているリソースの保護の詳細を要求できます。 
 ---
-= ダッシュボードから保護ステータスのレポートを要求する
+= SnapCenter ダッシュボードから保護ステータスレポートをリクエストする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

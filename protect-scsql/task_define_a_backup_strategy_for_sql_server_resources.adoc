@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup strategy 
 summary: バックアップジョブを作成する前にバックアップ戦略を定義しておくと、データベースの正常なリストアやクローニングに必要なバックアップを確実に作成するのに役立ちます。バックアップ戦略の大部分は、サービスレベルアグリーメント（ SLA\ ）、目標復旧時間（ RTO\ ）、および目標復旧時点（ RPO\ ）によって決まります。 
 ---
-= SQL Serverリソースのバックアップ戦略を定義する
+= SQL Server リソースのバックアップ戦略（SnapCenter）
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

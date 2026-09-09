@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup, Unix file system, policy, schedule, resources 
 summary: 'いずれのリソースグループにも含まれていないリソースは、[Resources]ページからバックアップできます。' 
 ---
-= UNIXファイルシステムのバックアップ
+= UNIXファイルシステムをSnapCenterでバックアップする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

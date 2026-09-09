@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter 
 summary: SnapCenterを使用してリストア処理を正常に実行するには、戦略を定義する必要があります。手動で追加したPostgreSQLリソースには、2種類のリストア方法があります。手動で追加したPostgreSQLリソースは回復できません。 
 ---
-= 手動で追加したPostgreSQLリソースでサポートされるリストア戦略のタイプ
+= 手動で追加されたPostgreSQLのSnapCenterにおける復元ストラテジ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -18,6 +18,7 @@ NOTE: 手動で追加したPostgreSQLリソースは回復できません。
 
 
 
+[[complete-resource-restore]]
 == リソース全体のリストア
 
 * リソースのすべてのボリューム、qtree、およびLUNをリストア

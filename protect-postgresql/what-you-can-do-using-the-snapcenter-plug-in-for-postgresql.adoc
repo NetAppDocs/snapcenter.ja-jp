@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for postgresql 
 summary: Plug-in for PostgreSQLをインストールした環境では、SnapCenterを使用して、PostgreSQLとそのリソースをバックアップ、リストア、およびクローニングできます。これらの処理をサポートするタスクを実行することもできます。 
 ---
-= SnapCenter Plug-in for PostgreSQLの使用方法
+= SnapCenter Plug-in for PostgreSQL の機能
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

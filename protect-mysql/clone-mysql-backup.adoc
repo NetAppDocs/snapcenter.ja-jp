@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for MySQL,run as 
 summary: SnapCenterを使用してバックアップをクローニングできます。クローニングはプライマリとセカンダリのどちらのバックアップからも実行できます。 
 ---
-= MySQLバックアップをクローニング
+= SnapCenter で MySQL バックアップをクローンする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

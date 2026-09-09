@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clone, pluggable database, PDB 
 summary: Pluggable Database \ （ PDB\ ）を、同じホストまたは代替ホスト上の異なるターゲット CDB または同じ CDB にクローニングできます。クローニングされたPDBを目的のSCNまたは日時にリカバリすることもできます。 
 ---
-= プラガブルデータベースのクローニング
+= SnapCenterによるOracleプラガブル データベースのクローン作成
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

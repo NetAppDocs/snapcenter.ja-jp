@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Microsoft Exchange Server 
 summary: ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。 
 ---
-= ホストを追加してSnapCenter Plug-in for Microsoft Exchange Serverをインストールするための前提条件
+= Microsoft Exchange Server 用 SnapCenter プラグインをインストールするための前提条件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -44,6 +44,7 @@ summary: ホストを追加してプラグインパッケージをインスト�
 ====
 
 
+[[host-requirements-to-install-snapcenter-plug-ins-package-for-windows]]
 == SnapCenter Plug-ins Package for Windowsをインストールするホストの要件
 
 SnapCenter Plug-ins Package for Windowsをインストールする前に、基本的なホストシステムのスペース要件とサイジング要件を理解しておく必要があります。
@@ -93,6 +94,7 @@ NOTE: 十分なディスクスペースを割り当て、logsフォルダによ�
 |===
 
 
+[[exchange-server-privileges-required]]
 == 必要なExchange Serverの権限
 
 SnapCenter で Exchange サーバまたは DAG を追加し、ホストまたは DAG に SnapCenter Plug-in for Microsoft Exchange Server をインストールできるようにするには、最小限の権限と権限を持つユーザのクレデンシャルを SnapCenter に設定する必要があります。

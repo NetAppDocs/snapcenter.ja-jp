@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for mysql 
 summary: SnapCenterを使用すると、1つ以上のバックアップからデータをリストアおよびリカバリできます。 
 ---
-= 手動で追加したリソースバックアップのリストアとリカバリ
+= 手動で追加したMySQLリソースバックアップを復元および復旧する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

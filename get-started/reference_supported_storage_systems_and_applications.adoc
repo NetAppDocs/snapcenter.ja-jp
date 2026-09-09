@@ -15,6 +15,7 @@ SnapCenterでサポートされるストレージシステム、アプリケー�
 
 
 
+[[supported-storage-systems]]
 == サポートされるストレージシステム
 
 * NetApp ONTAP 9.12.1以降
@@ -34,6 +35,7 @@ SnapCenter Server 6.2 およびSnapCenterプラグイン 6.2 を使用してい�
 
 
 
+[[supported-applications-and-databases]]
 == サポートされるアプリケーションとデータベース
 
 SnapCenterでは、さまざまなアプリケーションやデータベースの保護がサポートされています。

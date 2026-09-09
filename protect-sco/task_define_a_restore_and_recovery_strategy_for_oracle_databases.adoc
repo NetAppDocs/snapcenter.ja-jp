@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup types, restore methods, connect-and-copy restore, full restore, partial restore, in-place restore, recovery type, limitations 
 summary: データベースのリストアとリカバリを行う前に戦略を定義しておくと、リストア処理とリカバリ処理を正常に実行できるようになります。 
 ---
-= Oracleデータベースのリストアとリカバリの戦略を定義
+= SnapCenter での Oracle データベースのリストアとリカバリ戦略について説明します
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ summary: データベースのリストアとリカバリを行う前に戦略�
 
 
 
+[[types-of-backups-supported-for-restore-and-recovery-operations]]
 == リストア処理とリカバリ処理でサポートされるバックアップのタイプ
 
 SnapCenterでは、さまざまなタイプのOracleデータベースバックアップのリストアとリカバリがサポートされます。
@@ -39,6 +40,7 @@ NOTE: Active Data Guardスタンバイデータベースのリカバリは実行
 
 
 
+[[types-of-restore-methods-supported-for-oracle-databases]]
 == Oracleデータベースでサポートされるリストア方式のタイプ
 
 SnapCenter では、 Oracle データベースに対して Connect and Copy リストアと In Place リストアがサポートされます。SnapCenter は、リストア処理中に、データを失うことなくリストアに使用するファイルシステムに適したリストア方式を決定します。
@@ -48,6 +50,7 @@ NOTE: SnapCenter はボリュームベースの SnapRestore をサポートし�
 
 
 
+[[connect-and-copy-restore]]
 === Connect and Copyリストア
 
 データベースレイアウトがバックアップと異なる場合、またはバックアップ作成後に新しいファイルが存在する場合は、Connect and Copyリストアが実行されます。Connect and Copyリストア方式では、次のタスクが実行されます。
@@ -76,6 +79,7 @@ In Place リストアを強制的に有効にした場合でも、次のシナ�
 
 
 
+[[in-place-restore]]
 === In Placeリストア
 
 データベースレイアウトがバックアップとほぼ同じで、ストレージとデータベーススタックで設定を変更していない場合は、In Placeリストアが実行され、ファイルまたはLUNのリストアがONTAP上で実行されます。SnapCenter では、 In Place リストア方式の一環として Single File SnapRestore （ SFSR ）のみがサポートされます。
@@ -110,6 +114,7 @@ SAN 環境では、ストレージリストア処理の前に、 SnapCenter が�
 
 
 
+[[types-of-restore-operations-supported-for-oracle-databases]]
 == Oracleデータベースでサポートされるリストア処理のタイプ
 
 SnapCenter では、 Oracle データベースに対してさまざまなタイプのリストア処理を実行できます。
@@ -118,6 +123,7 @@ SnapCenter では、 Oracle データベースに対してさまざまなタイ�
 
 
 
+[[full-restore]]
 === フルリストア
 
 * データファイルのみをリストア
@@ -128,6 +134,7 @@ SnapCenter では、 Oracle データベースに対してさまざまなタイ�
 
 
 
+[[partial-restore]]
 === パーシャルリストア
 
 * 選択した表領域のみをリストア
@@ -137,6 +144,7 @@ SnapCenter では、 Oracle データベースに対してさまざまなタイ�
 
 
 
+[[types-of-recovery-operations-supported-for-oracle-databases]]
 == Oracleデータベースでサポートされるリカバリ処理のタイプ
 
 SnapCenter では、 Oracle データベースに対してさまざまなタイプのリカバリ処理を実行できます。
@@ -157,6 +165,7 @@ NOTE: データベースロールをスタンバイとして作成されたバ�
 
 
 
+[[limitations-related-to-restore-and-recovery-of-oracle-databases]]
 == Oracleデータベースのリストアとリカバリに関する制限事項
 
 リストア処理とリカバリ処理を実行する前に、制限事項を確認しておく必要があります。
@@ -186,6 +195,7 @@ NOTE: データベースロールをスタンバイとして作成されたバ�
 
 
 
+[[limitations-related-to-point-in-time-recovery-of-tablespaces]]
 == 表領域のポイントインタイムリカバリに関する制限事項
 
 * SYSTEM、SYSAUX、およびUNDO表領域のポイントインタイムリカバリ（PITR）はサポートされない
@@ -212,18 +222,21 @@ NOTE: データベースロールをスタンバイとして作成されたバ�
 
 
 
+[[sources-and-destinations-for-restoring-oracle-databases]]
 == Oracleデータベースをリストアするソースとデスティネーション
 
 プライマリストレージまたはセカンダリストレージのバックアップコピーからOracleデータベースをリストアできます。データベースは、同じデータベースインスタンスの同じ場所にのみリストアできます。ただし、Real Application Cluster（RAC）セットアップでは、データベースを他のノードにリストアできます。
 
 
 
+[[sources-for-restore-operations]]
 === リストア処理のソース
 
 プライマリストレージまたはセカンダリストレージ上のバックアップからデータベースをリストアできます。複数ミラー構成のセカンダリストレージ上のバックアップからリストアする場合は、セカンダリストレージミラーをソースとして選択できます。
 
 
 
+[[destinations-for-restore-operations]]
 === リストア処理のデスティネーション
 
 データベースは、同じデータベースインスタンスの同じ場所にのみリストアできます。

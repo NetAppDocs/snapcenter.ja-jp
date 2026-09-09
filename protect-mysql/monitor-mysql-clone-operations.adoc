@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: monitor, mysql database, clone operations 
 summary: Jobs ページを使用して、 SnapCenter のクローニング処理の進捗状況を監視できます。処理の進捗状況を確認して、処理が完了するタイミングや問題が発生していないかを確認できます。 
 ---
-= MySQLのクローニング処理を監視する
+= SnapCenter で MySQL クローン操作を監視する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

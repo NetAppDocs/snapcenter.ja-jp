@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for IBM Db2 
 summary: データベースをバックアップするときは、SnapCenterサーバとの接続を確立し、リソースの追加、ポリシーの追加、バックアップリソースグループの作成を行い、バックアップを実行します。 
 ---
-= DB2データベースのバックアップ
+= IBM Db2データベースをSnapCenterでバックアップする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

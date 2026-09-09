@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Oracle Database, back up, resource groups 
 summary: リソースグループは、ホスト上のリソースの集まりです。リソースグループのバックアップ処理は、リソースグループに定義されているすべてのリソースに対して実行されます。 
 ---
-= Oracleリソースグループのバックアップ
+= SnapCenter で Oracle リソースグループをバックアップする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

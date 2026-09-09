@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter, certificate thumbprint 
 summary: 証明書サムプリントは、証明書を識別する16進数の文字列です。サムプリントは、サムプリントアルゴリズムを使用して証明書の内容から計算されます。 
 ---
-= CA証明書サムプリントの取得
+= SnapCenter でCA証明書のサムプリントを取得する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

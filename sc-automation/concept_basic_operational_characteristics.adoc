@@ -4,7 +4,7 @@ permalink: sc-automation/concept_basic_operational_characteristics.html
 keywords: request and response, object identifiers, synchronous, asynchronous 
 summary: RESTでは共通のテクノロジとベストプラクティスが確立されますが、各APIの詳細は設計の選択内容によって異なります。 
 ---
-= 基本的な動作特性
+= SnapCenter REST API の基本的な動作特性
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ RESTでは共通のテクノロジとベストプラクティスが確立され�
 
 
 
+[[request-and-response-api-transaction]]
 == 要求と応答のAPIトランザクション
 
 すべてのREST API呼び出しは、SnapCenterサーバシステムへのHTTP要求として実行され、クライアントへの関連する応答が生成されます。この要求と応答のペアはAPIトランザクションとみなされます。
@@ -23,6 +24,7 @@ APIを使用する前に、要求の制御に使用できる入力変数と応�
 
 
 
+[[support-for-crud-operations]]
 == CRUD操作のサポート
 
 SnapCenter REST APIで使用できる各リソースは、CRUDモデルに基づいてアクセスされます。
@@ -37,6 +39,7 @@ SnapCenter REST APIで使用できる各リソースは、CRUDモデルに基づ
 
 
 
+[[object-identifiers]]
 == オフシエクトID
 
 各リソースインスタンスまたはオブジェクトには、作成時に一意の識別子が割り当てられます。ほとんどの場合、識別子は128ビットUUIDです。これらの識別子は、特定のSnapCenterサーバ内でグローバルに一意です。
@@ -48,18 +51,21 @@ IMPORTANT: オブジェクトIDの内容と内部構造はいつでも変更で�
 
 
 
+[[object-instances-and-collections]]
 == オブジェクトのインスタンスとコレクション
 
 リソースパスとHTTPメソッドに応じて、特定のオブジェクトインスタンスまたはオブジェクトのコレクションにAPI呼び出しを適用できます。
 
 
 
+[[synchronous-and-asynchronous-operations]]
 == 同期操作と非同期操作
 
 SnapCenterは、クライアントから受信したHTTP要求を同期または非同期で実行します。
 
 
 
+[[synchronous-processing]]
 === 同期処理
 
 SnapCenterは要求をただちに実行し、成功した場合はHTTPステータスコード200または201で応答します。
@@ -68,6 +74,7 @@ GETメソッドを使用する要求はすべて、常に同期的に実行さ�
 
 
 
+[[asynchronous-processing]]
 === 非同期処理
 
 非同期要求が有効な場合、SnapCenterは要求を処理するバックグラウンドタスクと、タスクをアンカーするジョブオブジェクトを作成します。HTTPステータスコード202が、ジョブオブジェクトとともに呼び出し元に返されます。成功または失敗を判断するには、ジョブの状態を取得する必要があります。
@@ -76,18 +83,21 @@ POSTおよびDELETEメソッドを使用する要求は、完了までに2秒以
 
 
 
+[[security]]
 == セキュリティ
 
 REST APIで提供されるセキュリティは、主にSnapCenterで使用できる既存のセキュリティ機能に基づいています。APIで使用されるセキュリティは次のとおりです。
 
 
 
+[[transport-layer-security]]
 === トランスポート層セキュリティ
 
 SnapCenterサーバとクライアントの間でネットワーク経由で送信されるすべてのトラフィックは、通常、SnapCenter設定に基づいてTLSを使用して暗号化されます。
 
 
 
+[[http-authentication]]
 === HTTP認証
 
 HTTPレベルでは、APIトランザクションにベーシック認証が使用されます。base64文字列にユーザ名とパスワードを含むHTTPヘッダーが各要求に追加されます。

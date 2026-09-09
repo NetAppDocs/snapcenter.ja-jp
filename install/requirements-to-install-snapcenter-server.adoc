@@ -15,6 +15,7 @@ WindowsホストまたはLinuxホストにSnapCenterサーバをインストー�
 
 
 
+[[domain-and-workgroup-requirements-for-windows-host]]
 == Windowsホストノドメイントワアククルウフノヨウケン
 
 SnapCenterサーバは、ドメインまたはワークグループ内のWindowsホストにインストールできます。
@@ -32,6 +33,7 @@ NOTE: SnapCenter サーバをインストールしたあとに、 SnapCenter ホ
 
 
 
+[[space-and-sizing-requirements]]
 == スペースとサイジングの要件
 
 スペースとサイジングの要件を把握しておく必要があります。
@@ -129,6 +131,7 @@ NOTE: ASP.NETコアは、Windows上のSnapCenterサーバーの一時ファイ�
 
 
 
+[[san-host-requirements]]
 == SANホストの要件
 
 SnapCenterにはHost UtilitiesもDSMも含まれていません。SnapCenterホストがSAN（FC / iSCSI）環境の一部である場合は、SnapCenterサーバホストに追加のソフトウェアをインストールして設定する必要があります。
@@ -143,12 +146,14 @@ NOTE: ONTAP DSMを使用していた場合は、Microsoft DSMに移行する必�
 
 
 
+[[browser-requirements]]
 == ブラウザ要件
 
 SnapCenterソフトウェアは、Chrome 125以降とMicrosoft Edge 110.0.1587.17以降をサポートしています。
 
 
 
+[[port-requirements]]
 == ポートの要件
 
 SnapCenterソフトウェアは、異なるコンポーネント間の通信に異なるポートを必要とします。

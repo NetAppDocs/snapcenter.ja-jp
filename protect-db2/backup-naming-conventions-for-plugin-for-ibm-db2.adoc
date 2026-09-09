@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Backup naming conventions 
 summary: Snapshotのデフォルトの命名規則を使用することも、カスタマイズした命名規則を使用することもできます。デフォルトのバックアップ命名規則では、Snapshot名にタイムスタンプが追加されるため、コピーがいつ作成されたかを確認できます。 
 ---
-= Plug-in for IBM DB2テエタヘエスノハツクアツフノメイメイキソク
+= IBM Db2用 SnapCenter プラグインで使用されるバックアップの命名規則
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

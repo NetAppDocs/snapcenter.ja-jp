@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials 
 summary: 'SnapCenterの[ホストを追加]ページを使用してホストを追加し、プラグインパッケージをインストールする必要があります。プラグインはリモートホストに自動的にインストールされます。ホストの追加とプラグインパッケージのインストールは、ホストごとまたはクラスタごとに実行できます。' 
 ---
-= ホストを追加してリモートホストにプラグインパッケージをインストールする
+= ホストを追加し、リモートホスト上に SnapCenter PostgreSQL プラグインパッケージをインストールする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

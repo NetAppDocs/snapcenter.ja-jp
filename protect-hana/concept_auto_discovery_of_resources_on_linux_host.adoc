@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Database 
 summary: 'リソースとは、SnapCenterで管理されているLinuxホスト上のSAP HANAデータベースとデータボリューム以外のボリュームです。SnapCenter Plug-in for SAP HANA Databaseプラグインをインストールすると、そのLinuxホスト上のSAP HANAデータベースが自動的に検出されて[リソース]ページに表示されます。' 
 ---
-= Linuxホスト上のリソースの自動検出
+= Linuxホスト上のリソースの自動検出（SnapCenter）
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

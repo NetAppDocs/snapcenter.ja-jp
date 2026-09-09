@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Databases 
 summary: SnapCenter では、自動検出された SAP HANA データベースについて、ボリュームベースの SnapRestore （ VBSR ）、単一ファイル SnapRestore 、および接続とコピーのリストアタイプがサポートされます。 
 ---
-= 自動検出されたSAP HANAデータベースのリストア処理のタイプ
+= 自動検出された SAP HANA データベースの SnapCenter での復元操作
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ SnapCenterでは、自動検出されたSAP HANAデータベースに対して�
 
 
 
+[[volume-based-snaprestore-vbsr-is-performed-in-nfs-environments-for-the-following-scenarios]]
 == ボリュームベースSnapRestore（VBSR）は、NFS環境で次のシナリオで実行されます。
 
 * リストア用に選択されたバックアップが SnapCenter 4.3 より前のリリースで実行され '** Complete Resource** オプションが選択されている場合のみ
@@ -23,6 +24,7 @@ SnapCenterでは、自動検出されたSAP HANAデータベースに対して�
 
 
 
+[[single-file-snaprestore-is-performed-in-nfs-environments-for-the-following-scenarios]]
 == NFS環境でSingle File SnapRestoreを実行するシナリオは、次のとおりです。
 
 * リストア用に選択したバックアップが SnapCenter 4.3 で実行されていて、 [ リソースを完全にバックアップ ] オプションのみが選択されている場合
@@ -32,6 +34,7 @@ SnapCenterでは、自動検出されたSAP HANAデータベースに対して�
 
 
 
+[[single-file-snaprestore-is-performed-in-san-environments-for-the-following-scenarios]]
 == 単一ファイル SnapRestore は、次のような状況で SAN 環境で実行されます。
 
 * SnapCenter 4.3 より前のリリースでバックアップを作成する場合、 [ リソースの完了 ] オプションが選択されている場合のみ
@@ -41,6 +44,7 @@ SnapCenterでは、自動検出されたSAP HANAデータベースに対して�
 
 
 
+[[connect-and-copy-based-restore-is-performed-in-san-environments-for-the-following-scenario]]
 == 接続およびコピーベースのリストアは、SAN環境で次のシナリオで実行されます。
 
 * MDC の場合は、リストア用に選択されたバックアップが SnapCenter 4.3 で作成され、 * テナントデータベース * オプションが選択されている場合

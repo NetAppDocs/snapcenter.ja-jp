@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup, Oracle database, policy, schedule, verification, resources 
 summary: 'いずれのリソースグループにも含まれていないリソースは、[Resources]ページからバックアップできます。' 
 ---
-= Oracleリソースのバックアップ
+= SnapCenter で Oracle リソースをバックアップする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

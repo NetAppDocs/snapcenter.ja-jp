@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: topology, unix file systems, 
 summary: リソースのバックアップ、リストア、またはクローニングを準備するときに、プライマリストレージとセカンダリストレージ上のすべてのバックアップ、リストアされたファイルシステム、およびクローンが図で表示されると役立つことがあります。 
 ---
-= [Topology]ページで保護されているUNIXファイルシステムを表示する
+= 保護された UNIX ファイルシステムを SnapCenter トポロジーページで表示する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

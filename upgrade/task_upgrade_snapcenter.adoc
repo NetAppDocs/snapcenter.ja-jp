@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: upgrade, upgrade snapcenter server, windows 
 summary: SnapCenter サーバインストーラの実行ファイルを使用して、 SnapCenter サーバをアップグレードできます。 
 ---
-= WindowsホストでのSnapCenterサーバのアップグレード
+= Windows ホスト上の SnapCenter サーバをアップグレードする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Credentials 
 summary: SnapCenter NetAppでサポートされるプラグインを使用する前に、SnapCenter管理者がSnapCenterサーバをインストールして設定し、前提条件となるタスクを実行する必要があります。 
 ---
-= NetAppでサポートされるプラグインを使用するための前提条件
+= SnapCenterでNetAppがサポートするプラグインを使用するための前提条件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore, recover, CLI 
 summary: リストアとリカバリのワークフローには、計画、リストア処理とリカバリ処理の実行、および処理の監視が含まれます。 
 ---
-= UNIXコマンドを使用したOracleデータベースのリストアとリカバリ
+= UNIXコマンドを使用してSnapCenterでOracleデータベースを復元およびリカバリする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

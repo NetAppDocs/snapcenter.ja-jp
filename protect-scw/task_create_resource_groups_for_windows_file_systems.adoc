@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resource groups 
 summary: リソースグループは、保護する複数のファイルシステムを追加できるコンテナです。また、リソースグループに1つ以上のポリシーを適用して実行するデータ保護ジョブのタイプを定義し、バックアップスケジュールを指定する必要があります。 
 ---
-= Windowsファイルシステムのリソースグループの作成
+= Windows ファイルシステム用の SnapCenter リソースグループの作成
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

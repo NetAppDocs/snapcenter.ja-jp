@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Minimum ONTAP privileges 
 summary: 必要な最小 ONTAP 権限は、データ保護に使用する SnapCenter プラグインによって異なります。 
 ---
-= IBM DB2プラグインに必要な最小限のONTAP権限
+= IBM Db2用 SnapCenter プラグインに必要な最小限の ONTAP 権限
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

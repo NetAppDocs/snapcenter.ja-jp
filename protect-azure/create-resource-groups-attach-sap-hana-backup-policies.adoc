@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resource groups, attach policies, snapcenter, SAP HANA, backup polices, schedule 
 summary: リソースグループはコンテナであり、バックアップおよび保護するリソースを追加する必要があります。 
 ---
-= リソースグループを作成してSAP HANAバックアップポリシーを適用
+= SnapCenter リソースグループを作成してSAP HANAバックアップポリシーを適用する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

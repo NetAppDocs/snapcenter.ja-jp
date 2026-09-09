@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: install, SnapCenter Plug-in for SAP HANA Database 
 summary: SnapCenter Plug-in for SAP HANA Databaseは、SnapCenterのユーザインターフェイス（UI）を使用してインストールする必要があります。環境でSnapCenter UIからプラグインのリモートインストールが許可されていない場合は、コマンドラインインターフェイス（CLI 1）を使用して、コンソールモードまたはサイレントモードでPlug-in for SAP HANA Databaseをインストールできます。 
 ---
-= コマンドラインインターフェイスを使用して、LinuxホストにSnapCenter Plug-in for SAP HANA Databaseをインストールする
+= CLI を使用して Linux ホストに SAP HANA データベース用 SnapCenter プラグインをインストールする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

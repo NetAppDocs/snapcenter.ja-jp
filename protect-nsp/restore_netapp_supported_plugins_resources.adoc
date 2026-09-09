@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: リストアとリカバリのワークフローには、計画、リストア処理の実行、および処理の監視が含まれます。 
 ---
-= NetAppでサポートされているプラグインリソースのリストア
+= NetAppサポートのプラグインによるSnapCenterでのリストアワークフロー
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

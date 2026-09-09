@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: dashboard 
 summary: SnapCenter の左側のナビゲーションペインでは、ダッシュボードの各種タイルや、関連するシステムの詳細を表示できます。ダッシュボードで使用できる表示数は固定であり、変更することはできません。各画面に表示される内容は、ロールベースアクセス制御（ RBAC ）によって異なります。 
 ---
-= ダッシュボードに情報を表示する方法
+= SnapCenter ダッシュボードの情報を表示する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, PDB, clone PDB 
 summary: 不要になったプラグイン可能データベース \ （ PDB\ ）のクローンは削除できます。 
 ---
-= プラガブルデータベースのクローンを削除する
+= SnapCenter でプラグイン可能なデータベースのクローンを削除する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

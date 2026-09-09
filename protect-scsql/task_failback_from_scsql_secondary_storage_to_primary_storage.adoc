@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: failback, snapcenter 
 summary: SnapCenter Plug-in for SQL Serverプライマリストレージがオンラインに戻ったら、プライマリストレージにフェイルバックする必要があります。 
 ---
-= SnapCenter Plug-in for SQL Serverセカンダリストレージからプライマリストレージへのフェイルバック
+= SQL Server 用 SnapCenter プラグインのプライマリストレージへのフェイルバック
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

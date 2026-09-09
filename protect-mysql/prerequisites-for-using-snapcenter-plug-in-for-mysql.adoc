@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Credentials,SnapCenter Plug-in for mysql 
 summary: SnapCenter Plug-in for MySQLを使用する前に、SnapCenter管理者がSnapCenterサーバをインストールして設定し、前提条件となるタスクを実行する必要があります。 
 ---
-= SnapCenter Plug-in for MySQLを使用するための前提条件
+= SnapCenter Plug-in for MySQL を使用するための前提条件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

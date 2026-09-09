@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup policy 
 summary: SnapCenter を使用して Windows ファイルシステムをバックアップする前に、リソースの新しいバックアップポリシーを作成することができます。また、リソースグループの作成時やリソースのバックアップ時に新しいバックアップポリシーを作成することもできます。 
 ---
-= Windowsファイルシステムのバックアップポリシーの作成
+= SnapCenter を使用して Windows ファイルシステムのバックアップポリシーを作成する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

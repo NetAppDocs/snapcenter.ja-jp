@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for IBM Db2 
 summary: 一部のDB2インスタンスでは自動検出がサポートされていません。これらのリソースは手動で追加する必要があります。 
 ---
-= プラグインホストに手動でリソースを追加する
+= IBM Db2リソースをSnapCenterプラグインホストに手動で追加します
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials, Windows, Linux, AIX 
 summary: ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。SnapCenter Plug-in for IBM DB2は、Windows、Linux、AIXの各環境でサポートされています。 
 ---
-= ホストを追加してPlug-in Package for Windows、Linux、AIXをインストールするための前提条件
+= ホストを追加して IBM Db2 用 SnapCenter プラグインをインストールするための前提条件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -25,6 +25,7 @@ NOTE: IBM Java は Windows および Linux ホストではサポートされて�
 
 
 
+[[windows-hosts]]
 == Windowsホスト
 
 * ローカル管理者Privilegesを持つドメインユーザと、リモートホストに対するローカルログイン権限が必要です。
@@ -38,6 +39,7 @@ link:https://www.oracle.com/java/technologies/downloads/#java17["Windows 用 Jav
 
 
 
+[[linux-and-aix-hosts]]
 == LinuxホストとAIXホスト
 
 * rootユーザまたはroot以外のユーザに対してパスワードベースのSSH接続を有効にしておく必要があります。
@@ -54,6 +56,7 @@ link:https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?license
 
 
 
+[[supplemental-commands]]
 == 補助コマンド
 
 SnapCenter Plug-in for IBM DB2で補足コマンドを実行するには、そのコマンドを_allowed_commands.config_fileに含める必要があります。
@@ -87,6 +90,7 @@ NOTE: ワイルドカードエントリ（*）を使用してすべてのコマ�
 
 
 
+[[configure-sudo-privileges-for-non-root-users-for-linux-host]]
 == Linuxホストのroot以外のユーザに対するsudo Privilegesの設定
 
 SnapCenterでは、root以外のユーザがSnapCenter Plug-ins Package for Linuxをインストールしてプラグインプロセスを開始できます。プラグインプロセスをroot以外の有効なユーザとして実行します。複数のパスにアクセスできるようにroot以外のユーザにsudo Privilegesを設定する必要があります。
@@ -168,6 +172,7 @@ IMPORTANT: この例は、独自のデータを作成するための参照とし
 
 
 
+[[configure-sudo-privileges-for-non-root-users-for-aix-host]]
 == AIXホストのroot以外のユーザに対するsudo Privilegesの設定
 
 SnapCenter 4.4以降では、root以外のユーザがSnapCenter Plug-ins Package for AIXをインストールしてプラグインプロセスを開始できます。プラグインプロセスをroot以外の有効なユーザとして実行します。複数のパスにアクセスできるようにroot以外のユーザにsudo Privilegesを設定する必要があります。

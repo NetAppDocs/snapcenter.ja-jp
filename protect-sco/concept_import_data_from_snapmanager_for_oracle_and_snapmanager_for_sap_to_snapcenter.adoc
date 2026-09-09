@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: import, SnapManager for Oracle, SnapManager for SAP 
 summary: SnapManager for Oracle および SnapManager for SAP から SnapCenter にデータをインポートすると、以前のバージョンのデータを引き続き使用することができます。 
 ---
-= SnapManager for OracleおよびSnapManager for SAPからSnapCenterへのデータのインポート
+= SnapCenterがSnapManager for OracleおよびSAPからデータをインポートする方法
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -31,6 +31,7 @@ SnapCenter では、 Data ONTAP 7-Mode はサポートされていません。7-
 
 
 
+[[configurations-supported-for-importing-data]]
 == データのインポートがサポートされる構成
 
 SnapManager 3.4.x for Oracle および SnapManager 3.4.x for SAP から SnapCenter にデータをインポートする前に、 SnapCenter Plug-in for Oracle Database でサポートされる構成を確認しておく必要があります。
@@ -39,6 +40,7 @@ SnapCenter Plug-in for Oracle Databaseでサポートされている構成は、
 
 
 
+[[what-gets-imported-to-snapcenter]]
 == データが SnapCenter にインポートされます
 
 プロファイル、スケジュール、およびプロファイルを使用して実行される処理をインポートできます。
@@ -195,6 +197,7 @@ Eメール通知がインポートされます。
 |===
 
 
+[[what-does-not-get-imported-to-snapcenter]]
 == SnapCenter にインポートされないデータ
 
 インポートツールは、すべてのデータを SnapCenter にインポートするわけではありません。
@@ -216,6 +219,7 @@ Eメール通知がインポートされます。
 
 
 
+[[prepare-to-import-data]]
 == データのインポートの準備
 
 SnapCenterにデータをインポートする前に、インポート処理を正常に実行するために特定のタスクを実行する必要があります。
@@ -268,6 +272,7 @@ FQDNが表示されない場合は、/etc/hostsを変更してホストのFQDN�
 
 
 
+[[import-data]]
 == データのインポート
 
 データをインポートするには、データベースホストからインポートツールを実行します。

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore, recover, Unix file systems 
 summary: データ損失が発生した場合は、SnapCenterを使用してデータをリストアできます。 
 ---
-= UNIXファイルシステムのリストア
+= SnapCenter で UNIX ファイルシステムをリストアする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 実行中、キューに格納されている、または応答しないバックアップ処理をキャンセルできます。 
 ---
-= Oracleデータベースのバックアップ処理をキャンセルします
+= SnapCenter で Oracle データベースのバックアップ操作をキャンセルする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

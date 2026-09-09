@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup, resource group 
 summary: リソースグループは、ホストまたはクラスタ上のリソースの集まりです。リソースグループのバックアップ処理は、リソースグループに定義されているすべてのリソースに対して実行されます。 
 ---
-= Oracleデータベースのリソースグループのバックアップ
+= SnapCenter で Oracle データベースのリソースグループをバックアップする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

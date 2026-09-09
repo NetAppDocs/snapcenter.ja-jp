@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for postgresql 
 summary: SnapCenterは、自動的に検出されたPostgreSQLクラスタに対して、ボリュームベースのSnapRestore（VBSR\）、Single File SnapRestore、およびConnect-and-Copyリストアタイプをサポートしています。 
 ---
-= 自動検出されたPostgreSQLのリストア処理のタイプ
+= 自動検出された PostgreSQL の SnapCenter での復元タイプ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ SnapCenter Plug-in for PostgreSQLは、自動的に検出されたPostgreSQLク�
 
 
 
+[[single-file-snaprestore-is-performed-in-nfs-environments-for-the-following-scenarios]]
 == NFS環境でSingle File SnapRestoreを実行するシナリオは、次のとおりです。
 
 * [Complete Resource]オプションのみが選択されている場合
@@ -23,6 +24,7 @@ SnapCenter Plug-in for PostgreSQLは、自動的に検出されたPostgreSQLク�
 
 
 
+[[single-file-snaprestore-is-performed-in-san-environments-for-the-following-scenarios]]
 == 単一ファイル SnapRestore は、次のような状況で SAN 環境で実行されます。
 
 * [Complete Resource]オプションのみが選択されている場合

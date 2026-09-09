@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: mfa, authentication, multifactor authentication 
 summary: SnapCenter では、データのセキュリティを確保するために厳格なセキュリティおよび認証機能を採用しています。 
 ---
-= 多要素認証（MFA）を管理します。
+= SnapCenter で多要素認証を管理する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ Active Directoryフェデレーションサービス（AD FS）サーバとSnapC
 
 
 
+[[enable-multi-factor-authentication-mfa]]
 == 多要素認証（MFA）を有効にする
 
 SnapCenterサーバのMFA機能は、PowerShellコマンドを使用して有効にできます。
@@ -120,6 +121,7 @@ SnapCenter MFA機能は、REST APIを使用して有効にすることもでき�
 
 
 
+[[update-ad-fs-mfa-metadata]]
 == AD FS MFAメタデータの更新
 
 アップグレード、CA証明書の更新、DRなど、AD FSサーバで変更があった場合は、SnapCenterでAD FS MFAメタデータを更新する必要があります。
@@ -136,6 +138,7 @@ SnapCenter MFA機能は、REST APIを使用して有効にすることもでき�
 
 
 
+[[update-snapcenter-mfa-metadata]]
 == SnapCenter MFAメタデータの更新
 
 ADFSサーバで修復、CA証明書の更新、DRなどの変更があった場合は、AD FSでSnapCenter MFAメタデータを更新する必要があります。
@@ -159,6 +162,7 @@ ADFSサーバで修復、CA証明書の更新、DRなどの変更があった場
 
 
 
+[[disable-multi-factor-authentication-mfa]]
 == 多要素認証（MFA）を無効にする
 
 .手順

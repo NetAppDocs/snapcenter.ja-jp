@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Backup workflow 
 summary: SnapCenter Plug-in for Microsoft Exchange Serverをインストールした環境では、SnapCenterを使用してExchangeリソースをバックアップできます。 
 ---
-= バックアップのワークフロー
+= SnapCenter Plug-in for Microsoft Exchange Server のバックアップワークフロー
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

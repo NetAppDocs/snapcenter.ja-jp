@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Oracle Database, clone, database, backups. split clone, pluggable database 
 summary: SnapCenter を使用してバックアップをクローニングすることができます。 
 ---
-= Oracleデータベースバックアップのクローニング
+= Oracle DatabaseのバックアップをSnapCenterでクローニングする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -59,6 +59,7 @@ OracleデータベースANFボリュームが手動のQoS容量プールに設�
 
 
 
+[[clone-a-pluggable-database]]
 == プラガブルデータベースのクローニング
 
 プラガブルデータベース（PDB）は、同じホストまたは代替ホスト上の別のターゲットCDBまたは同じターゲットCDBにクローニングできます。クローニングされたPDBを目的のSCNまたは日時にリカバリすることもできます。

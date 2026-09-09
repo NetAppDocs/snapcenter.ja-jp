@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: oracle databases discover 
 summary: SnapCenter によるOracleデータベースの検出方法 
 ---
-= バックアップスケジュール
+= SnapCenter のバックアップスケジュール
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

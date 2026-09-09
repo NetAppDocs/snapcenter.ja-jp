@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore resources, snapcenter 
 summary: リソースのバックアップをリストアするときは、 SnapCenter サーバとの接続セッションを開始し、バックアップをリストしてバックアップ情報を取得し、バックアップをリストアします。 
 ---
-= PowerShellコマンドレットを使用したリソースのリストア
+= SnapCenterプラグインfor PostgreSQLリソースのPowerShellコマンドレットを使用したリストア
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

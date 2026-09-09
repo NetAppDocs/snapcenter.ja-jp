@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: environment variable, predefined, prescript, postscript, backup, policy 
 summary: SnapCenterでは、バックアップポリシーの作成時にプリスクリプトとポストスクリプトを実行する際に、事前定義された環境変数を使用できます。 
 ---
-= バックアップ固有のプリスクリプトとポストスクリプト用に事前定義された環境変数
+= SnapCenterバックアップ用のプリスクリプトおよびポストスクリプト環境変数
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -17,6 +17,7 @@ SnapCenterは、シェルスクリプトが実行される環境で直接アク�
 
 
 
+[[supported-predefined-environment-variables-for-creating-backup-policy]]
 == バックアップポリシーの作成でサポートされる事前定義された環境変数
 
 * * sc_job_ID * は、処理のジョブ ID を指定します。
@@ -232,6 +233,7 @@ RACの場合、host nameはバックアップが実行されるホストの名�
 
 
 
+[[supported-delimiters]]
 == サポートされるデリミタ
 
 * * ： * は、 SVM 名とボリューム名を区切るために使用します

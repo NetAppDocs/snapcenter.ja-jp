@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SQL Server Database, restore, recover 
 summary: SnapCenterを使用すると、1つ以上のバックアップからデータをリストアおよびリカバリできます。 
 ---
-= SQL Serverデータベースのリストアとリカバリ
+= SQL ServerデータベースをSnapCenterで復元およびリカバリする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add, storage system, SVM, ASA r2 systems 
 summary: データ保護処理とプロビジョニング処理を実行するには、 ONTAP ストレージへの SnapCenter アクセスを付与するストレージシステムをセットアップする必要があります。スタンドアロンの SVM を追加するか、複数の SVM で構成されるクラスタを追加することができます。 
 ---
-= ストレージシステムを追加する
+= SnapCenter にストレージシステムを追加する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

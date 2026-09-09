@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SMB shares 
 summary: Storage Virtual Machine（SVM）にSMB3共有を設定するには、SnapCenterユーザインターフェイスまたはPowerShellコマンドレットを使用します。 
 ---
-= SMB共有の作成と管理
+= SnapCenter での SMB 共有の作成と管理
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -25,6 +25,7 @@ TIP: 必要に応じて、提供されているモデルに従って独自のテ
 
 
 
+[[create-an-smb-share]]
 == SMB共有を作成する
 
 SnapCenter共有ページを使用して、Storage Virtual Machine（SVM）にSMB3共有を作成できます。
@@ -84,6 +85,7 @@ SnapCenter により、 SVM に SMB 共有が作成されます。
 
 
 
+[[delete-an-smb-share]]
 == SMB共有を削除する
 
 不要になったSMB共有は削除できます。

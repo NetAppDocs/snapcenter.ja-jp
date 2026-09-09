@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: application volume, clone, split a clone 
 summary: SnapCenter を使用して、アプリケーションボリュームのバックアップのクローニング、クローンのスプリット、およびクローンの削除を行うことができます。 
 ---
-= アプリケーションボリュームのバックアップをクローニング
+= SnapCenter でアプリケーションボリュームのバックアップをクローニングする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -62,6 +62,7 @@ NOTE: Eメール通知を使用する場合は、GUIまたはPowerShellコマン
 
 
 
+[[split-an-application-volume-clone]]
 == アプリケーションボリュームのクローンをスプリットする
 
 SnapCenterを使用して、クローンリソースを親リソースからスプリットできます。スプリットされたクローンは親リソースから独立します。
@@ -77,6 +78,7 @@ SnapCenterを使用して、クローンリソースを親リソースからス�
 
 
 
+[[delete-an-application-volume-clone]]
 == アプリケーションボリュームのクローンを削除する
 
 不要になったクローンは削除できます。他のクローンのソースと同様に機能するクローンは削除できません。

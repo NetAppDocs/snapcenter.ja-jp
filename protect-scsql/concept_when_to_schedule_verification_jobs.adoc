@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Microsoft SQL Server 
 summary: SnapCenter では、バックアップの作成直後にそのバックアップを検証できますが、その場合、バックアップジョブの完了に必要な時間が大幅に増加し、大量のリソースが必要となります。そのため、ほとんどの場合、別のジョブであとで検証を実行するようにスケジュールを設定することを推奨します。たとえば、毎日午後5時にデータベースをバックアップする場合は、1時間後の午後6時に検証を実行するようにスケジュールを設定できます。 
 ---
-= 検証ジョブをスケジュールするタイミング
+= SnapCenter で検証ジョブをスケジュールするタイミング
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

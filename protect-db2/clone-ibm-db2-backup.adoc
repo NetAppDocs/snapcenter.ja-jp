@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for IBM Db2,run as 
 summary: SnapCenterを使用してバックアップをクローニングできます。クローニングはプライマリとセカンダリのどちらのバックアップからも実行できます。 
 ---
-= IBM DB2バックアップのクローニング
+= IBM Db2 バックアップを SnapCenter でクローニングする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

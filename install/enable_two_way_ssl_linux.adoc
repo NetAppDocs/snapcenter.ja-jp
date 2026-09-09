@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: security,enable two-way ssL, windows host, one-way ssl 
 summary: PowerShellコマンドを使用してSSL通信を有効にすると、Linuxホスト上のSnapCenterサーバとプラグインの間の相互通信を保護できます。 
 ---
-= LinuxホストでSSL通信を有効にする
+= SnapCenter Linux ホストで双方向 SSL 通信を有効にする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -12,17 +12,17 @@ entries:
     entries:
     - title: 多要素認証（MFA）を管理します。
       url: "/install/enable_multifactor_authentication.html"
-    - title: REST API、PowerShell、SCCLIを使用して多要素認証（MFA）を管理
+    - title: REST API、PowerShell、およびSCCLIを使用したSnapCenterでのMFAの管理
       url: "/install/enable_multifactor_authentication_using_RestAPI_PowerShell_SCCLI.html"
     - title: PowerShell、SCCLI、REST APIを使用してSnapCenterサーバでMFAを設定します
       url: "/install/configure_mfa_using_powershell_sccli_restapi.html"
 - title: SnapCenterサーバーをインストールする
   entries:
-  - title: WindowsホストへのSnapCenterサーバのインストール
+  - title: Windows ホストへの SnapCenter サーバーのインストール
     url: "/install/task_install_the_snapcenter_server_using_the_install_wizard.html"
-  - title: LinuxホストへのSnapCenterサーバのインストール
+  - title: Linux ホストへの SnapCenter サーバーのインストール
     url: "/install/install_snapcenter_server_linux.html"
-  - title: SnapCenterの登録
+  - title: SnapCenter を登録してサポートを有効にする
     url: "/install/register-snapcenter-software.html"
   - title: SnapCenterへのログイン
     url: "/install/task_log_in_to_snapcenter.html"
@@ -30,49 +30,49 @@ entries:
   entries:
   - title: ストレージシステムの追加とプロビジョニング
     entries:
-    - title: ストレージシステムを追加する
+    - title: SnapCenter にストレージシステムを追加する
       url: "/install/task_add_storage_systems.html"
-    - title: ストレージ接続とクレデンシャル
+    - title: SnapCenter のストレージ接続と認証情報
       url: "/install/concept_svm_connections_and_credentials.html"
     - title: Windowsホストでのストレージのプロビジョニング
       entries:
-      - title: igroupの作成と管理
+      - title: SnapCenter での igroup の作成と管理
         url: "/install/concept_create_and_manage_igroups.html"
-      - title: ディスクの作成と管理
+      - title: SnapCenter でのディスクの作成と管理
         url: "/install/task_create_and_manage_disks.html"
-      - title: SMB共有の作成と管理
+      - title: SnapCenter での SMB 共有の作成と管理
         url: "/install/concept_create_and_manage_smb_shares.html"
-      - title: ストレージシステム上のスペースの再生
+      - title: SnapCenter を使用してストレージシステムのスペースを解放する
         url: "/install/task_reclaim_space_on_the_storage_system.html"
-      - title: PowerShellコマンドレットを使用したストレージのプロビジョニング
+      - title: SnapCenter PowerShell ストレージ プロビジョニング用コマンドレット
         url: "/install/reference_provision_storage_using_powershell_cmdlets.html"
-    - title: VMware環境でのストレージのプロビジョニング
+    - title: SnapCenter VMware環境でのストレージ プロビジョニング
       url: "/install/concept_provision_storage_in_vmware_environments.html"
   - title: SnapCenter Standardコントローラベースライセンスを追加
     url: "/install/concept_snapcenter_standard_controller_based_licenses.html"
   - title: ハイアベイラビリティの設定
     entries:
-    - title: 高可用性を実現するためのSnapCenterサーバの設定
+    - title: SnapCenter サーバーを高可用性向けに設定する
       url: "/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html"
     - title: SnapCenter MySQL リポジトリの高可用性
       url: "/install/concept_high_availability_for_snapcenter_mysql_repository.html"
   - title: ロールベースアクセス制御（RBAC）の設定
     entries:
-    - title: ロールの作成
+    - title: SnapCenter でロールを作成する
       url: "/install/task_create_a_role.html"
     - title: security loginコマンドを使用してONTAP RBACロールを追加する
       url: "/install/task_add_an_rbac_role_using_security_login_commands.html"
-    - title: 最小限の権限でSVMロールを作成する
+    - title: SnapCenter で最小限の権限を持つ SVM ロールを作成する
       url: "/install/create-svm-roles-minimum-privileges.html"
-    - title: ASA R2システム用のSVMロールの作成
+    - title: ASA r2システムのSVMロールをSnapCenterで作成する
       url: "/install/create-svm-roles-asa-r2-resources.html"
-    - title: 最小限の権限でONTAPクラスタロールを作成する
+    - title: SnapCenter の最小権限を持つ ONTAP クラスタロールを作成する
       url: "/install/task_create_an_ontap_cluster_role_with_minimum_privileges.html"
-    - title: ASA R2システム用のONTAPクラスタロールの作成
+    - title: ASA r2システム向けにSnapCenterでONTAPクラスターロールを作成する
       url: "/install/create-cluster-roles-asa-r2-resources.html"
-    - title: ユーザまたはグループを追加してロールとアセットを割り当てる
+    - title: SnapCenter でユーザーまたはグループを追加し、ロールとアセットを割り当てる
       url: "/install/task_add_a_user_or_group_and_assign_role_and_assets.html"
-  - title: 監査ログの設定
+  - title: SnapCenter で監査ログ設定を構成する
     url: "/install/task_configure_audit_log_settings.html"
   - title: SnapCenterサーバとのセキュアなMySQL接続の設定
     url: "/install/concept_configure_secured_mysql_connections_with_snapcenter_server.html"
@@ -80,37 +80,37 @@ entries:
   url: "/install/configure_certificate_based_authentication.html"
 - title: WindowsホストのCA証明書の設定
   entries:
-  - title: CA証明書CSRファイルの生成
+  - title: CA証明書CSRファイル（SnapCenter）
     url: "/install/reference_generate_CA_certificate_CSR_file.html"
   - title: CA証明書のインポート
     url: "/install/task_import_CA_certificates.html"
-  - title: CA証明書サムプリントの取得
+  - title: SnapCenter でCA証明書のサムプリントを取得する
     url: "/install/task_get_the_CA_certificate_thumbprint.html"
-  - title: WindowsホストプラグインサービスでのCA証明書の設定
+  - title: CA証明書をSnapCenter Windowsホストプラグインサービスで設定する
     url: "/install/task_configure_CA_certificate_with_Windows_host_plug-in_services.html"
   - title: SnapCenterサイトでCA証明書を設定
     url: "/install/task_configure_CA_certificate_with_snapcenter_site.html"
   - title: SnapCenterサーバのCA証明書を有効にする
     url: "/install/task_enable_ca_certificates_for_snapcenter.html"
-- title: LinuxホストのCA証明書の設定
+- title: Linux ホスト上の SnapCenter に CA 証明書を設定する
   url: "/install/configure_ca_certificate_linux_host.html"
 - title: Windowsホストで双方向SSL通信を設定して有効にする
   entries:
-  - title: Windowsホストでの双方向SSL通信の設定
+  - title: SnapCenter Windows ホストで双方向 SSL 通信を設定する
     url: "/install/task_configure_two_way_ssl.html"
-  - title: Windowsホストで双方向SSL通信を有効にする
+  - title: SnapCenter Windows ホストで双方向 SSL 通信を有効にする
     url: "/install/task_enable_two_way_ssl.html"
 - title: Linuxホストでの双方向SSL通信の設定と有効化
   entries:
-  - title: Linuxホストでの双方向SSL通信の設定
+  - title: SnapCenter Linux ホストで双方向 SSL 通信を設定する
     url: "/install/configure_two_way_ssl_linux.html"
-  - title: LinuxホストでSSL通信を有効にする
+  - title: SnapCenter Linux ホストで双方向 SSL 通信を有効にする
     url: "/install/enable_two_way_ssl_linux.html"
 - title: Active Directory、LDAP、LDAPSの設定
   entries:
-  - title: 信頼されていないActive Directoryドメインの登録
+  - title: 信頼されていない Active Directory ドメインを SnapCenter に登録する
     url: "/install/task_register_untrusted_active_directory_domains.html"
-  - title: Active Directoryの読み取り権限を有効にするようにIISアプリケーションプールを構成する
+  - title: SnapCenter で Active Directory の IIS アプリケーション プールを構成する
     url: "/install/task_configure_iis_application_pools_to_enable_active_directory_read_permissions.html"
-  - title: LDAPS用のCAクライアント証明書の設定
+  - title: SnapCenter で LDAPS の CA クライアント証明書を設定する
     url: "/install/task_configure_CA_client_certificate_for_LDAPS.html"

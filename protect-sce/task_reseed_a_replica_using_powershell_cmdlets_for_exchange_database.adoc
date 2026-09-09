@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: PowerShellコマンドレットを使用すると、同じホスト上の最新のコピーまたは代替ホストからの最新のコピーを使用して、正常でないレプリカをリストアできます。 
 ---
-= ExchangeデータベースヨウノPowerShellコマントレツトヲシヨウシタレプリカノサイシード
+= SnapCenter PowerShell コマンドレットを使用して Exchange レプリカを再シードする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

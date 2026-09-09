@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SQL Server Database, back up, databases, Azure NetApp Files 
 summary: '[Resources]ページからリソースをバックアップします。' 
 ---
-= Azure NetApp Filesで実行されているSQL Serverデータベースのバックアップ
+= Azure NetApp Files 上の SQL Server データベースを SnapCenter でバックアップする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

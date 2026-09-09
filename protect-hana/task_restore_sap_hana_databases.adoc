@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Database 
 summary: リストアとリカバリのワークフローには、計画、リストア処理の実行、および処理の監視が含まれます。 
 ---
-= リストアのワークフロー
+= SAP HANAデータベースの復元とリカバリのワークフロー（SnapCenter）
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

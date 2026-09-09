@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SMBR, Single Mailbox recovery, Exchange database 
 summary: Single Mailbox Recovery（SMBR）ソフトウェアを使用すると、Exchangeデータベース全体の代わりに、メールまたはメールボックスをリストアおよびリカバリできます。 
 ---
-= メールとメールボックスのきめ細かなリカバリ
+= Microsoft Exchange Server 向け SnapCenter プラグインの詳細なメールとメールボックスのリカバリ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

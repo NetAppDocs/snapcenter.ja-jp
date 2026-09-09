@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: Plug-in for Exchange は SnapCenter の GUI からインストールする必要があります。GUIを使用しない場合は、SnapCenterサーバホストまたはリモートホストでPowerShellコマンドレットを使用できます。 
 ---
-= PowerShellコマンドレットを使用したSnapCenter ServerホストからのPlug-in for Exchangeのインストール
+= PowerShell コマンドレットを使用した Exchange 用 SnapCenter プラグインのインストール
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

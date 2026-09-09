@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Oracle Database, restore, recover, tablespaces, pluggable databases, point-in-time 
 summary: SnapCenterを使用すると、1つ以上のバックアップからデータをリストアおよびリカバリできます。 
 ---
-= Oracleデータベースのリストアとリカバリ
+= OracleデータベースをSnapCenterで復元および復旧する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -54,6 +54,7 @@ summary: SnapCenterを使用すると、1つ以上のバックアップからデ
 
 
 
+[[restore-and-recover-tablespaces-using-point-in-time-recovery]]
 == ポイントインタイムリカバリを使用した表領域のリストアとリカバリ
 
 データベース内の他の表領域に影響を与えることなく、破損または削除された表領域のサブセットをリストアできます。SnapCenterは、RMANを使用して表領域のポイントインタイムリカバリ（PITR）を実行します。
@@ -88,6 +89,7 @@ summary: SnapCenterを使用すると、1つ以上のバックアップからデ
 
 
 
+[[restore-and-recover-pluggable-database-using-point-in-time-recovery]]
 == ポイントインタイムリカバリを使用したプラガブルデータベースのリストアとリカバリ
 
 コンテナデータベース（CDB）内の他のPDBに影響を与えることなく、破損またはドロップされたプラガブルデータベース（PDB）をリストアおよびリカバリできます。SnapCenterは、RMANを使用してPDBのポイントインタイムリカバリ（PITR）を実行します。

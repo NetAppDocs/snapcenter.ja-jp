@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter, certificate signing request, ca, 
 summary: 証明書署名要求（CSR）を生成し、生成されたCSRを使用して認証局（CA）から取得できる証明書をインポートできます。証明書には秘密鍵が関連付けられます。 
 ---
-= CA証明書CSRファイルの生成
+= CA証明書CSRファイル（SnapCenter）
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

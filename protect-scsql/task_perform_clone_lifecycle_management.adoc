@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: SnapCenter を使用すると、リソースグループまたはデータベースからクローンを作成できます。クローニングはオンデマンドで実行することも、リソースグループまたはデータベースの定期的なクローニング処理をスケジュール設定することもできます。バックアップを定期的にクローニングすると、クローンを使用してアプリケーションの開発、データの取り込み、またはデータのリカバリを行うことができます。 
 ---
-= クローンライフサイクルの実行
+= SnapCenter クローンライフサイクル管理の実行
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -110,7 +110,7 @@ NOTE: プリスクリプトまたはポストスクリプトのパスにドラ�
 NOTE: Eメール通知を使用する場合は、GUIまたはPowerShellコマンドSet-SmSmSmtpServerを使用して、SMTPサーバの詳細を指定しておく必要があります。
 
 +
-EMSの場合は、 https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_ems_data_collection.html["EMSデータ収集の管理"]
+EMSについては、 https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_ems_data_collection.html["SnapCenter で EMS データ収集を管理する"]を参照してください。
 
 . 概要を確認し、 [ 完了 ] をクリックします。
 

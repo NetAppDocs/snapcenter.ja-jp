@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for MySQL 
 summary: 'リソースとは、SnapCenterで管理されるLinuxホスト上のMySQLインスタンスです。SnapCenter Plug-in for MySQLプラグインをインストールすると、そのLinuxホスト上のMySQLデータベースが自動的に検出されて[リソース]ページに表示されます。' 
 ---
-= Linuxホスト上のリソースの自動検出
+= Linuxホスト上でのMySQLリソースの自動検出
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

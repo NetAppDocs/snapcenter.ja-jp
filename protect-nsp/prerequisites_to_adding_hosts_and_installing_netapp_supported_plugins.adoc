@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials 
 summary: ホストを追加してプラグインパッケージをインストールする前に、すべての要件を満たしておく必要があります。NetAppでサポートされているプラグインは、Windows、Linux、AIXの両方の環境で使用できます。 
 ---
-= ホストを追加してPlug-in Package for Windows、Linux、AIXをインストールするための前提条件
+= ホストの追加と SnapCenter プラグインのインストールの前提条件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -27,12 +27,14 @@ NOTE: IBM Java は Windows および Linux ホストではサポートされて�
 
 
 
+[[general]]
 == 全般
 
 iSCSIを使用している場合は、iSCSIサービスが実行されている必要があります。
 
 
 
+[[windows-hosts]]
 == Windowsホスト
 
 * ローカル管理者Privilegesを持つドメインユーザと、リモートホストに対するローカルログイン権限が必要です。
@@ -45,6 +47,7 @@ link:https://www.oracle.com/java/technologies/downloads/#java17["Windows 用 Jav
 
 
 
+[[linux-and-aix-hosts]]
 == LinuxホストとAIXホスト
 
 
@@ -99,6 +102,7 @@ IMPORTANT: この例は、独自のデータを作成するための参照とし
 
 
 
+[[aix-host-requirements]]
 == AIXホストの要件
 
 SnapCenter Plug-ins Package for AIXをインストールする前に、ホストが要件を満たしていることを確認する必要があります。
@@ -148,6 +152,7 @@ Javaを最新バージョンにアップグレードした場合は、/var/opt/s
 |===
 
 
+[[configure-sudo-privileges-for-non-root-users-for-aix-host]]
 === AIXホストのroot以外のユーザに対するsudo Privilegesの設定
 
 SnapCenter 4.4以降では、root以外のユーザがSnapCenter Plug-ins Package for AIXをインストールしてプラグインプロセスを開始できます。プラグインプロセスをroot以外の有効なユーザとして実行します。複数のパスにアクセスできるようにroot以外のユーザにsudo Privilegesを設定する必要があります。
