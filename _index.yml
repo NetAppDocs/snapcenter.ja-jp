@@ -76,7 +76,7 @@ indexpage:
     - title: NetAppブログ- SnapCenter
       url: https://blog.netapp.com/tag/snapcenter/
     - title: NetAppコミュニティ- SnapCenter
-      url: https://community.netapp.com/t5/forums/filteredbylabelpage/board-id/backup-and-restore-discussions/label-name/snapcenter
+      url: https://community.netapp.com/community/categories/solutions
   - title: その他のリソース
     links:
     - title: コマンドレットリファレンスガイド
