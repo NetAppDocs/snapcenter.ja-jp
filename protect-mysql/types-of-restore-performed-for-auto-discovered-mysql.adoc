@@ -2,7 +2,7 @@
 permalink: protect-mysql/types-of-restore-performed-for-auto-discovered-mysql.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for mysql 
-summary: SnapCenterでは、自動的に検出されたSnapRestoreデータベースに対して、ボリュームベースのMySQL \（VBSR\）、単一ファイルSnapRestore、および接続とコピーのリストアタイプがサポートされます。 
+summary: SnapCenter は、自動的に検出された MySQL データベース向けに、ボリュームベースの SnapRestore（VBSR）、シングルファイル SnapRestore、および接続とコピーによるリストアタイプをサポートしています。 
 ---
 = SnapCenter で自動検出された MySQL データベースの復元タイプ
 :allow-uri-read: 

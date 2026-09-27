@@ -2,7 +2,7 @@
 permalink: protect-sco/task_clone_a_pluggable_database.html 
 sidebar: sidebar 
 keywords: clone, pluggable database, PDB 
-summary: Pluggable Database \ （ PDB\ ）を、同じホストまたは代替ホスト上の異なるターゲット CDB または同じ CDB にクローニングできます。クローニングされたPDBを目的のSCNまたは日時にリカバリすることもできます。 
+summary: プラガブルデータベース（PDB）は、同じホストまたは代替ホスト上の別のターゲットCDBまたは同じターゲットCDBにクローニングできます。クローニングされたPDBを目的のSCNまたは日時にリカバリすることもできます。 
 ---
 = SnapCenterによるOracleプラガブル データベースのクローン作成
 :allow-uri-read: 

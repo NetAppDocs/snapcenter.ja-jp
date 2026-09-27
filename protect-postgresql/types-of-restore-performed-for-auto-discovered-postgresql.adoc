@@ -2,7 +2,7 @@
 permalink: protect-postgresql/types-of-restore-performed-for-auto-discovered-postgresql.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for postgresql 
-summary: SnapCenterは、自動的に検出されたPostgreSQLクラスタに対して、ボリュームベースのSnapRestore（VBSR\）、Single File SnapRestore、およびConnect-and-Copyリストアタイプをサポートしています。 
+summary: SnapCenter は、自動的に検出された PostgreSQL クラスタに対して、ボリュームベースの SnapRestore（VBSR）、シングルファイル SnapRestore、および接続とコピーによるリストアタイプをサポートしています。 
 ---
 = 自動検出された PostgreSQL の SnapCenter での復元タイプ
 :allow-uri-read: 

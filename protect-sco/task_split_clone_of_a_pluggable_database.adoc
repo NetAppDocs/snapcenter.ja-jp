@@ -2,7 +2,7 @@
 permalink: protect-sco/task_split_clone_of_a_pluggable_database.html 
 sidebar: sidebar 
 keywords: split, PDB, cloned PDB 
-summary: SnapCenter を使用して、クローニングされた Pluggable Database \ （ PDB\ ）をスプリットできます。 
+summary: SnapCenterを使用して、プラガブルデータベース（PDB）のクローンをスプリットできます。 
 ---
 = SnapCenter でプラグイン可能なデータベースクローンを分割する
 :allow-uri-read: 

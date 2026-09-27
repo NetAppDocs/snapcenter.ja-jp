@@ -2,7 +2,7 @@
 permalink: protect-postgresql/number-of-backup-jobs-needed-for-postgresql.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for postgresql 
-summary: 必要なバックアップジョブの数を左右する要因としては、リソースのサイズ、使用中のボリュームの数、リソースの変更率、サービスレベルアグリーメント（ SLA\ ）などがあります。 
+summary: 必要なバックアップジョブの数を左右する要因には、リソースのサイズ、使用されているボリュームの数、リソースの変更率、サービスレベルアグリーメント（SLA）などがあります。 
 ---
 = SnapCenter Plug-in for PostgreSQL の必要なバックアップジョブ数
 :allow-uri-read: 

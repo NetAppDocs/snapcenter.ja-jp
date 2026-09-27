@@ -2,7 +2,7 @@
 permalink: protect-hana/task_configure_gMSA_on_windows_server_2012_or_later.html 
 sidebar: sidebar 
 keywords:  
-summary: Windows Server 2016 以降では、管理ドメインアカウントからサービスアカウントパスワードの自動管理を提供するグループ Managed Service Account \ （ gMSA \ ）を作成できます。 
+summary: Windows Server 2016以降では、管理対象ドメインアカウントからサービスアカウントのパスワードを自動管理するグループ管理サービスアカウント（gMSA）を作成できます。 
 ---
 = Windows Server 2016 以降で SnapCenter の gMSA を構成する
 :allow-uri-read: 

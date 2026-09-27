@@ -2,7 +2,7 @@
 permalink: protect-scsql/task_restore_a_sql_server_database_from_secondary_storage.html 
 sidebar: sidebar 
 keywords: restore operation 
-summary: セカンダリストレージシステム上の物理 LUN （ RDM 、 iSCSI 、または FCP ）から、バックアップされた SQL Server データベースをリストアできます。リストア機能は段階的に行われ、すべてのデータとログページがセカンダリストレージシステム上の指定されたSQL Serverバックアップから指定されたデータベースにコピーされます。 
+summary: セカンダリストレージシステム上の物理LUN（RDM、iSCSI、またはFCP）から、バックアップされたSQL Serverデータベースをリストアできます。リストア機能は段階的に行われ、すべてのデータとログページがセカンダリストレージシステム上の指定されたSQL Serverバックアップから指定されたデータベースにコピーされます。 
 ---
 = SnapCenter のセカンダリストレージから SQL Server データベースを復元する
 :allow-uri-read: 

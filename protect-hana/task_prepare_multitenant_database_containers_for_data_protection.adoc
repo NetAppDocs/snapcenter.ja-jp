@@ -2,7 +2,7 @@
 permalink: protect-hana/task_prepare_multitenant_database_containers_for_data_protection.html 
 sidebar: sidebar 
 keywords: multitenant database containers 
-summary: 'SnapCenterに直接登録されているSAP HANAホストの場合、SnapCenter Plug-in for SAP HANA Databaseをインストールまたはアップグレードすると、ホスト上のリソースの自動検出がトリガーされます。プラグインをインストールまたはアップグレードした後、プラグインホスト上にあるすべてのマルチテナントデータベースコンテナ \(MDC\) リソースに対して、別の MDC リソースが自動的に別の GUID 形式で検出され、 SnapCenter に登録されます。新しいリソースは「ロック」状態になります。' 
+summary: SAP HANAホストがSnapCenterに直接登録されている場合、SnapCenter Plug-in for SAP HANA Databaseをインストールまたはアップグレードすると、ホスト上のリソースの自動検出がトリガーされます。プラグインのインストールまたはアップグレード後、プラグインホスト上にあったすべてのマルチテナントデータベースコンテナ（MDC）リソースに対して、異なるGUID形式を持つ別のMDCリソースが自動的に検出され、SnapCenterに登録されます。新しいリソースは「ロック」状態になります。 
 ---
 = SnapCenter でのデータ保護のためのマルチテナントデータベースコンテナの準備
 :allow-uri-read: 

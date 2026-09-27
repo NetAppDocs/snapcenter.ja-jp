@@ -2,7 +2,7 @@
 permalink: protect-hana/concept_number_of_backup_jobs_needed_for_sap_hana_databases.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for SAP HANA Database 
-summary: 必要なバックアップジョブの数を左右する要因としては、リソースのサイズ、使用中のボリュームの数、リソースの変更率、サービスレベルアグリーメント（ SLA\ ）などがあります。 
+summary: 必要なバックアップジョブの数を左右する要因には、リソースのサイズ、使用されているボリュームの数、リソースの変更率、サービスレベルアグリーメント（SLA）などがあります。 
 ---
 = SnapCenter での SAP HANA データベースに必要なバックアップジョブの数
 :allow-uri-read: 

@@ -2,7 +2,7 @@
 permalink: protect-scsql/concept_number_of_backup_jobs_needed_for_databases.html 
 sidebar: sidebar 
 keywords: Number of backup jobs 
-summary: 必要なバックアップジョブの数を左右する要因としては、データベースのサイズ、使用中のボリュームの数、データベースの変更率、サービスレベルアグリーメント（ SLA\ ）などがあります。 
+summary: 必要なバックアップジョブの数を左右する要因には、データベースのサイズ、使用されているボリュームの数、データベースの変更率、サービスレベルアグリーメント（SLA）などがあります。 
 ---
 = SnapCenter のデータベースに必要なバックアップジョブの数
 :allow-uri-read: 

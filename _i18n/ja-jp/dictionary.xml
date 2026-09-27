@@ -474,7 +474,6 @@
   <block id="495685c9e0a33087f4a235b8fe0d5e1c" category="section-title">保護の解除</block>
   <block id="d315d492e2b430b33a4c4cd7b63eda74" category="paragraph">保護の解除：すべてのバックアップが削除され、すべてのポリシーが解除されます。保護を解除する前に、バックアップがマウントされておらず、バックアップにクローンが関連付けられていないことを確認する必要があります。</block>
   <block id="58184ed57b20efbfac17064f1bc0e4f4" category="list-text">バックアップを選択し、*[保護の削除]*をクリックします。</block>
-  <block id="3a3be0733cfa37aa5b2c3451b35cd9f3" category="summary">PowerShellコマンドレットを使用して、Event Management System（EMS；イベント管理システム）によるデータ収集のスケジュール設定と管理を行うことができます。EMS データ収集では、 SnapCenter サーバ、インストールされている SnapCenter プラグインパッケージ、ホストに関する情報などが収集され、指定した ONTAP Storage Virtual Machine （ SVM ）に送信されます。</block>
   <block id="f3d27d54305040136fecebe4c18cadc3" category="paragraph">PowerShellコマンドレットを使用して、Event Management System（EMS；イベント管理システム）によるデータ収集のスケジュール設定と管理を行うことができます。EMS データ収集では、 SnapCenter サーバ、インストールされている SnapCenter プラグインパッケージ、ホストに関する情報などが収集され、指定した ONTAP Storage Virtual Machine （ SVM ）に送信されます。</block>
   <block id="3c34d42e74b6213595e7d0230e7bb1dc" category="admonition">データ収集タスクの実行中はシステムのCPU利用率が高くなります。CPU利用率は、データサイズに関係なく、処理の進行中は高いままです。</block>
   <block id="8d3511cf036c12acd5f18af37375b613" category="section-title">EMSデータ収集の停止</block>
@@ -494,7 +493,6 @@
   <block id="1812de3b7db541c75daf530599cdcf20" category="list-text">_Get-SmDataCollectionEmsSchedule_ と入力して、 EMS データ収集スケジュールに関する情報を取得します。</block>
   <block id="c272a17a5819b3ca650242ce895e6250" category="list-text">_Get-SmDataCollectionEmsStatus_ と入力して、 EMS データ収集のステータスに関する情報を取得します。</block>
   <block id="5a0d010510d163ad44131286e573b19c" category="list-text">_Get-SmDataCollectionEmsTarget_ と入力して、 EMS データ収集ターゲットに関する情報を取得します。</block>
-  <block id="742a485520d4686910da365e393bff09" category="summary">ホストの追加、SnapCenterプラグインパッケージのインストール、検証サーバの追加、ホストの削除、バックアップジョブの移行、ホストの更新（プラグインパッケージのアップグレードや新しいプラグインパッケージの追加）を行うことができます。使用するプラグインに応じて、ディスクのプロビジョニング、 SMB 共有の管理、イニシエータグループの管理、 iSCSI セッションの管理、データの移行も可能です。</block>
   <block id="f4a4e1bbc870f6173a4c9f0b39e55876" category="paragraph">ホストの追加、SnapCenterプラグインパッケージのインストール、検証サーバの追加、ホストの削除、バックアップジョブの移行、ホストの更新（プラグインパッケージのアップグレードや新しいプラグインパッケージの追加）を行うことができます。使用しているプラグインに応じて、ディスクのプロビジョニング、SMB共有の管理、イニシエータグループ（igroup）の管理、iSCSIセッションの管理、データの移行も実行できます。</block>
   <block id="32fbba6dfc90536fe1616258f0747518" category="cell">実行できるタスク</block>
   <block id="6dd0426cb2899c2798c6a154f738fb9b" category="cell">Microsoft Exchange Server の場合</block>
@@ -585,7 +583,6 @@
   <block id="90a7eb3ff9a70c2efedf775c9ed6b840" category="paragraph">ポリシーがリソースまたはリソースグループに関連付けられている場合は、ポリシーの適用を解除する必要があります。</block>
   <block id="7a8ac26347aa77c0139da1f6e52e5a21" category="list-text">ポリシーを選択し、 * 削除 * をクリックします。</block>
   <block id="86ce5961ef6624058f736d93459d1889" category="list-text">「 * はい * 」をクリックします。</block>
-  <block id="9bbbd908c36125f841bedc2e6a71693b" category="summary">SnapCenter は、 Active Directory \ （ AD \ ）の信頼できるドメインのホストを管理するだけでなく、複数の AD 信頼されていないドメインのホストも管理します。信頼されていない AD ドメインを SnapCenter サーバに登録する必要があります。SnapCenter では、複数の信頼されていない AD ドメインのユーザとグループがサポートされます</block>
   <block id="59d70ce40a9e697537123ee978630105" category="paragraph">SnapCenter は、 Active Directory （ AD ）の信頼できるドメイン内のホストの管理に加えて、複数の AD の信頼されていないドメイン内のホストも管理します。信頼されていない AD ドメインを SnapCenter サーバに登録する必要があります。SnapCenter では、複数の信頼されていない AD ドメインのユーザとグループがサポートされます</block>
   <block id="526aa9a917f9b353e8479368ebf3d9b1" category="paragraph">SnapCenter サーバは、ドメインまたはワークグループ内のマシンにインストールできます。SnapCenter サーバをインストールするには、マシンがドメイン内にある場合はドメインのクレデンシャル、ワークグループ内にある場合はローカルの管理者クレデンシャルを指定する必要があります。</block>
   <block id="0f820fb58fcccabccee18d0a21cfa2af" category="paragraph">SnapCenter サーバに登録されていないドメインに属する Active Directory （ AD ）グループはサポートされていません。これらの AD グループを使用して SnapCenter ロールを作成できますが、 SnapCenter サーバへのログインが失敗し、次のエラーメッセージが表示されます。 The user are trying to login does not belong to any roles管理者にお問い合わせください。</block>
@@ -727,7 +724,6 @@
   <block id="6ec96cdabd229503589406f50db55e68" category="list-text">コマンドプロンプトで、次のように入力します。<block ref="37d753227b34046b37527adc789bf242" prefix=" " category="inline-code"></block></block>
   <block id="10e9473a908d95c326ebb4e1eda2310b" category="list-text">コマンドプロンプトで、次のように入力します。<block ref="390a6a5b224eeeb6e5a59afa8063b1a6" prefix=" " category="inline-code"></block></block>
   <block id="5e994007f42cad41d718c5f9751d91f2" category="list-text">[Jobs]ページで、ジョブのステータスを確認します。</block>
-  <block id="be2aa64f1b64fb075f7467ccc849a45f" category="summary">SnapCenterの左側のナビゲーションペインから[Dashboard]にアクセスすると、最近のジョブアクティビティ、アラート、保護の概要、Storage Efficiencyと使用状況、SnapCenterジョブのステータス（バックアップ、クローン、リストア\）、スタンドアロンホストとWindowsクラスタホストの設定ステータスなど、システムの健常性の概要を確認できます。 SnapCenterで管理しているStorage Virtual Machine（SVM）の数とライセンス容量。</block>
   <block id="784e370a7c51736fcc92afb2efec1327" category="paragraph">SnapCenter の左側のナビゲーションペインで、ダッシュボードを使用すると、最近のジョブアクティビティ、アラート、保護の概要、ストレージの効率性と使用状況、 SnapCenter ジョブのステータス（バックアップ、クローン、リストア）、スタンドアロンおよび Windows クラスタホストの構成ステータスなど、システムの健全性を一目で把握できます。 SnapCenter で管理されている Storage Virtual Machine （ SVM ）の数とライセンス容量。</block>
   <block id="ddfe3037f5fe958abe596df4766dd448" category="paragraph">ダッシュボードビューに表示される情報は、 SnapCenter に現在ログインしているユーザに割り当てられたロールによって異なります。ユーザにその情報を表示する権限がない場合、一部のコンテンツが表示されないことがあります。</block>
   <block id="7273ea7e20043b55529d88d0ae7ca390" category="paragraph">多くの場合、 * i * にカーソルを合わせると、ディスプレイに関する詳細情報を表示できます。状況によっては、リソース、モニタ、レポートなどの SnapCenter GUI ページの詳細なソース情報にダッシュボードの情報がリンクされていることがあります。</block>
@@ -879,7 +875,6 @@
   <block id="624aa4628c7efc536a22463b3c04e7bf" category="paragraph">ファイルシステムが削除されないことがあります。次のコマンドを実行して、clone_delete_delayパラメータの値を増やす必要があります。<block ref="19924a319758482fdeb11886ef84cdef" prefix="" category="inline-code"></block></block>
   <block id="5a2f2b525efb0333ccf2d94e71dd9708" category="admonition">clone_delete_delayパラメータには、アプリケーションクローンの削除が完了してからファイルシステムの削除を開始するまでの待機時間を秒数で指定します。</block>
   <block id="51458de5e4f348eca31269218b799aa0" category="paragraph">パラメータの値を変更したら、SnapCenter Plug-in Loader（SPL）サービスを再起動します。</block>
-  <block id="661deaa2ad79f76fbf57f1b17a36c702" category="summary">SnapCenter の左側のナビゲーションペインでは、ダッシュボードの各種タイルや、関連するシステムの詳細を表示できます。ダッシュボードで使用できる表示数は固定であり、変更することはできません。各画面に表示される内容は、ロールベースアクセス制御（ RBAC ）によって異なります。</block>
   <block id="b18f22e2cd7840fe2cc2386acb9d3bf8" category="paragraph">SnapCenter の左側のナビゲーションペインでは、ダッシュボードの各種タイルや、関連するシステムの詳細を表示できます。ダッシュボードで使用できる表示数は固定であり、変更することはできません。各画面に表示されるコンテンツは、Role-Based Access Control（RBAC；ロールベースアクセス制御）によって異なります。</block>
   <block id="047f218cde508f517efee65edfd05c5e" category="list-text">左側のナビゲーションペインで、 * ダッシュボード * をクリックします。</block>
   <block id="018700eef5386a0cf792953b0d656365" category="list-text">各ディスプレイのアクティブな領域をクリックすると、追加情報が表示されます。</block>
@@ -1164,7 +1159,6 @@
   <block id="e56e6eb9f96878a5d909655ad543a59d" category="list-text">入力が完了したら、 * 接続 * をクリックします。</block>
   <block id="8103ea1f974b6fe78b3263b7a1107692" category="paragraph">SnapCenter が iSCSI セッションを確立します。</block>
   <block id="d92abf366bd9060c59bb86c051a977d0" category="list-text">この手順を繰り返して、ターゲットごとにセッションを確立します。</block>
-  <block id="8871af3db2b33c68b1e7799897970dbb" category="summary">SnapCenter サーバと MySQL サーバ間の通信をスタンドアロン構成または Network Load Balancing （ NLB ）構成で保護する場合は、 Secure Sockets Layer （ SSL ）証明書とキーファイルを生成できます。</block>
   <block id="2c83e33769333482559e227de9729593" category="doc">SnapCenterサーバとのセキュアなMySQL接続の設定</block>
   <block id="073e8e92522cf9a79fe89d146dc9c6e4" category="paragraph">SnapCenter サーバと MySQL サーバ間の通信をスタンドアロン構成または Network Load Balancing （ NLB ）構成で保護する場合は、 Secure Sockets Layer （ SSL ）証明書とキーファイルを生成できます。</block>
   <block id="1390fc0f7d66ff5e08d5a27c97798c11" category="section-title">スタンドアロンSnapCenterサーバ構成用のセキュアなMySQL接続の設定</block>
@@ -2218,7 +2212,6 @@
   <block id="79e06e5c035a2c2f7382e995d5baa08e" category="list-text">syslogサーバプロトコルの入力</block>
   <block id="7a86ee54e2df90d7a4109938e53c1deb" category="list-text">RFC形式の入力</block>
   <block id="ace31f9e5f442121e5c3914671ec85d3" category="list-text">監査整合性チェックとディスク領域チェックは、* Monitor *&gt;* Jobs *をクリックすると表示できます。</block>
-  <block id="57cb4604cb5a08f7df53f4664acf802c" category="summary">SnapCenter の Active Directory 読み取り権限を有効にする必要がある場合は、 Windows Server でインターネットインフォメーションサービス（ IIS ）を設定してカスタムのアプリケーションプールアカウントを作成できます。</block>
   <block id="455df4e09a44d6f772e16ebd873a4ec2" category="paragraph">SnapCenter の Active Directory 読み取り権限を有効にする必要がある場合は、 Windows Server でインターネットインフォメーションサービス (IIS) を構成して、カスタムのアプリケーションプールアカウントを作成できます。</block>
   <block id="dc5a0bd474b3e3add540897a1e445236" category="list-text">左側のナビゲーションペインで、 * アプリケーションプール * をクリックします。</block>
   <block id="519d1f4122df08344a80aee5282c2dcd" category="list-text">［ アプリケーションプール ］ リストで ［ SnapCenter ］ を選択し、 ［ アクション ］ ペインで ［ * 詳細設定 * ］ をクリックします。</block>
@@ -3166,7 +3159,6 @@
   <block id="d8325e1122610585ec7096ce7847c2e7" category="paragraph">次に、DB2データベースをバックアップする例を示します。</block>
   <block id="6ba5594c01f0e8734610d7df124641ef" category="list-text">Get-smJobSummaryReportコマンドレットを使用して、ジョブのステータス（実行中、完了、失敗）を監視します。</block>
   <block id="dcda47f958f8a194233c8913b74e1781" category="list-text">Get-SmBackupReportコマンドレットを使用して、リストアやクローニングの処理を実行するバックアップID、バックアップ名などのバックアップジョブの詳細を監視します。</block>
-  <block id="d22047afaa5fcff0c93fc9cb30e1d95a" category="summary">リソース（データベース）またはリソースグループのバックアップを作成することができます。バックアップのワークフローには、計画、バックアップするデータベースの特定、バックアップポリシーの管理、リソースグループの作成とポリシーの適用、バックアップの作成、処理の監視が含まれます。</block>
   <block id="73bb0c3e029e657eee721094d9dfd4a4" category="doc">IBM DB2リソースのバックアップ</block>
   <block id="15fda0d23b806181f091668c1c1e55bf" category="paragraph">リソース（データベース）またはリソースグループのバックアップを作成できます。バックアップのワークフローには、計画、バックアップするデータベースの特定、バックアップポリシーの管理、リソースグループの作成とポリシーの適用、バックアップの作成、処理の監視が含まれます。</block>
   <block id="b9721a35a6c374ded595576ccbd2f789" category="paragraph">次のワークフローは、バックアップ処理の実行順序を示しています。</block>
@@ -3254,9 +3246,7 @@
   <block id="62efa2c3113bfa21f93723855cb62c9a" category="doc">Linuxホスト上のSnapCenter IBM DB2 Plug-insサービスのCA証明書の設定</block>
   <block id="a601121a2919d3d268279f81d4b8569b" category="doc">Windowsホスト上のSnapCenter IBM DB2 Plug-insサービス用のCA証明書の設定</block>
   <block id="1f8ca173b65dfa4ec89689efd778bdb1" category="summary">Windows ホストプラグインサービスで CA 証明書を設定します</block>
-  <block id="257f5cefc00605ee767b1d8dcdf64b40" category="summary">Windows Server 2016 以降では、管理ドメインアカウントからサービスアカウントパスワードの自動管理を提供するグループ Managed Service Account \ （ gMSA \ ）を作成できます。</block>
   <block id="4f96a9b27e2a438e2024bd3f65ccc8ee" category="doc">Windows Server 2016以降でのgMSAの設定</block>
-  <block id="b3623fe28f77f962e4c4478a0a8d7f10" category="summary">バックアップのスケジュールを決定する場合に最も重要な要因となるのは、リソースの変更率です。使用頻度の高いリソースは1時間ごとにバックアップし、使用頻度の低いリソースは1日に1回バックアップすることもできます。その他の要因としては、組織におけるリソースの重要性、サービスレベルアグリーメント（ SLA ）、目標復旧時点（ RPO ）などがあります。</block>
   <block id="938d7b512488434ede64cfdba5004463" category="doc">IBM DB2のバックアップスケジュールを決定する際の考慮事項</block>
   <block id="1c5acb0c3b5af90c130534aa5e541208" category="paragraph">バックアップのスケジュールを決定する場合に最も重要な要因となるのは、リソースの変更率です。使用頻度の高いリソースは1時間ごとにバックアップし、使用頻度の低いリソースは1日に1回バックアップすることもできます。その他の要因としては、組織におけるリソースの重要性、サービスレベルアグリーメント（SLA）、目標復旧時点（RPO）などがあります。</block>
   <block id="ee5aad08262d029e0581b7fe9d3a47a4" category="list-text">バックアップ頻度（バックアップを実行する間隔）</block>
@@ -3339,7 +3329,6 @@
   <block id="7c221f1777123603eacf6f596630737a" category="paragraph">設定されたスケジュールは、 [* Applied Schedules] 列に表示されます。</block>
   <block id="eecd36c568b40385bb729410ba711a64" category="paragraph">サードパーティのバックアップスケジュールがSnapCenterバックアップスケジュールと重複している場合はサポートされません。</block>
   <block id="572a352f5f18989eb8c33a0e36d194c3" category="paragraph">また、送信者と受信者のEメールアドレス、およびEメールの件名を指定する必要があります。SMTP サーバーは、 * Settings * &gt; * Global Settings * で設定する必要があります。</block>
-  <block id="3ae095e6e07d17e8918b6a67b8c784c9" category="summary">バックアップジョブを作成する前にバックアップ戦略を定義しておくと、リソースの正常なリストアやクローニングに必要なバックアップを作成するのに役立ちます。バックアップ戦略の大部分は、サービスレベルアグリーメント（ SLA\ ）、目標復旧時間（ RTO\ ）、および目標復旧時点（ RPO\ ）によって決まります。</block>
   <block id="438775167d054f53795eefbfe90a56db" category="doc">IBM DB2のバックアップ戦略の定義</block>
   <block id="dae0c1941584d66ccde8deef4940141d" category="paragraph">バックアップジョブを作成する前にバックアップ戦略を定義しておくと、リソースの正常なリストアやクローニングに必要なバックアップを作成するのに役立ちます。バックアップ戦略の大部分は、Service Level Agreement（SLA；サービスレベルアグリーメント）、Recovery Time Objective（RTO；目標復旧時間）、Recovery Point Objective（RPO；目標復旧時点）によって決まります。</block>
   <block id="fa8467a355232709f9161185e426b477" category="paragraph">SLAは、期待されるサービスレベル、およびサービスに関連する多くの問題（サービスの可用性やパフォーマンスなど）への対処方法を定義したものです。RTOは、サービスの停止後にビジネスプロセスをリストアする必要がある時間です。RPOは、障害発生後に通常処理を再開するためにバックアップストレージからリカバリする必要があるファイルの経過時間に関する戦略を定義します。SLA、RTO、RPOは、データ保護戦略に影響します。</block>
@@ -3438,7 +3427,6 @@
   <block id="72c4d5bc612a304d82653189ff27c3e8" category="paragraph">コマンドで使用できるパラメータとその説明については、 RUNNING Get Help command_name _ を使用して参照できます。または、を参照することもできます<block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block>。</block>
   <block id="422ecd7253a08bde5f8633b6a2311f26" category="doc">[Activity]ペインで、IBM DB2データベースに対するデータ保護処理を監視します。</block>
   <block id="4b0b8f3dcc1d02bb62d5a7533b295209" category="summary">SnapCenter Jobs ページを使用して、各バックアップ処理の進捗状況を監視できます。進捗状況を確認して、いつ完了したか、問題が発生していないかを確認できます。</block>
-  <block id="5e398ea531b7d56ad433ce2103049eab" category="summary">必要なバックアップジョブの数を左右する要因としては、リソースのサイズ、使用中のボリュームの数、リソースの変更率、サービスレベルアグリーメント（ SLA\ ）などがあります。</block>
   <block id="a84788f54000c40469694497a702a0c6" category="doc">IBM DB2に必要なバックアップジョブの数</block>
   <block id="8b3a2edf035fc93730de54663ee89cc2" category="paragraph">必要なバックアップジョブの数を左右する要因には、リソースのサイズ、使用されているボリュームの数、リソースの変更率、サービスレベルアグリーメント（SLA）などがあります。</block>
   <block id="6cd5d6027517e4056d2f3bac15454e38" category="summary">SnapCenter プラグインは、 ONTAP の SnapMirror テクノロジおよび SnapVault テクノロジと組み合わせて使用できます</block>
@@ -3567,7 +3555,6 @@
   <block id="2a681580cba5d0bac1fe8b6665a6a47e" category="doc">サポートされるバックアップのタイプ</block>
   <block id="c6dba23441b7b81118b01afb845de37e" category="section-title">Snapshotコピーベースのバックアップ</block>
   <block id="ecea86165f916243bd9672803822610e" category="paragraph">Snapshotコピーベースのバックアップでは、NetApp Snapshotテクノロジを利用して、IBM DB2データベースが格納されているボリュームのオンラインの読み取り専用コピーを作成します。</block>
-  <block id="d817348208f0f5e278b5ac5470a4a74f" category="summary">SnapCenterは、自動検出されたSnapRestoreデータベースに対して、ボリュームベースの（VBSR\）、Single File SnapRestore、およびConnect-and-Copyリストアタイプをサポートしています。</block>
   <block id="ff70e08b6b702c923422d7ca798d9a2e" category="doc">自動検出されたIBM DB2のリストア処理のタイプ</block>
   <block id="a9df86e6e8deee9da3968ec6a96fafbf" category="paragraph">SnapCenter Plug-in for IBM DB2は、自動検出されたIBM DB2データベースに対して、Single File SnapRestoreおよびConnect-and-Copyリストアタイプをサポートしています。</block>
   <block id="b84bb31b9e5d09baf5905b34fa16035f" category="section-title">NFS環境でSingle File SnapRestoreを実行するシナリオは、次のとおりです。</block>
@@ -3697,7 +3684,6 @@
   <block id="3ee4871644963356f98fad58d0b99216" category="paragraph">リカバリの日時を指定する必要があります。</block>
   <block id="7ba57e19f3511ec8095d5f1239ebabca" category="list-text">特定のデータバックアップまでデータベースをリカバリ</block>
   <block id="91e17023cada2b1f21dbf9949614b65a" category="paragraph">SnapCenterでは、SAP HANAデータベースに対して[No recovery]オプションも用意されています。</block>
-  <block id="a30cbc0a03f03c5c43937ad1f7927038" category="summary">SnapCenter では、自動検出された SAP HANA データベースについて、ボリュームベースの SnapRestore （ VBSR ）、単一ファイル SnapRestore 、および接続とコピーのリストアタイプがサポートされます。</block>
   <block id="956114026450e935573541a200bd51a7" category="doc">自動検出されたSAP HANAデータベースのリストア処理のタイプ</block>
   <block id="cce48356cb2b15c37720771a9ef414c4" category="paragraph">SnapCenterでは、自動検出されたSAP HANAデータベースに対して、ボリュームベースSnapRestore（VBSR）、単一ファイルSnapRestore、および接続とコピーのリストアタイプがサポートされます。</block>
   <block id="75bb2846113f16e696f05fb74edd409b" category="section-title">ボリュームベースSnapRestore（VBSR）は、NFS環境で次のシナリオで実行されます。</block>
@@ -3891,7 +3877,6 @@
   <block id="14121664b691a3085947fb503ee4883e" category="list-text">SnapCenter Plug-ins Package for SnapCenterのインストールファイル（SAP_Linux_host_plugin.bin）をC：\ProgramData\SAP\Package RepositoryからPlug-in for NetApp SnapCenterデータベースをインストールするホストにコピーします。</block>
   <block id="b3f72639442ac8dbec9806a234d5e8db" category="list-text">次のコマンドを入力して、 =&lt;installation directory&gt;/NetApp/snapcenter /cscc /etc/SC_SMS_Services.properties ファイルを編集し、 plugins/enabled=hana ： 3.0 パラメータを追加します。</block>
   <block id="6caa4afe72478c59bf8ac3860bb47274" category="doc">[Activity]ペインでSAP HANAデータベースのデータ保護処理を監視する</block>
-  <block id="b77f43243ff7824de010f233cda7884a" category="summary">SnapCenterに直接登録されているSAP HANAホストの場合、SnapCenter Plug-in for SAP HANA Databaseをインストールまたはアップグレードすると、ホスト上のリソースの自動検出がトリガーされます。プラグインをインストールまたはアップグレードした後、プラグインホスト上にあるすべてのマルチテナントデータベースコンテナ \(MDC\) リソースに対して、別の MDC リソースが自動的に別の GUID 形式で検出され、 SnapCenter に登録されます。新しいリソースは「ロック」状態になります。</block>
   <block id="2d31622eca840c7473dfc8841b0fcd75" category="doc">データ保護のためのマルチテナントデータベースコンテナの準備</block>
   <block id="db9199418ff0f829220632ad691b417e" category="paragraph">SnapCenterに直接登録されているSAP HANAホストの場合、SnapCenter Plug-in for SAP HANA Databaseをインストールまたはアップグレードすると、ホスト上のリソースの自動検出がトリガーされます。プラグインをインストールまたはアップグレードすると、プラグインホストに配置されていたマルチテナントデータベースコンテナ（MDC）リソースごとに別のMDCリソースが自動的に検出され、SnapCenterに登録されます。新しいリソースは「ロック」状態になります。</block>
   <block id="d1cb961e923b4db159abec1766c6b4a9" category="admonition">SnapCenter 4.2以前のバージョンのリソースに関連するバックアップは、保持期間が終了するまで保持する必要があります。保持期間が終了したら、古いMDCリソースを削除して、自動検出された新しいMDCリソースの管理を続行できます。</block>
@@ -4057,7 +4042,6 @@
   <block id="a8e3ba965f3e160532b9d3ee582e1c53" category="doc">SnapCenter Plug-in for MySQLでサポートされるストレージタイプ</block>
   <block id="b0690f2baf30cb16cc28a09328493965" category="summary">Backup typeには、作成するバックアップのタイプを指定します。SnapCenterでは、MySQLデータベースに対してSnapshotコピーベースのバックアップタイプがサポートされます。</block>
   <block id="f0bd8176fa3b88ee04e0a3ecd7db9fb1" category="paragraph">Snapshotコピーベースのバックアップでは、NetAppのSnapshotテクノロジを利用して、MySQLデータベースが格納されているボリュームのオンラインの読み取り専用コピーを作成します。</block>
-  <block id="3c59e4c3c47881e0ac6d8dc552ae7982" category="summary">SnapCenterでは、自動的に検出されたSnapRestoreデータベースに対して、ボリュームベースのMySQL \（VBSR\）、単一ファイルSnapRestore、および接続とコピーのリストアタイプがサポートされます。</block>
   <block id="ada7dc28b5c70bef4ecf0c92798d1e43" category="doc">自動検出されたMySQLのリストア処理のタイプ</block>
   <block id="f3618459f99706822a34e8d3bb0c9b62" category="paragraph">SnapCenter Plug-in for MySQLでは、自動的に検出されたMySQLデータベースに対して、Single File SnapRestoreおよびConnect and Copyリストアタイプがサポートされます。</block>
   <block id="d2b2218abe2cb24dc79aa582f2130db3" category="summary">SnapCenterを使用してリストア処理を正常に実行するには、戦略を定義する必要があります。自動的に検出されたMySQLデータベースには、2種類のリストア戦略があります。</block>
@@ -4271,7 +4255,6 @@
   <block id="d40040f6fe85caa89878dd7a41e7b55b" category="list-text">[Notification]*ページの[Email preference]*ドロップダウンリストから、Eメールを送信するシナリオを選択します。</block>
   <block id="34b6cd75171affba6957e308dcbd92be" category="paragraph">バージョン</block>
   <block id="fd05d7f6bfc90e815087880e8e915b43" category="paragraph">例：</block>
-  <block id="6aba9ab9639862100a3f951f105883b5" category="summary">バックアップジョブを作成する前にバックアップ戦略を定義しておくと、リソースの正常なリストアやクローニングに必要なバックアップを確実に作成できます。バックアップ戦略の大部分は、サービスレベルアグリーメント（ SLA\ ）、目標復旧時間（ RTO\ ）、および目標復旧時点（ RPO\ ）によって決まります。</block>
   <block id="24940fc9df90a646aba3659646256b87" category="doc">バックアップ戦略を定義する</block>
   <block id="aec3dc1357d1c4a5e8173a948d80fd3c" category="paragraph">バックアップジョブを作成する前にバックアップ戦略を定義しておくと、リソースの正常なリストアやクローニングに必要なバックアップを確実に作成できます。バックアップ戦略の大部分は、Service Level Agreement（SLA；サービスレベルアグリーメント）、Recovery Time Objective（RTO；目標復旧時間）、Recovery Point Objective（RPO；目標復旧時点）によって決まります。</block>
   <block id="2cd86db6267706ae2b61eb8f47d98ca8" category="list-text">整合グループSnapshotが必要かどうかを決定し、整合グループSnapshotを削除するための適切なオプションを決定します。</block>
@@ -4391,7 +4374,6 @@
   <block id="8df8e33d8de2d6167669d469ccf7bacd" category="summary">リソースとは、SnapCenterによって管理されるLinuxホスト上のPostgreSQLクラスタとインスタンスです。SnapCenter Plug-in for PostgreSQLプラグインをインストールすると、そのLinuxホスト上のPostgreSQLクラスタが自動的に検出され、[Resources]ページに表示されます。</block>
   <block id="b7010b9dd54942efc350213b545f8fcc" category="paragraph">リソースとは、SnapCenterによって管理されるLinuxホスト上のPostgreSQLクラスタとインスタンスです。SnapCenter Plug-in for PostgreSQLプラグインをインストールすると、そのLinuxホスト上のすべてのインスタンスのPostgreSQLクラスタが自動的に検出され、[Resources]ページに表示されます。</block>
   <block id="82cdab2339b9d151736b53885e0ce102" category="paragraph">次に、PostgreSQLインスタンスを追加する例を示します。</block>
-  <block id="76c214e24b03aa4168d09074b6e14e3f" category="summary">リソース\（cluster\）またはリソースグループのバックアップを作成できます。バックアップのワークフローには、計画、バックアップするクラスタの特定、バックアップポリシーの管理、リソースグループの作成とポリシーの適用、バックアップの作成、処理の監視が含まれます。</block>
   <block id="530895ccaf7ffc619f25f8f9d8ec3597" category="doc">PostgreSQLリソースのバックアップ</block>
   <block id="7ac906e4114d3c1fc1afbc68526373d1" category="paragraph">リソース（クラスタ）またはリソースグループのバックアップを作成できます。バックアップのワークフローには、計画、バックアップするクラスタの特定、バックアップポリシーの管理、リソースグループの作成とポリシーの適用、バックアップの作成、処理の監視が含まれます。</block>
   <block id="8dd18363015f7db73665c4d7f82edb52" category="image-alt">PostgreSQLバックアップのワークフロー</block>
@@ -4487,7 +4469,6 @@
   <block id="1cba333f7c70ea15dd4dc4f2c3d76e77" category="doc">SnapCenter Plug-in for PostgreSQLでサポートされるストレージタイプ</block>
   <block id="b4988589f3a9e9f24d49ce750ee55e3e" category="summary">Backup typeには、作成するバックアップのタイプを指定します。SnapCenterでは、PostgreSQLクラスタに対してSnapshotコピーベースのバックアップタイプがサポートされます。</block>
   <block id="fe86ef6be8f5bd76c7a72cc22e0e6676" category="paragraph">Snapshotコピーベースのバックアップでは、NetApp Snapshotテクノロジを利用して、PostgreSQLクラスタが配置されているボリュームのオンラインの読み取り専用コピーを作成します。</block>
-  <block id="2d08138fbe12d536cb5fbb3f0a742216" category="summary">SnapCenterは、自動的に検出されたPostgreSQLクラスタに対して、ボリュームベースのSnapRestore（VBSR\）、Single File SnapRestore、およびConnect-and-Copyリストアタイプをサポートしています。</block>
   <block id="524739e7fb88e0bc47e353a9fdeb5623" category="doc">自動検出されたPostgreSQLのリストア処理のタイプ</block>
   <block id="dc586324be986bbebd1af0c02f240b75" category="paragraph">SnapCenter Plug-in for PostgreSQLは、自動的に検出されたPostgreSQLクラスタに対して、Single File SnapRestoreおよびConnect-and-Copyリストアタイプをサポートしています。</block>
   <block id="82a4be7ef2e16581004c387094d5a5db" category="summary">SnapCenterを使用してリストア処理を正常に実行するには、戦略を定義する必要があります。自動的に検出されたPostgreSQLクラスタには、2種類の復元方法があります。</block>
@@ -4849,7 +4830,6 @@
   <block id="13d62cafc9cfc5929565224152d9294b" category="paragraph">この処理は、ポリシーに指定されている頻度ごとに実行する必要があります。設定されたスケジュールは、 [ 選択したポリシーのスケジュールの設定 ] セクションの [ 適用されたスケジュール *] 列に一覧表示されます。</block>
   <block id="0771f0b55ed8545cb9de7dcadfc93b74" category="paragraph">また、送信者と受信者のEメールアドレス、およびEメールの件名を指定する必要があります。リソースグループで実行された操作のレポートを添付する場合は、 [ ジョブレポートの添付（ Attach Job Report ） ] を選択します。</block>
   <block id="632e8f771f2b94f3016767f9170f82e3" category="paragraph">Eメール通知を使用する場合は、GUIまたはPowerShellコマンドを使用して、SMTPサーバの詳細を指定しておく必要があります<block ref="997c102f406bdf4b18d046c49ffaa8f9" prefix=" " category="inline-code"></block>。</block>
-  <block id="9bcf17f4427582cfbb783f46971b1eb0" category="summary">バックアップジョブを作成する前にバックアップ戦略を定義しておくと、データベースの正常なリストアに必要なバックアップを確実に作成できます。バックアップ戦略の大部分は、サービスレベルアグリーメント（ SLA ）、目標復旧時間（ RTO ）、および目標復旧時点（ RPO ）によって決まります。</block>
   <block id="7fc686e60d66e170f709548904c946f0" category="doc">Exchange Serverリソースのバックアップ戦略を定義する</block>
   <block id="a1232051e6c5e893c86adc35d8552a57" category="paragraph">バックアップジョブを作成する前にバックアップ戦略を定義しておくと、データベースの正常なリストアに必要なバックアップを確実に作成できます。バックアップ戦略の大部分は、Service Level Agreement（SLA；サービスレベルアグリーメント）、Recovery Time Objective（RTO；目標復旧時間）、Recovery Point Objective（RPO；目標復旧時点）によって決まります。</block>
   <block id="d30dabe55676a51374c03d57a495fc56" category="paragraph">SLAは、期待されるサービスレベルと、サービスに関連する多くの問題（サービスの可用性やパフォーマンスなど）への対処方法を定義したものです。RTOは、サービスの停止後にビジネスプロセスをリストアする必要があるまでの時間です。RPOは、障害発生後に通常処理を再開するためにバックアップストレージからリカバリする必要があるファイルの経過時間に関する戦略を定義したものです。SLA、RTO、RPOがバックアップ戦略に影響します。</block>
@@ -5851,7 +5831,6 @@
   <block id="288e6f17e0e4e6641bd8834d75c83cc3" category="list-text">操作を選択し、 * ジョブのキャンセル * をクリックします。</block>
   <block id="f99ed48ad453fc5752d3cb633588ec73" category="paragraph">処理がキャンセルされ、リソースが元の状態に戻ります。</block>
   <block id="1a75cd98b02615b4d68d5425fefe32ad" category="paragraph">キャンセル中または実行中の状態でキャンセルした処理が応答しない場合は、 Cancel-SmJobID&lt;int&gt; -Force を実行してバックアップ処理を強制的に停止する必要があります。</block>
-  <block id="5693ae4d41ff0830c7c00315e2ae426a" category="summary">Pluggable Database \ （ PDB\ ）を、同じホストまたは代替ホスト上の異なるターゲット CDB または同じ CDB にクローニングできます。クローニングされたPDBを目的のSCNまたは日時にリカバリすることもできます。</block>
   <block id="7afa5f09a2ec0408c252721ee88ca240" category="list-text">データベースの詳細ビューまたはリソースグループの詳細ビューで、タイプが単一インスタンス（マルチテナント）のデータベースを選択します。</block>
   <block id="7c1afe1132a66031facaef80ef58976a" category="list-text">[*PDB Clone*] を選択します。</block>
   <block id="32be37d76bd4ec69c9ff9fa8d3041696" category="list-text">クローニングするPDBを指定します。</block>
@@ -6288,7 +6267,6 @@
   <block id="6c39fd8b168969057db8809308f6fa7d" category="section-title">リストア処理のデスティネーション</block>
   <block id="3ac862c89220de1caebfe67568f499cb" category="paragraph">データベースは、同じデータベースインスタンスの同じ場所にのみリストアできます。</block>
   <block id="0008fa503e4f0b20c7c5998325b66ab6" category="paragraph">RACセットアップでは、クラスタ内の任意のノードからRACデータベースをリストアできます。</block>
-  <block id="8b6b14f8ee2bef8618a7a68823627672" category="summary">不要になったプラグイン可能データベース \ （ PDB\ ）のクローンは削除できます。</block>
   <block id="91f3b991ab625c1db5dde23278dea1c2" category="doc">プラガブルデータベースのクローンを削除する</block>
   <block id="3883545e9f031c735dbdc8f40c3853a6" category="paragraph">不要になった場合は、プラガブルデータベース（PDB）のクローンを削除できます。</block>
   <block id="9b7e4959127de26d75609e3142e4d19c" category="paragraph">PDBがクローニングされるターゲットCDBのバックアップを作成した場合、PDBクローンを削除すると、クローニングされたPDBもターゲットCDBのバックアップから削除されます。</block>
@@ -6447,7 +6425,6 @@
   <block id="65f23999a47a9d1a67b492919b7a71e2" category="list-text">指定したバックアップに関する詳細情報を取得します： _Get-SmBackupDetails_</block>
   <block id="f93390a0e3ad758bd81456069379fc0d" category="paragraph">このコマンドは、指定したバックアップIDで指定したリソースのバックアップに関する詳細情報を取得します。情報には、データベース名、バージョン、ホーム、開始SCNと終了SCN、表領域、プラガブルデータベース、およびその表領域が含まれます。</block>
   <block id="0db67b7a2811a90349f1fdde49eaff2d" category="list-text">バックアップからデータをリストアする： _Restore-SmBackup_</block>
-  <block id="bc9f89729bc570541b5b790a7dc8c706" category="summary">コンテナデータベース（ CDB ）内の他の PDB に影響を与えることなく、破損または破棄された Pluggable Database （ PDB ）をリストアおよびリカバリできます。SnapCenter は、 RMAN を使用して PDB のポイントインタイムリカバリ（ PITR ）を実行します。</block>
   <block id="cf87c94d6f7bf124321d0c9faae55611" category="list-text">PDBのPITRを実行するために必要なバックアップをカタログ化してマウントする必要があります。</block>
   <block id="e6d74b74a005fe0b9fd7afcd09113b23" category="admonition">RACセットアップでは、RACセットアップのすべてのノードでPDBを手動で閉じる（状態をMOUNTEDに変更する）必要があります。</block>
   <block id="177987316eb870c31f16e797975af94a" category="paragraph">PITR処理中、RMANは指定された補助デスティネーションに補助インスタンスを作成します。補助デスティネーションには、マウントポイントまたはASMディスクグループを指定できます。マウントされた場所に十分なスペースがある場合は、専用のマウントポイントの代わりにいずれかのマウントされた場所を再利用できます。</block>
@@ -6475,7 +6452,6 @@
   <block id="ad068b9fd01b2cf6ac4e86169a89e611" category="paragraph">プリスクリプトは、/var/opt/snapcenter/spl/scriptsパスまたはこのパス内の任意のフォルダに保存してください。デフォルトでは、/var/opt/snapcenter/spl/scriptsパスが入力されています。スクリプトを保存するフォルダをこのパス内に作成してある場合は、パス内のそれらのフォルダを指定する必要があります。</block>
   <block id="01e025a69fb0e3e37bdca75ddd65d273" category="paragraph">RACセットアップでは、データベースがリカバリされたノードでのみPDBが開きます。リカバリしたPDBは、RACセットアップの他のすべてのノードで手動で開く必要があります。</block>
   <block id="f962b287b176101c2821f2e924894a04" category="list-text">[ 通知 ] ページの [ 電子メールの設定 *] ドロップダウンリストから、電子メール通知を送信するシナリオを選択します。</block>
-  <block id="cad5c11b4fef48d75eb3db98fb343e1b" category="summary">データベース内の他の表領域に影響を与えることなく、破損または削除された表領域のサブセットをリストアできます。SnapCenter は、 RMAN を使用して表領域のポイントインタイムリカバリ（ PITR ）を実行します。</block>
   <block id="4291e94658d31afa6cbfc0020f3c2c2f" category="paragraph">データベース内の他の表領域に影響を与えることなく、破損または削除された表領域のサブセットをリストアできます。SnapCenterは、RMANを使用して表領域のポイントインタイムリカバリ（PITR）を実行します。</block>
   <block id="aaa6df61815d51b26effc01d2a2c2ed9" category="list-text">表領域のPITRを実行するために必要なバックアップをカタログ化してマウントする必要があります。</block>
   <block id="037f7129c07a21699fed48efc05ceca4" category="paragraph">日時またはSCNを指定すると、ソースデータベースに表領域がリストアされます。</block>
@@ -6486,7 +6462,6 @@
   <block id="c073ee3bf31639ca8cd5dfdf2fe18185" category="paragraph">SMCoreサービスが再起動し、クローンスプリット処理が実行されたデータベースが[リソース]ページにクローンとして表示されると、クローンスプリット処理が応答を停止します。_Stop-SmJob_cmdlet を実行してクローンスプリット処理を停止し、クローンスプリット処理を再試行する必要があります。</block>
   <block id="103e35e260868e1aa1c36274a7301158" category="paragraph">クローンがスプリットされているかどうかを確認するためにポーリング時間を長くしたり、ポーリング時間を短くしたりする場合は、SMCoreServiceHost.exe.configファイルのCloneSplitStatusCheckPollTimeパラメータの値を変更して、SMCoreがクローンスプリット処理のステータスをポーリングする時間間隔を設定できます。値はミリ秒単位で、デフォルト値は5分です。</block>
   <block id="fbfa277a055cde6a44aa257516ef119c" category="admonition">バックアップ、リストア、または別のクローンスプリットが実行中の場合、クローンスプリットの開始処理は失敗します。クローンスプリット処理を再開するのは、実行中の処理が完了してからにしてください。</block>
-  <block id="156cbb91cfb42345ea9b28c562e803a7" category="summary">SnapCenter を使用して、クローニングされた Pluggable Database \ （ PDB\ ）をスプリットできます。</block>
   <block id="0841514f865605a705539d269e140769" category="paragraph">PDBがクローニングされるターゲットCDBのバックアップを作成した場合、PDBクローンをスプリットすると、クローニングされたPDBがそのPDBを含むターゲットCDBのすべてのバックアップからも削除されます。</block>
   <block id="49b39d27e489b805a366414e3b30c78b" category="paragraph">[Summary Card]セクションには、バックアップとクローンの総数、およびログバックアップの総数が表示されます。</block>
   <block id="9672f59acbe87e1f0d5b5b9ce8bec042" category="list-text">表でバックアップを選択し、データ保護アイコンをクリックして、リストア、クローニング、マウント、アンマウント、名前変更、カタログ化、カタログ解除、および削除の各処理を実行します。</block>
@@ -6496,18 +6471,15 @@
   <block id="11dbb257c91d345a6a0cee430763b610" category="paragraph">コマンドで使用できるパラメータとその説明については、 Get-Help_command_name _ を実行して取得できます。</block>
   <block id="3e2d2f6a646250c8b750be0ca26e5b46" category="summary">プライマリストレージボリュームまたはセカンダリストレージボリュームを使用してバックアップコピーを検証します。</block>
   <block id="be7d1513fcb4c496cc0a08dc4180b0c0" category="summary">Snapshotのデフォルトの命名規則を使用することも、カスタマイズした命名規則を使用することもできます。デフォルトのバックアップ命名規則では、Snapshot名にタイムスタンプが追加されるため、コピーがいつ作成されたかを確認できます。</block>
-  <block id="3f62b0eaf385764495dac5125b982527" category="summary">バックアップ頻度 \ （スケジュールタイプ \ ）はポリシーで指定され、バックアップスケジュールはリソースグループの設定で指定されます。</block>
   <block id="98d00f0950d49399aca5b7e5b8865719" category="summary">SnapCenter Plug-in for Microsoft SQL Server では、最新の状態へのリストア処理を実行するために、トランザクションログバックアップが必要です。この場合、 2 つのフルバックアップの間の任意の時点の状態にデータベースがリストアされます。</block>
   <block id="fdc4a4ab9ed4ec8a0e816124044ffbb2" category="doc">ソースストレージシステムにトランザクションログバックアップを保持する期間</block>
   <block id="fd97a5c736cbe90079f5f9ad13506469" category="paragraph">たとえば、Plug-in for SQL Serverで午前8時にフルバックアップが作成され、午後5時に別のフルバックアップが作成された場合、最新のトランザクションログバックアップを使用して午前8時から午後5時までの任意の時点にデータベースをリストアできます。トランザクションログが使用できない場合、Plug-in for SQL Serverはポイントインタイムリストア処理のみを実行できます。このリストア処理では、Plug-in for SQL Serverがフルバックアップが完了した時点のフルバックアップが完了した時点でデータベースが完了した時点にデータベースがリストアされます。</block>
   <block id="e1648da076ced3c1817678512208f9c2" category="doc">SQL Serverの保護におけるリソース、リソースグループ、ポリシーの使用方法</block>
   <block id="487a53be0a7591a408a6869c3857445e" category="list-text">リソースとは、 SnapCenter でバックアップやクローンを作成するデータベース、データベースインスタンス、または Microsoft SQL Server 可用性グループのことです。</block>
   <block id="d88bacbb5672d08c2bee7f25fb3fc697" category="paragraph">リソースグループは、保護対象となるものと、曜日と時間の観点から保護する場合を定義するものと考えてください。ポリシーは、保護する方法を定義するポリシーと考えてください。たとえば、すべてのデータベースまたはホストのすべてのファイルシステムをバックアップする場合は、すべてのデータベースまたはホストのすべてのファイルシステムを含むリソースグループを作成します。そのあとに、日次ポリシーと時間次ポリシーの2つのポリシーをリソースグループに適用できます。リソースグループを作成してポリシーを適用する際に、フルバックアップを1日1回実行するようにリソースグループを設定し、別のスケジュールでログバックアップを1時間ごとに実行するように設定します。</block>
-  <block id="bfa8c341f9069cab983b83a7b3d6e229" category="summary">バックアップポリシーにはバックアップあたりの最大データベース数を設定できるオプション（デフォルト値は 100 \ ）があるため、すべてのデータベースを同じボリュームに配置できます。</block>
   <block id="49d3d638c72a43de1071ccafc35ba79d" category="doc">同じボリューム上の複数のデータベース</block>
   <block id="4e23a71c353d487c1b39814259994b97" category="paragraph">バックアップポリシーでは、バックアップあたりの最大データベース数を設定できるため（デフォルト値は100）、すべてのデータベースを同じボリュームに配置できます。</block>
   <block id="27d1d8a7545b265c4bdec73aaeb38eed" category="paragraph">たとえば、同じボリューム内に200個のデータベースがある場合、2つのSnapshotがそれぞれ100個のデータベースで作成されます。</block>
-  <block id="f2b64e9f01b196d10f0f2aa40fc2203e" category="summary">必要なバックアップジョブの数を左右する要因としては、データベースのサイズ、使用中のボリュームの数、データベースの変更率、サービスレベルアグリーメント（ SLA\ ）などがあります。</block>
   <block id="99fb5ff09a4f066b4ab553406e478671" category="paragraph">必要なバックアップジョブの数を左右する要因には、データベースのサイズ、使用されているボリュームの数、データベースの変更率、サービスレベルアグリーメント（SLA）などがあります。</block>
   <block id="44567489037e9457257d3790f8cb3ccd" category="paragraph">データベースバックアップの場合、選択するバックアップジョブの数は、通常、データベースが配置されているボリュームの数によって決まります。たとえば、あるボリュームに小規模データベースのグループを配置し、別のボリュームに大規模データベースを配置した場合は、小規模データベース用に1つのバックアップジョブを作成し、大規模データベース用に1つのバックアップジョブを作成できます。</block>
   <block id="45d66806e5bd1bbdee583fa4e0d0ef79" category="summary">ユーザが Plug-in for SQL Server の使用を開始するためには、 SnapCenter 管理者が事前に SnapCenter サーバをインストールして設定し、前提条件となるタスクを実行する必要があります。</block>
@@ -6581,7 +6553,6 @@
   <block id="cc8872fd3647eea5077aab482b8a8315" category="paragraph">フルリカバリモデルを使用すると、障害ポイントからデータベースを以前の状態にリストアできます。</block>
   <block id="a93af87c8649f227602a94864e899324" category="list-text">一括ログ復旧モデル</block>
   <block id="75f9316c993a023ec1a7767f5f57f99b" category="paragraph">一括ログ復旧モデルを使用する場合は、ログに一括記録された処理を手動で再実行する必要があります。ログに一括記録された処理のコミットレコードを含むトランザクションログがリストア前にバックアップされていない場合は、一括記録処理を実行する必要があります。ログに一括記録された処理でデータベースに1、000万行が挿入され、トランザクションログがバックアップされる前にデータベースで障害が発生した場合、リストアされたデータベースには、ログに一括記録された処理で挿入された行は含まれません。</block>
-  <block id="5abc04a0058572b3476c739ab8f716ae" category="summary">SnapCenter Plug-in for Microsoft SQL Server は、 SQL Server 2012 以降、非対称 LUN マッピング（ ALM ）構成の高可用性、およびディザスタリカバリ用の可用性グループの検出をサポートしています。SnapCenter は、リソースを検出する際に、 ALM 構成のローカルホストとリモートホストにあるデータベースを検出します。</block>
   <block id="142782e834c9014d923c3a1905a8dcdc" category="doc">Windowsクラスタでの非対称LUNマッピングのサポート</block>
   <block id="2bf8e92ae2c79563e9a8c5f6c833c5a6" category="paragraph">SnapCenter Plug-in for Microsoft SQL Serverでは、SQL Server 2012以降での検出、高可用性用の非対称LUNマッピング（ALM）構成、ディザスタリカバリ用の可用性グループがサポートされます。SnapCenter は、リソースを検出する際に、 ALM 構成のローカルホストとリモートホストにあるデータベースを検出します。</block>
   <block id="918162f12ad57f4382a7a53bb6d775b3" category="paragraph">ALM構成は、プライマリデータセンターに1つ以上のノード、ディザスタリカバリセンターに1つ以上のノードを含む、単一のWindowsサーバフェイルオーバークラスタです。</block>
@@ -6591,7 +6562,6 @@
   <block id="047292a89758275d763e235a846b8712" category="paragraph">プライマリデータセンター内のストレージは、プライマリデータセンター内のFCIノード間で共有されます。ディザスタリカバリデータセンター内のストレージは、ディザスタリカバリデータセンター内のFCIノード間で共有されます。</block>
   <block id="7d6c564058645b974e7a066a328c9765" category="paragraph">プライマリデータセンターのストレージは、ディザスタリカバリデータセンターのノードには認識されず、その逆も同様です。</block>
   <block id="19f41a1b89c8c0b2bc4c7041effadc74" category="paragraph">ALMアーキテクチャは、FCIで使用される2つの共有ストレージソリューションと、SQL AGで使用される非共有または専用ストレージソリューションを組み合わせたものです。AGソリューションでは、データセンター間で共有ディスクリソースに同じドライブレターを使用します。このストレージの配置（WSFC内のノードのサブセット間でクラスタディスクが共有される）は、ALMと呼ばれます。</block>
-  <block id="0bfdfbd1ef58fc826a8deec759820453" category="summary">SnapCenter を使用して SQL Server システムおよびユーザデータベースをバックアップするときは、データベース、 SQL Server インスタンス、可用性グループ（ AG ）などのリソースタイプを選択する必要があります。Snapshotテクノロジを使用して、リソースが配置されているボリュームのオンラインの読み取り専用コピーが作成されます。</block>
   <block id="b4d3eba987f9528647b8ea2102ac055f" category="paragraph">SnapCenter を使用して SQL Server システムおよびユーザデータベースをバックアップするときは、データベース、 SQL Server インスタンス、可用性グループ（ AG ）などのリソースタイプを選択する必要があります。Snapshotテクノロジを使用して、リソースが配置されているボリュームのオンラインの読み取り専用コピーが作成されます。</block>
   <block id="3f2b6cc2adaf1a1f28214b5ed39ff5cd" category="paragraph">コピーのみのオプションを選択すると、SQL Serverでトランザクションログが切り捨てられないように指定できます。このオプションは、他のバックアップアプリケーションでSQL Serverを管理する場合に使用します。トランザクションログをそのまま保持することで、すべてのバックアップアプリケーションでシステムデータベースをリストアできます。コピーのみのバックアップは、スケジュールされたバックアップの順序とは関係なく、データベースのバックアップおよびリストア手順には影響しません。</block>
   <block id="6c8a86b32ee2dec60604a9f5961cc1c5" category="cell">バックアップタイプを指定したコピーのみのオプション</block>
@@ -6978,7 +6948,6 @@
   <block id="b39614f1e3ff23cc5b5cd5fd6bf27259" category="inline-image-macro">アイコンをクリックして、設定済みスケジュールを編集します</block>
   <block id="5f11c7889df3330ff1f653f5e5702931" category="inline-image-macro">削除アイコン</block>
   <block id="028663e79f1637979085ec64bff7081d" category="paragraph">設定されたスケジュールは、 [ 適用されたスケジュール ] 列に一覧表示されます。確認して編集するには**をクリックし、削除するに<block ref="2d7d19a80eadfa8bd69c03954ae600b5" category="inline-image-macro-rx" type="image"></block>は**をクリックします<block ref="07738f780882ec9b17642d6716f5c477" category="inline-image-macro-rx" type="image"></block>。</block>
-  <block id="9660edb91fac8702aaa8095506c95490" category="summary">バックアップジョブを作成する前にバックアップ戦略を定義しておくと、データベースの正常なリストアやクローニングに必要なバックアップを確実に作成するのに役立ちます。バックアップ戦略の大部分は、サービスレベルアグリーメント（ SLA\ ）、目標復旧時間（ RTO\ ）、および目標復旧時点（ RPO\ ）によって決まります。</block>
   <block id="e5b60957c4b0bca31d0e2fd06deba46c" category="doc">SQL Serverリソースのバックアップ戦略を定義する</block>
   <block id="57fbd1379ab3804c06f6e72d479b21a7" category="paragraph">バックアップジョブを作成する前にバックアップ戦略を定義しておくと、データベースの正常なリストアやクローニングに必要なバックアップを確実に作成するのに役立ちます。バックアップ戦略の大部分は、Service Level Agreement（SLA；サービスレベルアグリーメント）、Recovery Time Objective（RTO；目標復旧時間）、Recovery Point Objective（RPO；目標復旧時点）によって決まります。</block>
   <block id="9ca74d34b57102a33530d9899af7733c" category="summary">クローニング戦略を定義しておくと、それに従ってデータベースのクローニングを実行することができます。</block>
@@ -7061,7 +7030,6 @@
   <block id="fe607551f6d30b5693e84243bc691f1f" category="list-text">Windowsタスクスケジューラ、メインインストールログファイルC:\Installdebug.log、およびC:\Temp内の追加インストールファイルを監視します。</block>
   <block id="1d3ff9161bd935afda9c159ee83f701a" category="list-text">%temp%ディレクトリを監視して、msiexe.exeインストーラがエラーなくソフトウェアをインストールしていることを確認します。</block>
   <block id="341266b7169d2c0293fcd15ceda7d923" category="admonition">Plug-in for SQL Server をインストールすると、 SnapCenter Server ではなくホストにプラグインが登録されます。SnapCenter GUIまたはPowerShellコマンドレットを使用してホストを追加することで、SnapCenterサーバにプラグインを登録できます。ホストを追加すると、プラグインが自動的に検出されます。</block>
-  <block id="4311a9aa7335c4d3eaea1abc109915e9" category="summary">SnapCenter Plug-in for Microsoft Windows を使用してネットアップストレージシステムをプロビジョニングしたら、 SnapCenter グラフィカルユーザインターフェイス \ （ GUI\ ）または PowerShell コマンドレットを使用して、リソースをネットアップストレージシステムに移行するか、またはあるネットアップ LUN から別のネットアップ LUN に移行できます。</block>
   <block id="1da241185bd7824666c55b0362d4f620" category="doc">NetAppストレージシステムへのリソースの移行</block>
   <block id="7decf653e0973f5dd345fc4a5bb45ec4" category="paragraph">SnapCenter Plug-in for Microsoft Windows を使用してネットアップストレージシステムをプロビジョニングしたら、 SnapCenter グラフィカルユーザインターフェイス（ GUI ）または PowerShell コマンドレットを使用して、リソースをネットアップストレージシステムに移行するか、またはあるネットアップ LUN から別のネットアップ LUN に移行できます。</block>
   <block id="8de8d289eda0eddeff6c55dee5eaa498" category="list-text">SnapCenter サーバにストレージシステムを追加しておく必要があります。</block>
@@ -7109,7 +7077,6 @@
   <block id="4efced0758e3c842e9e2cd9af1e96abf" category="list-text">スクリプトページで、クローニング処理の実行前または実行後に実行するプリスクリプトまたはポストスクリプトのパスと引数を入力します。</block>
   <block id="6106775f73edc24edf8af08f95820dc2" category="list-text">クローン処理の実行頻度、クローンスケジュールの開始日時、クローニング処理の実行日、スケジュールの期限、スケジュールの期限が切れたあとにクローンを削除する必要があるかどうかを指定する場合は、 * Configure schedule * を選択します。</block>
   <block id="7fbd5ad78d8bfea99956316bc22a845f" category="paragraph">クローニング処理は、 * Monitor * &gt; * Jobs * ページで監視する必要があります。</block>
-  <block id="51d95bab000b8bd5e8f9d83c3f25d453" category="summary">再シードは、可用性グループ（ AG ）データベースをリストアするためのオプションです。セカンダリデータベースがAG内のプライマリデータベースと同期していない場合は、セカンダリデータベースを再シードできます。</block>
   <block id="951ead00aca07936d7cbe2d0eaf3bdde" category="doc">可用性グループデータベースの再シード</block>
   <block id="86c8bce86a1532578679c840db2996d0" category="paragraph">再シードは、可用性グループ（AG）データベースをリストアするためのオプションです。セカンダリデータベースがAG内のプライマリデータベースと同期していない場合は、セカンダリデータベースを再シードできます。</block>
   <block id="a696411e9de03074c6ebc8b32b1cb1c3" category="list-text">リストアするセカンダリAGデータベースのバックアップを作成しておく必要があります。</block>
@@ -7120,7 +7087,6 @@
   <block id="e79bc209774c084585c986b76f44f3e4" category="list-text">左側のナビゲーションペインで、 [* リソース *] をクリックし、リストから [* SnapCenter Plug-in for SQL Server] を選択します。</block>
   <block id="2a469b63ef1458d6f0c779e8b21fb6d6" category="list-text">リストからセカンダリAGデータベースを選択します。</block>
   <block id="a952ded3652ff67c9b0646a79093d02d" category="list-text">[Reseed-*] をクリックします。</block>
-  <block id="0a5070b538c653ac59aaa80bcbf05055" category="summary">セカンダリストレージシステム上の物理 LUN （ RDM 、 iSCSI 、または FCP ）から、バックアップされた SQL Server データベースをリストアできます。リストア機能は段階的に行われ、すべてのデータとログページがセカンダリストレージシステム上の指定されたSQL Serverバックアップから指定されたデータベースにコピーされます。</block>
   <block id="322e2c0228e3fa3086aa2d2caa7e24ad" category="paragraph">セカンダリストレージシステム上の物理LUN（RDM、iSCSI、またはFCP）から、バックアップされたSQL Serverデータベースをリストアできます。リストア機能は段階的に行われ、すべてのデータとログページがセカンダリストレージシステム上の指定されたSQL Serverバックアップから指定されたデータベースにコピーされます。</block>
   <block id="f8037ac04b4b9ad5f1f4efa485f02267" category="list-text">プライマリストレージシステムからセカンダリストレージシステムにSnapshotをレプリケートしておく必要があります。</block>
   <block id="e1573e93dec4a09a53c7948b08bea942" category="list-text">SnapCenterサーバとプラグインホストがセカンダリストレージシステムに接続できることを確認する必要があります。</block>
@@ -10035,4 +10001,12 @@
   <block id="6bd3a7460654af7cf024fe83b4e8fc7b" category="doc">Windows ホスト上の SnapCenter サーバをアップグレードする</block>
   <block id="0dc14c8f6c7f2126879c6b73f1b5fe06" category="doc">Linux ホスト上の SnapCenter サーバーをアップグレードする</block>
   <block id="47d2f91352de11d0050cd18c13e2719c" category="doc">SnapCenterサーバーアップグレードのワークフロー</block>
+  <block id="e00b4e480331325a184fc4b9b2020101" category="summary">SnapCenter は、自動的に検出された IBM Db2 データベースに対して、ボリュームベースの SnapRestore（VBSR）、シングルファイル SnapRestore、および接続とコピーのリストアタイプをサポートしています。</block>
+  <block id="0f61644cb3e815722cfe8146700d8b98" category="summary">SAP HANAホストがSnapCenterに直接登録されている場合、SnapCenter Plug-in for SAP HANA Databaseをインストールまたはアップグレードすると、ホスト上のリソースの自動検出がトリガーされます。プラグインのインストールまたはアップグレード後、プラグインホスト上にあったすべてのマルチテナントデータベースコンテナ（MDC）リソースに対して、異なるGUID形式を持つ別のMDCリソースが自動的に検出され、SnapCenterに登録されます。新しいリソースは「ロック」状態になります。</block>
+  <block id="15f19acdf3142655bfcdf7741f87d804" category="summary">SnapCenter は、自動的に検出された MySQL データベース向けに、ボリュームベースの SnapRestore（VBSR）、シングルファイル SnapRestore、および接続とコピーによるリストアタイプをサポートしています。</block>
+  <block id="22c80ec7d5f860d10bc482d806b0bd30" category="summary">SnapCenter は、自動的に検出された PostgreSQL クラスタに対して、ボリュームベースの SnapRestore（VBSR）、シングルファイル SnapRestore、および接続とコピーによるリストアタイプをサポートしています。</block>
+  <block id="233fe91e73d223a1b1f6faf80dfe8e5e" category="summary">SnapCenter Plug-in for Microsoft Exchange Server はバックアップ検証機能を提供していません。Exchange に付属の Eseutil ツールを使用すると、Exchange データベースとバックアップを検証できます。</block>
+  <block id="829690f9bb273b74b9b78d6c6f633563" category="summary">バックアップ頻度（スケジュールタイプ）はポリシーで指定され、バックアップスケジュールはリソースグループ構成で指定されます。</block>
+  <block id="7961a2a642f2ef14bcc3560c4533978b" category="summary">バックアップジョブのパフォーマンスへの影響を軽減するため、バックアップ検証はバックアップ作成直後ではなく、別のジョブとして後日実行するようにスケジュールしてください。</block>
+  <block id="2faaeb23f72a64bdbb16cfe932406ce8" category="summary">プライマリストレージまたはセカンダリストレージからファイルシステムのバックアップをクローンできます。また、要件に合った保存先を選択することもできます。元のバックアップ場所、同じホスト上の別の保存先、または別のホスト上の別の保存先などです。クローン先は、クローン元のバックアップと同じボリューム上に存在する必要があります。</block>
 </blocks>

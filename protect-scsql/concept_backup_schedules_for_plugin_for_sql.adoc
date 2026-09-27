@@ -2,7 +2,7 @@
 permalink: protect-scsql/concept_backup_schedules_for_plugin_for_sql.html 
 sidebar: sidebar 
 keywords: Backup schedules 
-summary: バックアップ頻度 \ （スケジュールタイプ \ ）はポリシーで指定され、バックアップスケジュールはリソースグループの設定で指定されます。 
+summary: バックアップ頻度（スケジュールタイプ）はポリシーで指定され、バックアップスケジュールはリソースグループ構成で指定されます。 
 ---
 = SnapCenter Plug-in for SQL Server のバックアップスケジュール
 :allow-uri-read: 

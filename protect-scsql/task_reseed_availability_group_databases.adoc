@@ -2,7 +2,7 @@
 permalink: protect-scsql/task_reseed_availability_group_databases.html 
 sidebar: sidebar 
 keywords: reseed 
-summary: 再シードは、可用性グループ（ AG ）データベースをリストアするためのオプションです。セカンダリデータベースがAG内のプライマリデータベースと同期していない場合は、セカンダリデータベースを再シードできます。 
+summary: 再シードは、可用性グループ（AG）データベースをリストアするためのオプションです。セカンダリデータベースがAG内のプライマリデータベースと同期していない場合は、セカンダリデータベースを再シードできます。 
 ---
 = SnapCenter で可用性グループデータベースを再シードする
 :allow-uri-read: 

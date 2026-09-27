@@ -2,7 +2,7 @@
 permalink: protect-hana/task_back_up_sap_hana_resources.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for SAP HANA Database 
-summary: リソース（データベース）またはリソースグループのバックアップを作成することができます。バックアップのワークフローには、計画、バックアップするデータベースの特定、バックアップポリシーの管理、リソースグループの作成とポリシーの適用、バックアップの作成、処理の監視が含まれます。 
+summary: リソース（データベース）またはリソースグループのバックアップを作成できます。バックアップのワークフローには、計画、バックアップするデータベースの特定、バックアップポリシーの管理、リソースグループの作成とポリシーの適用、バックアップの作成、処理の監視が含まれます。 
 ---
 = SAP HANAリソースのバックアップワークフロー（SnapCenter）
 :allow-uri-read: 

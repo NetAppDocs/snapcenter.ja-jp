@@ -2,7 +2,7 @@
 permalink: protect-sco/task_restore_and_recover_pluggable_database_using_point_in_time_recovery.html 
 sidebar: sidebar 
 keywords: PDB, pluggable database, restore, CDB, PITR, point-in-time recovery, RMAN 
-summary: コンテナデータベース（ CDB ）内の他の PDB に影響を与えることなく、破損または破棄された Pluggable Database （ PDB ）をリストアおよびリカバリできます。SnapCenter は、 RMAN を使用して PDB のポイントインタイムリカバリ（ PITR ）を実行します。 
+summary: コンテナデータベース（CDB）内の他のPDBに影響を与えることなく、破損またはドロップされたプラガブルデータベース（PDB）をリストアおよびリカバリできます。SnapCenterは、RMANを使用してPDBのポイントインタイムリカバリ（PITR）を実行します。 
 ---
 = SnapCenter でポイントインタイムリカバリを使用してプラグイン可能なデータベースをリストアする
 :allow-uri-read: 

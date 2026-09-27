@@ -2,7 +2,7 @@
 permalink: protect-sce/reference_exchange_database_and_backup_verification.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for Microsoft Exchange Server 
-summary: SnapCenter Plug-in for Microsoft Exchange Serverではバックアップの検証は行われませんが、Exchangeに付属のEseutilツールを使用して、Exchangeデータベースおよびバックアップを検証できます。 
+summary: SnapCenter Plug-in for Microsoft Exchange Server はバックアップ検証機能を提供していません。Exchange に付属の Eseutil ツールを使用すると、Exchange データベースとバックアップを検証できます。 
 ---
 = Exchange データベースとバックアップの検証（SnapCenter Plug-in for Microsoft Exchange Server を使用）
 :allow-uri-read: 

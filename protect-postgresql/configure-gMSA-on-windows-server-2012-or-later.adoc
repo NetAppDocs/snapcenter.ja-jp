@@ -2,7 +2,7 @@
 permalink: protect-postgresql/configure-gMSA-on-windows-server-2012-or-later.html 
 sidebar: sidebar 
 keywords:  
-summary: Windows Server 2016 以降では、管理ドメインアカウントからサービスアカウントパスワードの自動管理を提供するグループ Managed Service Account \ （ gMSA \ ）を作成できます。 
+summary: Windows Server 2016以降では、管理対象ドメインアカウントからサービスアカウントのパスワードを自動管理するグループ管理サービスアカウント（gMSA）を作成できます。 
 ---
 = PostgreSQL用SnapCenterプラグインを実行しているWindows ServerホストでのgMSAの構成
 :allow-uri-read: 
