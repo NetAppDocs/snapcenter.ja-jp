@@ -25,6 +25,10 @@ SnapCenter Plug-ins Package for AIXは、ファイルレベルのシンボリッ
 * インストールユーザのクレデンシャルを、認証モードをLinuxまたはAIXに設定して作成します。
 * Java 17（SnapCenter 6.2.1 以降の場合）または Java 11（SnapCenter 6.2 以前の場合）を Linux または AIX ホストにインストールしている必要があります。
 +
+
+NOTE: 非ルートユーザーは、Java を実行するために実行権限が必要です。
+
++
 ** Linuxでは、Oracle、OpenJDK、またはSAP JDKのJavaがサポートされています。
 ** IBM Java for AIX。 https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?version=17&os=AIX["IBM Semeruランタイムのダウンロード"^]からダウンロードできます。
 +
@@ -224,6 +228,10 @@ NOTE: 十分なディスクスペースを割り当て、logsフォルダによ�
 必要なソフトウェアパッケージ
  a| 
 * IBM Java 17（SnapCenter 6.2.1以降）またはIBM Java 11（SnapCenter 6.2以前）
++
+
+NOTE: 非ルートユーザーは、Java を実行するために実行権限が必要です。
+
 
 
 Javaを最新バージョンにアップグレードした場合は、/var/opt/snapcenter/spl/etc/spl.propertiesにあるJAVA_HOMEオプションが正しいJavaバージョンと正しいパスに設定されていることを確認する必要があります。

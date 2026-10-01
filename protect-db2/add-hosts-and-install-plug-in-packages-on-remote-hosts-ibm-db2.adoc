@@ -132,6 +132,10 @@ NOTE: gMSAは、SnapCenter Plug-in for Windowsサービスのログオンサー�
 *Skip prechecks*チェックボックスを選択していない場合、ホストがプラグインのインストール要件を満たしているかどうかを確認するために検証されます。ディスク容量、RAM、PowerShellバージョン、.NETバージョン、場所（Windowsプラグインの場合）、およびJava 17（SnapCenter 6.2.1以降の場合）またはJava 11（SnapCenter 6.2以前の場合）がWindowsおよびLinuxプラグインの両方について最小要件に対して検証されます。最小要件を満たしていない場合は、適切なエラーメッセージまたは警告メッセージが表示されます。
 
 +
+
+NOTE: 非ルートユーザーは、Java を実行するために実行権限が必要です。
+
++
 エラーがディスクスペースまたはRAMに関連している場合は、C：\Program Files\NetApp\SnapCenter WebAppにあるweb.configファイルを更新してデフォルト値を変更できます。エラーが他のパラメータに関連している場合は、問題を修正する必要があります。
 
 +

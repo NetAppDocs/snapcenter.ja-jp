@@ -22,6 +22,10 @@ summary: プラグインパッケージは、 SnapCenter アップグレード�
 お使いの特定のSnapCenterバージョンに対応するASP.NET CoreおよびPowerShellの最新の認定バージョンについては、link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467["SnapCenter Software Release Notes"^]を参照してください。
 
 * SnapCenter 6.2.1以降にはJava 17 （Oracle Java、OpenJDK、またはSAP JDK）、SnapCenter 6.2以前にはJava 11が、WindowsおよびLinuxのプラグインホストにインストールされていることを確認してください。
++
+
+NOTE: 非ルートユーザーは、Java を実行するために実行権限が必要です。
+
 * デフォルトでは、SnapCenterは環境からJAVA_HOMEを検出します。修正された JAVA_HOME を使用する場合、 Linux ホストでプラグインをアップグレードする場合は、 /var/opt/snapcenter /spl/etc/__ にある _spl.properties_ ファイルに skip_JAVAHOME_update パラメータを手動で追加し、値を true に設定する必要があります。
 +
 JAVA_HOMEの値は、プラグインがアップグレードされたとき、またはSnapCenter Plug-in Loader（SPL）サービスが再起動されたときに更新されます。SPLをアップグレードまたは再起動する前に、SKIP_JAVAHOME_UPDATEパラメータを追加して値をtrueに設定すると、JAVA_HOMEの値は更新されません。

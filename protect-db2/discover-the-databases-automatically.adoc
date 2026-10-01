@@ -15,7 +15,7 @@ summary: リソースとは、SnapCenterで管理されるLinuxホスト上のIB
 
 .開始する前に
 * SnapCenterサーバのインストール、ホストの追加、ストレージシステム接続のセットアップなどのタスクを完了しておく必要があります。
-* SnapCenter Plug-in for IBM DB2では、RDM / VMDK仮想環境にあるリソースの自動検出はサポートされていません。データベースを手動で追加する際に、仮想環境のストレージの情報を指定する必要があります。
+* SnapCenter Plug-in for IBM Db2では、RDM / VMDK仮想環境にあるリソースの自動検出がサポートされていません。データベースを手動で追加する際に、仮想環境のストレージの情報を指定する必要があります。詳細については、<<resources_rdm_vmdk_virtual_environments,RDM/VMDK仮想環境に存在するリソース>>を参照してください。
 
 
 .タスクの内容
@@ -45,3 +45,16 @@ summary: リソースとは、SnapCenterで管理されるLinuxホスト上のIB
 
 
 IMPORTANT: SnapCenter以外でデータベースの名前が変更された場合は、リソースを更新する必要があります。
+
+[[resources_rdm_vmdk_virtual_environments]]
+.RDM/VMDK仮想環境に存在するリソース
+RDM/VMDK仮想環境上に存在するリソースは、自動的に検出できません。IBM Db2 用 SnapCenter プラグインについては、次の手順に従って自動検出を無効にし、インスタンスを手動で追加する必要があります：
+
+[listing]
+----
+Set-SmConfigSettings -Agent -Hostname <HOST_NAME> -configSettings @{"DISABLE_AUTO_DISCOVERY"="true"}
+
+PS C:\> Add-SmResource -HostName 10.32.212.13 -PluginCode DB2 -ResourceType Instance -ResourceName db2inst1 -StorageFootPrint
+(@{"VolumeName"="windb201_data01";"LUNName"="windb201_data01";"StorageSystem"="windb2svm"})
+----
+詳細については、link:back-up-db2-databases.html["IBM Db2データベースのバックアップ、PowerShellコマンドレット"]を参照してください。

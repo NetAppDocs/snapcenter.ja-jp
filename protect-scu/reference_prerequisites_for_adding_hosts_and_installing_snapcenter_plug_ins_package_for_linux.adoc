@@ -76,12 +76,18 @@ NOTE: 十分なディスクスペースを割り当て、logsフォルダによ�
 必要なソフトウェアパッケージ
  a| 
 * Java 17 （Oracle Java、OpenJDK、またはSAP JDK）（SnapCenter 6.2.1以降）またはJava 11（SnapCenter 6.2以前）
-
-
++
 
 NOTE: Linux ホストに SnapCenter 6.2.1 以降用の Java 17 の認定版のみ、または SnapCenter 6.2 以前用の Java 11 の認定版のみがインストールされていることを確認してください。
 
++
 Javaを最新バージョンにアップグレードした場合は、/var/opt/snapcenter/spl/etc/spl.propertiesにあるJAVA_HOMEオプションが正しいJavaバージョンと正しいパスに設定されていることを確認する必要があります。
+
++
+
+NOTE: 非ルートユーザーは、Java を実行するために実行権限が必要です。
+
+
 
 |===
 サポートされているバージョンの最新情報については、 https://imt.netapp.com/imt/imt.jsp?components=180320;180338;&solution=1257&isHWU&src=IMT["NetApp Interoperability Matrix Tool"^]を参照してください。

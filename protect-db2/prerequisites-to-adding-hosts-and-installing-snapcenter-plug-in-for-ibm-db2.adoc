@@ -16,7 +16,7 @@ summary: ホストを追加してプラグインパッケージをインスト�
 * ホストに Java 17 （Oracle Java、OpenJDK、または SAP JDK）（SnapCenter 6.2.1 以降の場合）または Java 11 （SnapCenter 6.2 以前の場合）をインストールしておく必要があります。
 +
 
-NOTE: IBM Java は Windows および Linux ホストではサポートされていません。
+NOTE: IBM Javaは、WindowsおよびLinuxホストではサポートされていません。
 
 * Windowsの場合、Plug-in CreatorサービスはWindowsユーザ「LocalSystem」を使用して実行する必要があります。これは、Plug-in for IBM DB2がドメイン管理者としてインストールされている場合のデフォルトの動作です。
 * Windowsホストにプラグインをインストールするときに、組み込みでないクレデンシャルを指定した場合やユーザがローカルワークグループに属している場合は、ホストのUACを無効にする必要があります。SnapCenter Plug-in for Microsoft Windowsは、WindowsホストにIBM DB2プラグインを使用してデフォルトで導入されます。
@@ -49,6 +49,10 @@ link:https://www.oracle.com/java/technologies/downloads/#java17["Linux 用 Java 
 
 +
 link:https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?license=IBM["AIX 用 Java をダウンロード"^]
+
++
+
+NOTE: 非ルートユーザーは、Java を実行するために実行権限が必要です。
 
 * LinuxホストでIBM DB2データベースを実行している場合は、Plug-in for IBM DB2のインストール時にSnapCenter Plug-in for UNIXが自動的にインストールされます。
 * プラグインのインストールには、デフォルトのシェルとして* bash *が必要です。

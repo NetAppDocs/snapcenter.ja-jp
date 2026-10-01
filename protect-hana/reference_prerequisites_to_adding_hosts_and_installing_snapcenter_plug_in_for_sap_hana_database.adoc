@@ -50,6 +50,10 @@ link:https://www.oracle.com/java/technologies/downloads/#java17["すべてのオ
 +
 link:https://www.oracle.com/java/technologies/downloads/#java17["すべてのオペレーティング システム用の Java をダウンロード"]
 
++
+
+NOTE: 非ルートユーザーは、Java を実行するために実行権限が必要です。
+
 * LinuxホストでSAP HANAデータベースを実行している場合は、Plug-in for SAP HANA Databaseのインストール時にSnapCenter Plug-in for UNIXが自動的にインストールされます。
 * プラグインのインストールには、デフォルトのシェルとして* bash *が必要です。
 
