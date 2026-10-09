@@ -10009,7 +10009,6 @@
   <block id="7961a2a642f2ef14bcc3560c4533978b" category="summary">バックアップジョブのパフォーマンスへの影響を軽減するため、バックアップ検証はバックアップ作成直後ではなく、別のジョブとして後日実行するようにスケジュールしてください。</block>
   <block id="2faaeb23f72a64bdbb16cfe932406ce8" category="summary">プライマリストレージまたはセカンダリストレージからファイルシステムのバックアップをクローンできます。また、要件に合った保存先を選択することもできます。元のバックアップ場所、同じホスト上の別の保存先、または別のホスト上の別の保存先などです。クローン先は、クローン元のバックアップと同じボリューム上に存在する必要があります。</block>
   <block id="f7182d7a35e19e73172617deaca2e396" category="admonition">Javaを実行するアカウントには、Javaを実行する権限が必要です。</block>
-  <block id="baf777b8ad8fec11ce73312d60c6beec" category="paragraph">+ 注：非ルートユーザーは、Java を実行するために実行権限が必要です。</block>
   <block id="af4f76638af48843fe26083b8647819a" category="admonition">非ルートユーザーは、Java を実行するために実行権限が必要です。</block>
   <block id="28476e82f924742dee48ae4d44d52558" category="inline-xref">RDM/VMDK仮想環境に存在するリソース</block>
   <block id="211bef1be936b825b44ea7171f22e760" category="list-text">SnapCenter Plug-in for IBM Db2では、RDM / VMDK仮想環境にあるリソースの自動検出がサポートされていません。データベースを手動で追加する際に、仮想環境のストレージの情報を指定する必要があります。詳細については、<block ref="40c107052fc48aa77e5bdccb7af86d58" category="inline-xref-macro-rx"></block>を参照してください。</block>
@@ -10017,4 +10016,8 @@
   <block id="8f3b4f1a702849c5530b3620426cca19" category="inline-link-macro">IBM Db2データベースのバックアップ、PowerShellコマンドレット</block>
   <block id="17a05e9785500431b7cdd6242282c8ed" category="paragraph">詳細については、<block ref="636d9603a663670ca77c87610aa537ee" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="b9bcbcd68d11ccb28e0b885b2d2877cf" category="admonition">IBM Javaは、WindowsおよびLinuxホストではサポートされていません。</block>
+  <block id="123edbe25c8249f99cd2533a36af7a0d" category="list-text">SnapCenterは、LUNのリストアまたはクローン操作を実行する際に、igroupがまだ存在しない場合は自動的に作成します。igroupは、次の名前形式で作成されます：<block ref="bcd792dfc656b95e5dc2b984425fc0f5" prefix=" " category="inline-code"></block></block>
+  <block id="56612541ccd886dc39344f635827756c" category="list-text">SnapCenterは、クローン削除操作の一部として作成されたigroupを削除しません。これは、今後のクローン作成やリストア操作のために保持されます。</block>
+  <block id="3156e86fd2bdb0611b9b9c89c87999b7" category="list-text">NVMe over TCPおよびNVMe over FCストレージレイアウトの場合、SnapCenterは、LUNのリストアまたはクローン操作中にNVMeサブシステムがまだ存在しない場合、自動的に作成します。</block>
+  <block id="4426256068c2cde9d001eb996c0ed069" category="list-text">SnapCenterは、クローンの削除操作の一環として作成されたサブシステムを削除しません。今後のクローン作成やリストア操作のために保持されます。サブシステムを削除する場合は、ONTAPから削除し、次のコマンドを使用してホストから切断します：<block ref="49bebb92a89712c3abd8ca411ed2bb21" prefix=" " category="inline-code"></block> <block ref="42f6268ffadaad1cb31f90aff2a0b50b" prefix=" " category="inline-code"></block>をサブシステムの実際のNQNに置き換えます。</block>
 </blocks>

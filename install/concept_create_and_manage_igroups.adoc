@@ -13,6 +13,13 @@ summary: イニシエータグループ（igroup）を作成して、ストレ�
 [role="lead"]
 イニシエータグループ（igroup）を作成して、ストレージシステム上の特定のLUNにアクセスできるホストを指定します。SnapCenter を使用して、 Windows ホストの igroup の作成、名前変更、変更、削除を行うことができます。
 
+[NOTE]
+====
+* SnapCenterは、LUNのリストアまたはクローン操作を実行する際に、igroupがまだ存在しない場合は自動的に作成します。igroupは、次の名前形式で作成されます： `snapcenter_<id>_igroup`
+* SnapCenterは、クローン削除操作の一部として作成されたigroupを削除しません。これは、今後のクローン作成やリストア操作のために保持されます。
+
+
+====
 
 
 [[create-an-igroup]]
